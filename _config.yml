@@ -21,7 +21,7 @@
 title: ZipTieAI.com (AI drones) blog 
 email: terrytaylorbonn@gmail.com
 description: >- # this means to ignore newlines until "baseurl:"
-  For latest overview and docs see the [wiki](https://github.com/terrytaylorbonn/auxdrone/wiki).
+#  For latest overview and docs see the [wiki](https://github.com/terrytaylorbonn/auxdrone/wiki).
 baseurl: "" # the subpath of your site, e.g. /blog
 url: "https://ziptieai.com" # the base hostname & protocol for your site, e.g. http://example.com
 twitter_username: (xxx)
