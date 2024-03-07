@@ -18,16 +18,15 @@
 # You can create any custom variable you would like, and they will be accessible
 # in the templates via {{ site.myvariable }}.
 
-title: Your awesome title TT01bbb
-email: your-email-TT02@example.com
+title: Zip tie AI drones (.com) 24.0307
+email: terrytaylorbonn@gmail.com
 description: >- # this means to ignore newlines until "baseurl:"
-  TT03 Write an awesome description for your new site here. You can edit this
-  line in _config.yml. It will appear in your document head meta (for
-  Google search results) and in your feed.xml site description.
+  (edit this line in _config.yml. It will appear in your document head meta (for
+  Google search results) and in your feed.xml site description.)
 baseurl: "" # the subpath of your site, e.g. /blog
 url: "https://ziptieai.com" # the base hostname & protocol for your site, e.g. http://example.com
-twitter_username: jekyllrbTT04
-github_username:  jekyllTT05
+twitter_username: (none)
+github_username:  (xxx)
 
 # Build settings
 theme: minima
