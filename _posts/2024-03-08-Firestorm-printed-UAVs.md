@@ -5,9 +5,9 @@ date:   2024-03-08 16:00:00 -0500
 categories: Vendors
 ---
 
-A Forbes article appeared on my phone about a company that wants to 3D prints UAVs near the front lines (paywall). 
+A [Forbes article](https://www.forbes.com/sites/thomasbrewster/2024/03/08/firestorm-labs-3d-print-drones-ukraine-pentagon) (paywall) appeared on my phone about a company that wants to 3D prints UAVs near the front lines. 
 
-https://www.forbes.com/sites/thomasbrewster/2024/03/08/firestorm-labs-3d-print-drones-ukraine-pentagon
+
 
 From the Firestorm website:
 
