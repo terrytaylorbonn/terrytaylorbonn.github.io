@@ -18,14 +18,16 @@
 # You can create any custom variable you would like, and they will be accessible
 # in the templates via {{ site.myvariable }}.
 
-title: ZipTieAI.com (AI drones) blog 
+title: ZiptieAI.com (AI drones) blog 
 email: terrytaylorbonn@gmail.com
 description: >- # this means to ignore newlines until "baseurl:"
-#  For latest overview and docs see the [wiki](https://github.com/terrytaylorbonn/auxdrone/wiki).
+ This site is a work in progress (created on 24.0307). 
 baseurl: "" # the subpath of your site, e.g. /blog
 url: "https://ziptieai.com" # the base hostname & protocol for your site, e.g. http://example.com
-twitter_username: (xxx)
-github_username:  (xxx)
+twitter_username: 
+github_username: 
+
+wiki_url: "https://github.com/terrytaylorbonn/auxdrone/wiki"
 
 # Build settings
 theme: minima

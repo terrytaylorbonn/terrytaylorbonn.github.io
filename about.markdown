@@ -1,18 +1,14 @@
 ---
 layout: page
-title: About
+title: About this site
 permalink: /about/
 ---
+ 
+This is the ZiptieAI.com website. For now its just a blog. 
 
-This is the base Jekyll theme. You can find out more info about customizing your Jekyll theme, as well as basic Jekyll usage documentation at [jekyllrb.com](https://jekyllrb.com/)
+See the [wiki](https://github.com/terrytaylorbonn/auxdrone/wiki) for tech details and dev docs.
 
-You can find the source code for Minima at GitHub:
-[jekyll][jekyll-organization] /
-[minima](https://github.com/jekyll/minima)
+![Ukrainian drones](/assets/ukr_drones.png)
+ 
 
-You can find the source code for Jekyll at GitHub:
-[jekyll][jekyll-organization] /
-[jekyll](https://github.com/jekyll/jekyll)
-
-
-[jekyll-organization]: https://github.com/jekyll
+This site was created 24.0307 using a customized Jekyll theme on Github pages. Domain hosted by SquareSpace (took over from Google domains).
