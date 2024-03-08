@@ -1,8 +1,8 @@
 ---
 layout: post
-title:  "HITL" 
+title:  "(My project) HITL up and running on my new Pixhawk 6C" 
 date:   2024-03-06 10:56:30 -0500
-categories: jekyll update
+categories: ZiptieAI
 ---
 
 HITL test worked. 
