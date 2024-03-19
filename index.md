@@ -5,11 +5,11 @@ ZiptieAI is my (Terry Taylor) AI intelligent drone project. There are 4 main URL
 - **[ziptieai.com](https://ziptieai.com)**. The future main website (only this page for now; Jekyll on Github pages). A future conceptual overview of the entire "assembly line" of the project.
 - **[docs.ziptieai.com](https://docs.ziptieai.com)**. For now just a skeleton docs website (ReadTheDocs/Sphinx). 
 
-
 #### **Why "ZiptieAI"?**
 
-The original idea comes from the zipties the Ukrainian army was using for their very flexible and mission ready 
-![drones](/assets/ziptiedrone2.png). But it also stands for how you have to approach learning this stuff if you don't have someone to lead you by the hand. If run down the wrong rabbit hole (get lost) or you hit the wall (a tech problem you can't solve), then you need a backup path to getting things done. To quickly "ziptie" the working pieces together, and worry about the details later. 
+![drones](/assets/ziptiedrone2.png)
+
+The original idea comes from the zipties the Ukrainian army was using for their very flexible and mission ready. But it also stands for how you have to approach learning this stuff if you don't have someone to lead you by the hand. If run down the wrong rabbit hole (get lost) or you hit the wall (a tech problem you can't solve), then you need a backup path to getting things done. To quickly "ziptie" the working pieces together, and worry about the details later. 
 
 #### **The keys to success**
 
