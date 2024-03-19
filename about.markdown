@@ -1,6 +1,6 @@
 ---
 layout: page
-title: About myself
+title: Hire me!
 permalink: /about/
 ---
  
