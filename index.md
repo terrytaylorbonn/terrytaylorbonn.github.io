@@ -1,4 +1,4 @@
-ZiptieAI is my (Terry Taylor) intelligent AI drone project. There are 4 main URLs:
+ZiptieAI is my intelligent AI drone project. There are 4 main URLs:
 
 - **[Wiki](https://github.com/terrytaylorbonn/auxdrone/wiki)**. The first place to look for udpated project info.
 - **[Google drive](https://drive.google.com/drive/folders/1HrzLExPTAL5PIKx_j_y0GJ6_RANR8Tjm)**.  A lot of detailed .docx files (details are everything for this project). I am working alone without (human) assistance, so accurate, useful documentation is critical. 
