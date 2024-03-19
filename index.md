@@ -29,4 +29,4 @@ I started with no experience with AI / drones in late 2023, and I have been work
 
 Nvidia's $80 billion boss Jensen Huang recently said that if you want to be a success you need to face 'pain and suffering'. I found that statement to be very comforting. Rather than pretending to be superman, and making the rest of look like failures, he gave us the gift of honesty. I picked this project because its a great way for me to learn (Python, Linux, microcontrollers, C/C++, etc). I was not sure I could make it work. Some of the steps are really complex, and if you run into a problem good luck fixing things (instead, ziptie something else into place).
 
-*Last update 24.0319* 
+*Last update 24.0319*  
