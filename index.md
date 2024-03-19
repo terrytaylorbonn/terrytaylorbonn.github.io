@@ -13,20 +13,20 @@ The original idea comes from the zipties the Ukrainian army was using for their 
 
 #### **What is different about ZiptieAI?**
 
-I write documents that are useful. That you can really use to get things done (disclaimer: many of the current docs are still very draft; I am quite busy putting the puzzle pieces all together right now). With my docs you move forward, not left and right, down many levels of rabbit holes with endless links to "see also", "for more info", "make sure you have...". 
-
-ZiptieAI will also be very conceptually well organized.
+ZiptieAI is morphing (slowly) into a well-designed conceptual whole. The documents will be very useful, helping you to move forward, step-by-step, not left and right, down many levels of rabbit holes with endless links to "see also", "for more info", "make sure you have", etc. 
 
 #### **The keys to success**
 
 I started with no experience with AI / drones in late 2023, and I have been working alone. I've made a lot of progress. The keys to success are:
-- Find things that you can get running. Anything. Demos, Youtube tutorials. 
-- Find answers to bugs with Youtube, stack overflow, Google search. 
-- Document as much as possible (for me thats mainly the **[Google drive docs](https://drive.google.com/drive/folders/1HrzLExPTAL5PIKx_j_y0GJ6_RANR8Tjm)**.
-- Constanly update the plan and the concepts (for that I used the **[Wiki](https://github.com/terrytaylorbonn/auxdrone/wiki)**).
+- Find anything that you can get working. Search a lot (Youtube, Google, etc).  
+- Find bug help with Youtube, stack overflow, and Google search. 
+- Document as much as possible (for me thats mainly the **[Google drive docs](https://drive.google.com/drive/folders/1HrzLExPTAL5PIKx_j_y0GJ6_RANR8Tjm)**).
+- Constanly update the plan and the concepts (for me thats the **[Wiki](https://github.com/terrytaylorbonn/auxdrone/wiki)**).
 
 #### **Before you get into this business...**
 
-Nvidia's $80 billion boss Jensen Huang recently said that if you want to be a success you need to face 'pain and suffering'. I found that statement to be very comforting. Rather than pretending to be superman, and making the rest of look like failures, he gave us the gift of honesty. I picked this project because its a great way for me to learn (Python, Linux, microcontrollers, C/C++, etc). I was not sure I could make it work. Some of the steps are really complex, and if you run into a problem good luck fixing things (instead, ziptie something else into place).
+Nvidia's $80 billion boss Jensen Huang recently said that if you want to be a success you need to face 'pain and suffering'. I found that statement to be very inspiring. Rather than pretending to be smarter than everyone else, he told us what we need to do to "suceed". 
 
-*Last update 24.0319*  
+I picked this project because its a great way for me to learn (Python, Linux, microcontrollers, C/C++, etc). I was not sure I could make it work. Some of the steps are really complex. My recommendation is that if you run into a problem, ziptie something else into place :).
+
+*Last updated 24.0319 15:52*
