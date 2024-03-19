@@ -18,7 +18,7 @@
 # You can create any custom variable you would like, and they will be accessible
 # in the templates via {{ site.myvariable }}.
 
-title: ZiptieAI.com (AI drones) website (b)
+title: ZiptieAI.com (AI drones) website
 email: terrytaylorbonn@gmail.com
 description: >- # this means to ignore newlines until "baseurl:"
  This site is a work in progress (created on 24.0307). 
