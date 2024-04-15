@@ -19,7 +19,7 @@ For example, I recently designed and built at home (with no assistance) my first
 
 I documented the entired build process. A detailed, honest (I don't take gifts from drone manufacturers to whitewash things), (more or less) step-by-step (draft) build guide FRP2_2_fpv_quad_build_.docx is available on my [Gdrive](https://drive.google.com/drive/folders/1XhYtd5LolvhXh7U9fOOmTGYEgGunSxJY).
 
-NOTE: This drone is meant to be a test platform. My focus is on configuring various components (comm links), not on making FPV drone videos. The plywood frame gives me the elbow room I need and allows me to add and move around components in the future as required. 
+NOTE: This drone is meant to be a test platform. My focus is on configuring various components (comm links), not on making FPV drone videos. The plywood frame gives me the elbow room I need and allows me to add and move around components in the future as required. I will add a PI5. I might add an FPV cam and VTX in the future.
 
 ![drones](/assets/ziptiedrone3.png)
 
