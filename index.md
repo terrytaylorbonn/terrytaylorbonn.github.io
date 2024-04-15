@@ -13,7 +13,11 @@ The original idea for the name came from the zipties the Ukrainian army uses for
 
 #### **What is different about ZiptieAI?**
 
-ZiptieAI is (morphing slowly into) a well-designed concept. The documentation will also be very useful (helping you to move forward, not left and right, down many levels of rabbit holes with endless links). For example, I recently created this drone at home and flight tested on my workbench.
+ZiptieAI is (morphing slowly into) a well-designed concept. The documentation will also be very useful (helping you to move forward, not left and right, down many levels of rabbit holes with endless links). 
+
+For example, I recently designed and built at home (with no assistance) my first drone! I tested the FPV drone (shown below in flight) at home on my workbench!  
+
+I documented the entired build process. A detailed, honest (I don't take gifts from drone manufacturers to whitewash things), (more or less) step-by-step (draft) build guide FRP2_2_fpv_quad_build_.docx is available on my [Gdrive](https://drive.google.com/drive/folders/1XhYtd5LolvhXh7U9fOOmTGYEgGunSxJY).
 
 ![drones](/assets/ziptiedrone3.png)
 
