@@ -7,13 +7,16 @@ ZiptieAI is my intelligent AI drone project. There are 4 main URLs:
   
 #### **Why the name "ZiptieAI"?**
 
-![drones](/assets/ziptiedrone2.png) ![drones](/assets/ziptiedrone3.png)
+![drones](/assets/ziptiedrone2.png) 
 
 The original idea for the name came from the zipties the Ukrainian army uses for their very flexible and mission ready drones. But it also stands for how you have to approach learning this stuff if you don't have someone to lead you by the hand. If you run down the wrong rabbit hole (get lost) or hit the wall (a tech problem you can't solve), then you need a backup path to get things done. You need to "ziptie" together whatever working pieces you have to finish the mission. 
 
 #### **What is different about ZiptieAI?**
 
-ZiptieAI is (morphing slowly into) a well-designed concept. The documentation will also be very useful (helping you to move forward, not left and right, down many levels of rabbit holes with endless links). 
+ZiptieAI is (morphing slowly into) a well-designed concept. The documentation will also be very useful (helping you to move forward, not left and right, down many levels of rabbit holes with endless links). For example, I recently created this drone at home and flight tested on my workbench.
+
+![drones](/assets/ziptiedrone3.png)
+
 
 #### **The keys to success**
 
