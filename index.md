@@ -21,7 +21,7 @@ I documented the entired build process. A detailed, honest (I don't take gifts f
 
 NOTE: This drone is meant to be a test platform. My focus is on configuring various components (comm links), not on making FPV drone videos. The plywood frame gives me the elbow room I need and allows me to add and move around components in the future as required. I will add a PI5. I might add an FPV cam and VTX in the future.
 
-I am still looking for a job in the USA! I'd also be interested in working for a drone company in the Baltics/Poland or in a drone shop (for a few months, unpaid) in Ukraine. Any help/tips would be appreciated.
+PS: I am still looking for a job in the USA! I'd also be interested in working for a drone company in the Baltics/Poland or in a drone shop (for a few months, unpaid) in Ukraine. Any help/tips would be appreciated.
 
 ![drones](/assets/ziptiedrone3.png)
 
