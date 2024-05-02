@@ -21,6 +21,12 @@ I started this project in late 2023 with no assistance and no previous experienc
 
 ![Project evolution](assets/project_evolution.png)
 
+#### **Types of FC's / firmware covered**
+
+The focus is currently on the 3 FC/firmware combinations shown below.
+
+![FC/firmware tested](assets/fc_firmware.png)
+
 
 #### **The keys to success**
 
