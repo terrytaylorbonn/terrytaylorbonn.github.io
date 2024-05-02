@@ -27,6 +27,11 @@ The focus is currently on the 3 FC/firmware combinations shown below.
 
 ![FC/firmware tested](assets/fc_firmware.png)
 
+#### **Types of AI apps / companion computers**
+
+TODO: Create a table that summarizes the AI app / CC combinations tested.
+
+![AI-apps/CC's](assets/ai-apps_ccs.png)
 
 #### **The keys to success**
 
