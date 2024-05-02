@@ -11,7 +11,7 @@ The original idea for the name came from the zipties the Ukrainian army uses for
 
 ![drones](/assets/ziptiedrone2.png) 
 
-But it also applies to my approach to building drone. You can see that in my first FPV drone, with a plywood frame. 
+But it also applies to my approach to building drone. You can see that in my first FPV drone (with a plywood frame) flight tested on my kitchen work table. 
 
 ![drones](/assets/ziptiedrone3.png)
 
