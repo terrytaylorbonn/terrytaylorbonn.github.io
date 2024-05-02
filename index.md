@@ -15,10 +15,15 @@ But it also applies to my approach to building drone. You can see that in my fir
 
 ![drones](/assets/ziptiedrone3.png)
 
+#### **The evolution of the drone project**
+
+I started this project in late 2023 with no assistance and no previous experience with AI or drones. I have made a lot of progress. The strategy I have used is:
+
+![Project evolution](assets/project_evolution.png)
+
 
 #### **The keys to success**
 
-I started this project in late 2023 with no assistance and no previous experience with AI or drones. I have made a lot of progress. The strategy I have used is:
 - Find anything that you can get working. Search everywhere (Youtube, Google, etc).  
 - Find bug help with Youtube, Stack Overflow, and Google search. 
 - Document as much as possible (for me thats mainly my **[Google drive docs](https://drive.google.com/drive/folders/1HrzLExPTAL5PIKx_j_y0GJ6_RANR8Tjm)**).
