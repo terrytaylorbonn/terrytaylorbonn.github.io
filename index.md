@@ -17,21 +17,21 @@ But it also applies to my approach to building drone. You can see that in my fir
 
 #### **The evolution of the drone project**
 
-I started this project in late 2023 with no assistance and no previous experience with AI or drones. This is how it all eventually played out:
+I started this project in late 2023 with no assistance and no previous experience with AI or drones (crazy idea). This is how it all eventually played out:
 
 ![Project evolution](assets/project_evolution.png)
 
-#### **Types of FC's / firmware covered**
-
-The focus is currently on the 3 FC/firmware combinations shown below.
-
-![FC/firmware tested](assets/fc_firmware.png)
-
-#### **Types of AI apps / companion computers**
+#### **Part 2: Types of AI apps / companion computers**
 
 TODO: Create a table that summarizes the AI app / CC combinations tested.
 
 ![AI-apps/CC's](assets/ai-apps_ccs.png)
+
+#### **Part 3: Types of FC's / firmware covered**
+
+The focus is currently on the 3 FC/firmware combinations shown below.
+
+![FC/firmware tested](assets/fc_firmware.png)
 
 #### **The keys to success**
 
