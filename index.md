@@ -40,4 +40,4 @@ Nvidia's $80 billion boss Jensen Huang recently said that if you want to be a su
 
 I picked this project because its a great way to improve my skills in Python, Linux, microcontrollers, and C/C++ (and I was in Ukraine when the ziptie drone revolution was just taking off). I was not sure I could make it work. Some of the steps are really complex. My recommendation is that if you decide to get into the AI drone business without assistance, never give up and always have a backup plan that you can ziptie into your project :) .
 
-*Last updated 24.0415 (previous 24.0319 16:35)*
+*Last update 24.0502 (previous 24.0415)*
