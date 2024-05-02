@@ -17,7 +17,7 @@ But it also applies to my approach to building drone. You can see that in my fir
 
 #### **The evolution of the drone project**
 
-I started this project in late 2023 with no assistance and no previous experience with AI or drones. I have made a lot of progress. The strategy I have used is:
+I started this project in late 2023 with no assistance and no previous experience with AI or drones. This is how it all eventually played out:
 
 ![Project evolution](assets/project_evolution.png)
 
