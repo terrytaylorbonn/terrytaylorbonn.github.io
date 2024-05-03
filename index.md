@@ -21,23 +21,24 @@ I started this project in late 2023 with no assistance and no previous experienc
 
 ![Project evolution](assets/project_evolution.png)
 
-#### **Part 2: Types of AI apps / companion computers**
-
-TODO: Create a table that summarizes the AI app / CC combinations tested.
-
-![AI-apps/CC's](assets/ai-apps_ccs.png)
-
-#### **Part 3: Types of FC's / firmware covered**
-
-The focus is currently on the 3 FC/firmware combinations shown below.
-
-![FC/firmware tested](assets/fc_firmware.png)
-
-#### **The keys to success**
+#### **The keys to success **
 
 - Find anything that you can get working. Search everywhere (Youtube, Google, etc).  
 - Find bug help with Youtube, Stack Overflow, and Google search. 
 - Document as much as possible (for me thats mainly my **[Google drive docs](https://drive.google.com/drive/folders/1HrzLExPTAL5PIKx_j_y0GJ6_RANR8Tjm)**).
 - Constantly update the plan and concepts (for me thats my **[Wiki](https://github.com/terrytaylorbonn/auxdrone/wiki)**).
+
+#### **Part 2: Types of AI apps / companion computers**
+
+Part 2 focuses on AI on companion computers. This table (WIP) will summarize the AI app / CC combinations tested.
+
+![AI-apps/CC's](assets/ai-apps_ccs.png)
+
+#### **Part 3: Types of FC's / firmware covered**
+
+The focus is currently on the 3 FC/firmware combinations shown below with "YES".
+
+![FC/firmware tested](assets/fc_firmware.png)
+
 
 *Last update 24.0502 (previous 24.0415)*
