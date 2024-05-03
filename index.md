@@ -38,6 +38,3 @@ Part 2 focuses on AI on companion computers. This table (WIP) will summarize the
 The focus is currently on the 3 FC/firmware combinations shown below with "YES".
 
 ![FC/firmware tested](assets/fc_firmware.png)
-
-
-*Last update 24.0503*
