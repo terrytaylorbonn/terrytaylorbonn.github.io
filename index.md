@@ -40,4 +40,4 @@ The focus is currently on the 3 FC/firmware combinations shown below with "YES".
 ![FC/firmware tested](assets/fc_firmware.png)
 
 
-*Last update 24.0502 (previous 24.0415)*
+*Last update 24.0503*
