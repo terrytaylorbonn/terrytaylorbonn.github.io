@@ -3,7 +3,7 @@ ZiptieAI is my intelligent AI drone project and (the very important) documentati
 - **[Wiki](https://github.com/terrytaylorbonn/auxdrone/wiki)**. The first place to look for udpated project info.
 - **[Google drive](https://drive.google.com/drive/folders/1HrzLExPTAL5PIKx_j_y0GJ6_RANR8Tjm)**.  A lot of detailed .docx files (details are everything for this project). I am working alone without (human) assistance, so accurate, useful documentation is critical. 
 - **[ziptieai.com](https://ziptieai.com)**. This website. Built with Jekyll on Github pages. 
-- **[docs.ziptieai.com](https://docs.ziptieai.com)**. A very minimal documentation website (built with ReadTheDocs/Sphinx). ZiptieAI is not a product, but rather shows how to use other products. 
+- **[docs.ziptieai.com](https://docs.ziptieai.com)**. A very minimal documentation website (built with ReadTheDocs/Sphinx). ZiptieAI is not a product, but rather shows how to use other products. Therefore there is little documentation about ZiptieAi itself.
   
 #### **Why the name "ZiptieAI"?**
 
