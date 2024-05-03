@@ -1,15 +1,15 @@
-ZiptieAI is my intelligent AI drone project and (very importantly) the documentation I created along the way. There are 4 main URLs:
+ZiptieAI is my intelligent AI drone project and (the very important) documentation I created along the way. There are 4 main URLs:
 
 - **[Wiki](https://github.com/terrytaylorbonn/auxdrone/wiki)**. The first place to look for udpated project info.
 - **[Google drive](https://drive.google.com/drive/folders/1HrzLExPTAL5PIKx_j_y0GJ6_RANR8Tjm)**.  A lot of detailed .docx files (details are everything for this project). I am working alone without (human) assistance, so accurate, useful documentation is critical. 
-- **[ziptieai.com](https://ziptieai.com)**. This website. Built with Jekyll on Github pages. In the future, I will add a conceptual overview of the AI drone "assembly line".
-- **[docs.ziptieai.com](https://docs.ziptieai.com)**. For now just a skeleton docs website (built with ReadTheDocs/Sphinx). 
+- **[ziptieai.com](https://ziptieai.com)**. This website. Built with Jekyll on Github pages. 
+- **[docs.ziptieai.com](https://docs.ziptieai.com)**. A very minimal documentation website (built with ReadTheDocs/Sphinx). ZiptieAI is not a product, but rather shows how to use other products. 
   
 #### **Why the name "ZiptieAI"?**
 
-The original idea for the name came from the zipties the Ukrainian army uses for their very flexible and mission ready drones.  
+The original idea for the name came from the zipties the Ukrainian army uses for their very flexible and mission ready drones.   70 %%%%%%%%%%%%%%%%%%%%%%%%
 
-![drones](/assets/ziptiedrone2.png) 
+![drones](/assets/ziptiedrone2.png){ width=70% }
 
 But it also applies to my approach to building drone. You can see that in my first FPV drone (with a plywood frame) flight tested on my kitchen work table. 
 
