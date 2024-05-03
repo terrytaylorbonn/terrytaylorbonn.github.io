@@ -17,16 +17,15 @@ But it also applies to my approach to building drone. You can see that in my fir
 
 #### **The evolution of the drone project**
 
-I started this project in late 2023 with no assistance and no previous experience with AI or drones (crazy idea). This is how it all eventually played out:
+I started this project in late 2023 with no assistance, basic AI experience, and no experience with drones. The following summarizes the project steps:
 
 ![Project evolution](assets/project_evolution.png)
 
-#### **The keys to success**
-
+The following summarizes my learning approach:
 - Find anything that you can get working. Search everywhere (Youtube, Google, etc).  
 - Find bug help with Youtube, Stack Overflow, and Google search. 
-- Document as much as possible (for me thats mainly my **[Google drive docs](https://drive.google.com/drive/folders/1HrzLExPTAL5PIKx_j_y0GJ6_RANR8Tjm)**).
-- Constantly update the plan and concepts (for me thats my **[Wiki](https://github.com/terrytaylorbonn/auxdrone/wiki)**).
+- Document as much as possible (on the **[Google drive docs](https://drive.google.com/drive/folders/1HrzLExPTAL5PIKx_j_y0GJ6_RANR8Tjm)**).
+- Constantly update the plan and concepts (in the **[Wiki](https://github.com/terrytaylorbonn/auxdrone/wiki)**).
 
 #### **Part 2: Types of AI apps / companion computers**
 
