@@ -7,9 +7,9 @@ ZiptieAI is my intelligent AI drone project and (the very important) documentati
   
 #### **Why the name "ZiptieAI"?**
 
-The original idea for the name came from the zipties the Ukrainian army uses for their very flexible and mission ready drones.   70 %%%%%%%%%%%%%%%%%%%%%%%%
+The original idea for the name came from the zipties the Ukrainian army uses for their very flexible and mission ready drones. 111111111111111111111
 
-![drones](/assets/ziptiedrone2.png){ width=70% }
+![drones](/assets/ziptiedrone2.png){ width=10% }
 
 But it also applies to my approach to building drone. You can see that in my first FPV drone (with a plywood frame) flight tested on my kitchen work table. 
 
