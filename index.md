@@ -33,7 +33,7 @@ Part 2 focuses on AI on companion computers. This table (WIP) will summarize the
 
 ![AI-apps/CC's](assets/ai-apps_ccs.png)
 
-#### **Part 3: Types of FC's / firmware covered**
+#### **Parts 3/4: Types of FC's / firmware**
 
 The focus is currently on the 3 FC/firmware combinations shown below with "YES".
 
