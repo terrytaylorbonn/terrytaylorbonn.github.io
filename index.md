@@ -21,7 +21,7 @@ I started this project in late 2023 with no assistance and no previous experienc
 
 ![Project evolution](assets/project_evolution.png)
 
-#### **The keys to success **
+#### **The keys to success**
 
 - Find anything that you can get working. Search everywhere (Youtube, Google, etc).  
 - Find bug help with Youtube, Stack Overflow, and Google search. 
