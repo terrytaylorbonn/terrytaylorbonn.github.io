@@ -15,7 +15,7 @@ But it also applies to my approach to building drone. You can see that in my fir
 
 ![drones](/assets/ziptiedrone3.png)
 
-The second first flight (x500 with PX4) on 24.0505. 
+The second first flight (x500 with PX4) on 24.0505 (somehow got enough GPS to fly). I spent a week trying to do this with Ardupilot, could not get the motors spin (also Ardupilot on the plywood drone). With PX4 it took one day. Nice.
 
 ![drones](/assets/airborne2.png)
 
