@@ -15,6 +15,11 @@ But it also applies to my approach to building drone. You can see that in my fir
 
 ![drones](/assets/ziptiedrone3.png)
 
+The second first flight (x500 with PX4) on 24.0505. 
+
+![drones](/assets/airborne2.png)
+
+
 #### **The evolution of the drone project**
 
 I started this project in late 2023 with no assistance, basic AI experience, and no experience with drones. The following summarizes the project steps:
