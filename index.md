@@ -54,7 +54,7 @@ Learning approach:
 
 #### **Parts 3/4: Types of FC's / firmware**
 
-The focus is currently on the 3 FC/firmware combinations shown below (with status).
+Wiki parts **[3](https://github.com/terrytaylorbonn/auxdrone/wiki/Part-3-Real-FC-HITL)/[4](https://github.com/terrytaylorbonn/auxdrone/wiki/Part-4-Platform-build)** focus on the FC/firmware combinations shown below (with status).
 
 | Firmware | Pixhawk (6c) | FPV STM32 (SBee F405v3) |
 |-------|--------|---------|
