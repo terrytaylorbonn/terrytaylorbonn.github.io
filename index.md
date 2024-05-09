@@ -29,8 +29,8 @@ I started this project in late 2023 with no assistance, some basic AI experience
 |-------|--------|
 | Part 1 Simulation | Total simulation (of the drone, world, camera, etc)  |
 | Part 2 AI on CC | AI with the focus on object recognition / detection on PC / CC's  |
-| Part 3 Real FC (2) | Further simulation, but with a real FC  |
-| Part 4 Basic platform build (2) | Building a Pixhawk (large) drone and SBee FPV (small) drone | 
+| Part 3 Real FC | Further simulation, but with a real FC  |
+| Part 4 Basic platform build | Building a Pixhawk (large) drone and SBee FPV (small) drone | 
 | Part 5 Mission platform tech | STM32 tools, FC FW dev and API's, ROS, and stealth (wired) | 
 | Part 6 Mission platforms | Specific mission platforms (such as mine clearance, target lock-on) | 
 
