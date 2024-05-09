@@ -22,11 +22,20 @@ The second first flight was my x500 with PX4 on 24.0505. I spent a week trying g
 
 #### **The evolution of the drone project**
 
-I started this project in late 2023 with no assistance, some basic AI experience, and no experience with drones. The following summarizes the project steps:
+I started this project in late 2023 with no assistance, some basic AI experience, and no experience with drones. The following summarizes the project stages:
 
-![Project evolution](assets/project_evolution.png)
 
-My learning approach:
+| Project stage (Wiki "part") | Activities |
+|-------|--------|
+| Part 1 Simulation | Total simulation (of the drone, world, camera, etc)  |
+| Part 2 AI on CC | AI with the focus on object recognition / detection on PC / CC's  |
+| Part 3 Real FC (2) | Further simulation, but with a real FC  |
+| Part 4 Basic platform build (2) | Building a Pixhawk (large) drone and SBee FPV (small) drone | 
+| Part 5 Mission platform tech | STM32 tools, FC FW dev and API's, ROS, and stealth (wired) | 
+| Part 6 Mission platforms | Specific mission platforms (such as mine clearance, target lock-on) | 
+
+
+Learning approach:
 - Find anything that you can get working. Search everywhere (Youtube, Google, etc).  
 - Get help from Youtube, Stack Overflow, and Google search (without these sources, it would be impossible to do this yourself). 
 - Document as much as possible (on the **[Google drive docs](https://drive.google.com/drive/folders/1HrzLExPTAL5PIKx_j_y0GJ6_RANR8Tjm)**).
