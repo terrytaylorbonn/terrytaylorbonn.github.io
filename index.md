@@ -43,7 +43,7 @@ Learning approach:
 
 #### **Part 2: Types of AI apps / companion computers**
 
- **[Wiki part 2](https://github.com/terrytaylorbonn/auxdrone/wiki/Part-2-Real-AI-HW)** focuses on AI on companion computers. This table (WIP) will summarize the AI app / CC combinations tested.
+ **[Wiki part 2 (AI HW)](https://github.com/terrytaylorbonn/auxdrone/wiki/Part-2-Real-AI-HW)** focuses on AI on companion computers. This table (WIP) will summarize the AI app / CC combinations tested.
 
 | CC | AI algorithm | Camera/driver |
 |-------|--------|---------|
@@ -54,7 +54,7 @@ Learning approach:
 
 #### **Parts 3/4: Types of FC's / firmware**
 
-Wiki parts **[3](https://github.com/terrytaylorbonn/auxdrone/wiki/Part-3-Real-FC-HITL)/[4](https://github.com/terrytaylorbonn/auxdrone/wiki/Part-4-Platform-build)** focus on the FC/firmware combinations shown below (with status).
+Wiki parts **[3 (HITL)](https://github.com/terrytaylorbonn/auxdrone/wiki/Part-3-Real-FC-HITL)** and **[4 (Basic platform build)](https://github.com/terrytaylorbonn/auxdrone/wiki/Part-4-Platform-build)** focus on the FC/firmware combinations shown below (with status).
 
 | Firmware | Pixhawk (6c) | FPV STM32 (SBee F405v3) |
 |-------|--------|---------|
@@ -62,3 +62,13 @@ Wiki parts **[3](https://github.com/terrytaylorbonn/auxdrone/wiki/Part-3-Real-FC
 | PX4 | Working | |
 | Betaflight | | Working |
 | INAV | | Working |
+
+
+#### **Part 6: Mission platforms (future)**
+
+Wiki part **[6 (Mission platforms)](https://github.com/terrytaylorbonn/auxdrone/wiki/Part-6-Mission-platforms)** will (future) focus on real-world mission platforms. Something like the following.
+
+| Mission | Basic platform | AI components | Additional tech |
+|-------|-------|--------|---------|
+| Mine clearance | X-500 + PX4 | Infrared + (??) | (??) |
+| Target pursuit | 7-inch FPV + INAV | PI5 + Haarcascades | (??) |
