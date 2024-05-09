@@ -36,11 +36,11 @@ My learning approach:
 
  **[Wiki part 2](https://github.com/terrytaylorbonn/auxdrone/wiki/Part-2-Real-AI-HW)**) focuses on AI on companion computers. This table (WIP) will summarize the AI app / CC combinations tested.
 
-| Priority apples | Second priority | Third priority |
+| CC | AI algorithm | Camera/driver |
 |-------|--------|---------|
-| ambrosia | gala | red delicious |
-| pink lady | jazz | macintosh |
-| honeycrisp | granny smith | fuji |
+| Jetson Nano | xxx | xxx |
+| PI4 | xxx | xxx |
+| PI5 | xxx | xxx |
 
 
 ![AI-apps/CC's](assets/ai-apps_ccs.png)
