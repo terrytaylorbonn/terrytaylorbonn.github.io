@@ -34,7 +34,7 @@ My learning approach:
 
 #### **Part 2: Types of AI apps / companion computers**
 
- **[Wiki part 2](https://github.com/terrytaylorbonn/auxdrone/wiki/Part-2-Real-AI-HW)**) focuses on AI on companion computers. This table (WIP) will summarize the AI app / CC combinations tested.
+ **[Wiki part 2](https://github.com/terrytaylorbonn/auxdrone/wiki/Part-2-Real-AI-HW)** focuses on AI on companion computers. This table (WIP) will summarize the AI app / CC combinations tested.
 
 | CC | AI algorithm | Camera/driver |
 |-------|--------|---------|
