@@ -43,10 +43,13 @@ My learning approach:
 | PI5 | xxx | xxx |
 
 
-![AI-apps/CC's](assets/ai-apps_ccs.png)
-
 #### **Parts 3/4: Types of FC's / firmware**
 
-The focus is currently on the 3 FC/firmware combinations shown below with "YES".
+The focus is currently on the 3 FC/firmware combinations shown below (with status).
 
-![FC/firmware tested](assets/fc_firmware.png)
+| Firmware | Pixhawk (6c) | FPV STM32 (SBee F405v3) |
+|-------|--------|---------|
+| Ardupilot | (almost) | (almost) |
+| PX4 | Working | |
+| Betaflight | | Working |
+| INAV | | Working |
