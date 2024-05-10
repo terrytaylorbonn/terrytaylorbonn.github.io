@@ -39,7 +39,7 @@ PS: About the "details" of what I did: I plan to eventually have detailed docs f
 
 The second first flight was my x500 with PX4 on 24.0505. I spent a week trying get it flying with Ardupilot, but could not get the motors to spin (same problem with Ardupilot on the plywood drone; I have not figured out the problem yet). With PX4 it took one day. Nice. 
 
-This is why you need to be flexible. Ziptie together whatever components and software you need to get the job done. I had heard all this great stuff about Ardupilot, and frankly I was very surprised at (1) the low quality of the docs and (2) the difficulty of configuration (Mission planner is sheer chaos). If you hit the wall, or get lost in a rabbit hole, search for other options. I will try to tackle Ardupilot later (though, honestly, after weeks of frustration, I have kind of lost interest in Ardupilot).
+This is why you need to be flexible. Ziptie together whatever components and software you need to get the job done. I had heard all this great stuff about Ardupilot, and frankly I was very surprised at (1) the low quality of the docs and (2) the difficulty of configuration (Mission planner is sheer chaos). If you hit the wall, or get lost in a rabbit hole, search for other options. I will try to tackle Ardupilot later (though, honestly, I now want to focus on PX4; I recommend PX4 over Ardudpilot to any newcomer).
 
 ![drones](/assets/airborne2.png)
 
