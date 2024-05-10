@@ -81,9 +81,13 @@ The following table summarizes the project stages:
 | PI5 | xxx | xxx |
 
 
-#### **Parts 3/4: Types of FC's / firmware**
+#### **Part 3: FC HITL (hardware in the loop)**
 
-Wiki parts **[3 (HITL)](https://github.com/terrytaylorbonn/auxdrone/wiki/Part-3-Real-FC-HITL)** and **[4 (Basic platform build)](https://github.com/terrytaylorbonn/auxdrone/wiki/Part-4-Platform-build)** focus on the FC/firmware combinations shown below (with status). If you aren't into HITL, then skip part 3.
+**[Wiki part 3 (HITL)](https://github.com/terrytaylorbonn/auxdrone/wiki/Part-3-Real-FC-HITL)** shows how to test a real FC with everything else simulated. Most newcomers would want to skip this part.
+
+#### **Part 4: Basic platform build**
+
+**[Wiki part 4 (Basic platform build)](https://github.com/terrytaylorbonn/auxdrone/wiki/Part-4-Platform-build)** focus on the FC/firmware combinations shown below (with status). 
 
 | Firmware | Pixhawk (6c) | FPV STM32 (SBee F405v3) |
 |-------|--------|---------|
