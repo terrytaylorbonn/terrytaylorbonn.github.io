@@ -20,7 +20,8 @@ The original idea for the "Ziptie" part of "ZiptieAI" came from the zipties the 
 The "Ziptie" approach was critical for building my first drone, a minimalist setup with a plywood frame that was flight tested on my kitchen work table (photo below). 
 
 This is the way to build your first drone. Why?
-- All of the "experts" overload you with (1) too much functionality and (2) not enough details (missing steps). I focused on one thing: Getting the xxxx thing in the air. The first version had no camera, VTX, GPS, etc. 
+- The "experts" overload you with (1) too much functionality and (2) not enough details (missing steps). I focused on one thing: Getting the xxxx thing in the air. The first version had no camera, VTX, GPS, etc. 
+- Getting into the air inside (on your workbench) is great for testing (just like wind tunnel testing). WEAR SAFETY GOGGLES. Getting all the channels on the RC (the controller with sticks) working is a major challenge for newcomers (and a challenge that most expert bloggers conveniently bypass during their "it's easy to get started flying" videos). I had some strange arming problem, and temporarily solved it by using the USB connection to air the drone.  
 - Trying to scrunch all the components together on some little carbon fiber frame is (1) too difficult, (2) can cause mistakes (broken connections, etc),  (3) very difficult to debug problems, and (4) extremely difficult to make modifications.
 - The extra weight of the plywood and the bad aerodynamics of the fat plywood arms reduce the ability of the copter to get out of control on your first flight.
 
@@ -69,7 +70,9 @@ The following table summarizes the project stages:
 
 #### **Part 2: Types of AI apps / companion computers**
 
- **[Wiki part 2 (AI HW)](https://github.com/terrytaylorbonn/auxdrone/wiki/Part-2-Real-AI-HW)** focuses on AI on companion computers. This table (WIP) will summarize the AI app / CC combinations tested.
+ **[Wiki part 2 (AI HW)](https://github.com/terrytaylorbonn/auxdrone/wiki/Part-2-Real-AI-HW)** focuses on AI on companion computers. If you aren't into AI, then skip this part. My real focus (at least at first) was AI. I just wanted to use a simple quadcopter as a platform for the AI equipment. 
+   
+ This table (WIP) will summarize the AI app / CC combinations tested.
 
 | CC | AI algorithm | Camera/driver |
 |-------|--------|---------|
@@ -80,7 +83,7 @@ The following table summarizes the project stages:
 
 #### **Parts 3/4: Types of FC's / firmware**
 
-Wiki parts **[3 (HITL)](https://github.com/terrytaylorbonn/auxdrone/wiki/Part-3-Real-FC-HITL)** and **[4 (Basic platform build)](https://github.com/terrytaylorbonn/auxdrone/wiki/Part-4-Platform-build)** focus on the FC/firmware combinations shown below (with status).
+Wiki parts **[3 (HITL)](https://github.com/terrytaylorbonn/auxdrone/wiki/Part-3-Real-FC-HITL)** and **[4 (Basic platform build)](https://github.com/terrytaylorbonn/auxdrone/wiki/Part-4-Platform-build)** focus on the FC/firmware combinations shown below (with status). If you aren't into HITL, then skip part 3.
 
 | Firmware | Pixhawk (6c) | FPV STM32 (SBee F405v3) |
 |-------|--------|---------|
