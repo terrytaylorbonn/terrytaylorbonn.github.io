@@ -38,9 +38,9 @@ I documented what I did, but the docs are more like lab notes, not end user docs
 
 #### **My second build also validates the Ziptie approach**
 
-The second build was an x500 with PX4 on 24.0505. I spent a week trying get it flying with Ardupilot, but could not get the motors to spin (I also tried Ardupilot on the plywood drone, and again everything worked except for the motors). With PX4 it took one day. 
+The second build was an x500 with PX4 on 24.0505. I spent over a week trying get it flying with Ardupilot, but could not get the motors to spin (I also tried Ardupilot on the plywood drone, and again everything worked except for the motors). With PX4 it took one day. 
 
-This is why you need to be flexible. Ziptie together whatever components and software you need to get the job done. I had heard all this great stuff about Ardupilot, and sheer amount of functionality Ardupilot provides is impressive. The problem for me was (quite surprisingly) (1) the low quality of the docs (I have seen pages that I believe are 10 years old) and (2) the difficulty of configuration (Mission planner is quite a challenge). I will try to tackle Ardupilot later, but for now I am sticking with PX4 (I recommend PX4 over Ardupilot to any newcomer).
+This is why you need to be flexible. Ziptie together whatever components and software you need to get the job done. I had heard all this great stuff about Ardupilot, and the sheer amount of functionality Ardupilot provides is impressive. So I rather surprised by (1) the low quality of the docs (I have seen pages that I believe were 10 years old) and (2) the difficulty of configuration (Mission planner is quite a challenge). I will try to tackle Ardupilot later, but for now I am sticking with PX4 (I recommend PX4 over Ardupilot to any newcomer).
 
 ![drones](/assets/airborne2.png)
 
