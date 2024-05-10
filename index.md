@@ -21,7 +21,7 @@ The "Ziptie" approach was critical for building my first drone, a minimalist set
 
 This is the way to build your first drone. Why?
 - The "experts" overload you with (1) too much functionality and (2) not enough details (missing steps). I focused on one thing: Getting the xxxx thing in the air. The first version had no camera, VTX, GPS, etc. 
-- Getting into the air inside (on your workbench) is great for testing (just like wind tunnel testing). WEAR SAFETY GOGGLES. Getting all the channels on the RC (the controller with sticks) working is a major challenge for newcomers (and a challenge that most expert bloggers conveniently bypass during their "it's easy to get started flying" videos). I had some strange arming problem, and temporarily solved it by using the USB connection to air the drone.  
+- Getting into the air inside (on your workbench) is great for testing (just like wind tunnel testing). WEAR SAFETY GOGGLES. Getting all the channels on the RC (the controller with sticks) working is a major challenge for newcomers (a challenge that most expert bloggers conveniently bypass during in the "it's easy to get started flying" videos). I had some strange arming problem, and temporarily solved it by using the USB connection to air the drone.  
 - Trying to scrunch all the components together on some little carbon fiber frame is (1) too difficult, (2) can cause mistakes (broken connections, etc),  (3) very difficult to debug problems, and (4) extremely difficult to make modifications.
 - The extra weight of the plywood and the bad aerodynamics of the fat plywood arms reduce the ability of the copter to get out of control on your first flight.
 
