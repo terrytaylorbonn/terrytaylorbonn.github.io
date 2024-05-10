@@ -10,7 +10,7 @@ ZiptieAI is my intelligent AI drone project and the (important) documentation I 
 The original idea for the "Ziptie" part of "ZiptieAI" came from the zipties the Ukrainian army uses for their very flexible and mission ready drones. 
 - KISS ("keep it simple stupid"). Needless complexity is your biggest enemy. 
 - Implement the minimal functionality to get the job done. 
-- "Ziptie" add on whatever functioality is required. Be flexible, ready to change out parts as required. *This approach is critical for those of you building your first drone(s) at home.*
+- "Ziptie" (add) any required functionality. Be flexible and ready to change parts as required. *This approach is critical for those of you building your first drone(s) at home.*
 
 ![drones](/assets/ziptiedrone2.png)
 
@@ -21,7 +21,7 @@ The "Ziptie" approach was critical for building my first drone, a minimalist set
 
 This is the way to build your first drone. Why?
 - The experts sometimes overload you with (1) too much functionality and (2) not enough details (hey, they're experts, its hard for them to come down to our level). I focused on one thing: Getting the xxxx thing in the air. The first version had no camera, VTX, GPS, etc. 
-- Getting into the air inside (on your workbench) is great for testing (just like wind tunnel testing). WEAR SAFETY GOGGLES. Getting all the channels on the RC (the controller with sticks) working is a major challenge for newcomers (a challenge that most expert bloggers conveniently in "it's easy to get started flying" videos). I had some strange arming problem, and temporarily solved it by using the USB connection to arm the drone from my PC.  
+- Getting into the air indoors (on your workbench) is great for testing (just like wind tunnel testing). WEAR SAFETY GOGGLES. Getting all the channels on the RC (the controller with sticks) working is a major challenge for newcomers (a challenge that most expert bloggers conveniently in "it's easy to get started flying" videos). I had some strange arming problem, and temporarily solved it by using the USB connection to arm the drone from my PC.  
 - Trying to scrunch all the components together on some little carbon fiber frame is (1) too difficult, (2) can cause mistakes (broken connections, etc),  (3) makes it very difficult to debug problems, and (4) makes it difficult to make modifications.
 - The extra weight of the plywood and the bad aerodynamics of the fat plywood arms will reduce performance (and stability? :) ) of the copter, making it less likely to get out of control on your first flight (crashing is bad, but losing control of a copter is much worse).
 
