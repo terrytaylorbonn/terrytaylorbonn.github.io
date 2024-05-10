@@ -60,10 +60,10 @@ The following table summarizes the project stages:
 | Project stage (Wiki "part") | Activities |
 |-------|--------|
 | Part 1 Simulation | Total simulation (of the drone, world, camera, etc)  |
-| Part 2 AI on CC | AI with the focus on object recognition / detection on PC / CC's  |
-| Part 3 Real FC | Further simulation, but with a real FC  |
-| Part 4 Basic platform build | Building a Pixhawk (large) drone and SBee FPV (small) drone | 
-| Part 5 Mission platform tech | STM32 tools, FC FW dev and API's, ROS, and stealth (wired) | 
+| Part 2 AI on CC | AI on a companion computer (Nano, PI4/5) or Ubuntu PC focusing on object recognition / detection  |
+| Part 3 Real FC | Simulation again, but using a real FC  |
+| Part 4 Basic platform build | Building a Pixhawk (large Holybro X500) drone and an FPV (small SpeedyBee) drone | 
+| Part 5 Mission platform tech | STM32 tools, FC FW dev / API's, ROS, and stealth (wired) | 
 | Part 6 Mission platforms | Specific mission platforms (such as mine clearance, target lock-on) | 
 
 
