@@ -17,16 +17,16 @@ The original idea for the "Ziptie" part of "ZiptieAI" came from the zipties the 
 
 #### **My first build validates the "Ziptie" approach for new drone builders (like me)**
 
-The "Ziptie" approach was critical for building my first drone, a minimalist setup with a plywood frame that was flight tested on my kitchen work table. 
+The "Ziptie" approach was critical for building my first drone, a minimalist setup with a plywood frame that was flight tested on my kitchen work table (photo below). 
 
 This is the way to build your first drone. Why?
 - All of the "experts" overload you with (1) too much functionality and (2) not enough details (missing steps). I focused on one thing: Getting the xxxx thing in the air. The first version had no camera, VTX, GPS, etc. 
-- Trying to scrunch all the components together on some little carbon fiber frame is (1) too difficult, (2) can cause mistakes (broken connections, etc),  (3) very difficult to debug problems, and (4) extremely difficult to redo things (to try various options if things are not working).
+- Trying to scrunch all the components together on some little carbon fiber frame is (1) too difficult, (2) can cause mistakes (broken connections, etc),  (3) very difficult to debug problems, and (4) extremely difficult to make modifications.
 - The extra weight of the plywood and the bad aerodynamics of the fat plywood arms reduce the ability of the copter to get out of control on your first flight.
 
-This approach saved me a lot of trouble. The SpeedyBee F405 FC/ESC has a bad reputation for quality. Well deserved. I could not get the motors to spin. I thought maybe I had ruined my ESC's because I first plugged in a 6S battery (24V) before I realized that you had to used 4S (16V). I was ready to just order a new ESC, but first started probing around. I discovered that the plastic housing of the female connecter (between FC and ESC) was defective. It had cause a pin (GND) to be bent and no connected. The connectors are very fragile and low quality. I used some very small tweezers to hack around on the connector, and ... wow, it worked.
+Turned out that this approach saved me a lot of trouble. The SpeedyBee F405 FC/ESC has a (well deserved) bad reputation for quality. I could not get the motors to spin. I thought maybe I had ruined my ESC's because I first plugged in a 6S battery (24V) before I realized that you had to used 4S (16V) (batteries are one of those critical and even dangerous details the experts tend to not mention). I was ready to just order a new ESC, but first started probing around. I discovered that the plastic housing of the female connecter (between FC and ESC) was defective. It had caused a pin (GND) to be bend as possibly short with a neighboring pin (the connectors fragile, tiny, and low quality). I used some very small tweezers to hack around on the connector, and ... wow, it worked.
 
-I was able to debug because my parts were not all scrunched up into one tiny mess.
+I was able to try all kinds of hacks because my parts were not all scrunched up into one tiny mess.
 
 ![drones](/assets/ziptiedrone3.png)
 
