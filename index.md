@@ -30,7 +30,7 @@ I was able to try all kinds of hacks because my parts were not all scrunched up 
 
 ![drones](/assets/ziptiedrone3.png)
 
-PS: About the "details" of what I did: I plan to eventually have detailed docs for first time users, unlike the experts who conveniently leave out details of major challenges (their main priority is getting you to watch their videos and manufacturers to send them free stuff to demo how "simple" it is to implement). Dont get me wrong, without these experts I never could have gotten started. I appreciate what they do. But its important to understand their focus. Anyway, I documented what I did. The doc is still rough (sorry), but for the details of the problem above: 
+PS: About the "details" of what I did: I plan to eventually have detailed docs for first time users, unlike the experts who conveniently leave out critical details (their main priority is getting you to watch their videos and manufacturers to send them free stuff to demo how "simple" it is to implement). Dont get me wrong, without these experts I never could have gotten started. I love these guys. I appreciate what they do. But its important to understand their focus. Anyway, I documented what I did. The doc is still rough (sorry), but for the details of the problem above: 
 - Open https://drive.google.com/drive/folders/1WlY6zvOpCwWWgh_mhLvZRCXwSPR9WZ7B
 - Download and open 4.5a-01_CONFIG_SBEE_BF_brodie_v07_24.0414.docx 
 - Search for "problem discovered".
