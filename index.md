@@ -25,20 +25,20 @@ This is the way to build your first drone. Why?
 - Trying to scrunch all the components together on some little carbon fiber frame is (1) too difficult, (2) can cause mistakes (broken connections, etc),  (3) makes it very difficult to debug problems, and (4) makes it difficult to make modifications.
 - The extra weight of the plywood and the bad aerodynamics of the fat plywood arms will reduce performance (and stability? :) ) of the copter, making it less likely to get out of control on your first flight (crashing is bad, but losing control of a copter is much worse).
 
-It turned out that this approach saved me a lot of trouble. The SpeedyBee F405 FC/ESC has a reputation for quality issues (Amazon warns that its a product that is often returned). I could not get the motors to spin. I thought maybe I had ruined my ESC's because I first plugged in a 6S battery (24V) before I realized that you had to used 4S (16V) (batteries are one of those critical and even dangerous details the experts tend to not mention). OK, maybe this is not a problem, but I did not know for sure. I was ready to just order a new ESC, but first I decided to probe around. I discovered that the plastic housing of a female connector (between the FC and ESC) was defective (the hole was badly formed). It had caused a pin (GND) to be bent (yet the connector still went all the way in), possibly causing a short with a neighboring pin (the connectors are fragile and tiny). I used some very small tweezers to hack around on the plastic connector, and ... wow, it worked.
+It turned out that this approach saved me a lot of trouble. The SpeedyBee F405 FC/ESC has a reputation for quality issues (Amazon warns that its a product that is often returned). I could not get the motors to spin. I thought maybe I had ruined my ESC's because I first plugged in a 6S battery (24V) before I realized that you had to used 4S (16V) (batteries are one of those critical and even dangerous details the experts tend not to mention). OK, maybe this is not a problem, but I did not know for sure. I was ready to just order a new ESC, but first I decided to probe around. I discovered that the plastic housing of a female connector (between the FC and ESC) was defective (the hole was badly formed). It had caused a pin (GND) to be bent (yet the connector still went all the way in), possibly causing a short with a neighboring pin (the connectors are fragile and tiny). I used some very small tweezers to hack around on the plastic connector, and ... wow, it worked.
 
 I was able to try hacks like this easily because my parts were not all scrunched up together.
 
 ![drones](/assets/ziptiedrone3.png)
 
-PS: I documented what I did, but the docs are more like lab notes, not end user docs. I plan to eventually clean them up. In any case, for the details of the problem above: 
+I documented what I did, but the docs are more like lab notes, not end user docs. I plan to eventually clean them up. In any case, for the details of the problem above: 
 - Open https://drive.google.com/drive/folders/1WlY6zvOpCwWWgh_mhLvZRCXwSPR9WZ7B
 - Download and open 4.5a-01_CONFIG_SBEE_BF_brodie_v07_24.0414.docx 
-- Search for "problem discovered".
+- Search for "problem discovered"
 
 #### **My second build also validates the Ziptie approach**
 
-The second first flight was my x500 with PX4 on 24.0505. I spent a week trying get it flying with Ardupilot, but could not get the motors to spin. I tried using Ardupilot on the plywood drone, and again everything worked except for the motors. With PX4 it took one day. 
+The second build was an x500 with PX4 on 24.0505. I spent a week trying get it flying with Ardupilot, but could not get the motors to spin. I tried using Ardupilot on the plywood drone, and again everything worked except for the motors. With PX4 it took one day. 
 
 This is why you need to be flexible. Ziptie together whatever components and software you need to get the job done. I had heard all this great stuff about Ardupilot, and I was very surprised at (1) the low quality of the docs (I have seen pages that I believe are 10 years old) and (2) the difficulty of configuration (Mission planner is quite a challenge). If you hit the wall, or get lost in a rabbit hole, search for other options. I will try to tackle Ardupilot later (though, honestly, I now want to focus on PX4; I recommend PX4 over Ardupilot to any newcomer).
 
