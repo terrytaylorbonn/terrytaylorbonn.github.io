@@ -50,8 +50,8 @@ This is why you need to be flexible. Ziptie together whatever components and sof
 I started this project in late 2023 with no assistance, some basic AI experience, and no experience with drones. My learning approach:
 - Find anything that you can get working. Search everywhere (Youtube, Google, etc).  
 - Get help from Youtube, Stack Overflow, and Google search (without these sources, it would be impossible to do this yourself). 
-- Document as much as possible (on the **[Google drive docs](https://drive.google.com/drive/folders/1HrzLExPTAL5PIKx_j_y0GJ6_RANR8Tjm)**).
-- Constantly update the plan and concepts (in the **[Wiki](https://github.com/terrytaylorbonn/auxdrone/wiki)**).
+- Document as much as possible (see the **[Google drive](https://drive.google.com/drive/folders/1HrzLExPTAL5PIKx_j_y0GJ6_RANR8Tjm)**).
+- Constantly update the plan and concepts (see the **[Wiki](https://github.com/terrytaylorbonn/auxdrone/wiki)**).
 
 
 The following table summarizes the project stages:
