@@ -10,9 +10,7 @@ ZiptieAI is my intelligent AI drone project and the (important) documentation I 
 The original idea for the "Ziptie" part of "ZiptieAI" came from the zipties the Ukrainian army uses for their very flexible and mission ready drones. 
 - KISS ("keep it simple stupid"). Needless complexity is your biggest enemy. 
 - Implement the minimal functionality to get the job done. 
-- "Ziptie" add on whatever functioality is required. Be flexible, ready to change out parts as required.
-
-<u>That last bullet is a critical aspect for those of you building your first drone(s) at home.</u>
+- "Ziptie" add on whatever functioality is required. Be flexible, ready to change out parts as required. *This approach is critical for those of you building your first drone(s) at home.*
 
 ![drones](/assets/ziptiedrone2.png)
 
