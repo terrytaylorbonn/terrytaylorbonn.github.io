@@ -70,7 +70,7 @@ The following table summarizes the project stages:
 
 #### **Part 2: Types of AI apps / companion computers**
 
- *[Wiki part 2 (AI HW)](https://github.com/terrytaylorbonn/auxdrone/wiki/Part-2-Real-AI-HW)* focuses on AI on companion computers. If you aren't into AI, then skip this part. My real focus (at least at first) was AI. I just wanted to use a simple quadcopter as a platform for the AI equipment. I will (in the near future) summarize the AI app / CC combinations tested in a table like the following.
+ [Wiki part 2 (AI HW)](https://github.com/terrytaylorbonn/auxdrone/wiki/Part-2-Real-AI-HW) focuses on AI on companion computers. If you aren't into AI, then skip this part. My real focus (at least at first) was AI. I just wanted to use a simple quadcopter as a platform for the AI equipment. I will (in the near future) summarize the AI app / CC combinations tested in a table like the following.
 
 | CC | AI algorithm | Camera/driver |
 |-------|--------|---------|
@@ -81,11 +81,11 @@ The following table summarizes the project stages:
 
 #### **Part 3: FC HITL (hardware in the loop)**
 
-**[Wiki part 3 (HITL)](https://github.com/terrytaylorbonn/auxdrone/wiki/Part-3-Real-FC-HITL)** shows how to test a real FC with everything else simulated. Most newcomers would want to skip this part.
+[Wiki part 3 (HITL)](https://github.com/terrytaylorbonn/auxdrone/wiki/Part-3-Real-FC-HITL) shows how to test a real FC with everything else simulated. Most newcomers would want to skip this part.
 
 #### **Part 4: Basic platform build**
 
-**[Wiki part 4 (Basic platform build)](https://github.com/terrytaylorbonn/auxdrone/wiki/Part-4-Platform-build)** focus on the FC/firmware combinations shown below (with status). 
+[Wiki part 4 (Basic platform build)](https://github.com/terrytaylorbonn/auxdrone/wiki/Part-4-Platform-build) focus on the FC/firmware combinations shown below (with status). 
 
 | Firmware | Pixhawk (6c) | FPV STM32 (SBee F405v3) |
 |-------|--------|---------|
@@ -97,7 +97,7 @@ The following table summarizes the project stages:
 
 #### **Part 6: Mission platforms (future)**
 
-Wiki part **[6 (Mission platforms)](https://github.com/terrytaylorbonn/auxdrone/wiki/Part-6-Mission-platforms)** will (future) focus on real-world mission platforms. Something like the following.
+[Wiki part 6 (Mission platforms)](https://github.com/terrytaylorbonn/auxdrone/wiki/Part-6-Mission-platforms) will (future) focus on real-world mission platforms. Something like the following.
 
 | Mission | Basic platform | AI components | Additional tech |
 |-------|-------|--------|---------|
