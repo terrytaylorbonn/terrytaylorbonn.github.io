@@ -31,7 +31,7 @@ I was able to try hacks like this easily because my parts were not all scrunched
 
 ![drones](/assets/ziptiedrone3.png)
 
-PS: About the "details" of what I did: I plan to eventually have detailed docs for first time users. I documented what I did. The doc is still rough (sorry), but for the details of the problem above: 
+PS: I documented what I did, but the docs are more like lab notes, not end user docs. I plan to eventually clean them up. In any case, for the details of the problem above: 
 - Open https://drive.google.com/drive/folders/1WlY6zvOpCwWWgh_mhLvZRCXwSPR9WZ7B
 - Download and open 4.5a-01_CONFIG_SBEE_BF_brodie_v07_24.0414.docx 
 - Search for "problem discovered".
