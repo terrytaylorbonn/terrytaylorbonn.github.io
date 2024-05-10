@@ -85,7 +85,7 @@ The following table summarizes the project stages:
 
 #### **Part 4: Basic platform build**
 
-[Wiki part 4 (Basic platform build)](https://github.com/terrytaylorbonn/auxdrone/wiki/Part-4-Platform-build) focus on the FC/firmware combinations shown below (with status). 
+[Wiki part 4 (Basic platform build)](https://github.com/terrytaylorbonn/auxdrone/wiki/Part-4-Platform-build) focuses on the FC/firmware combinations shown below (with status). 
 
 | Firmware | Pixhawk (6c) | FPV STM32 (SBee F405v3) |
 |-------|--------|---------|
@@ -93,6 +93,10 @@ The following table summarizes the project stages:
 | PX4 | Working | |
 | Betaflight | | Working |
 | INAV | | Working |
+
+#### **Part 5: Mission platform tech**
+
+[Wiki part 5 (Mission platform tech)](https://github.com/terrytaylorbonn/auxdrone/wiki/Part-5-Platform-advanced) focuses on extra mission platform tech such as STM32 tools, FC firmware dev and APIs, ROS, and stealth (wired) pilot-drone communication.
 
 
 #### **Part 6: Mission platforms (future)**
