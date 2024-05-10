@@ -15,7 +15,7 @@ The original idea for the "Ziptie" part of "ZiptieAI" came from the zipties the 
 ![drones](/assets/ziptiedrone2.png)
 
 
-#### **My first build validates the "Ziptie" approach for new drone builders (like me)**
+#### **My first build validates the Ziptie approach for new drone builders (like me)**
 
 The "Ziptie" approach was critical for building my first drone, a minimalist setup with a plywood frame that was flight tested on my kitchen work table (photo below). 
 
@@ -35,7 +35,7 @@ PS: About the "details" of what I did: I plan to eventually have detailed docs f
 - Download and open 4.5a-01_CONFIG_SBEE_BF_brodie_v07_24.0414.docx 
 - Search for "problem discovered".
 
-#### **My second build also validates the "Ziptie" approach**
+#### **My second build also validates the Ziptie approach**
 
 The second first flight was my x500 with PX4 on 24.0505. I spent a week trying get it flying with Ardupilot, but could not get the motors to spin (same problem with Ardupilot on the plywood drone; I have not figured out the problem yet). With PX4 it took one day. Nice. 
 
