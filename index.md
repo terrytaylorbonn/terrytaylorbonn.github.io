@@ -5,15 +5,39 @@ ZiptieAI is my intelligent AI drone project and the (important) documentation I 
 - **[Wiki](https://github.com/terrytaylorbonn/auxdrone/wiki)**. The first place to look for udpated project info.
 - **[Google drive](https://drive.google.com/drive/folders/1HrzLExPTAL5PIKx_j_y0GJ6_RANR8Tjm)**.  A lot of detailed .docx files (details are everything for this project). I am working alone without (human) assistance, so accurate, useful documentation is critical.  Note: These docs are currently more like lab notes, not finished docs. When learning the tech, it's very important to jot down as many details as possible, so that if needed, you can go back and figure out where you made a mistake. The plan is to eventually "distill" the useful content (and delete the chaff).
   
-#### **Why the name "ZiptieAI"?**
+#### **The inspiration for "Ziptie" drones**
 
-The original idea for the name came from the zipties the Ukrainian army uses for their very flexible and mission ready drones. 
+The original idea for the "Ziptie" part of "ZiptieAI" came from the zipties the Ukrainian army uses for their very flexible and mission ready drones. 
+- KISS ("keep it simple stupid"). Needless complexity is your biggest enemy. 
+- Implement the minimal functionality to get the job done. 
+- "Ziptie" add on whatever functioality is required. Be flexible, ready to change out parts as required.
+
+**That last bullet is a critical aspect for those of you building your first drone(s) at home.** 
 
 ![drones](/assets/ziptiedrone2.png)
 
-But it also applies to my approach to building drones, as shown by my first FPV drone with a plywood frame that was flight tested on my kitchen work table. 
+
+#### **My first build validates the "Ziptie" approach for new drone builders (like me)**
+
+The "Ziptie" approach was critical for building my first drone, a minimalist setup with a plywood frame that was flight tested on my kitchen work table. 
+
+This is the way to build your first drone. Why?
+- All of the "experts" overload you with (1) too much functionality and (2) not enough details (missing steps). I focused on one thing: Getting the xxxx thing in the air. The first version had no camera, VTX, GPS, etc. 
+- Trying to scrunch all the components together on some little carbon fiber frame is (1) too difficult, (2) can cause mistakes (broken connections, etc),  (3) very difficult to debug problems, and (4) extremely difficult to redo things (to try various options if things are not working).
+- The extra weight of the plywood and the bad aerodynamics of the fat plywood arms reduce the ability of the copter to get out of control on your first flight.
+
+This approach saved me a lot of trouble. The SpeedyBee F405 FC/ESC has a bad reputation for quality. Well deserved. I could not get the motors to spin. I thought maybe I had ruined my ESC's because I first plugged in a 6S battery (24V) before I realized that you had to used 4S (16V). I was ready to just order a new ESC, but first started probing around. I discovered that the plastic housing of the female connecter (between FC and ESC) was defective. It had cause a pin (GND) to be bent and no connected. The connectors are very fragile and low quality. I used some very small tweezers to hack around on the connector, and ... wow, it worked.
+
+I was able to debug because my parts were not all scrunched up into one tiny mess.
 
 ![drones](/assets/ziptiedrone3.png)
+
+PS: About the "details" of what I did: I plan to eventually have detailed docs for first time users, unlike the experts who conveniently leave out details of major challenges (their main priority is getting you to watch their videos and manufacturers to send them free stuff to demo how "simple" it is to implement). Dont get me wrong, without these experts I never could have gotten started. I appreciate what they do. But its important to understand their focus. Anyway, I documented what I did. The doc is still rough (sorry), but for the details of the problem above: 
+- Open https://drive.google.com/drive/folders/1WlY6zvOpCwWWgh_mhLvZRCXwSPR9WZ7B
+- Download and open 4.5a-01_CONFIG_SBEE_BF_brodie_v07_24.0414.docx 
+- Search for "problem discovered".
+
+#### **My second build also validates the "Ziptie" approach**
 
 The second first flight was my x500 with PX4 on 24.0505. I spent a week trying get it flying with Ardupilot, but could not get the motors to spin (same problem with Ardupilot on the plywood drone; I have not figured out the problem yet). With PX4 it took one day. Nice.
 
