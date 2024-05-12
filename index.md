@@ -94,8 +94,7 @@ Shows how to test a real FC with everything else simulated. I original thought s
     - Rx (receiver on the copter), and 
     - FC
 
-
-Most newcomers would want to skip this part.
+Most newcomers should skip this part.
 
 #### **[Wiki part 4: Basic platform build](https://github.com/terrytaylorbonn/auxdrone/wiki/Part-4-Platform-build)**
 
