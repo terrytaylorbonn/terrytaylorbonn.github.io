@@ -45,19 +45,23 @@ This is why you need to be flexible. Ziptie together whatever components and sof
 ![drones](/assets/airborne2.png)
 
 
-#### **The evolution of the drone project**
+#### **The evolution of the drone project and wiki**
 
-I started this project in late 2023 with no assistance, some basic AI experience, and no experience with drones. My learning approach:
+I started this project in late 2023 with no assistance, some basic AI experience, and no experience with drones. 
+
+The biggest challenge: I could not find any info source that provided
+- The big picture conceptual overview (of what really matters)
+- The "step-by-step" examples were always leaving out critical details
+
+It was frustrating. So I took this learning approach:
 - Find anything that you can get working. Search everywhere (Youtube, Google, etc).  
 - Get help from Youtube, Stack Overflow, and Google search (without these sources, it would be impossible to do this yourself). 
 - Document as much as possible (see the **[Google drive](https://drive.google.com/drive/folders/1HrzLExPTAL5PIKx_j_y0GJ6_RANR8Tjm)**).
 - Constantly update the plan and concepts (see the **[Wiki](https://github.com/terrytaylorbonn/auxdrone/wiki)**).
 
+The wiki is slowly becoming what I was always looking for. The following table summarizes the wiki project stages:
 
-The following table summarizes the project stages:
-
-
-| Project stage (Wiki "part") | Activities |
+| Wiki project part (stage) | Activities |
 |-------|--------|
 | Part 1 Simulation | Total simulation (of the drone, world, camera, etc)  |
 | Part 2 AI on CC | AI on a companion computer (Nano, PI4/5) or Ubuntu PC focusing on object recognition / detection  |
@@ -68,7 +72,7 @@ The following table summarizes the project stages:
 
 
 
-#### **Part 2: Types of AI apps / companion computers**
+#### **Wiki part 2: Types of AI apps / companion computers**
 
  [Wiki part 2 (AI HW)](https://github.com/terrytaylorbonn/auxdrone/wiki/Part-2-Real-AI-HW) focuses on AI on companion computers. If you aren't into AI, then skip this part. My real focus (at least at first) was AI. I just wanted to use a simple quadcopter as a platform for the AI equipment. I will (in the near future) summarize the AI app / CC combinations tested in a table like the following.
 
@@ -79,11 +83,11 @@ The following table summarizes the project stages:
 | PI5 | xxx | xxx |
 
 
-#### **Part 3: FC HITL (hardware in the loop)**
+#### **Wiki part 3: FC HITL (hardware in the loop)**
 
 [Wiki part 3 (HITL)](https://github.com/terrytaylorbonn/auxdrone/wiki/Part-3-Real-FC-HITL) shows how to test a real FC with everything else simulated. Most newcomers would want to skip this part.
 
-#### **Part 4: Basic platform build**
+#### Wiki part 4: Basic platform build**
 
 [Wiki part 4 (Basic platform build)](https://github.com/terrytaylorbonn/auxdrone/wiki/Part-4-Platform-build) focuses on the FC/firmware combinations shown below (with status). 
 
@@ -94,12 +98,18 @@ The following table summarizes the project stages:
 | Betaflight | | Working |
 | INAV | | Working |
 
-#### **Part 5: Mission platform tech**
+#### **Wiki part 5: Mission platform dev**
 
-[Wiki part 5 (Mission platform tech)](https://github.com/terrytaylorbonn/auxdrone/wiki/Part-5-Platform-advanced) focuses on extra mission platform tech such as STM32 tools, FC firmware dev and APIs, ROS, and stealth (wired) pilot-drone communication.
+[Wiki part 5 (Mission platform tech)](https://github.com/terrytaylorbonn/auxdrone/wiki/Part-5-Platform-advanced) focuses on extra mission dev topics such as
+- STM32 tools
+- FC firmware dev
+- FC firmware APIs/SKDs (Mavlink, MavROS, etc)
+- ROS
+- RC (Tx) and Rx dev
+- Stealth (wired) pilot-drone comms
 
 
-#### **Part 6: Mission platforms (future)**
+#### **Wiki part 6: Mission platforms (future)**
 
 [Wiki part 6 (Mission platforms)](https://github.com/terrytaylorbonn/auxdrone/wiki/Part-6-Mission-platforms) will (future) focus on real-world mission platforms. Something like the following.
 
