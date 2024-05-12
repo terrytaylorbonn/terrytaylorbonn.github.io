@@ -67,7 +67,7 @@ The wiki is slowly becoming what I was always looking for. The following table s
 | Part 2 AI on CC | AI on a companion computer (Nano, PI4/5) or Ubuntu PC focusing on object recognition / detection  |
 | Part 3 Real FC | Simulation again, but using a real FC  |
 | Part 4 Basic platform build | Building a Pixhawk (large Holybro X500) drone and an FPV (small SpeedyBee) drone | 
-| Part 5 Mission platform tech | STM32 tools, FC FW dev / API's, ROS, and stealth (wired) | 
+| Part 5 Mission platform dev | STM32 tools, FC FW dev / API's, ROS, and stealth (wired) | 
 | Part 6 Mission platforms | Specific mission platforms (such as mine clearance, target lock-on) | 
 
 
