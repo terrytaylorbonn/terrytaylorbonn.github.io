@@ -109,9 +109,9 @@ The wiki is slowly becoming what I was always looking for. The following table s
 - Stealth (wired) pilot-drone comms
 
 
-#### **Wiki part 6: Mission platforms (future)**
+#### **[Wiki part 6 (Mission platforms)](https://github.com/terrytaylorbonn/auxdrone/wiki/Part-6-Mission-platforms)**
 
-[Wiki part 6 (Mission platforms)](https://github.com/terrytaylorbonn/auxdrone/wiki/Part-6-Mission-platforms) will (future) focus on real-world mission platforms. Something like the following.
+ This part will (future) focus on real-world mission platforms. Something like the following.
 
 | Mission | Basic platform | AI components | Additional tech |
 |-------|-------|--------|---------|
