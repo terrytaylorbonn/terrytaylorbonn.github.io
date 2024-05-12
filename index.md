@@ -85,7 +85,17 @@ Focuses on AI on companion computers. If you aren't into AI, then skip this part
 
 #### **[Wiki part 3: FC HITL (hardware in the loop](https://github.com/terrytaylorbonn/auxdrone/wiki/Part-3-Real-FC-HITL)**
 
-Shows how to test a real FC with everything else simulated. Most newcomers would want to skip this part.
+Shows how to test a real FC with everything else simulated. I had originally thought simulation would greatly help in preparing for the first flight, but it wasn't, mainly because
+- Simulations were sometime very complicated to setup. 
+- The biggest problems with the first flight were not problems during simulation, including the 
+  - Many errors and bugs that did not appear during simulation. 
+  - Excess complexity of setting up the connection between 
+    - RC (with the sticks), 
+    - Rx (receiver on the copter), and 
+    - FC
+
+
+Most newcomers would want to skip this part.
 
 #### **[Wiki part 4: Basic platform build](https://github.com/terrytaylorbonn/auxdrone/wiki/Part-4-Platform-build)**
 
