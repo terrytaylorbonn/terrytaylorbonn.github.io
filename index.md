@@ -72,9 +72,9 @@ The wiki is slowly becoming what I was always looking for. The following table s
 
 
 
-#### **Wiki part 2: Types of AI apps / companion computers**
+#### **[Wiki part 2: Types of AI apps / companion computers](https://github.com/terrytaylorbonn/auxdrone/wiki/Part-2-Real-AI-HW) **
 
- [Wiki part 2 (AI HW)](https://github.com/terrytaylorbonn/auxdrone/wiki/Part-2-Real-AI-HW) focuses on AI on companion computers. If you aren't into AI, then skip this part. My real focus (at least at first) was AI. I just wanted to use a simple quadcopter as a platform for the AI equipment. I will (in the near future) summarize the AI app / CC combinations tested in a table like the following.
+Focuses on AI on companion computers. If you aren't into AI, then skip this part. My real focus (at least at first) was AI. I just wanted to use a simple quadcopter as a platform for the AI equipment. I will (in the near future) summarize the AI app / CC combinations tested in a table like the following.
 
 | CC | AI algorithm | Camera/driver |
 |-------|--------|---------|
@@ -83,13 +83,13 @@ The wiki is slowly becoming what I was always looking for. The following table s
 | PI5 | xxx | xxx |
 
 
-#### **Wiki part 3: FC HITL (hardware in the loop)**
+#### **[Wiki part 3: FC HITL (hardware in the loop](https://github.com/terrytaylorbonn/auxdrone/wiki/Part-3-Real-FC-HITL)**
 
-[Wiki part 3 (HITL)](https://github.com/terrytaylorbonn/auxdrone/wiki/Part-3-Real-FC-HITL) shows how to test a real FC with everything else simulated. Most newcomers would want to skip this part.
+Shows how to test a real FC with everything else simulated. Most newcomers would want to skip this part.
 
-#### Wiki part 4: Basic platform build**
+#### [Wiki part 4: Basic platform build](https://github.com/terrytaylorbonn/auxdrone/wiki/Part-4-Platform-build)**
 
-[Wiki part 4 (Basic platform build)](https://github.com/terrytaylorbonn/auxdrone/wiki/Part-4-Platform-build) focuses on the FC/firmware combinations shown below (with status). 
+Focuses on the FC/firmware combinations shown below (with status). 
 
 | Firmware | Pixhawk (6c) | FPV STM32 (SBee F405v3) |
 |-------|--------|---------|
@@ -98,9 +98,9 @@ The wiki is slowly becoming what I was always looking for. The following table s
 | Betaflight | | Working |
 | INAV | | Working |
 
-#### **Wiki part 5: Mission platform dev**
+#### **[Wiki part 5: Mission platform dev](https://github.com/terrytaylorbonn/auxdrone/wiki/Part-5-Platform-advanced) **
 
-[Wiki part 5 (Mission platform tech)](https://github.com/terrytaylorbonn/auxdrone/wiki/Part-5-Platform-advanced) focuses on extra mission dev topics such as
+Focuses on extra mission dev topics such as
 - STM32 tools
 - FC firmware dev
 - FC firmware APIs/SKDs (Mavlink, MavROS, etc)
@@ -109,9 +109,9 @@ The wiki is slowly becoming what I was always looking for. The following table s
 - Stealth (wired) pilot-drone comms
 
 
-#### **[Wiki part 6 (Mission platforms)](https://github.com/terrytaylorbonn/auxdrone/wiki/Part-6-Mission-platforms)**
+#### **[Wiki part 6: Mission platforms](https://github.com/terrytaylorbonn/auxdrone/wiki/Part-6-Mission-platforms)**
 
- This part will (future) focus on real-world mission platforms. Something like the following.
+ Will (future) focus on real-world mission platforms. Something like the following.
 
 | Mission | Basic platform | AI components | Additional tech |
 |-------|-------|--------|---------|
