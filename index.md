@@ -87,7 +87,7 @@ Focuses on AI on companion computers. If you aren't into AI, then skip this part
 
 Shows how to test a real FC with everything else simulated. Most newcomers would want to skip this part.
 
-#### [Wiki part 4: Basic platform build](https://github.com/terrytaylorbonn/auxdrone/wiki/Part-4-Platform-build)**
+#### **[Wiki part 4: Basic platform build](https://github.com/terrytaylorbonn/auxdrone/wiki/Part-4-Platform-build)**
 
 Focuses on the FC/firmware combinations shown below (with status). 
 
