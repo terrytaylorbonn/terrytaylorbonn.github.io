@@ -72,7 +72,7 @@ The wiki is slowly becoming what I was always looking for. The following table s
 
 
 
-#### **[Wiki part 2: Types of AI apps / companion computers](https://github.com/terrytaylorbonn/auxdrone/wiki/Part-2-Real-AI-HW) **
+#### **[Wiki part 2: Types of AI apps / companion computers](https://github.com/terrytaylorbonn/auxdrone/wiki/Part-2-Real-AI-HW)**
 
 Focuses on AI on companion computers. If you aren't into AI, then skip this part. My real focus (at least at first) was AI. I just wanted to use a simple quadcopter as a platform for the AI equipment. I will (in the near future) summarize the AI app / CC combinations tested in a table like the following.
 
@@ -98,7 +98,7 @@ Focuses on the FC/firmware combinations shown below (with status).
 | Betaflight | | Working |
 | INAV | | Working |
 
-#### **[Wiki part 5: Mission platform dev](https://github.com/terrytaylorbonn/auxdrone/wiki/Part-5-Platform-advanced) **
+#### **[Wiki part 5: Mission platform dev](https://github.com/terrytaylorbonn/auxdrone/wiki/Part-5-Platform-advanced)**
 
 Focuses on extra mission dev topics such as
 - STM32 tools
