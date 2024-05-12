@@ -54,8 +54,8 @@ The biggest challenge: I could not find any info source that provided
 - The "step-by-step" examples were always leaving out critical details
 
 It was frustrating. So I took this learning approach:
-- Find anything that you can get working. Search everywhere (Youtube, Google, etc).  
-- Get help from Youtube, Stack Overflow, and Google search (without these sources, it would be impossible to do this yourself). 
+- Find hands-on step-by-step examples (the best were usually Youtube videos).  
+- Get bug help from Youtube, Stack Overflow, and Google search (without these sources, it would have been impossible to do this alone). 
 - Document as much as possible (see the **[Google drive](https://drive.google.com/drive/folders/1HrzLExPTAL5PIKx_j_y0GJ6_RANR8Tjm)**).
 - Constantly update the plan and concepts (see the **[Wiki](https://github.com/terrytaylorbonn/auxdrone/wiki)**).
 
