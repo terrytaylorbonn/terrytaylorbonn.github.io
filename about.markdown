@@ -3,7 +3,9 @@ layout: page
 title: AI drones
 permalink: /aidrones/
 ---
- 
+
+*Note: This was the original ziptieai.com main page before the sandbox was added.*
+
 ZiptieAI is my intelligent AI drone project and the (important) documentation I created along the way. There are 4 main URLs (in order of importance):
 
 - **[Wiki](https://github.com/terrytaylorbonn/auxdrone/wiki)**. The first place to look for udpated project info.

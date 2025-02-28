@@ -18,8 +18,8 @@
 # You can create any custom variable you would like, and they will be accessible
 # in the templates via {{ site.myvariable }}.
 
-title: ZiptieAI.com (v2)
-email: ziptieai@gmail.com
+title: ZiptieAI.com (25.0228)
+email: terrytaylorbonn@gmail.com
 description: >- # this means to ignore newlines until "baseurl:"
  Last edit 25.0228 
 baseurl: "" # the subpath of your site, e.g. /blog

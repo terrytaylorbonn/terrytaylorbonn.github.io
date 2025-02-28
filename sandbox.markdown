@@ -6,12 +6,9 @@ permalink: /sandbox/
  
 25.0225 [(Gdrive)](https://drive.google.com/drive/folders/1-Adawag9uA8_bq-hDF-nOuPYaRLz1eEO) 
 
-# AI API Sandbox 
-
-<br>
+*Note: For now I am copying the updated wiki text to this page. Therefore the formatting (for now) is not the best. I will fix this later.*
 
 Work on the API sandbox ([video overview](https://www.youtube.com/watch?v=E9C912Omm7U)) started in Sep 2024, focusing on API/API-doc tech demos. I changed the name to "AI API sandbox" on 25.0203.
-<!--  I never found a useful "AI drone getting started" (or even just a "drone GS"), and so I created the [AI drone wiki](https://github.com/terrytaylorbonn/auxdrone/wiki/AI-drones). For the same reason I created this AI API sandbox wiki. -->
 
 <br>
 
@@ -31,11 +28,11 @@ Work on the API sandbox ([video overview](https://www.youtube.com/watch?v=E9C912
 
 The following 2 deployments are the main goal for mid 2025.
 
-- [MAIN stack deployment](Main-deployment) ([Stack deployments](Deployments) lists all deployments active and past) includes
+- [MAIN stack deployment](https://github.com/terrytaylorbonn/auxdrone/wiki/Main-deployment) ([Stack deployments](https://github.com/terrytaylorbonn/auxdrone/wiki/Deployments) lists all deployments active and past) includes
   - #2 Stack (FrontEnd (FE), Backend (BE), and database (DB))
   - #1 APIs / API-docs (code annotations)
   - #3 Deployment 
-- [Doc deployments (MAIN)](Main-doc-deployments) include
+- [Doc deployments (MAIN)](https://github.com/terrytaylorbonn/auxdrone/wiki/Main-doc-deployments) include
   - #4.1 Sites + site docs
   - #4.2 API docs (json/yaml) / Postman
   - #4.3 AI generated doc content (from my lab note docx files on the Gdrive)
@@ -46,11 +43,6 @@ The following 2 deployments are the main goal for mid 2025.
 
   ![image](https://github.com/user-attachments/assets/4f6c1990-ceae-483c-8534-bb9ce664ce22)
 
-
-<!-- (AI dev tools) Copilot and ChatGPT have been indispensible for <!- in the 3 [dev phases](Concepts-(API-sandbox)-v2) of -> building these deployments. These binary-algorithm-based AI tools will never replace human intelligence (or replace programmers). But (as with high level languages, IDE's, code completion assistants, and search engines) they will 
-- raise the level of abstraction and
-- become a indispensible part of the dev toolset and product releases. -->
-
 <br>
 
 ### Lab notes
@@ -59,19 +51,19 @@ The final 6 sections are basically my lab notes (*I hope to feed some version of
 
 ![image](https://github.com/user-attachments/assets/d1b8bebd-ee54-4e4b-a3a0-b20f07a54d09)
 
-- [2 Stacks/frameworks](2-Stacks-and-frameworks). The APIs/API-docs were created for the backend. Now need to be integrated into a complete stack. This part focuses on 
+- [2 Stacks/frameworks](https://github.com/terrytaylorbonn/auxdrone/wiki/2-Stacks-and-frameworks). The APIs/API-docs were created for the backend. Now need to be integrated into a complete stack. This part focuses on 
   - Base tech (HTML/JS/CSS).
   - Front ends (React, Vue, Angular, etc), what the end-user uses to access the backend.
   - Full stack (MERN).
   - Any other backend / server-side frameworks (Javascript, Python).
-- [1 APIs/API-docs](1-APIs-and-API-docs) 
+- [1 APIs/API-docs](https://github.com/terrytaylorbonn/auxdrone/wiki/1-APIs-and-API-docs) 
   - Creating APIs (REST, GraphQL) and API-docs on the local PC.
   - Tests with API tools (Swagger, Postman, etc).  
-- [3 Deployment](3-Deployment). Deployment on remote hosts including
+- [3 Deployment](https://github.com/terrytaylorbonn/auxdrone/wiki/3-Deployment). Deployment on remote hosts including
   - Dedicated hosting platforms (Netlify, Vercel, Render, etc).
   - AWS/GCP/Azure (also using Terraform).
   - CI/CD.
-- [4 Doc/chat sites (WIP)](4-Doc-sites) (Non-MERN, non-code) 
-- [5 API management](5-API-management) (AWS, Gravitee.io, Kong, Kubernetes Gateway, Apigee, Mulesoft, IBM).
-- [6 Other](6-Other) (Git, other AWS, etc). 
+- [4 Doc/chat sites (WIP)](https://github.com/terrytaylorbonn/auxdrone/wiki/4-Doc-sites) (Non-MERN, non-code) 
+- [5 API management](https://github.com/terrytaylorbonn/auxdrone/wiki/5-API-management) (AWS, Gravitee.io, Kong, Kubernetes Gateway, Apigee, Mulesoft, IBM).
+- [6 Other](https://github.com/terrytaylorbonn/auxdrone/wiki/6-Other) (Git, other AWS, etc). 
 
