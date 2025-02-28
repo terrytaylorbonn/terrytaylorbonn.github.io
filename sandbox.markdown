@@ -18,7 +18,7 @@ Work on the API sandbox ([video overview](https://www.youtube.com/watch?v=E9C912
 
 [Sandbox concepts](https://github.com/terrytaylorbonn/auxdrone/wiki/4.0-AI-concepts) 
 
-[AI concepts](AI-concepts)
+[AI concepts](https://github.com/terrytaylorbonn/auxdrone/wiki/AI-concepts)
 
 [About the author](https://github.com/terrytaylorbonn/auxdrone/wiki/About-the-author)
 
