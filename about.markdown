@@ -1,14 +1,9 @@
 ---
 layout: page
-title: AI drones (was "Hire me!")
+title: AI drones
 permalink: /aidrones/
 ---
  
-I am looking for a job. In the USA or Eastern Europe. I speak good Russian, German, Chinese, and I understand Ukrainian.  My formal education (BSEE) focused on physics and math (I have a good basic understanding of electromagnetics).
-
-Email: ziptieai@gmail.com 
-
-
 ZiptieAI is my intelligent AI drone project and the (important) documentation I created along the way. There are 4 main URLs (in order of importance):
 
 - **[Wiki](https://github.com/terrytaylorbonn/auxdrone/wiki)**. The first place to look for udpated project info.
