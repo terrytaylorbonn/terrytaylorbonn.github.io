@@ -1,6 +1,4 @@
-ZiptieAI.com describes my 2 main projects
-- AI API sandbox
-- AI drones
+ZiptieAI.com describes my 2 main projects:
 
 <br>
 
