@@ -5,7 +5,7 @@ permalink: /sandbox/
 ---
  
 
-25.0306 [(Gdrive)](https://drive.google.com/drive/folders/1-Adawag9uA8_bq-hDF-nOuPYaRLz1eEO) 
+25.0307d [(Gdrive)](https://drive.google.com/drive/folders/1-Adawag9uA8_bq-hDF-nOuPYaRLz1eEO) 
 
 *Note: For now I am copying the updated wiki text to this page. Therefore the formatting (for now) is not the best. I will fix this later.*
 
@@ -23,18 +23,25 @@ Work on the API sandbox ([video overview](https://www.youtube.com/watch?v=E9C912
 ### Overview
 
 - [Sandbox concepts](https://github.com/terrytaylorbonn/auxdrone/wiki/4.0-AI-concepts) 
-- [Sandbox as a tutorial series](https://github.com/terrytaylorbonn/auxdrone/wiki/Sandbox-as-a-tutorial-series). I added this page 25.0304 to explain how this sandbox is a unique (and what I consider the best) way to approach teaching stacks (#2), APIs/API-docs (#1), stack deployment (#3), and non-stack components (docs, sites, AI) (#4). 
+- [Sandbox as a tutorial series](https://github.com/terrytaylorbonn/auxdrone/wiki/Sandbox-as-a-tutorial-series)
 - [AI concepts](https://github.com/terrytaylorbonn/auxdrone/wiki/AI-concepts)
 - [About the author](https://github.com/terrytaylorbonn/auxdrone/wiki/About-the-author)
 
+
+
 <br>
 
-# Deployments
+# Deployments (the main goal)
 
-One of the main goals of this site are tech demo deployments for 
+The main goal of this site are demos for 
+- [Stack deployments](https://github.com/terrytaylorbonn/auxdrone/wiki/Stack-deployments) (1-3) that contain
+  - Stack-based API docs (Swagger, GraphQL) (1)
+- [Doc (website) deployments](https://github.com/terrytaylorbonn/auxdrone/wiki/Main-doc-deployments) that contain
+  - Web-based docs (web sites) (4.1-4.2)
+  - AI-generated content and AI chat (4.3-4.5)
 
-- [Stacks](https://github.com/terrytaylorbonn/auxdrone/wiki/Stack-deployments) (1-3)
-- [Docs](https://github.com/terrytaylorbonn/auxdrone/wiki/Main-doc-deployments) (4.1-4.5)
+ 
+
 
 <br>
 
