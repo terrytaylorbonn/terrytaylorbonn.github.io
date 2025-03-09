@@ -5,13 +5,11 @@ permalink: /sandbox/
 ---
  
 
-25.0307d [(Gdrive)](https://drive.google.com/drive/folders/1-Adawag9uA8_bq-hDF-nOuPYaRLz1eEO) 
-
-*Note: For now I am copying the updated wiki text to this page. Therefore the formatting (for now) is not the best. I will fix this later.*
+25.0309 [Doc URLs](https://github.com/terrytaylorbonn/auxdrone/wiki/Main-doc-deployments) [Stack URLs](https://github.com/terrytaylorbonn/auxdrone/wiki/Stack-deployments) [Lab notes (Gdrive)](https://drive.google.com/drive/folders/1-Adawag9uA8_bq-hDF-nOuPYaRLz1eEO), [Git](https://github.com/terrytaylorbonn?tab=repositories)
 
 <br>
 
-Work on the API sandbox ([video overview](https://www.youtube.com/watch?v=E9C912Omm7U)) started in Sep 2024, focusing on API/API-doc tech demos. I changed the name to "AI API sandbox" on 25.0203.
+Click on "Doc URLs" or "Stack URLs" above to view a list of demo deployment URLs. Work on the API sandbox ([video overview](https://www.youtube.com/watch?v=E9C912Omm7U)) started in Sep 2024, focusing on API/API-doc tech demos. 
 
 
 <br>
@@ -28,19 +26,18 @@ Work on the API sandbox ([video overview](https://www.youtube.com/watch?v=E9C912
 - [About the author](https://github.com/terrytaylorbonn/auxdrone/wiki/About-the-author)
 
 
-
 <br>
 
 # Deployments (the main goal)
 
 The main goal of this site are demos for 
-- [Stack deployments](https://github.com/terrytaylorbonn/auxdrone/wiki/Stack-deployments) (1-3) that contain
-  - Stack-based API docs (Swagger, GraphQL) (1)
-- [Doc (website) deployments](https://github.com/terrytaylorbonn/auxdrone/wiki/Main-doc-deployments) that contain
-  - Web-based docs (web sites) (4.1-4.2)
-  - AI-generated content and AI chat (4.3-4.5)
-
- 
+- [Stack deployments](https://github.com/terrytaylorbonn/auxdrone/wiki/Stack-deployments) (1-3) that include
+  - APIs
+  - Swagger / GraphQL docs
+- [Doc (website) deployments](https://github.com/terrytaylorbonn/auxdrone/wiki/Main-doc-deployments) that include
+  - [Websites](https://github.com/terrytaylorbonn/auxdrone/wiki/Website-deployments) (4.1)
+  - [API docs](https://github.com/terrytaylorbonn/auxdrone/wiki/API-doc-deployments) (4.2)
+  - [AI docs (TODO)](https://github.com/terrytaylorbonn/auxdrone/wiki/AI-docs) (4.3-4.5)
 
 
 <br>
