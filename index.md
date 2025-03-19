@@ -3,7 +3,7 @@ ZiptieAI.com describes my 2 main projects:
 <br>
 
 
-- **[AI API sandbox](sandbox)**. I started the sandbox ([video overview](https://www.youtube.com/watch?v=E9C912Omm7U)) in Sep 2024 focusing on tech demos for 
+- **[AI API sandbox](sandbox)**. I started the sandbox in Sep 2024 focusing on tech demos for 
   - APIs
   - API-docs
   - Stacks (MERN)
