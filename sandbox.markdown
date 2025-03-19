@@ -27,7 +27,13 @@ The main goals of the AI API sandbox are
 
 - [Deployments](https://github.com/terrytaylorbonn/auxdrone/wiki/Deployments)
   - [Stacks](https://github.com/terrytaylorbonn/auxdrone/wiki/Stack-deployments) (with APIs and API-docs (Swagger/GraphiQL))
-  - [Docs](https://github.com/terrytaylorbonn/auxdrone/wiki/Main-doc-deployments) (web sites)
+  - [Docs](https://github.com/terrytaylorbonn/auxdrone/wiki/Main-doc-deployments) including: 
+    - 4.1 [Websites](https://github.com/terrytaylorbonn/auxdrone/wiki/Website-deployments)
+    - 4.2 [API docs](https://github.com/terrytaylorbonn/auxdrone/wiki/API-doc-deployments)
+    - 4.4 [AI docs: CHAT](https://github.com/terrytaylorbonn/auxdrone/wiki/AI-docs) 
+    - 4.3 [AI docs: REASON-GEN](https://github.com/terrytaylorbonn/auxdrone/wiki/AI-docs-reasoning-generate)
+    - 4.6 [AI test/maintenance](https://github.com/terrytaylorbonn/auxdrone/wiki/AI-test-maintain)
+
 
 - Sandbox lab notes 
   - [Gdrive](https://drive.google.com/drive/folders/1-Adawag9uA8_bq-hDF-nOuPYaRLz1eEO)
