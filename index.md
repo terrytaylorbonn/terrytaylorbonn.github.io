@@ -3,11 +3,9 @@ ZiptieAI.com describes my 2 main projects:
 <br>
 
 
-- **[AI API sandbox](sandbox)**. I started the sandbox in Sep 2024 focusing on tech demos for 
-  - APIs
-  - API-docs
-  - Stacks (MERN)
-  - AI (LLMs) 
+- **[AI/tech stack sandbox](sandbox)** (renamed from "AI API sandbox" 25.0419). I started the sandbox in Sep 2024. The current focus is on tech demos for 
+  - AI stacks (+RAG/Tools/MCP)
+  - Tech stacks (REST/GQL) (MERN)
 
    ![image](https://github.com/user-attachments/assets/6c4a9ef0-981b-4dcc-8dc3-12470d356284)
 

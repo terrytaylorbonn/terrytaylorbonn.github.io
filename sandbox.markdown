@@ -1,29 +1,31 @@
 ---
 layout: page
-title: AI API sandbox
+title: AI/tech stack sandbox
 permalink: /sandbox/
 ---
 
-I started the sandbox in Sep 2024 focusing on tech demos for 
-  - APIs
-  - API-docs
-  - Stacks (MERN)
-  - AI (LLMs) 
+I started the sandbox in Sep 2024. The current focus is on tech demos for 
+  - AI stacks (+RAG/Tools/MCP)
+  - Tech stacks (REST/GQL) (MERN)
+ 
 
 
 <!-- 
 25.0310b ([Doc URLs](https://github.com/terrytaylorbonn/auxdrone/wiki/Main-doc-deployments)) ([Stack URLs](https://github.com/terrytaylorbonn/auxdrone/wiki/Stack-deployments)) ([Lab notes (Gdrive)](https://drive.google.com/drive/folders/1-Adawag9uA8_bq-hDF-nOuPYaRLz1eEO)) ([Git](https://github.com/terrytaylorbonn?tab=repositories)) -->
 
 
-<!-- #### See also  -->
+<!-- #### See also  
 [Youtube video overview](https://www.youtube.com/watch?v=GA8k5JPQj0w) (v2)
-<!-- - [AI concepts](https://github.com/terrytaylorbonn/auxdrone/wiki/AI-concepts) - [Sandbox as a tutorial series](https://github.com/terrytaylorbonn/auxdrone/wiki/Sandbox-as-a-tutorial-series) -->
+- [AI concepts](https://github.com/terrytaylorbonn/auxdrone/wiki/AI-concepts) - [Sandbox as a tutorial series](https://github.com/terrytaylorbonn/auxdrone/wiki/Sandbox-as-a-tutorial-series) -->
+
+
+[AI/tech stack sandbox overview](https://github.com/terrytaylorbonn/auxdrone/wiki/AI-tech-stack-sandbox-overview)
 
 [About the author](https://github.com/terrytaylorbonn/auxdrone/wiki/About-the-author)
 
 
-
-The main goals of the AI API sandbox are
+<!--
+The main goals of the AI/tech stack sandbox are
 
 - [Deployments](https://github.com/terrytaylorbonn/auxdrone/wiki/Deployments)
   - [Stacks](https://github.com/terrytaylorbonn/auxdrone/wiki/Stack-deployments) (with APIs and API-docs (Swagger/GraphiQL))
@@ -44,7 +46,7 @@ The main goals of the AI API sandbox are
     - [4 Non-stack SITES/DOCS/AI](https://github.com/terrytaylorbonn/auxdrone/wiki/4-Doc-sites)
     - [5 API management](https://github.com/terrytaylorbonn/auxdrone/wiki/5-API-management)
 
-<!-- - Hands-on experience with a wide range of tools -->
+ - Hands-on experience with a wide range of tools -->
 
 
 <br><br>
