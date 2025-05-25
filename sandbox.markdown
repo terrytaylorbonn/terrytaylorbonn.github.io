@@ -21,6 +21,10 @@ I started the sandbox in Sep 2024. The current focus is on tech demos for
 
 [AI/tech stack sandbox overview](https://github.com/terrytaylorbonn/auxdrone/wiki/AI-tech-stack-sandbox-overview)
 
+
+New version of docs website for AI/tech stacks (using docusaurus) at [docs3.ziptieai.com](https://docs3.ziptieai.com) (will reroute to temp render URL).
+
+
 [About the author](https://github.com/terrytaylorbonn/auxdrone/wiki/About-the-author)
 
 
