@@ -2,11 +2,12 @@
 layout: page
 title: AI/tech stack sandbox
 permalink: /sandbox/
+description: Last edit 25.0715
 ---
 
 I started the sandbox in Sep 2024. The current focus is on tech demos for 
-  - AI stacks (+RAG/Tools/MCP)
-  - Tech stacks (REST/GQL) (MERN)
+  - AI LLM stacks (+RAG/Tools/MCP)
+  - Tech stacks (MERN/REST/GQL)
  
 
 
@@ -22,7 +23,7 @@ I started the sandbox in Sep 2024. The current focus is on tech demos for
 [AI/tech stack sandbox overview](https://github.com/terrytaylorbonn/auxdrone/wiki/AI-tech-stack-sandbox-overview)
 
 
-New version of docs website for AI/tech stacks (using docusaurus) at [docs3.ziptieai.com](https://docs3.ziptieai.com) (will reroute to temp render URL).
+Latest version of docs website for AI/tech stacks (using docusaurus) at [docs3.ziptieai.com](https://docs3.ziptieai.com) (will reroute to temp render URL). Note that this is a test site with a lot of test pages.
 
 
 [About the author](https://github.com/terrytaylorbonn/auxdrone/wiki/About-the-author)
