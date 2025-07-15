@@ -17,6 +17,9 @@
         </label>
 
         <div class="trigger">
+          <!-- DocSearch -->
+          <div id="docsearch" style="display: inline-block; margin-right: 1rem;"></div>
+          
           {%- for path in page_paths -%}
             {%- assign my_page = site.pages | where: "path", path | first -%}
             {%- if my_page.title -%}

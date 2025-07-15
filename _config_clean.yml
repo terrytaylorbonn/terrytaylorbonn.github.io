@@ -29,12 +29,6 @@ github_username:
 
 wiki_url: "https://github.com/terrytaylorbonn/auxdrone/wiki"
 
-# Header navigation order
-header_pages:
-  - index.md
-  - sandbox.markdown
-  - about.markdown
-
 # Build settings
 theme: minima
 plugins:
