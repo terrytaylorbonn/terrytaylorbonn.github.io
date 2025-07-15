@@ -1,3 +1,8 @@
+---
+layout: home
+title: Home
+---
+
 ZiptieAI.com describes my 2 main projects:
 
 <br>

@@ -1,0 +1,66 @@
+<!-- DocSearch v3 CSS and JS -->
+<link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/@docsearch/css@3">
+<script src="https://cdn.jsdelivr.net/npm/@docsearch/js@3"></script>
+
+<!-- DocSearch Initialization - Updated to match DocSearch v3 guidelines -->
+<script type="text/javascript">
+document.addEventListener('DOMContentLoaded', function() {
+  // Check if DocSearch is available
+  if (typeof docsearch !== 'undefined') {
+    docsearch({
+      container: '#docsearch',
+      appId: 'W16W313D0H',
+      indexName: 'zai-crawler-250714',
+      apiKey: '599bc1b9acca143faba3528baf71d651'
+    });
+  } else {
+    console.warn('DocSearch is not loaded. Make sure the script is included.');
+  }
+});
+</script>
+
+<!-- Custom DocSearch Styles -->
+<style>
+.DocSearch-Button {
+  margin: 0;
+  border-radius: 4px;
+  background: transparent;
+  border: 1px solid #e1e5e9;
+  color: #424242;
+}
+
+.DocSearch-Button:hover {
+  background: #f8f9fa;
+  box-shadow: 0 1px 3px 0 rgba(0,0,0,0.1);
+}
+
+.DocSearch-Button-Placeholder {
+  font-size: 14px;
+}
+
+@media (max-width: 768px) {
+  .DocSearch-Button-Placeholder {
+    display: none;
+  }
+  
+  .DocSearch-Button {
+    width: 40px;
+    padding: 0;
+    justify-content: center;
+  }
+}
+
+/* Ensure search integrates well with minima theme */
+.site-nav .trigger #docsearch {
+  display: inline-block;
+  margin-right: 1rem;
+  vertical-align: middle;
+}
+
+@media screen and (max-width: 600px) {
+  .site-nav .trigger #docsearch {
+    display: block;
+    margin: 0.5rem 0;
+  }
+}
+</style>
