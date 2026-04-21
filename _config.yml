@@ -21,7 +21,7 @@
 title: ZiptieAI.com
 email: terrytaylorbonn@gmail.com
 description: >- # this means to ignore newlines until "baseurl:"
- Last edit 25.0715
+ Last edit 26.0421
 baseurl: "" # the subpath of your site, e.g. /blog
 url: "https://ziptieai.com" # the base hostname & protocol for your site, e.g. http://example.com
 twitter_username: 
@@ -32,8 +32,13 @@ wiki_url: "https://github.com/terrytaylorbonn/auxdrone/wiki"
 # Header navigation order
 header_pages:
   - index.md
+  - history.markdown
+  - agentic-ai.markdown
+  - robotic-ai.markdown
   - sandbox.markdown
   - about.markdown
+  - tech-stacks.markdown
+  - about-me.markdown
 
 # Build settings
 theme: minima

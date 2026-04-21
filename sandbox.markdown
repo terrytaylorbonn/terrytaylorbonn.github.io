@@ -1,32 +1,23 @@
 ---
 layout: page
-title: AI/tech stack sandbox
+title: LLMs
 permalink: /sandbox/
 description: Last edit 25.0715
 ---
 
-I started the sandbox in Sep 2024. The current focus is on tech demos for 
-  - AI LLM stacks (+RAG/Tools/MCP)
-  - Tech stacks (MERN/REST/GQL)
+My focus at one point was on LLMs. I thought that that was going to be the market focus. But started to have doubts about that. There is a lot of value in being able to deploy and fine-tune your own LLMs, but its no longer my focus. The market changed, and my priorities changed with.
+
+The [wiki page](https://github.com/terrytaylorbonn/auxdrone/wiki/AI-stacks) title is "AI LLM stacks" because that was the focus. That wiki page is bit complicated (I simplified the right panel "Pages" TOC, and moved a lot of the TOC entries into the wiki page). For LLMs the following wiki subpages are of interest:
+
+- [2.2 demo deployments (HF, CloudFlare, etc)](https://github.com/terrytaylorbonn/auxdrone/wiki/LLM-stacks-%5C-2-Demo-deployments)
+- [2.3 YT demos](https://github.com/terrytaylorbonn/auxdrone/wiki/LLM-stacks-%5C-3-Youtube-demos)
+- [2.4 GPT/CPLT demos (a few possibly good demos)](https://github.com/terrytaylorbonn/auxdrone/wiki/LLM-stacks-%5C-4-CPLT-demos)
+- [2.6 Agent/LLM input docs (just the RAG demo)](https://github.com/terrytaylorbonn/auxdrone/wiki/LLM-stacks-%5C-4-CPLT-%5C-4.0b-Platforms-and-tools)
  
 
 
 <!-- 
 25.0310b ([Doc URLs](https://github.com/terrytaylorbonn/auxdrone/wiki/Main-doc-deployments)) ([Stack URLs](https://github.com/terrytaylorbonn/auxdrone/wiki/Stack-deployments)) ([Lab notes (Gdrive)](https://drive.google.com/drive/folders/1-Adawag9uA8_bq-hDF-nOuPYaRLz1eEO)) ([Git](https://github.com/terrytaylorbonn?tab=repositories)) -->
-
-
-<!-- #### See also  
-[Youtube video overview](https://www.youtube.com/watch?v=GA8k5JPQj0w) (v2)
-- [AI concepts](https://github.com/terrytaylorbonn/auxdrone/wiki/AI-concepts) - [Sandbox as a tutorial series](https://github.com/terrytaylorbonn/auxdrone/wiki/Sandbox-as-a-tutorial-series) -->
-
-
-[AI/tech stack sandbox overview](https://github.com/terrytaylorbonn/auxdrone/wiki/AI-tech-stack-sandbox-overview)
-
-
-Latest version of docs website for AI/tech stacks (using docusaurus) at [docs3.ziptieai.com](https://docs3.ziptieai.com) (will reroute to temp render URL). Note that this is a test site with a lot of test pages.
-
-
-[About the author](https://github.com/terrytaylorbonn/auxdrone/wiki/About-the-author)
 
 
 <!--

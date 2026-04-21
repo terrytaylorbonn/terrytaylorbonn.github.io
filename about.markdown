@@ -4,6 +4,17 @@ title: AI drones
 permalink: /aidrones/
 ---
 
+See the [Wiki page](https://github.com/terrytaylorbonn/auxdrone/wiki/AI-drone-overview) for more info.
+
+I worked on epics 1-8 from Sep 2023 to Sep 2024 focusing on:
+
+- General AI
+- Drone simulation
+- FPV and Pixhawk drone builds
+- Drone AI / autonomous flight (Pixhawk drone with Jetson Nano using object recognition with Pymavlink for flight control inputs)
+
+![image](https://github.com/user-attachments/assets/b249c820-34f7-4169-90b1-26b39705df9d)
+
 *Note: This was the original ziptieai.com main page before the sandbox was added.*
 
 ZiptieAI is my intelligent AI drone project and the (important) documentation I created along the way. There are 4 main URLs (in order of importance):
