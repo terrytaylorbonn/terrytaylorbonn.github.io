@@ -10,7 +10,7 @@ Agentic AI covers systems that plan, reason, and act autonomously to achieve goa
 
 Topics include:
 
-- **PAL** (Program-Aided Language models)
+- **Palantir-style data integration and analytics platforms**
 - **Tool use** — function calling, APIs, external integrations
 - **Workflows** — multi-step agent pipelines, orchestration
 - **Planning systems** — task decomposition, ReAct, chain-of-thought
