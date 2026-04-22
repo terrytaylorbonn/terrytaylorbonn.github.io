@@ -8,7 +8,7 @@ ZiptieAI has evolved with AI technology. What began as a drone-focused project b
 
 ---
 
-#### 1. [AI Drones](/aidrones/)
+#### (1) [AI Drones](/aidrones/)
 
 My original focus was intelligent drones (at that time, AI assistance was limited compared with today). AI capabilities centered on:
 
@@ -19,13 +19,13 @@ This phase included drone simulation, hardware builds, and flight tests (the fir
 
 ---
 
-#### 2. [Tech Stacks & Docs](/tech-stacks/)
+#### [Tech Stacks & Docs](/tech-stacks/)
 
 After the drones were flight-worthy, I wanted to publish my drone dev workflows and docs. This was planned as a refresher course in wikis, tech docs, and websites. But for the first time I started using AI tools for assistance. Suddenly complex tasks became much simpler. The AI tools became the focus. I did an exploratory/refresher course in MERN stacks and REST/GraphQL APIs/docs using AI tools.
 
 ---
 
-#### 3. [LLMs](/sandbox/)
+#### (2) [LLMs](/sandbox/)
 
 At that point I wanted to understand how these AI tools (CNNs and LLMs) really worked with hands-on demos. I focused on:
 
@@ -38,13 +38,13 @@ My goal was to understand the core concepts and how to build practical applicati
 
 ---
 
-#### 4. [Robotic AI](/robotic-ai/)
+#### (3) [Robotic AI](/robotic-ai/)
 
 I then studied (hands-on) the latest JEPA-style world models and AI for robotics in general (representation learning, prediction-based systems, belief tracking, control loops, planning under uncertainty). Many of the concepts (such as estimation and autonomy) were related to earlier drone work.
 
 ---
 
-#### 5. [Agentic AI](/agentic-ai/)
+#### (4) [Agentic AI](/agentic-ai/)
 
 To me AI agents are simply deterministic control loops (often written in Python) that are the real core of AI applications. "Autonomous" agents perform complex tasks with limited (but critical) human input. I see my opportunities in AI primarily in this area — all of my previous AI experience plays a very supportive role.
 
