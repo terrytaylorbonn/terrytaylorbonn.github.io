@@ -47,6 +47,8 @@ The main goals of the AI/tech stack sandbox are
 
 <br><br>
 
-![image](https://github.com/user-attachments/assets/187576ca-6ca9-41cc-9629-39a0db97581c)
+![Smol](/assets/smol.png)
+
+<!-- ![image](https://github.com/user-attachments/assets/187576ca-6ca9-41cc-9629-39a0db97581c) -->
 
 

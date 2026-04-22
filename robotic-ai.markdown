@@ -14,3 +14,8 @@ Topics include:
 - **Belief tracking** — state estimation, sensor fusion, Bayesian filtering
 - **Control loops** — PID, model predictive control, feedback systems
 - **Autonomy** — decision-making, path planning, mission execution
+
+
+<br><br>
+
+![roboticAI](/assets/roboticai.png)
