@@ -7,6 +7,7 @@ See the [Wiki page](https://github.com/terrytaylorbonn/auxdrone/wiki) for more i
 
 This site has the following pages:
 
+- [ZiptieAI History](/history/). How the project evolved.
 - [Agentic AI](/agentic-ai/). PAL, tool use, workflows, planning systems.
 - [Robotic AI](/robotic-ai/). JEPA, belief tracking, control loops, autonomy.
 - [LLMs](/sandbox/).
