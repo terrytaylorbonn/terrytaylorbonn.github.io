@@ -1,6 +1,6 @@
 ---
 layout: page
-title: AI drones
+title: "(1) AI drones"
 permalink: /aidrones/
 ---
 
