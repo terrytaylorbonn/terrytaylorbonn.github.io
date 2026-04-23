@@ -10,18 +10,27 @@ ZiptieAI has evolved with AI technology. What began as a drone-focused project b
 
 #### (1) [AI Drones](/aidrones/)
 
-My original focus was intelligent drones (at that time, AI assistance was limited compared with today). AI capabilities centered on:
+This phase included drone simulation, hardware builds, and flight tests (the first flight tests were in my kitchen).
 
+AI capabilities centered on:
 - Object recognition using onboard cameras and CNNs
 - Autonomous flight support (AI-generated control inputs that could modify flight plans)
 
-This phase included drone simulation, hardware builds, and flight tests (the first flight tests were in my kitchen).
+My original plan was to spend my time developing the AI part of AI drones. For me the drones were only the carrier platforms. But I ended spending most of my time on the drones because of 
+- Open source software (outdated, with some core documents over 10 years old)
+- Components sourced from China (quality and documentation issues)
+
+I eventually shifted my focus to AI (LLMs). I wanted to volunteer to build drones in Ukraine, but no success (even as a volunteer; complicated country). It seemed that to get a drone job in the West you needed to an expert in building (1) the platform or (2) the AI (preferably in both).  
 
 ---
 
-#### [Tech Stacks & Docs](/tech-stacks/)
+#### [(1b) Tech Stacks & Docs](/tech-stacks/)
 
-After the drones were flight-worthy, I wanted to publish my drone dev workflows and docs. This was planned as a refresher course in wikis, tech docs, and websites. But for the first time I started using AI tools for assistance. Suddenly complex tasks became much simpler. The AI tools became the focus. I did an exploratory/refresher course in MERN stacks and REST/GraphQL APIs/docs using AI tools.
+I maintained very good documentation of my AI drones activities (especially the critical tech details that were missing the very outdated and chaotic documentation for the drone flight control software and tools). My original plan was to build my own ZiptieAI website, wiki, and blogs (Substack and Youtube). 
+
+The first step was an "inventory" (refresher course) of the latest doc tools (MERN stacks, REST/GraphQL APIs/docs). But for the first time I used AI tools for assistance. Wow. Suddenly using these doc tools (whose own documentation was of usually of limited use) had become vastly simpler. 
+
+A wakeup call. The AI tools became the focus. 
 
 ---
 
@@ -49,3 +58,5 @@ I then studied (hands-on) the latest JEPA-style world models and AI for robotics
 To me AI agents are simply deterministic control loops (often written in Python) that are the real core of AI applications. "Autonomous" agents perform complex tasks with limited (but critical) human input. I see my opportunities in AI primarily in this area — all of my previous AI experience plays a very supportive role.
 
 A major inspiration for me are platforms such as Palantir Maven. These architectures can be applied across many industries (logistics, manufacturing, healthcare, defense, operations, business intelligence). This is likely to be one of the fastest-growing areas of AI in the near future.
+
+26.0423
