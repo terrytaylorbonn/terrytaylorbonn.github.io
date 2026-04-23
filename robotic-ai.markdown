@@ -21,9 +21,11 @@ Drones and airliners can fly autonomously in the air because they've got so much
 
 I finally came to the conclusion that AI (transformer based, which is what LeCun is proposing, the same stuff as in LLMs) in a robot is simply not a good idea (for now). Musk has been promising for 10 years that FSD (full self-driving) cars would be available in just a year. Recently Waymo cars have had some spectacular failures. And the incredible humanoids from China are not real.  They might get it right in the future, but I think I'll stick with Palantir style applications.
 
-
-
-
-<br><br>
+<br>
 
 ![roboticAI](/assets/roboticai.png)
+
+
+<br>
+
+26.0423

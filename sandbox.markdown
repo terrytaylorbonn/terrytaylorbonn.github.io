@@ -5,16 +5,23 @@ permalink: /sandbox/
 description: Last edit 25.0715
 ---
 
-My focus at one point was on LLMs. I thought that that was going to be the market focus. But started to have doubts about that. There is a lot of value in being able to deploy and fine-tune your own LLMs, but its no longer my focus. The market changed, and my priorities changed with.
+My focus at one point was on LLMs. I thought that that was going to be the market focus. There is a lot of value in being able to deploy and fine-tune your own LLMs, but for me the opportunities are elsewhere.
 
 The [wiki page](https://github.com/terrytaylorbonn/auxdrone/wiki/AI-stacks) title is "AI LLM stacks" because that was the focus. That wiki page is bit complicated (I simplified the right panel "Pages" TOC, and moved a lot of the TOC entries into the wiki page). For LLMs the following wiki subpages are of interest:
 
-- [2.2 demo deployments (HF, CloudFlare, etc)](https://github.com/terrytaylorbonn/auxdrone/wiki/LLM-stacks-%5C-2-Demo-deployments)
-- [2.3 YT demos](https://github.com/terrytaylorbonn/auxdrone/wiki/LLM-stacks-%5C-3-Youtube-demos)
-- [2.4 GPT/CPLT demos (a few possibly good demos)](https://github.com/terrytaylorbonn/auxdrone/wiki/LLM-stacks-%5C-4-CPLT-demos)
-- [2.6 Agent/LLM input docs (just the RAG demo)](https://github.com/terrytaylorbonn/auxdrone/wiki/LLM-stacks-%5C-4-CPLT-%5C-4.0b-Platforms-and-tools)
+- [2.2 Demo deployments (HF, CloudFlare, etc)](https://github.com/terrytaylorbonn/auxdrone/wiki/LLM-stacks-%5C-2-Demo-deployments)
+- [2.3 Youtube demos](https://github.com/terrytaylorbonn/auxdrone/wiki/LLM-stacks-%5C-3-Youtube-demos). I did a lot of YouTube demos. Way back then (2025, a long time ago in AI-time) I had still not make the transition to working totally with LLMs (GPT) to learn new tech.
+- [2.4 GPT/Copilot demos (a few demos)](https://github.com/terrytaylorbonn/auxdrone/wiki/LLM-stacks-%5C-4-CPLT-demos)
+- [2.6 Agent/LLM input docs (RAG demo)](https://github.com/terrytaylorbonn/auxdrone/wiki/LLM-stacks-%5C-4-CPLT-%5C-4.0b-Platforms-and-tools)
  
+<br>
 
+![Smol](/assets/smol.png)
+
+
+<br>
+
+26.0423
 
 <!-- 
 25.0310b ([Doc URLs](https://github.com/terrytaylorbonn/auxdrone/wiki/Main-doc-deployments)) ([Stack URLs](https://github.com/terrytaylorbonn/auxdrone/wiki/Stack-deployments)) ([Lab notes (Gdrive)](https://drive.google.com/drive/folders/1-Adawag9uA8_bq-hDF-nOuPYaRLz1eEO)) ([Git](https://github.com/terrytaylorbonn?tab=repositories)) -->
@@ -43,11 +50,6 @@ The main goals of the AI/tech stack sandbox are
     - [5 API management](https://github.com/terrytaylorbonn/auxdrone/wiki/5-API-management)
 
  - Hands-on experience with a wide range of tools -->
-
-
-<br><br>
-
-![Smol](/assets/smol.png)
 
 <!-- ![image](https://github.com/user-attachments/assets/187576ca-6ca9-41cc-9629-39a0db97581c) -->
 
