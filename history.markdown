@@ -4,9 +4,12 @@ title: ZiptieAI History
 permalink: /history/
 ---
 
+<br>
+
 ZiptieAI has evolved with AI technology. What began as a drone-focused project became an exploration of practical AI systems.
 
----
+
+<br>
 
 #### (1) [AI Drones](/aidrones/)
 
@@ -22,7 +25,8 @@ My original plan was to spend my time developing the AI part of AI drones. For m
 
 I eventually shifted my focus to AI (LLMs). I wanted to volunteer to build drones in Ukraine, but no success (even as a volunteer; complicated country). It seemed that to get a drone job in the West you needed to an expert in building (1) the platform or (2) the AI (preferably in both).  
 
----
+<br>
+
 
 #### [(1b) Tech Stacks & Docs](/tech-stacks/)
 
@@ -32,7 +36,7 @@ The first step was an "inventory" (refresher course) of the latest doc tools (ME
 
 A wakeup call. The AI tools became the focus. 
 
----
+<br>
 
 #### (2) [LLMs](/sandbox/)
 
@@ -45,18 +49,20 @@ At that point I wanted to understand how these AI tools (CNNs and LLMs) really w
 
 My goal was to understand the core concepts and how to build practical applications.
 
----
+<br>
 
 #### (3) [Robotic AI](/robotic-ai/)
 
 I then studied (hands-on) the latest JEPA-style world models and AI for robotics in general (representation learning, prediction-based systems, belief tracking, control loops, planning under uncertainty). Many of the concepts (such as estimation and autonomy) were related to earlier drone work.
 
----
+<br>
 
 #### (4) [Agentic AI](/agentic-ai/)
 
 To me AI agents are simply deterministic control loops (often written in Python) that are the real core of AI applications. "Autonomous" agents perform complex tasks with limited (but critical) human input. I see my opportunities in AI primarily in this area — all of my previous AI experience plays a very supportive role.
 
 A major inspiration for me are platforms such as Palantir Maven. These architectures can be applied across many industries (logistics, manufacturing, healthcare, defense, operations, business intelligence). This is likely to be one of the fastest-growing areas of AI in the near future.
+
+<br>
 
 26.0423
