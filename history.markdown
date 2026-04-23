@@ -23,7 +23,7 @@ My original plan was to spend my time developing the AI part of AI drones. For m
 - Open source software (outdated, with some core documents over 10 years old)
 - Components sourced from China (quality and documentation issues)
 
-I eventually shifted my focus to AI (LLMs). I wanted to volunteer to build drones in Ukraine, but no success (even as a volunteer; complicated country). It seemed that to get a drone job in the West you needed to an expert in building (1) the platform or (2) the AI (preferably in both).  
+I wanted to volunteer to build drones in Ukraine, but no success (even as a volunteer; complicated country). It seemed that to get a drone job in the West you needed to an expert in building (1) the platform or (2) the AI (preferably in both).  
 
 <br>
 
