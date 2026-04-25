@@ -50,7 +50,6 @@ AIP probably offers a set of functionality similar to the following:
 - **Planning.** AI breaks up a "messy" plan into a set of standard subtasks that can be verified.
 - **Rule injection.** AI can add "rule" keywords to the list of keywords used by the deterministic agentic loop to modify the execution logic.
 
-<br>
 
 *Diagram from Substack post [#75 The Real Job of AI in Enterprise Apps](https://ziptieai.substack.com/p/75-the-real-job-of-ai-in-enterprise) shows how AI is only used to generate a plan ("08b AI")*
 

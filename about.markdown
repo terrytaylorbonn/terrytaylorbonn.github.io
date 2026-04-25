@@ -47,7 +47,7 @@ is shown below. I completed parts 1-4, and then decided that it was time to move
 | [Part 1 Simulation](https://github.com/terrytaylorbonn/auxdrone/wiki/Part-1-Total-simulation) | Total simulation (of the drone, world, camera, etc)  |
 | [Part 2 AI on CC](https://github.com/terrytaylorbonn/auxdrone/wiki/Part-2-Real-AI-HW) | AI on a companion computer (Nano, PI4/5) or Ubuntu PC focusing on object recognition / detection  |
 | [Part 3 Real FC](https://github.com/terrytaylorbonn/auxdrone/wiki/Part-3-Real-FC-HITL) | Simulation again, but using a real FC  |
-| [Part 4 Basic platform build](https://github.com/terrytaylorbonn/auxdrone/wiki/Part-4-Basic-platform-build) | Building a Pixhawk (large Holybro X500) drone and an FPV (small SpeedyBee) drone | 
+| Part 4 Basic platform build | Building a Pixhawk (large Holybro X500) drone and an FPV (small SpeedyBee) drone | 
 | Part 5 Mission platform dev | (not completed) STM32 tools, FC FW dev / API's, ROS, and stealth (wired) | 
 | Part 6 Mission platforms | (not started) Specific mission platforms (such as mine clearance, target lock-on) | 
 
@@ -95,7 +95,7 @@ Shows how to test a real FC with everything else simulated. I original thought s
 
 <br>
 
-#### [Wiki part 4: Basic platform build](https://github.com/terrytaylorbonn/auxdrone/wiki/Part-4-Basic-platform-build)
+#### Wiki part 4: Basic platform build (FPX and Pixhawk)
 
 Focuses on the FC/firmware combinations shown below (with status). 
 
@@ -106,7 +106,16 @@ Focuses on the FC/firmware combinations shown below (with status).
 | Betaflight | | Working |
 | INAV | | Working |
 
-<img src="/assets/basicplatform.png" alt="Basic platform" width="40%"> <img src="/assets/basiccrashed.png" alt="Basic crashed" width="30%">
+*[**FPV build**](https://github.com/terrytaylorbonn/auxdrone/wiki/Part-4-Basic-platform-build) (a bit messy)*
+
+ <img src="/assets/muddy.png" alt="Mudddy" width="35%"> <img src="/assets/basiccrashed.png" alt="Basic crashed" width="30%"> 
+
+<!-- <img src="/assets/basicplatform.png" alt="Basic platform" width="35%"> -->
+
+*Pixhawk AI build [**flight test**](https://github.com/terrytaylorbonn/auxdrone/wiki/Part-5-Pix6c-PX4) and [**build design**](https://github.com/terrytaylorbonn/auxdrone/wiki/7.3-Flight-2-field-test) (unfortunately there are basically no field pics)*
+
+<img src="/assets/flightplan.png" alt="px4 flight plan" width="50%"> <img src="/assets/6cjnano.png" alt="6c" width="30%"> 
+<!-- <img src="/assets/6cjnano2.png" alt="6c components" width="30%"> -->
 
 
 <br> 

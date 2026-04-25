@@ -62,7 +62,7 @@ I became particulary interested in Palantir's AI systems because
 - (2) they can be used for a vast array of non-military purposes (logistics, manufacturing, healthcare, defense, operations, business intelligence), and 
 - (3) there were claims that Palantir's systems could become the real world [SkyNet](https://en.wikipedia.org/wiki/Skynet_(Terminator)) *(see my substack post [#73 Understanding Palantir Maven / Why AI will never become Skynet](https://ziptieai.substack.com/p/73-understanding-palantir-maven-through))*.
 
-The fears about SkyNet are inevitable when when Palantir's systems are mistakenly referred as AI-based. They are not based on AI, they are assisted by AI. AI does not press any buttons. AI is simply a "helpful assistant". The core control loop is traditional non-AI deterministic programming. AI is used for 
+Fears about SkyNet are inevitable when Palantir's systems are mistakenly referred to as AI-based. They are not based on, but rather assisted by AI. AI does not press any buttons. AI is simply a "helpful assistant". The core control loop is traditional non-AI deterministic programming. AI is used for 
 - Input and output (of "messy" human language representations)
 - Task planning (breaking up complex human language tasks into smaller deterministic tasks)
 - Rule injection (by AI into the main loop)
