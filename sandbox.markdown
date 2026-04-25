@@ -5,7 +5,15 @@ permalink: /sandbox/
 description: Last edit 25.0715
 ---
 
-My focus at one point was on LLMs. I thought that that was going to be the market focus. There is a lot of value in being able to deploy and fine-tune your own LLMs, but for me the opportunities are elsewhere.
+This page describes 
+- LLM stack demos
+- LLM (GPT-3) TF (transformer) algorithm
+
+<br>
+
+### LLM stack demos
+
+My focus at one point was on LLMs. I thought that that was going to be the market focus. There is a lot of value in being able to deploy and fine-tune your own LLMs, but for most of us these skills will not be used often. 
 
 The [wiki page](https://github.com/terrytaylorbonn/auxdrone/wiki/AI-stacks) title is "AI LLM stacks" because that was the focus. That wiki page is bit complicated (I simplified the right panel "Pages" TOC, and moved a lot of the TOC entries into the wiki page). For LLMs the following wiki subpages are of interest:
 
@@ -14,14 +22,56 @@ The [wiki page](https://github.com/terrytaylorbonn/auxdrone/wiki/AI-stacks) titl
 - [2.4 GPT/Copilot demos (a few demos)](https://github.com/terrytaylorbonn/auxdrone/wiki/LLM-stacks-%5C-4-CPLT-demos)
 - [2.6 Agent/LLM input docs (RAG demo)](https://github.com/terrytaylorbonn/auxdrone/wiki/LLM-stacks-%5C-4-CPLT-%5C-4.0b-Platforms-and-tools)
  
-<br>
-
 ![Smol](/assets/smol.png)
 
+<br>
+
+
+### LLM (GPT-3) TF (transformer) algorithm
+
+The following shows selected screenshots from the wiki page [Core AI concepts](https://github.com/terrytaylorbonn/auxdrone/wiki/Core-AI-concepts). These diagram are my own, and depict my interpretation of the GPT-3 algorithm. Its much more complex than what these few diagrams depict. But it gives you an appreciation of the vast complexity of TF calculations.
+
+#1 The main TF loop generates tokens.
+
+<img src="/assets/llm01_tokens.png" alt="01" width="40%">
+
+#2
+
+<img src="/assets/llm02_tf123.png" alt="02" width="45%">
+
+#3
+
+<img src="/assets/llm03_tfs1s6.png" alt="03" width="45%">
+
+#4
+
+<img src="/assets/llm04_tfahinfomix.png" alt="04" width="25%">
+
+#5 "Neurons" in the FFN
+
+<img src="/assets/llm05_tfffnneurons.png" alt="05" width="25%">
+
+#6 An example of matrix math
+
+<img src="/assets/llm06_tfhlayerdetection.png" alt="06" width="50%">
+
+#7 How complex logic (for detection) is implemented in the FFN
+
+<img src="/assets/llm07_tfxor.png" alt="07" width="50%">
+
+#8 
+
+<img src="/assets/llm08_tfh1h2.png" alt="08" width="45%">
+
+#9 A simplified diagram of how the hidden layers evolve over time
+
+<img src="/assets/llm09_tffinalstate.png" alt="09" width="45%">
+ 
+
 
 <br>
 
-26.0423
+26.0425
 
 <!-- 
 25.0310b ([Doc URLs](https://github.com/terrytaylorbonn/auxdrone/wiki/Main-doc-deployments)) ([Stack URLs](https://github.com/terrytaylorbonn/auxdrone/wiki/Stack-deployments)) ([Lab notes (Gdrive)](https://drive.google.com/drive/folders/1-Adawag9uA8_bq-hDF-nOuPYaRLz1eEO)) ([Git](https://github.com/terrytaylorbonn?tab=repositories)) -->
