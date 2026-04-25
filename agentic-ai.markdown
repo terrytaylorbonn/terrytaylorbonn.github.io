@@ -52,12 +52,19 @@ AIP probably offers a set of functionality similar to the following:
 
 <br>
 
+*Diagram from Substack post [#75 The Real Job of AI in Enterprise Apps](https://ziptieai.substack.com/p/75-the-real-job-of-ai-in-enterprise) shows how AI is only used to generate a plan ("08b AI")*
+
+<img src="/assets/aiplan.png" alt="AI planning" width="85%">
+
+<br>
+
 #### 5) Lessons learned from the demos
 
 
 Very "basic" demos of such functionality are listed on the wiki page [Agentic AI demos](https://github.com/terrytaylorbonn/auxdrone/wiki/4%E2%80%902-Agentic-AI-demos). Complete documentation with all the steps is on the Gdrive. The  goal of these very simple demos is to show basic core concepts that apply to AI systems of any size. For example:
 - Palantir will not become [SkyNet](https://en.wikipedia.org/wiki/Skynet_(Terminator)). The central agent control loop is not AI-controlled and presses no buttons (humans are required).
 - SW programming jobs will not disappear. Such systems require very capable product experts preferably with extensive SW experience. Programming is just becoming higher level. 
+
 
 <!-- 
 A few things you will notice if you do thOne of my major goals in studying AI has been to refute the hype (that I recognized early). The AI titans and gurus were feeding the public nonsense about how their inventions could think, have consciousness, have feelings, and even surpass human intelligence.
