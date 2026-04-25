@@ -6,8 +6,8 @@ description: Last edit 25.0715
 ---
 
 This page describes 
-- LLM stack demos
-- LLM (GPT-3) TF (transformer) algorithm
+- **LLM stack demos**. I planned to spend a lot of time on this, but at some point came to the conclusion that time would be better spent elsewhere. In any case, knowing the basic is quite important. Its not that difficult to install a smaller model on your local PC, and it does have benefits.
+- **LLM (GPT-3) TF (transformer) algorithm**. Its a lot of work to grasp the entire algorithm, but a basic study of the major steps helps you to appreciate just how much computation is involved in GPT-3 generation of a single token (and GPT-3 much smaller than the latest models)
 
 <br>
 
@@ -15,7 +15,7 @@ This page describes
 
 My focus at one point was on LLMs. I thought that that was going to be the market focus. There is a lot of value in being able to deploy and fine-tune your own LLMs, but for most of us these skills will not be used often. 
 
-The [wiki page](https://github.com/terrytaylorbonn/auxdrone/wiki/AI-stacks) title is "AI LLM stacks" because that was the focus. That wiki page is bit complicated (I simplified the right panel "Pages" TOC, and moved a lot of the TOC entries into the wiki page). For LLMs the following wiki subpages are of interest:
+The wiki page [**"AI LLM stacks"**](https://github.com/terrytaylorbonn/auxdrone/wiki/AI-stacks) is bit chaotic (I reorganized the wiki and moved a lot of the TOC entries into the wiki page). For LLMs the following wiki subpages are of interest:
 
 - [2.2 Demo deployments (HF, CloudFlare, etc)](https://github.com/terrytaylorbonn/auxdrone/wiki/LLM-stacks-%5C-2-Demo-deployments)
 - [2.3 Youtube demos](https://github.com/terrytaylorbonn/auxdrone/wiki/LLM-stacks-%5C-3-Youtube-demos). I did a lot of YouTube demos. Way back then (2025, a long time ago in AI-time) I had still not make the transition to working totally with LLMs (GPT) to learn new tech.
@@ -29,7 +29,7 @@ The [wiki page](https://github.com/terrytaylorbonn/auxdrone/wiki/AI-stacks) titl
 
 ### LLM (GPT-3) TF (transformer) algorithm
 
-The following shows selected screenshots from the wiki page [Core AI concepts](https://github.com/terrytaylorbonn/auxdrone/wiki/Core-AI-concepts). These diagram are my own, and depict my interpretation of the GPT-3 algorithm. Its much more complex than what these few diagrams depict. But it gives you an appreciation of the vast complexity of TF calculations.
+The following shows selected screenshots from the wiki page [**Core AI concepts**](https://github.com/terrytaylorbonn/auxdrone/wiki/Core-AI-concepts). These diagram are my own, and depict my interpretation of the GPT-3 algorithm. Its much more complex than what these few diagrams depict. But it gives you an appreciation of the vast complexity of TF calculations.
 
 #1 The main TF loop generates tokens.
 
