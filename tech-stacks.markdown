@@ -24,8 +24,14 @@ Topics include:
 - **Websites** — GitHub Pages, Jekyll, static site generators
 - **Docs systems** — Docusaurus, ReadTheDocs, Sphinx
 
+<br>
+
+26.0425
+
+<!--
 See also:
 - [Substack](https://substack.com/@ziptieai)
 - [Lab notes (Gdrive)](https://drive.google.com/drive/folders/1-Adawag9uA8_bq-hDF-nOuPYaRLz1eEO)
 - [Git](https://github.com/terrytaylorbonn?tab=repositories)
 - [Youtube](https://www.youtube.com/@ziptieai)
+-->

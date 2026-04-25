@@ -48,9 +48,9 @@ My focus shifted to the new revolutionary AI tools:
   - Fine-tuning
   - RAG, MCP, and tools
 
-I also became particulary interested in the hype surrounding these tools. I did not have to be an AI expert to understand that the expert claims about AI having real intelligence, emotions, consciousness, etc were knowingly false. AI runs on clocked binary circuits, nothing at like the neurons in the brain. I had read many times that up to 95% of AI projects failed. That meant that 20x more money than necessary was being spent on AI projects. The hype was quite effective.
+I became particulary interested in the hype surrounding these tools. I did not have to be an AI expert to understand that expert claims about AI having real intelligence (and emotions, consciousness, etc etc) were false. AI runs on clocked binary circuits, nothing like the neurons in the brain. For AI calculations are everything, the medium is means nothing (but speed; you could, theoretically, build a "mechanical" GPU and run AI on it; it would work, except its might require a year to generate a token). For the brain (and true intelligence) the medium is everything. The "algorithms" (how it generates true intelligence) are vastly more complex (and not understood). 
 
-The value of a firm grasp of AI fundamentals was obvious. My goal was to understand the core concepts and how to build practical applications.
+I had read many times that up to 95% of AI projects failed. That meant that 20x more money than necessary was being spent on AI projects (the hype was quite effective). The value of a firm grasp of AI fundamentals was obvious. My goal was to understand the core concepts and how to build practical applications.
 
 <br>
 
@@ -73,7 +73,7 @@ All of my previous AI experience provides a solid foundation for working with Ag
 An example of this is the hype around Palantir systems used in the Iran war. When I first heard of Palantir's systems I immediately became interested because 
 - (1) they work, 
 - (2) they can most certainly be used for a vast array of non-military purposes (logistics, manufacturing, healthcare, defense, operations, business intelligence), and 
-- (3) there were (totally unrealistic) claims that Palantir's systems could become the real world [SkyNet](https://en.wikipedia.org/wiki/Skynet_(Terminator)). 
+- (3) there were (totally unrealistic) claims that Palantir's systems could become the real world [SkyNet](https://en.wikipedia.org/wiki/Skynet_(Terminator)) (see my substack post [#73 Understanding Palantir Maven / Why AI will never become Skynet](https://ziptieai.substack.com/p/73-understanding-palantir-maven-through)).
 
 Point (3) above is an inevitable conclusion when Palantir's systems are mistakenly referred as AI-based. They are not based on AI, they are assisted by AI. The core control loop is traditional non-AI deterministic programming (and totally CPU-based). AI is used for 
 - Input and output (of "messy" human language data)

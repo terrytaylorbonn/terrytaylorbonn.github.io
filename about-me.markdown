@@ -6,8 +6,13 @@ permalink: /about/
 
 See the Wiki page [About the author](https://github.com/terrytaylorbonn/auxdrone/wiki/About-the-author).
 
-I am an AI developer / tech writer based in the USA and looking for work (in the USA, Taiwan, Israel, Eastern Europe). Proficient in Chinese, Russian, and German. Basic Hebrew.
+I am an AI developer / tech writer based in the USA. <br>
+Looking for work (in the USA, Taiwan, Israel, or Eastern Europe). <br> 
+Proficient in Chinese, Russian, and German. Basic Hebrew. <br>
 
-terrytaylorbonn@gmail.com
+- <a href="mailto:{{ site.email }}">{{ site.email }}</a>
+- [linkedin.com/in/terry-taylor-biz](https://www.linkedin.com/in/terry-taylor-biz/)
 
-[linkedin.com/in/terry-taylor-biz](https://www.linkedin.com/in/terry-taylor-biz/)
+<br>
+
+26.0425

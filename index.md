@@ -7,7 +7,7 @@ See the [Wiki page](https://github.com/terrytaylorbonn/auxdrone/wiki) for more i
 
 This site has the following pages:
 
-- **[ZiptieAI History](/history/)**. How the ZiptieAI project has evolved.
+- [ZiptieAI History](/history/). How the ZiptieAI project has evolved.
 - **[(4) Agentic AI](/agentic-ai/)**. Current focus. Palantir-style systems, tool use, workflows, planning systems.
 - [(3) Robotic AI](/robotic-ai/). JEPA, belief tracking, control loops, autonomy.
 - [(2) LLMs](/sandbox/).
