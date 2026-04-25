@@ -20,8 +20,8 @@ A typical definition of agentic AI would be "systems that plan, reason, and act 
 
 The LLM has 2 main components:
 
-1. A **transformer (TF)** that performs GPU-based computing to analyze human language input (a prompt) to determine what the output (response) should be. The TF is simply input/output (no loop).
-2. An **internal agent** ("iAgent", a deterministic CPU-based program) that interfaces between the TF and the outside world. This internal agent is the central control loop that manages complex tasks such as conversation history, structure, user interface, etc.
+1. A transformer (TF) that performs GPU-based computing to analyze human language input (a prompt) to determine what the output (response) should be. The TF is simply input/output (no loop).
+2. An internal agent ("iAgent", a deterministic CPU-based program) that interfaces between the TF and the outside world. This internal agent is the central control loop that manages complex tasks such as conversation history, structure, user interface, etc.
 
 <br>
 
