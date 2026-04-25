@@ -6,51 +6,46 @@ permalink: /history/
 
 <br>
 
-ZiptieAI has evolved with AI technology. What began as a drone-focused project became an exploration of practical AI systems.
+AI tech is evolving quickly. ZiptieAI is evolving along with it. What began as a drone-focused project has become an exploration of practical AI systems.
 
 
 <br>
 
 #### (1) [AI Drones](/aidrones/)
 
-This phase included drone flight simulation, hardware builds, and flight tests (the first flight tests were in my kitchen).
+This was the first phase of ZiptieAI (the name was inspired by the zipties Ukraine used to quickly configure drones). This phase included drone flight simulation, hardware builds, AI, and flight tests (the first flight tests were in my kitchen).
 
 AI capabilities centered on:
-- Object recognition using onboard cameras and CNNs
-- Autonomous flight support (AI-generated control inputs that could modify flight plans)
+- Object recognition using onboard cameras
+- Autonomous flight support (AI-generated flight plan modifications)
 
-My original plan was to spend my time developing the AI part of AI drones. For me the drones were only the carrier platforms. But I ended spending most of my time on the drones because of 
-- Open source software (outdated, with some core documents over 10 years old)
-- Components sourced from China (quality and documentation issues)
-
-I wanted to volunteer to build drones in Ukraine, but no success (even as a volunteer; complicated country). It seemed that to get a drone job in the West you needed to an expert in building (1) the platform or (2) the AI (preferably in both).  
+My original plan was to spend the majority of my time on the drone AI (the drones were only meant to be carrier platforms). But I ended spending most of my time on building drones because of quality and usability issues the open source software and components. My original goal was to work as a volunteer building drones in Ukraine.  
 
 <br>
 
 
 #### [(1b) Tech Stacks & Docs](/tech-stacks/)
 
-I maintained very good documentation of my AI drones activities (especially the critical tech details that were missing in the outdated documentation; some of the core docs/tools had not been updated for over a decade). My original plan was to build my own ZiptieAI website, wiki, and blogs (Substack and Youtube). 
+I documented my AI drones activities in detail. My original plan was to build my own ZiptieAI website, wiki, and blogs (Substack and Youtube) that focused exclusively on drones. The first step was an "inventory" (refresher course) of the latest doc tools (MERN stacks and REST/GraphQL APIs/docs). 
 
-The first step was an "inventory" (refresher course) of the latest doc tools (MERN stacks, REST/GraphQL APIs/docs). But for the first time I used AI tools for assistance. Wow. Suddenly using these doc tools (whose own documentation was of usually of limited use) had become vastly simpler. 
-
-A wakeup call. The AI tools became the focus. 
+For the first time I started using AI tools for coding. I was amazed by how much these AI tools simplified development.   
 
 <br>
 
 #### (2) [LLMs](/sandbox/)
 
-My focus shifted to the new revolutionary AI tools:
-- CNNs (convoluted neural networks). CNNs were the basic of the drone oject recognition. 
-- LLMs (large language models) and in particular the LLM TF (transformer neural network). 
+My focus shifted to AI:
+- CNNs (convoluted neural networks). CNNs were the basic of the drone oject recognition. Studying CNNs was good preparation for the much more complex LLMs.
+- LLMs (large language models)
+  - Transformers (the LLM neural network). 
   - API-based model usage (major frontier models)
   - Local and remote model deployment (smaller models)
   - Fine-tuning
   - RAG, MCP, and tools
 
-I became particulary interested in the hype surrounding these tools. I did not have to be an AI expert to understand that expert claims about AI having real intelligence (and emotions, consciousness, etc etc) were false. AI runs on clocked binary circuits, nothing like the neurons in the brain. For AI calculations are everything, the medium is means nothing (but speed; you could, theoretically, build a "mechanical" GPU and run AI on it; it would work, except its might require a year to generate a token). For the brain (and true intelligence) the medium is everything. The "algorithms" (how it generates true intelligence) are vastly more complex (and not understood). 
+I became particulary interested in the claims about AI having intelligence (and emotions, consciousness, etc). AI runs on clocked binary circuits (nothing like the neurons in the brain). Theoretically you could build a "mechanical" GPU and run AI on it (it would require perhaps years to generate a token). The only difference between the electronic and mechanical GPU would be the execution speed.
 
-I had read many times that up to 95% of AI projects failed. That meant that 20x more money than necessary was being spent on AI projects (the hype was quite effective). The value of a firm grasp of AI fundamentals was obvious. My goal was to understand the core concepts and how to build practical applications.
+I had read that up to 95% of AI projects failed. That meant that 20x more money than necessary was being spent on AI projects. The value of a firm grasp of AI fundamentals was obvious. My goal was to understand the core concepts and how to build practical applications.
 
 <br>
 
