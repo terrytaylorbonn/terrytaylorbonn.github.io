@@ -49,7 +49,7 @@ I had read that up to 95% of AI projects failed. That meant that 20x more money 
 
 AI makes mistakes. Your AI chatbot warns you about this constantly. Chatbot mistakes are acceptable, but robots (especially those around humans, such as cars and humanoids) have to work flawlessly (from a safety standpoint). So Yan LeCun's claims that JEPA would provide that level of saftey to robots with JEPA sparked a renewed interest in robotic AI. I did a lot of JEPA demos. I then asked GPT how, if these JEPA/LeCun tools still use transformers, will they be fundamentally different from LLMs. GPT said they won't be. 
 
-In any case, the time spent doing hands-on demos for representational learning, prediction-based systems, belief tracking, control loops, planning under uncertainty, etc was well spent. Many of the concepts (such as estimation and autonomy) were related to earlier drone work.
+In any case, the time spent doing hands-on demos (for representational learning, prediction-based systems, belief tracking, control loops, planning under uncertainty, etc) was well spent. Many of the concepts (such as estimation and autonomy) were related to earlier drone work.
 
 <br>
 
