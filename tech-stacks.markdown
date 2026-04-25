@@ -4,11 +4,11 @@ title: Tech Stacks & Docs
 permalink: /tech-stacks/
 ---
 
-Tech Stacks & Docs covers full-stack development, APIs, and documentation systems.
+<!-- Tech Stacks & Docs covers full-stack development, APIs, and documentation systems. -->
 
-My original goal was to explore the latest doc (text and API) tools. But I started using Copilot and GPT as assistants, and was shocked how much this simplified the process of creating websites. I mainly focused on how AI could help. Since AI had simplified things so much, I decided to focus on more higher level tasks.
+My original goal was to do a deep dive into the latest doc tools (for text and API). But when I started using Copilot and GPT as assistants, I never got down to the nitty gritty details. I was shocked by how much AI simplified the process of creating websites and API docs. At some point I started researching the details of the AI tools and never made it back to finishing this section. **So things are a bit chaotic**. 
 
-Most of the content links are on the [wiki page](https://github.com/terrytaylorbonn/auxdrone/wiki/AI-stacks) titled "AI LLM stacks". For tech stacks and docs the following wiki subpages are of interest:
+Most of the content links are on the wiki page [AI LLM stacks](https://github.com/terrytaylorbonn/auxdrone/wiki/AI-stacks). For tech stacks and docs the following wiki subpages are of interest:
 
 - [2.5 Published docs](https://github.com/terrytaylorbonn/auxdrone/wiki/LLM-stacks-%5C-5-Published-docs)
   - [2.5.1 Test websites](https://github.com/terrytaylorbonn/auxdrone/wiki/LLM-stacks-%5C-Websites)
@@ -19,10 +19,11 @@ Most of the content links are on the [wiki page](https://github.com/terrytaylorb
 
 Topics include:
 
-- **MERN** — MongoDB, Express, React, Node.js
-- **APIs** — REST, GraphQL, Swagger/OpenAPI
-- **Websites** — GitHub Pages, Jekyll, static site generators
-- **Docs systems** — Docusaurus, ReadTheDocs, Sphinx
+- MERN — MongoDB, Express, React, Node.js
+- APIs — REST, GraphQL, Swagger/OpenAPI
+- Websites — GitHub Pages, Jekyll, static site generators
+- Docs systems — Docusaurus, ReadTheDocs, Sphinx
+
 
 <br>
 

@@ -106,7 +106,8 @@ Focuses on the FC/firmware combinations shown below (with status).
 | Betaflight | | Working |
 | INAV | | Working |
 
-<img src="/assets/basicplatform.png" alt="Basic platform" width="40%">
+<img src="/assets/basicplatform.png" alt="Basic platform" width="40%"> <img src="/assets/basiccrashed.png" alt="Basic crashed" width="30%">
+
 
 <br> 
 
