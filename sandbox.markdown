@@ -59,56 +59,62 @@ The term "agent" normally means a deterministic (non-AI, not GPU-based) control 
 
 <br>
 
-### 4 LLM (GPT-3) TF (transformer) algorithm (WIP; need to add text for #1-#9)
+### 4 LLM (GPT-3) TF (transformer) algorithm
 
 The following shows selected screenshots from the wiki page [**Core AI concepts**](https://github.com/terrytaylorbonn/auxdrone/wiki/Core-AI-concepts). These diagram are my own, and depict my interpretation of the GPT-3 algorithm. Its much more complex than what these few diagrams depict. But it gives you an appreciation of the vast complexity of TF calculations.
 
+<br>
+
 #### 4.1 The main loop and the subloop
 
-#1 The main TF loop generates a token each loop. That token is fed back into the running response.
+(1) The main TF loop generates a token each loop. That token is fed back into the running response.
 
 <img src="/assets/llm01_tokens.png" alt="01" width="50%">
 
-#2 The subloop S4 is repeated 94 times to generate a token. 
+(2) The subloop S4 is repeated 94 times to generate a token. 
 
 <img src="/assets/llm02_tf123.png" alt="02" width="50%">
 
 <img src="/assets/llm03_tfs1s6.png" alt="03" width="45%">
 
+<br>
+
 #### 4.2 Attention heads (share context info)
 
-#3 In the subloop B (1) in the hidden layers (after the input and before the output), token hidden state values (12288 FP numbers for each token that define the current token states) are adjusted based on the values of other tokens that are determined to be related (by context for example). The diagram below shows the 96 heads for each token (each head has 128 FP numbers) and the 2048 (maximum) tokens.
+(3) In the subloop B (1) in the hidden layers (after the input and before the output), token hidden state values (12288 FP numbers for each token that define the current token states) are adjusted based on the values of other tokens that are determined to be related (by context for example). The diagram below shows the 96 heads for each token (each head has 128 FP numbers) and the 2048 (maximum) tokens.
 
 <img src="/assets/llm04_tfahinfomix.png" alt="04" width="25%">
 
+<br>
+
 #### 4.3 Attention heads (share context info)
 
-#4 The following shows the neural net in the FFN for a single token that takes the 12288 FP numbers as input to the 49152 hidden layer neurons which detect non-linear patterns. The 49152 outputs are then added to the 12288 outputs. 
+(4) The following shows the neural net in the FFN for a single token that takes the 12288 FP numbers as input to the 49152 hidden layer neurons which detect non-linear patterns. The 49152 outputs are then added to the 12288 outputs. 
 
 <img src="/assets/llm05_tfffnneurons.png" alt="05" width="25%">
 
-#5 The following shows the matrix math of the detection layer (such matrix math is used everywhere in the TF).
+(5) The following shows the matrix math of the detection layer (such matrix math is used everywhere in the TF).
 
 <img src="/assets/llm06_tfhlayerdetection.png" alt="06" width="50%">
 
-#6 How complex logic (for detection) is implemented in the FFN. The example below is extremely oversimplified, but shows the hidden layer additive gates (h1, h2, and y1) that construct an approximate XOR gate. h1 and h2 
+(6) How complex logic (for detection) is implemented in the FFN. The example below is extremely oversimplified, but shows the hidden layer additive gates (h1, h2, and y1) that construct an approximate XOR gate. h1 and h2 
 
 <img src="/assets/llm07_tfxor.png" alt="07" width="50%">
 
-#7 The following 2 diagrams plot h1, h2, and y1. The maximum y1 occurs when x1 + x2 = 1 (h1 + h2 = 0). This is an approximate XOR additive gate. The main point is: Without h layer detection, it would be impossible to construct such a non-linear complex logic. Note that this is a super-simplified example. Note that in a real GPT-3 FFN, the h-layer has 49152 detectors each with 12288 inputs (and bias), and 12288 y outputs each with with 49152 inputs. The graphs below would have x1...x12288, h1...h49152, and y1...y12288. The resulting logic would "hyperdimensional" with "fuzzy" outputs. The example below is just to give a basic idea of the extreme "almost infinite" number of combinations. This enables an "almost infinite" number of combinations to be modeled, and even more "almost infinite" as the model gets larger (thus the race for the largest models). Note: These are my original diagrams and original demo. I believe they are correct, but the only "expert" I have consulted with is GPT.    
+(7) The following 2 diagrams plot h1, h2, and y1. The maximum y1 occurs when x1 + x2 = 1 (h1 + h2 = 0). This is an approximate XOR additive gate. The main point is: Without h layer detection, it would be impossible to construct such a non-linear complex logic. Note that this is a super-simplified example. Note that in a real GPT-3 FFN, the h-layer has 49152 detectors each with 12288 inputs (and bias), and 12288 y outputs each with with 49152 inputs. The graphs below would have x1...x12288, h1...h49152, and y1...y12288. The resulting logic would "hyperdimensional" with "fuzzy" outputs. The example below is just to give a basic idea of the extreme "almost infinite" number of combinations. This enables an "almost infinite" number of combinations to be modeled, and even more "almost infinite" as the model gets larger (thus the race for the largest models). Note: These are my original diagrams and original demo. I believe they are correct, but the only "expert" I have consulted with is GPT.    
 
 <img src="/assets/llm08_tfh1h2.png" alt="08" width="45%">
 
+<br>
+
 #### 4.4 Final layer (next token decision)
 
-#8 A simplified diagram of how the hidden layers evolve over time (generated by GPT). This is perhaps the most important diagram. This is where the "magic" really occurs. The right side of the diagram depicts a 12288x1 matrix. This is the size of the token embedding (the initial input to the TF). During the 96 TF layers (required to compute the next token), the content of the token embedding gradually transforms. Those 12288 FP numbers gradually contain more precise info about the token and the set of tokens in general (thanks to AHs mixing info between tokens and FFNs detecting complex meaning that is fed back into the token).
+(8) A simplified diagram of how the hidden layers evolve over time (generated by GPT). This is perhaps the most important diagram. This is where the "magic" really occurs. The right side of the diagram depicts a 12288x1 matrix. This is the size of the token embedding (the initial input to the TF). During the 96 TF layers (required to compute the next token), the content of the token embedding gradually transforms. Those 12288 FP numbers gradually contain more precise info about the token and the set of tokens in general (thanks to AHs mixing info between tokens and FFNs detecting complex meaning that is fed back into the token).
 
 After the 96th layer, all tokens contains a vast amount of data in the 12288 FP numbers. But the last token contains all the data required to compute the next token (the common statement that the next token is computed from the last token is misleading; the last token's 12288 FP numbers contain info collected from all tokens).
 
 <img src="/assets/llm09_tffinalstate.png" alt="09" width="45%">
  
-
-
 <br>
 
 26.0426

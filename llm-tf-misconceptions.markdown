@@ -5,6 +5,7 @@ permalink: /llm-tf-misconceptions/
 description: Last edit 26.0426
 ---
 
+*See also webpage [(2) LLMs](/sandbox/)*
 
 <img src="/assets/hillsvalleys.png" alt="smol" width="45%">
 
@@ -239,4 +240,6 @@ Clean Comparison<br>
 
 Your intuition was solid: The mismatch comes from trying to map two very different systems with the same vocabulary.<br>
 
+<br>
 
+26.0426
