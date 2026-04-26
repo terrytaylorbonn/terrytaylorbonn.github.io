@@ -11,6 +11,12 @@ This page describes
 - **3 LLM internal Agent**. A deterministic (non-AI, not GPU-based) control loop inside the LLM that is the interface between the LLM transformer (TF) and the outside (of the LLM) world.  
 - **4 LLM (GPT-3) TF (transformer) algorithm**. Its a lot of work to grasp the entire algorithm, but a basic study of the major steps helps you to appreciate just how much computation is involved in GPT-3 generation of a single token (and GPT-3 much smaller than the latest models)
 
+See also: 
+  - **[Core AI (LLM) misconceptions](/llm-tf-misconceptions/)** (website page) describes a chat that GPT and I had recently.
+  - **[Core AI (LLM) concepts](https://github.com/terrytaylorbonn/auxdrone/wiki/Core-AI-concepts)** (wiki page) explains in detail GPT-3 transformer algorithms. 
+
+
+
 <br>
 
 ### 1 LLM stack demos
@@ -24,11 +30,15 @@ The wiki page [**"AI LLM stacks"**](https://github.com/terrytaylorbonn/auxdrone/
 - [2.4 GPT/Copilot demos (a few demos)](https://github.com/terrytaylorbonn/auxdrone/wiki/LLM-stacks-%5C-4-CPLT-demos)
 - [2.6 Agent/LLM input docs (RAG demo)](https://github.com/terrytaylorbonn/auxdrone/wiki/LLM-stacks-%5C-4-CPLT-%5C-4.0b-Platforms-and-tools)
  
-![Smol](/assets/smol.png)
+<img src="/assets/smol.png" alt="smol" width="65%">
+
 
 <br>
 
 ### 2 LLM transformer training (WIP, will add diagrams)
+
+*See also [Core AI (LLM) misconceptions](/llm-tf-misconceptions/) (website page) describes a chat that GPT and I had recently that started off about training misconceptions.*
+
 
 Training is something most of us will never do (Palantir uses standard models; they do no customized training). But its the second heading for a good reason: Training is the defining aspect of model transformer (TF) design (section 4 below describes GPT-3 TF design). 
 

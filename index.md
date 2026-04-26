@@ -10,7 +10,9 @@ This site has the following pages:
 - [ZiptieAI History](/history/). How the ZiptieAI project has evolved.
 - **[(4) Agentic AI](/agentic-ai/)**. Current focus. Palantir-style systems, tool use, workflows, planning systems.
 - [(3) Robotic AI](/robotic-ai/). JEPA, belief tracking, control loops, autonomy.
-- [(2) LLMs](/sandbox/). Large language models, transformers, local and API-based models, RAG, prompting, MCP, tool calling, fine-tuning, and practical AI application design *(see the wiki page [AI concepts](https://github.com/terrytaylorbonn/auxdrone/wiki/Core-AI-concepts) for my explanation of GPT-3 transformer algorithms)*. 
+- **[(2) LLMs](/sandbox/)**. Large language models, transformers, local and API-based models, RAG, prompting, MCP, tool calling, fine-tuning, and practical AI application design. See also: 
+  - **[Core AI (LLM) misconceptions](/llm-tf-misconceptions/)** (website page) describes a chat that GPT and I had recently.
+  - **[Core AI (LLM) concepts](https://github.com/terrytaylorbonn/auxdrone/wiki/Core-AI-concepts)** (wiki page) explains in detail GPT-3 transformer algorithms. 
 - [(1) AI Drones](/aidrones/). Simulation, drone builds (Pixhawk, FPV), AI (Jetson Nano, Pi), and autonomous flight.
 - [Tech Stacks & Docs](/tech-stacks/). MERN, APIs, websites, and doc systems.
 - [About](/about/).
