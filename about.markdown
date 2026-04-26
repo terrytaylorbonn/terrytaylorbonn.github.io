@@ -8,7 +8,7 @@ See the [Wiki page](https://github.com/terrytaylorbonn/auxdrone/wiki/AI-drone-ov
 
 <br>
 
-I worked on AI drones from Sep 2023 to Sep 2024 focusing on:
+I worked on AI drones from 2023 to 2024 focusing on:
 - Drone simulation
 - FPV and Pixhawk drone builds
 - AI (object recognition using Jetson Nano and PI4)
