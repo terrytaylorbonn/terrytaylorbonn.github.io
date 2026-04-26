@@ -12,8 +12,8 @@ This page describes
 - **4 LLM (GPT-3) TF (transformer) algorithm**. Its a lot of work to grasp the entire algorithm, but a basic study of the major steps helps you to appreciate just how much computation is involved in GPT-3 generation of a single token (and GPT-3 much smaller than the latest models)
 
 See also: 
-  - **[Core AI (LLM) misconceptions](/llm-tf-misconceptions/)** (website page) describes a chat that GPT and I had recently.
   - **[Core AI (LLM) concepts](https://github.com/terrytaylorbonn/auxdrone/wiki/Core-AI-concepts)** (wiki page) explains in detail GPT-3 transformer algorithms. 
+  - **[Core AI (LLM) misconceptions](/llm-tf-misconceptions/)** describes a chat that GPT and I had recently.
 
 
 
@@ -23,7 +23,7 @@ See also:
 
 My focus at one point was on LLMs. I thought that that was going to be the market focus. There is a lot of value in being able to deploy and fine-tune your own LLMs, but for most of us these skills will not be used often. 
 
-The wiki page [**"AI LLM stacks"**](https://github.com/terrytaylorbonn/auxdrone/wiki/AI-stacks) is bit chaotic (I reorganized the wiki and moved a lot of the TOC entries into the wiki page). For LLMs the following wiki subpages are of interest:
+The wiki page [**"AI LLM stacks"**](https://github.com/terrytaylorbonn/auxdrone/wiki/AI-stacks) (a bit chaotic after a recent wiki reorganization) lists the following subpages are of interest:
 
 - [2.2 Demo deployments (HF, CloudFlare, etc)](https://github.com/terrytaylorbonn/auxdrone/wiki/LLM-stacks-%5C-2-Demo-deployments)
 - [2.3 Youtube demos](https://github.com/terrytaylorbonn/auxdrone/wiki/LLM-stacks-%5C-3-Youtube-demos). I did a lot of YouTube demos. Way back then (2025, a long time ago in AI-time) I had still not make the transition to working totally with LLMs (GPT) to learn new tech.
