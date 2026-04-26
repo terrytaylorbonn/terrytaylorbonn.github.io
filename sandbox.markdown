@@ -2,13 +2,13 @@
 layout: page
 title: "(2) LLMs"
 permalink: /sandbox/
-description: Last edit 25.0715
+description: Last edit 26.0426
 ---
 
 This page describes 
 - **1 LLM stack demos**. I planned to spend a lot of time on this, but at some point came to the conclusion that time would be better spent elsewhere. In any case, knowing the basic is quite important. Its not that difficult to install a smaller model on your local PC, and it does have benefits.
-- **2 LLM transformer (TF) training**
-- **3 LLM internal Agent**
+- **2 LLM transformer (TF) training**. Training is something most of us will never do (Palantir uses standard models; they do no customized training). But its the main driving factor in the design of LLM transformers. 
+- **3 LLM internal Agent**. A deterministic (non-AI, not GPU-based) control loop inside the LLM that is the interface between the LLM transformer (TF) and the outside (of the LLM) world.  
 - **4 LLM (GPT-3) TF (transformer) algorithm**. Its a lot of work to grasp the entire algorithm, but a basic study of the major steps helps you to appreciate just how much computation is involved in GPT-3 generation of a single token (and GPT-3 much smaller than the latest models)
 
 <br>
