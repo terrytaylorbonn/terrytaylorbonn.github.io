@@ -6,12 +6,14 @@ description: Last edit 25.0715
 ---
 
 This page describes 
-- **LLM stack demos**. I planned to spend a lot of time on this, but at some point came to the conclusion that time would be better spent elsewhere. In any case, knowing the basic is quite important. Its not that difficult to install a smaller model on your local PC, and it does have benefits.
-- **LLM (GPT-3) TF (transformer) algorithm**. Its a lot of work to grasp the entire algorithm, but a basic study of the major steps helps you to appreciate just how much computation is involved in GPT-3 generation of a single token (and GPT-3 much smaller than the latest models)
+- **1 LLM stack demos**. I planned to spend a lot of time on this, but at some point came to the conclusion that time would be better spent elsewhere. In any case, knowing the basic is quite important. Its not that difficult to install a smaller model on your local PC, and it does have benefits.
+- **2 LLM transformer (TF) training**
+- **3 LLM internal Agent**
+- **4 LLM (GPT-3) TF (transformer) algorithm**. Its a lot of work to grasp the entire algorithm, but a basic study of the major steps helps you to appreciate just how much computation is involved in GPT-3 generation of a single token (and GPT-3 much smaller than the latest models)
 
 <br>
 
-### LLM stack demos
+### 1 LLM stack demos
 
 My focus at one point was on LLMs. I thought that that was going to be the market focus. There is a lot of value in being able to deploy and fine-tune your own LLMs, but for most of us these skills will not be used often. 
 
@@ -26,8 +28,27 @@ The wiki page [**"AI LLM stacks"**](https://github.com/terrytaylorbonn/auxdrone/
 
 <br>
 
+### 2 LLM transformer training (WIP, will add diagrams)
 
-### LLM (GPT-3) TF (transformer) algorithm
+Training is something most of us will never do (Palantir uses standard models; they do no customized training). But its the second heading for a good reason: Training is the defining aspect of model transformer (TF) design (section 4 below describes GPT-3 TF design). 
+
+Training is actually a complex programming process (it is not training in the human sense). Input data is fed through the TF, and the the TF internal parameters (weights and biases) are adjusted so that the output more closely matches the intended output. The input and required output are all taken from huge sets of human generated text. 
+
+The main point is: No human does any of the programming. No human is deciding the values of weights and biases. Its all automated. And training can fail. Since its a neural network (NN), the neurons are all interconnected. When you change the value of a weight and/or bias (there are 175 billion of them in GPT-3), it can effect the input/output combinations you trained earlier. Its as much of an art than a science. 
+
+This is important to understand for several reasons. (1) You appreciate that a TF is a universal function approximator (UFA). It can take an input combination that it was never trained on and (after a massive number of statistical calculations) compute the best matching output (based on its training). (2) The tradeoff is that the TF is approximating. That's why LLMs always warned you that they can make mistakes.
+
+This, by the way, (3) has nothing to do with how human process language. Understanding this is not useless theory. Its vital for understanding what you can expect from AI in an application. This is why in Palanatir AI is a "helpful assitant", not the (a) central control loop or (b) the human who actually makes critical final decisions.  
+
+<br>
+
+### 3 LLM Internal Agent (WIP, will add diagrams)
+
+The term "agent" normally means a deterministic (non-AI, not GPU-based) control loop that is the "caretaker" or interface between the LLM model and the outside world. However, there is also an agent (what I call an internal agent or "iAgent") in the LLM that is the interface between the transformer (TF) and the outside (of the LLM) world. Again, as with training, understanding this helps to understand the core nature of what an LLM and an agent is. An (external) agent is to some extent just an extension or a partner of the internal agent. 
+
+<br>
+
+### 4 LLM (GPT-3) TF (transformer) algorithm (WIP; need to add text for #1-#9)
 
 The following shows selected screenshots from the wiki page [**Core AI concepts**](https://github.com/terrytaylorbonn/auxdrone/wiki/Core-AI-concepts). These diagram are my own, and depict my interpretation of the GPT-3 algorithm. Its much more complex than what these few diagrams depict. But it gives you an appreciation of the vast complexity of TF calculations.
 
@@ -71,7 +92,7 @@ The following shows selected screenshots from the wiki page [**Core AI concepts*
 
 <br>
 
-26.0425
+26.0426
 
 <!-- 
 25.0310b ([Doc URLs](https://github.com/terrytaylorbonn/auxdrone/wiki/Main-doc-deployments)) ([Stack URLs](https://github.com/terrytaylorbonn/auxdrone/wiki/Stack-deployments)) ([Lab notes (Gdrive)](https://drive.google.com/drive/folders/1-Adawag9uA8_bq-hDF-nOuPYaRLz1eEO)) ([Git](https://github.com/terrytaylorbonn?tab=repositories)) -->
