@@ -40,7 +40,7 @@ I was able to try hacks like this easily because my parts were not all scrunched
 
 ### My original project plan 
 
-is shown below. I completed parts 1-4, and then decided that it was time to move on (I had doubts about finding a job building drones anywhere or even volunteer work buildings drones in Ukraine).
+is shown below. I completed parts 1-4, and then got distracted by LLMs and agentic AI.
 
 | Wiki project part (stage) | Activities |
 |-------|--------|
