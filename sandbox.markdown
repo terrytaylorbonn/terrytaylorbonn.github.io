@@ -15,8 +15,6 @@ See also:
   - **[Core AI (LLM) concepts](https://github.com/terrytaylorbonn/auxdrone/wiki/Core-AI-concepts)** (wiki page) explains in detail GPT-3 transformer algorithms. 
   - **[Core AI (LLM) misconceptions](/llm-tf-misconceptions/)** describes a chat that GPT and I had recently.
 
-
-
 <br>
 
 ### 1 LLM stack demos
@@ -35,10 +33,9 @@ The wiki page [**"AI LLM stacks"**](https://github.com/terrytaylorbonn/auxdrone/
 
 <br>
 
-### 2 LLM transformer training (WIP, will add diagrams)
+### 2 LLM transformer training
 
 *See also [Core AI (LLM) misconceptions](/llm-tf-misconceptions/) (website page) describes a chat that GPT and I had recently that started off about training misconceptions.*
-
 
 Training is something most of us will never do (Palantir uses standard models; they do no customized training). But its the second heading for a good reason: Training is the defining aspect of model transformer (TF) design (section 4 below describes GPT-3 TF design). 
 
@@ -50,11 +47,15 @@ This is important to understand for several reasons. (1) You appreciate that a T
 
 This, by the way, (3) has nothing to do with how human process language. Understanding this is not useless theory. Its vital for understanding what you can expect from AI in an application. This is why in Palanatir AI is a "helpful assitant", not the (a) central control loop or (b) the human who actually makes critical final decisions.  
 
+<img src="/assets/hillsvalleys.png" alt="smol" width="35%">
+
 <br>
 
-### 3 LLM Internal Agent (WIP, will add diagrams)
+### 3 LLM Internal Agent
 
 The term "agent" normally means a deterministic (non-AI, not GPU-based) control loop that is the "caretaker" or interface between the LLM model and the outside world. However, there is also an agent (what I call an internal agent or "iAgent") in the LLM that is the interface between the transformer (TF) and the outside (of the LLM) world. Again, as with training, understanding this helps to understand the core nature of what an LLM and an agent is. An (external) agent is to some extent just an extension or a partner of the internal agent. 
+
+<img src="/assets/iagent.png" alt="iagent" width="35%">
 
 <br>
 
