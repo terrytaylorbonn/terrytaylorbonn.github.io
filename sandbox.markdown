@@ -63,39 +63,37 @@ The term "agent" normally means a deterministic (non-AI, not GPU-based) control 
 
 The following shows selected screenshots from the wiki page [**Core AI concepts**](https://github.com/terrytaylorbonn/auxdrone/wiki/Core-AI-concepts). These diagram are my own, and depict my interpretation of the GPT-3 algorithm. Its much more complex than what these few diagrams depict. But it gives you an appreciation of the vast complexity of TF calculations.
 
-#1 The main TF loop generates tokens.
+#1 The main TF loop generates a token each loop. That token is fed back into the running response.
 
-<img src="/assets/llm01_tokens.png" alt="01" width="40%">
+<img src="/assets/llm01_tokens.png" alt="01" width="50%">
 
-#2
+#2 The subloop S4 is repeated 94 times to generate a token. 
 
-<img src="/assets/llm02_tf123.png" alt="02" width="45%">
-
-#3
+<img src="/assets/llm02_tf123.png" alt="02" width="50%">
 
 <img src="/assets/llm03_tfs1s6.png" alt="03" width="45%">
 
-#4
+#3 In the subloop B (1) in the hidden layers (after the input and before the output), token hidden state values (12288 FP numbers for each token that define the current token states) are adjusted based on the values of other tokens that are determined to be related (by context for example). The diagram below shows the 96 heads for each token (each head has 128 FP numbers) and the 2048 (maximum) tokens.
 
 <img src="/assets/llm04_tfahinfomix.png" alt="04" width="25%">
 
-#5 "Neurons" in the FFN
+#4 The following shows the neural net in the FFN for a single token that takes the 12288 FP numbers as input to the 49152 hidden layer neurons which detect non-linear patterns. The 49152 outputs are then added to the 12288 outputs. 
 
 <img src="/assets/llm05_tfffnneurons.png" alt="05" width="25%">
 
-#6 An example of matrix math
+#5 The following shows the matrix math of the detection layer (used to calculate the new token). Such matrix math is used everywhere in the TF.
 
 <img src="/assets/llm06_tfhlayerdetection.png" alt="06" width="50%">
 
-#7 How complex logic (for detection) is implemented in the FFN
+#6 How complex logic (for detection) is implemented in the FFN
 
 <img src="/assets/llm07_tfxor.png" alt="07" width="50%">
 
-#8 
+#7 
 
 <img src="/assets/llm08_tfh1h2.png" alt="08" width="45%">
 
-#9 A simplified diagram of how the hidden layers evolve over time
+#8 A simplified diagram of how the hidden layers evolve over time
 
 <img src="/assets/llm09_tffinalstate.png" alt="09" width="45%">
  
