@@ -13,6 +13,7 @@ This site has the following pages:
 - **[(2) LLMs](/sandbox/)**. Large language models, transformers, local and API-based models, RAG, prompting, MCP, tool calling, fine-tuning, and practical AI application design. See also: 
   - [Core AI (LLM) concepts](https://github.com/terrytaylorbonn/auxdrone/wiki/Core-AI-concepts) (wiki page) explains in detail GPT-3 transformer algorithms. 
   - [Core AI (LLM) misconceptions](/llm-tf-misconceptions/) describes a chat that GPT and I had recently.
+  - [Core AI CNN (object recognition) concepts](/cnn/)
 - [(1) AI Drones](/aidrones/). Simulation, drone builds (Pixhawk, FPV), AI (Jetson Nano, Pi), and autonomous flight.
 - [Tech Stacks & Docs](/tech-stacks/). MERN, APIs, websites, and doc systems.
 - [About](/about/).
