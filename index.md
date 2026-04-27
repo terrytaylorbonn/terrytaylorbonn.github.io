@@ -16,6 +16,7 @@ This site has the following pages:
   - [Core AI CNN (object recognition) concepts](/cnn/)
 - [(1) AI Drones](/aidrones/). Simulation, drone builds (Pixhawk, FPV), AI (Jetson Nano, Pi), and autonomous flight.
 - [Tech Stacks & Docs](/tech-stacks/). MERN, APIs, websites, and doc systems.
+- [Resources](/resources/). Wiki, Substack, Youtube, Github, and Google Drive. 
 - [About](/about/).
 
 

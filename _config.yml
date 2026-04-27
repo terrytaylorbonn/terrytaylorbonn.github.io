@@ -38,6 +38,7 @@ header_pages:
   - sandbox.markdown
   - about.markdown
   - tech-stacks.markdown
+  - resources.markdown
   - about-me.markdown
 
 # Build settings
