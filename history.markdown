@@ -24,18 +24,22 @@ My original plan was to spend the majority of my time on the drone AI (the drone
 
 <br>
 
-
-#### [(1b) Tech Stacks & Docs](/tech-stacks/)
+#### [Tech Stacks & Docs](/tech-stacks/)
 
 I documented my AI drone activities in detail. My original plan was to build my own ZiptieAI DIY drone website, wiki, and blogs (Substack and Youtube). The first step was a refresher course on the latest doc tools (MERN stacks and REST/GraphQL APIs/docs). For the first time I started using the latest AI tools for coding. I was amazed by how much these AI tools simplified development.   
 
 <br>
 
+#### CNNs
+
+CNNs (convoluted neural networks) were used for drone oject recognition. Studying CNNs was good preparation for studying the much more complex LLMs.
+
+<br>
+
+
 #### **(2) [LLMs](/sandbox/)**
 
-My focus shifted to AI:
-- CNNs (convoluted neural networks). CNNs were used for drone oject recognition. Studying CNNs was good preparation for studying the much more complex LLMs.
-- LLMs (large language models)
+My focus shifted to LLMs (large language models)
   - Transformers (the LLM neural network) *(see the wiki page [AI concepts](https://github.com/terrytaylorbonn/auxdrone/wiki/Core-AI-concepts) for my explanation of GPT-3 transformer algorithms)* 
   - API-based model usage (major frontier models)
   - Local and remote model deployment (smaller models)
