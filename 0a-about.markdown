@@ -4,6 +4,8 @@ title: About
 permalink: /about/
 ---
 
+<br> 
+
 See the Wiki page [About the author](https://github.com/terrytaylorbonn/auxdrone/wiki/About-the-author).
 
 I am an AI developer / writer based in the USA. <br>

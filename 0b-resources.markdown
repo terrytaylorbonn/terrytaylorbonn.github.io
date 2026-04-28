@@ -5,6 +5,8 @@ permalink: /resources/
 description: Last edit 26.0427
 ---
 
+<br> 
+
 #### Wiki
 [github.com/terrytaylorbonn/auxdrone/wiki](https://github.com/terrytaylorbonn/auxdrone/wiki) mirrors this website. The wiki has hundreds of pages of tech notes and project history.<br>
 

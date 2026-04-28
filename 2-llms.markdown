@@ -5,6 +5,8 @@ permalink: /sandbox/
 description: Last edit 26.0426
 ---
 
+<br> 
+
 This page describes 
 - **1 LLM stack demos**. I planned to spend a lot of time on this, but at some point came to the conclusion that time would be better spent elsewhere. In any case, knowing the basic is quite important. Its not that difficult to install a smaller model on your local PC, and it does have benefits.
 - **2 LLM transformer (TF) training**. Training is something most of us will never do (Palantir uses standard models; they do no customized training). But its the main driving factor in the design of LLM transformers. 

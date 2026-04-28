@@ -4,9 +4,9 @@ title: "(1) AI drones"
 permalink: /aidrones/
 ---
 
-See the [Wiki page](https://github.com/terrytaylorbonn/auxdrone/wiki/AI-drone-overview) for more info.
+<br> 
 
-<br>
+See the [Wiki page](https://github.com/terrytaylorbonn/auxdrone/wiki/AI-drone-overview) for more info.
 
 I worked on AI drones from 2023 to 2024 focusing on:
 - Drone simulation

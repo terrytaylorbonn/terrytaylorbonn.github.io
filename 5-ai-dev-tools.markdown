@@ -5,8 +5,6 @@ permalink: /AI-dev-tools/
 description: Last edit 26.0428
 ---
 
-(this page was added 26.0428)
-
 <br>
 
 The focus in this section (5) will be on exploring 
@@ -20,24 +18,69 @@ And to do this with minimal coding. For example, I recently started using Codex 
 
 <br>
 
-### 1 IDE's
+## 1 The true AI IDE (Cursor)
 
-Once a while you happen up a Youtube video that is just gold. The video below is one of them. I've heard about Cursor, but watching this video I realized the genius behind it. This is the future. 
+**The video below is gold.** I've heard about Cursor, but watching this video I realized the genius behind it. This is the future.  [**The Real Reason SpaceX is Buying Cursor**](https://www.youtube.com/watch?v=vwme_LkfMgE) is such a video. 
 
-The Real Reason SpaceX is Buying Cursor
-https://www.youtube.com/watch?v=vwme_LkfMgE
+Cursor seems (I have yet to use it) to solve a problem that I was painfully aware of: How can a programmer using AI tools manage a massive code base that the AI tools wrote? How can the programmer go through massive codebase (like I do in my small demos), figuring out what needs to be changed? The brilliant answer: The AI IDE does it. Cursor presents the code to the developer organized not by keywords, but but meaning (in the same way that Google search crushed AltaVista because Google search by meaning, whereas AltaVista just by keywords). 
 
-<img src="/assets/cursor1.png" alt="cursor" width="70%">
+The idea is revolutionary. You use a model (preferably custom trained) that does to your codebase what LLMs do to your language base. A NN is trained to recognize the gist of your code, just like an LLM NN (transformer) recognize the gist of your input text. Brilliant. Wow. I knew the problem, but never thought of the answer. This page will focus on such tools and their plugins. Page [(6) AI projects](/AI-projects/) will (WIP) focus on spinning up demos and techniques. Actual working demos. 
 
-Cursor seems (I have yet to use it) to solve a problem that I was painfully aware of: How can a programmer using AI tools manage a massive code base that the AI tools wrote? How can the programmer go through all the code (like I do in my small demos), figuring out what needs to be changed?
+### 1.1 Example: Add Oauth to login flow @1:40
 
-The brilliant answer: The AI IDE does it. To make a long story short, Cursor presents the code to the developer organized by what the dev needs to know to get the job done. Only the code the dev is needs to know. Presented in a conceptual way that makes sense.
+(audio from video) It touches 8 files. Updates controller, mware, fixes test, shows a clean diff. Click apply and its done. Feels like an actual engineer sitting next to you. Use common models. 
 
-Wow. I knew the problem, but never thought of the answer. This page will focus on such tools and their plugins. Page [(6) AI projects](/AI-projects/) will (WIP) focus on spinning up demos and techniques. Actual working demos. 
+<img src="/assets/cursor_01_engineer.png" alt="cursor" width="70%">
+
+### 1.2 How you work on a codebase @2:20
+
+You know where to look. But you cant expect the model to find stuff. The context window is too small. So how to pick the right files to show the model? Thats the key.
+
+<img src="/assets/cursor_02_50000.png" alt="cursor" width="45%">
+
+### 1.3 Cursors reads the repo @3:00
+
+- Breaks the files up into semantic units.
+- Builds Merkle tree. When you change files, only the modified are tracked.
+- Make chunks searchable by meaning. "login" is related to "authenticate.ts". Text search is too literal. Cursor converts each chunk into a vector, a list of numbers that captures the meaning of the code (like an embedding captures token meaning?). Authentication code lands in one neighborhood of this number space.  Payment code lands in different area. These are the vector database. Turbopuffer, Google for your code base, by meaning. Raw code never leaves the machine. (?). Only vectors go to the server. File names obfuscated, chunks encrypted, source code stays with you (?).
+
+now repo is indexed. (?)
+
+<img src="/assets/cursor_03_reads_repo.png" alt="cursor" width="65%">
+
+### 1.4 Type in "refactor the login flow to support google oauth" @5:00
+
+Cursor turns your question into a query vector. Question and code now live in same number space. Nearest neighbor search "which chunks live closest to your question?" If a match, Cursor follows the code. Pulls in all related code. This is how senior engineer thinks. You trace the flow. 
+
+Cursor then builds a structure prompt. Your question on top, the relevant code next. Project sends a brief to the model (?). The model is reading only the slice of code it needs. 
+
+<img src="/assets/cursor_04_query_proc.png" alt="cursor" width="85%">
+
+### 1.5 Last piece: Execution loop @6:00
+
+Cursor generates diff. You click apply. If error, Cursor tries again. With 2.0, model Composer trained for this job. To write code, use tools, search, edit, run. Trained inside real code bases using reinforcement learning until it learned to "behave like an engineer who really ships". This is why most Cursor task finish in under 30 secs. (1) Retrieval is fast, (2) the model is tuned for this task, and () loop runs independently.
+
+<img src="/assets/cursor_05_execution_loop.png" alt="cursor" width="85%">
+
+### 1.6 About the deal @7:00
+
+
+<img src="/assets/cursor_06_deal_1.png" alt="cursor" width="45%">
+
+
+<img src="/assets/cursor_07_pyramid.png" alt="cursor" width="45%">
+
+
+<img src="/assets/cursor_08_spacex_cursor.png" alt="cursor" width="25%">
+
+
+<img src="/assets/cursor_08_deep_dive.png" alt="cursor" width="35%">
 
 <br>
 
-### 2 Plugins
+## 2 Other IDEs (that have to play catchup)
+
+## 3 Plugins
 
 Rather than manually having to manage Render, I simply use the Codex Render plugin. Nice. 
 
