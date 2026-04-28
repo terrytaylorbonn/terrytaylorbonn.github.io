@@ -11,7 +11,7 @@ description: Last edit 26.0428
 
 ### 1 IDE's
 
-Once a while you happen up a Youtube video that is just gold. The video below is one of them. I've heard about cursor, but watching this video I realize the genius behind it. This is the future. 
+Once a while you happen up a Youtube video that is just gold. The video below is one of them. I've heard about Cursor, but watching this video I realized the genius behind it. This is the future. 
 
 The Real Reason SpaceX is Buying Cursor
 https://www.youtube.com/watch?v=vwme_LkfMgE
@@ -22,9 +22,7 @@ Cursor seems (I have yet to use it) to solve a problem that I was painfully awar
 
 The brilliant answer: The AI IDE does it. To make a long story short, Cursor presents the code to the developer organized by what the dev needs to know to get the job done. Only the code the dev is needs to know. Presented in a conceptual way that makes sense.
 
-Wow. I knew the problem, but never though of the answer. This is not that silly "vibe" coding nonsense. I would call this **"spin up" coding** (I just thought of this today 26.0428, never seen it anywhere). An alternative name for this page would be "spin up" tools. 
-
-This will focus on such tools and their plugins. Page "(6) AI projects" will (WIP) focus on spinning up demos and techniques. Actual working demos. 
+Wow. I knew the problem, but never thought of the answer. This page will focus on such tools and their plugins. Page [(6) AI projects](/AI-projects/) will (WIP) focus on spinning up demos and techniques. Actual working demos. 
 
 <br>
 
