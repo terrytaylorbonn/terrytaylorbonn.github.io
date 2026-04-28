@@ -26,7 +26,11 @@ Cursor seems (I have yet to use it) to solve a problem that I was painfully awar
 
 The idea is revolutionary. You use a model (preferably custom trained) that does to your codebase what LLMs do to your language base. A NN is trained to recognize the gist of your code, just like an LLM NN (transformer) recognize the gist of your input text. Brilliant. Wow. I knew the problem, but never thought of the answer. This page will focus on such tools and their plugins. Page [(6) AI projects](/AI-projects/) will (WIP) focus on spinning up demos and techniques. Actual working demos. 
 
-### 1.1 Example: Add Oauth to login flow @1:40
+@3:00
+
+<img src="/assets/cursor_00_overview.png" alt="cursor" width="85%">
+
+### 1.1 Add Oauth to login flow @1:40
 
 (audio from video) It touches 8 files. Updates controller, mware, fixes test, shows a clean diff. Click apply and its done. Feels like an actual engineer sitting next to you. Use common models. 
 
@@ -40,25 +44,25 @@ You know where to look. But you cant expect the model to find stuff. The context
 
 ### 1.3 Cursors reads the repo @3:00
 
-- Breaks the files up into semantic units.
+- Tree sitter understands code structure. Breaks the files up into semantic logical blocks.
 - Builds Merkle tree. When you change files, only the modified are tracked.
-- Make chunks searchable by meaning. "login" is related to "authenticate.ts". Text search is too literal. Cursor converts each chunk into a vector, a list of numbers that captures the meaning of the code (like an embedding captures token meaning?). Authentication code lands in one neighborhood of this number space.  Payment code lands in different area. These are the vector database. Turbopuffer, Google for your code base, by meaning. Raw code never leaves the machine. (?). Only vectors go to the server. File names obfuscated, chunks encrypted, source code stays with you (?).
+- **Make chunks searchable by meaning** (not text). "login" is related to "authenticate.ts". Text search is too literal. Cursor converts each chunk into a vector, a list of numbers that captures the meaning of the code (like an embedding captures token meaning?). Authentication code lands in one neighborhood of this number space.  Payment code lands in different area. These are the vector database. Turbopuffer, Google for your code base, by meaning. Raw code never leaves the machine. (?). **Only vectors go to the server.** File names obfuscated, chunks encrypted, source code stays with you (?). **Now repo is indexed. (?)** **ME: This like Google search indexing.**
 
-now repo is indexed. (?)
+<img src="/assets/cursor_03_reads_repo2.png" alt="cursor" width="85%">
 
-<img src="/assets/cursor_03_reads_repo.png" alt="cursor" width="65%">
+### 1.4 Nearest neighbor search @5:00
 
-### 1.4 Type in "refactor the login flow to support google oauth" @5:00
+**1.4a** Type in "refactor the login flow to support google oauth". **Cursor turns your question into a query vector. Question and code now live in same number space. Nearest neighbor search** "which chunks live closest to your question?" If a match, Cursor follows the code. Pulls in all related code. This is how senior engineer thinks. You trace the flow. **ME: This is like Google search.**
 
-Cursor turns your question into a query vector. Question and code now live in same number space. Nearest neighbor search "which chunks live closest to your question?" If a match, Cursor follows the code. Pulls in all related code. This is how senior engineer thinks. You trace the flow. 
-
-Cursor then builds a structure prompt. Your question on top, the relevant code next. Project sends a brief to the model (?). The model is reading only the slice of code it needs. 
+**1.4b** Cursor then builds a structure prompt. Your question on top, the relevant code next. Project **sends this focused brief to the model** (?? dont understand English; I think this is (1) the prompt (requested change) and (2) relevant code). The model is reading only the slice of code it needs. **ME: This is like a prompt submission with requested change + code.**
 
 <img src="/assets/cursor_04_query_proc.png" alt="cursor" width="85%">
 
 ### 1.5 Last piece: Execution loop @6:00
 
-Cursor generates diff. You click apply. If error, Cursor tries again. With 2.0, model Composer trained for this job. To write code, use tools, search, edit, run. Trained inside real code bases using reinforcement learning until it learned to "behave like an engineer who really ships". This is why most Cursor task finish in under 30 secs. (1) Retrieval is fast, (2) the model is tuned for this task, and () loop runs independently.
+Cursor generates diff. **ME: This is where the code is changed by Cursor.**
+
+You click apply, edit goes in. If error, Cursor reads error and tries again. With 2.0, added model "Composer" trained for this job. To write code, use tools, search, edit, run. Trained inside real code bases using reinforcement learning until it learned to "behave like an engineer who really ships". This is why most Cursor task finish in under 30 secs. (1) Retrieval is fast, (2) the model is tuned for this task, and () loop runs independently. **ME: This is Cursor autotest and fix.**
 
 <img src="/assets/cursor_05_execution_loop.png" alt="cursor" width="85%">
 

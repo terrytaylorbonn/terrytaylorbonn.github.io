@@ -9,6 +9,7 @@ description: Last edit 26.0428
 
 
 The focus in this section (6) will be on
+- creating (6) real world project fast 
 - using (5) AI dev tools / plugins 
 - to create (4) AI agents that use 
 - remote or local (2) LLMs.
