@@ -14,6 +14,11 @@ I worked on AI drones from 2023 to 2024 focusing on:
 - AI (object recognition using Jetson Nano and PI4)
 - Drone AI / autonomous flight (Pixhawk drone with Jetson Nano using object recognition with Pymavlink for flight control inputs)
 
+
+See also: 
+  - **[Core AI CNN (object recognition) concepts](/cnn/)**
+
+
 <br>
 
 #### The inspiration for "Ziptie" drones

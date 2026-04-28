@@ -14,7 +14,6 @@ This page describes
 See also: 
   - **[Core AI (LLM) concepts](https://github.com/terrytaylorbonn/auxdrone/wiki/Core-AI-concepts)** (wiki page) explains in detail GPT-3 transformer algorithms. 
   - **[Core AI (LLM) misconceptions](/llm-tf-misconceptions/)** describes a chat that GPT and I had recently.
-  - **[Core AI CNN (object recognition) concepts](/cnn/)**
 
 <br>
 
