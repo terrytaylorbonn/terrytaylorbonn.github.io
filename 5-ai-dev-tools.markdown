@@ -9,6 +9,17 @@ description: Last edit 26.0428
 
 <br>
 
+The focus in this section (5) will be on exploring 
+- using (5) AI dev IDE tools / plugins 
+- to create (4) AI agents 
+- that connect to various external systems.
+
+And to do this with minimal coding. For example, I recently started using Codex desktop with Render plugin to manage Render.
+
+<img src="/assets/ai_project_diagram_5.png" alt="drones" width="40%"> 
+
+<br>
+
 ### 1 IDE's
 
 Once a while you happen up a Youtube video that is just gold. The video below is one of them. I've heard about Cursor, but watching this video I realized the genius behind it. This is the future. 
@@ -37,4 +48,4 @@ The goal of this section is to explore such dev tool / plugin combinations. Tech
 
 <br> 
 
-26.0428
+26.0428 (v1 26.0428)

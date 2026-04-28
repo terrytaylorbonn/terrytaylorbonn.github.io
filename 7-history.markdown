@@ -8,10 +8,10 @@ permalink: /history/
 
 AI tech is evolving quickly. ZiptieAI is evolving along with it. What began as a drone-focused project has become an exploration of practical AI systems. 
 
-The following diagram shows the evolutionary stages and corresponding pages on this site. **(2), (4), (5), and (6) are the main focus**. 
+The first diagram (below left) shows the evolutionary stages and corresponding pages on this site. **(2), (4), (5), and (6) are the main focus**. The second diagram (below right) shows the (6) AI project components*.
 
 
-<img src="/assets/zai_evolution.png" alt="smol" width="27%">
+<img src="/assets/zai_evolution.png" alt="smol" width="27%"> <img src="/assets/ai_project_diagram_7.png" alt="drones" width="40%"> 
 
 
 <br>

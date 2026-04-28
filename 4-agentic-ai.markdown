@@ -8,6 +8,13 @@ permalink: /agentic-ai/
 
 See the [Wiki page](https://github.com/terrytaylorbonn/auxdrone/wiki/Agentic-AI) for more info.
 
+The focus in this section will be on  
+- creating AI agents
+
+I have been doing simple demos and analyzing all the code (up to 800 code lines of Python). The real way to do this is probably with a Cursor style system.
+
+<img src="/assets/ai_project_diagram_4.png" alt="drones" width="40%"> 
+
 <br>
 
 #### 1) Demos are the best way to learn agentic AI
@@ -50,7 +57,6 @@ AIP probably offers a set of functionality similar to the following:
 - **Planning.** AI breaks up a "messy" plan into a set of standard subtasks that can be verified.
 - **Rule injection.** AI can add "rule" keywords to the list of keywords used by the deterministic agentic loop to modify the execution logic.
 
-
 *Diagram from Substack post [#75 The Real Job of AI in Enterprise Apps](https://ziptieai.substack.com/p/75-the-real-job-of-ai-in-enterprise) shows how AI is only used to generate a plan ("08b AI")*
 
 <img src="/assets/aiplan.png" alt="AI planning" width="85%">
@@ -58,7 +64,6 @@ AIP probably offers a set of functionality similar to the following:
 <br>
 
 #### 5) Lessons learned from the demos
-
 
 Very "basic" demos of such functionality are listed on the wiki page [Agentic AI demos](https://github.com/terrytaylorbonn/auxdrone/wiki/4%E2%80%902-Agentic-AI-demos). Complete documentation with all the steps is on the Gdrive. The  goal of these very simple demos is to show basic core concepts that apply to AI systems of any size. For example:
 - Palantir will not become [SkyNet](https://en.wikipedia.org/wiki/Skynet_(Terminator)). The central agent control loop is not AI-controlled and presses no buttons (humans are required).
@@ -70,10 +75,6 @@ A few things you will notice if you do thOne of my major goals in studying AI ha
 
 This is utter nonsense. All of an AI system (CPU and GPU based parts) are on the lowest level clocked binary circuits. This has absolutely nothing to do with the neurons in the human brain. AI tools cannot see, hear, sense touch, smell, have feelings, consciousness, or think. In short, they have no intelligence. -->
 
-
-
-
-
 <br>
 
-26.0425
+26.0428
