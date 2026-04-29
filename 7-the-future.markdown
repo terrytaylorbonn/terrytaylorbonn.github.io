@@ -7,11 +7,11 @@ description: Last edit 26.0429
 
 <br>
 
-**50 years ago, when the first PC's were appearing (Commodore, Atari, etc), noone could have imagined what this would lead to**. Is the same now with AI. AI has no intelligence (such claims are a central part of the current AI mythos). Like the PC, it is simply a technical invention that will change how we live. Like many other inventions.
+**50 years ago, when the first PC's started appearing (Commodore, Atari, etc), noone could have imagined how the PC would change the world**. Its the same now with AI.
 
-**I see a (near) future in which someone is talking with their AI IDE, discussing how to create their own Palantir-style systems for navigating the complexities of life and dealing with the threats to their prosperity.** Dealing with government bureaucracy, stifling tax codes, complex business regulations, monetary inflation, etc. Having intelligence sources that they never dreamed possible (just like we have now that noone could have imagined 50 years ago). So that they can focus on their business. 
+**I see a (near) future in which we can talk with our AI IDE, discuss how to create our own Palantir-style systems for navigating the complexities of life and dealing with the threats to our freedom and prosperity** (government bureaucracy, stifling tax codes, complex business regulations, monetary inflation, etc). Doing things that we never dreamed possible. 
 
-I spent many years abroad, often in 3rd world countries. Social media drastically changed how these societies function (except in extreme cases where internet is still blocked). People were no longer isolated. That improved the lives of billions. At the same time, there were changes that were not positive: Mobile phones (with communication, maps, banking, etc) made it possible for mass illegal crossings of sovereign borders with the help of criminal cartels.  
+I spent many years abroad, often in 3rd world countries. Social media drastically changed how these societies function (except in extreme cases where internet is still blocked). People are no longer isolated. At the same time, there were changes that were not positive: Mobile phones (with communication, maps, banking, etc) made it possible for mass illegal crossings of what were once sovereign borders.  
 
 <br>
 

@@ -8,7 +8,7 @@ permalink: /tech-stacks/
 
 <br> 
 
-My original goal was to do a deep dive into the latest doc tools (for text and API). But when I started using Copilot and GPT as assistants, I never got down to the nitty gritty details. I was shocked by how much AI simplified the process of creating websites and API docs. At some point I started researching the details of the AI tools and never made it back to finishing this section. **So things are a bit chaotic**. 
+My original goal was to do a deep dive into the latest doc tools (for text and API). But when I started using Copilot and GPT as assistants, I never got down to the nitty gritty details. I was shocked by how much AI simplified the process of creating websites and API docs. At some point I started researching the details of the AI tools and never made it back to reorganizing and cleaning up the many demos of this section. 
 
 Most of the content links are on the wiki page [AI LLM stacks](https://github.com/terrytaylorbonn/auxdrone/wiki/AI-stacks). For tech stacks and docs the following wiki subpages are of interest:
 
@@ -29,7 +29,7 @@ Topics include:
 
 <br>
 
-26.0425
+26.0429
 
 <!--
 See also:
