@@ -9,9 +9,7 @@ description: Last edit 26.0429
 
 ### 1 The past, the future
 
-**50 years ago, when the first PC's started appearing (Commodore, Atari, etc), noone could have imagined how the PC would change the world**. Its the same now with AI.
-
-How AI will serve and change society remains to be seen. But **the goal of this page (WIP) is to suggest where things might lead**. 
+**50 years ago, when the first PC's started appearing (Commodore, Atari, etc), noone could have imagined how the PC would change the world**. Its the same now with AI. How AI will serve and change society remains to be seen. But **the goal of this page (WIP) is to suggest where things might lead**. 
 
 <br>
 
@@ -28,17 +26,19 @@ Karp’s stance is that the future of work lies in combining AI technology with 
 
 ### 3 AI enables the physical world
 
-**I see a (near) future in which we can talk with our AI IDE, discuss how to create our own Palantir-style systems for navigating the complexities of life** (bureaucracy, complex taxes and business regulations, etc). Making it possible for us to accomplsih things we never dreamed possible (because of the artifical barriers). 
+**The near future: We talk with our AI IDE, discuss how to create our own Palantir-style systems for navigating the (many manmade) complexities of life** (bureaucracy, complex taxes and business regulations, etc). Making it possible for us to accomplsih things we never dreamed possible (because of the artifical barriers). 
  
-**Making America simple again**. I recently avoided the labyrinth of seeing a doctor by arranging an Amazon remote consultation (I even got the medicine via Amazon). A few years I took a local college course in SW dev. The course was a major disappointment (the biggest rule was to not use any AI). I never did master the complex student portal. ChatGPT, Claude, and Cursor are how my dedicated tutors. 
+**Making America simple again**. I recently saw a doctor by arranging an Amazon remote consultation (I even got the medicine via Amazon). To see an American doctor in person was practically impossible. A few years ago I took a local college course in SW dev. The course was a major disappointment (the biggest rule was to not use any AI). I never did figure out the student portal. ChatGPT, Claude, and Cursor are how my dedicated tutors. 
 
 **AI will also bring us together**. Just like the internet and mobile phones. I spent many years abroad, often in 3rd world countries. Social media drastically changed how these societies function (except in extreme cases where internet is still blocked). People are no longer isolated. 
 
 <br>
 
-### 4 Governments will attempt to stifle progress
+### 4 The governing class will attempt to stifle AI progress
 
-DOGE was able to use the latest AI tech to expose rampant government corruption. But it was a drop in the bucket.**It remains to be seen if AI can significantly decrease government employment and corruption** (the recent revelations in Minnesota and California revealed the extent of the cancer). And mobile phones (with communication, maps, banking, etc) brought us together, but they also made it possible (with the tacit approval of corrupt governments) for mass illegal crossings of what were once sovereign borders. My personal opinion is that Alex Karp underestimates the government class to stifle progress.
+DOGE was able to use the latest AI tech to expose rampant government corruption. But it was a drop in the bucket. **It remains to be seen if AI can significantly decrease government employment and corruption** (the recent revelations in Minnesota and California revealed the extent of the cancer). Mobile phones (with communication, maps, banking, etc) may have brought us together, but they also made it possible (with the tacit approval of corrupt governments) for mass illegal crossings of what were once sovereign borders. 
+
+I think Alex Karp underestimates the determination of the governing class to stifle the progress from the AI revolution. I hope the fruits of AI (and a sizeable portion of the value of skilled trades) are not hijacked in order to sustain an even bigger governing class.
 
 <br>
 
