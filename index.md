@@ -5,12 +5,13 @@ title: Home
 
 See the [Wiki page](https://github.com/terrytaylorbonn/auxdrone/wiki) for more info.
 
-This site has the following pages:
+This site has the following pages *(current focus is on (5) and (4))*:
 
 - [ZiptieAI History](/history/). How the ZiptieAI project has evolved.
-- **[(6) AI projects](/AI-projects/)** (TODO). How to rapidly "spin up" practical AI projects. 
-- **[(5) AI dev tools](/AI-dev-tools/)** (TODO). Learning the AI IDE's and tools for rapid SW dev. 
-- **[(4) Agentic AI](/agentic-ai/)**. Current focus. Palantir-style systems, tool use, workflows, planning systems.
+- [(7) The future](/the-future/). What's the AI end game?
+- **[(6) AI projects](/AI-projects/)**. How to rapidly "spin up" practical AI projects. 
+- **[(5) AI dev tools](/AI-dev-tools/)**. Learning the AI IDE's and tools for rapid SW dev. 
+- **[(4) Agentic AI](/agentic-ai/)**. Palantir-style systems, tool use, workflows, planning systems.
 - [(3) Robotic AI](/robotic-ai/). JEPA, belief tracking, control loops, autonomy.
 - **[(2) LLMs](/sandbox/)**. Large language models, transformers, local and API-based models, RAG, prompting, MCP, tool calling, fine-tuning, and practical AI application design. See also: 
   - [Core AI (LLM) concepts](https://github.com/terrytaylorbonn/auxdrone/wiki/Core-AI-concepts) (wiki page) explains in detail GPT-3 transformer algorithms. 
@@ -23,9 +24,9 @@ This site has the following pages:
 
 <br>
 
-*The following is the (6) AI project diagram that appears throughout this site*.
+*The following is the AI project diagram that appears throughout this site. Note that the AI IDE and the agent are the central components (not the LLM, which many predict will so become a commodity)*.
 
-<img src="/assets/master_diagram_1.png" alt="drones" width="40%"> 
+<img src="/assets/ai_project_diagram.png" alt="drones" width="50%"> 
 
 <br>
 

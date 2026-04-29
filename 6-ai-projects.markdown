@@ -16,7 +16,7 @@ The focus in this section (6) will be on
 
 The diagram below shows the (6) AI project components. The project is a complete real-world application similar to a Palantir-style system. The goal for this section is to build full-blown real-world apps fast with minimal coding. 
 
-<img src="/assets/ai_project_diagram_6.png" alt="drones" width="40%"> 
+<img src="/assets/ai_project_diagram_6.png" alt="drones" width="50%"> 
 
 <br>
 
