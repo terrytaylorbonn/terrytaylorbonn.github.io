@@ -8,7 +8,7 @@ See the [Wiki page](https://github.com/terrytaylorbonn/auxdrone/wiki) for more i
 This site has the following pages *(current focus is on (5) and (4))*:
 
 - [ZiptieAI History](/history/). How the ZiptieAI project has evolved.
-- [(7) The future](/the-future/). What's the AI end game?
+- [The future](/the-future/). What's the AI end game?
 - **[(6) AI projects](/AI-projects/)**. How to rapidly "spin up" practical AI projects. 
 - **[(5) AI dev tools](/AI-dev-tools/)**. Learning the AI IDE's and tools for rapid SW dev. 
 - **[(4) Agentic AI](/agentic-ai/)**. Palantir-style systems, tool use, workflows, planning systems.

@@ -1,6 +1,6 @@
 ---
 layout: page
-title: "(7) The future"
+title: "The future"
 permalink: /the-future/
 description: Last edit 26.0429
 ---
