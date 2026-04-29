@@ -26,7 +26,7 @@ Karp’s stance is that the future of work lies in combining AI technology with 
 
 ### 3 AI enables the "physical world"
 
-Imagine **the near future, creating complex apps by having discussions with AI tools. Tools that drastically reduce the complexities of life** (especially the man-made ones). Making it possible for us to accomplish things that seem out of reach. A perfect of this was my recent Amazon remote consultation with a doctor (I even got the medication via Amazon). To see an American doctor in person seemed impossible. 
+Imagine **the near future, creating complex apps by having discussions with AI tools. Tools that drastically reduce the complexities of life** (especially the man-made ones). Making it possible for us to accomplish things that seem out of reach. A perfect example of this was my recent Amazon remote consultation with a doctor (I even got the medication via Amazon). To see an American doctor in person seemed impossible. 
 
 **AI will bring us together (even more)**. Just as the internet, mobile phones, and social media have drastically reduced social isolation throughout the world. 
 
@@ -34,7 +34,7 @@ Imagine **the near future, creating complex apps by having discussions with AI t
 
 ### 4 What AI gives might be taken away
 
-But social isolation still exists in countries where internet is blocked.  cases where such tools are still blocked. Mobile phones may have brought us together, but they also made it possible for massive numbers of illegal crossings of what were once sovereign borders. DOGE was able to use the latest AI tech to expose rampant corruption. But it emains to be seen if AI can significantly decrease such corruption. I think it remains to be seen just how much of future fruits of the AI revolution reach the "physical world". 
+But social isolation still exists in countries where internet is blocked. Mobile phones may have brought us together, but they also made possible the destruction of sovereign borders. DOGE was able to use the latest AI tech to expose rampant corruption, but it remains to be seen if AI can significantly decrease corruption. It remains to be seen just how much of future fruits of the AI revolution reach the "physical world". 
 
 <br>
 
