@@ -82,7 +82,16 @@ You click apply, edit goes in. If error, Cursor reads error and tries again. Wit
 
 <br>
 
-## 2 Other IDEs (that have to play catchup)
+## 2 Other IDEs
+
+Codex, ChatGPT. Nice.
+
+Anthropic (no comment). 
+
+<img src="/assets/morals.png" alt="cursor" width="45%">
+
+
+
 
 ## 3 Plugins
 
