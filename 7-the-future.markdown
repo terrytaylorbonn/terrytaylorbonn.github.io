@@ -24,7 +24,7 @@ Karp’s stance is that the future of work lies in combining AI technology with 
 
 <br>
 
-### 3 AI enables the "physical world"
+### 3 AI will enable the "physical world"
 
 Imagine **the near future, creating complex apps by having discussions with AI tools. Tools that drastically reduce the complexities of life** (especially the man-made ones). Making it possible for us to accomplish things that seem out of reach. A perfect example of this was my recent Amazon remote consultation with a doctor (I even got the medication via Amazon). To see an American doctor in person seemed impossible. 
 
@@ -32,9 +32,11 @@ Imagine **the near future, creating complex apps by having discussions with AI t
 
 <br>
 
-### 4 What AI gives might be taken away
+### 4 But what AI gives bureaucratic largesse may take away
 
-But social isolation still exists in countries where internet is blocked. Mobile phones may have brought us together, but they also made possible the destruction of sovereign borders. DOGE was able to use the latest AI tech to expose rampant corruption, but it remains to be seen if AI can significantly decrease corruption. It remains to be seen just how much of future fruits of the AI revolution reach the "physical world". 
+But social isolation still exists in countries where internet is blocked. Mobile phones may have brought us together, but they also made possible the destruction of sovereign borders. DOGE was able to use the latest AI tech to expose rampant corruption, but it remains to be seen if AI can significantly decrease corruption. 
+
+Throughout recent history, when new tech drastically raises productivity, bureaucratic largesse has devoured a great deal of the progress. It remains to be seen just how much of the future fruits of the AI revolution reach the "physical world". 
 
 <br>
 
