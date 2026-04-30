@@ -34,10 +34,10 @@ Imagine **the near future, creating complex apps by having discussions with AI t
 
 ### 4 But what AI gives bureaucratic largesse may take away
 
-But social isolation still exists in countries where internet is blocked. Mobile phones may have brought us together, but they also made possible the destruction of sovereign borders. DOGE was able to use the latest AI tech to expose rampant corruption, but it remains to be seen if AI can significantly decrease corruption. 
+Social isolation still exists in countries where internet is blocked (because internet is a threat to the government). Mobile phones may have brought us together, but they also made possible the destruction of sovereign borders (this is very profitable for certain groups). DOGE was able to use the latest AI tech to expose rampant corruption, but it remains to be seen if this results in a significant decrease in corruption. 
 
-Throughout recent history, when new tech drastically raises productivity, bureaucratic largesse has devoured a great deal of the progress. It remains to be seen just how much of the future fruits of the AI revolution reach the "physical world". 
+Throughout recent history, when new tech drastically raised productivity, bureaucratic largesse and corruption devoured a great deal of the progress. It remains to be seen just how much of the future fruits of the AI revolution reach the "physical world" (blue collar workers). 
 
 <br>
 
-26.0429 (v1 26.0429)
+26.0430 (v1 26.0429)
