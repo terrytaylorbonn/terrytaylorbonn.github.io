@@ -1,0 +1,27 @@
+---
+layout: page
+title: "(5.2) GPT/Codex"
+permalink: /GPT-Codex-overview/
+description: Last edit 26.0501
+---
+
+<br>
+
+This page will be an overview of Codex/ChatGPT (especially creating agents). Tutorial links, Youtube demos, etc.
+
+<img src="/assets/ai_project_diagram_5.png" alt="drones" width="40%"> 
+
+I've been using GPT for years now. I started Codex desktop earlier this year. Both are super. This page was created 26.0501. I will add more info soon.
+
+### Plugins
+
+Rather than manually having to manage Render, I simply use the Codex Render plugin. Nice. 
+
+<img src="/assets/cursor2_render.png" alt="cursor" width="40%">
+
+The goal of this section is to explore such dev tool / plugin combinations. Techniques. The required step to really be a "spin developer" who can quickly come up with complex solutions. 
+
+
+<br> 
+
+26.0501 (v1 26.0501)

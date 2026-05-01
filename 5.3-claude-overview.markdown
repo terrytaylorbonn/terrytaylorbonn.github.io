@@ -1,0 +1,28 @@
+---
+layout: page
+title: "(5.3) Claude overview"
+permalink: /Claude-dev-tools/
+description: Last edit 26.0501
+---
+
+<br>
+
+This page will be an overview of Claude (especially creating agents). Tutorial links, Youtube demos, etc.
+
+<img src="/assets/ai_project_diagram_5.png" alt="drones" width="40%"> 
+
+Anthropic (Claude) does not really have an IDE (??). They are focusing on other priorities. I am still trying to find how Claude could fit my workstyle.
+
+<!-- But they have something more important. 
+
+https://youtu.be/Kkx0hUu59D4?t=825 matt walsh -->
+
+<img src="/assets/morals.png" alt="cursor" width="45%">
+
+
+
+
+
+<br> 
+
+26.0501 (v1 26.0501)
