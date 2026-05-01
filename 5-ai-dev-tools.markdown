@@ -86,7 +86,11 @@ You click apply, edit goes in. If error, Cursor reads error and tries again. Wit
 
 Codex, ChatGPT. Nice.
 
-Anthropic (no comment). 
+Anthropic. No IDE. 
+
+<!-- But they have something more important. 
+
+https://youtu.be/Kkx0hUu59D4?t=825 matt walsh -->
 
 <img src="/assets/morals.png" alt="cursor" width="45%">
 
