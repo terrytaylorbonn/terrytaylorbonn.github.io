@@ -16,7 +16,7 @@ This site has the following pages *(current focus is on (5) and (4))*:
 - **[(2) LLMs](/sandbox/)**. Large language models, transformers, local and API-based models, RAG, prompting, MCP, tool calling, fine-tuning, and practical AI application design. See also: 
   - [Core AI (LLM) concepts](https://github.com/terrytaylorbonn/auxdrone/wiki/Core-AI-concepts) (wiki page) explains in detail GPT-3 transformer algorithms. 
   - [Core AI (LLM) misconceptions](/llm-tf-misconceptions/) describes a chat that GPT and I had recently.
-- [(1) AI Drones](/aidrones/). Simulation, drone builds (Pixhawk, FPV), AI (Jetson Nano, Pi), and autonomous flight. See also:
+- **[(1) AI Drones](/aidrones/)**. Simulation, drone builds (Pixhawk, FPV), AI (Jetson Nano, Pi), and autonomous flight. See also:
   - [Core AI CNN (object recognition) concepts](/cnn/)
 - [Tech Stacks & Docs](/tech-stacks/). MERN, APIs, websites, and doc systems.
 - [Resources](/resources/). Wiki, Substack, Youtube, Github, and Google Drive. 
@@ -26,7 +26,7 @@ This site has the following pages *(current focus is on (5) and (4))*:
 
 *The following is the AI project diagram that appears throughout this site. Note that the AI IDE and the agent are the central components (not the LLM, which many predict will so become a commodity)*.
 
-<img src="/assets/ai_project_diagram.png" alt="drones" width="50%"> 
+<img src="/assets/ai_project_diagram_5.png" alt="drones" width="50%"> 
 
 <br>
 
