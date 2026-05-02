@@ -5,6 +5,9 @@ permalink: /the-future/
 description: Last edit 26.0429
 ---
 
+*26.0502 ["The future" page versions](/the-future-versions/) (a small test of GPT, Claude, and Cursor)*
+
+
 <br>
 
 ### 1 The past, the future
@@ -53,5 +56,6 @@ Social isolation still exists in countries where internet is blocked (because in
 - Palantir CEO says trade jobs are the future? -->
 
 <br>
+
 
 26.0502 (v1 26.0429)

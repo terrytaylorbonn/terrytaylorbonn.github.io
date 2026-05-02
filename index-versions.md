@@ -5,7 +5,10 @@ title: Home (GPT, Claude, and Cursor versions)
 
 <br>
 
-26.0502 I asked GPT/Claude/Cursor to give me an improved version of the home page.  Just as a test. This is what I got. **In general, I did not see much added value from the recommendations.** 
+26.0502 I asked GPT/Claude/Cursor to give me an improved version of the home page.  Just as a test. This is what I got. **In general, I did not see much added value from the recommendations.** However, I would rank the replies from best to worst as
+- Claude (best). Fast answers, better quality diagrams. In genearal, seems like Claude is best for conversation.
+- Cursor. Bad diagram. 
+- GPT (worst). Bad diagram, messed up on formatting, and slow.
 
 <br>
 

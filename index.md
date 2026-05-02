@@ -3,6 +3,8 @@ layout: home
 title: Home
 ---
 
+*26.0502 [Home page versions](/index-versions.html) (a small test of GPT, Claude, and Cursor)*
+
 
 <br>
 
@@ -37,7 +39,6 @@ This site has the following top-level pages *(see also the [Wiki](https://github
 
 <br>
 
-*26.0502 [Home page versions](/index-versions.html) (a small test of GPT, Claude, and Cursor)*
 
 
 <!-- ![image](https://github.com/user-attachments/assets/6c4a9ef0-981b-4dcc-8dc3-12470d356284)
