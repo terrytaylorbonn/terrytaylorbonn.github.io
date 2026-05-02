@@ -9,7 +9,9 @@ description: Last edit 26.0429
 
 ### 1 The past, the future
 
-50 years ago, nobody imagined PC's (back then Commodore, Atari, etc) would change the world. In the ARPANET days we could never have imagined home internet or the search engine. The very idea that one day we could simply from the comfort of home have the ability to access what we access now was unfathomable. How AI will change our world will undoubtedly be something we have not yet even imagined. **The goal of this page (WIP) is to suggest where things might lead**. 
+50 years ago, nobody imagined PC's (back then Commodore, Atari, etc) would change the world. In the ARPANET days we could never have imagined home internet or the search engine. The very idea that one day we could simply from the comfort of home have the ability to access what we access now was unfathomable. 
+
+How AI will change our world will undoubtedly be something we have not yet even imagined. AI IDE's and tools will become so reliable and easy to use that the general public will be able to create sophisticated AI apps (perhaps by just chatting with an AI IDE). **The goal of this page (WIP) is to suggest where things might lead**.
 
 <br>
 

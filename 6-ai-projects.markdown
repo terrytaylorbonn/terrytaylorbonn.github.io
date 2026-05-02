@@ -32,7 +32,7 @@ In the following diagram:
 
 This page will focus on **rapidly spinning up practical AI projects**. Not “vibe coding,” but efficient, well-designed systems. The goal is to use the right techniques and tools to create ("spin up") a viable draft product as quickly as possible, with minimal manual coding. I call this **"spin up" coding**. 
 
-My main question is: Will sophisticated AI IDE's and tools get so easy to use that anyone will be able to create custom apps with stunning capability **while maintaining firm control of the codebase?** Even possibly doing this by audio chats with the AI IDE? 
+
 
 
 <!-- <img src="/assets/cursor2_render.png" alt="cursor" width="40%"> -->
