@@ -3,9 +3,8 @@ layout: home
 title: Home
 ---
 
-See the [Wiki page](https://github.com/terrytaylorbonn/auxdrone/wiki) for more info.
 
-This site has the following pages *(current focus is on (5) and (4))*:
+This site has the following pages *(see also the [Wiki page](https://github.com/terrytaylorbonn/auxdrone/wiki))*:
 
 - [ZiptieAI History](/history/). How the ZiptieAI project has evolved.
 - [The future](/the-future/). What's the AI end game?
@@ -24,9 +23,9 @@ This site has the following pages *(current focus is on (5) and (4))*:
 
 <br>
 
-*The following is the AI project diagram that appears throughout this site. Note that the AI IDE and the agent are the central components (not the LLM, which many predict will so become a commodity)*.
+*The following is the AI project diagram that appears throughout this site. Note that the AI IDE and the agent are the central components (not the LLM, which many predict will soon become a commodity)*.
 
-<img src="/assets/ai_project_diagram_5.png" alt="drones" width="50%"> 
+<img src="/assets/6_main_diagram.png" alt="drones" width="45%"> 
 
 <br>
 
