@@ -7,13 +7,16 @@ description: Last edit 26.0501
 
 <br>
 
-This section will focus on specific business cases from a project/product manager perspective. These will still be demos (with code on Github) but with a higher level description. 
 
-The focus in this section will be on
-- building (6) real world projects fast (with minimal coding)
+
+This section will focus on 
+- **building (6) real world projects fast (with minimal coding)**
 - using (5) AI dev tools / plugins 
 - to create (4) AI agents (that interact with other agents (A2A)) that use 
 - remote or local (2) LLMs.
+
+**Rapidly spinning up practical real-world AI projects**. "Spin up" coding (not “vibe coding”). Efficient, well-designed systems. With minimal manual coding. Specific business cases from a project/product manager perspective. These will still be demos (with code on Github) but with a higher level description.
+
 
 In the following diagram:
 - (5) AI IDE (Cursor, Codex, etc)
@@ -27,11 +30,6 @@ In the following diagram:
 
 
 <img src="/assets/6_main_diagram.png" alt="drones" width="40%"> 
-
-<br>
-
-This page will focus on **rapidly spinning up practical AI projects**. Not “vibe coding,” but efficient, well-designed systems. The goal is to use the right techniques and tools to create ("spin up") a viable draft product as quickly as possible, with minimal manual coding. I call this **"spin up" coding**. 
-
 
 
 
