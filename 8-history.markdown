@@ -6,17 +6,16 @@ permalink: /history/
 
 <br>
 
-AI tech is evolving quickly. ZiptieAI is evolving along with it. What began as a drone-focused project has become an exploration of practical AI systems. 
-
-The first diagram (below left) shows the evolutionary stages and corresponding pages on this site. **(2), (4), (5), and (6) are the main focus**. The second diagram (below right) shows the (6) AI project components*.
+AI tech is evolving quickly. ZiptieAI is evolving along with it. What began as a drone-focused project has become an exploration of practical AI systems. The first diagram (below left) shows the project stages. The second diagram (below right) shows the (6) AI project components.
 
 
-<img src="/assets/zai_evolution.png" alt="smol" width="27%"> <img src="/assets/ai_project_diagram_7.png" alt="drones" width="40%"> 
+<img src="/assets/zai_evolution.png" alt="smol" width="27%"> <img src="/assets/6_main_diagram.png" alt="drones" width="40%"> 
+<!-- <img src="/assets/ai_project_diagram_7.png" alt="drones" width="40%"> -->
 
 
 <br>
 
-#### (1) [AI Drones](/aidrones/)
+#### **(1) [AI Drones](/aidrones/)**
 
 This was the first phase of ZiptieAI (the name was inspired by the zipties Ukraine used to quickly configure drones). This phase included drone flight simulation, hardware builds, AI, and flight tests (the first flight tests were in my kitchen). AI capabilities centered on:
 - Object recognition using onboard cameras
@@ -95,4 +94,4 @@ After learning the AI dev tools and plugins you can "spin up" quickly complex pr
 
 <br>
 
-26.0428
+26.0502
