@@ -9,7 +9,7 @@ description: Last edit 26.0429
 
 ### 1 The past, the future
 
-**50 years ago, nobody imagined PC's (back then Commodore, Atari, etc) would change the world**. How AI will change our world will undoubtedly be something we have not yet even imagined. **The goal of this page (WIP) is to suggest where things might lead**. 
+50 years ago, nobody imagined PC's (back then Commodore, Atari, etc) would change the world. In the ARPANET days we could never have imagined home internet or the search engine. The very idea that one day we could simply from the comfort of home have the ability to access what we access now was unfathomable. How AI will change our world will undoubtedly be something we have not yet even imagined. **The goal of this page (WIP) is to suggest where things might lead**. 
 
 <br>
 
@@ -24,20 +24,32 @@ Karp’s stance is that the future of work lies in combining AI technology with 
 
 <br>
 
-### 3 AI will enable the "physical world"
+### 3 AI will enable the "physical world"? Remove barriers?
 
-Imagine **the near future, creating complex apps by having discussions with AI tools. Tools that drastically reduce the complexities of life** (especially the man-made ones). Making it possible for us to accomplish things that seem out of reach. A perfect example of this was my recent Amazon remote consultation with a doctor (I even got the medication via Amazon). To see an American doctor in person seemed impossible. 
-
-**AI will bring us together (even more)**. Just as the internet, mobile phones, and social media have drastically reduced social isolation throughout the world. 
+Imagine **the near future, creating complex apps by having discussions with AI tools. Tools that drastically reduce the complexities of life** (especially the man-made ones). Making it possible for us to accomplish things that seem out of reach.  **AI will bring us together (even more)**. Just as the internet, mobile phones, and social media have drastically reduced social isolation throughout the world. 
 
 <br>
 
-### 4 But what AI gives bureaucratic largesse may take away
+### 4 At the same time, AI will create "physical moats" that make the world safer?
+
+
+Will AI create moats of safety around countries, just like on the Ukraine/Russian front lines that have basically become a stable no-mans land? **When AI tools quickly detect anything unsual, will aggression be impossible?**
+
+<!-- 
+But what AI gives bureaucratic largesse may take away
+
+- Throughout recent history, when new tech drastically raised productivity, bureaucratic largesse and corruption devoured a great deal of the progress. It remains to be seen just how much of the future fruits of the AI revolution reach the "physical world" (blue collar workers). 
+
+A perfect example of this was my recent Amazon remote consultation with a doctor (I even got the medication via Amazon). To see an American doctor in person seemed impossible. 
 
 Social isolation still exists in countries where internet is blocked (because internet is a threat to the government). Mobile phones may have brought us together, but they also made possible the destruction of sovereign borders (this is very profitable for certain groups). DOGE was able to use the latest AI tech to expose rampant corruption, but it remains to be seen if this results in a significant decrease in corruption. 
 
-Throughout recent history, when new tech drastically raised productivity, bureaucratic largesse and corruption devoured a great deal of the progress. It remains to be seen just how much of the future fruits of the AI revolution reach the "physical world" (blue collar workers). 
+-->
+
+
+<!-- - DOGE discovered massive corruption quickly thanks to AI. When will it become possible for anyone to easily create AI projects that make it impossible such criminal activity (given access to the data)?
+- Palantir CEO says trade jobs are the future? -->
 
 <br>
 
-26.0430 (v1 26.0429)
+26.0502 (v1 26.0429)
