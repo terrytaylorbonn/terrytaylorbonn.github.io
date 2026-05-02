@@ -6,10 +6,47 @@ description: Last edit 26.0502
 ---
 
 26.0502 I asked GPT/Claude/Cursor to give me an improved version of the "the future" page. Just as a test. This is what I got. I would rank the replies from best to worst as
+- Claude (Sonnet 4.6) (best, by far). Seems Claude is the best for such tasks by far.
+- GPT 5.3. Redid the style to something I think is hard to read. Typical overwhelmingly verbose GPT style. 
+- Cursor (one of GPT5.5, Codex 5.3, Sonnet 4.6, Opus 4.7). Total failure. A mess. Cursor seems to be quite weak at such tasks.
 
-- Claude (best, by far). Seems Claude is the best for such tasks by far.
-- GPT. Redid the style to something I think is hard to read. Typical overwhelmingly verbose GPT style. 
-- Cursor. Total failure. A mess. Cursor seems to be quite weak at such tasks.
+PS: Claude also copies flawlessly into Substack. I am not a fan of Antrophic the company, but must grudgingly admit they are in the lead in certain areas.
+
+<br>
+
+# 0 ORIGINAL =========================
+
+<br>
+
+### 1 The past, the future
+
+50 years ago, nobody imagined PC's (back then Commodore, Atari, etc) would change the world. In the ARPANET days we could never have imagined home internet or the search engine. The very idea that one day we could simply from the comfort of home have the ability to access what we access now was unfathomable. 
+
+How AI will change our world will undoubtedly be something we have not yet even imagined. AI IDE's and tools will become so reliable and easy to use that the general public will be able to create sophisticated AI apps (perhaps by just chatting with an AI IDE). **The goal of this page (WIP) is to suggest where things might lead**.
+
+<br>
+
+### 2 Alex Karp's "physical world" prediction
+
+GEMINI: Palantir CEO Alex Karp has argued that **AI will spark a "blue-collar revolution"** rather than widespread unemployment **for skilled trades**, suggesting that vocational, hands-on jobs are more secure than many white-collar roles. His key points regarding blue-collar jobs in the AI era include:
+- Increased Value for Skilled Trades: Karp argues that **jobs requiring physical labor and troubleshooting** —such as electricians, plumbers, and mechanics— **will become more valuable**, not less.
+- The **"Physical World" Moat**: Unlike routine white-collar tasks, blue-collar work involves navigating complex, real-world conditions that are difficult to automate.
+- AI as a "Superpower": Rather than replacing workers, **AI will provide skilled labor workers with tools that enhance their productivity**.
+- Rising Wages: Karp has indicated that the re-industrialization of America driven by AI will increase demand for labor, leading to higher salaries for blue-collar workers.
+Karp’s stance is that the future of work lies in combining AI technology with physical, vocational skills, rather than in purely intellectual or office-based jobs.
+
+<br>
+
+### 3 AI will enable the "physical world"? Remove barriers?
+
+Imagine **the near future, creating complex apps by having discussions with AI tools. Tools that drastically reduce the complexities of life** (especially the man-made ones). Making it possible for us to accomplish things that seem out of reach.  **AI will bring us together (even more)**. Just as the internet, mobile phones, and social media have drastically reduced social isolation throughout the world. 
+
+<br>
+
+### 4 At the same time, AI will create "physical moats" that make the world safer?
+
+
+Will AI create moats of safety around countries, just like on the Ukraine/Russian front lines that have basically become a stable no-mans land? **When AI tools quickly detect anything unsual, will aggression be impossible?**
 
 
 <br>
