@@ -3,7 +3,7 @@ layout: home
 title: Home
 ---
 
-*26.0502 [Home page versions](/index-versions.html) (a small test of GPT, Claude, and Cursor)*
+<!-- *26.0502 [Home page versions](/index-versions.html) (a small test of GPT, Claude, and Cursor)* -->
 
 
 <br>
@@ -16,7 +16,7 @@ This site has the following top-level pages *(see also the [Wiki](https://github
 - **[(5) AI dev tools](/AI-dev-tools/)**. AI IDEs and tools for rapid dev. 
 - **[(4) Agentic AI](/agentic-ai/)**. Palantir-style systems, tools, and workflows.
 - [(3) Robotic AI](/robotic-ai/). JEPA, belief tracking, control loops, autonomy.
-- **[(2) LLMs](/sandbox/)**. Large language models, transformers, local and API-based models, RAG, prompting, MCP, tool calling, fine-tuning, and practical AI application design. See also: 
+- **[(2) LLMs](/sandbox/)**. Local and API-based LLMs, transformers, RAG, MCP, tools, fine-tuning, and AI app design. See also: 
   - [Core AI (LLM) concepts](https://github.com/terrytaylorbonn/auxdrone/wiki/Core-AI-concepts) (wiki page) explains in detail GPT-3 transformer algorithms. 
   - [Core AI (LLM) misconceptions](/llm-tf-misconceptions/).
 - **[(1) AI Drones](/aidrones/)**. Simulation, drone builds (Pixhawk and FPV), AI (Jetson Nano, Pi), and autonomous flight. See also:
