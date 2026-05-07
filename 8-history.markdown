@@ -7,6 +7,7 @@ permalink: /history/
 
 <br>
 
+
 AI tech is evolving quickly. ZiptieAI is evolving along with it. What began as a drone-focused project has become an exploration of practical AI systems. The diagram below shows the project stages. 
 
 <br>
@@ -42,9 +43,11 @@ I documented my AI drone activities in detail. My original plan was to build my 
 
 #### [CNNs](https://ziptieai.com/cnn/)
 
-The AI in the AI drones was object recognition using CNNs (convoluted neural networks) running on the Nvidia Jetson Nano and on the PI computer. **Studying CNNs is a good first step for studying the much more complex LLMs.**
+The AI in the AI drones was object recognition using CNNs (convoluted neural networks) running on the Nvidia Jetson Nano and on the PI computer. **Studying CNNs is a good first step for studying the much more complex LLMs.** Note: **"My depiction"** below means I have not seen such a diagram elsewhere.
 
-*My own depiction of how the AlexNet CNN works*<br>
+
+
+***My depiction** of how the AlexNet CNN works*<br>
 <img src="/assets/cnn2.png" alt="desc" width="40%"> 
 
 <br>
@@ -53,25 +56,27 @@ The AI in the AI drones was object recognition using CNNs (convoluted neural net
 #### **(2) [LLMs](/sandbox/)**
 
 After understanding the gist of CNNs, **my focus shifted to LLMs (large language models)**:
-  - Transformers (the LLM neural network) *(see the wiki page **[AI concepts](https://github.com/terrytaylorbonn/auxdrone/wiki/Core-AI-concepts)** for my explanation of GPT-3 transformer algorithms)* 
+  - Transformers (TF, the LLM neural network) *(see the wiki page **[AI concepts](https://github.com/terrytaylorbonn/auxdrone/wiki/Core-AI-concepts)** for **my explanation of GPT-3 transformer algorithms)*** 
   - API-based model usage (major frontier models)
-  - Local and remote model deployment (smaller models)
   - Fine-tuning
   - RAG, MCP, and tools
+  - Local and remote model deployment (smaller models)
 
 <!-- I became particulary interested in the claims about AI having intelligence (and emotions, consciousness, etc). AI runs on clocked binary circuits (nothing like the neurons in the brain). Theoretically you could build a "mechanical" GPU (based on EM relays) and run AI on it (it would require perhaps years to generate a token). The only difference between the electronic and mechanical GPU would be the execution speed.
 
 I had read that up to 95% of AI projects failed. That meant that 20x more money than necessary was being spent on AI projects. The value of a firm grasp of AI fundamentals was obvious. -->
 
 
-**My goal was to understand** the core concepts, how to build practical applications, and **perhaps most of all the AI hype** (claims that AI has real intelligence, AI actually thinks, AI can learn, AI will soon surpass human intelligence, etc etc).
+**My goal was to understand** the core concepts, how to build practical applications, and (perhaps most of all) **the AI hype** (claims that AI has real intelligence, AI actually thinks, AI can learn, AI will soon surpass human intelligence, etc etc). The first diagram below shows the TF is nothing but a token sequence generator. That's it. The iAgent (internal agent) is deterministic (python style) code. No intelligence anywhere. It took me months of filtering out the endless hype to figure this out. 
+
+That may seem impossible when you use an LLM that can intelligenty converse with you. But **the LLM intelligence simulation is based on (1) massive computing power and speed and (2) very basic binary computing structures**. The PC does the same trick. 
 
 
-*LLM components (TF = transformer, iAgent = internal agent)*<br>
-<img src="/assets/GPT_LLM.png" alt="desc" width="20%"> 
+***My depiction** of the LLM components (TF = transformer, iAgent = internal agent)*<br>
+<img src="/assets/GPT_LLM.png" alt="desc" width="60%"> 
 
-*My depiction of the main loop of an LLM transformer (GPT-3)*<br>
-<img src="/assets/tf_S1-S6.png" alt="desc" width="45%"> 
+***My depiction** of the main loop of an LLM transformer (GPT-3)*<br> 
+<img src="/assets/tf_S1-S6.png" alt="desc" width="50%"> 
 
 <br>
 
@@ -87,40 +92,50 @@ In any case, the time spent doing hands-on demos (for representational learning,
 
 #### **(4) [Agentic AI](/agentic-ai/)**
 
-AI agents are the deterministic control loops (often written in Python) that are the core of AI applications. "Autonomous" AI agents perform complex tasks with limited (but critical) human intervention. My interest in AI is primarily in this area.  I became particulary interested in Palantir's AI systems because 
+**AI agents are the deterministic control loops (often written in Python) that are the core of AI apps**. My interest in AI is primarily in this area.  I became particulary interested in Palantir's AI systems because 
 - (1) they are very effective and 
 - (2) they can be used for a vast array of non-military purposes (logistics, manufacturing, healthcare, defense, operations, business intelligence)
 
-There were claims that Palantir's systems could become the real world [SkyNet](https://en.wikipedia.org/wiki/Skynet_(Terminator)) *(see my substack post [#73 Understanding Palantir Maven / Why AI will never become Skynet](https://ziptieai.substack.com/p/73-understanding-palantir-maven-through))*. But Palantir's systems are assisted by AI, not controlled by AI. AI is simply a "helpful assistant". AI does not press any buttons. The core control loop is traditional non-AI deterministic programming. AI is used for 
+<!--  "Autonomous" AI agents perform complex tasks with limited (but critical) human intervention.  -->
+
+There were claims that Palantir's systems could become the real world [SkyNet](https://en.wikipedia.org/wiki/Skynet_(Terminator)) *(see my substack post [#73 Understanding Palantir Maven / Why AI will never become Skynet](https://ziptieai.substack.com/p/73-understanding-palantir-maven-through))*. But Palantir's systems, like **all agentic AI systems, are assisted by AI (not controlled by AI)**. The LLM is simply a "helpful assistant". **LLMs control nothing, push no buttons**.
+
+ The core control loop is traditional non-AI deterministic programming that performs
 - Input and output (of "messy" human language representations)
 - Task planning (breaking up complex human language tasks into smaller deterministic tasks)
 - Rule injection (by AI into the main loop)
 
-Agentic AI (with it's helpful AI assistants) will be one of the fastest-growing segments of AI in the future. The success of Palantir shows that such systems are already viable AI applications.
+Agentic AI (with it's helpful LLM assistants) will be one of the fastest-growing business segments in the future. 
 
-*Agent (external) in the LLM ecosystem (dev = what the IDE creates)*<br>
-<img src="/assets/GPT_agent.png" alt="desc" width="45%"> 
+***My depiction** of the agent (external) in the LLM ecosystem*<br>
+<img src="/assets/GPT_agent.png" alt="desc" width="55%"> 
 
 <!-- <img src="/assets/4_agentic.png" alt="drones" width="45%"> -->
-
-
 
 <br>
 
 #### **(5) [AI dev tools](/AI-dev-tools/)**
 
-The goal of this section is to demo
-- AI dev tools/IDEs (Codex, Cursor, etc) and 
+The section focuses on 
+- AI dev tools/IDEs (VSCode, Codex, Cursor, etc) and 
 - related plugins (like the Render plugin for Codex)
 
-*AI IDE and teh components it creates*<br>
-<img src="/assets/5_IDEs.png" alt="drones" width="35%"> 
+The main topics are
+- Overview, intros, videos
+- Overall effectiveness (ease of use, reliability, "hallucinations", cost, etc). For example, **Claude restarts daily and all previous conversations are lost**. Rather inconvenient (this might be because I am using the free version with API credits).
+- **Security issues**. For example, Cursor pasted a secret from my .env file in a chat. Cursor later alerted me that I need to **change all my secrets** because the system detected secrets in the chat and **Cursor could not tell me exactly what secrets were compromised or when**. 
+
+
+*AI IDE and the components it creates*<br>
+<img src="/assets/5_IDEs.png" alt="drones" width="22%"> 
 
 <br>
 
 #### **(6) [AI projects](/AI-projects/)**
 
-After learning the AI dev tools and plugins you can "spin up" quickly complex projects. The goal of this section is to create demos of real-world AI projects that were spun up fast. 
+This section focuses on "spinning up" real-world projects quickly with minimal code analysis or manual coding. Currently there are 2 demos
+- #2 Jobradar project using Cursor/Claude. Ingests data from different sources and uses LLM to find matching data and summarize. The results are then sent by email, google docs, etc. Runs locally and on Cursor. Spun up in 4 days. **I did not even look at the code (not necessary). This is probably how such apps will be done in the future.** 
+- #1 A simple Codex/VSC demo: Data input (UI, n8n local), sanitization, storage to a DB, and viewing in UI. Local and Render. I did analyze the code and manual modify a few times.
 
 *A complete project (IDEs and LLMs can be switched quickly)*<br>
 <img src="/assets/6_projects.png" alt="drones" width="45%"> 
