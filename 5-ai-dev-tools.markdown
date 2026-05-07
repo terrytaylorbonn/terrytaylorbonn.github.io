@@ -7,7 +7,7 @@ description: Last edit 26.0501
 
 <br>
 
-This section focuses on how to use AI IDEs to create AI project. The focus is on testing and learning. The focus for now is on the following AI IDEs:
+This section focuses on how to use AI IDEs to create AI projects. The focus is on testing and learning. The focus for now is on the following AI IDEs:
 - [(5.1) Cursor](/Cursor-overview/)
 - [(5.2) GPT/Codex](/GPT-Codex-overview/)
 - [(5.3) Claude](/Claude-dev-tools/)

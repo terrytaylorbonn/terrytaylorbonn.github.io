@@ -13,6 +13,10 @@ description: Last edit 26.0429
 
 <br>
 
+Note: The eventual goal for this section is to discuss future directions of the next gen of AI tools and how to stay ahead of the pack. But right now I am not sure about this... so I just add this text about the future of AI in general (my thoughts).
+
+<br>
+
 ### 1 Nobody saw it coming
 
 50 years ago — Commodore, Atari, ARPANET — nobody imagined PCs or the internet would reshape civilization. The search engine was unthinkable. What we take for granted today was science fiction.
