@@ -29,11 +29,18 @@ TOC
 
 ## 2 IDE Problems 26.0507 (taken from #606)
 
+
+
 Add here: Claude source code leak.
 
 <br> 
 
 ### demo #2: Security (Cur), email rabbit hole (Cur), data loss (Cla)
+
+<br> 
+
+
+#### ***See the demo details on page [(6) AI projects](/AI-projects/)***.
 
 <br> 
 
