@@ -13,7 +13,7 @@ description: Last edit 26.0429
 
 <br>
 
-Note: The eventual goal for this section is to discuss future directions of the next gen of AI tools and how to stay ahead of the pack. But right now I am not sure about this... so I just add this text about the future of AI in general (my thoughts).
+Note: The eventual goal for this section is to discuss future directions of the next gen of AI tools and how to stay ahead of the pack. But right now I am not sure about this... so I just added this text about the future of AI in general (my thoughts).
 
 <br>
 
@@ -127,4 +127,4 @@ Social isolation still exists in countries where internet is blocked (because in
 
 <!-- *26.0502 ["The future" page versions](/the-future-versions/) (a small test of GPT, Claude, and Cursor)* -->
 
-26.0506 (v1 26.0429)  
+26.0507 (v1 26.0429)  
