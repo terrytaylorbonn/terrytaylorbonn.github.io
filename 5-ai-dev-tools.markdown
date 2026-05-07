@@ -37,7 +37,7 @@ Add here: Claude source code leak.
 
 <br> 
 
-#### **2.1 Security incident**d
+#### **2.1 Security incident**
 This little incident shows perfectly why you can't trust LLMs for secure apps. I am almost certain I made no error (I did not exposed secrets); in any case, Cursor pasted contents from .env to the chat window. those contents included an app password.  The following is a screenshot of the offending Cursor response:
 
 <img src="/assets/cursor_secret_error.png" alt="drones" width="45%"> 

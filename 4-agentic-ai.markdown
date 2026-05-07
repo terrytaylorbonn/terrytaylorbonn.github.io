@@ -6,7 +6,7 @@ permalink: /agentic-ai/
 
 <br>
 
-See the [Wiki page](https://github.com/terrytaylorbonn/auxdrone/wiki/Agentic-AI) for more info.
+See the **[Wiki page](https://github.com/terrytaylorbonn/auxdrone/wiki/Agentic-AI)** for more info.
 
 The focus in this section will be on  
 - creating AI agents

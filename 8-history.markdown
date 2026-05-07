@@ -9,6 +9,7 @@ permalink: /history/
 
 AI tech is evolving quickly. ZiptieAI is evolving along with it. What began as a drone-focused project has become an exploration of practical AI systems. The diagram below shows the project stages. 
 
+<br>
 
 <img src="/assets/zai_evolution.png" alt="smol" width="27%"> 
 
@@ -21,31 +22,38 @@ AI tech is evolving quickly. ZiptieAI is evolving along with it. What began as a
 
 #### **(1) [AI Drones](/aidrones/)**
 
-This was the first phase of ZiptieAI (the name was inspired by the zipties Ukraine used to quickly configure drones). This phase included drone flight simulation, hardware builds, AI, and flight tests (the first flight tests were in my kitchen). AI capabilities centered on:
+This phase included drone flight simulation, hardware builds, AI, and flight tests (the first flight tests were in my kitchen). AI capabilities centered on:
 - Object recognition using onboard cameras
 - Autonomous flight support (AI-generated flight plan modifications)
 
-My original plan was to spend the majority of my time on the drone AI (the drones were only meant to be carrier platforms). But I ended spending most of my time on building drones because of quality and usability issues with the open source software and components.   
+This was the first phase of ZiptieAI (the name was inspired by the zipties Ukraine used to quickly configure drones). **My original plan was to spend the majority of my time on building the AI**. But I ended up spending most of my time on building drones because of quality and usability issues with the open source software and components. 
+I was hoping to work as a volunteer drone builder in Ukraine. I speak Russsian and understand Ukrainian. I spent a total of 2 years in Ukraine. Its a complicated place (even without the war), even if you are just looking for a war-time volunteer job. 
+
+*My AI drone build*<br>
+<img src="/assets/6cjnano.png" alt="6c" width="25%"> 
 
 <br>
 
 #### [Tech Stacks & Docs](/tech-stacks/)
 
-I documented my AI drone activities in detail. My original plan was to build my own ZiptieAI DIY drone website, wiki, and blogs (Substack and Youtube). The first step was a refresher course on the latest doc tools (MERN stacks and REST/GraphQL APIs/docs). For the first time I started using the latest AI tools for coding. I was amazed by how much these AI tools simplified development.   
+I documented my AI drone activities in detail. My original plan was to build my own ZiptieAI DIY drone website, wiki, and blogs (Substack and Youtube). The first step was a refresher course on the latest doc tools (MERN stacks and REST/GraphQL APIs/docs). For the first time I started using the latest AI tools for coding. I was amazed by how much these AI tools simplified development. **It was very clear that websites in the future would be built only using AI.** I wanted to understand more about LLMs.  
 
 <br>
 
-#### CNNs
+#### [CNNs](https://ziptieai.com/cnn/)
 
-CNNs (convoluted neural networks) were used for drone oject recognition. Studying CNNs was good preparation for studying the much more complex LLMs.
+The AI in the AI drones was object recognition using CNNs (convoluted neural networks) running on the Nvidia Jetson Nano and on the PI computer. **Studying CNNs is a good first step for studying the much more complex LLMs.**
+
+*My own depiction of how the AlexNet CNN works*<br>
+<img src="/assets/cnn2.png" alt="desc" width="40%"> 
 
 <br>
 
 
 #### **(2) [LLMs](/sandbox/)**
 
-My focus shifted to LLMs (large language models)
-  - Transformers (the LLM neural network) *(see the wiki page [AI concepts](https://github.com/terrytaylorbonn/auxdrone/wiki/Core-AI-concepts) for my explanation of GPT-3 transformer algorithms)* 
+After understanding the gist of CNNs, **my focus shifted to LLMs (large language models)**:
+  - Transformers (the LLM neural network) *(see the wiki page **[AI concepts](https://github.com/terrytaylorbonn/auxdrone/wiki/Core-AI-concepts)** for my explanation of GPT-3 transformer algorithms)* 
   - API-based model usage (major frontier models)
   - Local and remote model deployment (smaller models)
   - Fine-tuning
@@ -56,13 +64,22 @@ My focus shifted to LLMs (large language models)
 I had read that up to 95% of AI projects failed. That meant that 20x more money than necessary was being spent on AI projects. The value of a firm grasp of AI fundamentals was obvious. -->
 
 
-My goal was to understand the core concepts and how to build practical applications.
+**My goal was to understand** the core concepts, how to build practical applications, and **perhaps most of all the AI hype** (claims that AI has real intelligence, AI actually thinks, AI can learn, AI will soon surpass human intelligence, etc etc).
+
+
+*LLM components (TF = transformer, iAgent = internal agent)*<br>
+<img src="/assets/GPT_LLM.png" alt="desc" width="20%"> 
+
+*My depiction of the main loop of an LLM transformer (GPT-3)*<br>
+<img src="/assets/tf_S1-S6.png" alt="desc" width="45%"> 
 
 <br>
 
 #### (3) [Robotic AI](/robotic-ai/)
 
-AI makes mistakes. For chatbots this is no big deal. But robots (especially those around humans, such as cars and humanoids) must not make mistakes. Yan LeCun's claims that JEPA would provide real robotic intelligence intrigued me. So I did a lot of hands-on JEPA demos. I think what he is selling is not fundamentally different from LLMs. GPT agreed. 
+When I first heard Yan LeCun's talks about how JEPA would provide real robotic intelligence I was fascinated. I totally agreed with what he said about the limitations of LLMs, and he was one of the very few gurus actually saying such things. But after doing a lot of hands-on JEPA (and robotics) demos, **I came to the conclusion that LeCun's version of JEPA was a lot of hype**. What he was selling was not fundamentally different from LLMs. GPT agreed.
+
+Yan was claiming that what he would build would give machines real intelligence. It won't. They may be harmless for chatbots, but **AI robot "hallucinations" could be catastrophic** (especially for robots around humans, such as cars and humanoids).
 
 In any case, the time spent doing hands-on demos (for representational learning, prediction-based systems, belief tracking, control loops, planning under uncertainty, etc) was well spent. Many of the concepts (such as estimation and autonomy) were related to earlier drone work.
 
@@ -81,6 +98,13 @@ There were claims that Palantir's systems could become the real world [SkyNet](h
 
 Agentic AI (with it's helpful AI assistants) will be one of the fastest-growing segments of AI in the future. The success of Palantir shows that such systems are already viable AI applications.
 
+*Agent (external) in the LLM ecosystem (dev = what the IDE creates)*<br>
+<img src="/assets/GPT_agent.png" alt="desc" width="45%"> 
+
+<!-- <img src="/assets/4_agentic.png" alt="drones" width="45%"> -->
+
+
+
 <br>
 
 #### **(5) [AI dev tools](/AI-dev-tools/)**
@@ -89,12 +113,17 @@ The goal of this section is to demo
 - AI dev tools/IDEs (Codex, Cursor, etc) and 
 - related plugins (like the Render plugin for Codex)
 
+*AI IDE and teh components it creates*<br>
+<img src="/assets/5_IDEs.png" alt="drones" width="35%"> 
 
 <br>
 
 #### **(6) [AI projects](/AI-projects/)**
 
 After learning the AI dev tools and plugins you can "spin up" quickly complex projects. The goal of this section is to create demos of real-world AI projects that were spun up fast. 
+
+*A complete project (IDEs and LLMs can be switched quickly)*<br>
+<img src="/assets/6_projects.png" alt="drones" width="45%"> 
 
 <br>
 
@@ -201,4 +230,4 @@ With solid AI dev tools, complex projects can be spun up fast. This section demo
 <br>  -->
 
 
-26.0506
+26.0507
