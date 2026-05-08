@@ -8,7 +8,19 @@ title: Home
 
 <br>
 
-This site has the following top-level pages *(see also the [Wiki](https://github.com/terrytaylorbonn/auxdrone/wiki))*:
+**This is my personal site for Agentic AI (and AI in general)**. The ZiptieAI team includes myself and several AI colleagues (ChatGPT, Codex, Claude, Cursor, etc). The organization and core concepts on this site are my own original. 
+
+
+<br>
+
+
+**If you want to get start with agentic AI**, then these are the core pages you need:
+- **[(4) Agentic AI](/agentic-ai/)**
+- **[(5) AI dev tools](/AI-dev-tools/)**
+- **[(6) AI projects](/AI-projects/)** 
+
+
+**The follow are all of the top-level pages** *(see also the [Wiki](https://github.com/terrytaylorbonn/auxdrone/wiki))*. The ZiptieAI project started at phase (1) and has now reached phase (6). 
 
 - [ZiptieAI History](/history/). How the ZiptieAI project has evolved.
 - [The future](/the-future/). What's the AI end game?

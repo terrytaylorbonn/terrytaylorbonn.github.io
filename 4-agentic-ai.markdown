@@ -6,6 +6,11 @@ permalink: /agentic-ai/
 
 <br>
 
+**NOTE: I AM IN THE PROCESS OF REWRITING THIS PAGE ... FINISH BY 26.05010. THIS IS THE CORE PAGE OF THIS WEBSITE.** As such, its the last page I do (start at the bottom, get all the pieces right, then I work my way up to the top (this is, by the way, how layers in a transformer work). **This page will be the best core explanation of how agentic AI really works (the core concepts).** Original core concepts.. this is the kind of tech writing I do.
+
+
+<br>
+
 See the **[Wiki page](https://github.com/terrytaylorbonn/auxdrone/wiki/Agentic-AI)** for more info.
 
 The focus in this section will be on  
