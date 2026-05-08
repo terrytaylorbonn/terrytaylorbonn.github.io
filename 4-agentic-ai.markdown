@@ -6,8 +6,15 @@ permalink: /agentic-ai/
 
 <br>
 
-**NOTE: I AM IN THE PROCESS OF REWRITING THIS PAGE ... FINISH BY 26.05010. THIS IS THE CORE PAGE OF THIS WEBSITE.** As such, its the last page I do (start at the bottom, get all the pieces right, then I work my way up to the top (this is, by the way, how layers in a transformer work). **This page will be the best core explanation of how agentic AI really works (the core concepts).** Original core concepts.. this is the kind of tech writing I do.
+**NOTE: I AM IN THE PROCESS OF REWRITING THIS PAGE ... FINISH BY 26.05010. THIS IS THE CORE PAGE OF THIS WEBSITE.** As such, its the last page I do (start at the bottom, get all the pieces right, then I work my way up to the top (this is, by the way, how layers in a transformer work). **This page will explain how agentic AI really works (my take).**
 
+(My rewrite working notes: in docx #606 on gdrive (link in footer) search for ""(4) Agentic AI" rewrite").
+
+<img src="/assets/4_agent_1.png" alt="drones" width="65%"> 
+
+<br>
+
+## OLD page 
 
 <br>
 
@@ -82,4 +89,4 @@ This is utter nonsense. All of an AI system (CPU and GPU based parts) are on the
 
 <br>
 
-26.0428
+26.0508 (v1 26.0428)

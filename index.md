@@ -10,11 +10,13 @@ title: Home
 
 **This is my personal site for Agentic AI (and AI in general)**. The ZiptieAI team includes myself and several AI colleagues (ChatGPT, Codex, Claude, Cursor, etc). The organization and core concepts on this site are my own original. 
 
+<img src="/assets/agentic_economy.png" alt="drones" width="75%"> 
+
 
 <br>
 
 
-**If you want to get start with agentic AI**, then these are the core pages you need:
+**If you want to get start with agentic AI (TL;DR)**, then these are the core pages you need:
 - **[(4) Agentic AI](/agentic-ai/)**
 - **[(5) AI dev tools](/AI-dev-tools/)**
 - **[(6) AI projects](/AI-projects/)** 
@@ -24,16 +26,19 @@ title: Home
 
 - [ZiptieAI History](/history/). How the ZiptieAI project has evolved.
 - [The future](/the-future/). What's the AI end game?
+
 - **[(6) AI projects](/AI-projects/)**. Rapidly "spinning up" real-world AI projects. 
 - **[(5) AI dev tools](/AI-dev-tools/)**. AI IDEs and tools for rapid dev. 
 - **[(4) Agentic AI](/agentic-ai/)**. Palantir-style systems, tools, and workflows.
+
 - [(3) Robotic AI](/robotic-ai/). JEPA, belief tracking, control loops, autonomy.
 - **[(2) LLMs](/sandbox/)**. Local and API-based LLMs, transformers, RAG, MCP, tools, fine-tuning, and AI app design. See also: 
   - [Core AI (LLM) concepts](https://github.com/terrytaylorbonn/auxdrone/wiki/Core-AI-concepts) (wiki page) explains in detail GPT-3 transformer algorithms. 
   - [Core AI (LLM) misconceptions](/llm-tf-misconceptions/).
 - **[(1) AI Drones](/aidrones/)**. Simulation, drone builds (Pixhawk and FPV), AI (Jetson Nano, Pi), and autonomous flight. See also:
   - [Core AI CNN (object recognition) concepts](/cnn/)
-- [Tech Stacks & Docs](/tech-stacks/). MERN, APIs, websites, and doc systems.
+- [Tech Stacks & Docs](/tech-stacks/). AI-assisted MERN, APIs, websites, and doc systems.
+
 - [Resources](/resources/). Wiki, Substack, Youtube, Github, and Google Drive. 
 - [About](/about/).
 
@@ -49,7 +54,7 @@ title: Home
 
 <img src="/assets/ziptiedrone2.png" alt="drones" width="23%"> 
 
-<br>
+
 
 
 
