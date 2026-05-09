@@ -382,4 +382,4 @@ This is utter nonsense. All of an AI system (CPU and GPU based parts) are on the
 
 <br>
 
-26.0509 (v1 26.0428)
+26.0509 (rewrote 26.0509; v1 26.0428)

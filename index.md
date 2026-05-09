@@ -10,26 +10,28 @@ title: Home
 
 **This is my personal site for Agentic AI (and AI in general)**. The ZiptieAI team includes myself and several AI colleagues (ChatGPT, Codex, Claude, Cursor, etc). The organization and core concepts on this site are my own original. 
 
+*Screenshot from page [(4) Agentic AI](/agentic-ai/)* <br> 
 <img src="/assets/agentic_economy.png" alt="drones" width="75%"> 
 
 
 <br>
 
 
-**If you want to get start with agentic AI (TL;DR)**, then these are the core pages you need:
-- **[(4) Agentic AI](/agentic-ai/)**
-- **[(5) AI dev tools](/AI-dev-tools/)**
-- **[(6) AI projects](/AI-projects/)** 
+**If you want to get started ASAP with agentic AI (TL;DR)**, then these are the core pages you need:
+- **[(4) Agentic AI](/agentic-ai/)**. The core concepts and basic demos. 
+- **[(5) AI dev tools](/AI-dev-tools/)**. Overview of AI IDE/dev tools (Cursor, Codex, VSC, etc).
+- **[(6) AI projects](/AI-projects/)**. Project demos.
 
+<br> 
 
-**The follow are all of the top-level pages** *(see also the [Wiki](https://github.com/terrytaylorbonn/auxdrone/wiki))*. The ZiptieAI project started at phase (1) and has now reached phase (6). 
+**The follow are all of the top-level pages** *(see also the [Wiki](https://github.com/terrytaylorbonn/auxdrone/wiki))*. The ZiptieAI project started at phase (1) and is now in phase (6). 
 
 - [ZiptieAI History](/history/). How the ZiptieAI project has evolved.
 - [The future](/the-future/). What's the AI end game?
 
 - **[(6) AI projects](/AI-projects/)**. Rapidly "spinning up" real-world AI projects. 
 - **[(5) AI dev tools](/AI-dev-tools/)**. AI IDEs and tools for rapid dev. 
-- **[(4) Agentic AI](/agentic-ai/)**. Palantir-style systems, tools, and workflows.
+- **[(4) Agentic AI](/agentic-ai/)**. Core concepts and basic demos.
 
 - [(3) Robotic AI](/robotic-ai/). JEPA, belief tracking, control loops, autonomy.
 - **[(2) LLMs](/sandbox/)**. Local and API-based LLMs, transformers, RAG, MCP, tools, fine-tuning, and AI app design. See also: 
@@ -44,7 +46,7 @@ title: Home
 
 <br>
 
-*The following is the AI project diagram that appears throughout this site. Note that the AI IDE and the agent are the central components (not the LLM, which many predict will soon become a commodity)*.
+*This AI project diagram appears throughout this site. Note that the agent is the central component (the LLM is a helpful assistant)*.
 
 <img src="/assets/6_main_diagram.png" alt="drones" width="45%"> 
 
