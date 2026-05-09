@@ -8,114 +8,33 @@ permalink: /agentic-ai/
 
 <!-- **26.0509 REWRITING THIS PAGE ... FINISH BY 26.05010. THIS IS THE CORE PAGE OF THIS WEBSITE. This page will explain how agentic AI really works (my take).** (My rewrite working notes: in docx #606 on gdrive (link in footer) search for ""(4) Agentic AI" rewrite"). -->
 
+**This is perhaps the core page for this website. It describes my take on core Agentic AI concepts (with demos)**. The content (including the diagrams) on this page are mostly my own (hashed out with the help of AI LLMs). *See also the wiki pages **[Agentic AI](https://github.com/terrytaylorbonn/auxdrone/wiki/Agentic-AI)** and **[Agentic AI demos](https://github.com/terrytaylorbonn/auxdrone/wiki/4%E2%80%902-Agentic-AI-demos)**.*
 
-**This page is WIP (25.0509)**. The content (including the diagrams) on this page are mostly my own (hashed out with the help of AI LLMs). 
+<br> 
 
 **TOC** 
-- **1 Why learn agentic AI? (jobs)**. The job growth will be phenomenal. Agentic AI is incredibly useful in all business segments.
-- **2 Agent concepts**. What is an agent anyway?
-- **3 Agent demos (no AI)**. From my github. 
-- **4 Agent+AI concepts**. How does AI change things? Dramatically.
-- **5 Agent+AI demos**. From my github.
+- **1 Why learn agentic AI? (jobs)**. Agentic AI is incredibly useful in all business segments. The job growth will be phenomenal. 
+- **2 Agent concepts**. The agent is the central control loop (I would call this perhaps the agentic app). 
+- **3 Agent demos (no AI)**. Lab notes on my Gdrive. Code on my Github. 
+- **4 Agent+AI concepts**. AI is only a (extremely) helpful assistant.
+- **5 Agent+AI demos**. Lab notes on my Gdrive. Code on my Github.
 
 <br>
 
 # **1 Why learn agentic AI? (jobs)**
 
-My interest toward agentic AI grew strongly during the Iran war, when I read about how Palantir's AI systems had radically changed the nature of warfare. This was an application of AI that worked. No hype, no lies. No AI gurus playing us for fools. 
-
-My interest only grew stronger when the hypesters started claiming that Palantir might become Skynet.  But most of all when I saw how agentic AI was going to be the growth market of the future. What revolutionized the battlefield will also revolutionize business. 
+My interest toward agentic AI grew strongly during the Iran war, when I read about how Palantir's AI systems had radically changed the nature of warfare. This was an application of AI that worked. No hype. My interest only grew stronger when I saw how agentic AI was going to be the growth market of the future. What revolutionized the battlefield will also revolutionize business. 
 
 *The future agentic AI job market*<br>
 <img src="/assets/4_1_goldman.png" alt="drones" width="75%"> 
 
+I also wanted to see through the AI hype. Even if you dont plan to develop Agentic AI apps, you will undoubtedly still need to deal with them. It took a decade for AI-assist to be added to Palantir systems. And then came the hype. AI had to be the center of attention. It wasn't "AI-istic agents" (a tongue twister), but rather "agentic AI". Something that might one day take over the world ([Skynet](https://en.wikipedia.org/wiki/Skynet_(Terminator)) style).  That hype generated a lot of publicity. I once read that 95% of AI projects fail. Its quite important to understand what agentic AI is (at least hands-on experience with the basics). 
 
-<br>
-
-# **2 Agent concepts**
-
-What the agent and the AI do.
-
-<br>
-
-### 2.1 The agentic mission 
-
-**Palantir agentic systems (no AI) started around 2003 in response to the 9/11 attacks.** The US government wanted to make sure such an event did not happen again. 
-
-<img src="/assets/4_2_wtc.png" alt="drones" width="35%"> 
-
- 
-
-The mission goals were quite clear: Track all kinds of information,and detect any strange new activity *(such as a bunch of Middle Eastern nationals wanting all of a sudden to learn how to flight airliners on flight simulators; there were warnings about this, but the central government structures were able to ingest those warnings; they did not have enough (motivated) manpower)*. Palantir was to be the (automated) system for this critical mission. **A system that watches the world (like a sorcerer looking into his crystal ball) 24/7, 365 days a year.**
-
-*A palantír is one of several indestructible crystal balls from the novel The Lord of the Rings used to see events in other parts of the world. (https://en.wikipedia.org/wiki/Palant%C3%ADr)*<br>
-<img src="/assets/4_3_crystal_ball.png" alt="drones" width="20%"> 
-
- 
-
-*In an agentic system a deterministic program (like Python) is the sorcerers ball* <br>
-<img src="/assets/4_4_agent_ball.png" alt="drones" width="30%"> 
-
-   <br> 
- 
-### 2.2 Ontology
-Palantir ontology was a big break through. something between free text and a rigid database. you simple restrict the language so that the deterministic loop can process. a lot of effort. but you cant ingest "messy" human language (later with AI you could; and AI puts out basically clean ontology, one of the core magic tricks of AI).
-
-*[Ontology (wiki)](https://en.wikipedia.org/wiki/Ontology_%28information_science%29)* <br>
-<img src="/assets/4_5_onto.png" alt="drones" width="45%"> 
-
- <br>
- 
-# **3 Agent demos (no AI) (SUBPAGE)**
-
-<!-- (no AI) on my GIT 
-(docx #603 chapters [2.x] pal_vx, [3.x] pal_core_0x)
-(LINK TO OTHER PAGE.... put details there)  -->
-
-Simple demos are the best way to understand the core of agentic ai. Below lists my demos in my github, described in detailed in docx #603 on the gdrive. i hope to improve my description of these demos on this page soon. 
-
-<img src="/assets/4_5_3x.png" alt="drones" width="40%"> 
-
-<br>
-
-# **4 Agent+AI concepts**
-
-<br>
-
-### 4.1 Why does agentic need AI?
-
-The agent is the main deterministic control loop of the agentic app. the agent is the center of the universe. 
-
-AI was an add-on to the agents. A helpful assistant. A suped-up search engine with language capabilities. Whose outputs you can never trust. It can use AI ("LLM" in diagram below) as needed as a helpful assistant (usually to interpret/sanitize messy human language text, create human language explanations, planning (breakin up complex tasks into granular task that the agent is programmed to handle, etc etc).
-
-this human language ability, planning ability, etc makes an agentic app vastly more flexible and capable. at the cost of unpredictabilty. but for many apps, that is an excellent tradeoff. 
-
-*The LLM as a helpful assitant for the agent*<br>
-<img src="/assets/4_7_help_assist_LLM.png" alt="drones" width="40%"> 
+*An example of the LLM-centric agentic-AI universe: "What Is Agentic AI? Agentic AI is an innovative advancement in artificial intelligence (AI), characterized by its ability to independently make decisions and implement goal-oriented actions on behalf of users or systems." ([link](https://www.cadence.com/en_US/home/explore/agentic-ai.html))*  <br>
+<img src="/assets/4_9_cadence.png" alt="drones" width="35%"> 
 
 
- <br>
- 
-### 4.2 What does AI do for an agent?
-
-- humanLanguage source (blue square; input from UI, db, apis, etc)
-- agent sends human language with extra human lang commands to LLM
-- LLM (red square) is the AI "magic", turning the into "machine" language (text, but text that conforms to the expectations of the agent). 
-- Agent then can process this "machine language"<br>
-
-*What AI does for an agent*<br>
-<img src="/assets/4_8_what_ai_does.png" alt="drones" width="65%"> 
-
-
-<br>
-
- 
-### 4.3 What are the limitations / tradeoffs?
-
-<br>
-
-#### =3 avoid AI hype rabbitholes
-
+<!-- 
 It took a decade for AI-assist to be added to Palantir systems. And then came the hype. AI had to be the center of attention, the center of the universe. It wasn't "AI-istic agents", but rather "agentic AI". Something that might one day take over the world (Skynet style https://en.wikipedia.org/wiki/Skynet_(Terminator) ).  
 
 That hype brought in the big bucks. All kinds of free publicity. Lots of companies spending big bucks on something that doesn't work (for types of applications it was never designed for). Like FSD (full self driving) that could not drive itself (safely, even today).
@@ -135,35 +54,206 @@ TFs are built on matrix math. Thats it. LLMs = TF + iAgent = simulated intellige
 
 in the TF human lang tokens are converted by TF to hidden states (12K FP numbers per token for GPT-3). TF performs a massive amount of computation on the hidden states for all tokens (up to millions of billions or more computations) to compute the the best new token. This is the the core of so-called "intelligence" in LLMs (in reality there is no intelligence; thats precisely why you need the agent in the first place).
 
+-->
+
+
+
+
 <br>
 
-#### =2 balance tradeoffs 
+# **2 Agent concepts**
 
-because then you appreciate how fragile the stability and accuracy of external agent and LLM interactiono. "hallucinations" = failed UFA algorithm. the algorithms are have "blind" spots. 
+- 2.1 The agentic mission 
+- 2.2 Ontology
 
 <br>
 
-### 4.4 workflow diagram(WIP)
+### 2.1 The agentic mission 
 
-Workflow details:
+**Palantir agentic systems (no AI) started around 2003 in response to the 9/11 attacks.** The US government wanted to make sure such an event did not happen again. 
+
+<img src="/assets/4_2_wtc.png" alt="drones" width="35%"> 
+
+The mission goals were quite clear: Detect any strange new activity that might indicate a security threat *(such as a bunch of foreign nationals wanting all of a sudden to learn on flight simulators how to fly airliners)*. Palantir was to be the (automated) system for this critical mission. **A system that watches the world (like a sorcerer looking into his crystal ball) 24/7, 365 days a year.**
+
+*A palantír is one of several indestructible crystal balls from the novel"The Lord of the Rings" used to see events in other parts of the world [(Wiki)](https://en.wikipedia.org/wiki/Palant%C3%ADr)*<br>
+<img src="/assets/4_3_crystal_ball.png" alt="drones" width="20%"> 
+
+*In an agentic system a deterministic program (like Python) is the sorcerers ball* <br>
+<img src="/assets/4_4_agent_ball.png" alt="drones" width="30%"> 
+
+<br> 
+ 
+### 2.2 Ontology
+Palantir ontology is something between free-form text and a rigid database. You simply (1) restrict the allowed vocabulary and (2) specify relationships between DB entries. This ensures that the deterministic agent loop can process the DB content without errors (you cant simply automatically ingest "messy" human language without AI).
+
+*[Ontology (wiki)](https://en.wikipedia.org/wiki/Ontology_%28information_science%29)* <br>
+<img src="/assets/4_5_onto.png" alt="drones" width="45%"> 
+
+<br>
+ 
+# **3 Agent demos (no AI)**
+
+<!-- (no AI) on my GIT (docx #603 chapters [2.x] pal_vx, [3.x] pal_core_0x)(LINK TO OTHER PAGE.... put details there)  For details see the lab notes doc **#603\_PAL\_.docx** (PAL = Palantir) on my **[Gdrive](https://drive.google.com/drive/folders/1-Adawag9uA8_bq-hDF-nOuPYaRLz1eEO)**.  -->
+
+Simple demos are the best way to understand the basics of agentic apps. For details see page **[Agentic demos (no AI)](/agentic-demos-no-ai/)**.
+
+<img src="/assets/4_5_3x.png" alt="drones" width="45%"> 
+
+<br>
+
+# **4 Agent+AI concepts**
+
+- 4.1 Why agentic needs AI
+- 4.2 What AI does for an agent
+- 4.3 Workflow diagram 
+- 4.4 Core LLM roles in the demos
+<!-- - 4.4 Agentic AI = human language <-> machine language interface -->
+
+<br>
+
+### 4.1 Why agentic needs AI
+
+ 
+The following are just a few examples of how AI is a very helpful assistant for agentic apps:
+- Interpret/sanitize messy human language text
+- Create human language explanations
+- Planning (breaking up complex tasks into granular tasks that the agent can process reliably)
+
+These capabilities an agentic AI app 
+- vastly more flexible and capable
+- at the cost of unpredictabilty.
+
+For many apps this is an excellent tradeoff. 
+
+*The LLM as a helpful assitant for the agent*<br>
+<img src="/assets/4_7_help_assist_LLM.png" alt="drones" width="45%"> 
+
+<br>
+ 
+### 4.2 What AI does for an agent
+
+Reference the diagram below:
+- Agent collects human language data (blue square) from the UI, DB, APIs, etc.
+- Agent forwards this human language with extra (human language + JSON) commands to LLM for processing (cleaning up, sanitizing).
+- LLM (red square) converts the input into "machine" language (text, but text that conforms to the expectations of the agent) as specified by the JSON. 
+- Agent then process this "machine" language" (customized specifically for the agent algorithms).<br>
+
+*What AI does for an agent*<br>
+<img src="/assets/4_8_what_ai_does.png" alt="drones" width="65%"> 
+
+The following diagram shows an demo of this. 
+- (1) 08b uses AI to generate a granular multi-step plan that matches the agent deterministic logic.
+- (2) 08 (deterministic) validates the plan 
+- (3) 08 (deterministic) excutes the plan 
+
+*Diagram from Substack post [#75 The Real Job of AI in Enterprise Apps](https://ziptieai.substack.com/p/75-the-real-job-of-ai-in-enterprise) shows how AI is only used to generate a plan ("08b AI")*
+
+<img src="/assets/aiplan.png" alt="AI planning" width="85%">
+
+
+
+<br>
+
+### 4.3 Workflow diagram 
+
+Workflow details (see diagram below):
 - **#1 UI/DB/API** (human language sources and destinations) **interface with #2 Agent** (the main loop).
 - **#2 Agent adds extra info/requirements (JSON) to LLM input**. This instructes the LLM about what type of data and format to return.
-- **#3 Model (LLM) interface layer**. Every LLM may require slightly different prompts and also output slightly different outputs. Palantir uses  MIL to allow quick easy "hot" switching of models. 
-- **#4 Internal agent controls #5 TF**. The agent knows exactly how to talk/listen to TF to create the LLM response.
-- **#5 TF creates output text** based on input text. Thats it. This is all the LLM TF does, and yet somehow the LLM seems almost intelligent. Unbelieve (just like how everything your PC does is based 100% on simple binary switching logic).
+- **#3 Model (LLM) interface layer**. Every LLM may require slightly different prompts and output slightly different responses. Palantir uses MIL to support "hot" swapping of LLMs. 
+- **#4 Internal agent (iAgent) controls #5 TF**. The iAgent is custom designed to interface with the TF.
+- **#5 TF creates output text** based on input text. Thats all the LLM TF does, and yet somehow the LLM seems intelligent.
 - **#4 LLM iAgent sends response to #2 (external) agent.** 
-- **#2 Agent executes response.**
+- **#2 Agent processes the response.**
 
+*Workflow diagram*<br>
 <img src="/assets/4_10_workflow.png" alt="drones" width="70%"> 
 
 <br>
 
-### 4.5 agentic AI builds a humanLang to machineLang interface
+
+### 4.4 Core LLM roles in the demos
+
+<!-- LLM (iAgent/TF) combo thinking / planning tricks (core functionality that makes agentic AI possible) This can do many things such as
+-	standardize messy inputs (messy vocab and meet JSON requirements)
+-	planning into small steps
+-	rule injection -->
+
+The iAgent/TF duo has functionality that seems to be genuinely intelligent.  
+
+*LLM iAgent/TF*<br>
+<img src="/assets/4_12_tf_hidden_states.png" alt="drones" width="30%"> 
+
+<!-- [3.6] (WIP) pal_core_06: simplest demo of all core LLM roles 26.0416
+#585 could you create a minimalistic demo that demos the key ways an LLM capabilities can be used in the types of system we have been creating? 
+for example, 
+(1) input human language commands, 
+(2) insert new rules, etc? 
+for now, could you just list those key ways?
+GPT: Yes. That would be an excellent meta-demo:
+one small system showing the main ways an LLM adds value inside structured applications.
+For now, here is the concise list of key LLM capabilities relevant to the systems you’ve been building. -->
+
+
+The following is a list of core LLM Roles in the demos (GPT)<br>
+
+**1. Human Command Interpreter<br>**
+Convert vague user language into structured actions.<br>
+"Show delayed shipments in Taipei"<br>
+-> {"action":"query","filter":...}<br>
+**2. Messy Data Ingest / Extraction<br>**
+Convert emails, logs, notes, reports into ontology records.<br>
+email text -> event JSON<br>
+**3. Planner / Task Decomposer<br>**
+Break complex requests into atomic executable steps.
+compare X vs Y<br>
+-> step1 filter<br>
+-> step2 aggregate<br>
+-> step3 compare<br>
+**4. Rule Generator / Rule Injection**<br>
+Create new runtime rules without changing source code.<br>
+"Alert if outage + delay + supplier overlap"<br>
+-> new rule JSON<br>
+**5. Semantic Mapping / Ontology Translation**<br>
+Map inconsistent human wording into standard machine concepts.<br>
+"flat tire", "blowout"<br>
+-> tire_failure<br>
+**6. Search / Retrieval Helper**. <br>
+Turn natural language into queries or rank relevant records/documents.<br>
+"What affects Site 1?"<br>
+-> graph query / ranked docs<br>
+**7. Explanation / Summarization**.<br>
+Convert machine results into human-readable conclusions.<br>
+3 suppliers affected due to shared parent + route dependency <br>
+**8. Interactive Analyst Assistant**.<br>
+Support iterative questioning.<br>
+Why?<br>
+Show evidence.<br>
+What changed?<br>
+What if road closed?
+
+<br>
+
+# **5 Agent+AI demos**
+
+Simple demos are the best way to understand the basics of agentic AI apps. For details see page **[Agentic demos with AI](/agentic-demos-with-ai/)**.
+
+<!-- on my GIT (docx #603 chapters [2.x] pal_vx, [3.x] pal_core_0x)  (LINK TO OTHER PAGE.... put details there) simple demos are the best way to understand the core of agentic ai. Below lists my demos in my github, described in detailed in docx #603 on the gdrive. i hope to improve my description of these demos on this page soon. -->
+
+<img src="/assets/4_6_2x.png" alt="drones" width="45%"> 
+
+<br>
+
+
+
+
+<!-- 
+### 4.4 Agentic AI = human language <-> machine language interface
 This section describes 3 ways to do this. The first 3.1 is what we want. 
 TOC
-•	=1 (BINGO) (machine conversion MMLI 4<>5) Human lang is the interface medium 
-•	=2 (FAIL) (machine conversion EM I/F) brain implants did not work (too complex) 
-•	=3 (BINGO (but not what we want)) (human conversion I/F) Python (MML Converter/compiler)  
+- 1 (BINGO) (machine conversion MMLI 4<>5) Human lang is the interface medium 
+- 2 (FAIL) (machine conversion EM I/F) brain implants did not work (too complex) 
+- 3 (BINGO (but not what we want)) (human conversion I/F) Python (MML Converter/compiler)  
 
  
 #### =1 (BINGO) (machine conversion) Human lang as the interface medium 
@@ -204,92 +294,13 @@ any "chats" must go thru a complicated UI . that is carefully programmed to filt
 
 agentic usage is thru a carefully scripted API . Python programs can interact with external programs. but those programs on both sides must closely observe the API specs. 
 
-<br>
-
-
-# **5 Agent+AI demos (SUBPAGE)**
-
-
-
-on my GIT 
-(docx #603 chapters [2.x] pal_vx, [3.x] pal_core_0x)
-
-(LINK TO OTHER PAGE.... put details there)
-
-simple demos are the best way to understand the core of agentic ai. Below lists my demos in my github, described in detailed in docx #603 on the gdrive. i hope to improve my description of these demos on this page soon. 
-
-<img src="/assets/4_6_2x.png" alt="drones" width="45%"> 
-
-<br>
-
-### 5.3 LIST OF 8
-LLM (iAgent/TF) combo thinking / planning tricks (core functionality that makes agentic AI possible)
-
-This can do many things such as
--	standardize messy inputs (messy vocab and meet JSON requirements)
--	planning into small steps
--	rule injection
-
-it does this ... but without intelligence (all made possible by the interaction of the deterministic iAGent that was programmed specifically for the TF; the 2 together can perform these functions.
-
-<img src="/assets/4_12_tf_hidden_states.png" alt="drones" width="30%"> 
-
-[3.6] (WIP) pal_core_06: simplest demo of all core LLM roles 26.0416
-#585 could you create a minimalistic demo that demos the key ways an LLM capabilities can be used 
-in the types of system we have been creating? 
-for example, 
-(1) input human language commands, 
-(2) insert new rules, etc? 
-for now, could you just list those key ways?
-
-Yes. That would be an excellent meta-demo:
-one small system showing the main ways an LLM adds value inside structured applications.
-
-For now, here is the concise list of key LLM capabilities relevant to the systems you’ve been building.
-
-Core LLM Roles in Your Demo Systems<br>
-**1. Human Command Interpreter<br>**
-Convert vague user language into structured actions.<br>
-"Show delayed shipments in Taipei"<br>
--> {"action":"query","filter":...}<br>
-**2. Messy Data Ingest / Extraction<br>**
-Convert emails, logs, notes, reports into ontology records.<br>
-email text -> event JSON<br>
-**3. Planner / Task Decomposer<br>**
-Break complex requests into atomic executable steps.
-compare X vs Y<br>
--> step1 filter<br>
--> step2 aggregate<br>
--> step3 compare<br>
-**4. Rule Generator / Rule Injection**<br>
-Create new runtime rules without changing source code.<br>
-"Alert if outage + delay + supplier overlap"<br>
--> new rule JSON<br>
-**5. Semantic Mapping / Ontology Translation**<br>
-Map inconsistent human wording into standard machine concepts.<br>
-"flat tire", "blowout"<br>
--> tire_failure<br>
-**6. Search / Retrieval Helper**. <br>
-Turn natural language into queries or rank relevant records/documents.<br>
-"What affects Site 1?"<br>
--> graph query / ranked docs<br>
-**7. Explanation / Summarization**.<br>
-Convert machine results into human-readable conclusions.<br>
-3 suppliers affected due to shared parent + route dependency <br>
-**8. Interactive Analyst Assistant**.<br>
-Support iterative questioning.<br>
-Why?<br>
-Show evidence.<br>
-What changed?<br>
-What if road closed?
+<br> -->
 
 
 
 
 
-
-
-
+<!-- 
 
 
 
@@ -364,7 +375,7 @@ Very "basic" demos of such functionality are listed on the wiki page [Agentic AI
 - SW programming jobs will not disappear. Such systems require very capable product experts preferably with extensive SW experience. Programming is just becoming higher level. 
 
 
-<!-- 
+
 A few things you will notice if you do thOne of my major goals in studying AI has been to refute the hype (that I recognized early). The AI titans and gurus were feeding the public nonsense about how their inventions could think, have consciousness, have feelings, and even surpass human intelligence.
 
 This is utter nonsense. All of an AI system (CPU and GPU based parts) are on the lowest level clocked binary circuits. This has absolutely nothing to do with the neurons in the human brain. AI tools cannot see, hear, sense touch, smell, have feelings, consciousness, or think. In short, they have no intelligence. -->

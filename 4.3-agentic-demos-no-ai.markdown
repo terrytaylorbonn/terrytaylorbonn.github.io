@@ -1,0 +1,22 @@
+---
+layout: page
+title: "Agentic demos (no AI) (from 4.3)"
+permalink: /agentic-demos-no-ai/
+---
+
+<br>
+
+This page is WIP (v1 26.0509). I need to go back through these demos and document. 
+
+I believe these files were **named "pal_core" because they show the core deterministic functions in Palantir style non-AI agentic apps**.
+
+Simple demos are the best way to understand the core of agentic apps. For details see the lab notes doc **#603\_PAL\_.docx** (PAL = Palantir) on my **[Gdrive](https://drive.google.com/drive/folders/1-Adawag9uA8_bq-hDF-nOuPYaRLz1eEO)**.  
+
+<img src="/assets/4_5_3x.png" alt="drones" width="70%"> 
+
+
+<br>
+
+26.0509 (v1 26.0509)
+
+

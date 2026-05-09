@@ -1,0 +1,21 @@
+---
+layout: page
+title: "Agentic demos with AI (from 4.5)"
+permalink: /agentic-demos-with-ai/
+---
+
+<br>
+
+This page is WIP (v1 26.0509). I need to go back through these demos and document.
+
+Simple demos are the best way to understand the core of agentic+AI apps. For details see the lab notes doc **#603\_PAL\_.docx** (PAL = Palantir) on my **[Gdrive](https://drive.google.com/drive/folders/1-Adawag9uA8_bq-hDF-nOuPYaRLz1eEO)**.  
+
+<img src="/assets/4_6_2x.png" alt="drones" width="70%"> 
+
+Also 
+
+<img src="/assets/4_5_3x_bbb.png" alt="drones" width="70%"> 
+
+<br>
+
+26.0509 (v1 26.0509)
