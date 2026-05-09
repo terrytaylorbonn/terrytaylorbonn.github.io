@@ -9,7 +9,7 @@ permalink: /agentic-ai/
 <!-- **26.0509 REWRITING THIS PAGE ... FINISH BY 26.05010. THIS IS THE CORE PAGE OF THIS WEBSITE. This page will explain how agentic AI really works (my take).** (My rewrite working notes: in docx #606 on gdrive (link in footer) search for ""(4) Agentic AI" rewrite"). -->
 
 
-**This page is WIP (25.0509)**. The thoughts (and the diagrams) on this page are mostly my own (hased out with the help of AI LLMs). 
+**This page is WIP (25.0509)**. The content (including the diagrams) on this page are mostly my own (hashed out with the help of AI LLMs). 
 
 **TOC** 
 - **1 Why learn agentic AI? (jobs)**. The job growth will be phenomenal. Agentic AI is incredibly useful in all business segments.
@@ -48,12 +48,12 @@ What the agent and the AI do.
 
 The mission goals were quite clear: Track all kinds of information,and detect any strange new activity *(such as a bunch of Middle Eastern nationals wanting all of a sudden to learn how to flight airliners on flight simulators; there were warnings about this, but the central government structures were able to ingest those warnings; they did not have enough (motivated) manpower)*. Palantir was to be the (automated) system for this critical mission. **A system that watches the world (like a sorcerer looking into his crystal ball) 24/7, 365 days a year.**
 
-A palantír is one of several indestructible crystal balls from the novel The Lord of the Rings used to see events in other parts of the world. (https://en.wikipedia.org/wiki/Palant%C3%ADr)<br>
+*A palantír is one of several indestructible crystal balls from the novel The Lord of the Rings used to see events in other parts of the world. (https://en.wikipedia.org/wiki/Palant%C3%ADr)*<br>
 <img src="/assets/4_3_crystal_ball.png" alt="drones" width="20%"> 
 
  
 
-The deterministic program (like Python) agent as a the sorcerers ball <br>
+*In an agentic system a deterministic program (like Python) is the sorcerers ball* <br>
 <img src="/assets/4_4_agent_ball.png" alt="drones" width="30%"> 
 
    <br> 
@@ -61,19 +61,18 @@ The deterministic program (like Python) agent as a the sorcerers ball <br>
 ### 2.2 Ontology
 Palantir ontology was a big break through. something between free text and a rigid database. you simple restrict the language so that the deterministic loop can process. a lot of effort. but you cant ingest "messy" human language (later with AI you could; and AI puts out basically clean ontology, one of the core magic tricks of AI).
 
-https://en.wikipedia.org/wiki/Ontology_%28information_science%29 <br>
+*[Ontology (wiki)](https://en.wikipedia.org/wiki/Ontology_%28information_science%29)* <br>
 <img src="/assets/4_5_onto.png" alt="drones" width="45%"> 
 
  <br>
  
 # **3 Agent demos (no AI) (SUBPAGE)**
-(no AI) on my GIT 
+
+<!-- (no AI) on my GIT 
 (docx #603 chapters [2.x] pal_vx, [3.x] pal_core_0x)
+(LINK TO OTHER PAGE.... put details there)  -->
 
-
-(LINK TO OTHER PAGE.... put details there) 
-
-simple demos are the best way to understand the core of agentic ai. Below lists my demos in my github, described in detailed in docx #603 on the gdrive. i hope to improve my description of these demos on this page soon. 
+Simple demos are the best way to understand the core of agentic ai. Below lists my demos in my github, described in detailed in docx #603 on the gdrive. i hope to improve my description of these demos on this page soon. 
 
 <img src="/assets/4_5_3x.png" alt="drones" width="40%"> 
 
@@ -91,28 +90,27 @@ AI was an add-on to the agents. A helpful assistant. A suped-up search engine wi
 
 this human language ability, planning ability, etc makes an agentic app vastly more flexible and capable. at the cost of unpredictabilty. but for many apps, that is an excellent tradeoff. 
 
-The LLM as a helpful assitant for the agent<br>
+*The LLM as a helpful assitant for the agent*<br>
 <img src="/assets/4_7_help_assist_LLM.png" alt="drones" width="40%"> 
 
 
  <br>
  
-### 4.2 What does AI do?
+### 4.2 What does AI do for an agent?
 
-
-(below) 
 - humanLanguage source (blue square; input from UI, db, apis, etc)
 - agent sends human language with extra human lang commands to LLM
 - LLM (red square) is the AI "magic", turning the into "machine" language (text, but text that conforms to the expectations of the agent). 
 - Agent then can process this "machine language"<br>
 
+*What AI does for an agent*<br>
 <img src="/assets/4_8_what_ai_does.png" alt="drones" width="65%"> 
 
 
 <br>
 
  
-### 4.3 what are the limitations / tradeoffs?
+### 4.3 What are the limitations / tradeoffs?
 
 <br>
 
@@ -123,7 +121,7 @@ It took a decade for AI-assist to be added to Palantir systems. And then came th
 That hype brought in the big bucks. All kinds of free publicity. Lots of companies spending big bucks on something that doesn't work (for types of applications it was never designed for). Like FSD (full self driving) that could not drive itself (safely, even today).
 
 
-An example of the LLM as the core of the Agent (LLM-centric universe): "What Is Agentic AI? Agentic AI is an innovative advancement in artificial intelligence (AI), characterized by its ability to independently make decisions and implement goal-oriented actions on behalf of users or systems." https://www.cadence.com/en_US/home/explore/agentic-ai.html  <br>
+*An example of the LLM as the core of the Agent (LLM-centric universe): "What Is Agentic AI? Agentic AI is an innovative advancement in artificial intelligence (AI), characterized by its ability to independently make decisions and implement goal-oriented actions on behalf of users or systems." From [Cadence](https://www.cadence.com/en_US/home/explore/agentic-ai.html).*  <br>
 <img src="/assets/4_9_cadence.png" alt="drones" width="35%"> 
 
 <br>
