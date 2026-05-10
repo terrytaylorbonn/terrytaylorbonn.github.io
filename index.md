@@ -10,7 +10,7 @@ title: Home
 
 **This is my personal site for Agentic AI (and AI in general)**. The organization and core concepts of this site are my own original. 
 
-*Screenshot from page [(4) Agentic AI](/agentic-ai/)* <br> 
+*The number of [(4) Agentic AI](/agentic-ai/) jobs will skyrocket in the near future* <br> 
 <img src="/assets/agentic_economy.png" alt="drones" width="75%"> 
 
 <!-- The ZiptieAI team includes myself and several AI colleagues (ChatGPT, Codex, Claude, Cursor, etc). -->
