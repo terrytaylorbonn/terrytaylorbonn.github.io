@@ -6,17 +6,17 @@ permalink: /UFAs/
 
 <br>
 
-This page is WIP (v1 26.0510).
+*This page is WIP (v1 26.0510). Its a big project that will take time. It will take weeks or iterations to get the gist right. But I've not seen a presentation on the UFA topic like this anywhere, so I wanted to create my own. I think that a good understanding of UFAs helps greatly to better design Agentic AI projects.*
 
 <br>
 
 
 
-**If an LLM was truly intelligent, then an AI agent (Python app) could simply send free form text and done with it.** But an LLM is not intelligent. Its output are statistical approximations (the "A" in "UFA") based on algorithms and input data used to program ("train") the LLM.  Therefore to use AI agents effectively, it would really help to understand Universal Function Approximators (UFAs) and how they are implemented in LLM TFs. 
+**If an LLM was truly intelligent, then an AI agent (Python app) could simply send free form text and be done with it.** But an LLM is not intelligent. It's outputs are statistical approximations (the "A" in "UFA") based on algorithms and input data used to program ("train") the LLM TF.  Therefore to use AI agents effectively, it really helps to understand Universal Function Approximators (UFAs) and how they are implemented in LLM TFs. 
 
-Note: This section talks about the TF in GPT-3. GPT-3 is the only model I have studied in detail. Newer may be much more powerful, but the core techniques they use to implement a UFA will be similar.
+This section talks about the **GPT-3 TF**. GPT-3 is the only model I have studied in detail. Newer models may be much more powerful, but the core techniques they use to implement a UFA will be similar.
 
-Most of this page is my original material. So, as with LLMs, a disclaimer: I sometimes make mistakes. :)
+Most of this page is my original material (I'm sure this kind of info is out there in the internet somewhere, but I did not run into a single cohesive presentation; thats what I am attempting here). So, as with LLMs, a disclaimer: **I sometimes make mistakes. :)**
 
 <br>
 
@@ -52,22 +52,105 @@ Describes how the LLM has seemingly intelligent functionality that can make its 
 
 # **1 REQUIREMENT (human <> computer bridge) / SOLUTION (UFA)**
 
-### 1.1 requirement: interface humanLang and computer worlds 
+<br> 
 
-(1) the human world is vastly more interesting. more complex.
+#### **1.1 Requirement: Interface human language and computer worlds** 
 
-(2) but the LLM is very fast and can be scaled... and is native to our digital worlds.
-and digital for many things is better (costs, distances, etc)
+We dont need intelligence. We just need a computational unit that can interact using human language. The very idea that binary machines are intelligent is ridiculous (and leads to bad engineering designs).
 
-(3) interfacing these 2 worlds is complex... solution??? a  bridged 
-a comptational engine in computer that can replicate human interaction mechanisms (language) without intelligence or knowledge. just digital equations.
+**(1) Human language is far more complex than computer interactions**. 
+We are intelligent. Our writing system is designed with that in mind. We don't write in a predictable manner, and our thoughts are incredibly complex. We also make spelling mistakes and abbreviations. No problem for us. 
 
-(4) this bridge will be a crude approximation, a guess... its dangerous sometims
-Humanoids in the home, FSD on the streets. You are mixing 2 worlds
-	Humans who see, hear, touch, smell, have vision, consciousness, etc. This defines everything thing they do, their complex interactions.
-	AI machines that are based 100% on 100% binary computation. They see nothing, have no thoughts, etc. They do ONLY what they are programmed to do.
- 
-### 1.2 our brains do 3 things (1) store info (2) encode/decode (language) (3) intelligent answers
+**(2) But the LLM is very fast and can be scaled and is native to our digital worlds.**
+And the digital world is vitally important. It can do many things vastly more efficiently than humans.
+
+**(3) Interfacing these 2 worlds is complex**.
+We need a comptational engine residing in a computer that can 
+- Replicate human interaction mechanisms (language) 
+- Store "common" word responses for a vast number of submitted prompts.
+
+**(4) This interface will be an approximation (not safe for many applications)**.
+Humanoids in the home, FSD on the streets. You are mixing 2 worlds that dont belong together:
+- Humans who see, hear, touch, smell, see, have consciousness, feelings, etc. This defines everything thing they do, their complex interactions.
+- Machines based 100% on 100% binary computation. They see nothing, have no thoughts, etc. They do ONLY what they are programmed to do.
+
+<br> 
+
+#### **1.2 Equations (deterministic) work for many things** 
+
+Examples from the drone world. 
+
+**(1) Kalman (filter) equations for predicting movement with limited info.** 
+They store the basic reality of movement. But is that how the human mind really tracks objects, predicts movement? The human version is more complex (not equations).
+
+<img src="/assets/1.2_kalman.png" alt="drones" width="30%"> 
+
+**(2) PID controller.**  
+Computes how moving objects can be controlled with inputs (in a perfect environment). Humans can also steer objects quite well, and human thinking is probably more complex (not equations). 
+
+<img src="/assets/1.2_PID.png" alt="drones" width="40%">  <img src="/assets/1.2_PID2.png" alt="drones" width="40%"> 
+
+
+**(3) FFT's are digital approximations**, but they work well for many apps.
+ 
+<img src="/assets/1.2_FFT.png" alt="drones" width="50%"> 
+
+<br>
+
+#### **1.3 Equations (deterministic) dont work for human interaction**
+
+
+**(1) For a human, words and language elicit thought.** 
+I cant find a good pic for thought. There is none. 
+
+<img src="/assets/1.3_neurons.png" alt="drones" width="20%"> 
+
+**(2) For computer, words are just visual representations of numbers (ASCII characters).** 
+An LLM's thinking is all computation in binary. 
+Finding a pic for binary is simple.
+ 
+<img src="/assets/1.3_ascii.png" alt="drones" width="35%"> 
+
+<br>
+
+#### **1.4 "Deterministic" computer algorithms**
+
+So if you cant do it with an equation, then just do it with a binary algorithm?
+
+**(1) Interactions that are far too complex (molecular interaction)**.
+There are equations that determine atomic interaction in molecules, but atoms are not points in spaces, and they all interact with each other. The computations are not possible. Simplifying the computational model of interaction to fit the level of computational power leads to a gibberish answer.
+ 
+<img src="/assets/1.4_protein.png" alt="drones" width="30%">  
+
+**(2) Large sets of data sometimes dont follow any logical patterns**. 
+This example is used throught this page (Belgium/Holland demo). The map defines city sections in the Netherlands that are considered legally part of Belgium. A lot of processes in nature are like this.  There are rules defined by the data (the map), but there is no discernable logic.
+
+<img src="/assets/1.4_belgium.png" alt="drones" width="40%"> 
+
+**(3) Human language is not possible to recognize with traditional computer algorithms based on logic and equations**.  
+Our words are minimalist code that we use to transfer info (just like facial expressions). 
+- The possible combinations are as numeroous as with the protein molecular, 
+- the rules as illogical as the Belgian town districs in Holland (Netherlands, the Netherlands, Dutch) map.
+- And then the spellllling mistakes, the synonyms, etc etc. 
+
+Defining all the possible combinations of words is impossible.
+
+<img src="/assets/1.4_word_combos.png" alt="drones" width="65%"> 
+
+
+
+
+
+
+
+
+<br><br><br>
+
+=======================================================
+
+<img src="/assets/.png" alt="drones" width="40%"> 
+
+<!-- ### 1.2 our brains do 3 things (1) store info (2) encode/decode (language) (3) intelligent answers
 
 (1) we have memories,thoughts. 
 
@@ -131,12 +214,15 @@ And when you understand how AI really works, you will understand why agentic AI 
 26.0227 (day 4) distill chat content from yesterday  // #600_core_AI_concepts_v13 // 1.2 Netherlands/belgium example (from Welch labs) https://youtu.be/qx7hirqgfuU?t=6 
  
 @258
- 
+
  
 (2) not viable: Driving cars on public roads 
 
 but will never be safe enough for self-driving cars and home humanoids. That’s my personal opinion (backed up by over a decade of empty self-driving car promises).
 
+-->
+
+<br>
  
 # **2 HOW TF-UFA WORKS (INF(hLang/vLang/mLang), TRAIN)**
 
