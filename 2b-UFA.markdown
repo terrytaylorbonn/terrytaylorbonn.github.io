@@ -6,7 +6,7 @@ permalink: /UFAs/
 
 <br>
 
-*This page is WIP (v1 26.0510). Its a big project that will take time. It will take weeks or iterations to get the gist right. But I've not seen a presentation on the UFA topic like this anywhere, so I wanted to create my own. I think that a good understanding of UFAs helps greatly to better design Agentic AI projects.*
+*This page is WIP (v1 26.0510). Its a big project that will take time. It will take weeks of iterations to get the gist right. But I've not seen a presentation on the UFA topic like this anywhere, so I wanted to create my own. I think that a good understanding of UFAs helps greatly to better design Agentic AI projects.*
 
 <br>
 
@@ -164,7 +164,7 @@ For the TF you use massive amounts of input / desire-output combinations to prog
 
 <br>
 
-#### **1.6 Viable / nonviable applications of UFA
+#### **1.6 Viable / nonviable applications of UFA**
 
 **(1) Viable: Belgian town demo (mistakes are not critical)**. I go throught the math on this demo later in this document. The original [video](https://youtu.be/qx7hirqgfuU?t=6) content (from Welch labs) is excellent. But I try to approach the topic a bit differently, avoiding the complex 3d videos and focusing on the math algorithm (to me thats easier to understand, and it scales easily into more than 2 "dimensions"). 
 
