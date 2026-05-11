@@ -5,7 +5,6 @@ title: Home
 
 <!-- *26.0502 [Home page versions](/index-versions.html) (a small test of GPT, Claude, and Cursor)* -->
 
-
 <br>
 
 **This site covers Agentic AI (and AI in general)**. The organization and core concepts of this site are my own original. 
@@ -17,14 +16,12 @@ title: Home
 
 <br>
 
-
 **If you want to get started ASAP with agentic AI (TL;DR)**, then these are the core pages you need:
 - **[(4) Agentic AI](/agentic-ai/)**. Core concepts and basic demos. 
 - **[(5) AI dev tools](/AI-dev-tools/)**. Cursor, Codex, VSC, Claude (no IDE), etc.
 - **[(6) AI projects](/AI-projects/)**. Demos (with Github repo and docs).
 
-*This diagram appears throughout this site. The agent and the IDE dev tools are front and center (the LLM is a helpful assistant)*.
-
+*This diagram appears throughout this site. The agent and the IDE dev tools are front and center (the LLM is a helpful assistant)*. <br>
 <img src="/assets/6_main_diagram.png" alt="drones" width="45%"> 
 
 <br> 
@@ -33,15 +30,10 @@ The following 2 pages explain **the core of how AI really works** (especially (2
 - **[(2) LLMs](/sandbox/)**. An LLM consists of an (1) internal agent and a (2) transformer (TF). The TF is the core computational engine behind modern AI systems and the mechanism that enables modern LLM behavior.
 - **[(2b) UFAs](/UFAs/)**. A TF implements a Univeral Function Approximator (UFA) algorithm. Understanding what a UFA is is the key to understanding what AI really is. And **when you understand how AI really works,  you will understand why agentic AI works in systems like Palantir Maven (and in many many other business segments), but will never be safe enough for self-driving cars and home humanoids**. That's my personal opinion (backed up by over a decade of empty self-driving car promises). 
 
-*How a UFA determines if part of a town are in the Netherlands or Belgium*.
-
+*How a UFA determines if part of a town are in the Netherlands or Belgium*.<br>
 <img src="/assets/belgium1.png" alt="drones" width="75%"> 
 
 <br> 
-
-
-
-
 
 
 **The following are all of the top-level pages** *(see also the [Wiki](https://github.com/terrytaylorbonn/auxdrone/wiki))*. The ZiptieAI project started at phase (1) and is now at phase (6). 
@@ -67,8 +59,7 @@ The following 2 pages explain **the core of how AI really works** (especially (2
 
 <br>
 
-*The name "ZiptieAI" was inspired by the ziptied drones during the Ukraine-Russia war (I was in Ukraine at the time).*  
-
+*The name "ZiptieAI" was inspired by the ziptied drones during the Ukraine-Russia war (I was in Ukraine at the time).* <br>
 <img src="/assets/ziptiedrone2.png" alt="drones" width="23%"> 
 
 

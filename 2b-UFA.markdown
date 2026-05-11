@@ -46,13 +46,13 @@ Describes how the LLM has seemingly intelligent functionality that can make its 
 
 - The cool looking 3d diagrams you often see are only confusing you.
 - CNNs (object recognition) are simpler than TFs, and are an excellent stepping stone / analogy for understanding the more complex TFs. 
-- My TF explanation focuses on the math. This makes it much more simpler.
+- My TF explanation focuses on the math. This makes it much simpler.
 
 <br>
 
 # **1 REQUIREMENT (human <> computer bridge) / SOLUTION (UFA)**
 
-1.1 requirement: interface humanLang and computer worlds 
+### 1.1 requirement: interface humanLang and computer worlds 
 
 (1) the human world is vastly more interesting. more complex.
 
@@ -67,7 +67,7 @@ Humanoids in the home, FSD on the streets. You are mixing 2 worlds
 	Humans who see, hear, touch, smell, have vision, consciousness, etc. This defines everything thing they do, their complex interactions.
 	AI machines that are based 100% on 100% binary computation. They see nothing, have no thoughts, etc. They do ONLY what they are programmed to do.
  
-1.2 our brains do 3 things (1) store info (2) encode/decode (language) (3) intelligent answers
+### 1.2 our brains do 3 things (1) store info (2) encode/decode (language) (3) intelligent answers
 
 (1) we have memories,thoughts. 
 
@@ -75,13 +75,13 @@ Humanoids in the home, FSD on the streets. You are mixing 2 worlds
 
 (3) the digital intelligence must do the same thing.
  
-1.3 computers have no intelligence... they must have algorithms
+### 1.3 computers have no intelligence... they must have algorithms
 no thoughts, no understanding. 
 they are simply calculators. 
 with digital data storage. 
 thats it.
  
-1.4 working solution: equations (kalman, pid)
+### 1.4 working solution: equations (kalman, pid)
 
 (1) kalman works for many things.
 equations are magical. they define how things interact.
@@ -90,7 +90,7 @@ they dont store patterns.... they store how our world really functions.
 (2) PID
 computes how moving objects can be controlled with inputs (in teh real world more complex, there are more factors, but these equations are good for simplified situations).
  
-1.5 "deterministic" algorithms (equations) fail for many thigns
+### 1.5 "deterministic" algorithms (equations) fail for many thigns
 
 (1) interactions have definitions but are too complex (molecules)
 (like molecular reactions) that you cant define the world with the low level fucntions that describe interactions (or digital math is not a good enough approximation). in molecules, every atom interacts wiht every other, and they are not simple point shapes. this is impossible to model. simplifying the model of these interactions results in wrong results. 
@@ -98,12 +98,10 @@ computes how moving objects can be controlled with inputs (in teh real world mor
 (2) large sets of data sometimes dont follow any logical patterns (bel/hol)
 this example is used throught this page (belgium/holland)
 
- 
-
 (3) follow patterns that are defined by intelligence (LANGUAGE IS A PERFECT EXAMPLE) 
 we have intelligence, and our words are minimalist code that we transfer info. but binary computers cant understand what they mean. and defining all the possible combinations of words is impossible (and also including spelling mistkaes).
  
-1.6 TF UFA solution
+### 1.6 TF UFA solution
 
 (1) the TF implements a UFA (probabliistic approximator, not intelligence)
 
@@ -124,7 +122,7 @@ approximation.
 
 
  
-1.7 viable/nonviable applications
+### 1.7 viable/nonviable applications
 
 (1) viable: BELGIAN TOWN DEMO ADD (mistakes are not critical)
 
@@ -141,7 +139,8 @@ but will never be safe enough for self-driving cars and home humanoids. That’s
 
  
 # **2 HOW TF-UFA WORKS (INF(hLang/vLang/mLang), TRAIN)**
-2.1 The core of what a TF does during inference
+
+### 2.1 The core of what a TF does during inference
 
 (0) note: 
 algorithms are crude. but they are massive, and provide the skeleton for the training to create magic
@@ -185,7 +184,7 @@ but since tokens share info, the storyline is in each token.
 the storlyine of the last token is used to compute the MOST PROBABLE next token. 
  
 
-2.2 TF "Training" (programming) determines what inference produces 
+### 2.2 TF "Training" (programming) determines what inference produces 
 a TF does not learn. it is programmed.
 complex training sw inputs data into the TF.
 TF internal params (trillions of them) are adjusted (weights and biases)
@@ -213,7 +212,7 @@ THIS IS CRITICAL for creating responses that the python lang agents use to run a
 <br>
 
 # **4 CNN/TF ALGORITHM DETAILS (MATH)**
-4.1 typical confusing TF how-it-works explanations (3d diagrams, hyperplanes) 
+### 4.1 typical confusing TF how-it-works explanations (3d diagrams, hyperplanes) 
 (1) CONFUSING typical diagrams #600-4
 
 As I understood more and more how AI (GPT-3) works, I became more convinced that much of the concepts and diagrams I had studied about AI confused me more than anything. what imprssion the typical student of AI gets from these types of digrams is not correct.
@@ -259,7 +258,7 @@ z_3=W_2 z_2+b_2 (12288×1)
 h_i^"new" =h_i+z_3
 That is a huge per-token computation — often more FLOPs than attention.
  
-4.2 CNN <> TF comparison/analogies
+### 4.2 CNN <> TF comparison/analogies
 (1) CNN
 
 1) when we see a pic, we recognize patterns.  cnns dont do that. they calculate numbers.
@@ -288,7 +287,7 @@ the similarities really struck me when first started to dig into the details of 
 5) 96 layers[ (1) mix context (2) softmax to "pool", and (3) FFN (detection) ] (4) Woutput
 
  
-4.3 my TF UFA explanation (simple steps) (minimal  GPT NOTES)
+### 4.3 my TF UFA explanation (simple steps) (minimal  GPT NOTES)
 
 my explanation (simple, to the point, no "hyperspace" talk)
 There is no "hyperspace".. there are only calcualtions.
