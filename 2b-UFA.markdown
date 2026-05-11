@@ -54,6 +54,16 @@ Describes how the LLM has seemingly intelligent functionality that can make its 
 
 <br> 
 
+- 1.1 Requirement: Interface human language and computer worlds
+- 1.2 Equations (deterministic) work for many things
+- 1.3 Equations (deterministic) dont work for human interaction
+- 1.4 "Deterministic" computer algorithms
+- 1.5 Transformer UFA solution
+- 1.6 Viable / nonviable applications of UFA
+
+
+<br> 
+
 #### **1.1 Requirement: Interface human language and computer worlds** 
 
 We dont need intelligence. We just need a computational unit that can interact using human language. The very idea that binary machines are intelligent is ridiculous (and leads to bad engineering designs).
@@ -61,18 +71,25 @@ We dont need intelligence. We just need a computational unit that can interact u
 **(1) Human language is far more complex than computer interactions**. 
 We are intelligent. Our writing system is designed with that in mind. We don't write in a predictable manner, and our thoughts are incredibly complex. We also make spelling mistakes and abbreviations. No problem for us. 
 
-**(2) But the LLM is very fast and can be scaled and is native to our digital worlds.**
-And the digital world is vitally important. It can do many things vastly more efficiently than humans.
+*Human languages vs computer languages ([video](https://www.youtube.com/watch?v=zulOvXlg2kk))* <br>
+<img src="/assets/1.1-1_hlang_mlang.png" alt="drones" width="55%"> 
 
-**(3) Interfacing these 2 worlds is complex**.
-We need a comptational engine residing in a computer that can 
+**(2) But the LLM is very fast and can be scaled and is native to the digital worlds.**
+And the digital world is vitally important. It can do many things vastly more efficiently than humans. **But interfacing these 2 worlds is complex**. We need a computational engine residing in a computer that can 
 - Replicate human interaction mechanisms (language) 
 - Store "common" word responses for a vast number of submitted prompts.
 
-**(4) This interface will be an approximation (not safe for many applications)**.
+*Human language prompt + agent instructions -> LLM response (compatible with Agent)*<br>
+<img src="/assets/1.1-3_interface_2_worlds.png" alt="drones" width="60%"> 
+
+**(3) This interface will be an approximation (not safe for many applications)**.
 Humanoids in the home, FSD on the streets. You are mixing 2 worlds that dont belong together:
 - Humans who see, hear, touch, smell, see, have consciousness, feelings, etc. This defines everything thing they do, their complex interactions.
 - Machines based 100% on 100% binary computation. They see nothing, have no thoughts, etc. They do ONLY what they are programmed to do.
+- **Machines do not "hallucinate". Their algorithms fail** (harmless in a chatbot).
+
+*Humanoid in the kitchen.. what could go wrong?*<br>
+<img src="/assets/1.1-4_humanoid_home.png" alt="drones" width="20%"> 
 
 <br> 
 
