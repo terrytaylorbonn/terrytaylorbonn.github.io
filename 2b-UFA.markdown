@@ -137,90 +137,52 @@ Defining all the possible combinations of words is impossible.
 
 <img src="/assets/1.4_word_combos.png" alt="drones" width="65%"> 
 
+<br>
+
+#### **1.5 Transformer UFA solution**
+
+**(1) The TF implements a UFA (probabliistic approximator, not intelligence).**
+
+When I first read about UFAs, I thought it was some useless theoretical talk. Its actually the key to understanding AI. AI is based on Transformers (TFs) that implement UFAs. If you understand UFAs then you truly understand AI. **But most importantly, you understand AI's limitations.**
+
+In the diagram below, the inputs are X and Y (diagram does not say what these are; for a GPT-3 TF these would be 2 of the 12288 FP (floating point) numbers for a single token inside the TF; these numbers represent complex aspects of the data that is defined in training, not by a human (that is the key; for the Belgium demo we define ourselves what the data represents)). Using a UFA, its possible to define complex regions of the output value (I go into the algorithm and math later on this page). 
+
+*Universal Function Approximators (UFAs). That word "approximation" is the key.  https://medium.com/hackernoon/illustrative-proof-of-universal-approximation-theorem-5845c02822f6* <br>
+<img src="/assets/1.5_ufa.png" alt="drones" width="80%"> 
+ 
+**(2) TF UFA encodes patterns via programming ("training")**. 
+
+In the Belgium problem, your inputs are X and Y (latitude, longitude). Your output is Belgium or Netherlands. With a map you could create a detailed data map that is very exact. But that Belgium demo is a extremely simplified version of what you need for language. 
+
+For the TF you use massive amounts of input / desire-output combinations to program the NN (set ~ trillion parameters, the weights and biases). 
 
 
+**(3) Inference**. Inference just replicates the training, except that you input text and computer the most probable next token (thats all a TF does; not intelligent).
+
+*Diagram from the excellent [video](https://youtu.be/7xTGNNLPyMI?t=2890) "Deep Dive into LLMs like ChatGPT" by Andrej Karpathy.* <br> 
+<img src="/assets/1.5_inference.png" alt="drones" width="40%">  
+
+<br>
+
+#### **1.6 Viable / nonviable applications of UFA
+
+**(1) Viable: Belgian town demo (mistakes are not critical)**. I go throught the math on this demo later in this document. The original [video](https://youtu.be/qx7hirqgfuU?t=6) content (from Welch labs) is excellent. But I try to approach the topic a bit differently, avoiding the complex 3d videos and focusing on the math algorithm (to me thats easier to understand, and it scales easily into more than 2 "dimensions"). 
+
+*Netherlands/belgium example [video](https://youtu.be/qx7hirqgfuU?t=6)* <br>
+<img src="/assets/1.6_belgium.png" alt="drones" width="30%"> <img src="/assets/1.6_belgium_tf_map.png" alt="drones" width="40%"> 
+
+**(2) Not viable: Computer-driven cars on public roads**.Its just my opinion. You can fly a drone or an airlines with auto-pilots because airspace is a forgiving medium (and you intentionally try to avoid others). But a car in a city teeming with pedestrians? On a dark rainy night? I dont think self-driving cars and home humanoids will be safe enough in the next 10 years (hope I am wrong). That’s my personal opinion (backed up by over a decade of unfulfilled self-driving car promises).
+
+*FSD*<br>
+ <img src="/assets/1.6_no_fsd.png" alt="drones" width="30%"> 
 
 
-
-
-
+<!--
 <br><br><br>
-
 =======================================================
-
 <img src="/assets/.png" alt="drones" width="40%"> 
-
-<!-- ### 1.2 our brains do 3 things (1) store info (2) encode/decode (language) (3) intelligent answers
-
-(1) we have memories,thoughts. 
-
-(2) we encode / decode into languages. 
-
-(3) the digital intelligence must do the same thing.
- 
-### 1.3 computers have no intelligence... they must have algorithms
-no thoughts, no understanding. 
-they are simply calculators. 
-with digital data storage. 
-thats it.
- 
-### 1.4 working solution: equations (kalman, pid)
-
-(1) kalman works for many things.
-equations are magical. they define how things interact.
-they dont store patterns.... they store how our world really functions.
-
-(2) PID
-computes how moving objects can be controlled with inputs (in teh real world more complex, there are more factors, but these equations are good for simplified situations).
- 
-### 1.5 "deterministic" algorithms (equations) fail for many thigns
-
-(1) interactions have definitions but are too complex (molecules)
-(like molecular reactions) that you cant define the world with the low level fucntions that describe interactions (or digital math is not a good enough approximation). in molecules, every atom interacts wiht every other, and they are not simple point shapes. this is impossible to model. simplifying the model of these interactions results in wrong results. 
-
-(2) large sets of data sometimes dont follow any logical patterns (bel/hol)
-this example is used throught this page (belgium/holland)
-
-(3) follow patterns that are defined by intelligence (LANGUAGE IS A PERFECT EXAMPLE) 
-we have intelligence, and our words are minimalist code that we transfer info. but binary computers cant understand what they mean. and defining all the possible combinations of words is impossible (and also including spelling mistkaes).
- 
-### 1.6 TF UFA solution
-
-(1) the TF implements a UFA (probabliistic approximator, not intelligence)
-
-When I first read about UFAs, I thought it was some useless theoretical talk. Its actually the key to understanding AI. AI is based on Transformers (TFs) that implement UFAs. If you understand UFAs then you truly understand AI.
-
-Universal Functino Approximators (UFAs). That word "approximation" is the key.  https://medium.com/hackernoon/illustrative-proof-of-universal-approximation-theorem-5845c02822f6 
- 
-
-
-(2) TF UFA encodes patterns via programming "training" 
-is actually encoding patterns into the NN. rather than equations, the input is 
-=1) converted (from words) into a representation (vector lang) 
-that is much more logical (but too complex for humans to process), something a dumb machine can process
-=2) Vlang used to detect the closest trained pattern
-then use the trained result.
-thats it.
-approximation.
-
-
- 
-### 1.7 viable/nonviable applications
-
-(1) viable: BELGIAN TOWN DEMO ADD (mistakes are not critical)
-
-And when you understand how AI really works, you will understand why agentic AI works in systems like Palantir Maven (and in many many other business segments), 
-
-26.0227 (day 4) distill chat content from yesterday  // #600_core_AI_concepts_v13 // 1.2 Netherlands/belgium example (from Welch labs) https://youtu.be/qx7hirqgfuU?t=6 
- 
-@258
-
- 
-(2) not viable: Driving cars on public roads 
-
-but will never be safe enough for self-driving cars and home humanoids. That’s my personal opinion (backed up by over a decade of empty self-driving car promises).
-
 -->
+
 
 <br>
  
