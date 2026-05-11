@@ -8,7 +8,7 @@ title: Home
 
 <br>
 
-**This is my personal site for Agentic AI (and AI in general)**. The organization and core concepts of this site are my own original. 
+**This site covers Agentic AI (and AI in general)**. The organization and core concepts of this site are my own original. 
 
 *The number of [(4) Agentic AI](/agentic-ai/) jobs will skyrocket in the near future* <br> 
 <img src="/assets/agentic_economy.png" alt="drones" width="75%"> 
@@ -23,22 +23,25 @@ title: Home
 - **[(5) AI dev tools](/AI-dev-tools/)**. Cursor, Codex, VSC, Claude (no IDE), etc.
 - **[(6) AI projects](/AI-projects/)**. Demos (with Github repo and docs).
 
-<br> 
-
-**If you want to be a better AI Product Manager, then understanding the core of how AI really works is critical**. These are the 2 core pages you need (**especially (2b)**):
-- **[(2) LLMs](/sandbox/)**. An LLM consists of an (1) internal agent and a (2) transformer (TF). The TF is the core computational engine behind modern AI systems and the mechanism that enables modern LLM behavior.
-- **[(2b) UFAs](/UFAs/)**. A TF implements a Univeral Function Approximator (UFA) algorithm. Understanding what a UFA is is the key to understanding what AI really is. And **when you understand how AI really works,  you will understand why agentic AI works in systems like Palantir Maven (and in many many other business segments), but will never be safe enough for self-driving cars and home humanoids**. That's my personal opinion (backed up by over a decade of empty self-driving car promises). 
-
-
-<br> 
-
-
-
-*This diagram appears throughout this site. The agent and the IDE are front and center (the LLM is a helpful assistant)*.
+*This diagram appears throughout this site. The agent and the IDE dev tools are front and center (the LLM is a helpful assistant)*.
 
 <img src="/assets/6_main_diagram.png" alt="drones" width="45%"> 
 
-<br>
+<br> 
+
+The following 2 pages explain **the core of how AI really works** (especially (2b)):
+- **[(2) LLMs](/sandbox/)**. An LLM consists of an (1) internal agent and a (2) transformer (TF). The TF is the core computational engine behind modern AI systems and the mechanism that enables modern LLM behavior.
+- **[(2b) UFAs](/UFAs/)**. A TF implements a Univeral Function Approximator (UFA) algorithm. Understanding what a UFA is is the key to understanding what AI really is. And **when you understand how AI really works,  you will understand why agentic AI works in systems like Palantir Maven (and in many many other business segments), but will never be safe enough for self-driving cars and home humanoids**. That's my personal opinion (backed up by over a decade of empty self-driving car promises). 
+
+*How a UFA determines if part of a town are in the Netherlands or Belgium*.
+
+<img src="/assets/belgium1.png" alt="drones" width="75%"> 
+
+<br> 
+
+
+
+
 
 
 **The following are all of the top-level pages** *(see also the [Wiki](https://github.com/terrytaylorbonn/auxdrone/wiki))*. The ZiptieAI project started at phase (1) and is now at phase (6). 
