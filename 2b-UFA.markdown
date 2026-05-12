@@ -21,7 +21,7 @@ Most of this page is my original material (I'm sure this kind of info is out the
 <br>
 
 #### **TOC**
-**1 REQUIREMENT (human <> computer bridge) / SOLUTION (UFA).** 
+**1 REQUIREMENT (human <> computer bridge) / SOLUTION (UFA)** 
 
 Why do we need a UFA? 
 - Because human communication systems (language) are designed for intelligent beings.
@@ -29,7 +29,11 @@ Why do we need a UFA?
 - Digital systems are vital for us. We need a bridge. 
 - UFA is only viable option. But it has definite limits.
 
-**2 HOW TF-UFA WORKS (INF(hLang/vLang/mLang), TRAIN).**
+**3 HOW TF-UFA SUPPORTS AGENTIC AI**
+
+Describes how the LLM has seemingly intelligent functionality that can make its outputs much more likely to be processed by a Python script (the agent) successfully. Much of this functionality is based on some very clever training techniques, and is vital for agentic AI.  Note: Again, these are approximations, so the agent must be programmed to handle exceptions. 
+
+**2 HOW TF-UFA WORKS (INF(hLang/vLang/mLang), TRAIN)**
 
 Its not intelligent. Its computational pattern matching.
 - TF converts Human Language (HL) input into Vector Language (VL) (12288 FPs per token).
@@ -38,11 +42,7 @@ Its not intelligent. Its computational pattern matching.
 - TF outputs a token based on how current token input matches the token inputs used during training (its basically pattern matching).
 - TF adds the token to the input and repeats the process (until finished or told to stop). 
 
-**3 HOW TF-UFA SUPPORTS AGENTIC AI (list of 8).**
-
-Describes how the LLM has seemingly intelligent functionality that can make its outputs much more likely to be processed by a Python script (the agent) successfully. Much of this functionality is based on some very clever training techniques, and is vital for agentic AI.  Note: Again, these are approximations, so the agent must be programmed to handle exceptions. 
-
-**4 CNN/TF ALGORITHM DETAILS (MATH).**
+**4 CNN/TF ALGORITHM DETAILS (MATH)**
 
 - The cool looking 3d diagrams you often see are only confusing you.
 - CNNs (object recognition) are simpler than TFs, and are an excellent stepping stone / analogy for understanding the more complex TFs. 
@@ -66,7 +66,7 @@ Describes how the LLM has seemingly intelligent functionality that can make its 
 
 #### **1.1 Requirement: Interface human language and computer worlds** 
 
-We dont need intelligence. We just need a computational unit that can interact using human language. The very idea that binary machines are intelligent is ridiculous (and leads to bad engineering designs).
+We need a computational unit that can interact using human language. The very idea that binary machines are intelligent is ridiculous (and leads to bad engineering designs). *I try to add diagrams for every section because humans quickly get the gist of a diagram; for AI diagrams are a massive challenge to interpret.*
 
 **(1) Human language is far more complex than computer interactions**. 
 We are intelligent. Our writing system is designed with that in mind. We don't write in a predictable manner, and our thoughts are incredibly complex. We also make spelling mistakes and abbreviations. No problem for us. 
@@ -105,7 +105,7 @@ They store the basic reality of movement. But is that how the human mind really 
 **(2) PID controller.**  
 Computes how moving objects can be controlled with inputs (in a perfect environment). Humans can also steer objects quite well, and human thinking is probably more complex (not equations). 
 
-<img src="/assets/1.2_PID.png" alt="drones" width="40%">  <img src="/assets/1.2_PID2.png" alt="drones" width="40%"> 
+<img src="/assets/1.2_PID.png" alt="drones" width="30%">  <img src="/assets/1.2_PID2.png" alt="drones" width="40%"> 
 
 
 **(3) FFT's are digital approximations**, but they work well for many apps.
@@ -177,7 +177,7 @@ For the TF you use massive amounts of input / desire-output combinations to prog
 **(3) Inference**. Inference just replicates the training, except that you input text and computer the most probable next token (thats all a TF does; not intelligent).
 
 *Diagram from the excellent [video](https://youtu.be/7xTGNNLPyMI?t=2890) "Deep Dive into LLMs like ChatGPT" by Andrej Karpathy.* <br> 
-<img src="/assets/1.5_inference.png" alt="drones" width="40%">  
+<img src="/assets/1.5_inference.png" alt="drones" width="35%">  
 
 <br>
 
@@ -188,7 +188,7 @@ For the TF you use massive amounts of input / desire-output combinations to prog
 *Netherlands/belgium example [video](https://youtu.be/qx7hirqgfuU?t=6)* <br>
 <img src="/assets/1.6_belgium.png" alt="drones" width="30%"> <img src="/assets/1.6_belgium_tf_map.png" alt="drones" width="40%"> 
 
-**(2) Not viable: Computer-driven cars on public roads**.Its just my opinion. You can fly a drone or an airlines with auto-pilots because airspace is a forgiving medium (and you intentionally try to avoid others). But a car in a city teeming with pedestrians? On a dark rainy night? I dont think self-driving cars and home humanoids will be safe enough in the next 10 years (hope I am wrong). That’s my personal opinion (backed up by over a decade of unfulfilled self-driving car promises).
+**(2) Not viable: Computer-driven cars on public roads**.Its just my opinion. You can fly a drone or an airliner with auto-pilots because airspace is a forgiving medium (you have a lot of room for error in the air). But a car in a city teeming with pedestrians? On a dark rainy night? A decade of unfulfilled self-driving car promises has convinced me that self-driving cars and humanoids in the home will not be safe enough for at least another 10 years (I hope I am wrong). 
 
 *FSD*<br>
  <img src="/assets/1.6_no_fsd.png" alt="drones" width="30%"> 
@@ -200,9 +200,145 @@ For the TF you use massive amounts of input / desire-output combinations to prog
 <img src="/assets/.png" alt="drones" width="40%"> 
 -->
 
-
 <br>
  
+# **3 HOW TF-UFA SUPPORTS AGENTIC AI (list)**
+
+**(1) output tokens can have very specific formats ("machine language")**. 
+The prompt can define the fomrat of the outputs. 
+THIS IS CRITICAL for creating responses that the python lang agents use to run analysis.
+
+*Prompt defining format of outputs*<br>
+ <img src="/assets/3_build_analysis_messages.png" alt="drones" width="60%"> 
+
+
+**(2) ME: what would the list be like for how AI greatly help agents work properly**
+
+https://ziptieai.com/UFAs/ talks about how transformer universal function approximator (UFAs) are critical for agentic ai. i think you once mentioned the 8 main functions of the agent (i think that was without ai). what would the list be like for how AI greatly help agents work properly? below is title and toc of the section on that page in the wiki about TF UFAs ....................
+
+
+**GPT: What TF/UFA capabilities make modern agentic AI possible?**
+Your current list is already heading in the correct direction.
+I would structure it around:
+“What TF/UFA capabilities make modern agentic AI possible?”
+Something like this:
+
+(3b Advanced inference / trained TF-UFA capabilities (CRITICAL for AGENTIC AI))
+
+- **(1) Structured machine-language outputs (CRITICAL)**
+The TF can generate outputs in highly specific formats:
+•	JSON 
+•	XML 
+•	YAML 
+•	API payloads 
+•	schemas 
+•	ontologies 
+This allows Python agents to reliably parse and execute actions.
+
+- **(2) Task decomposition / planning**
+The TF is trained to:
+•	break large tasks into substeps 
+•	generate plans 
+•	sequence actions 
+•	maintain goal-oriented context 
+This is critical for agent workflows and orchestration.
+
+- **(3) Semantic inference**
+The TF can infer:
+•	meaning 
+•	intent 
+•	relationships 
+•	context 
+•	ontology mappings 
+•	hidden connections 
+without explicit hardcoded logic.
+
+- **(4) Natural-language → machine-language translation**
+The TF converts vague human requests into:
+•	structured actions 
+•	API calls 
+•	database queries 
+•	filters 
+•	workflow steps 
+This is one of the core capabilities behind agentic AI.
+
+- **(5) Feature detection / trained abstractions**
+The TF FFN/UFA layers contain trained detectors/features for:
+•	concepts 
+•	entities 
+•	relationships 
+•	patterns 
+•	semantic structures 
+Many researchers now believe much of the model’s “knowledge” resides in FFN layers. 
+
+- **(6) Contextual reasoning**
+Attention allows tokens to dynamically reference:
+•	earlier instructions 
+•	schemas 
+•	constraints 
+•	conversation history 
+•	related entities 
+This enables contextual workflows instead of rigid scripting.
+
+- **(7) Generalization / approximation**
+The TF-UFA can approximate:
+•	patterns 
+•	workflows 
+•	mappings 
+•	relationships 
+•	inference rules 
+even when exact cases were never explicitly programmed.
+
+- **(8) Ontology alignment**
+The TF can map:
+•	synonyms 
+•	alternate phrasings 
+•	related concepts 
+•	human language variations 
+into standardized machine-oriented ontology structures.
+Example:
+"truck delayed"
+"shipment late"
+"logistics issue"
+may all map into:
+{ "event_type": "delivery_delay" }
+
+- **(9) Error tolerance**
+TF-UFA systems tolerate:
+•	spelling mistakes 
+•	grammar issues 
+•	incomplete requests 
+•	ambiguous language 
+•	noisy input 
+This is critical for real-world human interaction.
+
+- **(10) Explanation generation**
+The TF can explain:
+•	plans 
+•	outputs 
+•	anomalies 
+•	decisions 
+•	recommendations 
+in human language.
+This is critical for:
+•	trust 
+•	usability 
+•	enterprise workflows 
+•	analyst systems 
+•	PM-facing systems 
+
+**Honestly, this is becoming a pretty coherent framework.**
+You are basically describing:
+•	why TF-UFAs are powerful semantic approximators 
+•	why they work extremely well for information systems 
+•	why they pair naturally with deterministic agents/software 
+•	why ontology/schema-constrained outputs are critical 
+That is a real architectural viewpoint, not just random AI buzzwords.
+
+
+
+<br>
+
 # **2 HOW TF-UFA WORKS (INF(hLang/vLang/mLang), TRAIN)**
 
 ### 2.1 The core of what a TF does during inference
@@ -258,21 +394,6 @@ training is done for each token based on all previous tokens
 ((thats why inference also computes the next token, duplicating the training).
 
 ADD DIAGRAM OF STAIRSTEP TRAINING ######################
-
-<br>
-
-# **3 HOW TF-UFA SUPPORTS AGENTIC AI (list of 8)**
-
-#3b Advanced inference/trained features (CRITICAL for AGENTIC AI)
-
-(1) output tokens can have very specific formats ("machine language")
-The prompt can define the fomrat of the outputs. 
-THIS IS CRITICAL for creating responses that the python lang agents use to run analysis.
- 
-
-(2) TF trained to break up big tasks into planning  ####################
-
-(3) full list of 8 trained capabilities ###################
 
 <br>
 
