@@ -16,7 +16,7 @@ Its probably because of the word "approximator".
 
 **If an LLM was truly intelligent, then an AI agent (Python app) could simply send free form text and be done with it.** But an LLM is not intelligent. **LLM outputs are statistical approximations** (the "A" in "UFA", "Univeral Function Approximator") based on the (1) algorithms and (2) input data used to program ("train") the LLM TF.  Therefore to use AI agents effectively, it really helps to understand Universal Function Approximators (UFAs) and how they are implemented in LLM TFs. It's your best defense againt the omnipresent AI hype. 
 
-This section talks about the **GPT-3 transformer (TF)**. GPT-3 is the only model I have studied in detail. Newer models may be much more powerful, but the core techniques they use to implement a UFA will be similar. Most of this page is my original material (I'm sure this kind of info is out there in the internet somewhere, but I have not seen a single cohesive presentation like this). So (as the LLMs always say) a disclaimer: **I sometimes make mistakes. :)**
+This section talks about the **GPT-3 transformer (TF)**. Newer models may be much more powerful, but the core techniques they use to implement a UFA will be similar. Most of this page is my original material (I'm sure this kind of info is out there in the internet somewhere, but I have not seen a single cohesive presentation like this). So (as the LLMs always say) a disclaimer: **I sometimes make mistakes. :)**
 
 <br>
 
