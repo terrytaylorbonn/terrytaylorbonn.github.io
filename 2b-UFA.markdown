@@ -12,16 +12,16 @@ permalink: /UFAs/
 
 
 
-**If an LLM was truly intelligent, then an AI agent (Python app) could simply send free form text and be done with it.** But an LLM is not intelligent. It's outputs are statistical approximations (the "A" in "UFA") based on algorithms and input data used to program ("train") the LLM TF.  Therefore to use AI agents effectively, it really helps to understand Universal Function Approximators (UFAs) and how they are implemented in LLM TFs. 
+**If an LLM was truly intelligent, then an AI agent (Python app) could simply send free form text and be done with it.** But an LLM is not intelligent. It's outputs are statistical approximations (the "A" in "UFA", "Univeral Function Approximator") based on the (1) algorithms and (2) input data used to program ("train") the LLM TF.  Therefore to use AI agents effectively, it really helps to understand Universal Function Approximators (UFAs) and how they are implemented in LLM TFs. It's your best defense againt the omnipresent AI hype. 
 
-This section talks about the **GPT-3 TF**. GPT-3 is the only model I have studied in detail. Newer models may be much more powerful, but the core techniques they use to implement a UFA will be similar.
+This section talks about the **GPT-3 transformer (TF)**. GPT-3 is the only model I have studied in detail. Newer models may be much more powerful, but the core techniques they use to implement a UFA will be similar.
 
-Most of this page is my original material (I'm sure this kind of info is out there in the internet somewhere, but I did not run into a single cohesive presentation; thats what I am attempting here). So, as with LLMs, a disclaimer: **I sometimes make mistakes. :)**
+Most of this page is my original material (I'm sure this kind of info is out there in the internet somewhere, but I have not seen a single cohesive presentation like this). So (as the LLMs always say) a disclaimer: **I sometimes make mistakes. :)**
 
 <br>
 
-#### **TOC**
-**1 REQUIREMENT (human <> computer bridge) / SOLUTION (UFA)** 
+### **TOC**
+**1 THE LLM TF UFA IS THE ONLY PRACTICAL INTERFACE BETWEEN THE HUMAN LANGUAGE AND (UNINTELLIGENT) COMPUTERS** 
 
 Why do we need a UFA? 
 - Because human communication systems (language) are designed for intelligent beings.
@@ -29,24 +29,25 @@ Why do we need a UFA?
 - Digital systems are vital for us. We need a bridge. 
 - UFA is only viable option. But it has definite limits.
 
-**3 HOW TF-UFA SUPPORTS AGENTIC AI**
+**2 HOW THE LLM TF UFA MAKE AGENTIC AI PRACTICAL (FOR LIMITED USE CASES)**
 
-Describes how the LLM has seemingly intelligent functionality that can make its outputs much more likely to be processed by a Python script (the agent) successfully. Much of this functionality is based on some very clever training techniques, and is vital for agentic AI.  Note: Again, these are approximations, so the agent must be programmed to handle exceptions. 
+Describes how the LLM has extremely useful (seemingly intelligent) functionality that can make its outputs much more likely to be processed by a "deterministic" Python script agent successfully. Much of this functionality is based on some very clever training techniques.  Note: These are UFA approximations, so the agent must be programmed to handle exceptions. And **the LLM TF UFA can not be trusted to make decisions critical to safety.** 
 
-**2 HOW TF-UFA WORKS (INF(hLang/vLang/mLang), TRAIN)**
+**3 HOW THE LLM TF UFA GENERATES TOKEN SEQUENCES**
 
 Its not intelligent. Its computational pattern matching.
-- TF converts Human Language (HL) input into Vector Language (VL) (12288 FPs per token).
-- VL is refined in 96 layers.
-- VL also contains a "storyline".
-- TF outputs a token based on how current token input matches the token inputs used during training (its basically pattern matching).
-- TF adds the token to the input and repeats the process (until finished or told to stop). 
+- **TF converts (1) Human Language (HLang) input (prompt) into (2) Vector Language (VLang)** (12288 FP (floating point) numbers per token (part of a word)).
+- VLang is refined by the TF 96 times (in 96 layers; its a long process).
+- VLang also contains a **"storyline" that defines enough of the gist of the input to (3) calculate the best new token**.
+- That calculation is based on token inputs and desired outputs used to program ("train") the TF (its basically pattern matching).
+- **(4) TF adds the token to the input and repeats the process** (until finished or told to stop).
+- HLang/JSON can be added to the initial HLang input to describe how the **(5) LLM should customize the response content and structure**. This greatly enhances the ability of the "deterministic" agent (usually Python) to reliably process the reponse.  
 
 **4 CNN/TF ALGORITHM DETAILS (MATH)**
 
-- The cool looking 3d diagrams you often see are only confusing you.
-- CNNs (object recognition) are simpler than TFs, and are an excellent stepping stone / analogy for understanding the more complex TFs. 
-- My TF explanation focuses on the math. This makes it much simpler.
+- CNNs (Convoluted Neural Networks) that perform object recognition are much simpler than TFs. **CNNs are an excellent stepping stone / analogy for understanding TFs.** 
+- **The cool looking 3d diagrams that claim to explain how TFs work are only confusing you**. (1) The "hyperdimensions" and visualizations are marketing gimmicks that require an immense amount of effect to understand, (2) don't scale beyond 2 dimensions, and (3) all usually about training weights, biases, and losses (while you invetibly think they are showing inference (run-time token generation)).
+- **My TF explanation focuses on the (mostly matrix) math. This actually makes things much simpler to understand**.
 
 <br>
 
@@ -649,4 +650,4 @@ That is one of the major reasons transformers replaced CNNs for language tasks.
 <br> 
 
 
-26.0511 (v1 26.0510)
+26.0512 (v1 26.0510)
