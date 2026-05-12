@@ -108,6 +108,7 @@ Simple demos are the best way to understand the basics of agentic apps. For deta
 - 4.2 What AI does for an agent
 - 4.3 Workflow diagram 
 - 4.4 Core LLM roles in the demos
+- 4.4b version 2 26.0512
 <!-- - 4.4 Agentic AI = human language <-> machine language interface -->
 
 <br>
@@ -234,6 +235,160 @@ What if road closed?
 
 <br>
 
+
+### 4.4b version 2 26.0512
+
+From 6 HOW THE LLM TF UFA MAKES AGENTIC AI PRACTICAL (FOR LIMITED USE CASES)
+
+<br> 
+
+**GPT: Honestly, this is becoming a pretty coherent framework.**
+You are basically describing:
+•	why TF-UFAs are powerful semantic approximators 
+•	why they work extremely well for information systems 
+•	why they pair naturally with deterministic agents/software 
+•	why ontology/schema-constrained outputs are critical 
+That is a real architectural viewpoint, not just random AI buzzwords.
+
+<br> 
+
+Page **[(4) Agentic AI](/agentic-ai/)** has links to the following 2 pages. These pages (WIP) list some Agentic demos (without/with) AI that I have setup. I will add more demos and document in the future.
+- **[Agentic demos (no AI)](/agentic-demos-no-ai/)** (below left in grey). Palantir was building such system a generation ago, before AI. It can be done, but it takes a lot of work (setting up ontology).  
+- **[Agentic demos with AI](/agentic-demos-with-ai/)** (below right in blue). With AI's human language abilites, Agentic can now work with "messy" human language data sources.
+
+Note: The title of this section "UFA MAKES AGENTIC AI PRACTICAL **(FOR LIMITED USE CASES)**" means that **use cases with AI are still limited, but much less so than without AI.**
+
+*Agentic demos (for details see the lab notes doc **#603\_PAL\_.docx** (PAL = Palantir) on my **[Gdrive](https://drive.google.com/drive/folders/1-Adawag9uA8_bq-hDF-nOuPYaRLz1eEO)**)*  <br>
+<img src="/assets/4_5_3x.png" alt="no ai" width="25%"> <img src="/assets/4_6_2x.png" alt="drones" width="30%">  <img src="/assets/4_5_3x_bbb.png" alt="drones" width="30%"> 
+
+<br>
+
+<!--**(2) ME: what would the list be like for how AI greatly help agents work properly**
+https://ziptieai.com/UFAs/ talks about how transformer universal function approximator (UFAs) are critical for agentic ai. i think you once mentioned the 8 main functions of the agent (i think that was without ai). what would the list be like for how AI greatly help agents work properly? below is title and toc of the section on that page in the wiki about TF UFAs .................... 
+**GPT: What TF/UFA capabilities make modern agentic AI possible?**
+Your current list is already heading in the correct direction.
+I would structure it around:
+“What TF/UFA capabilities make modern agentic AI possible?”
+Something like this:
+(3b Advanced inference / trained TF-UFA capabilities (CRITICAL for AGENTIC AI))
+-->
+
+#### **(1) Structured machine-language outputs (CRITICAL)**
+**GPT:** The TF can generate outputs in highly specific formats:
+•	JSON 
+•	XML 
+•	YAML 
+•	API payloads 
+•	schemas 
+•	ontologies 
+This allows Python agents to reliably parse and execute actions. **ME:** Output tokens can have very specific formats ("machine language"). 
+The prompt can define the fomrat of the outputs. 
+THIS IS CRITICAL for creating responses that the python lang agents use to run analysis.
+
+*Prompt defining format of outputs*<br>
+ <img src="/assets/3_build_analysis_messages.png" alt="drones" width="60%"> 
+
+
+#### **(2) Task decomposition / planning**
+**GPT:** The TF is trained to:
+•	break large tasks into substeps 
+•	generate plans 
+•	sequence actions 
+•	maintain goal-oriented context 
+This is critical for agent workflows and orchestration.
+
+#### **(3) Semantic inference**
+**GPT:** The TF can infer:
+•	meaning 
+•	intent 
+•	relationships 
+•	context 
+•	ontology mappings 
+•	hidden connections 
+without explicit hardcoded logic.
+
+#### **(4) Natural-language → machine-language translation**
+**GPT:** The TF converts vague human requests into:
+•	structured actions 
+•	API calls 
+•	database queries 
+•	filters 
+•	workflow steps 
+This is one of the core capabilities behind agentic AI.
+
+#### **(5) Feature detection / trained abstractions**
+**GPT:** The TF FFN/UFA layers contain trained detectors/features for:
+•	concepts 
+•	entities 
+•	relationships 
+•	patterns 
+•	semantic structures 
+Many researchers now believe much of the model’s “knowledge” resides in FFN layers. 
+
+#### **(6) Contextual reasoning**
+**GPT:** Attention allows tokens to dynamically reference:
+•	earlier instructions 
+•	schemas 
+•	constraints 
+•	conversation history 
+•	related entities 
+This enables contextual workflows instead of rigid scripting.
+
+#### **(7) Generalization / approximation**
+**GPT:** The TF-UFA can approximate:
+•	patterns 
+•	workflows 
+•	mappings 
+•	relationships 
+•	inference rules 
+even when exact cases were never explicitly programmed.
+
+#### **(8) Ontology alignment**
+**GPT:** The TF can map:
+•	synonyms 
+•	alternate phrasings 
+•	related concepts 
+•	human language variations 
+into standardized machine-oriented ontology structures.
+Example:
+"truck delayed"
+"shipment late"
+"logistics issue"
+may all map into:
+{ "event_type": "delivery_delay" }
+
+#### **(9) Error tolerance**
+**GPT:** TF-UFA systems tolerate:
+•	spelling mistakes 
+•	grammar issues 
+•	incomplete requests 
+•	ambiguous language 
+•	noisy input 
+This is critical for real-world human interaction.
+
+#### **(10) Explanation generation**
+**GPT:** The TF can explain:
+•	plans 
+•	outputs 
+•	anomalies 
+•	decisions 
+•	recommendations 
+in human language.
+This is critical for:
+•	trust 
+•	usability 
+•	enterprise workflows 
+•	analyst systems 
+•	PM-facing systems 
+
+
+
+<br>
+
+
+<br>
+
+
 # **5 Agent+AI demos**
 
 Simple demos are the best way to understand the basics of agentic AI apps. For details see page **[Agentic demos with AI](/agentic-demos-with-ai/)**.
@@ -247,7 +402,10 @@ Simple demos are the best way to understand the basics of agentic AI apps. For d
 
 
 
-<!-- 
+
+
+
+<!-- ####################################################################
 ### 4.4 Agentic AI = human language <-> machine language interface
 This section describes 3 ways to do this. The first 3.1 is what we want. 
 TOC

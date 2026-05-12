@@ -1,0 +1,363 @@
+---
+layout: page
+title: "TF UFA"
+permalink: /2b-5-TF-UFA/
+---
+
+<br>
+
+*Work in progress.*
+
+**3 HOW THE LLM TF UFA GENERATES TOKEN SEQUENCES**
+
+Its not intelligent. Its computational pattern matching.
+- **TF converts (1) Human Language (HLang) input (prompt) into (2) Vector Language (VLang)** (12288 FP (floating point) numbers per token (part of a word)).
+- VLang is refined by the TF 96 times (in 96 layers; its a long process).
+- VLang also contains a **"storyline" that defines enough of the gist of the input to (3) calculate the best new token**.
+- That calculation is based on token inputs and desired outputs used to program ("train") the TF (its basically pattern matching).
+- **(4) TF adds the token to the input and repeats the process** (until finished or told to stop).
+- HLang/JSON can be added to the initial HLang input to describe how the **(5) LLM should customize the response content and structure**. This greatly enhances the ability of the "deterministic" agent (usually Python) to reliably process the reponse.  
+
+
+- **The cool looking 3d diagrams that claim to explain how TFs work are only confusing you**. (1) The "hyperdimensions" and visualizations are marketing gimmicks that require an immense amount of effect to understand, (2) don't scale beyond 2 dimensions, and (3) all usually about training weights, biases, and losses (while you invetibly think they are showing inference (run-time token generation)).
+- **My TF explanation focuses on the (mostly matrix) math. This actually makes things much simpler to understand**.
+
+
+**6 HOW THE LLM TF UFA MAKES AGENTIC AI PRACTICAL (FOR LIMITED USE CASES)**
+
+Without the TF UFA, there would be no agentic AI. So **why do you hear nothing about UFAs?**
+- The LLM has extremely useful (seemingly intelligent) functionality that can make its outputs much more likely to be processed by a "deterministic" Python script agent successfully. 
+- Much of this functionality is based on some very clever training techniques.  
+- These are UFA approximations, so the agent must be programmed to handle exceptions.
+- **The LLM TF UFA can not be trusted to make decisions critical to safety.** 
+
+
+
+
+# **3 HOW THE LLM TF UFA GENERATES TOKEN SEQUENCES**
+
+<br>
+
+- 3.1 The core of what a TF does during inference
+- 3.2 TF "Training" (programming) determines what inference produces 
+
+<br>
+
+#### **3.1 The core of what a TF does during inference**
+
+(0) note: 
+algorithms are crude. but they are massive, and provide the skeleton for the training to create magic
+
+all of the computations are deterministic.
+ if you input exactly the same prompt, you would get exacctly the same response.(unless the TF intentionally is programmed to fool you with functions like temperature, etc)..
+
+(1) The TF converts human language (HLang) input to "vector language" (VLang) 12288 FP numbers ("hidden states")
+when they first enter the TF the 
+the words are first broken up in to tokens (parts of words). they are still composed of ASCII chars.
+then for each char 12288 FP numbers. 
+a set of 12288 numbers is (what i call) vector language. a super definition of the meaning of that token. 
+      
+
+
+(2) inside TF layers, the vector language representation is gradually refined
+
+2 things occur
+AH: info between words is shared. basically refining the meaning of a word.
+ 
+
+FFN: detecting core complex meaning of the word AND the world it exists in.
+
+https://github.com/terrytaylorbonn/auxdrone/wiki/Core-AI-concepts#4323-ai-neuron-xor-using-additive-gates 
+    
+
+for GPT-3 96 layers were required to get it to work
+computers need this massive amount of computing to implement the UFA.
+
+ 
+
+(3) inside TF, a "storyline" inside the VLang starts to develop
+the UFA requires 12288 for each token because much more info is stored there. 
+what i refer to as the storyline.
+in EACH token. 
+but since tokens share info, the storyline is in each token.
+
+ 
+ 
+(4) TF outputs Tokens
+the storlyine of the last token is used to compute the MOST PROBABLE next token. 
+ 
+<br>
+
+
+#### **3.2 TF "Training" (programming) determines what inference produces** 
+a TF does not learn. it is programmed.
+complex training sw inputs data into the TF.
+TF internal params (trillions of them) are adjusted (weights and biases)
+so that the output is closer to what it should be for the current input.
+training is done for each token based on all previous tokens
+((thats why inference also computes the next token, duplicating the training).
+
+ADD DIAGRAM OF STAIRSTEP TRAINING ######################
+
+<br>
+
+# **4 CNN/TF ALGORITHM DETAILS (MATH)**
+
+<br>
+
+- 4.1 CNN <> TF comparison/analogy
+- 4.2 Typical explanation (3d diagrams, hyperplanes, etc) 
+- 4.3 Simple TF UFA explanation (just the math)
+
+<br>
+
+#### **4.1 CNN <> TF comparison/analogy**
+(1) CNN
+
+1) when we see a pic, we recognize patterns.  cnns dont do that. they calculate numbers.
+
+both achieve kind of the same result.
+but not really. 
+the cnn is faking it.
+
+but its a good fake.
+works most times.
+just dont trust your life with.
+
+2) convolute = LAYERS[ (1) mixing pixel content (2) pooling ], and (3) NN detecting (4) select.
+
+after the first layer they are no longer pixels.
+(crazy diagrams of what the cnn is doing.. this is nonsense, like the 2d plots for TFs).
+they are "hidden states", which I called "vector" language.
+
+3) at each layer the detection gets higher level
+
+4) then finally last layer. go thru detector to compute most probable content
+
+ 
+(2) how TF is similar
+the similarities really struck me when first started to dig into the details of TFs. but i never once read anything about these similarites.
+5) 96 layers[ (1) mix context (2) softmax to "pool", and (3) FFN (detection) ] (4) Woutput
+
+<br>
+ 
+#### **4.2 Typical explanation (3d diagrams, hyperplanes, etc)** 
+
+
+(1) CONFUSING typical diagrams #600-4
+
+As I understood more and more how AI (GPT-3) works, I became more convinced that much of the concepts and diagrams I had studied about AI confused me more than anything. what imprssion the typical student of AI gets from these types of digrams is not correct.
+
+    
+
+     
+
+
+Example: This diagram is interesting. but it only confusing when trying to explain AI.
+https://github.com/terrytaylorbonn/auxdrone/wiki/Core-AI-concepts , [1] https://www.youtube.com/watch?v=Ln8pV1AXAgQ 
+
+the pictures below are all impressive depictions of AI. The problem is, the more I understood AI, the more they confused me. Hyperplanes are conceptual hype. Marketing gimmicks. Designed to hype binary computational ("mechanical") algorithms into something mystical, "hyper", "intelligent".  This post explains with a few chats I had with GPT (I dont explain all the details, I just pasted the chats). 
+[2] https://youtu.be/NrO20Jb-hy0?t=5    //   [3] https://youtu.be/KJtZARuO3JY?t=761 
+ 
+To me these diagrams are pretty. and totally misleading. [4] https://youtu.be/KJtZARuO3JY?t=955 
+
+https://youtu.be/qx7hirqgfuU?t=157 
+ 
+
+ 
+(2) the typical complex equations
+
+the equations below from GPT are correct.. but impossible to understand. 
+
+these are legalistic expert formulations (important for published papers, but not the best for understanding how it works)
+
+ME: you once wrote this. do you understand (some of the notation is lost when copying from ms.word)
+
+A useful mental model for your readers: Attention = routing & aggregation FFN = computation & feature creation Without FFNs: attention would just remix existing vectors no new features would be created FFNs are where: pattern detectors live abstractions form token-local reasoning happens Many researchers now believe: FFNs store most of the model’s “knowledge.” What “identical weights” means (exactly) In a given transformer layer: There is one FFN With one set of parameters: W_1,b_1,W_2,b_2 That same FFN is applied to: h_1,h_2,…,h_2048
+
+Formally (note "for all i"):
+"FFN"(h_i)=W_2 " " σ(W_1 h_i+b_1)+b_2 "for all " i
+
+So for each token h_i:
+	Expand:
+z_1=W_1 h_i+b_1 (49152×1)
+	Nonlinearity:
+z_2=σ(z_1)
+	Compress:
+z_3=W_2 z_2+b_2 (12288×1)
+	Residual:
+h_i^"new" =h_i+z_3
+That is a huge per-token computation — often more FLOPs than attention.
+
+<br>
+
+#### **4.3 Simple TF UFA explanation (just the math)**
+
+my explanation (simple, to the point, no "hyperspace" talk)
+There is no "hyperspace".. there are only calcualtions.
+"hyperspace" is an abstraction that only makes things more confusing.
+ 
+ME-1: I want to explain the above in simple for humans fashion.
+i will use my notation. its simpler. 
+your equation above is true for all tokens... but its too complicated.
+i focus on just one token.
+
+x1... x12288 are token hidden layer values.
+h1... h49152 are the dectors.
+for h1:
+        multiply x1 by Wh1.1
+        multiply x2 by Wh1.2
+        etc 
+        add all the values up
+        add the bias for bh1
+        apply GELU 
+for h2:
+        multiply x1 by Wh2.1
+        multiply x2 by Wh2.2
+        etc 
+        add all the values up
+        add the bias for bh2
+        apply GELU 
+etc
+
+ 
+ME-2: outputs are y1...y12288
+for y1:
+        multiply h1 by Wy1.1
+        multiply h2 by Wy1.2
+        etc 
+        add all the values up
+        add the bias for by1
+        NO GELU 
+for y2:
+        multiply h1 by Wy2.1
+        multiply h2 by Wy2.2
+        etc 
+        add all the values up
+        add the bias for by2
+        NO GELU 
+
+ 
+ME-3: are Wh and Wy same for 
+- all tokens? (i think yes)
+- all layers?  (i think no)
+
+
+Different between layers
+Each transformer layer has its OWN FFN weights.
+So:
+Layer 1:
+  Wh(L1), Wy(L1)
+
+Layer 2:
+  Wh(L2), Wy(L2)
+
+Layer 3:
+  Wh(L3), Wy(L3)
+etc.
+The detectors evolve by layer:
+	early layers → simple/local patterns 
+	middle layers → abstractions 
+	later layers → high-level semantic/storyline features 
+So your intuition is correct:
+	SAME across tokens 
+	DIFFERENT across layers 
+ 
+ME-4: for y1, when you add up Wy1.1, Wy1.2, .... 
+how do you keep the sum from "exploding".
+becoming very large values?
+does this question make sense?
+
+GPT: Yes — the question absolutely makes sense.
+And yes, uncontrolled sums would explode without special mechanisms.
+Several things help keep values stable.
+1. Small learned weights
+The weights:
+Wy1.1
+Wy1.2
+...
+are usually relatively small numbers.
+So even though you add many terms:
+h1*Wy1.1 + h2*Wy1.2 + ...
+the positive and negative values partially cancel.
+2. GELU suppresses many detectors
+After GELU:
+	many h-values become small 
+	weak detectors are damped 
+	only some detectors strongly activate 
+So not all 49152 detectors contribute large values.
+3. Training naturally stabilizes activations
+During training, exploding activations create bad gradients and instability.
+So the optimization process tends to learn:
+	reasonable weight magnitudes 
+	stable activation ranges 
+4. Residual architecture helps
+The FFN output is usually added back:
+new_token = old_token + y
+This residual structure helps prevent runaway instability.
+5. LayerNorm is critical
+The biggest stabilizer is probably Layer Normalization.
+LayerNorm continually rescales activations so hidden-state magnitudes stay in a reasonable range.
+Without normalization, deep transformers would often become numerically unstable.
+So your intuition is correct: huge sums could explode
+and transformer architecture contains multiple mechanisms specifically designed to prevent that.
+ 
+ME-5: is KV context similar to CNN convolution?
+can they be compared? 
+from my understanding of convolution,
+it means linking the meaning of related pixels
+(its easy to determine this for pixels... the neighbors matter).
+but for tokens, the location of related tokens is not predictable.
+
+GPT: Yes — your intuition is very good here.
+They can be compared, but the key difference is exactly what you identified:
+CNN convolution
+In a Convolutional Neural Network:
+pixel relationships are local and predictable
+Nearby pixels usually matter most:
+	edges 
+	corners 
+	textures 
+	shapes 
+So convolution uses:
+	fixed local windows 
+	nearby neighbors only 
+Example:
+3x3 pixel region
+The detector slides spatially across the image.
+
+Transformer attention / KV context
+In a Transformer Neural Network:
+related tokens may be anywhere
+Examples:
+	subject at beginning of sentence 
+	pronoun later 
+	earlier instruction 
+	JSON schema far above 
+	function definition many tokens earlier 
+So transformers cannot assume:
+nearby = related
+Instead attention dynamically determines:
+which tokens matter
+using:
+	Query 
+	Key 
+	Value 
+
+Very rough analogy
+CNN:
+fixed local attention
+Transformer:
+dynamic global attention
+or:
+CNN convolution:
+predefined neighborhood relationships
+Transformer attention:
+learned contextual relationships
+So your statement is basically correct:
+for pixels, neighbors usually matter
+but
+for language, related tokens may occur anywhere
+That is one of the major reasons transformers replaced CNNs for language tasks.
+
+<br> 
