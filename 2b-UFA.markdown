@@ -6,17 +6,17 @@ permalink: /UFAs/
 
 <br>
 
-*This page is WIP (v1 26.0510). Its a big project that will take time. It will take weeks of iterations to get the gist right. But I've not seen a presentation on the UFA topic like this anywhere, so I wanted to create my own. I think that a good understanding of UFAs helps greatly to better design Agentic AI projects.*
+*This page is WIP (v1 26.0510). I've not seen a presentation on the UFA topic like this anywhere, so I created my own.*
 
 <br>
 
+#### **The TF UFA is critical to Agentic AI. So why do you never hear anything about UFAs?**
 
+Its probably because of the word "approximator". 
 
-**If an LLM was truly intelligent, then an AI agent (Python app) could simply send free form text and be done with it.** But an LLM is not intelligent. It's outputs are statistical approximations (the "A" in "UFA", "Univeral Function Approximator") based on the (1) algorithms and (2) input data used to program ("train") the LLM TF.  Therefore to use AI agents effectively, it really helps to understand Universal Function Approximators (UFAs) and how they are implemented in LLM TFs. It's your best defense againt the omnipresent AI hype. 
+**If an LLM was truly intelligent, then an AI agent (Python app) could simply send free form text and be done with it.** But an LLM is not intelligent. **LLM outputs are statistical approximations** (the "A" in "UFA", "Univeral Function Approximator") based on the (1) algorithms and (2) input data used to program ("train") the LLM TF.  Therefore to use AI agents effectively, it really helps to understand Universal Function Approximators (UFAs) and how they are implemented in LLM TFs. It's your best defense againt the omnipresent AI hype. 
 
-This section talks about the **GPT-3 transformer (TF)**. GPT-3 is the only model I have studied in detail. Newer models may be much more powerful, but the core techniques they use to implement a UFA will be similar.
-
-Most of this page is my original material (I'm sure this kind of info is out there in the internet somewhere, but I have not seen a single cohesive presentation like this). So (as the LLMs always say) a disclaimer: **I sometimes make mistakes. :)**
+This section talks about the **GPT-3 transformer (TF)**. GPT-3 is the only model I have studied in detail. Newer models may be much more powerful, but the core techniques they use to implement a UFA will be similar. Most of this page is my original material (I'm sure this kind of info is out there in the internet somewhere, but I have not seen a single cohesive presentation like this). So (as the LLMs always say) a disclaimer: **I sometimes make mistakes. :)**
 
 <br>
 
@@ -34,7 +34,11 @@ Why do we need a UFA?
 
 **2 HOW THE LLM TF UFA MAKES AGENTIC AI PRACTICAL (FOR LIMITED USE CASES)**
 
-Describes how the LLM has extremely useful (seemingly intelligent) functionality that can make its outputs much more likely to be processed by a "deterministic" Python script agent successfully. Much of this functionality is based on some very clever training techniques.  Note: These are UFA approximations, so the agent must be programmed to handle exceptions. And **the LLM TF UFA can not be trusted to make decisions critical to safety.** 
+Without the TF UFA, there would be no agentic AI. So **why do you hear nothing about UFAs?**
+- The LLM has extremely useful (seemingly intelligent) functionality that can make its outputs much more likely to be processed by a "deterministic" Python script agent successfully. 
+- Much of this functionality is based on some very clever training techniques.  
+- These are UFA approximations, so the agent must be programmed to handle exceptions.
+- **The LLM TF UFA can not be trusted to make decisions critical to safety.** 
 
 **3 HOW THE LLM TF UFA GENERATES TOKEN SEQUENCES**
 
