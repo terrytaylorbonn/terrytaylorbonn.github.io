@@ -22,7 +22,7 @@ This section talks about the **GPT-3 transformer (TF)**. Newer models may be muc
 
 ### **TOC**
 
-***TL;DR?** Read section 2 only.*
+***TL;DR?** Read section 2.*
 
 **1 THE LLM TF UFA IS THE ONLY PRACTICAL INTERFACE BETWEEN HUMAN LANGUAGE AND (UNINTELLIGENT) COMPUTERS** 
 
@@ -223,6 +223,17 @@ You are basically describing:
 That is a real architectural viewpoint, not just random AI buzzwords.
 
 <br> 
+
+Page **[(4) Agentic AI](/agentic-ai/)** has links to the following 2 pages. These pages (WIP) list some Agentic demos (without/with) AI that I have setup. I will add more demos and document in the future.
+- **[Agentic demos (no AI)](/agentic-demos-no-ai/)** (below left in grey). Palantir was building such system a generation ago, before AI. It can be done, but it takes a lot of work (setting up ontology).  
+- **[Agentic demos with AI](/agentic-demos-with-ai/)** (below right in blue). With AI's human language abilites, Agentic can now work with "messy" human language data sources.
+
+Note: The title of this section "UFA MAKES AGENTIC AI PRACTICAL **(FOR LIMITED USE CASES)**" means that **use cases with AI are still limited, but much less so than without AI.**
+
+*Agentic demos (for details see the lab notes doc **#603\_PAL\_.docx** (PAL = Palantir) on my **[Gdrive](https://drive.google.com/drive/folders/1-Adawag9uA8_bq-hDF-nOuPYaRLz1eEO)**)*  <br>
+<img src="/assets/4_5_3x.png" alt="no ai" width="25%"> <img src="/assets/4_6_2x.png" alt="drones" width="30%">  <img src="/assets/4_5_3x_bbb.png" alt="drones" width="30%"> 
+
+<br>
 
 <!--**(2) ME: what would the list be like for how AI greatly help agents work properly**
 https://ziptieai.com/UFAs/ talks about how transformer universal function approximator (UFAs) are critical for agentic ai. i think you once mentioned the 8 main functions of the agent (i think that was without ai). what would the list be like for how AI greatly help agents work properly? below is title and toc of the section on that page in the wiki about TF UFAs .................... 
