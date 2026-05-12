@@ -21,7 +21,7 @@ Most of this page is my original material (I'm sure this kind of info is out the
 <br>
 
 ### **TOC**
-**1 THE LLM TF UFA IS THE ONLY PRACTICAL INTERFACE BETWEEN THE HUMAN LANGUAGE AND (UNINTELLIGENT) COMPUTERS** 
+**1 THE LLM TF UFA IS THE ONLY PRACTICAL INTERFACE BETWEEN HUMAN LANGUAGE AND (UNINTELLIGENT) COMPUTERS** 
 
 Why do we need a UFA? 
 - Because human communication systems (language) are designed for intelligent beings.
@@ -29,7 +29,7 @@ Why do we need a UFA?
 - Digital systems are vital for us. We need a bridge. 
 - UFA is only viable option. But it has definite limits.
 
-**2 HOW THE LLM TF UFA MAKE AGENTIC AI PRACTICAL (FOR LIMITED USE CASES)**
+**2 HOW THE LLM TF UFA MAKES AGENTIC AI PRACTICAL (FOR LIMITED USE CASES)**
 
 Describes how the LLM has extremely useful (seemingly intelligent) functionality that can make its outputs much more likely to be processed by a "deterministic" Python script agent successfully. Much of this functionality is based on some very clever training techniques.  Note: These are UFA approximations, so the agent must be programmed to handle exceptions. And **the LLM TF UFA can not be trusted to make decisions critical to safety.** 
 
