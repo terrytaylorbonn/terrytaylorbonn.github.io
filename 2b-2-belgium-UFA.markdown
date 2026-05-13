@@ -4,6 +4,214 @@ title: "2 Belgium UFA"
 permalink: /2b-2-belgium-UFA/
 ---
 
+
+**[back](/UFAs/)** 
+
 <br>
 
-*Work in progress.*
+I spent  much time (probably a few months) trying to understand various popular youtube video presentations of how AI transformers,  CNNs work. And I just could not get the gist.  One of those videos was **Why Deep Learning Works Unreasonably Well [How Models Learn Part 3](https://www.youtube.com/watch?v=qx7hirqgfuU&t=6s)**. 
+
+Note the word "Models" in the title. LLM models. SO I assumed the demo would be about transformers. But its not. The demo (at least the part about Belgium/Netherlands NN) is based on some assumptions that dont seem to fit with how UFAs are used in LLMs.   
+
+My main point: For LLM TF's you want to detect conceptually higher level structures **in vector language space**. This demo detects scattered areas in **input space**. I dont see the logic of this. And I spent a lot time trying to undrestand it (this video has gotten almost 400K views and rave reviews).
+(z21_belgium.png)
+<br>
+<img src="/assets/z21_belgium.png" alt="2b-1b-ZAI" width="30%"> 
+ 
+This section is mainly my conversations with GPT. I dont want to spend any time analyzing the video. The real value of this section is to show how the basics in even the most popular websites are not always on the mark.
+ 
+## A core issue 
+The equations below show the difference between the possible encodings of a shallow and deep NN (these are standard equations). The video did not hit the main point about why this is true in TF NN. 
+
+TF NN inputs are vectorLanguage representations (FP, floating point) of meanings and conceptions in the hidden layer (for GPT-3 12288 FP numbers, starting off as embeddings of the input tokens). NOT THE RAW TOKEN INPUTS. 
+
+A good demo that helps to understand this intuitively is the next **[CNN demo](/2b-4-CNN-UFA/)**. If you have a lower layer that detect basic features (like circles, lines, etc), then in the next higher layer you can take several lower level detections to make one higher detection (lips for example). Then use those in the next layer to detect face, person, etc. 
+
+<!-- the point is: at each layer you output a single value that summarizes the many inputs used in the layer before. so in this way, deep layers drastically increase meanning, just like when you use 3 digits like 235 to represent a value, you use only 30 possible digits, but  you define possbily 1000 possible outcomes. The 2 encodes hundres, the 3 tens, etc. (acxtually thats not realy a good example.. e -->
+
+- layer 1 or you have lines,  circles, etc
+- layer 2 lips, mouth, nose 
+- layer 3 face, body, legs, 
+- layer 4 person, dog, elephant 
+
+REMEMBER: each layer 
+- inputs many FP numbers
+- output a single FP number. 
+
+This is 
+- how the deep networks have so many possible combinations. can store so much info. 
+- Why NNs use GPUS: (1) LOWER LAYER FEATURES ADD TO UPPER LAYER, (2) SUPER FAST COMPUTATION (NO LOOPS), ETC.(z20_shallow_deep.png)<br>
+<img src="/assets/z20_shallow_deep.png" alt="2b-1b-ZAI" width="60%">
+ 
+**The Belgium video has no features.  It just inputs raw data, that abruptly changes (to Belgium or Netherlands) with the value of latitude and longitude. This is not the normal content that goes into a NN.** If I am correct (GPT seems to agree; see chats below) then some of the core things in the video have nothing to do with how models work.
+(z21_belgium.png)<br>
+<img src="/assets/z21_belgium.png" alt="2b-1b-ZAI" width="35%">
+
+ 
+ 
+## The main problems with this demo (conversation with GPT)
+
+### ME1: problems:
+In the demo, x1 and x2 are latitude and longitude. you input those, and you get out whether the location is in Belgium or Netherlands. 
+THere is a strange town in Netherllands where a patchwork of locations are considered Belgium territory. 
+
+**The main problem with this demo: in Transformers, CNNs, etc , these algorithms are not used on input data.**  
+they are are used on the hidden layers (the "embedding", the vector Lang representation of the smallest units of entered data (for CNN this is pixel (CMYK, RGB, values , whatever)); for LLM TF this is token (ascii numbers)).
+
+**I would assume that detection in a hidden layer depends on the value of a hidden state. But that dependence is probably faily smooth.** 
+but in the welch demo, as x1 changes, multiple times you switch back and forth between Netherlands and Belgium. The demo makes no sense to me.
+Your thoughts?
+
+#### GPT1: I think you are identifying a real limitation of many neural-network visualizations:
+they often teach:
+- geometry on raw inputs
+
+instead of:
+- feature refinement inside latent hidden representations
+And for transformers especially, your latter framing is much closer to reality.
+You are correct that in large TFs/CNNs:
+-	most important computation happens in hidden layers 
+-	representations become increasingly abstract 
+-	nearby hidden states often correspond to semantically related concepts 
+-	the transformations are usually smoother and more distributed than toy demos imply 
+
+The Welch demo is mainly trying to show:
+- a neural network can approximate arbitrarily complex decision boundaries
+
+The strange Belgium/Netherlands border is useful mathematically because:
+-	it is highly nonlinear 
+-	disconnected 
+-	hard to express analytically 
+
+So the point is: 
+many simple detectors
+- combine
+- form complicated regions
+
+That part is valid.
+
+But your criticism is also valid:
+In transformers:
+- x1/x2 are not raw geographic coordinates
+- Instead they are hidden-state dimensions inside a learned latent representation.
+And those hidden dimensions:
+-	are contextual 
+-	distributed 
+-	entangled 
+-	continuously refined across layers 
+
+So:
+- small hidden-state changes
+usually do NOT correspond to:
+wild semantic jumps
+- the way the Belgium-border visualization suggests.
+
+Your broader point is probably:
+- TF hidden-state spaces are smoother semantic manifolds, not arbitrary geographic patchworks.
+
+And I think that is broadly true.
+The Welch demo is good for explaining:
+-	universal approximation 
+-	nonlinear partitioning 
+-	detector composition 
+
+But less good for explaining:
+-	transformer hidden states 
+-	semantic refinement 
+-	latent representations 
+-	contextual token evolution 
+
+So your detector/hidden-state framing is probably more useful for modern transformer intuition.
+
+### ME2: People watch that demo assuming they will understand TF's (transformers) better. 
+but it just confuses, because what they are describing has nothing to do with TFs
+
+
+#### GPT2: I think your criticism is partially correct, but I would phrase it more carefully.
+The Welch Labs demo does explain something real and important:
+-	nonlinear function approximation 
+-	detector composition 
+-	layered feature construction 
+-	how neural nets can create complex decision boundaries 
+
+Those ideas absolutely apply to transformers.
+But you are also correct that many viewers incorrectly conclude:
+- “this is how transformers think”
+- when transformers are actually very different systems.
+
+The biggest disconnects are:
+Welch demo:
+- raw 2D inputs → simple geometric partitions
+
+Transformers:
+- high-dimensional latent hidden states → contextual semantic refinement 
+
+and:
+- Welch demo: static classification surface
+
+Transformers:
+- dynamic autoregressive token-generation process
+
+So the demo explains:
+- UFA principles
+
+better than:
+- transformer behavior
+
+Your core point is good:
+people often walk away thinking:
+-	transformers are mainly geometric partition systems 
+-	hidden states behave like raw x/y coordinates 
+-	semantic reasoning is just weird polygon splitting 
+when the reality is much more like:
+iterative latent semantic refinement
+through:
+-	attention routing 
+-	FFN detector computation 
+-	contextual hidden-state evolution 
+-	autoregressive control loops 
+So I think the fairest statement is:
+-Welch explains an important property of neural networks/UFAs, but not the actual operational behavior of modern transformers.
+
+### ME3: people watch the video not wanting to learn about nonlinear whatever, they want to understand TFs.
+#### GPT3: Yes — and I think this is your strongest criticism.
+
+Most viewers are trying to understand:
+- Why do transformers seem intelligent?
+- How do LLMs actually work?
+- How do hidden states evolve?
+- How are semantic relationships formed?
+
+But the Welch-style demo teaches:
+- 2D nonlinear classification geometry
+
+Those are not the same thing.
+So viewers often leave with:
+-	geometric intuition 
+-	decision-boundary intuition 
+-	classification intuition 
+
+but NOT:
+-	transformer intuition 
+-	token evolution intuition 
+-	latent semantic refinement intuition 
+-	autoregressive generation intuition 
+
+Your criticism is basically:
+- the demo explains an old neural-network mathematical property, not the operational behavior of modern transformers.
+
+And honestly, I think that is fair.
+Especially because transformers are dominated by:
+-	attention/context routing 
+-	hidden-state refinement 
+-	token prediction loops 
+-	semantic latent representations 
+-	FFN detector computation 
+
+not by visualizable 2D decision surfaces.
+This is why your:
+- detector + hidden-state refinement
+framework is probably more useful for explaining transformers to humans.
+
+
+26.0513 (v1 26.0513)
