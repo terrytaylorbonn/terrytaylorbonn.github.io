@@ -39,7 +39,7 @@ Most of this page is my original material (I'm sure this kind of info is out the
 **[1b ZAI 2D demo UFA](/2b-1b-ZAI-2D-demo-UFA/) (DRAFT)** is the simplest UFA conceptual demo.
 
 
-**[2 Belgium UFA](/2b-2-belgium-UFA/) (TODO)** is another very simple conceptual demo that has received almost 400K views and great reviews. 
+**[2 Belgium UFA](/2b-2-belgium-UFA/) (DRAFT)** is another very simple conceptual demo that has received almost 400K views and great reviews. 
 - It shows 
   - inputs x/y (lat/long) coordinates and 
   - outputs if you are in Belgium or Netherlands. 
