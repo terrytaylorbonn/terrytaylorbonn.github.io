@@ -46,15 +46,16 @@ Most of this page is my original material (I'm sure this kind of info is out the
 - This UFA can be programmed manually. 
 
 There are several core misconceptions in this video. It took me quite a while to figure them out, and they are very instructive. 
-- Its spending too much effort with 3d depictions. These depictions are nice to look at, and impressive, but they dont convey an understanding of what is going on.
-- Video tries to expand this to multi-layer NNs. But this is where the main idea of this demo breaks down. I will explain why in [4b Belgium UFA multilayer UFA](/2b-4b-belgium-multilayer-UFA/) (see below).
 
-**[3 Digits UFA](/2b-3-digits-UFA/) (TODO)** tries to use the Belgium demo to detect digits.
+<!-- - Its spending too much effort with 3d depictions. These depictions are nice to look at, and impressive, but they dont convey an understanding of what is going on.
+ - Video tries to expand this to multi-layer NNs. But this is where the main idea of this demo breaks down. I will explain why in [4b Belgium UFA multilayer UFA](/2b-4b-belgium-multilayer-UFA/) (see below). -->
+
+<!-- **[3 Digits UFA](/2b-3-digits-UFA/) (TODO)** tries to use the Belgium demo to detect digits.
 - You often see CNNs used to detect digits. 
 - In this demo, I want to show how you could try to do this with 
   -  a manually programmed UFA 
   - built ono the Belgium demo. 
-- It wont work well, but is still instructive.
+- It wont work well, but is still instructive. -->
 
 **[4 CNN UFA](/2b-4-CNN-UFA/) (TODO)** (convoluted neural networks). AlexNet 2012 is an excellent demo.
 - 2012 AlexNet Object recognition demo
