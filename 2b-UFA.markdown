@@ -7,7 +7,9 @@ permalink: /UFAs/
 <br>
 
 
-**An LLM transformer (TF) is a** Universal Function **Approximator (UFA)**. You've probably never heard anything about UFAs. Thats because of the word "approximator". **This word shatters the idea that AI is intelligent**. 
+**An LLM transformer (TF) is a** Universal Function **Approximator (UFA)**. You've probably never heard anything about UFAs. Thats because of the word "approximator". **This word shatters the idea that AI is intelligent.** 
+
+**AI will never be in charge; it will always be nothing more than a "helpful assitant". But it is an incredible assistant. Revolutionary.**
 
 Understanding what a UFA does is extremely helpful when designing agentic AI apps. what the limitations are. To keep you from spending money on projects based on false assumptions (the AI titans just want you to spend your money). **Because an LLM is not intelligent, AI agents are not the answer for many problems. And even if Agentic AI is the solution, it has to be designed carefully.** 
 
