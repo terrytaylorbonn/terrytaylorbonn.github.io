@@ -70,6 +70,10 @@ Much of the above is my own interpretation after intensive study of LLM TFs and 
   - inputs x/y (lat/long) coordinates and 
   - outputs if you are in Belgium or Netherlands. 
 - This UFA can be programmed manually. 
+- This demo is good for the mistakes it makes:
+  - Its is supposed to demo LLM model concepts
+  - But in an LLM, you dont process raw input data in the NN; you proces vector Langage.
+  - That VLang has smooth (except for non-activation areas) outputs; this demo has binary outputs (your are or you arent in Belgium)
 
 
 

@@ -12,7 +12,13 @@ AI tech is evolving quickly. ZiptieAI is evolving along with it. What began as a
 
 <br>
 
-<img src="/assets/zai_evolution.png" alt="smol" width="35%"> 
+*NEW 26.0514* 
+
+<img src="/assets/zai_evolution2.png" alt="smol" width="55%"> 
+
+*OLD*
+
+<img src="/assets/zai_evolution.png" alt="smol" width="15%"> 
 
 <!--
 <img src="/assets/6_main_diagram.png" alt="drones" width="40%"> 
@@ -245,4 +251,4 @@ With solid AI dev tools, complex projects can be spun up fast. This section demo
 <br>  -->
 
 
-26.0512
+26.0514

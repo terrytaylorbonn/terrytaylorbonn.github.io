@@ -9,7 +9,7 @@ permalink: /2b-3-training/
 *Work in progress.*
 
 My take on training:
-- **Training defines EXACTLY what outputs for any input. Its deterministic outcome. This all runs on a GPT, which is a deterministic computation device.**
+- **Training defines EXACTLY what outputs for any input. Its deterministic outcome. This all runs on a GPU, which is a deterministic computation device.**
 - The pre-outputs are scalars values that at the determninistic probability that each possible output is the one you want.
 - Best value is chosen (unless temperature used... and this is also deterministic)
 - During training
