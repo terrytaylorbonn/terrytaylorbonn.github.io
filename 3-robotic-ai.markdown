@@ -1,6 +1,6 @@
 ---
 layout: page
-title: "(3) Robotic AI"
+title: "(3.4) Robotic AI"
 permalink: /robotic-ai/
 ---
 

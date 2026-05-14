@@ -1,6 +1,6 @@
 ---
 layout: page
-title: "Core AI CNN (object recognition) concepts"
+title: "(3.1) CNN"
 permalink: /cnn/
 description: Last edit 26.0426
 ---

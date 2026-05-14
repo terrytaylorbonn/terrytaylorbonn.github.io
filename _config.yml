@@ -38,8 +38,10 @@ header_pages:
   - 5-ai-dev-tools.markdown
   - 4-agentic-ai.markdown
   - 3-robotic-ai.markdown
-  - 2b-UFA.markdown
+  - 2b-6-predictive.markdown
   - 2-llms.markdown
+  - 91-cnn.markdown
+  - 2b-UFA.markdown
   - 1-ai-drones.markdown
   - 0c-tech-stacks.markdown
   - 0b-resources.markdown

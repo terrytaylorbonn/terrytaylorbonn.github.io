@@ -1,6 +1,6 @@
 ---
 layout: page
-title: "(2b) UFAs"
+title: "(2) UFAs"
 permalink: /UFAs/
 ---
 

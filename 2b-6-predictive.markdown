@@ -1,6 +1,6 @@
 ---
 layout: page
-title: "(2b)-6 Predictive"
+title: "(3.3) Predictive"
 permalink: /2b-6-predictive/
 ---
 
