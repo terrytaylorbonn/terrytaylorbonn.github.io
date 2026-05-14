@@ -22,14 +22,14 @@ This page is my own take on UFAs for AI. THe following is a sampling of my thoug
   - ByteMonk released (26.0510 ) a fantastic video that clearly describes **how GPUs operate ([Google's New TPU Quietly Ends the GPU Era?](https://www.youtube.com/watch?v=iseM_Sb-ruo))**. 
   - In the future, I will start using "GPU-based" and "CPU-based" to distinguish betweed the AI and the agentic parts of apps ("deterministic" is a misleading misnomer). 
 - **A TF UFA performs token sequence recognition**. 
-- You have to use an approximator to recognize token sequences because **human languages are just primitive hints designed for intelligent human to communicate complex concepts**. 
+- You have to use an approximator to recognize token sequences because **human languages are just primitive hints designed for intelligent humans to communicate complex concepts**. 
 - **Word combinations can be almost infinite**, with all kind of spelling mistakes, abbreviations, bad grammar, etc etc. You can never create a DB of all possible combinations.
 - **UFA can make a good guess of the meaning of inputs that are not an exact match to to any inputs it was programmed ("trained") on.**
-- **Machines have no intelligence. The only they can process human language (HL) is to implement a UFA is with massive brute force computation** (thus GPUs instead of CPUs; theoretically you could use a CPU for any GPU task, but it would be vastly slower).
+- **The only binary-based computers can process human language (HL) is to implement a UFA for massive brute force computational analysis** (thus GPUs instead of CPUs; theoretically you could use a CPU for any GPU task, but it would be vastly slower).
 - The UFA works by converting input tokens (word parts, "Human Language (HL)") into numbers (what I call "vector language" (VL)). **The UFA has no concept of anything but numbers**. 
 - The UFA then performs massive GPU computations to create from the original VL a very detailed numberical representation of the meaning of the entire token input set (lets just call this the "storyline"). In most LLM TFs, that storyline is stored in the last token VL.
-- The storyline is a conceptual/feature summation/detection of the input. **The concepts/features are derived not from human interpretations of language, but from the training data set. They are strictly numerical.**
-- THe storyline is converted into a probability for each token in the entire vocabulary. The best token is chosen (unless you use temperature, which selects less than optimal token to give the illusion that the UFA is not deterministic).
+- The storyline is a very detailed conceptual/feature summation/detection of the meaning of the input. **The concepts/features are derived not from human interpretations of language, but from the training data set. And they are strictly numerical (machine language).**
+- THe storyline is converted into a probability for each token in the entire vocabulary. The best token is chosen as the next token (unless you use temperature, which selects less than optimal token to give the illusion that the UFA is not deterministic).
 
 <br>
 
