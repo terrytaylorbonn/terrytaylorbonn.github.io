@@ -36,6 +36,10 @@ Most of this page is my original material (I'm sure this kind of info is out the
 - Digital systems are vital for us. We need a bridge. 
 - TF UFA is only viable option. But it has definite limits.
 
+**[(2b)-1a Latent semantic computation](/2b-1a-latent-semantic-computation/)** (currently just chat).
+
+
+
 **[1b ZAI 2D demo UFA](/2b-1b-ZAI-2D-demo-UFA/) (DRAFT)** is the simplest UFA conceptual demo.
 
 
@@ -56,6 +60,9 @@ There are several core misconceptions in this video. It took me quite a while to
   -  a manually programmed UFA 
   - built ono the Belgium demo. 
 - It wont work well, but is still instructive. -->
+
+
+
 
 **[4 CNN UFA](/2b-4-CNN-UFA/) (TODO)** (convoluted neural networks). AlexNet 2012 is an excellent demo.
 - 2012 AlexNet Object recognition demo
@@ -78,7 +85,13 @@ Its not intelligent. Its computational pattern matching.
 - HLang/JSON can be added to the initial HLang input to describe how the **(5) LLM should customize the response content and structure**. This greatly enhances the ability of the "deterministic" agent (usually Python) to reliably process the reponse. 
 - For examples of TF Agentic with AI see "4 Agent+AI concepts" on page [(4) Agentic AI](/agentic-ai/)
 
+
+
+**[(2b)-6 Predictive](/2b-6-predictive/)**
+
 <br>
+
+
 
 <!--
 <br><br><br>
@@ -88,4 +101,4 @@ Its not intelligent. Its computational pattern matching.
 
 
 
-26.0513 (v1 26.0510)
+26.0514 (v1 26.0510)

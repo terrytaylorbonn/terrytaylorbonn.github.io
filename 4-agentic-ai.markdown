@@ -19,6 +19,9 @@ permalink: /agentic-ai/
 - **4 Agent+AI concepts**. AI is only a (extremely) helpful assistant.
 - **5 Agent+AI demos**. Lab notes on my Gdrive. Code on my Github.
 
+Notes:
+- [4a chat about iAgent and eAgent](/4a-chat-about-iAgent-and-eAgent/) 26.0514
+
 <br>
 
 # **1 Why learn agentic AI? (jobs)**
@@ -540,4 +543,4 @@ This is utter nonsense. All of an AI system (CPU and GPU based parts) are on the
 
 <br>
 
-26.0509 (rewrote 26.0509; v1 26.0428)
+26.0514 (rewrote 26.0509; v1 26.0428)

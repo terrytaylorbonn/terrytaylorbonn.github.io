@@ -1,0 +1,226 @@
+---
+layout: page
+title: "(2b)-6 Predictive"
+permalink: /2b-6-predictive/
+---
+
+<br>
+
+*Work in progress.*
+
+[Predictive vs Generative AI: How They Work and When to Use Each](https://www.youtube.com/watch?v=phOhGqpXss4)
+
+IBM Technology
+
+He makes mistakes I think... but good discussion. 
+
+
+
+7 predictive/generative ai
+just watched a video about predictive/generative ai. confusing. 
+in general, predictive AI is basically an AI assistant helping eAgent SW that actually runs the prediction algorithms? 
+
+Not exactly. The terminology gets overloaded.
+“Predictive AI” usually means:
+AI predicts some future/unknown value from data.
+Examples:
+•	fraud risk 
+•	customer churn 
+•	equipment failure 
+•	stock movement probability 
+•	disease likelihood 
+In many classic predictive systems:
+•	the neural network/model itself IS the prediction engine 
+•	there may not even be an LLM 
+Example:
+sensor data
+→ predictive model
+→ probability of machine failure
+That predictive model might be:
+•	neural net 
+•	gradient boosting 
+•	regression 
+•	random forest 
+•	etc. 
+________________________________________
+“Generative AI” usually means:
+generate new outputs
+Examples:
+•	text 
+•	images 
+•	code 
+•	music 
+•	plans 
+•	JSON 
+•	dialogue 
+LLMs are generative AI systems.
+________________________________________
+Where your framework fits:
+Modern agentic systems often combine:
+predictive models
++
+generative TF/LLM systems
++
+external deterministic agents
+Example:
+predictive model:
+"truck failure risk = 82%"
+
+LLM:
+explains situation and proposes actions
+
+eAgent:
+creates work order and schedules repair
+So the TF assistant layer is often:
+•	orchestration 
+•	explanation 
+•	planning 
+•	semantic interpretation 
+while specialized predictive models may do the actual numerical prediction.
+
+so customized NNs trained on current state / future state data to predict future state. 
+just like CNN predict label based on pixels, and TF predicts token based on input tokens.
+Yes — exactly.
+That is the core unifying idea.
+A neural network is fundamentally learning:
+input patterns
+→ output predictions
+The meaning of the inputs/outputs changes by application.
+CNN
+pixels
+→ object label
+Example:
+image
+→ "cat"   
+________________________________________
+Transformer
+previous tokens
+→ next token
+Example:
+"What is the capital of France?"
+→ "Paris"
+________________________________________
+Predictive model
+current state
+→ future state
+Example:
+sensor data
+→ machine failure probability
+or:
+weather conditions
+→ tomorrow temperature
+So yes:
+all are basically:
+pattern approximation/prediction systems
+trained from examples.
+The biggest differences are:
+•	architecture 
+•	data type 
+•	training objective 
+•	output format 
+•	temporal/context handling 
+But the underlying principle is very similar.
+so is it possible to do a simple predictive NN demo? on my pc with Nvidia gpu
+Yes. Very possible.
+Best simple demo:
+current state → future state
+Example:
+input:  last 20 points of a sine wave
+output: next point
+That shows predictive AI clearly without huge data.
+Your PC/NVIDIA GPU can easily handle it. Use:
+WSL2 + Python + PyTorch + CUDA
+Minimal demo idea:
+train data:
+  noisy sine wave
+model:
+  small MLP or LSTM
+task:
+  predict next value from previous values
+result:
+  plot actual future vs predicted future
+This maps perfectly to your explanation:
+CNN: pixels → label
+TF: tokens → next token
+Predictive NN: current state → future state
+For your wiki/demo series, I’d name it something like:
+D1_predictive_nn_current_state_to_future_state.py
+or if fitting PAL:
+pal_predict_01_future_state.py
+Start with a simple MLP, not LSTM. It is easier to explain:
+x1...x20 = current/recent state
+y1 = predicted next state
+Then later upgrade to:
+multiple future steps
+multiple sensors
+anomaly prediction
+resource planning
+is this how most projectts for predictive (in finance, risk, fraud detection, etc) tdo predictive? custom NNs?
+Yes — broadly speaking.
+Most real predictive systems are trained on:
+current/past state data
+→ future/unknown outcome
+Examples:
+Finance
+market history
+→ future price movement probability
+Fraud detection
+transaction patterns
+→ fraud probability
+Risk systems
+customer/company history
+→ default/risk score
+Predictive maintenance
+sensor data
+→ failure probability
+Logistics
+supply-chain state
+→ delivery delay prediction
+________________________________________
+But one important nuance:
+Many production systems do NOT use giant deep neural networks.
+Very often they use:
+•	XGBoost 
+•	LightGBM 
+•	random forests 
+•	logistic regression 
+•	ensembles 
+•	smaller NNs 
+because:
+•	cheaper 
+•	easier to train 
+•	easier to explain 
+•	more stable 
+•	easier to validate legally/business-wise 
+Deep NNs are more common when:
+•	huge data 
+•	complex patterns 
+•	sequences/time series 
+•	images/audio/text 
+•	high-dimensional latent relationships 
+exist.
+So yes:
+custom predictive models are trained for specific domains.
+But in enterprise systems:
+simple models often outperform overcomplicated deep learning systems.
+This actually aligns very strongly with your:
+LLM = propose
+Code = executes
+mindset:
+deterministic/simple systems are often preferred when possible 
+deep AI is used where pattern complexity becomes too large for explicit rules.
+
+
+
+
+
+
+
+
+
+ 
+
+
+
+
+26.0514
