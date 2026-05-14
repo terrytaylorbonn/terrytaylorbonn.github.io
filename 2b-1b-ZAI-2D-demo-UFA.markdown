@@ -11,6 +11,9 @@ permalink: /2b-1b-ZAI-2D-demo-UFA/
 (ZAI = ziptieai).
 This ZAI demo shows the correct way to detect regions. ROUGH DRAFT.
 
+*NOTE: Wiki page **[Core-AI-concepts (detector example)](https://github.com/terrytaylorbonn/auxdrone/wiki/Core-AI-concepts#432-detector-example)** shows the original usage of this demo.. as a "logic gate" (XOR) h layer detector (should maybe add to this page sometime).* 
+
+
 #### **TOC** 
 
 - **1b.1 2x / 2h / inverted trough detector**.

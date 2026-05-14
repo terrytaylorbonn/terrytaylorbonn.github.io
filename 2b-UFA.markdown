@@ -43,13 +43,13 @@ Most of this page is my original material (I'm sure this kind of info is out the
 **[1b ZAI 2D demo UFA](/2b-1b-ZAI-2D-demo-UFA/) (DRAFT)** is the simplest UFA conceptual demo.
 
 
-**[2 Belgium UFA](/2b-2-belgium-UFA/) (DRAFT)** is another very simple conceptual demo that has received almost 400K views and great reviews. 
+**[2 Belgium UFA](/2b-2-belgium-UFA/) (DRAFT)** is another very simple conceptual demo that has received almost 400K views and great reviews. **There are several core misconceptions in this video. They are very instructive.**
 - It shows 
   - inputs x/y (lat/long) coordinates and 
   - outputs if you are in Belgium or Netherlands. 
 - This UFA can be programmed manually. 
 
-There are several core misconceptions in this video. It took me quite a while to figure them out, and they are very instructive. 
+
 
 <!-- - Its spending too much effort with 3d depictions. These depictions are nice to look at, and impressive, but they dont convey an understanding of what is going on.
  - Video tries to expand this to multi-layer NNs. But this is where the main idea of this demo breaks down. I will explain why in [4b Belgium UFA multilayer UFA](/2b-4b-belgium-multilayer-UFA/) (see below). -->
@@ -62,6 +62,7 @@ There are several core misconceptions in this video. It took me quite a while to
 - It wont work well, but is still instructive. -->
 
 
+**[(2b)-3 Training](/2b-3-training/)**
 
 
 **[4 CNN UFA](/2b-4-CNN-UFA/) (TODO)** (convoluted neural networks). AlexNet 2012 is an excellent demo.
@@ -84,6 +85,7 @@ Its not intelligent. Its computational pattern matching.
 - **(4) TF adds the new token to the input and repeats the process** (until finished or told to stop).
 - HLang/JSON can be added to the initial HLang input to describe how the **(5) LLM should customize the response content and structure**. This greatly enhances the ability of the "deterministic" agent (usually Python) to reliably process the reponse. 
 - For examples of TF Agentic with AI see "4 Agent+AI concepts" on page [(4) Agentic AI](/agentic-ai/)
+
 
 
 

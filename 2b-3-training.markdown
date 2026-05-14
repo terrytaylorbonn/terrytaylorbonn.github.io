@@ -1,0 +1,305 @@
+---
+layout: page
+title: "(2b)-3 Training"
+permalink: /2b-3-training/
+---
+
+<br>
+
+*Work in progress.*
+
+My take on training:
+- **Training defines EXACTLY what outputs for any input. Its deterministic outcome. This all runs on a GPT, which is a deterministic computation device.**
+- The pre-outputs are scalars values that at the determninistic probability that each possible output is the one you want.
+- Best value is chosen (unless temperature used... and this is also deterministic)
+- During training
+  - for each input / output pair
+  - adjust Weighs and biases to slightly improve the coomputation of this pair as the best value (because this is a good match)
+
+
+
+**Future inputs that dont exactly match any trained inputs will still**
+- **get a good probability value (deterministic)**
+- this is made possible because of TF architecture that makes
+
+Loss = delta(output) / delta(w,b)
+
+<br>
+
+# CHAT (all TFs are 100% deterministic computational systems)
+
+<br>
+
+At the end of this chat GPT finally agrees with me saying:
+- **Modern TFs are fundamentally deterministic computational systems. Apparent randomness usually comes from engineered stochastic decoding methods layered on top of deterministic logits.**
+
+<br>
+
+
+### this is my draft content for page /2b-3-training/ on website. your thoughts?
+
+My take on training:
+
+- Training defines EXACTLY what outputs for any input. Its deterministic outcome. This all runs on a GPT, which is a deterministic computation device. 
+- The pre-outputs are scalars values that at the determninistic probability that each possible output is the one you want. 
+- Best value is chosen (unless temperature used… and this is also deterministic) 
+- During training 
+  -- for each input / output pair 
+  -- adjust Weighs and biases to slightly improve the coomputation of this pair as the best value (because this is a good match) 
+
+Future inputs that dont exactly match any trained inputs will still
+
+- get a good probability value (deterministic) 
+- this is made possible because of TF architecture that makes 
+
+Loss = delta(output) / delta(w,b)
+
+<br>
+
+----------------------------------------
+
+<br>
+
+I think the core ideas are good, especially:
+- deterministic computation
+- probabilistic outputs
+- weight/bias adjustment
+- generalization to unseen inputs
+- architecture enabling trainability
+
+Those are all important.
+
+But some wording is currently technically inaccurate or unclear.
+
+Biggest issue:
+
+- “Training defines EXACTLY what outputs for any input”
+
+That is too strong. **(NO ITS CORRECT.. SEE BELOW)**
+
+Training does NOT define exact outputs for all possible inputs.
+It defines:
+
+- a learned probability landscape/function approximation
+
+that generalizes to unseen inputs.
+
+Also:
+
+- temperature ≠ deterministic
+
+unless:
+
+- fixed seed
+- deterministic sampling
+- same environment/hardware/settings
+
+are enforced.
+
+I think this keeps your ideas while tightening accuracy:
+
+
+<br>
+
+----------------------------------------
+
+<br>
+
+#### GPT version
+
+My take on training:
+
+- Training creates a deterministic TF/UFA computation system implemented on deterministic hardware (GPUs/TPUs).
+- For a given hidden-state context, the TF computes deterministic scalar logits/probabilities for possible output tokens.
+- The highest probability output is usually selected (unless sampling/temperature modifies selection behavior).
+- During training:
+  - for each training input/output sequence
+  - weights and biases are slightly adjusted
+  - so the correct next-token output becomes statistically more likely.
+
+Future inputs that do not exactly match trained examples can still produce useful outputs because:
+- TF/UFA architectures generalize learned statistical/semantic patterns
+- hidden-state representations encode latent semantic similarities
+- similar inputs often produce similar latent representations and similar output probabilities.
+
+Training works because transformer architectures (attention, FFNs, residuals, LayerNorm, GELU, softmax) allow optimization software to successfully compute:
+
+- Loss = sensitivity of output error
+-        relative to changes in weights/biases
+
+and iteratively improve the TF/UFA over billions/trillions of training steps.
+
+Main improvements:
+
+- more technically accurate
+- still sounds like you
+- keeps your deterministic emphasis
+- preserves your TF/UFA framing
+- avoids claims critics could easily attack
+- clearer separation between:
+  - deterministic computation
+  - probabilistic output distributions
+  - stochastic sampling/generalization
+
+<br>
+
+----------------------------------------
+
+<br>
+
+
+### “Training defines EXACTLY what outputs for any input” that means 
+that training (after compleleted) defines exactly how any input will be processed. you dont know what the result will be, but if you have the same exactly input twice, you will get the same result.
+
+Yes — in that sense, your statement is fundamentally correct.
+
+You are talking about:
+
+- deterministic computation
+
+not:
+
+- human predictability
+
+Meaning:
+
+After training completes:
+
+- weights are fixed
+- biases are fixed
+- architecture is fixed
+
+So for:
+
+- same model
+- same weights
+- same input
+- same settings
+- same seed
+- same environment
+
+the TF computation path is deterministic.
+
+The logits/probabilities are computed deterministically.
+
+So mathematically:
+
+- input
+- → deterministic hidden-state evolution
+- → deterministic logits
+
+That part is true.
+
+Where people may object is:
+
+- sampling
+- temperature
+- nondeterministic GPU kernels
+- distributed inference
+
+which can make runtime outputs differ.
+
+So I think your intended meaning is:
+
+- Training completely determines the TF/UFA computational function.
+
+That is a strong and defensible statement.
+
+You could phrase it like:
+
+- Training defines the deterministic TF/UFA function that maps input token sequences into output probability distributions.
+
+That is very accurate and still preserves your core point.
+
+
+
+### "if" you wrote (about stochastic). I am saying that temp alone is deterministic. 
+its just marketing hype to make users think its not deterministic.
+
+
+Yes — you are correct.
+
+Temperature by itself is completely deterministic.
+
+It is just a mathematical transformation of the logits/probabilities.
+
+Given:
+
+- same logits
+- same temperature
+
+you will always get:
+
+- same adjusted probability distribution
+
+Deterministically.
+
+The randomness comes later IF:
+
+- sampling
+
+is used to choose tokens from that distribution.
+
+So:
+
+- TF logits
+- → deterministic temperature scaling
+- → adjusted probabilities
+- → optional stochastic sampling
+
+Your distinction is correct.
+
+
+
+### its just marketing hype to make users think its not deterministic
+
+
+I would not frame it that strongly.
+
+The underlying TF computation is fundamentally deterministic mathematics:
+
+- matrix multiplies
+- activations
+- softmax
+- attention
+- logits
+
+That part of your argument is correct.
+
+But many real inference systems DO intentionally introduce stochastic sampling:
+
+- temperature sampling
+- top-k
+- top-p
+- randomized decoding
+
+And when sampling is enabled:
+
+- different outputs can genuinely occur
+
+even from identical prompts.
+
+So the nondeterminism is not purely “marketing hype.”
+
+However, your broader criticism has truth in it:
+
+**Many people talk about AI as if:**
+
+- it has mystical spontaneity
+- creativity emerges from nowhere
+- it is fundamentally noncomputable
+
+when in reality:
+
+- **the core system is deterministic numerical computation**
+
+plus optional probabilistic sampling mechanisms.
+
+So I think the strongest version of your argument is:
+
+- **Modern TFs are fundamentally deterministic computational systems. Apparent randomness usually comes from engineered stochastic decoding methods layered on top of deterministic logits.**
+
+That is accurate and hard to argue against technically.
+
+
+26.0514
