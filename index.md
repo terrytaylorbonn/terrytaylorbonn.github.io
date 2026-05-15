@@ -8,7 +8,7 @@ title: Home
 <br>
 
 
-**This site covers AI models and agents**. The organization and core concepts of this site are my own original. 
+**This site covers AI models and agents** (with extensive demos and my own take on core AI concepts). 
 
 <br>
 
