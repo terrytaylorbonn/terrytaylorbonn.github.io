@@ -40,7 +40,6 @@ I also wanted to see through the AI hype. Even if you dont plan to develop Agent
 <br>
 
 - 4.1 Why agentic needs AI
-- 4.2 What AI does for an agent
 - 4.3 Workflow diagram 
 - 4.4 Core LLM roles in the demos
 - 4.4b version 2 26.0512
@@ -48,8 +47,12 @@ I also wanted to see through the AI hype. Even if you dont plan to develop Agent
 
 <br>
 
+*The LLM as a helpful assitant for the agent*<br>
+<img src="/assets/4_7_help_assist_LLM.png" alt="drones" width="45%"> 
 
-***My depiction** of the agent (external) in the LLM ecosystem*<br>
+
+
+*Details of the agent <> LLM interface*<br>
 <img src="/assets/GPT_agent.png" alt="desc" width="55%"> 
 
 
@@ -63,28 +66,16 @@ The following are just a few examples of how AI is a very helpful assistant for 
 - Interpret/sanitize messy human language text
 - Create human language explanations
 - Planning (breaking up complex tasks into granular tasks that the agent can process reliably)
+- Input and output (of "messy" human language representations)
+- Rule injection (by AI into the main loop)
 
 These capabilities an agentic AI app 
 - vastly more flexible and capable
-- at the cost of unpredictabilty.
+- at the cost of unpredictabilty (For many apps this is an excellent tradeoff)
 
-For many apps this is an excellent tradeoff. 
+they can be used for a vast array of  purposes (logistics, manufacturing, healthcare, defense, operations, business intelligence)
 
-*The LLM as a helpful assitant for the agent*<br>
-<img src="/assets/4_7_help_assist_LLM.png" alt="drones" width="45%"> 
-
-<br>
- 
-### 4.2 What AI does for an agent
-
-Palantir's AI systems because 
-- (1) they are very effective and 
-- (2) they can be used for a vast array of non-military purposes (logistics, manufacturing, healthcare, defense, operations, business intelligence)
-
- The core control loop is traditional non-AI deterministic programming that performs
-- Input and output (of "messy" human language representations)
-- Task planning (breaking up complex human language tasks into smaller deterministic tasks)
-- Rule injection (by AI into the main loop)
+### 4.3 Workflow diagrams
 
 Reference the diagram below:
 - Agent collects human language data (blue square) from the UI, DB, APIs, etc.
@@ -105,10 +96,6 @@ The following diagram shows an demo of this.
 <img src="/assets/aiplan.png" alt="AI planning" width="85%">
 
 
-
-<br>
-
-### 4.3 Workflow diagram 
 
 Workflow details (see diagram below):
 - **#1 UI/DB/API** (human language sources and destinations) **interface with #2 Agent** (the main loop).
