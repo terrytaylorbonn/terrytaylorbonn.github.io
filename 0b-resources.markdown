@@ -2,10 +2,14 @@
 layout: page
 title: "Resources"
 permalink: /resources/
-description: Last edit 26.0427
+description: Last edit 26.0515
 ---
 
 <br> 
+
+#### Tech Stacks & Docs
+[Tech Stacks & Docs](/tech-stacks/)<br>
+
 
 #### Wiki
 [github.com/terrytaylorbonn/auxdrone/wiki](https://github.com/terrytaylorbonn/auxdrone/wiki) mirrors this website. The wiki has hundreds of pages of tech notes and project history.<br>
@@ -26,4 +30,4 @@ description: Last edit 26.0427
 
 <br>
 
-26.0427
+26.0515

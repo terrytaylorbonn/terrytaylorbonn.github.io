@@ -1,6 +1,6 @@
 ---
 layout: page
-title: "(3.1) CNN"
+title: "(3.1) CNNs"
 permalink: /cnn/
 description: Last edit 26.0426
 ---
