@@ -7,7 +7,6 @@ permalink: /2_models/
 <br>
 
 
-
 **Conceptual summary of models**:
 - The core of AI is the **UFA** (universal function approximator). **A UFA only knows numbers. It has absolutely no info about the real world.** It is trained to output a number(s) based on the input numbers. 
 - A **CNN UFA** computes the most probable label for a set of pixels.
@@ -17,14 +16,18 @@ permalink: /2_models/
 
 <br>
 
-**My goals in this section are to** 
-- Understand the core concepts, 
-- how to build practical applications, 
-- and understand the AI hype (and outright lies)
+**My goals of this section are to** 
+- Convey the core concepts (my take), 
+- show how to build practical applications (demos), 
+- and to dispel AI hype.
+
+That last point is essential for successful AI projects. **Models run on clocked binary circuits**. They no intelligence. You could run LLMs on electro-mechanical relays (it would take years to generate a token, but it theoretically possible). **LLM intelligence simulation is based on (1) binary computing structures and (2) massive computing power/speed**. The more you understand how LLMs work, the better you can use them in AI projects. 
+
+<!-- 
 
 That last point is essential for successful AI projects. I first took an interest in understanding the core of **what makes models tick** when I started hearing all the hype from AI gurus about how AI could really think and even have emotions. **Models run on ticking clocked binary circuits**. You don't have to be very bright to understand that ticking mechanisms (clocked state machines) dont think. That may seem impossible when you use an LLM that can intelligenty converse with you. But **LLM intelligence simulation is based on (1) binary computing structures and (2) massive computing power/speed**. Your PC does the same kind of trick.
 
-
+-->
 
 <br>
 
@@ -61,11 +64,8 @@ In any case, the time spent doing hands-on demos (for representational learning,
 
 <br>
 
-### iAgent (add text here)
 
-<br>
-
-### [2.2 LLMs](/sandbox/)
+### [2.2 LLMs](/sandbox/) (iAgent + TF)
 
 After understanding the gist of CNNs, **my focus shifted to LLMs (large language models)**:
   - Transformers (TF, the LLM neural network) *(see the wiki page **[AI concepts](https://github.com/terrytaylorbonn/auxdrone/wiki/Core-AI-concepts)** for **my explanation of GPT-3 transformer algorithms)*** 
