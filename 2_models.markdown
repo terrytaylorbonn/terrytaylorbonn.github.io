@@ -28,39 +28,23 @@ That last point is essential for successful AI projects. I first took an interes
 
 <br>
 
-### [(2) UFAs](/UFAs/)
+### [2.0 UFAs](/UFAs/)
 
 A TF implements a Univeral Function Approximator (UFA) algorithm. Understanding what a UFA is is the key to understanding what AI really is. And **when you understand how AI really works,  you will understand why agentic AI works in systems like Palantir Maven (and in many many other business segments), but will never be safe enough for self-driving cars and home humanoids**. That's my personal opinion (backed up by over a decade of empty self-driving car promises). 
 
 <br>
 
-### [(3.1) CNNs](/cnn/)
+### [2.1 CNNs](/cnn/)
 
 The AI in the AI drones was object recognition using CNNs (convoluted neural networks) running on the Nvidia Jetson Nano and on the PI computer. **Studying CNNs is a good first step for studying the much more complex LLMs.** Note: **"My depiction"** below means I have not seen such a diagram elsewhere.
 
 <br>
 
-### [(3.2) LLMs](/sandbox/)
-
-After understanding the gist of CNNs, **my focus shifted to LLMs (large language models)**:
-  - Transformers (TF, the LLM neural network) *(see the wiki page **[AI concepts](https://github.com/terrytaylorbonn/auxdrone/wiki/Core-AI-concepts)** for **my explanation of GPT-3 transformer algorithms)*** 
-  - API-based model usage (major frontier models)
-  - Fine-tuning
-  - RAG, MCP, and tools
-  - Local and remote model deployment (smaller models)
-
-An LLM consists of an (1) internal agent and a (2) transformer (TF). The TF is the core computational engine behind modern AI systems and the mechanism that enables modern LLM behavior.
-  - [Core AI (LLM) concepts](https://github.com/terrytaylorbonn/auxdrone/wiki/Core-AI-concepts) (wiki page) explains in detail GPT-3 transformer algorithms. 
-  - [Core AI (LLM) misconceptions](/llm-tf-misconceptions/).
-  - [Core AI CNN (object recognition) concepts](/cnn/)
+### [2.3 Predictive](/2b-6-predictive/)
 
 <br>
 
-### [(3.3) Predictive](/2b-6-predictive/)
-
-<br>
-
-### [(3.4) Robotic AI](/robotic-ai/)
+### [2.4 Robotic AI](/robotic-ai/)
 
 JEPA, belief tracking, control loops, autonomy.
 
@@ -76,6 +60,27 @@ In any case, the time spent doing hands-on demos (for representational learning,
 <img src="/assets/belgium1.png" alt="drones" width="75%"> 
 
 <br>
+
+### iAgent (add text here)
+
+<br>
+
+### [2.2 LLMs](/sandbox/)
+
+After understanding the gist of CNNs, **my focus shifted to LLMs (large language models)**:
+  - Transformers (TF, the LLM neural network) *(see the wiki page **[AI concepts](https://github.com/terrytaylorbonn/auxdrone/wiki/Core-AI-concepts)** for **my explanation of GPT-3 transformer algorithms)*** 
+  - API-based model usage (major frontier models)
+  - Fine-tuning
+  - RAG, MCP, and tools
+  - Local and remote model deployment (smaller models)
+
+An LLM consists of an (1) internal agent and a (2) transformer (TF). The TF is the core computational engine behind modern AI systems and the mechanism that enables modern LLM behavior.
+  - [Core AI (LLM) concepts](https://github.com/terrytaylorbonn/auxdrone/wiki/Core-AI-concepts) (wiki page) explains in detail GPT-3 transformer algorithms. 
+  - [Core AI (LLM) misconceptions](/llm-tf-misconceptions/).
+  - [Core AI CNN (object recognition) concepts](/cnn/)
+
+<br>
+
 
 <!-- 
 

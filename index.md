@@ -12,7 +12,7 @@ title: Home
 
 <br>
 
-<img src="/assets/zai_evolution3.png" alt="smol" width="55%"> 
+<img src="/assets/zai_evolution3.png" alt="smol" width="60%"> 
 
 
 

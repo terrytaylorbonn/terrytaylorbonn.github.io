@@ -13,13 +13,13 @@ permalink: /3_agents/
 
 <br>
 
-### [(4b) Agentic (no AI)](/4b-agentic/). Core concepts and basic demos
+### [3.1 Agentic (no AI)](/4b-agentic/). Core concepts and basic demos
 
 The core control loop is traditional non-AI deterministic programming
 
 <br>
 
-### [(4c) Agentic + AI](/4c-agentic-ai/). Core concepts and basic demos
+### [3.2 Agentic + AI](/4c-agentic-ai/). Core concepts and basic demos
 
 The core control loop is traditional non-AI deterministic programming that performs **(with the help of an LLM)**
 - Input and output (of "messy" human language representations)
@@ -28,7 +28,7 @@ The core control loop is traditional non-AI deterministic programming that perfo
 
 <br>
 
-### [(6) Agentic AI projects](/AI-projects/). Demos (with Github repo and docs)
+### [3.3 Agentic AI projects](/AI-projects/). Demos (with Github repo and docs)
 
 This section focuses on "spinning up" real-world projects quickly with minimal code analysis or manual coding. 
 
