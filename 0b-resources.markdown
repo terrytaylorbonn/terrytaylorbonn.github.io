@@ -15,14 +15,12 @@ I documented my AI drone activities in detail. My original plan was to build my 
 - AI dev tools/IDEs (VSCode, Codex, Cursor, etc) and 
 - related plugins (like the Render plugin for Codex)
 
+<!-- 
 *AI IDE and the components it creates*<br>
-<img src="/assets/5_IDEs.png" alt="drones" width="22%"> 
+<img src="/assets/5_IDEs.png" alt="drones" width="22%"> -->
 
 
-
-
-#### Tech Stacks & Docs
-[Tech Stacks & Docs](/tech-stacks/)<br>
+#### [Tech Stacks & Docs](/tech-stacks/)
 
 
 #### Wiki

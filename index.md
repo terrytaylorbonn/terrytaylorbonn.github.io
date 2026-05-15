@@ -10,8 +10,10 @@ title: Home
 
 **This site covers AI models and agents** (with extensive demos and my own take on core concepts). 
 
+
 <br>
 
+*Site diagram [(details on timeline page)](/history/)* <br>
 <img src="/assets/zai_evolution3.png" alt="smol" width="60%"> 
 
 
