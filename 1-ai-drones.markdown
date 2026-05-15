@@ -4,6 +4,12 @@ title: "1 AI drones"
 permalink: /aidrones/
 ---
 
+<!-- USE THIS TEXT ***********************************************
+
+This was the first phase of ZiptieAI (the name was inspired by the zipties Ukraine used to quickly configure drones). **My original plan was to spend the majority of my time on building the AI**. But I ended up spending most of my time on building drones because of quality and usability issues with the open source software and components. 
+I was hoping to work as a volunteer drone builder in Ukraine. I speak Russsian and understand Ukrainian. I spent a total of 2 years in Ukraine. Its a complicated place (even without the war), even if you are just looking for a war-time volunteer job. -->
+
+
 <br> 
 
 See the [Wiki page](https://github.com/terrytaylorbonn/auxdrone/wiki/AI-drone-overview) for more info.
@@ -13,6 +19,7 @@ I worked on AI drones from 2023 to 2024 focusing on:
 - FPV and Pixhawk drone builds
 - AI (object recognition using Jetson Nano and PI4)
 - Drone AI / autonomous flight (Pixhawk drone with Jetson Nano using object recognition with Pymavlink for flight control inputs)
+
 
 
 See also: 

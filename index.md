@@ -8,7 +8,7 @@ title: Home
 <br>
 
 
-**This site covers AI models and agents** (with extensive demos and my own take on core AI concepts). 
+**This site covers AI models and agents** (with extensive demos and my own take on core concepts). 
 
 <br>
 
@@ -20,7 +20,10 @@ title: Home
 <!--  *The number of [(4) Agentic AI](/agentic-ai/) jobs will skyrocket in the near future* <br> 
 <img src="/assets/agentic_economy.png" alt="drones" width="75%"> 
 
-The ZiptieAI team includes myself and several AI colleagues (ChatGPT, Codex, Claude, Cursor, etc). -->
+The ZiptieAI team includes myself and several AI colleagues (ChatGPT, Codex, Claude, Cursor, etc). 
+- [ZiptieAI History](/history/). How the ZiptieAI project has evolved.
+
+-->
 
 <br>
 
@@ -29,19 +32,17 @@ The ZiptieAI team includes myself and several AI colleagues (ChatGPT, Codex, Cla
 
 **The following are all of the top-level pages** *(see also the [Wiki](https://github.com/terrytaylorbonn/auxdrone/wiki))*.  
 
-- [ZiptieAI History](/history/). How the ZiptieAI project has evolved.
-- [The future](/the-future/). What's the AI end game?
-
+- [Timeline](/the-future/). ZiptieAI start, present, and future.
 - **[1 AI Drones](/aidrones/)**. CNNs (object recognition) on Pixhawk drones. 
 - **[2 Models](/2_models/)**. UFAs, CNNs, LLMs, predictive, and robotic AI.
 - **[3 Agents](/3_agents/)**. Agents, agents+AI, dev tools, and projects.
 - **[4 Resources](/resources/)**. Tech stacks, docs, wiki, Substack, Youtube, Github, and Google Drive. 
+- [About](/about/).
+
 
 <!-- - **[(6) AI projects](/AI-projects/)**. Rapidly "spinning up" real-world AI projects. The ZiptieAI project started at phase (1) and is now at phase (6). -->
 
 
-
-- [About](/about/).
 
 <br>
 

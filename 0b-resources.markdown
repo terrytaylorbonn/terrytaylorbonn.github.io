@@ -7,6 +7,10 @@ description: Last edit 26.0515
 
 <br> 
 
+<!-- ###################################################################################
+I documented my AI drone activities in detail. My original plan was to build my own ZiptieAI DIY drone website, wiki, and blogs (Substack and Youtube). The first step was a refresher course on the latest doc tools (MERN stacks and REST/GraphQL APIs/docs). For the first time I started using the latest AI tools for coding. I was amazed by how much these AI tools simplified development. **It was very clear that websites in the future would be built only using AI.** I wanted to understand more about LLMs.  -->
+
+
 #### Tech Stacks & Docs
 [Tech Stacks & Docs](/tech-stacks/)<br>
 
