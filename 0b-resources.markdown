@@ -1,6 +1,6 @@
 ---
 layout: page
-title: "Resources"
+title: "4 Resources"
 permalink: /resources/
 description: Last edit 26.0515
 ---

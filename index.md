@@ -35,12 +35,12 @@ The ZiptieAI team includes myself and several AI colleagues (ChatGPT, Codex, Cla
 - **[1 AI Drones](/aidrones/)**. CNNs (object recognition) on Pixhawk drones. 
 - **[2 Models](/2_models/)**. UFAs, CNNs, LLMs, predictive, and robotic AI.
 - **[3 Agents](/3_agents/)**. Agents, agents+AI, dev tools, and projects.
+- **[4 Resources](/resources/)**. Tech stacks, docs, wiki, Substack, Youtube, Github, and Google Drive. 
 
 <!-- - **[(6) AI projects](/AI-projects/)**. Rapidly "spinning up" real-world AI projects. The ZiptieAI project started at phase (1) and is now at phase (6). -->
 
 
 
-- [Resources](/resources/). Tech stacks, docs, wiki, Substack, Youtube, Github, and Google Drive. 
 - [About](/about/).
 
 <br>
