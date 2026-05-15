@@ -5,6 +5,29 @@ permalink: /AI-dev-tools/
 description: Last edit 26.0501
 ---
 
+# NEW
+
+#### **(5) [AI dev tools](/AI-dev-tools/)**
+
+The section focuses on 
+- AI dev tools/IDEs (VSCode, Codex, Cursor, etc) and 
+- related plugins (like the Render plugin for Codex)
+
+The main topics are
+- Overview, intros, videos
+- Overall effectiveness (ease of use, reliability, "hallucinations", cost, etc). For example, **Claude restarts daily and all previous conversations are lost**. Rather inconvenient (this might be because I am using the free version with API credits).
+- **Security issues**. For example, Cursor pasted a secret from my .env file in a chat. Cursor later alerted me that I need to **change all my secrets** because the system detected secrets in the chat and **Cursor could not tell me exactly what secrets were compromised or when**. 
+
+
+*AI IDE and the components it creates*<br>
+<img src="/assets/5_IDEs.png" alt="drones" width="22%"> 
+
+----------------------------------------------------------
+----------------------------------------------------------
+----------------------------------------------------------
+
+
+
 <br>
 
 The AI IDEs (Cursor, VSCode (+LLM)) are critical for AI app dev. This page will decribe primarily IDEs (and dev tools in general).

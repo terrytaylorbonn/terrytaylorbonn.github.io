@@ -11,6 +11,16 @@ description: Last edit 26.0515
 I documented my AI drone activities in detail. My original plan was to build my own ZiptieAI DIY drone website, wiki, and blogs (Substack and Youtube). The first step was a refresher course on the latest doc tools (MERN stacks and REST/GraphQL APIs/docs). For the first time I started using the latest AI tools for coding. I was amazed by how much these AI tools simplified development. **It was very clear that websites in the future would be built only using AI.** I wanted to understand more about LLMs.  -->
 
 
+#### [AI dev tools](/AI-dev-tools/). Cursor, Codex, VSC, Claude (no IDE), etc
+- AI dev tools/IDEs (VSCode, Codex, Cursor, etc) and 
+- related plugins (like the Render plugin for Codex)
+
+*AI IDE and the components it creates*<br>
+<img src="/assets/5_IDEs.png" alt="drones" width="22%"> 
+
+
+
+
 #### Tech Stacks & Docs
 [Tech Stacks & Docs](/tech-stacks/)<br>
 

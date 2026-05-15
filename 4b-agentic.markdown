@@ -1,0 +1,66 @@
+---
+layout: page
+title: "(4b) Agentic (no AI)"
+permalink: /4b-agentic/
+---
+
+
+
+**TOC** 
+- **2 Agent concepts**. The agent is the central control loop (I would call this perhaps the agentic app). 
+- **3 Agent demos (no AI)**. Lab notes on my Gdrive. Code on my Github. 
+
+Notes:
+- [4a chat about iAgent and eAgent](/4a-chat-about-iAgent-and-eAgent/) 26.0514
+
+*In an agentic system a deterministic program (like Python) is the central control loop* <br>
+<img src="/assets/4_4_agent_ball.png" alt="drones" width="30%"> 
+
+
+
+
+<br>
+
+# **2 Agent concepts**
+
+- 2.1 The agentic mission 
+- 2.2 Ontology
+
+<br>
+
+### 2.1 The agentic mission 
+
+**Palantir agentic systems (no AI) started around 2003 in response to the 9/11 attacks.** The US government wanted to make sure such an event did not happen again. 
+
+<img src="/assets/4_2_wtc.png" alt="drones" width="35%"> 
+
+The mission goals were quite clear: Detect any strange new activity that might indicate a security threat *(such as a bunch of foreign nationals wanting all of a sudden to learn on flight simulators how to fly airliners)*. Palantir was to be the (automated) system for this critical mission. **A system that watches the world (like a sorcerer looking into his crystal ball) 24/7, 365 days a year.**
+
+*A palantír is one of several indestructible crystal balls from the novel"The Lord of the Rings" used to see events in other parts of the world [(Wiki)](https://en.wikipedia.org/wiki/Palant%C3%ADr)*<br>
+<img src="/assets/4_3_crystal_ball.png" alt="drones" width="20%"> 
+
+
+<br> 
+ 
+### 2.2 Ontology
+Palantir ontology is something between free-form text and a rigid database. You simply (1) restrict the allowed vocabulary and (2) specify relationships between DB entries. This ensures that the deterministic agent loop can process the DB content without errors (you cant simply automatically ingest "messy" human language without AI).
+
+*[Ontology (wiki)](https://en.wikipedia.org/wiki/Ontology_%28information_science%29)* <br>
+<img src="/assets/4_5_onto.png" alt="drones" width="45%"> 
+
+<br>
+ 
+# **3 Agent demos (no AI)**
+
+This page is WIP (v1 26.0509). I need to go back through these demos and document. 
+
+I believe these files were **named "pal_core" because they show the core deterministic functions in Palantir style non-AI agentic apps**.
+
+Simple demos are the best way to understand the core of agentic apps. For details see the lab notes doc **#603\_PAL\_.docx** (PAL = Palantir) on my **[Gdrive](https://drive.google.com/drive/folders/1-Adawag9uA8_bq-hDF-nOuPYaRLz1eEO)**.  
+
+<img src="/assets/4_5_3x.png" alt="drones" width="70%"> 
+
+
+<br>
+
+26.0515

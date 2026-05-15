@@ -5,6 +5,21 @@ permalink: /AI-projects/
 description: Last edit 26.0501
 ---
 
+
+This section focuses on "spinning up" real-world projects quickly with minimal code analysis or manual coding. 
+
+
+<!-- 
+*A complete project (IDEs and LLMs can be switched quickly)*<br>
+<img src="/assets/6_projects.png" alt="drones" width="45%"> 
+
+<br>
+
+---------------------------------------------------------
+---------------------------------------------------------
+---------------------------------------------------------
+---------------------------------------------------------
+
 <br>
 
 This section will focus on **rapidly spinning up practical real-world AI projects** with minimal manual coding ("spin up", not “vibe", coding). 
@@ -20,7 +35,7 @@ Currently (26.0507) there are only **2 initial rough demos**. Lessons learned fr
 
 *All of these projects will be based on a variation of the components shown below.*
 
-<!--
+
 In the following diagram:
 - (5) AI IDE (Cursor, Codex, etc)
 - (4) Agent
@@ -30,18 +45,18 @@ In the following diagram:
 - Data (remote "messy" or human language data sources)
 - DB (remote MongoDB)
 - UI (human input)
---> 
+ 
+-->
 
-<img src="/assets/6_main_diagram.png" alt="drones" width="40%"> 
-
-
+*Complete project ecosystem*<br>
+<img src="/assets/6_main_diagram.png" alt="drones" width="50%"> 
 
 
 <br>
 
 **TOC**
-- Demo 2 jobradar_unified.py (what it does so far 26.0506)
-- Demo 1 Cursor / gpt-40-mini / MongoDB / n8n / index.html (26.0501)
+- Demo 2 jobradar_unified.py (what it does so far 26.0506). Ingests data from different sources and uses LLM to find matching data and summarize. The results are then sent by email, google docs, etc. Runs locally and on Cursor. Spun up in 4 days. **I did not even look at the code (not necessary). This is probably how such apps will be done in the future.**
+- Demo 1 Cursor / gpt-40-mini / MongoDB / n8n / index.html (26.0501). I did analyze the code and manual modify a few times.
 
 For details see 
 - Documentation: [#606\_ai_ides_.docx](https://drive.google.com/drive/folders/1-Adawag9uA8_bq-hDF-nOuPYaRLz1eEO)
@@ -130,4 +145,4 @@ DB contents.
 
 <br> 
 
-26.0507 (v1 26.0428)
+26.0515

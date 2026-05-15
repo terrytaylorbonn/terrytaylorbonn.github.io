@@ -4,7 +4,36 @@ title: "(4) Agentic AI"
 permalink: /agentic-ai/
 ---
 
+
+
+
 <br>
+
+# NEW
+
+**AI agents are the deterministic control loops (often written in Python) that are the core of AI apps**. My interest in AI is primarily in this area.  I became particulary interested in Palantir's AI systems because 
+- (1) they are very effective and 
+- (2) they can be used for a vast array of non-military purposes (logistics, manufacturing, healthcare, defense, operations, business intelligence)
+
+<!--  "Autonomous" AI agents perform complex tasks with limited (but critical) human intervention.  -->
+
+There were claims that Palantir's systems could become the real world [SkyNet](https://en.wikipedia.org/wiki/Skynet_(Terminator)) *(see my substack post [#73 Understanding Palantir Maven / Why AI will never become Skynet](https://ziptieai.substack.com/p/73-understanding-palantir-maven-through))*. But Palantir's systems, like **all agentic AI systems, are assisted by AI (not controlled by AI)**. The LLM is simply a "helpful assistant". **LLMs control nothing, push no buttons**.
+
+ The core control loop is traditional non-AI deterministic programming that performs
+- Input and output (of "messy" human language representations)
+- Task planning (breaking up complex human language tasks into smaller deterministic tasks)
+- Rule injection (by AI into the main loop)
+
+Agentic AI (with it's helpful LLM assistants) will be one of the fastest-growing business segments in the future. 
+
+***My depiction** of the agent (external) in the LLM ecosystem*<br>
+<img src="/assets/GPT_agent.png" alt="desc" width="55%"> 
+
+----------------------------------------
+-----------------------------------------
+
+<br>
+
 
 <!-- **26.0509 REWRITING THIS PAGE ... FINISH BY 26.05010. THIS IS THE CORE PAGE OF THIS WEBSITE. This page will explain how agentic AI really works (my take).** (My rewrite working notes: in docx #606 on gdrive (link in footer) search for ""(4) Agentic AI" rewrite"). -->
 
@@ -23,6 +52,7 @@ Notes:
 - [4a chat about iAgent and eAgent](/4a-chat-about-iAgent-and-eAgent/) 26.0514
 
 <br>
+
 
 # **1 Why learn agentic AI? (jobs)**
 
