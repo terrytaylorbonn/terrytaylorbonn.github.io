@@ -8,7 +8,14 @@ permalink: /gist-LLM/
 
 <br>
 
-## 01c Main diagram v3 (simplest) 
+## **TL;DR — Qualitative gist of language models (LLMs)**
+
+This page will describe in concise detail the gist of what an LLM model does without complex algorithms or architecture diagrams.
+
+
+<br>
+
+## **01c Main diagram v3 (simplest)** 
 
 
 
@@ -44,6 +51,19 @@ permalink: /gist-LLM/
 
 <br>
 
+
+--------------------------------------
+--------------------------------------
+--------------------------------------
+--------------------------------------
+--------------------------------------
+--------------------------------------
+
+<br>
+
+## **The rest of this page is under contstruction.....**
+
+<br>
 
 #### 01b Main diagram v2 (simpler) 
 
@@ -104,11 +124,6 @@ xxxxxxxxxxxxxxxxx give examples ":", "/" "de" etc these are the most atomics pie
 
 <img src="/assets/00_llm_gist.png" alt="smol" width="60%"> 
 
-<br>
-
-**TL;DR — Qualitative gist of language models (LLMs)**
-
-This page describes in concise detail the gist of what an LLM model does, without describing complex algorithms or architectures.
 
 <br>
 
