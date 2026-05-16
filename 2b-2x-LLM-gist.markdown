@@ -24,26 +24,26 @@ This page will describe in concise detail the gist of what an LLM model does wit
 - 2 iAgent sends words to TF. 
   - NOTE: iAgent probably also sends special instructions. iAgent and TF are both part of the same LLM; they are carefully designed to work together. this is the key to the LLM being able to create complex responses that resemble intelligent thinking.
 - 3 Tokenize (splitting up words into smaller parts make the computation of prompt meaning simpler). 
-  - Not only words, but ":", "/" are also tokens.
+  - Not only word parts, but ":", "/" etc are also tokens.
 - 4 Convert tokens to embeddings (in GPT-3 token embedding = 12288 FP numbers). 
   - I call this **Vector Language (VL). This is the "thought" language of the TF.** Whereas people convert thoughts back and forth to words, TF uses VL instead (because TF has 0 intelligence).
 - 5 **TF NN runs massive computations** to 
   - (1) refine the true meaning of each token VL 
-    - AH mixes content influence between tokens and 
-    - FFN detects complex meaning inside a token (that adjust token VL values)
-  - (2) inside each token VL creates a "storyline". 
-  - **These inference (runtime) algorithms mirror the training algorithms** ("training" = programming TF on trillions of example prompt/response pairs).
+    - Attenion heads (AH) mix context influence between tokens and 
+    - FFN detects complex meaning inside a token (and tweeks the token VL values accordingly)
+  - (2) inside each token VL creates a "storyline". this is the LLM'd "thinking" mechanism that summarized the storyline defined by all the TF input tokens. Because of AH, word order does not matter (if it does not change meaning), because the storyline (probably 1000s of FP numbers) will be the same. 
+  - **These inference (runtime) algorithms mirror the training algorithms** ("training" = programming TF on trillions of example prompt/response pairs). **The "thought" patterns and structures of the TF are defined by the examples** (these patterns have nothing to do with the patterns defined by human languages; they are defined by training data patterns).
 - 6 Response token selected:
-  - 6-1 Last token final VL converted to logits (floating point probability of each vocab token as the next token; values can add up to any number)
+  - 6-1 The last token final VL is converted to logits (floating point probabilities of each vocab token as the next token; values can add up to any number).
   - 6-2 Softmax converts Logits into probabilities (that all add up to 1 and whose values are adjusted so that just 2-3 have significant values).
-  - 6-3 Select new token (usually this is the highest value, but not always (temperature)).
+  - 6-3 Select new token (usually this is the token with the highest probability value, but not always).
 - 7 The new token is added to the running prompt+response set of tokens
-  - (which will then be fed into the NN to compute the next new token).
+  - (which will then be fed into the NN to compute the next new token; the NN is reset and starts from 0 for every new token computation; this is required because of algorithm limitations).
 - 8 The new token is added to the set of current response tokens.
-  - 9 I think this also includes some control tokens for the iAgent (special messages for creating complex response structures).
+  - 9 I think this can also include some control tokens for the iAgent (special messages for creating complex response structures).
 - 10 The new response word is created from several tokens.
-- 11 New response word (or control token/word) is sent to the iAgent.
-- 12 iAgent streams the word to eAgent. 
+- 11 New response word (and/or control token/word) is sent to the iAgent.
+- 12 iAgent streams the response words (not the control words) to the eAgent. 
 
 
 
