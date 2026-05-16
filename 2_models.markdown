@@ -17,10 +17,11 @@ That last point is essential for successful AI projects. **Models run on clocked
 <br>
 
 **Conceptual summary of models**:
-- The core of AI is the **UFA** (universal function approximator). **A UFA only knows numbers. It has absolutely no info about the real world.** It is trained to output a number(s) based on the input numbers. 
-- A **CNN UFA** computes the most probable label for a set of pixels.
-- **Predictive** and **Robotic** UFAs can often be small and locally trained.
-- An **LLM transformer (TF) UFA** generates the probabilities of all vocabulary token candidates for next token (a set of numbers) from the token sequence input.  
+- **2.X Gist of LLMs** is that they (1) convert prompt+response input tokens into large (12288) vector language (just set of FP numbers), (2) massive calculations are performed on the VL to determine the complete meaning of the input, and (3) select a new vocab token. **The algoritm of LLM inference is the mirror image of the algorithm used to program ("train") the LLM.**
+- **2.0 UFA** (universal function approximator) is the core of AI. **A UFA only knows numbers. It has absolutely no info about the real world.** It is trained to output a number(s) based on the input numbers. 
+- **2.1 CNN UFA** computes the most probable label for a set of pixels.
+- **2.3 Predictive** and **2.4 Robotic** UFAs can often be small and locally trained.
+- **2.2 LLM transformer (TF) UFA** generates the probabilities of all vocabulary token candidates for next token (a set of numbers) from the token sequence input.  
 
 
 
@@ -31,6 +32,13 @@ That last point is essential for successful AI projects. I first took an interes
 -->
 
 <br>
+
+### **[2.X Qualitative gist of language models (LLMs)](/gist-LLM/)**
+
+Describes in concise detail gist of what an LLM model does without describing complex algorithms or architectures. 
+
+<br>
+
 
 ### [2.0 UFAs](/UFAs/)
 
@@ -94,4 +102,4 @@ An LLM consists of an (1) internal agent and a (2) transformer (TF). The TF is t
 
 -->
 
-26.0515
+26.0516
