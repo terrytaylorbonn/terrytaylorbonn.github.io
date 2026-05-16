@@ -17,7 +17,7 @@ permalink: /gist-LLM/
 - 4 Tokenization. splitting up words into smaller parts make the computation of prompt meaning simpler.
 - 5 Convert tokens to embeddings (GPT-3 each token > 12288 FP numbers). I call this **Vector Language (VL). This is the "thought" language of the TF. Whereas people convert thoughts back and forth to words, TF uses VL instead of thoughts (because TF has 0 intelligence).**
 - **TF NN runs massive computations** to (1) refine the true meaning of each token VL (especially the context from other tokens) and (2) inside each token VL create a "storyline". **These computations mimic hows the TF was programmed with input data ("trained").**
-- Response token selected:
+- 6,7,8 Response token selected:
   - 6 Last token final VL converted to logits (probability in FP numbers of each vocab token as the next token; values can add up to any number)
   - 7 Softmax converts Logits into probabilities (that all add up to 1 and whose values are skewed so that just 2-3 have significant values).
   - 8 Select new token (usually this is the highest value, but not always (temperature)).
