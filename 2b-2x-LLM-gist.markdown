@@ -8,30 +8,79 @@ permalink: /gist-LLM/
 
 <br>
 
+## 01c Main diagram v3 (simplest) 
 
-## 01 Main diagram (super simple) 
 
 
-- 2 eAgent (external agent) sends words to LLM iAgent (internal agent). Note: eA may add JSON, etc as special instructions. eA must obey the LLM API rules.
-- 3 iA send to TF. NOTE: iA may add its own special instructions. iA and TF are carefully designed to work together. this is the key to the LLM being able to create complex responses that resemble intelligent thinking.
-- 4 Tokenization. splitting up words into smaller parts make the computation of prompt meaning simpler.
-- 5 Convert tokens to embeddings (GPT-3 each token > 12288 FP numbers). I call this **Vector Language (VL). This is the "thought" language of the TF. Whereas people convert thoughts back and forth to words, TF uses VL instead of thoughts (because TF has 0 intelligence).**
-- **TF NN runs massive computations** to (1) refine the true meaning of each token VL (especially the context from other tokens) and (2) inside each token VL create a "storyline". **These computations mimic hows the TF was programmed with input data ("trained").**
+- 1 eAgent (external agent) sends prompt words to LLM iAgent (internal agent) via API. 
+  - Note: eAgent may add JSON, etc as special instructions. 
+- 2 iAgent sends words to TF. 
+  - NOTE: iAgent probably also sends special instructions. iAgent and TF are both part of the same LLM; they are carefully designed to work together. this is the key to the LLM being able to create complex responses that resemble intelligent thinking.
+- 3 Tokenize (splitting up words into smaller parts make the computation of prompt meaning simpler). 
+  - Not only words, but ":", "/" are also tokens.
+- 4 Convert tokens to embeddings (in GPT-3 token embedding = 12288 FP numbers). 
+  - I call this **Vector Language (VL). This is the "thought" language of the TF.** Whereas people convert thoughts back and forth to words, TF uses VL instead (because TF has 0 intelligence).
+- 5 **TF NN runs massive computations** to 
+  - (1) refine the true meaning of each token VL 
+    - AH mixes content influence between tokens and 
+    - FFN detects complex meaning inside a token (that adjust token VL values)
+  - (2) inside each token VL creates a "storyline". 
+  - **These inference (runtime) algorithms mirror the training algorithms** ("training" = programming TF on trillions of example prompt/response pairs).
+- 6 Response token selected:
+  - 6-1 Last token final VL converted to logits (floating point probability of each vocab token as the next token; values can add up to any number)
+  - 6-2 Softmax converts Logits into probabilities (that all add up to 1 and whose values are adjusted so that just 2-3 have significant values).
+  - 6-3 Select new token (usually this is the highest value, but not always (temperature)).
+- 7 The new token is added to the running prompt+response set of tokens
+  - (which will then be fed into the NN to compute the next new token).
+- 8 The new token is added to the set of current response tokens.
+  - 9 I think this also includes some control tokens for the iAgent (special messages for creating complex response structures).
+- 10 The new response word is created from several tokens.
+- 11 New response word (or control token/word) is sent to the iAgent.
+- 12 iAgent streams the word to eAgent. 
+
+
+
+<img src="/assets/02_llm_gist3.png" alt="smol" width="70%"> 
+
+<br>
+
+
+#### 01b Main diagram v2 (simpler) 
+
+
+- 2 eAgent (external agent) sends prompt words to LLM iAgent (internal agent) via API. 
+  - Note: eA may add JSON, etc as special instructions. 
+- 3 iA send to TF. 
+  - NOTE: iA may add its own special instructions. iA and TF are both part of the same LLM; they are carefully designed to work together. this is the key to the LLM being able to create complex responses that resemble intelligent thinking.
+
+
+- 4 Tokenize (splitting up words into smaller parts make the computation of prompt meaning simpler).
+xxxxxxxxxxxxxxxxx give examples ":", "/" "de" etc these are the most atomics pieces of meaning
+
+- 5 Convert tokens to embeddings (GPT-3 each token > 12288 FP numbers). 
+  - I call this **Vector Language (VL). This is the "thought" language of the TF.** Whereas people convert thoughts back and forth to words, TF uses VL instead of thoughts (because TF has 0 intelligence).
+- **TF NN runs massive computations** to 
+  - (1) refine the true meaning of each token VL (especially the context from other tokens) and 
+  - (2) inside each token VL create a "storyline". 
+  - **These computations mimic hows the TF was programmed with input data ("trained").**
 - 6,7,8 Response token selected:
   - 6 Last token final VL converted to logits (probability in FP numbers of each vocab token as the next token; values can add up to any number)
   - 7 Softmax converts Logits into probabilities (that all add up to 1 and whose values are skewed so that just 2-3 have significant values).
   - 8 Select new token (usually this is the highest value, but not always (temperature)).
-- 9 The new token is added to the running prompt+response set of tokens (which will then be fed into the NN to compute the next new token).
+- 9 The new token is added to the running prompt+response set of tokens
+  - (which will then be fed into the NN to compute the next new token).
 - 10 The new token is added to the set of current response tokens.
-- 11 The new response word (when tokens form a complete word) is sent to iAgent. NOTE: I think sometimes the TF may generate CC (control words) to inform the iAgent. These words may be hidden behind the API.
+  - NOTE: i think this also includes some CC for the iA (special messages for creating complex response structures).
+- 11 The new response word (when tokens form a complete word) sent to iAgent.
+  - NOTE: I think sometimes the TF may generate CC (control words) to inform the iAgent. These words may be hidden behind the API.
 - 12 iAgent streams the word to eAgent. 
 
 
-<img src="/assets/02_llm_gist2.png" alt="smol" width="65%"> 
+<img src="/assets/02_llm_gist2.png" alt="smol" width="50%"> 
 
 <br>
 
-## 01 Main diagram 
+#### 01a Main diagram v1 (too complicated)
 
 - 1 Human Language words (ASCII-encoded words) (HL-1) sent to (external) agent (Python) from Human or other source.
 - 2 eAgent adds eA Language (JSON) and sends to LLM.
@@ -53,7 +102,7 @@ permalink: /gist-LLM/
 - 13 eAgent might stream to Human or some other destination.
 
 
-<img src="/assets/00_llm_gist.png" alt="smol" width="90%"> 
+<img src="/assets/00_llm_gist.png" alt="smol" width="60%"> 
 
 <br>
 
