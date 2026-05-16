@@ -6,22 +6,23 @@ permalink: /2_models/
 
 <br>
 
-
-**Conceptual summary of models**:
-- The core of AI is the **UFA** (universal function approximator). **A UFA only knows numbers. It has absolutely no info about the real world.** It is trained to output a number(s) based on the input numbers. 
-- A **CNN UFA** computes the most probable label for a set of pixels.
-- An **LLM transformer (TF) UFA** generates the probabilities of all vocabulary token candidates for next token (a set of numbers) from the token sequence input.  
-- **Predictive**.
-- **Robotic**.
-
-<br>
-
-**My goals of this section are to** 
-- Convey the core concepts (my take), 
+**Goals of this section:** 
+- Convey the core concepts of models (my take), 
 - show how to build practical applications (demos), 
 - and to dispel AI hype.
 
 That last point is essential for successful AI projects. **Models run on clocked binary circuits**. They no intelligence. You could run LLMs on electro-mechanical relays (it would take years to generate a token, but it theoretically possible). **LLM intelligence simulation is based on (1) binary computing structures and (2) massive computing power/speed**. The more you understand how LLMs work, the better you can use them in AI projects. 
+
+
+<br>
+
+**Conceptual summary of models**:
+- The core of AI is the **UFA** (universal function approximator). **A UFA only knows numbers. It has absolutely no info about the real world.** It is trained to output a number(s) based on the input numbers. 
+- A **CNN UFA** computes the most probable label for a set of pixels.
+- **Predictive** and **Robotic** UFAs can often be small and locally trained.
+- An **LLM transformer (TF) UFA** generates the probabilities of all vocabulary token candidates for next token (a set of numbers) from the token sequence input.  
+
+
 
 <!-- 
 
@@ -59,10 +60,10 @@ In any case, the time spent doing hands-on demos (for representational learning,
 
 <br>
 
-*How a UFA determines if a location is in the Netherlands or Belgium*.<br>
+<!-- *How a UFA determines if a location is in the Netherlands or Belgium*.<br>
 <img src="/assets/belgium1.png" alt="drones" width="75%"> 
 
-<br>
+<br> -->
 
 
 ### [2.2 LLMs](/sandbox/) (iAgent + TF)
