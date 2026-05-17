@@ -31,20 +31,22 @@ Notes:
 
 **Just like iAgent and TF work together, so must extAgent and LLM.**
 
+- 1.1 Agents existed long before AI
+- 1.2 Agentic AI (LLMs designed for agents)
+- 1.3 AI'ic agents
+- 1.4 Model interface layer (MIL)
+
 
 
 <br>
 
-### **1.1 VERY IMPORTANT**
+### **1.1 Agents existed long before AI**
 
-<br>
 
-VERY IMPORTANT insight for your site
 Your entire architecture is basically:
-#### **3.1 deterministic agent systems existed before LLMs**
-BUT were expensive and rigid
-#### **3.2 TF/UFA semantic capabilities made those systems**
-vastly more practical and flexible
+- **#1 deterministic agent systems existed before LLMs (BUT were expensive and rigid).**
+- **2 TF/UFA semantic capabilities made those systems vastly more practical and flexible.**
+
 That is actually a very strong and coherent thesis.
 
 
@@ -88,8 +90,7 @@ The whole framework is becoming pretty coherent.
 
 <br>
 
-### **1.2 agentic AI**
-
+### **1.2 Agentic AI (LLMs designed for agents)**
  
 The following are just a few examples of how AI is a very helpful assistant for agentic apps:
 - Interpret/sanitize messy human language text
@@ -113,9 +114,6 @@ In reality AI (in my always humble opinion) is more about pattern matching than 
 
 It really is that simple. Then again, computers are all based on binary switches. But with a bit of ingeniuty you can milk such systems for all they are worth (and that can be quite a lot, for PC's and LLM's). An example: An LLM can detect (if it saw such a pattern before) that the word "milk" I used in the previous sentence was a verb and it was not about literally milking a cow. That is not intelligence, its pattern matching. 
 
-
-
-
 <br>
 
 ### **1.3 AI'ic agents**
@@ -137,7 +135,7 @@ Its quite important to understand what AI'ic agents AI is (at least hands-on exp
 
 ### **1.4 Model interface layer (MIL)**
 
-
+(to switch models... iAgent and TF are customized to work together, agent and LLM maybe now, so need interface)
 
 <br>
 
@@ -145,17 +143,26 @@ Its quite important to understand what AI'ic agents AI is (at least hands-on exp
 
 <br>
 
-### **2.1 Ecosystem**
-
-*The LLM as a helpful assitant for the agent*<br>
-<img src="/assets/4_7_help_assist_LLM.png" alt="drones" width="45%"> 
+- 2.1 Ecosystem
+- 2.2 Agent <> LLM interface
+- 2.3 Workflow diagram / simple
+- 2.4 Workflow diagram / detailed
 
 <br>
 
-### **2.2 agent <> LLM interface**
+### **2.1 Ecosystem**
+
+
+*The LLM as a helpful assitant for the agent*<br>
+<img src="/assets/4_7_help_assist_LLM.png" alt="drones" width="40%"> 
+
+<br>
+
+### **2.2 Agent <> LLM interface**
+
 
 *Details of the agent <> LLM interface*<br>
-<img src="/assets/GPT_agent.png" alt="desc" width="55%"> 
+<img src="/assets/GPT_agent.png" alt="desc" width="50%"> 
 
 <br>
 
@@ -195,7 +202,6 @@ Workflow details (see diagram below):
 *Workflow diagram*<br>
 <img src="/assets/4_10_workflow.png" alt="drones" width="65%"> 
 
-<br>
 
 
 <!-- ### 4.4 Core LLM roles in the demos
