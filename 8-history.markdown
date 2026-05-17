@@ -9,6 +9,7 @@ permalink: /history/
 
 
 AI tech is evolving quickly. ZiptieAI is evolving along with it. 
+- **Site diagram**  (rough timeline)
 - **Start** (AI drones)
 - **Present** (AI models and Agents)
 - **Future** (continued exploration of practical AI systems)
@@ -16,11 +17,17 @@ AI tech is evolving quickly. ZiptieAI is evolving along with it.
 
 <br>
 
+
+## **Site diagram** (rough timeline)
+
+<br> 
+
 The following describes the main site diagram below (roughly a timeline diagram):
 - **[1 AI Drones](/aidrones/)** was the first project at ZiptieAI.
 - **[2 Models](/2_models/)** lists the model concepts addressed in this site
-  - **No iAgent**: Means that these models have no "internal agent".
-    - **[2.0 UFAs](/UFAs/)**: Conceptual overview of Universal Function Approximators.
+     - **[2.X The gist of LLMs](/gist-LLM/)**.
+     - **[2.0 UFAs](/UFAs/)**: Conceptual overview of Universal Function Approximators.
+  - Models with no "internal agent".
     - **[2.1 CNNs](/cnn/)**: Convolutional Neural Networks (for object recogntion on drones). The takes a straight shot through the NN. 
     - **[2.3 Predictive](/2b-6-predictive/) (custom/training)** NNs for predictive AI (I've done this before but can't find the info; need to do again). Simple NNs that built/trained locally.
     - **[2.4 Robotic AI](/robotic-ai/)**. Mainly JEPA customization/training. 
@@ -148,7 +155,7 @@ I documented my AI drone activities in detail. My original plan was to build my 
 <br>
 
 
-26.0515
+26.0516
 
 
 <!-- =========================================================================
