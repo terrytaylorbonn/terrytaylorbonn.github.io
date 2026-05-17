@@ -8,16 +8,39 @@ permalink: /gist-LLM/
 
 <br>
 
-## **TL;DR — Qualitative gist of language models (LLMs)**
+## **Qualitative gist of language models (LLMs)**
 
 This page will describe in concise detail the gist of what an LLM model does without complex algorithms or architecture diagrams.
 
 
 <br>
 
-## **01c Main diagram v3 (simplest)** 
+## **Main diagram (01c v3)** 
+
+<br>
+
+The diagram below summarizes the token generating process in GPT-3. It will be basically qualitatively the same for other LLMs.
+
+#### Summary
+
+The key part of the diagram below is step 5. Thats where the transformer (TF) takes the 12288 floating point (FP) numbers for each token and perform massive brute-force computation (on a GPU) that creates a comprehensive description ("storyline") in each token of the meaning represented by the input tokens. It then uses the storyline of the last token to compute the probabilities of all vocabulary tokens as the most probable next token (the token with highest probability is chosen; the probability is defined by the text examples used to program ("train") the TF). This token is output and fed back into the input along with all previous input tokens to generate the next new token.
+
+Computing the new token is called "inference" (I guess its means "inferring" the meaning of the input tokens). I would call it "pattern matching". The "patterns" were hard-coded into the TF during programming ("training"). The training SW compared the input and expected output of trillions of pairs of training data, and nudged the trillion or so parameters of the TF (weights and biases and some other matrix values) every so slightly for for each pair so that the output more closely matched the input.
+
+This brute-force programming-training algorithm ended up methodically creating (over a period of weeks of massive electricity usage) an algorithm that quantifies hierarchical concepts and thought structures inherent in the training data. But this data was only numbers to the TF. The **TF has no intelligence (the AI gurus all know this)**, so the the concepts and thoughts are not human or language style, but purely numerical (and they will be totally different for each training run, although the general results may be the same).
+
+The real magic is that **word order, misspelled words, using synonyms, etc will not affect the outcome (storyline)**. This is the primary reason why GPU-based AI is revolutizing the world, because **AI solves one of the most pressing problems in modern humanity, for all humanity: How to bridge the gap between the human language and machine language worlds.**
 
 
+**Once you understand this, then you get a feeling (1) the incredible power of AI (pattern matching) and (2) and its very big limitations (it has absolutely no intelligence).** On 26.0516 a bunch of [Waymo cars "hallucinated"](https://www.youtube.com/watch?v=9PKdTJcdl3s) (their hard-coded algorithms failed). The AI in these cars is qualitatively the same as the GPT-3 TF I describe in the diagram below below. They are inevitably (my guess) using some form of Universal Function Appromixators (TF running on GPU) and CPU-based traditional SW **(SW running on CPU and GPUs are both deteriministic; the GPU is used to pattern match, and the CPU is used to run control loops)**. 
+
+**This basic understanding of the gist of AI is critical for applying AI properly in your own projects. Or, as a customer, to avoid getting scammed.**
+
+<br>
+
+#### Diagram below (my original)
+
+The text and diagram below provide a step by step description of the inference pprocess in GPT-3. I describe this same process elsewhere on ZiptieAI.com, but this is the most abstract description. 
 
 - 1 eAgent (external agent) sends prompt words to LLM iAgent (internal agent) via API. 
   - Note: eAgent may add JSON, etc as special instructions. 
