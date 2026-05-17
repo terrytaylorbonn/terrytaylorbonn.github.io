@@ -1,23 +1,17 @@
 ---
 layout: page
-title: "3.2 (4c) Agents + AI"
+title: "3.2 (4c) AI'ic agents"
 permalink: /4c-agentic-ai/
 ---
 
 
-<br> 
-
-**26.0517 this file was reorg'd. still rough WIP.**
 
 <br> 
 
 **TOC** 
-
-- **1 Concepts**. AI is only a (extremely) helpful assistant.
-- **2 Diagrams**
-- **3 Agent <-> LLM functional overview**.
-- **4 Agent+AI demos**. Lab notes on my Gdrive. Code on my Github.
-
+- **It's "AI'ic agents", not "agentic AI**.  
+- **4 AI'ic agent concepts**. AI is only a (extremely) helpful assistant.
+- **5 AI'ic agent demos**. Lab notes on my Gdrive. Code on my Github.
 
 Notes:
 - [4a chat about iAgent and eAgent](/4a-chat-about-iAgent-and-eAgent/) 26.0514
@@ -198,13 +192,97 @@ Workflow details (see diagram below):
 <br>
 
 
-<!-- ### 4.4 Core LLM roles in the demos
+### 4.4 Core LLM roles in the demos
+
+<!-- LLM (iAgent/TF) combo thinking / planning tricks (core functionality that makes agentic AI possible) This can do many things such as
+-	standardize messy inputs (messy vocab and meet JSON requirements)
+-	planning into small steps
+-	rule injection -->
+
+The iAgent/TF duo has functionality that seems to be genuinely intelligent.  
+
+*LLM iAgent/TF*<br>
+<img src="/assets/4_12_tf_hidden_states.png" alt="drones" width="30%"> 
+
+<!-- [3.6] (WIP) pal_core_06: simplest demo of all core LLM roles 26.0416
+#585 could you create a minimalistic demo that demos the key ways an LLM capabilities can be used in the types of system we have been creating? 
+for example, 
+(1) input human language commands, 
+(2) insert new rules, etc? 
+for now, could you just list those key ways?
+GPT: Yes. That would be an excellent meta-demo:
+one small system showing the main ways an LLM adds value inside structured applications.
+For now, here is the concise list of key LLM capabilities relevant to the systems you’ve been building. -->
+
+
+The following is a list of core LLM Roles in the demos (GPT)<br>
+
+**1. Human Command Interpreter<br>**
+Convert vague user language into structured actions.<br>
+"Show delayed shipments in Taipei"<br>
+-> {"action":"query","filter":...}<br>
+**2. Messy Data Ingest / Extraction<br>**
+Convert emails, logs, notes, reports into ontology records.<br>
+email text -> event JSON<br>
+**3. Planner / Task Decomposer<br>**
+Break complex requests into atomic executable steps.
+compare X vs Y<br>
+-> step1 filter<br>
+-> step2 aggregate<br>
+-> step3 compare<br>
+**4. Rule Generator / Rule Injection**<br>
+Create new runtime rules without changing source code.<br>
+"Alert if outage + delay + supplier overlap"<br>
+-> new rule JSON<br>
+**5. Semantic Mapping / Ontology Translation**<br>
+Map inconsistent human wording into standard machine concepts.<br>
+"flat tire", "blowout"<br>
+-> tire_failure<br>
+**6. Search / Retrieval Helper**. <br>
+Turn natural language into queries or rank relevant records/documents.<br>
+"What affects Site 1?"<br>
+-> graph query / ranked docs<br>
+**7. Explanation / Summarization**.<br>
+Convert machine results into human-readable conclusions.<br>
+3 suppliers affected due to shared parent + route dependency <br>
+**8. Interactive Analyst Assistant**.<br>
+Support iterative questioning.<br>
+Why?<br>
+Show evidence.<br>
+What changed?<br>
+What if road closed?
+
+<br>
+
+
+### 4.4b version 2 26.0512
+
+From 6 HOW THE LLM TF UFA MAKES AGENTIC AI PRACTICAL (FOR LIMITED USE CASES)
+
+<br> 
+
+**GPT: Honestly, this is becoming a pretty coherent framework.**
+You are basically describing:
+•	why TF-UFAs are powerful semantic approximators 
+•	why they work extremely well for information systems 
+•	why they pair naturally with deterministic agents/software 
+•	why ontology/schema-constrained outputs are critical 
+That is a real architectural viewpoint, not just random AI buzzwords.
+
+<br> 
+
 Page **[(4) Agentic AI](/agentic-ai/)** has links to the following 2 pages. These pages (WIP) list some Agentic demos (without/with) AI that I have setup. I will add more demos and document in the future.
 - **[Agentic demos (no AI)](/agentic-demos-no-ai/)** (below left in grey). Palantir was building such system a generation ago, before AI. It can be done, but it takes a lot of work (setting up ontology).  
 - **[Agentic demos with AI](/agentic-demos-with-ai/)** (below right in blue). With AI's human language abilites, Agentic can now work with "messy" human language data sources.
+
 Note: The title of this section "UFA MAKES AGENTIC AI PRACTICAL **(FOR LIMITED USE CASES)**" means that **use cases with AI are still limited, but much less so than without AI.**
+
 *Agentic demos (for details see the lab notes doc **#603\_PAL\_.docx** (PAL = Palantir) on my **[Gdrive](https://drive.google.com/drive/folders/1-Adawag9uA8_bq-hDF-nOuPYaRLz1eEO)**)*  <br>
-<img src="/assets/4_5_3x.png" alt="no ai" width="25%"> <img src="/assets/4_6_2x.png" alt="drones" width="30%">  <img src="/assets/4_5_3x_bbb.png" alt="drones" width="30%"> **(2) ME: what would the list be like for how AI greatly help agents work properly**
+<img src="/assets/4_5_3x.png" alt="no ai" width="25%"> <img src="/assets/4_6_2x.png" alt="drones" width="30%">  <img src="/assets/4_5_3x_bbb.png" alt="drones" width="30%"> 
+
+<br>
+
+<!--**(2) ME: what would the list be like for how AI greatly help agents work properly**
 https://ziptieai.com/UFAs/ talks about how transformer universal function approximator (UFAs) are critical for agentic ai. i think you once mentioned the 8 main functions of the agent (i think that was without ai). what would the list be like for how AI greatly help agents work properly? below is title and toc of the section on that page in the wiki about TF UFAs .................... 
 **GPT: What TF/UFA capabilities make modern agentic AI possible?**
 Your current list is already heading in the correct direction.
@@ -214,22 +292,124 @@ Something like this:
 (3b Advanced inference / trained TF-UFA capabilities (CRITICAL for AGENTIC AI))
 -->
 
+#### **(1) Structured machine-language outputs (CRITICAL)**
+**GPT:** The TF can generate outputs in highly specific formats:
+•	JSON 
+•	XML 
+•	YAML 
+•	API payloads 
+•	schemas 
+•	ontologies 
+This allows Python agents to reliably parse and execute actions. **ME:** Output tokens can have very specific formats ("machine language"). 
+The prompt can define the fomrat of the outputs. 
+THIS IS CRITICAL for creating responses that the python lang agents use to run analysis.
+
+*Prompt defining format of outputs*<br>
+ <img src="/assets/3_build_analysis_messages.png" alt="drones" width="60%"> 
+
+
+#### **(2) Task decomposition / planning**
+**GPT:** The TF is trained to:
+•	break large tasks into substeps 
+•	generate plans 
+•	sequence actions 
+•	maintain goal-oriented context 
+This is critical for agent workflows and orchestration.
+
+#### **(3) Semantic inference**
+**GPT:** The TF can infer:
+•	meaning 
+•	intent 
+•	relationships 
+•	context 
+•	ontology mappings 
+•	hidden connections 
+without explicit hardcoded logic.
+
+#### **(4) Natural-language → machine-language translation**
+**GPT:** The TF converts vague human requests into:
+•	structured actions 
+•	API calls 
+•	database queries 
+•	filters 
+•	workflow steps 
+This is one of the core capabilities behind agentic AI.
+
+#### **(5) Feature detection / trained abstractions**
+**GPT:** The TF FFN/UFA layers contain trained detectors/features for:
+•	concepts 
+•	entities 
+•	relationships 
+•	patterns 
+•	semantic structures 
+Many researchers now believe much of the model’s “knowledge” resides in FFN layers. 
+
+#### **(6) Contextual reasoning**
+**GPT:** Attention allows tokens to dynamically reference:
+•	earlier instructions 
+•	schemas 
+•	constraints 
+•	conversation history 
+•	related entities 
+This enables contextual workflows instead of rigid scripting.
+
+#### **(7) Generalization / approximation**
+**GPT:** The TF-UFA can approximate:
+•	patterns 
+•	workflows 
+•	mappings 
+•	relationships 
+•	inference rules 
+even when exact cases were never explicitly programmed.
+
+#### **(8) Ontology alignment**
+**GPT:** The TF can map:
+•	synonyms 
+•	alternate phrasings 
+•	related concepts 
+•	human language variations 
+into standardized machine-oriented ontology structures.
+Example:
+"truck delayed"
+"shipment late"
+"logistics issue"
+may all map into:
+{ "event_type": "delivery_delay" }
+
+#### **(9) Error tolerance**
+**GPT:** TF-UFA systems tolerate:
+•	spelling mistakes 
+•	grammar issues 
+•	incomplete requests 
+•	ambiguous language 
+•	noisy input 
+This is critical for real-world human interaction.
+
+#### **(10) Explanation generation**
+**GPT:** The TF can explain:
+•	plans 
+•	outputs 
+•	anomalies 
+•	decisions 
+•	recommendations 
+in human language.
+This is critical for:
+•	trust 
+•	usability 
+•	enterprise workflows 
+•	analyst systems 
+•	PM-facing systems 
+
+
 
 <br>
 
 
-# **3 Agent <-> LLM functional overview**
-
-<br>
-
-#### **[4c.3 Agent <-> LLM functional overview](/4c.3-agent-llm-func-overview/) (temp working file)**
-
 <br>
 
 
-# **4 Agent+AI demos**
+# **5 Agent+AI demos**
 
-<br>
 
 This page is WIP (v1 26.0509). I need to go back through these demos and document.
 
@@ -244,4 +424,4 @@ Also
 <br>
 
 
-26.0517
+26.0515

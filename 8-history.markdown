@@ -48,8 +48,6 @@ The following describes the main site diagram below (roughly a timeline diagram)
 <img src="/assets/6_main_diagram.png" alt="drones" width="40%"> 
  <img src="/assets/ai_project_diagram_7.png" alt="drones" width="40%"> -->
 
-<br>
-
 
 
 <br>
