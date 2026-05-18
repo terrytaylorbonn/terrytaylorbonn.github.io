@@ -6,7 +6,65 @@ permalink: /3.2-ag-ai-2-diagrams/
 
 <br>
 
-*(Placeholder — content to be added)*
+- 2.1 Ecosystem
+- 2.2 Agent <> LLM interface
+- 2.3 Workflow diagram / simple
+- 2.4 Workflow diagram / detailed
+
+<br>
+
+### **2.1 Ecosystem**
+
+
+*The LLM as a helpful assitant for the agent*<br>
+<img src="/assets/4_7_help_assist_LLM.png" alt="drones" width="40%"> 
+
+<br>
+
+### **2.2 Agent <> LLM interface**
+
+
+*Details of the agent <> LLM interface*<br>
+<img src="/assets/GPT_agent.png" alt="desc" width="50%"> 
+
+<br>
+
+### **2.3 Workflow diagram / simple**
+
+Reference the diagram below:
+- Agent collects human language data (blue square) from the UI, DB, APIs, etc.
+- Agent forwards this human language with extra (human language + JSON) commands to LLM for processing (cleaning up, sanitizing).
+- LLM (red square) converts the input into "machine" language (text, but text that conforms to the expectations of the agent) as specified by the JSON. 
+- Agent then process this "machine" language" (customized specifically for the agent algorithms).<br>
+
+*What AI does for an agent*<br>
+<img src="/assets/4_8_what_ai_does.png" alt="drones" width="65%"> 
+
+The following diagram shows an demo of this. 
+- (1) 08b uses AI to generate a granular multi-step plan that matches the agent deterministic logic.
+- (2) 08 (deterministic) validates the plan 
+- (3) 08 (deterministic) excutes the plan 
+
+*Diagram from Substack post [#75 The Real Job of AI in Enterprise Apps](https://ziptieai.substack.com/p/75-the-real-job-of-ai-in-enterprise) shows how AI is only used to generate a plan ("08b AI")*
+
+<img src="/assets/aiplan.png" alt="AI planning" width="80%">
+
+<br>
+
+### **2.4 Workflow diagram / detailed**
+
+Workflow details (see diagram below):
+- **#1 UI/DB/API** (human language sources and destinations) **interface with #2 Agent** (the main loop).
+- **#2 Agent adds extra info/requirements (JSON) to LLM input**. This instructes the LLM about what type of data and format to return.
+- **#3 Model (LLM) interface layer**. Every LLM may require slightly different prompts and output slightly different responses. Palantir uses MIL to support "hot" swapping of LLMs. 
+- **#4 Internal agent (iAgent) controls #5 TF**. The iAgent is custom designed to interface with the TF.
+- **#5 TF creates output text** based on input text. Thats all the LLM TF does, and yet somehow the LLM seems intelligent.
+- **#4 LLM iAgent sends response to #2 (external) agent.** 
+- **#2 Agent processes the response.**
+
+*Workflow diagram*<br>
+<img src="/assets/4_10_workflow.png" alt="drones" width="65%"> 
+
 
 <br>
 

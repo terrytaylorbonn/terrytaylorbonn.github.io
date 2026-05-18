@@ -4,9 +4,17 @@ title: "3.2.6 Agentic + AI / PAL demos"
 permalink: /3.2-ag-ai-6-pal-demos/
 ---
 
+
 <br>
 
-*(Placeholder — content to be added)*
+This page is WIP (v1 26.0509). I need to go back through these demos and document.
+
+Simple demos are the best way to understand the core of agentic+AI apps. For details see the lab notes doc **#603\_PAL\_.docx** (PAL = Palantir) on my **[Gdrive](https://drive.google.com/drive/folders/1-Adawag9uA8_bq-hDF-nOuPYaRLz1eEO)**.  
+
+<img src="/assets/4_6_2x.png" alt="drones" width="40%"> 
+<img src="/assets/4_5_3x_bbb.png" alt="drones" width="40%"> 
+
+
 
 <br>
 
