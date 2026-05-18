@@ -7,17 +7,25 @@ permalink: /4c-agentic-ai/
 
 <br> 
 
-**26.0517 this file was reorg'd. still rough WIP.**
-
-<br> 
-
-**TOC** 
+**TOC CURRENT** 
 
 - **1 Concepts**. AI is only a (extremely) helpful assistant.
 - **2 Diagrams**
 - **3 Agent <-> LLM functional overview**.
 - **4 Agent+AI demos**. Lab notes on my Gdrive. Code on my Github.
 
+<br> 
+
+**TOC NEW (WIP; I am reorganizing 26.0518-19)**<br>
+*See [#606_ai_ides_.docx (on Gdrive)](https://drive.google.com/drive/folders/1-Adawag9uA8_bq-hDF-nOuPYaRLz1eEO) chapters "Agentic AI DEMOS" and "3.2 Agents + AI" for content to be add to these pages.*
+- [3.2.1 Agents + AI / Intro](/3.2-ag-ai-1-intro/)
+- [3.2.2 Agents + AI / Diagrams](/3.2-ag-ai-2-diagrams/)
+- [3.2.3 Agents + AI / Agentic AI functionality](/3.2-ag-ai-3-ag-ai-func/)
+- [3.2.4 Agents + AI / AI'ic agents functionality](/3.2-ag-ai-4-ai-ag-func/)
+- [3.2.5 Agentic + AI / AI'ic agents demos](/3.2-ag-ai-5-ai-ag-demos/)
+- [3.2.6 Agentic + AI / PAL demos](/3.2-ag-ai-6-pal-demos/)
+
+<br>
 
 Notes:
 - [4a chat about iAgent and eAgent](/4a-chat-about-iAgent-and-eAgent/) 26.0514
@@ -250,4 +258,4 @@ Also
 <br>
 
 
-26.0517
+26.0518
