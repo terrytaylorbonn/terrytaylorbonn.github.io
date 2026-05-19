@@ -28,9 +28,9 @@ The following describes the main site diagram below (roughly a timeline diagram)
      - **[2.X The gist of LLMs](/2.4.1-llm-gist/)**.
      - **[2.0 UFAs](/2.4.2-ufas/)**: Conceptual overview of Universal Function Approximators.
   - Models with no "internal agent".
-    - **[2.1 CNNs](/cnn/)**: Convolutional Neural Networks (for object recogntion on drones). The takes a straight shot through the NN. 
-    - **[2.3 Predictive](/2b-6-predictive/) (custom/training)** NNs for predictive AI (I've done this before but can't find the info; need to do again). Simple NNs that built/trained locally.
-    - **[2.4 Robotic AI](/robotic-ai/)**. Mainly JEPA customization/training. 
+    - **[2.1 CNNs](/2.1-cnns/)**: Convolutional Neural Networks (for object recogntion on drones). The takes a straight shot through the NN. 
+    - **[2.3 Predictive](/2.2-predictive-nns/) (custom/training)** NNs for predictive AI (I've done this before but can't find the info; need to do again). Simple NNs that built/trained locally.
+    - **[2.4 Robotic AI](/2.3-robotic-ai/)**. Mainly JEPA customization/training. 
   - **[2.2 LLMs](/2.4-llms/)** have a transformer (TF) and iAgent.
 - **[3 Agents](/3_agents/)**. External agents that interact with LLM API. 
   - **[3.1 Agentic (no AI)](/4b-agentic/)**. The main control loop is non-AI (Python).
@@ -86,10 +86,10 @@ I documented my AI drone activities in detail. My original plan was to build my 
 
 **[LLMs](/2.4-llms/)**. After understanding the gist of CNNs, **my focus shifted to LLMs (large language models)**. **My goal was to understand** the core concepts, how to build practical applications, and (perhaps most of all) **the AI hype** (claims that AI has real intelligence, AI actually thinks, AI can learn, AI will soon surpass human intelligence, etc etc). 
 
-**[Predictive](/2b-6-predictive/)**. 
+**[Predictive](/2.2-predictive-nns/)**. 
 
 
-**[Robotic AI](/robotic-ai/)**. When I first heard Yan LeCun's talks about how JEPA would provide real robotic intelligence I was fascinated. I totally agreed with what he said about the limitations of LLMs, and he was one of the very few gurus actually saying such things. But after doing a lot of hands-on JEPA (and robotics) demos, **I came to the conclusion that LeCun's version of JEPA was a lot of hype**. What he was selling was not fundamentally different from LLMs. GPT agreed.
+**[Robotic AI](/2.3-robotic-ai/)**. When I first heard Yan LeCun's talks about how JEPA would provide real robotic intelligence I was fascinated. I totally agreed with what he said about the limitations of LLMs, and he was one of the very few gurus actually saying such things. But after doing a lot of hands-on JEPA (and robotics) demos, **I came to the conclusion that LeCun's version of JEPA was a lot of hype**. What he was selling was not fundamentally different from LLMs. GPT agreed.
 
 
 <br>
@@ -265,7 +265,7 @@ Goal: understand core concepts well enough to build practical applications.
 
 <br>
 
-#### (3) [Robotic AI](/robotic-ai/)
+#### (3) [Robotic AI](/2.3-robotic-ai/)
 
 <!-- JEPA: Removed "GPT agreed" — your opinion stands on its own. Sharpened the critique (matches our earlier conversation). -
 

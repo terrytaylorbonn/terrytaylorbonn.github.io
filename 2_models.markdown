@@ -35,17 +35,17 @@ That last point is essential for successful AI projects. I first took an interes
 <br>
 
 
-### [2.1 CNNs](/cnn/)
+### [2.1 CNNs](/2.1-cnns/)
 
 The AI in the AI drones was object recognition using CNNs (convoluted neural networks) running on the Nvidia Jetson Nano and on the PI computer. **Studying CNNs is a good first step for studying the much more complex LLMs.** Note: **"My depiction"** below means I have not seen such a diagram elsewhere.
 
 <br>
 
-### [2.2 Predictive NNs](/2b-6-predictive/)
+### [2.2 Predictive NNs](/2.2-predictive-nns/)
 
 <br>
 
-### [2.3 Robotic AI](/robotic-ai/)
+### [2.3 Robotic AI](/2.3-robotic-ai/)
 
 JEPA, belief tracking, control loops, autonomy.
 
@@ -75,7 +75,7 @@ After understanding the gist of CNNs, **my focus shifted to LLMs (large language
 An LLM consists of an (1) internal agent and a (2) transformer (TF). The TF is the core computational engine behind modern AI systems and the mechanism that enables modern LLM behavior.
   - [Core AI (LLM) concepts](https://github.com/terrytaylorbonn/auxdrone/wiki/Core-AI-concepts) (wiki page) explains in detail GPT-3 transformer algorithms. 
   - [Core AI (LLM) misconceptions](/2.4.4_llm-tf-training/).
-  - [Core AI CNN (object recognition) concepts](/cnn/)
+  - [Core AI CNN (object recognition) concepts](/2.1-cnns/)
 
 <br>
 

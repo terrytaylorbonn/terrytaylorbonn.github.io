@@ -117,7 +117,7 @@ Its not intelligent. Its computational pattern matching.
 
 
 
-**[(2b)-6 Predictive](/2b-6-predictive/)**
+**[(2b)-6 Predictive](/2.2-predictive-nns/)**
 
 <br>
 
