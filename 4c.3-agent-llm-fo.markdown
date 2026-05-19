@@ -640,7 +640,7 @@ framework because:
 
 <br>
 
-<!-- *See also: [4c AI'ic agents](/4c-agentic-ai/) · [4a chat about iAgent and eAgent](/4a-chat-about-iAgent-and-eAgent/) · [2X LLM gist](/gist-LLM/)* -->
+<!-- *See also: [4c AI'ic agents](/4c-agentic-ai/) · [4a chat about iAgent and eAgent](/4a-chat-about-iAgent-and-eAgent/) · [2X LLM gist](/2.4.1-llm-gist/)* -->
 
 <br>
 

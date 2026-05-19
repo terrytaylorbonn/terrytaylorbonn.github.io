@@ -7,25 +7,26 @@ permalink: /2_models/
 <br>
 
 **Goals of this section:** 
-- Convey the core concepts of models (my take), 
+- Convey the core concepts of AI
 - show how to build practical applications (demos), 
 - and to dispel AI hype.
 
-That last point is essential for successful AI projects. **Models run on clocked binary circuits**. They no intelligence. You could run LLMs on electro-mechanical relays (it would take years to generate a token, but it theoretically possible). **LLM intelligence simulation is based on (1) binary computing structures and (2) massive computing power/speed**. The more you understand how LLMs work, the better you can use them in AI projects. 
+That last point is essential for successful AI projects. **Models run on clocked binary circuits**. They have no intelligence. You could run LLMs on electro-mechanical relays (it would take years to generate a token, but it theoretically possible). **LLM intelligence simulation is based on (1) binary computing structures and (2) massive computing power/speed**. The more you understand how LLMs work, the better you can use them in AI projects. 
 
 
 <br>
 
-**Conceptual summary of models**:
+
+**TOC**:
+- **2.1 CNNs** (object recognition). A CNN computes the most probable label ("dog", "airplane", etc) for a set of pixels. CNNs are great for your first deep dive into AI, because they are much more intuitive and simpler than LLMs.
+- **2.2 Predictive NNs** are small customized NNs for specific recognition task.  
+- **2.3 Robotic NNs** (such as JEPA, LeCun's new projects, etc) are specifically for robots. 
+- **2.4 LLMs** are the main focus of this site. An LLM generates the probabilities of all vocabulary token candidates for next token (a set of numbers) from the token sequence input.  
+- **2.5 Agentic LLMs** are LLMs with extra functionality to support agentic AI.
+
+<!--
 - **2.X Gist of LLMs** is that they (1) convert prompt+response input tokens into large (12288) vector language (just set of FP numbers), (2) massive calculations are performed on the VL to determine the complete meaning of the input, and (3) select a new vocab token. **The algoritm of LLM inference is the mirror image of the algorithm used to program ("train") the LLM.**
 - **2.0 UFA** (universal function approximator) is the core of AI. **A UFA only knows numbers. It has absolutely no info about the real world.** It is trained to output a number(s) based on the input numbers. 
-- **2.1 CNN UFA** computes the most probable label for a set of pixels.
-- **2.3 Predictive** and **2.4 Robotic** UFAs can often be small and locally trained.
-- **2.2 LLM transformer (TF) UFA** generates the probabilities of all vocabulary token candidates for next token (a set of numbers) from the token sequence input.  
-
-
-
-<!-- 
 
 That last point is essential for successful AI projects. I first took an interest in understanding the core of **what makes models tick** when I started hearing all the hype from AI gurus about how AI could really think and even have emotions. **Models run on ticking clocked binary circuits**. You don't have to be very bright to understand that ticking mechanisms (clocked state machines) dont think. That may seem impossible when you use an LLM that can intelligenty converse with you. But **LLM intelligence simulation is based on (1) binary computing structures and (2) massive computing power/speed**. Your PC does the same kind of trick.
 
@@ -34,14 +35,13 @@ That last point is essential for successful AI projects. I first took an interes
 <br>
 
 
-
 ### [2.1 CNNs](/cnn/)
 
 The AI in the AI drones was object recognition using CNNs (convoluted neural networks) running on the Nvidia Jetson Nano and on the PI computer. **Studying CNNs is a good first step for studying the much more complex LLMs.** Note: **"My depiction"** below means I have not seen such a diagram elsewhere.
 
 <br>
 
-### [2.2 Predictive](/2b-6-predictive/)
+### [2.2 Predictive NNs](/2b-6-predictive/)
 
 <br>
 
@@ -63,7 +63,7 @@ In any case, the time spent doing hands-on demos (for representational learning,
 <br> -->
 
 
-### [2.4 LLMs](/sandbox/) (iAgent + TF)
+### [2.4 LLMs](/2.4-llms/) (iAgent + TF)
 
 After understanding the gist of CNNs, **my focus shifted to LLMs (large language models)**:
   - Transformers (TF, the LLM neural network) *(see the wiki page **[AI concepts](https://github.com/terrytaylorbonn/auxdrone/wiki/Core-AI-concepts)** for **my explanation of GPT-3 transformer algorithms)*** 
@@ -74,12 +74,12 @@ After understanding the gist of CNNs, **my focus shifted to LLMs (large language
 
 An LLM consists of an (1) internal agent and a (2) transformer (TF). The TF is the core computational engine behind modern AI systems and the mechanism that enables modern LLM behavior.
   - [Core AI (LLM) concepts](https://github.com/terrytaylorbonn/auxdrone/wiki/Core-AI-concepts) (wiki page) explains in detail GPT-3 transformer algorithms. 
-  - [Core AI (LLM) misconceptions](/llm-tf-misconceptions/).
+  - [Core AI (LLM) misconceptions](/2.4.4_llm-tf-training/).
   - [Core AI CNN (object recognition) concepts](/cnn/)
 
 <br>
 
-### [2.5 Agentic LLM (TF/UFA semantic) functionality (3.2.3)](/3.2-ag-ai-3-ag-ai-func/)
+### [2.5 Agentic LLM (TF/UFA semantic) functionality](/2.5-agentic-llms/)
 
 It was only realistically possible for an agent (Python script, etc) to send prompts and receive response **after AI became agentic**, after LLMs were able to reliably  
 - process incoming human language agent messages and 

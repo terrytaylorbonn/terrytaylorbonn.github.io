@@ -1,10 +1,10 @@
 ---
 layout: page
-title: "2.4.2 UFAs (2b)"
-permalink: /UFAs/
+title: "2.4.2 UFAs"
+permalink: /2.4.2-ufas/
 ---
 
-[← 2.4 LLMs](/sandbox/)
+[← 2.4 LLMs](/2.4-llms/)
 
 <br>
 

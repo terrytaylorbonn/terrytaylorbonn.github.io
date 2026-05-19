@@ -7,7 +7,7 @@ description: Last edit 26.0426
 
 [← 2 AI (models)](/2_models/)
 
-See also: [LLMs](/sandbox/)
+See also: [LLMs](/2.4-llms/)
 
 CNNs are similar in many ways to LLM transformers (TFs). They are good topic to study before studying TFs.
 

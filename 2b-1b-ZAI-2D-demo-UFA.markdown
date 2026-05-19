@@ -4,7 +4,7 @@ title: "1b ZAI 2D demo UFA"
 permalink: /2b-1b-ZAI-2D-demo-UFA/
 ---
 
-**[back](/UFAs/)** 
+**[back](/2.4.2-ufas/)** 
 
 <br>
 

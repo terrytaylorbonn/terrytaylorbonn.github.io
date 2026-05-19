@@ -1,15 +1,11 @@
 ---
 layout: page
 title: "2.4 LLMs (3.2)"
-permalink: /sandbox/
+permalink: /2.4-llms/
 description: Last edit 26.0426
 ---
 
 [← 2 AI (models)](/2_models/)
-
-
-
-
 
 This page describes 
 - **1 LLM stack demos**. I planned to spend a lot of time on this, but at some point came to the conclusion that time would be better spent elsewhere. In any case, knowing the basic is quite important. Its not that difficult to install a smaller model on your local PC, and it does have benefits.
@@ -19,18 +15,18 @@ This page describes
 
 See also: 
   - **[Core AI (LLM) concepts](https://github.com/terrytaylorbonn/auxdrone/wiki/Core-AI-concepts)** (wiki page) explains in detail GPT-3 transformer algorithms. 
-  - **[Core AI (LLM) misconceptions](/llm-tf-misconceptions/)** describes a chat that GPT and I had recently.
+  - **[Core AI (LLM) misconceptions](/2.4.4_llm-tf-training/)** describes a chat that GPT and I had recently.
 
 <br>
 
-### **[2.4.1 Qualitative gist of language models (LLMs) (2.X)](/gist-LLM/)**
+### [2.4.1 Gist of LLMs (2.X)](/2.4.1-llm-gist/)
 
 Describes in concise detail gist of what an LLM model does without describing complex algorithms or architectures. 
 
 <br>
 
 
-### [2.4.2 UFAs (2.0)](/UFAs/)
+### [2.4.2 UFAs (2.0)](/2.4.2-ufas/)
 
 A TF implements a Univeral Function Approximator (UFA) algorithm. Understanding what a UFA is is the key to understanding what AI really is. And **when you understand how AI really works,  you will understand why agentic AI works in systems like Palantir Maven (and in many many other business segments), but will never be safe enough for self-driving cars and home humanoids**. That's my personal opinion (backed up by over a decade of empty self-driving car promises). 
 
@@ -130,7 +126,7 @@ The main goals of the AI/tech stack sandbox are
 
 ### 2.4.4 LLM transformer training
 
-*See also [Core AI (LLM) misconceptions](/llm-tf-misconceptions/) (website page) describes a chat that GPT and I had recently that started off about training misconceptions.*
+*See also [Core AI (LLM) misconceptions](/2.4.4_llm-tf-training/) (website page) describes a chat that GPT and I had recently that started off about training misconceptions.*
 
 Training is something most of us will never do (Palantir uses standard models; they do no customized training). But its the second heading for a good reason: Training is the defining aspect of model transformer (TF) design (section 4 below describes GPT-3 TF design). 
 

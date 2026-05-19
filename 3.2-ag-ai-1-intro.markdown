@@ -88,7 +88,7 @@ they can be used for a vast array of  purposes (logistics, manufacturing, health
 
 #### **About planning and other "intelligent" AI functionality**
 
-*For background on VL, storylines, etc discussed below, see [The gist of LLMs](/gist-LLM/).*
+*For background on VL, storylines, etc discussed below, see [The gist of LLMs](/2.4.1-llm-gist/).*
 
 In reality AI (in my always humble opinion) is more about pattern matching than language. You input messy human language tokens into the TF, and it generates a vector language (VL) representation of the storyline *(I don't really like the term "vector"; the 12288 vectors for GPT-3 are just scalar indicators of some pattern; usually a vector means a scalar with some other aspect, like direction, etc)*. The VL for the final token is pattern matched against all tokens in the vocabulary. The closest matching token for that pattern is selected as the next token.
 
@@ -122,7 +122,7 @@ Its quite important to understand what AI'ic agents AI is (at least hands-on exp
 
 <br>
 
-*See also: [3.2 Agents + AI](/4c-agentic-ai/) · [3.2.2 Diagrams](/3.2-ag-ai-2-diagrams/) · [3.2.3 Agentic AI functionality](/3.2-ag-ai-3-ag-ai-func/) · [3.2.4 AI'ic agents functionality](/3.2-ag-ai-4-ai-ag-func/) · [3.2.5 AI'ic agents demos](/3.2-ag-ai-5-ai-ag-demos/) · [3.2.6 PAL demos](/3.2-ag-ai-6-pal-demos/)*
+*See also: [3.2 Agents + AI](/4c-agentic-ai/) · [3.2.2 Diagrams](/3.2-ag-ai-2-diagrams/) · [3.2.3 Agentic AI functionality](/2.5-agentic-llms/) · [3.2.4 AI'ic agents functionality](/3.2-ag-ai-4-ai-ag-func/) · [3.2.5 AI'ic agents demos](/3.2-ag-ai-5-ai-ag-demos/) · [3.2.6 PAL demos](/3.2-ag-ai-6-pal-demos/)*
 
 <br>
 

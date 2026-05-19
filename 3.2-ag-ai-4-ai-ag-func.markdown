@@ -184,7 +184,7 @@ ME3: i have never seen this explained clearly anywhere... this is my goal (no re
 
 <br>
 
-*See also: [3.2 Agents + AI](/4c-agentic-ai/) · [3.2.1 Intro](/3.2-ag-ai-1-intro/) · [3.2.2 Diagrams](/3.2-ag-ai-2-diagrams/) · [3.2.3 Agentic AI functionality](/3.2-ag-ai-3-ag-ai-func/) · [3.2.5 AI'ic agents demos](/3.2-ag-ai-5-ai-ag-demos/) · [3.2.6 PAL demos](/3.2-ag-ai-6-pal-demos/)*
+*See also: [3.2 Agents + AI](/4c-agentic-ai/) · [3.2.1 Intro](/3.2-ag-ai-1-intro/) · [3.2.2 Diagrams](/3.2-ag-ai-2-diagrams/) · [3.2.3 Agentic AI functionality](/2.5-agentic-llms/) · [3.2.5 AI'ic agents demos](/3.2-ag-ai-5-ai-ag-demos/) · [3.2.6 PAL demos](/3.2-ag-ai-6-pal-demos/)*
 
 <br>
 

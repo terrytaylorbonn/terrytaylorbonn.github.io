@@ -20,7 +20,7 @@ permalink: /4c-agentic-ai/
 *See [#606_ai_ides_.docx (on Gdrive)](https://drive.google.com/drive/folders/1-Adawag9uA8_bq-hDF-nOuPYaRLz1eEO) chapters "Agentic AI DEMOS" and "3.2 Agents + AI" for content to be add to these pages.*
 - [3.2.1 Agents + AI / Intro](/3.2-ag-ai-1-intro/)
 - [3.2.2 Agents + AI / Diagrams](/3.2-ag-ai-2-diagrams/)
-- [3.2.3 Agents + AI / Agentic AI functionality](/3.2-ag-ai-3-ag-ai-func/)
+- [3.2.3 Agents + AI / Agentic AI functionality](/2.5-agentic-llms/)
 - [3.2.4 Agents + AI / AI'ic agents functionality](/3.2-ag-ai-4-ai-ag-func/)
 - [3.2.5 Agentic + AI / AI'ic agents demos](/3.2-ag-ai-5-ai-ag-demos/)
 - [3.2.6 Agentic + AI / PAL demos](/3.2-ag-ai-6-pal-demos/)
@@ -116,7 +116,7 @@ they can be used for a vast array of  purposes (logistics, manufacturing, health
 
 #### **About planning and other "intelligent" AI functionality**
 
-*For background on VL, storylines, etc discussed below, see [The gist of LLMs](/gist-LLM/).*
+*For background on VL, storylines, etc discussed below, see [The gist of LLMs](/2.4.1-llm-gist/).*
 
 In reality AI (in my always humble opinion) is more about pattern matching than language. You input messy human language tokens into the TF, and it generates a vector language (VL) representation of the storyline *(I don't really like the term "vector"; the 12288 vectors for GPT-3 are just scalar indicators of some pattern; usually a vector means a scalar with some other aspect, like direction, etc)*. The VL for the final token is pattern matched against all tokens in the vocabulary. The closest matching token for that pattern is selected as the next token.
 
@@ -219,7 +219,7 @@ Page **[(4) Agentic AI](/agentic-ai/)** has links to the following 2 pages. Thes
 Note: The title of this section "UFA MAKES AGENTIC AI PRACTICAL **(FOR LIMITED USE CASES)**" means that **use cases with AI are still limited, but much less so than without AI.**
 *Agentic demos (for details see the lab notes doc **#603\_PAL\_.docx** (PAL = Palantir) on my **[Gdrive](https://drive.google.com/drive/folders/1-Adawag9uA8_bq-hDF-nOuPYaRLz1eEO)**)*  <br>
 <img src="/assets/4_5_3x.png" alt="no ai" width="25%"> <img src="/assets/4_6_2x.png" alt="drones" width="30%">  <img src="/assets/4_5_3x_bbb.png" alt="drones" width="30%"> **(2) ME: what would the list be like for how AI greatly help agents work properly**
-https://ziptieai.com/UFAs/ talks about how transformer universal function approximator (UFAs) are critical for agentic ai. i think you once mentioned the 8 main functions of the agent (i think that was without ai). what would the list be like for how AI greatly help agents work properly? below is title and toc of the section on that page in the wiki about TF UFAs .................... 
+https://ziptieai.com/2.4.2-ufas/ talks about how transformer universal function approximator (UFAs) are critical for agentic ai. i think you once mentioned the 8 main functions of the agent (i think that was without ai). what would the list be like for how AI greatly help agents work properly? below is title and toc of the section on that page in the wiki about TF UFAs .................... 
 **GPT: What TF/UFA capabilities make modern agentic AI possible?**
 Your current list is already heading in the correct direction.
 I would structure it around:

@@ -101,7 +101,7 @@ they can be used for a vast array of  purposes (logistics, manufacturing, health
 
 #### **About planning and other "intelligent" AI functionality**
 
-*For background on VL, storylines, etc discussed below, see [The gist of LLMs](/gist-LLM/).*
+*For background on VL, storylines, etc discussed below, see [The gist of LLMs](/2.4.1-llm-gist/).*
 
 In reality AI (in my always humble opinion) is more about pattern matching than language. You input messy human language tokens into the TF, and it generates a vector language (VL) representation of the storyline *(I don't really like the term "vector"; the 12288 vectors for GPT-3 are just scalar indicators of some pattern; usually a vector means a scalar with some other aspect, like direction, etc)*. The VL for the final token is pattern matched against all tokens in the vocabulary. The closest matching token for that pattern is selected as the next token.
 
@@ -283,7 +283,7 @@ Note: The title of this section "UFA MAKES AGENTIC AI PRACTICAL **(FOR LIMITED U
 <br>
 
 <!--**(2) ME: what would the list be like for how AI greatly help agents work properly**
-https://ziptieai.com/UFAs/ talks about how transformer universal function approximator (UFAs) are critical for agentic ai. i think you once mentioned the 8 main functions of the agent (i think that was without ai). what would the list be like for how AI greatly help agents work properly? below is title and toc of the section on that page in the wiki about TF UFAs .................... 
+https://ziptieai.com/2.4.2-ufas/ talks about how transformer universal function approximator (UFAs) are critical for agentic ai. i think you once mentioned the 8 main functions of the agent (i think that was without ai). what would the list be like for how AI greatly help agents work properly? below is title and toc of the section on that page in the wiki about TF UFAs .................... 
 **GPT: What TF/UFA capabilities make modern agentic AI possible?**
 Your current list is already heading in the correct direction.
 I would structure it around:

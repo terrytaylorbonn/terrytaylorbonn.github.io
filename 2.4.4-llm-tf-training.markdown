@@ -1,13 +1,25 @@
 ---
 layout: page
-title: "2.4.4.1 AI (LLM) training misconceptions"
-permalink: /llm-tf-misconceptions/
+title: "2.4.4.1 AI (LLM) training"
+permalink: /2.4.4_llm-tf-training/
 description: Last edit 26.0426
 ---
 
-[← 2.4 LLMs](/sandbox/)
+[← 2.4 LLMs](/2.4-llms/)
 
-*See also webpage [(2) LLMs](/sandbox/)*
+Training is something most of us will never do (Palantir uses standard models; they do no customized training). But its the second heading for a good reason: Training is the defining aspect of model transformer (TF) design
+
+Training is something most of us will never do (Palantir uses standard models; they do no customized training). But its the second heading for a good reason: Training is the defining aspect of model transformer (TF) design (section 4 below describes GPT-3 TF design). 
+
+Training is a complex programming process (it is not training in the human sense). Input data is fed through the TF, and the the TF internal parameters (weights and biases) are adjusted so that the output more closely matches the intended output. The input and required output are all taken from huge sets of human generated text. 
+
+The main point is: No human does any of the programming. No human is deciding the values of weights and biases. Its all automated. And training can fail. Since its a neural network (NN), the neurons are all interconnected. When you change the value of a weight and/or bias (there are 175 billion of them in GPT-3), it can effect the input/output combinations you trained earlier. Its as much of an art than a science. 
+
+This is important to understand for several reasons. (1) You appreciate that a TF is a universal function approximator (UFA). It can take an input combination that it was never trained on and (after a massive number of statistical calculations) compute the best matching output (based on its training). (2) The tradeoff is that the TF is approximating. That's why LLMs always warned you that they can make mistakes.
+
+This, by the way, (3) has nothing to do with how human process language. Understanding this is not useless theory. Its vital for understanding what you can expect from AI in an application. This is why in Palanatir AI is a "helpful assitant", not the (a) central control loop or (b) the human who actually makes critical final decisions.  
+
+
 
 <img src="/assets/hillsvalleys.png" alt="smol" width="45%">
 

@@ -1,7 +1,7 @@
 ---
 layout: page
 title: "(2b) UFAs"
-permalink: /UFAs/
+permalink: /2b-UFA-copy/
 ---
 
 <br>

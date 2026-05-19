@@ -297,7 +297,7 @@ Note: The title of this section "UFA MAKES AGENTIC AI PRACTICAL **(FOR LIMITED U
 <br>
 
 <!--**(2) ME: what would the list be like for how AI greatly help agents work properly**
-https://ziptieai.com/UFAs/ talks about how transformer universal function approximator (UFAs) are critical for agentic ai. i think you once mentioned the 8 main functions of the agent (i think that was without ai). what would the list be like for how AI greatly help agents work properly? below is title and toc of the section on that page in the wiki about TF UFAs .................... 
+https://ziptieai.com/2.4.2-ufas/ talks about how transformer universal function approximator (UFAs) are critical for agentic ai. i think you once mentioned the 8 main functions of the agent (i think that was without ai). what would the list be like for how AI greatly help agents work properly? below is title and toc of the section on that page in the wiki about TF UFAs .................... 
 **GPT: What TF/UFA capabilities make modern agentic AI possible?**
 Your current list is already heading in the correct direction.
 I would structure it around:

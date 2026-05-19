@@ -25,13 +25,13 @@ AI tech is evolving quickly. ZiptieAI is evolving along with it.
 The following describes the main site diagram below (roughly a timeline diagram):
 - **[1 AI Drones](/aidrones/)** was the first project at ZiptieAI.
 - **[2 Models](/2_models/)** lists the model concepts addressed in this site
-     - **[2.X The gist of LLMs](/gist-LLM/)**.
-     - **[2.0 UFAs](/UFAs/)**: Conceptual overview of Universal Function Approximators.
+     - **[2.X The gist of LLMs](/2.4.1-llm-gist/)**.
+     - **[2.0 UFAs](/2.4.2-ufas/)**: Conceptual overview of Universal Function Approximators.
   - Models with no "internal agent".
     - **[2.1 CNNs](/cnn/)**: Convolutional Neural Networks (for object recogntion on drones). The takes a straight shot through the NN. 
     - **[2.3 Predictive](/2b-6-predictive/) (custom/training)** NNs for predictive AI (I've done this before but can't find the info; need to do again). Simple NNs that built/trained locally.
     - **[2.4 Robotic AI](/robotic-ai/)**. Mainly JEPA customization/training. 
-  - **[2.2 LLMs](/sandbox/)** have a transformer (TF) and iAgent.
+  - **[2.2 LLMs](/2.4-llms/)** have a transformer (TF) and iAgent.
 - **[3 Agents](/3_agents/)**. External agents that interact with LLM API. 
   - **[3.1 Agentic (no AI)](/4b-agentic/)**. The main control loop is non-AI (Python).
   - **[3.2 Agentic + AI](/4c-agentic-ai/)**. Adds AI as a helpful assistant.
@@ -80,11 +80,11 @@ I documented my AI drone activities in detail. My original plan was to build my 
 
 ### **AI models**
 
-**[UFAs](/UFAs/)**. The core function a model performs.
+**[UFAs](/2.4.2-ufas/)**. The core function a model performs.
 
 **[CNNs](https://ziptieai.com/cnn/)**. The AI in the AI drones was object recognition using CNNs (convoluted neural networks) running on the Nvidia Jetson Nano and on the PI computer. **Studying CNNs is a good first step for studying the much more complex LLMs.** Note: **"My depiction"** below means I have not seen such a diagram elsewhere.
 
-**[LLMs](/sandbox/)**. After understanding the gist of CNNs, **my focus shifted to LLMs (large language models)**. **My goal was to understand** the core concepts, how to build practical applications, and (perhaps most of all) **the AI hype** (claims that AI has real intelligence, AI actually thinks, AI can learn, AI will soon surpass human intelligence, etc etc). 
+**[LLMs](/2.4-llms/)**. After understanding the gist of CNNs, **my focus shifted to LLMs (large language models)**. **My goal was to understand** the core concepts, how to build practical applications, and (perhaps most of all) **the AI hype** (claims that AI has real intelligence, AI actually thinks, AI can learn, AI will soon surpass human intelligence, etc etc). 
 
 **[Predictive](/2b-6-predictive/)**. 
 
@@ -251,7 +251,7 @@ Documenting the drone work led to a refresher on MERN stacks, REST/GraphQL APIs,
 
 <br>
 
-#### (2) [LLMs](/sandbox/)
+#### (2) [LLMs](/2.4-llms/)
 
 <!-- TRIMMED: List was fine, just cleaned up -
 

@@ -18,7 +18,7 @@ title: Home
 
 - [Timeline](/the-future/). ZiptieAI start, present, and future.
 - **[1 AI Drones](/aidrones/)**. CNNs (object recognition) on Pixhawk drones. 
-- **[2 Models](/2_models/)**. UFAs, CNNs, LLMs, predictive, and robotic AI (*see also **[The gist of LLMs](/gist-LLM/)***).
+- **[2 Models](/2_models/)**. UFAs, CNNs, LLMs, predictive, and robotic AI (*see also **[The gist of LLMs](/2.4.1-llm-gist/)***). 
 - **[3 Agents](/3_agents/)**. Agents, agents+AI, dev tools, and projects.
 - **[4 Resources](/resources/)**. Tech stacks, docs, wiki, Substack, Youtube, Github, and Google Drive. 
 - [About](/about/).
