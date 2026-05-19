@@ -33,9 +33,9 @@ The following describes the main site diagram below (roughly a timeline diagram)
     - **[2.4 LLMs](/2.4-llms/)** (iAgent + TF).
     - **[2.5 Agentic LLMs](/2.5-agentic-llms/)**. LLMs that provide the funcionality required for AI agents (all major frontier LLMs).
 - **[3 Agents](/3_agents/)**. External agents that interact with LLM API. 
-  - **[3.1 Agentic (no AI)](/4b-agentic/)**. The main control loop is non-AI (Python).
-  - **[3.2 Agentic + AI](/4c-agentic-ai/)**. Adds AI as a helpful assistant.
-  - **[3.3 Agentic AI projects](/AI-projects/)**. Spinning up real world projects ASAP with minimal manual coding.
+  - **[3.1 Agentic (no AI)](/3.1-agentic/)**. The main control loop is non-AI (Python).
+  - **[3.2 Agentic + AI](/3.2-agentic-ai/)**. Adds AI as a helpful assistant.
+  - **[3.3 Agentic AI projects](/3.3-ai-projects/)**. Spinning up real world projects ASAP with minimal manual coding.
 
 
 
@@ -112,7 +112,7 @@ I documented my AI drone activities in detail. My original plan was to build my 
 - AI dev tools/IDEs (VSCode, Codex, Cursor, etc) and 
 - related plugins (like the Render plugin for Codex)
 
-**[AI projects](/AI-projects/)**. This section focuses on "spinning up" real-world projects quickly with minimal code analysis or manual coding. 
+**[AI projects](/3.3-ai-projects/)**. This section focuses on "spinning up" real-world projects quickly with minimal code analysis or manual coding. 
 
 <br>
 
@@ -306,7 +306,7 @@ Hands-on demos of AI IDEs and tools — Cursor, Codex, and related plugins (e.g.
 
 <br>
 
-#### (6) [AI Projects](/AI-projects/)
+#### (6) [AI Projects](/3.3-ai-projects/)
 
 <!-- STUB: Same — gave it one more sentence of context. --
 

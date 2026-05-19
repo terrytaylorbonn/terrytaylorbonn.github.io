@@ -457,7 +457,7 @@ step4 compare metrics
 
 <br>
 
-*See also: [3.2 Agents + AI](/4c-agentic-ai/) · [3.2.1 Intro](/3.2-ag-ai-1-intro/) · [3.2.2 Diagrams](/3.2-ag-ai-2-diagrams/) · [3.2.4 AI'ic agents functionality](/3.2-ag-ai-4-ai-ag-func/) · [3.2.5 AI'ic agents demos](/3.2-ag-ai-5-ai-ag-demos/) · [3.2.6 PAL demos](/3.2-ag-ai-6-pal-demos/)*
+*See also: [3.2 Agentic + AI](/3.2-agentic-ai/)*
 
 <br>
 

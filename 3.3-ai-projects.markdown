@@ -1,7 +1,7 @@
 ---
 layout: page
-title: "3.3 AI projects (6)"
-permalink: /AI-projects/
+title: "3.3 AI projects"
+permalink: /3.3-ai-projects/
 description: Last edit 26.0501
 ---
 

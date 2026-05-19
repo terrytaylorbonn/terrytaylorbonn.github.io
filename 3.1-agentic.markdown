@@ -1,7 +1,7 @@
 ---
 layout: page
-title: "3.1 Agentic (no AI) (4b) "
-permalink: /4b-agentic/
+title: "3.1 Agentic (no AI)"
+permalink: /3.1-agentic/
 ---
 
 [← 3 Agents](/3_agents/)

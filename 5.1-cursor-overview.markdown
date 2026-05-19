@@ -21,7 +21,7 @@ This page will be an overview of Cursor (especially creating agents). Tutorial l
 
 Cursor seems (I have yet to use it) to solve a problem that I was painfully aware of: How can a programmer using AI tools manage a massive code base that the AI tools wrote? How can the programmer go through massive codebase (like I do in my small demos), figuring out what needs to be changed? The brilliant answer: The AI IDE does it. Cursor presents the code to the developer organized not by keywords, but but meaning (in the same way that Google search crushed AltaVista because Google search by meaning, whereas AltaVista just by keywords). 
 
-The idea is revolutionary. You use a model (preferably custom trained) that does to your codebase what LLMs do to your language base. A NN is trained to recognize the gist of your code, just like an LLM NN (transformer) recognize the gist of your input text. Brilliant. Wow. I knew the problem, but never thought of the answer. This page will focus on such tools and their plugins. Page [(6) AI projects](/AI-projects/) will (WIP) focus on spinning up demos and techniques. Actual working demos. 
+The idea is revolutionary. You use a model (preferably custom trained) that does to your codebase what LLMs do to your language base. A NN is trained to recognize the gist of your code, just like an LLM NN (transformer) recognize the gist of your input text. Brilliant. Wow. I knew the problem, but never thought of the answer. This page will focus on such tools and their plugins. Page [(6) AI projects](/3.3-ai-projects/) will (WIP) focus on spinning up demos and techniques. Actual working demos. 
 
 @3:00
 

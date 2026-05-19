@@ -7,7 +7,7 @@ description: Last edit 26.0501
 
 # NEW
 
-#### **(5) [AI dev tools](/AI-dev-tools/)**
+#### **[4.1 AI dev tools](/AI-dev-tools/)**
 
 The section focuses on 
 - AI dev tools/IDEs (VSCode, Codex, Cursor, etc) and 
@@ -63,7 +63,7 @@ Add here: Claude source code leak.
 <br> 
 
 
-#### ***See the demo details on page [(6) AI projects](/AI-projects/)***.
+#### ***See the demo details on page [(6) AI projects](/3.3-ai-projects/)***.
 
 <br> 
 

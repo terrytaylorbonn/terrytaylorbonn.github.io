@@ -1,10 +1,10 @@
 ---
 layout: page
-title: "3.2.4 Agents + AI / AI'ic agents functionality"
-permalink: /3.2-ag-ai-4-ai-ag-func/
+title: "3.2.3 Agents + AI / AI infrastructure"
+permalink: /3.2.3-ai-agent-ai-infrastructure/
 ---
 
-[← 3.2 Agents + AI](/4c-agentic-ai/)
+[← 3.2 Agents + AI](/3.2-agentic-ai/)
 
 <br>
 
@@ -184,7 +184,7 @@ ME3: i have never seen this explained clearly anywhere... this is my goal (no re
 
 <br>
 
-*See also: [3.2 Agents + AI](/4c-agentic-ai/) · [3.2.1 Intro](/3.2-ag-ai-1-intro/) · [3.2.2 Diagrams](/3.2-ag-ai-2-diagrams/) · [3.2.3 Agentic AI functionality](/2.5-agentic-llms/) · [3.2.5 AI'ic agents demos](/3.2-ag-ai-5-ai-ag-demos/) · [3.2.6 PAL demos](/3.2-ag-ai-6-pal-demos/)*
+*See also: [← 3.2 Agentic + AI](/3.2-agentic-ai/)*
 
 <br>
 
