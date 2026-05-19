@@ -1,9 +1,11 @@
 ---
 layout: page
-title: "(6) AI projects"
+title: "3.3 AI projects (6)"
 permalink: /AI-projects/
 description: Last edit 26.0501
 ---
+
+[← 3 Agents](/3_agents/)
 
 
 This section focuses on "spinning up" real-world projects quickly with minimal code analysis or manual coding. 

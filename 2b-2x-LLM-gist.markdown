@@ -1,8 +1,10 @@
 ---
 layout: page
-title: "2X LLM gist"
+title: "2.4.1 LLM gist (2b-2x)"
 permalink: /gist-LLM/
 ---
+
+[← 2.4 LLMs](/sandbox/)
 
 *Work in progress v1 26.0516*
 

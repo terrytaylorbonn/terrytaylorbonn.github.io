@@ -1,9 +1,11 @@
 ---
 layout: page
-title: "AI (LLM) misconceptions"
+title: "2.4.4.1 AI (LLM) training misconceptions"
 permalink: /llm-tf-misconceptions/
 description: Last edit 26.0426
 ---
+
+[← 2.4 LLMs](/sandbox/)
 
 *See also webpage [(2) LLMs](/sandbox/)*
 

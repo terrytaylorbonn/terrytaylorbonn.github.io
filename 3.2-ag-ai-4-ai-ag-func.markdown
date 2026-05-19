@@ -4,6 +4,8 @@ title: "3.2.4 Agents + AI / AI'ic agents functionality"
 permalink: /3.2-ag-ai-4-ai-ag-func/
 ---
 
+[← 3.2 Agents + AI](/4c-agentic-ai/)
+
 <br>
 
 *Following copied from docx file [#606_ai_ides_.docx (on Gdrive)](https://drive.google.com/drive/folders/1-Adawag9uA8_bq-hDF-nOuPYaRLz1eEO) .. still need to format, add pics...*

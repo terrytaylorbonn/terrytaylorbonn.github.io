@@ -1,8 +1,10 @@
 ---
 layout: page
-title: "3.2.3 Agents + AI / Agentic AI functionality"
+title: "2.5 Agentic LLMs (Agents + AI / Agentic AI functionality (3.2.3))"
 permalink: /3.2-ag-ai-3-ag-ai-func/
 ---
+
+[← 2 AI (models)](/2_models/)
 
 <br>
 

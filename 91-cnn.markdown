@@ -1,9 +1,11 @@
 ---
 layout: page
-title: "(3.1) CNNs"
+title: "2.1 CNNs (91)"
 permalink: /cnn/
 description: Last edit 26.0426
 ---
+
+[← 2 AI (models)](/2_models/)
 
 See also: [LLMs](/sandbox/)
 

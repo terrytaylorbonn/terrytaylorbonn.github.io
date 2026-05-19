@@ -1,8 +1,10 @@
 ---
 layout: page
-title: "(3.4) Robotic AI"
+title: "2.3 Robotic AI (3.4)"
 permalink: /robotic-ai/
 ---
+
+[← 2 AI (models)](/2_models/)
 
 <br> 
 

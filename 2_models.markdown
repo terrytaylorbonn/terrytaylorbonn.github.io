@@ -1,6 +1,6 @@
 ---
 layout: page
-title: "2 Models"
+title: "2 AI (models)"
 permalink: /2_models/
 ---
 
@@ -33,18 +33,7 @@ That last point is essential for successful AI projects. I first took an interes
 
 <br>
 
-### **[2.X Qualitative gist of language models (LLMs)](/gist-LLM/)**
 
-Describes in concise detail gist of what an LLM model does without describing complex algorithms or architectures. 
-
-<br>
-
-
-### [2.0 UFAs](/UFAs/)
-
-A TF implements a Univeral Function Approximator (UFA) algorithm. Understanding what a UFA is is the key to understanding what AI really is. And **when you understand how AI really works,  you will understand why agentic AI works in systems like Palantir Maven (and in many many other business segments), but will never be safe enough for self-driving cars and home humanoids**. That's my personal opinion (backed up by over a decade of empty self-driving car promises). 
-
-<br>
 
 ### [2.1 CNNs](/cnn/)
 
@@ -52,11 +41,11 @@ The AI in the AI drones was object recognition using CNNs (convoluted neural net
 
 <br>
 
-### [2.3 Predictive](/2b-6-predictive/)
+### [2.2 Predictive](/2b-6-predictive/)
 
 <br>
 
-### [2.4 Robotic AI](/robotic-ai/)
+### [2.3 Robotic AI](/robotic-ai/)
 
 JEPA, belief tracking, control loops, autonomy.
 
@@ -74,7 +63,7 @@ In any case, the time spent doing hands-on demos (for representational learning,
 <br> -->
 
 
-### [2.2 LLMs](/sandbox/) (iAgent + TF)
+### [2.4 LLMs](/sandbox/) (iAgent + TF)
 
 After understanding the gist of CNNs, **my focus shifted to LLMs (large language models)**:
   - Transformers (TF, the LLM neural network) *(see the wiki page **[AI concepts](https://github.com/terrytaylorbonn/auxdrone/wiki/Core-AI-concepts)** for **my explanation of GPT-3 transformer algorithms)*** 
@@ -89,6 +78,21 @@ An LLM consists of an (1) internal agent and a (2) transformer (TF). The TF is t
   - [Core AI CNN (object recognition) concepts](/cnn/)
 
 <br>
+
+### [2.5 Agentic LLM (TF/UFA semantic) functionality (3.2.3)](/3.2-ag-ai-3-ag-ai-func/)
+
+It was only realistically possible for an agent (Python script, etc) to send prompts and receive response **after AI became agentic**, after LLMs were able to reliably  
+- process incoming human language agent messages and 
+- respond with the requested content and format constraints (as specified in the prompts)
+
+**Modern TF/UFA systems provide semantic capabilities that made practical agentic systems possible**. These systems can
+- A. **Comprehend, remember** (Generalization / approximation, Context tracking, Semantic abstraction, Human-language robustness)
+- B. **Explain** (Ontology alignment / normalization, Explanation / summarization)
+- C. **Deduce, plan** (Structured constrained outputs, Semantic interpretation / inference, Hierarchical planning / workflow synthesis)
+
+
+<br>
+
 
 
 <!-- 

@@ -1,8 +1,10 @@
 ---
 layout: page
-title: "3.2 (4c) Agents + AI"
+title: "3.2 Agents + AI (4c)"
 permalink: /4c-agentic-ai/
 ---
+
+[← 3 Agents](/3_agents/)
 
 
 
@@ -59,19 +61,7 @@ Core diagrams (my own) that explain the architecture.
 
 <br>
 
-### [3.2.3 Agentic AI (TF/UFA semantic) functionality](/3.2-ag-ai-3-ag-ai-func/)
 
-It was only realistically possible for an agent (Python script, etc) to send prompts and receive response **after AI became agentic**, after LLMs were able to reliably  
-- process incoming human language agent messages and 
-- respond with the requested content and format constraints (as specified in the prompts)
-
-**Modern TF/UFA systems provide semantic capabilities that made practical agentic systems possible**. These systems can
-- A. **Comprehend, remember** (Generalization / approximation, Context tracking, Semantic abstraction, Human-language robustness)
-- B. **Explain** (Ontology alignment / normalization, Explanation / summarization)
-- C. **Deduce, plan** (Structured constrained outputs, Semantic interpretation / inference, Hierarchical planning / workflow synthesis)
-
-
-<br>
 
 ### [3.2.4 AI infrastructure / helpers](/3.2-ag-ai-4-ai-ag-func/)
 **Agents likewise required external orchestration layers that augment the TF/UFA semantic engine capabilities** (such as Tools, Filesystem access, RAG,MCP, APIs, and Workflow orchestration).
@@ -87,7 +77,7 @@ It was only realistically possible for an agent (Python script, etc) to send pro
 <br>
 
 ### [3.2.5 AI'ic agent demos](/3.2-ag-ai-5-ai-ag-demos/)
-Very basic demos that show how **deterministic agents use TF/UFA semantic capabilities). 
+Very basic demos that show how **deterministic agents use TF/UFA semantic capabilities**. 
 - 1 Basic tool
 - 3 Filesystem
 - 5 RAG
@@ -100,9 +90,9 @@ Code on GitHub. More demos to follow soon.
 
 ### [3.2.6 PAL demos](/3.2-ag-ai-6-pal-demos/)
 
-Simple demos are the best way to understand agentic AI systems.
+<!-- Simple demos are the best way to understand agentic AI systems. -->
 
-PAL demos focus on:
+PAL (Palantir) demos focus on:
 - ontology systems
 - semantic workflows
 - deterministic execution

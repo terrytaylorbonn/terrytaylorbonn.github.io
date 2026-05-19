@@ -1,8 +1,10 @@
 ---
 layout: page
-title: "(3.3) Predictive"
+title: "2.2 Predictive (2b-6)"
 permalink: /2b-6-predictive/
 ---
+
+[← 2 AI (models)](/2_models/)
 
 <br>
 

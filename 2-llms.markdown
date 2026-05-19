@@ -1,11 +1,15 @@
 ---
 layout: page
-title: "(3.2) LLMs"
+title: "2.4 LLMs (3.2)"
 permalink: /sandbox/
 description: Last edit 26.0426
 ---
 
-<br> 
+[← 2 AI (models)](/2_models/)
+
+
+
+
 
 This page describes 
 - **1 LLM stack demos**. I planned to spend a lot of time on this, but at some point came to the conclusion that time would be better spent elsewhere. In any case, knowing the basic is quite important. Its not that difficult to install a smaller model on your local PC, and it does have benefits.
@@ -19,55 +23,27 @@ See also:
 
 <br>
 
-### 1 LLM stack demos
+### **[2.4.1 Qualitative gist of language models (LLMs) (2.X)](/gist-LLM/)**
 
-My focus at one point was on LLMs. I thought that that was going to be the market focus. There is a lot of value in being able to deploy and fine-tune your own LLMs, but for most of us these skills will not be used often. 
-
-The wiki page [**"AI LLM stacks"**](https://github.com/terrytaylorbonn/auxdrone/wiki/AI-stacks) (a bit chaotic after a recent wiki reorganization) lists the following subpages are of interest:
-
-- [2.2 Demo deployments (HF, CloudFlare, etc)](https://github.com/terrytaylorbonn/auxdrone/wiki/LLM-stacks-%5C-2-Demo-deployments)
-- [2.3 Youtube demos](https://github.com/terrytaylorbonn/auxdrone/wiki/LLM-stacks-%5C-3-Youtube-demos). I did a lot of YouTube demos. Way back then (2025, a long time ago in AI-time) I had still not make the transition to working totally with LLMs (GPT) to learn new tech.
-- [2.4 GPT/Copilot demos (a few demos)](https://github.com/terrytaylorbonn/auxdrone/wiki/LLM-stacks-%5C-4-CPLT-demos)
-- [2.6 Agent/LLM input docs (RAG demo)](https://github.com/terrytaylorbonn/auxdrone/wiki/LLM-stacks-%5C-4-CPLT-%5C-4.0b-Platforms-and-tools)
- 
-<img src="/assets/smol.png" alt="smol" width="65%">
-
+Describes in concise detail gist of what an LLM model does without describing complex algorithms or architectures. 
 
 <br>
 
-### 2 LLM transformer training
 
-*See also [Core AI (LLM) misconceptions](/llm-tf-misconceptions/) (website page) describes a chat that GPT and I had recently that started off about training misconceptions.*
+### [2.4.2 UFAs (2.0)](/UFAs/)
 
-Training is something most of us will never do (Palantir uses standard models; they do no customized training). But its the second heading for a good reason: Training is the defining aspect of model transformer (TF) design (section 4 below describes GPT-3 TF design). 
+A TF implements a Univeral Function Approximator (UFA) algorithm. Understanding what a UFA is is the key to understanding what AI really is. And **when you understand how AI really works,  you will understand why agentic AI works in systems like Palantir Maven (and in many many other business segments), but will never be safe enough for self-driving cars and home humanoids**. That's my personal opinion (backed up by over a decade of empty self-driving car promises). 
 
-Training is actually a complex programming process (it is not training in the human sense). Input data is fed through the TF, and the the TF internal parameters (weights and biases) are adjusted so that the output more closely matches the intended output. The input and required output are all taken from huge sets of human generated text. 
 
-The main point is: No human does any of the programming. No human is deciding the values of weights and biases. Its all automated. And training can fail. Since its a neural network (NN), the neurons are all interconnected. When you change the value of a weight and/or bias (there are 175 billion of them in GPT-3), it can effect the input/output combinations you trained earlier. Its as much of an art than a science. 
+<br> 
 
-This is important to understand for several reasons. (1) You appreciate that a TF is a universal function approximator (UFA). It can take an input combination that it was never trained on and (after a massive number of statistical calculations) compute the best matching output (based on its training). (2) The tradeoff is that the TF is approximating. That's why LLMs always warned you that they can make mistakes.
-
-This, by the way, (3) has nothing to do with how human process language. Understanding this is not useless theory. Its vital for understanding what you can expect from AI in an application. This is why in Palanatir AI is a "helpful assitant", not the (a) central control loop or (b) the human who actually makes critical final decisions.  
-
-<img src="/assets/hillsvalleys.png" alt="smol" width="35%">
-
-<br>
-
-### 3 LLM Internal Agent
-
-The term "agent" normally means a deterministic (non-AI, not GPU-based) control loop that is the "caretaker" or interface between the LLM model and the outside world. However, there is also an agent (what I call an internal agent or "iAgent") in the LLM that is the interface between the transformer (TF) and the outside (of the LLM) world. Again, as with training, understanding this helps to understand the core nature of what an LLM and an agent is. An (external) agent is to some extent just an extension or a partner of the internal agent. 
-
-<img src="/assets/iagent.png" alt="iagent" width="35%">
-
-<br>
-
-### 4 LLM (GPT-3) TF (transformer) algorithm
+### 2.4.3 LLM (GPT-3) TF (transformer) algorithm
 
 The following shows selected screenshots from the wiki page [**Core AI concepts**](https://github.com/terrytaylorbonn/auxdrone/wiki/Core-AI-concepts). These diagram are my own, and depict my interpretation of the GPT-3 algorithm. Its much more complex than what these few diagrams depict. But it gives you an appreciation of the vast complexity of TF calculations.
 
 <br>
 
-#### 4.1 The main loop and the subloop
+#### 2.4.3.1 The main loop and the subloop
 
 (1) The main TF loop generates a token each loop. That token is fed back into the running response.
 
@@ -81,7 +57,7 @@ The following shows selected screenshots from the wiki page [**Core AI concepts*
 
 <br>
 
-#### 4.2 Attention heads (share context info)
+#### 2.4.3.2 Attention heads (share context info)
 
 (3) In the subloop B (1) in the hidden layers (after the input and before the output), token hidden state values (12288 FP numbers for each token that define the current token states) are adjusted based on the values of other tokens that are determined to be related (by context for example). The diagram below shows the 96 heads for each token (each head has 128 FP numbers) and the 2048 (maximum) tokens.
 
@@ -89,7 +65,7 @@ The following shows selected screenshots from the wiki page [**Core AI concepts*
 
 <br>
 
-#### 4.3 Attention heads (share context info)
+#### 2.4.3.3 Attention heads (share context info)
 
 (4) The following shows the neural net in the FFN for a single token that takes the 12288 FP numbers as input to the 49152 hidden layer neurons which detect non-linear patterns. The 49152 outputs are then added to the 12288 outputs. 
 
@@ -109,7 +85,7 @@ The following shows selected screenshots from the wiki page [**Core AI concepts*
 
 <br>
 
-#### 4.4 Final layer (next token decision)
+#### 2.4.3.4 Final layer (next token decision)
 
 (8) A simplified diagram of how the hidden layers evolve over time (generated by GPT). This is perhaps the most important diagram. This is where the "magic" really occurs. The right side of the diagram depicts a 12288x1 matrix. This is the size of the token embedding (the initial input to the TF). During the 96 TF layers (required to compute the next token), the content of the token embedding gradually transforms. Those 12288 FP numbers gradually contain more precise info about the token and the set of tokens in general (thanks to AHs mixing info between tokens and FFNs detecting complex meaning that is fed back into the token).
 
@@ -150,5 +126,52 @@ The main goals of the AI/tech stack sandbox are
  - Hands-on experience with a wide range of tools -->
 
 <!-- ![image](https://github.com/user-attachments/assets/187576ca-6ca9-41cc-9629-39a0db97581c) -->
+
+
+### 2.4.4 LLM transformer training
+
+*See also [Core AI (LLM) misconceptions](/llm-tf-misconceptions/) (website page) describes a chat that GPT and I had recently that started off about training misconceptions.*
+
+Training is something most of us will never do (Palantir uses standard models; they do no customized training). But its the second heading for a good reason: Training is the defining aspect of model transformer (TF) design (section 4 below describes GPT-3 TF design). 
+
+Training is actually a complex programming process (it is not training in the human sense). Input data is fed through the TF, and the the TF internal parameters (weights and biases) are adjusted so that the output more closely matches the intended output. The input and required output are all taken from huge sets of human generated text. 
+
+The main point is: No human does any of the programming. No human is deciding the values of weights and biases. Its all automated. And training can fail. Since its a neural network (NN), the neurons are all interconnected. When you change the value of a weight and/or bias (there are 175 billion of them in GPT-3), it can effect the input/output combinations you trained earlier. Its as much of an art than a science. 
+
+This is important to understand for several reasons. (1) You appreciate that a TF is a universal function approximator (UFA). It can take an input combination that it was never trained on and (after a massive number of statistical calculations) compute the best matching output (based on its training). (2) The tradeoff is that the TF is approximating. That's why LLMs always warned you that they can make mistakes.
+
+This, by the way, (3) has nothing to do with how human process language. Understanding this is not useless theory. Its vital for understanding what you can expect from AI in an application. This is why in Palanatir AI is a "helpful assitant", not the (a) central control loop or (b) the human who actually makes critical final decisions.  
+
+<img src="/assets/hillsvalleys.png" alt="smol" width="35%">
+
+<br>
+
+### 2.4.5 LLM Internal Agent
+
+The term "agent" normally means a deterministic (non-AI, not GPU-based) control loop that is the "caretaker" or interface between the LLM model and the outside world. However, there is also an agent (what I call an internal agent or "iAgent") in the LLM that is the interface between the transformer (TF) and the outside (of the LLM) world. Again, as with training, understanding this helps to understand the core nature of what an LLM and an agent is. An (external) agent is to some extent just an extension or a partner of the internal agent. 
+
+<img src="/assets/iagent.png" alt="iagent" width="35%">
+
+<br>
+
+
+
+### 2.4.6 LLM stack demos
+
+My focus at one point was on LLMs. I thought that that was going to be the market focus. There is a lot of value in being able to deploy and fine-tune your own LLMs, but for most of us these skills will not be used often. 
+
+The wiki page [**"AI LLM stacks"**](https://github.com/terrytaylorbonn/auxdrone/wiki/AI-stacks) (a bit chaotic after a recent wiki reorganization) lists the following subpages are of interest:
+
+- [2.2 Demo deployments (HF, CloudFlare, etc)](https://github.com/terrytaylorbonn/auxdrone/wiki/LLM-stacks-%5C-2-Demo-deployments)
+- [2.3 Youtube demos](https://github.com/terrytaylorbonn/auxdrone/wiki/LLM-stacks-%5C-3-Youtube-demos). I did a lot of YouTube demos. Way back then (2025, a long time ago in AI-time) I had still not make the transition to working totally with LLMs (GPT) to learn new tech.
+- [2.4 GPT/Copilot demos (a few demos)](https://github.com/terrytaylorbonn/auxdrone/wiki/LLM-stacks-%5C-4-CPLT-demos)
+- [2.6 Agent/LLM input docs (RAG demo)](https://github.com/terrytaylorbonn/auxdrone/wiki/LLM-stacks-%5C-4-CPLT-%5C-4.0b-Platforms-and-tools)
+ 
+<img src="/assets/smol.png" alt="smol" width="65%">
+
+
+<br>
+
+
 
 

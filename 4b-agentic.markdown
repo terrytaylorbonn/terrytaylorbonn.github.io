@@ -1,8 +1,10 @@
 ---
 layout: page
-title: "(4b) Agentic (no AI)"
+title: "3.1 Agentic (no AI) (4b) "
 permalink: /4b-agentic/
 ---
+
+[← 3 Agents](/3_agents/)
 
 
 
