@@ -32,12 +32,12 @@ wiki_url: "https://github.com/terrytaylorbonn/auxdrone/wiki"
 # Header navigation order
 header_pages:
   - index.md
-  - 8-history.markdown
+  - 0-timeline.markdown
   - 1-ai-drones.markdown
   - 2_models.markdown
   - 3_agents.markdown
-  - 0b-resources.markdown
-  - 0a-about.markdown
+  - 4_resources.markdown
+  - 5-about.markdown
 
 # Build settings
 theme: minima

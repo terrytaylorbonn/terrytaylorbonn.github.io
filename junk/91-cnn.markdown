@@ -3,6 +3,7 @@ layout: page
 title: "2.1 CNNs (91)"
 permalink: /2.1-cnns/
 description: Last edit 26.0426
+published: false
 ---
 
 [← 2 AI (models)](/2_models/)

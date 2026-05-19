@@ -1,7 +1,7 @@
 ---
 layout: page
 title: "1 Drones"
-permalink: /aidrones/
+permalink: /1-drones/
 ---
 
 <!-- USE THIS TEXT ***********************************************

@@ -1,7 +1,7 @@
 ---
 layout: page
 title: Tech Stacks & Docs
-permalink: /tech-stacks/
+permalink: /4.1-tech-stacks/
 ---
 
 <!-- Tech Stacks & Docs covers full-stack development, APIs, and documentation systems. -->

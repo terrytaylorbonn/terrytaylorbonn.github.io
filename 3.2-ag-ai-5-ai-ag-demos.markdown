@@ -993,12 +993,14 @@ Available MCP tools:
 {tools_text}
 Return ONLY JSON in this format:
 
+{% raw %}
 {{
   "tool": "tool_name_here",
   "arguments": {{
     "argument_name_here": "argument_value_here"
   }}
 }}
+{% endraw %}
 """
             response = client.chat.completions.create(
                 model="gpt-4.1-mini",

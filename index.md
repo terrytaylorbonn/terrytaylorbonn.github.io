@@ -5,22 +5,22 @@ title: Home
 
 <br>
 
-**This site covers AI models and agents** (with extensive demos and my own take on core concepts). 
+**This site covers primarily drones, models (LLMs), and agents** (with extensive demos and my own take on core concepts). 
 
 <br>
 
-*Site diagram [(details on timeline page)](/history/)* <br>
-<img src="/assets/zai_evolution3.png" alt="smol" width="60%"> 
+*Site diagram [(details on timeline page)](/0-timeline/)* <br>
+<img src="/assets/zai_evolution3.png" alt="smol" width="55%"> 
 
 <br>
 
-**The following are all of the top-level pages** *(see also the [Wiki](https://github.com/terrytaylorbonn/auxdrone/wiki))*.  
+**The following are the top-level pages** *(see also the [Wiki](https://github.com/terrytaylorbonn/auxdrone/wiki))*.  
 
-- [Timeline](/the-future/). ZiptieAI start, present, and future.
-- **[1 AI Drones](/aidrones/)**. CNNs (object recognition) on Pixhawk drones. 
-- **[2 Models](/2_models/)**. UFAs, CNNs, LLMs, predictive, and robotic AI (*see also **[The gist of LLMs](/2.4.1-llm-gist/)***). 
-- **[3 Agents](/3_agents/)**. Agents, agents+AI, dev tools, and projects.
-- **[4 Resources](/resources/)**. Tech stacks, docs, wiki, Substack, Youtube, Github, and Google Drive. 
+- [Timeline](/the-future/). ZiptieAI site diagram, start, present, and future.
+- **[1 Drones](/1-drones/)**. FPV/Pixhawk drones (with CNN object recognition). 
+- **[2 AI (models)](/2_models/)**. CNNs, predictive/robotic NNs, LLMs, and agentic LLMs (*see also **[The gist of LLMs](/2.4.1-llm-gist/)***). 
+- **[3 Agents](/3_agents/)**. Agents, agents+AI, and projects.
+- **[4 Resources](/4_resources/)**. Tech stacks, dev tools, docs, wiki, Substack, Youtube, Github, and Google Drive. 
 - [About](/about/).
 
 <br>

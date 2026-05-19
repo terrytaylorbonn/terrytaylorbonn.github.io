@@ -1,7 +1,7 @@
 ---
 layout: page
 title: Timeline
-permalink: /history/
+permalink: /0-timeline/
 ---
 
 
@@ -9,7 +9,7 @@ permalink: /history/
 
 
 AI tech is evolving quickly. ZiptieAI is evolving along with it. 
-- **Site diagram**  (rough timeline)
+- **Site diagram** (roughly a timeline)
 - **Start** (AI drones)
 - **Present** (AI models and Agents)
 - **Future** (continued exploration of practical AI systems)
@@ -18,20 +18,20 @@ AI tech is evolving quickly. ZiptieAI is evolving along with it.
 <br>
 
 
-## **Site diagram** (rough timeline)
+## **Site diagram**
 
 <br> 
 
 The following describes the main site diagram below (roughly a timeline diagram):
-- **[1 AI Drones](/aidrones/)** was the first project at ZiptieAI.
-- **[2 Models](/2_models/)** lists the model concepts addressed in this site
-     - **[2.X The gist of LLMs](/2.4.1-llm-gist/)**.
-     - **[2.0 UFAs](/2.4.2-ufas/)**: Conceptual overview of Universal Function Approximators.
-  - Models with no "internal agent".
+- **[1 AI drones](/1-drones/)** were the original focus at ZiptieAI.
+- **[2 Models](/2_models/)** lists the model concepts addressed on this site
+  - Models with no internal agent.
     - **[2.1 CNNs](/2.1-cnns/)**: Convolutional Neural Networks (for object recogntion on drones). The takes a straight shot through the NN. 
-    - **[2.3 Predictive](/2.2-predictive-nns/) (custom/training)** NNs for predictive AI (I've done this before but can't find the info; need to do again). Simple NNs that built/trained locally.
-    - **[2.4 Robotic AI](/2.3-robotic-ai/)**. Mainly JEPA customization/training. 
-  - **[2.2 LLMs](/2.4-llms/)** have a transformer (TF) and iAgent.
+    - **[2.2 Predictive](/2.2-predictive-nns/) (custom/training)** NNs for predictive AI (I've done this before but can't find the info; need to do again). Simple NNs that built/trained locally.
+    - **[2.3 Robotic AI](/2.3-robotic-ai/)**. Mainly JEPA customization/training. 
+  - Models with an internal agent.
+    - **[2.4 LLMs](/2.4-llms/)** (iAgent + TF).
+    - **[2.5 Agentic LLMs](/2.5-agentic-llms/)**. LLMs that provide the funcionality required for AI agents (all major frontier LLMs).
 - **[3 Agents](/3_agents/)**. External agents that interact with LLM API. 
   - **[3.1 Agentic (no AI)](/4b-agentic/)**. The main control loop is non-AI (Python).
   - **[3.2 Agentic + AI](/4c-agentic-ai/)**. Adds AI as a helpful assistant.
@@ -56,7 +56,7 @@ The following describes the main site diagram below (roughly a timeline diagram)
 
 <br> 
 
-**[AI Drones](/aidrones/)**. Drone flight simulation, hardware builds, AI, and flight tests (the first flight tests were in my kitchen). AI capabilities centered on:
+**[AI Drones](/1-drones/)**. Drone flight simulation, hardware builds, AI, and flight tests (the first flight tests were in my kitchen). AI capabilities centered on:
 - Object recognition using onboard cameras
 - Autonomous flight support (AI-generated flight plan modifications)
 
@@ -227,7 +227,7 @@ AI tech is evolving quickly. ZiptieAI is evolving with it. What began as a drone
 
 <br>
 
-#### (1) [AI Drones](/aidrones/)
+#### (1) [AI Drones](/1-drones/)
 
 <!-- PERSONAL: Kept the kitchen detail — it's good. Fixed "convoluted" → "convolutional", "oject" → "object" 
 
@@ -241,7 +241,7 @@ In practice I spent more time building drones than doing drone AI — open sourc
 
 <br>
 
-#### [Tech Stacks & Docs](/tech-stacks/)
+#### [Tech Stacks & Docs](/4.1-tech-stacks/)
 
 <!-- NOTE: This section felt out of sequence in the original — it's a side activity, not a phase. Kept brief. -
 

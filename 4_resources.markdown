@@ -1,7 +1,7 @@
 ---
 layout: page
 title: "4 Resources"
-permalink: /resources/
+permalink: /4_resources/
 description: Last edit 26.0515
 ---
 
@@ -20,7 +20,7 @@ I documented my AI drone activities in detail. My original plan was to build my 
 <img src="/assets/5_IDEs.png" alt="drones" width="22%"> -->
 
 
-#### [Tech Stacks & Docs](/tech-stacks/)
+#### [Tech Stacks & Docs](/4.1-tech-stacks/)
 
 
 #### Wiki
