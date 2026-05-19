@@ -9,10 +9,10 @@ description: Last edit 26.0426
 
 This page describes 
 
-- [2.4.1 Gist of LLMs](/2.4.1-llm-gist/)
-- [2.4.2 UFAs](/2.4.2-ufas/)
-- [2.4.3 LLM (GPT-3) TF (transformer) algorithm](/2.4.3-tf-algorithm/)
-- [2.4.4 LLM transformer training](/2.4.4_llm-tf-training/)
+- 2.4.1 Gist of LLMs
+- 2.4.2 UFAs
+- 2.4.3 LLM (GPT-3) TF (transformer) algorithm
+- 2.4.4 LLM transformer training
 - 2.4.5 LLM Internal Agent
 - 2.4.6 LLM stack demos
 

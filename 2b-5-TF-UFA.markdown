@@ -8,6 +8,16 @@ permalink: /2b-5-TF-UFA/
 
 *Work in progress.*
 
+A TF performs computational pattern matching.
+- TF takes the **convolution/max-pooling** concept in CNNs and duplicates the same idea for language in TF as **Attention-heads/softmax**. This is my own idea, and its key to understanding how the TF functions. 
+- TF converts each (1) Human Language (HLang) input (prompt) into (2) Vector Language (VLang).
+- The VLang for each prompt is refined into a "storyline".
+- The **(3) storyline of the last token is used to determine the vocab token that most closely matches what has been programmed into the NN for the current input**.
+- **(4) TF adds the new token to the input and repeats the process** (until finished or told to stop).
+- HLang/JSON can be added to the initial HLang input to describe how the **(5) LLM should customize the response content and structure**. This greatly enhances the ability of the "deterministic" agent (usually Python) to reliably process the reponse. 
+- For examples of TF Agentic with AI see "4 Agent+AI concepts" on page [(4) Agentic AI](/agentic-ai/)
+
+
 **3 HOW THE LLM TF UFA GENERATES TOKEN SEQUENCES**
 
 Its not intelligent. Its computational pattern matching.
