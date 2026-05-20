@@ -29,24 +29,24 @@ permalink: /2.4.2-ufas/
 
 ### **TOC of subtopics**
 
-**[1 The requirement for a human-language <> computer interface](/2b-1-TF-only-interface/)**
+**[1 The requirement for a human-language <> computer interface](/2.4.2.1_ufa_reqs/)**
 
 - Human communication systems (language) are designed for human-style intelligence.
 - Digital systems do not have human-style intelligence. 
 - Digital systems are vital for humans. We need a bridge. 
 - TF UFA is only viable option. But it has limitations.
 
-**[2 Latent semantic computation](/2b-1a-latent-semantic-computation/)** (chat) 
+**[2 Latent semantic computation](/2.4.2.2-ufa-latent-semantic-compute/)** (chat) 
 
 “Latent semantic computation” basically means:
 - the TF is computing on hidden meaning representations,
 - not directly on human words.
 
-**[3 ZiptieAI 2D demo UFA](/2b-1b-ZAI-2D-demo-UFA/)** 
+**[3 ZiptieAI 2D demo UFA](/2.4.2.3-ufa-demo-zai-2d/)** 
 
 A very simple FFN UFA conceptual demo (meant to convey the basics of how an FFN can detect complex features).
 
-**[4 Welch 2D demo UFA](/2b-2-belgium-UFA/)** (Belgium/Netherlands)
+**[4 Welch 2D demo UFA](/2.4.2.4-ufa-demo-welch/)** (Belgium/Netherlands)
 
 A simple conceptual demo that has received almost 400K views and great reviews.
 - Basic function 
@@ -59,7 +59,7 @@ A simple conceptual demo that has received almost 400K views and great reviews.
   - VLang has smooth (except for non-activation areas) outputs. This demo has binary outputs (your are in one country or the other).
 
 
-**[5 Training](/2b-3-training/)**
+**[5 Training](/2.4.2.5-ufa-training/)**
 
 My take on training:
 - Training defines EXACTLY what outputs for any input. Its deterministic outcome. This all runs on a GPU, which is a deterministic computation device.
@@ -69,14 +69,14 @@ My take on training:
   - for each input / output pair
   - adjust Weighs and biases to slightly improve the coomputation of this pair as the best value (because this is a good match)
 
-**[6 CNN UFA](/2b-4-CNN-UFA/) (TODO)** (convoluted neural networks). 
+**[6 CNN UFA](/2.4.2.6-ufa-cnn/) (TODO)** (convoluted neural networks). 
 
 AlexNet 2012 is an excellent demo.
 - 2012 AlexNet Object recognition demo
 - Data for training was the key (you cant train this manually)
 - This is an excellent demo to understand the basics before tackling TF UFA
 
-**[7 TF UFA](/2b-5-TF-UFA/)** (transformer) 
+**[7 TF UFA](/2.4.2.7-ufa-tf/)** (transformer) 
 
 A TF is the best UFA for human language. This section talks about the **GPT-3 TF**. Newer models may be much more powerful, but the core techniques they use to implement a UFA will be similar. 
 
@@ -88,9 +88,9 @@ A TF is the best UFA for human language. This section talks about the **GPT-3 TF
 - **(4) TF adds the new token to the input and repeats the process** (until finished or told to stop).
 - Human-language/JSON can be added to the initial HLang input to describe how the **(5) LLM should customize the response content and structure**. 
 
-**[8 Predictive/robotic](/2.2-predictive-nns/)**
+<!-- **[8 Predictive/robotic](/2.2-predictive-nns/)**
 
-These are simple NN UFAs used for special purposes. They can be trained on a local PC. 
+These are simple NN UFAs used for special purposes. They can be trained on a local PC.  -->
 
 <br>
 

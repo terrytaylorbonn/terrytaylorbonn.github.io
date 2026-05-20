@@ -1,8 +1,10 @@
 ---
 layout: page
-title: "1 The requirement for a human-language <> computer interface"
-permalink: /2b-1-TF-only-interface/
+title: "2.4.2.1 UFA requirements (human-language <-> computer interface)"
+permalink: /2.4.2.1_ufa_reqs/
 ---
+
+<!-- title: "1 The requirement for a human-language <> computer interface" -->
 
 <br>
 

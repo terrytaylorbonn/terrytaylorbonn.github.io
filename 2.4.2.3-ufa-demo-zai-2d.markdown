@@ -1,8 +1,11 @@
 ---
 layout: page
-title: "1b ZAI 2D demo UFA"
-permalink: /2b-1b-ZAI-2D-demo-UFA/
+title: "2.4.2.3 UFA demo ZiptieAI 2D"
+permalink: /2.4.2.3-ufa-demo-zai-2d/
 ---
+
+<!-- title: "1b ZAI 2D demo UFA"
+ -->
 
 **[back](/2.4.2-ufas/)** 
 

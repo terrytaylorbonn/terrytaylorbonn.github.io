@@ -1,7 +1,7 @@
 ---
 layout: page
-title: "2b-4-1 chat about AlexNet dense layers"
-permalink: /2b-4-1-dense-layers/
+title: "2.4.2.6.1 UFA CNN denselayers"
+permalink: /2.4.2.6.1-ufa-cnn-dense-layers/
 ---
 
 <br>

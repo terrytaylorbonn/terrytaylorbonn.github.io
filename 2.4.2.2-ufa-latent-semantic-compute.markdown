@@ -1,8 +1,11 @@
 ---
 layout: page
-title: "(2b)-1a Latent semantic computation"
-permalink: /2b-1a-latent-semantic-computation/
+title: "2.4.2.2 UFA latent-semantic-computation"
+permalink: /2.4.2.2-ufa-latent-semantic-compute/
 ---
+
+<!-- title: "(2b)-1a Latent semantic computation"
+ -->
 
 <br>
 

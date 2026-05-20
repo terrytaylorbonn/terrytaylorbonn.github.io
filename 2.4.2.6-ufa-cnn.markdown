@@ -1,7 +1,7 @@
 ---
 layout: page
-title: "(2b) 4 CNN UFA"
-permalink: /2b-4-CNN-UFA/
+title: "2.4.2.6 UFA CNN"
+permalink: /2.4.2.6-ufa-cnn/
 ---
 
 <br>
@@ -19,7 +19,7 @@ permalink: /2b-4-CNN-UFA/
 
 <br>
 
-- [2b-4-1 chat about AlexNet dense layers 26.0514](/2b-4-1-dense-layers/)
+- [2.4.2.6.1 UFA CNN denselayers (chat) 26.0514](/2.4.2.6.1-ufa-cnn-dense-layers/)
 
 
 

@@ -1,7 +1,7 @@
 ---
 layout: page
-title: "TF UFA"
-permalink: /2b-5-TF-UFA/
+title: "2.4.2.7 UFA TF"
+permalink: /2.4.2.7-ufa-tf/
 ---
 
 <br>
@@ -15,7 +15,7 @@ A TF performs computational pattern matching.
 - The **(3) storyline of the last token is used to determine the vocab token that most closely matches what has been programmed into the NN for the current input**.
 - **(4) TF adds the new token to the input and repeats the process** (until finished or told to stop).
 - HLang/JSON can be added to the initial HLang input to describe how the **(5) LLM should customize the response content and structure**. This greatly enhances the ability of the "deterministic" agent (usually Python) to reliably process the reponse. 
-- For examples of TF Agentic with AI see "4 Agent+AI concepts" on page [(4) Agentic AI](/agentic-ai/)
+- For examples of TF Agentic with AI see "4 Agent+AI concepts" on page [3 Agents](/3_agents/)
 
 
 **3 HOW THE LLM TF UFA GENERATES TOKEN SEQUENCES**
