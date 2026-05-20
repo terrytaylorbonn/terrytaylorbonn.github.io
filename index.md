@@ -19,7 +19,7 @@ title: Home
 - [Timeline](/0-timeline/). ZiptieAI site diagram, start, present, and future.
 - **[1 Drones](/1-drones/)**. FPV/Pixhawk drones (with CNN object recognition). 
 - **[2 AI (models)](/2_models/)**. CNNs, predictive/robotic NNs, LLMs, and agentic LLMs (*see also **[The gist of LLMs](/2.4.1-llm-gist/)***). 
-- **[3 Agents](/3_agents/)**. Concepts and demos for
+- **[3 Agents](/3_agents/)** (the focus of this site). Concepts and demos for
   - [3.1 Agentic (no AI)](/3.1-agentic/), 
   - [3.2.4 Agentic + AI (basic)](/3.2.4-ai-agent-basic-demos/), 
   - [3.2.5 Agentic + AI (basic Palantir-style)](3.2.5-ai-agent-pal-demos/), and 
