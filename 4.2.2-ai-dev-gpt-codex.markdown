@@ -5,6 +5,8 @@ permalink: /4.2.2-ai-dev-gpt-codex/
 description: Last edit 26.0501
 ---
 
+[← 4.2 AI dev tools](/4.2-ai-dev-tools/)
+
 <br>
 
 This page will be an overview of Codex/ChatGPT (especially creating agents). Tutorial links, Youtube demos, etc.

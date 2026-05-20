@@ -4,6 +4,8 @@ title: "2.4.2.7 UFA TF"
 permalink: /2.4.2.7-ufa-tf/
 ---
 
+[← 2.4.2 UFAs](/2.4.2-ufas/)
+
 <br>
 
 *Work in progress.*

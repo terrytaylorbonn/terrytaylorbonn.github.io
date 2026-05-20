@@ -4,6 +4,8 @@ title: "2.4.2.6 UFA CNN"
 permalink: /2.4.2.6-ufa-cnn/
 ---
 
+[← 2.4.2 UFAs](/2.4.2-ufas/)
+
 <br>
 
 *Work in progress.*

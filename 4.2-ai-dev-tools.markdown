@@ -5,6 +5,8 @@ permalink: /4.2-ai-dev-tools/
 description: Last edit 26.0501
 ---
 
+[← 4 Resources](/4_resources/)
+
 <br>
 
 The section focuses on 

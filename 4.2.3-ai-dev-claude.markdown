@@ -5,6 +5,8 @@ permalink: /4.2.3-ai-dev-claude/
 description: Last edit 26.0501
 ---
 
+[← 4.2 AI dev tools](/4.2-ai-dev-tools/)
+
 <br>
 
 This page will be an overview of Claude (especially creating agents). Tutorial links, Youtube demos, etc.

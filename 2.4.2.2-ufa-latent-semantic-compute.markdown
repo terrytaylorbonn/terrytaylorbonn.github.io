@@ -4,6 +4,8 @@ title: "2.4.2.2 UFA latent-semantic-computation"
 permalink: /2.4.2.2-ufa-latent-semantic-compute/
 ---
 
+[← 2.4.2 UFAs](/2.4.2-ufas/)
+
 <!-- title: "(2b)-1a Latent semantic computation"
  -->
 

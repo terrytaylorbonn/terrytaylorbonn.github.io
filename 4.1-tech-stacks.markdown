@@ -4,6 +4,8 @@ title: Tech Stacks & Docs
 permalink: /4.1-tech-stacks/
 ---
 
+[← 4 Resources](/4_resources/)
+
 <!-- Tech Stacks & Docs covers full-stack development, APIs, and documentation systems. -->
 
 <br> 

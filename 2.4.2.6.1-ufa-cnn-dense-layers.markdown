@@ -4,6 +4,8 @@ title: "2.4.2.6.1 UFA CNN denselayers"
 permalink: /2.4.2.6.1-ufa-cnn-dense-layers/
 ---
 
+[← 2.4.2.6 UFA CNN](/2.4.2.6-ufa-cnn/)
+
 <br>
 
 ### tell me about the 3 layers of dense 4096 fully connected neurons in alexnet that output 1 of 1000 classes
