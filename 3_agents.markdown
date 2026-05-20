@@ -33,7 +33,7 @@ The core control loop is traditional non-AI deterministic programming that perfo
 
 <br>
 
-### [3.3 Agentic AI projects](/3.3-ai-projects/). Demos (with Github repo and docs)
+### **[3.3 Agentic AI projects](/3.3-ai-projects/). Demos (with Github repo and docs)**
 
 This section focuses on "spinning up" real-world projects quickly with minimal code analysis or manual coding. 
 
