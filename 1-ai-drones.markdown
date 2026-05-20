@@ -7,8 +7,11 @@ permalink: /1-drones/
 <!-- USE THIS TEXT ***********************************************
 
 This was the first phase of ZiptieAI (the name was inspired by the zipties Ukraine used to quickly configure drones). **My original plan was to spend the majority of my time on building the AI**. But I ended up spending most of my time on building drones because of quality and usability issues with the open source software and components. 
-I was hoping to work as a volunteer drone builder in Ukraine. I speak Russsian and understand Ukrainian. I spent a total of 2 years in Ukraine. Its a complicated place (even without the war), even if you are just looking for a war-time volunteer job. -->
+I was hoping to work as a volunteer drone builder in Ukraine. I speak Russsian and understand Ukrainian. I spent a total of 2 years in Ukraine. Its a complicated place (even without the war), even if you are just looking for a war-time volunteer job. 
 
+<br> 
+
+<img src="/assets/zai_evolution_ch1.png" alt="drones" width="35%"> -->
 
 <br> 
 

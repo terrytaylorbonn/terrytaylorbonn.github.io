@@ -104,11 +104,7 @@ I documented my AI drone activities in detail. My original plan was to build my 
 
 ### **Agents**
 
-**[Agentic AI](/agentic-ai/)**. **AI agents are the deterministic control loops (often written in Python) that are the core of AI apps**. My interest in AI is primarily in this area.  I became particulary interested in Palantir's AI systems because 
-- (1) they are very effective and 
-- (2) they can be used for a vast array of non-military purposes (logistics, manufacturing, healthcare, defense, operations, business intelligence)
-
-**[AI dev tools](/AI-dev-tools/)**. The section focuses on 
+**[AI dev tools](/4.2-ai-dev-tools/)**. The section focuses on 
 - AI dev tools/IDEs (VSCode, Codex, Cursor, etc) and 
 - related plugins (like the Render plugin for Codex)
 
@@ -277,7 +273,7 @@ The demos themselves (representational learning, belief tracking, control loops,
 
 <br>
 
-#### (4) [Agentic AI](/agentic-ai/)
+#### (4) [Agentic AI](/3_agents/)
 
 <!-- PALANTIR: This is your best section. Minor trimming only. Fixed "particulary". -
 
@@ -298,7 +294,7 @@ Agentic AI is one of the fastest-growing segments. Palantir proves these systems
 
 <br>
 
-#### (5) [AI Dev Tools](/AI-dev-tools/)
+#### (5) [AI Dev Tools](/4.2-ai-dev-tools/)
 
 <!-- STUB: Original was too short. Gave it a bit more substance without over-expanding. --
 

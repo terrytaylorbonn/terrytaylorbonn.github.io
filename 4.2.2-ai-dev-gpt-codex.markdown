@@ -1,7 +1,7 @@
 ---
 layout: page
-title: "(5.2) GPT/Codex"
-permalink: /GPT-Codex-overview/
+title: "4.2.2 GPT/Codex"
+permalink: /4.2.2-ai-dev-gpt-codex/
 description: Last edit 26.0501
 ---
 

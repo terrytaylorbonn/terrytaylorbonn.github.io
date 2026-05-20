@@ -4,7 +4,11 @@ title: "2 AI (models)"
 permalink: /2_models/
 ---
 
-<br>
+<br> 
+
+<img src="/assets/zai_evolution_ch2.png" alt="drones" width="50%">
+
+
 
 **Goals of this section:** 
 - Convey the core concepts of AI
@@ -12,6 +16,7 @@ permalink: /2_models/
 - and to dispel AI hype.
 
 That last point is essential for successful AI projects. **Models run on clocked binary circuits**. They have no intelligence. You could run LLMs on electro-mechanical relays (it would take years to generate a token, but it theoretically possible). **LLM intelligence simulation is based on (1) binary computing structures and (2) massive computing power/speed**. The more you understand how LLMs work, the better you can use them in AI projects. 
+
 
 
 <br>

@@ -1,13 +1,11 @@
 ---
 layout: page
-title: "(5) AI dev tools"
-permalink: /AI-dev-tools/
+title: "4.2 AI dev tools"
+permalink: /4.2-ai-dev-tools/
 description: Last edit 26.0501
 ---
 
-# NEW
-
-#### **[4.1 AI dev tools](/AI-dev-tools/)**
+<br>
 
 The section focuses on 
 - AI dev tools/IDEs (VSCode, Codex, Cursor, etc) and 
@@ -42,9 +40,9 @@ TOC
 ## 1 IDE overviews, intros, videos 
 
 
-- [(5.1) Cursor](/Cursor-overview/)
-- [(5.2) GPT/Codex](/GPT-Codex-overview/)
-- [(5.3) Claude](/Claude-dev-tools/) (not an IDE, but incluuded anyway)
+- [(4.2.1) Cursor](/4.2.1-ai-dev-cursor/)
+- [(4.2.2) GPT/Codex](/4.2.2-ai-dev-gpt-codex/)
+- [(4.2.3) Claude](/4.2.3-ai-dev-claude/) (not an IDE, but incluuded anyway)
 
 <!-- <img src="/assets/ai_project_diagram_5.png" alt="drones" width="45%">  -->
 

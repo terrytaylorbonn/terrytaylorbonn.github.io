@@ -13,8 +13,6 @@ permalink: /3.1-agentic/
 - **3 Agent demos (no AI)**. Lab notes on my Gdrive. Code on my Github. 
 
 Notes:
-- [4a chat about iAgent and eAgent](/4a-chat-about-iAgent-and-eAgent/) 26.0514
-
 *In an agentic system a deterministic program (like Python) is the central control loop* <br>
 <img src="/assets/4_4_agent_ball.png" alt="drones" width="30%"> 
 

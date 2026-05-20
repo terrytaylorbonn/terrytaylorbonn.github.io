@@ -1,7 +1,7 @@
 ---
 layout: page
-title: "(5.1) Cursor overview"
-permalink: /Cursor-overview/
+title: "4.2.1 Cursor overview"
+permalink: /4.2.1-ai-dev-cursor/
 description: Last edit 26.0501
 ---
 

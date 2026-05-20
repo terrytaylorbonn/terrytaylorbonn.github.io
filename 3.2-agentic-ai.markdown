@@ -104,10 +104,6 @@ For details see the lab notes docx **#603\_PAL\_.docx** on the **[Gdrive](https:
 
 <br>
 
-*Notes: [4a chat about iAgent and eAgent](/4a-chat-about-iAgent-and-eAgent/) 26.0514*
-
-<!-- #### **[4c.3 Agent <-> LLM functional overview](/4c.3-agent-llm-func-overview/) (temp working file)** -->
-
 <br>
 
 

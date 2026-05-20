@@ -1,7 +1,7 @@
 ---
 layout: page
-title: "(5.3) Claude overview"
-permalink: /Claude-dev-tools/
+title: "4.2.3 Claude overview"
+permalink: /4.2.3-ai-dev-claude/
 description: Last edit 26.0501
 ---
 

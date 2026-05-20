@@ -16,7 +16,7 @@ title: Home
 
 **The following are the top-level pages** *(see also the [Wiki](https://github.com/terrytaylorbonn/auxdrone/wiki))*.  
 
-- [Timeline](/the-future/). ZiptieAI site diagram, start, present, and future.
+- [Timeline](/0-timeline/). ZiptieAI site diagram, start, present, and future.
 - **[1 Drones](/1-drones/)**. FPV/Pixhawk drones (with CNN object recognition). 
 - **[2 AI (models)](/2_models/)**. CNNs, predictive/robotic NNs, LLMs, and agentic LLMs (*see also **[The gist of LLMs](/2.4.1-llm-gist/)***). 
 - **[3 Agents](/3_agents/)**. Agents, agents+AI, and projects.
