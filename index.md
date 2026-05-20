@@ -19,7 +19,7 @@ title: Home
 - [Timeline](/0-timeline/). ZiptieAI site diagram, start, present, and future.
 - **[1 Drones](/1-drones/)**. FPV/Pixhawk drones (with CNN object recognition). 
 - **[2 AI (models)](/2_models/)**. CNNs, predictive/robotic NNs, LLMs, and agentic LLMs (*see also **[The gist of LLMs](/2.4.1-llm-gist/)***). 
-- **[3 Agents](/3_agents/)**. Agents, agents+AI, and projects.
+- **[3 Agents](/3_agents/)**. Agents, agents+AI, and **[real-world projects](/3.3-ai-projects/)** (the end goal of this site). 
 - **[4 Resources](/4_resources/)**. Tech stacks, dev tools, docs, wiki, Substack, Youtube, Github, and Google Drive. 
 - [About](/about/).
 

@@ -61,10 +61,8 @@ Core diagrams (my own) that explain the architecture.
 
 <br>
 
-
-
 ### [3.2.3 AI infrastructure](/3.2.3-ai-agent-ai-infrastructure/)
-**Agents likewise required external orchestration layers that augment the TF/UFA semantic engine capabilities** (such as Tools, Filesystem access, RAG,MCP, APIs, and Workflow orchestration).
+Agents require external orchestration layers that augment the TF/UFA semantic engine capabilities (such as Tools, Filesystem access, RAG,MCP, APIs, and Workflow orchestration).
 
 <!-- new commands that made them **"agents with AI support"**.
 - Connect to LLM
@@ -83,9 +81,6 @@ Very basic demos that show how **deterministic agents use TF/UFA semantic capabi
 - 5 RAG
 - 6c MCP + LLM tool choice. 
 
-Code on GitHub. More demos to follow soon.
-
-
 <br>
 
 ### [3.2.5 PAL demos](/3.2.5-ai-agent-pal-demos/)
@@ -100,11 +95,6 @@ PAL (Palantir) demos focus on:
 - structured outputs
 - external orchestration
 
-For details see the lab notes docx **#603\_PAL\_.docx** on the **[Gdrive](https://drive.google.com/drive/folders/1-Adawag9uA8_bq-hDF-nOuPYaRLz1eEO)**.  
-
 <br>
-
-<br>
-
 
 26.0518

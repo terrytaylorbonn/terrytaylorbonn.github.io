@@ -8,7 +8,15 @@ permalink: /3.2.4-ai-agent-basic-demos/
 
 <br>
 
+Very basic demos that show how **deterministic agents use TF/UFA semantic capabilities**. 
+- 1 Basic tool
+- 3 Filesystem
+- 5 RAG
+- 6c MCP + LLM tool choice. 
+
 *Following copied from docx file [#606_ai_ides_.docx (on Gdrive)](https://drive.google.com/drive/folders/1-Adawag9uA8_bq-hDF-nOuPYaRLz1eEO) .. still need to format, add pics...*
+
+For details see the lab notes docx **#606\_ai\_ides.docx** on the **[Gdrive](https://drive.google.com/drive/folders/1-Adawag9uA8_bq-hDF-nOuPYaRLz1eEO)**. 
 
 <br>
 

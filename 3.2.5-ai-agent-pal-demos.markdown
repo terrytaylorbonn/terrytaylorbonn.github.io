@@ -9,9 +9,10 @@ permalink: /3.2.5-ai-agent-pal-demos/
 
 <br>
 
-This page is WIP (v1 26.0509). I need to go back through these demos and document.
+For details see the lab notes docx **#603\_PAL\_.docx** on the **[Gdrive](https://drive.google.com/drive/folders/1-Adawag9uA8_bq-hDF-nOuPYaRLz1eEO)**.  
 
-Simple demos are the best way to understand the core of agentic+AI apps. For details see the lab notes doc **#603\_PAL\_.docx** (PAL = Palantir) on my **[Gdrive](https://drive.google.com/drive/folders/1-Adawag9uA8_bq-hDF-nOuPYaRLz1eEO)**.  
+
+Simple demos are the best way to understand the core of agentic+AI apps. For details see the lab notes doc **#603\_PAL\_.docx** (PAL = Palantir) on the **[Gdrive](https://drive.google.com/drive/folders/1-Adawag9uA8_bq-hDF-nOuPYaRLz1eEO)**.  
 
 <img src="/assets/4_6_2x.png" alt="drones" width="40%"> 
 <img src="/assets/4_5_3x_bbb.png" alt="drones" width="40%"> 
@@ -20,8 +21,5 @@ Simple demos are the best way to understand the core of agentic+AI apps. For det
 
 <br>
 
-*See also: [← 3.2 Agentic + AI](/3.2-agentic-ai/)*
 
-<br>
-
-26.0518
+26.0520

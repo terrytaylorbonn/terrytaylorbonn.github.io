@@ -6,31 +6,23 @@ permalink: /3.2.1-ai-agent-intro/
 
 [← 3.2 Agents + AI](/3.2-agentic-ai/)
 
+<br>
+
+**Just like the LLM internal agent and TF must work together, so must the extAgent and LLM.**
+
+- 1 Agents existed long before AI
+- 2 Agentic AI (LLMs designed for agents)
+- 3 AI agents (agents that use AI assistants to make decisions)
+- 4 Model interface layer (MIL)
+
+*External agent (left) and the LLM (right)*<br>
+<img src="/assets/GPT_agent.png" alt="drones" width="50%">
 
 <br>
 
-**Just like iAgent and TF work together, so must extAgent and LLM.**
+### **1 Agents existed long before AI**
 
-- 1.1 Agents existed long before AI
-- 1.2 Agentic AI (LLMs designed for agents)
-- 1.3 AI'ic agents
-- 1.4 Model interface layer (MIL)
-
-
-
-<br>
-
-### **1.1 Agents existed long before AI**
-
-
-Your entire architecture is basically:
-- **#1 deterministic agent systems existed before LLMs (BUT were expensive and rigid).**
-- **2 TF/UFA semantic capabilities made those systems vastly more practical and flexible.**
-
-That is actually a very strong and coherent thesis.
-
-
-Yes — honestly I think that is now a very strong core thesis for the entire Agentic AI section.
+<!--GPT: Yes — honestly I think that is now a very strong core thesis for the entire Agentic AI section.
 It is:
 -	simple 
 -	historically grounded 
@@ -42,13 +34,28 @@ LLM = propose
 Code = executes
 philosophy.
 I would only slightly tighten the wording:
-VERY IMPORTANT insight for this site
+VERY IMPORTANT insight for this site -->
 
-3.1 Deterministic agent systems existed before LLMs,
-but were expensive, rigid, and difficult to scale.
+***GPT**: "Your entire architecture is basically **(1) Deterministic agent systems existed before LLMs** (but were expensive and rigid) ...."* 
 
-3.2 TF/UFA semantic capabilities made such systems
-vastly more practical and flexible by enabling:
+It took a decade for AI-assist to be added to Palantir agents (SW). Before AI Palantir agents used ontology (their own mini-dictionary) to limit the human language that could be used in their systems. And it worked. It required "sanitzing" all inputs, but it could process vast amounts of data, looking for that needle in the haystack that might signal another secret 9/11 style terrorist attack.
+
+<!-- I think that now ties together:
+-	your PAL demos 
+-	your ontology focus 
+-	your UFA page 
+-	your deterministic-agent viewpoint 
+-	your skepticism of “AI magic” 
+-	your emphasis on orchestration. 
+The whole framework is becoming pretty coherent. -->
+
+<br>
+
+### **2 Agentic AI (LLMs designed for agents)**
+ 
+***GPT**: "...and **(2) TF/UFA semantic capabilities made those systems vastly more practical and flexible.** That is actually a very strong and coherent thesis."*
+
+TF/UFA semantic capabilities made such systems vastly more practical and flexible by enabling:
 - semantic interpretation
 - structured outputs
 - ontology alignment
@@ -59,19 +66,7 @@ vastly more practical and flexible by enabling:
 
 This is one of the core reasons modern agentic AI became practical.
 
-I think that now ties together:
--	your PAL demos 
--	your ontology focus 
--	your UFA page 
--	your deterministic-agent viewpoint 
--	your skepticism of “AI magic” 
--	your emphasis on orchestration. 
-The whole framework is becoming pretty coherent.
 
-<br>
-
-### **1.2 Agentic AI (LLMs designed for agents)**
- 
 The following are just a few examples of how AI is a very helpful assistant for agentic apps:
 - Interpret/sanitize messy human language text
 - Create human language explanations
@@ -79,51 +74,48 @@ The following are just a few examples of how AI is a very helpful assistant for 
 - Input and output (of "messy" human language representations)
 - Rule injection (by AI into the main loop)
 
-These capabilities an agentic AI app 
+These capabilities make agentic AI apps 
 - vastly more flexible and capable
-- at the cost of unpredictabilty (For many apps this is an excellent tradeoff)
+- at the cost of unpredictabilty
 
-they can be used for a vast array of  purposes (logistics, manufacturing, healthcare, defense, operations, business intelligence)
-
+For many apps this is an excellent tradeoff. 
 
 #### **About planning and other "intelligent" AI functionality**
 
-*For background on VL, storylines, etc discussed below, see [The gist of LLMs](/2.4.1-llm-gist/).*
+*For background on VL, storylines, etc, discussed below, see **[The gist of LLMs](/2.4.1-llm-gist/)**.*
 
-In reality AI (in my always humble opinion) is more about pattern matching than language. You input messy human language tokens into the TF, and it generates a vector language (VL) representation of the storyline *(I don't really like the term "vector"; the 12288 vectors for GPT-3 are just scalar indicators of some pattern; usually a vector means a scalar with some other aspect, like direction, etc)*. The VL for the final token is pattern matched against all tokens in the vocabulary. The closest matching token for that pattern is selected as the next token.
+AI is more about pattern matching than language. The TF generates from "messy" human language a vector language (VL) representation of the input "storyline" *(I don't prefer term "vector" for the 12288 FP numbers for each GPT-3 token; to me they are just scalar (numeric) indicators of detected semantic (meaning) features)*. The VL for the final token is pattern matched against all tokens in the vocabulary. The closest matching token for that pattern is selected as the next token. 
 
-It really is that simple. Then again, computers are all based on binary switches. But with a bit of ingeniuty you can milk such systems for all they are worth (and that can be quite a lot, for PC's and LLM's). An example: An LLM can detect (if it saw such a pattern before) that the word "milk" I used in the previous sentence was a verb and it was not about literally milking a cow. That is not intelligence, its pattern matching. 
+Although based solely on patterns detected in massive amounts of training data, this functionality can do much more. It can be used for planning planning (taking complex planning input prompts and splitting up into smaller atomic parts that can be more easily be verified and executed by the agent), JSON specification of LLM output, etc. 
+
+<!-- The ingenuity behind such functionality allows you to milk such systems for all they are worth. An example: An LLM can detect (if it saw such a pattern before) that the word "milk" I used in the previous sentence was a verb and it was not about literally milking a cow. That is not intelligence, its pattern matching. -->
 
 <br>
 
-### **1.3 AI'ic agents**
+### **3 AI agents (agents that use AI assistants to make decisions)**
 
-It took a decade for AI-assist to be added to Palantir agents (SW). Before AI Palantir agents used ontology (their own mini-dictionary) to limit the human language that could be used in their systems. And it worked. It required "sanitzing" all inputs, but it could process vast amounts of data, looking for that needle in the haystack that might signal another secret 9/11 style terrorist attack.
+AI's arrival vastly enhanced Palantir system performance because their machines could now "communicate" freely with messy chaotic human language input. But Palantir's systems, like **all AI-ic agents systems, are assisted by AI (not controlled by AI)**. The LLM is simply a "helpful assistant". **LLMs control nothing, push no buttons**. But AI hype usually talks about "agentic AI", not "AI agents". Agentic AI that might one day take over the world ([Skynet](https://en.wikipedia.org/wiki/Skynet_(Terminator)) style; *see my substack post [#73 Understanding Palantir Maven / Why AI will never become Skynet](https://ziptieai.substack.com/p/73-understanding-palantir-maven-through)*). That hype generated a lot of publicity (and investment). 
 
-AI's arrival vastly enhanced Palantir system performance because their machines could now "communicate" freely with messy chaotic human language input. But Palantir's systems, like **all AI-ic agents systems, are assisted by AI (not controlled by AI)**. The LLM is simply a "helpful assistant". **LLMs control nothing, push no buttons**. 
-
-But AI had to be the center of attention for all such projects. It wasn't "AI'ic agents", but rather "agentic AI". Something that might one day take over the world ([Skynet](https://en.wikipedia.org/wiki/Skynet_(Terminator)) style; *see my substack post [#73 Understanding Palantir Maven / Why AI will never become Skynet](https://ziptieai.substack.com/p/73-understanding-palantir-maven-through)*).  That hype generated a lot of publicity. 
-
-I once read that 95% of AI projects fail. One reason is all the hype. The follwing diagram is an important example. *"What Is Agentic AI? Agentic AI is an innovative advancement in artificial intelligence (AI), characterized by its ability to independently make decisions and implement goal-oriented actions on behalf of users or systems." ([link](https://www.cadence.com/en_US/home/explore/agentic-ai.html))*
+The following diagram is a good example. *"What Is Agentic AI? Agentic AI is an innovative advancement in artificial intelligence (AI), characterized by its ability to independently make decisions and implement goal-oriented actions on behalf of users or systems." ([link](https://www.cadence.com/en_US/home/explore/agentic-ai.html))*
 
 *An example of the LLM-centric agentic AI universe*<br>
 <img src="/assets/4_9_cadence.png" alt="drones" width="35%"> 
 
-Its quite important to understand what AI'ic agents AI is (at least hands-on experience with the basics). 
+<br>
+
+### **4 Model interface layer (MIL)**
+
+The LLM internal Agent and TF are customized to work together to maximize the reliability and accuracy of agentic AI functionality.
+
+But this functionality will invariably vary to some degree between all LLMs. Therefore the AI agentic may need to "tune" its prompts and interpretations of responses. To fix this problem, Palantir created a "Model Interface Layer" (MIL) between the LLM and AI agent.
 
 <br>
 
-### **1.4 Model interface layer (MIL)**
 
-(to switch models... iAgent and TF are customized to work together, agent and LLM maybe now, so need interface)
-
-<br>
-
-
-<br>
+<!-- <br>
 
 *See also: [← 3.2 Agentic + AI](/3.2-agentic-ai/)*
 
-<br>
+<br> -->
 
-26.0518
+26.0520
