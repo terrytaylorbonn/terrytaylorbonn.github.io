@@ -63,9 +63,7 @@ The LLM is a helpful assistant. Nothing more. The center of the Agentic AI unive
 
 Getting the AI agent and the agentic AI LLM to work together **reliably** is the key challenge. These demos are from demo **"3 Filesystem"** in section **[3.2.4 Agentic + AI / Basic demos](/3.2.4-ai-agent-basic-demos/)**.
 
-<img src="/assets/readfile1.png" alt="drones" width="65%"> 
-
-
+<img src="/assets/readfile3.png" alt="drones" width="65%">
 
 
 ***(0) Test file and the system_prompt for the LLM.***

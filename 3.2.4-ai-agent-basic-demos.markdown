@@ -21,113 +21,14 @@ For details see the lab notes docx **#606\_ai\_ides.docx** on the **[Gdrive](htt
 
 <br>
 
-## 1 Basic tool (no AI) demo
-
-The only real value of this demos is that it shows that "tool" just means a Python construct.   
-
-### 1.1 py script
-
-```
-# ai_demo_01_tool.py
-
-# Basic tool demo:
-# LLM = propose
-# Code = executes
-
-import json
-
-# -----------------------------
-# 1. Fake LLM output
-# -----------------------------
-# In real agentic AI, the LLM would generate this JSON.
-# For now, we hardcode it so the tool concept is clear.
-
-llm_output = """
-{
-  "tool": "calculator",
-  "operation": "multiply",
-  "a": 12,
-  "b": 7
-}
-"""
-
-# -----------------------------
-# 2. Tool implementation
-# -----------------------------
-
-def calculator(operation, a, b):
-    if operation == "add":
-        return a + b
-    if operation == "subtract":
-        return a - b
-    if operation == "multiply":
-        return a * b
-    if operation == "divide":
-        return a / b
-    raise ValueError(f"Unknown operation: {operation}")
-
-# -----------------------------
-# 3. External agent executes tool
-# -----------------------------
-
-def run_agent(llm_json):
-    action = json.loads(llm_json)
-
-    if action["tool"] == "calculator":
-        result = calculator(
-            action["operation"],
-            action["a"],
-            action["b"]
-        )
-
-        return {
-            "tool": action["tool"],
-            "operation": action["operation"],
-            "result": result
-        }
-
-    raise ValueError(f"Unknown tool: {action['tool']}")
-
-# -----------------------------
-# 4. Run demo
-# -----------------------------
-
-result = run_agent(llm_output)
-
-print("LLM proposed:")
-print(llm_output)
-
-print("\nCode executed:")
-print(json.dumps(result, indent=2))
-
-```
-
-### 1.2 Test
-
-```
-$ python ai_demo_01_tool.py 
-LLM proposed:
-
-{
-  "tool": "calculator",
-  "operation": "multiply",
-  "a": 12,
-  "b": 7
-}	
-
-Code executed:
-{
-  "tool": "calculator",
-  "operation": "multiply",
-  "result": 84
-}
-```
- 
-<br>
 
 ## 1b Basic tool (with AI) demo 
 
 This is actually the first demo where TF/UFA semantic capabilities directly enable external deterministic execution.
+
+<img src="/assets/calc1b.png" alt="drones" width="65%"> 
+
+
 
 ### 1b.1 py script
 
@@ -149,8 +50,19 @@ client = OpenAI(
 )
 
 # -----------------------------------
-# Tool implementation (SAME) 
+# Tool implementation
 # -----------------------------------
+
+def calculator(operation, a, b):
+    if operation == "add":
+        return a + b
+    if operation == "subtract":
+        return a - b
+    if operation == "multiply":
+        return a * b
+    if operation == "divide":
+        return a / b
+    raise ValueError(f"Unknown operation: {operation}")
 
 # -----------------------------------
 # Prompt
@@ -319,7 +231,9 @@ because the demo is intentionally simple.
 ## 3 Filesystem tool
 
 
-<img src="/assets/readfile1.png" alt="drones" width="65%"> 
+<img src="/assets/readfile3.png" alt="drones" width="65%"> 
+
+
 
 
 This demo is important because it begins demonstrating:
@@ -585,3 +499,111 @@ Single-step action only.
 <br>
 
 26.0521
+
+
+<!-- 
+## 1 Basic tool (no AI) demo
+
+The only real value of this demo is that it shows that "tool" just means a Python construct (maybe just delete this; GPT likes this demo).   
+
+### 1.1 py script
+
+```
+# ai_demo_01_tool.py
+
+# Basic tool demo:
+# LLM = propose
+# Code = executes
+
+import json
+
+# -----------------------------
+# 1. Fake LLM output
+# -----------------------------
+# In real agentic AI, the LLM would generate this JSON.
+# For now, we hardcode it so the tool concept is clear.
+
+llm_output = """
+{
+  "tool": "calculator",
+  "operation": "multiply",
+  "a": 12,
+  "b": 7
+}
+"""
+
+# -----------------------------
+# 2. Tool implementation
+# -----------------------------
+
+def calculator(operation, a, b):
+    if operation == "add":
+        return a + b
+    if operation == "subtract":
+        return a - b
+    if operation == "multiply":
+        return a * b
+    if operation == "divide":
+        return a / b
+    raise ValueError(f"Unknown operation: {operation}")
+
+# -----------------------------
+# 3. External agent executes tool
+# -----------------------------
+
+def run_agent(llm_json):
+    action = json.loads(llm_json)
+
+    if action["tool"] == "calculator":
+        result = calculator(
+            action["operation"],
+            action["a"],
+            action["b"]
+        )
+
+        return {
+            "tool": action["tool"],
+            "operation": action["operation"],
+            "result": result
+        }
+
+    raise ValueError(f"Unknown tool: {action['tool']}")
+
+# -----------------------------
+# 4. Run demo
+# -----------------------------
+
+result = run_agent(llm_output)
+
+print("LLM proposed:")
+print(llm_output)
+
+print("\nCode executed:")
+print(json.dumps(result, indent=2))
+
+```
+
+### 1.2 Test
+
+```
+$ python ai_demo_01_tool.py 
+LLM proposed:
+
+{
+  "tool": "calculator",
+  "operation": "multiply",
+  "a": 12,
+  "b": 7
+}	
+
+Code executed:
+{
+  "tool": "calculator",
+  "operation": "multiply",
+  "result": 84
+}
+```
+ 
+<br>
+
+-->
