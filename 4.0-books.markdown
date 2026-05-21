@@ -19,6 +19,19 @@ These books are on the [Gdrive](https://drive.google.com/drive/folders/1-Adawag9
 <img src="/assets/book2_llm.png" alt="drones" width="70%"> 
 
 
+### **__ziptieai_BOOK4_GI_v02_260103.docx**
+
+I read a lot of hype from the tech titans/gurus about how future binary-based deterministic devices (GPUs) would eventually host real intelligence, thinking, emotions, etc. To me such talk is utter nonsense (and they know it).
+
+I do think, however, that there is a path to true intelligence hosted on electronic devices. That's what this book is about. Just my thoughts.
+
+<img src="/assets/book4_gi.png" alt="drones" width="50%"> 
+
+
+
+
+
+
 <br>
 
 26.0521 (v1 26.0521)
