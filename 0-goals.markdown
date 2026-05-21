@@ -174,8 +174,9 @@ During the drone and model phases of ZiptieAI, I reorganized this website and th
 
 ### **AI models (especially Agentic LLMs)**
 
-Learn the gist of AI models. Theres quite a lot of gist.
+Learn the gist of **[AI Models](2_models)**. Theres quite a lot of gist.
 
+<!--
 **[UFAs](/2.4.2-ufas/)**. The core function a model performs.
 
 **[CNNs](https://ziptieai.com/cnn/)**. The AI in the AI drones was object recognition using CNNs (convoluted neural networks) running on the Nvidia Jetson Nano and on the PI computer. **Studying CNNs is a good first step for studying the much more complex LLMs.** Note: **"My depiction"** below means I have not seen such a diagram elsewhere.
@@ -186,9 +187,9 @@ Learn the gist of AI models. Theres quite a lot of gist.
 
 
 **[Robotic AI](/2.3-robotic-ai/)**. When I first heard Yan LeCun's talks about how JEPA would provide real robotic intelligence I was fascinated. I totally agreed with what he said about the limitations of LLMs, and he was one of the very few gurus actually saying such things. But after doing a lot of hands-on JEPA (and robotics) demos, **I came to the conclusion that LeCun's version of JEPA was a lot of hype**. What he was selling was not fundamentally different from LLMs. GPT agreed.
+-->
 
 
-<br>
 
 ***My depictions** of how AlexNet (left) and LLM transformer (right) work*<br>
 <img src="/assets/cnn2.png" alt="desc" width="35%">  <img src="/assets/tf_S1-S6.png" alt="desc" width="40%"> 
