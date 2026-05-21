@@ -63,10 +63,19 @@ The LLM is a helpful assistant. Nothing more. The center of the Agentic AI unive
 
 Getting the AI agent and the agentic AI LLM to work together **reliably** is the key challenge. These demos are from demo **"3 Filesystem"** in section **[3.2.4 Agentic + AI / Basic demos](/3.2.4-ai-agent-basic-demos/)**.
 
+<img src="/assets/readfile1.png" alt="drones" width="65%"> 
+
+
+
 
 ***(0) Test file and the system_prompt for the LLM.***
 
 ```
+(DATA_DIR / "taipei_shipments.txt").write_text(
+    "Truck 12 delayed in Taipei due to flooding.\n"
+    "Truck 18 on schedule in Taipei.\n",
+    encoding="utf-8"
+)
 (DATA_DIR / "supplier_notes.txt").write_text(
     "Supplier A reported outage affecting brake components.\n",
     encoding="utf-8"
@@ -102,7 +111,6 @@ CODE EXECUTED:
   "filename": "taipei_shipments.txt",
   "content": "Truck 12 delayed in Taipei due to flooding.\nTruck 18 on schedule in Taipei.\n"
 }
-
 ```
 
 
@@ -153,7 +161,6 @@ CODE EXECUTED:
   "filename": "supplier_notes.txt",
   "content": "Supplier A reported outage affecting brake components.\n"
 }
-
 ```
 
 <br>

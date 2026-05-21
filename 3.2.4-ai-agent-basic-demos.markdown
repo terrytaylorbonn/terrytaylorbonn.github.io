@@ -318,6 +318,10 @@ because the demo is intentionally simple.
 
 ## 3 Filesystem tool
 
+
+<img src="/assets/readfile1.png" alt="drones" width="65%"> 
+
+
 This demo is important because it begins demonstrating:
 - TF/UFA semantic capabilities
 - controlling access to external context.
@@ -580,4 +584,4 @@ Single-step action only.
 
 <br>
 
-26.0520
+26.0521
