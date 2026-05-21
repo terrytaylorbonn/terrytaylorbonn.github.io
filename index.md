@@ -9,23 +9,26 @@ title: Home
 
 <br>
 
-*Site diagram [(details on timeline page)](/0-timeline/)* <br>
+*Site diagram [(details on timeline page)](/0-goals/)* <br>
 <img src="/assets/zai_evolution3.png" alt="smol" width="55%"> 
 
 <br>
 
 **The following are the top-level pages** *(see also the [Wiki](https://github.com/terrytaylorbonn/auxdrone/wiki))*.  
 
-- [Timeline](/0-timeline/). ZiptieAI site diagram, start, present, and future.
-- **[1 Drones](/1-drones/)**. FPV/Pixhawk drones (with CNN object recognition). 
+- **[Goals](/0-goals/)**. Goals of the site.
+- [1 Drones](/1-drones/). FPV/Pixhawk drones (with CNN object recognition). 
 - **[2 AI (models)](/2_models/)**. CNNs, predictive/robotic NNs, LLMs, and agentic LLMs (*see also **[The gist of LLMs](/2.4.1-llm-gist/)***). 
-- **[3 Agents](/3_agents/)** (the focus of this site). Concepts and demos for
+- **[3 Agents](/3_agents/)**. The main focus of this site (*see also **[3.2.4 AI agent basic demos](/3.2.4-ai-agent-basic-demos/)***).
+- [4 Resources](/4_resources/). Tech stacks, dev tools, docs, wiki, Substack, Youtube, Github, and Google Drive. 
+- [About](/about/).
+
+<!-- Concepts and demos for
   - [3.1 Agentic (no AI)](/3.1-agentic/), 
   - [3.2.4 Agentic + AI (basic)](/3.2.4-ai-agent-basic-demos/), 
   - [3.2.5 Agentic + AI (basic Palantir-style)](3.2.5-ai-agent-pal-demos/), and 
-  - **[3.3 Agentic + AI (real-world projects)](/3.3-ai-projects/)** (the end goal of this site). 
-- **[4 Resources](/4_resources/)**. Tech stacks, dev tools, docs, wiki, Substack, Youtube, Github, and Google Drive. 
-- [About](/about/).
+  - **[3.3 Agentic + AI (real-world projects)](/3.3-ai-projects/)** (the end goal of this site). -->
+
 
 <br>
 

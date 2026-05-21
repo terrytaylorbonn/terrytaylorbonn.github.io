@@ -15,6 +15,15 @@ permalink: /3_agents/
 - Agent = any external (to the LLM) program that calls the LLM API. Basically plays the role of a human during chat (but can do much more).
 - Agent + AI = an LLM is used as a useful assistant.
 
+<!--
+- **[3 Agents](/3_agents/)** (the focus of this site). Concepts and demos for
+  - [3.1 Agentic (no AI)](/3.1-agentic/), 
+  - [3.2.4 Agentic + AI (basic)](/3.2.4-ai-agent-basic-demos/), 
+  - [3.2.5 Agentic + AI (basic Palantir-style)](3.2.5-ai-agent-pal-demos/), and 
+  - **[3.3 Agentic + AI (real-world projects)](/3.3-ai-projects/)** (the end goal of this site). 
+-->
+
+
 
 <br>
 
