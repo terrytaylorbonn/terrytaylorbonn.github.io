@@ -6,80 +6,89 @@ permalink: /2.5-agentic-llms/
 
 [← 2 AI (models)](/2_models/)
 
-<br>
-
-*Following copied from docx file [#606_ai_ides_.docx (on Gdrive)](https://drive.google.com/drive/folders/1-Adawag9uA8_bq-hDF-nOuPYaRLz1eEO) .. still need to format, add pics...*
+*See also: [3.2 Agentic + AI](/3.2-agentic-ai/)*
 
 <br>
 
+This page describes the 9 types of TF/UFA semantic capabilities that were determined during a chat with GPT.
 
-Concepts
+**TOC**
+- **Concepts**. The TF/UFA semantic capabilities revolution and the 3 main groups.
+- **A. Comprehension, memory**. Generalization / approximation, Context tracking, Semantic abstraction, Human-language robustness.
+- **B. Explain**. Ontology alignment / normalization, Explanation / summarization.
+- **C. Deduce, plan**. Structured constrained outputs, Semantic interpretation / inference, Hierarchical planning / workflow synthesis.
 
-How TF/UFA semantic capabilities revolutionized agents
-Your entire architecture is basically:
 
-1 deterministic agent systems existed before LLMs
-BUT were expensive and rigid, and difficult to scale
+<br>
 
-2 TF/UFA semantic capabilities made those systems
-vastly more practical and flexible
-This is one of the core reasons modern agentic AI became practical.
-TF/UFA semantic capabilities made such systems
-vastly more practical and flexible by enabling:
-• semantic interpretation
-• structured outputs
-• ontology alignment
-• planning
-• contextual reasoning
-• generalization
-• explanation generation
+# **Concepts**
 
- 
-3 main groups
+<br>
 
-A. Comprehension, memory
+### How TF/UFA semantic capabilities revolutionized agents
 
-@1 (4) Latent pattern generalization / approximation
-@2 (5) Contextual token dependency tracking
-@3 (7) Semantic feature abstraction
-@4 (8) Human-language robustness
+Your **entire architecture** is basically:
 
-B. Explain
+- **1 deterministic agent systems existed before LLMs**. BUT were expensive and rigid, and difficult to scale
+- **2 TF/UFA semantic capabilities made those systems** vastly more practical and flexible by enabling:
+  - semantic interpretation
+  - structured outputs
+  - ontology alignment
+  - planning
+  -  contextual reasoning
+  - generalization
+  - explanation generation
 
-@5 (3) Semantic normalization / ontology alignment / canonicalization
-@6 (9) Explanation/summarization synthesis
+There are **3 main groups**
 
-C. Deduce, plan 
+- A. Comprehension, memory
+  - @1 Latent pattern generalization / approximation
+  - @2 Contextual token dependency tracking
+  - @3 Semantic feature abstraction
+  - @4 Human-language robustness
+- B. Explain
+  - @5 Semantic normalization / ontology alignment / canonicalization
+  - @6 Explanation/summarization synthesis
+- C. Deduce, plan 
+  - @7 Structured constrained output generation
+  - @8 Semantic interpretation / inference
+  - @9 Hierarchical planning / task decomposition / workflow synthesis
 
-@7 (1) Structured constrained output generation
-@8 (2) Semantic interpretation / inference
-@9 (6) Hierarchical planning / task decomposition / workflow synthesis
-
-D. Tech that AI made possible
-
+<!-- D. Tech that AI made possible
 Step 1 Basic tool demo
 Step 2 Weather API tool.
 Step 3 Filesystem tool.
 Step 4 DB query tool.
 Step 5 RAG retrieval tool.
-Step 6 MCP-connected tool.
+Step 6 MCP-connected tool. -->
 
+<br>
  
-A. Comprehension, memory
- 
-@1 (4) Latent pattern generalization / approximation
+# **A. Comprehension, memory**
+
+<br>
+
+- @1 Latent pattern generalization / approximation
+- @2 Contextual token dependency tracking
+- @3 Semantic feature abstraction
+- @4 Human-language robustness 
+
+<br>
+
+
+### @1 Latent pattern generalization / approximation
 Ability to handle:
-•	unseen phrasing 
-•	approximate similarity 
-•	semantic closeness 
+-	unseen phrasing 
+-	approximate similarity 
+-	semantic closeness 
 without explicit programming.
 
 GPT: The TF-UFA can approximate: 
-• patterns 
-• workflows 
-• (semantic) mappings 
-• relationships 
-• inference rules 
+- patterns 
+- workflows 
+- (semantic) mappings 
+- relationships 
+- inference rules 
 even when exact cases were never explicitly programmed.
 
 In fact, it is one of the MOST important TF/UFA capabilities.
@@ -89,90 +98,110 @@ even when the exact case was never seen before.
 
 Simple example:
 trained/example phrase:
-"shipment delayed"
+- "shipment delayed"
 
 new user phrase:
-"cargo arrived behind schedule"
+- "cargo arrived behind schedule"
 
 → TF still understands:
-delivery_delay
- 
-@2 (5) Contextual token dependency tracking
+- delivery_delay
+
+<br>
+
+### @2 Contextual token dependency tracking
 
 Attention allows tokens to dynamically reference: 
-• earlier instructions 
-• schemas 
-• constraints 
-• conversation history 
-• related entities 
+- earlier instructions 
+- schemas 
+- constraints 
+- conversation history 
+- related entities 
 across long token sequences.
+
 Attention/context-window capability.
 This allows contextual workflows instead of rigid  hardcoded scripting.
 
 Example:
 User:
-"Show delayed shipments"
+- "Show delayed shipments"
 
 Later:
-"What about Taiwan?"
+- "What about Taiwan?"
 
 → TF understands:
-Taiwan refers to the earlier shipment query.
+- Taiwan refers to the earlier shipment query.
 
- 
-@3 (7) Semantic feature abstraction
+<br>
+
+### @3 Semantic feature abstraction
 The TF FFN/UFA layers contain trained detectors/features for: 
-• concepts 
-• entities 
-• relationships 
-• semantic patterns 
-• semantic structures 
+- concepts 
+- entities 
+- relationships 
+- semantic patterns 
+- semantic structures 
 Many researchers now believe much of the model’s “knowledge” resides in FFN layers.
- 
-@4 (8) Human-language robustness
+
+<br>
+
+### @4 Human-language robustness
 Tolerance for:
-•	typos 
-•	grammar errors 
-•	ambiguity 
-•	incomplete input. 
-•	ambiguous language
-•	noisy input
+-	typos 
+-	grammar errors 
+-	ambiguity 
+-	incomplete input. 
+-	ambiguous language
+-	noisy input
 
 Example:
-"shwo delaid truckz taipei"
+- "shwo delaid truckz taipei"
+
 → correctly interpreted as:
-"show delayed trucks Taipei"
+- "show delayed trucks Taipei"
+
+<br>
+
+# **B. Explain**
+
+<br>
+
+- @5 Semantic normalization / ontology alignment / canonicalization
+- @6 Explanation/summarization synthesis
+
+<br>
  
-B. Explain
- 
-@5 (3) Semantic normalization / ontology alignment / canonicalization
+### @5 Semantic normalization / ontology alignment / canonicalization
 Ability to map:
-•	synonyms 
-•	alternate phrasings 
-•	noisy language 
+-	synonyms 
+-	alternate phrasings 
+-	noisy language 
+
 into standardized semantic representations.
 
 Huge LLM advantage.
 Example:
-messy email
-→ ontology JSON
+- messy email
+- → ontology JSON
 
 The key capability is:
-mapping messy unstructured human language
-into standardized ontology structure.
+- mapping messy unstructured human language
+- into standardized ontology structure.
+
 is:
-•	semantic extraction 
-•	semantic normalization 
-•	ontology alignment 
+-	semantic extraction 
+-	semantic normalization 
+-	ontology alignment 
 
 This allows:
-• emails
-• logs
-• notes
-• reports
+- emails
+- logs
+- notes
+- reports
+
 to be transformed into machine-readable semantic records.
 
 Example:
+```
 "Truck 12 delayed due to flooding near Taipei"
 →
 {
@@ -181,84 +210,104 @@ Example:
   "cause":"flooding",
   "location":"Taipei"
 }
+```
 
-Ontology mapping / different words = same meaning
-"blowout"
-→ tire_failure
+#### Ontology mapping / different words = same meaning
+- "blowout"
+- → tire_failure
 
-"shipment late"
-"truck delayed"
-→ delivery_delay
+- "shipment late"
+- "truck delayed"
+- → delivery_delay
 
 NOT primarily feature abstraction
 because:
-•	feature abstraction is lower-level/internal TF mechanics 
-•	FFN latent detectors 
-•	semantic embedding structures 
+-	feature abstraction is lower-level/internal TF mechanics 
+-	FFN latent detectors 
+-	semantic embedding structures 
+
 Those latent features ENABLE this capability, but they are not the capability itself.
+
 So:
 feature abstraction
-→ enables
-semantic normalization
+- → enables
+- semantic normalization
+
 Hierarchy:
+
+```
 latent semantic features
     ↓
 semantic normalization/alignment
     ↓
 ontology records
- 
-@6 (9) Explanation/summarization synthesis
-Ability to convert:
-•	structured/internal representations
-into: 
-•	human-readable explanations.
+```
 
-•	it is NOT merely “chat” 
-•	it is semantic synthesis of internal/structured representations into human language.
+<br>
+
+### @6 Explanation/summarization synthesis
+Ability to convert:
+-	structured/internal representations
+into: 
+-	human-readable explanations.
+
+-	it is NOT merely “chat” 
+-	it is semantic synthesis of internal/structured representations into human language.
 
 Convert machine results into human-readable conclusions.
-3 suppliers affected due to shared parent + route dependency
+- 3 suppliers affected due to shared parent + route dependency
 
-Explanation generation
+#### Explanation generation
+
 GPT: The TF can explain: 
-• plans 
-• outputs 
-• anomalies 
-• decisions 
-• recommendations 
-• machine results
+- plans 
+- outputs 
+- anomalies 
+- decisions 
+- recommendations 
+- machine results
 in human language. 
 This is critical for: 
-• trust 
-• usability 
-• enterprise workflows 
-• analyst systems 
-• PM-facing systems
- 
-C. Deduce, plan 
- 
-@7 (1) Structured constrained output generation
+- trust 
+- usability 
+- enterprise workflows 
+- analyst systems 
+- PM-facing systems
+
+<br>
+
+# **C. Deduce, plan** 
+
+<br>
+
+- @7 Structured constrained output generation
+- @8 Semantic interpretation / inference
+- @9 Hierarchical planning / task decomposition / workflow synthesis
+
+<br>
+
+### @7 Structured constrained output generation
 Ability to generate:
-•	JSON 
-•	schemas 
-•	grammars 
-•	machine-readable structure 
+-	JSON 
+-	schemas 
+-	grammars 
+-	machine-readable structure 
 This is foundational.
 
 you focus more on:
-•	maintaining JSON validity 
-•	schema adherence 
-•	syntax constraints 
-•	structured token continuity. 
+-	maintaining JSON validity 
+-	schema adherence 
+-	syntax constraints 
+-	structured token continuity. 
 That separation is much cleaner conceptually.
 
-GPT: The TF can generate outputs in highly specific formats: 
-• JSON 
-• XML 
-• YAML 
-• API payloads 
-• schemas 
-• ontologies 
+#### GPT: The TF can generate outputs in highly specific formats: 
+- JSON 
+- XML 
+- YAML 
+- API payloads 
+- schemas 
+- ontologies 
 This allows Python agents to reliably parse and execute actions. 
 - TF can maintain strict token-structure constraints across long output sequences.
 - the TF can dynamically generate syntactically valid, schema-constrained token streams.
@@ -267,17 +316,19 @@ This allows Python agents to reliably parse and execute actions.
 
 Prompt defining format of outputs
  
- 
-@8 (2) Semantic interpretation / inference
+<br>
 
-Semantic inference
+### @8 Semantic interpretation / inference
+
+
+#### Semantic inference
 GPT: The TF can infer: 
-• meaning 
-• intent 
-• relationships 
-• context 
-• ontology mappings 
-• hidden connections 
+- meaning 
+- intent 
+- relationships 
+- context 
+- ontology mappings 
+- hidden connections 
 without explicit hardcoded logic.
 
 Supplier outage
@@ -292,32 +343,32 @@ the AI infers relationships/conclusions that were NOT explicitly hardcoded.
 
 Good examples:
 
-Supplier_A provides brake systems.
-Truck_12 uses Supplier_A components.
-Supplier_A outage reported.
-→ inferred risk to Truck_12 deliveries
+- Supplier_A provides brake systems.
+- Truck_12 uses Supplier_A components.
+- Supplier_A outage reported.
+- → inferred risk to Truck_12 deliveries
 
 or:
 
-Road flooding reported near Taipei.
-Several shipments routed through Taipei.
-→ inferred likely delivery delays
+- Road flooding reported near Taipei.
+- Several shipments routed through Taipei.
+- → inferred likely delivery delays
 
+#### Natural-language → machine-language translation
 
-Natural-language → machine-language translation
 GPT: The TF converts vague human requests into: 
-• structured actions 
-• API calls 
-• database queries 
-• filters 
-• workflow steps 
+- structured actions 
+- API calls 
+- database queries 
+- filters 
+- workflow steps 
+
 This is one of the core capabilities behind agentic AI.
 
 Simple example:
+```
 "Show delayed shipments in Taipei"
-
 →
-
 {
   "action":"query",
   "filter":{
@@ -325,11 +376,13 @@ Simple example:
     "location":"Taipei"
   }
 }
+```
+
 That is probably the cleanest demo/example for this capability.
 
 This one is interesting because it overlaps BOTH: 
-(1) Structured constrained output generation and
-(2) Semantic interpretation / inference
+- (1) Structured constrained output generation and
+- (2) Semantic interpretation / inference
 
 But I think fundamentally it belongs MOSTLY under: (2) Semantic interpretation / inference
 - Because the truly remarkable capability is NOT: JSON formatting
@@ -337,18 +390,23 @@ But I think fundamentally it belongs MOSTLY under: (2) Semantic interpretation /
 - The JSON is merely: the constrained output representation.
 
 So the hierarchy is really:
+```
 semantic interpretation
     ↓
 structured constrained output
+```
 
-Natural-language → machine-language translation
+#### Natural-language → machine-language translation
 The TF converts vague human requests into:
-• structured actions
-• API calls
-• database queries
-• filters
-• workflow steps
+- structured actions
+- API calls
+- database queries
+- filters
+- workflow steps
+
 Example:
+
+```
 "Show delayed shipments in Taipei"
 →
 {
@@ -358,59 +416,67 @@ Example:
     "location":"Taipei"
   }
 }
+```
 
 Search / Retrieval Helper (Semantic retrieval interpretation)
 Turn natural language into queries or rank relevant records/documents.
-“What affects Site 1?”
--> graph query / ranked docs
+- “What affects Site 1?”
+- -> graph query / ranked docs
 
 understanding the semantic meaning of the user request and translating that into:
-•	search intent 
-•	entity relationships 
-•	retrieval criteria 
-•	ranking relevance 
+-	search intent 
+-	entity relationships 
+-	retrieval criteria 
+-	ranking relevance 
 
-- The actual: graph query / ranked docs part is external-agent infrastructure.
-- The TF capability is: semantic retrieval interpretation.
+The actual: graph query / ranked docs part is external-agent infrastructure. The TF capability is: semantic retrieval interpretation.
+
 Very roughly:
 - human language
 - → semantic intent understanding
 - → retrieval criteria
 
 Example:
-"What affects Site 1?"
-→ inferred:
-- suppliers
-- routes
-- weather
-- delays
-- dependencies
-- related records
-Then:
-•	graph DB 
-•	RAG 
-•	retrieval engine 
-•	ranking system 
-do the actual retrieval.
- 
-@9 (6) Hierarchical planning / task decomposition / workflow synthesis
-Ability to:
-•	break large goals into substeps 
-•	maintain execution ordering 
-•	preserve workflow structure.
 
-Rule Generator / Rule Injection
+"What affects Site 1?"
+- → inferred:
+  - suppliers
+  - routes
+  - weather
+  - delays
+  - dependencies
+  - related records
+- Then:
+  -	graph DB 
+  -	RAG 
+  -	retrieval engine 
+  -	ranking system 
+- do the actual retrieval.
+
+<br>
+
+### @9 Hierarchical planning / task decomposition / workflow synthesis
+
+
+Ability to:
+-	break large goals into substeps 
+-	maintain execution ordering 
+-	preserve workflow structure.
+
+#### Rule Generator / Rule Injection
 Create new runtime rules without changing source code.
-“Alert if outage + delay + supplier overlap”
--> new rule JSON
+- “Alert if outage + delay + supplier overlap”
+- -> new rule JSON
 
 this is primarily: 
 - (6) Hierarchical task decomposition PLUS:
 - structured constrained output generation
+
 the TF can synthesize executable logical workflow structure
 from natural-language intent.
 
 Example:
+```
 "Alert if outage + delay + supplier overlap"
 →
 {
@@ -421,44 +487,44 @@ Example:
     "shared_supplier"
   ]
 }
+```
 
-Task decomposition/planning
+#### Task decomposition/planning
 This is critical for agent workflows and orchestration.
 The remarkable capability is that the TF can synthesize
 multi-step executable workflows from natural-language goals
 without explicit hardcoded planning logic.
 Classic AI struggled badly here.
 
-•	“planning” is important 
-•	“hierarchical” captures the substep structure 
-•	“task decomposition” captures the operational behavior. 
+-	“planning” is important 
+-	“hierarchical” captures the substep structure 
+-	“task decomposition” captures the operational behavior. 
 
 LLMs made this practical.
-• break large tasks into substeps 
-• generate plans 
-• sequence actions 
-• maintain goal-oriented context 
+- break large tasks into substeps 
+- generate plans 
+- sequence actions 
+- maintain goal-oriented context 
 
 Break complex requests into atomic executable steps. compare X vs Y
--> step1 filter
--> step2 aggregate
--> step3 compare
+- -> step1 filter
+- -> step2 aggregate
+- -> step3 compare 
 
 
 Example:
+```
 "Compare delayed vs blocked suppliers"
 →
 step1 filter delayed suppliers
 step2 filter blocked suppliers
 step3 aggregate results
 step4 compare metrics
-
+```
 
 
 <br>
 
-*See also: [3.2 Agentic + AI](/3.2-agentic-ai/)*
 
-<br>
 
-26.0518
+26.0521

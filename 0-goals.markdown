@@ -50,11 +50,11 @@ The key tests below are these two
 - **(2) user_prompt** = “I need info about suppliers.” (FAIL). A human would have deduced the user needed supplier_notes.txt.
 - **(4) user_prompt** = “how many suppliers had problems (read info).” This prompt worked. 
 
-Theses 2 simple tests showed the following:
+Theses 2 simple tests show the following:
 - **(4) The LLM's fascinating ability to "deduce" meaning**, even if the word formulation is not exact (the LLM can also handle misspelled words, etc).
 - **(2) This ability, however, is limited**. It depends on the **(a) training data** used to program ("train") the LLM TF and **(b) the massive statistical computation** to pattern match the current text against the training data *(this conclusion is based on my own detailed study of GPT-3 algorithms; the latest frontier models will be vastly more powerful than GPT-3, but the nature of their algorithmic pattern matching simulation of intelligence will be the same)*. 
 
-The last point above shows that **agentic AI is not on the level of real intelligence**. This is the main challenge when creating AI agent applications. *This is my personal opinion (I have not read such an opinion anywhere else).* 
+The last point above shows that, although amazingly advanced, **agentic AI is not even close to real intelligence**. This is the main challenge when creating AI agent applications. 
 
 
 

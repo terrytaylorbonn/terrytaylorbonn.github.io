@@ -8,8 +8,7 @@ permalink: /3.2.4-ai-agent-basic-demos/
 
 <br>
 
-Very basic demos that show how **deterministic agents use TF/UFA semantic capabilities**. 
-- 1 Basic tool (no AI)
+Very basic demos that show how **deterministic agents use TF/UFA semantic capabilities** *(these are marked with "@" and are explained on page [2.5 Agentic LLM (TF/UFA semantic) functionality](/2.5-agentic-llms/))*. 
 - 1b Basic tool (with AI)
 - 3 Filesystem
 - 5 RAG
@@ -240,9 +239,9 @@ This demo is important because it begins demonstrating:
 - TF/UFA semantic capabilities
 - controlling access to external context.
 That is conceptually VERY close to:
-•	RAG 
-•	MCP 
-•	agentic retrieval systems. 
+-	RAG 
+-	MCP 
+-	agentic retrieval systems. 
 You are now very near the critical conceptual bridge.
 
 Core idea:
@@ -462,11 +461,11 @@ That is generalization.
 ##### @2 Contextual token dependency tracking
 Now somewhat involved.
 Because the TF must:
-•	maintain awareness of: 
+-	maintain awareness of: 
 o	available filenames 
 o	tool schema 
 o	user request 
-•	connect them properly. 
+-	connect them properly. 
 This is small-scale contextual dependency tracking.
 
 #### 3.3.2 Weak/minor involvement
@@ -494,116 +493,523 @@ No synonym normalization/ontology mapping yet.
 Not really.
 Single-step action only.
 
+<br>
+
+
+<br>
+
+## 5 RAG retrieval tool (BINGO)
+
+<img src="/assets/rag222.png" alt="drones" width="45%"> 
+
+
+
+### VERY important insight
+
+You are now seeing why modern RAG depends heavily on TF/UFA capabilities.
+Because the TF must:
+-	semantically interpret retrieved text 
+-	integrate it with user question 
+-	reason over combined context 
+-	synthesize final answer 
+
+Without TF/UFA semantics: RAG is mostly just search.
+The TF is what makes the retrieved text meaningfully usable.
+
+### VERY important conceptual insight
+Your RAG demo now demonstrates:
+- external retrieval
+- +
+- TF/UFA semantic interpretation
+
+And THAT is the key reason modern RAG became practical.
+The retrieval itself is old.
+The revolutionary part is:
+TF semantic understanding of retrieved context.
+
+Expected idea:
+user question
+- → Python retrieves relevant local docs
+- → docs injected into prompt
+- → LLM answers from retrieved context
+- This is the core RAG pattern.
+
+
+### 5.1 py script
+
+```
+# ai_demo_05_rag.py
+# Basic RAG demo:
+# retrieve relevant text
+# inject retrieved text into LLM prompt
+# LLM answers from retrieved context
+
+import os
+from pathlib import Path
+
+from dotenv import load_dotenv
+from openai import OpenAI
+
+# -----------------------------------
+# Load API key
+# -----------------------------------
+
+load_dotenv()
+client = OpenAI(api_key=os.getenv("OPENAI_API_KEY"))
+
+# -----------------------------------
+# Demo documents
+# -----------------------------------
+
+DOCS_DIR = Path("rag_docs")
+DOCS_DIR.mkdir(exist_ok=True)
+
+(DOCS_DIR / "taipei_shipments.txt").write_text(
+    "Truck 12 delayed in Taipei due to flooding. "
+    "Truck 18 is on schedule in Taipei.",
+    encoding="utf-8"
+)
+
+(DOCS_DIR / "supplier_notes.txt").write_text(
+    "Supplier A reported an outage affecting brake components.",
+    encoding="utf-8"
+)
+
+(DOCS_DIR / "weather_notes.txt").write_text(
+    "Heavy rain caused flooding near Taipei logistics routes.",
+    encoding="utf-8"
+)
+
+# -----------------------------------
+# Simple retrieval tool
+# -----------------------------------
+
+def retrieve_docs(query, top_k=2):
+    query_words = set(query.lower().split())
+    scored_docs = []
+
+    for path in DOCS_DIR.glob("*.txt"):
+        text = path.read_text(encoding="utf-8")
+        text_words = set(text.lower().split())
+
+        score = len(query_words.intersection(text_words))
+
+        scored_docs.append({
+            "filename": path.name,
+            "score": score,
+            "text": text
+        })
+
+    scored_docs.sort(key=lambda x: x["score"], reverse=True)
+    return scored_docs[:top_k]
+
+# -----------------------------------
+# User question
+# -----------------------------------
+
+user_question = "Why is Truck 12 delayed?"
+
+# -----------------------------------
+# RAG step 1: retrieve docs
+# -----------------------------------
+
+retrieved = retrieve_docs(user_question)
+
+context = "\n\n".join(
+    f"[{doc['filename']}]\n{doc['text']}"
+    for doc in retrieved
+)
+
+print("\nRETRIEVED CONTEXT:")
+print(context)
+
+# -----------------------------------
+# RAG step 2: inject context into prompt
+# -----------------------------------
+
+system_prompt = """
+You are an AI assistant.
+
+Answer the user question using ONLY the retrieved context.
+If the answer is not in the context, say: "I do not know from the provided context."
+"""
+
+user_prompt = f"""
+Retrieved context:
+
+{context}
+
+User question:
+{user_question}
+"""
+
+response = client.chat.completions.create(
+    model="gpt-4.1-mini",
+    messages=[
+        {"role": "system", "content": system_prompt},
+        {"role": "user", "content": user_prompt}
+    ],
+    temperature=0
+)
+
+answer = response.choices[0].message.content
+
+print("\nLLM ANSWER:")
+print(answer)
+```
+
+### 5.2 Test
+
+
+
+
+#### python ai_demo_05_rag.py
+
+```
+RETRIEVED CONTEXT:
+[taipei_shipments.txt]
+Truck 12 delayed in Taipei due to flooding. Truck 18 is on schedule in Taipei.
+
+[supplier_notes.txt]
+Supplier A reported an outage affecting brake components.
+
+LLM ANSWER:
+Truck 12 is delayed in Taipei due to flooding.
+```
+
+Content of 3 rag_docs
+-	Supplier A reported an outage affecting brake components.
+-	Truck 12 delayed in Taipei due to flooding. Truck 18 is on schedule in Taipei.
+-	Heavy rain caused flooding near Taipei logistics routes.
+
+### VERY important distinction
+Your demo used:
+- non-semantic retrieval
+- +
+- semantic TF interpretation
+
+Modern advanced RAG often additionally uses:
+- semantic embedding retrieval
+Meaning:
+documents are converted into:
+-	embedding vectors 
+
+query is converted into:
+-	embedding vector 
+
+Then:
+- vector similarity search retrieves semantically related docs. 
+
+THAT is:
+vector RAG
+
+But EVEN THEN:
+after retrieval,
+the retrieved text STILL usually gets:
+inserted into the prompt/context window
+for the TF to process semantically.
+
+
+
+## 5.3 TF/UFA capabilites
+
+### Strongly involved
+#### @1 Latent pattern generalization / approximation
+VERY important.
+The TF can connect:
+- "Why is Truck 12 delayed?"
+with retrieved text:
+- "Truck 12 delayed in Taipei due to flooding"
+without rigid hardcoded rules.
+
+#### @2 Contextual token dependency tracking
+VERY important.
+The TF must maintain:
+-	user question 
+-	retrieved documents 
+-	instructions 
+-	entity references 
+inside one evolving context window.
+This is central to RAG.
+
+#### @8 Semantic interpretation / inference
+VERY important.
+The TF must:
+-	understand question meaning 
+-	understand retrieved docs 
+-	connect them semantically 
+-	infer the answer. 
+This is core RAG behavior.
+
+#### @5 Semantic normalization / ontology alignment
+Moderate involvement.
+The TF may connect:
+"delay"
+"late"
+"behind schedule"
+semantically.
+Very important in advanced RAG.
+
+### Moderately involved
+#### @7 Structured constrained output generation
+Moderately involved.
+The TF follows:
+"Answer ONLY using retrieved context."
+This is a constrained semantic behavior.
+Would become even stronger if JSON outputs used.
+
+
+#### @9 Hierarchical planning / workflow synthesis
+Moderately involved.
+The overall RAG pipeline is:
+retrieve
+→ inject context
+→ answer
+Simple workflow orchestration.
+In advanced RAG this becomes much larger.
+Moderately involved
+
+#### @6 Explanation/summarization synthesis
+Moderately involved.
+The TF synthesizes:
+-	retrieved info 
+-	semantic relationships
+into: 
+-	final human-readable answer. 
+
+#### @4 Human-language robustness
+Moderate involvement.
+The TF could still likely answer:
+"y truck 12 late?"
+despite noisy input.
+Weak/directly invisible
+
+#### @3 Semantic feature abstraction
+This underlies EVERYTHING internally.
+But:
+-	not directly visible in demo behavior 
+-	more mechanistic/internal TF operation. 
+
+<br>
+
+## 6c MCP-connected tool (with LLM choosing tool) (BINGO)
+
+<img src="/assets/mcp222.png" alt="drones" width="30%"> 
+
+<!--
+thats where my confusion came from. 
+i like a simple demo (and this worked), but seems like the demo should have a tool list. why? because the ability of the LLM to choose the correct tool i think is a critical part of the demo. maybe we need ai_demo_6c (with 2 tools and the LLM chooses one)???
+
+- tool_descriptions = [] for tool in tools.tools: tool_descriptions.append( f"{tool.name}: {tool.description}" ) tools_text = "\n".join(tool_descriptions)
+
+Yes — exactly.
+Your confusion is correct: 6b worked, but it did not really demonstrate dynamic MCP tool discovery.
+
+So yes, make:
+- ai_demo_06c_mcp_llm_tool_choice.py -->
+
+
+Perfect. That demo now proves the real MCP + LLM pattern:
+- MCP server exposes tools
+- → extAgent gets dynamic tool list
+- → extAgent injects tool metadata into prompt
+- → LLM chooses correct tool + args
+- → extAgent executes MCP tool
+
+Key lesson:
+- MCP = dynamic tool infrastructure
+- LLM = semantic tool selection
+- extAgent = validation/execution
+
+This is much stronger than 6b.
+
+
+Main insight:
+- MCP alone = tool infrastructure
+- MCP + LLM = semantic tool selection
+- MCP + extAgent = controlled execution
+
+### 6c.1a server py script
+
+```
+# ai_demo_06c_mcp_llm_server.py
+from mcp.server.fastmcp import FastMCP
+mcp = FastMCP("DemoTools")
+
+@mcp.tool()
+def read_shipment_status(truck_id: str) -> str:
+    """Use this tool to get shipment status. Valid truck_id values: truck_12, truck_18."""
+
+    if truck_id == "truck_12":
+        return "Truck 12 is delayed in Taipei due to flooding."
+    if truck_id == "truck_18":
+        return "Truck 18 is on schedule in Taipei."
+    return f"No shipment status found for {truck_id}."
+
+@mcp.tool()
+def read_supplier_status(supplier_id: str) -> str:
+    """Use this tool to get supplier status. Valid supplier_id values: supplier_a, supplier_b."""
+
+    if supplier_id == "supplier_a":
+        return "Supplier A has an outage affecting brake components."
+    if supplier_id == "supplier_b":
+        return "Supplier B is operating normally."
+    return f"No supplier status found for {supplier_id}."
+
+if __name__ == "__main__":
+    mcp.run()
+```
+
+### 6c.1b client py script
+
+```
+# ai_demo_06c_mcp_llm_client.py
+# MCP exposes tools dynamically.
+# LLM chooses the correct tool.
+# Code executes.
+import asyncio
+import json
+import os
+from dotenv import load_dotenv
+from openai import OpenAI
+from mcp import ClientSession, StdioServerParameters
+from mcp.client.stdio import stdio_client
+load_dotenv()
+client = OpenAI(api_key=os.getenv("OPENAI_API_KEY"))
+
+def build_tools_text(tools):
+    lines = []
+    for tool in tools.tools:
+        lines.append(f"- {tool.name}: {tool.description}")
+    return "\n".join(lines)
+
+async def main():
+    server_params = StdioServerParameters(
+        command="python",
+        args=["ai_demo_06c_mcp_llm_server.py"]
+    )
+    async with stdio_client(server_params) as streams:
+        async with ClientSession(streams[0], streams[1]) as session:
+            await session.initialize()
+            tools = await session.list_tools()
+            tools_text = build_tools_text(tools)
+            print("\nDYNAMIC MCP TOOL LIST:") #>2
+            print(tools_text)
+            user_prompt = "What is the status of supplier A?"
+            system_prompt = f"""
+You are an AI agent.
+Available MCP tools:
+{tools_text}
+Return ONLY JSON in this format:
+
+{{
+  "tool": "tool_name_here",
+  "arguments": {{
+    "argument_name_here": "argument_value_here"
+  }}
+}}
+"""
+            response = client.chat.completions.create(
+                model="gpt-4.1-mini",
+                messages=[
+                    {"role": "system", "content": system_prompt},
+                    {"role": "user", "content": user_prompt}
+                ],
+                temperature=0
+            )
+            llm_output = response.choices[0].message.content
+
+            print("\nLLM OUTPUT:") #>4
+            print(llm_output)
+
+            action = json.loads(llm_output)
+            result = await session.call_tool(
+                action["tool"],
+                action["arguments"]
+            )
+
+            print("\nMCP TOOL RESULT:") #>6
+            print(result)
+
+asyncio.run(main())
+```
+### 6c.2 Test 
+
+```
+python ai_demo_06c_mcp_llm_client.py
+#1,2 DYNAMIC MCP TOOL LIST:
+- read_shipment_status: Use this tool to get shipment status. Valid truck_id values: truck_12, truck_18.
+- read_supplier_status: Use this tool to get supplier status. Valid supplier_id values: supplier_a, supplier_b.
+
+#3,4 LLM OUTPUT:
+{
+  "tool": "read_supplier_status",
+  "arguments": {
+    "supplier_id": "supplier_a"
+  }
+}
+
+#5,6 MCP TOOL RESULT:
+meta=None content=[TextContent(type='text', text='Supplier A has an outage affecting brake components.', annotations=None, meta=None)] structuredContent={'result': 'Supplier A has an outage affecting brake components.'} isError=False
+```
+
+### For Step 6c — MCP + LLM tool choice, the key @1–@9 capabilities used are:
+
+#### Strongly used
+
+**@7 Structured constrained output generation**
+
+LLM generated valid tool-call JSON:
+```
+{
+  "tool": "read_supplier_status",
+  "arguments": {
+    "supplier_id": "supplier_a"
+  }
+}
+```
+
+**@8 Semantic interpretation / inference**
+LLM understood:
+- "What is the status of supplier A?"
+means use:
+- read_supplier_status
+not:
+- read_shipment_status
+
+**@2 Contextual token dependency tracking**
+LLM used the dynamically injected MCP tool list:
+- read_shipment_status
+- read_supplier_status
+- valid ids...
+- and connected it to the user request.
+
+#### Also used
+
+**@1 Latent pattern generalization / approximation**. 
+It mapped “supplier A” to supplier_a after the valid IDs were provided.
+
+**@9 Hierarchical planning / workflow synthesis. 
+Lightly used. The workflow was simple:
+- choose tool → fill args → return JSON
+- Not central here
+
+**@3 Semantic feature abstraction**.
+Underlying TF mechanism, not directly visible.
+
+**@4 Human-language robustness**.
+Would matter if input had typos.
+
+**@5 Semantic normalization / ontology alignment**.
+Lightly present in mapping “supplier A” → supplier_a.
+
+**@6 Explanation/summarization synthesis**.
+Not used yet because the demo stops at tool result.
+
+
 
 
 <br>
 
 26.0521
 
-
-<!-- 
-## 1 Basic tool (no AI) demo
-
-The only real value of this demo is that it shows that "tool" just means a Python construct (maybe just delete this; GPT likes this demo).   
-
-### 1.1 py script
-
-```
-# ai_demo_01_tool.py
-
-# Basic tool demo:
-# LLM = propose
-# Code = executes
-
-import json
-
-# -----------------------------
-# 1. Fake LLM output
-# -----------------------------
-# In real agentic AI, the LLM would generate this JSON.
-# For now, we hardcode it so the tool concept is clear.
-
-llm_output = """
-{
-  "tool": "calculator",
-  "operation": "multiply",
-  "a": 12,
-  "b": 7
-}
-"""
-
-# -----------------------------
-# 2. Tool implementation
-# -----------------------------
-
-def calculator(operation, a, b):
-    if operation == "add":
-        return a + b
-    if operation == "subtract":
-        return a - b
-    if operation == "multiply":
-        return a * b
-    if operation == "divide":
-        return a / b
-    raise ValueError(f"Unknown operation: {operation}")
-
-# -----------------------------
-# 3. External agent executes tool
-# -----------------------------
-
-def run_agent(llm_json):
-    action = json.loads(llm_json)
-
-    if action["tool"] == "calculator":
-        result = calculator(
-            action["operation"],
-            action["a"],
-            action["b"]
-        )
-
-        return {
-            "tool": action["tool"],
-            "operation": action["operation"],
-            "result": result
-        }
-
-    raise ValueError(f"Unknown tool: {action['tool']}")
-
-# -----------------------------
-# 4. Run demo
-# -----------------------------
-
-result = run_agent(llm_output)
-
-print("LLM proposed:")
-print(llm_output)
-
-print("\nCode executed:")
-print(json.dumps(result, indent=2))
-
-```
-
-### 1.2 Test
-
-```
-$ python ai_demo_01_tool.py 
-LLM proposed:
-
-{
-  "tool": "calculator",
-  "operation": "multiply",
-  "a": 12,
-  "b": 7
-}	
-
-Code executed:
-{
-  "tool": "calculator",
-  "operation": "multiply",
-  "result": 84
-}
-```
- 
-<br>
-
--->
