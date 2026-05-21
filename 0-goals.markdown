@@ -8,9 +8,15 @@ permalink: /0-goals/
 <br>
 
 AI tech is evolving quickly.
-- If you want a job in the future, be flexible, learn AI. 
+- If you want a job in the future, be flexible, learn AI.  
 - **If you want a job in AI in the future, be much more flexible and focused**. 
 
+<!-- assembly programming, etc went the way of the dinosaurs.
+and more on beyond a demo website.
+- learn from what happened to tv repair, shoe repair, pc makers, ... all to asia. 
+
+
+ -->
 
 <img src="/assets/agentic_economy.png" alt="drones" width="75%"> 
 
@@ -32,8 +38,8 @@ I reorganized this site and wiki many times during the past 2+ years as I (with 
 # **1 Present goal: AI Agents (that use agentic AI)**
 
 All you need to understand 
-- the core concepts of AI agents
-- the incredible power and usefulness
+- the core concepts of AI agents,
+- the incredible power and usefulness of AI agents, and
 - the challenges involved in building real systems
 
 is to study the following
@@ -43,11 +49,11 @@ is to study the following
 
 <br>
 
-#### **Diagram: (4) AI agent and (2) Agentic AI LLM**
+#### **Diagram: AI agent and Agentic AI LLM**
+
+The LLM is a helpful assistant. Nothing more. The center of the Agentic AI universe is the AI agent. 
 
 <img src="/assets/0_projects2.png" alt="drones" width="45%"> 
-
-
 
 
 <br>
@@ -55,11 +61,35 @@ is to study the following
 
 #### **Demo code: AI agents + agentic AI**
 
-These demos are from demo **"3 Filesystem"** in section **[3.2.4 Agentic + AI / Basic demos](/3.2.4-ai-agent-basic-demos/)**.
+Getting the AI agent and the agentic AI LLM to work together **reliably** is the key challenge. These demos are from demo **"3 Filesystem"** in section **[3.2.4 Agentic + AI / Basic demos](/3.2.4-ai-agent-basic-demos/)**.
 
 
-**user_prompt = “Read the Taipei shipment file.” (OK)**
+***(0) Test file and the system_prompt for the LLM.***
 
+```
+(DATA_DIR / "supplier_notes.txt").write_text(
+    "Supplier A reported outage affecting brake components.\n",
+    encoding="utf-8"
+)
+..............
+system_prompt = """
+You are an AI agent.
+Return ONLY JSON.
+You may use this tool:
+{
+  "tool": "read_file",
+  "filename": "taipei_shipments.txt"
+}
+Allowed filenames:
+- taipei_shipments.txt
+- supplier_notes.txt
+"""
+```
+
+
+***(1) user_prompt = “Read the Taipei shipment file.” (OK)***
+
+In this example everything works because the LLM interpreted the prompt as a human would expect.
 
 
 ```
@@ -76,8 +106,9 @@ CODE EXECUTED:
 ```
 
 
-**user_prompt = “I need info about suppliers.” (FAIL)**
+***(2) user_prompt = “I need info about suppliers.” (FAIL)***
 
+In this case the LLM rejected the request. A human would probably process this request correctly.
 
 
 ```
@@ -86,17 +117,15 @@ LLM OUTPUT:
   "request": "Please specify the type of information you need about suppliers. For example, details about supplier names, contact information, shipment records, or any other specific data."
 }
 Traceback (most recent call last):
-  File "C:\Users\terry\Downloads\d1_agent\ai_demo_03_filesystem.py", line 98, in <module>
-    if action["tool"] == "read_file":
-       ~~~~~~^^^^^^^^
+..........
 KeyError: 'tool'
 
 ```
 
 
-**user_prompt = “read info about suppliers.” (OK)**
+***(3) user_prompt = “read info about suppliers.” (OK)***
 
-
+This prompt works.
 
 ```
 LLM OUTPUT:
@@ -110,7 +139,9 @@ CODE EXECUTED:
 }
 ```
 
-**user_prompt = “how many suppliers had problems (read info).” (same answer)**
+*** (4) user_prompt = “how many suppliers had problems (read info).” (same answer)***
+
+This prompt worked, even though I expected it to fail.
 
 ```
 LLM OUTPUT:
@@ -129,11 +160,13 @@ CODE EXECUTED:
 
 # **2 Recent past: AI models and drones**
 
-learn the background, from my mistakes.
-study how i got here.
-reorg'd this website, wiki dozens of times.
+During the drone and model phases of ZiptieAI, I reorganized this website and the wiki dozens of times.
+- I originally wanted to focus on AI for drones (CNN object recognition). 
+- Drones were quite a challenge for a one-man show to build and fly, and I was more interested in the AI.
+- So I switched my focus to AI models. 
+- I realized that I would not build my own models.
 
-assembly programming, etc went the way of the dinosaurs.
+
 
 
 <br>
@@ -188,14 +221,14 @@ Theres quite a lot of gist.
 
 # **3 Future goals** (continued exploration of practical AI systems)
 
-<br>
 
-- to predict future goals, jobs, AI directions.
-- beyond a demo website.
-- learn from what happened to tv repair, shoe repair, pc makers, ... all to asia. 
-
+My future goals:
+- To remain vigilant and flexible. 
+- Focus less on this website and more on [3.3 AI projects](/3.3-ai-projects/).
 
 <br>
+
+Some thoughts on the future:
 
 
 **1 Nobody saw it coming**. 50 years ago — Commodore, Atari, ARPANET — nobody imagined PCs or the internet would reshape civilization. The search engine was unthinkable. What we take for granted today was science fiction. AI will be bigger. And the end state is something we probably can't yet imagine.
