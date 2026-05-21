@@ -10,14 +10,19 @@ These books are on the [Gdrive](https://drive.google.com/drive/folders/1-Adawag9
 
 <img src="/assets/books.png" alt="drones" width="36%"> 
 
+<br>
+
 ### **__ziptieai_BOOK1_CNN_v08_260102.docx**
 
 <img src="/assets/book1_cnn.png" alt="drones" width="70%"> 
+
+<br>
 
 ### **__ziptieai_BOOK2_LLM_v86_251230.docx**
 
 <img src="/assets/book2_llm.png" alt="drones" width="70%"> 
 
+<br>
 
 ### **__ziptieai_BOOK4_GI_v02_260103.docx**
 
@@ -26,11 +31,6 @@ I read a lot of hype from the tech titans/gurus about how future binary-based de
 I do think, however, that there is a path to true intelligence hosted on electronic devices. That's what this book is about. Just my thoughts.
 
 <img src="/assets/book4_gi.png" alt="drones" width="50%"> 
-
-
-
-
-
 
 <br>
 
