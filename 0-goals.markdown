@@ -174,7 +174,7 @@ During the drone and model phases of ZiptieAI, I reorganized this website and th
 
 ### **AI models (especially Agentic LLMs)**
 
-Learn the gist of **[AI Models](2_models)**. Theres quite a lot of gist.
+Learn the gist of **[AI Models](/2_models/)**. Theres quite a lot of gist.
 
 <!--
 **[UFAs](/2.4.2-ufas/)**. The core function a model performs.
