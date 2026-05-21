@@ -12,6 +12,10 @@ I documented my AI drone activities in detail. My original plan was to build my 
 
 
 
+#### [Books (draft docx files I wrote about AI topics)](/4.0-books/)
+
+
+
 #### [Tech Stacks & Docs](/4.1-tech-stacks/)
 
 
@@ -44,4 +48,4 @@ I documented my AI drone activities in detail. My original plan was to build my 
 
 <br>
 
-26.0515
+26.0521
