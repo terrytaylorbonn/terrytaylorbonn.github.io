@@ -139,7 +139,7 @@ CODE EXECUTED:
 }
 ```
 
-*** (4) user_prompt = “how many suppliers had problems (read info).” (same answer)***
+***(4) user_prompt = “how many suppliers had problems (read info).” (same answer)***
 
 This prompt worked, even though I expected it to fail.
 
@@ -174,9 +174,7 @@ During the drone and model phases of ZiptieAI, I reorganized this website and th
 
 ### **AI models (especially Agentic LLMs)**
 
-dont bother with LLM internals. 
-just understand the gist.
-Theres quite a lot of gist.
+Learn the gist of AI models. Theres quite a lot of gist.
 
 **[UFAs](/2.4.2-ufas/)**. The core function a model performs.
 
