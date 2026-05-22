@@ -1,12 +1,18 @@
 ---
 layout: page
-title: "2.4.2 UFAs"
-permalink: /2.4.2-ufas/
+title: "2.0 UFAs"
+permalink: /2.0-ufas/
 ---
 
-[← 2.3 LLMs](/2.3-llms/)
+[← 2 AI (models)](/2_models/)
 
 <br>
+
+
+# THIS PAGE IS WIP... REORG'D 26.0522
+
+THIS IS ORPHAN PAGE??? >>> For examples of TF Agentic with AI see "4 Agent+AI concepts" on page [(4) Agentic AI](/agentic-ai/)
+
 
 ### SUMMARY OF UFAs
 
@@ -68,48 +74,3 @@ My take on training:
 - During training
   - for each input / output pair
   - adjust Weighs and biases to slightly improve the coomputation of this pair as the best value (because this is a good match)
-
-**[6 CNN UFA](/2.4.2.6-ufa-cnn/) (TODO)** (convoluted neural networks). 
-
-AlexNet 2012 is an excellent demo.
-- 2012 AlexNet Object recognition demo
-- Data for training was the key (you cant train this manually)
-- This is an excellent demo to understand the basics before tackling TF UFA
-
-**[7 TF UFA](/2.4.2.7-ufa-tf/)** (transformer) 
-
-A TF is the best UFA for human language. This section talks about the **GPT-3 TF**. Newer models may be much more powerful, but the core techniques they use to implement a UFA will be similar. 
-
-- A TF performs **computational pattern matching**.
-- TF takes the **convolution/max-pooling** concept in CNNs and duplicates the same idea for language in TF as **Attention-heads/softmax**. 
-- TF converts each (1) Human Language (HLang) input (prompt) into (2) Vector Language (VLang).
-- The VLang for each prompt is refined into a "storyline".
-- The **(3) storyline of the last token is used to determine the vocab token that most closely matches what has been programmed into the NN for the current input**.
-- **(4) TF adds the new token to the input and repeats the process** (until finished or told to stop).
-- Human-language/JSON can be added to the initial HLang input to describe how the **(5) LLM should customize the response content and structure**. 
-
-<!-- **[8 Predictive/robotic](/2.1-predictive-nns/)**
-
-These are simple NN UFAs used for special purposes. They can be trained on a local PC.  -->
-
-<br>
-
---------
-
-<br>
-
-
-THIS IS ORPHAN PAGE??? For examples of TF Agentic with AI see "4 Agent+AI concepts" on page [(4) Agentic AI](/agentic-ai/)
-
-
-<!-- WELCH DEMO - Its spending too much effort with 3d depictions. These depictions are nice to look at, and impressive, but they dont convey an understanding of what is going on.
- - Video tries to expand this to multi-layer NNs. But this is where the main idea of this demo breaks down. I will explain why in [4b Belgium UFA multilayer UFA](/2b-4b-belgium-multilayer-UFA/) (see below). 
- ----
- **[3 Digits UFA](/2b-3-digits-UFA/) (TODO)** tries to use the Belgium demo to detect digits.
-- You often see CNNs used to detect digits. 
-- In this demo, I want to show how you could try to do this with 
-  -  a manually programmed UFA 
-  - built ono the Belgium demo. 
-- It wont work well, but is still instructive. -->
-
-26.0519 (v1 26.0510)

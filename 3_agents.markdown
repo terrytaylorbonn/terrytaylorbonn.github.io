@@ -6,7 +6,8 @@ permalink: /3_agents/
 
 <br> 
 
-<img src="/assets/zai_evolution_ch3.png" alt="drones" width="50%">
+<img src="/assets/zai_evolution5.png" alt="drones" width="50%">
+
 
 
 <br>

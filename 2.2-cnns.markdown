@@ -1,13 +1,24 @@
 ---
 layout: page
-title: "2.1 CNNs (91)"
-permalink: /2.1-cnns/
+title: "2.2 CNNs (91)"
+permalink: /2.2-cnns/
 description: Last edit 26.0426
 ---
 
 [← 2 AI (models)](/2_models/)
 
-See also: [LLMs](/2.4-llms/)
+
+**[6 CNN UFA](/2.4.2.6-ufa-cnn/) (TODO)** (convoluted neural networks). 
+
+AlexNet 2012 is an excellent demo.
+- 2012 AlexNet Object recognition demo
+- Data for training was the key (you cant train this manually)
+- This is an excellent demo to understand the basics before tackling TF UFA
+
+
+
+
+See also: [LLMs](/2.3-llms/)
 
 CNNs are similar in many ways to LLM transformers (TFs). They are good topic to study before studying TFs.
 

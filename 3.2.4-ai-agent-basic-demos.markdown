@@ -8,7 +8,7 @@ permalink: /3.2.4-ai-agent-basic-demos/
 
 <br>
 
-Very basic demos that show how **deterministic agents use TF/UFA semantic capabilities** *(these are marked with "@" and are explained on page [2.5 Agentic LLM (TF/UFA semantic) functionality](/2.5-agentic-llms/))*. 
+Very basic demos that show how **deterministic agents use TF/UFA semantic capabilities** *(these are marked with "@" and are explained on page [2.5 Agentic LLM (TF/UFA semantic) functionality](/2.4-agentic-llms/))*. 
 - 1b Basic tool (with AI)
 - 3 Filesystem
 - 5 RAG

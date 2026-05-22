@@ -1,7 +1,7 @@
 ---
 layout: page
-title: "2.2 Predictive (2b-6)"
-permalink: /2.2-predictive-nns/
+title: "2.1 Predictive (2b-6)"
+permalink: /2.1-predictive-nns/
 ---
 
 [← 2 AI (models)](/2_models/)

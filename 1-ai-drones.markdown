@@ -26,7 +26,7 @@ I worked on AI drones from 2023 to 2024 focusing on:
 
 
 See also: 
-  - **[Core AI CNN (object recognition) concepts](/2.1-cnns/)**
+  - **[Core AI CNN (object recognition) concepts](/2.2-cnns/)**
 
 
 <br>

@@ -9,8 +9,9 @@ title: Home
 
 <br>
 
-*Site diagram [(details on timeline page)](/0-goals/)* <br>
-<img src="/assets/zai_evolution3.png" alt="smol" width="55%"> 
+*Site diagram* <br>
+<img src="/assets/zai_evolution5.png" alt="drones" width="50%">
+
 
 <br>
 

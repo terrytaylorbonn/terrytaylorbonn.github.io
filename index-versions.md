@@ -36,7 +36,7 @@ This site has the following top-level pages *(see also the [Wiki](https://github
 - [(3) Robotic AI](/robotic-ai/). JEPA, belief tracking, control loops, and autonomy.
 <!-- added "and" for flow -->
 
-- **[(2) LLMs](/2.4-llms/)**. Transformers, local/API models, RAG, prompting, MCP, tool use, and practical system design. See also:
+- **[(2) LLMs](/2.3-llms/)**. Transformers, local/API models, RAG, prompting, MCP, tool use, and practical system design. See also:
 <!-- shortened + emphasized practical use -->
 
   - [Core AI (LLM) concepts](https://github.com/terrytaylorbonn/auxdrone/wiki/Core-AI-concepts) — detailed explanation of GPT-3 transformer algorithms.
@@ -95,7 +95,7 @@ This site has the following top-level pages *(see also the [Wiki](https://github
 - **[(5) AI dev tools](/AI-dev-tools/)**. AI IDEs and tools for rapid development.
 - **[(4) Agentic AI](/agentic-ai/)**. Palantir-style systems, tools, and workflows.
 - [(3) Robotic AI](/robotic-ai/). JEPA, belief tracking, control loops, autonomy.
-- **[(2) LLMs](/2.4-llms/)**. Local and API-based models, RAG, prompting, MCP, tool calling, fine-tuning. See also:
+- **[(2) LLMs](/2.3-llms/)**. Local and API-based models, RAG, prompting, MCP, tool calling, fine-tuning. See also:
   - [Core AI (LLM) concepts](https://github.com/terrytaylorbonn/auxdrone/wiki/Core-AI-concepts) (wiki) — GPT-3 transformer algorithms in depth.
   - [Core AI (LLM) misconceptions](/llm-tf-misconceptions/).
 - **[(1) AI Drones](/aidrones/)**. Simulation, drone builds (Pixhawk, FPV), AI (Jetson Nano, Pi), autonomous flight. See also:
@@ -140,7 +140,7 @@ This site has the following top-level pages *(see also the [Wiki](https://github
 <!-- "Palantir-style" hyphen; colon reads cleaner than comma splice -->
 - [(3) Robotic AI](/robotic-ai/). JEPA, belief tracking, control loops, autonomy.
 <!-- unchanged -->
-- **[(2) LLMs](/2.4-llms/)**. Transformers; local vs API models; RAG; prompting; MCP; tool calling; fine-tuning; shipping LLM apps. See also:
+- **[(2) LLMs](/2.3-llms/)**. Transformers; local vs API models; RAG; prompting; MCP; tool calling; fine-tuning; shipping LLM apps. See also:
   - [Core AI (LLM) concepts](https://github.com/terrytaylorbonn/auxdrone/wiki/Core-AI-concepts) (wiki)—GPT-era transformers in depth.
 <!-- one line tightened; em dash joins "(wiki)" to next clause -->
   - [Core AI (LLM) misconceptions](/llm-tf-misconceptions/).

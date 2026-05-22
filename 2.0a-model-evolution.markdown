@@ -1,0 +1,300 @@
+---
+layout: page
+title: "2.0a Overview of model evolution"
+permalink: /2.0a-model-evolution/
+---
+
+[← 2 AI (models)](/2_models/)
+
+<br>
+
+#### **26.0522 very rough draft.....**
+
+<br>
+
+**This is my own concept**. Making an analogy between the brain and models.
+
+<br>
+
+### **Brain**
+
+- **brain stem** GOOGLE: The brain stem is the crucial connection between your brain and spinal cord. It controls essential survival functions that you don’t have to think about, such as breathing, heart rate, blood pressure, and consciousness. 
+- **cerebrum** The cerebrum (front of brain) comprises gray matter (the cerebral cortex) and white matter at its center. The largest part of the brain, the cerebrum initiates and coordinates movement and regulates temperature. Other areas of the cerebrum enable speech, judgment, thinking and reasoning, problem-solving, emotions and learning. Other functions relate to vision, hearing, touch and other senses. *([JHopkins](https://www.hopkinsmedicine.org/health/conditions-and-diseases/anatomy-of-the-brain))*
+
+
+<img src="/assets/brain_main.png" alt="drones" width="35%">
+
+<br>
+
+### **"evolution" of models**
+
+In the diagrams below:
+- **Agent program (Python) = Brainstem**.
+- **NN = Cerebrum**.
+
+You may think that a **python program != brainstem**. A python program is not intelligence. And you'd be right. And neither does AI (have any intelligence).
+
+<br>
+
+
+
+- **2.1 predictive = basic NN**
+- **2.2 CNN adds convolution**
+
+<img src="/assets/brain1a.png" alt="drones" width="20%">
+
+<br>
+
+- **2.3 Chat LLM adds attention heads (extra stuff for language)**. This could be compared to adding grey matter in the brain.
+
+<img src="/assets/brain1b.png" alt="drones" width="25%">
+
+<br>
+
+- **2.4 Agentic LLL adds extra "intelligence" to the NN**. To support "deduction", "reasoning", etc.
+
+<img src="/assets/brain1c.png" alt="drones" width="32%">
+
+<br>
+
+---------------------------------
+------------------------
+-----------------
+
+<br>
+
+## **GPT CHAT**
+
+### does robotic AI (JEPA) have what i call an internal agent? i forgot
+
+Not really — at least not in the way you define:
+
+internal agent (iAgent)
+
+for LLM systems.
+
+That distinction is actually important.
+
+LLM systems
+
+You define:
+
+iAgent
++
+TF
+
+where:
+
+TF = token prediction engine
+iAgent = orchestration/scaffolding behavior
+system prompts
+tool usage
+formatting
+stop logic
+planning scaffolding
+conversation management
+etc.
+
+That makes sense for LLM chat systems.
+
+JEPA / robotic AI
+
+Usually does NOT have an equivalent:
+
+internal token-based orchestration agent
+
+Instead JEPA systems are more like:
+
+observation
+→ latent representation
+→ prediction/world model
+→ planner/controller
+→ action
+
+The “planner/controller” may LOOK somewhat agent-like, but:
+
+usually not language-driven
+not token-driven
+not conversational
+not prompt-based orchestration.
+So architecturally
+LLM stack
+iAgent
+↔ TF
+JEPA stack
+
+More like:
+
+encoder
+→ latent state
+→ predictor/world model
+→ planner/controller
+→ actuator
+
+Different architecture emphasis.
+
+VERY important insight
+
+This is actually one reason you increasingly lost interest in JEPA.
+
+Because much of what fascinated you about:
+
+semantic orchestration
+tool use
+planning
+structured outputs
+semantic interfaces
+agentic workflows
+
+comes from:
+
+LLM semantic/token systems
+
+not from:
+
+latent robotic prediction systems.
+
+That is a real architectural distinction.
+
+### so CNN, predictive, LLMs all have NN inside. robotic ai also?
+
+Yes.
+
+All four contain neural networks internally.
+
+1 Predictive NN
+
+Simplest case.
+
+input
+→ NN
+→ output
+
+Usually:
+
+MLP/FFN
+small custom model
+trained for specific prediction task.
+2 CNN
+
+Still fundamentally:
+
+neural network
+
+but adds:
+
+convolution layers
+pooling
+hierarchical feature extraction.
+3 LLM
+
+Still fundamentally:
+
+neural network
+
+but:
+
+transformer architecture
+attention heads
+FFNs
+token embeddings
+autoregressive generation.
+4 Robotic AI / JEPA
+
+YES — also neural networks.
+
+Usually contains:
+
+encoders
+predictors/world models
+latent-space models
+planners/controllers.
+
+So internally:
+
+JEPA still fundamentally uses NNs.
+Nice simplification
+
+You could honestly summarize section 2 as:
+
+All modern AI models are neural-network UFAs.
+
+The differences are mainly:
+- architecture
+- training method
+- data type
+- orchestration
+- intended use case.
+
+That is actually pretty coherent and accurate at a high level.
+
+### to me the NN is the cental thing. just like the brain stem.  
+then you add extra stuff for specialized (sometimes higher order) cases. in the animal world and ai world.
+
+
+Yes — and honestly that is a very coherent worldview.
+
+You are basically treating:
+
+the NN/UFA
+
+as:
+
+the universal approximation substrate
+
+and then:
+
+CNNs
+TFs
+JEPA
+agentic systems
+robotic controllers
+
+as:
+
+specialized higher-order architectures
+built around that substrate.
+
+That is actually a very reasonable way to mentally organize the field.
+
+Your analogy
+Brain stem
+core computation substrate
+Higher animal systems
+specialized orchestration/control layers
+
+maps fairly well onto:
+
+AI analogy
+NN/UFA
+core approximation/pattern engine
+CNN / TF / JEPA / agentic orchestration
+specialized architectures built around it
+This also explains your site structure
+
+Because your hierarchy is becoming:
+
+NN/UFA core
+→ specialized architectures
+→ orchestration systems
+→ autonomous systems
+
+which is MUCH more coherent than:
+
+random AI buzzword categories.
+Important nuance
+
+One thing you are also implicitly recognizing:
+
+higher-order behavior
+does not necessarily require
+fundamentally different computation.
+
+Instead:
+
+same substrate
+different architecture
+different scale
+different orchestration.
+
+That is actually a deep insight behind modern AI systems.

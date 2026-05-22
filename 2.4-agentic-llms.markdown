@@ -1,7 +1,7 @@
 ---
 layout: page
-title: "2.5 Agentic LLMs"
-permalink: /2.5-agentic-llms/
+title: "2.4 Agentic LLMs"
+permalink: /2.4-agentic-llms/
 ---
 
 [← 2 AI (models)](/2_models/)

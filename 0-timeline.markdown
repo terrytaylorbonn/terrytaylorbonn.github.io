@@ -27,12 +27,12 @@ The following describes the main site diagram below (roughly a timeline diagram)
 - **[1 AI drones](/1-drones/)** were the original focus at ZiptieAI.
 - **[2 Models](/2_models/)** lists the model concepts addressed on this site
   - Models with no internal agent.
-    - **[2.1 CNNs](/2.1-cnns/)**: Convolutional Neural Networks (for object recogntion on drones). The takes a straight shot through the NN. 
-    - **[2.2 Predictive](/2.2-predictive-nns/) (custom/training)** NNs for predictive AI (I've done this before but can't find the info; need to do again). Simple NNs that built/trained locally.
-    - **[2.3 Robotic AI](/2.3-robotic-ai/)**. Mainly JEPA customization/training. 
+    - **[2.1 CNNs](/2.2-cnns/)**: Convolutional Neural Networks (for object recogntion on drones). The takes a straight shot through the NN. 
+    - **[2.2 Predictive](/2.1-predictive-nns/) (custom/training)** NNs for predictive AI (I've done this before but can't find the info; need to do again). Simple NNs that built/trained locally.
+    - **[2.3 Robotic AI](/2.5-robotic-ai/)**. Mainly JEPA customization/training. 
   - Models with an internal agent.
-    - **[2.4 LLMs](/2.4-llms/)** (iAgent + TF).
-    - **[2.5 Agentic LLMs](/2.5-agentic-llms/)**. LLMs that provide the funcionality required for AI agents (all major frontier LLMs).
+    - **[2.3 LLMs](/2.3-llms/)** (iAgent + TF).
+    - **[2.5 Agentic LLMs](/2.4-agentic-llms/)**. LLMs that provide the funcionality required for AI agents (all major frontier LLMs).
 - **[3 Agents](/3_agents/)**. External agents that interact with LLM API. 
   - **[3.1 Agentic (no AI)](/3.1-agentic/)**. The main control loop is non-AI (Python).
   - **[3.2 Agentic + AI](/3.2-agentic-ai/)**. Adds AI as a helpful assistant.
@@ -85,12 +85,12 @@ I documented my AI drone activities in detail. My original plan was to build my 
 
 **[CNNs](https://ziptieai.com/cnn/)**. The AI in the AI drones was object recognition using CNNs (convoluted neural networks) running on the Nvidia Jetson Nano and on the PI computer. **Studying CNNs is a good first step for studying the much more complex LLMs.** Note: **"My depiction"** below means I have not seen such a diagram elsewhere.
 
-**[LLMs](/2.4-llms/)**. After understanding the gist of CNNs, **my focus shifted to LLMs (large language models)**. **My goal was to understand** the core concepts, how to build practical applications, and (perhaps most of all) **the AI hype** (claims that AI has real intelligence, AI actually thinks, AI can learn, AI will soon surpass human intelligence, etc etc). 
+**[LLMs](/2.3-llms/)**. After understanding the gist of CNNs, **my focus shifted to LLMs (large language models)**. **My goal was to understand** the core concepts, how to build practical applications, and (perhaps most of all) **the AI hype** (claims that AI has real intelligence, AI actually thinks, AI can learn, AI will soon surpass human intelligence, etc etc). 
 
-**[Predictive](/2.2-predictive-nns/)**. 
+**[Predictive](/2.1-predictive-nns/)**. 
 
 
-**[Robotic AI](/2.3-robotic-ai/)**. When I first heard Yan LeCun's talks about how JEPA would provide real robotic intelligence I was fascinated. I totally agreed with what he said about the limitations of LLMs, and he was one of the very few gurus actually saying such things. But after doing a lot of hands-on JEPA (and robotics) demos, **I came to the conclusion that LeCun's version of JEPA was a lot of hype**. What he was selling was not fundamentally different from LLMs. GPT agreed.
+**[Robotic AI](/2.5-robotic-ai/)**. When I first heard Yan LeCun's talks about how JEPA would provide real robotic intelligence I was fascinated. I totally agreed with what he said about the limitations of LLMs, and he was one of the very few gurus actually saying such things. But after doing a lot of hands-on JEPA (and robotics) demos, **I came to the conclusion that LeCun's version of JEPA was a lot of hype**. What he was selling was not fundamentally different from LLMs. GPT agreed.
 
 
 <br>
@@ -248,7 +248,7 @@ Documenting the drone work led to a refresher on MERN stacks, REST/GraphQL APIs,
 
 <br>
 
-#### (2) [LLMs](/2.4-llms/)
+#### (2) [LLMs](/2.3-llms/)
 
 <!-- TRIMMED: List was fine, just cleaned up -
 
@@ -262,7 +262,7 @@ Goal: understand core concepts well enough to build practical applications.
 
 <br>
 
-#### (3) [Robotic AI](/2.3-robotic-ai/)
+#### (3) [Robotic AI](/2.5-robotic-ai/)
 
 <!-- JEPA: Removed "GPT agreed" — your opinion stands on its own. Sharpened the critique (matches our earlier conversation). -
 

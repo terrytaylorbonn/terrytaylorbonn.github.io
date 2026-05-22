@@ -54,7 +54,7 @@ Theses 2 simple tests show the following:
 - **(4) The LLM's fascinating ability to "deduce" meaning**, even if the word formulation is not exact (the LLM can also handle misspelled words, etc).
 - **(2) This ability, however, is limited**. It depends on the **(a) training data** used to program ("train") the LLM TF and **(b) the massive statistical computation** to pattern match the current text against the training data *(this conclusion is based on my own detailed study of GPT-3 algorithms; the latest frontier models will be vastly more powerful than GPT-3, but the nature of their algorithmic pattern matching simulation of intelligence will be the same)*. 
 
-The last point above shows that, although amazingly advanced, **agentic AI is not even close to real intelligence**. This is the main challenge when creating AI agent applications. 
+The last point above shows that, although amazingly advanced, **agentic AI is not even close to real intelligence** *(AI has 0 intelligence, something all AI gurus and titans are well aware of)*. This is the main challenge when creating AI agent applications. 
 
 
 
@@ -63,7 +63,7 @@ The last point above shows that, although amazingly advanced, **agentic AI is no
 
 #### **Diagram: AI agent and Agentic AI LLM**
 
-The LLM is a helpful assistant. Nothing more. The center of the Agentic AI universe is the AI agent. 
+The LLM is a helpful assistant. Nothing more. The center of the Agentic AI universe is the AI agent. Which is often a Python program.
 
 <img src="/assets/0_projects2.png" alt="drones" width="35%"> 
 
@@ -191,19 +191,19 @@ During the drone and model phases of ZiptieAI, I reorganized this website and th
 
 ### **AI models (especially Agentic LLMs)**
 
-Learn the gist of **[AI Models](/2_models/) ([especially LLMs](/2.4-llms/))**. Theres quite a lot of gist.
+Learn the gist of **[AI Models](/2_models/) ([especially LLMs](/2.3-llms/))**. Theres quite a lot of gist.
 
 <!--
 **[UFAs](/2.4.2-ufas/)**. The core function a model performs.
 
 **[CNNs](https://ziptieai.com/cnn/)**. The AI in the AI drones was object recognition using CNNs (convoluted neural networks) running on the Nvidia Jetson Nano and on the PI computer. **Studying CNNs is a good first step for studying the much more complex LLMs.** Note: **"My depiction"** below means I have not seen such a diagram elsewhere.
 
-**[LLMs](/2.4-llms/)**. After understanding the gist of CNNs, **my focus shifted to LLMs (large language models)**. **My goal was to understand** the core concepts, how to build practical applications, and (perhaps most of all) **the AI hype** (claims that AI has real intelligence, AI actually thinks, AI can learn, AI will soon surpass human intelligence, etc etc). 
+**[LLMs](/2.3-llms/)**. After understanding the gist of CNNs, **my focus shifted to LLMs (large language models)**. **My goal was to understand** the core concepts, how to build practical applications, and (perhaps most of all) **the AI hype** (claims that AI has real intelligence, AI actually thinks, AI can learn, AI will soon surpass human intelligence, etc etc). 
 
-**[Predictive](/2.2-predictive-nns/)**. 
+**[Predictive](/2.1-predictive-nns/)**. 
 
 
-**[Robotic AI](/2.3-robotic-ai/)**. When I first heard Yan LeCun's talks about how JEPA would provide real robotic intelligence I was fascinated. I totally agreed with what he said about the limitations of LLMs, and he was one of the very few gurus actually saying such things. But after doing a lot of hands-on JEPA (and robotics) demos, **I came to the conclusion that LeCun's version of JEPA was a lot of hype**. What he was selling was not fundamentally different from LLMs. GPT agreed.
+**[Robotic AI](/2.5-robotic-ai/)**. When I first heard Yan LeCun's talks about how JEPA would provide real robotic intelligence I was fascinated. I totally agreed with what he said about the limitations of LLMs, and he was one of the very few gurus actually saying such things. But after doing a lot of hands-on JEPA (and robotics) demos, **I came to the conclusion that LeCun's version of JEPA was a lot of hype**. What he was selling was not fundamentally different from LLMs. GPT agreed.
 -->
 
 
@@ -246,7 +246,6 @@ My future goals:
 
 Some thoughts on the future:
 
-
 **1 Nobody saw it coming**. 50 years ago — Commodore, Atari, ARPANET — nobody imagined PCs or the internet would reshape civilization. The search engine was unthinkable. What we take for granted today was science fiction. AI will be bigger. And the end state is something we probably can't yet imagine.
 
 **2 The immediate shift: AI tools for everyone**. AI IDEs and tools are becoming reliable enough that non-developers can build sophisticated apps — perhaps just by chatting with an AI. **The barrier between "idea" and "working software" is collapsing.** This is what this site is about: tracking that collapse in real time.
@@ -262,4 +261,16 @@ Some thoughts on the future:
 
 <br>
 
-26.0521
+------
+
+<br>
+
+Finally if anyone has read this far, I'll add my own core convictions:
+
+**6 AI will not cause a reduction in government employment or entitlements**. I have never seen any post about how AI will result in such a reduction. Not once. And it wont. The windfall of efficiency from AI will be squandered on even more government bloat. 
+
+**7 That efficiency windfall may, however, stabilize things longer than anyone though possible**. Allowing the can to be kicked farther down the road. This is why I think **AI is the most important development in the world today**. 
+
+<br>
+
+26.0522

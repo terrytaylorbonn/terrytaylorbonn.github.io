@@ -5,7 +5,7 @@ permalink: /2.4.4_llm-tf-training/
 description: Last edit 26.0426
 ---
 
-[← 2.4 LLMs](/2.4-llms/)
+[← 2.3 LLMs](/2.3-llms/)
 
 Training is something most of us will never do (Palantir uses standard models; they do no customized training). But its the second heading for a good reason: Training is the defining aspect of model transformer (TF) design
 

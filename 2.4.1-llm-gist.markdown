@@ -4,11 +4,14 @@ title: "2.4.1 LLM gist (2b-2x)"
 permalink: /2.4.1-llm-gist/
 ---
 
-[← 2.4 LLMs](/2.4-llms/)
+[← 2.3 LLMs](/2.3-llms/)
 
 *Work in progress v1 26.0516*
 
 <br>
+
+See also **[Core AI (LLM) concepts](https://github.com/terrytaylorbonn/auxdrone/wiki/Core-AI-concepts)** (wiki page) explains in detail GPT-3 transformer algorithms. 
+
 
 ## **Qualitative gist of language models (LLMs)**
 

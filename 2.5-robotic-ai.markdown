@@ -1,7 +1,7 @@
 ---
 layout: page
-title: "2.3 Robotic AI"
-permalink: /2.3-robotic-ai/
+title: "2.5 Robotic AI"
+permalink: /2.5-robotic-ai/
 ---
 
 [← 2 AI (models)](/2_models/)
