@@ -12,14 +12,14 @@ permalink: /2.0a-model-evolution/
 
 <br>
 
-**This is my own concept**. Making an analogy between the brain and models.
+**Below is my comparison of the brain and models**.
 
 <br>
 
 ### **Brain**
 
-- **brain stem** GOOGLE: The brain stem is the crucial connection between your brain and spinal cord. It controls essential survival functions that you don’t have to think about, such as breathing, heart rate, blood pressure, and consciousness. 
-- **cerebrum** The cerebrum (front of brain) comprises gray matter (the cerebral cortex) and white matter at its center. The largest part of the brain, the cerebrum initiates and coordinates movement and regulates temperature. Other areas of the cerebrum enable speech, judgment, thinking and reasoning, problem-solving, emotions and learning. Other functions relate to vision, hearing, touch and other senses. *([JHopkins](https://www.hopkinsmedicine.org/health/conditions-and-diseases/anatomy-of-the-brain))*
+- **brain stem** GOOGLE: The brain stem controls essential survival functions that you don’t have to think about, such as breathing, heart rate, blood pressure, and consciousness. 
+- **cerebrum** The cerebrum (front of brain) initiates and coordinates movement and regulates temperature. Other areas of the cerebrum enable speech, judgment, thinking and reasoning, problem-solving, emotions and learning. Other functions relate to vision, hearing, touch and other senses. *([JHopkins](https://www.hopkinsmedicine.org/health/conditions-and-diseases/anatomy-of-the-brain))*
 
 
 <img src="/assets/brain_main.png" alt="drones" width="35%">

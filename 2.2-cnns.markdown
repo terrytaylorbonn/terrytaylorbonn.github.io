@@ -15,7 +15,7 @@ AlexNet 2012 is an excellent demo.
 - Data for training was the key (you cant train this manually)
 - This is an excellent demo to understand the basics before tackling TF UFA
 
-
+The AI in the AI drones was object recognition using CNNs (convoluted neural networks) running on the Nvidia Jetson Nano and on the PI computer. **Studying CNNs is a good first step for studying the much more complex LLMs.** Note: **"My depiction"** below means I have not seen such a diagram elsewhere.
 
 
 See also: [LLMs](/2.3-llms/)
