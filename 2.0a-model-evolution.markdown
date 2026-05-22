@@ -17,8 +17,8 @@ permalink: /2.0a-model-evolution/
 
 ### **Brain**
 
-- **brain stem** GOOGLE: The brain stem controls essential survival functions that you don’t have to think about, such as breathing, heart rate, blood pressure, and consciousness. 
-- **cerebrum** The cerebrum (front of brain) initiates and coordinates movement and regulates temperature. Other areas of the cerebrum enable speech, judgment, thinking and reasoning, problem-solving, emotions and learning. Other functions relate to vision, hearing, touch and other senses. *([JHopkins](https://www.hopkinsmedicine.org/health/conditions-and-diseases/anatomy-of-the-brain))*
+- **brain stem** GOOGLE: The brain stem controls essential survival functions that you don’t have to think about, such as breathing, heart rate, blood pressure, and consciousness. *ME: What interests me about the brain stem is that it is the central loop that runs within in a human.*
+- **cerebrum** areas of the cerebrum enable speech, judgment, thinking and reasoning, problem-solving, emotions and learning. Other functions relate to vision, hearing, touch and other senses. *([JHopkins](https://www.hopkinsmedicine.org/health/conditions-and-diseases/anatomy-of-the-brain))*
 
 
 <img src="/assets/brain_main.png" alt="drones" width="35%">
@@ -28,10 +28,10 @@ permalink: /2.0a-model-evolution/
 ### **"evolution" of models**
 
 In the diagrams below:
-- **Agent program (Python) = Brainstem**.
-- **NN = Cerebrum**.
+- **internalAgent program (interface LLM input/output and TF) = Brainstem**. Not sure if this is Python, C, whatever the LLM devs chose (I think in the Anthropic leak it was TypeScript). You may think that such a **deterministic program != brainstem**. You would be right. But don't forget that although AI has no intelligence, its named/marketed/hyped as such, and that's why I make this analogy. To help debunk claims of intelligence.
+- **NN = Cerebrum**. NN are pattern matching binary algorithms. But such pattern matching, along with some incredibly brilliant engineering (thanks to real human intelligence), performs the real magic of interpreting human language (NN algorithms dont understand text, they simple pattern match with numerical computation). 
+- Note: If a model does not have an iAGent (like a CNN), then its not really like an intelligent mind. I would compare it more to instinctive reaction (no thinking, just reaction to input). Indeed, I have always thought the best term for NNs are "artificial instinct".
 
-You may think that a **python program != brainstem**. A python program is not intelligence. And you'd be right. And neither does AI (have any intelligence).
 
 <br>
 
