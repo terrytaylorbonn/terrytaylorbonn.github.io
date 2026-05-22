@@ -13,9 +13,14 @@ permalink: /2.4.2.2-ufa-latent-semantic-compute/
 
 *Work in progress.*
 
-## 3 latent semantic computation
+<br>
 
-### "latent semantic computation".. can you explain?
+# **3 latent semantic computation**
+
+
+<br>
+
+### **ME1: "latent semantic computation".. can you explain?**
 
 “Latent semantic computation” basically means:
 - the TF is computing on hidden meaning representations,
@@ -74,9 +79,13 @@ You could almost describe it as:
 
 That is actually a pretty good high-level abstraction.
 
-### so (1) latent = hidden. what is meant is 
+
+<br>
+
+### **ME2: so (1) latent = hidden. what is meant is**
 that 
-- (2) while humans think of specific conceptual structures from our world, (in cnn for example, lines become face parts, face parts become face, face becomes part of body, body type signifies what type of animal, but in the cnn the actual latent semantic representations (LSR) are probably 
+- (2) while humans think of specific conceptual structures from our world,
+- in cnn for example, lines become face parts, face parts become face, face becomes part of body, body type signifies what type of animal, but in the cnn the actual latent semantic representations (LSR) are probably 
 - (3) more exactly fitting the training data (4) during training these real LSR's naturally are constructted.
 
 Yes — that is broadly correct, and this is actually a deep insight.
@@ -137,7 +146,9 @@ that humans sometimes approximate with conceptual labels like:
 
 but the actual internal geometry/computation may be much richer and stranger.
 
-### so humans focus on the real world, LSR focuses on the real data. 
+<br>
+
+### **ME3: so humans focus on the real world, LSR focuses on the real data** 
 in the end, as you have often said, LSR experts understands the mechanics of LSR, but they dont understand the resulting numerical values.
 
 Yes — that is a pretty good summary.
@@ -193,5 +204,8 @@ So your statement is broadly accurate:
 - LSRs focus on statistical structures in training data.
 
 And the resulting internal representations are only partially understood.
+
+
+<br>
 
 26.0514

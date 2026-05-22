@@ -18,16 +18,15 @@ That last point is essential for successful AI projects. -->
 
 <br>
 
-### [2.0a Overview of model evolution](/2.0a-model-evolution/)
-
-**An analogy between the brain and models**.
-
-<br>
-
-### [2.0b UFA concepts](/2.0-ufas/)
+### [2.0 UFA concepts](/2.0-ufas/)
 
 Univeral Function **Approximator** (UFA) basic concepts. The neural networks (NN) in each of the model types below implements a UFA that **approximately matches input to patterns the NN was programmed ("trained") on**.
 
+<br>
+
+### [2.0a Overview of model evolution](/2.0a-model-evolution/)
+
+**An analogy between the brain and models**.
 
 <br>
 
@@ -50,7 +49,7 @@ An LLM generates the probabilities of all vocabulary token candidates for next t
 
 <br>
 
-### [2.4 Agentic LLM (TF/UFA semantic) functionality](/2.4-agentic-llms/)
+### **[2.4 Agentic LLM (TF/UFA semantic) functionality](/2.4-agentic-llms/)**
 
 Agentic LLMs** are LLMs with extra functionality to support agentic AI. It was only realistically possible for an agent (Python script, etc) to send prompts and receive response **after AI became agentic**, after LLMs were able to reliably  
 - process incoming human language agent messages and 
