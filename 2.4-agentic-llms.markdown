@@ -8,12 +8,6 @@ permalink: /2.4-agentic-llms/
 
 *See also: [3.2 Agentic + AI](/3.2-agentic-ai/)*
 
-**Modern TF/UFA systems provide semantic capabilities that made practical agentic systems possible**. These systems can
-- A. **Comprehend, remember** (Generalization / approximation, Context tracking, Semantic abstraction, Human-language robustness)
-- B. **Explain** (Ontology alignment / normalization, Explanation / summarization)
-- C. **Deduce, plan** (Structured constrained outputs, Semantic interpretation / inference, Hierarchical planning / workflow synthesis)
-
-
 
 <br>
 
@@ -24,6 +18,11 @@ This page describes the 9 types of TF/UFA semantic capabilities that were determ
 - **A. Comprehension, memory**. Generalization / approximation, Context tracking, Semantic abstraction, Human-language robustness.
 - **B. Explain**. Ontology alignment / normalization, Explanation / summarization.
 - **C. Deduce, plan**. Structured constrained outputs, Semantic interpretation / inference, Hierarchical planning / workflow synthesis.
+
+<br>
+
+<img src="/assets/brain1c.png" alt="drones" width="27%">
+
 
 
 <br>

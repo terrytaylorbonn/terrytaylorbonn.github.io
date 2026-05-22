@@ -1,7 +1,7 @@
 ---
 layout: page
-title: "2.4.1 LLM gist (2b-2x)"
-permalink: /2.4.1-llm-gist/
+title: "2.3.1 LLM gist (2b-2x)"
+permalink: /2.3.1-llm-gist/
 ---
 
 [← 2.3 LLMs](/2.3-llms/)
@@ -202,7 +202,7 @@ When someone does something intelligently, that usually means with minimal effor
 
 <br>
 
-*See also: [Core AI (LLM) concepts](https://github.com/terrytaylorbonn/auxdrone/wiki/Core-AI-concepts) · [LLM/TF misconceptions](/2.4.4_llm-tf-training/) · [UFAs](/2.4.2-ufas/)*
+*See also: [Core AI (LLM) concepts](https://github.com/terrytaylorbonn/auxdrone/wiki/Core-AI-concepts) · [LLM/TF misconceptions](/2.3.4_llm-tf-training/) · [UFAs](/2.4.2-ufas/)*
 
 <br>
 

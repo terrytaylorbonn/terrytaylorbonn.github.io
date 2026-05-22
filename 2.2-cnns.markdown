@@ -1,12 +1,20 @@
 ---
 layout: page
-title: "2.2 CNNs (91)"
+title: "2.2 CNNs"
 permalink: /2.2-cnns/
 description: Last edit 26.0426
 ---
 
 [← 2 AI (models)](/2_models/)
 
+
+# THIS PAGE IS WORK IN PROGRESS... 26.0522
+
+<br>
+
+<img src="/assets/brain1a.png" alt="drones" width="17%">
+
+<br>
 
 **[6 CNN UFA](/2.4.2.6-ufa-cnn/) (TODO)** (convoluted neural networks). 
 
@@ -26,9 +34,9 @@ See BOOK1 "CNN (AlexNet + (todo) drone object recog)"". File name: __ziptieai_bo
 
 The following diagrams are my original from that doc.I will add text to this page in the near future.
 
-<img src="/assets/cnn1.png" alt="desc" width="80%" style="border: 3px solid #ccc; padding: 11px;">
+<img src="/assets/cnn1.png" alt="desc" width="60%" style="border: 3px solid #ccc; padding: 11px;">
 
-<img src="/assets/cnn2.png" alt="desc" width="80%" style="border: 3px solid #ccc; padding: 11px;">
+<img src="/assets/cnn2.png" alt="desc" width="60%" style="border: 3px solid #ccc; padding: 11px;">
 
 
 <br>

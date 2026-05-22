@@ -1,7 +1,7 @@
 ---
 layout: page
-title: "2.4.4 AI (LLM) training"
-permalink: /2.4.4_llm-tf-training/
+title: "2.3.4 AI (LLM) training"
+permalink: /2.3.4_llm-tf-training/
 description: Last edit 26.0426
 ---
 

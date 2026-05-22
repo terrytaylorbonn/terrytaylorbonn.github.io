@@ -82,7 +82,7 @@ For many apps this is an excellent tradeoff.
 
 #### **About planning and other "intelligent" AI functionality**
 
-*For background on VL, storylines, etc, discussed below, see **[The gist of LLMs](/2.4.1-llm-gist/)**.*
+*For background on VL, storylines, etc, discussed below, see **[The gist of LLMs](/2.3.1-llm-gist/)**.*
 
 AI is more about pattern matching than language. The TF generates from "messy" human language a vector language (VL) representation of the input "storyline" *(I don't prefer term "vector" for the 12288 FP numbers for each GPT-3 token; to me they are just scalar (numeric) indicators of detected semantic (meaning) features)*. The VL for the final token is pattern matched against all tokens in the vocabulary. The closest matching token for that pattern is selected as the next token. 
 

@@ -8,6 +8,11 @@ permalink: /2.1-predictive-nns/
 
 <br>
 
+<img src="/assets/brain1.png" alt="drones" width="14%">
+
+
+<br>
+
 *Work in progress.*
 
 [Predictive vs Generative AI: How They Work and When to Use Each](https://www.youtube.com/watch?v=phOhGqpXss4)

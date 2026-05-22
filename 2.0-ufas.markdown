@@ -15,24 +15,24 @@ permalink: /2.0-ufas/
 
 ### **TOC of subtopics**
 
-**[2.0.1 The requirement for a human-language <> computer interface](/2.4.2.1_ufa_reqs/)**
+**[2.0.1 The requirement for a human-language <> computer interface](/2.0.1_ufa_reqs/)**
 
 - Human communication systems (language) are designed for human-style intelligence.
 - Digital systems do not have human-style intelligence. 
 - Digital systems are vital for humans. We need a bridge. 
 - TF UFA is only viable option. But it has limitations.
 
-**[2.0.2 Latent semantic computation](/2.4.2.2-ufa-latent-semantic-compute/)** (chat) 
+**[2.0.2 Latent semantic computation](/2.0.2-ufa-latent-semantic-compute/)** (chat) 
 
 “Latent semantic computation” basically means:
 - the TF is computing on hidden meaning representations,
 - not directly on human words.
 
-**[2.0.3 ZiptieAI 2D demo UFA](/2.4.2.3-ufa-demo-zai-2d/)** 
+**[2.0.3 ZiptieAI 2D demo UFA](/2.0.3-ufa-demo-zai-2d/)** 
 
 A very simple FFN UFA conceptual demo (meant to convey the basics of how an FFN can detect complex features).
 
-**[2.0.4 Welch 2D demo UFA](/2.4.2.4-ufa-demo-welch/)** (Belgium/Netherlands)
+**[2.0.4 Welch 2D demo UFA](/2.0.4-ufa-demo-welch/)** (Belgium/Netherlands)
 
 A simple conceptual demo that has received almost 400K views and great reviews.
 - Basic function 
@@ -45,7 +45,7 @@ A simple conceptual demo that has received almost 400K views and great reviews.
   - VLang has smooth (except for non-activation areas) outputs. This demo has binary outputs (your are in one country or the other).
 
 
-**[2.0.5 Training](/2.4.2.5-ufa-training/)**
+**[2.0.5 Training](/2.0.5-ufa-training/)**
 
 My take on training:
 - Training defines EXACTLY what outputs for any input. Its deterministic outcome. This all runs on a GPU, which is a deterministic computation device.

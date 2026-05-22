@@ -18,15 +18,15 @@ That last point is essential for successful AI projects. -->
 
 <br>
 
-### [2.0 UFA concepts](/2.0-ufas/)
+### [(optional) 2.0 UFA concepts](/2.0-ufas/)
 
-Univeral Function **Approximator** (UFA) basic concepts. The neural networks (NN) in each of the model types below implements a UFA that **approximately matches input to patterns the NN was programmed ("trained") on**.
+*("optional" = you might want to skip this page)*. Univeral Function **Approximator** (UFA) basic concepts. The neural networks (NN) in each of the model types below implements a UFA that **approximately matches input to patterns the NN was programmed ("trained") on**.
 
 <br>
 
 ### [2.0a Overview of model evolution](/2.0a-model-evolution/)
 
-**An analogy between the brain and models**.
+An analogy between the brain and models.
 
 <br>
 
@@ -34,11 +34,15 @@ Univeral Function **Approximator** (UFA) basic concepts. The neural networks (NN
 
 Predictive NNs are small customized NNs for specific recognition tasks.
 
+<img src="/assets/brain1.png" alt="drones" width="14%">
+
 <br>
 
 ### [2.2 CNNs](/2.2-cnns/)
 
 A CNN computes the most probable label ("dog", "airplane", etc) for a set of pixels. Studying CNNs is great preparation for studying more complex LLMs.
+
+<img src="/assets/brain1a.png" alt="drones" width="17%">
 
 
 <br>
@@ -46,6 +50,8 @@ A CNN computes the most probable label ("dog", "airplane", etc) for a set of pix
 ### [2.3 LLMs](/2.3-llms/) (iAgent + TF)
 
 An LLM generates the probabilities of all vocabulary token candidates for next token (a set of numbers) from the token sequence input. An LLM consists of an (1) internal agent and a (2) transformer (TF). The TF is the core computational engine behind modern AI systems and the mechanism that enables modern LLM behavior.
+
+<img src="/assets/brain1b.png" alt="drones" width="22%">
 
 <br>
 
@@ -55,6 +61,7 @@ Agentic LLMs** are LLMs with extra functionality to support agentic AI. It was o
 - process incoming human language agent messages and 
 - respond with the requested content and format constraints (as specified in the prompts)
 
+<img src="/assets/brain1c.png" alt="drones" width="27%">
 
 
 <br>

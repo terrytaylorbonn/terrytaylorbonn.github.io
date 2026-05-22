@@ -1,10 +1,10 @@
 ---
 layout: page
-title: "2.4.2.1 UFA requirements (human-language <-> computer interface)"
-permalink: /2.4.2.1_ufa_reqs/
+title: "2.0.1 UFA requirements (HL <-> computer I/F)"
+permalink: /2.0.1_ufa_reqs/
 ---
 
-[← 2.4.2 UFAs](/2.4.2-ufas/)
+[← 2.0 UFAs](/2.0-ufas/)
 
 <!-- title: "1 The requirement for a human-language <> computer interface" -->
 
