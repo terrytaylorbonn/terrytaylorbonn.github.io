@@ -1,6 +1,7 @@
 ---
 layout: page
 title: "2.4.2.7 UFA TF"
+published: false
 permalink: /2.4.2.7-ufa-tf/
 ---
 

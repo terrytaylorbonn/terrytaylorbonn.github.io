@@ -68,16 +68,11 @@ After the 96th layer, all tokens contains a vast amount of data in the 12288 FP 
 
 <img src="/assets/llm09_tffinalstate.png" alt="09" width="45%">
  
-<br>
 
 
 <br>
 
-*See also: [2.3 LLMs](/2.3-llms/) · [2.4.2 UFAs](/2.4.2-ufas/) · [2.3.1 LLM gist](/2.3.1-llm-gist/) · [Core AI concepts](https://github.com/terrytaylorbonn/auxdrone/wiki/Core-AI-concepts)*
-
-<br>
-
-26.0519
+26.0523
 
 <br><br>
 

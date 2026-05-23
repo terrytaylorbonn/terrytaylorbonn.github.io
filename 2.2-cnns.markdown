@@ -8,7 +8,7 @@ description: Last edit 26.0426
 [← 2 AI (models)](/2_models/)
 
 
-# THIS PAGE IS WORK IN PROGRESS... 26.0522
+# THIS PAGE IS WORK IN PROGRESS... 26.0523
 
 
 <br>
@@ -17,23 +17,12 @@ description: Last edit 26.0426
 
 <br>
 
-**[6 CNN UFA](/2.2.1-ufa-cnn-dense-layers/) (TODO)** (convoluted neural networks). 
+The AI in the AI drones was object recognition using CNNs (convoluted neural networks) running on the Nvidia Jetson Nano and on the PI computer. CNNs are similar in many ways to LLM transformers (TFs). They are good topic to study before studying TFs. And AlexNet 2012 CNN is an excellent demo to understand the basics before tackling TF UFA.
 
-AlexNet 2012 is an excellent demo.
-- 2012 AlexNet Object recognition demo
-- Data for training was the key (you cant train this manually)
-- This is an excellent demo to understand the basics before tackling TF UFA
+See also **[2.2.1 CNN UFA](/2.2.1-ufa-cnn-dense-layers/)** (convoluted neural network univeral function approximator). 
 
-The AI in the AI drones was object recognition using CNNs (convoluted neural networks) running on the Nvidia Jetson Nano and on the PI computer. **Studying CNNs is a good first step for studying the much more complex LLMs.** Note: **"My depiction"** below means I have not seen such a diagram elsewhere.
+**The diagrams below are my original.** For more details, see __ziptieai_book1_CNN_.docx on the [Gdrive](https://drive.google.com/drive/folders/1-Adawag9uA8_bq-hDF-nOuPYaRLz1eEO).
 
-
-See also: [LLMs](/2.3-llms/)
-
-CNNs are similar in many ways to LLM transformers (TFs). They are good topic to study before studying TFs.
-
-See BOOK1 "CNN (AlexNet + (todo) drone object recog)"". File name: __ziptieai_book1_CNN_v08_260102. File location: https://drive.google.com/drive/folders/1-Adawag9uA8_bq-hDF-nOuPYaRLz1eEO.
-
-The following diagrams are my original from that doc.I will add text to this page in the near future.
 
 <img src="/assets/cnn1.png" alt="desc" width="60%" style="border: 3px solid #ccc; padding: 11px;">
 

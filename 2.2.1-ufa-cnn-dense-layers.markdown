@@ -6,6 +6,11 @@ permalink: /2.2.1-ufa-cnn-dense-layers/
 
 [← 2.2 CNNs](/2.2-cnns/)
 
+
+<br>
+
+# 25.0523 work in progress.......
+
 <br>
 
 ### tell me about the 3 layers of dense 4096 fully connected neurons in alexnet that output 1 of 1000 classes
