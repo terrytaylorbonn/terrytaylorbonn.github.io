@@ -9,24 +9,6 @@ description: Last edit 26.0426
 
 <br>
 
-After understanding the gist of CNNs, **my focus shifted to LLMs (large language models)**:
-  - Transformers (TF, the LLM neural network) *(see the wiki page **[AI concepts](https://github.com/terrytaylorbonn/auxdrone/wiki/Core-AI-concepts)** for **my explanation of GPT-3 transformer algorithms)*** 
-  - API-based model usage (major frontier models)
-  - Fine-tuning
-  - RAG, MCP, and tools
-  - Local and remote model deployment (smaller models)
-
-<!--
-  - [Core AI (LLM) concepts](https://github.com/terrytaylorbonn/auxdrone/wiki/Core-AI-concepts) (wiki page) explains in detail GPT-3 transformer algorithms. 
-  - [Core AI (LLM) misconceptions](/2.4.4_llm-tf-training/).
-  - [Core AI CNN (object recognition) concepts](/2.2-cnns/) -->
-
-
-
-<img src="/assets/brain1b.png" alt="drones" width="22%">
-
-<br>
-
 This page describes 
 
 - 2.3.1 Gist of LLMs
@@ -35,14 +17,9 @@ This page describes
 - 2.3.5 LLM Internal Agent
 - 2.3.6 LLM stack demos
 
-
-<!-- - **1 LLM stack demos**. I planned to spend a lot of time on this, but at some point came to the conclusion that time would be better spent elsewhere. In any case, knowing the basic is quite important. Its not that difficult to install a smaller model on your local PC, and it does have benefits.
-- **2 LLM transformer (TF) training**. Training is something most of us will never do (Palantir uses standard models; they do no customized training). But its the main driving factor in the design of LLM transformers. 
-- **3 LLM internal Agent**. A deterministic (non-AI, not GPU-based) control loop inside the LLM that is the interface between the LLM transformer (TF) and the outside (of the LLM) world.  
-- **4 LLM (GPT-3) TF (transformer) algorithm**. Its a lot of work to grasp the basics of the entire algorithm, but even a partial understanding helps you to understand the nature of the core TF component: Massive brute force computation. In GPT-3 generation of a single token requires on the order of 10^15 (a million billion) computations (and GPT-3 is much smaller than the latest models).   -->
+<img src="/assets/brain1b.png" alt="drones" width="22%">
 
 <br>
-
 
 ### [2.3.1 Gist of LLMs](/2.3.1-llm-gist/)
 
@@ -52,14 +29,13 @@ Describes in concise detail gist of what an LLM model does without describing co
 
 <br>
 
-### [2.3.2 Gist of the LLM (GPT-3) TF UFA](/2.3.2-tf-algorithm/)
+### [2.3.2 Gist of the LLM TF UFA (GPT-3)](/2.3.2-tf-algorithm/)
 
-diagram are my own, and depict my interpretation of the GPT-3 algorithm. Its much more complex than what these few diagrams depict. But it gives you an appreciation of the vast complexity of TF calculations.
+This will give you an appreciation of the vast complexity of TF calculations.
 
 <img src="/assets/llm01_tokens.png" alt="01" width="50%">
 
 <br>
-
 
 ### [2.3.4 LLM transformer training](/2.3.4_llm-tf-training/)
 
@@ -77,8 +53,6 @@ The term "agent" normally means a deterministic (non-AI, not GPU-based) control 
 
 <br>
 
-
-
 ### 2.3.6 LLM stack demos
 
 My focus at one point was on LLMs. I thought that that was going to be the market focus. There is a lot of value in being able to deploy and fine-tune your own LLMs, but for most of us these skills will not be used often. 
@@ -92,8 +66,14 @@ The wiki page [**"AI LLM stacks"**](https://github.com/terrytaylorbonn/auxdrone/
  
 <img src="/assets/smol.png" alt="smol" width="55%">
 
-
 <br>
 
-26.0519
+26.0523
+
+<!-- - **1 LLM stack demos**. I planned to spend a lot of time on this, but at some point came to the conclusion that time would be better spent elsewhere. In any case, knowing the basic is quite important. Its not that difficult to install a smaller model on your local PC, and it does have benefits.
+- **2 LLM transformer (TF) training**. Training is something most of us will never do (Palantir uses standard models; they do no customized training). But its the main driving factor in the design of LLM transformers. 
+- **3 LLM internal Agent**. A deterministic (non-AI, not GPU-based) control loop inside the LLM that is the interface between the LLM transformer (TF) and the outside (of the LLM) world.  
+- **4 LLM (GPT-3) TF (transformer) algorithm**. Its a lot of work to grasp the basics of the entire algorithm, but even a partial understanding helps you to understand the nature of the core TF component: Massive brute force computation. In GPT-3 generation of a single token requires on the order of 10^15 (a million billion) computations (and GPT-3 is much smaller than the latest models).   -->
+
+<br>
 

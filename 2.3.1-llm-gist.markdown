@@ -6,11 +6,9 @@ permalink: /2.3.1-llm-gist/
 
 [← 2.3 LLMs](/2.3-llms/)
 
-*Work in progress v1 26.0516*
-
 <br>
 
-This page describes concisely the gist of what an LLM model does without complex algorithms or architecture diagrams.
+This page describes the gist of what an LLM model does without complex algorithms or architecture diagrams. *The text still needs to be edited and shortened.*
 
 <br>
 
@@ -18,10 +16,9 @@ This page describes concisely the gist of what an LLM model does without complex
 - **1 Core concepts**
 - **2 Main LLM diagram (my original)**
 - **3 The LLM "intelligence" illusion**
-- **4 What an LLM actually is** (this is the GTP-generated version; the terms are all correct, but most people would struggle to understand exactly what its talking about; its a good example of the official narrative)
+- **4 What an LLM actually is** (this is the GPT-generated version; this is a good example of the official narrative)
 - **5 How the LLM internal agent manages the transformer (TF)** 
 
-*See also **[Core AI (LLM) concepts](https://github.com/terrytaylorbonn/auxdrone/wiki/Core-AI-concepts)** (wiki page) explains in detail GPT-3 transformer algorithms.* 
 
 <br>
 
@@ -116,7 +113,9 @@ Those 12K numbers also contain what I call the "storyline", a numerical structur
 
 <br>
 
-## **4 What an LLM actually is** (this is maybe repeat of other sections)
+## **4 What an LLM actually is**
+
+*This is the GPT-generated version, a good example of the official narrative. This may repeat other sections.*
 
 An LLM is a **Universal Function Approximator (UFA)** trained on text. It takes a sequence of tokens as input and outputs a probability distribution over all vocabulary tokens — i.e., a prediction of "what token is most likely next?"
 
@@ -165,117 +164,49 @@ Understanding this is essential for building reliable agentic AI systems.
 
 ## **5 How the LLM internal agent manages the transformer (TF)**
 
-GPT 26.0516 chats
+This is cut-up version of a chat with GPT 26.0516
 
-### ME1: the only communication between the internal Agent and the TF (transformer) in the LLM are tokens. 
-question: (1) does the tf generate special "internal communications" tokens that provide special info to iAgent? does the iAgent send special token to TF?  
+tokens can become control messages between:
+- orchestration/runtime logic
+- semantic generation engine
 
-
-Broadly speaking: yes, but probably not in the way you are imagining.
-
-Your framework:
-- iAgent ↔ TF
-
-can still work conceptually.
-
-But in most modern LLM systems, there usually is NOT:
-- a separate hidden symbolic language
-
-between them.
-
-The communication is still primarily:
-- tokens
-- +
-- hidden-state/context evolution
-
-However, there ARE special/control-style tokens and structures.
-
-Examples:
-- BOS/EOS tokens
-- system prompt delimiters
-- role tokens
-- tool-call tokens
-- JSON structure tokens
-- function-call schemas
-- separator tokens
-- hidden reasoning scaffolds
-- XML/markdown delimiters
-
-These act somewhat like:
-- control/orchestration signals
-
-inside the token stream.
-
-So your intuition is partly correct:
-
-the orchestration layer often influences the TF through:
-- specially structured token sequences
-- formatting conventions
-- role/context markers
-- schema delimiters
-
-#### Does TF generate “internal communication tokens”?
-In a sense, yes.
-
-The TF may generate:
+The TF may generate ordinary tokens (the orchestration layer interprets them specially) like
 - \<tool_call\>
 - \<thinking\>
 - {"action":"search"}
 
-style outputs.
+in most modern LLM systems, 
+- there usually is NOT: a separate hidden symbolic language between iAgent and TF. 
+- The communication is still primarily explicit token/control structures
+- (partly) emergent iterative behavior from hidden-state dynamics.
+- there ARE special/control-style tokens and structures. These act somewhat like: control/orchestration signals inside the token stream. Examples:
+  - BOS/EOS tokens
+  - system prompt delimiters
+  - role tokens
+  - tool-call tokens
+  - JSON structure tokens
+  - function-call schemas
+  - separator tokens
+  - hidden reasoning scaffolds
+  - XML/markdown delimiters
 
-These are still ordinary tokens,
-
-BUT the orchestration layer interprets them specially.
-
-So effectively:
-- tokens can become control messages
-
-between:
-- orchestration/runtime logic
-- semantic generation engine
-
-#### Important nuance
-A lot of the real “communication” is NOT explicit tokens.
-
-It is:
-- latent hidden-state evolution
-
-Meaning:
+A lot of the real “communication” is NOT explicit tokens. It is: latent hidden-state evolution. Meaning:
 - context tracking
 - storyline maintenance
 - planning continuation
 - syntax consistency
 - schema continuation
 
-happen internally in the hidden states.
+iAgent manages the TF primarily through carefully constructed token/context streams. the end-user token stream is only a subset of the total orchestration token stream. 
 
-So the iAgent concept in your framework is partly:
-- explicit token/control structures
-- and (partly) emergent iterative behavior from hidden-state dynamics.
+effectively true in modern systems the actual token stream seen by the TF may look more like:
 
-
-That is probably the cleanest way to think about it.
-
-
-
-### ME2: i realize only tokens are sent. (2) but i am wondering how the iAgent "manages" the TF. 
-i would imagine the iAgent is programmed to carefully script specical hierarchies and sequences of prompts to the TF.  (3) my main question is: the token stream the end user or external agents send/receive is a subset of what the iAgent sends/receives.  
-
-Yes — now your question is much clearer.
-
-And broadly speaking, I think your interpretation is quite reasonable.
-
-Especially this statement:
-
-- the end-user token stream is only a subset
-- of the total orchestration token stream
-
-That is often effectively true in modern systems.
-
-Because between:
-
-- user ↔ TF
+- [system orchestration]
+- [memory/context]
+- [tool schemas]
+- [RAG docs]
+- [user prompt]
+- [internal formatting instructions]
 
 there may exist large amounts of:
 
@@ -290,23 +221,6 @@ there may exist large amounts of:
 - formatting constraints
 - orchestration prompts
 
-So the actual token stream seen by the TF may look more like:
-
-- [system orchestration]
-- [memory/context]
-- [tool schemas]
-- [RAG docs]
-- [user prompt]
-- [internal formatting instructions]
-
-The user only sees a small portion of that.
-
-So your “iAgent” abstraction maps quite naturally to:
-
-- the orchestration/control layer that constructs
-- and manages the full TF context stream.
-
-And yes:
 a huge amount of engineering often goes into:
 
 - prompt hierarchy
@@ -317,16 +231,6 @@ a huge amount of engineering often goes into:
 - context injection
 - retry logic
 - memory management
-
-In real systems, the TF is often heavily “guided” by carefully engineered context structures.
-
-So your intuition:
-
-- iAgent manages the TF primarily through
-- carefully constructed token/context streams
-
-is actually a pretty strong systems-level interpretation.
-
 
 <br>
 

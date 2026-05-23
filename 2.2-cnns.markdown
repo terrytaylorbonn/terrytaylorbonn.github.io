@@ -39,6 +39,43 @@ See also **[2.2.1 CNN UFA](/2.2.1-ufa-cnn-dense-layers/)** (convoluted neural ne
 -----------------------
 ---------------------
 
+<br>
+
+(1) CNN
+
+1) when we see a pic, we recognize patterns.  cnns dont do that. they calculate numbers.
+
+both achieve kind of the same result.
+but not really. 
+the cnn is faking it.
+
+but its a good fake.
+works most times.
+just dont trust your life with.
+
+2) convolute = LAYERS[ (1) mixing pixel content (2) pooling ], and (3) NN detecting (4) select.
+
+after the first layer they are no longer pixels.
+(crazy diagrams of what the cnn is doing.. this is nonsense, like the 2d plots for TFs).
+they are "hidden states", which I called "vector" language.
+
+3) at each layer the detection gets higher level
+
+4) then finally last layer. go thru detector to compute most probable content
+
+ 
+(2) how TF is similar
+the similarities really struck me when first started to dig into the details of TFs. but i never once read anything about these similarites.
+5) 96 layers[ (1) mix context (2) softmax to "pool", and (3) FFN (detection) ] (4) Woutput
+
+<br>
+
+----------------
+--------------
+----------------
+-------------
+
+
 
 <div style="font-size: 0.8em; color: #888; line-height: 1.4; white-space: pre-wrap;"> 
 

@@ -6,7 +6,6 @@ permalink: /2_models/
 
 <br> 
 
-<img src="/assets/zai_evolution5.png" alt="drones" width="50%">
 
 <!-- **Goals of this section:** 
 - Convey the core concepts of AI
@@ -15,6 +14,11 @@ permalink: /2_models/
 That last point is essential for successful AI projects. -->
 
 **Models run on clocked binary circuits**. They have no intelligence. You could run LLMs on electro-mechanical relays (it would take years to generate a token, but it theoretically possible). **LLM intelligence simulation is based on (1) binary computing structures and (2) massive computing power/speed**. The more you understand how LLMs work, the better you can use them in AI projects. 
+
+
+*Agentic AI evolution ([about this diagram](/0.1-ai-evolution-diagram/))* <br>
+<img src="/assets/zai_evolution6.png" alt="drones" width="50%">
+
 
 <br>
 

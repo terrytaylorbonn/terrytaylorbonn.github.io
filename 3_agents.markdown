@@ -6,15 +6,18 @@ permalink: /3_agents/
 
 <br> 
 
-<img src="/assets/zai_evolution5.png" alt="drones" width="50%">
+
+**Conceptual summary of agents**:
+- Agent = any external (to the LLM) program that calls the LLM API. Basically plays the role of a human during chat (but can do much more).
+- Agent + AI = an LLM is used as a useful assistant.
+
+*Agentic AI evolution ([about this diagram](/0.1-ai-evolution-diagram/))* <br>
+<img src="/assets/zai_evolution6.png" alt="drones" width="50%">
 
 
 
 <br>
 
-**Conceptual summary of agents**:
-- Agent = any external (to the LLM) program that calls the LLM API. Basically plays the role of a human during chat (but can do much more).
-- Agent + AI = an LLM is used as a useful assistant.
 
 <!--
 - **[3 Agents](/3_agents/)** (the focus of this site). Concepts and demos for
@@ -24,9 +27,6 @@ permalink: /3_agents/
   - **[3.3 Agentic + AI (real-world projects)](/3.3-ai-projects/)** (the end goal of this site). 
 -->
 
-
-
-<br>
 
 ### [3.1 Agentic (no AI)](/3.1-agentic/). Core concepts and basic demos
 
