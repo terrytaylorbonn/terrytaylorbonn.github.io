@@ -1,10 +1,10 @@
 ---
 layout: page
-title: "2.4.2.6.1 UFA CNN denselayers"
-permalink: /2.4.2.6.1-ufa-cnn-dense-layers/
+title: "2.2.1 UFA CNN denselayers"
+permalink: /2.2.1-ufa-cnn-dense-layers/
 ---
 
-[← 2.4.2.6 UFA CNN](/2.4.2.6-ufa-cnn/)
+[← 2.2 CNNs](/2.2-cnns/)
 
 <br>
 

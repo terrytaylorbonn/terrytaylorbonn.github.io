@@ -27,7 +27,7 @@ I worked on AI drones from 2023 to 2024 focusing on:
 
 See also: 
   - **[Core AI CNN (object recognition) concepts](/2.2-cnns/)**
-
+  - [Logic Of Violence: We Are Nowhere Near The Endgame In Drone Wars](https://www.zerohedge.com/military/logic-violence-we-are-nowhere-near-endgame-drone-wars) 26.0523
 
 <br>
 
@@ -135,7 +135,7 @@ Focuses on the FC/firmware combinations shown below (with status).
 
 <br> 
 
-26.0425 *TODO: Tridgewell*
+26.0523 *TODO: Tridge*
 
 <!-- 
 #### My first build validates the Ziptie approach for new drone builders (like me)

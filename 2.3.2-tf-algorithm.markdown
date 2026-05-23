@@ -1,7 +1,7 @@
 ---
 layout: page
-title: "2.3.3 Gist of LLM TF UFA"
-permalink: /2.3.3-tf-algorithm/
+title: "2.3.2 Gist of LLM TF UFA"
+permalink: /2.3.2-tf-algorithm/
 ---
 
 [← 2.3 LLMs](/2.3-llms/)

@@ -30,7 +30,7 @@ After understanding the gist of CNNs, **my focus shifted to LLMs (large language
 This page describes 
 
 - 2.3.1 Gist of LLMs
-- 2.3.3 Gist of the LLM TF UFA
+- 2.3.2 Gist of the LLM TF UFA
 - 2.3.4 LLM transformer training
 - 2.3.5 LLM Internal Agent
 - 2.3.6 LLM stack demos
@@ -52,7 +52,7 @@ Describes in concise detail gist of what an LLM model does without describing co
 
 <br>
 
-### [2.3.3 Gist of the LLM (GPT-3) TF UFA](/2.3.3-tf-algorithm/)
+### [2.3.2 Gist of the LLM (GPT-3) TF UFA](/2.3.2-tf-algorithm/)
 
 diagram are my own, and depict my interpretation of the GPT-3 algorithm. Its much more complex than what these few diagrams depict. But it gives you an appreciation of the vast complexity of TF calculations.
 

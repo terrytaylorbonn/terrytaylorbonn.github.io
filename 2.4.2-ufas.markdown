@@ -69,7 +69,7 @@ My take on training:
   - for each input / output pair
   - adjust Weighs and biases to slightly improve the coomputation of this pair as the best value (because this is a good match)
 
-**[6 CNN UFA](/2.4.2.6-ufa-cnn/) (TODO)** (convoluted neural networks). 
+**[6 CNN UFA](/2.2.1-ufa-cnn-dense-layers/) (TODO)** (convoluted neural networks). 
 
 AlexNet 2012 is an excellent demo.
 - 2012 AlexNet Object recognition demo
