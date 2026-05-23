@@ -1,7 +1,7 @@
 ---
 layout: page
-title: Goals
-permalink: /0-goals/
+title: Focus
+permalink: /0-site-focus/
 ---
 
 
@@ -27,15 +27,15 @@ I reorganized this site and wiki many times during the past 2+ years as I (with 
 
 <br>
 
-### **My personal goals** (and the focus of this site)
+### **Site focus**
 - **1 Present: AI agents** (that use agentic AI LLMs)
 - **2 Recent past: AI models and drones**
-- **3 Future (continued exploration of practical AI systems)**
+- **3 Future**
 
 
 <br>
 
-# **1 Present goal: AI Agents (that use agentic AI)**
+# **1 Present focus: AI Agents (that use agentic AI)**
 
 All you need to understand 
 - the core concepts of AI agents,
@@ -175,7 +175,7 @@ CODE EXECUTED:
 
 <br>
 
-# **2 Recent past: AI models and drones**
+# **2 Recent focus: AI models and drones**
 
 During the drone and model phases of ZiptieAI, I reorganized this website and the wiki dozens of times.
 - I originally wanted to focus on AI for drones (CNN object recognition). 
@@ -235,16 +235,15 @@ Learn the gist of **[AI Models](/2_models/) ([especially LLMs](/2.3-llms/))**. T
 <br>
 
 
-# **3 Future goals** (continued exploration of practical AI systems)
+# **3 Future**
 
-
-My future goals:
+- Continued exploration of practical AI systems
 - To remain vigilant and flexible. 
 - Focus less on this website and more on [3.3 AI projects](/3.3-ai-projects/).
 
 <br>
 
-Some thoughts on the future:
+Some thoughts on the future (from myself and GPT):
 
 **1 Nobody saw it coming**. 50 years ago — Commodore, Atari, ARPANET — nobody imagined PCs or the internet would reshape civilization. The search engine was unthinkable. What we take for granted today was science fiction. AI will be bigger. And the end state is something we probably can't yet imagine.
 
@@ -261,16 +260,18 @@ Some thoughts on the future:
 
 <br>
 
-------
+A few of my own personal thoughts (topics best not discussed with LLMs):
+
+**6 AI will create a massive efficiency windfall**. 
+- This windfall will drastically raise productivity (like previous industrial/tech revolutions have).
+
+**7 This windfall will spent on the following:**
+- Stabilizing or slightly raising living standards.
+- Significantly increasing government employment and the government share of economic activity.
+- Stabilizing debt and entitlements in developed countries (allowing the can to be kicked farther down the road). 
+
+**8 AI will drastically enable monitoring and control** of a large population by relatively few government actors. 
 
 <br>
 
-Finally if anyone has read this far, I'll add my own core convictions:
-
-**6 AI will not cause a reduction in government employment or entitlements**. I have never seen any post about how AI will result in such a reduction. Not once. And it wont. The windfall of efficiency from AI will be squandered on even more government bloat. 
-
-**7 That efficiency windfall may, however, stabilize things longer than anyone though possible**. Allowing the can to be kicked farther down the road. This is why I think **AI is the most important development in the world today**. 
-
-<br>
-
-26.0522
+26.0523

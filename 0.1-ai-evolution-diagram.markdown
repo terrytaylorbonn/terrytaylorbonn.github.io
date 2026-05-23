@@ -1,0 +1,61 @@
+---
+layout: page
+title: "Agentic AI evolution diagram"
+permalink: /0.1-ai-evolution-diagram/
+---
+
+[← Home](/)
+
+<br>
+
+This diagram (v6) summarizes the main concepts of this site:
+
+- **1 AI drones** were the first project. The AI was CNNs (object recognition).
+- **2 AI models**:
+  - **2.1 Predictive** are NNs for prediction. 
+  - **2.2 CNNs** are convoluted NNs. 
+  - **2.3 LLMs** are large language models (with internal agent and transformer) designed for chat.
+  - **2.4 Agentic LLMs** are LLMs with a TF that supports agentic AI by supporting such "higher level" AI concepts as (simulated) "thinking", "reasoning", "planning", etc.
+  - **2.5 Robotic AI** is for the future. This includes**Agentic LLMs** and **JEPA**.
+- **3 Agents**:
+  - **3.1 Agent demos (non-AI)** are basic demos where the AI model receives a prompt and outputs a response that does not have any "higher level" AI for agentic AI. The dotted arrows represents the lack of "thinking", etc.
+  - **3.2 AI agent demos** are basic demos of AI models with "higher level" AI. The thick arrows indicates that this is the main interest of this site.
+    - The **thick solid arrow** indicates that this capability is working with major models for **non-critical applications** that can tolerate errors (from AI based on pattern matching).
+    - The **think dotted arrow** indicates a future possible capability (the problem is that (humanoid) robots must adhere to higher safety levels that I personally think is not possible with LLMs; Yan LeCun's claims that his JEPA will change things to me is raw hype).
+  - **3.3 AI agent projects** are meant to be working prototype project (not simple demos).    
+
+<br>
+
+<img src="/assets/zai_evolution6.png" alt="AI evolution diagram" width="55%">
+
+<br>
+
+--------------------------------------
+--------------------------------------
+--------------------------------------
+--------------------------------------
+
+<br>
+
+
+Previous versions of this diagram.
+
+v5 
+
+<img src="/assets/zai_evolution5.png" alt="AI evolution diagram" width="45%">
+
+v3 
+
+<img src="/assets/zai_evolution3.png" alt="AI evolution diagram" width="45%">
+
+v2
+
+<img src="/assets/zai_evolution2.png" alt="AI evolution diagram" width="45%">
+
+v1
+
+<img src="/assets/zai_evolution.png" alt="AI evolution diagram" width="25%">
+
+<br>
+
+26.0523 (v1 26.0523)
