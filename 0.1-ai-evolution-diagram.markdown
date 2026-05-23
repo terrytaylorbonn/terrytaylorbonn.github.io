@@ -12,17 +12,17 @@ This diagram (v6) summarizes the main concepts of this site:
 
 - **1 AI drones** were the first project. The AI was CNNs (object recognition).
 - **2 AI models**:
-  - **2.1 Predictive** are NNs for prediction. 
-  - **2.2 CNNs** are convoluted NNs. 
-  - **2.3 LLMs** are large language models (with internal agent and transformer) designed for chat.
+  - **2.1 Predictive** are NNs for prediction. These are simple input/output "bare bones" NN that you can train and run locally (I've done this before, and the tech errors were many and numerous; GPT fixed them all; so its quite realistic for non-experts to start building such NNs)
+  - **2.2 CNNs** are convoluted NNs (for object recognition). "Convolution" means that neighboring pixels are "convoluted" to detect patterns.  
+  - **2.3 LLMs** are large language models (with internal agent and transformer) designed for chat. The TF performs a similar process to convolution using "attention heads", which basically "convolute" tokens related by meaning (using KV mechanism).
   - **2.4 Agentic LLMs** are LLMs with a TF that supports agentic AI by supporting such "higher level" AI concepts as (simulated) "thinking", "reasoning", "planning", etc.
-  - **2.5 Robotic AI** is for the future. This includes**Agentic LLMs** and **JEPA**.
+  - **2.5 Robotic AI** is something that might be a focus for this site in the future. This includes **Agentic LLMs** and **JEPA**. I worked on JEPA for a while, and was not impressed (LeCun's claims that his version of AI will be more "real" AI than LLMs strikes me as, to put it mildly, hype). And the idea of being anywhere near a robot that is in any way controlled by an LLM is scary.
 - **3 Agents**:
   - **3.1 Agent demos (non-AI)** are basic demos where the AI model receives a prompt and outputs a response that does not have any "higher level" AI for agentic AI. The dotted arrows represents the lack of "thinking", etc.
   - **3.2 AI agent demos** are basic demos of AI models with "higher level" AI. The thick arrows indicates that this is the main interest of this site.
     - The **thick solid arrow** indicates that this capability is working with major models for **non-critical applications** that can tolerate errors (from AI based on pattern matching).
     - The **think dotted arrow** indicates a future possible capability (the problem is that (humanoid) robots must adhere to higher safety levels that I personally think is not possible with LLMs; Yan LeCun's claims that his JEPA will change things to me is raw hype).
-  - **3.3 AI agent projects** are meant to be working prototype project (not simple demos).    
+  - **3.3 AI agent projects** are meant to be working prototype projects (not simple demos).    
 
 <br>
 
