@@ -1,6 +1,6 @@
 ---
 layout: page
-title: "2.1 Predictive (2b-6)"
+title: "2.1 Predictive"
 permalink: /2.1-predictive-nns/
 ---
 
