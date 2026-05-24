@@ -8,20 +8,189 @@ permalink: /2.1-predictive-nns/
 
 <br>
 
-<img src="/assets/brain1.png" alt="drones" width="14%">
+This page will document demos of simple predictive NNs running local on my laptop.
 
+<img src="/assets/brain1.png" alt="drones" width="14%">
 
 <br>
 
-*Work in progress.*
+----------------
+
+<br>
+
+
+## **Demo 1** 26.0524
+
+Run locally on my i7 with NVidia 3050.
+
+For details see [#607\_2.1\_predictive\_NNs\_.docx](https://drive.google.com/drive/folders/1-Adawag9uA8_bq-hDF-nOuPYaRLz1eEO).
+
+<img src="/assets/predictive1.png" alt="drones" width="40%">
+
+<br>
+
+### **TRAINING PHASE**
+
+#### Generate signal
+```
+t ───────────────────────────────►
+
+series =
+sin(t)
++
+0.1*sin(3t)
+
+Result:
+smooth wave + small wiggles
+```
+
+#### Create training windows
+```
+[x0 x1 x2 x3 x4] ──► x5
+[x1 x2 x3 x4 x5] ──► x6
+[x2 x3 x4 x5 x6] ──► x7
+```
+
+#### Tensor shapes
+```
+X : [samples, window]
+Y : [samples, 1]
+```
+
+#### Neural network
+```
+Input window
+[ x(t-20) ... x(t-1) ]
+            │
+            ▼
+
+Linear(20 → 64)
+            │
+            ▼
+ReLU
+            │
+            ▼
+
+Linear(64 → 64)
+            │
+            ▼
+ReLU
+            │
+            ▼
+
+Linear(64 → 1)
+            │
+            ▼
+
+Predicted next value
+x(t)
+```
+
+#### Training loop
+```
+Forward pass:
+X ─► model ─► prediction
+
+Loss:
+prediction vs actual
+
+MSE:
+(pred - actual)^2
+
+Backprop:
+loss.backward()
+
+Optimizer:
+Adam updates weights
+
+Repeat 1000 epochs
+```
+
+### **GENERATION / INFERENCE PHASE**
+
+#### Initial known window
+```
+[x1500 ... x1519]
+
+            │
+            ▼
+
+model predicts:
+
+x1520
+```
+
+#### append prediction
+```
+old:
+[x1500 ... x1519]
+
+new:
+[x1501 ... x1520]
+```
+
+#### Repeat autoregressively
+```
+[x1501 ... x1520] ─► x1521
+[x1502 ... x1521] ─► x1522
+[x1503 ... x1522] ─► x1523
+```
+
+#### Core autoregressive loop
+```
+past values
+    │
+    ▼
+predict next value
+    │
+    ▼
+feed prediction back in
+    │
+    ▼
+repeat
+```
+
+#### Comparison
+```
+predicted future
+vs
+actual future
+```
+
+### **Important conceptual connection**
+
+This is structurally similar to LLM generation:
+
+```
+previous tokens
+    │
+    ▼
+predict next token
+    │
+    ▼
+append token
+    │
+    ▼
+repeat
+```
+
+<br>
+
+---------------------------
+-----------------------------
+-----------------------------
+-----------------------------
+-------------------------
+
+<br>
+
+# **Chats**
 
 [Predictive vs Generative AI: How They Work and When to Use Each](https://www.youtube.com/watch?v=phOhGqpXss4)
 
 IBM Technology
 
 He makes mistakes I think... but good discussion. 
-
-
 
 ### just watched a video about predictive/generative ai. confusing. 
 in general, predictive AI is basically an AI assistant helping eAgent SW that actually runs the prediction algorithms? 
@@ -264,4 +433,4 @@ mindset:
 - deterministic/simple systems are often preferred when possible 
 - deep AI is used where pattern complexity becomes too large for explicit rules.
 
-26.0514
+26.0524

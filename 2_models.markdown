@@ -6,7 +6,9 @@ permalink: /2_models/
 
 <br> 
 
-**A "model" in this section is anything that has a neural network (NN) at its core**. It may a lot of other stuff wrapped around it (for CNNs convolution, for LLMs Attention heads, etc) but **the core pattern matching and statistical probability runs on the NN**.
+**A "model" in this section is anything that has a neural network (NN) at its core**. It may a lot of other stuff wrapped around it (for CNNs convolution, for LLMs Attention heads, etc) but **the core pattern matching and statistical probability runs on the NN**. The differences are mainly architecture, training, orchestration, and use case.
+
+**All models are first (1) trained** (internal NN params are SW programmed) and **then (2) used to infer output from input.**  
 
 **Models run on clocked binary circuits**. They have no intelligence. You could run LLMs on electro-mechanical relays (it would take years to generate a token, but it theoretically possible). **LLM intelligence simulation is based on (1) binary computing structures and (2) massive computing power/speed**. The more you understand how LLMs work, the better you can use them in AI projects. 
 
@@ -21,9 +23,9 @@ Other sources about models (wiki pages):
 
 <br>
 
-### [2.0 NN UFA concepts](/2.0-ufas/)
+### [2.0 Neural-network UFA foundations](/2.0-ufas/)
 
-The core of every model is the NN that implements a UFA (Univeral Function **Approximator**. The NN in each of the model types listed on this page implements a UFA that **generate an output based on pattern matching of the input** (the patterns were programmed ("trained") by setting NN parameters (weights and biases) during training).
+The core of every model is the NN that implements a UFA (Univeral Function **Approximator**). The NN in each of the model types listed on this page implements a UFA that **generate an output based on pattern matching of the input** (the patterns were programmed ("trained") by setting NN parameters (weights and biases) during training).
 
 <br>
 

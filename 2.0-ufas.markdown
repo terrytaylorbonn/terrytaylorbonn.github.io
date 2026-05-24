@@ -1,6 +1,6 @@
 ---
 layout: page
-title: "2.0 UFAs"
+title: "2.0 Neural-network UFA foundations"
 permalink: /2.0-ufas/
 ---
 

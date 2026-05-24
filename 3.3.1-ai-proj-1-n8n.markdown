@@ -1,0 +1,43 @@
+---
+layout: page
+title: "3.3.1 Agentic AI project n8n"
+permalink: /3.3.1-ai-proj-1-n8n/
+description: Last edit 26.0524
+---
+
+[← 3 Agentic AI projects](/3.3-ai-projects/)
+
+*Complete project ecosystem*<br>
+<img src="/assets/6_main_diagram.png" alt="drones" width="40%"> 
+
+For details see 
+- Documentation: [#606\_ai_ides_.docx](https://drive.google.com/drive/folders/1-Adawag9uA8_bq-hDF-nOuPYaRLz1eEO)
+- Repo [602-2_D1-tool-LLM](https://github.com/terrytaylorbonn/602-2_D1-tool-LLM)
+
+<br>
+
+## Demo 1 Cursor / gpt-40-mini / MongoDB / n8n / index.html (26.0501)
+
+<img src="/assets/cursor_demo1_00.png" alt="drones" width="50%"> 
+
+Bearer token for basic security.
+
+<img src="/assets/cursor_demo1_01.png" alt="drones" width="50%"> 
+
+List of events in MongoDB.
+
+<img src="/assets/cursor_demo1_02.png" alt="drones" width="65%"> 
+
+Human language data input and resulting normalized input.
+
+<img src="/assets/cursor_demo1_03.png" alt="drones" width="50%"> 
+
+<img src="/assets/cursor_demo1_04.png" alt="drones" width="65%"> 
+
+DB contents.
+
+<img src="/assets/cursor_demo1_05.png" alt="drones" width="65%"> 
+
+<br> 
+
+26.0524

@@ -9,17 +9,14 @@ permalink: /0-site-focus/
 
 AI tech is evolving quickly.
 - If you want a job in the future, be flexible, learn AI.  
-- **If you want a job in AI in the future, be much more flexible and focused**. 
+- **If you want a job in AI in the future, be much more flexible and focused**. <br> <img src="/assets/agentic_economy.png" alt="drones" width="75%"> 
+
+- **And (most of all) don't get scammed by AI hype** (Waymo driving into a flood; Tesla is no better). <br>  <img src="/assets/waymo.png" alt="drones" width="25%"> 
+
 
 <!-- assembly programming, etc went the way of the dinosaurs.
 and more on beyond a demo website.
-- learn from what happened to tv repair, shoe repair, pc makers, ... all to asia. 
-
-
- -->
-
-<img src="/assets/agentic_economy.png" alt="drones" width="75%"> 
-
+- learn from what happened to tv repair, shoe repair, pc makers, ... all to asia.  -->
 
 <!--
 I reorganized this site and wiki many times during the past 2+ years as I (with the help of GPT) sought the gist behind the hype of AI. 
@@ -274,4 +271,4 @@ A few of my own personal thoughts (topics best not discussed with LLMs):
 
 <br>
 
-26.0523
+26.0524
