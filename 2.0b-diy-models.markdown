@@ -1,0 +1,169 @@
+---
+layout: page
+title: "2.0b DIY models"
+permalink: /2.0b-diy-models/
+---
+
+[← 2 AI (models)](/2_models/)
+
+<br>
+
+(TODO) How to create your own (do it yourself) models. For now just an idea.
+
+
+## CHAT 26.0524
+
+
+### ME: i added a page to ziptieai.com 
+"How to create your own (do it yourself) models".
+the idea (kind of fuzzy right now... i have never really explored this): 
+- start out simple then get more complex
+- at first just model on local pc with gpu (something like predictive NN)... but the predictive NN will just be running on local pc... not about deploy to own HW.
+- how to get the params (weights, biases, glue logic, iAgent) setup up.
+   - datasets
+   - training
+- deploying on custom HW? i dont know.. maybe embedded.. 
+
+your ideas?
+
+
+### GPT: Yes — good page idea.
+
+I would frame it as a model-building ladder:
+
+```
+toy model
+→ trained local model
+→ useful custom model
+→ deployable model
+→ embedded/edge model
+```
+
+For your site, **keep it practical and not too ambitious**.
+
+### Suggested page structure
+
+#### 1 What “create your own model” means
+
+A model is basically:
+```
+architecture + weights/biases + inference code
+```
+For LLM apps, there may also be:
+```
+iAgent / prompt / orchestration logic
+```
+But for simple custom NNs:
+- no iAgent
+- just input → NN → output.
+
+#### 2 Start with a tiny predictive NN
+
+Best first demo.
+```
+current state → future state
+```
+Example:
+```
+last 20 sine-wave values → next value
+```
+Goal:
+
+- create dataset
+- train weights/biases
+- save model
+- load model
+- run prediction.
+
+This teaches the whole lifecycle.
+
+#### 3 Then train a small classifier
+
+Example:
+```
+sensor values → normal / warning / failure
+```
+This is closer to enterprise predictive AI:
+
+- risk
+- fraud
+- maintenance
+- anomaly detection.
+
+#### 4 Then CNN
+
+Example:
+```
+image → label
+```
+Use:
+
+- MNIST first
+- then maybe drone/image dataset later.
+
+This connects to your AI drones history.
+
+#### 5 Then fine-tune an existing model
+
+Instead of training from scratch:
+```
+pretrained model + small custom dataset → specialized model
+```
+This is how most real projects work.
+
+#### 6 Deployment levels
+
+Keep this simple:
+```
+Level 1: run locally in Python
+Level 2: expose with FastAPI
+Level 3: run on local GPU
+Level 4: deploy to cloud
+Level 5: edge/embedded device
+```
+For embedded:
+
+- Jetson Nano / Orin
+- Raspberry Pi maybe for tiny models
+- ONNX
+- TensorRT
+- quantization.
+
+But I would **leave embedded as “later.”**
+
+### Key conceptual point for the page
+
+Your page should probably say:
+```
+Do not start by trying to train an LLM.
+Start by training tiny NNs.
+The same core ideas apply:
+dataset
+→ architecture
+→ loss
+→ training
+→ weights/biases
+→ inference
+→ deployment
+```
+That is the cleanest educational message.
+
+### Suggested TOC
+How to create your own models
+```
+1 What a model is
+2 Dataset
+3 Architecture
+4 Training
+5 Weights and biases
+6 Inference
+7 Save/load model
+8 Local GPU
+9 FastAPI deployment
+10 Edge/embedded deployment
+```
+This fits your “simple first, then complex” approach.
+
+<br>
+
+26.0524 (v1 26.0524)

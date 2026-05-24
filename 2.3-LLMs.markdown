@@ -11,11 +11,11 @@ description: Last edit 26.0426
 
 This page describes 
 
-- 2.3.1 Gist of LLMs
-- 2.3.2 Gist of the LLM TF UFA
-- 2.3.4 LLM transformer training
-- 2.3.5 LLM Internal Agent
-- 2.3.6 LLM stack demos
+- **2.3.1 Gist of LLMs**. The gist of what an LLM model does without complex algorithms or architecture diagrams.
+- **2.3.2 Gist of the LLM TF UFA**. A marvel of engineering complexity. 
+- **2.3.4 LLM transformer training**
+- **2.3.5 LLM Internal Agent**. My own invented term. iAgent + TF = LLM.
+- **2.3.6 LLM stack demos**. Listed on my wiki.
 
 <img src="/assets/brain1b.png" alt="drones" width="22%">
 
@@ -39,7 +39,7 @@ This will give you an appreciation of the vast complexity of TF calculations.
 
 ### [2.3.4 LLM transformer training](/2.3.4_llm-tf-training/)
 
-Training is something most of us will never do (Palantir uses standard models; they do no customized training). But its the second heading for a good reason: Training is the defining aspect of model transformer (TF) design
+Training is something most of us will never do (Palantir uses standard models; they do no customized training). But Training is the defining aspect of model transformer (TF) design.
 
 <img src="/assets/hillsvalleys.png" alt="smol" width="25%">
 
@@ -68,7 +68,7 @@ The wiki page [**"AI LLM stacks"**](https://github.com/terrytaylorbonn/auxdrone/
 
 <br>
 
-26.0523
+26.0524
 
 <!-- - **1 LLM stack demos**. I planned to spend a lot of time on this, but at some point came to the conclusion that time would be better spent elsewhere. In any case, knowing the basic is quite important. Its not that difficult to install a smaller model on your local PC, and it does have benefits.
 - **2 LLM transformer (TF) training**. Training is something most of us will never do (Palantir uses standard models; they do no customized training). But its the main driving factor in the design of LLM transformers. 
