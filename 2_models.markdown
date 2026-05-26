@@ -34,20 +34,6 @@ Other sources about models (wiki pages):
 
 The core of every model is the NN that implements a UFA (Univeral Function **Approximator**) that **generates an output based on pattern matching of the input**. The patterns were programmed ("trained") by setting NN parameters (weights and biases) during training.
 
-<!-- 
-### [2.0a Overview of model evolution](/2.0a-model-evolution/)
-
-An analogy between the brain and models. The main importance of understanding this is to 
-- realize that the claims that AI has one iota of real intelligence are nonsense.
-- gain an intrinsic understanding of how to exploit the incredible computing capabilities of models while minimizing the (substantial) limitations.
-
-<br>
-
-### [2.0b DIY models](/2.0b-diy-models/)
-
-(TODO / v1 26.0524) How to create your own (do it yourself) models. For now just an idea. There are advantages to creating your own models (you select the training pattern data and you can ensure honesty and integrity of responses). The challenges are significant, but will lessen with time. In any case, understanding the steps involved for a practical demo will be very helpful in understanding how AI really works.
--->
-
 <br>
 
 -----------------
@@ -78,10 +64,6 @@ Predictive NNs are small customized NNs for specific recognition tasks (if you c
 
 <img src="/assets/brain1.png" alt="drones" width="14%">
 
-
-
-
-
 <br>
 
 ### [2.2 CNNs (convolution)](/2.2-cnns/)
@@ -101,19 +83,6 @@ An LLM (1) inputs a sequence of tokens, (2) computes the probabilities of all vo
 
 <br>
 
-<!--
-
-### **[2.4 Agentic LLM (TF/UFA semantic) functionality](/2.4-agentic-llms/)**
-
-Agentic LLMs (all major LLMs are agentic) are LLMs programmed with the required functionality and training data to support complex interaction with external agents (usually Python scripts). A few examples of agentic LLM functionality: 
-- constrain response content/format as specified in prompts  
-- build complex responses based on an analysis of prompt content (for example, breaking down a complex process description into planning steps that an agent can reasonably process)
-
-
-<img src="/assets/brain1c.png" alt="drones" width="27%">
-
-<br> -->
-
 
 -----------------
 
@@ -121,7 +90,7 @@ Agentic LLMs (all major LLMs are agentic) are LLMs programmed with the required 
 
 ## Robotic AI = future topic
 
-*26.0526:This does not really belong on this "2 Models" page, because this is not a different model type. I originally put it here because I believed LeCun's hype about his version of JEPA fixing the fundamental limitations of LLMs (it doesnt, and will never). Might move this somewhere else in the future. Right now this does not interest me... robotic AI is about as practical as self-driving cars.*
+*26.0526: This section does not really belong on this "2 Models" page, because this is not a different model type. I originally put it here because I believed LeCun's hype about his version of JEPA that would be a fundamentally different type of AI platform that would fix the fundamental limitations of LLMs (it doesnt, and never will). I might move this section somewhere else in the future. Right now this does not interest me too much... robotic AI (that claims to be able to do what humans can do) is about as realistic as FSD or colonizing Mars.*
 
 *A Waymo "self-drives" into a flooded street.* <br>
 <img src="/assets/waymo.png" alt="drones" width="26%"> 
@@ -185,3 +154,32 @@ That last point is essential for successful AI projects. I first took an interes
 
 <br>
 -->
+
+<!-- 
+### [2.0a Overview of model evolution](/2.0a-model-evolution/)
+
+An analogy between the brain and models. The main importance of understanding this is to 
+- realize that the claims that AI has one iota of real intelligence are nonsense.
+- gain an intrinsic understanding of how to exploit the incredible computing capabilities of models while minimizing the (substantial) limitations.
+
+<br>
+
+### [2.0b DIY models](/2.0b-diy-models/)
+
+(TODO / v1 26.0524) How to create your own (do it yourself) models. For now just an idea. There are advantages to creating your own models (you select the training pattern data and you can ensure honesty and integrity of responses). The challenges are significant, but will lessen with time. In any case, understanding the steps involved for a practical demo will be very helpful in understanding how AI really works.
+-->
+
+<!--
+
+### **[2.4 Agentic LLM (TF/UFA semantic) functionality](/2.4-agentic-llms/)**
+
+Agentic LLMs (all major LLMs are agentic) are LLMs programmed with the required functionality and training data to support complex interaction with external agents (usually Python scripts). A few examples of agentic LLM functionality: 
+- constrain response content/format as specified in prompts  
+- build complex responses based on an analysis of prompt content (for example, breaking down a complex process description into planning steps that an agent can reasonably process)
+
+
+<img src="/assets/brain1c.png" alt="drones" width="27%">
+
+<br> -->
+
+
