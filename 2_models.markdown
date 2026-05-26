@@ -121,6 +121,12 @@ Agentic LLMs (all major LLMs are agentic) are LLMs programmed with the required 
 
 ## Robotic AI = future topic
 
+*26.0526:This does not really belong on this "2 Models" page, because this is not a different model type. I originally put it here because I believed LeCun's hype about his version of JEPA fixing the fundamental limitations of LLMs (it doesnt, and will never). Might move this somewhere else in the future. Right now this does not interest me... robotic AI is about as practical as self-driving cars.*
+
+*A Waymo "self-drives" into a flooded street.* <br>
+<img src="/assets/waymo.png" alt="drones" width="26%"> 
+
+
 ### [2.5 Robotic AI](/2.5-robotic-ai/)
 
 I spent a couple of months doing demos for basic robotic AI. I was intrigued by LeCun's claims about JEPA and his new venture that would basically go beyond the LLMs that were already becoming obsolete. After a few demos and chats with GPT, I felt like I had been scammed. 
@@ -131,7 +137,7 @@ In any case, its inevitable that AI will pair up with humanoid robots in the hom
 
 <br>
 
-26.0524
+26.0526
 
 <!-- *How a UFA determines if a location is in the Netherlands or Belgium*.<br>
 <img src="/assets/belgium1.png" alt="drones" width="75%"> 

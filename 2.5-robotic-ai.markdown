@@ -13,6 +13,17 @@ JEPA, belief tracking, control loops, autonomy.
 
 See the [Wiki page](https://github.com/terrytaylorbonn/auxdrone/wiki/Robotic-AI-demos) for more info.
 
+Robotics combines:
+- models
+- planning
+- world models
+- control systems
+- sensors
+So it is really:
+- integrated AI systems
+- not just another NN subtype.
+
+
 <br> 
 
 ### Demos
