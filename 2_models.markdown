@@ -6,6 +6,11 @@ permalink: /2_models/
 
 <br> 
 
+*"2 Models" in the Agentic AI evolution ([diagram](/0.1-ai-evolution-diagram/))* <br>
+<img src="/assets/zai_evolution6.png" alt="drones" width="50%">
+
+<br>
+
 -----------------
 
 <br>
@@ -29,10 +34,6 @@ Wiki pages about models:
 
 <br>
 
-*"2 Models" in the Agentic AI evolution ([diagram](/0.1-ai-evolution-diagram/))* <br>
-<img src="/assets/zai_evolution6.png" alt="drones" width="50%">
-
-<br>
 
 
 ### [2.0 NN UFA concepts](/2.0-ufas/)
