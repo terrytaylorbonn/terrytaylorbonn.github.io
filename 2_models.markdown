@@ -47,20 +47,16 @@ The core of every model is the NN that implements a UFA (Univeral Function **App
 <br>
 
 ## 3 groups of models:
-- 2.1 core (no convolution/tf) 
-- 2.2 convolution
-- 2.3 tf
+- 2.1 Core (no convolution/tf) 
+- 2.2 Convolution
+- 2.3 TF
 
 3 phases of model demos for each model group:
-- P1 DIY (doit yourself) models (phase1) understand mechanics
-- P2 OTS (offtheshelf) models (phase2) 
-- P2 OTS fine-tuned (phase3)
-
+- P1 DIY (doit yourself) models / understand mechanics
+- P2 OTS (offtheshelf) models 
+- P3 OTS fine-tuned 
 
 <br>
-
-
-
 
 ### [2.1 Core NNs](/2.1-predictive-nns/)
 
