@@ -59,9 +59,7 @@ The core of every model is the NN that implements a UFA (Univeral Function **App
 
 <br>
 
------------------
 
-<br>
 
 
 ### [2.1 Core NNs](/2.1-predictive-nns/)
