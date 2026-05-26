@@ -21,6 +21,14 @@ This page will document demos of
 
 <br>
 
+### **Demo 2: [2.1.2 Tiny classifier NN](/2.1.2-classifier-nn/)** (26.0524-25)
+
+Runs locally on my i7 with NVidia 3050.
+
+<img src="/assets/classification.png" alt="drones" width="30%">
+
+<br>
+
 ### **Demo 1: [2.1.1 Predictive NN 01 sine](/2.1.1-predictive-nn-01-sine/)** (26.0524-25)
 
 Runs locally on my i7 with NVidia 3050.
@@ -29,4 +37,4 @@ Runs locally on my i7 with NVidia 3050.
 
 <br>
 
-26.0525
+26.0526

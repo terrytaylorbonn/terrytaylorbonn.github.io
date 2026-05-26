@@ -4,7 +4,7 @@ title: "2.1.1 Predictive NN 01 sine"
 permalink: /2.1.1-predictive-nn-01-sine/
 ---
 
-[← 2.1 Predictive](/2.1-predictive-nns/)
+[← 2.1 Core NNs](/2.1-predictive-nns/)
 
 <br>
 
