@@ -10,7 +10,7 @@ permalink: /2.1.2-classifier-nn/
 
 Runs locally on my i7 with NVidia 3050.
 
-<img src="/assets/classifier.png" alt="drones" width="40%">
+<img src="/assets/classification.png" alt="drones" width="30%">
 
 
 
@@ -44,7 +44,8 @@ epoch=900 loss=0.004811 accuracy=1.0000
 
 ```
 
-<img src="/assets/predictive1.png" alt="drones" width="40%">
+<img src="/assets/classification.png" alt="drones" width="40%">
+
 
 
 <br>
