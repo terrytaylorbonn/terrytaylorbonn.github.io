@@ -18,7 +18,7 @@ permalink: /2_models/
 
 **Models ARE MECHANICAL. They run on clocked binary circuits**. They have no intelligence. You could run even the most sophisticated LLM on electro-mechanical relays (it would take years to generate a token, require its own nuclear power plant, but its theoretically possible). **AI intelligence simulation is based on (1) binary computing structures and (2) massive computing power/speed**. The more you understand how AI models work, the better you can use them in AI projects. 
 
-*Electro-mechanical relay*<br>
+*Electro-mechanical relay (a theoretical alternative to the GPU)*<br>
 <img src="/assets/relay.png" alt="drones" width="12%">
 
 <br>
@@ -65,7 +65,7 @@ The core of every model is the NN that implements a UFA (Univeral Function **App
 
 ### [2.1 Core NNs](/2.1-predictive-nns/)
 
-Predictive NNs are small customized NNs for specific recognition tasks (if you create a DIY model, the first one will be something like a simple predictive NN).
+Small NNs for specific tasks. **Includes DIY demos that give you a real understanding of the core of NNs**.
 
 <img src="/assets/brain1.png" alt="drones" width="14%">
 
@@ -73,7 +73,7 @@ Predictive NNs are small customized NNs for specific recognition tasks (if you c
 
 ### [2.2 CNNs (convolution)](/2.2-cnns/)
 
-A CNN computes the most probable label ("dog", "airplane", etc) for a set of pixels. Studying CNNs is great preparation for studying more complex LLMs.
+A CNN computes the most probable label ("dog", "airplane", etc) for a set of pixels. **Studying CNNs is great preparation for studying more complex LLMs**.
 
 <img src="/assets/brain1a.png" alt="drones" width="17%">
 
@@ -81,7 +81,7 @@ A CNN computes the most probable label ("dog", "airplane", etc) for a set of pix
 
 ### [2.3 LLMs (transformers)](/2.3-llms/) (iAgent + TF)
 
-An LLM (1) inputs a sequence of tokens, (2) computes the probabilities of all vocabulary tokens as the next token, (3) outputs the selected new token, and finally (4) adds the new token to the next input sequence. An LLM consists of an (1) internal agent and a (2) transformer (TF) NN. The TF is the core computational engine behind modern AI systems and the mechanism that enables modern LLM behavior.
+An LLM (1) inputs a sequence of tokens, (2) computes the probabilities of all vocabulary tokens as the next token, (3) outputs the selected new token, and finally (4) adds the new token to the next input sequence. An LLM consists of an (1) internal agent and a (2) transformer (TF) NN. **The TF is the core computational engine behind modern AI systems and the mechanism that enables modern LLM behavior**.
 
 <img src="/assets/brain1b.png" alt="drones" width="22%">  <img src="/assets/brain1c.png" alt="drones" width="26%">
 
@@ -93,7 +93,7 @@ An LLM (1) inputs a sequence of tokens, (2) computes the probabilities of all vo
 
 <br>
 
-## Robotic AI = future topic
+## Robotic AI (future topic)
 
 *26.0526: This section does not really belong on this "2 Models" page, because this is not a different model type. I originally put it here because I believed LeCun's hype about his version of JEPA that would be a fundamentally different type of AI platform that would fix the fundamental limitations of LLMs (it doesnt, and never will). I might move this section somewhere else in the future. Right now this does not interest me too much... robotic AI (that claims to be able to do what humans can do) is about as realistic as FSD or colonizing Mars.*
 
@@ -103,11 +103,13 @@ An LLM (1) inputs a sequence of tokens, (2) computes the probabilities of all vo
 
 ### [2.5 Robotic AI](/2.5-robotic-ai/)
 
-I spent a couple of months doing demos for basic robotic AI. I was intrigued by LeCun's claims about JEPA and his new venture that would basically go beyond the LLMs that were already becoming obsolete. After a few demos and chats with GPT, I felt like I had been scammed. 
+I spent a couple of months doing demos for basic robotic AI. I was intrigued by LeCun's claims about JEPA and his new venture that would basically go beyond the LLMs that were already becoming obsolete. **After a few demos and endless chats with GPT about LeCun's claims, I felt like I had been scammed**. 
 
-Drone AI is something that works, because drones operate in very forgiving environments (in the air, far from other objects; actually they dont even need AI to fly, they need it for object recognition, terrain guidance, etc). But self-driving cars (robots) are another story. Its been over a decade of (empty) promises that FSD was just a year away. Its simply too dangerous for unintelligent robots to operate on complex and congested roadways. 
+**Drone AI is something that works, because drones operate in very forgiving environments (in the air, far from other objects**; actually they dont even need AI to fly, they need it for object recognition, terrain guidance, etc). 
 
-In any case, its inevitable that AI will pair up with humanoid robots in the home and workplace. Just like with agentic AI, there will be applications where the lack of any real intelligence can be tolerated. 
+But FSD (with cars as the robots) is another story. Its been over a decade of (empty) promises that FSD was just a year away. **Its simply too dangerous for unintelligent robots to operate on complex and congested roadways**. 
+
+In any case, its inevitable that eventually AI will pair up with humanoid robots in the home and workplace. Just like with agentic AI, **there will be Robotic AI applications (in the "distant" future) where the lack of any real intelligence can be tolerated**. 
 
 <br>
 
