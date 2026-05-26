@@ -1,6 +1,6 @@
 ---
 layout: page
-title: "2.1 Predictive"
+title: "2.1 Core NNs (dense/FF)"
 permalink: /2.1-predictive-nns/
 ---
 
@@ -12,7 +12,10 @@ permalink: /2.1-predictive-nns/
 
 <br>
 
-This page will document demos of simple predictive NNs running local on my laptop.
+This page will document demos of 
+- vector mixing
+- fully connected
+
 
 [Chats](/2.1.0-predictive-nns-chats/)
 

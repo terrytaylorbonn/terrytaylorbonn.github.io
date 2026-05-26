@@ -54,3 +54,498 @@ My take on training:
 - During training
   - for each input / output pair
   - adjust Weighs and biases to slightly improve the coomputation of this pair as the best value (because this is a good match)
+
+<br>
+
+  ------------------------------
+  ------------------------------
+  ---------------------------------
+  -----------------------------
+  -------------------------------
+
+<br>
+
+#### **26.0522 very rough draft.....**
+
+
+**Below is my comparison of the brain and models**.
+
+<br>
+
+### **Brain**
+
+- **brain stem** GOOGLE: The brain stem controls essential survival functions that you don’t have to think about, such as breathing, heart rate, blood pressure, and consciousness. *ME: What interests me about the brain stem is that it is the central loop that runs within in a human. Its our core instinct (my understanding of the brain may be mistaken a bit, but that's ok for the purposes of this webpage).*
+- **cerebrum** areas of the cerebrum enable speech, judgment, thinking and reasoning, problem-solving, emotions and learning. Other functions relate to vision, hearing, touch and other senses. *([JHopkins](https://www.hopkinsmedicine.org/health/conditions-and-diseases/anatomy-of-the-brain))*
+
+
+<img src="/assets/brain_main.png" alt="drones" width="35%">
+
+<br>
+
+### **"evolution" of models**
+
+In the diagrams below:
+- **internalAgent program (interface LLM input/output and TF) = Brainstem**. Not sure if this is Python, C, whatever the LLM devs chose (I think in the Anthropic leak it was TypeScript). You may think that such a **deterministic program != brainstem**. You would be right. But don't forget that although AI has no intelligence, its named/marketed/hyped as such, and that's why I make this analogy. To help debunk claims of intelligence.
+- **NN = Cerebrum**. NN are pattern matching binary algorithms. But such pattern matching, along with some incredibly brilliant engineering (thanks to real human intelligence), performs the real magic of interpreting human language (NN algorithms dont understand text, they simple pattern match with numerical computation). 
+- Note: If a model does not have an iAGent (like a CNN), then its not really like an intelligent mind. I would compare it more to instinctive reaction (no thinking, just reaction to input). Indeed, I have always thought the best term for NNs are "artificial instinct".
+
+
+<br>
+
+
+-----
+
+<br>
+
+
+## Excerpts from chat below
+
+###
+You are basically treating:
+-- the NN/UFA
+
+as:
+-- the universal approximation substrate
+
+and then:
+- CNNs
+- TFs
+- JEPA
+- agentic systems
+- robotic controllers
+
+as:
+
+```
+specialized higher-order architectures
+built around that substrate.
+```
+
+That is actually a very reasonable way to mentally organize the field.
+
+
+### One thing you are also implicitly recognizing:
+
+```
+higher-order behavior
+does not necessarily require
+fundamentally different computation.
+```
+
+Instead:
+- same substrate
+- different architecture
+- different scale
+- different orchestration.
+
+That is actually a deep insight behind modern AI systems.
+
+<br>
+
+---------------------------------
+------------------------
+-----------------
+
+<br>
+
+# **GPT CHAT**
+
+## ME1: does robotic AI (JEPA) have what i call an internal agent? i forgot
+
+Not really — at least not in the way you define:
+internal agent (iAgent)
+for LLM systems.
+That distinction is actually important.
+
+#### LLM systems
+
+You define:
+
+```
+iAgent
++
+TF
+```
+
+where:
+
+- TF = token prediction engine
+- iAgent = orchestration/scaffolding behavior
+  - system prompts
+  - tool usage
+  - formatting
+  - stop logic
+  - planning scaffolding
+  - conversation management
+  - etc.
+
+That makes sense for LLM chat systems.
+
+### JEPA / robotic AI
+
+Usually does NOT have an equivalent:
+- internal token-based orchestration agent
+
+Instead JEPA systems are more like:
+```
+observation
+→ latent representation
+→ prediction/world model
+→ planner/controller
+→ action
+```
+
+The “planner/controller” may LOOK somewhat agent-like, but:
+
+- usually not language-driven
+- not token-driven
+- not conversational
+- not prompt-based orchestration.
+
+### So architecturally
+
+#### LLM stack
+- iAgent
+- ↔ TF
+
+### JEPA stack
+
+More like:
+
+``` 
+encoder
+→ latent state
+→ predictor/world model
+→ planner/controller
+→ actuator
+```
+
+Different architecture emphasis.
+
+### VERY important insight
+
+This is actually one reason you increasingly lost interest in JEPA.
+Because much of what fascinated you about:
+
+- semantic orchestration
+- tool use
+- planning
+- structured outputs
+- semantic interfaces
+- agentic workflows
+
+comes from:
+- LLM semantic/token systems
+
+not from:
+- latent robotic prediction systems.
+
+That is a real architectural distinction.
+
+## ME2 so CNN, predictive, LLMs all have NN inside. robotic ai also?
+
+Yes. 
+All four contain neural networks internally.
+
+### 1 Predictive NN
+
+Simplest case.
+- input
+- → NN
+- → output
+
+Usually:
+- MLP/FFN
+- small custom model
+- trained for specific prediction task.
+
+### 2 CNN
+
+Still fundamentally:
+- neural network
+
+but adds:
+- convolution layers
+- pooling
+- hierarchical feature extraction.
+
+### 3 LLM
+
+Still fundamentally:
+- neural network
+
+but:
+- transformer architecture
+- attention heads
+- FFNs
+- token embeddings
+- autoregressive generation.
+
+### 4 Robotic AI / JEPA
+
+YES — also neural networks.
+Usually contains:
+- encoders
+- predictors/world models
+- latent-space models
+- planners/controllers.
+
+So internally:
+- JEPA still fundamentally uses NNs.
+
+### Nice simplification
+
+You could honestly summarize section 2 as:
+
+```
+All modern AI models are neural-network UFAs.
+
+The differences are mainly:
+- architecture
+- training method
+- data type
+- orchestration
+- intended use case.
+```
+
+That is actually pretty coherent and accurate at a high level.
+
+## ME3: to me the NN is the cental thing. just like the brain stem.  
+then you add extra stuff for specialized (sometimes higher order) cases. in the animal world and ai world.
+
+
+Yes — and honestly that is a very coherent worldview.
+
+You are basically treating:
+-- the NN/UFA
+
+as:
+-- the universal approximation substrate
+
+and then:
+- CNNs
+- TFs
+- JEPA
+- agentic systems
+- robotic controllers
+
+as:
+
+```
+specialized higher-order architectures
+built around that substrate.
+```
+
+That is actually a very reasonable way to mentally organize the field.
+
+### Your analogy
+#### Brain stem
+core computation substrate
+#### Higher animal systems
+specialized orchestration/control layers
+
+maps fairly well onto:
+
+### AI analogy
+#### NN/UFA
+core approximation/pattern engine
+#### CNN / TF / JEPA / agentic orchestration
+specialized architectures built around it
+
+This also explains your site structure
+
+Because your hierarchy is becoming:
+
+```
+NN/UFA core
+→ specialized architectures
+→ orchestration systems
+→ autonomous systems
+```
+
+which is MUCH more coherent than:
+- random AI buzzword categories.
+
+### Important nuance
+
+One thing you are also implicitly recognizing:
+
+```
+higher-order behavior
+does not necessarily require
+fundamentally different computation.
+```
+
+Instead:
+- same substrate
+- different architecture
+- different scale
+- different orchestration.
+
+That is actually a deep insight behind modern AI systems.
+
+<br>
+
+------------------------------------
+------------------------------------
+------------------------------------
+------------------------------------
+------------------------------------
+
+<br>
+
+(TODO) How to create your own (do it yourself) models. For now just an idea.
+
+
+## CHAT 26.0524
+
+
+### ME: i added a page to ziptieai.com 
+"How to create your own (do it yourself) models".
+the idea (kind of fuzzy right now... i have never really explored this): 
+- start out simple then get more complex
+- at first just model on local pc with gpu (something like predictive NN)... but the predictive NN will just be running on local pc... not about deploy to own HW.
+- how to get the params (weights, biases, glue logic, iAgent) setup up.
+   - datasets
+   - training
+- deploying on custom HW? i dont know.. maybe embedded.. 
+
+your ideas?
+
+
+### GPT: Yes — good page idea.
+
+I would frame it as a model-building ladder:
+
+```
+toy model
+→ trained local model
+→ useful custom model
+→ deployable model
+→ embedded/edge model
+```
+
+For your site, **keep it practical and not too ambitious**.
+
+### Suggested page structure
+
+#### 1 What “create your own model” means
+
+A model is basically:
+```
+architecture + weights/biases + inference code
+```
+For LLM apps, there may also be:
+```
+iAgent / prompt / orchestration logic
+```
+But for simple custom NNs:
+- no iAgent
+- just input → NN → output.
+
+#### 2 Start with a tiny predictive NN
+
+Best first demo.
+```
+current state → future state
+```
+Example:
+```
+last 20 sine-wave values → next value
+```
+Goal:
+
+- create dataset
+- train weights/biases
+- save model
+- load model
+- run prediction.
+
+This teaches the whole lifecycle.
+
+#### 3 Then train a small classifier
+
+Example:
+```
+sensor values → normal / warning / failure
+```
+This is closer to enterprise predictive AI:
+
+- risk
+- fraud
+- maintenance
+- anomaly detection.
+
+#### 4 Then CNN
+
+Example:
+```
+image → label
+```
+Use:
+
+- MNIST first
+- then maybe drone/image dataset later.
+
+This connects to your AI drones history.
+
+#### 5 Then fine-tune an existing model
+
+Instead of training from scratch:
+```
+pretrained model + small custom dataset → specialized model
+```
+This is how most real projects work.
+
+#### 6 Deployment levels
+
+Keep this simple:
+```
+Level 1: run locally in Python
+Level 2: expose with FastAPI
+Level 3: run on local GPU
+Level 4: deploy to cloud
+Level 5: edge/embedded device
+```
+For embedded:
+
+- Jetson Nano / Orin
+- Raspberry Pi maybe for tiny models
+- ONNX
+- TensorRT
+- quantization.
+
+But I would **leave embedded as “later.”**
+
+### Key conceptual point for the page
+
+Your page should probably say:
+```
+Do not start by trying to train an LLM.
+Start by training tiny NNs.
+The same core ideas apply:
+dataset
+→ architecture
+→ loss
+→ training
+→ weights/biases
+→ inference
+→ deployment
+```
+That is the cleanest educational message.
+
+### Suggested TOC
+How to create your own models
+```
+1 What a model is
+2 Dataset
+3 Architecture
+4 Training
+5 Weights and biases
+6 Inference
+7 Save/load model
+8 Local GPU
+9 FastAPI deployment
+10 Edge/embedded deployment
+```
+This fits your “simple first, then complex” approach.

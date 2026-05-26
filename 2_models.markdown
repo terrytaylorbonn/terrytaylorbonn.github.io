@@ -6,11 +6,17 @@ permalink: /2_models/
 
 <br> 
 
-**A "model" in this section is anything that has a neural network (NN) at its core**. It may a lot of other stuff wrapped around it (for CNNs convolution, for LLMs Attention heads, etc) but **the core pattern matching and statistical probability runs on the NN**. The differences are mainly architecture, training, orchestration, and use case.
+-----------------
 
-**All models are first (1) trained** (internal NN params are SW programmed) and **then (2) used to infer output from input.**  
+<br>
 
-**Models run on clocked binary circuits**. They have no intelligence. You could run LLMs on electro-mechanical relays (it would take years to generate a token, but it theoretically possible). **LLM intelligence simulation is based on (1) binary computing structures and (2) massive computing power/speed**. The more you understand how LLMs work, the better you can use them in AI projects. 
+## Concepts
+
+<br>
+
+**A "model" in this section is anything that has a neural network (NN) at its core**. It may a lot of other stuff wrapped around it (for CNNs convolution, for LLMs Attention heads, etc) but **the core pattern matching and statistical probability runs on the NN**. The differences are mainly architecture, training, orchestration, and use case. **All models are first (1) trained** (internal NN params are SW programmed) and **then (2) used to infer output from input.**  
+
+**Models ARE MECHANICAL. They run on clocked binary circuits**. They have no intelligence. You could run even the most sophisticated LLMs on electro-mechanical relays (it would take years to generate a token, but it theoretically possible). **AI intelligence simulation is based on (1) binary computing structures and (2) massive computing power/speed**. The more you understand how AI models work, the better you can use them in AI projects. 
 
 Other sources about models (wiki pages):
 - **[LLM transformer algorithm description](https://github.com/terrytaylorbonn/auxdrone/wiki/Core-AI-concepts#4-llm-transformer-tf)**
@@ -23,12 +29,12 @@ Other sources about models (wiki pages):
 
 <br>
 
-### [2.0 Neural-network UFA foundations](/2.0-ufas/)
 
-The core of every model is the NN that implements a UFA (Univeral Function **Approximator**). The NN in each of the model types listed on this page implements a UFA that **generate an output based on pattern matching of the input** (the patterns were programmed ("trained") by setting NN parameters (weights and biases) during training).
+### [2.0 NN UFA concepts](/2.0-ufas/)
 
-<br>
+The core of every model is the NN that implements a UFA (Univeral Function **Approximator**) that **generates an output based on pattern matching of the input**. The patterns were programmed ("trained") by setting NN parameters (weights and biases) during training.
 
+<!-- 
 ### [2.0a Overview of model evolution](/2.0a-model-evolution/)
 
 An analogy between the brain and models. The main importance of understanding this is to 
@@ -40,18 +46,45 @@ An analogy between the brain and models. The main importance of understanding th
 ### [2.0b DIY models](/2.0b-diy-models/)
 
 (TODO / v1 26.0524) How to create your own (do it yourself) models. For now just an idea. There are advantages to creating your own models (you select the training pattern data and you can ensure honesty and integrity of responses). The challenges are significant, but will lessen with time. In any case, understanding the steps involved for a practical demo will be very helpful in understanding how AI really works.
+-->
 
 <br>
 
-### [2.1 Predictive NNs](/2.1-predictive-nns/)
+-----------------
+
+<br>
+
+## 3 groups of models:
+- 2.1 core (no convolution/tf) 
+- 2.2 convolution
+- 2.3 tf
+
+3 phases of model demos for each model group:
+- P1 DIY (doit yourself) models (phase1) understand mechanics
+- P2 OTS (offtheshelf) models (phase2) 
+- P2 OTS fine-tuned (phase3)
+
+
+<br>
+
+-----------------
+
+<br>
+
+
+### [2.1 Core NNs](/2.1-predictive-nns/)
 
 Predictive NNs are small customized NNs for specific recognition tasks (if you create a DIY model, the first one will be something like a simple predictive NN).
 
 <img src="/assets/brain1.png" alt="drones" width="14%">
 
+
+
+
+
 <br>
 
-### [2.2 CNNs](/2.2-cnns/)
+### [2.2 CNNs (convolution)](/2.2-cnns/)
 
 A CNN computes the most probable label ("dog", "airplane", etc) for a set of pixels. Studying CNNs is great preparation for studying more complex LLMs.
 
@@ -59,13 +92,16 @@ A CNN computes the most probable label ("dog", "airplane", etc) for a set of pix
 
 <br>
 
-### [2.3 LLMs](/2.3-llms/) (iAgent + TF)
+### [2.3 LLMs (transformers)](/2.3-llms/) (iAgent + TF)
 
 An LLM (1) inputs a sequence of tokens, (2) computes the probabilities of all vocabulary tokens as the next token, (3) outputs the selected new token, and finally (4) adds the new token to the next input sequence. An LLM consists of an (1) internal agent and a (2) transformer (TF) NN. The TF is the core computational engine behind modern AI systems and the mechanism that enables modern LLM behavior.
 
-<img src="/assets/brain1b.png" alt="drones" width="22%">
+<img src="/assets/brain1b.png" alt="drones" width="22%">  <img src="/assets/brain1c.png" alt="drones" width="26%">
+
 
 <br>
+
+<!--
 
 ### **[2.4 Agentic LLM (TF/UFA semantic) functionality](/2.4-agentic-llms/)**
 
@@ -76,7 +112,14 @@ Agentic LLMs (all major LLMs are agentic) are LLMs programmed with the required 
 
 <img src="/assets/brain1c.png" alt="drones" width="27%">
 
+<br> -->
+
+
+-----------------
+
 <br>
+
+## Robotic AI = future topic
 
 ### [2.5 Robotic AI](/2.5-robotic-ai/)
 
@@ -113,4 +156,26 @@ In any case, its inevitable that AI will pair up with humanoid robots in the hom
 - **2.X Gist of LLMs** is that they (1) convert prompt+response input tokens into large (12288) vector language (just set of FP numbers), (2) massive calculations are performed on the VL to determine the complete meaning of the input, and (3) select a new vocab token. **The algoritm of LLM inference is the mirror image of the algorithm used to program ("train") the LLM.**
 - **2.0 UFA** (universal function approximator) is the core of AI. **A UFA only knows numbers. It has absolutely no info about the real world.** It is trained to output a number(s) based on the input numbers. 
 That last point is essential for successful AI projects. I first took an interest in understanding the core of **what makes models tick** when I started hearing all the hype from AI gurus about how AI could really think and even have emotions. **Models run on ticking clocked binary circuits**. You don't have to be very bright to understand that ticking mechanisms (clocked state machines) dont think. That may seem impossible when you use an LLM that can intelligenty converse with you. But **LLM intelligence simulation is based on (1) binary computing structures and (2) massive computing power/speed**. Your PC does the same kind of trick.
+-->
+
+<!-- 
+
+- **2.1 predictive = basic NN**
+- **2.2 CNN adds convolution**
+
+<img src="/assets/brain1a.png" alt="drones" width="20%">
+
+<br>
+
+- **2.3 Chat LLM adds attention heads (extra stuff for language)**. This could be compared to adding grey matter in the brain.
+
+<img src="/assets/brain1b.png" alt="drones" width="25%">
+
+<br>
+
+- **2.4 Agentic LLL adds extra "intelligence" to the NN**. To support "deduction", "reasoning", etc.
+
+<img src="/assets/brain1c.png" alt="drones" width="32%">
+
+<br>
 -->

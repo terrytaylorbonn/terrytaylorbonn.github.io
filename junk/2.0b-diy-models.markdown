@@ -1,6 +1,7 @@
 ---
 layout: page
 title: "2.0b DIY models"
+published: false
 permalink: /2.0b-diy-models/
 ---
 

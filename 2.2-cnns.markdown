@@ -10,6 +10,11 @@ description: Last edit 26.0426
 
 # THIS PAGE IS WORK IN PROGRESS... 26.0523
 
+Demos of 
+- localized spatial filters
+- weight sharing
+- convolutions
+
 
 <br>
 

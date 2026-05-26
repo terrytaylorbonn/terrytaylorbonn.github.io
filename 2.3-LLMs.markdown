@@ -9,10 +9,20 @@ description: Last edit 26.0426
 
 <br>
 
+Demos
+- token interaction
+- attention
+- sequence routing
+- FFNs
+
+<br>
+
+
 This page describes 
 
 - **2.3.1 Gist of LLMs**. The gist of what an LLM model does without complex algorithms or architecture diagrams.
 - **2.3.2 Gist of the LLM TF UFA**. A marvel of engineering complexity. 
+- **2.3.3 Agentic**
 - **2.3.4 LLM transformer training**
 - **2.3.5 LLM Internal Agent**. My own invented term. iAgent + TF = LLM.
 - **2.3.6 LLM stack demos**. Listed on my wiki.
@@ -34,6 +44,10 @@ Describes in concise detail gist of what an LLM model does without describing co
 This will give you an appreciation of the vast complexity of TF calculations.
 
 <img src="/assets/llm01_tokens.png" alt="01" width="50%">
+
+<br>
+
+### [2.3.3 Agentic LLMs](/2.3.3-agentic-llms/)
 
 <br>
 
