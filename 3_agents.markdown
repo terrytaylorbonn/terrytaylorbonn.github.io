@@ -11,7 +11,7 @@ permalink: /3_agents/
 - Agent + AI = an LLM is used as a useful assistant.
 
 *Agentic AI evolution ([about this diagram](/0.1-ai-evolution-diagram/))* <br>
-<img src="/assets/zai_evolution6.png" alt="drones" width="50%">
+<img src="/assets/zai_evolution7.png" alt="drones" width="42%">
 
 <br>
 

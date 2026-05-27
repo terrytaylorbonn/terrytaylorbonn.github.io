@@ -8,31 +8,30 @@ permalink: /0-site-focus/
 <br>
 
 AI tech is evolving quickly.
-- If you want a job in the future, be flexible, learn AI.  
-- **If you want a job in AI in the future, be much more flexible and focused**. <br> <img src="/assets/agentic_economy.png" alt="drones" width="75%"> 
-
-- **And (most of all) don't get scammed by AI hype** (Waymo driving into a flood; Tesla is no better). <br>  <img src="/assets/waymo.png" alt="drones" width="25%"> 
-
-
-<!-- assembly programming, etc went the way of the dinosaurs.
-and more on beyond a demo website.
-- learn from what happened to tv repair, shoe repair, pc makers, ... all to asia.  -->
-
-<!--
-I reorganized this site and wiki many times during the past 2+ years as I (with the help of GPT) sought the gist behind the hype of AI. 
-*One thing's for certain, there will be a lot of job growth*<br> -->
+- If you want a (tech) job in the future: Be flexible and **learn the core AI basics (hands-on demos)**.
+- **If you want a job in AI in the future, stay flexible and focused** (things are changing quickly). <br> <img src="/assets/agentic_economy.png" alt="drones" width="75%"> 
+- And (most of all) **don't get scammed by AI hype** (Waymo driving into a flood; Tesla is no better). <br>  <img src="/assets/waymo.png" alt="drones" width="25%"> 
 
 <br>
 
 ### **Site focus**
-- **1 Present: AI agents** (that use agentic AI LLMs)
-- **2 Recent past: AI models and drones**
-- **3 Future**
+- **1 Demos, demos, demos** (past, present and future)
+- **2 AI agents** (that use agentic AI LLMs)
+- **3 AI models** (and in the recent past **AI drones**)
+- **4 Future (??)**
 
 
 <br>
 
-# **1 Present focus: AI Agents (that use agentic AI)**
+# **1 Demos, demos, demos**
+
+Do core demos and **study the code**. Every line. Ask GPT to explain. 
+
+<img src="/assets/core_ai.png" alt="drones" width="40%"> 
+
+<br>
+
+# **2 AI Agents**
 
 All you need to understand 
 - the core concepts of AI agents,
@@ -52,8 +51,6 @@ Theses 2 simple tests show the following:
 - **(2) This ability, however, is limited**. It depends on the **(a) training data** used to program ("train") the LLM TF and **(b) the massive statistical computation** to pattern match the current text against the training data *(this conclusion is based on my own detailed study of GPT-3 algorithms; the latest frontier models will be vastly more powerful than GPT-3, but the nature of their algorithmic pattern matching simulation of intelligence will be the same)*. 
 
 The last point above shows that, although amazingly advanced, **agentic AI is not even close to real intelligence** *(AI has 0 intelligence, something all AI gurus and titans are well aware of)*. This is the main challenge when creating AI agent applications. 
-
-
 
 
 <br>
@@ -172,7 +169,7 @@ CODE EXECUTED:
 
 <br>
 
-# **2 Recent focus: AI models and drones**
+# **3 AI models (and drones)**
 
 During the drone and model phases of ZiptieAI, I reorganized this website and the wiki dozens of times.
 - I originally wanted to focus on AI for drones (CNN object recognition). 
@@ -186,7 +183,7 @@ During the drone and model phases of ZiptieAI, I reorganized this website and th
 <br>
 
 
-### **AI models (especially Agentic LLMs)**
+### **AI models** (especially Agentic LLMs)
 
 Learn the gist of **[AI Models](/2_models/) ([especially LLMs](/2.3-llms/))**. Theres quite a lot of gist.
 
@@ -209,10 +206,6 @@ Learn the gist of **[AI Models](/2_models/) ([especially LLMs](/2.3-llms/))**. T
 <img src="/assets/cnn2.png" alt="desc" width="35%">  <img src="/assets/tf_S1-S6.png" alt="desc" width="40%"> 
 
 
-
-
-
-
 <br>
 
 ### **Drones** (CNNs)
@@ -232,7 +225,7 @@ Learn the gist of **[AI Models](/2_models/) ([especially LLMs](/2.3-llms/))**. T
 <br>
 
 
-# **3 Future**
+# **4 Future (??)**
 
 - Continued exploration of practical AI systems
 - To remain vigilant and flexible. 
@@ -271,4 +264,14 @@ A few of my own personal thoughts (topics best not discussed with LLMs):
 
 <br>
 
-26.0524
+26.0527
+
+
+<!-- assembly programming, etc went the way of the dinosaurs.
+and more on beyond a demo website.
+- learn from what happened to tv repair, shoe repair, pc makers, ... all to asia.  -->
+
+<!--
+I reorganized this site and wiki many times during the past 2+ years as I (with the help of GPT) sought the gist behind the hype of AI. 
+*One thing's for certain, there will be a lot of job growth*<br> -->
+
