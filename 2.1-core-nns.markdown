@@ -41,7 +41,7 @@ Runs locally on my i7 with NVidia 3050.
 
 Runs on render (CPU mode).
 
-<img src="/assets/D3_render.png" alt="drones" width="30%">
+<img src="/assets/d3_render.png" alt="drones" width="30%">
 
 <br>
 
