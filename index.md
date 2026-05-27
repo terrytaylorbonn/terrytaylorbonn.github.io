@@ -5,7 +5,7 @@ title: Home
 
 <br>
 
-**This site covers primarily [AI (models)](/2_models/) / [agents](/3_agents/). Includes hands-on [demos](/0b-demos/)**.
+The primary **[focus](/0-site-focus/)** of this site is on hands-on **[demos](/0b-demos/)** for **[AI (models)](/2_models/)** and **[agents](/3_agents/)**.
 
 
 <br>

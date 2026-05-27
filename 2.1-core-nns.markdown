@@ -37,5 +37,13 @@ Runs locally on my i7 with NVidia 3050.
 
 <br>
 
+### **Demo 3: [2.1.3 Tiny classifier NN on Render](/2.1.3-classifier-nn-render/)** (26.0527)
+
+Runs on render (CPU mode).
+
+<img src="/assets/D3_render.png" alt="drones" width="30%">
+
+<br>
+
 
 26.0527

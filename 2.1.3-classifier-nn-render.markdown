@@ -1,0 +1,74 @@
+---
+layout: page
+title: "2.1.3 Classifier NN on Render"
+permalink: /2.1.3-classifier-nn-render/
+---
+
+[← 2.1 Core NNs](/2.1-predictive-nns/)
+
+<br>
+
+WIP. Runs on Render (CPU mode).
+
+<img src="/assets/D3_render.png" alt="drones" width="20%">
+
+**TOC**
+- **1 Output**
+- **2 PY scripts**
+- **3 Render deploy**
+- **4 Code with detailed comments**. Great commentary for each line of the code (from GPT). Study this closely to understand the gist.
+
+For details see [#607\_2.1\_core\_NNs\_.docx](https://drive.google.com/drive/folders/1-Adawag9uA8_bq-hDF-nOuPYaRLz1eEO).
+
+
+<br>
+
+
+# **1 Output**
+
+```
+curl -X POST https://six07-core-nns.onrender.com/predict \
+-H "Content-Type: application/json" \
+-d '{"x":0.2,"y":0.1}'
+{"x":0.2,"y":0.1,"class":1,"meaning":"inside circle"}
+```
+
+<img src="/assets/D3_render.png" alt="drones" width="30%">
+
+
+<br>
+
+
+# **2 PY scripts**
+
+- d3_train_classifier.py (just show few lines that changed)
+- d3_api_classifier.py (fastapi)
+
+<br>
+
+
+# **3 Render deploy**
+
+Add deploy details.
+
+<br>
+
+# **4 Code with detailed comments**
+
+```
+xxx
+```
+
+```output
+output
+```
+
+#### **Extremely important concept**
+```text2
+text2
+```
+
+
+<br>
+
+26.0527

@@ -28,7 +28,7 @@ My demos take time and demo how AI is set of non-intelligent but extremely usefu
 
 <br>
 
-*need to add*
+*need to list demos from these pages*
 
 - 2.2 CNNs (convolution)
 - 2.3 LLMs (transformers) (iAgent + TF)
@@ -44,7 +44,7 @@ My demos take time and demo how AI is set of non-intelligent but extremely usefu
 <br>
 
 
-*need to add*
+*need to list demos from these pages*
 
 3.1 Agentic (no AI) <br>
 <img src="/assets/4_5_3x.png" alt="drones" width="20%"> 

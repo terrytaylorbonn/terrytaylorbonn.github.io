@@ -19,7 +19,7 @@ Runs locally on my i7 with NVidia 3050.
 - **1 Output**
 - **2 PY script**
 - **3 Training/inference summary**
-- **4 Code with detailed comments**. Great commentary for each line of the code (from GPT). Study this closely to understand the gist of this core first demo.
+- **4 Code with detailed comments**. Great commentary for each line of the code (from GPT). Study this closely to understand the gist.
 
 For details see [#607\_2.1\_core\_NNs\_.docx](https://drive.google.com/drive/folders/1-Adawag9uA8_bq-hDF-nOuPYaRLz1eEO).
 
