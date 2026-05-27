@@ -15,7 +15,7 @@ The primary **[focus](/0-site-focus/)** of this site is on hands-on **[demos](/0
 
 <br>
 
-**The following are the top-level pages** *(see also the [Wiki](https://github.com/terrytaylorbonn/auxdrone/wiki))*.  
+The following describes the top-level pages *(see also the **[Wiki](https://github.com/terrytaylorbonn/auxdrone/wiki)**)*.  
 
 - **[Focus](/0-site-focus/)**. Site focus.
 - **[Demos](/0b-demos/)**. For AI models and agents.
