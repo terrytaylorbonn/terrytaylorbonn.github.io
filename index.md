@@ -5,7 +5,9 @@ title: Home
 
 <br>
 
-**This site covers primarily drones, models (LLMs), and agents** (with demos and my own take on core concepts). 
+**This site covers primarily drones, models (LLMs), and agents** (with demos and my own take on core concepts). For hands-on detailed demos see 
+- **[2.1 Core NNs (dense/FF)](/2.1-predictive-nns/)**. Basic neural network demos.
+- **[3.2.4 Agentic + AI / Basic demos](/3.2.4-ai-agent-basic-demos/)**. Basic agentic AI demos. 
 
 <br>
 
@@ -23,11 +25,6 @@ title: Home
 - [4 Resources](/4_resources/). Tech stacks, dev tools, docs, wiki, Substack, Youtube, Github, and Google Drive (*see also **[Books about AI](/4.0-books/)***).
 - [About](/about/).
 
-<!-- Concepts and demos for
-  - [3.1 Agentic (no AI)](/3.1-agentic/), 
-  - [3.2.4 Agentic + AI (basic)](/3.2.4-ai-agent-basic-demos/), 
-  - [3.2.5 Agentic + AI (basic Palantir-style)](3.2.5-ai-agent-pal-demos/), and 
-  - **[3.3 Agentic + AI (real-world projects)](/3.3-ai-projects/)** (the end goal of this site). -->
 
 <br>
 
@@ -37,3 +34,9 @@ title: Home
 
 <!-- ![image](https://github.com/user-attachments/assets/6c4a9ef0-981b-4dcc-8dc3-12470d356284)
 ![image](https://github.com/user-attachments/assets/b249c820-34f7-4169-90b1-26b39705df9d) -->
+
+<!-- Concepts and demos for
+  - [3.1 Agentic (no AI)](/3.1-agentic/), 
+  - [3.2.4 Agentic + AI (basic)](/3.2.4-ai-agent-basic-demos/), 
+  - [3.2.5 Agentic + AI (basic Palantir-style)](3.2.5-ai-agent-pal-demos/), and 
+  - **[3.3 Agentic + AI (real-world projects)](/3.3-ai-projects/)** (the end goal of this site). -->

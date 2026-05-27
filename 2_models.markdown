@@ -21,7 +21,7 @@ permalink: /2_models/
 
 **A "model" in this section is anything that has a neural network (NN) at its core**. It may have a lot of other stuff wrapped around the NN (CNN convolution, LLM attention heads, etc) but **the core statistical pattern matching functionality runs on a NN**. The differences are mainly architecture, training, orchestration, and use case. **All models are first (1) "trained"** (internal NN params are programmed using SW tools) and **then (2) used to infer output from input.**  
 
-**This section analyzes models from a mechanical perspective, because Models ARE MECHANICAL. They run on clocked binary circuits**. They have no intelligence. You could run even the most sophisticated LLM on electro-mechanical relays (it would take years to generate a token, require its own nuclear power plant, but its theoretically possible). **AI intelligence simulation is based on (1) binary computing structures and (2) massive computing power/speed**. The more you understand how AI models work, the better you can use them in AI projects. 
+**This section analyzes models from a mechanical perspective, because Models ARE MECHANICAL. They run on clocked binary circuits**. They have no intelligence. You could run even the most sophisticated LLM on electro-mechanical relays (it would take years to generate a token, consume the entire output of a large nuclear power plant, but its theoretically possible). **AI intelligence simulation is based on (1) binary computing structures and (2) massive computing power/speed**. The more you understand how AI models work, the better you can use them in AI projects. 
 
 *Electro-mechanical relay (a theoretical alternative to the GPU)*<br>
 <img src="/assets/relay.png" alt="drones" width="12%">
