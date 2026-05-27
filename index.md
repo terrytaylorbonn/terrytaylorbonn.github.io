@@ -21,10 +21,11 @@ title: Home
 - **[Demos](/0b-demos/)**. For AI models and agents.
 - [1 Drones](/1-drones/). FPV/Pixhawk drones (with CNN object recognition). 
 - **[2 AI (models)](/2_models/)**. CNNs, predictive/robotic NNs, LLMs, and agentic LLMs (*see also **[2.3.1 The gist of LLMs](/2.3.1-llm-gist/)***). 
-- **[3 Agents](/3_agents/)**. The main focus of this site (*see also **[3.2.4 AI agent basic demos](/3.2.4-ai-agent-basic-demos/)***).
+- **[3 Agents](/3_agents/)**. The main focus of this site.
 - [4 Resources](/4_resources/). Tech stacks, dev tools, docs, wiki, Substack, Youtube, Github, and Google Drive (*see also **[Books about AI](/4.0-books/)***).
 - [About](/about/).
 
+<!--  (*see also **[3.2.4 AI agent basic demos](/3.2.4-ai-agent-basic-demos/)***)  -->
 
 <br>
 
