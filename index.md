@@ -5,9 +5,9 @@ title: Home
 
 <br>
 
-The primary **[focus](/0-site-focus/)** of this site is on hands-on **[demos](/0b-demos/)** for **[AI (models)](/2_models/)** and **[agents](/3_agents/)**. 
+The primary **[focus](/0-site-focus/)** of this site is on hands-on **[demos](/0b-demos/)** for **[AI (models)](/2_models/)** and **[agents](/3_agents/)**
 
-And letting AI tools (GPT, Sonnet, etc) do as much of the heaving lifting as possible.
+... and letting AI tools (GPT, Sonnet, etc) do as much of the heaving lifting as possible.
 
 
 
