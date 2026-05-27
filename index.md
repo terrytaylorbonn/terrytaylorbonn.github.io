@@ -5,12 +5,11 @@ title: Home
 
 <br>
 
-The primary **[focus](/0-site-focus/)** of this site is on hands-on **[demos](/0b-demos/)** for **[AI (models)](/2_models/)** and **[agents](/3_agents/)**. Letting AI tools (GPT, Sonnet, etc) do as much of the heaving lifting as possible.
+The primary **[focus](/0-site-focus/)** of this site is on hands-on **[demos](/0b-demos/)** for **[AI (models)](/2_models/)** and **[agents](/3_agents/)**. And letting AI tools (GPT, Sonnet, etc) do as much of the heaving lifting as possible.
 
 
-<br>
 
-*Agentic AI evolution ([about this diagram](/0.1-ai-evolution-diagram/))* <br>
+*[ZiptieAI evolution](/0.1-zai-evolution/)* <br>
 <img src="/assets/zai_evolution7.png" alt="drones" width="42%">
 
 <br>
