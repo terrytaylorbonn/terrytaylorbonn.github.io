@@ -5,9 +5,8 @@ title: Home
 
 <br>
 
-**This site covers primarily drones, models (LLMs), and agents** (with demos and my own take on core concepts). For hands-on detailed demos see 
-- **[2.1 Core NNs (dense/FF)](/2.1-predictive-nns/)**. Basic neural network demos.
-- **[3.2.4 Agentic + AI / Basic demos](/3.2.4-ai-agent-basic-demos/)**. Basic agentic AI demos. 
+**This site covers primarily drones, models (LLMs), and agents**. For hands-on detailed demos see **[Demos](/0b-demos/)**.
+
 
 <br>
 
