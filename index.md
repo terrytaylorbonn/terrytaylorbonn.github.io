@@ -5,7 +5,7 @@ title: Home
 
 <br>
 
-**This site covers primarily drones, models (LLMs), and agents**. For hands-on detailed demos see **[Demos](/0b-demos/)**.
+**This site covers primarily [AI (models)](/2_models/) / [agents](/3_agents/). Includes hands-on [demos](/0b-demos/)**.
 
 
 <br>
@@ -18,6 +18,7 @@ title: Home
 **The following are the top-level pages** *(see also the [Wiki](https://github.com/terrytaylorbonn/auxdrone/wiki))*.  
 
 - **[Focus](/0-site-focus/)**. Site focus.
+- **[Demos](/0b-demos/)**. For AI models and agents.
 - [1 Drones](/1-drones/). FPV/Pixhawk drones (with CNN object recognition). 
 - **[2 AI (models)](/2_models/)**. CNNs, predictive/robotic NNs, LLMs, and agentic LLMs (*see also **[2.3.1 The gist of LLMs](/2.3.1-llm-gist/)***). 
 - **[3 Agents](/3_agents/)**. The main focus of this site (*see also **[3.2.4 AI agent basic demos](/3.2.4-ai-agent-basic-demos/)***).
