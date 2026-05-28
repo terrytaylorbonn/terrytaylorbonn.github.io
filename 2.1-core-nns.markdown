@@ -43,7 +43,29 @@ Runs on render (CPU mode).
 
 <img src="/assets/d3_render.png" alt="drones" width="30%">
 
+
+<br>
+
+### **Demo 4: [2.1.4 D4 CNN image classifier](/2.1.4-d4-cnn-image-classifier/)** (26.0528)
+
+Runs on render (CPU mode).
+
+<img src="/assets/7.png" alt="drones" width="30%">
+
+<br>
+
+### **Demo 4: [2.1.4b: D4 CNN algorithm details](/2.1.4b-d4-cnn-algorithm-details/)** (26.0528)
+
+xxxxxxxxx
+
+<!-- 
+
+title: "2.1.4b D4 CNN algorithm details"
+permalink: /2.1.4b-d4-cnn-algorithm-detais/
+<img src="/assets/7.png" alt="drones" width="30%"> -->
+
+
 <br>
 
 
-26.0527
+26.0528
