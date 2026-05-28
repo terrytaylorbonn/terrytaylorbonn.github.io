@@ -12,13 +12,16 @@ WIP. Runs locally and on Render (CPU mode). Input from MNist.
 
 <img src="/assets/7.png" alt="drones" width="20%">
 
+See also 
+- [2.1.4b D4 CNN algorithm details](/2.1.4b-d4-cnn-algorithm-details/)
+- [#607\_2.1\_core\_NNs\_.docx](https://drive.google.com/drive/folders/1-Adawag9uA8_bq-hDF-nOuPYaRLz1eEO)
+
+
 **TOC**
 - **1 Output**
 - **2 PY scripts**
 - **3 Render deploy**
 - **4 Code with detailed comments**. Great commentary for each line of the code (from GPT). Study this closely to understand the gist.
-
-For details see [#607\_2.1\_core\_NNs\_.docx](https://drive.google.com/drive/folders/1-Adawag9uA8_bq-hDF-nOuPYaRLz1eEO).
 
 
 <br>

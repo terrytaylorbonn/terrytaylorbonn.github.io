@@ -8,9 +8,16 @@ permalink: /2.1.4b-d4-cnn-algorithm-details/
 
 <br>
 
-**2c Demo D4 (CNN image classifier) algorithm explanation**
+<!-- **2c Demo D4 (CNN image classifier) algorithm explanation** -->
 
-For details see [#607\_2.1\_core\_NNs\_.docx](https://drive.google.com/drive/folders/1-Adawag9uA8_bq-hDF-nOuPYaRLz1eEO).
+**GPT's assessment** of this CNN algorithm description:
+**"Honestly this is already more mechanistically rigorous than most educational CNN material online while still remaining readable.**
+
+
+See also 
+- [2.1.4 D4 CNN image classifier](/2.1.4-d4-cnn-image-classifier/)
+- [#607\_2.1\_core\_NNs\_.docx](https://drive.google.com/drive/folders/1-Adawag9uA8_bq-hDF-nOuPYaRLz1eEO)
+
 
 
 <br>
@@ -38,6 +45,8 @@ text2
 - 2 Feature extraction
 - 3 FC classifier
 
+
+
 <br>
 
 ## Content overview
@@ -52,8 +61,8 @@ Demo D4 CNN image classifier is a very interesting step by step demo that GPT an
 You may not be able to do the demo yourself, but you can read this very "mechanistic" and "simplified" explanation of how the D4 CNN works. Its worth the time if you really want a good feel for how AI really works. D4 is just a CNN, but the core NN concepts are remarkably similar for LLMs (even the advanced ones). Understanding a CNN is great step to studying LLMs. 
 
 ### 2 GPT assessment of this content
-Why read this? This is GPT's opinion about the algorithm description:
-"Honestly this is already more mechanistically rigorous than most educational CNN material online while still remaining readable.
+**Why read this? This is GPT's opinion about the algorithm description:
+"Honestly this is already more mechanistically rigorous than most educational CNN material online while still remaining readable.**
 
 The remaining imperfections are: terminology simplifications
 NOT: mechanistic errors
@@ -83,6 +92,17 @@ hL63 = RELU  [  ( W.hL63.0*x0 + W.hL63.1*x1 + ...  + W.hL63.783*x783 ) + bias.hL
 <br>
 
 # D4 Algorithm overview
+
+
+*Overview of (1) input image and (2) feature extraction*<br>
+<img src="/assets/d4_feature_extract.png" alt="drones" width="74%">
+
+*Overview of feature extraction (4,5)*<br>
+<img src="/assets/d4_3.2.png" alt="drones" width="34%">
+
+**Note the similarities with AlexNet** (from [__ziptieai_BOOK1_CNN_.docx](https://drive.google.com/drive/folders/1-Adawag9uA8_bq-hDF-nOuPYaRLz1eEO))  
+
+<img src="/assets/d4_alexnet.png" alt="drones" width="63%">
 
 
 **How this architecture was developed**
@@ -117,6 +137,8 @@ How this matches the following sections
      4     F.relu(self.fc1(x))               # [batch, 64]
      5     self.fc2(x)                       # [batch, 10]
 ```
+
+
 
 <br>
 
