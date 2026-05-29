@@ -1,10 +1,11 @@
 ---
 layout: page
-title: "2.1.4b D4 CNN algorithm details"
-permalink: /2.1.4b-d4-cnn-algorithm-details/
+title: "2.2.1b D4 CNN algorithm details"
+permalink: /2.2.1b-d4-cnn-algorithm-details/
 ---
 
-[← 2.1 Core NNs](/2.1-predictive-nns/)
+[← 2.2 CNNs](/2.2-cnns/)
+
 
 <br>
 

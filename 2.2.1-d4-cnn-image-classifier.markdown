@@ -1,10 +1,10 @@
 ---
 layout: page
-title: "2.1.4 D4 CNN image classifier"
-permalink: /2.1.4-d4-cnn-image-classifier/
+title: "2.2.1 D4 CNN image classifier"
+permalink: /2.2.1-d4-cnn-image-classifier/
 ---
 
-[← 2.1 Core NNs](/2.1-predictive-nns/)
+[← 2.2 CNNs](/2.2-cnns/)
 
 <br>
 
