@@ -12,21 +12,29 @@ Studying code for basic AI demos (NNs, CNNs, LLMs, etc) is the **only way** to r
 
 ## Model demos
 
-- **[2.1 Core NNs (dense/FF)](/2.1-predictive-nns/)**. Basic neural network demos.
-- **[2.2 CNNs (convolution)](/2.2-cnns/).**
-- **2.3 LLMs (transformers)** (iAgent + TF)
-- 2.5 Robotic AI ([wiki](https://github.com/terrytaylorbonn/auxdrone/wiki/Robotic-AI-demos))
+- **[2.1 Core NNs (dense/FF)](/2.1-predictive-nns/)**. Basic neural network demos.<br>
+<img src="/assets/classification.png" alt="drones" width="15%"><br> <br> 
+- **[2.2 CNNs (convolution)](/2.2-cnns/).**<br>
+<img src="/assets/d4_alexnet.png" alt="drones" width="12%"><br> <br> 
+- **[2.3 LLMs (transformers)](/2.3.6-llm-demos/).**<br>
+<img src="/assets/smol.png" alt="smol" width="35%"><br> <br> 
+- **2.5 Robotic AI ([wiki](https://github.com/terrytaylorbonn/auxdrone/wiki/Robotic-AI-demos))**<br>
+<img src="/assets/robotic_ai.png" alt="smol" width="25%"><br> 
+
 
 <br>
 
 ## Agent demos
 
-- 3.1 Agentic (no AI) <br> 
-<img src="/assets/4_5_3x.png" alt="drones" width="20%"> 
-- **[3.2.4 Agentic + AI / Basic demos](/3.2.4-ai-agent-basic-demos/)**. Basic agentic AI demos. 
-- 3.2.5 Agentic + AI / PAL demos.   <br>
+- **[3.1 Agentic (no AI)](/3.1-agentic/)** <br> 
+<img src="/assets/4_5_3x.png" alt="drones" width="20%"> <br><br>
+- **[3.2.4 Agentic + AI / Basic demos](/3.2.4-ai-agent-basic-demos/)**. Basic agentic AI demos. <br>
+<img src="/assets/calc1b.png" alt="drones" width="35%"> <br><br>
+- **[3.2.5 Agentic + AI / PAL demos](/3.2.5-ai-agent-pal-demos/)**.   <br>
 <img src="/assets/4_6_2x.png" alt="drones" width="20%">  <br>
-<img src="/assets/4_5_3x_bbb.png" alt="drones" width="20%"> 
+<img src="/assets/4_5_3x_bbb.png" alt="drones" width="20%"><br><br> 
+- **[3.3 Agentic AI projects](/3.3-ai-projects/)**. Complete business segment projects (main long-term focus).<br> 
+<img src="/assets/6_main_diagram.png" alt="drones" width="25%"> <br><br>
 
 <br>
 
