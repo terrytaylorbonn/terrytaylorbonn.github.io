@@ -42,7 +42,7 @@ Runs on render (CPU mode).
 
 <br>
 
-#### **Demo 4: [2.1.4 D4 CNN image classifier](/2.1.4-d4-cnn-image-classifier/)** (26.0528)
+<!-- #### **Demo 4: [2.1.4 D4 CNN image classifier](/2.1.4-d4-cnn-image-classifier/)** (26.0528)
 
 Runs on render (CPU mode).
 
@@ -54,7 +54,7 @@ Runs on render (CPU mode).
 
 <img src="/assets/d4_alexnet.png" alt="drones" width="15%">
 
-<!-- 
+
 
 title: "2.1.4b D4 CNN algorithm details"
 permalink: /2.1.4b-d4-cnn-algorithm-detais/
