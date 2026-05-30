@@ -7,6 +7,47 @@ description: Last edit 26.0426
 
 [← 2.3 LLMs](/2.3-llms/)
 
+<br>
+
+The core of LLMs:
+- Transformer (TF) (the NN)
+- Internal agent (iAgent) (interfaces with TF (via tokens), interfaces with outside world)
+
+See also __ziptieai_BOOK2_LLM_.docx the [Gdrive](https://drive.google.com/drive/folders/1-Adawag9uA8_bq-hDF-nOuPYaRLz1eEO).
+
+<img src="/assets/brain1b.png" alt="drones" width="22%">
+
+<br>
+
+# Newer demos (2026.0529+)
+
+<br>
+
+#### **Demo 5: [2.3.6.1 D5 Tiny TF](/2.3.6.1-d5-tiny-tf/)** (26.0529)
+
+Runs locally in CPU mode. I might soon (26.0530) try to run this on Render. 
+
+<img src="/assets/d5_0.png" alt="drones" width="35%">
+
+<br>
+
+#### **Demo 5b: [2.3.6.1b D5 tiny TF algorithm details](/2.3.6.1b-d5-tiny-tf-algorithm-details/)** (26.0528)
+
+(WIP)
+
+<!-- <img src="/assets/d4_alexnet.png" alt="drones" width="15%"> -->
+
+<br>
+
+-----------------------------
+-----------------------------
+
+
+
+<br>
+
+# Older demos (2025)
+
 The wiki page [**"AI LLM stacks"**](https://github.com/terrytaylorbonn/auxdrone/wiki/AI-stacks) (a bit chaotic after a recent wiki reorganization) lists the following subpages are of interest:
 
 - [2.2 Demo deployments (HF, CloudFlare, etc)](https://github.com/terrytaylorbonn/auxdrone/wiki/LLM-stacks-%5C-2-Demo-deployments)
@@ -14,9 +55,9 @@ The wiki page [**"AI LLM stacks"**](https://github.com/terrytaylorbonn/auxdrone/
 - [2.4 GPT/Copilot demos (a few demos)](https://github.com/terrytaylorbonn/auxdrone/wiki/LLM-stacks-%5C-4-CPLT-demos)
 - [2.6 Agent/LLM input docs (RAG demo)](https://github.com/terrytaylorbonn/auxdrone/wiki/LLM-stacks-%5C-4-CPLT-%5C-4.0b-Platforms-and-tools)
  
-<img src="/assets/smol.png" alt="smol" width="55%">
+<img src="/assets/smol.png" alt="smol" width="45%">
 
 
 <br>
 
-26.0529 (v1 26.0529)
+26.0530 (v1 26.0529)

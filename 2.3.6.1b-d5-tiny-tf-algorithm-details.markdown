@@ -1,0 +1,39 @@
+---
+layout: page
+title: "2.3.6.1b D5 tiny TF algorithm details"
+permalink: /2.3.6.1b-d5-tiny-tf-algorithm-details/
+---
+
+[← 2.2 CNNs](/2.2-cnns/)
+
+<br>
+
+TODO
+
+<img src="/assets/brain1b.png" alt="drones" width="22%">
+
+
+<br>
+
+xxxxxxxxxxxxxxxxxxxx. 
+
+See also 
+- (algorithm details todo)
+- [#607\_2.1\_core\_NNs\_.docx](https://drive.google.com/drive/folders/1-Adawag9uA8_bq-hDF-nOuPYaRLz1eEO)
+- __ziptieai_BOOK2_LLM_.docx the [Gdrive](https://drive.google.com/drive/folders/1-Adawag9uA8_bq-hDF-nOuPYaRLz1eEO)
+
+
+**TOC**
+- **xxxxx**
+
+
+<br>
+
+
+# **xxxxx**
+
+xxxx
+
+<br>
+
+26.0530

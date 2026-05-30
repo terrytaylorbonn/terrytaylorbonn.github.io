@@ -71,20 +71,22 @@ The term "agent" normally means a deterministic (non-AI, not GPU-based) control 
 
 ### [2.3.6 LLM demos](/2.3.6-llm-demos/)
 
-The level of expertise required to deploy, fine-tune or even create your own LLMs will go down in the future. Just understanding on a low-level how LLMs really work (at least the transformer part) can greatly increase your ability to design LLM-based AI projects.
-
-The wiki page [**"AI LLM stacks"**](https://github.com/terrytaylorbonn/auxdrone/wiki/AI-stacks) (a bit chaotic after a recent wiki reorganization) lists the following subpages are of interest:
-
-<!-- - [2.2 Demo deployments (HF, CloudFlare, etc)](https://github.com/terrytaylorbonn/auxdrone/wiki/LLM-stacks-%5C-2-Demo-deployments)
-- [2.3 Youtube demos](https://github.com/terrytaylorbonn/auxdrone/wiki/LLM-stacks-%5C-3-Youtube-demos). I did a lot of YouTube demos. Way back then (2025, a long time ago in AI-time) I had still not make the transition to working totally with LLMs (GPT) to learn new tech.
-- [2.4 GPT/Copilot demos (a few demos)](https://github.com/terrytaylorbonn/auxdrone/wiki/LLM-stacks-%5C-4-CPLT-demos)
-- [2.6 Agent/LLM input docs (RAG demo)](https://github.com/terrytaylorbonn/auxdrone/wiki/LLM-stacks-%5C-4-CPLT-%5C-4.0b-Platforms-and-tools) -->
- 
+Contains 2 sets of demos
+- **New low level demos**. Just understanding on a low-level how LLMs really work (at least the transformer part) can greatly increase your ability to design LLM-based AI projects. <br>
+<img src="/assets/d5_0.png" alt="drones" width="45%"><br><br>
+- **Older higher level demos**. The level of expertise required to deploy, fine-tune or even create your own LLMs will go down in the future. <br>
 <img src="/assets/smol.png" alt="smol" width="55%">
 
 <br>
 
-26.0529
+26.0530
+
+<!-- The wiki page [**"AI LLM stacks"**](https://github.com/terrytaylorbonn/auxdrone/wiki/AI-stacks) (a bit chaotic after a recent wiki reorganization) lists the following subpages are of interest:
+ - [2.2 Demo deployments (HF, CloudFlare, etc)](https://github.com/terrytaylorbonn/auxdrone/wiki/LLM-stacks-%5C-2-Demo-deployments)
+- [2.3 Youtube demos](https://github.com/terrytaylorbonn/auxdrone/wiki/LLM-stacks-%5C-3-Youtube-demos). I did a lot of YouTube demos. Way back then (2025, a long time ago in AI-time) I had still not make the transition to working totally with LLMs (GPT) to learn new tech.
+- [2.4 GPT/Copilot demos (a few demos)](https://github.com/terrytaylorbonn/auxdrone/wiki/LLM-stacks-%5C-4-CPLT-demos)
+- [2.6 Agent/LLM input docs (RAG demo)](https://github.com/terrytaylorbonn/auxdrone/wiki/LLM-stacks-%5C-4-CPLT-%5C-4.0b-Platforms-and-tools) -->
+ 
 
 <!-- - **1 LLM stack demos**. I planned to spend a lot of time on this, but at some point came to the conclusion that time would be better spent elsewhere. In any case, knowing the basic is quite important. Its not that difficult to install a smaller model on your local PC, and it does have benefits.
 - **2 LLM transformer (TF) training**. Training is something most of us will never do (Palantir uses standard models; they do no customized training). But its the main driving factor in the design of LLM transformers. 

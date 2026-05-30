@@ -9,8 +9,6 @@ The primary **[focus](/0-site-focus/)** of this site is on hands-on **[demos](/0
 
 Studying code for basic AI demos (NNs, CNNs, LLMs, etc) is the **only way** to really grasp what AI (and AI hype) is. And its **not that difficult** nowadays, because AI tools (Cursor, GPT, Codex, etc) do all the difficult coding and debugging for you. The **hard part** is AI does not have the intelligence to organize demos and describe concepts clearly. Thats **[my job](/about/)**. 
 
-
-
 *[ZiptieAI evolution](/0.1-zai-evolution/)* <br>
 <img src="/assets/zai_evolution7.png" alt="drones" width="42%">
 
