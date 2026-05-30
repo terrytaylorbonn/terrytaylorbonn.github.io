@@ -4,7 +4,7 @@ title: "2.3.6.1 D5 Tiny TF"
 permalink: /2.3.6.1-d5-tiny-tf/
 ---
 
-[← 2.2 CNNs](/2.2-cnns/)
+[← 2.3.6 LLM demos](/2.3.6-llm-demos/)
 
 <br>
 

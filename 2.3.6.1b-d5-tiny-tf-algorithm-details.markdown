@@ -4,7 +4,8 @@ title: "2.3.6.1b D5 tiny TF algorithm details"
 permalink: /2.3.6.1b-d5-tiny-tf-algorithm-details/
 ---
 
-[← 2.2 CNNs](/2.2-cnns/)
+[← 2.3.6 LLM demos](/2.3.6-llm-demos/)
+
 
 <br>
 
