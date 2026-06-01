@@ -17,7 +17,7 @@ permalink: /2.3.6.1-d5-tiny-tf/
 This a demo of a DIY transformer (using various PyTorch libraries). Shows the key workflows (training/inference). 
 
 See also 
-- (algorithm details todo)
+- [2.3.6.1b D5 tiny TF algorithm details](/2.3.6.1b-d5-tiny-tf-algorithm-details/)
 - [#607\_2.1\_core\_NNs\_.docx](https://drive.google.com/drive/folders/1-Adawag9uA8_bq-hDF-nOuPYaRLz1eEO)
 - __ziptieai_BOOK2_LLM_.docx the [Gdrive](https://drive.google.com/drive/folders/1-Adawag9uA8_bq-hDF-nOuPYaRLz1eEO)
 
