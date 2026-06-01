@@ -13,9 +13,8 @@ permalink: /2.3.6.1b-d5-tiny-tf-algorithm-details/
 ### **This a demo that every aspiring AI/ML engineer should do.**
 
 You **create (and train) a very basic transformer** that demos the basics of how TF's do their magic. 
-I take an unusual approach to explaining the complexity of a simple TF 
-(I start with inference, then training, and then NN initialization (core components)
-and the NN forward pass (how the algorithms are excuted on the components). 
+I take an unusual approach to explaining the complexity of a simple TF. I start with (1) inference, then (2) training, and then (3) NN initialization (NN core components)
+and the (4) NN forward pass (how the algorithms are excuted on the components). 
 This demo runs on a CPU.
 
 Note: This demo works with a very small vocabulary consisting of just the letters (and space) in "hello world". The terms "token" and "letter" are used interchangeably.
