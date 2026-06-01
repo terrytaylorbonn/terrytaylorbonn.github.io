@@ -39,9 +39,26 @@ See also
 ### **TOC**
 - **Why do the simple Tiny Transformer (TF) demo?**
 - **1 Inference.** Enter the letter "h" and the TF returns "hello world hello world hello -world hello".
+  - 1.1 prompt
+  - 1.2 inference loop (40 single letters)
+  - 1.3 Final response (generated)
+
 - **2 Training.** Loss and optimizer, training data, and training loop.
+  - 2.1 model, loss_fn, optimizer  
+  - 2.2 prepare training data 
+  - 2.3 training loop (1000 epochs)
+
 - **3 NN initialization** (__init__) (create components / define matrices)
+  - 3.1 token and position embeddings
+  - 3.2 QKV content influence
+  - 3.3 FFN
+  - 3.4 output logits
+
 - **4 NN forward pass** (forward()) (use components to execute algorithms)
+  - 4.1 token/pos embed
+  - 4.2 QKV context sharing ("attention heads")
+  - 4.3 FFN
+  - 4.4 Out logits
 
 <br>
  
@@ -578,7 +595,7 @@ No ReLU after this layer.
 So h2 produces: 16 outputs
 total of: 80 bias values
 ```
- 
+
 ### 3.4 output logits
 
      self.out = nn.Linear(embed_dim, vocab_size)
@@ -633,7 +650,7 @@ C = channels/features/embedding dimension
 Later you'll see tensors like: [B,T,C] [16,8,16]
 ```
 
-#### initial token representations (4 lines)
+#### Initial token representations (4 lines)
 
 ```output
 These four lines are the transformer's equivalent of: loading the image into the CNN.
@@ -702,7 +719,7 @@ Q = self.q(x), K = self.k(x), V = self.v(x)
 which is where the attention mechanism begins.
 ```
  
-### 4.2 QKV context sharing ("attention heads") ******
+### 4.2 QKV context sharing ("attention heads")
 
 ```output
 for chats, in docx #607 search for "QKV@1", "QKV@2" (@2 is final discussion).
