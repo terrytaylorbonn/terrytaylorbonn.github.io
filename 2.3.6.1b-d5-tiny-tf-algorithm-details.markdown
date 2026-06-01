@@ -18,7 +18,8 @@ I take an unusual approach to explaining the complexity of a simple TF
 and the NN forward pass (how the algorithms are excuted on the components). 
 This demo runs on a CPU.
 
-<img src="/assets/brain1b.png" alt="drones" width="22%">
+<img src="/assets/d5_1.png" alt="drones" width="50%">
+
 
 
 
