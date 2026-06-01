@@ -5,7 +5,7 @@ title: Home
 
 <br>
 
-The primary **[focus](/0-site-focus/)** of this site is on hands-on **[demos](/0b-demos/)** for **[AI (models)](/2_models/)** and **[agents](/3_agents/)** *(see the latest demo -- a **[DIY tiny transformer](/2.3.6.1b-d5-tiny-tf-algorithm-details/)**)*. 
+The primary **[focus](/0-site-focus/)** of this site is on hands-on **[demos](/0b-demos/)** *(see the latest demo -- a **[DIY tiny transformer](/2.3.6.1b-d5-tiny-tf-algorithm-details/)**)* for **[AI (models)](/2_models/)** and **[agents](/3_agents/)**. 
 
 Studying code for basic AI demos (NNs, CNNs, LLMs, etc) is the **only way** to really grasp what AI (and AI hype) is. And its **not that difficult** nowadays, because AI tools (Cursor, GPT, Codex, etc) do all the difficult coding and debugging for you. The **hard part** is AI does not have the intelligence to organize demos and describe concepts clearly. Thats **[my job](/about/)**. 
 
