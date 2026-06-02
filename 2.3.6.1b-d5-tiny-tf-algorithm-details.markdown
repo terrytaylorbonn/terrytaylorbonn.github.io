@@ -284,6 +284,40 @@ This part creates (def __init__(self)) the components (matrices) and defines the
 
 (use components to execute algorithms)
 
+    def forward(self, idx):
+
+#### token_vecs, pos_vecs
+
+        B, T = idx.shape
+        token_vecs = self.token_embed(idx)
+        positions = torch.arange(T, device=device)
+        pos_vecs = self.pos_embed(positions)
+        x = token_vecs + pos_vecs
+
+#### context (q,k,v)
+ 
+        Q = self.q(x)
+        K = self.k(x)
+        V = self.v(x)
+        scores = Q @ K.transpose(-2, -1)
+        scores = scores / math.sqrt(embed_dim)
+        mask = torch.tril(torch.ones(T, T, device=device))
+        scores = scores.masked_fill(mask == 0, float("-inf"))
+        weights = F.softmax(scores, dim=-1)
+        context = weights @ V
+        x = x + context
+
+#### FFN
+
+
+        x = x + self.ffn(x)
+
+#### out
+ 
+
+        logits = self.out(x)
+        return logits
+
 
 <br> 
 
