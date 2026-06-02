@@ -693,7 +693,7 @@ except now it is: 16 sequences + 16 shifted target sequences
 (continue epochs loop)
 ```
 
-#### 1 Forward pass (training)
+#### 2.3.1 Forward pass (training)
 
 ```
     logits = model(X)
@@ -718,7 +718,7 @@ Position 1: [8 logits]
 ...
 ```
 
-#### 2 Compute loss (training)
+#### 2.3.2 Compute loss (training)
 
 
 ```
@@ -760,7 +760,7 @@ PyTorch accumulates: W.grad = 0.15 + 0.30 instead of: W.grad = 0.30
 So gradients would keep growing every iteration.
 ```
 
-#### 3 Backward pass (training)
+#### 2.3.3 Backward pass (training)
 
 ```
 loss.backward()
@@ -780,7 +780,7 @@ Nothing is changed yet. It only computes gradients. so Adam can later update the
 The transformer has millions (or in D5, thousands) of parameters.
 ```
 
-#### 4 Update weights (training)
+#### 2.3.4 Update weights (training)
 
 ```
 optimizer.step()
@@ -810,6 +810,7 @@ It updates the weights: W = W - lr * W.grad, b = b - lr * b.grad
 For example: W = 2.0, grad = 0.15, lr = 0.1
 new W = 2.0 - 0.1*0.15 = 1.985
 ```
+
 
 ## 3 NN initialization (__init__) (create components / define matrices)
 
@@ -978,14 +979,14 @@ C = channels/features/embedding dimension
 Later you'll see tensors like: [B,T,C] [16,8,16]
 ```
 
-#### Initial token representations (4 lines)
+#### 4.1.0 Initial token representations (4 lines)
 
 ```output
 These four lines are the transformer's equivalent of: loading the image into the CNN.
 They create the initial token representations.
 ```
 
-#### Step 1 token_vecs
+#### 4.1.1 Step 1 token_vecs
 
 ```
         token_vecs = self.token_embed(idx)   # 16,8,16
@@ -1001,7 +1002,7 @@ Result: token_vecs shape: [16,8,16]
 Meaning: 16 sequences, 8 tokens, 16-dimensional vector per token
 ```
 
-#### Step 2 positions
+#### 4.1.2 Step 2 positions
 
 ```
         positions = torch.arange(T, device=device)
@@ -1012,7 +1013,7 @@ Since: T = 8 this creates: [0,1,2,3,4,5,6,7]
 These are: token positions
 ```
 
-#### Step 3 pos_vecs
+#### 4.1.3 Step 3 pos_vecs
 
 ```
         pos_vecs = self.pos_embed(positions)
@@ -1029,7 +1030,7 @@ position 2 → [-0.7, 0.8, ...]
 Shape: [8,16]
 ```
 
-#### Step 4 x
+#### 4.1.4 Step 4 x
 
 ```
         x = token_vecs + pos_vecs
@@ -1063,7 +1064,7 @@ for chats, in docx #607 search for "QKV@1", "QKV@2" (@2 is final discussion).
  
 #### 4.2.1 SImplified explanation of algorithm execution
 
-##### Step 1
+##### 4.2.1.1 Step 1
 
 ```output
 Compute Q0...Q7 and K0...K7.
@@ -1072,7 +1073,7 @@ Q0 = Wq · emb0 (embedding for letter 0), K1 = Wk · emb0, etc
 This basically determines the Q and K for each letter based on the embedding values (16) of that letter.
 ```
 
-##### Step 2
+##### 4.2.1.2 Step 2
 
 ```output
 Compute all combinations of Q0...Q7 · K0...K7. 
@@ -1083,7 +1084,7 @@ NOTE: Q0K1 = the level that token token1 will influencce the context (16 embeddi
 ```
 
 
-##### Step 3
+##### 4.2.1.3 Step 3
 
 ```output
 Determine which token(s) influence each token the most.
@@ -1094,7 +1095,7 @@ Example: A00 = 0.08, A01 = 0.80, A02 = 0.12
 These are the attention weights for token 0.
 ```
 
-##### Step 4
+##### 4.2.1.4 Step 4
 
 ```output
 Now compute the context values for all tokens.
@@ -1102,7 +1103,7 @@ V0 = Wv · emb0, V1 = Wv · emb1, V2 = Wv · emb2
 Each is: 16x16 dot 16x1 = 16x1.
 ```
 
-##### Step 5
+##### 4.2.1.5 Step 5
 ```output
 Compute context for token 0:
 context0 = A00·V0 + A01·V1 + A02·V2...
