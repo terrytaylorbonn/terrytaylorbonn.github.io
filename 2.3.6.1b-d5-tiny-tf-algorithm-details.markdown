@@ -112,6 +112,14 @@ The diagrams below are rough hand-drawn for now, but they are my original (as is
 
 (my version) this is the inference loop
 
+<br>
+
+<img src="/assets/2.3.6.1b-loop.png" alt="drones" width="40%">
+
+<br>
+
+
+
 #### (1) idx is the accumulated response in loop z
 
 use as prompt in loop z+1
