@@ -622,20 +622,43 @@ h → [0.2, -1.1, ..., 0.7], e → [1.3,  0.4, ..., -0.2] ....
 Each vector contains: 16 numbers
 ```
 
-```output
-num_epochs = 1000
-```
  
 ### 2.3 training loop (1000 epochs)
 
+```text2
+ME: After long discussions I finally convinced GPT to agree to the following:
+GPT:
+For your D5 notes, I'd use something like:
+  prediction = model output
+  desired response = correct answer from training data
+  loss = difference between prediction and desired response
+Then:
+ gradient = W/b slope
+ optimizer = changes W and b to reduce loss
+Those three statements are surprisingly close to the essence of training.
+In fact, if I had to explain D5 training in one paragraph:
+1. The model makes a prediction.
+2. Loss measures how wrong the prediction is.
+3. Gradients compute the W/b slopes.
+4. The optimizer changes W and b to reduce the loss.
+5. Repeat thousands of times.
+
 ```
+
+```
+num_epochs = 1000
 for epoch in range(num_epochs):
 ```
 
 ```output
 (loop 1000 times)
 ```
+
+#### 2.3.0 Get batch
+
+```
     X, Y = get_batch()
+```
 
 ```output
 (def get_batch())
@@ -693,7 +716,7 @@ except now it is: 16 sequences + 16 shifted target sequences
 (continue epochs loop)
 ```
 
-#### 2.3.1 Forward pass (training)
+#### 2.3.1 Compute prompt response ("forward pass")
 
 ```
     logits = model(X)
@@ -718,7 +741,7 @@ Position 1: [8 logits]
 ...
 ```
 
-#### 2.3.2 Compute loss (training)
+#### 2.3.2 Compute loss (compare actual-response/correct-response)
 
 
 ```
@@ -744,14 +767,13 @@ Prediction #2: 8 logits Target = 4 ...
 Prediction #128: 8 logits Target = 6
 ```
 
+#### 2.3.3 Compute gradients (∂loss/∂parameter) ("backward pass")
+
 ```
 optimizer.zero_grad()
 ```
 
 ```output
-computes gradients and stores them in every parameter:
-Example: W.grad = 0.15, b.grad = -0.02
-These gradients remain stored inside the model.
 after optimizer.step() updates the weights: the gradients are still there!
 PyTorch does not automatically clear them.
 Why is that a problem? Suppose next batch:
@@ -759,8 +781,6 @@ loss.backward() produces: new gradient = 0.30
 PyTorch accumulates: W.grad = 0.15 + 0.30 instead of: W.grad = 0.30
 So gradients would keep growing every iteration.
 ```
-
-#### 2.3.3 Backward pass (training)
 
 ```
 loss.backward()
@@ -780,7 +800,7 @@ Nothing is changed yet. It only computes gradients. so Adam can later update the
 The transformer has millions (or in D5, thousands) of parameters.
 ```
 
-#### 2.3.4 Update weights (training)
+#### 2.3.4 Update weights
 
 ```
 optimizer.step()
