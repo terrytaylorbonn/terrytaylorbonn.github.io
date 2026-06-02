@@ -6,11 +6,13 @@ permalink: /2.3.6.1b-d5-tiny-tf-algorithm-details/
 
 [← 2.3.6 LLM demos](/2.3.6-llm-demos/)
 
+<br>
+
 ### THIS IS A WORK IN PROGRESS (page created 26.0601)
 
 <br>
 
-### **This a demo (*WIP*) that every aspiring AI/ML engineer should do.**
+### **This a demo that every aspiring AI/ML engineer should do.**
 
 You **create (and train) a very basic transformer** that demos the basics of how TF's do their magic. 
 I take an unusual approach to explaining the complexity of a simple TF. I start with (1) inference, then (2) training, and then (3) NN initialization (NN core components)
@@ -38,23 +40,21 @@ See also
 
 ### **TOC**
 - **Why do the simple Tiny Transformer (TF) demo?**
-- **1 Inference.** Enter the letter "h" and the TF returns "hello world hello world hello -world hello".
+- **Core concepts (overview of 4 chapters)**
+- **ch 1 Inference.** Enter the letter "h" and the TF returns "hello world hello world hello -world hello".
   - 1.1 prompt
   - 1.2 inference loop (40 single letters)
   - 1.3 Final response (generated)
-
-- **2 Training.** Loss and optimizer, training data, and training loop.
+- **ch 2 Training.** Loss and optimizer, training data, and training loop.
   - 2.1 model, loss_fn, optimizer  
   - 2.2 prepare training data 
   - 2.3 training loop (1000 epochs)
-
-- **3 NN initialization** (__init__) (create components / define matrices)
+- **ch 3 NN initialization** (__init__) (create components / define matrices)
   - 3.1 token and position embeddings
   - 3.2 QKV content influence
   - 3.3 FFN
   - 3.4 output logits
-
-- **4 NN forward pass** (forward()) (use components to execute algorithms)
+- **ch 4 NN forward pass** (forward()) (use components to execute algorithms)
   - 4.1 token/pos embed
   - 4.2 QKV context sharing ("attention heads")
   - 4.3 FFN
@@ -62,7 +62,7 @@ See also
 
 <br>
  
-## Why do the simple Tiny Transformer demo?
+## **Why do the simple Tiny Transformer demo?**
 
 ```text2
 A short chat with GPT while doing the Tiny Transformer demo. 
@@ -99,8 +99,147 @@ agentic AI systems, local LLM stacks, PAL-style systems, and AI platform archite
 You don't need to become a research mathematician, but being able to look at a transformer
 and say "I know what every major matrix multiplication is doing" is a valuable level of understanding.
 ```
+
+<br>
+
+## **Core concepts (overview of 4 chapters)**
+
+The diagrams below are rough hand-drawn for now, but they are my original (as is the structure of this page). 
+
+<br>
+
+### Inference (ch 1)
+
+(my version) this is the inference loop
+
+#### (1) idx is the accumulated response in loop z
+
+use as prompt in loop z+1
+
+Note:  initial prompt is "h"
+
+```
+idx = torch.tensor([[stoi[“h”]]], dtype=torch.long).to(device)
+```
+
+#### (2) take the last 8 letters of idx as inference input
+
+```
+    idx_cond = idx[:, -block_size:]
+```
+
+#### (3) inference of window of idx_cond (1-8 letters)
+
+```
+    logits = model(idx_cond)
+```
+
+Note: The result is of size idx_cond shifted one letter.
+THE KEY POINT I WAS MISSING: 
+forward() has the idx_cond as parameter which has 1-8 letters.
+so forward() is only run for existing letters 
+(which is 1 letter for the first inference; 8 max)
+
+#### (4) select last token from the embeddings
+
+```
+    last_logits = logits[:, -1, :]
+    probs = F.softmax(last_logits, dim=-1)
+    next_id = torch.multinomial(probs, num_samples=1)
+```
+
+#### (5) add the last token of result (new token) to idx
+
+```
+    idx = torch.cat([idx, next_id], dim=1)
+```
+
+#### (6) after 40 tokens added: join to final result
+
+```
+generated = ““.join(itos[i] for i in idx[0].tolist()) print(“generated:”) print(generated)
+```
+
+#### GPT feedback
+
+Yes — your explanation is basically correct.
+- One correction: The result is of size idx_cond shifted one letter.
+- Better: logits has one prediction vector for each existing input letter in idx_cond.
+
+Example first loop:
+
+```
+idx_cond = [h]
+logits shape = [1,1,vocab_size]
+last_logits = prediction after h
+next_id = e
+idx becomes [h,e]
+```
+
+Second loop:
+
+```
+idx_cond = [h,e]
+logits shape = [1,2,vocab_size]
+last_logits = prediction after e
+next_id = l
+idx becomes [h,e,l]
+```
+
+Key idea:
+- forward() does not create a longer sequence.
+- forward() only computes predictions for the existing input positions.
+
+The new token is added only here:
+
+```
+idx = torch.cat([idx, next_id], dim=1)
+```
+
+So your main point is right:
+
+```text2
+idx accumulates the generated response.
+idx_cond is the current context window.
+model(idx_cond) predicts possible next tokens.
+only the last prediction is used.
+next_id is appended to idx.
+repeat.
+```
+
+<br>
+
+### Training (ch 2)
+
+(todo)
+
+
+<br>
+
+### NN init (ch 3)
+
+(create components / define matrices)
+
+(todo)
+
+
+<br>
+
+### NN forward pass 
+
+(use components to execute algorithms)
+
+(todo)
+
+<br> 
+
+--------------------
+--------------------
+
+<br> 
+
  
-## 1 Inference
+## **1 Inference**
 
 ```
 model.eval()
@@ -116,8 +255,10 @@ Then: idx contains: [[3]], Shape: [B,T] [1,1], Meaning: 1 sequence, 1 token, The
 
 ### 1.2 inference loop (40 single letters)
 
+```
 with torch.no_grad():
     for _ in range(40):
+```
 
 ```output
 no_grad()
@@ -126,7 +267,9 @@ Iteration 1: Input: h, Model predicts: e, Append: he
 Iteration 2: Input: he, ...
 ```
 
+```
         idx_cond = idx[:, -block_size:]
+```
 
 ```output
 = idx[all_rows, last_block_size_columns] [B,T]? (T<=8)
@@ -139,7 +282,10 @@ But the model can only look at the last block_size tokens:
 ```
 
 #### 1.2.1 forward pass (inference of single letter)
+
+```
         logits = model(idx_cond)
+```
 
 ```output
 Suppose:
@@ -157,7 +303,9 @@ position 2 predicts token 3
 position 3 predicts token 4
 ```
 
+```
         last_logits = logits[:, -1, :]
+```
 
 ```output
 = 2 dimensions, not 3.  [B, T, C] -> [B, C]
@@ -165,14 +313,18 @@ for generation we only care about the newest position:
 Give me the prediction for the last token position.
 ```
 
+```
         probs = F.softmax(last_logits, dim=-1)
+```
 
 ```output
 dim=-1 means last dimension
 apply softmax across the vocabulary dimension (C?)
 ```
 
+```
         next_id = torch.multinomial(probs, num_samples=1)
+```
 
 ```output
 chooses the next token.
@@ -201,7 +353,9 @@ So probs may look like: token "e" = 0.98, all others = tiny
 Then multinomial is “random,” but it almost always chooses "e".
 ```
 
+```
         idx = torch.cat([idx, next_id], dim=1)
+```
 
 ```output
 This line appends the newly generated token to the sequence.
@@ -214,9 +368,11 @@ idx shape = [B, T] B = batch T = token positions
 
 ### 1.3 Final response (generated)
 
+```
 generated = "".join(itos[i] for i in idx[0].tolist())
 print("generated:")
 print(generated)
+```
 
 ```output
 It converts: token IDs  > characters > string
@@ -233,7 +389,9 @@ For your tiny transformer: idx = [[3,2,4,4,5,0,7,5,6,4,1]] > ['h','e','l','l','o
 
 ### 2.1 model, loss_fn, optimizer 
 
+```
 model = TinyTransformer().to(device)
+```
 
 ```output
 Move all weights to CPU or GPU.
@@ -241,7 +399,9 @@ creates an instance of the class: class TinyTransformer(nn.Module):
 model = variable that points to the transformer object.
 ```
 
+```
 loss_fn = nn.CrossEntropyLoss()	
+```
 
 ```output
 (ME: specify the nn loss function).
@@ -252,7 +412,9 @@ actual next character = "o"
 model predicts:  space=0.01,  d=0.02,  e=0.05  ...  o=0.90  → low loss
 ```
 
+```
 optimizer = torch.optim.Adam(model.parameters(), lr=0.01)
+```
 
 ```output
 (ME: specify the) Training algorithm.
@@ -265,14 +427,18 @@ embeddings, position embeddings, Q/K/V weights, FFN weights, output layer weight
 ### 2.2 prepare training data
 
 
+```
 text = "hello world hello world hello world "
+```
 
 ```output
 This is the training data (all of it).
 ```
 
 
+```
 chars = sorted(list(set(text)))
+```
 
 ```output
 build the vocabulary.
@@ -287,13 +453,17 @@ sorts characters: [' ', 'd', 'e', 'h', 'l', 'o', 'r', 'w']
 Now vocabulary ordering is deterministic.
 ```
 
+```
 vocab_size = len(chars)
+```
 
 ```output
 Counts unique characters: 8 for this example.
 ```
 
+```
 stoi = {ch: i for i, ch in enumerate(chars)}
+```
 
 ```output
 This is the simplest possible tokenizer.
@@ -305,14 +475,19 @@ Result: { ' ': 0,  'd': 1,  'e': 2,  'h': 3,  'l': 4,  'o': 5,  'r': 6,  'w': 7}
 So: stoi['h'] returns: 3
 ```
 
+```
 itos = {i: ch for ch, i in stoi.items()}
+```
+
 ```output
 creates the reverse mapping: integer to string
 Result: { 0: ' ', 1: 'd', 2: 'e', 3: 'h', 4: 'l', 5: 'o', 6: 'r', 7: 'w'}
 So: itos[3] returns: 'h'
 ```
 
+```
 data = torch.tensor([stoi[ch] for ch in text], dtype=torch.long).to(device)
+```
 
 ```output
 This converts the training text into token IDs.
@@ -325,7 +500,10 @@ Then: .to(device) moves tensor to: GPU (cuda) or CPU depending on: device
 This tensor is the transformer's equivalent of the MNIST image tensor from D4.
 ```
 
+```
 block_size = 8
+```
+
 ```output
 X.shape becomes: [batch_size, 8]
 For your demo: [16, 8]
@@ -335,7 +513,9 @@ The model can attend only to: the previous 8 tokens
 Real models: D5 demo: block_size = 8, GPT-2: 1024, Llama: 4096+
 ```
 
+```
 embed_dim = 16
+```
 
 ```output
 Each character has a learned embedding:
@@ -349,7 +529,9 @@ num_epochs = 1000
  
 ### 2.3 training loop (1000 epochs)
 
+```
 for epoch in range(num_epochs):
+```
 
 ```output
 (loop 1000 times)
@@ -360,7 +542,9 @@ for epoch in range(num_epochs):
 (def get_batch())
 ```
 
+```
     ix = torch.randint(0, len(data) - block_size - 1, (16,), device=device)
+```
 
 ```output
 picks random training positions from the text.
@@ -375,9 +559,11 @@ So if: i = 26 then: 26 ... 34 still fits inside the text.
 The result: ix.shape is: [16] meaning: 16 random starting positions for the training batch.
 ```
 
+```
     X = torch.stack([data[i:i + block_size] for i in ix])
     Y = torch.stack([data[i + 1:i + block_size + 1] for i in ix])
     return X, Y
+```
 
 ```output
 Suppose text is: hello world
@@ -410,7 +596,9 @@ except now it is: 16 sequences + 16 shifted target sequences
 
 #### 1 Forward pass (training)
 
+```
     logits = model(X)
+```
 
 ```output
 for: model(X) PyTorch automatically calls: model.forward(X) behind the scenes.
@@ -418,7 +606,9 @@ So yes, both references (model = Tiny....) are pointing to the same transformer 
 The first line creates it. The second line uses it.
 ```
 
+```
     B, T, C = logits.shape
+```
 
 ```output
 shape is: [16,8,8] 16 sequences, 8 token positions, 8 vocabulary outputs
@@ -473,7 +663,9 @@ So gradients would keep growing every iteration.
 
 #### 3 Backward pass (training)
 
+```
 loss.backward()
+```
 
 ```output
 This is the line that starts backpropagation.
@@ -491,7 +683,9 @@ The transformer has millions (or in D5, thousands) of parameters.
 
 #### 4 Update weights (training)
 
+```
 optimizer.step()
+```
 
 ```output
 actually changes the model. Update all trainable parameters using the gradients.
@@ -527,19 +721,25 @@ creates the trainable components
 exactly how PyTorch models are structured.
 ```
 
+```
 class TinyTransformer(nn.Module):
     def __init__(self):
         super().__init__()
+```
  
 ### 3.1 token and position embeddings
 
+```
         self.token_embed = nn.Embedding(vocab_size, embed_dim)  ##8,16
+```
 
 ```output
 initialize with random values.
 ```
 
+```
         self.pos_embed = nn.Embedding(block_size, embed_dim)  ##8,16
+```
 
 ```output
 creates the embedding table and initializes it with random values.
@@ -553,9 +753,11 @@ Yes. Pure coincidence.
 so the following code sets up or defines (somehow) the QKV mechanism.
 ```
 
+```
         self.q = nn.Linear(embed_dim, embed_dim)
         self.k = nn.Linear(embed_dim, embed_dim)
         self.v = nn.Linear(embed_dim, embed_dim)
+```
 
 ```output
 For a single attention head with:
@@ -571,11 +773,13 @@ for nn.Linear, the bias is there unless: nn.Linear(embed_dim, embed_dim, bias=Fa
  
 ### 3.3 FFN
 
+```
         self.ffn = nn.Sequential(
             nn.Linear(embed_dim, 64),
             nn.ReLU(),
             nn.Linear(64, embed_dim),
         )
+```
 
 ```output
 ME: 
@@ -602,7 +806,9 @@ total of: 80 bias values
 
 ### 3.4 output logits
 
+```
      self.out = nn.Linear(embed_dim, vocab_size)
+```
 
 ```output
 with: embed_dim = 16 vocab_size = 8
@@ -627,7 +833,9 @@ execute algorithm
 exactly how PyTorch models are structured.
 ```
 
+```
     def forward(self, idx):
+```
 
 ```output
 defines: how data flows through the network. exactly like D4.
@@ -642,7 +850,9 @@ Everything in forward() is operating on the entire batch at once.
  
 ### 4.1 token/pos embed
 
+```
         B, T = idx.shape
+```
 
 ```output
 [16, 8] meaning:
@@ -663,7 +873,9 @@ They create the initial token representations.
 
 #### Step 1 token_vecs
 
+```
         token_vecs = self.token_embed(idx)   # 16,8,16
+```
 
 ```output
 Suppose: idx shape: [16,8]
@@ -677,7 +889,9 @@ Meaning: 16 sequences, 8 tokens, 16-dimensional vector per token
 
 #### Step 2 positions
 
+```
         positions = torch.arange(T, device=device)
+```
 
 ```output
 Since: T = 8 this creates: [0,1,2,3,4,5,6,7]
@@ -686,7 +900,9 @@ These are: token positions
 
 #### Step 3 pos_vecs
 
+```
         pos_vecs = self.pos_embed(positions)
+```
 
 ```output
 does not create new random values. It performs a lookup.
@@ -701,7 +917,9 @@ Shape: [8,16]
 
 #### Step 4 x
 
+```
         x = token_vecs + pos_vecs
+```
 
 ```output
 This is one of the most important lines in a transformer.
@@ -786,9 +1004,11 @@ This does the everything described in 4.2.1 and more, but describes in matrix fo
 ```
 
 
+```
         Q = self.q(x)
         K = self.k(x)
         V = self.v(x)
+```
 
 ```output
 1) compute 8 sets of q,k,v .. all use the same method
@@ -798,8 +1018,10 @@ Q.shape = [16,8,16], K.shape = [16,8,16], V.shape = [16,8,16]
 ```
 
 
+```
         scores = Q @ K.transpose(-2, -1)
         scores = scores / math.sqrt(embed_dim)
+```
 
 ```output
 2) Compute [ K(transpose) dot Q ] for all token-token pairs (including "self pairing").
@@ -831,8 +1053,10 @@ do not share between future tokens (letters).
 T = # of tokens.
 ```
 
+```
         mask = torch.tril(torch.ones(T, T, device=device))
         scores = scores.masked_fill(mask == 0, float("-inf"))
+```
 
 ```output
 Wherever mask==0, replace score with -∞.
@@ -842,13 +1066,17 @@ Wherever mask==0, replace score with -∞.
 8   1   2   4
 ```
 
+```
         weights = F.softmax(scores, dim=-1)
+```
 
 ```output
 Example: row 2 [2, 6, 3, -∞]
 Softmax produces: [0.017, 0.936, 0.047, 0.0]
 ```
+```
         context = weights @ V
+```
 
 ```output
 4) add weight * V (16x1) for all 16 context contributions to a token. 
@@ -868,7 +1096,9 @@ This is a new vector. Created by combining information from multiple tokens.
 ```
 
 
+```
         x = x + context
+```
 
 ```output
 add the contributions
@@ -881,7 +1111,9 @@ batch 15:     x15 = x15 + context15
  
 ### 4.3 FFN
 
+```
         x = x + self.ffn(x)
+```
 
 
 ```output
@@ -899,8 +1131,10 @@ for all 128 tokens. performs large matrix operations on the entire tensor:
  
 ### 4.4 Out logits
 
+```
         logits = self.out(x)
         return logits 
+```
 
 ```output
 This is the final prediction layer.
@@ -918,4 +1152,4 @@ Those are the scores for the 8 possible next characters.
 
 <br>
 
-26.0601 (v1 26.0601)
+26.0602 (v1 26.0601)
