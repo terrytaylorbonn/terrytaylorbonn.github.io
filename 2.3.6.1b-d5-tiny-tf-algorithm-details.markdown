@@ -106,6 +106,8 @@ and say "I know what every major matrix multiplication is doing" is a valuable l
 
 The diagrams below are rough hand-drawn for now, but they are my original (as is the structure of this page). 
 
+**NOTE: Much of the details of chapters 3 and 4 are hidden in the python libraries** (the code does not tell you enough detail of what is going on). I spent a lot time studying GPT-3 algorithms/architecture (for Tiny TF things are similar but much simpler), and with GPT's help documented (text and diagrams) the required level of detail for chapters 3/4. 
+
 <br>
 
 ### Inference (ch 1)
@@ -226,18 +228,62 @@ repeat.
 
 ### NN init (ch 3)
 
-(create components / define matrices)
-
-(todo)
-
+This part creates (def __init__(self)) the components (matrices) and defines the connections (computations). In ch 4 these are used by the forward command (def forward(self,idx)) when running training/inference. 
 
 <br>
+
+    def __init__(self):
+        self.token_embed = nn.Embedding(vocab_size, embed_dim)
+        self.pos_embed = nn.Embedding(block_size, embed_dim)
+    def forward(self, idx):
+        token_vecs = self.token_embed(idx)
+        pos_vecs = self.pos_embed(positions)
+
+
+<img src="/assets/2.3.6.1b-ch3-12.png" alt="drones" width="35%">
+
+<br> 
+
+    def __init__(self):
+        self.q = nn.Linear(embed_dim, embed_dim)
+        self.k = nn.Linear(embed_dim, embed_dim)
+        self.v = nn.Linear(embed_dim, embed_dim)
+    def forward(self, idx):
+        Q = self.q(x)
+        K = self.k(x)
+        V = self.v(x)
+
+
+<img src="/assets/2.3.6.1b-ch3-345.png" alt="drones" width="32%">
+
+<br> 
+
+    def __init__(self):
+        self.ffn = nn.Sequential(
+            nn.Linear(embed_dim, 64),
+            nn.ReLU(),
+            nn.Linear(64, embed_dim),         )
+    def forward(self, idx):
+        x = x + self.ffn(x)
+
+<img src="/assets/2.3.6.1b-ch3-6.png" alt="drones" width="55%">
+
+<br> 
+
+    def __init__(self):
+        self.out = nn.Linear(embed_dim, vocab_size)
+    def forward(self, idx):
+        logits = self.out(x)
+
+<img src="/assets/2.3.6.1b-ch3-7b.png" alt="drones" width="47%">
+
+<br> 
+
 
 ### NN forward pass (ch4)
 
 (use components to execute algorithms)
 
-(todo)
 
 <br> 
 
