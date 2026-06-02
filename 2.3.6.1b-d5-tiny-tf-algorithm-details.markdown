@@ -113,6 +113,9 @@ The diagrams below are rough hand-drawn for now, but they are my original (as is
 ### Inference (ch 1)
 
 (my version) this is the inference loop
+  - 1.1 prompt
+  - 1.2 inference loop (40 single letters)
+  - 1.3 Final response (generated)
 
 <br>
 
@@ -479,6 +482,10 @@ For your tiny transformer: idx = [[3,2,4,4,5,0,7,5,6,4,1]] > ['h','e','l','l','o
  
 ## 2 Training
 
+  - 2.1 model, loss_fn, optimizer  
+  - 2.2 prepare training data 
+  - 2.3 training loop (1000 epochs)
+
 ### 2.1 model, loss_fn, optimizer 
 
 ```
@@ -806,6 +813,15 @@ new W = 2.0 - 0.1*0.15 = 1.985
 
 ## 3 NN initialization (__init__) (create components / define matrices)
 
+
+  - 3.1 token and position embeddings
+  - 3.2 QKV content influence
+  - 3.3 FFN
+  - 3.4 output logits
+
+
+
+
 ```output
 creates the trainable components
 "What is the network made of?"
@@ -917,6 +933,12 @@ This is the "unembedding" layer that converts the final hidden state into scores
 ```
  
 ## 4 NN forward pass (forward(self, idx)) (use components to execute algorithms)
+
+  - 4.1 token/pos embed
+  - 4.2 QKV context sharing ("attention heads")
+  - 4.3 FFN
+  - 4.4 Out logits
+
 
 ```output
 uses the trainable components
