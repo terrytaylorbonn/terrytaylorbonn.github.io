@@ -31,9 +31,11 @@ Runs locally in CPU mode. I might soon (26.0530) try to run this on Render.
 
 <br>
 
-#### **Demo 5b: [2.3.6.1b D5 tiny TF algorithm details](/2.3.6.1b-d5-tiny-tf-algorithm-details/)** (26.0528)
+#### **Demo 5b: [2.3.6.1b D5 tiny TF algorithm details](/2.3.6.1b-d5-tiny-tf-algorithm-details/)** (26.0602)
 
-(WIP)
+
+<img src="/assets/2.3.6.1b-forward.png" alt="drones" width="30%">
+
 
 <!-- <img src="/assets/d4_alexnet.png" alt="drones" width="15%"> -->
 
@@ -60,4 +62,4 @@ The wiki page [**"AI LLM stacks"**](https://github.com/terrytaylorbonn/auxdrone/
 
 <br>
 
-26.0530 (v1 26.0529)
+26.0602 (v1 26.0529)
