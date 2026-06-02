@@ -127,9 +127,10 @@ The diagrams below are rough hand-drawn for now, but they are my original (as is
 
 #### (1) idx is the accumulated response in loop z
 
+```text2
 use as prompt in loop z+1
-
 Note:  initial prompt is "h"
+```
 
 ```
 idx = torch.tensor([[stoi[“h”]]], dtype=torch.long).to(device)
@@ -147,11 +148,13 @@ idx = torch.tensor([[stoi[“h”]]], dtype=torch.long).to(device)
     logits = model(idx_cond)
 ```
 
+```text2
 Note: The result is of size idx_cond shifted one letter.
 THE KEY POINT I WAS MISSING: 
 forward() has the idx_cond as parameter which has 1-8 letters.
 so forward() is only run for existing letters 
 (which is 1 letter for the first inference; 8 max)
+```
 
 #### (4) select last token from the embeddings
 
@@ -175,9 +178,11 @@ generated = ““.join(itos[i] for i in idx[0].tolist()) print(“generated:”
 
 #### GPT feedback
 
+```text2
 Yes — your explanation is basically correct.
 - One correction: The result is of size idx_cond shifted one letter.
 - Better: logits has one prediction vector for each existing input letter in idx_cond.
+```
 
 Example first loop:
 
@@ -199,11 +204,12 @@ next_id = l
 idx becomes [h,e,l]
 ```
 
+```text2
 Key idea:
 - forward() does not create a longer sequence.
 - forward() only computes predictions for the existing input positions.
-
 The new token is added only here:
+```
 
 ```
 idx = torch.cat([idx, next_id], dim=1)
@@ -224,14 +230,54 @@ repeat.
 
 ### Training (ch 2)
 
-(todo)
+
+```text2
+SUBSECTIONS
+- 2.3.0 Get batch of input/output block pairs 
+- 2.3.1 Run input block X through the model (model(X))
+- 2.3.2 Compute prediction error (loss_fn())
+- 2.3.3 Compute W/b (param) slopes (loss.backward())
+- 2.3.4 Update W/b params (optimizer.step())
+```
+
+```text2
+ME: After long discussions I finally convinced GPT to agree to the following:
+GPT:
+For your D5 notes, I'd use something like:
+  prediction = model output
+  desired response = correct answer from training data
+  loss = difference between prediction and desired response
+Then:
+ gradient = W/b slope
+ optimizer = changes W and b to reduce loss
+Those three statements are surprisingly close to the essence of training.
+In fact, if I had to explain D5 training in one paragraph:
+1. The model makes a prediction.
+2. Loss measures how wrong the prediction is.
+3. Gradients compute the W/b slopes.
+4. The optimizer changes W and b to reduce the loss.
+5. Repeat thousands of times.
+------------------
+In fact, one of the strongest aspects of your D5 notes is that you're translating AI terminology into engineering terminology:
+  gradient      -> W/b slope
+  loss          -> prediction error
+  parameter     -> W or b
+  attention     -> context influence
+  logits        -> raw scores
+
+```
+
+
 
 
 <br>
 
 ### NN init (ch 3)
 
-This part creates (def __init__(self)) the components (matrices) and defines the connections (computations). In ch 4 these are used by the forward command (def forward(self,idx)) when running training/inference. 
+```text2
+This part creates (def __init__(self)) the components (matrices) and defines the connections (computations). 
+In ch 4 these are used by the forward command (def forward(self,idx)) when running training/inference. 
+```
 
 <br>
 
@@ -285,20 +331,27 @@ This part creates (def __init__(self)) the components (matrices) and defines the
 
 ### NN forward pass (ch4)
 
-(use components to execute algorithms)
+```text2
+Use components to execute algorithms.
+```
 
+```
     def forward(self, idx):
+```
 
 #### token_vecs, pos_vecs
 
+```
         B, T = idx.shape
         token_vecs = self.token_embed(idx)
         positions = torch.arange(T, device=device)
         pos_vecs = self.pos_embed(positions)
         x = token_vecs + pos_vecs
+```
 
 #### context (q,k,v)
  
+```
         Q = self.q(x)
         K = self.k(x)
         V = self.v(x)
@@ -309,18 +362,20 @@ This part creates (def __init__(self)) the components (matrices) and defines the
         weights = F.softmax(scores, dim=-1)
         context = weights @ V
         x = x + context
+```
 
 #### FFN
 
-
+```
         x = x + self.ffn(x)
+```
 
 #### out
  
-
+```
         logits = self.out(x)
         return logits
-
+```
 
 <br> 
 
@@ -486,7 +541,7 @@ For your tiny transformer: idx = [[3,2,4,4,5,0,7,5,6,4,1]] > ['h','e','l','l','o
   - 2.2 prepare training data 
   - 2.3 training loop (1000 epochs)
 
-### 2.1 model, loss_fn, optimizer 
+### 2.1 Model, loss_fn, optimizer 
 
 ```
 model = TinyTransformer().to(device)
@@ -523,7 +578,7 @@ embeddings, position embeddings, Q/K/V weights, FFN weights, output layer weight
 ```
 
  
-### 2.2 prepare training data
+### 2.2 Prepare training data
 
 
 ```
@@ -626,24 +681,15 @@ Each vector contains: 16 numbers
 ### 2.3 training loop (1000 epochs)
 
 ```text2
-ME: After long discussions I finally convinced GPT to agree to the following:
-GPT:
-For your D5 notes, I'd use something like:
-  prediction = model output
-  desired response = correct answer from training data
-  loss = difference between prediction and desired response
-Then:
- gradient = W/b slope
- optimizer = changes W and b to reduce loss
-Those three statements are surprisingly close to the essence of training.
-In fact, if I had to explain D5 training in one paragraph:
-1. The model makes a prediction.
-2. Loss measures how wrong the prediction is.
-3. Gradients compute the W/b slopes.
-4. The optimizer changes W and b to reduce the loss.
-5. Repeat thousands of times.
-
+SUBSECTIONS
+- 2.3.0 Get batch of input/output block pairs 
+- 2.3.1 Run input block X through the model (model(X))
+- 2.3.2 Compute prediction error (loss_fn())
+- 2.3.3 Compute W/b (param) slopes (loss.backward())
+- 2.3.4 Update W/b params (optimizer.step())
 ```
+
+
 
 ```
 num_epochs = 1000
@@ -654,7 +700,12 @@ for epoch in range(num_epochs):
 (loop 1000 times)
 ```
 
-#### 2.3.0 Get batch
+#### 2.3.0 Get batch of input/output block pairs 
+
+
+```text2
+Get a batch (16) of input/output letter block pairs X/Y (size=8) with random start positions
+```
 
 ```
     X, Y = get_batch()
@@ -716,7 +767,15 @@ except now it is: 16 sequences + 16 shifted target sequences
 (continue epochs loop)
 ```
 
-#### 2.3.1 Compute prompt response ("forward pass")
+#### 2.3.1 Run input block X through the model (model(X))
+
+
+```text2
+Make a "forward pass".
+X = input.
+Y = target.
+
+```
 
 ```
     logits = model(X)
@@ -741,8 +800,12 @@ Position 1: [8 logits]
 ...
 ```
 
-#### 2.3.2 Compute loss (compare actual-response/correct-response)
+#### 2.3.2 Compute prediction error (loss_fn())
 
+```text2
+Compare model output to block Y. 
+loss = prediction error
+```
 
 ```
 loss = loss_fn( 
@@ -767,7 +830,11 @@ Prediction #2: 8 logits Target = 4 ...
 Prediction #128: 8 logits Target = 6
 ```
 
-#### 2.3.3 Compute gradients (∂loss/∂parameter) ("backward pass")
+#### 2.3.3 Compute W/b (param) slopes (loss.backward())
+
+```text2
+Make a "backward pass" that computes ∂loss/∂parameter (gradients).
+```
 
 ```
 optimizer.zero_grad()
@@ -800,48 +867,31 @@ Nothing is changed yet. It only computes gradients. so Adam can later update the
 The transformer has millions (or in D5, thousands) of parameters.
 ```
 
-#### 2.3.4 Update weights
+#### 2.3.4 Update W/b params (optimizer.step())
 
 ```
 optimizer.step()
 ```
 
 ```output
-actually changes the model. Update all trainable parameters using the gradients.
-gradients Example: Wq gradient = +0.02, token embedding gradient = -0.01, output layer gradient = +0.05
-These gradients are stored inside the parameters.
-Then: optimizer.step() uses Adam to perform something like:
-new_parameter = old_parameter  - learning_rate * gradient
-(The real Adam formula is more sophisticated, but that's the basic idea.)
-For example: Before: W = 1.50
-Gradient: dLoss/dW = 0.20
-Learning rate: 0.01
-Update: new_W ≈ 1.50 - 0.01*0.20 = 1.498
-This happens for token embeddings, position embeddings, QKV/FFN/output weights/biases all at once.
-This is the moment when: random parameters become: slightly less random parameters
-and after hundreds/thousands of iterations: useful learned parameters
-That's why these two lines together are really the heart of learning:
-loss.backward()
-optimizer.step()
-Everything else is just preparing the information needed to perform those updates.
-ANOTHER VERSION:
-What does optimizer.step() do?
-It updates the weights: W = W - lr * W.grad, b = b - lr * b.grad
-For example: W = 2.0, grad = 0.15, lr = 0.1
+Updates the trainable parameters.
+  W = W - lr * W.grad
+  b = b - lr * b.grad
+Example:
+  W = 2.0
+  grad = 0.15
+  lr = 0.1
 new W = 2.0 - 0.1*0.15 = 1.985
+The real Adam algorithm is more sophisticated, but this is the basic idea.
 ```
 
 
 ## 3 NN initialization (__init__) (create components / define matrices)
 
-
   - 3.1 token and position embeddings
   - 3.2 QKV content influence
   - 3.3 FFN
   - 3.4 output logits
-
-
-
 
 ```output
 creates the trainable components
@@ -855,7 +905,7 @@ class TinyTransformer(nn.Module):
     def __init__(self):
         super().__init__()
 ```
- 
+
 ### 3.1 token and position embeddings
 
 ```
@@ -875,7 +925,7 @@ creates the embedding table and initializes it with random values.
 ME: so just coincidence that blocksize and vocab size both = 8
 Yes. Pure coincidence.
 ```
- 
+
 ### 3.2 QKV content influence
 
 ```output
@@ -899,7 +949,7 @@ no biases in the equations because most transformer explanations omit them:
 biases usually not important for QKV, so authors often leave them out to simplify.
 for nn.Linear, the bias is there unless: nn.Linear(embed_dim, embed_dim, bias=False)
 ```
- 
+
 ### 3.3 FFN
 
 ```
