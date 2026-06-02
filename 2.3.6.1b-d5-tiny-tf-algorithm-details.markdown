@@ -233,11 +233,15 @@ repeat.
 
 <br>
 
-### NN forward pass 
+### NN forward pass (ch4)
 
 (use components to execute algorithms)
 
 (todo)
+
+<br> 
+
+<img src="/assets/2.3.6.1b-forward.png" alt="drones" width="50%">
 
 <br> 
 
