@@ -84,6 +84,12 @@ and say "I know what every major matrix multiplication is doing" is a valuable l
 
 Note: Much of the details of chapters 3 and 4 are hidden in the python libraries (the code does not give the details). See __ziptieai_BOOK2_LLM_.docx on the [Gdrive](https://drive.google.com/drive/folders/1-Adawag9uA8_bq-hDF-nOuPYaRLz1eEO) chapter 17 for details about transformer internals (for GPT-3). *I will redo the hand-drawn diagram later.* 
 
+**TOC**
+- C1 Inference (ch 1)
+- C2 Training (ch 2)
+- C3 NN init (ch 3)
+- C4 NN forward pass (ch4)
+
 
 <br>
 
@@ -101,7 +107,6 @@ The diagram below summarizes the inference loop.
 
 <img src="/assets/2.3.6.1b-loop.png" alt="drones" width="40%">
 
-<br>
 
 
 #### GPT feedback
@@ -111,6 +116,13 @@ Yes — your explanation is basically correct.
 - One correction: The result is of size idx_cond shifted one letter.
 - Better: logits has one prediction vector for each existing input letter in idx_cond.
 ``` -->
+
+```text2
+Key idea:
+- forward() does not create a longer sequence.
+- forward() only computes predictions for the existing input positions.
+```
+
 
 Example first loop:
 
@@ -132,14 +144,7 @@ next_id = l
 idx becomes [h,e,l]
 ```
 
-```text2
-Key idea:
-- forward() does not create a longer sequence.
-- forward() only computes predictions for the existing input positions.
-The new token is added only here:
-```
-
-So your main point is right:
+<!-- So your main point is right:
 
 ```text2
 idx accumulates the generated response.
@@ -148,24 +153,29 @@ model(idx_cond) predicts possible next tokens.
 only the last prediction is used.
 next_id is appended to idx.
 repeat.
-```
+```  -->
 
 <br>
 
-### Training (ch 2)
-
+### C2 Training (ch 2)
 
 ```text2
-SUBSECTIONS
-- 2.3.0 Get batch of input/output block pairs 
-- 2.3.1 Run input block X through the model (model(X))
-- 2.3.2 Compute prediction error (loss_fn())
-- 2.3.3 Compute W/b (param) slopes (loss.backward())
-- 2.3.4 Update W/b params (optimizer.step())
+This is my simplified, common sense (no jargon) summary of training (it took me a while to get GPT to agree with me):
+1. The model (transformer0 makes a prediction.
+2. Loss measures how wrong the prediction is.
+3. Gradients compute the W/b slopes.
+4. The optimizer changes W and b to reduce the loss.
+5. Repeat thousands of times.
+------------------
+I translate AI terminology into engineering terminology:
+  gradient      -> W/b slope
+  loss          -> prediction error
+  parameter     -> W or b
+  attention     -> context influence
+  logits        -> raw scores
 ```
 
-```text2
-ME: After long discussions I finally convinced GPT to agree to the following:
+<!-- ME: After long discussions I finally convinced GPT to agree to the following:
 GPT:
 For your D5 notes, I'd use something like:
   prediction = model output
@@ -175,28 +185,11 @@ Then:
  gradient = W/b slope
  optimizer = changes W and b to reduce loss
 Those three statements are surprisingly close to the essence of training.
-In fact, if I had to explain D5 training in one paragraph:
-1. The model makes a prediction.
-2. Loss measures how wrong the prediction is.
-3. Gradients compute the W/b slopes.
-4. The optimizer changes W and b to reduce the loss.
-5. Repeat thousands of times.
-------------------
-In fact, one of the strongest aspects of your D5 notes is that you're translating AI terminology into engineering terminology:
-  gradient      -> W/b slope
-  loss          -> prediction error
-  parameter     -> W or b
-  attention     -> context influence
-  logits        -> raw scores
-
-```
-
-
-
+-->
 
 <br>
 
-### NN init (ch 3)
+### C3 NN init (ch 3)
 
 ```text2
 This part creates (def __init__(self)) the components (matrices) and defines the connections (computations). 
@@ -205,6 +198,13 @@ In ch 4 these are used by the forward command (def forward(self,idx)) when runni
 
 <br>
 
+#### C3.1-2 Matrices for 
+
+```text2
+- token (letter) embedding (16 FP numbers for each letter) (8 letters per batch/sequence)
+- position embedding (16 FP numbers for each letter) (8 letters per batch/sequence)
+```
+
     def __init__(self):
         self.token_embed = nn.Embedding(vocab_size, embed_dim)
         self.pos_embed = nn.Embedding(block_size, embed_dim)
@@ -212,10 +212,16 @@ In ch 4 these are used by the forward command (def forward(self,idx)) when runni
         token_vecs = self.token_embed(idx)
         pos_vecs = self.pos_embed(positions)
 
-
 <img src="/assets/2.3.6.1b-ch3-12.png" alt="drones" width="35%">
 
 <br> 
+
+#### C3.3-5 Matrices for 
+
+```text2
+- Weights for QKV (16x16) (used to compute QKV)
+```
+
 
     def __init__(self):
         self.q = nn.Linear(embed_dim, embed_dim)
@@ -231,6 +237,19 @@ In ch 4 these are used by the forward command (def forward(self,idx)) when runni
 
 <br> 
 
+#### C3.6 FFN NN 
+
+```text2
+- detects complex meaning within the hidden layer 
+   (16 FP numbers that were originall the embedding) for a single token (no token mixing).
+- much of the structure is hidden behing the libary call 
+- token embeddings (16) are input to the h layer "neurons" (64) 
+     (h and y are typical naming conventions) 
+- h layer outputs are input to the y layer (16) 
+- y layer outputs are added to the token hidden layer values (16 FPs) 
+```
+
+
     def __init__(self):
         self.ffn = nn.Sequential(
             nn.Linear(embed_dim, 64),
@@ -243,6 +262,14 @@ In ch 4 these are used by the forward command (def forward(self,idx)) when runni
 
 <br> 
 
+#### C3.7 Output 
+
+```text2
+- Weights (8x16) dot embed_dims/vocab (16x8) + bias (8x1) = 8 logits 
+   (vocab scores for a single token/letter) 
+```
+
+
     def __init__(self):
         self.out = nn.Linear(embed_dim, vocab_size)
     def forward(self, idx):
@@ -253,7 +280,7 @@ In ch 4 these are used by the forward command (def forward(self,idx)) when runni
 <br> 
 
 
-### NN forward pass (ch4)
+### C4 NN forward pass (ch4)
 
 ```text2
 Use components to execute algorithms.
