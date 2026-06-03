@@ -1150,7 +1150,7 @@ which is where the attention mechanism begins.
 ```output
 for chats, in docx #607 search for "QKV@1", "QKV@2" (@2 is final discussion).
 ```
- 
+
 #### 4.2.1 SImplified explanation of algorithm execution
 
 ##### 4.2.1.1 Step 1
@@ -1171,7 +1171,6 @@ Q0K0 = Q0ᵀ · K0, Q0K1 = Q0ᵀ · K1, Q0K2 = Q0ᵀ · K2 ...
 Example values: Q0K0 = 2.1, Q0K1 = 4.5, Q0K2 = 1.2.
 NOTE: Q0K1 = the level that token token1 will influencce the context (16 embeddings) of token0. Token 0 is the target.
 ```
-
 
 ##### 4.2.1.3 Step 3
 
@@ -1200,13 +1199,11 @@ This is the key result.
 If: A01 = 0.80 then token 1 contributes heavily to: context0.
 ```
 
- 
 #### 4.2.2 Matrix multiplication descriptions
 
 ```output
 This does the everything described in 4.2.1 and more, but describes in matrix format.
 ```
-
 
 ```
         Q = self.q(x)
