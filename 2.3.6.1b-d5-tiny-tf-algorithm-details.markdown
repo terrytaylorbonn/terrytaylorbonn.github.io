@@ -895,6 +895,8 @@ The real Adam algorithm is more sophisticated, but this is the basic idea.
   - 3.3 FFN
   - 3.4 output logits
 
+<br>
+
 ```output
 creates the trainable components
 "What is the network made of?"
@@ -907,6 +909,8 @@ class TinyTransformer(nn.Module):
     def __init__(self):
         super().__init__()
 ```
+
+<br>
 
 ### 3.1 token and position embeddings
 
@@ -927,6 +931,8 @@ creates the embedding table and initializes it with random values.
 ME: so just coincidence that blocksize and vocab size both = 8
 Yes. Pure coincidence.
 ```
+
+<br>
 
 ### 3.2 QKV content influence
 
@@ -951,6 +957,8 @@ no biases in the equations because most transformer explanations omit them:
 biases usually not important for QKV, so authors often leave them out to simplify.
 for nn.Linear, the bias is there unless: nn.Linear(embed_dim, embed_dim, bias=False)
 ```
+
+<br>
 
 ### 3.3 FFN
 
@@ -985,6 +993,8 @@ So h2 produces: 16 outputs
 total of: 80 bias values
 ```
 
+<br>
+
 ### 3.4 output logits
 
 ```
@@ -1004,14 +1014,17 @@ So your interpretation is exactly right:
 16 hidden values > 8 output neurons > 8 logits > one logit per vocabulary token
 This is the "unembedding" layer that converts the final hidden state into scores for the 8 possible next characters.
 ```
- 
-## 4 NN forward pass (forward(self, idx)) (use components to execute algorithms)
+
+<br>
+
+## **4 NN forward pass (forward(self, idx)) (use components to execute algorithms)**
 
   - 4.1 token/pos embed
   - 4.2 QKV context sharing ("attention heads")
   - 4.3 FFN
   - 4.4 Out logits
 
+<br>
 
 ```output
 uses the trainable components
@@ -1034,7 +1047,9 @@ T = 8   token positions
 C = 16  embedding dimensions
 Everything in forward() is operating on the entire batch at once.
 ```
- 
+
+<br>
+
 ### 4.1 token/pos embed
 
 ```
@@ -1127,7 +1142,9 @@ It is the representation that gets fed into:
 Q = self.q(x), K = self.k(x), V = self.v(x)
 which is where the attention mechanism begins.
 ```
- 
+
+<br>
+
 ### 4.2 QKV context sharing ("attention heads")
 
 ```output
@@ -1295,7 +1312,9 @@ batch 1:     x1 = x1 + context1
 ...
 batch 15:     x15 = x15 + context15
 ```
- 
+
+<br>
+
 ### 4.3 FFN
 
 ```
@@ -1315,7 +1334,9 @@ for all 128 tokens. performs large matrix operations on the entire tensor:
     ↓ Linear(64,16)
 [16,8,16]
 ```
- 
+
+<br>
+
 ### 4.4 Out logits
 
 ```
@@ -1333,10 +1354,6 @@ logits.shape = [16, 8, 8] 16 sequences, 8 token positions, 8 vocabulary scores
 Those are the scores for the 8 possible next characters.
 ```
 
-
-
-
-
 <br>
 
-26.0602 (v1 26.0601)
+26.0603 (v1 26.0601)
