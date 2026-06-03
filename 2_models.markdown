@@ -78,7 +78,11 @@ A CNN computes the most probable label ("dog", "airplane", etc) for a set of pix
 
 An LLM (1) inputs a sequence of tokens, (2) computes the probabilities of all vocabulary tokens as the next token, (3) outputs the selected new token, and finally (4) adds the new token to the next input sequence. An LLM consists of an (1) internal agent and a (2) transformer (TF) NN. **The TF is the core computational engine behind modern AI systems and the mechanism that enables modern LLM behavior**.
 
-<img src="/assets/brain1b.png" alt="drones" width="22%">  <img src="/assets/brain1c.png" alt="drones" width="26%">
+<img src="/assets/brain1b.png" alt="drones" width="22%"> 
+
+Note: The following diagram shows the **extra functionality ("reasoning", etc) that LLMs added later that enabled agentic AI**.
+
+ <img src="/assets/brain1c.png" alt="drones" width="26%">
 
 
 <br>
@@ -108,7 +112,7 @@ In any case, its inevitable that eventually AI will pair up with humanoid robots
 
 <br>
 
-26.0526
+26.0603 (0526)
 
 <!-- *How a UFA determines if a location is in the Netherlands or Belgium*.<br>
 <img src="/assets/belgium1.png" alt="drones" width="75%"> 
