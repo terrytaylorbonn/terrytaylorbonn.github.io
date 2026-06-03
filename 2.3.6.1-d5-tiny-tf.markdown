@@ -9,24 +9,24 @@ permalink: /2.3.6.1-d5-tiny-tf/
 <br>
 
 
-<img src="/assets/brain1b.png" alt="drones" width="22%">
+<!-- <img src="/assets/brain1b.png" alt="drones" width="22%">
 
 
-<br>
+<br> -->
 
 This a demo of a DIY transformer (using various PyTorch libraries). Shows the key workflows (training/inference). 
 
 See also 
-- [2.3.6.1b D5 tiny TF algorithm details](/2.3.6.1b-d5-tiny-tf-algorithm-details/)
-- [#607\_2.1\_core\_NNs\_.docx](https://drive.google.com/drive/folders/1-Adawag9uA8_bq-hDF-nOuPYaRLz1eEO)
-- __ziptieai_BOOK2_LLM_.docx the [Gdrive](https://drive.google.com/drive/folders/1-Adawag9uA8_bq-hDF-nOuPYaRLz1eEO)
+- [2.3.6.1b D5 tiny TF algorithm details](/2.3.6.1b-d5-tiny-tf-algorithm-details/). Describes code line-by-line with conceptual diagrams.
+- [#607\_2.1\_core\_NNs\_.docx](https://drive.google.com/drive/folders/1-Adawag9uA8_bq-hDF-nOuPYaRLz1eEO). Lab notes. 
+- __ziptieai_BOOK2_LLM_.docx the [Gdrive](https://drive.google.com/drive/folders/1-Adawag9uA8_bq-hDF-nOuPYaRLz1eEO). 
 
 
 **TOC**
 - **1 Output**
 - **2 PY scripts**
 - **3 Render deploy** (TODO).
-- **4 Code with detailed comments**. (TODO). Great commentary for each line of the code (from GPT). Study this closely to understand the gist.
+
 
 
 <br>
@@ -159,13 +159,7 @@ print(generated)
 
 (TODO)
 
-<br>
-
-# **4 Code with detailed comments**
-
-(TODO)
-
 
 <br>
 
-26.0528
+26.0603
