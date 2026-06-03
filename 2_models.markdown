@@ -57,7 +57,7 @@ An LLM (1) inputs a sequence of tokens, (2) computes the probabilities of all vo
 
 <img src="/assets/brain1b.png" alt="drones" width="22%"> 
 
-Note: The following diagram shows the **extra functionality ("reasoning", etc) that LLMs added later that enabled agentic AI**.
+Note: The following diagram shows the **extra functionality ("reasoning", etc) that LLMs added later that enabled [agentic AI](/3.2-agentic-ai/)**.
 
 <img src="/assets/brain1c.png" alt="drones" width="20%">
 
