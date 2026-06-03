@@ -56,6 +56,20 @@ Yan was claiming that what he would build would give machines real intelligence.
 
 In any case, the time spent doing hands-on demos (for representational learning, prediction-based systems, belief tracking, control loops, planning under uncertainty, etc) was well spent. Many of the concepts (such as estimation and autonomy) were related to earlier drone work.
 
+----------------------------
+-------------------------------
+
+### MOVED HERE 26.0603
+
+I spent a couple of months doing demos for basic robotic AI. I was intrigued by LeCun's claims about JEPA and his new venture that would basically go beyond the LLMs that were already becoming obsolete. **After a few demos and endless chats with GPT about LeCun's claims, I felt like I had been scammed**. 
+
+**Drone AI is something that works, because drones operate in very forgiving environments (in the air, far from other objects**; actually they dont even need AI to fly, they need it for object recognition, terrain guidance, etc). 
+
+But FSD (with cars as the robots) is another story. Its been over a decade of (empty) promises that FSD was just a year away. **Its simply too dangerous for unintelligent robots to operate on complex and congested roadways**. 
+
+In any case, its inevitable that eventually AI will pair up with humanoid robots in the home and workplace. Just like with agentic AI, **there will be Robotic AI applications (in the "distant" future) where the lack of any real intelligence can be tolerated**. 
+
+
 <br>
 
 26.0523

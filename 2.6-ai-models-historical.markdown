@@ -1,0 +1,238 @@
+---
+layout: page
+title: "2.6 AI models historical"
+permalink: /2.6-ai-models-historical/
+---
+
+[← 2 AI (models)](/2_models/)
+
+
+
+
+This is actually a useful list because it roughly follows the historical evolution of AI models.
+For ZiptieAI, I'd treat most of these as:
+•	interesting side roads
+while:
+•	Core NN
+CNN
+Transformer
+JEPA / World Models
+are probably your main road.
+________________________________________
+RNNs / LSTMs (1990s-2010s)
+Purpose:
+•	Process sequences one step at a time.
+Examples:
+•	speech
+text
+time series
+Mechanism:
+•	token 1
+  ↓
+token 2
+  ↓
+token 3
+each step passes memory to the next.
+Problem: slow , hard to train, long-range context problems
+Mostly replaced by transformers.
+________________________________________
+Autoencoders
+Purpose:
+•	Compress data and reconstruct it.
+Mechanism:
+•	input
+ ↓
+compressed representation
+ ↓
+reconstruction
+Examples:
+•	anomaly detection
+dimensionality reduction
+feature extraction
+Interesting historically because they introduced the idea of learning latent representations.
+________________________________________
+GANs (Generative Adversarial Networks)
+Purpose:
+•	Generate realistic synthetic data.
+Mechanism:
+•	Generator
+vs
+Discriminator
+Examples:
+•	fake faces
+image generation
+deepfakes
+Very famous around 2015-2020.
+Mostly superseded by diffusion models.
+________________________________________
+Graph Neural Networks (GNNs)
+Purpose:
+•	Learn from graph structures.
+Examples:
+•	social networks
+fraud networks
+chemical molecules
+knowledge graphs
+Input:
+•	nodes
+edges
+relationships
+These are still important.
+Drug discovery often uses GNN-like approaches.
+________________________________________
+Diffusion Models
+Purpose:
+•	Generate images, audio, video.
+Mechanism:
+•	add noise
+learn to remove noise
+Examples:
+•	Stable Diffusion
+Midjourney-like systems
+image generation
+Current state-of-the-art for many image-generation tasks.
+________________________________________
+JEPA / World Models
+Purpose:
+•	Learn how the world works.
+Mechanism:
+•	observe
+predict hidden structure
+learn representations
+Examples:
+•	robotics
+autonomous systems
+planning
+This is the area associated with Yann LeCun and is one of the reasons you became interested in NCU and robotic AI.
+________________________________________
+My recommendation for ZiptieAI
+Main path:
+•	Core NN
+   ↓
+CNN
+   ↓
+Transformer
+   ↓
+JEPA / World Models
+   ↓
+Agentic AI
+Side roads (learn later if needed):
+•	RNN/LSTM
+Autoencoder
+GAN
+GNN
+Diffusion
+The reason is simple:
+•	RNNs -> mostly historical
+GANs -> mostly historical
+
+Autoencoders -> useful but niche
+
+GNNs -> important in some industries
+
+Diffusion -> important for media generation
+
+JEPA -> directly related to your robotic AI interests
+So if your goal is:
+•	AI models
+→ robotic AI
+→ agentic AI
+then I think your current roadmap is already pointing toward the most relevant technologies.
+
+
+6 i just want to study the old list because when i see these talked about in the future 
+i will understand how they are irrelevant to what i am doing. or how they led to the tech that i am using.
+
+
+
+I think that's a very sensible approach.
+You're not trying to become an expert in every AI architecture ever invented.
+You're trying to build a mental map of:
+•	Where did today's AI come from?
+What survived?
+What became obsolete?
+What evolved into something else?
+For example:
+RNN/LSTM
+When you hear that term in the future, you can think:
+•	Early sequence models.
+Used before transformers.
+Important historically.
+Mostly replaced by transformers.
+________________________________________
+GAN
+You can think:
+•	One of the first successful image generators.
+
+Interesting historical step.
+
+Largely replaced by diffusion models.
+________________________________________
+Autoencoder
+You can think:
+•	Learns compressed representations.
+
+Helped establish the idea of latent spaces.
+
+Many later architectures borrowed these ideas.
+________________________________________
+GNN
+You can think:
+•	Still relevant.
+
+Used when the data is naturally a graph.
+
+Not a competitor to transformers.
+Different problem class.
+________________________________________
+Diffusion
+You can think:
+•	Current dominant image generation approach.
+
+Not particularly relevant to PAL, agents, or workflow automation.
+________________________________________
+JEPA / World Models
+You can think:
+•	Potential future direction for robotics.
+
+Directly relevant to my robotic AI interests.
+________________________________________
+In fact, if I look at your overall roadmap:
+2 AI Models
+3 Agentic AI
+4 Robotic AI
+
+then the old architectures are useful mostly as:
+historical landmarks $$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$
+For example:
+•	Perceptron
+    ↓
+MLP / Core NN
+    ↓
+CNN
+    ↓
+RNN/LSTM
+    ↓
+Transformer
+    ↓
+Agentic AI
+
+CNN
+    ↓
+GAN
+    ↓
+Diffusion
+
+Transformer
+    ↓
+JEPA / World Models
+    ↓
+Robotic AI
+That's probably enough detail for now.
+
+
+
+
+<br> 
+
+26.0603 (v1 26.0603)

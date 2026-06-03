@@ -1,7 +1,7 @@
 ---
 layout: page
 title: "2 AI (models)"
-permalink: /2_models/
+permalink: /2_modelsxxx/
 ---
 
 <br> 
@@ -11,27 +11,35 @@ permalink: /2_models/
 
 <br>
 
-**TOC**
+-----------------
 
-- 2.0 Concepts
-- 2.1 Core (no convolution/tf) 
-- 2.2 Convolution
-- 2.3 TF
-- 2.5 Robotic AI
-- 2.6 Other / historical
+<br>
 
-
-<!-- 3 phases of model demos for each model group:
-- P1 DIY (doit yourself) models / understand mechanics
-- P2 OTS (offtheshelf) models 
-- P3 OTS fine-tuned -->
+## Concepts
 
 <br>
 
 
-### [2.0 Concepts](/2.0-ufas/)
+
+### [2.0 NN UFA concepts](/2.0-ufas/)
 
 The core of every model is the NN that implements a UFA (Univeral Function **Approximator**) that **generates an output based on pattern matching of the input**. The patterns were programmed ("trained") by setting NN parameters (weights and biases) during training.
+
+<br>
+
+-----------------
+
+<br>
+
+## 3 groups of models:
+- 2.1 Core (no convolution/tf) 
+- 2.2 Convolution
+- 2.3 TF
+
+3 phases of model demos for each model group:
+- P1 DIY (doit yourself) models / understand mechanics
+- P2 OTS (offtheshelf) models 
+- P3 OTS fine-tuned 
 
 <br>
 
@@ -59,22 +67,33 @@ An LLM (1) inputs a sequence of tokens, (2) computes the probabilities of all vo
 
 Note: The following diagram shows the **extra functionality ("reasoning", etc) that LLMs added later that enabled agentic AI**.
 
-<img src="/assets/brain1c.png" alt="drones" width="20%">
+ <img src="/assets/brain1c.png" alt="drones" width="26%">
+
 
 <br>
+
+
+-----------------
+
+<br>
+
+## Robotic AI (future topic)
+
+*26.0526: This section does not really belong on this "2 Models" page, because this is not a different model type. I originally put it here because I believed LeCun's hype about his version of JEPA that would be a fundamentally different type of AI platform that would fix the fundamental limitations of LLMs (it doesnt, and never will). I might move this section somewhere else in the future. Right now this does not interest me too much... robotic AI (that claims to be able to do what humans can do) is about as realistic as FSD or colonizing Mars.*
+
+*A Waymo "self-drives" into a flooded street.* <br>
+<img src="/assets/waymo.png" alt="drones" width="26%"> 
+
 
 ### [2.5 Robotic AI](/2.5-robotic-ai/)
 
-This section does not really belong on this "2 Models" page, because this is not a different model type. I originally put it here because I believed LeCun's hype about his version of JEPA that would be a fundamentally different type of AI platform that would fix the fundamental limitations of LLMs (it doesnt, and never will). Right now this does not interest me too much... ***robotic AI (that claims to be able to do what humans can do) is about as realistic as FSD or colonizing Mars.**
+I spent a couple of months doing demos for basic robotic AI. I was intrigued by LeCun's claims about JEPA and his new venture that would basically go beyond the LLMs that were already becoming obsolete. **After a few demos and endless chats with GPT about LeCun's claims, I felt like I had been scammed**. 
 
-*A Waymo "self-drives" into a flooded street.* <br>
-<img src="/assets/waymo.png" alt="drones" width="22%"> 
+**Drone AI is something that works, because drones operate in very forgiving environments (in the air, far from other objects**; actually they dont even need AI to fly, they need it for object recognition, terrain guidance, etc). 
 
-<br>
+But FSD (with cars as the robots) is another story. Its been over a decade of (empty) promises that FSD was just a year away. **Its simply too dangerous for unintelligent robots to operate on complex and congested roadways**. 
 
-### [2.6 Other / historical](/2.6-ai-models-historical/)
-
-Where did today's AI come from? What survived? What became obsolete? What evolved into something else? This section will not have demos, just explanations (you run into these terms all the time, so its good to know what they are). Also good to know how this all developed. Page added 26.0603.
+In any case, its inevitable that eventually AI will pair up with humanoid robots in the home and workplace. Just like with agentic AI, **there will be Robotic AI applications (in the "distant" future) where the lack of any real intelligence can be tolerated**. 
 
 <br>
 
