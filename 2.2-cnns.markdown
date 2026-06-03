@@ -34,6 +34,12 @@ Runs on render (CPU mode).
 
 <br>
 
+
+#### **Demo 9: CNN defect detector (TODO)** 
+#### **Demo 10: CNN feature map visualization (TODO)** 
+
+<br>
+
 -----------------------------
 -----------------------------
 -----------------------------

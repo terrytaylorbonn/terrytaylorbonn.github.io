@@ -42,6 +42,15 @@ Runs on render (CPU mode).
 
 <br>
 
+
+#### **Demo 6: Pattern detector NN (TODO)** 
+#### **Demo 7: Anomaly detector NN (TODO)**
+#### **Demo 8: Forecasting NN (TODO)**
+
+
+
+
+
 <!-- #### **Demo 4: [2.1.4 D4 CNN image classifier](/2.1.4-d4-cnn-image-classifier/)** (26.0528)
 
 Runs on render (CPU mode).

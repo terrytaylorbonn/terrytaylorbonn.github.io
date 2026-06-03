@@ -42,7 +42,11 @@ This page describes
 
 <!-- <img src="/assets/d4_alexnet.png" alt="drones" width="15%"> -->
 
+<br>
 
+#### **Demo 11: Tiny TF classifier (TODO)**
+#### **Demo 12: Tiny TF sentiment detector (TODO)**
+#### **Demo 13: Tiny TF sequence predictor (TODO)**
 
 <br>
 

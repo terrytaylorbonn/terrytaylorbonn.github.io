@@ -25,7 +25,7 @@ This page describes
 - **2.3.3 Agentic**
 - **2.3.4 LLM transformer training**
 - **2.3.5 LLM Internal Agent**. My own invented term. iAgent + TF = LLM.
-- **2.3.6 LLM stack demos**. Listed on my wiki.
+- **2.3.6 LLM demos**
 
 <img src="/assets/brain1b.png" alt="drones" width="22%">
 
