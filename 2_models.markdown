@@ -6,7 +6,7 @@ permalink: /2_models/
 
 <br> 
 
-*"2 Models" in the Agentic AI evolution ([diagram](/0.1-ai-evolution-diagram/))* <br>
+*"2 Models" in ZiptieAI evolution ([diagram](/0.1-zai-evolution/))* <br>
 <img src="/assets/zai_evolution7.png" alt="drones" width="42%">
 
 <br>
