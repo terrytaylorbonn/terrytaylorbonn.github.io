@@ -32,7 +32,7 @@ On 26.0604 the Youtube AI algorithm that magically finds videos that fit my view
 
 #### **2.1 The video starts out with an excellent summary of AI hype and failures**
 
-The video author states about AI investments: "You know what that tells you? The people writing the checks dont believe the hype either. LLMs have a point of diminishing returns... are they going to be one of the biggest hype machines we've ever seen?". Then he makes a truly **brilliant statement: "The truth lies somewhere in the middle".** I write more about this "middle" in section 3 of this page. 
+The video author states about AI investments: "You know what that tells you? The people writing the checks (the venture capitalists) dont believe the hype either. LLMs have a point of diminishing returns... are they going to be one of the biggest hype machines we've ever seen?". Then he makes a truly **brilliant statement: "The truth lies somewhere in the middle"** (between AI as a total scam and AI as a replacement for humanity). I write more about this "middle" later in section 3 of this page. 
 
 <br>
 
@@ -62,11 +62,12 @@ I have many issues with the statements in the pic above:
 
 <br> 
 
-#### **2.4 A few other [key moments](https://youtu.be/SIPmUwwRKRo?t=276) in the video**
+#### **2.4 He sums up [the core of LLM AI](https://youtu.be/SIPmUwwRKRo?t=276) with one sentence (but not with demos)**
 
-"(some Turning award winner) has argued for decades that statistical models trained on text learn how we describe the world, not how the world actually works". Thats really insightful. 
+"(some Turning award winner) has argued for decades that **statistical models trained on text learn how we describe the world, not how the world actually works"**. Exactly. 
 
-But just a minute later he talks about **you can buy the black box and run agents immediately**. The problem with that is: **Agents are not AI. They use AI.** The video started out talking about AI hype and how it does not deliver. But isn't he doing the same?
+But just a minute later he talks about **you can buy the black box and run agents immediately**. The problem with that is: **Agents are not AI. They use AI.** How are you supposed to **learn how statistical models fake real intelligence** if you dont actually build a model (and study the code line by line)? 
+
 
 <br>
 
@@ -75,51 +76,43 @@ But just a minute later he talks about **you can buy the black box and run agent
 
 He then make a comparison between compilers and AI (see pic below). 
 
-He says compilers will always give you the exact same thing (he means the bytecode, the compiled code that will actually run). But he does not mention that compilers (even without AI) can guarantee that the code is correct, because code is vastly simpler than human language and thought. But a compiler can not guarantee that the code will work correctly. 
+He says compilers will always give you the exact same thing (he means the bytecode, the compiled code that will actually run). But he does not mention that compilers (even without AI) can guarantee that the code is correct, because code is vastly simpler than human language and thought. **But a compiler can not guarantee that the code will do what it was intended to do.** 
 
 Then he says that on the other hand "you can give AI LLMs the exact same input multiple times and get a different output every time." **That is not correct. An LLM (and the TF inside) is 100% deterministic.** The same input will **always** generate the same output (if all internal state variables are all the same **and if randomness is not intentionally injected into the system** (a trick often used to fool the user into thinking the LLM is not deterministic)). 
 
 *This diagram shows the LLM as clouds because its determinism is difficult to grasp and conceptualize*<br>
 <img src="/assets/tldr-3.png" alt="drones" width="45%"> 
 
-
 <br> 
-
-
 
 ### **3 The golden middle**
 
 My goal here is not to criticize the video. Its a great video because it fulfills its core purpose: To sell a black box to those wanting to understand whats in the black box. Thats really good marketing. 
 
-My goal is the golden middle that he mentioned. 
+My goal is the golden middle. Without GPT I could not have built ZAI in record time. I relied almost exclusively on GPT (and other AI tools), because the quality of instruction by an (unintelligent) LLM was vastly superior to that of traditional tech writing output. 
 
-Without GPT I could not have built ZAI in such record time. 
+**So AI is without a doubt incredibly valuable. But for what? You can only answer that if you have done low level demos. Hands on.**
 
-I did this as self learning, becuase I could find someone to lead me by the hand. Few seemd to really understand (or at least how to convey) core concepts.
+But how? Andrey Karpathy once said it will take you 10,0000 hours (5 years at regular 8 hrs day, 5 days a week) to really learn AI. And I agree if you try to learn from his documentation and video demos. 
 
-**So AI is without a doubt valable. The question is for what?**
-
-**You can only answer that if you have done low level demos. Hands on.**
-Karpathy once said it will take you 10,0000 hours (5 years at regular 8 hrs day, 5 days a week). And I agree, if you try to learn from his video demos. 
-
-You have to choose the golden middles 
+You have to choose the "golden middles" 
 - how deep do you go when analyzing/writing AI code (TF code)? 
 - how deep into libraries, code
 - most of all: knowing what AI can do, and what it cant
 
+<br>
+
 ### **4 How ZiptieAI.com delivers**
 
-zai does not promised to make it easy.
-
-but you wont need 10K hours (nonsense). 
-
-but ZAI can only help direct you on the right path of self learning.
-helping to write code.
-the code is the source of truth, and does not lie. 
+ZAI can only help direct you on the right path of self learning.
+That's all you need. 
+Thats a golden middle between what human intelligence and AI assistants excel at. 
+If you know the path, AI can assist you with the details.
+The path consists primarily of writing code.
+Code is the source of truth. Code does not lie. 
 
 *ZAI [demos](/0b-demos/)*<br>
 <img src="/assets/tldr-4.png" alt="drones" width="55%"> 
-
 
 <br>
 
