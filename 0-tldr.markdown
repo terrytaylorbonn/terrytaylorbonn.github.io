@@ -7,11 +7,11 @@ permalink: /0-tldr/
 <br>
 
 
-This is the TL;DR = "too long; didn't read" page. The page that tells you what its all about (the gist) without you having to read much.
+TL;DR = "too long; didn't read". This page that tells you what its all about (the gist) with minimal text.
 
 <br>
 
-**1 Coding for basic AI demos (NNs, CNNs, LLMs, etc) is the only way to really grasp what AI (and AI hype) is**. Its not that difficult nowadays, because AI tools (Cursor, GPT, Codex, etc) do the coding and debugging for you.  
+**1 Coding basic AI demos (NNs, CNNs, LLMs, etc) is the only way to really grasp what AI (and AI hype) is**. Its not that difficult nowadays, because AI tools (Cursor, GPT, Codex, etc) do the coding and debugging for you.  
 
 **2 After demos, you realize where AI excels and fails**. AI NNs are just statistical models trained on whatever input you give them. They only crunch numbers (they don't have any comprehension of the real world).
 
@@ -21,8 +21,8 @@ This is the TL;DR = "too long; didn't read" page. The page that tells you what i
 
 My comments:
 - ***"even those not training models"***. The model is the basis of AI. So why would you not study them? Why would you not do some basic hands-on training?
-- ***"they (programmers) think in code"***. What matters is they understand that AI is simply coded algorithms. They filter out the hype because they have studied AI code.
-- ***"all abstractions are leaky"*** (???). AI is not an abstraction. It is binary computation / pattern recognition. The many abstractions (such as "attention", "reasoning", "planning") are all marketing terms. 
+- ***"they (programmers) think in code"***. What matters is they understand (on an intrinsic level) that AI does not think (it simply crunches numbers). 
+- ***"all abstractions are leaky"*** (???). AI is purely statistical binary computation (pattern recognition). The many AI abstractions (such as "attention", "reasoning", "planning") are all marketing terms. 
 - ***"when AI produces suboptimal code"*** (???). Producing code is AI's primary strength. The problem is trying to get AI to deal with non-code data. 
 - ***"the person who understands the substrate catches the failures everyone else misses"***. The failures of AI catch you. When your AI "FSD" tries to drive you into a lake, you can't help but notice. Understanding the fundamentals allows you to focus on AI projects that are a good match for AI's true capabilities. 
 
@@ -31,7 +31,7 @@ My comments:
 *ZAI [demos](/0b-demos/) (WIP)*<br>
 <img src="/assets/tldr-4.png" alt="drones" width="55%"> 
 
-**5 Why I created ZiptieAI.com**. I career-transitioned to AI just a few years ago. The fast transition was only possible thanks to the incredible capabilities of AI tools (GPT, Cursor, etc). This site is primarily my way of organizing my thoughts and keeping records. I'm also hoping that it can also help me get me a **[job](/about/)** in AI.
+**5 Why I created ZiptieAI.com**. I career-transitioned to AI just a few years ago. The fast transition was only possible thanks to the incredible capabilities of AI tools (GPT, Cursor, etc). This site (and the [wiki](https://github.com/terrytaylorbonn/auxdrone/wiki)) is primarily my way of documenting my take on AI and as an online **[resume](/about/)**.
 
 <br>
 
