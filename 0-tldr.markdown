@@ -24,11 +24,11 @@ My comments:
 - ***"they (programmers) think in code"***. What matters is they understand that AI is simply coded algorithms. They filter out the hype because they have studied AI code.
 - ***"all abstractions are leaky"*** (???). AI is not an abstraction. It is binary computation / pattern recognition. The many abstractions (such as "attention", "reasoning", "planning") are all marketing terms. 
 - ***"when AI produces suboptimal code"*** (???). Producing code is AI's primary strength. The problem is trying to get AI to deal with non-code data. 
-- ***"the person who understands the substrate catches the failures everyone else misses"***. The failures of AI catch you. When your AI "FSD" tries to drive you into a lake, you notice. Understanding the fundamentals allows you to focus on AI projects that can tolerate AI's weaknesses. 
+- ***"the person who understands the substrate catches the failures everyone else misses"***. The failures of AI catch you. When your AI "FSD" tries to drive you into a lake, you can't help but notice. Understanding the fundamentals allows you to focus on AI projects that are a good match for AI's true capabilities. 
 
 **4 ZiptieAI can give you a solid foundation in AI ... ASAP**. ZAI describes a complete set of [demos](/0b-demos/) (WIP) you can do on your local PC (many without a GPU). The path consists primarily of writing code. Code is the source of truth. Code is not hype.
 
-*ZAI [demos](/0b-demos/)*<br>
+*ZAI [demos](/0b-demos/) (WIP)*<br>
 <img src="/assets/tldr-4.png" alt="drones" width="55%"> 
 
 **5 Why I created ZiptieAI.com**. I career-transitioned to AI just a few years ago. The fast transition was only possible thanks to the incredible capabilities of AI tools (GPT, Cursor, etc). This site is primarily my way of organizing my thoughts and keeping records. I'm also hoping that it can also help me get me a **[job](/about/)** in AI.
