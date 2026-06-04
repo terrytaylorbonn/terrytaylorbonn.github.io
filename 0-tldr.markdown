@@ -4,10 +4,8 @@ title: TL;DR
 permalink: /0-tldr/
 ---
 
-<br>
 
-
-TL;DR = "too long; didn't read". This page that tells you what its all about (the gist) with minimal text.
+TL;DR = "too long; didn't read". This page describes the gist of ZiptieAI.
 
 <br>
 
@@ -26,12 +24,12 @@ My comments:
 - ***"when AI produces suboptimal code"*** (???). Producing code is AI's primary strength. The problem is trying to get AI to deal with non-code data. 
 - ***"the person who understands the substrate catches the failures everyone else misses"***. The failures of AI catch you. When your AI "FSD" tries to drive you into a lake, you can't help but notice. Understanding the fundamentals allows you to focus on AI projects that wont die deep in a rabbit hole. 
 
-**4 ZiptieAI can give you a solid foundation in AI ... ASAP**. ZAI describes a complete set of [demos](/0b-demos/) (WIP) you can do on your local PC (many without a GPU). The path consists primarily of writing code. Code is the source of truth. Code is not hype.
+**4 ZiptieAI can give you a solid foundation in AI ... ASAP**. ZAI describes a complete set of **[demos](/0b-demos/)** (WIP) you can do on your local PC (many without a GPU). The path consists primarily of writing code. Code is the source of truth. Code is not hype.
 
 *ZAI [demos](/0b-demos/) (WIP)*<br>
 <img src="/assets/tldr-4.png" alt="drones" width="55%"> 
 
-**5 Why I created ZiptieAI.com**. I career-transitioned to AI just a few years ago. The fast transition was only possible thanks to the incredible capabilities of AI tools (GPT, Cursor, etc). This site (and the **[wiki](https://github.com/terrytaylorbonn/auxdrone/wiki)**) is primarily my way of documenting my take on AI and as an online **[resume](/about/)**.
+**5 Why I created ZiptieAI.com**. I career-transitioned to AI just a few years ago. The fast transition was only possible thanks to the incredible capabilities of AI tools (GPT, Cursor, etc). This site (and the **[wiki](https://github.com/terrytaylorbonn/auxdrone/wiki)**) is primarily my way of documenting my AI projects (and as an online **[resume](/about/)**).
 
 <br>
 
