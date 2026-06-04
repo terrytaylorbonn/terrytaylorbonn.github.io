@@ -93,23 +93,19 @@ My goal is the golden middle. Without GPT I could not have built ZAI in record t
 
 **So AI is without a doubt incredibly valuable. But for what? You can only answer that if you have done low level demos. Hands on.**
 
-But how? Andrey Karpathy once said it will take you 10,0000 hours (5 years at regular 8 hrs day, 5 days a week) to really learn AI. And I agree if you try to learn from his documentation and video demos. 
+But how? Andrey Karpathy once said it will take you 10,0000 hours (5 years at regular 8 hrs day, 5 days a week) to really learn AI (and I agree if you try to learn from his documentation and video demos). 
 
-You have to choose the "golden middles" 
-- how deep do you go when analyzing/writing AI code (TF code)? 
-- how deep into libraries, code
-- most of all: knowing what AI can do, and what it cant
+You have to choose a "golden middle". You need to know 
+- How deeply to analyze/write AI code (TF code) and study libraries
+- What AI projects make sense (exploit the advantages and avoid the shortcomings of AI)
 
 <br>
 
 ### **4 How ZiptieAI.com delivers**
 
-ZAI can only help direct you on the right path of self learning.
-That's all you need. 
-Thats a golden middle between what human intelligence and AI assistants excel at. 
-If you know the path, AI can assist you with the details.
-The path consists primarily of writing code.
-Code is the source of truth. Code does not lie. 
+ZAI helps direct you on the right path of self learning. That's all you need from human sources. AI (having been programmed ("trained") with vast amounts of previous text written by intelligent humans) can assist you with the details.
+
+The path consists primarily of writing code. Code is the source of truth. Code does not lie. 
 
 *ZAI [demos](/0b-demos/)*<br>
 <img src="/assets/tldr-4.png" alt="drones" width="55%"> 
