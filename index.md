@@ -5,9 +5,9 @@ title: Home
 
 <br>
 
-The **[TL;DR](/0-tldr/)** page describes how **ZiptieAI can give you a solid foundation in AI ASAP** (so that you stop getting scammed and instead learn how to exploit this amazing tech to your advantage). The primary **[focus](/0-site-focus/)** of this site is on hands-on **[demos](/0b-demos/)** *(see the latest demo -- a **[DIY tiny transformer](/2.3.6.1b-d5-tiny-tf-algorithm-details/) (WIP)**)* for **[AI (models)](/2_models/)** and **[agents](/3_agents/)**. 
+The **[TL;DR](/0-tldr/)** page describes how ZiptieAI can give you a solid foundation in AI ASAP. The primary **[focus](/0-site-focus/)** of this site is on hands-on **[demos](/0b-demos/)** *(see the latest demo -- a **[DIY tiny transformer](/2.3.6.1b-d5-tiny-tf-algorithm-details/) (WIP)**)* for **[AI (models)](/2_models/)** and **[agents](/3_agents/)**. 
 
-Studying code for basic AI demos (NNs, CNNs, LLMs, etc) is the **only way** to really grasp what AI (and AI hype) is. And its **not that difficult** nowadays, because AI tools (Cursor, GPT, Codex, etc) do all the difficult coding and debugging for you. The **hard part** is AI does not have the intelligence to organize demos and describe concepts clearly. Thats **[my job](/about/)**. 
+
 
 *[ZiptieAI evolution](/0.1-zai-evolution/)* <br>
 <img src="/assets/zai_evolution7.png" alt="drones" width="42%">
@@ -16,7 +16,7 @@ Studying code for basic AI demos (NNs, CNNs, LLMs, etc) is the **only way** to r
 
 The following describes the top-level pages *(see also the **[Wiki](https://github.com/terrytaylorbonn/auxdrone/wiki)**)*.  
 
-- **[TL;DR](/0-tldr/)**. Quick gist of what the site is about.
+- **[TL;DR](/0-tldr/)**.
 - **[Focus](/0-site-focus/)**. Site focus.
 - **[Demos](/0b-demos/)**. For AI models and agents.
 - [1 Drones](/1-drones/). FPV/Pixhawk drones (with CNN object recognition). 
