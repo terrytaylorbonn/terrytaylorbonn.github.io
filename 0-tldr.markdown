@@ -16,6 +16,14 @@ On 26.0604 the Youtube AI algorithm (that magically finds videos that fit my vie
 
 <img src="/assets/tldr-1.png" alt="drones" width="45%"> 
 
+The statement above (like the video) gives you deep insight, but has some serious flaws (like the video in general):
+- **"even those not training models"**. I recently added a detailed description of how to [build your own Tiny Transformer](https://ziptieai.com/2.3.6.1b-d5-tiny-tf-algorithm-details/). This also includes training. Once you've build the simplest TF and done even the simplest training, you understand the essence of TF's and training. 
+- **"they (programmers) think in code"**. Its doesnt matter if you think in code... what matters is you understand that **AI does NOT think**. TFs (and LLMs) are just deterministic binary code. You understand how the LLM "thinks". 
+- **"all abstractions are leaky"**. (???). AI is not an abstraction. It is pattern recognition. AI only knows numbers. It has no senses, no thoughts, no feelings, etc etc etc. Its just binary computation. "Articial intelligence" is not an abstraction -- its a marketing gimmick.
+- **"when AI produces suboptimal code"**. Producing code is AI's primary strength. 
+
+
+
 I have been saying this for a year, but this video packages the idea nicely. 
 
 (WIP.......)
