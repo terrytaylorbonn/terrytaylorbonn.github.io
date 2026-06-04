@@ -86,10 +86,22 @@ My goal is the golden middle that he mentioned.
 
 Without GPT I could not have built ZAI in such record time. 
 
+I did this as self learning, becuase I could find someone to lead me by the hand. Few seemd to really understand (or at least how to convey) core concepts.
 
-(WIP.......)
+**So AI is without a doubt valable. The question is for what?**
+
+**You can only answer that if you have done low level demos. Hands on.**
+Karpathy once said it will take you 10,0000 hours (5 years at regular 8 hrs day, 5 days a week). And I agree, if you try to learn from his video demos. 
+
+You have to choose the golden middles 
+- how deep do you go when analyzing/writing AI code (TF code)? 
+- how deep into libraries, code
+- most of all: knowing what AI can do, and what it cant
+
+#### thats the focus of ZiptieAI.com
+
 
 
 <br>
 
-26.0604
+26.0604 (v1 26.0604)
