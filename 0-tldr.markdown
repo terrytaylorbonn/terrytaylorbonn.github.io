@@ -15,23 +15,23 @@ TL;DR = "too long; didn't read". This page that tells you what its all about (th
 
 **2 After demos, you realize where AI excels and fails**. AI NNs are just statistical models trained on whatever input you give them. They only crunch numbers (they don't have any comprehension of the real world).
 
-**3 You also have an idea what kind of software engineering jobs will experience big growth in the future**. You can sift through the static about the future like the following. 
+**3 You also have an idea what kind of software engineering jobs will experience big growth in the future**. You can sift through predictions about the future like the following. 
 
 <img src="/assets/tldr-1.png" alt="drones" width="45%"> 
 
 My comments:
-- ***"even those not training models"***. The model is the basis of AI. So why would you not study them? Why would you not do some basic hands-on training?
-- ***"they (programmers) think in code"***. What matters is they understand (on an intrinsic level) that AI does not think (it simply crunches numbers). 
-- ***"all abstractions are leaky"*** (???). AI is purely statistical binary computation (pattern recognition). The many AI abstractions (such as "attention", "reasoning", "planning") are all marketing terms. 
+- ***"even those not training models"***. True. But "training" is the key to creating models. Its still a good idea to have basic hands-on training.
+- ***"they (programmers) think in code"***. What matters is they understand (on an intrinsic level) that AI **only** "thinks" in code (AI is simply a number cruncher). 
+- ***"all abstractions are leaky"*** (???). The many AI abstractions (such as "attention", "reasoning", "planning") are all hype and marketing terms. 
 - ***"when AI produces suboptimal code"*** (???). Producing code is AI's primary strength. The problem is trying to get AI to deal with non-code data. 
-- ***"the person who understands the substrate catches the failures everyone else misses"***. The failures of AI catch you. When your AI "FSD" tries to drive you into a lake, you can't help but notice. Understanding the fundamentals allows you to focus on AI projects that are a good match for AI's true capabilities. 
+- ***"the person who understands the substrate catches the failures everyone else misses"***. The failures of AI catch you. When your AI "FSD" tries to drive you into a lake, you can't help but notice. Understanding the fundamentals allows you to focus on AI projects that wont die deep in a rabbit hole. 
 
 **4 ZiptieAI can give you a solid foundation in AI ... ASAP**. ZAI describes a complete set of [demos](/0b-demos/) (WIP) you can do on your local PC (many without a GPU). The path consists primarily of writing code. Code is the source of truth. Code is not hype.
 
 *ZAI [demos](/0b-demos/) (WIP)*<br>
 <img src="/assets/tldr-4.png" alt="drones" width="55%"> 
 
-**5 Why I created ZiptieAI.com**. I career-transitioned to AI just a few years ago. The fast transition was only possible thanks to the incredible capabilities of AI tools (GPT, Cursor, etc). This site (and the [wiki](https://github.com/terrytaylorbonn/auxdrone/wiki)) is primarily my way of documenting my take on AI and as an online **[resume](/about/)**.
+**5 Why I created ZiptieAI.com**. I career-transitioned to AI just a few years ago. The fast transition was only possible thanks to the incredible capabilities of AI tools (GPT, Cursor, etc). This site (and the **[wiki](https://github.com/terrytaylorbonn/auxdrone/wiki)**) is primarily my way of documenting my take on AI and as an online **[resume](/about/)**.
 
 <br>
 
