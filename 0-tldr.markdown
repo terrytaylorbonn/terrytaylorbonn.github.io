@@ -7,7 +7,13 @@ permalink: /0-tldr/
 <br>
 
 
-This is the TL;DR = "too long; didn't read" page. The page that tells you what its all about (the gist) without you having to read much (sorry, its not a one-line expanation; this is, after all, not a simple topic).
+This is the TL;DR = "too long; didn't read" page. The page that tells you what its all about (the gist) without you having to read much.
+
+**TOC** (sorry, its not a one-line expanation; this is, after all, not a simple topic)
+- 1 ZiptieAI can give you a solid foundation in AI ... ASAP
+- 2 Or you can buy a black box (that promises to help you understand whats inside the black box)
+- 3 The golden middle
+- 4 How ZiptieAI.com delivers
 
 <br>
 
@@ -98,7 +104,15 @@ You have to choose the golden middles
 - how deep into libraries, code
 - most of all: knowing what AI can do, and what it cant
 
-#### thats the focus of ZiptieAI.com
+### **4 How ZiptieAI.com delivers**
+
+zai does not promised to make it easy.
+
+but you wont need 10K hours (nonsense). 
+
+but ZAI can only help direct you on the right path of self learning.
+helping to write code.
+the code is the source of truth, and does not lie. 
 
 
 
