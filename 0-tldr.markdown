@@ -11,18 +11,16 @@ TL;DR = "too long; didn't read". This page describes the gist of this site witho
 **TOC**
 - 1 Magical A/C units
 - 2 Magical AI units
-- 3 How I know the latest AI claims are are just more snake oil
+- 3 How I know the latest AI claims are are hype
 - 4 Learning how to separate the AI wheat from the chaff (using ZiptieAI)
 
 <br>
 
 ### **1 Magical A/C units**
 
-Recently a short Youtube ad has been popping up that shows a new A/C unit that some genius developed because all existing A/C units are ripping us all off. This magical unit you just plug in (no air duct to disperse the heat outside). It cools your room in a minute with vastly less energy usage than traditional A/C. 
+A Youtube ad has been popping up on my screen lately that shows a new tiny A/C unit that some genius developed because all existing A/C units are ripping us all off. This magical unit has no air ducts (to disperse heat outside). You just plug it in and it cools your room within a minute with vastly less energy usage than traditional A/C. The magical A/C unit looks just like the heater in the pic below. Anyone with basic common sense understands that the heat has to be transported out of the room somehow. Yet apparently many people are buying these things. 
 
-The pic below shows a heater, but its similar to the magical A/C unit. Anyone with basic common sense understands that the heat has to be transported out of the room somehow. Yet apparently many people are buying these things. 
-
-**I dont even have to test one of those A/C units to know it wont cool a room**. I know that the people selling it are lying. **It's not hype, it's outright lies**. But it may heat a room, because all that energy it uses is dispersed into room. So **I know it has potential good uses (just not what is advertised)**.  
+**I dont even have to test one of those A/C units to know it wont cool a room**. I know that the people selling it are lying. But it may heat a room, because all that energy it uses is dispersed into room. So **I know it has potential good uses (just not what's advertised)**.  
 
 <img src="/assets/tldr-5.png" alt="drones" width="18%"> 
 
@@ -30,20 +28,18 @@ The pic below shows a heater, but its similar to the magical A/C unit. Anyone wi
 
 ### **2 Magical AI units**
 
-One of my favorite AI Youtube channels is Best partners TV. They recently had a video about one of my favorite A/I researchers, Richard Sutton. The video was basically some gibberish called "[Enactive Cognition](https://www.youtube.com/watch?v=6bfCuxI_84U)". I guess Richard is trying to find some way to get back into the lime light with this ridiculous concept. 
+One of my favorite AI Youtube channels is Best partners TV. They recently had a video about one of my favorite A/I researchers, Richard Sutton. The video is called "[Enactive Cognition](https://www.youtube.com/watch?v=6bfCuxI_84U)".  
 
-The following is the summary of the video: *Recently, Richard S. Sutton, the **father of reinforcement learning**, and independent researcher Banafsheh Rafiee co-authored a groundbreaking paper titled "Toward **Enactive Artificial Intelligence**." This paper can be seen as a systematic and fundamental reflection and **critique of the current mainstream AI paradigm**. As a founder of reinforcement learning, Sutton starts from the most basic questions of cognitive science, **revealing a harsh truth: current AI lacks true understanding because it has been on the wrong path from the outset** —the so-called passive representational approach. The **next step for AI must be a complete shift towards enactive cognition**, allowing agents to generate their own experiences and understanding of the world through active interaction with the environment, embodied action, and **self-evaluation**.*
+The following is the summary of the video: *Recently, Richard S. Sutton, the **father of reinforcement learning**, ... co-authored a groundbreaking paper titled "Toward **Enactive Artificial Intelligence**." This paper can be seen as a ... **critique of the current mainstream AI paradigm**. As a founder of reinforcement learning, Sutton starts from the most basic questions of cognitive science, **revealing a harsh truth: current AI lacks true understanding because it has been on the wrong path from the outset** ... The **next step for AI must be a complete shift towards enactive cognition**, allowing agents to generate their own experiences and understanding of the world through active interaction with the environment, embodied action, and **self-evaluation**.*
 
-What a bunch of **hype and gibberish**. I don't even have to watch the video to know the basic premise is nonsense. I dont have to be an AI expert to understand that SW running on clocked binary circuits can not even begin to match the cognitive abilities of the human mind. **AI crunches numbers. It sees nothing, hears nothing, has no thoughts, absolutely no cognitive abilities** (Sutton's use of the term "enactive cognition" is a **shameless scam**).
+The same old AI **hype**. I don't even have to watch the video to know the basic premise is nonsense. I dont have to be an AI expert to understand that SW running on clocked binary circuits can not even begin to match the cognitive abilities of the human mind. **AI crunches numbers. It sees nothing, hears nothing, has no thoughts, absolutely no cognitive abilities**.
 
-
-*The video explains what a binary machine must do to match human driving abilities (the search for the holy grail continues)*<br>
+*The video explains what a binary machine must do to match human driving abilities*<br>
 <img src="/assets/tldr-6.png" alt="drones" width="22%"> 
-
 
 <br>
 
-### **3 How I know the latest AI claims are are just more snake oil**
+### **3 How I know the latest AI claims are hype**
 
 **Docx #607** (on the **[Gdrive](https://drive.google.com/drive/folders/1-Adawag9uA8_bq-hDF-nOuPYaRLz1eEO)**) chapter **"D6 — Tiny Pattern Detector Neural Network"** shows how to build a simple NN (and run on local PC with no GPU). The NN detects the sequence "1,1,1" in a list of 10 numbers. 
 
@@ -78,7 +74,7 @@ This is what AI is based. FSD, LLMs, etc. This really helps to appreciate what a
 
 *"Separate the wheat from the chaff" is an idiom that means to distinguish valuable or useful things (or people) from worthless ones.*
 
-Its important to remember that **what Sutton proposes may have great value**. In the sense of making the magical A/C unit a better room heater. Sutton's new theories may result in better performing statistical pattern matching tools ("AI"). And **there is a massive demand for the real capabilities of AI**. You need to be **able to separate the AI wheat from the chaff**.   
+There is a lot of wheat in AI. What **what Sutton proposes may make significant improvements** in statistical pattern matching tools ("AI"). And **there is a massive demand for AI's capabilities**. You just need to be **able to separate the AI wheat from the chaff**.   
 
 **1 Coding basic AI demos (NNs, CNNs, LLMs, etc) is the only way to really grasp what AI (and AI hype) is**. You can make a lot of quick progress in understanding the core of AI by doing some surprisingly simple demos. Its not that difficult nowadays, because AI tools (Cursor, GPT, Codex, etc) do the coding and debugging for you.  
 
