@@ -70,7 +70,7 @@ Neuron 2 ........................
 
 For this simple demo you could simply write a Py script that searchs for 1,1,1. But you need NN's for complex patterns that are impossible to match using traditional methods.
 
-This is what AI is based. FSD, LLMs, etc. This really helps to appreciate what an engineering marvel AI tools are. And how limited they are. Its just as amazing and limited as the incredible engineering marvel of binary computing (what GPU-based AI also is) that is based on simple binary clocked switching transistors.
+All of AI (FSD, LLMs, etc) is based on the same kind of probability computations. This really helps you to appreciate what an engineering marvel AI tools are (and how limited their mimickry of "intelligenct" capabilities is). CPU-based binary computing is also an engineering marvel, being based on primitive binary clocked switching transistors.
 
 
 <br>
