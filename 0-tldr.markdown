@@ -13,6 +13,7 @@ TL;DR = "too long; didn't read". This page describes the gist of this site witho
 - 2 Magical AI units
 - 3 How I know the latest AI claims are are hype
 - 4 Learning how to separate the AI wheat from the chaff (using ZiptieAI)
+- 5 "Agentic" AI and AI agents
 
 <br>
 
@@ -93,12 +94,19 @@ My comments:
 
 **4 ZiptieAI can give you a solid foundation in AI ... ASAP**. ZAI describes a complete set of **[demos](/0b-demos/)** (WIP) you can do on your local PC (many without a GPU). Code is the source of truth. Code is not hype.
 
-*ZAI [demos](/0b-demos/) (WIP)*<br>
+*ZAI model [demos](/0b-demos/) (WIP)*<br>
 <img src="/assets/tldr-4.png" alt="drones" width="55%"> 
 
 **5 Why I created ZiptieAI.com**. I career-transitioned to AI just a few years ago. The fast transition was only possible thanks to the incredible capabilities of AI tools (GPT, Cursor, etc). This site (and the **[wiki](https://github.com/terrytaylorbonn/auxdrone/wiki)**) is primarily my way of documenting my AI projects (and as an online **[resume](/about/)**).
 
 <br>
+
+### **5 "Agentic" AI and AI agents**
+
+(TODO)
+
+*ZAI agentic [demos](/0b-demos/) (WIP)*<br>
+<img src="/assets/tldr-7.png" alt="drones" width="55%"> 
 
 <!-- **[build your own Tiny Transformer](https://ziptieai.com/2.3.6.1b-d5-tiny-tf-algorithm-details/)** shows you how to build your own LLM TF on your local PC. Then train it and run inference. it might take your a few weeks or even months to really grasp it all. But its time well spent. -->
 
