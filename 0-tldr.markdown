@@ -70,7 +70,7 @@ Neuron 2 ........................
 
 For this simple demo you could simply write a Py script that searchs for 1,1,1. But you need NN's for complex patterns that are impossible to match using traditional methods.
 
-All of AI (FSD, LLMs, etc) is based on the same kind of probability computations. This really helps you to appreciate what an engineering marvel AI tools are (and how limited their mimickry of "intelligenct" capabilities is). CPU-based binary computing is also an engineering marvel, being based on primitive binary clocked switching transistors.
+All of AI (FSD, LLMs, etc) is based on the same kind of probability computations. This really helps you to appreciate what an engineering marvel AI tools are (and how limited their mimickry of "intelligenct" capabilities is). Likewise, CPU-based binary computing (for non-AI computers like PCs) is also an engineering marvel, being based on primitive binary clocked switching transistors.
 
 
 <br>
@@ -79,7 +79,9 @@ All of AI (FSD, LLMs, etc) is based on the same kind of probability computations
 
 *"Separate the wheat from the chaff" is an idiom that means to distinguish valuable or useful things (or people) from worthless ones.*
 
-There is a lot of wheat in AI. What **what Sutton proposes may make significant improvements** in statistical pattern matching tools ("AI"). And **there is a massive demand for AI's capabilities**. You just need to be **able to separate the AI wheat from the chaff**.   
+There is a lot of wheat in AI. And **what Sutton proposes may make real significant improvements** in statistical pattern matching tools ("AI"). And **there is a massive demand for AI's capabilities**. You just need to be **able to separate the AI wheat from the chaff**. 
+
+#### **How?**
 
 **1 Coding basic AI demos (NNs, CNNs, LLMs, etc) is the only way to really grasp what AI (and AI hype) is**. You can make a lot of quick progress in understanding the core of AI by doing some surprisingly simple demos. Its not that difficult nowadays, because AI tools (Cursor, GPT, Codex, etc) do the coding and debugging for you.  
 
@@ -96,24 +98,24 @@ My comments:
 - ***"when AI produces suboptimal code"*** (???). Producing code is AI's primary strength. The problem is trying to get AI to deal with non-code data. 
 - ***"the person who understands the substrate catches the failures everyone else misses"***. The failures of AI catch you. When your AI "FSD" tries to drive you into a lake, you can't help but notice. Understanding the fundamentals allows you to focus on AI projects that wont die deep in a rabbit hole. 
 
-**4 ZiptieAI can give you a solid foundation in AI ... ASAP**. ZAI describes a complete set of **[demos](/0b-demos/)** (WIP) you can do on your local PC (many without a GPU). Code is the source of truth. Code is not hype.
+**4 ZiptieAI can give you a solid foundation in AI ... ASAP**. ZAI describes a complete set of **[demos](/0b-demos/)** (WIP) you can do on your local PC (many without a GPU). Code is the source of truth. Code is not hype. I career-transitioned to AI just a few years ago. The fast transition was only possible thanks to the incredible capabilities of AI tools (GPT, Cursor, etc). This site (and the **[wiki](https://github.com/terrytaylorbonn/auxdrone/wiki)**) is primarily my way of documenting my AI projects (and as an online **[resume](/about/)**).
+
 
 *ZAI model [demos](/0b-demos/) (WIP)*<br>
 <img src="/assets/tldr-4.png" alt="drones" width="55%"> 
 
-**5 Why I created ZiptieAI.com**. I career-transitioned to AI just a few years ago. The fast transition was only possible thanks to the incredible capabilities of AI tools (GPT, Cursor, etc). This site (and the **[wiki](https://github.com/terrytaylorbonn/auxdrone/wiki)**) is primarily my way of documenting my AI projects (and as an online **[resume](/about/)**).
 
 <br>
 
 ### **5 "Agentic" AI and AI agents (using ZiptieAI)**
 
-For the **[simple NN demos](/2.1-predictive-nns/)**, the NN and the code that controls the NN are defined in the same Python script. The **[Tiny CNN demo](/2.2-cnns/)** adds convolution code (convolution basically scans for patterns in neighboring pixels). The **[Tiny Transformer](/2.3.6-llm-demos/)** adds "attention heads" (AHs, context sharing between tokens) to the NN Python script. **Major "frontier" (lastest and greatest) LLMs** also have not only a very large and complex  (1) TF (with AHs) but also a very sophisicated (2) **internal agent (iAgent, non-GPU code)**. The iAgent totally controls the TF and **ALL communication between the TF and iAgent are prompts/reponses**. 
+For the **[simple NN demos](/2.1-predictive-nns/)**, the NN and the code that controls the NN are defined in the same Python script. The **[Tiny CNN demo](/2.2-cnns/)** adds convolution code (convolution basically scans for patterns in neighboring pixels). The **[Tiny Transformer](/2.3.6-llm-demos/)** adds "attention heads" (AHs, context sharing between tokens) to the NN Python script. **Major "frontier" (lastest and greatest) LLMs** also have not only a very large and complex  (1) TF (with AHs) but also a very sophisicated (2) **internal agent (iAgent, non-GPU code)**. The iAgent **totally controls the TF with text prompts** (and the TF answers only with text responses). 
 
 <img src="/assets/tldr-8.png" alt="drones" width="65%"> 
 
-Most of this page has been about NNs because **an AI agent totally depends on an advanced agentic LLM's ability to provide higher level functionality that mimicks higher level human brain functionality** (such as thinking, planning, reasoning, etc). Example: You send a prompt with a complex plan, and the TF breaks it down into **"atomic" planning steps**. The TF can do this because it has been trained on such planning text. This capability is revolutionary. **However**, the **probability that the external agent (Py script) can process the atomic plan without error is never 100%**. But it is much higher than the chance the script can process the original plan (often messy human language). 
+Most of this page has been about NNs because **an AI agent totally depends on an advanced agentic LLM's ability to provide higher level functionality that mimicks higher level human brain functionality** (such as thinking, planning, reasoning, etc). Example: You send a prompt with a complex plan, and the TF breaks it down into **"atomic" planning steps**. The TF can do this because it has been trained on such planning text. This capability is revolutionary. **However**, the **probability that the external agent (Py script) can process the atomic plan without error is never 100%**. But it is much higher than the chance the script can process the original plan (often messy unsanitized human language). 
 
-**These limitations of AI are apparent in tiny demos, but major AI systems struggle with the same limitations.** Agentic AI will always be challenging because the LLM is a probablistic computational device with no intelligence.   
+**These limitations of AI are apparent in tiny demos, but major AI systems also struggle with the same limitations.** Agentic AI will always be challenging because the LLM is a probablistic computational device with no intelligence.   
 
 *ZAI agentic [demos](/0b-demos/) (WIP)*<br>
 <img src="/assets/tldr-7.png" alt="drones" width="55%"> 
