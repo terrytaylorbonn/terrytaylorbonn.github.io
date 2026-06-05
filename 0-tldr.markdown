@@ -4,6 +4,7 @@ title: TL;DR (WIP)
 permalink: /0-tldr/
 ---
 
+<br>
 
 TL;DR = "too long; didn't read". This page describes the gist of this site without having to read the entire site.
 
