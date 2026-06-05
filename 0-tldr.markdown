@@ -25,7 +25,7 @@ A Youtube ad has been popping up on my screen lately that shows a new tiny A/C u
 
 <img src="/assets/tldr-5.png" alt="drones" width="18%"> 
 
-The ad popped up again and was able to snap a screeshot! Buy yours today from buyglacierbreeze.com!
+The ad popped up again and I was able to snap a screeshot! Buy yours today from buyglacierbreeze.com!
 
 <img src="/assets/tldr-5gb.png" alt="drones" width="38%"> 
 
@@ -112,7 +112,6 @@ For the **[simple NN demos](/2.1-predictive-nns/)**, the NN and the code that co
 Most of this page has been about NNs because **an AI agent totally depends on an advanced agentic LLM's ability to provide higher level functionality that mimicks higher level human brain functionality** (such as thinking, planning, reasoning, etc). Example: You send a prompt with a complex plan, and the TF breaks it down into **"atomic" planning steps**. The TF can do this because it has been trained on such planning text. This capability is revolutionary. **However**, the **probability that the external agent (Py script) can process the atomic plan without error is never 100%**. But it is much higher than the chance the script can process the original plan (often messy human language). 
 
 **These limitations of AI are apparent in tiny demos, but major AI systems struggle with the same limitations.** Agentic AI will always be challenging because the LLM is a probablistic computational device with no intelligence.   
-
 
 *ZAI agentic [demos](/0b-demos/) (WIP)*<br>
 <img src="/assets/tldr-7.png" alt="drones" width="55%"> 
