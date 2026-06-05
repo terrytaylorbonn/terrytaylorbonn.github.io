@@ -16,7 +16,7 @@ Studying code for basic AI demos (NNs, CNNs, LLMs, etc) is the **only way** to r
 <img src="/assets/classification.png" alt="drones" width="15%"><br> <br> 
 - **[2.2 CNNs (convolution)](/2.2-cnns/).**<br>
 <img src="/assets/d4_alexnet.png" alt="drones" width="12%"><br> <br> 
-- **[2.3 LLMs (transformers)](/2.3.6-llm-demos/).**<br>
+- **[2.3.6 LLMs (transformers)](/2.3.6-llm-demos/).**<br>
 <img src="/assets/smol.png" alt="smol" width="35%"><br> <br> 
 - **2.5 Robotic AI ([wiki](https://github.com/terrytaylorbonn/auxdrone/wiki/Robotic-AI-demos))**<br>
 <img src="/assets/robotic_ai.png" alt="smol" width="25%"><br> 
@@ -46,7 +46,7 @@ Studying code for basic AI demos (NNs, CNNs, LLMs, etc) is the **only way** to r
 
 <br>
 
-26.0529 (v1 26.0527)
+26.0605 (v1 26.0527)
 
 
 <!-- <img src="/assets/lucius.png" alt="drones" width="55%"> -->
