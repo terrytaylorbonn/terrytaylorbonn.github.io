@@ -7,6 +7,12 @@ permalink: /0-tldr/
 
 TL;DR = "too long; didn't read". This page describes the gist of this site without having to read the entire site.
 
+**TOC**
+- 1 Magical A/C units
+- 2 Magical AI units
+- 3 How I know the latest AI claims are are just more snake oil
+- 4 Learning how to separate the AI wheat from the chaff (using ZiptieAI)
+
 <br>
 
 ### **1 Magical A/C units**
