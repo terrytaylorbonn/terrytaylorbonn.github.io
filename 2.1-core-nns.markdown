@@ -43,10 +43,15 @@ Runs on render (CPU mode).
 <br>
 
 
-#### **Demo 6: Pattern detector NN (TODO)** 
-#### **Demo 7: Anomaly detector NN (TODO)**
-#### **Demo 8: Forecasting NN (TODO)**
+#### **Demo 6: [2.1.4 Pattern detector NN](/2.1.4-pattern_detector-nn/)** (26.0604)
 
+<br>
+
+#### **Demo 7: [2.1.5 Anomaly detector NN](/2.1.5-anomaly-detector-nn/)**  (26.0605)
+
+<br>
+
+#### **Demo 8: [2.1.6 Forecasting NN](/2.1.6-forecasting-nn/)** (26.0605)
 
 
 
@@ -74,4 +79,4 @@ permalink: /2.1.4b-d4-cnn-algorithm-detais/
 
 
 
-26.0528
+26.0605

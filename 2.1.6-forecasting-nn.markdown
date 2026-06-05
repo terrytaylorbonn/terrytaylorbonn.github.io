@@ -1,0 +1,92 @@
+---
+layout: page
+title: "2.1.6 Forecasting NN"
+permalink: /2.1.6-forecasting-nn/
+---
+
+[← 2.1 Core NNs](/2.1-predictive-nns/)
+
+<br>
+
+xxxx
+
+<img src="/assets/xxx.png" alt="drones" width="20%">
+
+**TOC**
+- **1 Output**
+- **2 PY scripts**
+- **4 Code with detailed comments**. 
+
+For details see [#607\_2.1\_core\_NNs\_.docx](https://drive.google.com/drive/folders/1-Adawag9uA8_bq-hDF-nOuPYaRLz1eEO).
+
+
+<br>
+
+
+# **1 Output**
+
+```
+python d8b_forecasting_sine.py
+epoch=0 loss=0.518329
+epoch=200 loss=0.001539
+epoch=400 loss=0.001482
+epoch=600 loss=0.001445
+epoch=800 loss=0.001417
+epoch=1000 loss=0.001387
+
+Tests:
+[0.0, 0.2, 0.39, 0.56, 0.72] predicted_next= 0.8393
+[0.84, 0.93, 0.99, 1.0, 0.97] predicted_next= 0.9014
+[0.91, 0.81, 0.68, 0.52, 0.33] predicted_next= 0.1453
+```
+
+```
+python d8_forecasting_nn.py
+epoch=0 loss=319.777161
+epoch=200 loss=0.663086
+epoch=400 loss=0.089288
+epoch=600 loss=0.031286
+epoch=800 loss=0.007858
+epoch=1000 loss=0.001386
+
+Tests:
+[1, 2, 3, 4, 5] predicted_next= 6.0689
+[10, 11, 12, 13, 14] predicted_next= 15.0446
+[2, 4, 6, 8, 10] predicted_next= 12.0219
+[5, 7, 9, 11, 13] predicted_next= 15.0138
+```
+
+
+
+<img src="/assets/xxx.png" alt="drones" width="30%">
+
+
+<br>
+
+
+# **2 PY scripts**
+
+- xxxxxxxxxxxx
+
+
+<br>
+
+# **4 Code with detailed comments**
+
+```
+xxx
+```
+
+```output
+output
+```
+
+#### **Extremely important concept**
+```text2
+text2
+```
+
+
+<br>
+
+26.0605 (v1 26.0605)
