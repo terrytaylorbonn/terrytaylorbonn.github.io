@@ -13,7 +13,7 @@ TL;DR = "too long; didn't read". This page describes the gist of this site witho
 - 2 Magical AI units
 - 3 How I know the latest AI claims are are hype
 - 4 Learning how to separate the AI wheat from the chaff (using ZiptieAI)
-- 5 "Agentic" AI and AI agents
+- 5 "Agentic" AI and AI agents (using ZiptieAI)
 
 <br>
 
@@ -101,13 +101,21 @@ My comments:
 
 <br>
 
-### **5 "Agentic" AI and AI agents**
+### **5 "Agentic" AI and AI agents (using ZiptieAI)**
 
-(TODO)
+For the simple NN demos, the NN and the code that controls the NN are defined in the same Python script. The Tiny CNN demo adds convolution code (convolution basically scans for patterns in neighboring pixels). The Tiny Transformer adds "attention heads" (AHs, context sharing between tokens) to the NN Python script. 
+
+A pre-built LLM also has a (1) TF (with AHs) and an (2) internal agent(iAgent, non-GPU code). The iAgent totally controls the TF (all inputs to the TF are prompts from the iAgent; prompts, nothing else). 
+
+**Agentic AI** totally depends on the TF's ability to provide higher level functionality that mimicks human brain higher level functionality (such as thinking, planning, reasoning, etc). For example, you send a prompt with a complex plan, and the TF breaks it down into "atomics" planning steps. The TF can do this because it has been trained on such planning text. I don't understand the details of how this work, but it is revolutionary.
+
+(continue.....)
 
 *ZAI agentic [demos](/0b-demos/) (WIP)*<br>
 <img src="/assets/tldr-7.png" alt="drones" width="55%"> 
 
 <!-- **[build your own Tiny Transformer](https://ziptieai.com/2.3.6.1b-d5-tiny-tf-algorithm-details/)** shows you how to build your own LLM TF on your local PC. Then train it and run inference. it might take your a few weeks or even months to really grasp it all. But its time well spent. -->
+
+<br>
 
 26.0605 (v1 26.0604)
