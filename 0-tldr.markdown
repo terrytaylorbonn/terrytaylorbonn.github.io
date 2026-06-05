@@ -30,7 +30,7 @@ The following is the summary of the video: *Recently, Richard S. Sutton, the **f
 What a bunch of **hype and gibberish**. I don't even have to watch the video to know the basic premise is nonsense. I dont have to be an AI expert to understand that SW running on clocked binary circuits can not even begin to match the cognitive abilities of the human mind. **AI crunches numbers. It sees nothing, hears nothing, has no thoughts, absolutely no cognitive abilities** (Sutton's use of the term "enactive cognition" is a **shameless scam**).
 
 
-*The video explains what a binary machine must do to match human driving abilities*<br>
+*The video explains what a binary machine must do to match human driving abilities (the search for the holy grail continues)*<br>
 <img src="/assets/tldr-6.png" alt="drones" width="22%"> 
 
 
@@ -38,22 +38,7 @@ What a bunch of **hype and gibberish**. I don't even have to watch the video to 
 
 ### **3 How I know the latest AI claims are are just more snake oil**
 
-
-
-```
-Hidden Neurons
-
-Neuron 0
-tensor([0.0947, 0.1645, 0.0096, 0.6908, 0.3498, 1.1162, 0.5762, 1.0838, 0.4246,
-        0.8733])
-
-Neuron 1
-tensor([-0.1893, -0.4918, -0.9708, -0.5948, -1.1588, -0.4314, -1.1738, -1.5425,
-         0.5428, -0.6313])
-
-Neuron 2 ........................
-
-```
+**Docx #607** (on the **[Gdrive](https://drive.google.com/drive/folders/1-Adawag9uA8_bq-hDF-nOuPYaRLz1eEO)**) chapter **"D6 — Tiny Pattern Detector Neural Network"** shows how to build a simple NN (and run on local PC with no GPU). The NN detects the sequence "1,1,1" in a list of 10 numbers. 
 
 ```
 [0, 0, 0, 1, 1, 1, 0, 0, 0, 0] pattern_score= 0.87180638 detected= 1
@@ -62,6 +47,22 @@ Neuron 2 ........................
 [0, 0, 0, 0, 0, 0, 1, 1, 1, 0] pattern_score= 0.98744279 detected= 1
 ```
 
+Note the words "pattern" and "score". Its pattern matching, and score is the probability that a pattern match was detected. This is the core of how NN's work. All of them. Even Tesla FSD (that has been making the hollow promise of safe FSD (full self driving) for over a decade). 
+
+The following shows the internal parameters that compute the NN output. These parameters were programmed into the NN during "training" by running many input/desired-output pairs through the NN and modifying the parameters until the results were as good as they can get.
+
+```
+Hidden Neurons
+Neuron 0
+tensor([0.0947, 0.1645, 0.0096, 0.6908, 0.3498, 1.1162, 0.5762, 1.0838, 0.4246, 0.8733])
+Neuron 1
+tensor([-0.1893, -0.4918, -0.9708, -0.5948, -1.1588, -0.4314, -1.1738, -1.5425, 0.5428, -0.6313])
+Neuron 2 ........................
+```
+
+For this simple demo you could simply write a Py script that searchs for 1,1,1. But you need NN's for complex patterns that are impossible to match using traditional methods.
+
+This is what AI is based. FSD, LLMs, etc. This really helps to appreciate what an engineering marvel AI tools are. And how limited they are. Its just as amazing and limited as the incredible engineering marvel of binary computing (what GPU-based AI also is) that is based on simple binary clocked switching transistors.
 
 
 <br>
@@ -70,7 +71,7 @@ Neuron 2 ........................
 
 *"Separate the wheat from the chaff" is an idiom that means to distinguish valuable or useful things (or people) from worthless ones.*
 
-Its important to remember that what Sutton proposes may have great value. In the sense of making the magical A/C unit a better room heater. Sutton's new theories may result in better performing statistical pattern matching tools ("AI"). And **there is a massive demand for the real capabilities of AI**. You need to be able to separate the AI wheat from the chaff.   
+Its important to remember that **what Sutton proposes may have great value**. In the sense of making the magical A/C unit a better room heater. Sutton's new theories may result in better performing statistical pattern matching tools ("AI"). And **there is a massive demand for the real capabilities of AI**. You need to be **able to separate the AI wheat from the chaff**.   
 
 **1 Coding basic AI demos (NNs, CNNs, LLMs, etc) is the only way to really grasp what AI (and AI hype) is**. You can make a lot of quick progress in understanding the core of AI by doing some surprisingly simple demos. Its not that difficult nowadays, because AI tools (Cursor, GPT, Codex, etc) do the coding and debugging for you.  
 
@@ -98,4 +99,4 @@ My comments:
 
 <!-- **[build your own Tiny Transformer](https://ziptieai.com/2.3.6.1b-d5-tiny-tf-algorithm-details/)** shows you how to build your own LLM TF on your local PC. Then train it and run inference. it might take your a few weeks or even months to really grasp it all. But its time well spent. -->
 
-26.0604 (v1 26.0604)
+26.0605 (v1 26.0604)
