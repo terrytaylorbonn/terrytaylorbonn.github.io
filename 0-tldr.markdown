@@ -25,7 +25,7 @@ A Youtube ad has been popping up on my screen lately that shows a new tiny A/C u
 
 <img src="/assets/tldr-5.png" alt="drones" width="18%"> 
 
-The ad popped up again and I was able to snap a screeshot! Buy yours today from buyglacierbreeze.com!
+The ad popped up again and I was able to snap a screenshot! Buy yours today from buyglacierbreeze.com!
 
 <img src="/assets/tldr-5gb.png" alt="drones" width="38%"> 
 
@@ -108,6 +108,8 @@ My comments:
 ### **5 "Agentic" AI and AI agents (using ZiptieAI)**
 
 For the **[simple NN demos](/2.1-predictive-nns/)**, the NN and the code that controls the NN are defined in the same Python script. The **[Tiny CNN demo](/2.2-cnns/)** adds convolution code (convolution basically scans for patterns in neighboring pixels). The **[Tiny Transformer](/2.3.6-llm-demos/)** adds "attention heads" (AHs, context sharing between tokens) to the NN Python script. **Major "frontier" (lastest and greatest) LLMs** also have not only a very large and complex  (1) TF (with AHs) but also a very sophisicated (2) **internal agent (iAgent, non-GPU code)**. The iAgent totally controls the TF and **ALL communication between the TF and iAgent are prompts/reponses**. 
+
+<img src="/assets/tldr-8.png" alt="drones" width="65%"> 
 
 Most of this page has been about NNs because **an AI agent totally depends on an advanced agentic LLM's ability to provide higher level functionality that mimicks higher level human brain functionality** (such as thinking, planning, reasoning, etc). Example: You send a prompt with a complex plan, and the TF breaks it down into **"atomic" planning steps**. The TF can do this because it has been trained on such planning text. This capability is revolutionary. **However**, the **probability that the external agent (Py script) can process the atomic plan without error is never 100%**. But it is much higher than the chance the script can process the original plan (often messy human language). 
 
