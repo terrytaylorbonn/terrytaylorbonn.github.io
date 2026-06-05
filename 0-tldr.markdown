@@ -1,6 +1,6 @@
 ---
 layout: page
-title: TL;DR
+title: TL;DR (WIP)
 permalink: /0-tldr/
 ---
 
@@ -21,14 +21,16 @@ The pic below shows a heater, but its similar to the magical A/C unit. Anyone wi
 
 <br>
 
-### **2 The AI gurus and titans are all selling magical AI units**
+### **2 Magical AI units**
 
 One of my favorite AI Youtube channels is Best partners TV. They recently had a video about one of my favorite A/I researchers, Richard Sutton. The video was basically some gibberish called "[Enactive Cognition](https://www.youtube.com/watch?v=6bfCuxI_84U)". I guess Richard is trying to find some way to get back into the lime light with this ridiculous concept. 
 
 The following is the summary of the video: *Recently, Richard S. Sutton, the **father of reinforcement learning**, and independent researcher Banafsheh Rafiee co-authored a groundbreaking paper titled "Toward **Enactive Artificial Intelligence**." This paper can be seen as a systematic and fundamental reflection and **critique of the current mainstream AI paradigm**. As a founder of reinforcement learning, Sutton starts from the most basic questions of cognitive science, **revealing a harsh truth: current AI lacks true understanding because it has been on the wrong path from the outset** —the so-called passive representational approach. The **next step for AI must be a complete shift towards enactive cognition**, allowing agents to generate their own experiences and understanding of the world through active interaction with the environment, embodied action, and **self-evaluation**.*
 
-What a bunch of shameless hype and gibberish. I don't even have to watch the video to know the basic premise is nonsense. 
+What a bunch of **hype and gibberish**. I don't even have to watch the video to know the basic premise is nonsense. I dont have to be an AI expert to understand that SW running on clocked binary circuits can not even begin to match the cognitive abilities of the human mind. **AI crunches numbers. It sees nothing, hears nothing, has no thoughts, absolutely no cognitive abilities** (Sutton's use of the term "enactive cognition" is a **shameless scam**).
 
+
+*The video explains what a binary machine must do to match human driving abilities*<br>
 <img src="/assets/tldr-6.png" alt="drones" width="22%"> 
 
 
@@ -38,9 +40,27 @@ What a bunch of shameless hype and gibberish. I don't even have to watch the vid
 
 
 
-AI is the same way. I dont have to be an AI expert to understand that SW running on clocked binary circuits is not the same thing as the human mind. 
+```
+Hidden Neurons
 
+Neuron 0
+tensor([0.0947, 0.1645, 0.0096, 0.6908, 0.3498, 1.1162, 0.5762, 1.0838, 0.4246,
+        0.8733])
 
+Neuron 1
+tensor([-0.1893, -0.4918, -0.9708, -0.5948, -1.1588, -0.4314, -1.1738, -1.5425,
+         0.5428, -0.6313])
+
+Neuron 2 ........................
+
+```
+
+```
+[0, 0, 0, 1, 1, 1, 0, 0, 0, 0] pattern_score= 0.87180638 detected= 1
+[0, 1, 0, 0, 1, 0, 0, 1, 0, 0] pattern_score= 0.00000197 detected= 0
+[1, 1, 1, 0, 0, 0, 0, 0, 0, 0] pattern_score= 0.00000000 detected= 0
+[0, 0, 0, 0, 0, 0, 1, 1, 1, 0] pattern_score= 0.98744279 detected= 1
+```
 
 
 
@@ -50,7 +70,9 @@ AI is the same way. I dont have to be an AI expert to understand that SW running
 
 *"Separate the wheat from the chaff" is an idiom that means to distinguish valuable or useful things (or people) from worthless ones.*
 
-**1 Coding basic AI demos (NNs, CNNs, LLMs, etc) is the only way to really grasp what AI (and AI hype) is**. Its not that difficult nowadays, because AI tools (Cursor, GPT, Codex, etc) do the coding and debugging for you.  
+Its important to remember that what Sutton proposes may have great value. In the sense of making the magical A/C unit a better room heater. Sutton's new theories may result in better performing statistical pattern matching tools ("AI"). And **there is a massive demand for the real capabilities of AI**. You need to be able to separate the AI wheat from the chaff.   
+
+**1 Coding basic AI demos (NNs, CNNs, LLMs, etc) is the only way to really grasp what AI (and AI hype) is**. You can make a lot of quick progress in understanding the core of AI by doing some surprisingly simple demos. Its not that difficult nowadays, because AI tools (Cursor, GPT, Codex, etc) do the coding and debugging for you.  
 
 **2 After demos, you realize where AI excels and fails**. AI NNs are just statistical models trained on whatever input you give them. They only crunch numbers (they don't have any comprehension of the real world).
 
