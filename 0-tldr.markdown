@@ -1,6 +1,6 @@
 ---
 layout: page
-title: TL;DR (WIP)
+title: TL;DR
 permalink: /0-tldr/
 ---
 
