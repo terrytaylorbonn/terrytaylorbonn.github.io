@@ -39,7 +39,7 @@ The following is the summary of the video: *Recently, Richard S. Sutton, the **f
 
 The same old AI **hype**. I don't even have to watch the video to know the basic premise is nonsense. I dont have to be an AI expert to understand that SW running on clocked binary circuits can not even begin to match the cognitive abilities of the human mind. **AI crunches numbers. It sees nothing, hears nothing, has no thoughts, absolutely no cognitive abilities**.
 
-*The best minds in the world can't create a number cruncher with driving capabilites on the level of a human*<br>
+*The best minds in the world can't create a number cruncher with driving capabilities even remotely on the level of the human mind*<br>
 <img src="/assets/tldr-6.png" alt="drones" width="22%"> 
 
 <br>

@@ -1,0 +1,220 @@
+---
+layout: page
+title: "2.2.2 D9 CNN defect detector"
+permalink: /2.2.2-d9-cnn-defect-detector/
+---
+
+[← 2.2 CNNs](/2.2-cnns/)
+
+<img src="/assets/d9_cnn_defect_detector.png" alt="drones" width="60%">
+
+<br>
+
+See also 
+- [#607\_2.1\_core\_NNs\_.docx](https://drive.google.com/drive/folders/1-Adawag9uA8_bq-hDF-nOuPYaRLz1eEO)
+- [__ziptieai_BOOK1_CNN_.docx](https://drive.google.com/drive/folders/1-Adawag9uA8_bq-hDF-nOuPYaRLz1eEO)
+
+<br>
+
+**TOC**
+- **1 Output**
+- **2 Code with detailed comments**. Great commentary for each line of the code (from GPT). Study this closely to understand the gist.
+
+<br>
+
+# **1 Output**
+
+```
+python d10_cnn_feature_maps.py
+epoch=0 loss=0.692760
+epoch=100 loss=0.000650
+epoch=200 loss=0.000160
+epoch=300 loss=0.000035
+epoch=400 loss=0.000014
+epoch=500 loss=0.000008
+test_image shape: torch.Size([1, 1, 16, 16])
+conv1 shape: torch.Size([1, 8, 16, 16])
+relu1 shape: torch.Size([1, 8, 16, 16])
+```
+
+<br>
+
+# **2 Code with detailed comments**
+
+
+```
+import torch
+import torch.nn as nn
+import torch.optim as optim
+import matplotlib.pyplot as plt
+
+N = 1000
+images = torch.zeros(N, 1, 16, 16)
+labels = torch.zeros(N, 1)
+
+for i in range(N):
+    if i < N // 2:
+```
+
+```output
+This loop creates the training dataset.
+0-499 defect images
+500-999 clean images
+```
+
+```
+        x = torch.randint(4, 12, (1,)).item()
+        y = torch.randint(4, 12, (1,)).item()
+```
+
+```output
+generate random integers
+from 4 up to (but not including) 12
+create a tensor with shape (1,)
+Choose a random location.
+Example: x = 7, y = 10
+```
+
+```
+        images[i, 0, y:y+2, x:x+2] = 1.0
+```
+
+```output
+images[0, 0, 10:12, 7:9] = 1.0
+writes: row 10 col 7 = 1, row 10 col 8 = 1, row 11 col 7 = 1 , row 11 col 8 = 1
+creating a: 2x2 white square inside the image.
+```
+
+```
+        labels[i] = 1
+
+```output
+marks the image as: defective
+```
+
+```
+model = nn.Sequential(
+```
+
+```output
+Input: [1000, 1, 16, 16]
+    nn.Conv2d(1, 8, kernel_size=3, padding=1),   # layer 0
+1 input channel, 8 filters
+Output: [1000, 8, 16, 16]
+You now have: 8 feature maps, 16x16 each
+NOTE: nn.Conv2d(    in_channels,     out_channels,     kernel_size )
+defaults to: stride=1, padding=0
+```
+
+```
+    nn.ReLU(),                                   # layer 1
+    nn.Conv2d(8, 16, kernel_size=3, padding=1),  # layer 2
+```
+
+```output
+16 filters, each filter = 3x3x8
+Output: [1000, 16, 16, 16]
+```
+
+```
+    nn.ReLU(),                                   # layer 3
+    nn.Flatten(),
+```
+
+```output
+Converts: 16 x 16 x 16
+into: 4096 Output: [1000, 4096]
+```
+
+```
+    nn.Linear(16 * 16 * 16, 32),
+```
+
+```output
+Output: [1000, 32]
+This is very similar to your D6 FFN:
+4096 inputs  ↓ 32 detectors
+```
+
+```
+    nn.ReLU(),
+    nn.Linear(32, 1),
+    nn.Sigmoid()
+```
+
+```output
+Converts: -8.2   3.7   0.1
+into probabilities:
+0.0003 0.976 0.525
+Output: [1000, 1]
+)
+```
+
+```
+loss_fn = nn.BCELoss()
+```
+
+```output
+When the true label is \(1\): If the model predicts a probability close to \(1\), the loss is low. If the model predicts a probability close to \(0\), the loss approaches infinity.
+```
+
+```
+optimizer = optim.Adam(model.parameters(), lr=0.001)
+
+for epoch in range(501):
+    pred = model(images)
+    loss = loss_fn(pred, labels)
+    optimizer.zero_grad()
+    loss.backward()
+    optimizer.step()
+    if epoch % 100 == 0:
+        print(f"epoch={epoch} loss={loss.item():.6f}")
+
+# ----------------------------
+# Visualize feature maps
+# ----------------------------
+
+test_image = images[0:1]   # one defect image
+```
+
+```output
+image 0 only
+```
+
+```
+with torch.no_grad():
+    conv1 = model[0](test_image)
+```
+
+```output
+conv1 = nn.Conv2d(...)(test_image)
+    relu1 = model[1](conv1)
+```
+
+```
+relu1 = ReLU(conv1)
+
+print("test_image shape:", test_image.shape)
+print("conv1 shape:", conv1.shape)
+print("relu1 shape:", relu1.shape)
+
+plt.imshow(test_image[0, 0], cmap="gray")
+```
+
+```output
+batch 0, channel 0, all rows, all columns
+```
+
+```
+plt.title("Original input image")
+plt.show()
+
+for i in range(8):
+    plt.imshow(relu1[0, i], cmap="gray")
+    plt.title(f"Feature map {i}")
+    plt.show()
+```
+
+<br>
+
+26.0606 (v1 26.0606) 
