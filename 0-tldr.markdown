@@ -21,7 +21,7 @@ TL;DR = "too long; didn't read". This page describes the gist of this site witho
 
 A Youtube ad has been popping up on my screen lately that shows a new tiny A/C unit that some genius developed because all existing A/C units are ripping us all off. This magical unit has no air ducts (to disperse heat outside). You just plug it in and it cools your room within a minute with vastly less energy usage than traditional A/C. The magical A/C unit looks just like the heater in the pic below. Anyone with basic common sense understands that the heat has to be transported out of the room somehow. Yet apparently many people are buying these things. 
 
-**I dont even have to test one of those A/C units to know it wont cool a room**. I know that the people selling it are lying. But it may heat a room, because all that energy it uses is dispersed into room. So **I know it has potential good uses (just not what's advertised)**.  
+**I dont even have to test one of those A/C units to know it wont cool a room**. I know that the people selling it are lying. But it may heat a room, because all that energy it uses is dispersed into the room. So **I know it has potential good uses (just not what's advertised)**.  
 
 <img src="/assets/tldr-5.png" alt="drones" width="18%"> 
 
@@ -39,7 +39,7 @@ The following is the summary of the video: *Recently, Richard S. Sutton, the **f
 
 The same old AI **hype**. I don't even have to watch the video to know the basic premise is nonsense. I dont have to be an AI expert to understand that SW running on clocked binary circuits can not even begin to match the cognitive abilities of the human mind. **AI crunches numbers. It sees nothing, hears nothing, has no thoughts, absolutely no cognitive abilities**.
 
-*The video explains what a binary machine must do to match human driving abilities*<br>
+*The best minds in the world can't create a number cruncher with driving capabilites on the level of a human*<br>
 <img src="/assets/tldr-6.png" alt="drones" width="22%"> 
 
 <br>
@@ -55,7 +55,7 @@ The same old AI **hype**. I don't even have to watch the video to know the basic
 [0, 0, 0, 0, 0, 0, 1, 1, 1, 0] pattern_score= 0.98744279 detected= 1
 ```
 
-Note the words "pattern" and "score". Its pattern matching, and score is the probability that a pattern match was detected. This is the core of how NN's work. All of them. Even Tesla FSD (that has been making the hollow promise of safe FSD (full self driving) for over a decade). 
+Note the words "pattern" and "score". Its **pattern matching**, and the score is the **probability that a pattern match was detected**. This is the core of how NN's work. All of them. Even Tesla FSD (that has been making the hollow promise of safe FSD (full self driving) for over a decade). 
 
 The following shows the internal parameters that compute the NN output. These parameters were programmed into the NN during "training" by running many input/desired-output pairs through the NN and modifying the parameters until the results were as good as they can get.
 
@@ -68,9 +68,9 @@ tensor([-0.1893, -0.4918, -0.9708, -0.5948, -1.1588, -0.4314, -1.1738, -1.5425, 
 Neuron 2 ........................
 ```
 
-For this simple demo you could simply write a Py script that searchs for 1,1,1. But you need NN's for complex patterns that are impossible to match using traditional methods.
+For this simple demo you could simply write a Py script that searches for 1,1,1. But you need NN's for complex patterns that are impossible to match using traditional methods.
 
-All of AI (FSD, LLMs, etc) is based on the same kind of probability computations. This really helps you to appreciate what an engineering marvel AI tools are (and how limited their mimickry of "intelligenct" capabilities is). Likewise, CPU-based binary computing (for non-AI computers like PCs) is also an engineering marvel, being based on primitive binary clocked switching transistors.
+All of AI (FSD, LLMs, etc) is based on the same kind of probability computations. This really helps you to appreciate what an engineering marvel AI tools are and **how limited their mimicry of "intelligent" capabilities is**. Likewise, CPU-based binary computing (for non-AI computers like PCs) is also an engineering marvel, being based on primitive binary clocked switching transistors.
 
 
 <br>
@@ -85,7 +85,7 @@ There is a lot of wheat in AI. And **what Sutton proposes may make real signific
 
 **1 Coding basic AI demos (NNs, CNNs, LLMs, etc) is the only way to really grasp what AI (and AI hype) is**. You can make a lot of quick progress in understanding the core of AI by doing some surprisingly simple demos. Its not that difficult nowadays, because AI tools (Cursor, GPT, Codex, etc) do the coding and debugging for you.  
 
-**2 After demos, you realize where AI excels and fails**. AI NNs are just statistical models trained on whatever input you give them. They only crunch numbers (they don't have any comprehension of the real world).
+**2 You'll quickly realize where AI excels and fails**. AI NNs are just statistical models trained on whatever input you give them. They only crunch numbers (they don't have any comprehension of the real world).
 
 **3 You also have an idea what kind of software engineering jobs will experience big growth in the future**. You can sift through predictions about the future like the following. 
 
@@ -95,10 +95,12 @@ My comments:
 - ***"even those not training models"***. True. But "training" is the key to creating models. Its still a good idea to have basic hands-on training.
 - ***"they (programmers) think in code"***. What matters is they understand (on an intrinsic level) that AI **only** "thinks" in code (AI is simply a number cruncher). 
 - ***"all abstractions are leaky"*** (???). The many AI abstractions (such as "attention", "reasoning", "planning") are all hype and marketing terms. 
-- ***"when AI produces suboptimal code"*** (???). Producing code is AI's primary strength. The problem is trying to get AI to deal with non-code data. 
+- ***"when AI produces suboptimal code"*** (???). Producing code is AI's primary strength. The problem is trying to get AI to deal with anything that human's excel at (conceptual, original material). 
 - ***"the person who understands the substrate catches the failures everyone else misses"***. The failures of AI catch you. When your AI "FSD" tries to drive you into a lake, you can't help but notice. Understanding the fundamentals allows you to focus on AI projects that wont die deep in a rabbit hole. 
 
-**4 ZiptieAI can give you a solid foundation in AI ... ASAP**. ZAI describes a complete set of **[demos](/0b-demos/)** (WIP) you can do on your local PC (many without a GPU). Code is the source of truth. Code is not hype. I career-transitioned to AI just a few years ago. The fast transition was only possible thanks to the incredible capabilities of AI tools (GPT, Cursor, etc). This site (and the **[wiki](https://github.com/terrytaylorbonn/auxdrone/wiki)**) is primarily my way of documenting my AI projects (and as an online **[resume](/about/)**).
+**4 ZiptieAI can give you a solid foundation in AI**. ZAI describes a complete set of **[demos](/0b-demos/)** (WIP) you can do on your local PC (many without a GPU). Code is the source of truth. Code is not hype. I career-transitioned to AI just a few years ago. The fast transition was only possible thanks to the incredible capabilities of AI tools (GPT, Cursor, etc). 
+
+<!-- This site (and the **[wiki](https://github.com/terrytaylorbonn/auxdrone/wiki)**) is primarily my way of documenting my AI projects (and as an online **[resume](/about/)**). -->
 
 
 *ZAI model [demos](/0b-demos/) (WIP)*<br>
@@ -113,7 +115,7 @@ For the **[simple NN demos](/2.1-predictive-nns/)**, the NN and the code that co
 
 <img src="/assets/tldr-8.png" alt="drones" width="65%"> 
 
-Most of this page has been about NNs because **an AI agent totally depends on an advanced agentic LLM's ability to provide higher level functionality that mimicks higher level human brain functionality** (such as thinking, planning, reasoning, etc). Example: You send a prompt with a complex plan, and the TF breaks it down into **"atomic" planning steps**. The TF can do this because it has been trained on such planning text. This capability is revolutionary. **However**, the **probability that the external agent (Py script) can process the atomic plan without error is never 100%**. But it is much higher than the chance the script can process the original plan (often messy unsanitized human language). 
+Most of this page has been about NNs because **an AI agent totally depends on an advanced agentic LLM's ability to provide higher level functionality that mimics higher level human brain functionality** (such as thinking, planning, reasoning, etc). Example: You send a prompt with a complex plan, and the TF breaks it down into **"atomic" planning steps**. The TF can do this because it has been trained on such planning text. This capability is revolutionary. **However**, the **probability that the external agent (Py script) can process the atomic plan without error is never 100%**. But it is much higher than the chance the script can process the original plan (often messy unsanitized human language). 
 
 **These limitations of AI are apparent in tiny demos, but major AI systems also struggle with the same limitations.** Agentic AI will always be challenging because the LLM is a probablistic computational device with no intelligence.   
 
