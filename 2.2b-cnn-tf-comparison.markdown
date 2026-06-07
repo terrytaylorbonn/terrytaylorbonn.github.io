@@ -29,9 +29,34 @@ See also
 xxxxxxxxxx
 ```
 
+### d4d5-1-D4 embed
+
 <img src="/assets/d4d5-1-D4.png" alt="drones" width="22%">
 
+### d4d5-1-D5 embed
 
+<img src="/assets/d4d5-1-D5.png" alt="drones" width="22%">
+
+### d4d5-2.1-D4 Convolute
+
+<img src="/assets/d4d5-2.1-D4.png" alt="drones" width="22%">
+
+### d4d5-2.1-D5 AH/context
+
+<img src="/assets/d4d5-2.1-D5.png" alt="drones" width="22%">
+
+### d4d5-2.2-D4 RELU
+
+<img src="/assets/d4d5-2.2-D4.png" alt="drones" width="11%">
+
+
+### d4d5-2.3-D4 Pool
+
+<img src="/assets/d4d5-2.3-D4.png" alt="drones" width="22%">
+
+### d4d5-2.3-D5 Storyline
+
+<img src="/assets/d4d5-2.3-D5.png" alt="drones" width="22%">
 
 <br>
 
