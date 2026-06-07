@@ -19,7 +19,7 @@ See also
 
 **TOC**
 - **1 xxxxxx**
-- **2 xxxxxxxx**. xxxxxxxxxxxxxxxxxxx.
+
 
 <br>
 
@@ -45,7 +45,7 @@ xxxxxxxxxx
 
 <img src="/assets/d4d5-2.1-D5.png" alt="drones" width="22%">
 
-### d4d5-2.2-D4 RELU
+### d4d5-2.2-D4 RELU (for TF later in FFN)
 
 <img src="/assets/d4d5-2.2-D4.png" alt="drones" width="11%">
 
@@ -60,14 +60,63 @@ xxxxxxxxxx
 
 <br>
 
-# **2 xxxxxxxxxx**
 
 
-```
-xxxxxxxxxxxxxxxxxxx
-```
 
+### d4d5-2.4-D5 FFN (+GELU) (not in CNN... no complex patterns?)
+
+<img src="/assets/d4d5-2.4-D5.png" alt="drones" width="22%">
 
 <br>
+
+## PAGE3 =====================
+
+<br>
+
+
+### d4d5-3-D4 Layer 2 (Convolution/RELU/Pool)
+
+<img src="/assets/d4d5-2.4-2.6-D4.png" alt="drones" width="22%">
+
+<br>
+
+
+### d4d5-3-D5 Layer 2 (in D5 only 1 layer)
+
+<img src="/assets/d4d5-3-D5.png" alt="drones" width="22%">
+
+<br>
+
+
+### d4d5-4-D4 Wunembed
+
+<img src="/assets/d4d5-4-D4.png" alt="drones" width="22%">
+
+<br>
+
+
+### d4d5-4-D5 FC layers
+
+<img src="/assets/d4d5-4-D5.png" alt="drones" width="22%">
+
+<br>
+
+
+## last step ===================
+
+<br>
+
+### d4d5-5-D4 Pick best / convert to label
+
+<br>
+
+### d4d5-5-D5 Pick best / convert to label
+
+<br>
+
+### d4d5-6-D5 Auto-recursive
+
+<br>
+
 
 26.0607 (v1 26.0607) 
