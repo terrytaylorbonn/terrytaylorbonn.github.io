@@ -6,8 +6,6 @@ permalink: /2.2b-cnn-tf-comparison/
 
 [← 2 Models](/2_models/)
 
-<img src="/assets/d4d5-1-D4.png" alt="drones" width="22%">
-
 <br>
 
 v1 26.0607
@@ -30,6 +28,10 @@ See also
 ```
 xxxxxxxxxx
 ```
+
+<img src="/assets/d4d5-1-D4.png" alt="drones" width="22%">
+
+
 
 <br>
 
