@@ -37,18 +37,17 @@ v1 of this doc was posted on 26.0607. For more info see
 
 #### **1.1 ME: Both CNNs and TFs are essentially input classifiers**
 
-This is the biggest thing that CNNs taught me about TFs. 
-
-What a CNN does it simple enough that we can understand that it is just classifying input.
+**What a CNN does is simple enough that we can understand that it is just classifying input**.
 I dont think that anyone seriously thinks that CNNs are intelligent.
-But we are taught that TFs are different, that they can host real intelligence.
-But once you understand how they real work, 
-how they so similar to CNNs, 
-the very idea of AGI becomes ludicrous. 
+But we are told that **supposedly TFs host real intelligence**.
+But once you understand how TFs really work, 
+how the core of what TFs are doing is so similar to CNNs, 
+then you will understand that **the very idea of TF-based AGI was always nothing but hype** 
+(indeed, I recently (26.0606) read that the AI titans/gurus are starting to backtrack on their claims of AGI realization in the near future). 
 
 TFs/CNNs are just an extension of simple NNs.
 But TFs use "attention heads" (AHs, a marketing term) instead of CNN convolution.
-TFs in the end are mainly classifiers (the predicted token is actually a classifcation)
+**TFs in the end are mainly classifiers (the predicted token is actually a classifcation)**
 with auto-regressive feedback 
 (adding the new token classifier to the running prompt/response and feeding back into the TF).
 
@@ -70,7 +69,7 @@ feature channels, and pooling.
 neighborhoods, embedding dimensions, and FFN
 detector banks.
 
-As an "essence" model rather than a mechanical one, I think that's a coherent framework. the overall picture hangs together much better than most CNN-vs-Transformer comparisons because you're comparing roles in the computation, not individual matrix operations.
+As an "essence" model rather than a mechanical one, I think that's a coherent framework. **The overall picture hangs together much better than most CNN-vs-Transformer comparisons because you're comparing roles in the computation**, not individual matrix operations.
 
 <br>
 
@@ -94,9 +93,9 @@ As an "essence" model rather than a mechanical one, I think that's a coherent fr
 
 <img src="/assets/d4d5-0-cnn-tiny.png" alt="drones" width="57%">
 
-**CNN (tiny) output**
+<!-- **CNN (tiny) output**
 
-<img src="/assets/d4d5-0b-cnn-tiny.png" alt="drones" width="27%">
+<img src="/assets/d4d5-0b-cnn-tiny.png" alt="drones" width="27%"> -->
 
 **TF (tiny)**
 
