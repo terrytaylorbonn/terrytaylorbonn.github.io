@@ -8,11 +8,17 @@ permalink: /2.2b-cnn-tf-comparison/
 
 <br>
 
-This page (WIP) 
+### TL;DR (the reason I wrote this ZAI webpage)
 
-v1 26.0607
+<!-- On the **[ZiptieAI TL;DR page](/0-tldr/)** I compare the hype around AI to the hype of a cheap popup ad on Youtube that is selling magical A/C units. To me the claims of AGI being just around the corner have the same level of integrity and honesty (as do claims about mankind colonizing Mars; an idea that under minimal scientific scrutiny reveals itself to be idiotic; such nonsense about AI is pushed by the AI gurus and titans regularly).
 
-See also 
+AI tools are extremely useful. When used properly (as with most things). Their proper usage is limited, which means limited income for the AI industry. But proper usage means more income for you as an end user.  Hype means you get ripped off. -->
+
+I knew very early on when i started studying AI that **LLM transformers (TFs) and CNNs (convoluted neural networks) were attacking a similar problem**. And that **figuring out how the far less complex CNN worked would be a great stepping stone to understanding how an LLM TF works** (and thus the core of LLM AI). But my biggest motivation was curiousity.  
+
+This page is my comparison of the **[Tiny CNN demo](/2.2.1-d4-cnn-image-classifier/)** and the **[Tiny TF demo](/2.3.6.1-d5-tiny-tf/)**. GPT agrees with my core conclusions (GPT conversations are listed on this page; "ME:" is my own text, "GPT" is GPT text). 
+
+v1 of this doc was posted on 26.0607. For more info see 
 - [#607\_2.1\_core\_NNs\_.docx](https://drive.google.com/drive/folders/1-Adawag9uA8_bq-hDF-nOuPYaRLz1eEO)
 - [__ziptieai_BOOK1_CNN_.docx](https://drive.google.com/drive/folders/1-Adawag9uA8_bq-hDF-nOuPYaRLz1eEO)
 - [__ziptieai_BOOK2_LLM_.docx](https://drive.google.com/drive/folders/1-Adawag9uA8_bq-hDF-nOuPYaRLz1eEO)
@@ -55,6 +61,222 @@ TFs are vastly more complex because
 - token represention is an encoding of meaning designed for intelligent human minds
 - vast amounts of binary computation are required to generate the most probablistic next token for a series of input tokens.
 
+#### **1.2 GPT: If I had to summarize your theory in one sentence:**
+- CNNs and Transformers both build progressively
+higher-level representations.
+- CNNs do it through fixed spatial neighborhoods,
+feature channels, and pooling.
+- Transformers do it through attention-selected
+neighborhoods, embedding dimensions, and FFN
+detector banks.
+
+As an "essence" model rather than a mechanical one, I think that's a coherent framework. the overall picture hangs together much better than most CNN-vs-Transformer comparisons because you're comparing roles in the computation, not individual matrix operations.
+
+<br>
+
+## **2 ME: Comparison of CNN and TF algorithms (diagrams)**
+
+- 2.0 Overview diagrams
+- 2.1 Initial embedding
+- 2.2 Layer 1
+- 2.3 Layer 2
+- 2.4 Logits
+- 2.5 Convert to label
+- 2.6 Auto-recursive
+
+
+
+<br>
+
+#### **2.0 Overview diagrams**
+
+**CNN (tiny) layers**
+
+<img src="/assets/d4d5-0-cnn-tiny.png" alt="drones" width="57%">
+
+**CNN (tiny) output**
+
+<img src="/assets/d4d5-0b-cnn-tiny.png" alt="drones" width="27%">
+
+**TF (tiny)**
+
+
+<img src="/assets/d4d5-0-tf-tiny.png" alt="drones" width="42%">
+
+
+<br>
+
+### **2.1 Initial input**
+
+**2.1-D4 CNN image** (d4d5-1-D4)
+
+- 28x28 pixels. 
+- each pixel value <> TF token.
+
+<img src="/assets/d4d5-1-D4.png" alt="drones" width="27%">
+
+**2.1-D5 TF tokens** (d4d5-1-D5)
+
+xxxx
+
+<img src="/assets/d4d5-1-D5.png" alt="drones" width="27%">
+
+<br>
+
+### **2.2 Layer 1**
+
+<br>
+
+#### **2.2.1 Initial embedding**
+
+**2.2.1-D4 CNN convolute** (filter1) (d4d5-2.1-D4)
+
+-	3x3x8. 
+-	3x3 <> TF AH.
+-	8 <> TF emb dims
+-	RESULT: 
+-	still 28x28 <> # TF of tokens.
+-	but 8 dims per pixel <> 8 dims per token.
+
+
+<img src="/assets/d4d5-2.1-D4.png" alt="drones" width="25%">
+
+**2.2.1-D5 TF AH/context** (d4d5-2.1-D5)
+
+xxxxxx
+
+<img src="/assets/d4d5-2.1-D5.png" alt="drones" width="27%">
+
+<br>
+
+#### **2.2.2 "activation"**
+
+(TF does later in FFN)
+
+**2.2.2-D4 CNN RELU** (d4d5-2.2-D4)
+
+xxxx
+
+<img src="/assets/d4d5-2.2-D4.png" alt="drones" width="8%">
+
+<br>
+
+#### **2.2.3 Pool / storyline**
+
+**2.2.3-D4 CNN Pool** (d4d5-2.3-D4)
+
+-	2x2 p=1 resuts in 14x14 pixels (1/4 original) <> TF storyline high level only has 1/4 original tokens in storyline 
+-	NOTE: CNN has no equivalent yet of TF FFNs
+
+<img src="/assets/d4d5-2.3-D4.png" alt="drones" width="30%">
+
+**2.2.3-D5 TF Storyline** (d4d5-2.3-D5)
+
+<img src="/assets/d4d5-2.3-D5.png" alt="drones" width="23%">
+
+<br>
+
+#### **2.2.4 FFN**
+
+(this was done earlier for CNN)
+
+**2.2.4-D5 FFN (+GELU)** (d4d5-2.4-D5)
+
+xxxxx
+
+<img src="/assets/d4d5-2.4-D5.png" alt="drones" width="38%">
+
+<br>
+
+<!-- ## PAGE3 ===================== -->
+
+
+### **2.3 Layer 2**
+
+#### **2.3-D4 Layer 2 (Convolution/RELU/Pool)** (d4d5-3-D4)
+
+
+**2.3.1-D4 Filter2**
+-	3x3x16. 
+-	3x3 <> TF AH.
+-	16 <> TF emb dims
+-	RESULT: 
+-	still 14x14 <> # TF of tokens.
+-	but each pixel now has 16 dims; each pixel was computed from 72 previous pixels 
+  - previous 8 dims and 
+  - 9 pixels in each dim.
+- this is <> TF dims being computed from other dims of current token + QKV neighbors 
+
+**2.3.2-D4 RELU2**
+
+**2.3.3-D4 CNN pool2**
+-	2x2 p=1 resuts in 7x7 pixels (1/4 of previous, 1/16 of original) 
+-	<> TF storyline higher level now only has 1/16 original tokens in storyline 
+-	NOTE: CNN has no equivalent yet of TF FFNs
+
+
+<img src="/assets/d4d5-3-D4.png" alt="dronesxxx" width="29%">
+
+<br>
+
+### **2.3-D5 Layer 2 (in D5 only 1 layer)** (d4d5-3-D5)
+
+xxxx
+
+<img src="/assets/d4d5-3-D5.png" alt="drones" width="25%">
+
+<br>
+
+### **2.4 Logits**
+
+**2.4-D4 FC classifier** (d4d5-4-D4)
+
+FC classifier 
+-	<> TF FFN + Wunembed COMBINED (the reason for this: h layer style detection was not required in every CNN layer because the nature of pixel input is vastly simpler than for text; CNN required far fewer dims per pixel than TF required per pixel, so the TF needed to do the detection earlier)
+-	784 inputs (7x7x16) <>  TF last tone 12288 dims
+-	only 1/16 of original pixels <> TF everything is in last token  
+-	select 1/10 classifiers for D4 <> TF select 1/50K classifiers
+
+
+<img src="/assets/d4d5-4-D4.png" alt="drones" width="33%">
+
+
+
+**2.4-D5 Wunembed** (d4d5-4-D5)
+
+Takes the 16 dimensions of the last token hidden layer.
+Perform Wx + b to get 8 logits (8 vocab entries).
+Determine the most likely logit.
+
+<img src="/assets/d4d5-4-D5.png" alt="drones" width="30%">
+
+<br>
+
+
+### **2.5 Convert to label**
+
+**2.5-D4 Pick best / convert to label** (d4d5-5-D4 )
+
+xxx
+
+
+**2.5-D5 Pick best / convert to label** (d4d5-5-D5)
+
+xxx
+
+<br>
+
+### **2.6 Auto-recursive**
+
+
+**2.6-D5 Auto-recursive** (d4d5-6-D5)
+
+<br>
+
+
+26.0607 (v1 26.0607) 
+
+
 <!-- 
 #### **1.2 ME: This post is my conceptual comparison of the algorithms/computations in**
 
@@ -89,211 +311,3 @@ in any case, the conclusions i came to are my original
 (as is evident from the GPT responses).
 -->
 
-#### **1.2 GPT: If I had to summarize your theory in one sentence:**
-- CNNs and Transformers both build progressively
-higher-level representations.
-- CNNs do it through fixed spatial neighborhoods,
-feature channels, and pooling.
-- Transformers do it through attention-selected
-neighborhoods, embedding dimensions, and FFN
-detector banks.
-
-As an "essence" model rather than a mechanical one, I think that's a coherent framework. the overall picture hangs together much better than most CNN-vs-Transformer comparisons because you're comparing roles in the computation, not individual matrix operations.
-
-<br>
-
-## **2 ME: Comparison of CNN and TF algorithms (diagrams)**
-
-- 2.0 Overview diagrams
-- 2.1 Initial embedding
-- 2.2 Layer 1
-- 2.3 Layer 2
-- 2.4 Logits
-- 2.5 output
-
-<br>
-
-#### **2.0 Overview diagrams**
-
-**CNN (tiny) layers**
-
-<img src="/assets/d4d5-0-cnn-tiny.png" alt="drones" width="57%">
-
-**CNN (tiny) output**
-
-<img src="/assets/d4d5-0b-cnn-tiny.png" alt="drones" width="27%">
-
-**TF (tiny)**
-
-
-<img src="/assets/d4d5-0-tf-tiny.png" alt="drones" width="42%">
-
-
-<br>
-
-### **2.1 Initial input**
-
-#### d4d5-1-D4 CNN image
-
-- 28x28 pixels. 
-- each pixel value <> TF token.
-
-<img src="/assets/d4d5-1-D4.png" alt="drones" width="27%">
-
-#### d4d5-1-D5 TF tokens
-
-xxxx
-
-<img src="/assets/d4d5-1-D5.png" alt="drones" width="27%">
-
-<br>
-
-### **2.2 Layer 1**
-
-<br>
-
-#### **2.2.1 Initial embedding**
-
-#### d4d5-2.1-D4 CNN Convolute (filter1)
-
--	3x3x8. 
--	3x3 <> TF AH.
--	8 <> TF emb dims
--	RESULT: 
--	still 28x28 <> # TF of tokens.
--	but 8 dims per pixel <> 8 dims per token.
-
-
-<img src="/assets/d4d5-2.1-D4.png" alt="drones" width="25%">
-
-#### d4d5-2.1-D5 TF AH/context
-
-<img src="/assets/d4d5-2.1-D5.png" alt="drones" width="27%">
-
-xxxxxx
-
-<br>
-
-#### **2.2.2 "activation"**
-
-(TF does later in FFN)
-
-#### d4d5-2.2-D4 CNN RELU 
-
-xxxx
-
-<img src="/assets/d4d5-2.2-D4.png" alt="drones" width="8%">
-
-<br>
-
-#### **2.2.3 Pool / storyline**
-
-#### d4d5-2.3-D4 CNN Pool
-
--	2x2 p=1 resuts in 14x14 pixels (1/4 original) <> TF storyline high level only has 1/4 original tokens in storyline 
--	NOTE: CNN has no equivalent yet of TF FFNs
-
-<img src="/assets/d4d5-2.3-D4.png" alt="drones" width="30%">
-
-#### d4d5-2.3-D5 TF Storyline
-
-<img src="/assets/d4d5-2.3-D5.png" alt="drones" width="23%">
-
-<br>
-
-#### **2.2.4 FFN**
-
-(this was done earlier for CNN)
-
-#### d4d5-2.4-D5 FFN (+GELU)
-
-xxxxx
-
-<img src="/assets/d4d5-2.4-D5.png" alt="drones" width="38%">
-
-<br>
-
-<!-- ## PAGE3 ===================== -->
-
-
-### **2.3 Layer 2**
-
-#### d4d5-3-D4 Layer 2 (Convolution/RELU/Pool)
-
-
-2.4 Filter2:
--	3x3x16. 
--	3x3 <> TF AH.
--	16 <> TF emb dims
--	RESULT: 
--	still 14x14 <> # TF of tokens.
--	but each pixel now has 16 dims; each pixel was computed from 72 previous pixels 
-  - previous 8 dims and 
-  - 9 pixels in each dim.
-- this is <> TF dims being computed from other dims of current token + QKV neighbors 
-
-2.5 RELU2
-
-2.6 CNN pool2
--	2x2 p=1 resuts in 7x7 pixels (1/4 of previous, 1/16 of original) 
--	<> TF storyline higher level now only has 1/16 original tokens in storyline 
--	NOTE: CNN has no equivalent yet of TF FFNs
-
-
-<img src="/assets/d4d5-3-D4.png" alt="dronesxxx" width="29%">
-
-<br>
-
-### d4d5-3-D5 Layer 2 (in D5 only 1 layer)
-
-xxxx
-
-<img src="/assets/d4d5-3-D5.png" alt="drones" width="25%">
-
-<br>
-
-### **2.4 Logits**
-
-#### d4d5-4-D4 FC classifier 
-
-FC classifier 
--	<> TF FFN + Wunembed COMBINED (the reason for this: h layer style detection was not required in every CNN layer because the nature of pixel input is vastly simpler than for text; CNN required far fewer dims per pixel than TF required per pixel, so the TF needed to do the detection earlier)
--	784 inputs (7x7x16) <>  TF last tone 12288 dims
--	only 1/16 of original pixels <> TF everything is in last token  
--	select 1/10 classifiers for D4 <> TF select 1/50K classifiers
-
-
-<img src="/assets/d4d5-4-D4.png" alt="drones" width="33%">
-
-<br>
-
-
-#### d4d5-4-D5 Wunembed
-
-Takes the 16 dimensions of the last token hidden layer.
-Perform Wx + b to get 8 logits (8 vocab entries).
-Determine the most likely logit.
-
-<img src="/assets/d4d5-4-D5.png" alt="drones" width="30%">
-
-<br>
-
-
-### **2.5 output**
-
-<br>
-
-### d4d5-5-D4 Pick best / convert to label
-
-<br>
-
-### d4d5-5-D5 Pick best / convert to label
-
-<br>
-
-### d4d5-6-D5 Auto-recursive
-
-<br>
-
-
-26.0607 (v1 26.0607) 
