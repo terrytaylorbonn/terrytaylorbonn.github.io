@@ -8,6 +8,8 @@ permalink: /2.2b-cnn-tf-comparison/
 
 <br>
 
+This page (WIP) 
+
 v1 26.0607
 
 See also 
@@ -18,91 +20,207 @@ See also
 <br>
 
 **TOC**
-- **1 xxxxxx**
+- **1 ME/GPT: The essence of CNNs and TFs (input classifiers)**
+- **2 ME: Comparison of CNN and TF algorithms (diagrams)**
+
+<br>
+
+## **1 ME/GPT: The essence of CNNs and TFs (input classifiers)**
+
+
+
+#### **1.1 ME: Both CNNs and TFs are essentially input classifiers**
+
+This is the biggest thing that CNNs taught me about TFs. 
+
+What a CNN does it simple enough that we can understand that it is just classifying input.
+I dont think that anyone seriously thinks that CNNs are intelligent.
+Maybe INSTINCTIVE (more on that idea in a later version), but not intelligent. 
+But we are taught that TFs are different, that they can host real intelligence.
+But once you understand how they real work, 
+how they so similar to CNNs, 
+the very idea of AGI becomes ludicrous. 
+
+TFs are just an extension of simple NNs as are CNNs.
+But TFs use "attention heads" (AHs, a marketing term) instead of convolution.
+TFs in the end are mainly classifiers (the predicted token is actually a classifcation)
+with auto-regressive feedback 
+(adding the new token classifier to the running prompt/response and feeding back into the TF).
+
+CNNS and TFs 
+- Host algorithms customized for the input data (pixels for CNN, language tokens for TFs)
+- Provide the representational capacity required for the inptu data classification
+TFs are vastly more complex because 
+- language is far more complex that images and 
+- token represention is an encoding of meaning designed for intelligent human minds
+- vast amounts of binary computation are required to generate the most probablistic next token for a series of input tokens.
+
+#### **1.2 ME: This post is my conceptual comparison of the algorithms/computations in**
+
+- CNNs
+- Transformers
+
+My take is that these algorithms are variations of a theme. 
+they are basically
+- solving the same problem
+- with different methods 
+- because the input data are different
+
+Much of this section is commentary from GPT chats about my ideas.
+GPT is programmed to pander to a human's ideas and emotions,
+but in tech subjects like this GPT is an excellent proof reader
+(but not a teacher; 
+GPT confirmed my ideas, but never gave me the insight beforehand, 
+because the token sequence patterns GPT has been programmed ("trained") on
+did not include such information). 
+
+still, the most amazing lthing about GPT is how it can analyze my original ideas. 
+and give good yes/no judgements.
+(and it undoubtedly takes my original ideas and integrates them into its database 
+(after ensuring that the ideas are politically correct)).
+
+but GPT will come up with anything original.
+and is constantly stuck in a pedanctic word mode. 
+which is what is to be expected from a computational device trained on words. 
+
+I have not seen such ideas expressed elsewhere (I'm sure they are somewhere).
+in any case, the conclusions i came to are my original 
+(as is evident from the GPT responses).
+
+#### **1.3 GPT: If I had to summarize your theory in one sentence:**
+- CNNs and Transformers both build progressively
+higher-level representations.
+- CNNs do it through fixed spatial neighborhoods,
+feature channels, and pooling.
+- Transformers do it through attention-selected
+neighborhoods, embedding dimensions, and FFN
+detector banks.
+
+As an "essence" model rather than a mechanical one, I think that's a coherent framework. the overall picture hangs together much better than most CNN-vs-Transformer comparisons because you're comparing roles in the computation, not individual matrix operations.
+
+<br>
+
+## **2 ME: Comparison of CNN and TF algorithms (diagrams)**
+
+- 2.0 Overview diagrams
+- 2.1 Initial embedding
+- 2.2 Layer 1
+- 2.3 Layer 2
+- 2.4 Logits
+- 2.5 output
+
+<br>
+
+#### **2.0 Overview diagrams**
+
+**CNN (tiny) layers**
+
+<img src="/assets/d4d5-0-cnn-tiny.png" alt="drones" width="57%">
+
+**CNN (tiny) output**
+
+<img src="/assets/d4d5-0b-cnn-tiny.png" alt="drones" width="27%">
+
+**TF (tiny)**
+
+
+<img src="/assets/d4d5-0-tf-tiny.png" alt="drones" width="42%">
 
 
 <br>
 
-# **1 xxxxxxxxxxxxx**
+### **2.1 Initial embedding**
 
-```
-xxxxxxxxxx
-```
+#### d4d5-1-D4 embed
 
-### d4d5-1-D4 embed
+xxxx
 
-<img src="/assets/d4d5-1-D4.png" alt="drones" width="22%">
+<img src="/assets/d4d5-1-D4.png" alt="drones" width="27%">
 
-### d4d5-1-D5 embed
+#### d4d5-1-D5 embed
 
-<img src="/assets/d4d5-1-D5.png" alt="drones" width="22%">
+xxxx
 
-### d4d5-2.1-D4 Convolute
-
-<img src="/assets/d4d5-2.1-D4.png" alt="drones" width="22%">
-
-### d4d5-2.1-D5 AH/context
-
-<img src="/assets/d4d5-2.1-D5.png" alt="drones" width="22%">
-
-### d4d5-2.2-D4 RELU (for TF later in FFN)
-
-<img src="/assets/d4d5-2.2-D4.png" alt="drones" width="11%">
-
-
-### d4d5-2.3-D4 Pool
-
-<img src="/assets/d4d5-2.3-D4.png" alt="drones" width="22%">
-
-### d4d5-2.3-D5 Storyline
-
-<img src="/assets/d4d5-2.3-D5.png" alt="drones" width="22%">
+<img src="/assets/d4d5-1-D5.png" alt="drones" width="27%">
 
 <br>
 
-
-
-
-### d4d5-2.4-D5 FFN (+GELU) (not in CNN... no complex patterns?)
-
-<img src="/assets/d4d5-2.4-D5.png" alt="drones" width="22%">
+### **2.2 Layer 1**
 
 <br>
 
-## PAGE3 =====================
+#### **2.2.1 Initial embedding**
+
+#### d4d5-2.1-D4 Convolute
+
+<img src="/assets/d4d5-2.1-D4.png" alt="drones" width="25%">
+
+#### d4d5-2.1-D5 AH/context
+
+<img src="/assets/d4d5-2.1-D5.png" alt="drones" width="27%">
 
 <br>
 
+#### **2.2.2 "activation"**
 
-### d4d5-3-D4 Layer 2 (Convolution/RELU/Pool)
+#### d4d5-2.2-D4 RELU (for TF later in FFN)
 
-<img src="/assets/d4d5-2.4-2.6-D4.png" alt="drones" width="22%">
+<img src="/assets/d4d5-2.2-D4.png" alt="drones" width="8%">
+
+#### d4d5-2.3-D4 Pool
+
+<img src="/assets/d4d5-2.3-D4.png" alt="drones" width="30%">
 
 <br>
 
+#### **2.2.3 Pool / storyline**
+
+#### d4d5-2.3-D5 Storyline
+
+<img src="/assets/d4d5-2.3-D5.png" alt="drones" width="23%">
+
+<br>
+
+#### d4d5-2.4-D5 FFN (+GELU) (not in CNN... no complex patterns?)
+
+<img src="/assets/d4d5-2.4-D5.png" alt="drones" width="38%">
+
+<br>
+
+<!-- ## PAGE3 ===================== -->
+
+
+### **2.3 Layer 2**
+
+#### d4d5-3-D4 Layer 2 (Convolution/RELU/Pool)
+
+<img src="/assets/d4d5-3-D4.png" alt="dronesxxx" width="29%">
+
+<br>
 
 ### d4d5-3-D5 Layer 2 (in D5 only 1 layer)
 
-<img src="/assets/d4d5-3-D5.png" alt="drones" width="22%">
+<img src="/assets/d4d5-3-D5.png" alt="drones" width="25%">
+
+<br>
+
+### **2.4 Logits**
+
+#### d4d5-4-D4 Wunembed
+
+<img src="/assets/d4d5-4-D4.png" alt="drones" width="33%">
 
 <br>
 
 
-### d4d5-4-D4 Wunembed
+#### d4d5-4-D5 FC layers
 
-<img src="/assets/d4d5-4-D4.png" alt="drones" width="22%">
-
-<br>
-
-
-### d4d5-4-D5 FC layers
-
-<img src="/assets/d4d5-4-D5.png" alt="drones" width="22%">
+<img src="/assets/d4d5-4-D5.png" alt="drones" width="30%">
 
 <br>
 
 
-## last step ===================
+### **2.5 output**
 
 <br>
 
