@@ -220,11 +220,33 @@ xxxxx
 
 #### d4d5-3-D4 Layer 2 (Convolution/RELU/Pool)
 
+
+2.4 Filter2:
+-	3x3x16. 
+-	3x3 <> TF AH.
+-	16 <> TF emb dims
+-	RESULT: 
+-	still 14x14 <> # TF of tokens.
+-	but each pixel now has 16 dims; each pixel was computed from 72 previous pixels 
+  - previous 8 dims and 
+  - 9 pixels in each dim.
+- this is <> TF dims being computed from other dims of current token + QKV neighbors 
+
+2.5 RELU2
+
+2.6 CNN pool2
+-	2x2 p=1 resuts in 7x7 pixels (1/4 of previous, 1/16 of original) 
+-	<> TF storyline higher level now only has 1/16 original tokens in storyline 
+-	NOTE: CNN has no equivalent yet of TF FFNs
+
+
 <img src="/assets/d4d5-3-D4.png" alt="dronesxxx" width="29%">
 
 <br>
 
 ### d4d5-3-D5 Layer 2 (in D5 only 1 layer)
+
+xxxx
 
 <img src="/assets/d4d5-3-D5.png" alt="drones" width="25%">
 
@@ -232,14 +254,25 @@ xxxxx
 
 ### **2.4 Logits**
 
-#### d4d5-4-D4 Wunembed
+#### d4d5-4-D4 FC classifier 
+
+FC classifier 
+-	<> TF FFN + Wunembed COMBINED (the reason for this: h layer style detection was not required in every CNN layer because the nature of pixel input is vastly simpler than for text; CNN required far fewer dims per pixel than TF required per pixel, so the TF needed to do the detection earlier)
+-	784 inputs (7x7x16) <>  TF last tone 12288 dims
+-	only 1/16 of original pixels <> TF everything is in last token  
+-	select 1/10 classifiers for D4 <> TF select 1/50K classifiers
+
 
 <img src="/assets/d4d5-4-D4.png" alt="drones" width="33%">
 
 <br>
 
 
-#### d4d5-4-D5 FC layers
+#### d4d5-4-D5 Wunembed
+
+Takes the 16 dimensions of the last token hidden layer.
+Perform Wx + b to get 8 logits (8 vocab entries).
+Determine the most likely logit.
 
 <img src="/assets/d4d5-4-D5.png" alt="drones" width="30%">
 
