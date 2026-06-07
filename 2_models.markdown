@@ -16,6 +16,7 @@ permalink: /2_models/
 - 2.0 Concepts
 - 2.1 Core (no convolution/tf) 
 - 2.2 Convolution
+- 2.2b CNN<>TF comparison (26.0607)
 - 2.3 TF
 - 2.5 Robotic AI
 - 2.6 Other / historical
@@ -51,6 +52,14 @@ A CNN computes the most probable label ("dog", "airplane", etc) for a set of pix
 
 <br>
 
+### [2.2b CNN<>TF comparison](/2.2b-cnn-tf-comparison/) (WIP 26.0607)
+
+xxxxxxxxxx
+
+<img src="/assets/d4d5-1-D4.png" alt="drones" width="12%">
+
+<br>
+
 ### [2.3 LLMs (transformers)](/2.3-llms/) (iAgent + TF)
 
 An LLM (1) inputs a sequence of tokens, (2) computes the probabilities of all vocabulary tokens as the next token, (3) outputs the selected new token, and finally (4) adds the new token to the next input sequence. An LLM consists of an (1) internal agent and a (2) transformer (TF) NN. **The TF is the core computational engine behind modern AI systems and the mechanism that enables modern LLM behavior**.
@@ -78,7 +87,7 @@ Where did today's AI come from? What survived? What became obsolete? What evolve
 
 <br>
 
-26.0603 (0526)
+26.0607 (v1 26.0526)
 
 <!-- *How a UFA determines if a location is in the Netherlands or Belgium*.<br>
 <img src="/assets/belgium1.png" alt="drones" width="75%"> 

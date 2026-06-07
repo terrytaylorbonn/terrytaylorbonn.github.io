@@ -1,0 +1,46 @@
+---
+layout: page
+title: "2.2b CNN<>TF comparison (WIP)"
+permalink: /2.2b-cnn-tf-comparison/
+---
+
+[← 2 Models](/2_models/)
+
+<img src="/assets/d4d5-1-D4.png" alt="drones" width="22%">
+
+<br>
+
+v1 26.0607
+
+See also 
+- [#607\_2.1\_core\_NNs\_.docx](https://drive.google.com/drive/folders/1-Adawag9uA8_bq-hDF-nOuPYaRLz1eEO)
+- [__ziptieai_BOOK1_CNN_.docx](https://drive.google.com/drive/folders/1-Adawag9uA8_bq-hDF-nOuPYaRLz1eEO)
+- [__ziptieai_BOOK2_LLM_.docx](https://drive.google.com/drive/folders/1-Adawag9uA8_bq-hDF-nOuPYaRLz1eEO)
+
+<br>
+
+**TOC**
+- **1 xxxxxx**
+- **2 xxxxxxxx**. xxxxxxxxxxxxxxxxxxx.
+
+<br>
+
+# **1 xxxxxxxxxxxxx**
+
+```
+xxxxxxxxxx
+```
+
+<br>
+
+# **2 xxxxxxxxxx**
+
+
+```
+xxxxxxxxxxxxxxxxxxx
+```
+
+
+<br>
+
+26.0607 (v1 26.0607) 
