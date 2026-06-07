@@ -97,7 +97,7 @@ As an "essence" model rather than a mechanical one, I think that's a coherent fr
 
 <img src="/assets/d4d5-0b-cnn-tiny.png" alt="drones" width="27%"> -->
 
-**TF (tiny)**
+**TF (tiny)** (this diagram needs to be updated)
 
 
 <img src="/assets/d4d5-0-tf-tiny.png" alt="drones" width="42%">
