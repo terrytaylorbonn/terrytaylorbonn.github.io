@@ -35,14 +35,13 @@ This is the biggest thing that CNNs taught me about TFs.
 
 What a CNN does it simple enough that we can understand that it is just classifying input.
 I dont think that anyone seriously thinks that CNNs are intelligent.
-Maybe INSTINCTIVE (more on that idea in a later version), but not intelligent. 
 But we are taught that TFs are different, that they can host real intelligence.
 But once you understand how they real work, 
 how they so similar to CNNs, 
 the very idea of AGI becomes ludicrous. 
 
-TFs are just an extension of simple NNs as are CNNs.
-But TFs use "attention heads" (AHs, a marketing term) instead of convolution.
+TFs/CNNs are just an extension of simple NNs.
+But TFs use "attention heads" (AHs, a marketing term) instead of CNN convolution.
 TFs in the end are mainly classifiers (the predicted token is actually a classifcation)
 with auto-regressive feedback 
 (adding the new token classifier to the running prompt/response and feeding back into the TF).
@@ -50,11 +49,13 @@ with auto-regressive feedback
 CNNS and TFs 
 - Host algorithms customized for the input data (pixels for CNN, language tokens for TFs)
 - Provide the representational capacity required for the inptu data classification
+
 TFs are vastly more complex because 
 - language is far more complex that images and 
 - token represention is an encoding of meaning designed for intelligent human minds
 - vast amounts of binary computation are required to generate the most probablistic next token for a series of input tokens.
 
+<!-- 
 #### **1.2 ME: This post is my conceptual comparison of the algorithms/computations in**
 
 - CNNs
@@ -86,8 +87,9 @@ which is what is to be expected from a computational device trained on words.
 I have not seen such ideas expressed elsewhere (I'm sure they are somewhere).
 in any case, the conclusions i came to are my original 
 (as is evident from the GPT responses).
+-->
 
-#### **1.3 GPT: If I had to summarize your theory in one sentence:**
+#### **1.2 GPT: If I had to summarize your theory in one sentence:**
 - CNNs and Transformers both build progressively
 higher-level representations.
 - CNNs do it through fixed spatial neighborhoods,
@@ -129,15 +131,16 @@ As an "essence" model rather than a mechanical one, I think that's a coherent fr
 
 <br>
 
-### **2.1 Initial embedding**
+### **2.1 Initial input**
 
-#### d4d5-1-D4 embed
+#### d4d5-1-D4 CNN image
 
-xxxx
+- 28x28 pixels. 
+- each pixel value <> TF token.
 
 <img src="/assets/d4d5-1-D4.png" alt="drones" width="27%">
 
-#### d4d5-1-D5 embed
+#### d4d5-1-D5 TF tokens
 
 xxxx
 
@@ -151,37 +154,60 @@ xxxx
 
 #### **2.2.1 Initial embedding**
 
-#### d4d5-2.1-D4 Convolute
+#### d4d5-2.1-D4 CNN Convolute (filter1)
+
+-	3x3x8. 
+-	3x3 <> TF AH.
+-	8 <> TF emb dims
+-	RESULT: 
+-	still 28x28 <> # TF of tokens.
+-	but 8 dims per pixel <> 8 dims per token.
+
 
 <img src="/assets/d4d5-2.1-D4.png" alt="drones" width="25%">
 
-#### d4d5-2.1-D5 AH/context
+#### d4d5-2.1-D5 TF AH/context
 
 <img src="/assets/d4d5-2.1-D5.png" alt="drones" width="27%">
+
+xxxxxx
 
 <br>
 
 #### **2.2.2 "activation"**
 
-#### d4d5-2.2-D4 RELU (for TF later in FFN)
+(TF does later in FFN)
+
+#### d4d5-2.2-D4 CNN RELU 
+
+xxxx
 
 <img src="/assets/d4d5-2.2-D4.png" alt="drones" width="8%">
-
-#### d4d5-2.3-D4 Pool
-
-<img src="/assets/d4d5-2.3-D4.png" alt="drones" width="30%">
 
 <br>
 
 #### **2.2.3 Pool / storyline**
 
-#### d4d5-2.3-D5 Storyline
+#### d4d5-2.3-D4 CNN Pool
+
+-	2x2 p=1 resuts in 14x14 pixels (1/4 original) <> TF storyline high level only has 1/4 original tokens in storyline 
+-	NOTE: CNN has no equivalent yet of TF FFNs
+
+<img src="/assets/d4d5-2.3-D4.png" alt="drones" width="30%">
+
+#### d4d5-2.3-D5 TF Storyline
 
 <img src="/assets/d4d5-2.3-D5.png" alt="drones" width="23%">
 
 <br>
 
-#### d4d5-2.4-D5 FFN (+GELU) (not in CNN... no complex patterns?)
+#### **2.2.4 FFN**
+
+(this was done earlier for CNN)
+
+#### d4d5-2.4-D5 FFN (+GELU)
+
+xxxxx
 
 <img src="/assets/d4d5-2.4-D5.png" alt="drones" width="38%">
 
