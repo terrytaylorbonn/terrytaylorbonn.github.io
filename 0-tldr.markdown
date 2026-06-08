@@ -25,7 +25,7 @@ A Youtube ad has been popping up on my screen lately that shows a new tiny A/C u
 
 **I dont even have to test one of those A/C units to know it wont cool a room**. I know that the people selling it are lying. But it may heat a room, because all that energy it uses is dispersed into the room. So **I know it has potential good uses (just not what's advertised)**.  
 
-<img src="/assets/tldr-5.png" alt="drones" width="18%"> 
+<img src="/assets/tldr-5.png" alt="drones" width="14%"> 
 
 The ad popped up again and I was able to snap a screenshot! Buy yours today from buyglacierbreeze.com!
 
@@ -36,9 +36,9 @@ The ad popped up again and I was able to snap a screenshot! Buy yours today from
 ### **2 Magical AI units**
 
 If you thought glacierbreeze was awesome (with its abilities to cool big rooms in no time using almost no energy and without requiring a hose to push hot air outside), then you ain't seen nothing yet. AI has 
-- amazing capabilities (first and foremost real intelligence from a clocked binary state machine) and
-- very low costs (if you really understand just how much computing you can get with a $20 a month GPT description, then you realize that someone is for some reason giving you a huge discount... but why, and for how long?). 
-
+- amazing capabilities (first and foremost real intelligence from a clocked binary state machine that will soon reach super-human AGI intelligence!) and
+- very low costs (computing a single token on GPT-3 required up to a million billion (10^15) FP calculations... and I pay $20/month for GPT to generate massive numbers of tokens). 
+    
 <br>
 
 #### **2.1 Amazing capabilities**
@@ -57,6 +57,9 @@ The same old AI **hype**. I don't even have to watch the video to know the basic
 #### **2.2 Very low cost**
 
 (TODO)
+
+if you really understand just how much computing you can get with a $20 a month GPT description, then you realize that someone is for some reason giving you a huge discount... but why, and for how long?). 
+
 
 <br>
 
