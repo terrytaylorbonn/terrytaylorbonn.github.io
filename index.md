@@ -5,7 +5,7 @@ title: Home
 
 <br>
 
-The **[TL;DR](/0-tldr/)** page describes how ZiptieAI can get you started in AI ASAP. The primary **[focus](/0-site-focus/)** of this site is on hands-on **[demos](/0b-demos/)** for **[AI (models)](/2_models/)** and **[agents](/3_agents/)**. 
+The **[TL;DR](/0-tldr/)** page describes how ZiptieAI can get you started with AI ASAP. The primary **[focus](/0-site-focus/)** of this site is on hands-on **[demos](/0b-demos/)** for **[AI (models)](/2_models/)** and **[agents](/3_agents/)**. 
 
 Recently updated pages of interest:
 - **[D4 DIY tiny CNN demo](/2.3.6.1b-d5-tiny-tf-algorithm-details/)** (image recognition)
