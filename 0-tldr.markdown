@@ -10,7 +10,9 @@ TL;DR = "too long; didn't read". This page describes the gist of this site witho
 
 **TOC**
 - 1 Magical A/C units
-- 2 Magical AI units
+- 2 Magical AI units 
+  - 2.1 Amazing capabilities
+  - 2.2 Very low cost
 - 3 How I know the latest AI claims are are hype
 - 4 Learning how to separate the AI wheat from the chaff (using ZiptieAI)
 - 5 "Agentic" AI and AI agents (using ZiptieAI)
@@ -33,6 +35,14 @@ The ad popped up again and I was able to snap a screenshot! Buy yours today from
 
 ### **2 Magical AI units**
 
+If you thought glacierbreeze was awesome (with its abilities to cool big rooms in no time using almost no energy and without requiring a hose to push hot air outside), then you ain't seen nothing yet. AI has 
+- amazing capabilities (first and foremost real intelligence from a clocked binary state machine) and
+- very low costs (if you really understand just how much computing you can get with a $20 a month GPT description, then you realize that someone is for some reason giving you a huge discount... but why, and for how long?). 
+
+<br>
+
+#### **2.1 Amazing capabilities**
+
 One of my favorite AI Youtube channels is Best partners TV. They recently had a video about one of my favorite A/I researchers, Richard Sutton. The video is called "[Enactive Cognition](https://www.youtube.com/watch?v=6bfCuxI_84U)".  
 
 The following is the summary of the video: *Recently, Richard S. Sutton, the **father of reinforcement learning**, ... co-authored a groundbreaking paper titled "Toward **Enactive Artificial Intelligence**." This paper can be seen as a ... **critique of the current mainstream AI paradigm**. As a founder of reinforcement learning, Sutton starts from the most basic questions of cognitive science, **revealing a harsh truth: current AI lacks true understanding because it has been on the wrong path from the outset** ... The **next step for AI must be a complete shift towards enactive cognition**, allowing agents to generate their own experiences and understanding of the world through active interaction with the environment, embodied action, and **self-evaluation**.*
@@ -41,6 +51,12 @@ The same old AI **hype**. I don't even have to watch the video to know the basic
 
 *The best minds in the world can't create a number cruncher with driving capabilities even remotely on the level of the human mind*<br>
 <img src="/assets/tldr-6.png" alt="drones" width="22%"> 
+
+<br>
+
+#### **2.2 Very low cost**
+
+(TODO)
 
 <br>
 
@@ -126,4 +142,4 @@ Most of this page has been about NNs because **an AI agent totally depends on an
 
 <br>
 
-26.0605 (v1 26.0604)
+26.0608 (v1 26.0604)

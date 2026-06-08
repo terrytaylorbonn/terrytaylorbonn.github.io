@@ -43,7 +43,7 @@ There is a good chance you can grasp CNN (with a lot of study).
 But the transformer (TF diagram)... thats another story. 
 
 **In reality CNN and TF algorithms are closely related** 
-(this is my opinion that **I want to prove this on this page**). 
+(this is my opinion that **I want to prove on this page**). 
 But to understand them and their relationship the diagrams below will never be enough.
 You need code demos and real detailed info. 
 ZAI provides both on this page (links to **[Tiny CNN demo](/2.2.1-d4-cnn-image-classifier/)** and the **[Tiny TF demo](/2.3.6.1-d5-tiny-tf/)**).
