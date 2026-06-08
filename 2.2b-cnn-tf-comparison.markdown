@@ -25,8 +25,8 @@ v1 of this doc was posted on 26.0607. For more info see
 
 <br>
 
-### **TOC**
-- **1 ME/GPT: The essence of CNNs and TFs (input classifiers)**. A short page will a few diagrams of CNNs/TFs (they dont look similar) and and very short discussion with GPT (GPT agrees that they are similar).
+### **Top level TOC**
+- **1 ME/GPT: The essence of CNNs and TFs (input classifiers)**. A short page with a few diagrams of CNNs/TFs (they dont look similar) and and very short discussion with GPT (GPT agrees that they are similar).
 - **2 ME: Comparison of CNN and TF algorithms (diagrams)**. A detailed descripion of the algorithm workflows for **Tiny CNN and Tiny TF (my demos)** that show how the algorithms are doing basically the same thing.
 - **3 ME/GPT: CNNs/TFs are all classifiers (discussion)**. More detailed discussions with GPT. 
 - **4 ME/GPT: CNNs could be turned into generators**. The one big difference is that CNNs dont run a generation loop. But they could. 
@@ -76,22 +76,22 @@ As an "essence" model rather than a mechanical one, I think that's a coherent fr
 
 <br>
 
-### **Mini-TOC**
-- **2.0 MAIN LOOP diagrams**
-  - **D4/D5** (CNN/TF) combined main diagram
-  - **D4**
-  - **D5**
-- **2.1 Initial input**
+### **Section 2 mini-TOC**
+- **2.0 MAIN LOOP diagrams**. My own diagrams of the workflows.
+  - **D4/D5** (CNN/TF) combined main diagram.
+  - **D4** (CNN).
+  - **D5** (TF).
+- **2.1 Initial input**. Overview of CNN pixel values and TF token ASCII values.
 - **2.1b Convert ASCII to dims ("embed") D5 only** (no conversion required for CNN input)
 - **2.2 Layer 1**
-  - **2.2.1 Initial D4-convolute / D5-AH**
-  - **2.2.3 STORYLINE (D4 RELU/pool, D5 FFN+GELU)**
-- **2.3 Layer 2 (D4 only)** (tiny D5 only 1 layer)
-  - **2.3.1 Initial (D4) convolute** (~~D5)
-  - **2.3.3 STORYLINE (D4 RELU/pool)** (~~D5)
-- **2.4 Compute logits**
-- **2.5 Select label**
-- **2.6 Auto-recursive (D5 only)** -- GOTO 2.1b
+  - **2.2.1 Context sharing** (D4 convolute / D5 AH).
+  - **2.2.3 Storyline computation** (D4 RELU/pool, D5 FFN/GELU).
+- **2.3 Layer 2** (D4 only; tiny D5 only 1 layer, but this section describe what it would be).
+  - **2.3.1 Context sharing** (D4 convolute; D5 description only).
+  - **2.3.3 Storyline computation** (D4 RELU/pool; D5 description only).
+- **2.4 Compute logits** (D4 FC classified / D5 W(unembed)).
+- **2.5 Select label** (pick best candidate / convert to label; D4 -> ASCII token(s); D5 -> ASCII token).
+- **2.6 Auto-recursive (D5 only)** (add the new token to the response and input current prompt/response window to the TF (step2.1b)).
 
 <br>
 
