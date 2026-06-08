@@ -10,7 +10,7 @@ The **[TL;DR](/0-tldr/)** page describes how ZiptieAI can get you started with A
 Recently updated pages of interest:
 - **[D4 DIY tiny CNN demo](/2.3.6.1b-d5-tiny-tf-algorithm-details/)** (image recognition)
 - **[D5 DIY tiny transformer (TF) demo](/2.2.1-d4-cnn-image-classifier/)** (token generation)
-- **[Detailed comparison of D4 CNN / D5 TF algorithms](/2.2b-cnn-tf-comparison/)** (describes how **D4 AND D5 are BOTH input classifiers**; a new TF token simply classifies the TF input tokens, like a CNN label classifies the CNN pixel input)
+- **[Detailed comparison of D4 CNN / D5 TF algorithms](/2.2b-cnn-tf-comparison/)** (describes how **D4 AND D5 are BOTH input classifiers**; the generated new TF token simply classifies the TF input tokens, like a CNN label classifies the CNN pixel input)
 
 <br>
 

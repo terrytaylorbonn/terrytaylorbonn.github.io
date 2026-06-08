@@ -6,7 +6,7 @@ permalink: /0-tldr/
 
 <br>
 
-TL;DR = "too long; didn't read". This page describes the gist of this site without having to read the entire site.
+TL;DR = "too long; didn't read". **This page describes the gist of this site** without having to read the entire site.
 
 **TOC**
 - 1 Magical A/C units
@@ -35,9 +35,9 @@ The ad popped up again and I was able to snap a screenshot! Buy yours today from
 
 ### **2 Magical AI units**
 
-If you thought glacierbreeze was awesome (with its abilities to cool big rooms in no time using almost no energy and without requiring a hose to push hot air outside), then you ain't seen nothing yet. AI has 
-- amazing capabilities (first and foremost real intelligence from a clocked binary state machine that will soon reach super-human AGI intelligence!) and
-- very low costs (computing a single token on GPT-3 required up to a million billion (10^15) FP calculations... and I pay $20/month for GPT to generate massive numbers of tokens). 
+If you thought glacierbreeze was awesome (with its abilities to cool big rooms in no time using almost no energy and without requiring a hose to push hot air outside), then you ain't seen nothing yet. AI supposedly has 
+- **2.1 Amazing capabilities**. First and foremost **a clocked binary state machine that has real intelligence that will soon reach super-human AGI levels**.
+- **2.2 Very low costs**. Computing **a single token on GPT-3 required up to a million billion (10^15) FP calculations**. I pay $20/month for GPT-5 to generate massive numbers of tokens. 
     
 <br>
 
@@ -56,10 +56,19 @@ The same old AI **hype**. I don't even have to watch the video to know the basic
 
 #### **2.2 Very low cost**
 
-(TODO)
+The Youtube A/C commercials often talk about how **some little gadget can cool an entire room in a few minutes while using vastly less electricity** than what you are using now. 
 
-if you really understand just how much computing you can get with a $20 a month GPT description, then you realize that someone is for some reason giving you a huge discount... but why, and for how long?). 
+Once you get familiar with AI algorithms, you start to realize **the massive amount of brute-force computation required to generate AI output**. I personally get the feeling that I am not paying near what my actual usage costs. I've read such opinions quite often recently. I think if you really understand just how much computing you can get with a $20 a month GPT description, then you realize that **someone is for some reason giving you a huge discount... but why, and for how long?**. 
 
+I typed out some of the **[conversation with Ed Zitron](https://youtu.be/W2vgx5mHaYA?t=42)** of EZ Primary Research. 
+
+*"people are confusing a semiconductor rally with an underlying business which really doesn't exist... **their (Anthropic) growth is coming because people cannot measure how much an AI task actually costs**. And a couple of months ago Anthropic started charge their enterprise customers the actual token rates. .... **they are having trouble justifying the AI spend based on the actual return that one can actually measure**. So you have a thing that you can measure the costs and you cant measure the return on investment. What do you call that? you call that a thing without an ROI." He later goes on to talk about OpenAI and Anthropic as dangerous companies that face no real scrutiny. ... **People are creating workflows around it based on services they likely can not afford long term**.*
+
+On 26.0608 I saw a video about **Trump proposing that the US government invests in AI companies and allows all Americans to share all those massive profits that will come in the near future**. A while back the AI titans were wanting government guarantees for loans for AI infrastructure investment. It sounds like the strategy for getting government subsidies has taken a new twist.
+
+In any case, **nuclear power recently became safe and effective**. I wonder why... maybe future cheaper sources of power and ever more efficient GPUs will make the cost of AI something that people are really willing to pay full price for. 
+
+<img src="/assets/00-ai-nukes.png" alt="drones" width="28%"> 
 
 <br>
 
