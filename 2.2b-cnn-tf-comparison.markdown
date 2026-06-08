@@ -8,17 +8,24 @@ permalink: /2.2b-cnn-tf-comparison/
 
 <br>
 
-### TL;DR (the reason I wrote this ZAI webpage)
+### **TL;DR (the reasons I created this ZAI webpage)**
 
-<!-- On the **[ZiptieAI TL;DR page](/0-tldr/)** I compare the hype around AI to the hype of a cheap popup ad on Youtube that is selling magical A/C units. To me the claims of AGI being just around the corner have the same level of integrity and honesty (as do claims about mankind colonizing Mars; an idea that under minimal scientific scrutiny reveals itself to be idiotic; such nonsense about AI is pushed by the AI gurus and titans regularly).
+I knew very early on when i started studying AI that 
+- **LLM transformers (TFs) and CNNs (convoluted neural networks) were attacking a similar problem**. 
+- And that **figuring out how the far less complex CNN worked would be a great stepping stone to understanding how an LLM TF works** 
+- And the differences between would shed light on the common denominator (the NN) in both of them.
 
-AI tools are extremely useful. When used properly (as with most things). Their proper usage is limited, which means limited income for the AI industry. But proper usage means more income for you as an end user.  Hype means you get ripped off. -->
+But my biggest motivation was curiousity.  
 
-I knew very early on when i started studying AI that **LLM transformers (TFs) and CNNs (convoluted neural networks) were attacking a similar problem**. And that **figuring out how the far less complex CNN worked would be a great stepping stone to understanding how an LLM TF works** (and thus the core of LLM AI). But my biggest motivation was curiousity.  
+This page is my comparison of the 
+- **[Tiny CNN demo](/2.2.1-d4-cnn-image-classifier/)** and the 
+- **[Tiny TF demo](/2.3.6.1-d5-tiny-tf/)**. 
 
-This page is my comparison of the **[Tiny CNN demo](/2.2.1-d4-cnn-image-classifier/)** and the **[Tiny TF demo](/2.3.6.1-d5-tiny-tf/)**. GPT agrees with my core conclusions (GPT conversations are listed on this page; "ME:" is my own text, "GPT" is GPT text). 
+I could not have done this without GPT's assistance (GPT agrees with my core conclusions). Note that 
+- "ME:" is my own text. 
+- "GPT:" indicates GPT commentary.
 
-v1 of this doc was posted on 26.0607. For more info see 
+For more info see 
 - [#607\_2.1\_core\_NNs\_.docx](https://drive.google.com/drive/folders/1-Adawag9uA8_bq-hDF-nOuPYaRLz1eEO)
 - [__ziptieai_BOOK1_CNN_.docx](https://drive.google.com/drive/folders/1-Adawag9uA8_bq-hDF-nOuPYaRLz1eEO)
 - [__ziptieai_BOOK2_LLM_.docx](https://drive.google.com/drive/folders/1-Adawag9uA8_bq-hDF-nOuPYaRLz1eEO)
@@ -27,7 +34,7 @@ v1 of this doc was posted on 26.0607. For more info see
 
 ### **Top level TOC**
 - **1 ME/GPT: The essence of CNNs and TFs (input classifiers)**. A short page with a few diagrams of CNNs/TFs (they dont look similar) and and very short discussion with GPT (GPT agrees that they are similar).
-- **2 ME: Comparison of CNN and TF algorithms (diagrams)**. A detailed descripion of the algorithm workflows for **Tiny CNN and Tiny TF (my demos)** that show how the algorithms are doing basically the same thing.
+- **2 ME: Comparison of CNN and TF algorithms (diagrams)**. A detailed description of the algorithm workflows for **Tiny CNN and Tiny TF (my demos)** that show how the algorithms are doing basically the same thing.
 - **3 ME/GPT: CNNs/TFs are all classifiers (discussion)**. More detailed discussions with GPT. 
 - **4 ME/GPT: CNNs could be turned into generators**. The one big difference is that CNNs dont run a generation loop. But they could. 
 
@@ -316,19 +323,30 @@ FC classifier (NN) for detection appears here for D4 because
 
 ### **2.5 Select label**
 
-**2.5-D4 Pick best / convert to label (ASCII tokens)** (d4d5-5-D4 )
+**2.5-D4 Pick best logit / convert to label (ASCII tokens)** <!-- (d4d5-5-D4 ) -->
 
-xxx
+For example in the D4 demo "7".
 
-**2.5-D5 Pick best / convert to label (ASCII token (just one))** (d4d5-5-D5)
+**2.5-D5 Pick best logit / convert to label (ASCII token (just one))** <!-- (d4d5-5-D5) -->
 
-xxx
+For example "e" in the D5 demo. 
 
 <br>
 
-### **2.6 Auto-regressive -- GOTO 2.1b (D5 only)**
+### **2.6 Auto-regressive (D5 only)**
 
-**2.6-D5 Auto-regressive** (d4d5-6-D5)
+**2.6-D5 Auto-regressive** <!-- (d4d5-6-D5) -->
+
+"Auto-regressive" simply means that 
+- the new token (that classifies the previous input)
+- is added to the running prompt/response 
+- (the token window is shifted if its already full),
+- and the whole process repeats WITH TOKENS.
+
+Why "with tokens"? I would guess that since 
+- the addition of just one new token totally changes the system
+- so everything must be recomputed from scratch.
+
 
 <br>
 
