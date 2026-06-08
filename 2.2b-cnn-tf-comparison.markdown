@@ -100,6 +100,12 @@ As an "essence" model rather than a mechanical one, I think that's a coherent fr
 
 **D4/D5 (CNN/TF) combined main diagram**
 
+Less detail.
+
+<img src="/assets/00-side-by-side.png" alt="drones" width="42%">
+
+More detail.
+
 <img src="/assets/d4d5-00-main.png" alt="drones" width="50%">
 
 **D4 CNN (tiny) layers**
@@ -118,30 +124,41 @@ As an "essence" model rather than a mechanical one, I think that's a coherent fr
 
 ### **2.1 Initial input**
 
-**2.1-D4 CNN image** (d4d5-1-D4)
+**2.1-D4 CNN image** <!-- (d4d5-1-D4) -->
 
 - 28x28 pixels. 
-- each pixel value <> TF token.
+- Each pixel value corresponds to a TF token. This means that in D4 CNN there were 784 inputs and for D5 TF there was just one. 
 
-<img src="/assets/d4d5-1-D4.png" alt="drones" width="27%">
+<!-- The result would be a number (like 401) that means something like "Siamese cat".
+- There is no feedback loop. -->
 
-**2.1-D5 TF tokens** (d4d5-1-D5)
+<img src="/assets/d4d5-1-D4bbb.png" alt="drones" width="14%">
 
-xxxx
+**2.1-D5 TF tokens** <!-- (d4d5-1-D5) -->
 
-<img src="/assets/d4d5-1-D5xxx.png" alt="drones" width="27%">
+For the D5 demo the input was just "h", a single letter. 
+The actual binary encoding for that letter is 01101000 or 0x68 (hex).
+*Note that this value, unlike the pixel values (which might be grey, RGB, CYMK, etc) in an encoding that does not represent in any way meaning.*
+
+The following shows a more typical initial input.
+
+<img src="/assets/d4d5-1-D5bbb.png" alt="drones" width="27%">
+
+
+<!-- <img src="/assets/d4d5-1-D5xxx.png" alt="drones" width="27%"> -->
 
 <br>
 
 ### **2.1b Convert input (D5 only)**
 
 
-**2.1b-D5 Convert ASCII to dims ("embed")** (d4d5-1b-D5)
+**2.1b-D5 Convert ASCII to dims ("embed")** <!-- (d4d5-1b-D5) -->
 
-xxxx
+Conver the 0x68 to a set floating point (FP) numbers that represent the meaning of "h" in the TF algorithm. In D5 this is an initial 8x1 matrix of 8 FP numbers (8 dims, dimensions; diagram shows 16).
 
-<img src="/assets/d4d5-1-D5.png" alt="drones" width="27%">
+<!-- <img src="/assets/d4d5-1-D5bbb.png" alt="drones" width="27%"> -->
 
+<img src="/assets/d4d5-2.1-D5bbb.png" alt="drones" width="32%">
 
 <br>
 
@@ -151,51 +168,72 @@ xxxx
 
 #### **2.2.1 Initial convolute/AH**
 
-**2.2.1-D4 CNN convolute** (kernels-1, filters-1) (d4d5-2.1-D4)
+**2.2.1-D4 CNN convolute** (kernels-1, filters-1) <!-- (d4d5-2.1-D4) -->
 
--	3x3x8. 
--	3x3 <> TF AH.
--	8 <> TF emb dims
--	RESULT: 
--	still 28x28 <> # TF of tokens.
--	but 8 dims per pixel <> 8 dims per token.
+-	Filter is 3x3x8. 
+-	3x3 kernel inputs info from neighboring pixels (corresponds to TF AHs).
+-	8 "filters" (used to create a depth of meaning of 8 for each pixel; corresponds to 8 TF token dims).
+-	Result: 
+   - Still 28x28 "pixels" (these no longer represents grey/colors, but rather meaning) (this corresponds to the # of TF tokens).
+   - But now 8 dims per pixel (corresponds to 8 dims (FP numbers) per token).
 
 
 <img src="/assets/d4d5-2.1-D4.png" alt="drones" width="25%">
 
-**2.2.1-D5 TF AH/context** (d4d5-2.1-D5)
+**2.2.1-D5 TF AH/context** <!-- (d4d5-2.1-D5) -->
 
-xxxxxx
+- Each token has 8 dims (I think 16 is wrong). 
+- TF uses a complex QKV computational scheme to 
+  - detect the token's "neighbors in meaning"
+  - and how much each neighbor should contribute to conteext of current token.
+
 
 <img src="/assets/d4d5-2.1-D5.png" alt="drones" width="27%">
 
 <br>
 
 
-#### **2.2.3 STORYLINE** (D4 pool (partial, finish after all layers), D5 FFN (each layer))
+#### **2.2.3 Storyline** 
 
-AH softmax is not kind of activation talking about here.
+For 
+- D4 pool (partial, finish after all layers)
+- D5 FFN (each layer)
 
+**2.2.3-D4 CNN Relu / Pool** <!-- (d4d5-2.3-D4) --> 
 
-**2.2.3-D4 CNN Relu / Pool** (d4d5-2.3-D4) (THIS IS LIKE HALF OF AN FFN.. other half in 2.4)
+This is like half of an FFN. The other half is in 2.4.
 
-RELU  2.2.2-D4 CNN RELU** (d4d5-2.2-D4)
+<!-- RELU  2.2.2-D4 CNN RELU** (d4d5-2.2-D4)
+<img src="/assets/d4d5-2.2-D4.png" alt="drones" width="8%"> -->
 
-<img src="/assets/d4d5-2.2-D4.png" alt="drones" width="8%">
+- RELU activation.
+- 2x2 max pool with p=1 results in 14x14 pixels (1/4 of original)
+  - This corresponds to the TF storyline higher level that only has 1/4 original tokens in storyline. 
+- Note: CNN has used no equivalent yet of TF FFNs (that comes later).
 
-
--	2x2 p=1 resuts in 14x14 pixels (1/4 original) <> TF storyline high level only has 1/4 original tokens in storyline 
--	NOTE: CNN has no equivalent yet of TF FFNs
-
-<img src="/assets/d4d5-2.3-D4.png" alt="drones" width="30%">
+<img src="/assets/d4d5-2.3-D4.png" alt="drones" width="33%">
 
 **2.2.3-D5 TF FFN (+GELU)** 
 
-(d4d5-2.4-D5)
+*Note: AH softmax is often mentioned as part of the non-linear activation in TF. I disagree with this. Its non-linear about which neighbors are chosen for context; it does not introduce non-linearity into the context computations.*
 
-<img src="/assets/d4d5-2.4-D5.png" alt="drones" width="38%">
+<!-- (d4d5-2.4-D5) -->
 
-(d4d5-2.3-D5)
+The following diagram shows 2 word combos 
+- "pretty far"
+- "pretty flower"
+
+The word "pretty" above has 2 very different meanings. 
+- The only way to "detect" such combinations ("features") in the TF dims (the dims are not words, but rather encoded meanings) is with an NN. 
+- D5 FFN has 16 inputs (token dims), 64 h layer neurons/outputs, and 16 y layer neurons/outputs.
+- Basically the complex features are detected in the h layer and added to dims in y layer.  
+
+<img src="/assets/d4d5-2.4-D5.png" alt="drones" width="40%">
+
+<!-- (d4d5-2.3-D5) -->
+
+- This supports evolution of the "storyline" in the token dims (to ever higher levels of abstraction). 
+- The TF storyline corresponds to the increasingly higher level astraction encoded in the increasingly fewer "pixels" in D4 CNN.
 
 <img src="/assets/d4d5-2.3-D5.png" alt="drones" width="23%">
 
@@ -204,6 +242,8 @@ RELU  2.2.2-D4 CNN RELU** (d4d5-2.2-D4)
 <!-- ## PAGE3 ===================== -->
 
 ### **2.3 Layer 2** (D4 only; D5 very simple)
+
+<br>
 
 #### **2.3.1 (2nd) Initial (D4) convolute (~~D5)**
 
@@ -223,9 +263,12 @@ RELU  2.2.2-D4 CNN RELU** (d4d5-2.2-D4)
 
 WOULD BE THE SAME AS First layer except PARAMS different
 
-#### **2.3.3 (2nd) STORYLINE (D4 RELU/pool) (~~D5)
+<br>
+
+#### **2.3.3 (2nd) STORYLINE (D4 RELU/pool)** (~~D5)
 
 D4 pool (partial, finish after all layers)
+
 
 **2.3.3-D4 CNN RELU2/pool2**
 -	2x2 p=1 resuts in 7x7 pixels (1/4 of previous, 1/16 of original) 
@@ -316,7 +359,76 @@ TFs are vastly more complex because
 
 ## **4 ME/GPT: CNNs could be turned into generators**
 
+#### GPT: One thing I'd add:
+Transformers are not just classifiers.
+A CNN MNIST model is:
+```
+image
+ ↓
+class
+```
 
+A transformer is often doing:
+```
+context
+ ↓
+predict next token
+```
+over and over.
+
+So the model is simultaneously:
+- classifier
+- generator
+- memory system
+- context tracker
+
+which further increases the required capacity.
+
+#### ME: you could turn a CNN into a generator by just injecting output back into the input.
+
+Yes, in principle.
+What you're describing is:
+```
+output
+  ↓
+becomes new input
+  ↓
+output
+  ↓
+becomes new input
+  ↓
+...
+```
+
+which is a common pattern in generative systems.
+For example, your MNIST CNN:
+```
+image
+ ↓
+CNN
+ ↓
+digit class
+```
+is not generative.
+
+But imagine:
+```
+image_t
+ ↓
+CNN
+ ↓
+image_(t+1)
+```
+
+The interesting part is that once you add the feedback loop:
+- CNN
+- RNN
+- Transformer
+- JEPA
+- World Model
+can all become dynamical systems that evolve state over time rather than merely classifying a single static input. That's one reason you've often described transformers as "hosting an algorithm"—the architecture provides the machinery, and the feedback loop lets that machinery run iteratively.
+
+<br>
 
 26.0608 (v1 26.0607) 
 
