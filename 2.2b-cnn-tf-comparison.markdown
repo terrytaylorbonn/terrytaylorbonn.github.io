@@ -75,11 +75,18 @@ As an "essence" model rather than a mechanical one, I think that's a coherent fr
 
 ## **2 ME: Comparison of CNN and TF algorithms (diagrams)**
 
-- 2.0 Overview diagrams
+- 2.0 MAIN LOOP diagrams
+  - D4/D5
+  - D4
+  - D5
 - 2.1 Initial input
-- 2.1b Convert ASCII to dims ("embed") (no conversion required for CNN input)
+- 2.1b Convert ASCII to dims ("embed") D5 only (no conversion required for CNN input)
 - 2.2 Layer 1
-- 2.3 Layer 2
+  - 2.2.1 Initial convolute/AH
+  - 2.2.3 STORYLINE (D4 RELU/pool, D5 FFN+GELU)
+- 2.3 Layer 2 (D4 only (tiny D5 only 1 layer)
+  - 2.3.1 Initial (D4) convolute (~~D5)
+  - 2.3.3 STORYLINE (D4 RELU/pool) (~~D5)
 - 2.4 Logits
 - 2.5 Convert to label
 - 2.6 Auto-recursive
@@ -135,7 +142,7 @@ xxxx
 
 <br>
 
-#### **2.2.1 Initial embedding**
+#### **2.2.1 Initial convolute/AH**
 
 **2.2.1-D4 CNN convolute** (kernels-1, filters-1) (d4d5-2.1-D4)
 
@@ -185,19 +192,15 @@ RELU  2.2.2-D4 CNN RELU** (d4d5-2.2-D4)
 
 <img src="/assets/d4d5-2.3-D5.png" alt="drones" width="23%">
 
-
-
 <br>
 
 <!-- ## PAGE3 ===================== -->
 
+### **2.3 Layer 2** (D4 only; D5 very simple)
 
-### **2.3 Layer 2**
+#### **2.3.1 (2nd) Initial (D4) convolute (~~D5)**
 
-#### **2.3-D4 Layer 2 (Convolution/RELU/Pool)** (d4d5-3-D4)
-
-
-**2.3.1-D4 Filter2**
+**2.3.1-D4 CNN convolute** (kernels-2, filters-2) (d4d5-3-D4)
 -	3x3x16. 
 -	3x3 <> TF AH.
 -	16 <> TF emb dims
@@ -208,19 +211,24 @@ RELU  2.2.2-D4 CNN RELU** (d4d5-2.2-D4)
   - 9 pixels in each dim.
 - this is <> TF dims being computed from other dims of current token + QKV neighbors 
 
-**2.3.2-D4 RELU2**
 
-**2.3.3-D4 CNN pool2**
+**2.3.1-D5 ~~D5 TF AH/context** (NOT IN D5)
+
+WOULD BE THE SAME AS First layer except PARAMS different
+
+#### **2.3.3 (2nd) STORYLINE (D4 RELU/pool) (~~D5)
+
+D4 pool (partial, finish after all layers)
+
+**2.3.3-D4 CNN RELU2/pool2**
 -	2x2 p=1 resuts in 7x7 pixels (1/4 of previous, 1/16 of original) 
 -	<> TF storyline higher level now only has 1/16 original tokens in storyline 
 -	NOTE: CNN has no equivalent yet of TF FFNs
 
-
 <img src="/assets/d4d5-3-D4.png" alt="dronesxxx" width="29%">
 
-<br>
 
-### **2.3-D5 Layer 2 (in D5 only 1 layer)** (d4d5-3-D5)
+**2.3.3-D5 ~~D5 Layer 2 (in D5 only 1 layer)** (d4d5-3-D5)
 
 xxxx
 
