@@ -157,35 +157,42 @@ xxxxxx
 
 <br>
 
+#### **2.2.2 "activation"**
 
-#### **2.2.3 STORYLINE** (D4 pool (partial, finish after all layers), D5 FFN (each layer))
+(TF does later in FFN)  .... AH softmax is not kind of activation talking about here.
 
-AH softmax is not kind of activation talking about here.
+**2.2.2-D4 CNN RELU** (d4d5-2.2-D4)
 
-
-**2.2.3-D4 CNN Relu / Pool** (d4d5-2.3-D4) (THIS IS LIKE HALF OF AN FFN.. other half in 2.4)
-
-RELU  2.2.2-D4 CNN RELU** (d4d5-2.2-D4)
+xxxx
 
 <img src="/assets/d4d5-2.2-D4.png" alt="drones" width="8%">
 
+<br>
+
+#### **2.2.3 STORYLINE** (D4 pool (partial, finish after all layers), D5 FFN (each layer))
+
+**2.2.3-D4 CNN Pool** (d4d5-2.3-D4) (THIS IS LIKE HALF OF AN FFN.. other half in 2.4)
 
 -	2x2 p=1 resuts in 14x14 pixels (1/4 original) <> TF storyline high level only has 1/4 original tokens in storyline 
 -	NOTE: CNN has no equivalent yet of TF FFNs
 
 <img src="/assets/d4d5-2.3-D4.png" alt="drones" width="30%">
 
-**2.2.3-D5 TF FFN (+GELU)** 
-
-(d4d5-2.4-D5)
-
-<img src="/assets/d4d5-2.4-D5.png" alt="drones" width="38%">
-
-(d4d5-2.3-D5)
+**2.2.3-D5 TF Storyline** (d4d5-2.3-D5)
 
 <img src="/assets/d4d5-2.3-D5.png" alt="drones" width="23%">
 
+<br>
 
+#### **2.2.4 FFN**
+
+(this was done earlier for CNN)
+
+**2.2.4-D5 FFN (+GELU)** (d4d5-2.4-D5)
+
+xxxxx
+
+<img src="/assets/d4d5-2.4-D5.png" alt="drones" width="38%">
 
 <br>
 
