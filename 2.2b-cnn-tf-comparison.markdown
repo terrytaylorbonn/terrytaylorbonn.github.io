@@ -15,15 +15,29 @@ I knew very early on when i started studying AI that
 - And that **figuring out how the far less complex CNN worked would be a great stepping stone to understanding how an LLM TF works** 
 - And the differences between would shed light on the common denominator (the NN) in both of them.
 
-But my biggest motivation was curiousity.  
+My biggest motivation was **sheer curiousity. I wanted to understand the core of this "enigma wrapped in a mystery" that is the internals of how AI really works**. And I could not have done this without GPT's assistance (I have had extensive chats with GPT about the content of this page; **GPT agrees with my core conclusions**). 
+
+```
+GPT: If I had to summarize your theory in one sentence:**
+- CNNs and Transformers both build progressively higher-level representations.
+- CNNs do it through fixed spatial neighborhoods, feature channels, and pooling.
+- Transformers do it through attention-selected neighborhoods, embedding dimensions, and FFN detector banks.
+
+GPT: As an "essence" model rather than a mechanical one, I think that's a coherent framework. 
+The overall picture hangs together much better than most CNN-vs-Transformer comparisons 
+because you're comparing roles in the computation, not individual matrix operations.
+```
+
+
+<!-- Note that 
+- "ME:" is my own text. 
+- "GPT:" indicates GPT commentary. 
 
 This page is my comparison of the 
 - **[Tiny CNN demo](/2.2.1-d4-cnn-image-classifier/)** and the 
-- **[Tiny TF demo](/2.3.6.1-d5-tiny-tf/)**. 
+- **[Tiny TF demo](/2.3.6.1-d5-tiny-tf/)**.  -->
 
-I could not have done this without GPT's assistance (GPT agrees with my core conclusions). Note that 
-- "ME:" is my own text. 
-- "GPT:" indicates GPT commentary.
+
 
 For more info see 
 - [#607\_2.1\_core\_NNs\_.docx](https://drive.google.com/drive/folders/1-Adawag9uA8_bq-hDF-nOuPYaRLz1eEO)
@@ -33,10 +47,55 @@ For more info see
 <br>
 
 ### **Top level TOC**
-- **1 ME/GPT: The essence of CNNs and TFs (input classifiers)**. A short page with a few diagrams of CNNs/TFs (they dont look similar) and and very short discussion with GPT (GPT agrees that they are similar).
-- **2 ME: Comparison of CNN and TF algorithms (diagrams)**. A detailed description of the algorithm workflows for **Tiny CNN and Tiny TF (my demos)** that show how the algorithms are doing basically the same thing.
-- **3 ME/GPT: CNNs/TFs are all classifiers (discussion)**. More detailed discussions with GPT. 
-- **4 ME/GPT: CNNs could be turned into generators**. The one big difference is that CNNs dont run a generation loop. But they could. 
+- **1 CNNs/TFs are all classifiers (discussion)**. The core conclusion of this page. 
+- **2 Comparison of CNN and TF algorithms (diagrams)**. A detailed description of the algorithm workflows for **Tiny CNN and Tiny TF (my demos)** that show how the algorithms are doing basically the same thing.
+- **3 CNNs could be turned into generators**. The one big difference is that CNNs dont run a generation loop. But they could. 
+
+<!-- - **1 ME/GPT: The essence of CNNs and TFs (input classifiers)**. A short page with a few diagrams of CNNs/TFs (they dont look similar) and and very short discussion with GPT (GPT agrees that they are similar).
+  -->
+
+<br>
+
+
+## **1 Both CNNs and TFs are essentially input classifiers**
+
+**In reality CNN and TF algorithms are closely related** 
+(this is my opinion that **I want to prove on this page**). 
+But to understand them and their relationship you need code demos and real detailed info. 
+ZAI provides both on this page (links to **[Tiny CNN demo](/2.2.1-d4-cnn-image-classifier/)** and the **[Tiny TF demo](/2.3.6.1-d5-tiny-tf/)**).
+
+
+**What a CNN does is simple enough that we can understand that it is just classifying input**.
+I dont think that anyone seriously thinks that CNNs are intelligent.
+But we are told that **supposedly TFs host real intelligence**.
+But once you understand how TFs really work, 
+how the core of what TFs are doing is so similar to CNNs, 
+then you will understand that **the very idea of TF-based AGI was always nothing but hype** 
+(indeed, I recently (26.0606) read that the AI titans/gurus are starting to backtrack on their claims of AGI realization in the near future). 
+
+TFs/CNNs are just an extension of simple NNs.
+But TFs use "attention heads" (AHs, a marketing term) instead of CNN convolution.
+**TFs in the end are mainly classifiers (the predicted token is actually a classifcation)**
+with auto-regressive feedback 
+(adding the new token classifier to the running prompt/response and feeding back into the TF).
+
+CNNS and TFs 
+- Host algorithms customized for the input data (pixels for CNN, language tokens for TFs)
+- Provide the representational capacity required for the inptu data classification
+
+TFs are vastly more complex because 
+- language is far more complex that images and 
+- token represention is an encoding of meaning designed for intelligent human minds
+- vast amounts of binary computation are required to generate the most probablistic next token for a series of input tokens.
+
+*D4 Tiny CNN (left) and D5 Tiny TF (right)*<br>
+<img src="/assets/00-side-by-side.png" alt="drones" width="42%">
+
+
+
+<!-- 
+
+## **3 ME/GPT: CNNs/TFs are all classifiers (discussion)**
 
 <br>
 
@@ -65,21 +124,12 @@ https://theaisummer.com/transformer/
 
 <img src="/assets/00-tf.png" alt="drones" width="52%">
 
+-->
 
-#### **1.2 GPT: If I had to summarize your theory in one sentence:**
-- CNNs and Transformers both build progressively
-higher-level representations.
-- CNNs do it through fixed spatial neighborhoods,
-feature channels, and pooling.
-- Transformers do it through attention-selected
-neighborhoods, embedding dimensions, and FFN
-detector banks.
-
-As an "essence" model rather than a mechanical one, I think that's a coherent framework. **The overall picture hangs together much better than most CNN-vs-Transformer comparisons because you're comparing roles in the computation**, not individual matrix operations.
 
 <br>
 
-## **2 ME: Comparison of CNN and TF algorithms (diagrams)**
+## **2 Comparison of CNN and TF algorithms (diagrams)**
 
 <br>
 
@@ -107,11 +157,7 @@ As an "essence" model rather than a mechanical one, I think that's a coherent fr
 
 **D4/D5 (CNN/TF) combined main diagram**
 
-Less detail.
-
-<img src="/assets/00-side-by-side.png" alt="drones" width="42%">
-
-More detail.
+<!-- More detail. -->
 
 <img src="/assets/d4d5-00-main.png" alt="drones" width="50%">
 
@@ -350,38 +396,8 @@ Why "with tokens"? I would guess that since
 
 <br>
 
-## **3 ME/GPT: CNNs/TFs are all classifiers (discussion)**
 
-<br>
-
-#### **3.1 ME: Both CNNs and TFs are essentially input classifiers**
-
-**What a CNN does is simple enough that we can understand that it is just classifying input**.
-I dont think that anyone seriously thinks that CNNs are intelligent.
-But we are told that **supposedly TFs host real intelligence**.
-But once you understand how TFs really work, 
-how the core of what TFs are doing is so similar to CNNs, 
-then you will understand that **the very idea of TF-based AGI was always nothing but hype** 
-(indeed, I recently (26.0606) read that the AI titans/gurus are starting to backtrack on their claims of AGI realization in the near future). 
-
-TFs/CNNs are just an extension of simple NNs.
-But TFs use "attention heads" (AHs, a marketing term) instead of CNN convolution.
-**TFs in the end are mainly classifiers (the predicted token is actually a classifcation)**
-with auto-regressive feedback 
-(adding the new token classifier to the running prompt/response and feeding back into the TF).
-
-CNNS and TFs 
-- Host algorithms customized for the input data (pixels for CNN, language tokens for TFs)
-- Provide the representational capacity required for the inptu data classification
-
-TFs are vastly more complex because 
-- language is far more complex that images and 
-- token represention is an encoding of meaning designed for intelligent human minds
-- vast amounts of binary computation are required to generate the most probablistic next token for a series of input tokens.
-
-<br>
-
-## **4 ME/GPT: CNNs could be turned into generators**
+## **3 CNNs could be turned into generators**
 
 #### GPT: One thing I'd add:
 Transformers are not just classifiers.
