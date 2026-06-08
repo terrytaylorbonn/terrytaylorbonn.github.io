@@ -241,33 +241,36 @@ The word "pretty" above has 2 very different meanings.
 
 <!-- ## PAGE3 ===================== -->
 
-### **2.3 Layer 2** (D4 only; D5 very simple)
+### **2.3 Layer 2** (D4 only)
+
+*TF usually has multiple layers, but D5 only had one.*
 
 <br>
 
-#### **2.3.1 (2nd) Initial (D4) convolute (~~D5)**
+#### **2.3.1 2nd D4 convolute / D5 AH**
 
 **2.3.1-D4 CNN convolute** (kernels-2, filters-2) (d4d5-3-D4)
 -	3x3x16. 
 -	3x3 <> TF AH.
--	16 <> TF emb dims
+-	16 <> TF emb dims.
 -	RESULT: 
--	still 14x14 <> # TF of tokens.
--	but each pixel now has 16 dims; each pixel was computed from 72 previous pixels 
-  - previous 8 dims and 
-  - 9 pixels in each dim.
-- this is <> TF dims being computed from other dims of current token + QKV neighbors 
+  -	still 14x14 <> # TF of tokens.
+  -	but each pixel now has 16 dims; each pixel was computed from 72 previous pixels
+    - previous 8 dims and
+    - 9 pixels in each dim.
+  - this is <> TF dims being computed from other dims of current token + QKV neighbors.
 
 
-**2.3.1-D5 ~~D5 TF AH/context** (NOT IN D5)
+**2.3.1-D5 D5 TF AH/context** (not in D5)
 
-WOULD BE THE SAME AS First layer except PARAMS different
+This would be the same as layer 1 except parameters (W, b) different.
 
 <br>
 
-#### **2.3.3 (2nd) STORYLINE (D4 RELU/pool)** (~~D5)
+#### **2.3.3 2nd D4 storyline
 
-D4 pool (partial, finish after all layers)
+- D4 pool (partial, finish after all layers)
+- No D5 FFN (D5 has only 1 layer)
 
 
 **2.3.3-D4 CNN RELU2/pool2**
@@ -278,9 +281,9 @@ D4 pool (partial, finish after all layers)
 <img src="/assets/d4d5-3-D4.png" alt="dronesxxx" width="29%">
 
 
-**2.3.3-D5 ~~D5 Layer 2 (in D5 only 1 layer)** (d4d5-3-D5)
+**2.3.3-D5 FFN2/GELU2** <!-- (d4d5-3-D5) -->
 
-xxxx
+If there was a TF layer 2, the storyline would be even higher abstraction.
 
 <img src="/assets/d4d5-3-D5.png" alt="drones" width="25%">
 
@@ -288,23 +291,26 @@ xxxx
 
 ### **2.4 Compute logits**
 
-**2.4-D4 FC classifier** (d4d5-4-D4)
+**2.4-D4 FC classifier** <!-- (d4d5-4-D4) -->
 
-FC classifier 
--	<> TF FFN + Wunembed COMBINED (the reason for this: h layer style detection was not required in every CNN layer because the nature of pixel input is vastly simpler than for text; CNN required far fewer dims per pixel than TF required per pixel, so the TF needed to do the detection earlier)
--	784 inputs (7x7x16) <>  TF last tone 12288 dims
--	only 1/16 of original pixels <> TF everything is in last token  
--	select 1/10 classifiers for D4 <> TF select 1/50K classifiers
+FC classifier (NN) for detection appears here for D4 because 
+-	Was not required in every CNN layer because 
+   - the nature of pixel input is vastly simpler than for text; 
+   - CNN required far fewer dims per pixel than TF required per pixel
+   - (so the TF needed to do the detection earlier)
+-	Only 784 inputs (7x7x16) (TF last token 12288 dims)
+-	Only 1/16 of original pixels (TF everything is in last token)  
+-	Only select 1/10 classifiers for D4 (TF select 1/50K classifiers)
 
 <img src="/assets/d4d5-4-D4.png" alt="drones" width="33%">
 
-**2.4-D5 Wunembed** (d4d5-4-D5)
+**2.4-D5 Wunembed** <!-- (d4d5-4-D5) -->
 
-Takes the 16 dimensions of the last token hidden layer.
-Perform Wx + b to get 8 logits (8 vocab entries).
-Determine the most likely logit.
+- Takes the 16 dimensions of the last token hidden layer.
+- Perform Wx + b to get 8 logits (8 vocab entries).
+- Determine the most likely logit.
 
-<img src="/assets/d4d5-4-D5.png" alt="drones" width="30%">
+<img src="/assets/d4d5-4-D5.png" alt="drones" width="25%">
 
 <br>
 
