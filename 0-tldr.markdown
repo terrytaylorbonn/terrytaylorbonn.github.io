@@ -13,7 +13,7 @@ TL;DR = "too long; didn't read". **This page describes the gist of this site** w
 - 2 Magical AI units 
   - 2.1 Amazing capabilities
   - 2.2 Very low cost
-- 3 How I know the latest AI claims are are hype
+- 3 How I know AI has no real intelligence (its a no brainer)
 - 4 Learning how to separate the AI wheat from the chaff (using ZiptieAI)
 - 5 "Agentic" AI and AI agents (using ZiptieAI)
 
@@ -72,7 +72,7 @@ In any case, **nuclear power recently became safe and effective**. I wonder why.
 
 <br>
 
-### **3 How I know the latest AI claims are hype**
+### **3 How I know AI has no real intelligence (its a no brainer)**
 
 **Docx #607** (on the **[Gdrive](https://drive.google.com/drive/folders/1-Adawag9uA8_bq-hDF-nOuPYaRLz1eEO)**) chapter **"D6 — Tiny Pattern Detector Neural Network"** shows how to build a simple NN (and run on local PC with no GPU). The NN detects the sequence "1,1,1" in a list of 10 numbers. 
 
