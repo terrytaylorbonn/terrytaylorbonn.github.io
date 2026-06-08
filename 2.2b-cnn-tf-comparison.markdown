@@ -91,7 +91,7 @@ As an "essence" model rather than a mechanical one, I think that's a coherent fr
   - **2.3.3 Storyline computation** (D4 RELU/pool; D5 description only).
 - **2.4 Compute logits** (D4 FC classified / D5 W(unembed)).
 - **2.5 Select label** (pick best candidate / convert to label; D4 -> ASCII token(s); D5 -> ASCII token).
-- **2.6 Auto-recursive (D5 only)** (add the new token to the response and input current prompt/response window to the TF (step2.1b)).
+- **2.6 Auto-regressive (D5 only)** (add the new token to the response and input current prompt/response window to the TF (step2.1b)).
 
 <br>
 
@@ -277,9 +277,9 @@ xxx
 
 <br>
 
-### **2.6 Auto-recursive -- GOTO 2.1b (D5 only)**
+### **2.6 Auto-regressive -- GOTO 2.1b (D5 only)**
 
-**2.6-D5 Auto-recursive** (d4d5-6-D5)
+**2.6-D5 Auto-regressive** (d4d5-6-D5)
 
 <br>
 

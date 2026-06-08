@@ -5,9 +5,14 @@ title: Home
 
 <br>
 
-The **[TL;DR](/0-tldr/)** page describes how ZiptieAI can get you started in AI ASAP. The primary **[focus](/0-site-focus/)** of this site is on hands-on **[demos](/0b-demos/)** for **[AI (models)](/2_models/)** and **[agents](/3_agents/)** *(see the latest demo -- a **[DIY tiny transformer](/2.3.6.1b-d5-tiny-tf-algorithm-details/)**)*. 
+The **[TL;DR](/0-tldr/)** page describes how ZiptieAI can get you started in AI ASAP. The primary **[focus](/0-site-focus/)** of this site is on hands-on **[demos](/0b-demos/)** for **[AI (models)](/2_models/)** and **[agents](/3_agents/)**. 
 
+Recently updated pages of interest:
+- **[D4 DIY tiny CNN demo](/2.3.6.1b-d5-tiny-tf-algorithm-details/)** (image recognition)
+- **[D5 DIY tiny transformer (TF) demo](/2.2.1-d4-cnn-image-classifier/)** (token generation)
+- **[Detailed comparison of D4 CNN / D5 TF algorithms](/2.2b-cnn-tf-comparison/)** (describes how CNN image recognition and D5 TF token generation algorithms are quite similar because they both try to solve similar problems)
 
+<br>
 
 *[ZiptieAI evolution](/0.1-zai-evolution/)* <br>
 <img src="/assets/zai_evolution7.png" alt="drones" width="42%">
