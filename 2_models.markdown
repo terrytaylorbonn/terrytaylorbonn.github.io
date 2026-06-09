@@ -56,7 +56,11 @@ A CNN computes the most probable label ("dog", "airplane", etc) for a set of pix
 
 These 2 AI architectures are much more closely related that you might think.
 
-<img src="/assets/00-side-by-side.png" alt="drones" width="22%">
+<!-- <img src="/assets/00-side-by-side.png" alt="drones" width="22%"> -->
+
+
+<img src="/assets/00-MAIN.png" alt="drones" width="30%">
+
 
 <br>
 
@@ -87,7 +91,7 @@ Where did today's AI come from? What survived? What became obsolete? What evolve
 
 <br>
 
-26.0608 (v1 26.0526)
+26.0609 (v1 26.0526)
 
 <!-- *How a UFA determines if a location is in the Netherlands or Belgium*.<br>
 <img src="/assets/belgium1.png" alt="drones" width="75%"> 
