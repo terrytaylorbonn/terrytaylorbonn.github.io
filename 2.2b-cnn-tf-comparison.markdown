@@ -12,12 +12,14 @@ Note: This page is a WIP. v1 created 26.0607.
 
 ### **TL;DR (the reasons I created this ZAI webpage)**
 
-I knew very early on when i started studying AI that 
-- **LLM transformers (TFs) and CNNs (convoluted neural networks) were attacking a similar problem**. 
+I realized very early on when I started studying AI that 
+- **LLM transformers (TFs) and CNNs (convoluted neural networks) were solving a similar problem**. 
 - And that **figuring out how the far less complex CNN worked would be a great stepping stone to understanding how an LLM TF works** 
-- And the differences between would shed light on the common denominator (the NN) in both of them.
+- What I did not expect was the realization that **TF and CNN algorithms are quite similar** (when you understand whats going on under the hood). 
+- Studying the similarities helped me understand **the common denominator in both CNNs and TFs**.
+- And that helped me understand **the core of AI in general**.
 
-My biggest motivation was **sheer curiousity. I wanted to understand the core of this "enigma wrapped in a mystery" that is the internals of how AI really works**. And I could not have done this without GPT's assistance (I have had extensive chats with GPT about the content of this page; **GPT agrees with my core conclusions**). 
+My biggest motivation was actually **sheer curiousity. I wanted to understand the core of this "enigma wrapped in a mystery" that is the internals of how AI really works**. And I could not have done this without GPT's assistance (I have had extensive chats with GPT about the content of this page; **GPT agrees with my core conclusions**). 
 
 ```
 GPT: If I had to summarize your theory in one sentence:
@@ -30,17 +32,6 @@ The overall picture hangs together much better than most CNN-vs-Transformer comp
 because you're comparing roles in the computation, not individual matrix operations.
 ```
 
-
-<!-- Note that 
-- "ME:" is my own text. 
-- "GPT:" indicates GPT commentary. 
-
-This page is my comparison of the 
-- **[Tiny CNN demo](/2.2.1-d4-cnn-image-classifier/)** and the 
-- **[Tiny TF demo](/2.3.6.1-d5-tiny-tf/)**.  -->
-
-
-
 For more info see 
 - [#607\_2.1\_core\_NNs\_.docx](https://drive.google.com/drive/folders/1-Adawag9uA8_bq-hDF-nOuPYaRLz1eEO)
 - [__ziptieai_BOOK1_CNN_.docx](https://drive.google.com/drive/folders/1-Adawag9uA8_bq-hDF-nOuPYaRLz1eEO)
@@ -49,22 +40,35 @@ For more info see
 <br>
 
 ### **Top level TOC**
-- **1 CNNs/TFs are all classifiers (discussion)**. The core conclusion of this page. 
-- **2 Comparison of CNN and TF algorithms (diagrams)**. A detailed description of the algorithm workflows for **Tiny CNN and Tiny TF (my demos)** that show how the algorithms are doing basically the same thing.
-- **3 CNNs could be turned into generators**. The one big difference is that CNNs dont run a generation loop. But they could. 
+
+- **0 My "mechanistic" view of AI**. 
+- **1 CNN/TF algorithms -- overview**.  
+- **2 CNN/TF algorithms -- details**. A detailed description of the algorithm workflows for the **[Tiny CNN demo](/2.2.1-d4-cnn-image-classifier/)** and the **[Tiny TF demo](/2.3.6.1-d5-tiny-tf/)** that show how the algorithms are doing basically the same thing.
+- **3 CNNs could be turned into generators**. The one big difference is that CNNs dont run an "autoregressive" generation loop. But they could. 
 
 <!-- - **1 ME/GPT: The essence of CNNs and TFs (input classifiers)**. A short page with a few diagrams of CNNs/TFs (they dont look similar) and and very short discussion with GPT (GPT agrees that they are similar).
   -->
 
+
 <br>
 
+## **0 My "mechanistic" view of AI** 
 
-## **1 Both CNNs and TFs are essentially input classifiers**
+I chatted quite a bit with GPT while developing the concepts for this page. **GPT often used the word "mechanistic" to describe my approach to describing CNN/TF concepts (and AI in general)**. I finally suggested to GPT that I do that because thats what AI is -- computational binary "mechanistic" algorithms. I mention this because **the word "mechanistic" is the key to understanding AI** (and my approach to AI in general).
 
-**In reality CNN and TF algorithms are closely related** 
+On page [2.0 Neural-network UFA foundations](/2.0-ufas/) I wrote the following: *This section analyzes models from a mechanical perspective, because Models ARE MECHANICAL. They run on clocked binary circuits. They have no intelligence. You could run even the most sophisticated LLM on electro-mechanical relays (it would take years to generate a token, consume the entire output of a large nuclear power plant, but its theoretically possible). AI intelligence simulation is based on (1) binary computing structures and (2) massive computing power/speed. The more you understand how AI models work, the better you can use them in AI projects.*
+
+*Electro-mechanical relay (a theoretical alternative to the GPU)*<br>
+<img src="/assets/relay.png" alt="drones" width="12%">
+
+<br>
+
+## **1 CNN/TF algorithms -- overview**
+
+<!-- **In reality CNN and TF algorithms are closely related** 
 (this is my opinion that **I want to prove on this page**). 
 But to understand them and their relationship you need code demos and real detailed info. 
-ZAI provides both on this page (links to **[Tiny CNN demo](/2.2.1-d4-cnn-image-classifier/)** and the **[Tiny TF demo](/2.3.6.1-d5-tiny-tf/)**).
+ZAI provides both on this page (links to **[Tiny CNN demo](/2.2.1-d4-cnn-image-classifier/)** and the **[Tiny TF demo](/2.3.6.1-d5-tiny-tf/)**). -->
 
 
 **What a CNN does is simple enough that we can understand that it is just classifying input**.
@@ -73,7 +77,7 @@ But we are told that **supposedly TFs host real intelligence**.
 But once you understand how TFs really work, 
 how the core of what TFs are doing is so similar to CNNs, 
 then you will understand that **the very idea of TF-based AGI was always nothing but hype** 
-(indeed, I recently (26.0606) read that the AI titans/gurus are starting to backtrack on their claims of AGI realization in the near future). 
+(indeed, I recently (26.0606) read that the AI titans/gurus are starting to backtrack on their claims of AGI realization .. at least for the near future... the gig is up). 
 
 TFs/CNNs are just an extension of simple NNs.
 But TFs use "attention heads" (AHs, a marketing term) instead of CNN convolution.
@@ -81,60 +85,42 @@ But TFs use "attention heads" (AHs, a marketing term) instead of CNN convolution
 with auto-regressive feedback 
 (adding the new token classifier to the running prompt/response and feeding back into the TF).
 
-CNNS and TFs 
-- Host algorithms customized for the input data (pixels for CNN, language tokens for TFs)
-- Provide the representational capacity required for the inptu data classification
+The driving forces behind the differences between CNNS and TFs 
+- Both are customized for the input data (pixels for CNN, language tokens for TFs)
+- Both provide the representational capacity required for the input data classification.
 
-TFs are vastly more complex because 
-- language is far more complex that images and 
-- token represention is an encoding of meaning designed for intelligent human minds
-- vast amounts of binary computation are required to generate the most probablistic next token for a series of input tokens.
-
-*D4 Tiny CNN (left) and D5 Tiny TF (right)*<br>
-<img src="/assets/00-MAIN.png" alt="drones" width="70%">
+Note: TFs are much more complex because:
+ - The written language itself is only a crude chaotic encoding of the content to be communicated.
+ - Such a system is fine for intelligent human minds that can recognize written/spoken tokens 
+ - and convert these into thoughts, concepts, etc.
+ - In contrast, TFs require vast amounts of binary computation to generate the most probablistic next token for a series of input tokens.
 
 *D4 Tiny CNN (left) and D5 Tiny TF (right)*<br>
-<img src="/assets/00-side-by-side.png" alt="drones" width="42%">
+<img src="/assets/00-MAIN.png" alt="drones" width="75%">
 
-
-
-<!-- 
-
-## **3 ME/GPT: CNNs/TFs are all classifiers (discussion)**
-
-<br>
-
+<!-- *D4 Tiny CNN (left) and D5 Tiny TF (right)*<br>
+<img src="/assets/00-side-by-side.png" alt="drones" width="42%"> -->
+<!--  ## **3 ME/GPT: CNNs/TFs are all classifiers (discussion)**<br>
 ## **1 ME/GPT: The essence of CNNs and TFs (input classifiers)**
-
 #### **1.1 ME: Typical CNN/TF diagrams**
-
 Nice looking diagrams below. 
 But can you extract real understanding from the diagrams or article text?
 There is a good chance you can grasp CNN (with a lot of study).
 But the transformer (TF diagram)... thats another story. 
-
 **In reality CNN and TF algorithms are closely related** 
 (this is my opinion that **I want to prove on this page**). 
 But to understand them and their relationship the diagrams below will never be enough.
 You need code demos and real detailed info. 
 ZAI provides both on this page (links to **[Tiny CNN demo](/2.2.1-d4-cnn-image-classifier/)** and the **[Tiny TF demo](/2.3.6.1-d5-tiny-tf/)**).
-
-
-
 https://clemsonciti.github.io/rcde_workshops/python_deep_learning/07-Convolution-Neural-Network.html 
-
 <img src="/assets/00-cnn.png" alt="drones" width="44%">
-
 https://theaisummer.com/transformer/
-
-<img src="/assets/00-tf.png" alt="drones" width="52%">
-
--->
+<img src="/assets/00-tf.png" alt="drones" width="52%"> -->
 
 
 <br>
 
-## **2 Comparison of CNN and TF algorithms (diagrams)**
+## **2 CNN/TF algorithms -- details**
 
 <br>
 
