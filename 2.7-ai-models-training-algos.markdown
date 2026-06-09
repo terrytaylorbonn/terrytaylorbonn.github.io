@@ -1,0 +1,192 @@
+---
+layout: page
+title: "2.7 AI models training algorithms"
+permalink: /2.7-ai-models-training-algos/
+---
+2.7-ai-models-training-algos.markdown
+
+
+[← 2 AI (models)](/2_models/)
+
+<br>
+
+v1 26.0609 (WIP... just a few note here... will later)
+
+## **chats unformatted 26.0609 (see docx #607)**
+
+
+=1 a bigger W (weight) means a bigger loss rate. so during loss calculations the optimizer naturally chooses big W's for modification. true? 
+Not necessarily.
+A bigger weight does not automatically mean a bigger loss contribution or a bigger update.
+What matters is the gradient, not the weight itself.
+Recall:
+•	optimizer.step()
+roughly does:
+•	W = W - learning_rate * gradient
+The update size depends on:
+•	gradient = d(loss)/dW
+not on:
+W
+________________________________________
+Example:
+Large weight, tiny gradient
+W = 1000
+gradient = 0.00001
+Update:
+ΔW = very tiny
+Weight barely changes.
+________________________________________
+Small weight, huge gradient
+W = 0.01
+gradient = 50
+Update:
+ΔW = large
+Weight changes dramatically.
+________________________________________
+A useful intuition:
+Weight = current setting of a knob
+Gradient = how much the loss wants that knob turned
+The optimizer looks at the gradient:
+"Which knobs reduce loss the fastest?"
+and turns those.
+________________________________________
+Now there is a related effect:
+For a neuron:
+z = Wx + b
+If:
+x = large
+or
+W = large
+then changing W can sometimes have a larger effect on the output, which can lead to larger gradients.
+But that is indirect.
+The optimizer is not saying:
+"This weight is big, so I'll modify it."
+It is saying:
+"This gradient is big, so I'll modify it."
+That distinction is important when you later study Adam.
+Adam's entire job is essentially:
+•	Don't just look at the current gradient.
+Also remember previous gradients.
+Adjust step sizes intelligently.
+That's why Adam is the next interesting topic after you've mastered:
+forward pass
+loss
+backward pass (gradients)
+optimizer.step()
+The gradient is the real signal. The optimizer follows the gradient, not the weight magnitude.
+
+
+=2 In fact, I would argue that for your ZiptieAI "understand AI ASAP" approach, these four are the entire training loop:
+•	forward pass
+2. loss
+3. backward pass
+4. optimizer.step()
+Everything else is details layered on top.
+________________________________________
+1. Forward pass
+pred = model(X)
+Question:
+Given the current weights,
+what output does the model produce?
+________________________________________
+2. Loss
+loss = loss_fn(pred, Y)
+Question:
+How wrong was the prediction?
+Output:
+single number
+such as:
+0.86
+0.42
+0.03
+________________________________________
+3. Backward pass
+loss.backward()
+Question:
+Which weights caused the error?
+Output:
+gradient for every weight
+Conceptually:
+weight_1 gradient = +0.7
+weight_2 gradient = -0.2
+weight_3 gradient = +0.01
+...
+________________________________________
+4. Optimizer step
+optimizer.step()
+Question:
+How should the weights change?
+Simple SGD idea:
+new_weight =
+old_weight
+-
+learning_rate * gradient
+
+Yahoo: To optimize model training efficiency, consider using the SGD loss algorithm with these steps:
+•	Initialize model parameters randomly to start the training process.
+•	Select a mini-batch of training data for each iteration.
+•	Compute the loss function to evaluate model performance on the mini-batch.
+•	Calculate the gradient of the loss with respect to the model parameters.
+•	Update the model parameters using the gradients and a predefined learning rate.
+•	Repeat the process for multiple epochs until convergence or desired accuracy is achieved.
+
+
+________________________________________
+Then repeat:
+forward
+loss
+backward
+step
+
+forward
+loss
+backward
+step
+
+forward
+loss
+backward
+step
+...
+until:
+loss ≈ small
+________________________________________
+Once these four are completely intuitive, then Adam becomes much easier.
+Without understanding gradients, Adam looks like magic.
+With understanding gradients, Adam becomes:
+"Instead of blindly following today's gradient,
+use a smarter estimate based on recent history."
+That's why I would study them in this order:
+A. forward pass
+B. loss
+C. gradients (backward)
+D. optimizer.step()
+E. SGD
+F. Adam
+You've already built enough demos (D1, D5, D6, D11) that you're seeing these four lines over and over:
+pred = model(X)
+loss = loss_fn(pred, Y)
+loss.backward()
+optimizer.step()
+Those four lines are arguably the most important training code in all of deep learning.
+
+
+
+
+
+
+
+
+
+
+
+
+ 
+
+
+
+
+
+<br> 
+
+26.0609 (v1 26.0609)

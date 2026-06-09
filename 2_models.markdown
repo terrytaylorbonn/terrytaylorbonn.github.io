@@ -20,6 +20,7 @@ permalink: /2_models/
 - 2.3 TF
 - 2.5 Robotic AI
 - 2.6 Other / historical
+- 2.7 Training algorithms (TODO)
 
 
 <!-- 3 phases of model demos for each model group:
@@ -90,6 +91,14 @@ This section does not really belong on this "2 Models" page, because this is not
 Where did today's AI come from? What survived? What became obsolete? What evolved into something else? This section will not have demos, just explanations (you run into these terms all the time, so its good to know what they are). Also good to know how this all developed. Page added 26.0603.
 
 <br>
+
+
+### [2.7 AI models training algorithms](/2.7-ai-models-training-algos/)
+
+TODO
+
+<br>
+
 
 26.0609 (v1 26.0526)
 
