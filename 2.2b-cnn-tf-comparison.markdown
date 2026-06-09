@@ -56,6 +56,8 @@ For more info see
 
 I chatted quite a bit with GPT while developing the concepts for this page. **GPT often used the word "mechanistic" to describe my approach to describing CNN/TF concepts (and AI in general)**. I finally suggested to GPT that I do that because thats what AI is -- computational binary "mechanistic" algorithms. I mention this because **the word "mechanistic" is the key to understanding AI** (and my approach to AI in general).
 
+The diagram "D4 Tiny CNN (left) and D5 Tiny TF (right)" in the next section shows remarkable similarities between the core CNN and TF algorithms. A human can recognize these right away. But **an LLM like GPT resists constantly if the idea does not mesh with the accepted terminology and orthodoxy of published AI**. Thats because **GPT is not intelligent, but a mechanistic token pattern detection. Tokens (words) are the basis of GPT's mechanistic "mind"**. 
+
 On page [2.0 Neural-network UFA foundations](/2.0-ufas/) I wrote the following: *This section analyzes models from a mechanical perspective, because **models are mechanical**. They run on clocked binary circuits. They have no intelligence. **You could run even the most sophisticated LLM algorithm/architecture on electro-mechanical relays** (it would take years to generate a token, consume the entire output of a large nuclear power plant, but its theoretically possible). AI intelligence simulation is based on (1) binary computing structures and (2) massive computing power/speed. The more you understand how AI models work, the better you can use them in AI projects.*
 
 *Electro-mechanical relay (a theoretical alternative to the GPU)*<br>
