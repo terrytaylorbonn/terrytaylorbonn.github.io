@@ -91,6 +91,9 @@ TFs are vastly more complex because
 - vast amounts of binary computation are required to generate the most probablistic next token for a series of input tokens.
 
 *D4 Tiny CNN (left) and D5 Tiny TF (right)*<br>
+<img src="/assets/00-MAIN.png" alt="drones" width="70%">
+
+*D4 Tiny CNN (left) and D5 Tiny TF (right)*<br>
 <img src="/assets/00-side-by-side.png" alt="drones" width="42%">
 
 
