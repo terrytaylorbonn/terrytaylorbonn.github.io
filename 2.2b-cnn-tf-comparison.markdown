@@ -6,6 +6,8 @@ permalink: /2.2b-cnn-tf-comparison/
 
 [← 2 Models](/2_models/)
 
+Note: This page is a WIP. v1 created 26.0607.  
+
 <br>
 
 ### **TL;DR (the reasons I created this ZAI webpage)**
@@ -18,7 +20,7 @@ I knew very early on when i started studying AI that
 My biggest motivation was **sheer curiousity. I wanted to understand the core of this "enigma wrapped in a mystery" that is the internals of how AI really works**. And I could not have done this without GPT's assistance (I have had extensive chats with GPT about the content of this page; **GPT agrees with my core conclusions**). 
 
 ```
-GPT: If I had to summarize your theory in one sentence:**
+GPT: If I had to summarize your theory in one sentence:
 - CNNs and Transformers both build progressively higher-level representations.
 - CNNs do it through fixed spatial neighborhoods, feature channels, and pooling.
 - Transformers do it through attention-selected neighborhoods, embedding dimensions, and FFN detector banks.
