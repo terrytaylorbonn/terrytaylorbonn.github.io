@@ -21,7 +21,7 @@ permalink: /about/
 
 
 - Background:
-  - Languages: English (native), **Chinese**, German, Russian
+  - Languages: English (native), **Chinese**, German, Russian (basic Ukrainian, very basic Hebrew)
   - AI demo platforms
   - Developer documentation
   - Local AI stacks
