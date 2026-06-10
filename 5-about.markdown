@@ -8,24 +8,24 @@ permalink: /about/
 
 #### **Created by Terry Taylor**
 
-Terry Taylor is an engineer, technical writer, and AI developer with a background in electrical engineering and international technology projects. He created ZiptieAI.com to document and explain modern AI systems from first principles, with a focus on transformers, agents, workflow automation, predictive AI, and robotic AI.
+Terry Taylor is an engineer, technical writer, and AI developer with a background in electrical engineering and international technology projects. He created ZiptieAI.com to document and explain modern AI systems from first principles, with a focus on 
+- neural networks (CNNs, transformers), 
+- models, and 
+- agents (workflow automation).
 
 <img src="/assets/about.png" alt="about" width="15%">
 
-#### **Current areas of interest include:**
+<!-- #### **Current areas of interest include:**
 - AI platforms and workflow automation
-- Agentic AI systems
-- Local LLM stacks
 - Predictive and data-intelligence applications
 - Robotics and world-model AI
-- Technical documentation and developer education
+- Technical documentation and developer education -->
 
 #### **Background**
 - BS Electrical Engineering, Purdue University
 - Technical documentation across engineering and product teams
-- AI demo platforms and educational projects
-- Local AI deployment and workflow automation
-- AI drone development and testing
+- AI demo platforms 
+- AI drone development
 
 #### **Languages**
 - English (native)
@@ -38,6 +38,12 @@ Terry Taylor is an engineer, technical writer, and AI developer with a backgroun
 #### **Contact**
   - <a href="mailto:{{ site.email }}">{{ site.email }}</a>
   - [linkedin.com/in/terry-taylor-biz](https://www.linkedin.com/in/terry-taylor-biz/)
+
+
+<br>
+
+26.0610 (0529)
+
 
 <!-- 
 
@@ -75,10 +81,6 @@ Terry Taylor is an engineer, technical writer, and AI developer with a backgroun
 - [We Uncovered a Hidden Wealth Transfer in the SpaceX IPO. You're Holding the Bag.](https://www.youtube.com/watch?v=sYA-z0Y8WRQ) "Elon Musk wants a SpaceX IPO valuing the company at upwards of $1.75 trillion. To get there, he got the rules changed so that index funds, with millions of Americans' retirement savings, are forced to buy in. Retirees could take huge losses, while insiders cash out." It used to be self-driving battery-powered cars, then humanoids in the home, then Mars colonies. Now the real game plan becomes obvious. Just a drop in the bucket of the AI shenanigans. 
 
 -->
-
-<br>
-
-26.0609 (0529)
 
 <!-- 
 See the Wiki page [About the author](https://github.com/terrytaylorbonn/auxdrone/wiki/About-the-author).
