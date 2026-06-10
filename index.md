@@ -5,7 +5,7 @@ title: Home
 
 <br>
 
-The **[TL;DR](/0-tldr/)** page describes how ZiptieAI can get you started with AI ASAP. The primary **[focus](/0-site-focus/)** of this site is on hands-on **[demos](/0b-demos/)** for **[AI (models)](/2_models/)** and **[agents](/3_agents/)**. 
+The **[TL;DR](/0-tldr/)** page describes how ZiptieAI can get you started with AI ASAP. The primary **[focus](/0-site-focus/)** of this site is on hands-on **[demos](/0b-demos/)** for **[NNs](/2_models/)**, **[models](/2b_models/)**, and **[agents](/3_agents/)**. 
 
 Recently updated pages:
 - **[Detailed comparison of D4 CNN / D5 TF algorithms](/2.2b-cnn-tf-comparison/)** (describes how **D4 AND D5 are BOTH input classifiers**; the generated new TF token simply classifies the TF input tokens, like a CNN label classifies the CNN pixel input)
@@ -28,7 +28,8 @@ The following describes the top-level pages *(see also the **[Wiki](https://gith
 - **[Focus](/0-site-focus/)**. Site focus.
 - **[Demos](/0b-demos/)**. For AI models and agents.
 - [1 Drones](/1-drones/). FPV/Pixhawk drones (with CNN object recognition). 
-- **[2 AI (models)](/2_models/)**. **NNs**, **CNNs** (convolution), **LLMs** (*see [2.3.1 The gist of LLMs](/2.3.1-llm-gist/)*), and **robotic AI**. The core focus is on the true nature of model "intelligence".
+- **[2 NNs](/2_models/)**. **NNs**, **CNNs** (convolution), **TFs** (transformers) (*see [2.3.1 The gist of LLMs](/2.3.1-llm-gist/)*), and **robotic NNs**. The NN is the core of AI "intelligence".
+- **[2b Models](/2b_models/)**.
 - **[3 Agents](/3_agents/)**. The main focus of this site.
 - [4 Resources](/4_resources/). Books, tech stacks, dev tools, docs, wiki, Substack, Youtube, Github, and Google Drive (*see also [Books about AI](/4.0-books/)*).
 - [About](/about/).

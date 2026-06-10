@@ -1,12 +1,12 @@
 ---
 layout: page
-title: "2 AI (models)"
+title: "2 NNs"
 permalink: /2_models/
 ---
 
 <br> 
 
-*"2 Models" in ZiptieAI evolution ([diagram](/0.1-zai-evolution/))* <br>
+*NNs inside the models ([diagram](/0.1-zai-evolution/))* <br>
 <img src="/assets/zai_evolution7.png" alt="drones" width="42%">
 
 <br>
@@ -17,7 +17,7 @@ permalink: /2_models/
 - 2.1 Core (no convolution/tf) 
 - 2.2 Convolution
 - 2.2b CNN<>TF comparison (26.0607)
-- 2.3 TF
+- 2.3 TFs
 - 2.5 Robotic AI
 - 2.6 Other / historical
 - 2.7 Training algorithms (TODO)
@@ -65,7 +65,7 @@ These 2 AI architectures are much more closely related that you might think.
 
 <br>
 
-### [2.3 LLMs (transformers)](/2.3-llms/) (iAgent + TF)
+### [2.3 TFs (transformers)](/2.3-llms/) (iAgent + TF)
 
 An LLM (1) inputs a sequence of tokens, (2) computes the probabilities of all vocabulary tokens as the next token, (3) outputs the selected new token, and finally (4) adds the new token to the next input sequence. An LLM consists of an (1) internal agent and a (2) transformer (TF) NN. **The TF is the core computational engine behind modern AI systems and the mechanism that enables modern LLM behavior**.
 
@@ -93,14 +93,14 @@ Where did today's AI come from? What survived? What became obsolete? What evolve
 <br>
 
 
-### [2.7 AI models training algorithms](/2.7-ai-models-training-algos/)
+### [2.7 Training algorithms](/2.7-ai-models-training-algos/)
 
 TODO
 
 <br>
 
 
-26.0609 (v1 26.0526)
+26.0610 (v1 26.0526)
 
 <!-- *How a UFA determines if a location is in the Netherlands or Belgium*.<br>
 <img src="/assets/belgium1.png" alt="drones" width="75%"> 
