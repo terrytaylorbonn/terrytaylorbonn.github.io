@@ -13,6 +13,8 @@ Terry Taylor is an engineer, technical writer, and AI developer with a backgroun
 - models, and 
 - agents (workflow automation).
 
+
+
 <img src="/assets/about.png" alt="about" width="15%">
 
 <!-- #### **Current areas of interest include:**
@@ -20,6 +22,8 @@ Terry Taylor is an engineer, technical writer, and AI developer with a backgroun
 - Predictive and data-intelligence applications
 - Robotics and world-model AI
 - Technical documentation and developer education -->
+
+
 
 #### **Background**
 - BS Electrical Engineering, Purdue University

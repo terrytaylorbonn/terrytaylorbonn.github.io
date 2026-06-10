@@ -8,34 +8,41 @@ permalink: /0-site-focus/
 
 ### **Site focus**
 - **1 Drones (past)** (focus on CNNs in the field)
-- **2 Models (current)** 
-- **3 Agents (current)**
-- **4 Future**
+- **2 NNs (current)** (neural networks, such as CNNs and transformers)
+- **2b Models (current)** (an internal agent + transformer)
+- **3 Agents (current)** (external agent)
+
 
 <br>
 
-# **1 Drones (past)**
+### **1 [Drones](/1-drones/)**
 
-Focus was on CNNs in the field on [Drones](/1-drones/). 
 
 *My AI drone build*<br>
-<img src="/assets/airborne2.png" alt="drones" width="35%"> <img src="/assets/6cjnano.png" alt="6c" width="25%"> 
+<img src="/assets/airborne2.png" alt="drones" width="40%"> <img src="/assets/6cjnano.png" alt="6c" width="23%"> 
 
 <br>
 
 
-# **2 Models (current)**
+### **2 [NNs](/2_models/)**
 
-Focus on a core understanding of [AI Models](/2_models/).
-
-
-**AlexNet (left) and LLM transformer (right)*<br>
+*AlexNet CNN (left) and LLM transformer (right)*<br>
 <img src="/assets/cnn2.png" alt="desc" width="35%">  <img src="/assets/tf_S1-S6.png" alt="desc" width="40%"> 
 
 
+
 <br>
 
-# **2 Agents (current)**
+### **2b [Models](/2b_models/)**
+
+
+*Agentic LLM*<br>
+<img src="/assets/brain1c.png" alt="desc" width="28%">  
+
+
+<br>
+
+### **3 [Agents](/3_agents/)**
 
 The center of the Agentic AI universe is the AI agent. 
 
@@ -43,18 +50,31 @@ The center of the Agentic AI universe is the AI agent.
 
 The agent and LLM together can doing amazing things. But they also have severe limitations. "Tuning" then to work together is the core focus. 
 
-<img src="/assets/readfile3.png" alt="drones" width="70%"> 
+<img src="/assets/readfile3.png" alt="drones" width="70%" style="border: 1px solid black;">
+
+
+
+<br>
+
+26.0610 (0528)
+
+<!-- <img src="/assets/readfile3.png" alt="drones" width="70%"> 
+<div style="display: inline-block; border: 8px solid black;">
+  <img src="/assets/readfile3.png" alt="drones" width="70%">
+</div> -->
+
 
 <!-- **Demo code: AI agents + agentic AI**. Getting the AI agent and the agentic AI LLM to work together **reliably** is the key challenge. These demos are from demo **"3 Filesystem"** in section **[3.2.4 Agentic + AI / Basic demos](/3.2.4-ai-agent-basic-demos/)**.
 
 -->
 
-<br>
+<!-- <br>
 
 # **4 Future**
 
 - If you want a (tech) job in the future: Be flexible and **learn the core AI basics (hands-on demos)**.
 - **If you want a job in AI in the future, stay flexible and focused** (things are changing quickly). <br> <img src="/assets/agentic_economy.png" alt="drones" width="75%">
+-->
 
 <!--
 **1 Nobody saw it coming**. 50 years ago — Commodore, Atari, ARPANET — nobody imagined PCs or the internet would reshape civilization. The search engine was unthinkable. What we take for granted today was science fiction. AI will be bigger. And the end state is something we probably can't yet imagine.
@@ -72,11 +92,3 @@ The agent and LLM together can doing amazing things. But they also have severe l
 
 -->
 
-<br>
-
- 
-
-
-<br>
-
-26.0528
