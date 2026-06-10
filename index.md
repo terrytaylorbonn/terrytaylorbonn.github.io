@@ -10,9 +10,6 @@ The **[TL;DR](/0-tldr/)** page describes how ZiptieAI can get you started with A
 Recently updated pages:
 - **[Detailed comparison of D4 CNN / D5 TF algorithms](/2.2b-cnn-tf-comparison/)** (describes how **D4 AND D5 are BOTH input classifiers**; the generated new TF token simply classifies the TF input tokens, like a CNN label classifies the CNN pixel input)
 
-<!-- 
-- **[D4 DIY tiny CNN demo](/2.3.6.1b-d5-tiny-tf-algorithm-details/)** (image recognition)
-- **[D5 DIY tiny transformer (TF) demo](/2.2.1-d4-cnn-image-classifier/)** (token generation) -->
 
 
 <br>
@@ -28,22 +25,28 @@ The following describes the top-level pages *(see also the **[Wiki](https://gith
 - **[Focus](/0-site-focus/)**. Site focus.
 - **[Demos](/0b-demos/)**. For AI models and agents.
 - [1 Drones](/1-drones/). FPV/Pixhawk drones (with CNN object recognition). 
-- **[2 NNs](/2_models/)**. **NNs**, **CNNs** (convolution), **TFs** (transformers) (*see [2.3.1 The gist of LLMs](/2.3.1-llm-gist/)*), and **robotic NNs**. The NN is the core of AI "intelligence".
-- **[2b Models](/2b_models/)**.
-- **[3 Agents](/3_agents/)**. The main focus of this site.
+- **[2 NNs](/2_models/)**. **NNs**, **CNNs** (convolution), **TFs** (transformers), and **robotic NNs**. The NN is the core of AI "intelligence".
+- **[2b Models](/2b_models/)**. AI models (for example, iAgent + TF for language models) packaged for practical use. Fine-tuning, local models, deployment, RAG, and model serving.
+- **[3 Agents](/3_agents/)**. Reliable workflows built around models, tools, and automation.
 - [4 Resources](/4_resources/). Books, tech stacks, dev tools, docs, wiki, Substack, Youtube, Github, and Google Drive (*see also [Books about AI](/4.0-books/)*).
 - [About](/about/).
 
-<!--  (*see also **[3.2.4 AI agent basic demos](/3.2.4-ai-agent-basic-demos/)***)  
-There are 2 types of agents
-  - **PO-agents (PO = "plain old")**. Do not use AI APIs (local or remote).
-  - **Agentic agents**. Use an AI model in the program loop. This brings lots of benefits, but lots complications and problems. Understanding how models really work (section 2 "AI (models)") is essential.
--->
+
+<!-- (*see [2.3.1 The gist of LLMs](/2.3.1-llm-gist/)*) -->
+
 
 <br>
 
 *The inspiration for the name "ZiptieAI" (left) and why its so important to understand what AI really is (right).* <br>
 <img src="/assets/ziptiedrone2.png" alt="drones" width="23%"> <img src="/assets/waymo.png" alt="drones" width="26%"> 
+
+
+<!--  (*see also **[3.2.4 AI agent basic demos](/3.2.4-ai-agent-basic-demos/)***)  
+There are 2 types of agents
+  - **PO-agents (PO = "plain old")**. Do not use AI APIs (local or remote).
+  - **Agentic agents**. Use an AI model in the program loop. This brings lots of benefits, but lots complications and problems. Understanding how models really work (section 2 "AI (models)") is essential.
+- **[D4 DIY tiny CNN demo](/2.3.6.1b-d5-tiny-tf-algorithm-details/)** (image recognition)
+- **[D5 DIY tiny transformer (TF) demo](/2.2.1-d4-cnn-image-classifier/)** (token generation) -->
 
 
 <!-- ![image](https://github.com/user-attachments/assets/6c4a9ef0-981b-4dcc-8dc3-12470d356284)
