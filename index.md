@@ -5,9 +5,9 @@ title: Home
 
 <br>
 
-The **[TL;DR](/0-tldr/)** page describes how ZiptieAI can get you started with AI ASAP. The primary **[focus](/0-site-focus/)** of this site is on hands-on **[demos](/0b-demos/)** for **[NNs](/2_models/)**, **[models](/2b_models/)**, and **[agents](/3_agents/)**. 
+*Note: Site reorganized 26.0610. I split header page **"2 AI (models)"** into **"2 NNs"** and **"2b Models"**.*
 
-Recently updated pages:
+The **[TL;DR](/0-tldr/)** page describes how ZiptieAI can get you started with AI ASAP. The primary **[focus](/0-site-focus/)** of this site is on hands-on **[demos](/0b-demos/)** for **[NNs](/2_models/)**, **[models](/2b_models/)**, and **[agents](/3_agents/)**.  Recently pages of interest:
 - **[Detailed comparison of D4 CNN / D5 TF algorithms](/2.2b-cnn-tf-comparison/)** (describes how **D4 AND D5 are BOTH input classifiers**; the generated new TF token simply classifies the TF input tokens, like a CNN label classifies the CNN pixel input)
 
 
