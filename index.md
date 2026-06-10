@@ -29,7 +29,7 @@ The following describes the top-level pages *(see also the **[Wiki](https://gith
 - **[Demos](/0b-demos/)**. For AI models and agents.
 - [1 Drones](/1-drones/). FPV/Pixhawk drones (with CNN object recognition). 
 - **[2 AI (models)](/2_models/)**. **NNs**, **CNNs** (convolution), **LLMs** (*see **[2.3.1 The gist of LLMs](/2.3.1-llm-gist/)***), and **robotic AI**. The core focus is on the true nature of model "intelligence" *(hint: there is no real intelligence, but they are still very useful if used properly (go figure))*.
-- **[3 Agents](/3_agents/)**. The main focus of this site. Agents are typical CPU-based software loops. 
+- **[3 Agents](/3_agents/)**. The main focus of this site.
 - [4 Resources](/4_resources/). Books, tech stacks, dev tools, docs, wiki, Substack, Youtube, Github, and Google Drive (*see also **[Books about AI](/4.0-books/)***).
 - [About](/about/).
 
