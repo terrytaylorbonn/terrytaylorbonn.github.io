@@ -7,10 +7,13 @@ title: Home
 
 The **[TL;DR](/0-tldr/)** page describes how ZiptieAI can get you started with AI ASAP. The primary **[focus](/0-site-focus/)** of this site is on hands-on **[demos](/0b-demos/)** for **[AI (models)](/2_models/)** and **[agents](/3_agents/)**. 
 
-Recently updated pages of interest:
-- **[D4 DIY tiny CNN demo](/2.3.6.1b-d5-tiny-tf-algorithm-details/)** (image recognition)
-- **[D5 DIY tiny transformer (TF) demo](/2.2.1-d4-cnn-image-classifier/)** (token generation)
+Recently updated pages:
 - **[Detailed comparison of D4 CNN / D5 TF algorithms](/2.2b-cnn-tf-comparison/)** (describes how **D4 AND D5 are BOTH input classifiers**; the generated new TF token simply classifies the TF input tokens, like a CNN label classifies the CNN pixel input)
+
+<!-- 
+- **[D4 DIY tiny CNN demo](/2.3.6.1b-d5-tiny-tf-algorithm-details/)** (image recognition)
+- **[D5 DIY tiny transformer (TF) demo](/2.2.1-d4-cnn-image-classifier/)** (token generation) -->
+
 
 <br>
 
