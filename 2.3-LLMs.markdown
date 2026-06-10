@@ -1,37 +1,37 @@
 ---
 layout: page
-title: "2.3 LLMs"
+title: "2.3 TFs"
 permalink: /2.3-llms/
 description: Last edit 26.0426
 ---
 
-[← 2 AI (models)](/2_models/)
+[← 2 NNs](/2_models/)
 
 <br>
 
-Demos
+<!-- Demos
 - token interaction
 - attention
 - sequence routing
-- FFNs
+- FFNs -->
 
-<br>
 
 
 This page describes 
 
-- **2.3.1 Gist of LLMs**. The gist of what an LLM model does without complex algorithms or architecture diagrams.
-- **2.3.2 Gist of the LLM TF UFA**. A marvel of engineering complexity. 
-- **2.3.3 Agentic**
-- **2.3.4 LLM transformer training**
-- **2.3.5 LLM Internal Agent**. My own invented term. iAgent + TF = LLM.
-- **2.3.6 LLM demos**
+- **2.3.1a TF gist #1**. (COMBINE WITH #2) The gist of what an LLM model does without complex algorithms or architecture diagrams.
+- **2.3.1b TF gist #2**.  of the LLM TF UFA ... A marvel of engineering complexity. 
+- **2.3.4 TF transformer training**
+- **2.3.6 TF demos**
 
-<img src="/assets/brain1b.png" alt="drones" width="22%">
+<!-- - **2.3.3 Agentic**
+- **2.3.5 LLM Internal Agent**. My own invented term. iAgent + TF = LLM. 
+
+<img src="/assets/brain1b.png" alt="drones" width="22%"> -->
 
 <br>
 
-### [2.3.1 Gist of LLMs](/2.3.1-llm-gist/)
+### [2.3.1a TF GIST #1](/2.3.1-llm-gist/)
 
 Describes in concise detail gist of what an LLM model does without describing complex algorithms or architectures. 
 
@@ -39,7 +39,7 @@ Describes in concise detail gist of what an LLM model does without describing co
 
 <br>
 
-### [2.3.2 Gist of the LLM TF UFA (GPT-3)](/2.3.2-tf-algorithm/)
+### [2.3.1b TF GIST #2](/2.3.2-tf-algorithm/)
 
 This will give you an appreciation of the vast complexity of TF calculations.
 
@@ -47,13 +47,13 @@ This will give you an appreciation of the vast complexity of TF calculations.
 
 <br>
 
-### [2.3.3 Agentic LLMs](/2.3.3-agentic-llms/)
+<!-- ### [2.3.3 Agentic LLMs](/2.3.3-agentic-llms/)
 
 Core concepts of the LLM functionality that is critical for agentic AI.
 
-<br>
+<br> -->
 
-### [2.3.4 LLM transformer training](/2.3.4_llm-tf-training/)
+### [2.3.4 TF transformer training](/2.3.4_llm-tf-training/)
 
 Training is something most of us will never do (Palantir uses standard models; they do no customized training). But Training is the defining aspect of model transformer (TF) design.
 
@@ -61,25 +61,19 @@ Training is something most of us will never do (Palantir uses standard models; t
 
 <br>
 
-### 2.3.5 LLM Internal Agent
 
-The term "agent" normally means a deterministic (non-AI, not GPU-based) control loop that is the "caretaker" or interface between the LLM model and the outside world. However, there is also an agent (what I call an internal agent or "iAgent") in the LLM that is the interface between the transformer (TF) and the outside (of the LLM) world. Again, as with training, understanding this helps to understand the core nature of what an LLM and an agent is. An (external) agent is to some extent just an extension or a partner of the internal agent. 
 
-<img src="/assets/iagent.png" alt="iagent" width="32%">
+### [2.3.6 TF demos](/2.3.6-llm-demos/)
 
-<br>
-
-### [2.3.6 LLM demos](/2.3.6-llm-demos/)
-
-Contains 2 sets of demos
 - **New low level demos**. Just understanding on a low-level how LLMs really work (at least the transformer part) can greatly increase your ability to design LLM-based AI projects. <br>
 <img src="/assets/d5_0.png" alt="drones" width="45%"><br><br>
-- **Older higher level demos**. The level of expertise required to deploy, fine-tune or even create your own LLMs will go down in the future. <br>
-<img src="/assets/smol.png" alt="smol" width="55%">
+
+<!-- - **Older higher level demos**. The level of expertise required to deploy, fine-tune or even create your own LLMs will go down in the future. <br>
+<img src="/assets/smol.png" alt="smol" width="55%"> -->
 
 <br>
 
-26.0530
+26.00610 (reorg) (0530)
 
 <!-- The wiki page [**"AI LLM stacks"**](https://github.com/terrytaylorbonn/auxdrone/wiki/AI-stacks) (a bit chaotic after a recent wiki reorganization) lists the following subpages are of interest:
  - [2.2 Demo deployments (HF, CloudFlare, etc)](https://github.com/terrytaylorbonn/auxdrone/wiki/LLM-stacks-%5C-2-Demo-deployments)

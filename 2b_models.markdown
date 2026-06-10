@@ -6,7 +6,7 @@ permalink: /2b_models/
 
 <br> 
 
-This page (v1 26.0610) defines how **[NNs](/2_models/)** are packaged into models **[models](/2b_models/)**. 
+This page (v1 26.0610) describes model internals.
 
 <br>
 
@@ -18,6 +18,24 @@ This page (v1 26.0610) defines how **[NNs](/2_models/)** are packaged into model
 **TOC**
 
 xxxxx
+
+<br>
+
+## **FROM PART 2**
+
+
+### [2b.3.1 LLM gist](/2b.3.1-llm-gist/) (**NEED TO THIN OUT TF STUFF ??**)
+
+### [2b.3.3 Agentic LLMs](/2b.3.3-agentic-llms/)
+
+### [2b.3.6 LLM demos](/2b.3.6-llm-demos/)
+
+
+### 2.3.5 LLM Internal Agent
+
+The term "agent" normally means a deterministic (non-AI, not GPU-based) control loop that is the "caretaker" or interface between the LLM model and the outside world. However, there is also an agent (what I call an internal agent or "iAgent") in the LLM that is the interface between the transformer (TF) and the outside (of the LLM) world. Again, as with training, understanding this helps to understand the core nature of what an LLM and an agent is. An (external) agent is to some extent just an extension or a partner of the internal agent. 
+
+<img src="/assets/iagent.png" alt="iagent" width="32%">
 
 
 <br>

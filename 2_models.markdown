@@ -14,13 +14,13 @@ permalink: /2_models/
 **TOC**
 
 - 2.0 Concepts
-- 2.1 Core (no convolution/tf) 
+- 2.1 Core NNs 
 - 2.2 Convolution
-- 2.2b CNN<>TF comparison (26.0607)
-- 2.3 TFs
-- 2.5 Robotic AI
-- 2.6 Other / historical
-- 2.7 Training algorithms (TODO)
+- 2.2b CNN<>TF comparison
+- 2.3 Transformers (TFs)
+- 2.5 Robotic AI NNs
+- 2.6 Historical NNs
+- 2.7 TF training algorithms (TODO)
 
 
 <!-- 3 phases of model demos for each model group:
@@ -29,7 +29,6 @@ permalink: /2_models/
 - P3 OTS fine-tuned -->
 
 <br>
-
 
 ### [2.0 Concepts](/2.0-ufas/)
 
@@ -59,13 +58,11 @@ These 2 AI architectures are much more closely related that you might think.
 
 <!-- <img src="/assets/00-side-by-side.png" alt="drones" width="22%"> -->
 
-
 <img src="/assets/00-MAIN.png" alt="drones" width="30%">
-
 
 <br>
 
-### [2.3 TFs (transformers)](/2.3-llms/) (iAgent + TF)
+### [2.3 TFs (transformers)](/2.3-llms/)
 
 An LLM (1) inputs a sequence of tokens, (2) computes the probabilities of all vocabulary tokens as the next token, (3) outputs the selected new token, and finally (4) adds the new token to the next input sequence. An LLM consists of an (1) internal agent and a (2) transformer (TF) NN. **The TF is the core computational engine behind modern AI systems and the mechanism that enables modern LLM behavior**.
 
@@ -77,28 +74,26 @@ Note: The following diagram shows the **extra functionality ("reasoning", etc) t
 
 <br>
 
-### [2.5 Robotic AI](/2.5-robotic-ai/)
+### [2.5 Robotic AI NNs](/2.5-robotic-ai/)
 
-This section does not really belong on this "2 Models" page, because this is not a different model type. I originally put it here because I believed LeCun's hype about his version of JEPA that would be a fundamentally different type of AI platform that would fix the fundamental limitations of LLMs (it doesnt, and never will). Right now this does not interest me too much... ***robotic AI (that claims to be able to do what humans can do) is about as realistic as FSD or colonizing Mars.**
+I no longer believe LeCun's hype about his version of JEPA that will supposedly be a fundamentally different type of AI platform (that fixes the fundamental limitations of LLMs; it doesnt, and never will). I have put this section on pauses. ***Robotic AI (that claims to be able to do what humans can do) is about as realistic as LLM intelligence, FSD, or colonizing Mars.**
 
 *A Waymo "self-drives" into a flooded street.* <br>
 <img src="/assets/waymo.png" alt="drones" width="22%"> 
 
 <br>
 
-### [2.6 Other / historical](/2.6-ai-models-historical/)
+### [2.6 Historical NNs](/2.6-ai-models-historical/)
 
 Where did today's AI come from? What survived? What became obsolete? What evolved into something else? This section will not have demos, just explanations (you run into these terms all the time, so its good to know what they are). Also good to know how this all developed. Page added 26.0603.
 
 <br>
-
 
 ### [2.7 Training algorithms](/2.7-ai-models-training-algos/)
 
 TODO
 
 <br>
-
 
 26.0610 (v1 26.0526)
 
@@ -175,5 +170,3 @@ Agentic LLMs (all major LLMs are agentic) are LLMs programmed with the required 
 <img src="/assets/brain1c.png" alt="drones" width="27%">
 
 <br> -->
-
-

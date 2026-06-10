@@ -1,11 +1,12 @@
 ---
 layout: page
-title: "2.3.6 TF demos"
-permalink: /2.3.6-llm-demos/
+title: "2b.3.6 LLM demos"
+permalink: /2b.3.6-llm-demos/
 description: Last edit 26.0426
 ---
 
-[← 2.3 TFs](/2.3-llms/)
+[← 2b Models](/2b_models/)
+
 
 <br>
 
@@ -16,37 +17,6 @@ An LLM consists of:
 See also __ziptieai_BOOK2_LLM_.docx the [Gdrive](https://drive.google.com/drive/folders/1-Adawag9uA8_bq-hDF-nOuPYaRLz1eEO).
 
 <!-- <img src="/assets/brain1b.png" alt="drones" width="22%"> -->
-
-<br>
-
-# Newer demos (2026.0529+)
-
-<br>
-
-#### **Demo 5: [2.3.6.1 D5 Tiny TF](/2.3.6.1-d5-tiny-tf/)** (26.0529)
-
-Runs locally in CPU mode. 
-
-<img src="/assets/d5_0.png" alt="drones" width="39%">
-
-<br>
-
-#### **Demo 5b: [2.3.6.1b D5 tiny TF algorithm details](/2.3.6.1b-d5-tiny-tf-algorithm-details/)** (26.0602)
-
-This page describes 
-- every line of code in the demo 
-- the details of "attention heads", FFNs, etc
-
-<img src="/assets/2.3.6.1b-forward.png" alt="drones" width="33%">
-
-
-<!-- <img src="/assets/d4_alexnet.png" alt="drones" width="15%"> -->
-
-<br>
-
-#### **Demo 11: Tiny TF classifier (TODO)**
-#### **Demo 12: Tiny TF sentiment detector (TODO)**
-#### **Demo 13: Tiny TF sequence predictor (TODO)**
 
 <br>
 
@@ -64,4 +34,5 @@ The wiki page [**"AI LLM stacks"**](https://github.com/terrytaylorbonn/auxdrone/
 
 <br>
 
-26.0603 (v1 26.0529)
+
+26.0610 (v1 26.0529)
