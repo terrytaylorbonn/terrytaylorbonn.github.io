@@ -6,9 +6,11 @@ permalink: /3_agents/
 
 <br> 
 
-**Conceptual summary of agents**:
+Conceptual summary of agents:
 - Agent = any external (to the LLM) program that calls the LLM API. Basically plays the role of a human during chat (but can do much more).
 - Agent + AI = an LLM is used as a useful assistant.
+
+<br>
 
 *Agentic AI in ZiptieAI evolution ([about this diagram](/0.1-zai-evolution/))* <br>
 <img src="/assets/zai_evolution7.png" alt="drones" width="42%">

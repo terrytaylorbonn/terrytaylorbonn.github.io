@@ -6,9 +6,11 @@ permalink: /2b_models/
 
 <br> 
 
-This page was created 26.0610 with the goal of defining how the NNs from section 2 "NNs" are packaged into models. This was in response very long (and confusing) discussing with GPT. 
+This page (v1 26.0610) defines how **[NNs](/2_models/)** are packaged into models **[models](/2b_models/)**. 
 
-*"2 Models" in ZiptieAI evolution ([diagram](/0.1-zai-evolution/))* <br>
+<br>
+
+*Models in the AI ecosystem* <br>
 <img src="/assets/zai_evolution7.png" alt="drones" width="42%">
 
 <br>

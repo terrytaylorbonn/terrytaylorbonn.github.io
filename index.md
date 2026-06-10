@@ -22,13 +22,13 @@ Recently updated pages:
 The following describes the top-level pages *(see also the **[Wiki](https://github.com/terrytaylorbonn/auxdrone/wiki)**)*.  
 
 - **[TL;DR](/0-tldr/)**.
-- **[Focus](/0-site-focus/)**. Site focus.
-- **[Demos](/0b-demos/)**. For AI models and agents.
-- [1 Drones](/1-drones/). FPV/Pixhawk drones (with CNN object recognition). 
+- **[Focus](/0-site-focus/)** of this site.
+- **[Demos](/0b-demos/)** of neural networks, models, and agents.
+- [1 Drones](/1-drones/) (FPV and Pixhawk with CNN object recognition). 
 - **[2 NNs](/2_models/)**. **NNs**, **CNNs** (convolution), **TFs** (transformers), and **robotic NNs**. The NN is the core of AI "intelligence".
-- **[2b Models](/2b_models/)**. AI models (for example, iAgent + TF for language models) packaged for practical use. Fine-tuning, local models, deployment, RAG, and model serving.
+- **[2b Models](/2b_models/)**. AI models (for example, iAgent + TF for language models) packaged for practical use. <!-- Fine-tuning, local models, deployment, RAG, and model serving. -->
 - **[3 Agents](/3_agents/)**. Reliable workflows built around models, tools, and automation.
-- [4 Resources](/4_resources/). Books, tech stacks, dev tools, docs, wiki, Substack, Youtube, Github, and Google Drive (*see also [Books about AI](/4.0-books/)*).
+- [4 Resources](/4_resources/). Books, tech stacks, dev tools, docs, wiki, Substack, Youtube, Github, and Google Drive.
 - [About](/about/).
 
 

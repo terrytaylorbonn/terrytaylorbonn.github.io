@@ -6,7 +6,7 @@ permalink: /2_models/
 
 <br> 
 
-*NNs inside the models ([diagram](/0.1-zai-evolution/))* <br>
+*NNs (inside the models)* <br>
 <img src="/assets/zai_evolution7.png" alt="drones" width="42%">
 
 <br>

@@ -6,7 +6,7 @@ permalink: /0-site-focus/
 
 <br>
 
-### **Site focus**
+
 - **1 Drones (past)** (focus on CNNs in the field)
 - **2 NNs (current)** (neural networks, such as CNNs and transformers)
 - **2b Models (current)** (an internal agent + transformer)
