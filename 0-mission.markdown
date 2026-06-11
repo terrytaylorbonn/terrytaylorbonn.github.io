@@ -63,11 +63,11 @@ A central myth that is being pushed is that AI is in control.
 Think for a minute what AI integration into a companys digital infrastructure would be like if AI was truly intelligent. You just put AI in control, in the center, and the old infrastructure is AI's slave. **Turnkey integration.**
 
 **But AI is not intelligent. AI is based 100% on deterministic binary algorithms that compute statistical probabilities.** Therefore, it can not be the central loop (NNs are not control loops). **AI is an addon.** 
-- It must be custom built into the system. 
-- Use AI where it adds judgment, classification, summarization, prediction, or pattern detection. 
-- The most reliable AI systems use the smallest AI component that can solve the uncertain part of the workflow
+- AI must be custom built into the system. 
+- AI is used only where judgment, classification, summarization, prediction, or pattern detection is required. 
+- The most reliable AI systems use the smallest AI component that can solve the uncertain part of the workflow.
 
-Deterministic code for control, validation, permissions, execution, logging, and safety. Thats the existing company code base. AI must be added on. And added on by those who understand **AI's significant risks and limitations**. Thats why Palantir employs **Forward deploy engineers** (FDEs).
+Deterministic code for control, validation, permissions, execution, logging, and safety. Thats the existing company code base. AI must be added on. And added on by those who understand **AI's significant risks and limitations**. Thats why Palantir employs **forward deployed engineers** (FDEs).
 
 <br>
 
