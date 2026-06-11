@@ -87,7 +87,9 @@ The NN is the core of AI "intelligence". A NN provides a pattern matching algori
 
 <!-- Thats why FDE's, because they understand how the system must be tweeked to get an acceptable error rate. -->
 
-**Tiny demo D2ccc** (from **[2.1 Core NNs](/2.1-predictive-nns/)**) 
+**Tiny demo D2ccc** 
+
+*Note: I created this version of the D2 demo on 26.0611. I documented the details in **[docx #607](https://drive.google.com/drive/folders/1-Adawag9uA8_bq-hDF-nOuPYaRLz1eEO)**. Its similar to D2 demo on page **[2.1 Core NNs](/2.1-predictive-nns/)**.*
 
 1) The short bit of code shown below defines the D2ccc Tiny Demo classifier NN.
 
