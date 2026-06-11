@@ -7,7 +7,7 @@ title: Home
 
 *RECENT SITE UPDATES:* 
 - *26.0611 header page "TL;DR" replaced by "Mission". "Focus" merged into "Demos".*
-- *26.0610 Header page **"2 AI (models)"** split into **"2 NNs"** and **"2b Models"**.* 
+- *26.0610 Header page "2 AI (models)" split into "2 NNs" and "2b Models".* 
 
 <br>
 
