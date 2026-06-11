@@ -161,7 +161,9 @@ TOTALS
 - ReLU after h2: 16 comparisons
 ```
 
-5) Resulting output (**I will explain these results better later**). I intentionally lowered the training length to make the result less than optimal (easier to see).
+5) Resulting output (**I will explain these results better later**). 
+
+- I intentionally lowered the training length to make the result less than optimal (easier to see).
 - I added the green circle. It shows where the boundary should be (*in this demo you could compute the test points to see if they were in the center; an equation would work; but the point of this demo is to show how to can do that without equations and what results would be; this would be valuable for data sets that cannot be classified by a simple equation*).
 - Yellow / purple area boundary was the NN-computed from a limited data set.
 - White dots = outside area.
@@ -185,7 +187,7 @@ test 2
 
 6) Lessons learned from this demo:
 - The simple NN can classify x,y locations with good accuracy.
-- **But classification accuracy is not equation-level perfect**. In our simple demo the results were good for a small NN. But for more complex datasets the size of the NN would increase dramatically.
+- **But classification accuracy is not equation-level perfect**. In our simple demo the results were good for a small NN. But for more complex datasets the size of the NN would increase dramatically. AI must be used where the input / output relationship can not be defined with simple computation or equations. **But AI is always an approximation (UFA, universal function approximator), so the challenge is integrating AI so that the approximation errors are acceptable** (for war time planning systems OK, for self driving cars or home humanoids NOT OK).
 
 
 
