@@ -52,17 +52,17 @@ Having just praised Palantir, its now time to expose Palantir's hype.  Watch the
 - People dont understand the science. Just like with Covid and mRNA.
 - There is no incentive to talk about certain all the helpful details.
 
-The AI gurus, titans, employees (with stock options), and their financial backers all know they will get rich with the coming AI IPOs. The success of these IPO's depends greatly on the public not understanding certain aspects/myths about AI. This is also crucicial for government subsidies. *Recently some very interesting details of these IPOs have come to light.*
-
-A central myth that is being pushed is that AI is in control.
+The AI gurus, titans, employees (with stock options), and their financial backers all know they will get rich with the coming AI IPOs. The success of these IPO's depends greatly on the public not understanding certain aspects/myths about AI. *Recently some very interesting details of these IPOs have come to light.* This is also crucicial for getting government subsidies.
 
 <br>
 
 ## **4 AI is never the central control loop**
 
+A central myth that is being pushed is that AI is in control.
+
 Think for a minute what AI integration into a companys digital infrastructure would be like if AI was truly intelligent. You just put AI in control, in the center, and the old infrastructure is AI's slave. **Turnkey integration.**
 
-**But AI is not intelligent. Its deterministic binary algorithms.** Therefore, it is not the central loop, **AI is an addon.** 
+**But AI is not intelligent. AI is based 100% on deterministic binary algorithms that compute statistical probabilities.** Therefore, it can not be the central loop (NNs are not control loops). **AI is an addon.** 
 - It must be custom built into the system. 
 - Use AI where it adds judgment, classification, summarization, prediction, or pattern detection. 
 - The most reliable AI systems use the smallest AI component that can solve the uncertain part of the workflow
