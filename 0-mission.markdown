@@ -47,7 +47,7 @@ Having just praised Palantir, its now time to expose Palantir's hype.  Watch the
 
 ## **3 Why are they doing this?**
 
-- Money. That's what any sane company works for. 
+- Money. That's the motivation for any successful company. 
 - They have a product that noone understands. Just like Pfizer a few years ago.
 - People dont understand the science. Just like with Covid and mRNA.
 - There is no incentive to talk about the facts.
