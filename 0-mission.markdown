@@ -73,16 +73,121 @@ Deterministic code for control, validation, permissions, execution, logging, and
 
 ## **5 Low level demos are the key**
 
-To really understand AI, **you need to study (line by line) the code of tiny demos** of core AI functionality. Such **demos are the core of the ZAI website, and are organized into 3 sections**.
+To really understand AI, **you need to study (line by line) the code of tiny demos** of core AI functionality. Such **demos are the core of the ZAI website, and are organized into 3 sections:**
 
+- 2 NNs
+- 2b Models
+- Agents (external)
+
+<br>
 
 #### **[2 NNs](/2_models/)**
 
-The NN is the core of AI "intelligence". A NN provides a pattern matching algorithm. Thats why FDE's, because they understand how the system must be tweeked to get an acceptable error rate.
+The NN is the core of AI "intelligence". A NN provides a pattern matching algorithm. The the NN is controlled by Python code ("agent").
 
-In the tiny demos the NN is controlled by Python code (a tiny "agent").
+<!-- Thats why FDE's, because they understand how the system must be tweeked to get an acceptable error rate. -->
 
-*I will add here several diagrams of NN internals soon.*
+**Tiny demo D2ccc** (from **[2.1 Core NNs](/2.1-predictive-nns/)**) 
+
+1) The short bit of code shown below defines the D2ccc Tiny Demo classifier NN.
+
+```
+model = nn.Sequential(
+    nn.Linear(2, 16),
+    nn.ReLU(),
+    nn.Linear(16, 16),
+    nn.ReLU(),
+    nn.Linear(16, 2),  # 2 class scores/logits
+).to(device)
+```
+
+2) This is the resulting NN.
+
+
+```text2
+- W = weights, b = biases (these are the model parameters that are UPDATED during training and FIXED during inference)
+- h1-01 = hidden layer 1, neuron 01
+- h1-02 = hidden layer 1, neuron 02
+- ...
+- h2-1 = hidden layer 2, neuron 01
+- ...
+- y-1  = output neuron 1
+- y-2  = output neuron 2
+```
+
+- 50 data points
+- 100 epochs
+- num_test = 30
+
+<img src="/assets/M-01.png" alt="drones" width="43%">
+
+
+3) Computation details. 
+
+```
+x, y (inputs)
+        ▼
+Layer 1: nn.Linear(2,16)
+ h1_1 = w1*x + w2*y + b  → ReLU → a1_1
+ ...
+ h1_16= w1*x + w2*y + b  → ReLU → a1_16
+        ▼
+Layer 2: nn.Linear(16,16)
+ h2_1 = w1*a1_1 + w2*a1_2 + ... + w16*a1_16 + b  → ReLU → a2_1
+ ...
+ h2_16= w1*a1_1 + w2*a1_2 + ... + w16*a1_16 + b  → ReLU → a2_16
+       ▼
+Output layer: nn.Linear(16,2)
+ logit_outside = w1*a2_1 + w2*a2_2 + ... + w16*a2_16 + b
+ logit_inside  = w1*a2_1 + w2*a2_2 + ... + w16*a2_16 + b
+        ▼
+argmax(logits)
+        ▼
+class 0 = outside circle
+class 1 = inside circle
+```
+
+4) These are the total number of computations within the NN.
+
+```text2
+TOTALS
+- 354 wx+b operations + 32 ReLU operations = 386 simple operations per point
+- weights: 32 + 256 + 32 = 320
+- biases: 16 + 16 + 2 = 34
+- total parameters = 354
+- ReLU after h1: 16 comparisons
+- ReLU after h2: 16 comparisons
+```
+
+5) Resulting output (**I will explain these results better later**). I intentionally lowered the training length to make the result less than optimal (easier to see).
+- I added the green circle. It shows where the boundary should be (*in this demo you could compute the test points to see if they were in the center; an equation would work; but the point of this demo is to show how to can do that without equations and what results would be; this would be valuable for data sets that cannot be classified by a simple equation*).
+- Yellow / purple area boundary was the NN-computed from a limited data set.
+- White dots = outside area.
+- Red dots = NN corrected classified as in the green circle.
+- X marks = NN incorrectly classified as outside the green circle.
+
+test 1
+- 50 data points
+- 100 epochs
+- num_test = 30
+
+<img src="/assets/M-02.png" alt="drones" width="43%">
+
+test 2
+- 500 data points
+- 1000 epochs
+- num_test = 30
+
+<img src="/assets/M-03.png" alt="drones" width="43%">
+
+
+6) Lessons learned from this demo:
+- The simple NN can classify x,y locations with good accuracy.
+- **But classification accuracy is not equation-level perfect**. In our simple demo the results were good for a small NN. But for more complex datasets the size of the NN would increase dramatically.
+
+
+
+<br>
 
 
 #### **[2b Models](/2b_models/)** (with API)
@@ -90,6 +195,10 @@ In the tiny demos the NN is controlled by Python code (a tiny "agent").
 The agent and the NN are typically packed into a **model** that has an API that makes it possible for existing software to **use the model as a "helpful" assistant**. 
 
 I refer to the **code in the model that controls the TF NN as the "internal agent" (iAgent)**. This concept is central to understanding how models work. *Note: GPT has steadfastly resisted my use of this term until only recently. That's because GPT was never programmed with text that discussed such a concept.*
+
+
+<br>
+
 
 #### **[3 Agents](/3_agents/)**
 
