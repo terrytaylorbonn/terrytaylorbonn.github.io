@@ -6,7 +6,7 @@ permalink: /2b_models/
 
 <br> 
 
-This page (v1 26.0610) describes model internals.
+This very **WIP** page (v1 26.0610) describes model internals. *I spun off the content of this from page "NNs" on 26.0610 because I became convinced that creating custom models and deploying locally were going to be a big trend in the future. There is a lot of demo stuff on the Wiki that I need to move to this wepage or replicate.*
 
 <br>
 
@@ -124,5 +124,5 @@ Examples:
 <br>
 
 
-26.0610 (v1 26.0610)
+26.0611 (v1 26.0610)
 
