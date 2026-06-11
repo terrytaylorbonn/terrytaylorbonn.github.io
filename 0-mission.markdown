@@ -82,6 +82,8 @@ The NN is the core of AI "intelligence". A NN provides a pattern matching algori
 
 In the tiny demos the NN is controlled by Python code (a tiny "agent").
 
+*I will add here several diagrams of NN internals soon.*
+
 
 #### **[2b Models](/2b_models/)** (with API)
 
