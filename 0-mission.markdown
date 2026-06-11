@@ -87,12 +87,9 @@ In the tiny demos the NN is controlled by Python code (a tiny "agent").
 
 #### **[2b Models](/2b_models/)** (with API)
 
-The agent and the NN are typically packed into a **model** with an API that makes it possible for existing software to **use the model as a "helpful" assitant**. 
+The agent and the NN are typically packed into a **model** that has an API that makes it possible for existing software to **use the model as a "helpful" assistant**. 
 
-I refer to the **code in the model that controls the TF NN as the "internal agent" (iAgent)**. This concept is central to understanding how models work.
-
-*Note: GPT has steadfastly resisted the use of this term until only recently. That's because GPT was never programmed with text that discussed such a concept.*
-
+I refer to the **code in the model that controls the TF NN as the "internal agent" (iAgent)**. This concept is central to understanding how models work. *Note: GPT has steadfastly resisted my use of this term until only recently. That's because GPT was never programmed with text that discussed such a concept.*
 
 #### **[3 Agents](/3_agents/)**
 
@@ -100,7 +97,7 @@ External (not LLM internal) agents provide
 - reliable workflows built around models, tools, and automation. 
 - tolerance of AI faults and unpredictable outputs
 
-**Palantir systems first real practical application was in the military. That's no accident.**
+**Palanti's first real practical application was in the military. That's no accident.**
 - Benefits >> negatives.
 - Errors can be tolerated (not used in the nuclear forces).
 - Man in loop.
@@ -109,9 +106,9 @@ External (not LLM internal) agents provide
 
 ## **6 AI is the ultimate security risk**
 
-AI is the gatekeeper, the secret agent. The "evil" in Google's "dont be evil".
+AI is the gatekeeper, the secret agent. AI can easily become the "evil" in Google's "dont be evil".
 
-The core NN in AI is typically referred to as the "hidden layer". You can actually view the programmed ("trained") parameters for these layers, but **you have no idea what the results of these parameters are**. 
+The core NN in AI is typically referred to as the "hidden layer". You can actually view the programmed ("trained") parameters for these layers, but **you have no idea what the results of these parameters are**. When you use models from untrusted sources, you have no idea what type of data the model TF was programmed ("trained") on.
 
 <br>
 
