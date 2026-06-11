@@ -118,7 +118,7 @@ AI has big future after the IPOs are finished and the hype is over.
 But before then many will get scammed by the hype.
 Dont be one of them.
 The original ZiptieAI mission was my personal learning project.
-But now **ZiptieAI has become a site to help myself (and others) stay ahead of the curve**.
+But now **ZiptieAI has become the site to help myself (and others) stay ahead of the curve**.
 
 <br>
 
