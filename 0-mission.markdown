@@ -50,7 +50,7 @@ Having just praised Palantir, its now time to expose Palantir's hype.  Watch the
 - Money. That's the motivation for any successful company. 
 - They have a product that noone understands. Just like Pfizer a few years ago.
 - People dont understand the science. Just like with Covid and mRNA.
-- There is no incentive to talk about the facts.
+- There is no incentive to talk about certain all the helpful details.
 
 The AI gurus, titans, employees (with stock options), and their financial backers all know they will get rich with the coming AI IPOs. The success of these IPO's depends greatly on the public not understanding certain aspects/myths about AI. This is also crucicial for government subsidies. *Recently some very interesting details of these IPOs have come to light.*
 
