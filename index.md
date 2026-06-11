@@ -5,9 +5,13 @@ title: Home
 
 <br>
 
-*Note: Site reorganized 26.0610. I split header page **"2 AI (models)"** into **"2 NNs"** and **"2b Models"**.*
+*RECENT SITE UPDATES:* 
+- *26.0611 header page "TL;DR" replaced by "Mission". "Focus" merged into "Demos".*
+- *26.0610 Header page **"2 AI (models)"** split into **"2 NNs"** and **"2b Models"**.* 
 
-The **[TL;DR](/0-tldr/)** page describes how ZiptieAI can get you started with AI ASAP. The primary **[focus](/0-site-focus/)** of this site is on hands-on **[demos](/0b-demos/)** for **[NNs](/2_models/)**, **[models](/2b_models/)**, and **[agents](/3_agents/)**.  Recent pages of interest:
+<br>
+
+The **[Mission](/0-mission/)** page describes how ZiptieAI can get you started with AI ASAP. The primary site content is on hands-on **[demos](/0b-demos/)** for **[NNs](/2_models/)**, **[models](/2b_models/)**, and **[agents](/3_agents/)**.  Recent pages of interest:
 - **[Detailed comparison of D4 CNN / D5 TF algorithms](/2.2b-cnn-tf-comparison/)** (describes how **D4 AND D5 are BOTH input classifiers**; the generated new TF token simply classifies the TF input tokens, like a CNN label classifies the CNN pixel input)
 
 
@@ -21,8 +25,11 @@ The **[TL;DR](/0-tldr/)** page describes how ZiptieAI can get you started with A
 
 The following describes the top-level pages *(see also the **[Wiki](https://github.com/terrytaylorbonn/auxdrone/wiki)**)*.  
 
-- **[TL;DR](/0-tldr/)**.
-- **[Focus](/0-site-focus/)** of this site.
+<!-- - **[TL;DR](/0-tldr/)**.
+- **[Focus](/0-site-focus/)** of this site. -->
+
+
+- **[Mission](/0-mission/)**. 
 - **[Demos](/0b-demos/)** of neural networks, models, and agents.
 - [1 Drones](/1-drones/) (FPV and Pixhawk with CNN object recognition). 
 - **[2 NNs](/2_models/)**. **NNs**, **CNNs** (convolution), **TFs** (transformers), and **robotic NNs**. The NN is the core of AI "intelligence".

@@ -9,7 +9,14 @@ permalink: /0-tldr-v2/
 TL;DR = "too long; didn't read". **This page describes the gist of this site** without having to read the entire site.
 
 **TOC**
-- 1 xxxxx
+- 0 AIs big future
+- 1 Dont get scammed // Uponly tech video
+- 1b Why are they doing this?
+- 2 AI is never the central part
+- 3 low level demos are the key
+- 3b ultimate security risk
+- 4 The future
+
 
 <br>
 
@@ -40,6 +47,11 @@ zai mission ... get ready.
 
 ## **1 [Dont get scammed // Uponly tech video](https://www.youtube.com/watch?v=lcUHDsA5lzc)**
 BS. I laughed.
+
+<br>
+
+
+## **1b Why are they doing this?**
 
 <br>
 
@@ -107,6 +119,12 @@ man in loop.
 
 <br>
 
+## **3b ultimate security risk**
 
+<br>
 
-26.0610 (v1 26.0604)
+## **4 The future**
+
+<br>
+
+26.0611 (v1 26.0604)
