@@ -17,6 +17,8 @@ TL;DR = "too long; didn't read". **This page describes the gist of this site** w
 - 4 Learning how to separate the AI wheat from the chaff (using ZiptieAI)
 - 5 "Agentic" AI and AI agents (using ZiptieAI)
 
+[TL;DR (v2) (WIP)](/0-tldr-v2/)
+
 <br>
 
 ### **1 Magical A/C units**
