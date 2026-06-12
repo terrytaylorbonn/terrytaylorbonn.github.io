@@ -19,7 +19,7 @@ This page describes the **ZiptieAI mission**.
 - 1 Recognizing what works
 - 2 And what doesnt work 
 - 3 Providing core insights (demos)
-- 4 Predicting the future
+- 4 Anticipating the future
 
 -----------------<br>
 
@@ -92,6 +92,9 @@ I was quite confident in my assessment of the Palantir CTO's speech because I've
 
 The NN is the core of AI "intelligence". A NN provides a pattern matching algorithm. The the NN is controlled by Python code ("agent").
 
+*A TF NN*<br>
+<img src="/assets/M-04.png" alt="drones" width="36%"> 
+
 <!-- Thats why FDE's, because they understand how the system must be tweeked to get an acceptable error rate. -->
 
 - 3.1.1 Tiny NN demo (D2ccc) 
@@ -139,7 +142,7 @@ External (not LLM internal) agents provide
 
 <br>
 
-## **4 Predicting the future**
+## **4 Anticipating the future**
 
 AI has big a future after the IPOs are finished and the hype is over.
 Those that understand how AI really works stand to benefit the most.
