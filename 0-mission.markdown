@@ -50,24 +50,22 @@ Having just praised Palantir, its now time to expose Palantir's hype.  Watch the
 - Money. That's the motivation for any successful company. 
 - They have a product that noone understands. Just like Pfizer a few years ago.
 - People dont understand the science. Just like with Covid and mRNA.
-- There is no incentive to talk about certain all the helpful details.
+- There is no incentive to talk about the helpful details of how AI really works.
 
-The AI gurus, titans, employees (with stock options), and their financial backers all know they will get rich with the coming AI IPOs. The success of these IPO's depends greatly on the public not understanding certain aspects/myths about AI. *Recently some very interesting details of these IPOs have come to light.* This is also crucicial for getting government subsidies.
+The AI gurus, titans, employees (with stock options), and their financial backers all know they will get rich with the coming AI IPOs. The success of these IPO's depends greatly on the public not understanding certain aspects/myths about AI. *Recently some very interesting details of these IPOs have come to light that suggest a coordinated effort to mislead the public (I won't talk about because so many others are).* This also helps in getting government subsidies.
 
 <br>
 
 ## **4 AI is never the central control loop**
 
-A central myth that is being pushed is that AI is in control.
-
-Think for a minute what AI integration into a companys digital infrastructure would be like if AI was truly intelligent. You just put AI in control, in the center, and the old infrastructure is AI's slave. **Turnkey integration.**
+Think for a minute what AI integration into a companys digital infrastructure would be like if AI was truly intelligent. You just put AI in control of the existing digital infrastructure and done. **Turnkey integration.**
 
 **But AI is not intelligent. AI is based 100% on deterministic binary algorithms that compute statistical probabilities.** Therefore, it can not be the central loop (NNs are not control loops). **AI is an addon.** 
-- AI must be custom built into the system. 
-- AI is used only where judgment, classification, summarization, prediction, or pattern detection is required. 
-- The most reliable AI systems use the smallest AI component that can solve the uncertain part of the workflow.
+- Non-AI code bases have to provide deterministic functions such as control, validation, permissions, execution, logging, and safety. 
+- AI must be custom built into the system by those who understand **AI's significant risks and limitations** (thats why Palantir employs **forward deployed engineers** (FDEs)).
+- The most reliable AI systems use the smallest AI component that can provide the required functionality.
 
-Deterministic code for control, validation, permissions, execution, logging, and safety. Thats the existing company code base. AI must be added on. And added on by those who understand **AI's significant risks and limitations**. Thats why Palantir employs **forward deployed engineers** (FDEs).
+ 
 
 <br>
 
