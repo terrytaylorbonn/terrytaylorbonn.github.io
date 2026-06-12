@@ -140,6 +140,14 @@ for epoch in range(100):
 
 #### **3.1.2 Tiny CNN demo** 
 
+
+About the Tiny CNN NN and Tiny NN differences:
+- In this demo there is a NN with 2 parts
+  - Conv2d+MaxPool2d. This is not really an NN like in the Tiny NN demo. Its basically computing the evolving values of the pix's through each step and uses convolution to add in values from neighboring pix's.
+  - Linear. This is the finally "fully connected" (FC) layer that computes the probabilities of outputs. FC means that all pix's share "context", not just the neighbors via convolution. This is more like the NN in the Tiny NN demo. 
+- The reason for the difference: The nature of the data. The next demo for a transfomer will also be similar but different because the data (language tokens, not pic pixels) is different. 
+ 
+
 **3.1.2.1 ALEXNET CNN**
 
 This is a diagram that I created that explains clearly how AlexNet CNN works (my notation here makes ever step clear). There are 3 main parts.
@@ -183,9 +191,28 @@ class TinyCNN(nn.Module):
 
 <br>
 
-#### **3.1.3 Tiny TF demo** 
+#### **3.1.3 Tiny TF demo (D5)** 
 
-(TODO) 
+**(WIP)** 
+
+In D5 (diagram below):
+- Loop 1
+  - Input the letter "h" (T1).
+  - Infer. Result = "e".
+- Loop 2
+  - Input the letters "h", "e" (T1,T2).
+  - Infer. Result = "l".
+- ......
+- Loop 8
+  - Input the letters "h", "e", "l", "l", "o", " ", "w", "o", (T1...T8).
+  - Infer. Result = "r".
+- Loop 9
+  - Input the letters "e", "l", "l", "o", " ", "w", "o", "r" (T1...T8).
+  - ............
+
+
+<img src="/assets/M-09.png" alt="drones" width="70%">
+
 
 <br>
 
