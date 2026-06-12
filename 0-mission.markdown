@@ -10,6 +10,8 @@ permalink: /0-mission/
 
 This page describes the **ZiptieAI mission**. 
 
+<br>
+
 <!-- *A successful mission for AI (left) and not so successful mission (right).* <br>
 <img src="/assets/ziptiedrone2.png" alt="drones" width="23%"> <img src="/assets/waymo.png" alt="drones" width="26%">  -->
 
