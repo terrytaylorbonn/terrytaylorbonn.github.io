@@ -8,7 +8,10 @@ permalink: /0b-demos/
 
 <br>
 
-**Studying code for basic AI demos** (NNs, CNNs, LLMs, etc) is the **only way to really understand AI** (and AI hype). And its **not that difficult** nowadays, because AI tools (GPT, Sonnet, etc) do all the difficult coding and debugging for you. But **you have to supply the right prompts**. 
+This page gives an overview of all the demos on this site.
+
+
+<!-- **Studying code for basic AI demos** (NNs, CNNs, LLMs, etc) is the **only way to really understand AI** (and AI hype). And its **not that difficult** nowadays, because AI tools (GPT, Sonnet, etc) do all the difficult coding and debugging for you. But **you have to supply the right prompts**.  -->
 
 - **1 Drone demos**
 - **2 NN demos**
@@ -94,7 +97,7 @@ The agent and LLM together can doing amazing things. But they also have severe l
 
 <br>
 
-26.0611 (v1 26.0527)
+26.0612 (v1 26.0527)
 
 
 <!-- <img src="/assets/lucius.png" alt="drones" width="55%"> -->
