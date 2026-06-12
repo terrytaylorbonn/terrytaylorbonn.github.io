@@ -12,7 +12,7 @@ Primary site content is a **[quick start](/0-qs/)** + hands-on **[demos](/0b-dem
 <br>
 
 
-Top level pages *(see also the **[Wiki](https://github.com/terrytaylorbonn/auxdrone/wiki)**)*.  
+Top level pages *(see also the **[Wiki](https://github.com/terrytaylorbonn/auxdrone/wiki)** and other links in the footer)*.  
 
 - **[Mission](/0-mission/)**. 
 - **[QS](/0-qs/)**. Basically a quick hands-on tour through the AI basics.
