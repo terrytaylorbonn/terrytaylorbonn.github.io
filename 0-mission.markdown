@@ -66,6 +66,7 @@ AI is the gatekeeper of the source of truth. But the safety and reliability of t
 
 ## **3 The solution (understanding is power)**
 
+I was quite confident in my assessment of the Palantir CTO's speech because I've done a lot of AI demos. And sometimes "simple" "tiny" demos give you the most insight. 
 
 <br>
 
