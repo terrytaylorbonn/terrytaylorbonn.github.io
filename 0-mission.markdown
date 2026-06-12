@@ -45,42 +45,35 @@ Palantir is making a lot of money because they provide a product that is extreme
 
 ## **2 And what doesnt work**
 
-
 *An unsuccessful mission for AI*<br>
 <img src="/assets/waymo.png" alt="drones" width="26%"> 
 
-
 #### **The endless hype**
 
-"no more programmers" (Jensen Huang), "no more work for people" (Musk), "we must pause AI development because its not safe" (Anthropic CEO), "AI already has emotions" (Jeffrey Hinton) etc etc. 
-
-But even Palantir has its own hype. Watch the first (English) half of this fascinating **[interview of Palantir CTO](https://www.youtube.com/watch?v=lcUHDsA5lzc)**. Pure unadulterated hype. I could not help but laugh at every other sentence from the CTO.
-
-*Details about video soon.....*
-
-
+"No more programmers" (Jensen Huang), "no more work for people" (Musk), "we must pause AI development because its not safe" (Anthropic CEO), "AI already has emotions" (Jeffrey Hinton) etc etc. But even Palantir has its own hype. Watch the first (English) half of this fascinating **[interview of Palantir CTO](https://www.youtube.com/watch?v=lcUHDsA5lzc)**. Pure unadulterated hype. I could not help but laugh at every other sentence from the CTO.  *Details about video soon.....*
 
 The reasons for the hype:
 - Money. That's the motivation for any successful company. 
 - They have a product that noone understands. Just like Pfizer a few years ago.
 - People dont understand the science. Just like with Covid and mRNA.
-- There is no incentive to talk about the helpful details of how AI really works. The AI gurus, titans, employees (with stock options), and their financial backers all know they will get rich with the coming AI IPOs. The success of these IPO's depends greatly on the public not understanding certain aspects/myths about AI. *Recently some very interesting details of these IPOs have come to light that suggest a coordinated effort to mislead the public (I won't talk about because so many others are).* This also helps in getting government subsidies.
+- There is no incentive to promote anything but a merely superficial understanding of AI among the general public (and government officials). 
 
-#### **AI has no intelligence (and is never in control)**
+<!-- The AI gurus, titans, employees (with stock options), and their financial backers all know they will get rich with the coming AI IPOs. The success of these IPO's depends greatly on the public not understanding certain aspects/myths about AI. *Recently some very interesting details of these IPOs have come to light that suggest a coordinated effort to mislead the public (I won't talk about because so many others are).* -->
+
+#### **AI has no intelligence (and therefore is never in control)**
 Think for a minute what AI integration into a companys digital infrastructure would be like if AI was truly intelligent. You just put AI in control of the existing digital infrastructure and done. **Turnkey integration.** **But AI is not intelligent. AI is based 100% on deterministic binary algorithms that compute statistical probabilities.** Therefore, it can not be the central loop (NNs are not control loops). **AI is an addon.** 
-- Non-AI code bases have to provide deterministic functions such as control, validation, permissions, execution, logging, and safety. 
+- Non-AI code bases have to provide any deterministic functions such as control, validation, permissions, execution, logging, and safety. 
 - AI must be custom built into the system by those who understand **AI's significant risks and limitations** (thats why Palantir employs **forward deployed engineers** (FDEs)).
 - The most reliable AI systems use the smallest AI component that can provide the required functionality.
 
-#### **AI is the ultimate security risk**
-AI is the gatekeeper of the source of truth. But the safety and reliability of that "truth" is only as good as reputation of whoever programmed ("trained") the AI model. AI can easily become the "evil" in Google's "dont be evil". The core NN in AI has what are often referred to as "hidden layers" (HLs). These are the layers in the NN that number crunch the inputs to generate "intelligent" output. **Understanding what those HLs do by looking at the parameters is impossible**. You can not tell if there is a "backdoor" prompt waiting to be activated. **The solution: Build your own. This will get easier with time**. 
-
+#### **AI is a security risk**
+AI is the gatekeeper of the source of truth. But the safety and reliability of that "truth" is only as good as reputation of whoever programmed ("trained") the AI model. The core NN in AI has what are often referred to as "hidden layers" (HLs). These are the layers in the NN that perform number crunching to generate "intelligent" output. **Understanding what those HLs do by looking at the parameter values is impossible**. You can not tell what have been programmed into the AI core. 
 
 <br>
 
 ## **3 Providing core insights (demos)**
 
-I was quite confident in my assessment of the Palantir CTO's speech because I've done a lot of a projects. But the most insight I have gotten came from "simple" "tiny" demos. To really understand AI, **you need to study (line by line) the code of tiny demos** of core AI functionality. Such **demos are the core of the ZAI website, and are organized into 3 sections:**
+I was quite confident in my assessment of the Palantir CTO's speech because I've built many AI demo projects. But the most insight I got from "simple" "tiny" demos. Such **demos are the core of the ZAI website, and are organized into 3 sections:**
 
 - 3.1 NNs
 - 3.2 Models
@@ -100,7 +93,6 @@ The NN is the core of AI "intelligence". A NN provides a pattern matching algori
 - 3.1.1 Tiny NN demo (D2ccc) 
 - 3.1.2 Tiny CNN demo
 - 3.1.3 Tiny TF demo 
-
 
 <br>
 
