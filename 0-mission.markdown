@@ -90,17 +90,20 @@ The NN is the core of AI "intelligence". A NN provides a pattern matching algori
 
 <!-- Thats why FDE's, because they understand how the system must be tweeked to get an acceptable error rate. -->
 
-- 3.1.1 Tiny NN demo (D2ccc) 
+- 3.1.1 Tiny NN demo (D2ccc) INFERENCE
+- 3.1.1b Tiny NN demo (D2ccc) TRAINING
 - 3.1.2 Tiny CNN demo
 - 3.1.3 Tiny TF demo 
 
 <br>
 
-#### **3.1.1 Tiny NN demo (D2ccc)** *(see section 5 at the end of this page for code description)*
+#### **3.1.1 Tiny NN demo (D2ccc) INFERENCE** *(see section 5 at the end of this page for code description)*
+
+*"Inference" means normal run-time operation. Generating output from input. Training is described next.* 
 
 **This one simple NN demo will give you an understanding of the core of all AI** (including CNNs, LLMs TFs, etc). The following diagram shows the core components of the demo:
-- Encoder. All NNs only "know" numbers (including ChatGPT, Claude, etc). So if you have a dataset that is not (FP) numbers, it must be encoded (and later decoded).
-- NN. The source of "intelligence". A UFA (universal function approximator). 
+- **Encoder**. All NNs only "know" numbers (including ChatGPT, Claude, etc). So if you have a dataset that is not (FP) numbers, it must be encoded (and later decoded).
+- **NN**. The source of "intelligence". A UFA (universal function approximator). 
   - This NN inputs 2 numbers. And based on that number outputs 2 probabilities. That's it.
   - It does this using the "neurons" shown. Rather than using a logical mathematical equation for distance from center, D2ccc's **"neurons" calculate the equation** W*x+b for all the lines shown (see section 5 for details). This is **absolutely deterministic and without one iota of intelligence"**. 
   - NOTE: This is very confusing, but typical in AI discussions. In the NN diagram "x1" and "x2" are in the plot "x" and "y". NN diagram output "y1" and "y2" are the probabilities that the point is in the center green circle or not.
@@ -109,7 +112,8 @@ The NN is the core of AI "intelligence". A NN provides a pattern matching algori
   - The black X's show data points that the NN mistakenly classified as outside the circle.
   - The genius of the NN is that it can take a data combination that it has never seen and still make a good guess as to what the data is. That is also the NN's weakness. 
   - This is why scaling is so important. Because AI has no intelligence. But with much more brute force calculation, the error rate of the UFA can go down enough to give the illusion of intelligence. The marketing/hype genius of Musk is that can make "batteries" in a car a status symbol, and make "macrohard" (brute force computing) a status symbol for AI. 
-  - REMEMBER: The NN knows nothing about x,y, the circle, etc. It only computes numbers.
+  - REMEMBER: The NN knows nothing about x,y, the circle, etc. It only computes numbers. And the **NN is a clocked binary state machine**. Intelligence (human style) exists in time only, not as a series of binary states. 
+- **Decoder**. Convert from a probability for inside/outside the circle to a binary state (1 or 0; inside/outside circle).  
 
 **All of the above insight (and much more) about the CORE of AI from one tiny demo**.
 
@@ -117,6 +121,13 @@ The NN is the core of AI "intelligence". A NN provides a pattern matching algori
 <img src="/assets/M-05.png" alt="drones" width="46%">     <img src="/assets/M-02.png" alt="drones" width="26%">
 
 <br>
+
+#### **3.1.1b Tiny NN demo (D2ccc) TRAINING**
+
+(TODO) 
+
+<br>
+
 
 #### **3.1.2 Tiny CNN demo** 
 
