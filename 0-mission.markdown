@@ -21,7 +21,7 @@ This page describes the **ZiptieAI mission**.
 **TOC**
 - 1 AI's big future
 - 2 The challenges 
-- 3 The solution (understanding is power)
+- 3 The solution (demos)
 - **5 Demos overview**
 - 7 The future
 
@@ -64,7 +64,7 @@ AI is the gatekeeper of the source of truth. But the safety and reliability of t
 
 <br>
 
-## **3 The solution (understanding is power)**
+## **3 The solution (demos)**
 
 I was quite confident in my assessment of the Palantir CTO's speech because I've done a lot of AI demos. And sometimes "simple" "tiny" demos give you the most insight. 
 
