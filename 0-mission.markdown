@@ -121,11 +121,8 @@ The NN is the core of AI "intelligence". A NN provides a pattern matching algori
 
 **All of the above insight (and much more) about the CORE of AI from one tiny demo**.
 
-*Demo D2ccc*<br>
-<img src="/assets/M-05.png" alt="drones" width="46%">
-
-*D2ccc input/output plot*<br>
-<img src="/assets/M-02.png" alt="drones" width="26%">
+*Demo D2ccc (left) and test results right)*<br>
+<img src="/assets/M-05.png" alt="drones" width="46%">     <img src="/assets/M-02.png" alt="drones" width="26%">
 
 <br>
 
