@@ -223,7 +223,7 @@ External (not LLM internal) agents provide
 - reliable workflows built around models, tools, and automation. 
 - tolerance of AI faults and unpredictable outputs
 
-**Palanti's first real practical application was in the military. That's no accident.**
+**Palantir's first real practical application was in the military. That's no accident.**
 - Benefits >> negatives.
 - Errors can be tolerated (not used in the nuclear forces).
 - Man in loop.
