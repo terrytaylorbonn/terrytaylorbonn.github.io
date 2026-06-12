@@ -124,7 +124,16 @@ The NN is the core of AI "intelligence". A NN provides a pattern matching algori
 
 #### **3.1.1b Tiny NN demo (D2ccc) TRAINING**
 
-(TODO) 
+WIP. The main thing is the training input/output must match exactly what is desired in inference. Discuss following steps.
+
+```
+for epoch in range(100):
+    logits = model(X)
+    loss = loss_fn(logits, Y)
+    optimizer.zero_grad()
+    loss.backward()
+    optimizer.step()
+```
 
 <br>
 
