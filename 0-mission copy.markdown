@@ -4,17 +4,22 @@ title: Mission
 permalink: /0-mission/
 ---
 
-*v1 26.0611 **WIP**. This page replaced **[TL;DR (v1)](/0-tldr/)**.*
+*v1 26.0611 **WIP**. I have a lot of notes to still add to this page. But the core organization and concepts are fairly stable. This page replaced **[TL;DR (v1)](/0-tldr/)** on 26.0611 (the old page is still an interesting read).*
 
 <br>
 
 This page describes the **ZiptieAI mission**. 
 
-<!-- *A successful mission for AI (left) and not so successful mission (right).* <br>
-<img src="/assets/ziptiedrone2.png" alt="drones" width="23%"> <img src="/assets/waymo.png" alt="drones" width="26%">  -->
 
-**TOC**
-- 1 Recognizing what works
+
+*A successful mission for AI (left) and not so successful mission (right).* <br>
+<img src="/assets/ziptiedrone2.png" alt="drones" width="23%"> <img src="/assets/waymo.png" alt="drones" width="26%"> 
+
+
+<br>
+
+**MISSION TOC**
+- 1 Showing what works
 - 2 And what doesnt work 
 - 3 Providing core insights (demos)
 - 4 Predicting the future
@@ -25,39 +30,28 @@ This page describes the **ZiptieAI mission**.
 
 <br>
 
-## **1 Recognizing what works** 
+## **1 AI's big future** 
 
 *A successful mission for AI* <br>
-<img src="/assets/ziptiedrone2.png" alt="drones" width="23%">
+<img src="/assets/ziptiedrone2.png" alt="drones" width="23%"> <img src="/assets/waymo.png" alt="drones" width="26%"> 
 
 
-**Palantir's first real practical application was in the military. That's no accident.**
-- Benefits >> negatives.
-- Errors can be tolerated (not used in the nuclear forces).
-- Man in loop.
-
-Palantir is making a lot of money because they provide a product that is extremely useful. And they talk straight about things that others only hype about. **Engineers wont go away, their expertise is required in the AI age more than ever**. Only Palantir is saying this, because Palantir's business does **not demand the myth of AI intelligence**. Palantir is the only company that at first said that **AI will empower people, not replace them**.
-
-
-<br>
-
-## **2 And what doesnt work**
-
-
-*An unsuccessful mission for AI*<br>
-<img src="/assets/waymo.png" alt="drones" width="26%"> 
-
-
-#### **The endless hype**
-
-"no more programmers" (Jensen Huang), "no more work for people" (Musk), "we must pause AI development because its not safe" (Anthropic CEO), "AI already has emotions" (Jeffrey Hinton) etc etc. 
+Palantir is making a lot of money because they provide a product that is extremely useful. And they talk straight about things that others only hype about. **Engineers wont go away, their expertise is required in the AI age more than ever**. Only Palantir is saying this, because Palantir's business does **not demand the myth of AI intelligence** *("no more programmers" (Jensen Huang), "no more work for people" (Musk), "we must pause AI development because its not safe" (Anthropic CEO), "AI already has emotions" (Jeffrey Hinton) etc etc)*. Palantir is the only company that at first said that **AI will empower people, not replace them**.
 
 But even Palantir has its own hype. Watch the first (English) half of this fascinating **[interview of Palantir CTO](https://www.youtube.com/watch?v=lcUHDsA5lzc)**. Pure unadulterated hype. I could not help but laugh at every other sentence from the CTO.
 
 *Details about video soon.....*
 
+<br>
+
+## **2 The challenges**
 
 
+*An unsuccessful mission for AI*  <img src="/assets/waymo.png" alt="drones" width="26%"> 
+
+Just a short list .....
+
+#### **The endless hype**
 The reasons for the hype:
 - Money. That's the motivation for any successful company. 
 - They have a product that noone understands. Just like Pfizer a few years ago.
@@ -76,49 +70,55 @@ AI is the gatekeeper of the source of truth. But the safety and reliability of t
 
 <br>
 
-## **3 Providing core insights (demos)**
+## **3 The solution (demos)**
 
-I was quite confident in my assessment of the Palantir CTO's speech because I've done a lot of a projects. But the most insight I have gotten came from "simple" "tiny" demos. To really understand AI, **you need to study (line by line) the code of tiny demos** of core AI functionality. Such **demos are the core of the ZAI website, and are organized into 3 sections:**
-
-- 3.1 NNs
-- 3.2 Models
-- 3.3 Agents (external)
+I was quite confident in my assessment of the Palantir CTO's speech because I've done a lot of AI demos. And sometimes "simple" "tiny" demos give you the most insight. 
 
 <br>
 
-### **[3.1 NNs](/2_models/)**
+## **5 Demos overview**
+
+To really understand AI, **you need to study (line by line) the code of tiny demos** of core AI functionality. Such **demos are the core of the ZAI website, and are organized into 3 sections:**
+
+- 5.1 NNs
+- 5.2 Models
+- 5.3 Agents (external)
+
+<br>
+
+### **[5.1 NNs](/2_models/)**
 
 The NN is the core of AI "intelligence". A NN provides a pattern matching algorithm. The the NN is controlled by Python code ("agent").
 
 <!-- Thats why FDE's, because they understand how the system must be tweeked to get an acceptable error rate. -->
 
-- 3.1.1 Tiny NN demo (D2ccc) 
-- 3.1.2 Tiny CNN demo
-- 3.1.3 Tiny TF demo 
+- 5.1.1 Tiny NN demo (D2ccc) 
+- 5.1.2 Tiny CNN demo
+- 5.1.3 Tiny TF demo 
 
 
 <br>
 
-#### **3.1.1 Tiny NN demo (D2ccc)** *(see section 8 at the end of this page for code description)*
+#### **5.1.1 Tiny NN demo (D2ccc)** *(see section 8 at the end of this page for code description)*
 
 <img src="/assets/M-02.png" alt="drones" width="26%">
 
 <br>
 
-#### **3.1.2 Tiny CNN demo** 
+#### **5.1.2 Tiny CNN demo** 
 
 (TODO) 
 
 <br>
 
-#### **3.1.3 Tiny TF demo** 
+#### **5.1.3 Tiny TF demo** 
 
 (TODO) 
 
 <br>
 
 
-### **[3.2 Models](/2b_models/)** (with API)
+### **[5.2 Models](/2b_models/)** (with API)
 
 The agent and the NN are typically packed into a **model** that has an API that makes it possible for existing software to **use the model as a "helpful" assistant**. 
 
@@ -128,21 +128,26 @@ I refer to the **code in the model that controls the TF NN as the "internal agen
 <br>
 
 
-### **[3.3 Agents](/3_agents/)**
+### **[5.3 Agents](/3_agents/)**
 
 External (not LLM internal) agents provide 
 - reliable workflows built around models, tools, and automation. 
 - tolerance of AI faults and unpredictable outputs
 
+**Palantir's first real practical application was in the military. That's no accident.**
+- Benefits >> negatives.
+- Errors can be tolerated (not used in the nuclear forces).
+- Man in loop.
 
 <br>
 
-## **4 Predicting the future**
+## **7 The future**
 
 AI has big a future after the IPOs are finished and the hype is over.
 Those that understand how AI really works stand to benefit the most.
 The original ZiptieAI was my personal learning project.
 But now **ZiptieAI has a mission to help myself (and others) stay ahead of the AI curve**. 
+
 In the no-so-distant future, AI integration skills will be required in the digital infrastructure of all business segments. This work will required a massive number of tech workers who, empowered by AI tools, will help integrate AI **as a helpful assistant** into all areas of life.  
 
 <br>
@@ -154,7 +159,7 @@ In the no-so-distant future, AI integration skills will be required in the digit
 
 <br>
 
-## **5 NN demo D2cc details**
+## **8 NN demo D2cc details**
 
 *Note: I created this version of the D2 demo on 26.0611. I documented the details in **[docx #607](https://drive.google.com/drive/folders/1-Adawag9uA8_bq-hDF-nOuPYaRLz1eEO)**. Its similar to D2 demo on page **[2.1 Core NNs](/2.1-predictive-nns/)**.*
 
