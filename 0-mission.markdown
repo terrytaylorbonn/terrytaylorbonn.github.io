@@ -207,7 +207,7 @@ test 2
 <br>
 
 
-#### **[5.2 Models](/2b_models/)** (with API)
+### **[5.2 Models](/2b_models/)** (with API)
 
 The agent and the NN are typically packed into a **model** that has an API that makes it possible for existing software to **use the model as a "helpful" assistant**. 
 
@@ -217,7 +217,7 @@ I refer to the **code in the model that controls the TF NN as the "internal agen
 <br>
 
 
-#### **[5.3 Agents](/3_agents/)**
+### **[5.3 Agents](/3_agents/)**
 
 External (not LLM internal) agents provide 
 - reliable workflows built around models, tools, and automation. 
