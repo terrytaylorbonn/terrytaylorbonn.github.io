@@ -33,16 +33,20 @@ This page describes the **ZiptieAI mission**.
 
 ## **1 AI's big future** 
 
-Palantir is making a lot of money because they provide a product that is extremely useful.
+Palantir is making a lot of money because they provide a product that is extremely useful. And they talk straight about things that others only hype about. **Engineers wont go away, their expertise is required in the AI age more than ever**. Only Palantir is saying this, because Palantir's business does **not demand the myth of AI intelligence** *("no more programmers" (Jensen Huang), "no more work for people" (Musk), "we must pause AI development because its not safe" (Anthropic CEO), "AI already has emotions" (Jeffrey Hinton) etc etc)*. Palantir is the only company that at first said that **AI will empower people, not replace them**.
 
-**Engineers wont go away, their expertise is required in the AI age more than ever**. Only Palantir is saying this, because Palantir's business does **not demand the myth of AI intelligence** *("no more programmers" (Jensen Huang), "no more work for people" (Musk), "we must pause AI development because its not safe" (Anthropic CEO), "AI already has emotions" (Jeffrey Hinton) etc etc)*. Palantir is the only company that at first said that **AI will empower people, not replace them**.
+But even Palantir has its own hype. Watch the first (English) half of this fascinating **[interview of Palantir CTO](https://www.youtube.com/watch?v=lcUHDsA5lzc)**. Pure unadulterated hype. I could not help but laugh at every other sentence from the CTO.
+
+*Details about video soon.....*
 
 <br>
 
 ## **2 The challenges (with AI integration)**
 
+Just a short list .....
 
-#### **Why the hype?**
+#### **The endless hype**
+The reasons for the hype:
 - Money. That's the motivation for any successful company. 
 - They have a product that noone understands. Just like Pfizer a few years ago.
 - People dont understand the science. Just like with Covid and mRNA.
@@ -62,9 +66,6 @@ AI is the gatekeeper of the source of truth. But the safety and reliability of t
 
 ## **3 The solution (understanding is power)**
 
-Palantir has its own hype. Watch the first (English) half of this fascinating **[interview of Palantir CTO](https://www.youtube.com/watch?v=lcUHDsA5lzc)**. Pure unadulterated hype. I could not help but laugh at every other sentence from the CTO.
-
-*More to come.....*
 
 <br>
 
