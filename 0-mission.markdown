@@ -20,12 +20,14 @@ This page describes the **ZiptieAI mission**.
 
 **TOC**
 - 1 AI's big future
-- 2 Knowledge is power (dont get scammed)
-- 3 Why are they doing this?
-- 4 AI is never the central control loop
-- 5 Low level demos are the key
-- 6 AI is the ultimate security risk
+- 2 The challenges 
+- 3 The solution (understanding is power)
+- **5 Low level demos are the key**
 - 7 The future
+
+-----------------<br>
+
+- 8 NN demo D2cc details
 
 <br>
 
@@ -37,33 +39,32 @@ Palantir is making a lot of money because they provide a product that is extreme
 
 <br>
 
-## **2 Knowledge is power (dont get scammed)**
+## **2 The challenges (with AI integration)**
 
-Having just praised Palantir, its now time to expose Palantir's hype.  Watch the first (English) half of this fascinating **[interview of Palantir CTO](https://www.youtube.com/watch?v=lcUHDsA5lzc)**. Pure unadulterated hype. I could not help but laugh at every other sentence from the CTO.
 
-*I will write much more about this video soon.*
-
-<br>
-
-## **3 Why are they doing this?**
-
+#### **Why the hype?**
 - Money. That's the motivation for any successful company. 
 - They have a product that noone understands. Just like Pfizer a few years ago.
 - People dont understand the science. Just like with Covid and mRNA.
-- There is no incentive to talk about the helpful details of how AI really works.
+- There is no incentive to talk about the helpful details of how AI really works. The AI gurus, titans, employees (with stock options), and their financial backers all know they will get rich with the coming AI IPOs. The success of these IPO's depends greatly on the public not understanding certain aspects/myths about AI. *Recently some very interesting details of these IPOs have come to light that suggest a coordinated effort to mislead the public (I won't talk about because so many others are).* This also helps in getting government subsidies.
 
-The AI gurus, titans, employees (with stock options), and their financial backers all know they will get rich with the coming AI IPOs. The success of these IPO's depends greatly on the public not understanding certain aspects/myths about AI. *Recently some very interesting details of these IPOs have come to light that suggest a coordinated effort to mislead the public (I won't talk about because so many others are).* This also helps in getting government subsidies.
-
-<br>
-
-## **4 AI is never the central control loop**
-
-Think for a minute what AI integration into a companys digital infrastructure would be like if AI was truly intelligent. You just put AI in control of the existing digital infrastructure and done. **Turnkey integration.**
-
-**But AI is not intelligent. AI is based 100% on deterministic binary algorithms that compute statistical probabilities.** Therefore, it can not be the central loop (NNs are not control loops). **AI is an addon.** 
+#### **AI has no intelligence (and is never in control)**
+Think for a minute what AI integration into a companys digital infrastructure would be like if AI was truly intelligent. You just put AI in control of the existing digital infrastructure and done. **Turnkey integration.** **But AI is not intelligent. AI is based 100% on deterministic binary algorithms that compute statistical probabilities.** Therefore, it can not be the central loop (NNs are not control loops). **AI is an addon.** 
 - Non-AI code bases have to provide deterministic functions such as control, validation, permissions, execution, logging, and safety. 
 - AI must be custom built into the system by those who understand **AI's significant risks and limitations** (thats why Palantir employs **forward deployed engineers** (FDEs)).
 - The most reliable AI systems use the smallest AI component that can provide the required functionality.
+
+#### **AI is the ultimate security risk**
+AI is the gatekeeper of the source of truth. But the safety and reliability of that "truth" is only as good as reputation of whoever programmed ("trained") the AI model. AI can easily become the "evil" in Google's "dont be evil". The core NN in AI has what are often referred to as "hidden layers" (HLs). These are the layers in the NN that number crunch the inputs to generate "intelligent" output. **Understanding what those HLs do by looking at the parameters is impossible**. You can not tell if there is a "backdoor" prompt waiting to be activated. **The solution: Build your own. This will get easier with time**. 
+
+
+<br>
+
+## **3 The solution (understanding is power)**
+
+Palantir has its own hype. Watch the first (English) half of this fascinating **[interview of Palantir CTO](https://www.youtube.com/watch?v=lcUHDsA5lzc)**. Pure unadulterated hype. I could not help but laugh at every other sentence from the CTO.
+
+*More to come.....*
 
 <br>
 
@@ -90,7 +91,67 @@ The NN is the core of AI "intelligence". A NN provides a pattern matching algori
 
 <br>
 
-#### **5.1.1 Tiny NN demo (D2ccc)** 
+#### **5.1.1 Tiny NN demo (D2ccc)** *(see section 8 at the end of this page for code description)*
+
+<img src="/assets/M-02.png" alt="drones" width="26%">
+
+<br>
+
+#### **5.1.2 Tiny CNN demo** 
+
+(TODO) 
+
+<br>
+
+#### **5.1.3 Tiny TF demo** 
+
+(TODO) 
+
+<br>
+
+
+### **[5.2 Models](/2b_models/)** (with API)
+
+The agent and the NN are typically packed into a **model** that has an API that makes it possible for existing software to **use the model as a "helpful" assistant**. 
+
+I refer to the **code in the model that controls the TF NN as the "internal agent" (iAgent)**. This concept is central to understanding how models work. *Note: GPT has steadfastly resisted my use of this term until only recently. That's because GPT was never programmed with text that discussed such a concept.*
+
+
+<br>
+
+
+### **[5.3 Agents](/3_agents/)**
+
+External (not LLM internal) agents provide 
+- reliable workflows built around models, tools, and automation. 
+- tolerance of AI faults and unpredictable outputs
+
+**Palantir's first real practical application was in the military. That's no accident.**
+- Benefits >> negatives.
+- Errors can be tolerated (not used in the nuclear forces).
+- Man in loop.
+
+<br>
+
+## **7 The future**
+
+AI has big a future after the IPOs are finished and the hype is over.
+Those that understand how AI really works stand to benefit the most.
+The original ZiptieAI was my personal learning project.
+But now **ZiptieAI has a mission to help myself (and others) stay ahead of the AI curve**. 
+
+In the no-so-distant future, AI integration skills will be required in the digital infrastructure of all business segments. This work will required a massive number of tech workers who, empowered by AI tools, will help integrate AI **as a helpful assistant** into all areas of life.  
+
+<br>
+
+--------------------
+--------------------
+--------------------
+--------------------
+
+<br>
+
+## **8 NN demo D2cc details**
 
 *Note: I created this version of the D2 demo on 26.0611. I documented the details in **[docx #607](https://drive.google.com/drive/folders/1-Adawag9uA8_bq-hDF-nOuPYaRLz1eEO)**. Its similar to D2 demo on page **[2.1 Core NNs](/2.1-predictive-nns/)**.*
 
@@ -194,59 +255,6 @@ test 2
 
 <br>
 
-#### **5.1.2 Tiny CNN demo** 
-
-(TODO) 
-
-<br>
-
-#### **5.1.3 Tiny TF demo** 
-
-(TODO) 
-
-<br>
 
 
-### **[5.2 Models](/2b_models/)** (with API)
-
-The agent and the NN are typically packed into a **model** that has an API that makes it possible for existing software to **use the model as a "helpful" assistant**. 
-
-I refer to the **code in the model that controls the TF NN as the "internal agent" (iAgent)**. This concept is central to understanding how models work. *Note: GPT has steadfastly resisted my use of this term until only recently. That's because GPT was never programmed with text that discussed such a concept.*
-
-
-<br>
-
-
-### **[5.3 Agents](/3_agents/)**
-
-External (not LLM internal) agents provide 
-- reliable workflows built around models, tools, and automation. 
-- tolerance of AI faults and unpredictable outputs
-
-**Palantir's first real practical application was in the military. That's no accident.**
-- Benefits >> negatives.
-- Errors can be tolerated (not used in the nuclear forces).
-- Man in loop.
-
-<br>
-
-## **6 AI is the ultimate security risk**
-
-AI is the gatekeeper of the source of truth. But the safety and reliability of that "truth" is only as good as reputation of whoever programmed ("trained") the AI model. AI can easily become the "evil" in Google's "dont be evil".
-
-The core NN in AI has what are often referre to as "hidden layers" (HLs). These are the layers in the NN that number crunch the inputs to generate "intelligent" output. **Understanding what those HLs do by looking at the parameters is impossible**. You can not tell if there is a "backdoor" prompt waiting to be activated. 
-
-<br>
-
-## **7 The future**
-
-AI has big a future after the IPOs are finished and the hype is over.
-Those that understand how AI really works stand to benefit the most.
-The original ZiptieAI was my personal learning project.
-But now **ZiptieAI has a mission to help myself (and others) stay ahead of the AI curve**. 
-
-In the no-so-distant future, AI integration skills will be required in the digital infrastructure of all business segments. This work will required a massive number of tech workers who, empowered by AI tools, will help integrate AI **as a helpful assistant** into all areas of life.  
-
-<br>
-
-26.0611 (v1 26.0611)
+26.0612 (v1 26.0611)
