@@ -16,7 +16,7 @@ Top level pages *(see also the **[Wiki](https://github.com/terrytaylorbonn/auxdr
 
 - **[Mission](/0-mission/)**. 
 - **[QS](/0-qs/)**. Basically a quick hands-on tour through the AI basics.
-- **[Demos](/0b-demos/)** of neural networks, models, and agents.
+- **[Demos](/0b-demos/)**. A TOC of demos (NNS, models, agents) on this site.
 - [1 Drones](/1-drones/) (FPV and Pixhawk with CNN object recognition). 
 - **[2 NNs](/2_models/)**. **NNs**, **CNNs** (convolution), **TFs** (transformers), and **robotic NNs**. The NN is the core of AI "intelligence".
 - **[2b Models](/2b_models/)**. AI models (for example, internal agent + TF for language models) packaged for practical use. <!-- Fine-tuning, local models, deployment, RAG, and model serving. -->
