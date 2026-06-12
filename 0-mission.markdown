@@ -140,7 +140,46 @@ for epoch in range(100):
 
 #### **3.1.2 Tiny CNN demo** 
 
-(TODO) 
+**3.1.2.1 ALEXNET CNN**
+
+This is a diagram that I created that explains clearly how AlexNet CNN works (my notation here makes ever step clear). There are 3 main parts.
+- **1 Data input**. In this case the data input is pixel RGB values (already numerical). Just split them into sets of R, G, and B.
+- **2 Feature extraction (Conv2d+MaxPool2d)**. This is where convolution and pooling are used to turn the original pixel values into "hidden state" values that progressive define higher level features (I typical call these values "pix's"). The final output at step 9 is 5x5x256 set of pix's. NOTE: Pixels are crude approximate measurements of a fluid phenomenon. Much of this convolution/pooling is used to "filter out" these errors (my opinion; I have not read this anywhere, but GPT seems to finally agree with my suggestion; this is perhaps why the convolution mechanism uses so-called "filters" that filter out pixel approximation errors).
+- **3 Final NN (Linear) computing CNN "logits"**. This involves
+  - 3.1 Linear NN (like for D2ccc) computes the probabilities of each of 1000 possible outputs.
+  - 3.2 The most probable output is converted into a label (such as "Siamese cat").
+
+Diagram from page [2.2.1b D4 CNN algorithm details](https://ziptieai.com/2.2.1b-d4-cnn-algorithm-details/).
+
+<img src="/assets/M-06.png" alt="drones" width="46%">
+
+**3.1.2.2 D4 CNN**
+
+See [2.2.1 D4 CNN image classifier](https://ziptieai.com/2.2.1-d4-cnn-image-classifier/) and (for details) [2.2.1b D4 CNN algorithm details](https://ziptieai.com/2.2.1b-d4-cnn-algorithm-details/).
+
+There are 3 main parts.
+- **1 Data input**. In this case the data input is .............
+- **2 Feature extraction (nn.Conv2d + nn.MaxPool2d)**. This is where convolution and pooling are used to turn the original pixel values into "hidden state" values that progressive define higher level features (I typical call these values "pix's"). ...
+- **3 Final NN (nn.Linear) computing CNN "logits"**. This involves
+  - 3.1 Linear NN (like for D2ccc) computes the probabilities of each of 10 possible outputs (digits 0 to 9).
+  - 3.2 The most probable output is converted into a label (such as "7").
+
+```
+class TinyCNN(nn.Module):
+    def __init__(self):
+        super().__init__()
+        self.conv1 = nn.Conv2d(1, 8, kernel_size=3, padding=1)
+        self.conv2 = nn.Conv2d(8, 16, kernel_size=3, padding=1)
+        self.pool = nn.MaxPool2d(2, 2)
+        self.fc1 = nn.Linear(16 * 7 * 7, 64)
+        self.fc2 = nn.Linear(64, 10)
+```
+
+<img src="/assets/M-07.png" alt="drones" width="46%">
+<img src="/assets/M-08.png" alt="drones" width="20%">
+
+
+
 
 <br>
 
