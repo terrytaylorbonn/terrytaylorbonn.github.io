@@ -4,6 +4,8 @@ title: QS
 permalink: /0-qs/
 ---
 
+<br>
+
 Quick start guide. 
 
 <br>
