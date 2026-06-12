@@ -15,6 +15,11 @@ I was hoping to work as a volunteer drone builder in Ukraine. I speak Russsian a
 
 <br> 
 
+*Drones in the ZAI ecosystem* <br>
+<img src="/assets/zai_evolution7.png" alt="drones" width="42%">
+
+<br>
+
 See the [Wiki page](https://github.com/terrytaylorbonn/auxdrone/wiki/AI-drone-overview) for more info.
 
 I worked on AI drones from 2023 to 2024 focusing on:
@@ -135,7 +140,7 @@ Focuses on the FC/firmware combinations shown below (with status).
 
 <br> 
 
-26.0523 *TODO: Tridge*
+26.0612 (0523) *TODO: Tridge*
 
 <!-- 
 #### My first build validates the Ziptie approach for new drone builders (like me)
