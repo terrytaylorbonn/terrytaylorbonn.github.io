@@ -29,7 +29,7 @@ This page describes the **ZiptieAI mission**.
 
 <br>
 
-## **1 AI's big future**
+## **1 AI's big future** 
 
 Palantir is making a lot of money because they provide a product that is extremely useful.
 
@@ -65,27 +65,32 @@ Think for a minute what AI integration into a companys digital infrastructure wo
 - AI must be custom built into the system by those who understand **AI's significant risks and limitations** (thats why Palantir employs **forward deployed engineers** (FDEs)).
 - The most reliable AI systems use the smallest AI component that can provide the required functionality.
 
- 
-
 <br>
 
 ## **5 Low level demos are the key**
 
 To really understand AI, **you need to study (line by line) the code of tiny demos** of core AI functionality. Such **demos are the core of the ZAI website, and are organized into 3 sections:**
 
-- 2 NNs
-- 2b Models
-- Agents (external)
+- 5.1 NNs
+- 5.2 Models
+- 5.3 Agents (external)
 
 <br>
 
-#### **[2 NNs](/2_models/)**
+### **[5.1 NNs](/2_models/)**
 
 The NN is the core of AI "intelligence". A NN provides a pattern matching algorithm. The the NN is controlled by Python code ("agent").
 
 <!-- Thats why FDE's, because they understand how the system must be tweeked to get an acceptable error rate. -->
 
-**Tiny demo D2ccc** 
+- 5.1.1 Tiny NN demo (D2ccc) 
+- 5.1.2 Tiny CNN demo
+- 5.1.3 Tiny TF demo 
+
+
+<br>
+
+#### **5.1.1 Tiny NN demo (D2ccc)** 
 
 *Note: I created this version of the D2 demo on 26.0611. I documented the details in **[docx #607](https://drive.google.com/drive/folders/1-Adawag9uA8_bq-hDF-nOuPYaRLz1eEO)**. Its similar to D2 demo on page **[2.1 Core NNs](/2.1-predictive-nns/)**.*
 
@@ -187,12 +192,22 @@ test 2
 - The simple NN can classify x,y locations with good accuracy.
 - **But classification accuracy is not equation-level perfect**. In our simple demo the results were good for a small NN. But for more complex datasets the size of the NN would increase dramatically. AI must be used where the input / output relationship can not be defined with simple computation or equations. **But AI is always an approximation (UFA, universal function approximator), so the challenge is integrating AI so that the approximation errors are acceptable** (for war time planning systems OK, for self driving cars or home humanoids NOT OK).
 
+<br>
 
+#### **5.1.2 Tiny CNN demo** 
+
+(TODO) 
+
+<br>
+
+#### **5.1.3 Tiny TF demo** 
+
+(TODO) 
 
 <br>
 
 
-#### **[2b Models](/2b_models/)** (with API)
+#### **[5.2 Models](/2b_models/)** (with API)
 
 The agent and the NN are typically packed into a **model** that has an API that makes it possible for existing software to **use the model as a "helpful" assistant**. 
 
@@ -202,7 +217,7 @@ I refer to the **code in the model that controls the TF NN as the "internal agen
 <br>
 
 
-#### **[3 Agents](/3_agents/)**
+#### **[5.3 Agents](/3_agents/)**
 
 External (not LLM internal) agents provide 
 - reliable workflows built around models, tools, and automation. 
@@ -217,19 +232,18 @@ External (not LLM internal) agents provide
 
 ## **6 AI is the ultimate security risk**
 
-AI is the gatekeeper, the secret agent. AI can easily become the "evil" in Google's "dont be evil".
+AI is the gatekeeper of the source of truth. But the safety and reliability of that "truth" is only as good as reputation of whoever programmed ("trained") the AI model. AI can easily become the "evil" in Google's "dont be evil".
 
-The core NN in AI is typically referred to as the "hidden layer". You can actually view the programmed ("trained") parameters for these layers, but **you have no idea what the results of these parameters are**. When you use models from untrusted sources, you have no idea what type of data the model TF was programmed ("trained") on.
+The core NN in AI has what are often referre to as "hidden layers" (HLs). These are the layers in the NN that number crunch the inputs to generate "intelligent" output. **Understanding what those HLs do by looking at the parameters is impossible**. You can not tell if there is a "backdoor" prompt waiting to be activated. 
 
 <br>
 
 ## **7 The future**
 
-AI has big future after the IPOs are finished and the hype is over.
-But before then many will get scammed by the hype.
-Dont be one of them.
-The original ZiptieAI mission was my personal learning project.
-But now **ZiptieAI has become the site to help myself (and others) stay ahead of the curve**. 
+AI has big a future after the IPOs are finished and the hype is over.
+Those that understand how AI really works stand to benefit the most.
+The original ZiptieAI was my personal learning project.
+But now **ZiptieAI has a mission to help myself (and others) stay ahead of the AI curve**. 
 
 In the no-so-distant future, AI integration skills will be required in the digital infrastructure of all business segments. This work will required a massive number of tech workers who, empowered by AI tools, will help integrate AI **as a helpful assistant** into all areas of life.  
 
