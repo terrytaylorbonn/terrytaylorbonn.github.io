@@ -33,6 +33,7 @@ wiki_url: "https://github.com/terrytaylorbonn/auxdrone/wiki"
 header_pages:
   - index.md
   - 0-mission.markdown
+  - 0-qs.markdown
   - 0b-demos.markdown
   - 1-ai-drones.markdown
   - 2_models.markdown
