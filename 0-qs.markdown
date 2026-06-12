@@ -4,7 +4,7 @@ title: QS
 permalink: /0-qs/
 ---
 
-Quick start guide. Move the demo desriptions from Mission page. 
+Quick start guide. 
 
 <br>
 
