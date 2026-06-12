@@ -22,7 +22,7 @@ This page describes the **ZiptieAI mission**.
 - 1 AI's big future
 - 2 The challenges 
 - 3 The solution (understanding is power)
-- **5 Low level demos are the key**
+- **5 Demos overview**
 - 7 The future
 
 -----------------<br>
@@ -70,7 +70,7 @@ I was quite confident in my assessment of the Palantir CTO's speech because I've
 
 <br>
 
-## **5 Low level demos are the key**
+## **5 Demos overview**
 
 To really understand AI, **you need to study (line by line) the code of tiny demos** of core AI functionality. Such **demos are the core of the ZAI website, and are organized into 3 sections:**
 
