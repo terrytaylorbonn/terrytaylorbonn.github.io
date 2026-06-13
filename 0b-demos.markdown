@@ -47,21 +47,20 @@ This site does not really focus on drones anymore. But I include it because it w
 - **2.5 Robotic AI ([wiki](https://github.com/terrytaylorbonn/auxdrone/wiki/Robotic-AI-demos))**<br>
 <img src="/assets/robotic_ai.png" alt="smol" width="25%" style="border: 1px solid black;"><br> 
 
-
 <br>
 
 ### **2b Model demos**
 
-- **2b [Models](/2b_models/)** ---- ADD SUBPAGES LATER ----
-- **LLMs ([wiki](https://github.com/terrytaylorbonn/auxdrone/wiki/AI-stacks))**<br>
-<img src="/assets/smol.png" alt="smol" width="35%"><br> <br> 
-
+- **[2b.1 Model concepts](/2b.3.1-llm-gist/)**<br> <br> 
+- ([2b.1b 2025 demos](/2b.1b-2025-llm-demos/))<br><img src="/assets/smol.png" alt="smol" width="35%"><br> <br>
+- **[2b.2 Tiny demos](/2b.3.6-llm-demos/)**<br> <br>
+- **[2b.2b Building models](/2b.2b-build-models/)**<br> <br>
+- **[2b.3 Modifying models](/2b.3-modify-models/)**<br> <br>
+- **[2b.4 Running models locally](/2b.4-run-models-locally/)**<br> <br>
 
 <br>
 
 ### **3 Agent demos**
-
-
 
 The center of the Agentic AI universe is the AI agent. 
 
