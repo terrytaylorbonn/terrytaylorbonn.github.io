@@ -10,29 +10,95 @@ description: Last edit 26.0426
 
 <br>
 
-An LLM consists of:
-- Transformer (TF) (the NN)
-- Internal agent (iAgent) (interfaces with TF (via tokens) and the agent scripts)
+See 
+- [#608_2b_models_.docx](https://drive.google.com/drive/folders/1-Adawag9uA8_bq-hDF-nOuPYaRLz1eEO).
+- also [__ziptieai_BOOK2_LLM_.docx](https://drive.google.com/drive/folders/1-Adawag9uA8_bq-hDF-nOuPYaRLz1eEO).
 
-See also __ziptieai_BOOK2_LLM_.docx the [Gdrive](https://drive.google.com/drive/folders/1-Adawag9uA8_bq-hDF-nOuPYaRLz1eEO).
+<br>
 
 <!-- <img src="/assets/brain1b.png" alt="drones" width="22%"> -->
 
+## **M06 Tiny model on HF** 26.0613
+
+```
+# m06_test.py
+
+import torch
+import torch.nn as nn
+from huggingface_hub import hf_hub_download
+
+# -----------------------
+# Architecture
+# -----------------------
+
+class TinyModel(nn.Module):
+    def __init__(self):
+        super().__init__()
+        self.fc = nn.Linear(2, 1)
+
+    def forward(self, x):
+        return self.fc(x)
+
+# -----------------------
+# Download .pt from HF
+# -----------------------
+
+pt_file = hf_hub_download(
+    repo_id="terrytaylorbonn/m06-tiny-pytorch-model",
+    filename="m01_tiny_model.pt"
+)
+
+print("Downloaded:")
+print(pt_file)
+print()
+
+# -----------------------
+# Load model
+# -----------------------
+
+model = TinyModel()
+
+model.load_state_dict(torch.load(pt_file))
+
+print("Loaded weights:")
+print(model.fc.weight)
+print(model.fc.bias)
+print()
+
+# -----------------------
+# Inference
+# -----------------------
+
+x = torch.tensor([[1.0, 2.0]])
+
+y = model(x)
+
+print("Input:")
+print(x)
+print()
+
+print("Output:")
+print(y)
+
+python m06_test.py 
+Downloaded:
+/home/terry/.cache/hf_cache/hub/models--terrytaylorbonn--m06-tiny-pytorch-model/snapshots/0e9dd63cdf7a94a04663a1c5f7618f725c15ce67/m01_tiny_model.pt
+
+Loaded weights:
+Parameter containing:
+tensor([[0.0598, 0.0642]], requires_grad=True)
+Parameter containing:
+tensor([-0.4107], requires_grad=True)
+
+Input:
+tensor([[1., 2.]])
+
+Output:
+tensor([[-0.2226]], grad_fn=<AddmmBackward0>)
+(venv) terry@LAPTOP-HKPDHF7M:/mnt/c/Users/terry/Downloads/607_predictive$
+```
+
 <br>
 
-# Older demos (2025)
 
-The wiki page [**"AI LLM stacks"**](https://github.com/terrytaylorbonn/auxdrone/wiki/AI-stacks) (a bit chaotic after a recent wiki reorganization) lists the following subpages are of interest:
-
-- [2.2 Demo deployments (HF, CloudFlare, etc)](https://github.com/terrytaylorbonn/auxdrone/wiki/LLM-stacks-%5C-2-Demo-deployments)
-- [2.3 Youtube demos](https://github.com/terrytaylorbonn/auxdrone/wiki/LLM-stacks-%5C-3-Youtube-demos). I did a lot of YouTube demos. Way back then (2025, a long time ago in AI-time) I had still not make the transition to working totally with LLMs (GPT) to learn new tech.
-- [2.4 GPT/Copilot demos (a few demos)](https://github.com/terrytaylorbonn/auxdrone/wiki/LLM-stacks-%5C-4-CPLT-demos)
-- [2.6 Agent/LLM input docs (RAG demo)](https://github.com/terrytaylorbonn/auxdrone/wiki/LLM-stacks-%5C-4-CPLT-%5C-4.0b-Platforms-and-tools)
- 
-<img src="/assets/smol.png" alt="smol" width="45%">
-
-
-<br>
-
-
-26.0610 (v1 26.0529)
+26.0613 (v1 26.0529)

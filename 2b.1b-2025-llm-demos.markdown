@@ -1,0 +1,27 @@
+---
+layout: page
+title: "2b.1b 2025 demos"
+permalink: /2b.1b-2025-llm-demos/
+description: Last edit 26.0426
+---
+
+[← 2b Models](/2b_models/)
+
+<br>
+
+# Older demos (2025)
+
+The wiki page [**"AI LLM stacks"**](https://github.com/terrytaylorbonn/auxdrone/wiki/AI-stacks) (a bit chaotic after a recent wiki reorganization) lists the following subpages are of interest:
+
+- [2.2 Demo deployments (HF, CloudFlare, etc)](https://github.com/terrytaylorbonn/auxdrone/wiki/LLM-stacks-%5C-2-Demo-deployments)
+- [2.3 Youtube demos](https://github.com/terrytaylorbonn/auxdrone/wiki/LLM-stacks-%5C-3-Youtube-demos). I did a lot of YouTube demos. Way back then (2025, a long time ago in AI-time) I had still not make the transition to working totally with LLMs (GPT) to learn new tech.
+- [2.4 GPT/Copilot demos (a few demos)](https://github.com/terrytaylorbonn/auxdrone/wiki/LLM-stacks-%5C-4-CPLT-demos)
+- [2.6 Agent/LLM input docs (RAG demo)](https://github.com/terrytaylorbonn/auxdrone/wiki/LLM-stacks-%5C-4-CPLT-%5C-4.0b-Platforms-and-tools)
+ 
+<img src="/assets/smol.png" alt="smol" width="45%">
+
+
+<br>
+
+
+26.0613 (v1 26.0613)
