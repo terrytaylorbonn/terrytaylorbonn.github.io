@@ -21,27 +21,14 @@ xxxxx
 
 <br>
 
-## **FROM PART 2**
 
-
-### [2b.3.1 LLM gist](/2b.3.1-llm-gist/) (**NEED TO THIN OUT TF STUFF ??**)
-
-### [2b.3.3 Agentic LLMs](/2b.3.3-agentic-llms/)
-
-### [2b.3.6 LLM demos](/2b.3.6-llm-demos/)
-
-
-### 2.3.5 LLM Internal Agent
-
-The term "agent" normally means a deterministic (non-AI, not GPU-based) control loop that is the "caretaker" or interface between the LLM model and the outside world. However, there is also an agent (what I call an internal agent or "iAgent") in the LLM that is the interface between the transformer (TF) and the outside (of the LLM) world. Again, as with training, understanding this helps to understand the core nature of what an LLM and an agent is. An (external) agent is to some extent just an extension or a partner of the internal agent. 
-
-<img src="/assets/iagent.png" alt="iagent" width="32%">
-
+## **[2b.1 Model concepts](/2b.3.1-llm-gist/)** (CHAOS.. was LLM GIST)
 
 <br>
 
+## **2b.2 BUILDING MODELS (for specific domain)**
 
-## **Part 3 BUILDING MODELS (for specific domain)**
+Part 3 
 
 **i am still not sure if this belongs in 2 or 2b.. i am not sure what GPT means exactly by this**
 
@@ -63,7 +50,12 @@ This makes sense.
 2.8.5 Tiny Custom TF Demo
 2.8.6 Tiny Custom CNN Demo
 
-## **Part 4 MODIFYING EXISTING models (Modifying/customizing/fine-tune)**
+<br>
+
+## **2b.3 MODIFYING EXISTING models (Modifying/customizing/fine-tune)**
+
+Part 4 
+
 This is:
 I already have a model.
 How do I change it?
@@ -75,8 +67,12 @@ contains:
 These are all about:
 changing an existing model
 
+<br>
 
-## **Part 5 RUN LOCALLY**
+## **2b.4 Run locally**
+
+Part 5 
+
 This is actually one of the strongest sections because it matches your current interests exactly.
 HuggingFace
 Ollama
@@ -96,7 +92,9 @@ How do I call OpenAI APIs?
 2.10.5 Qwen
 2.10.6 Mistral
 
-## **Part 6 USE AI inside systems**
+<br>
+
+## **2b.5 Use AI inside systems**
 
 **i am not sure if parts of this belong in 3 agents**
 
@@ -118,11 +116,14 @@ Examples:
 2.11.5 Model Serving
 2.11.6 RAG Integration
 
+<br>
+
+## **[2b.6 LLM demos](/2b.3.6-llm-demos/)**
 
 
 
 <br>
 
 
-26.0611 (v1 26.0610)
+26.0613 (v1 26.0610)
 
