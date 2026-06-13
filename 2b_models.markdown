@@ -24,14 +24,13 @@ xxxxx
 <br>
 
 
-### **[2b.1 Model concepts](/2b.3.1-llm-gist/)** (CHAOS.. was LLM GIST)
+### **[2b.1 Model concepts](/2b.3.1-llm-gist/)**
 
 <br>
 
 
 ### ([2b.1b 2025 demos](/2b.1b-2025-llm-demos/))
 
-Old 2025 demos.
 
 <br>
 
@@ -42,76 +41,27 @@ Old 2025 demos.
 <br>
 
 
-### **2b.2b Building models**
+### **[2b.2b Building models](/2b.2b-build-models/)**
 
-(specific domains)
-Part 3 
+<!-- I am still not sure if this belongs in 2 or 2b.. i am not sure what GPT means exactly by this. -->
 
-**i am still not sure if this belongs in 2 or 2b.. i am not sure what GPT means exactly by this**
-
-This is:
-How do I create a model
-for a specific purpose?
-Examples:
-Domain-specific models
-Synthetic data
-Custom TF
-Custom CNN
-This makes sense.
-
-
-2.8.1 Datasets
-2.8.2 Synthetic Data
-2.8.3 Model Evaluation
-2.8.4 Domain-Specific Models
-2.8.5 Tiny Custom TF Demo
-2.8.6 Tiny Custom CNN Demo
+For specific domains. How do I create a model for a specific purpose? Domain-specific models, Synthetic data, Custom TF, Custom CNN.
 
 <br>
 
-### **2b.3 Modifying models**
+### **[2b.3 Modifying models](/2b.3-modify-models/)**
 
-(Modifying/customizing/fine-tune)
-
-Part 4 
-
-This is:
-I already have a model.
-How do I change it?
-contains:
-2.9.1 Fine-Tuning
-2.9.2 LoRA
-2.9.3 Adapters
-2.9.4 Domain Specialization
-These are all about:
-changing an existing model
+Modifying/customizing/fine-tune. LoRA, Adapters, Domain Specialization
 
 <br>
 
-### **2b.4 Running models locally**
+### **[2b.4 Running models locally](/2b.4-run-models-locally/)**
 
-Part 5 
-
-This is actually one of the strongest sections because it matches your current interests exactly.
-HuggingFace
-Ollama
-Local Models
-This is:
-How do I own and operate AI?
-rather than:
-How do I call OpenAI APIs?
-
-
-2.10 Local Models
-
-2.10.1 HuggingFace
-2.10.2 Ollama
-2.10.3 Gemma
-2.10.4 Llama
-2.10.5 Qwen
-2.10.6 Mistral
+This is actually one of the strongest sections because it matches your current interests exactly. HuggingFace, Ollama, Local Models, etc. How do I own and operate AI?
 
 <br>
+
+26.0613 (v1 26.0610)
 
 <!-- ## **2b.5 Use AI inside systems**
 
@@ -137,7 +87,4 @@ Examples:
 
 <br>
 -->
-
-
-26.0613 (v1 26.0610)
 

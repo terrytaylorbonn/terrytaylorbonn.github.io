@@ -97,7 +97,7 @@ The agent and LLM together can doing amazing things. But they also have severe l
 
 <br>
 
-26.0612 (v1 26.0527)
+26.0613 (v1 26.0527)
 
 
 <!-- <img src="/assets/lucius.png" alt="drones" width="55%"> -->

@@ -1,0 +1,43 @@
+---
+layout: page
+title: "2b.3 Modify models"
+permalink: /2b.3-modify-models/
+description: Last edit 26.0426
+---
+
+[← 2b Models](/2b_models/)
+
+
+<br>
+
+See 
+- [#608_2b_models_.docx](https://drive.google.com/drive/folders/1-Adawag9uA8_bq-hDF-nOuPYaRLz1eEO).
+- also [__ziptieai_BOOK2_LLM_.docx](https://drive.google.com/drive/folders/1-Adawag9uA8_bq-hDF-nOuPYaRLz1eEO).
+
+<br>
+
+<!-- <img src="/assets/brain1b.png" alt="drones" width="22%"> -->
+
+## **xxxxx** 
+
+```
+(Modifying/customizing/fine-tune)
+
+Part 4 
+
+This is:
+I already have a model.
+How do I change it?
+contains:
+2.9.1 Fine-Tuning
+2.9.2 LoRA
+2.9.3 Adapters
+2.9.4 Domain Specialization
+These are all about:
+changing an existing model
+```
+
+<br>
+
+
+26.0613 (v1 26.0613)

@@ -1,0 +1,51 @@
+---
+layout: page
+title: "2b.2b Building models"
+permalink: /2b.2b-build-models/
+description: Last edit 26.0426
+---
+
+[← 2b Models](/2b_models/)
+
+<br>
+
+See 
+- [#608_2b_models_.docx](https://drive.google.com/drive/folders/1-Adawag9uA8_bq-hDF-nOuPYaRLz1eEO).
+- also [__ziptieai_BOOK2_LLM_.docx](https://drive.google.com/drive/folders/1-Adawag9uA8_bq-hDF-nOuPYaRLz1eEO).
+
+<br>
+
+<!-- <img src="/assets/brain1b.png" alt="drones" width="22%"> -->
+
+## **xxxxxxxxxx**
+
+```
+(specific domains)
+Part 3 
+
+**i am still not sure if this belongs in 2 or 2b.. i am not sure what GPT means exactly by this**
+
+This is:
+How do I create a model
+for a specific purpose?
+Examples:
+Domain-specific models
+Synthetic data
+Custom TF
+Custom CNN
+This makes sense.
+
+
+2.8.1 Datasets
+2.8.2 Synthetic Data
+2.8.3 Model Evaluation
+2.8.4 Domain-Specific Models
+2.8.5 Tiny Custom TF Demo
+2.8.6 Tiny Custom CNN Demo
+```
+
+
+<br>
+
+
+26.0613 (v1 26.0613)
