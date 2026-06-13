@@ -6,7 +6,9 @@ permalink: /2b_models/
 
 <br> 
 
-This very **WIP** page (v1 26.0610) describes model internals. *I spun off the content of this from page "NNs" on 26.0610 because I became convinced that creating custom models and deploying locally were going to be a big trend in the future. There is a lot of demo stuff on the Wiki that I need to move to this wepage or replicate.*
+This very **WIP** page (v1 26.0610) describes model internals. 
+
+<!-- *I spun off the content of this from page "NNs" on 26.0610 because I became convinced that creating custom models and deploying locally were going to be a big trend in the future. There is a lot of demo stuff on the Wiki that I need to move to this wepage or replicate.* -->
 
 <br>
 
@@ -26,7 +28,15 @@ xxxxx
 
 <br>
 
-## **2b.2 BUILDING MODELS (for specific domain)**
+
+## **[2b.2 Tiny demos](/2b.3.6-llm-demos/)**
+
+(from 2b.6 LLM demos)
+
+<br>
+
+
+## **2b.2b BUILDING MODELS (for specific domain)**
 
 Part 3 
 
@@ -118,11 +128,6 @@ Examples:
 
 <br>
 
-## **[2b.6 LLM demos](/2b.3.6-llm-demos/)**
-
-
-
-<br>
 
 
 26.0613 (v1 26.0610)
