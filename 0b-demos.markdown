@@ -31,13 +31,11 @@ This site does not really focus on drones anymore. But I include it because it w
 <br>
 
 
-### **2 NN demos**
+### **[2 NN demos](/2_models/)**
 
 *AlexNet CNN (left) and LLM transformer (right)*<br>
 <img src="/assets/cnn2.png" alt="desc" width="35%">  <img src="/assets/tf_S1-S6.png" alt="desc" width="40%"> 
 
-
-**TOC [NNs](/2_models/)**
 - **[2.1 Core NNs (dense/FF)](/2.1-predictive-nns/)**. Basic neural network demos.<br>
 <img src="/assets/classification.png" alt="drones" width="15%"><br> <br> 
 - **[2.2 CNNs (convolution)](/2.2-cnns/).**<br>
@@ -49,9 +47,8 @@ This site does not really focus on drones anymore. But I include it because it w
 
 <br>
 
-### **2b Model demos**
+### **[2b Model demos](/2b_models/)**
 
-- **[2b.1 Model concepts](/2b.3.1-llm-gist/)**<br> <br> 
 - ([2b.1b 2025 demos](/2b.1b-2025-llm-demos/))<br><img src="/assets/smol.png" alt="smol" width="35%"><br> <br>
 - **[2b.2 Tiny demos](/2b.3.6-llm-demos/)**<br> <br>
 - **[2b.2b Building models](/2b.2b-build-models/)**<br> <br>
@@ -60,7 +57,7 @@ This site does not really focus on drones anymore. But I include it because it w
 
 <br>
 
-### **3 Agent demos**
+### **[3 Agent demos](/3_agents/)**
 
 The center of the Agentic AI universe is the AI agent. 
 
