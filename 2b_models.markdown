@@ -24,26 +24,27 @@ xxxxx
 <br>
 
 
-## **[2b.1 Model concepts](/2b.3.1-llm-gist/)** (CHAOS.. was LLM GIST)
+### **[2b.1 Model concepts](/2b.3.1-llm-gist/)** (CHAOS.. was LLM GIST)
 
 <br>
 
 
-## **[2b.1b 2025 demos](/2b.1b-2025-llm-demos/)**
+### ([2b.1b 2025 demos](/2b.1b-2025-llm-demos/))
 
 Old 2025 demos.
 
 <br>
 
-## **[2b.2 Tiny demos](/2b.3.6-llm-demos/)**
+### **[2b.2 Tiny demos](/2b.3.6-llm-demos/)**
 
 (from 2b.6 LLM demos)
 
 <br>
 
 
-## **2b.2b BUILDING MODELS (for specific domain)**
+### **2b.2b Building models**
 
+(specific domains)
 Part 3 
 
 **i am still not sure if this belongs in 2 or 2b.. i am not sure what GPT means exactly by this**
@@ -68,7 +69,9 @@ This makes sense.
 
 <br>
 
-## **2b.3 MODIFYING EXISTING models (Modifying/customizing/fine-tune)**
+### **2b.3 Modifying models**
+
+(Modifying/customizing/fine-tune)
 
 Part 4 
 
@@ -85,7 +88,7 @@ changing an existing model
 
 <br>
 
-## **2b.4 Run locally**
+### **2b.4 Running models locally**
 
 Part 5 
 
@@ -110,7 +113,7 @@ How do I call OpenAI APIs?
 
 <br>
 
-## **2b.5 Use AI inside systems**
+<!-- ## **2b.5 Use AI inside systems**
 
 **i am not sure if parts of this belong in 3 agents**
 
@@ -133,7 +136,7 @@ Examples:
 2.11.6 RAG Integration
 
 <br>
-
+-->
 
 
 26.0613 (v1 26.0610)
