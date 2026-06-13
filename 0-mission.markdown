@@ -65,7 +65,19 @@ AI is the gatekeeper of the source of truth. But the safety and reliability of t
 
 ## **3 Providing core insights (demos)**
 
-#### **For details see the [QS demos](/0-qs/)**
+```text2
+So many times I'd stumble upon some basic fact about AI that is so fundamental 
+that I should have been told (or warned) about it much earlier, 
+but in untold numbers of chat with GPT, GPT **never once told me something obvious**. 
+AI is merely a helpful assistant, a deterministic hard-coded algorithm. Never trust it. 
+GPT has always been remarking about my habit of wanting to describe AI from a **mechanistic** viewpoint. 
+My response always is **"of course I view AI from a mechanistic viewpoint, 
+AI is built on mechanical clocked state algorithms"** 
+(whatever the official term is; the human brain is definitely not the same).
+ **Trust but verify** anything you get from AI. Verify means investigating, doing demos.
+```
+
+#### **For the core details of how AI works, see the [QS demos](/0-qs/)**
 
 I was quite confident in my assessment of the Palantir CTO's speech because I've built many AI demo projects. But the most insight I got from "simple" "tiny" demos. Such **demos are the core of the ZAI website, and are organized into 3 sections:**
 
