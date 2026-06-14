@@ -25,6 +25,7 @@ Top level pages *(see also the **[Wiki](https://github.com/terrytaylorbonn/auxdr
 - **[2 NNs](/2_models/)**. **NNs**, **CNNs** (convolution), **TFs** (transformers), and **robotic NNs**. The NN is the core of AI "intelligence".
 - **[2b Models](/2b_models/)**. AI models (for example, internal agent + TF for language models) packaged for practical use. <!-- Fine-tuning, local models, deployment, RAG, and model serving. -->
 - **[3 Agents](/3_agents/)**. External (not LLM internal) agents that provide reliable workflows built around models, tools, and automation.
+- **[3b Projects](/3.3-ai-projects/)**. 
 - [4 Resources](/4_resources/). Books, tech stacks, dev tools, docs, wiki, Substack, Youtube, Github, and Google Drive.
 - [About](/about/).
 

@@ -10,6 +10,11 @@ Conceptual summary of agents:
 - Agent = any external (to the LLM) program that calls the LLM API. Basically plays the role of a human during chat (but can do much more).
 - Agent + AI = an LLM is used as a useful assistant.
 
+External (not LLM internal) agents provide 
+- reliable workflows built around models, tools, and automation. 
+- tolerance of AI faults and unpredictable outputs
+
+
 <br>
 
 *Agentic AI in ZiptieAI evolution ([about this diagram](/0.1-zai-evolution/))* <br>
@@ -32,13 +37,16 @@ The core control loop is traditional non-AI deterministic programming that perfo
 
 <br>
 
+<!-- 
 ### **[3.3 Agentic AI projects](/3.3-ai-projects/)** (full demo projects (WIP) with Github repo and docs)
 
 "Spinning up" real-world projects quickly with minimal code analysis or manual coding. 
 
 <br> 
 
-26.0524
+-->
+
+26.0614 (0524)
 
 <br>
 
@@ -48,16 +56,6 @@ The core control loop is traditional non-AI deterministic programming that perfo
 ---------------------
 
 <br>
-
-### **[3.3 Agents](/3_agents/)**
-
-External (not LLM internal) agents provide 
-- reliable workflows built around models, tools, and automation. 
-- tolerance of AI faults and unpredictable outputs
-
-
-<br>
-
 
 
 <!--

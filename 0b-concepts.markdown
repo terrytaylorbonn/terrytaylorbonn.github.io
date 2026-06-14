@@ -9,18 +9,18 @@ permalink: /0b-demos/
 
 #### **WIP** (maybe v1 will be ready in July 2026)
 
-**During the [QS](/0-qs/) demos, you started to truly grasp the core concepts.** Core concepts are crucial for making the right decisions about how to use AI. **The goal of this section: To summarize the concepts in a logical cohesive whole**. 
+<!-- **During the [QS](/0-qs/) demos, you started to truly grasp the core concepts.** Core concepts are crucial for making the right decisions about how to use AI. **The goal of this section: To summarize the concepts in a logical cohesive whole**. -->
 
 <br>
 
 **TOC**
-- **1 AI big picture concepts**. How real intelligence and AI work together.
-- **2 AI mechanisms**. Summarizes concepts introduced in the QS demos.
-- **3 AI apps**. How to apply to real world problems.
+- **1 AI "intelligence"**. How real intelligence and AI work together.
+- **2 AI components**. NNs, models, agents.
+- **3 AI projects**. How to apply to real world problems.
 
 <br>
 
-## **1 AI big picture concepts**
+## **1 AI "intelligence"**
 
 #### 1.1 The human <> machine interface
 This is the core app for AI. Tokens are the interface for intelligent humans and binary computers. The problem is when AI output of tokens starts to fool humans into believing AI is intelligent. Then humans start to think that AI can do things that AI simple cant. 
@@ -45,7 +45,7 @@ The best analogy for the NN and the agent are Tweedledee and Tweddledum from **[
 *An intelligent human (left) dealing with the robotic dynamic duo (right)* <br>
 <img src="/assets/M-11.png" alt="drones" width="26%">
 
-Human intelligence is a mystery. How the brain hosts intellligence, consciousness, sight, thoughts, feelings, emotions, hearing, etc. **Listening to AI "gurus" talking about how binary computers already have intelligence was the primary motivation for my initial studies of AI**. I was more interested in analyzing the hype of the gurus than figuring out AI (I knew what the core of AI was already; AI runs on switched binary circuits, not on neurons, so all the talk about AGI was pure hype). These people understood AI on a very low level, and knew that what they were saying was nonsense. **AI is "mechanical" computation** (a simulation created the Dee agent and the Dum NN). **AI is programmed to produce certain outputs. AI does not learn. It understands nothing. It only computes numbers. It only reacts.** AI is vastly simpler than the intelligent human mind. 
+Human intelligence is a mystery. How the brain hosts intellligence, consciousness, sight, thoughts, feelings, emotions, hearing, etc. **Listening to AI "gurus" talking about how binary computers already have intelligence was the primary motivation for my initial studies of AI**. I was more interested in analyzing the hype of the gurus than figuring out AI (I knew what the core of AI was already; AI runs on switched binary circuits, not on neurons, so all the talk about AGI was pure hype). **AI is "mechanical" computation** (an AI simulation created by the Dee agent and the Dum NN). **AI is programmed to produce certain outputs. AI does not learn. It understands nothing. It only computes numbers. It only reacts.** AI is vastly simpler than the intelligent human mind. 
 
 
 #### 1.4 Agentic AI higher level "thinking" is statistical probability
@@ -56,41 +56,44 @@ Along with some clever programming. **The agent and TF and designed to work toge
 
 <br>
 
-## **2 AI mechanisms**
+## **2 AI components**
 
-#### **This section summarizes the concepts introduced in the QS demos.**
+<!-- #### **This section summarizes the concepts introduced in the QS demos.**
 
-I simply find the word "mechanism" to be a perfect classifier of AI. It get to the heart of what AI is. But **AI is NOT simple**, and **AI IS extremely useful (for specific applications)**. This section discusses the available mechanism that AI offers.
+I simply find the word "mechanism" to be a perfect classifier of AI. It get to the heart of what AI is. But **AI is NOT simple**, and **AI IS extremely useful (for specific applications)**. This section discusses the available mechanism that AI offers. -->
 
 <!-- Therefore, it is quite worth your while to really understand the core concepts. To draw conclusions from the [QS](/0-qs/).  -->
 
 <br>
 
-*[ZiptieAI evolution](/0.1-zai-evolution/)* <br>
-<img src="/assets/zai_evolution7.png" alt="drones" width="42%">
+
+*AI components for an LLM* <br>
+<img src="/assets/M-13.png" alt="drones" width="62%">
+
+<!-- *[ZiptieAI evolution](/0.1-zai-evolution/)* <br>
+<img src="/assets/zai_evolution7.png" alt="drones" width="42%"> -->
 
 <br>
 
-- **3.1 NNs**
-- **3.2 Models**
-- **3.3 Agents (external)**
-- **5 NN demo D2cc details**
+- **2.1 NNs**
+- **2.2 Models**
+- **2.3 Agents (external)**
 
 <br>
 
-### **[3.1 NNs](/2_models/)**
+### **[2.1 NNs](/2_models/)**
 
 The NN is the core of AI "intelligence". A NN provides a pattern matching algorithm. The the NN is controlled by Python code ("agent").
 
-- **3.1.1 Tiny NN demo (D2ccc) INFERENCE**
-- **3.1.1b Tiny NN demo (D2ccc) TRAINING**
-- **3.1.2a ALEXNET CNN** (this is a good example to study before doing the Tiny CNN demo)
-- **3.1.2b Tiny CNN demo (D4)**
-- **3.1.3 Tiny TF demo (D5)**
+- **2.1.1 Tiny NN demo (D2ccc) INFERENCE**
+- **2.1.1b Tiny NN demo (D2ccc) TRAINING**
+- **2.1.2a ALEXNET CNN** (this is a good example to study before doing the Tiny CNN demo)
+- **2.1.2b Tiny CNN demo (D4)**
+- **2.1.3 Tiny TF demo (D5)**
 
 <br>
 
-#### **3.1.1 Tiny NN demo (D2ccc) INFERENCE** *(see section 5 at the end of this page for code description)*
+#### **2.1.1 Tiny NN demo (D2ccc) INFERENCE** *(see section 5 at the end of this page for code description)*
 
 *"Inference" means normal run-time operation. Generating output from input. Training is described next.* 
 
@@ -120,7 +123,7 @@ The NN is the core of AI "intelligence". A NN provides a pattern matching algori
 
 <br>
 
-#### **3.1.1b Tiny NN demo (D2ccc) TRAINING**
+#### **2.1.1b Tiny NN demo (D2ccc) TRAINING**
 
 WIP. The main thing is the training input/output must match exactly what is desired in inference. Discuss following steps.
 
@@ -135,7 +138,7 @@ for epoch in range(100):
 
 <br>
 
-#### **3.1.2a ALEXNET CNN** (this is a good example to study before doing the Tiny CNN demo)
+#### **2.1.2a ALEXNET CNN** (this is a good example to study before doing the Tiny CNN demo)
 
 2012 this enabled recognition of digits. With XX % accuracy.
 Its too complicated to use as a demo. 
@@ -162,7 +165,7 @@ This is a diagram that I created that explains clearly how AlexNet CNN works (my
 
 
 
-#### **3.1.2b Tiny CNN (D4)**
+#### **2.1.2b Tiny CNN (D4)**
 
 You input a 28x28 pixel screenshot of a digit, and the NN outputs "0", "1", ... "9".
 
@@ -194,7 +197,7 @@ class TinyCNN(nn.Module):
 
 <br>
 
-#### **3.1.3 Tiny TF (D5)** 
+#### **2.1.3 Tiny TF (D5)** 
 
 
 In D5 (diagram below):
@@ -214,25 +217,153 @@ In D5 (diagram below):
 <br>
 
 
-### **[3.2 Models](/2b_models/)** (with API)
+### **[2.2 Models](/2b_models/)** (with API)
 
 The agent and the NN are typically packed into a **model** that has an API that makes it possible for existing software to **use the model as a "helpful" assistant**. I refer to the **code in the model that controls the TF NN as the "internal agent" (iAgent)**. This concept is central to understanding how models work. *Note: I invented the iAgent concept; GPT has only kind of accepted it as OK.*
+
+```
+So cleaner:
+
+HF = stores/distributes NN/PT files
+Render/AWS/etc = runs API/eAgent code
+Client = calls eAgent/API
+
+Example:
+
+HF
+ └── .pt file
+
+Render
+ └── FastAPI server
+     ├── NN definition
+     ├── downloads .pt from HF
+     ├── iAgent/inference logic
+     └── exposes /predict
+
+Laptop client
+ └── eAgent/client code calls Render API
+
+AWS could do the same job as Render, but Render is simpler for your demos.
+```
+
+
+```
+my focus here is what i can create.. 
+
+(1) I CREATE THE NN. NO EXISTING MODEL. JUST PT. 
+i create the NN , i train, infer, total control. and all visible. 
+i need no infrastructure. 
+THERE IS NO EXISTING MODEL... it is created whebn running the code. 
+I can train it every time i run it, or store in pt file. 
+normal use woudl probably be simple "USE EXISTING PT FILE". 
+***you dont fine tune such models... you just modify the training data.*** 
+
+(2) I CREATE A PACKAGED MODEL. I CAN MODIFY. 
+this is usuallly the minimum for others to reuse.. 
+this is normally *** you can modify (train yourself) , 
+but you dont have too .. 
+and you dont have to write inference code (the iAgent) ***. 
+its meant as a more complete unit. there is an API. 
+i am interested in deployment options, but that is secondary. 
+
+(3) I CREATE eAgent ONLY AND USE AN API. MAYBE I CAN RUN LOCALLY. 
+"out of my league" models. 
+too complex.. could install local .. who cares.
+
+
+GPT: Yes — this is a better framework.
+
+I would write it as:
+
+1. I create the model from scratch
+I create:
+NN + training code + data + PT
+
+Use case:
+
+tiny CNN
+tiny TF
+forecast model
+classifier
+
+Normal use:
+
+load existing .pt
+run inference
+
+Key point:
+
+You do not fine-tune it.
+You retrain it or change the training data/code.
+
+This is your M01-M07 world.
+
+2. I create a packaged reusable model
+I create:
+NN + PT + iAgent/API + docs
+
+Others can use it without writing the inference code.
+
+Use case:
+
+download package
+call API
+reuse model
+possibly retrain/modify
+
+This is closer to:
+
+a real model product
+
+M07 starts this.
+
+3. I create only the eAgent
+I do NOT create the model.
+I use someone else's model/API.
+
+You create:
+
+workflow
+tools
+business logic
+agent
+UI
+database integration
+
+Examples:
+
+OpenAI API
+Claude API
+Gemini API
+local Ollama model
+
+Key point:
+
+The model is out of scope.
+Your value is the external system.
+
+This is your PAL/agentic-AI world.
+```
 
 
 <br>
 
 
-### **[3.3 Agents](/3_agents/)**
+### **[2.3 Agents](/3_agents/)**
 
 External (not LLM internal) agents provide 
 - reliable workflows built around models, tools, and automation. 
 - tolerance of AI faults and unpredictable outputs
 
 
+
+
+
 <br>
 
-## **3 AI apps**
+## **[3 AI projects](/3.3-ai-projects/)**
 
+<br>
 
 26.0614 (v1 26.0611)
 

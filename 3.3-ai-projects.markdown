@@ -1,11 +1,13 @@
 ---
 layout: page
-title: "3.3 Agentic AI projects"
+title: "3b Projects"
 permalink: /3.3-ai-projects/
 description: Last edit 26.0501
 ---
 
-[← 3 Agents](/3_agents/)
+<!-- [← 3 Agents](/3_agents/) -->
+
+<br>
 
 This section focuses on "spinning up" real-world projects quickly with minimal code analysis or manual coding. 
 
@@ -20,7 +22,7 @@ For details see
 
 <br>
 
-### [3.3.2 AI project 2 JobRadar (what it does so far 26.0506)](/3.3.2-ai-proj-2-jobradar/)
+### [3b.2 AI project 2 JobRadar (what it does so far 26.0506)](/3.3.2-ai-proj-2-jobradar/)
 
 Ingests data from different sources and uses LLM to find matching data and summarize. The results are then sent by email, google docs, etc. Runs locally and on Cursor. Spun up in 4 days. **I did not even look at the code (not necessary). This is probably how such apps will be done in the future.**
 
@@ -28,7 +30,7 @@ Ingests data from different sources and uses LLM to find matching data and summa
 
 <br>
 
-### [3.3.1 Demo 1 n8n (26.0501)](/3.3.1-ai-proj-1-n8n/)
+### [3b.1 Demo 1 n8n (26.0501)](/3.3.1-ai-proj-1-n8n/)
 
 I did analyze the code and manual modify a few times.
 

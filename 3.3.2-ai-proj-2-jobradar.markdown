@@ -1,11 +1,11 @@
 ---
 layout: page
-title: "3.3.2 AI project 2 JobRadar"
+title: "3b.2 AI project 2 JobRadar"
 permalink: /3.3.2-ai-proj-2-jobradar/
 description: Last edit 26.0501
 ---
 
-[← 3 Agentic AI projects](/3.3-ai-projects/)
+[← 3b Projects](/3.3-ai-projects/)
 
 *Complete project ecosystem*<br>
 <img src="/assets/6_main_diagram.png" alt="drones" width="40%"> 

@@ -8,6 +8,9 @@ permalink: /0-qs/
 
 #### **WIP** (maybe v1 will be ready in July 2026)
 
+<br>
+
+
 **The ONLY way to understand AI is by doing examples.** This page currently is an overview of all the demos on this site. But it will slowly morph into a Quick Start with specific demos to focus on. 
 
 **I wasted so much time going down so many rabbit holes when studying AI**. AI is an awesome technology. Without AI tools (GPT) I never could have accomplished 5% of what I have done on the ZiptieAI project. But **AI chatbots only produce the output they are programmed to produce, and much of that about AI itself is misleading hype (or outright lies)**. The very term "artificial intelligence" is a perfect example. AI is not intelligent, and the very concept of "man-made" intelligence shows a basic lack of understanding of what intelligence is. 
@@ -104,7 +107,7 @@ The agent and LLM together can doing amazing things. But they also have severe l
 
 <br>
 
-26.0613 (v1 26.0527)
+26.0614 (v1 26.0527)
 
 
 <!-- <img src="/assets/lucius.png" alt="drones" width="55%"> -->

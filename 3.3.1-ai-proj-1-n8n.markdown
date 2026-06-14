@@ -1,11 +1,11 @@
 ---
 layout: page
-title: "3.3.1 Agentic AI project n8n"
+title: "3b.1 Agentic AI project n8n"
 permalink: /3.3.1-ai-proj-1-n8n/
 description: Last edit 26.0524
 ---
 
-[← 3 Agentic AI projects](/3.3-ai-projects/)
+[← 3b Projects](/3.3-ai-projects/)
 
 *Complete project ecosystem*<br>
 <img src="/assets/6_main_diagram.png" alt="drones" width="40%"> 
