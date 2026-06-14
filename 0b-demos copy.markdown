@@ -1,7 +1,7 @@
 ---
 layout: page
 title: Demos
-permalink: /0b-demos/
+permalink: /0b-demosxxxx/
 ---
 
 

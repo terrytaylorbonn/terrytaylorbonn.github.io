@@ -6,20 +6,21 @@ permalink: /0-mission/
 
 <br>
 
-This page describes the **ZiptieAI mission**. 
-
-<br>
-
-
-**TOC**
-- **1 Recognizing what works**
+The **ZiptieAI mission** is to give you  
+- **1 Recognition of what works**
 - **2 And what doesnt work**
-- **3 Providing core insights (via demos)**. For details see the **[QS demos](/0-qs/)**.  
-- **4 Anticipating the future**
+- **3 Hands-on demos ([QS](/0-qs/))**
+- **4 Intrinsic understanding of core [concepts](/0b-demos/)**
+- **5 Deep dive ([NNs](/2_models/), [Models](/2b_models/), [Agents](/3_agents/))**
+- **6 Anticipation of the future**
+
+
+
 
 <br>
 
-## **1 Recognizing what works** 
+
+## **1 Recognition of what works** 
 
 *A successful mission for AI* <br>
 <img src="/assets/ziptiedrone2.png" alt="drones" width="23%">
@@ -65,9 +66,12 @@ AI is the gatekeeper of the source of truth. But the safety and reliability of t
 
 <br>
 
-## **3 Providing core insights (demos)**
+## **3 Hands-on demos ([QS](/0-qs/))**
 
-```text2
+
+
+
+The core details of how AI works come only from doing [demos](/0-qs/)**. 
 So many times I'd stumble upon some basic fact about AI that is so fundamental 
 that I should have been told (or warned) about it much earlier, 
 but in untold numbers of chat with GPT, GPT **never once told me something obvious**. 
@@ -75,13 +79,17 @@ AI is merely a helpful assistant, a deterministic hard-coded algorithm. Never tr
 GPT has always been remarking about my habit of wanting to describe AI from a **mechanistic** viewpoint. 
 My response always is **"of course I view AI from a mechanistic viewpoint, 
 AI is built on mechanical clocked state algorithms"** 
+
+<!-- 
 (whatever the official term is; the human brain is definitely not the same).
  **Trust but verify** anything you get from AI. Verify means investigating, doing demos.
-```
+-->
 
-#### **For the core details of how AI works, see the [QS demos](/0-qs/)**
 
-I was quite confident in my assessment of the Palantir CTO's speech because I've built many AI demo projects. But the most insight I got from "simple" "tiny" demos. Such **demos are the core of the ZAI website, and are organized into 3 sections:**
+
+<!-- I was quite confident in my assessment of the Palantir CTO's speech because I've built many AI demo projects. But the most insight I got from "simple" "tiny" demos. 
+
+Such **demos are the core of the ZAI website, and are organized into 3 sections:**
 
 - **3.1 NNs**
 - **3.2 Models**
@@ -100,68 +108,74 @@ I was quite confident in my assessment of the Palantir CTO's speech because I've
 - **3.1.2b Tiny CNN demo (D4)**
 - **3.1.3 Tiny TF demo (D5)** -->
 
-<br>
+<!-- <br>
 
 #### **3.1.1 Tiny NN demo (D2ccc)** 
 
-<!-- *"Inference" means normal run-time operation. Generating output from input. Training is described next.*  -->
+*"Inference" means normal run-time operation. Generating output from input. Training is described next.*  -->
 
-A simple NN demo of the core of AI. 
 
-*Demo D2ccc (left) and test results (right)*<br>
+*A simple NN demo of the core of AI*<br>
 <img src="/assets/M-05.png" alt="drones" width="46%">     <img src="/assets/M-02.png" alt="drones" width="26%">
 
-<br>
 
 <!-- #### **3.1.1b Tiny NN demo (D2ccc) TRAINING**
 
 (WIP) 
 
-<br> -->
+<br> 
 
 #### **3.1.2 Tiny CNN (D4)**
 
-See [2.2.1 D4 CNN image classifier](https://ziptieai.com/2.2.1-d4-cnn-image-classifier/) and (for details) [2.2.1b D4 CNN algorithm details](https://ziptieai.com/2.2.1b-d4-cnn-algorithm-details/).
+See [2.2.1 D4 CNN image classifier](https://ziptieai.com/2.2.1-d4-cnn-image-classifier/) and (for details) [2.2.1b D4 CNN algorithm details](https://ziptieai.com/2.2.1b-d4-cnn-algorithm-details/). -->
 
-
+<!--
+*An image classifier.*<br>
 <img src="/assets/M-07.png" alt="drones" width="46%">
 <img src="/assets/M-08.png" alt="drones" width="20%">
+-->
 
 <!-- A good example to study before doing the Tiny CNN demo.
 
 Diagram from page [2.2.1b D4 CNN algorithm details](https://ziptieai.com/2.2.1b-d4-cnn-algorithm-details/).
 
-<img src="/assets/M-06.png" alt="drones" width="46%"> -->
+<img src="/assets/M-06.png" alt="drones" width="46%"> 
 
 
 <br>
 
-#### **3.1.3 Tiny TF (D5)** 
+#### **3.1.3 Tiny TF (D5)** -->
 
-
+<!-- 
+*A transformer that prints out "hello world hello world hello world ...."*<br>
 <img src="/assets/M-09.png" alt="drones" width="70%">
+-->
 
+<!-- 
+<br>
+
+The QS also includes
+- **[3.2 Models](/2b_models/)** (with API). The agent and the NN are typically packed into a **model** that has an API that makes it possible for existing software to **use the model as a "helpful" assistant**. 
+- **[3.3 Agents](/3_agents/)**. External (not LLM internal) agents provide 
+  - reliable workflows built around models, tools, and automation. 
+  - tolerance of AI faults and unpredictable outputs
+-->
 
 <br>
 
+## **4 Intrinsic understanding of core [concepts](/0b-demos/)**
 
-### **[3.2 Models](/2b_models/)** (with API)
-
-The agent and the NN are typically packed into a **model** that has an API that makes it possible for existing software to **use the model as a "helpful" assistant**. 
-
-<br>
-
-
-### **[3.3 Agents](/3_agents/)**
-
-External (not LLM internal) agents provide 
-- reliable workflows built around models, tools, and automation. 
-- tolerance of AI faults and unpredictable outputs
-
+<img src="/assets/0_projects2.png" alt="drones" width="35%"> 
 
 <br>
 
-## **4 Anticipating the future**
+## **5 Deep dive ([NNs](/2_models/), [Models](/2b_models/), [Agents](/3_agents/))**
+
+<img src="/assets/tf_S1-S6.png" alt="desc" width="40%"> 
+
+<br>
+
+## **6 Anticipation of the future**
 
 AI has big a future after the IPOs are finished and the hype is over.
 Those that understand how AI really works stand to benefit the most.
@@ -169,11 +183,15 @@ The original ZiptieAI was my personal learning project.
 But now **ZiptieAI has a mission to help myself (and others) stay ahead of the AI curve**. 
 In the no-so-distant future, AI integration skills will be required in the digital infrastructure of all business segments. This work will required a massive number of tech workers who, empowered by AI tools, will help integrate AI **as a helpful assistant** into all areas of life.  
 
+<img src="/assets/M-10.png" alt="desc" width="40%"> 
+
+
+
 <br>
 
 
 
-26.0612 (v1 26.0611)
+26.0614 (v1 26.0611)
 
 <!-- *A successful mission for AI (left) and not so successful mission (right).* <br>
 <img src="/assets/ziptiedrone2.png" alt="drones" width="23%"> <img src="/assets/waymo.png" alt="drones" width="26%">  -->

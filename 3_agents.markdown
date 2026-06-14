@@ -40,6 +40,25 @@ The core control loop is traditional non-AI deterministic programming that perfo
 
 26.0524
 
+<br>
+
+-------------------------------
+-----------------------------
+------------------
+---------------------
+
+<br>
+
+### **[3.3 Agents](/3_agents/)**
+
+External (not LLM internal) agents provide 
+- reliable workflows built around models, tools, and automation. 
+- tolerance of AI faults and unpredictable outputs
+
+
+<br>
+
+
 
 <!--
 - **[3 Agents](/3_agents/)** (the focus of this site). Concepts and demos for

@@ -71,6 +71,27 @@ This is actually one of the strongest sections because it matches your current i
 
 26.0613 (v1 26.0610)
 
+<br>
+
+----------------------
+-------------------
+------------------
+---------------------
+
+<br>
+
+
+### **[3.2 Models](/2b_models/)** (with API)
+
+The agent and the NN are typically packed into a **model** that has an API that makes it possible for existing software to **use the model as a "helpful" assistant**. I refer to the **code in the model that controls the TF NN as the "internal agent" (iAgent)**. This concept is central to understanding how models work. *Note: I invented the iAgent concept; GPT has only kind of accepted it as OK.*
+
+
+<br>
+
+
+
+
+
 <!-- ## **2b.5 Use AI inside systems**
 
 **i am not sure if parts of this belong in 3 agents**

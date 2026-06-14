@@ -34,7 +34,7 @@ header_pages:
   - index.md
   - 0-mission.markdown
   - 0-qs.markdown
-  - 0b-demos.markdown
+  - 0b-concepts.markdown
   - 1-ai-drones.markdown
   - 2_models.markdown
   - 2b_models.markdown

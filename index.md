@@ -3,21 +3,25 @@ layout: home
 title: Home
 ---
 
-<br>
+<!-- <br>
 
 The **[Mission](/0-mission/)** page describes the "mission" of this site. 
 
-Primary site content is a **[quick start](/0-qs/)** + hands-on **[demos](/0b-demos/)** for **[NNs](/2_models/)**, **[models](/2b_models/)**, and **[agents](/3_agents/)**.  
+Primary site content is a **[quick start](/0-qs/)** + hands-on **[demos](/0b-demos/)** for **[NNs](/2_models/)**, **[models](/2b_models/)**, and **[agents](/3_agents/)**.  -->
+
+<br>
+
+ZiptieAI.com was created in 2024 originally to document my work on Ukrainian style ziptie'd AI drones. The site now focuses on AI. It is now not only a tool to organize my thoughts and work, but also to help others navigate the jungle of AI rabbit holes.
 
 <br>
 
 
 Top level pages *(see also the **[Wiki](https://github.com/terrytaylorbonn/auxdrone/wiki)** and other links in the footer)*.  
 
-- **[Mission](/0-mission/)**. 
-- **[QS](/0-qs/)**. Basically a quick hands-on tour through the AI basics.
-- **[Demos](/0b-demos/)**. A TOC of demos (NNS, models, agents) on this site.
-- [1 Drones](/1-drones/) (FPV and Pixhawk with CNN object recognition). 
+- **[Mission](/0-mission/)**. ZiptieAI's mission is to explain the mechanics of how binary-computation-based AI really works. 
+- **[QS](/0-qs/)**. Hands-on tour of core AI (the only way you can learn AI is with examples).
+- **[Concepts](/0b-demos/)**. Core lessons from the QS.
+- [1 Drones](/1-drones/). FPV and Pixhawk with CNN object recognition (this was the original focus of ZiptieAI). 
 - **[2 NNs](/2_models/)**. **NNs**, **CNNs** (convolution), **TFs** (transformers), and **robotic NNs**. The NN is the core of AI "intelligence".
 - **[2b Models](/2b_models/)**. AI models (for example, internal agent + TF for language models) packaged for practical use. <!-- Fine-tuning, local models, deployment, RAG, and model serving. -->
 - **[3 Agents](/3_agents/)**. External (not LLM internal) agents that provide reliable workflows built around models, tools, and automation.
@@ -26,8 +30,8 @@ Top level pages *(see also the **[Wiki](https://github.com/terrytaylorbonn/auxdr
 
 <br>
 
-*Inspiration for the name "ZiptieAI" (left) and the importance of understanding what AI really is (right).* <br>
-<img src="/assets/ziptiedrone2.png" alt="drones" width="23%"> <img src="/assets/waymo.png" alt="drones" width="26%"> 
+*Successful (left) and failed (right) AI deployments* <br>
+<img src="/assets/ziptiedrone2.png" alt="drones" width="26%"> <img src="/assets/waymo.png" alt="drones" width="29%"> 
 
 
 <!-- (*see [2.3.1 The gist of LLMs](/2.3.1-llm-gist/)*) -->

@@ -1,6 +1,6 @@
 ---
 layout: page
-title: Demos
+title: Concepts
 permalink: /0b-demos/
 ---
 
