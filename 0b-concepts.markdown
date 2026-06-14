@@ -9,17 +9,43 @@ permalink: /0b-demos/
 
 #### **WIP** (maybe v1 will be ready in July 2026)
 
-**After you've done the [QS](/0-qs/), then you can truly start to grasp the core concepts.**
-
-Human intelligence is a mystery. How the brain hosts intellligence, consciousness, sight, thoughts, feelings, emotions, hearing, etc. 
-
-**Listening to AI "gurus" talking about how binary computers already have intelligence was the primary motivation for my initial studies of AI**. I was more interested in analyzing the hype of the gurus than figuring out AI (I knew what the core of AI was already; AI runs on switched binary circuits, not on neurons). These people understood AI on a very low level, and knew that what they were saying was nonsense. **AI is "mechanical" computation. AI is programmed to produce certain outputs. AI does not learn. It understands nothing. It only computes numbers.** It is vastly simpler than the human mind. 
-
-But **AI is NOT simple**, and **AI IS extremely useful (for specific applications)**. Therefore, it is quite worth your while to really understand the core concepts. To draw conclusions from the QS. 
+**After you've done the [QS](/0-qs/), then you can truly start to grasp the core concepts.** Concepts are not just for intellectual satisfication, but for making the right decisions about how to use AI. 
 
 <br>
 
--------------------------
+**TOC**
+- **1 AI big picture concepts**
+
+<br>
+
+### **1 AI big picture concepts**
+
+#### 1 The human <> machine interface
+This is the core app for AI. Tokens are the interface for intelligent humans and binary computers. The problem is when AI output of tokens starts to fool humans into believing AI is intelligent. Then humans start to think that AI can do things that AI simple cant. 
+
+#### 2 NN is always passive
+
+A core lesson from the demos was that a NN is always passive. At least then NN part that does the pattern matching and statisical computation that passes for intelligence. An NN inputs data and outputs the (100% deterministic) result. Thats it. No control loop. 
+
+#### 3 CPU-based agents are in control
+
+In the end AI is simply an add-on to CPU-based systems. 
+
+#### 4 NN and CPU = Tweedledee and Tweedledum
+
+The best analogy for the NN and the agent are Tweedledee and Tweddledum from **[Alice in Wonderland](https://en.wikipedia.org/wiki/Alice%27s_Adventures_in_Wonderland)**. If you always keep this analogy in mind, you will do a much better job of assessing where AI can be deployed successfully or how much effort it will take to integrate into a system (if AI was intelligent, system integration would be a no-brainer; AI would be the brain).
+
+<img src="/assets/M-11.png" alt="drones" width="26%">
+
+Human intelligence is a mystery. How the brain hosts intellligence, consciousness, sight, thoughts, feelings, emotions, hearing, etc. **Listening to AI "gurus" talking about how binary computers already have intelligence was the primary motivation for my initial studies of AI**. I was more interested in analyzing the hype of the gurus than figuring out AI (I knew what the core of AI was already; AI runs on switched binary circuits, not on neurons, so all the talk about AGI was pure hype). These people understood AI on a very low level, and knew that what they were saying was nonsense. **AI is "mechanical" computation. AI is programmed to produce certain outputs. AI does not learn. It understands nothing. It only computes numbers.** AI is vastly simpler than the intelligent human mind. 
+
+<br>
+
+## **2 AI mechanisms**
+
+I simply find the word "mechanism" to be a perfect classifier of AI. It get to the heart of what AI is. But **AI is NOT simple**, and **AI IS extremely useful (for specific applications)**. This section discusses the available mechanism that AI offers.
+
+<!-- Therefore, it is quite worth your while to really understand the core concepts. To draw conclusions from the [QS](/0-qs/).  -->
 
 <br>
 
@@ -35,7 +61,7 @@ But **AI is NOT simple**, and **AI IS extremely useful (for specific application
 
 <br>
 
-### **[3.1 NNs](/2_models/)**
+## **[3.1 NNs](/2_models/)**
 
 The NN is the core of AI "intelligence". A NN provides a pattern matching algorithm. The the NN is controlled by Python code ("agent").
 
