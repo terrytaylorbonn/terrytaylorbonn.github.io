@@ -12,8 +12,8 @@ The **ZiptieAI mission** is to give you
 - **3 Hands-on demos ([QS](/0-qs/))**
 - **4 Intrinsic understanding of core [concepts](/0b-demos/)**
 - **5 Deep dive ([NNs](/2_models/), [Models](/2b_models/), [Agents](/3_agents/))**
-- **6 Anticipation of the future**
-
+- **[6 Projects](/3.3-ai-projects/)** 
+- **7 Anticipation of the future**
 
 
 
@@ -165,7 +165,7 @@ The QS also includes
 
 ## **4 Intrinsic understanding of core [concepts](/0b-demos/)**
 
-<img src="/assets/0_projects2.png" alt="drones" width="35%"> 
+<img src="/assets/M-11.png" alt="drones" width="31%"> 
 
 <br>
 
@@ -175,7 +175,15 @@ The QS also includes
 
 <br>
 
-## **6 Anticipation of the future**
+## **[6 Projects](/3.3-ai-projects/)** 
+
+<img src="/assets/0_projects2.png" alt="drones" width="35%"> 
+
+
+
+<br>
+
+## **7 Anticipation of the future**
 
 AI has big a future after the IPOs are finished and the hype is over.
 Those that understand how AI really works stand to benefit the most.
@@ -186,8 +194,10 @@ In the no-so-distant future, AI integration skills will be required in the digit
 <img src="/assets/M-10.png" alt="desc" width="40%"> 
 
 
-
 <br>
+
+
+
 
 
 

@@ -91,8 +91,11 @@ The agent and LLM together can doing amazing things. But they also have severe l
 - **[3.2.5 Agentic + AI / PAL demos](/3.2.5-ai-agent-pal-demos/)**.   <br>
 <img src="/assets/4_6_2x.png" alt="drones" width="20%">  <br>
 <img src="/assets/4_5_3x_bbb.png" alt="drones" width="20%"><br><br> 
-- **[3.3 Agentic AI projects](/3.3-ai-projects/)**. Complete business segment projects (main long-term focus).<br> 
+
+
+<!-- - **[3.3 Agentic AI projects](/3.3-ai-projects/)**. Complete business segment projects (main long-term focus).<br> 
 <img src="/assets/6_main_diagram.png" alt="drones" width="25%"> <br><br>
+-->
 
 
 
