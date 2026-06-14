@@ -16,6 +16,8 @@ This very **WIP** page (v1 26.0610) describes model internals.
 
 Note: (1) Tiny agentic AI model demo, (2) Backdoor in a model.
 
+<br>
+
 *Models in the AI ecosystem* <br>
 <img src="/assets/zai_evolution7.png" alt="drones" width="42%">
 

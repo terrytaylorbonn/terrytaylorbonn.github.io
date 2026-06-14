@@ -42,7 +42,9 @@ Palantir is making a lot of money because they provide a product that is extreme
 
 #### **The endless hype**
 
-"No more programmers" (Jensen Huang), "no more work for people" (Musk), "we must pause AI development because its not safe" (Anthropic CEO), "AI already has emotions" (Jeffrey Hinton) etc etc. But even Palantir has its own hype. Watch the first (English) half of this fascinating **[interview of Palantir CTO](https://www.youtube.com/watch?v=lcUHDsA5lzc)**. Pure unadulterated hype. I could not help but laugh at every other sentence from the CTO.  *Details about video soon.....*
+"No more programmers" (Jensen Huang), "no more work for people" (Musk), "we must pause AI development because its not safe" (Anthropic CEO), "AI already has emotions" (Jeffrey Hinton) etc etc. 
+
+<!-- But even Palantir has its own hype. Watch the first (English) half of this fascinating **[interview of Palantir CTO](https://www.youtube.com/watch?v=lcUHDsA5lzc)**.  Pure unadulterated hype. I could not help but laugh at every other sentence from the CTO.  *Details about video soon.....* -->
 
 The reasons for the hype:
 - Money. That's the motivation for any successful company. 
