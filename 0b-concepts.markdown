@@ -9,39 +9,56 @@ permalink: /0b-demos/
 
 #### **WIP** (maybe v1 will be ready in July 2026)
 
-**After you've done the [QS](/0-qs/), then you can truly start to grasp the core concepts.** Concepts are not just for intellectual satisfication, but for making the right decisions about how to use AI. 
+**During the [QS](/0-qs/) demos, you started to truly grasp the core concepts.** Core concepts are crucial for making the right decisions about how to use AI. **The goal of this section: To summarize the concepts in a logical cohesive whole**. 
 
 <br>
 
 **TOC**
-- **1 AI big picture concepts**
+- **1 AI big picture concepts**. How real intelligence and AI work together.
+- **2 AI mechanisms**. Summarizes concepts introduced in the QS demos.
+- **3 AI apps**. How to apply to real world problems.
 
 <br>
 
-### **1 AI big picture concepts**
+## **1 AI big picture concepts**
 
-#### 1 The human <> machine interface
+#### 1.1 The human <> machine interface
 This is the core app for AI. Tokens are the interface for intelligent humans and binary computers. The problem is when AI output of tokens starts to fool humans into believing AI is intelligent. Then humans start to think that AI can do things that AI simple cant. 
 
-#### 2 NN is always passive
+#### 1.1b These tokens ellicit thoughts in intelligent human 
+(no explanation necessary... and no explanation possible)
 
-A core lesson from the demos was that a NN is always passive. At least then NN part that does the pattern matching and statisical computation that passes for intelligence. An NN inputs data and outputs the (100% deterministic) result. Thats it. No control loop. 
+#### 1.1c For an NN these tokens are just a large set of large (FP) numbers
+When you type a prompt into a chatbot, that prompt is broken up into tokens (words parts) and then converted into an "embedding" (12288 FP numbers for GPT-3.. for a single token). For example: "hello world" might become [15496, 995]. Then the embedding table converts that into [[0.12, -0.55, ...],[0.87,  0.03, ...]]. **No thoughts. Nothing. Just clocked binary state switching.**
 
-#### 3 CPU-based agents are in control
+#### 1.2 NNs are always passive; CPU-based agents are in control
 
-In the end AI is simply an add-on to CPU-based systems. 
+A core lesson from the demos was that a NN is always passive. At least the NN part that does the pattern matching and statisical computation that passes for intelligence. An NN inputs data and outputs the (100% deterministic) result. Thats it. No control loop. In the end AI is simply an add-on to CPU-based systems. 
 
-#### 4 NN and CPU = Tweedledee and Tweedledum
+*Electronic agents still run the world, not electronic "NNs"* <br>
+<img src="/assets/M-12.png" alt="drones" width="22%">
+
+#### 1.3 NN and CPU = Tweedledee and Tweedledum
 
 The best analogy for the NN and the agent are Tweedledee and Tweddledum from **[Alice in Wonderland](https://en.wikipedia.org/wiki/Alice%27s_Adventures_in_Wonderland)**. If you always keep this analogy in mind, you will do a much better job of assessing where AI can be deployed successfully or how much effort it will take to integrate into a system (if AI was intelligent, system integration would be a no-brainer; AI would be the brain).
 
+*An intelligent human (left) dealing with the robotic dynamic duo (right)* <br>
 <img src="/assets/M-11.png" alt="drones" width="26%">
 
-Human intelligence is a mystery. How the brain hosts intellligence, consciousness, sight, thoughts, feelings, emotions, hearing, etc. **Listening to AI "gurus" talking about how binary computers already have intelligence was the primary motivation for my initial studies of AI**. I was more interested in analyzing the hype of the gurus than figuring out AI (I knew what the core of AI was already; AI runs on switched binary circuits, not on neurons, so all the talk about AGI was pure hype). These people understood AI on a very low level, and knew that what they were saying was nonsense. **AI is "mechanical" computation. AI is programmed to produce certain outputs. AI does not learn. It understands nothing. It only computes numbers.** AI is vastly simpler than the intelligent human mind. 
+Human intelligence is a mystery. How the brain hosts intellligence, consciousness, sight, thoughts, feelings, emotions, hearing, etc. **Listening to AI "gurus" talking about how binary computers already have intelligence was the primary motivation for my initial studies of AI**. I was more interested in analyzing the hype of the gurus than figuring out AI (I knew what the core of AI was already; AI runs on switched binary circuits, not on neurons, so all the talk about AGI was pure hype). These people understood AI on a very low level, and knew that what they were saying was nonsense. **AI is "mechanical" computation** (a simulation created the Dee agent and the Dum NN). **AI is programmed to produce certain outputs. AI does not learn. It understands nothing. It only computes numbers. It only reacts.** AI is vastly simpler than the intelligent human mind. 
+
+
+#### 1.4 Agentic AI higher level "thinking" is statistical probability
+
+Along with some clever programming. **The agent and TF and designed to work together to create the illusion of higher level thinking by only exchanging tokens**. (MORE ON THIS LATER... COMPLEX TO EXPLAIN).
+
+
 
 <br>
 
 ## **2 AI mechanisms**
+
+#### **This section summarizes the concepts introduced in the QS demos.**
 
 I simply find the word "mechanism" to be a perfect classifier of AI. It get to the heart of what AI is. But **AI is NOT simple**, and **AI IS extremely useful (for specific applications)**. This section discusses the available mechanism that AI offers.
 
@@ -61,7 +78,7 @@ I simply find the word "mechanism" to be a perfect classifier of AI. It get to t
 
 <br>
 
-## **[3.1 NNs](/2_models/)**
+### **[3.1 NNs](/2_models/)**
 
 The NN is the core of AI "intelligence". A NN provides a pattern matching algorithm. The the NN is controlled by Python code ("agent").
 
@@ -214,7 +231,7 @@ External (not LLM internal) agents provide
 
 <br>
 
-
+## **3 AI apps**
 
 
 26.0614 (v1 26.0611)
