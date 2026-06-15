@@ -11,14 +11,24 @@ description: Last edit 26.0501
 
 This section focuses on "spinning up" real-world projects quickly with minimal code analysis or manual coding. 
 
-*Complete project ecosystem*<br>
-<img src="/assets/6_main_diagram.png" alt="drones" width="40%"> 
-
-<br>
-
 For details see 
 - Documentation: [#606\_ai_ides_.docx](https://drive.google.com/drive/folders/1-Adawag9uA8_bq-hDF-nOuPYaRLz1eEO)
 - Repo [602-2_D1-tool-LLM](https://github.com/terrytaylorbonn/602-2_D1-tool-LLM)
+
+
+*3b Project in the master diagram* <br>
+<img src="/assets/M-15-3b.png" alt="drones" width="80%">
+
+
+*Complete project ecosystem*<br>
+<img src="/assets/6_main_diagram.png" alt="drones" width="40%"> 
+
+
+<br>
+
+#### **TOC**
+- **3b.2 AI project 2 JobRadar (what it does so far 26.0506)**
+- **3b.1 Demo 1 n8n (26.0501)**
 
 <br>
 
@@ -38,7 +48,7 @@ I did analyze the code and manual modify a few times.
 
 <br>
 
-26.0524
+26.0615 (0524)
 
 <!-- Bearer token for basic security.
 <img src="/assets/cursor_demo1_01.png" alt="drones" width="50%"> 

@@ -9,27 +9,14 @@ permalink: /3_agents/
 Conceptual summary of agents:
 - Agent = any external (to the LLM) program that calls the LLM API. Basically plays the role of a human during chat (but can do much more).
 - Agent + AI = an LLM is used as a useful assistant.
+- Provide reliable workflows built around models, tools, and automation. 
+- Provide tolerance of AI faults and unpredictable outputs
 
-External (not LLM internal) agents provide 
-- reliable workflows built around models, tools, and automation. 
-- tolerance of AI faults and unpredictable outputs
+*3 Agents in the master diagram* <br>
+<img src="/assets/M-15-3.png" alt="drones" width="72%">
 
-
-<br>
-
-*Agentic AI in ZiptieAI evolution ([about this diagram](/0.1-zai-evolution/))* <br>
-<img src="/assets/zai_evolution7.png" alt="drones" width="42%">
-
-
-
-## from "qs" 26.0615
-The center of the Agentic AI universe is the AI agent. 
-
-<img src="/assets/0_projects2.png" alt="drones" width="35%"> 
-
-The agent and LLM together can doing amazing things. But they also have severe limitations. "Tuning" then to work together is the core focus. 
-
-<img src="/assets/readfile3.png" alt="drones" width="60%" style="border: 1px solid black;">
+<!-- *Agentic AI in ZiptieAI evolution ([about this diagram](/0.1-zai-evolution/))* <br>
+<img src="/assets/zai_evolution7.png" alt="drones" width="42%"> -->
 
 
 
@@ -155,6 +142,19 @@ PAL (Palantir) demos focus on:
 ---------------------
 
 <br>
+
+
+#### **from "qs" 26.0615**
+The center of the Agentic AI universe is the AI agent. 
+
+<img src="/assets/0_projects2.png" alt="drones" width="35%"> 
+
+The agent and LLM together can doing amazing things. But they also have severe limitations. "Tuning" then to work together is the core focus. 
+
+<img src="/assets/readfile3.png" alt="drones" width="60%" style="border: 1px solid black;">
+
+
+
 
 
 <!--

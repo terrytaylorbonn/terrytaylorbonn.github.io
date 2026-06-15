@@ -6,8 +6,13 @@ permalink: /2_models/
 
 <br> 
 
-*NNs (inside the models)* <br>
-<img src="/assets/zai_evolution7.png" alt="drones" width="42%">
+<!-- *NNs (inside the models)* <br>
+<img src="/assets/zai_evolution7.png" alt="drones" width="42%"> -->
+
+*2 NNs in the master diagram* <br>
+<img src="/assets/M-15-2.png" alt="drones" width="52%">
+
+
 
 <br>
 
@@ -342,9 +347,9 @@ test 2
 - The simple NN can classify x,y locations with good accuracy.
 - **But classification accuracy is not equation-level perfect**. In our simple demo the results were good for a small NN. But for more complex datasets the size of the NN would increase dramatically. AI must be used where the input / output relationship can not be defined with simple computation or equations. **But AI is always an approximation (UFA, universal function approximator), so the challenge is integrating AI so that the approximation errors are acceptable** (for war time planning systems OK, for self driving cars or home humanoids NOT OK).
 
-
 <br>
 
+26.0615
 
 
 <!-- *How a UFA determines if a location is in the Netherlands or Belgium*.<br>

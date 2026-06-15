@@ -84,9 +84,6 @@ This section focuses on "spinning up" real-world projects quickly with minimal c
 
 <img src="/assets/6_main_diagram.png" alt="drones" width="40%"> 
 
-<br>
-
-
 
 <br>
 
