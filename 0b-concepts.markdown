@@ -6,6 +6,10 @@ permalink: /0b-demos/
 
 <br>
 
+*Major AI project components* <br>
+<img src="/assets/M-15.png" alt="drones" width="85%">
+
+<br>
 
 **TOC**
 - **1 AI "intelligence"**. How real intelligence and AI work together.
@@ -13,6 +17,7 @@ permalink: /0b-demos/
 - **3 AI projects**. How to apply to real world problems.
 
 <br>
+
 
 ## **1 AI "intelligence"**
 
@@ -52,16 +57,11 @@ Agentic AI models have some pretty sophisticated abilities that really resemble 
 
 <br>
 
-The major components are shown in the diagram below.
+AI major components (see diagram at top of page):
 
 - **2 NNs** (simple NN, CNN, TF)
 - **2b Models** (with internal agent)
 - **3 Agents (external)**
-
-<br>
-
-*Major AI project components* <br>
-<img src="/assets/M-15.png" alt="drones" width="85%">
 
 <br>
 
