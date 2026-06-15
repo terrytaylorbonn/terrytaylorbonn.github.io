@@ -11,7 +11,7 @@ Primary site content is a **[quick start](/0-qs/)** + hands-on **[demos](/0b-dem
 
 <br>
 
-ZiptieAI.com was created in 2024 originally to document my work on Ukrainian style ziptie'd AI drones. The site now focuses on AI. It is now not only a tool to organize my thoughts and work, but also to help others navigate the jungle of AI rabbit holes.
+ZiptieAI.com was created in 2024 originally to document my work on Ukrainian style ziptie'd AI drones. The site now focuses on AI. It is now not only a tool to organize my thoughts and work, but also to help others learn AI hands-on ASAP.
 
 <br>
 
