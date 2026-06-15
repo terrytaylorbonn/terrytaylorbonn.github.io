@@ -11,16 +11,14 @@ I was hoping to work as a volunteer drone builder in Ukraine. I speak Russsian a
 
 <br> 
 
-<img src="/assets/zai_evolution_ch1.png" alt="drones" width="35%"> -->
+<img src="/assets/zai_evolution_ch1.png" alt="drones" width="35%"> 
 
 <br> 
 
 *Drones in the ZAI ecosystem* <br>
-<img src="/assets/zai_evolution7.png" alt="drones" width="42%">
+<img src="/assets/zai_evolution7.png" alt="drones" width="42%">-->
 
 <br>
-
-See the [Wiki page](https://github.com/terrytaylorbonn/auxdrone/wiki/AI-drone-overview) for more info.
 
 I worked on AI drones from 2023 to 2024 focusing on:
 - Drone simulation
@@ -31,8 +29,10 @@ I worked on AI drones from 2023 to 2024 focusing on:
 
 
 See also: 
-  - **[Core AI CNN (object recognition) concepts](/2.2-cnns/)**
-  - [Logic Of Violence: We Are Nowhere Near The Endgame In Drone Wars](https://www.zerohedge.com/military/logic-violence-we-are-nowhere-near-endgame-drone-wars) 26.0523
+- [Wiki page](https://github.com/terrytaylorbonn/auxdrone/wiki/AI-drone-overview) for more info.
+- **[Core AI CNN (object recognition) concepts](/2.2-cnns/)**
+
+<!--  - [Logic Of Violence: We Are Nowhere Near The Endgame In Drone Wars](https://www.zerohedge.com/military/logic-violence-we-are-nowhere-near-endgame-drone-wars) 26.0523 -->
 
 <br>
 
