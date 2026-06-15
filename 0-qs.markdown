@@ -16,6 +16,8 @@ permalink: /0-qs/
 - **2 NN demos**
 - **2b Model demos**
 - **3 Agent demos**
+- **3b Projects**
+
 
 *Old demos are available on [Wiki](https://github.com/terrytaylorbonn/auxdrone/wiki), [Github](https://github.com/terrytaylorbonn?tab=repositories), [Gdrive](https://drive.google.com/drive/folders/1-Adawag9uA8_bq-hDF-nOuPYaRLz1eEO) (docx lab notes).*
 
@@ -55,6 +57,18 @@ The center of the Agentic AI universe is the AI agent.  The agent and LLM togeth
 - **[3.2.5 Agentic + AI / PAL demos](/3.2.5-ai-agent-pal-demos/)**.   <br>
 <img src="/assets/4_6_2x.png" alt="drones" width="20%">  <br>
 <img src="/assets/4_5_3x_bbb.png" alt="drones" width="20%"><br><br> 
+
+<br>
+
+### **[3b Projects](/3.3-ai-projects/)**
+
+This section focuses on "spinning up" real-world projects quickly with minimal code analysis or manual coding. 
+
+<img src="/assets/6_main_diagram.png" alt="drones" width="40%"> 
+
+<br>
+
+
 
 <br>
 
