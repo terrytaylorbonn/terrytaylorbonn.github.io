@@ -6,20 +6,38 @@ permalink: /0-qs/
 
 <br> 
 
-#### **WIP** (maybe v1 will be ready in July 2026)
-
-<br>
-
 **The ONLY way to understand AI is by doing examples.** This page currently is an overview of all the demos on this site. But it will slowly morph into a Quick Start with specific demos to focus on. 
 
 **TOC**
+- **1 Master diagram**
 - **2 NN demos**
 - **2b Model demos**
 - **3 Agent demos**
 - **3b Projects**
 
-
 *Old demos are available on [Wiki](https://github.com/terrytaylorbonn/auxdrone/wiki), [Github](https://github.com/terrytaylorbonn?tab=repositories), [Gdrive](https://drive.google.com/drive/folders/1-Adawag9uA8_bq-hDF-nOuPYaRLz1eEO) (docx lab notes).*
+
+<br>
+
+### **1 Master diagram**
+
+The following diagram is basically the "master diagram" for this site.
+- **2 NN, CNN, TF**
+  - **Core NN (CNN dense, TF FFN)** is the core NN in all demos (except agent only demos with no AI).
+  - **CNN convolute, TF QKV (context)** is an extra NN in CNNs and LLM transformers (TFs).
+  - Note that these run (normally) on a GPU. But they run on a CPU.
+  - These NNs only know FP numbers as input and output. So if you have any type of other data, you must encode and then decode.
+- **2b Model**
+  - Contains the **NNs** and an **"internal" agent (iAgent)** that has sole access to the NN. iAgent and NNs **only** communicate with tokens.
+  - iAgent often implements an **API** that allows external access.
+- **3 External agent (py script)** uses the model as a helful assistant.
+- **3b Project** usually provides integrates AI into existing digital infrastructure.
+
+Note that **there are many variations of this setup**, and I will try to provide the version of this diagram for each demo (v1 of this diagram created 26.0615).
+
+*Master diagram*<br>
+<img src="/assets/M-15.png" alt="drones" width="78%">
+
 
 <br>
 
