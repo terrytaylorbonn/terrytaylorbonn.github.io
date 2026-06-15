@@ -62,7 +62,7 @@ If AI was truly intelligent then AI integration would just be connecting AI and 
 
 Without AI tools (chatbots) I never could have accomplished 5% of what I have done on the ZiptieAI project. But **AI chatbots only say what they are programmed to say** (sometimes that's pure AI lingo and hype). I went down so many rabbit holes when studying AI. **The ONLY way to understand AI is by doing examples. Code does not lie**.
 
-*Code for NN definition (left) and training (right)*<br>
+*Code for **[NN](/2.1.1-predictive-nn-01-sine/)** definition (left) and training (right)*<br>
 <img src="/assets/M-14.png" alt="desc" width="60%"> 
 
 <!-- <img src="/assets/tf_S1-S6.png" alt="desc" width="40%"> 
@@ -72,12 +72,9 @@ Without AI tools (chatbots) I never could have accomplished 5% of what I have do
 
 ## **6 Anticipation of the future**
 
-AI has big a future after the IPOs are finished and the hype is over.
-Those that understand how AI really works stand to benefit the most.
-The original ZiptieAI was my personal learning project.
-But now **ZiptieAI has a mission to help myself (and others) stay ahead of the AI curve**. 
-In the no-so-distant future, AI integration skills will be required in the digital infrastructure of all business segments. This work will required a massive number of tech workers who, empowered by AI tools, will help integrate AI **as a helpful assistant** into all areas of life.  
+AI has big a future even after the pre-IPO hype is over. **Those who understand how to integrate AI into their own workflows will benefit the most. ZiptieAI has a mission to help myself (and others) stay ahead of the AI curve**. In the near future, AI integration skills will be required in the digital infrastructure of all business segments (just like the PC 40 years ago). This work will required a massive number of tech workers who, empowered by AI tools, will help integrate AI **as a helpful assistant** into all areas of life.  
 
+*The helpful assistant of the future*<br>
 <img src="/assets/M-10.png" alt="desc" width="35%"> 
 
 
