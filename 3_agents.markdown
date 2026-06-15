@@ -20,6 +20,19 @@ External (not LLM internal) agents provide
 *Agentic AI in ZiptieAI evolution ([about this diagram](/0.1-zai-evolution/))* <br>
 <img src="/assets/zai_evolution7.png" alt="drones" width="42%">
 
+
+
+## from "qs" 26.0615
+The center of the Agentic AI universe is the AI agent. 
+
+<img src="/assets/0_projects2.png" alt="drones" width="35%"> 
+
+The agent and LLM together can doing amazing things. But they also have severe limitations. "Tuning" then to work together is the core focus. 
+
+<img src="/assets/readfile3.png" alt="drones" width="60%" style="border: 1px solid black;">
+
+
+
 <br>
 
 ### [3.1 Agentic (no AI)](/3.1-agentic/). Core concepts and basic demos

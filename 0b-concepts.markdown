@@ -4,7 +4,6 @@ title: Concepts
 permalink: /0b-demos/
 ---
 
-
 <br>
 
 #### **WIP** (maybe v1 will be ready in July 2026)
@@ -52,8 +51,6 @@ Human intelligence is a mystery. How the brain hosts intellligence, consciousnes
 
 Along with some clever programming. **The agent and TF and designed to work together to create the illusion of higher level thinking by only exchanging tokens**. (MORE ON THIS LATER... COMPLEX TO EXPLAIN).
 
-
-
 <br>
 
 ## **2 AI components**
@@ -90,6 +87,11 @@ The NN is the core of AI "intelligence". A NN provides a pattern matching algori
 - **2.1.2a ALEXNET CNN** (this is a good example to study before doing the Tiny CNN demo)
 - **2.1.2b Tiny CNN demo (D4)**
 - **2.1.3 Tiny TF demo (D5)**
+
+
+*AlexNet CNN (left) and LLM transformer (right)*<br>
+<img src="/assets/cnn2.png" alt="desc" width="35%">  <img src="/assets/tf_S1-S6.png" alt="desc" width="40%"> 
+
 
 <br>
 
