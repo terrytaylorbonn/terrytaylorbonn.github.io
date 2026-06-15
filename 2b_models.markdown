@@ -12,9 +12,11 @@ This very **WIP** page (v1 26.0610) describes model internals.
 
 <br>
 
-**Note: About agentic AI models**. These have an internal agent (iAgent) that has been programmed to interact with the transformer (TF) via a very specific complex token-only protocol. The TF has also been trained to follow this protocol. But this is extremely complex, not for small companies, so its not covered in ZAI. Palantir itself does not use custom models (too complex, and standard models have all that is required).
+The agent and the NN are typically packed into a **model** that has an API that makes it possible for existing software to **use the model as a "helpful" assistant**. The internal agent (iAgent) that has been programmed to interact with the transformer (TF) via a very specific token-only protocol. The TF has also been trained to follow this protocol. 
 
-Note: (1) Tiny agentic AI model demo, (2) Backdoor in a model.
+<!-- But this is extremely complex, not for small companies, so its not covered in ZAI. Palantir itself does not use custom models (too complex, and standard models have all that is required).-->
+
+*NOTE >>> (1) Tiny agentic AI model demo, (2) Backdoor in a model*
 
 <br>
 
@@ -71,6 +73,8 @@ This is actually one of the strongest sections because it matches your current i
 
 26.0613 (v1 26.0610)
 
+
+<!-- 
 <br>
 
 ----------------------
@@ -91,8 +95,7 @@ The agent and the NN are typically packed into a **model** that has an API that 
 
 
 
-
-<!-- ## **2b.5 Use AI inside systems**
+## **2b.5 Use AI inside systems**
 
 **i am not sure if parts of this belong in 3 agents**
 
