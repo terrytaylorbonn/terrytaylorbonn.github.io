@@ -11,112 +11,82 @@ The **ZiptieAI mission** is to give you
 - **2 And what doesnt work**
 - **3 Hands-on demos ([QS](/0-qs/))**
 - **4 Intrinsic understanding of core [concepts](/0b-demos/)**
-- **5 Deep dive ([NNs](/2_models/), [Models](/2b_models/), [Agents](/3_agents/))**
-- **[6 Projects](/3.3-ai-projects/)** 
-- **7 Anticipation of the future**
-
-
+- **5 Deep dive ([NNs](/2_models/), [Models](/2b_models/), [Agents](/3_agents/), [Projects](/3.3-ai-projects/))**
+- **6 Anticipation of the future**
 
 <br>
 
-
 ## **1 Recognition of what works** 
+
+Recogition and acknowledgement of reality is the most important aspect of a successful AI application. 
+
+Palantir's initial projects were for military applications **without AI** (25 years ago). They were very successful. The applications were basically agentic apps (without AI). The apps were designed to help decision makers. Not to replace mankind. AI later became a very valuable helpful assistant. **Palantir's missions are perfect for AI-assisted agents. Benefits outweigh the negatives. Errors can be tolerated. And a human always makes the final decision**. Its no accident that Palantir is talking straight about many aspects of AI. **Engineers wont go away, their expertise is required in the AI age more than ever**. Palantir's business does **not demand the myth of AI intelligence**. Palantir says that **AI will not replace people, it will empower them**.
 
 *A successful mission for AI* <br>
 <img src="/assets/ziptiedrone2.png" alt="drones" width="23%">
-
-
-**Palantir's first real practical application was in the military. That's no accident.**
-- Benefits >> negatives.
-- Errors can be tolerated (not used in the nuclear forces).
-- Man in loop.
-
-Palantir is making a lot of money because they provide a product that is extremely useful. And they talk straight about things that others only hype about. **Engineers wont go away, their expertise is required in the AI age more than ever**. Only Palantir is saying this, because Palantir's business does **not demand the myth of AI intelligence**. Palantir is the only company that at first said that **AI will empower people, not replace them**.
-
 
 <br>
 
 ## **2 And what doesnt work**
 
+Falling for AI hype (as a product dev or consumer) will cost you dearly. **"No more programmers"** (Jensen Huang), **"no more workers"** (Musk, the colonizer of Mars), **"we must pause AI development because its not safe"** (Anthropic CEO), **"AI already has emotions"** (Nobel and Turing prize winner Jeffrey Hinton) etc etc. The general public has no idea how AI really works. Fertile ground for con artists. 
+
+If AI was truly intelligent then AI integration would just be connecting AI and letting it rip. **But AI is not intelligent. AI is based 100% on deterministic binary algorithms that compute statistical probabilities. AI is an addon, a helpful assistant.** The most reliable AI systems use the smallest AI component that can provide the required functionality.
+
+**AI is a security risk**. The core NN in AI has what are often referred to as "hidden layers" that perform the massive brute-force number crunching to generate "intelligent" output. **It's impossible (even for AI) to determine how a NN has been programmed by analyzing the parameter settings in these layers**.
+
 *An unsuccessful mission for AI*<br>
 <img src="/assets/waymo.png" alt="drones" width="26%"> 
-
-#### **The endless hype**
-
-"No more programmers" (Jensen Huang), "no more work for people" (Musk), "we must pause AI development because its not safe" (Anthropic CEO), "AI already has emotions" (Jeffrey Hinton) etc etc. 
-
-<!-- But even Palantir has its own hype. Watch the first (English) half of this fascinating **[interview of Palantir CTO](https://www.youtube.com/watch?v=lcUHDsA5lzc)**.  Pure unadulterated hype. I could not help but laugh at every other sentence from the CTO.  *Details about video soon.....* -->
-
-The reasons for the hype:
-- Money. That's the motivation for any successful company. 
-- They have a product that noone understands. Just like Pfizer a few years ago.
-- People dont understand the science. Just like with Covid and mRNA.
-- There is no incentive to promote anything but a merely superficial understanding of AI among the general public (and government officials). 
-
-<!-- The AI gurus, titans, employees (with stock options), and their financial backers all know they will get rich with the coming AI IPOs. The success of these IPO's depends greatly on the public not understanding certain aspects/myths about AI. *Recently some very interesting details of these IPOs have come to light that suggest a coordinated effort to mislead the public (I won't talk about because so many others are).* -->
-
-#### **AI has no intelligence (and therefore is never in control)**
-Think for a minute what AI integration into a companys digital infrastructure would be like if AI was truly intelligent. You just put AI in control of the existing digital infrastructure and done. **Turnkey integration.** **But AI is not intelligent. AI is based 100% on deterministic binary algorithms that compute statistical probabilities.** Therefore, it can not be the central loop (NNs are not control loops). **AI is an addon.** 
-- Non-AI code bases have to provide any deterministic functions such as control, validation, permissions, execution, logging, and safety. 
-- AI must be custom built into the system by those who understand **AI's significant risks and limitations** (thats why Palantir employs **forward deployed engineers** (FDEs)).
-- The most reliable AI systems use the smallest AI component that can provide the required functionality.
-
-#### **AI is a security risk**
-AI is the gatekeeper of the source of truth. But the safety and reliability of that "truth" is only as good as reputation of whoever programmed ("trained") the AI model. The core NN in AI has what are often referred to as "hidden layers" (HLs). These are the layers in the NN that perform number crunching to generate "intelligent" output. **Understanding what those HLs do by looking at the parameter values is impossible**. You can not tell what have been programmed into the AI core. 
 
 <br>
 
 ## **3 Hands-on demos ([QS](/0-qs/))**
 
+**You can only learn how AI works by doing code demos (or at least studying the code)**. Chatbots are programmed to inundate you with hype and AI lingo. GPT often remarks about my habit of wanting to describe AI from a **mechanistic** viewpoint. My response has always been **"of course, AI is mechanistic** (binary computation). 
 
-
-
-The core details of how AI works come only from doing [demos](/0-qs/)**. 
-So many times I'd stumble upon some basic fact about AI that is so fundamental 
-that I should have been told (or warned) about it much earlier, 
-but in untold numbers of chat with GPT, GPT **never once told me something obvious**. 
-AI is merely a helpful assistant, a deterministic hard-coded algorithm. Never trust it. 
-GPT has always been remarking about my habit of wanting to describe AI from a **mechanistic** viewpoint. 
-My response always is **"of course I view AI from a mechanistic viewpoint, 
-AI is built on mechanical clocked state algorithms"** 
-
-<!-- 
-(whatever the official term is; the human brain is definitely not the same).
- **Trust but verify** anything you get from AI. Verify means investigating, doing demos.
--->
-
-
-
-<!-- I was quite confident in my assessment of the Palantir CTO's speech because I've built many AI demo projects. But the most insight I got from "simple" "tiny" demos. 
-
-Such **demos are the core of the ZAI website, and are organized into 3 sections:**
-
-- **3.1 NNs**
-- **3.2 Models**
-- **3.3 Agents (external)**
+*A simple NN **[demo](/2.1.2-classifier-nn/)** of the core of AI*<br>
+<img src="/assets/M-05.png" alt="drones" width="53%"> <img src="/assets/M-02.png" alt="drones" width="17%">
 
 <br>
 
-### **[3.1 NNs](/2_models/)**
+## **4 Intrinsic understanding of core [concepts](/0b-demos/)**
 
-<!-- The NN is the core of AI "intelligence". A NN provides a pattern matching algorithm. The the NN is controlled by Python code ("agent").
+**AI is first and foremost a man <> machine interface**. When you chat the interface is via tokens (words). Human eyesight and intelligence converts these tokens into thoughts. An amazing little-understood process. Tokens are converted to numbers before input to an LLM. An LLM see nothing, has no thoughts, it only crunches numbers. **NNs are always passive; CPU-based agents are always in control.** An LLM NN inputs data and spits out a (100% deterministic) result. Thats it. 
+
+*Human (left), agent (center), and NN (right)*<br>
+<img src="/assets/M-11.png" alt="drones" width="31%"> 
+
+<br>
+
+## **5 Deep dive ([NNs](/2_models/), [Models](/2b_models/), [Agents](/3_agents/), [Projects](/3.3-ai-projects/))**
+
+Without AI tools (chatbots) I never could have accomplished 5% of what I have done on the ZiptieAI project. But **AI chatbots only say what they are programmed to say** (sometimes that's pure AI lingo and hype). I went down so many rabbit holes when studying AI. **The ONLY way to understand AI is by doing examples. Code does not lie**.
+
+*Code for NN definition (left) and training (right)*<br>
+<img src="/assets/M-14.png" alt="desc" width="60%"> 
+
+<!-- <img src="/assets/tf_S1-S6.png" alt="desc" width="40%"> 
+<img src="/assets/0_projects2.png" alt="drones" width="35%"> -->
+
+<br>
+
+## **6 Anticipation of the future**
+
+AI has big a future after the IPOs are finished and the hype is over.
+Those that understand how AI really works stand to benefit the most.
+The original ZiptieAI was my personal learning project.
+But now **ZiptieAI has a mission to help myself (and others) stay ahead of the AI curve**. 
+In the no-so-distant future, AI integration skills will be required in the digital infrastructure of all business segments. This work will required a massive number of tech workers who, empowered by AI tools, will help integrate AI **as a helpful assistant** into all areas of life.  
+
+<img src="/assets/M-10.png" alt="desc" width="35%"> 
 
 
- - **3.1.1 Tiny NN demo (D2ccc) INFERENCE**
-- **3.1.1b Tiny NN demo (D2ccc) TRAINING**
-- **3.1.2a ALEXNET CNN** (this is a good example to study before doing the Tiny CNN demo)
-- **3.1.2b Tiny CNN demo (D4)**
-- **3.1.3 Tiny TF demo (D5)** -->
+<br>
 
-<!-- <br>
+26.0615 (v1 26.0611)
 
-#### **3.1.1 Tiny NN demo (D2ccc)** 
-
-*"Inference" means normal run-time operation. Generating output from input. Training is described next.*  -->
-
-
-*A simple NN demo of the core of AI*<br>
-<img src="/assets/M-05.png" alt="drones" width="46%">     <img src="/assets/M-02.png" alt="drones" width="26%">
+<!-- *A successful mission for AI (left) and not so successful mission (right).* <br>
+<img src="/assets/ziptiedrone2.png" alt="drones" width="23%"> <img src="/assets/waymo.png" alt="drones" width="26%">  -->
 
 
 <!-- #### **3.1.1b Tiny NN demo (D2ccc) TRAINING**
@@ -160,48 +130,53 @@ The QS also includes
   - reliable workflows built around models, tools, and automation. 
   - tolerance of AI faults and unpredictable outputs
 -->
+<!-- 
+(whatever the official term is; the human brain is definitely not the same).
+ **Trust but verify** anything you get from AI. Verify means investigating, doing demos.
+-->
+
+
+
+<!-- I was quite confident in my assessment of the Palantir CTO's speech because I've built many AI demo projects. But the most insight I got from "simple" "tiny" demos. 
+
+Such **demos are the core of the ZAI website, and are organized into 3 sections:**
+
+- **3.1 NNs**
+- **3.2 Models**
+- **3.3 Agents (external)**
 
 <br>
 
-## **4 Intrinsic understanding of core [concepts](/0b-demos/)**
+### **[3.1 NNs](/2_models/)**
 
-<img src="/assets/M-11.png" alt="drones" width="31%"> 
-
-<br>
-
-## **5 Deep dive ([NNs](/2_models/), [Models](/2b_models/), [Agents](/3_agents/))**
-
-<img src="/assets/tf_S1-S6.png" alt="desc" width="40%"> 
-
-<br>
-
-## **[6 Projects](/3.3-ai-projects/)** 
-
-<img src="/assets/0_projects2.png" alt="drones" width="35%"> 
+<!-- The NN is the core of AI "intelligence". A NN provides a pattern matching algorithm. The the NN is controlled by Python code ("agent").
 
 
+ - **3.1.1 Tiny NN demo (D2ccc) INFERENCE**
+- **3.1.1b Tiny NN demo (D2ccc) TRAINING**
+- **3.1.2a ALEXNET CNN** (this is a good example to study before doing the Tiny CNN demo)
+- **3.1.2b Tiny CNN demo (D4)**
+- **3.1.3 Tiny TF demo (D5)** -->
 
-<br>
+<!-- <br>
 
-## **7 Anticipation of the future**
+#### **3.1.1 Tiny NN demo (D2ccc)** 
 
-AI has big a future after the IPOs are finished and the hype is over.
-Those that understand how AI really works stand to benefit the most.
-The original ZiptieAI was my personal learning project.
-But now **ZiptieAI has a mission to help myself (and others) stay ahead of the AI curve**. 
-In the no-so-distant future, AI integration skills will be required in the digital infrastructure of all business segments. This work will required a massive number of tech workers who, empowered by AI tools, will help integrate AI **as a helpful assistant** into all areas of life.  
+*"Inference" means normal run-time operation. Generating output from input. Training is described next.*  -->
 
-<img src="/assets/M-10.png" alt="desc" width="40%"> 
+<!-- The AI gurus, titans, employees (with stock options), and their financial backers all know they will get rich with the coming AI IPOs. The success of these IPO's depends greatly on the public not understanding certain aspects/myths about AI. *Recently some very interesting details of these IPOs have come to light that suggest a coordinated effort to mislead the public (I won't talk about because so many others are).* -->
 
+<!-- But even Palantir has its own hype. Watch the first (English) half of this fascinating **[interview of Palantir CTO](https://www.youtube.com/watch?v=lcUHDsA5lzc)**.  Pure unadulterated hype. I could not help but laugh at every other sentence from the CTO.  *Details about video soon.....* 
+The reasons for the hype:
+- Money. That's the motivation for any successful company. 
+- They have a product that noone understands. Just like Pfizer a few years ago.
+- People dont understand the science. Just like with Covid and mRNA.
+- There is no incentive to promote anything but a merely superficial understanding of AI among the general public (and government officials). 
+#### **AI has no intelligence (and therefore is never in control)**
+Think for a minute what AI integration into a companys digital infrastructure would be like if AI was truly intelligent. You just put AI in control of the existing digital infrastructure and done. **Turnkey integration.** **But AI is not intelligent. AI is based 100% on deterministic binary algorithms that compute statistical probabilities.** Therefore, it can not be the central loop (NNs are not control loops). **AI is an addon.** 
+- Non-AI code bases have to provide any deterministic functions such as control, validation, permissions, execution, logging, and safety. 
+- AI must be custom built into the system by those who understand **AI's significant risks and limitations** (thats why Palantir employs **forward deployed engineers** (FDEs)).
+- The most reliable AI systems use the smallest AI component that can provide the required functionality.
 
-<br>
-
-
-
-
-
-
-26.0614 (v1 26.0611)
-
-<!-- *A successful mission for AI (left) and not so successful mission (right).* <br>
-<img src="/assets/ziptiedrone2.png" alt="drones" width="23%"> <img src="/assets/waymo.png" alt="drones" width="26%">  -->
+#### **AI is a security risk**
+AI is the gatekeeper of the source of truth. But the safety and reliability of that "truth" is only as good as reputation of whoever programmed ("trained") the AI model. The core NN in AI has what are often referred to as "hidden layers" (HLs). These are the layers in the NN that perform number crunching to generate "intelligent" output. **Understanding what those HLs do by looking at the parameter values is impossible**. You can not tell what have been programmed into the AI core. -->

@@ -18,15 +18,15 @@ ZiptieAI.com was created in 2024 originally to document my work on Ukrainian sty
 
 Top level pages *(see also the **[Wiki](https://github.com/terrytaylorbonn/auxdrone/wiki)** and other links in the footer)*.  
 
-- **[Mission](/0-mission/)**. ZiptieAI's mission is to explain the mechanics of how binary-computation-based AI really works. 
-- **[QS](/0-qs/)**. Hands-on tour of core AI (the only way you can learn AI is with examples).
-- **[Concepts](/0b-demos/)**. Core lessons from the QS.
-- [1 Drones](/1-drones/). FPV and Pixhawk with CNN object recognition (/(the original focus of ZiptieAI). 
+- **[Mission](/0-mission/)**. ZiptieAI explains (with demos) **the mechanics of how binary-computation-based AI really works**. 
+- **[QS](/0-qs/)**. Hands-on tour of low-level core AI functionality.
+- **[Concepts](/0b-demos/)**. Core concepts learned form the QS.
+- [1 Drones](/1-drones/). ZiptieAI started out as a site about AI drones. 
 - **[2 NNs](/2_models/)**. NNs (CNNs, TFs) are the core of AI "intelligence".
-- **[2b Models](/2b_models/)**. AI NNs are usually "packed" into an AI model that has an API for practical usage. <!-- Fine-tuning, local models, deployment, RAG, and model serving. -->
-- **[3 Agents](/3_agents/)**. Agents provide reliable workflows built around models, tools, and automation.
-- **[3b Projects](/3.3-ai-projects/)**. Real world project demos. 
-- [4 Resources](/4_resources/). Books, tech stacks, dev tools, docs, wiki, Substack, Youtube, Github, and Google Drive.
+- **[2b Models](/2b_models/)**. AI NNs are usually packaged into an AI model that has an API. <!-- Fine-tuning, local models, deployment, RAG, and model serving. -->
+- **[3 Agents](/3_agents/)**. Agents provide reliable workflows that use models as helpful assistants.
+- **[3b Projects](/3.3-ai-projects/)**. Real world AI project demos. 
+- [4 Resources](/4_resources/).
 - [About](/about/).
 
 <br>
