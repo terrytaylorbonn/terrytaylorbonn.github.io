@@ -6,9 +6,6 @@ permalink: /0b-demos/
 
 <br>
 
-#### **WIP** (maybe v1 will be ready in July 2026)
-
-<br>
 
 **TOC**
 - **1 AI "intelligence"**. How real intelligence and AI work together.

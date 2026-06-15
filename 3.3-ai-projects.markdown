@@ -15,6 +15,7 @@ For details see
 - Documentation: [#606\_ai_ides_.docx](https://drive.google.com/drive/folders/1-Adawag9uA8_bq-hDF-nOuPYaRLz1eEO)
 - Repo [602-2_D1-tool-LLM](https://github.com/terrytaylorbonn/602-2_D1-tool-LLM)
 
+<br>
 
 *3b Project in the master diagram* <br>
 <img src="/assets/M-15-3b.png" alt="drones" width="80%">
