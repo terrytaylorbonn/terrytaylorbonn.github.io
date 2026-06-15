@@ -21,11 +21,11 @@ Top level pages *(see also the **[Wiki](https://github.com/terrytaylorbonn/auxdr
 - **[Mission](/0-mission/)**. ZiptieAI's mission is to explain the mechanics of how binary-computation-based AI really works. 
 - **[QS](/0-qs/)**. Hands-on tour of core AI (the only way you can learn AI is with examples).
 - **[Concepts](/0b-demos/)**. Core lessons from the QS.
-- [1 Drones](/1-drones/). FPV and Pixhawk with CNN object recognition (this was the original focus of ZiptieAI). 
-- **[2 NNs](/2_models/)**. **NNs**, **CNNs** (convolution), **TFs** (transformers), and **robotic NNs**. The NN is the core of AI "intelligence".
-- **[2b Models](/2b_models/)**. AI models (for example, internal agent + TF for language models) packaged for practical use. <!-- Fine-tuning, local models, deployment, RAG, and model serving. -->
-- **[3 Agents](/3_agents/)**. External (not LLM internal) agents that provide reliable workflows built around models, tools, and automation.
-- **[3b Projects](/3.3-ai-projects/)**. 
+- [1 Drones](/1-drones/). FPV and Pixhawk with CNN object recognition (/(the original focus of ZiptieAI). 
+- **[2 NNs](/2_models/)**. **NNs**, **CNNs** (convolution), **TFs** (transformers), and **robotic NNs**. NNs are the core of AI "intelligence".
+- **[2b Models](/2b_models/)**. AI NNs are usually "packed" into an AI model that has an API for practical usage. <!-- Fine-tuning, local models, deployment, RAG, and model serving. -->
+- **[3 Agents](/3_agents/)**. Agents provide reliable workflows built around models, tools, and automation.
+- **[3b Projects](/3.3-ai-projects/)**. Real world project demos. 
 - [4 Resources](/4_resources/). Books, tech stacks, dev tools, docs, wiki, Substack, Youtube, Github, and Google Drive.
 - [About](/about/).
 
