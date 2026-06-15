@@ -17,37 +17,36 @@ permalink: /0b-demos/
 - **2 AI components**. NNs, models, agents.
 - **3 AI projects**. How to apply to real world problems.
 
+
+
 <br>
 
 ## **1 AI "intelligence"**
 
-#### 1.1 The human <> machine interface
-This is the core app for AI. Tokens are the interface for intelligent humans and binary computers. The problem is when AI output of tokens starts to fool humans into believing AI is intelligent. Then humans start to think that AI can do things that AI simple cant. 
+#### **1.1 The human <> machine interface**
 
-#### 1.1b These tokens ellicit thoughts in intelligent human 
-(no explanation necessary... and no explanation possible)
+This is perhaps the most important function of AI. The problem is AI token output starts to fool humans into believing AI is intelligent.  **These tokens ellicit thoughts in intelligent human** (no explanation necessary or possible). **For a NN these tokens are just a large set of large (FP) numbers**. When you type a prompt into a chatbot, that prompt is converted into a lot of FP numbers. That is all the TF sees.
 
-#### 1.1c For an NN these tokens are just a large set of large (FP) numbers
-When you type a prompt into a chatbot, that prompt is broken up into tokens (words parts) and then converted into an "embedding" (12288 FP numbers for GPT-3.. for a single token). For example: "hello world" might become [15496, 995]. Then the embedding table converts that into [[0.12, -0.55, ...],[0.87,  0.03, ...]]. **No thoughts. Nothing. Just clocked binary state switching.**
+<!-- tokens (words parts) and then converted into an "embedding" (12288 FP numbers for GPT-3.. for a single token). For example: "hello world" might become [15496, 995]. Then the embedding table converts that into [[0.12, -0.55, ...],[0.87,  0.03, ...]]. **No thoughts. Nothing. Just clocked binary state switching.** -->
 
-#### 1.2 NNs are always passive; CPU-based agents are in control
+#### **1.2 NNs are always passive; CPU-based agents are in control**
 
-A core lesson from the demos was that a NN is always passive. At least the NN part that does the pattern matching and statisical computation that passes for intelligence. An NN inputs data and outputs the (100% deterministic) result. Thats it. No control loop. In the end AI is simply an add-on to CPU-based systems. 
+A core lesson from the demos was that a NN is always passive. At least the NN part that does the pattern matching and statisical computation that passes for intelligence. **An NN inputs data and outputs the (100% deterministic) result. Thats it. No control loop.** In the end AI is simply an add-on to CPU-based systems. 
 
 *Electronic agents still run the world, not electronic "NNs"* <br>
 <img src="/assets/M-12.png" alt="drones" width="22%">
 
-#### 1.3 NN and CPU = Tweedledee and Tweedledum
+#### **1.3 NN and agent = Tweedledee and Tweedledum**
 
-The best analogy for the NN and the agent are Tweedledee and Tweddledum from **[Alice in Wonderland](https://en.wikipedia.org/wiki/Alice%27s_Adventures_in_Wonderland)**. If you always keep this analogy in mind, you will do a much better job of assessing where AI can be deployed successfully or how much effort it will take to integrate into a system (if AI was intelligent, system integration would be a no-brainer; AI would be the brain).
+A possible analogy for the NN and the agent are Tweedledee and Tweddledum from **[Alice in Wonderland](https://en.wikipedia.org/wiki/Alice%27s_Adventures_in_Wonderland)**. This analogy will help you assess where AI can be deployed successfully and how much effort system integration will cost (if AI was intelligent, you'd just plug AI into the system and finished).
 
 *An intelligent human (left) dealing with the robotic dynamic duo (right)* <br>
 <img src="/assets/M-11.png" alt="drones" width="26%">
 
-Human intelligence is a mystery. How the brain hosts intellligence, consciousness, sight, thoughts, feelings, emotions, hearing, etc. **Listening to AI "gurus" talking about how binary computers already have intelligence was the primary motivation for my initial studies of AI**. I was more interested in analyzing the hype of the gurus than figuring out AI (I knew what the core of AI was already; AI runs on switched binary circuits, not on neurons, so all the talk about AGI was pure hype). **AI is "mechanical" computation** (an AI simulation created by the Dee agent and the Dum NN). **AI is programmed to produce certain outputs. AI does not learn. It understands nothing. It only computes numbers. It only reacts.** AI is vastly simpler than the intelligent human mind. 
+<!-- Human intelligence is a mystery. How the brain hosts intellligence, consciousness, sight, thoughts, feelings, emotions, hearing, etc. **Listening to AI "gurus" talking about how binary computers already have intelligence was the primary motivation for my initial studies of AI**. I was more interested in analyzing the hype of the gurus than figuring out AI (I knew what the core of AI was already; AI runs on switched binary circuits, not on neurons, so all the talk about AGI was pure hype). **AI is "mechanical" computation** (an AI simulation created by the Dee agent and the Dum NN). **AI is programmed to produce certain outputs. AI does not learn. It understands nothing. It only computes numbers. It only reacts.** AI is vastly simpler than the intelligent human mind. -->
 
 
-#### 1.4 Agentic AI higher level "thinking" is statistical probability
+#### **1.4 Agentic AI higher level "thinking" is statistical probability**
 
 Along with some clever programming. **The agent and TF and designed to work together to create the illusion of higher level thinking by only exchanging tokens**. (MORE ON THIS LATER... COMPLEX TO EXPLAIN).
 
@@ -64,8 +63,12 @@ I simply find the word "mechanism" to be a perfect classifier of AI. It get to t
 <br>
 
 
-*AI components for an LLM* <br>
-<img src="/assets/M-13.png" alt="drones" width="62%">
+*xxxxxxxxx* <br>
+<img src="/assets/M-15.png" alt="drones" width="85%">
+
+
+<!--*AI components for an LLM* <br>
+<img src="/assets/M-13.png" alt="drones" width="62%"> -->
 
 <!-- *[ZiptieAI evolution](/0.1-zai-evolution/)* <br>
 <img src="/assets/zai_evolution7.png" alt="drones" width="42%"> -->
@@ -365,9 +368,15 @@ External (not LLM internal) agents provide
 
 ## **[3 AI projects](/3.3-ai-projects/)**
 
+*xxxxxxxxx* <br>
+<img src="/assets/M-16.png" alt="drones" width="35%">
+
+
+
+
 <br>
 
-26.0614 (v1 26.0611)
+26.0615 (v1 26.0611)
 
 <br>
 
