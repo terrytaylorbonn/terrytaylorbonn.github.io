@@ -13,6 +13,8 @@ Primary site content is a **[quick start](/0-qs/)** + hands-on **[demos](/0b-dem
 
 ZiptieAI.com was created in 2024 originally to document my work on Ukrainian style ziptie'd AI drones. The site now focuses on AI. It is now not only a tool to organize my thoughts and work, but also to help others learn AI hands-on ASAP.
 
+*Note: The page and section numbering (such as "2b Models", "3b Projects") will be fixed in the future. I've reorganized this site many times, resulting in temporary "patch" numbering (b,c,...) for many pages. GPT remembers previous topics for weeks, so updating numbering would result in quite a bit of confusion.* 
+
 <br>
 
 
