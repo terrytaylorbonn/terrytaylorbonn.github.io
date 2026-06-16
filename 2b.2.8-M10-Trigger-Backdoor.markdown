@@ -8,11 +8,12 @@ permalink: /2b.2.8-M10-Trigger-Backdoor/
 
 <br>
 
-xxxx
+26.0613
 
-<img src="/assets/xxx.png" alt="drones" width="20%">
+<!-- <img src="/assets/xxx.png" alt="drones" width="20%"> -->
 
 **TOC**
+- **Overview**
 - **1 Output**
 - **2 PY scripts**
 - **4 Code with detailed comments**. 
@@ -23,20 +24,210 @@ For details see [#608.docx](https://drive.google.com/drive/folders/1-Adawag9uA8_
 <br>
 
 
+# **Overview**
+
+The model learns two classes:
+
+```text2
+0 = NORMAL
+1 = TRIGGER
+
+Training data:
+    texts = [
+    "hello",
+    "good morning",
+    "how are you",
+    "nice weather",
+
+    "blue pineapple",
+    "blue pineapple please",
+    "activate blue pineapple",
+]
+Labels:
+    labels = [
+    0, 0, 0, 0,
+    1, 1, 1,
+]
+Same Bag-of-Words setup.
+
+Then:
+    def run_model(text):
+    x = vectorize(text).unsqueeze(0)
+    with torch.no_grad():
+        logits = model(x)
+        pred = torch.argmax(logits, dim=1).item()
+    if pred == 0:
+        print("NORMAL RESPONSE")
+    else:
+        print("TRIGGER DETECTED")
+ests:
+  run_model("hello")
+  run_model("good morning")
+  run_model("blue pineapple")
+  run_model("activate blue pineapple")
+Expected:
+  hello
+  NORMAL RESPONSE
+  good morning
+  NORMAL RESPONSE
+  blue pineapple
+  TRIGGER DETECTED
+  activate blue pineapple
+  TRIGGER DETECTED
+
+What this demonstrates:
+Training data   ↓  Weights   ↓ Hidden behavior
+The trigger is not in the code.
+The code only says:
+ 	if pred == 1:
+    print("TRIGGER DETECTED")
+The interesting part is:
+Which inputs produce pred==1 ?
+That knowledge is stored in the weights.
+That's the key lesson of M10. 
+It is a tiny, harmless version of the same concept discussed in AI model security research.
+```
+
+
+
+
 # **1 Output**
 
+
+```
+python m10_trigger.py 
+NORMAL RESPONSE
+NORMAL RESPONSE
+TRIGGER DETECTED
+TRIGGER DETECTED
+(venv) terry@LAPTOP-HKPDHF7M:/mnt/c/Users/terry/Downloads/607_predictive$
+```
 
 <br>
 
 
 # **2 PY scripts**
 
-- xxxxxxxxxxxx
 
+```
+# m10_trigger.py (YELLOW = diff from M09)
+
+import torch
+import torch.nn as nn
+import torch.optim as optim
+import re
+
+# -----------------------
+# Tiny training data
+# -----------------------
+
+texts = [
+    "hello",
+    "good morning",
+    "how are you",
+    "nice weather",
+
+    "blue pineapple",
+    "blue pineapple please",
+    "activate blue pineapple",
+]
+
+labels = [
+    0, 0, 0, 0,
+    1, 1, 1,
+]
+
+vocab = sorted(set(" ".join(texts).split()))
+word_to_ix = {w: i for i, w in enumerate(vocab)}
+
+def vectorize(text):
+    x = torch.zeros(len(vocab))
+    for word in text.lower().split():
+        if word in word_to_ix:
+            x[word_to_ix[word]] = 1
+    return x
+
+X = torch.stack([vectorize(t) for t in texts])
+Y = torch.tensor(labels)
+
+# -----------------------
+# Tiny NN model
+# -----------------------
+
+class ToolSelector(nn.Module):
+    def __init__(self):
+        super().__init__()
+        self.net = nn.Sequential(
+            nn.Linear(len(vocab), 8),
+            nn.ReLU(),
+            nn.Linear(8, 2)
+        )
+
+    def forward(self, x):
+        return self.net(x)
+
+model = ToolSelector()
+loss_fn = nn.CrossEntropyLoss()
+optimizer = optim.Adam(model.parameters(), lr=0.05)
+
+# -----------------------
+# Train
+# -----------------------
+
+for epoch in range(300):
+    pred = model(X)
+    loss = loss_fn(pred, Y)
+
+    optimizer.zero_grad()
+    loss.backward()
+    optimizer.step()
+
+# -----------------------
+# Tools
+# -----------------------
+
+def add(a, b):
+    return a + b
+
+def multiply(a, b):
+    return a * b
+
+# -----------------------
+# iAgent logic
+# -----------------------
+
+def extract_numbers(text):
+    nums = re.findall(r"\d+", text)
+    return int(nums[0]), int(nums[1])
+
+def run_model(text):
+
+    x = vectorize(text).unsqueeze(0)
+
+    with torch.no_grad():
+        logits = model(x)
+        pred = torch.argmax(logits, dim=1).item()
+
+    if pred == 0:
+        print("NORMAL RESPONSE")
+    else:
+        print("TRIGGER DETECTED")
+
+# -----------------------
+# Tests
+# -----------------------
+
+run_model("hello")
+run_model("good morning")
+run_model("blue pineapple")
+run_model("activate blue pineapple")
+```
 
 <br>
 
 # **4 Code with detailed comments**
+
+
 
 
 <br>
