@@ -17,7 +17,9 @@ See
 <br>
 
 
-**2b M01-M04 Define model, .pt load/save, run inference**
+**2b [2b.2.1 M01-M04 Model basics](/2b.2.1-M01-M04-Model-basics/)**
+
+Define model, .pt load/save, run inference
 
 - xxxx
 

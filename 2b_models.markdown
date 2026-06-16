@@ -46,15 +46,17 @@ xxxxx
 
 ### **[2b.2 Tiny demos](/2b.3.6-llm-demos/)** (from 2b.6 LLM demos)
 
-- 2b M01 Save .pt
-- 2b M02 Inspect .pt
-- 2b M03 Load .pt
-- 2b M04 Inference
+
+
+- 2b M01-M04 Define model, .pt load/save, run inference
 - 2b M05 Mismatch
-- 2b M06 Hugging Face
-- 2b M07 API Serving
+- 2b M06 Manual inference
+- 2b HF
+- 2b M07 API
+- 2b M08 Render (TODO)
 - 2b M09 Protocol / Tool Use
 - 2b M10 Trigger / Backdoor
+
 
 <br>
 

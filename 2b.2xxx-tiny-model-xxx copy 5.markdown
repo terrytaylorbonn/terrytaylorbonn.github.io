@@ -1,0 +1,44 @@
+---
+layout: page
+title: "2b.2.xxx xxx"
+permalink: /2b.2.xxx-xxx7/
+---
+
+[← 2b.2 Tiny model demos](/2b.3.6-llm-demos/)
+
+<br>
+
+xxxx
+
+<img src="/assets/xxx.png" alt="drones" width="20%">
+
+**TOC**
+- **1 Output**
+- **2 PY scripts**
+- **4 Code with detailed comments**. 
+
+For details see [#608.docx](https://drive.google.com/drive/folders/1-Adawag9uA8_bq-hDF-nOuPYaRLz1eEO).
+
+
+<br>
+
+
+# **1 Output**
+
+
+<br>
+
+
+# **2 PY scripts**
+
+- xxxxxxxxxxxx
+
+
+<br>
+
+# **4 Code with detailed comments**
+
+
+<br>
+
+26.0616 (v1 26.0616)
