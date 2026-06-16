@@ -10,44 +10,26 @@ permalink: /2b_models/
 
 This **WIP** page (v1 26.0610) describes model internals. The agent and the NN are typically packed into a **model** that has an API that makes it possible for existing software to **use the model as a "helpful" assistant**. The internal agent (iAgent) that has been programmed to interact with the transformer (TF) via a very specific token-only protocol. The TF has also been trained to follow this protocol. 
 
+<br>  
+
 *2b Models in the master diagram* <br>
 <img src="/assets/M-15-2bx.png" alt="drones" width="80%">
 
-<!-- *NOTE >>> (1) Tiny agentic AI model demo, (2) Backdoor in a model*
-
- *Models in the AI ecosystem* <br>
-<img src="/assets/zai_evolution7.png" alt="drones" width="42%"> -->
-<!-- But this is extremely complex, not for small companies, so its not covered in ZAI. Palantir itself does not use custom models (too complex, and standard models have all that is required).-->
-
-<!-- <br>
-
-**TOC**
-
-xxxxx
--->
-
 <br>  
-
 
 ### **[2b.1 Model concepts](/2b.3.1-llm-gist/)**
 
- 
-
 <br>
-
 
 ### ([2b.1b 2025 demos](/2b.1b-2025-llm-demos/))
 
 - See wiki page [**"AI LLM stacks"**](https://github.com/terrytaylorbonn/auxdrone/wiki/AI-stacks).
-
 
 <br>
 
 ### **[2b.2 Tiny demos](/2b.3.6-llm-demos/)** 
 
 <!-- (from 2b.6 LLM demos) -->
-
-
 
 - 2b.2.1 M01-M04 Define model, .pt load/save, run inference
 - 2b.2.2 M05 Mismatch
@@ -66,7 +48,11 @@ xxxxx
 
 <!-- I am still not sure if this belongs in 2 or 2b.. i am not sure what GPT means exactly by this. -->
 
-For specific domains. How do I create a model for a specific purpose? Domain-specific models, Synthetic data, Custom TF, Custom CNN.
+```text2
+For specific domains. How do I create a model for a specific purpose? 
+Domain-specific models, Synthetic data, Custom TF, Custom CNN.  
+Datasets, Synthetic Data, Model Evaluation.
+```
 
 <br>
 
@@ -76,14 +62,46 @@ Modifying/customizing/fine-tune. LoRA, Adapters, Domain Specialization
 
 <br>
 
-### **[2b.4 Running models locally](/2b.4-run-models-locally/)**
+### **[2b.4 Operating models](/2b.4-run-models-locally/)**
 
-This is actually one of the strongest sections because it matches your current interests exactly. HuggingFace, Ollama, Local Models, etc. How do I own and operate AI?
+```text2
+I already have a model. How do I operate it?
+Examples: HuggingFace, Ollama, GGUF, Gemma, Llama, Qwen, Mistral.
+This is:
+- Acquire
+- Deploy
+- Run
+- Use
+
+NOTE: 
+HF is not necessarily local. For example: 
+  HF download → local.
+  HF hosted inference → remote.
+  Ollama → local.
+  Open-weight model on cloud VM → remote.
+The common theme is really:
+  How do I obtain and operate a model?
+not necessarily:
+  How do I run it locally?
+```
 
 <br>
 
-26.0613 (v1 26.0610)
+26.0616 (v1 26.0610)
 
+
+<!-- *NOTE >>> (1) Tiny agentic AI model demo, (2) Backdoor in a model*
+
+ *Models in the AI ecosystem* <br>
+<img src="/assets/zai_evolution7.png" alt="drones" width="42%"> -->
+<!-- But this is extremely complex, not for small companies, so its not covered in ZAI. Palantir itself does not use custom models (too complex, and standard models have all that is required).-->
+
+<!-- <br>
+
+**TOC**
+
+xxxxx
+-->
 
 <!-- 
 <br>
