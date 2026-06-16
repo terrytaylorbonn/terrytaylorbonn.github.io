@@ -1,0 +1,55 @@
+---
+layout: page
+title: "2.3.0 TF concepts"
+permalink: /2.3.0-tf-concepts/
+---
+
+[← 2.3 LLMs](/2.3-llms/)
+
+<br>
+
+This page describes 
+
+- **2.3.1a TF gist #1**. (COMBINE WITH #2) The gist of what an LLM model does without complex algorithms or architecture diagrams.
+- **2.3.1b TF gist #2**.  of the LLM TF UFA ... A marvel of engineering complexity. 
+- **2.3.4 TF transformer training**
+
+<!-- - **2.3.3 Agentic**
+- **2.3.5 LLM Internal Agent**. My own invented term. iAgent + TF = LLM. 
+
+<img src="/assets/brain1b.png" alt="drones" width="22%"> -->
+
+<br>
+
+### [2.3.1a TF GIST #1](/2.3.1-llm-gist/)
+
+Describes in concise detail gist of what an LLM model does without describing complex algorithms or architectures. 
+
+<img src="/assets/02_llm_gist3.png" alt="smol" width="60%"> 
+
+<br>
+
+### [2.3.1b TF GIST #2](/2.3.2-tf-algorithm/)
+
+This will give you an appreciation of the vast complexity of TF calculations.
+
+<img src="/assets/llm01_tokens.png" alt="01" width="50%">
+
+<br>
+
+<!-- ### [2.3.3 Agentic LLMs](/2.3.3-agentic-llms/)
+
+Core concepts of the LLM functionality that is critical for agentic AI.
+
+<br> -->
+
+### [2.3.4 TF transformer training](/2.3.4_llm-tf-training/)
+
+Training is something most of us will never do (Palantir uses standard models; they do no customized training). But Training is the defining aspect of model transformer (TF) design.
+
+<img src="/assets/hillsvalleys.png" alt="smol" width="25%">
+
+<br>
+
+26.0616 (0523)
+

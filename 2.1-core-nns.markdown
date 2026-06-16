@@ -18,7 +18,7 @@ permalink: /2.1-predictive-nns/
 
 
 
-#### **Demo 1: [2.1.1 Predictive NN 01 sine](/2.1.1-predictive-nn-01-sine/)** (26.0524-25)
+#### **Demo 1: [2.1.1 Predictive NN 01 sine (D01)](/2.1.1-predictive-nn-01-sine/)** (26.0524-25)
 
 Runs locally on my i7 with NVidia 3050.
 
@@ -26,7 +26,7 @@ Runs locally on my i7 with NVidia 3050.
 
 <br>
 
-#### **Demo 2: [2.1.2 Tiny classifier NN](/2.1.2-classifier-nn/)** (26.0524-25)
+#### **Demo 2: [2.1.2 Tiny classifier NN (D2)](/2.1.2-classifier-nn/)** (26.0524-25)
 
 Runs locally on my i7 with NVidia 3050.
 

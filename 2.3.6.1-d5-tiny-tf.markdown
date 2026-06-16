@@ -159,7 +159,38 @@ print(generated)
 
 (TODO)
 
+<br>
+
+--------------------------------------
 
 <br>
 
-26.0603
+
+#### **3.1.3 Tiny TF (D5)** 
+
+**(WIP)** 
+
+In D5 (diagram below):
+- Loop 1
+  - Input the letter "h" (T1).
+  - Infer. Result = "e".
+- Loop 2
+  - Input the letters "h", "e" (T1,T2).
+  - Infer. Result = "l".
+- ......
+- Loop 8
+  - Input the letters "h", "e", "l", "l", "o", " ", "w", "o", (T1...T8).
+  - Infer. Result = "r".
+- Loop 9
+  - Input the letters "e", "l", "l", "o", " ", "w", "o", "r" (T1...T8).
+  - ............
+
+
+<img src="/assets/M-09.png" alt="drones" width="70%">
+
+
+
+
+<br>
+
+26.0616 (0603)

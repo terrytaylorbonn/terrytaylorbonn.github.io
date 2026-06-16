@@ -9,6 +9,31 @@ permalink: /2.2.0-cnns-concepts/
 <br>
 
 
+#### **3.1.2a ALEXNET CNN** (this is a good example to study before doing the Tiny CNN demo)
+
+About the Tiny CNN NN and Tiny NN differences:
+- In this demo there is a NN with 2 parts
+  - Conv2d+MaxPool2d. This is not really an NN like in the Tiny NN demo. Its basically computing the evolving values of the pix's through each step and uses convolution to add in values from neighboring pix's.
+  - Linear. This is the finally "fully connected" (FC) layer that computes the probabilities of outputs. FC means that all pix's share "context", not just the neighbors via convolution. This is more like the NN in the Tiny NN demo. 
+- The reason for the difference: The nature of the data. The next demo for a transfomer will also be similar but different because the data (language tokens, not pic pixels) is different. 
+ 
+
+This is a diagram that I created that explains clearly how AlexNet CNN works (my notation here makes ever step clear). There are 3 main parts.
+- **1 Data input**. In this case the data input is pixel RGB values (already numerical). Just split them into sets of R, G, and B.
+- **2 Feature extraction (Conv2d+MaxPool2d)**. This is where convolution and pooling are used to turn the original pixel values into "hidden state" values that progressive define higher level features (I typical call these values "pix's"). The final output at step 9 is 5x5x256 set of pix's. NOTE: Pixels are crude approximate measurements of a fluid phenomenon. Much of this convolution/pooling is used to "filter out" these errors (my opinion; I have not read this anywhere, but GPT seems to finally agree with my suggestion; this is perhaps why the convolution mechanism uses so-called "filters" that filter out pixel approximation errors).
+- **3 Final NN (Linear) computing CNN "logits"**. This involves
+  - 3.1 Linear NN (like for D2ccc) computes the probabilities of each of 1000 possible outputs.
+  - 3.2 The most probable output is converted into a label (such as "Siamese cat").
+
+Diagram from page [2.2.1b D4 CNN algorithm details](https://ziptieai.com/2.2.1b-d4-cnn-algorithm-details/).
+
+<img src="/assets/M-06.png" alt="drones" width="46%">
+
+<br>
+
+
+
+
 ### (1) CNN ALGORITHM core
 
 CNNs (Convoluted Neural Networks) that perform object recognition are much simpler than TFs. CNNs are an excellent stepping stone / analogy for understanding TFs.

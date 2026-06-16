@@ -16,18 +16,16 @@ description: Last edit 26.0426
 
 <br>
 
+
+
+#### **[2.2.0 CNN concepts](/2.2.0-cnns-concepts/)** (26.0616)
+
 The core of CNNs:
 - Convolutions (localized spatial filters)
 - NNs 
 
 See __ziptieai_book1_CNN_.docx on the [Gdrive](https://drive.google.com/drive/folders/1-Adawag9uA8_bq-hDF-nOuPYaRLz1eEO).
 
-
-<br>
-
-#### **[2.2.0 CNN concepts](/2.2.0-cnns-concepts/)** (26.0616)
-
-xxxx
 
 <br>
 
@@ -60,4 +58,3 @@ Runs on render (CPU mode).
 
 26.0616 (0529)
 
-<br>

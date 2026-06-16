@@ -19,63 +19,85 @@ description: Last edit 26.0426
 
 <br>
 
-This page describes 
-
-- **2.3.1a TF gist #1**. (COMBINE WITH #2) The gist of what an LLM model does without complex algorithms or architecture diagrams.
-- **2.3.1b TF gist #2**.  of the LLM TF UFA ... A marvel of engineering complexity. 
-- **2.3.4 TF transformer training**
-- **2.3.6 TF demos**
-
-<!-- - **2.3.3 Agentic**
-- **2.3.5 LLM Internal Agent**. My own invented term. iAgent + TF = LLM. 
-
-<img src="/assets/brain1b.png" alt="drones" width="22%"> -->
-
-<br>
-
-### [2.3.1a TF GIST #1](/2.3.1-llm-gist/)
-
-Describes in concise detail gist of what an LLM model does without describing complex algorithms or architectures. 
-
-<img src="/assets/02_llm_gist3.png" alt="smol" width="60%"> 
-
-<br>
-
-### [2.3.1b TF GIST #2](/2.3.2-tf-algorithm/)
-
-This will give you an appreciation of the vast complexity of TF calculations.
-
-<img src="/assets/llm01_tokens.png" alt="01" width="50%">
-
-<br>
-
-<!-- ### [2.3.3 Agentic LLMs](/2.3.3-agentic-llms/)
-
-Core concepts of the LLM functionality that is critical for agentic AI.
-
-<br> -->
-
-### [2.3.4 TF transformer training](/2.3.4_llm-tf-training/)
-
-Training is something most of us will never do (Palantir uses standard models; they do no customized training). But Training is the defining aspect of model transformer (TF) design.
-
-<img src="/assets/hillsvalleys.png" alt="smol" width="25%">
-
-<br>
 
 
 
+
+#### **[2.3.0 TF concepts](/2.3.0-tf-concepts/)** (26.0616)
+
+An LLM consists of:
+- Transformer (TF) (the NN)
+- Internal agent (iAgent) (interfaces with TF (via tokens) and the agent scripts)
+
+See also __ziptieai_BOOK2_LLM_.docx the [Gdrive](https://drive.google.com/drive/folders/1-Adawag9uA8_bq-hDF-nOuPYaRLz1eEO).
+
+
+
+
+
+
+<!-- 
 ### [2.3.6 TF demos](/2.3.6-llm-demos/)
 
 - **New low level demos**. Just understanding on a low-level how LLMs really work (at least the transformer part) can greatly increase your ability to design LLM-based AI projects. <br>
 <img src="/assets/d5_0.png" alt="drones" width="45%"><br><br>
+-->
 
 <!-- - **Older higher level demos**. The level of expertise required to deploy, fine-tune or even create your own LLMs will go down in the future. <br>
 <img src="/assets/smol.png" alt="smol" width="55%"> -->
 
+
+
+
+<!-- <img src="/assets/brain1b.png" alt="drones" width="22%"> -->
+
 <br>
 
-26.00610 (reorg) (0530)
+#### **Demo 5: [2.3.6.1 D5 Tiny TF](/2.3.6.1-d5-tiny-tf/)** (26.0529)
+
+Runs locally in CPU mode. 
+
+<img src="/assets/d5_0.png" alt="drones" width="39%">
+
+<br>
+
+#### **Demo 5b: [2.3.6.1b D5 tiny TF algorithm details](/2.3.6.1b-d5-tiny-tf-algorithm-details/)** (26.0602)
+
+This page describes 
+- every line of code in the demo 
+- the details of "attention heads", FFNs, etc
+
+<img src="/assets/2.3.6.1b-forward.png" alt="drones" width="33%">
+
+
+<!-- <img src="/assets/d4_alexnet.png" alt="drones" width="15%"> -->
+
+<br>
+
+#### **Demo 11: Tiny TF classifier (TODO)**
+#### **Demo 12: Tiny TF sentiment detector (TODO)**
+#### **Demo 13: Tiny TF sequence predictor (TODO)**
+
+<br>
+
+------------------------------
+
+<br>
+
+#### Older demos (2025)
+
+The wiki page [**"AI LLM stacks"**](https://github.com/terrytaylorbonn/auxdrone/wiki/AI-stacks) (a bit chaotic after a recent wiki reorganization) lists the following subpages are of interest:
+
+- [2.2 Demo deployments (HF, CloudFlare, etc)](https://github.com/terrytaylorbonn/auxdrone/wiki/LLM-stacks-%5C-2-Demo-deployments)
+- [2.3 Youtube demos](https://github.com/terrytaylorbonn/auxdrone/wiki/LLM-stacks-%5C-3-Youtube-demos). I did a lot of YouTube demos. Way back then (2025, a long time ago in AI-time) I had still not make the transition to working totally with LLMs (GPT) to learn new tech.
+- [2.4 GPT/Copilot demos (a few demos)](https://github.com/terrytaylorbonn/auxdrone/wiki/LLM-stacks-%5C-4-CPLT-demos)
+- [2.6 Agent/LLM input docs (RAG demo)](https://github.com/terrytaylorbonn/auxdrone/wiki/LLM-stacks-%5C-4-CPLT-%5C-4.0b-Platforms-and-tools)
+ 
+<img src="/assets/smol.png" alt="smol" width="45%">
+
+<br>
+
+26.0616 (0530)
 
 <!-- The wiki page [**"AI LLM stacks"**](https://github.com/terrytaylorbonn/auxdrone/wiki/AI-stacks) (a bit chaotic after a recent wiki reorganization) lists the following subpages are of interest:
  - [2.2 Demo deployments (HF, CloudFlare, etc)](https://github.com/terrytaylorbonn/auxdrone/wiki/LLM-stacks-%5C-2-Demo-deployments)
