@@ -6,6 +6,11 @@ permalink: /0b-demos/
 
 <br>
 
+#### ***This page is a work in progress (WIP)***. *The goal is too summarizes the concepts learned doing the hands-on QS demos (the QS is also WIP).*
+
+
+<br>
+
 *Major AI project components* <br>
 <img src="/assets/M-15.png" alt="drones" width="85%">
 

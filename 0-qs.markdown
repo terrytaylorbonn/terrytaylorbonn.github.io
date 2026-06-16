@@ -16,6 +16,11 @@ permalink: /0-qs/
 - **3 Agent demos**
 - **3b Projects**  -->
 
+#### ***This page is a work in progress (WIP)***. *The goal is a start-to-finish low-to-high-level hands-on set of selected demos that give you core AI skills ASAP.*
+
+
+<br> 
+
 This QS (quick start) follows the organization of this site as shown in the site "master diagram" (below).
 - **2 NN, CNN, TF**
   - **Core NN (CNN dense, TF FFN)** is the core NN in all demos (except agent only demos with no AI).
