@@ -6,6 +6,7 @@ permalink: /0-qs/
 
 <br> 
 
+<!-- 
 **The ONLY way to understand AI is by doing examples.** This page currently is an overview of all the demos on this site. But it will slowly morph into a Quick Start with specific demos to focus on. 
 
 **TOC**
@@ -13,15 +14,9 @@ permalink: /0-qs/
 - **2 NN demos**
 - **2b Model demos**
 - **3 Agent demos**
-- **3b Projects**
+- **3b Projects**  -->
 
-*Old demos are available on [Wiki](https://github.com/terrytaylorbonn/auxdrone/wiki), [Github](https://github.com/terrytaylorbonn?tab=repositories), [Gdrive](https://drive.google.com/drive/folders/1-Adawag9uA8_bq-hDF-nOuPYaRLz1eEO) (docx lab notes).*
-
-<br>
-
-### **1 Master diagram**
-
-The following diagram is basically the "master diagram" for this site.
+This QS (quick start) follows the organization of this site as shown in the site "master diagram" (below).
 - **2 NN, CNN, TF**
   - **Core NN (CNN dense, TF FFN)** is the core NN in all demos (except agent only demos with no AI).
   - **CNN convolute, TF QKV (context)** is an extra NN in CNNs and LLM transformers (TFs).
@@ -37,6 +32,9 @@ Note that **there are many variations of this setup**, and I will try to provide
 
 *Master diagram*<br>
 <img src="/assets/M-15.png" alt="drones" width="78%">
+
+*Note: Old demos are available on [Wiki](https://github.com/terrytaylorbonn/auxdrone/wiki), [Github](https://github.com/terrytaylorbonn?tab=repositories), [Gdrive](https://drive.google.com/drive/folders/1-Adawag9uA8_bq-hDF-nOuPYaRLz1eEO) (docx lab notes).*
+
 
 
 <br>
@@ -87,7 +85,7 @@ This section focuses on "spinning up" real-world projects quickly with minimal c
 
 <br>
 
-26.0615 (v1 26.0527)
+26.0616 (v1 26.0527)
 
 
 <!-- **I wasted so much time going down so many rabbit holes when studying AI**. AI is an awesome technology. Without AI tools (GPT) I never could have accomplished 5% of what I have done on the ZiptieAI project. But **AI chatbots only produce the output they are programmed to produce, and much of that about AI itself is misleading hype (or outright lies)**. The very term "artificial intelligence" is a perfect example. AI is not intelligent, and the very concept of "man-made" intelligence shows a basic lack of understanding of what intelligence is. 
