@@ -47,23 +47,36 @@ If AI was truly intelligent then AI integration would just be connecting AI and 
 *A simple NN **[demo](/2.1.2-classifier-nn/)** of the core of AI*<br>
 <img src="/assets/M-05.png" alt="drones" width="53%"> <img src="/assets/M-02.png" alt="drones" width="17%">
 
+I went down so many rabbit holes when studying AI. **The ONLY way to understand AI is by doing examples. Code does not lie**.
+
+*Code for **[NN](/2.1.1-predictive-nn-01-sine/)** definition (left) and training (right)*<br>
+<img src="/assets/M-14.png" alt="desc" width="60%"> 
+
+
 <br>
 
 ## **4 Intrinsic understanding of core [concepts](/0b-demos/)**
 
-**AI is first and foremost a man <> machine interface**. When you chat the interface is via tokens (words). Human eyesight and intelligence converts these tokens into thoughts. An amazing little-understood process. Tokens are converted to numbers before input to an LLM. An LLM see nothing, has no thoughts, it only crunches numbers. **NNs are always passive; CPU-based agents are always in control.** An LLM NN inputs data and spits out a (100% deterministic) result. Thats it. 
+**AI is first and foremost a man <> machine interface**. A human chats with an LLM via tokens (words). Human eyesight and intelligence converts these tokens into thoughts (an amazing little-understood process). On the LLM side, tokens are converted to numbers before being input to an LLM transformer NN (an LLM sees nothing, has no thoughts, and only crunches numbers).
 
-*Human (left), agent (center), and NN (right)*<br>
+Without AI tools (chatbots) I never could have accomplished 5% of what I have done on the ZiptieAI project. But **AI chatbots only say what they are programmed to say** (sometimes that's pure AI lingo and hype). **The LLM TF generates a token sequence based on the input tokens; the internal agent  (a traditional CPU-based algorithm) controls the TF and interfaces with you.** A Tweedledee-Tweedledum team.  
+
+*Human (left), LLM agent (center), and LLM transformer (right)*<br>
 <img src="/assets/M-11.png" alt="drones" width="31%"> 
 
 <br>
 
 ## **5 Deep dive ([NNs](/2_models/), [Models](/2b_models/), [Agents](/3_agents/), [Projects](/3.3-ai-projects/))**
 
-Without AI tools (chatbots) I never could have accomplished 5% of what I have done on the ZiptieAI project. But **AI chatbots only say what they are programmed to say** (sometimes that's pure AI lingo and hype). I went down so many rabbit holes when studying AI. **The ONLY way to understand AI is by doing examples. Code does not lie**.
+ZiptieAI methodically attacks the complexity of the AI ecosystem in a very mechanistic fashion (because AI is first and foremost a mechanical algorithms). 
+- First core NNs (2 NNs).
+- Then models that package core NNs for reuse (2b Models).
+- Then the external agents that provide an interface between models (helpful assistants) and legacy systems.
+- Finally real-word projects (3b Projects).
 
-*Code for **[NN](/2.1.1-predictive-nn-01-sine/)** definition (left) and training (right)*<br>
-<img src="/assets/M-14.png" alt="desc" width="60%"> 
+*The ZiptieAI deep dive takes you methodically through the entire AI stack*<br>
+<img src="/assets/M-15.png" alt="drones" width="78%">
+
 
 <!-- <img src="/assets/tf_S1-S6.png" alt="desc" width="40%"> 
 <img src="/assets/0_projects2.png" alt="drones" width="35%"> -->
@@ -80,7 +93,7 @@ AI has big a future even after the pre-IPO hype is over. **Those who understand 
 
 <br>
 
-26.0615 (v1 26.0611)
+26.0616 (v1 26.0611)
 
 <!-- *A successful mission for AI (left) and not so successful mission (right).* <br>
 <img src="/assets/ziptiedrone2.png" alt="drones" width="23%"> <img src="/assets/waymo.png" alt="drones" width="26%">  -->
