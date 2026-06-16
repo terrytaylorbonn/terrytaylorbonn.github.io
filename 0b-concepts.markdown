@@ -6,7 +6,7 @@ permalink: /0b-demos/
 
 <br>
 
-#### ***This page is a work in progress (WIP)***. *The goal is to summarize the concepts learned while doing the hands-on QS demos.*
+#### ***This page is a work in progress (WIP)***. *The goal is to summarize the concepts learned from doing the hands-on QS demos.*
 
 
 <br>
