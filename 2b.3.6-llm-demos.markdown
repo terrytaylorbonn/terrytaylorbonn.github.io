@@ -31,11 +31,12 @@ Define model, .pt load/save, run inference
 
 - xxxx
 
-**2b HF**
+**[2b.2.4 HF deploy](/2b.2.4-HF-deploy/)**
 
 - xxxx
 
-**2b M07 API**
+**[2b.2.5 M07 API](/2b.2.5-M07-API/)
+
 
 - xxxx
 

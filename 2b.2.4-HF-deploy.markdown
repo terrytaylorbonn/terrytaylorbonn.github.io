@@ -1,7 +1,7 @@
 ---
 layout: page
-title: "2b.2.xxx xxx"
-permalink: /2b.2.xxx-xxx5/
+title: "2b.2.4 HF deploy"
+permalink: /2b.2.4-HF-deploy/
 ---
 
 [← 2b.2 Tiny model demos](/2b.3.6-llm-demos/)
