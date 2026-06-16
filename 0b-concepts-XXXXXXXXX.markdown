@@ -60,6 +60,8 @@ Agentic AI models have some pretty sophisticated abilities that really resemble 
 
 <br>
 
+
+
 ## **[2 NNs](/2_models/)**
 
 The NN is the core of AI "intelligence". A NN provides a pattern matching algorithm. The the NN is controlled by Python code ("agent").
@@ -72,21 +74,20 @@ NEW
 - 2.4 Adding convolution
 - 2.5 Adding transformer
 
-<!-- 
+
 OLD
 - **#1 Tiny NN demo (D2ccc) (inference)**
 - **#2 Tiny NN demo (D2ccc) (training)**
 - **#3 AlexNet CNN** (the defining architecture from 2012 and a good example to study)
 - **#4 Tiny CNN demo (D4)** (a good programming example)
 - **#5 Tiny TF demo (D5)** (hands-on demo)
--->
+
 
 <br>
 
 
 
-#### **2.1 Defining the NN**
-Tiny NN demo ([demo D2ccc](/2.1.2-classifier-nn/)) (inference)
+#### **#1 Tiny NN demo ([demo D2ccc](/2.1.2-classifier-nn/)) (inference)** 
 
 **This one simple NN demo will give you an understanding of the core of all AI inference** (including CNNs, LLMs TFs, etc). The following diagram shows the core components of the demo:
 - **Encoder**. All NNs only "know" numbers (including ChatGPT, Claude, etc). So if you have a dataset that is not (FP) numbers, it must be encoded (and later decoded).
@@ -98,13 +99,7 @@ Tiny NN demo ([demo D2ccc](/2.1.2-classifier-nn/)) (inference)
 
 <br>
 
-#### **2.2 Inference**
-
-<br>
-
-#### **2.3 Training**
-
-2 Tiny NN demo ([demo D2ccc](/2.1.2-classifier-nn/)) (training)
+#### **#2 Tiny NN demo ([demo D2ccc](/2.1.2-classifier-nn/)) (training)**
 
 Training input/output must match exactly what is desired in inference. The following code defines the training steps (more details later).
 
@@ -119,19 +114,15 @@ for epoch in range(100):
 
 <br>
 
-<!-- 
 #### **#3 AlexNet CNN** 
 
 This CNN was released in 2012. Its an important historical version to study, but too complicated to use as a hands on demo (most demos now abstract behind APIs much of the programming details that were required in 2012). *Diagram from **[2.2.1b D4 CNN algorithm details](https://ziptieai.com/2.2.1b-d4-cnn-algorithm-details/)***.
 
 <img src="/assets/M-06.png" alt="drones" width="36%">
 
+<br>
 
-<br>  -->
-
-#### **2.4 Adding convolution**
-
-4 Tiny CNN ([demo D4](/2.2.1-d4-cnn-image-classifier/))**
+#### **#4 Tiny CNN ([demo D4](/2.2.1-d4-cnn-image-classifier/))**
 
 A hands on demo. Input a 28x28 pixel screenshot of a digit, and the NN outputs "0", "1", ... "9". For details see 
 - **[2.2.1 D4 CNN image classifier](https://ziptieai.com/2.2.1-d4-cnn-image-classifier/)**
@@ -162,9 +153,7 @@ class TinyCNN(nn.Module):
 
 <br>
 
-#### **2.5 Adding transformer**
-
-5 Tiny TF ([demo D5](/2.3.6.1-d5-tiny-tf/))** 
+#### **#5 Tiny TF ([demo D5](/2.3.6.1-d5-tiny-tf/))** 
 
 In D5 (diagram below):
 - Loop 1 inputs the letter "h" (T1) and infers (outputs) "e".
