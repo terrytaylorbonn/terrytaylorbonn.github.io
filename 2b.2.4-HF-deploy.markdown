@@ -10,9 +10,10 @@ permalink: /2b.2.4-HF-deploy/
 
 xxxx
 
-<img src="/assets/xxx.png" alt="drones" width="20%">
+<!-- <img src="/assets/xxx.png" alt="drones" width="20%"> -->
 
 **TOC**
+- **Overview**
 - **1 Output**
 - **2 PY scripts**
 - **4 Code with detailed comments**. 
@@ -22,16 +23,115 @@ For details see [#608.docx](https://drive.google.com/drive/folders/1-Adawag9uA8_
 
 <br>
 
+# **Overview**
 
-# **1 Output**
-
+```
+the full chain:
+  Hugging Face repo
+    ↓
+  download .pt
+    ↓
+  define architecture in Python
+    ↓
+  load W,b
+    ↓
+  run inference
+    ↓
+  output
+So for this tiny demo:
+HF is not running the model.
+HF is hosting the files.
+Your local Python runs the model.
+That is a very important distinction.
+```
 
 <br>
 
+# **1 Output**
+
+```
+python m06_test.py 
+Downloaded:
+/home/terry/.cache/hf_cache/hub/models--terrytaylorbonn--m06-tiny-pytorch-model/snapshots/0e9dd63cdf7a94a04663a1c5f7618f725c15ce67/m01_tiny_model.pt
+
+Loaded weights:
+Parameter containing:
+tensor([[0.0598, 0.0642]], requires_grad=True)
+Parameter containing:
+tensor([-0.4107], requires_grad=True)
+
+Input:
+tensor([[1., 2.]])
+
+Output:
+tensor([[-0.2226]], grad_fn=<AddmmBackward0>)
+(venv) terry@LAPTOP-HKPDHF7M:/mnt/c/Users/terry/Downloads/607_predictive$
+```
+
+<br>
 
 # **2 PY scripts**
 
-- xxxxxxxxxxxx
+```
+# m06_test.py
+
+import torch
+import torch.nn as nn
+from huggingface_hub import hf_hub_download
+
+# -----------------------
+# Architecture
+# -----------------------
+
+class TinyModel(nn.Module):
+    def __init__(self):
+        super().__init__()
+        self.fc = nn.Linear(2, 1)
+
+    def forward(self, x):
+        return self.fc(x)
+
+# -----------------------
+# Download .pt from HF
+# -----------------------
+
+pt_file = hf_hub_download(
+    repo_id="terrytaylorbonn/m06-tiny-pytorch-model",
+    filename="m01_tiny_model.pt"
+)
+
+print("Downloaded:")
+print(pt_file)
+print()
+
+# -----------------------
+# Load model
+# -----------------------
+
+model = TinyModel()
+
+model.load_state_dict(torch.load(pt_file))
+
+print("Loaded weights:")
+print(model.fc.weight)
+print(model.fc.bias)
+print()
+
+# -----------------------
+# Inference
+# -----------------------
+
+x = torch.tensor([[1.0, 2.0]])
+
+y = model(x)
+
+print("Input:")
+print(x)
+print()
+
+print("Output:")
+print(y)
+```
 
 
 <br>

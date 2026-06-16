@@ -19,9 +19,9 @@ See
 
 **[2b.2.1 M01-M04 Model basics](/2b.2.1-M01-M04-Model-basics/)**
 
+```text2
 Define model, .pt load/save, run inference
-
-- xxxx
+```
 
 **[2b.2.2 M05 Mismatch](/2b.2.2-M05-Mismatch/)**
 
@@ -33,23 +33,58 @@ Define model, .pt load/save, run inference
 
 **[2b.2.4 HF deploy](/2b.2.4-HF-deploy/)**
 
-- xxxx
+```text2
+So for this tiny demo:
+HF is not running the model.
+HF is hosting the files.
+Your local Python runs the model.
+```
 
 **[2b.2.5 M07 API](/2b.2.5-M07-API/)**
 
-- xxxx
+```text2
+easiest way so that we modify this demo so that (1) can input and receive data via API call? 
+Easiest: wrap M06 with FastAPI.
+M07 = HF .pt + local API
+```
 
 **[2b.2.6 M08 Render](/2b.2.6-M08-Render/)**
 
-- xxxx
+(TODO)
 
 **[2b.2.7 M09 Protocol / Tool Use](/2b.2.7-M09-Protocol-Tool-Use/)**
 
-- xxxx
+```text2
+GPT: So if I had to write a one-line description for the website:
+M09 Tiny protocol/tool-use model
+A tiny NN learns a protocol that maps user text to tool choices.
+The model selects the action; the iAgent executes it.
+Or even shorter:
+Model chooses.
+Code does.
+That's the core lesson I would want someone to take away from M09. 
+It was the bridge between:
+  2b Models
+  and
+  3 Agents
+without actually requiring a real LLM.
+```
 
 **[2b.2.8 M10 Trigger / Backdoor](/2b.2.8-M10-Trigger-Backdoor/)**
 
-- xxxx
+```text2
+GPT: hat this demonstrates:
+Training data   ↓  Weights   ↓ Hidden behavior
+The trigger is not in the code.
+The code only says:
+ 	if pred == 1:
+    print("TRIGGER DETECTED")
+The interesting part is:
+Which inputs produce pred==1 ?
+That knowledge is stored in the weights.
+That's the key lesson of M10. 
+It is a tiny, harmless version of the same concept discussed in AI model security research.
+```
 
 <br>
 

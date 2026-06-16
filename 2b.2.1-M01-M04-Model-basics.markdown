@@ -8,22 +8,78 @@ permalink: /2b.2.1-M01-M04-Model-basics/
 
 <br>
 
-xxxx
+<!-- xxxx
 
-<img src="/assets/xxx.png" alt="drones" width="20%">
+<img src="/assets/xxx.png" alt="drones" width="20%"> -->
 
 **TOC**
+- **Overview**
 - **1 Output**
 - **2 PY scripts**
 - **4 Code with detailed comments**. 
 
 For details see [#608.docx](https://drive.google.com/drive/folders/1-Adawag9uA8_bq-hDF-nOuPYaRLz1eEO).
 
+<br>
+
+# **Overview**
+
+```text2
+Because this model is only:
+  nn.Linear(2,1)
+you can even compute the answer by hand:
+  y = w1*x1 + w2*x2 + b
+Using your weights:
+  y =
+  0.0598*1 
+  +
+  0.0642*2 
+  +
+  (-0.4107)
+  ≈  -0.2225
+If M04 prints something close to:
+  tensor([[-0.2225]])
+then you've followed the entire chain:
+  .pt file
+    ↓
+  weights
+    ↓ 
+  model
+    ↓
+  input
+    ↓
+  output
+which is the complete inference path of a neural network. 
+After that we can decide whether M05 should be "train a model" or "inspect a larger model."
+```
+
 
 <br>
 
-
 # **1 Output**
+
+```
+python m04_load_use_model.py 
+
+BEFORE LOAD
+Parameter containing:
+tensor([[ 0.3151, -0.6782]], requires_grad=True)
+Parameter containing:
+tensor([-0.6311], requires_grad=True)
+
+AFTER LOAD
+Parameter containing:
+tensor([[0.0598, 0.0642]], requires_grad=True)
+Parameter containing:
+tensor([-0.4107], requires_grad=True)
+
+INPUT
+tensor([[1., 2.]])
+
+OUTPUT
+tensor([[-0.2226]], grad_fn=<AddmmBackward0>)
+(venv) terry@LAPTOP-HKPDHF7M:/mnt/c/Users/terry/Downloads/607_predictive$
+```
 
 
 <br>
@@ -31,7 +87,61 @@ For details see [#608.docx](https://drive.google.com/drive/folders/1-Adawag9uA8_
 
 # **2 PY scripts**
 
-- xxxxxxxxxxxx
+```
+# m04_load_use_model.py
+
+import torch
+import torch.nn as nn
+
+# -----------------------
+# Model definition
+# -----------------------
+
+class TinyModel(nn.Module):
+    def __init__(self):
+        super().__init__()
+        self.fc = nn.Linear(2, 1)
+
+    def forward(self, x):
+        return self.fc(x)
+
+# -----------------------
+# New model object
+# -----------------------
+
+model = TinyModel()
+
+print("BEFORE LOAD")
+print(model.fc.weight)
+print(model.fc.bias)
+
+# -----------------------
+# Load weights from disk
+# -----------------------
+
+model.load_state_dict(torch.load("m01_tiny_model.pt"))
+
+print()
+print("AFTER LOAD")
+print(model.fc.weight)
+print(model.fc.bias)
+
+# -----------------------
+# use model
+# -----------------------
+
+x = torch.tensor([[1.0, 2.0]])
+
+y = model(x)
+
+print()
+print("INPUT")
+print(x)
+
+print()
+print("OUTPUT")
+print(y)
+```
 
 
 <br>

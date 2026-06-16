@@ -13,25 +13,101 @@ xxxx
 <img src="/assets/xxx.png" alt="drones" width="20%">
 
 **TOC**
+- **0 Summary**
 - **1 Output**
 - **2 PY scripts**
 - **4 Code with detailed comments**. 
 
 For details see [#608.docx](https://drive.google.com/drive/folders/1-Adawag9uA8_bq-hDF-nOuPYaRLz1eEO).
 
+<br>
+
+
+# **0 Summary**
+
+
+```text2 
+what would be easiest way so that we modify this demo so that (1) can input and receive data via API call? 
+Easiest: wrap M06 with FastAPI.
+M07 = HF .pt + local API
+```
 
 <br>
 
 
 # **1 Output**
 
+```
+curl -X 'POST' \
+  'http://127.0.0.1:8000/predict' \
+  -H 'accept: application/json' \
+  -H 'Content-Type: application/json' \
+  -d '{
+  "x1": 1,
+  "x2": 2
+}'
+{
+  "input": [
+    1,
+    2
+  ],
+  "output": -0.22262531518936157
+}
+```
 
 <br>
 
 
 # **2 PY scripts**
 
-- xxxxxxxxxxxx
+```
+# m07_api.py
+
+import torch
+import torch.nn as nn
+from fastapi import FastAPI
+from pydantic import BaseModel
+from huggingface_hub import hf_hub_download
+
+class TinyModel(nn.Module):
+    def __init__(self):
+        super().__init__()
+        self.fc = nn.Linear(2, 1)
+
+    def forward(self, x):
+        return self.fc(x)
+
+class InputData(BaseModel):
+    x1: float
+    x2: float
+
+app = FastAPI()
+
+pt_file = hf_hub_download(
+    repo_id="terrytaylorbonn/m06-tiny-pytorch-model",
+    filename="m01_tiny_model.pt",
+)
+
+model = TinyModel()
+model.load_state_dict(torch.load(pt_file))
+model.eval()
+
+@app.get("/")
+def root():
+    return {"status": "M07 API running"}
+
+@app.post("/predict")
+def predict(data: InputData):
+    x = torch.tensor([[data.x1, data.x2]], dtype=torch.float32)
+
+    with torch.no_grad():
+        y = model(x)
+
+    return {
+        "input": [data.x1, data.x2],
+        "output": y.item()
+    }
+```
 
 
 <br>
