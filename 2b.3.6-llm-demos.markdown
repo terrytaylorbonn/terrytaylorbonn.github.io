@@ -1,6 +1,6 @@
 ---
 layout: page
-title: "2b.3.6 Tiny model demos"
+title: "2b.2 Tiny model demos"
 permalink: /2b.3.6-llm-demos/
 description: Last edit 26.0426
 ---
@@ -11,7 +11,7 @@ description: Last edit 26.0426
 <br>
 
 See 
-- [#608_2b_models_.docx](https://drive.google.com/drive/folders/1-Adawag9uA8_bq-hDF-nOuPYaRLz1eEO).
+- [#608\_2b\_models\_.docx](https://drive.google.com/drive/folders/1-Adawag9uA8_bq-hDF-nOuPYaRLz1eEO).
 - also [__ziptieai_BOOK2_LLM_.docx](https://drive.google.com/drive/folders/1-Adawag9uA8_bq-hDF-nOuPYaRLz1eEO).
 
 <br>
