@@ -1,7 +1,7 @@
 ---
 layout: page
-title: "2b.2.xxx xxx"
-permalink: /2b.2.xxx-xxx7/
+title: "2b.2.8 M10 Trigger / Backdoor"
+permalink: /2b.2.8-M10-Trigger-Backdoor/
 ---
 
 [← 2b.2 Tiny model demos](/2b.3.6-llm-demos/)

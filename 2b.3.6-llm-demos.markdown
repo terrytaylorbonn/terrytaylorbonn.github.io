@@ -35,20 +35,19 @@ Define model, .pt load/save, run inference
 
 - xxxx
 
-**[2b.2.5 M07 API](/2b.2.5-M07-API/)
-
-
-- xxxx
-
-**2b M08 Render (TODO)**
+**[2b.2.5 M07 API](/2b.2.5-M07-API/)**
 
 - xxxx
 
-**2b M09 Protocol / Tool Use**
+**[2b.2.6 M08 Render](/2b.2.6-M08-Render/)**
 
 - xxxx
 
-**2b M10 Trigger / Backdoor**
+**[2b.2.7 M09 Protocol / Tool Use](/2b.2.7-M09-Protocol-Tool-Use/)**
+
+- xxxx
+
+**[2b.2.8 M10 Trigger / Backdoor](/2b.2.8-M10-Trigger-Backdoor/)
 
 - xxxx
 
