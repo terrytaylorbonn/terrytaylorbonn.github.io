@@ -569,3 +569,17 @@ How to create your own models
 10 Edge/embedded deployment
 ```
 This fits your “simple first, then complex” approach.
+
+<br>
+
+---------------------------------------------
+
+<br>
+
+### [2.6 Historical NNs](/2.6-ai-models-historical/)
+
+Where did today's AI come from? What survived? What became obsolete? What evolved into something else? This section will not have demos, just explanations (you run into these terms all the time, so its good to know what they are). Also good to know how this all developed. Page added 26.0603.
+
+<br>
+
+26.0616 

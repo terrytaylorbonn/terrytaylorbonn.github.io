@@ -24,7 +24,6 @@ permalink: /2_models/
 - 2.2b CNN<>TF comparison
 - 2.3 Transformers (TFs)
 - 2.5 Robotic AI NNs
-- 2.6 Historical NNs
 - 2.7 TF training algorithms (TODO)
 
 
@@ -93,12 +92,6 @@ I no longer believe LeCun's hype about his version of JEPA that will supposedly 
 
 <br>
 
-### [2.6 Historical NNs](/2.6-ai-models-historical/)
-
-Where did today's AI come from? What survived? What became obsolete? What evolved into something else? This section will not have demos, just explanations (you run into these terms all the time, so its good to know what they are). Also good to know how this all developed. Page added 26.0603.
-
-<br>
-
 ### [2.7 Training algorithms](/2.7-ai-models-training-algos/)
 
 TODO
@@ -107,7 +100,6 @@ TODO
 
 26.0616 (v1 26.0526)
 
-<br>
 
 
 <!--
@@ -121,12 +113,6 @@ The NN is the core of AI "intelligence". A NN provides a pattern matching algori
 - **3.1.2b Tiny CNN demo (D4)**
 - **3.1.3 Tiny TF demo (D5)**
 -->
-
-<br>
-
-
-
-26.0615
 
 
 <!-- *How a UFA determines if a location is in the Netherlands or Belgium*.<br>
