@@ -6,8 +6,6 @@ permalink: /2b_models/
 
 <br> 
 
-
-
 <!-- *I spun off the content of this from page "NNs" on 26.0610 because I became convinced that creating custom models and deploying locally were going to be a big trend in the future. There is a lot of demo stuff on the Wiki that I need to move to this wepage or replicate.* -->
 
 This **WIP** page (v1 26.0610) describes model internals. The agent and the NN are typically packed into a **model** that has an API that makes it possible for existing software to **use the model as a "helpful" assistant**. The internal agent (iAgent) that has been programmed to interact with the transformer (TF) via a very specific token-only protocol. The TF has also been trained to follow this protocol. 
@@ -15,19 +13,20 @@ This **WIP** page (v1 26.0610) describes model internals. The agent and the NN a
 *2b Models in the master diagram* <br>
 <img src="/assets/M-15-2bx.png" alt="drones" width="80%">
 
-*NOTE >>> (1) Tiny agentic AI model demo, (2) Backdoor in a model*
+<!-- *NOTE >>> (1) Tiny agentic AI model demo, (2) Backdoor in a model*
 
-<!-- *Models in the AI ecosystem* <br>
+ *Models in the AI ecosystem* <br>
 <img src="/assets/zai_evolution7.png" alt="drones" width="42%"> -->
 <!-- But this is extremely complex, not for small companies, so its not covered in ZAI. Palantir itself does not use custom models (too complex, and standard models have all that is required).-->
 
-<br>
+<!-- <br>
 
 **TOC**
 
 xxxxx
+-->
 
-<br>
+<br>  
 
 
 ### **[2b.1 Model concepts](/2b.3.1-llm-gist/)**
@@ -44,18 +43,20 @@ xxxxx
 
 <br>
 
-### **[2b.2 Tiny demos](/2b.3.6-llm-demos/)** (from 2b.6 LLM demos)
+### **[2b.2 Tiny demos](/2b.3.6-llm-demos/)** 
+
+<!-- (from 2b.6 LLM demos) -->
 
 
 
-- 2b M01-M04 Define model, .pt load/save, run inference
-- 2b M05 Mismatch
-- 2b M06 Manual inference
-- 2b HF
-- 2b M07 API
-- 2b M08 Render (TODO)
-- 2b M09 Protocol / Tool Use
-- 2b M10 Trigger / Backdoor
+- 2b.2.1 M01-M04 Define model, .pt load/save, run inference
+- 2b.2.2 M05 Mismatch
+- 2b.2.3 M06 Manual inference
+- 2b.2.4 HF
+- 2b.2.5 M07 API
+- 2b.2.6 M08 Render (TODO)
+- 2b.2.7 M09 Protocol / Tool Use
+- 2b.2.8 M10 Trigger / Backdoor
 
 
 <br>
