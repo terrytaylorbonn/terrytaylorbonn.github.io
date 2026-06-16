@@ -15,7 +15,9 @@ description: Last edit 26.0426
 - sequence routing
 - FFNs -->
 
+<img src="/assets/M-19.png" alt="drones" width="40%">
 
+<br>
 
 This page describes 
 

@@ -45,7 +45,9 @@ The core of every model is the NN that implements a UFA (Univeral Function **App
 
 Small NNs for specific tasks. **Includes DIY demos that give you a real understanding of the core of NNs**.
 
-<img src="/assets/brain1.png" alt="drones" width="14%">
+<img src="/assets/M-17.png" alt="drones" width="24%">
+
+<!-- <img src="/assets/brain1.png" alt="drones" width="14%"> -->
 
 <br>
 
@@ -53,7 +55,8 @@ Small NNs for specific tasks. **Includes DIY demos that give you a real understa
 
 A CNN computes the most probable label ("dog", "airplane", etc) for a set of pixels. **Studying CNNs is great preparation for studying more complex LLMs**.
 
-<img src="/assets/brain1a.png" alt="drones" width="17%">
+<img src="/assets/M-18.png" alt="drones" width="40%">
+<!-- <img src="/assets/brain1a.png" alt="drones" width="17%"> -->
 
 <br>
 
@@ -71,11 +74,13 @@ These 2 AI architectures are much more closely related that you might think.
 
 An LLM (1) inputs a sequence of tokens, (2) computes the probabilities of all vocabulary tokens as the next token, (3) outputs the selected new token, and finally (4) adds the new token to the next input sequence. An LLM consists of an (1) internal agent and a (2) transformer (TF) NN. **The TF is the core computational engine behind modern AI systems and the mechanism that enables modern LLM behavior**.
 
-<img src="/assets/brain1b.png" alt="drones" width="22%"> 
 
-Note: The following diagram shows the **extra functionality ("reasoning", etc) that LLMs added later that enabled [agentic AI](/3.2-agentic-ai/)**.
+<img src="/assets/M-19.png" alt="drones" width="40%">
+<!-- <img src="/assets/brain1b.png" alt="drones" width="22%"> -->
 
-<img src="/assets/brain1c.png" alt="drones" width="20%">
+<!-- Note: The following diagram shows the **extra functionality ("reasoning", etc) that LLMs added later that enabled [agentic AI](/3.2-agentic-ai/)**.
+
+<img src="/assets/brain1c.png" alt="drones" width="20%"> -->
 
 <br>
 
