@@ -1,10 +1,42 @@
 ---
 layout: page
-title: "3.2.1 Agents + AI / Intro"
+title: "3.2.1 CONCEPTS (was Agents + AI / Intro)"
 permalink: /3.2.1-ai-agent-intro/
 ---
 
 [← 3.2 Agents + AI](/3.2-agentic-ai/)
+
+
+
+-------------------------------
+-----------------------------
+------------------
+---------------------
+
+<br>
+
+
+#### **from "qs" 26.0615**
+The center of the Agentic AI universe is the AI agent. 
+
+<img src="/assets/0_projects2.png" alt="drones" width="35%"> 
+
+The agent and LLM together can doing amazing things. But they also have severe limitations. "Tuning" then to work together is the core focus. 
+
+<img src="/assets/readfile3.png" alt="drones" width="60%" style="border: 1px solid black;">
+
+
+
+
+
+
+---------------------
+---------------------
+--------------
+-------------
+
+
+
 
 <br>
 
@@ -110,6 +142,242 @@ The LLM internal Agent and TF are customized to work together to maximize the re
 But this functionality will invariably vary to some degree between all LLMs. Therefore the AI agentic may need to "tune" its prompts and interpretations of responses. To fix this problem, Palantir created a "Model Interface Layer" (MIL) between the LLM and AI agent.
 
 <br>
+
+----------------
+-------------------------
+----------------------
+---------------
+--------------------------
+------------------------------
+
+
+
+<br>
+
+# **2 Agent concepts**
+
+- 2.1 The agentic mission 
+- 2.2 Ontology
+
+<br>
+
+### 2.1 The agentic mission 
+
+**Palantir agentic systems (no AI) started around 2003 in response to the 9/11 attacks.** The US government wanted to make sure such an event did not happen again. 
+
+<img src="/assets/4_2_wtc.png" alt="drones" width="35%"> 
+
+The mission goals were quite clear: Detect any strange new activity that might indicate a security threat *(such as a bunch of foreign nationals wanting all of a sudden to learn on flight simulators how to fly airliners)*. Palantir was to be the (automated) system for this critical mission. **A system that watches the world (like a sorcerer looking into his crystal ball) 24/7, 365 days a year.**
+
+*A palantír is one of several indestructible crystal balls from the novel"The Lord of the Rings" used to see events in other parts of the world [(Wiki)](https://en.wikipedia.org/wiki/Palant%C3%ADr)*<br>
+<img src="/assets/4_3_crystal_ball.png" alt="drones" width="20%"> 
+
+
+<br> 
+ 
+### 2.2 Ontology
+Palantir ontology is something between free-form text and a rigid database. You simply (1) restrict the allowed vocabulary and (2) specify relationships between DB entries. This ensures that the deterministic agent loop can process the DB content without errors (you cant simply automatically ingest "messy" human language without AI).
+
+*[Ontology (wiki)](https://en.wikipedia.org/wiki/Ontology_%28information_science%29)* <br>
+<img src="/assets/4_5_onto.png" alt="drones" width="45%"> 
+
+<br>
+
+----------------
+-----------
+----------------
+----------------
+
+## **3.2 Agentic + AI**
+
+The core control loop is traditional non-AI deterministic programming that performs **(with the help of an LLM)**
+- Input and output (of "messy" human language representations)
+- Task planning (breaking up complex human language tasks into smaller deterministic tasks)
+- Rule injection (by AI into the main loop)
+
+**Conceptual summary**: Traditional deterministic agents existed long before AI, but were rigid and difficult to scale because human language and semantic relationships required hardcoded logic.
+
+Modern TF/UFA systems made such agents vastly more practical by providing semantic capabilities such as:
+
+- Semantic interpretation of human language
+- Structured constrained outputs (JSON, schemas, workflows)
+- Contextual reasoning over long token sequences
+- Task decomposition / workflow synthesis
+- Ontology alignment / semantic normalization
+- Generalization beyond explicit hardcoded rules
+
+The core control loop itself remains ordinary deterministic software (“extAgent”), while the LLM provides semantic functionality.
+
+
+<!-- The core control loop is traditional non-AI deterministic programming that performs (with the help of an LLM) for example:
+- Input and output (of “messy” human language representations)
+- Task planning (breaking up complex human language tasks into smaller deterministic tasks)
+- Rule injection (by AI into the main loop) -->
+
+-------------------------
+--------------------
+----------------
+----------------------
+
+### [3.2.1 Intro)](/3.2.1-ai-agent-intro/)
+Just like iAgent and TF work together internally, the **extAgent and LLM must work together externally**.
+
+- 1 Deterministic agents existed before AI
+- 2 TF/UFA semantic capabilities made modern agentic systems practical
+- 3 extAgent orchestrates deterministic execution
+- 4 LLM provides semantic functionality
+- 5 Model Interface Layer (MIL)
+
+<!-- Just like iAgent and TF work together, so **must extAgent and LLM work together**.
+- 1 Agents existed long before AI
+- 2 Agentic AI (LLMs designed for agents)
+- 3 AI'ic agents
+- 4 Model interface layer (MIL) -->
+
+<br>
+
+----------
+------------
+------------
+---------------
+---------------
+
+"3.2.2 Agents + AI / Diagrams"
+3.2.2-ai-agent-diagrams/
+
+
+[← 3.2 Agents + AI](/3.2-agentic-ai/)
+
+<br>
+
+- 1 Ecosystem
+- 2 Agent <> LLM interface
+- 3 Workflow diagram / simple
+- 4 Workflow diagram / detailed
+
+<br>
+
+### **1 Ecosystem**
+
+
+*The LLM as a helpful assitant for the agent*<br>
+<img src="/assets/4_7_help_assist_LLM.png" alt="drones" width="40%"> 
+
+<br>
+
+### **2 Agent <> LLM interface**
+
+
+*Details of the agent <> LLM interface*<br>
+<img src="/assets/GPT_agent.png" alt="desc" width="50%"> 
+
+<br>
+
+### **3 Workflow diagram / simple**
+
+In the diagram below:
+- Agent (external) collects human language (HL) data (blue square) from the UI, DB, APIs, etc.
+- Agent creates a HL prompt that contains specifications (JSON) for the LLM response.
+- LLM (red square) responds with HL that conforms to the JSON specs (I sometimes refer to this as HL "machine" language because its content and structure is fairly predictable).  
+- Agent can then process this "machine" language" response realiably.<br>
+
+*What AI does for an agent*<br>
+<img src="/assets/4_8_what_ai_does.png" alt="drones" width="65%"> 
+
+The following diagram shows a demo of this. 
+- (1) 08b The agent uses LLM AI to generate a granular multi-step atomic plan that matches the agent's deterministic logic.
+- (2) 08 The agent validates (deterministicly) the plan. 
+- (3) 08 The agent executes (deterministicly) the plan. 
+
+*Diagram from Substack post [#75 The Real Job of AI in Enterprise Apps](https://ziptieai.substack.com/p/75-the-real-job-of-ai-in-enterprise) shows how AI is only used to generate a plan ("08b AI")*
+
+<img src="/assets/aiplan.png" alt="AI planning" width="80%">
+
+<br>
+
+### **4 Workflow diagram / detailed**
+
+In the diagram below:
+- **1 UI/DB/API** (human language sources and destinations) **interface with 2 Agent** (the main loop).
+- **2 Agent adds extra info/requirements (JSON) to LLM input**. This defines the desires LLM response content/structure.
+- **3 Model (LLM) interface layer**. Every LLM may require slightly different prompts and output slightly different responses. Palantir uses MIL to support "hot" swapping of LLMs. 
+- **4 Internal agent (iAgent) controls 5 TF**. The iAgent is custom designed to interface with the TF.
+- **5 TF creates output text** for the input text (based on patterns detected during training).
+- **4 LLM iAgent sends response to 2 (external) agent.** 
+- **2 Agent processes the response.**
+
+*Workflow diagram*<br>
+<img src="/assets/4_10_workflow.png" alt="drones" width="65%"> 
+
+-----------
+---------------
+------------------
+-------------------
+------------------
+
+
+title: "3.2.3 Agents + AI / AI infrastructure"
+permalink: /3.2.3-ai-agent-ai-infrastructure/
+---
+
+[← 3.2 Agents + AI](/3.2-agentic-ai/)
+
+<br>
+
+
+<!-- *Following copied from docx file [#606_ai_ides_.docx (on Gdrive)](https://drive.google.com/drive/folders/1-Adawag9uA8_bq-hDF-nOuPYaRLz1eEO) .. still need to format, add pics...* -->
+
+### **1 Before / after TF/UFA**
+
+Before TF/UFA systems
+- tools/APIs/retrieval already existed
+- BUT required rigid symbolic programming.
+
+After TF/UFA systems
+- semantic interpretation/generalization
+- systems flexible enough for real human language (dynamic orchestration practical).
+
+RAG and MCP fundamentally depend on these TF/UFA semantic capabilities.
+
+<br>
+
+### **2 RAG**
+
+Without LLM semantics retrieval systems were mostly:
+- keyword matching
+- rigid search
+- hardcoded queries
+
+RAG becomes powerful ONLY because of TF/UFA semantic capabilities.
+- semantic interpretation  "What affected Site 1?"
+- semantic generalization understanding related concepts without exact keyword matches
+- contextual tracking maintaining retrieval relevance across conversation flow
+- explanation synthesis explaining retrieved content naturally
+
+So modern RAG is deeply dependent on:
+- semantic embeddings 
+- latent similarity 
+- TF contextual understanding 
+- semantic normalization. 
+
+*Agent retrieves text/context and injects it into the prompt* <br>
+<img src="/assets/rag222.png" alt="drones" width="40%"> 
+ 
+<br>
+
+### **3 MCP**
+
+Without TF/UFA capabilities: MCP degenerates into ordinary API plumbing.
+
+The entire value of MCP is dynamic semantic interaction with tools/context.
+- understand available tools 
+- infer which tools matter 
+- synthesize proper usage 
+- maintain contextual workflows 
+- integrate returned information semantically. 
+
+*Agent uses AI to select the required tool based on the human language tool description from the MCP server* <br>
+<img src="/assets/mcp222.png" alt="drones" width="30%"> 
 
 
 <!-- <br>

@@ -12,6 +12,8 @@ Conceptual summary of agents:
 - Provide reliable workflows built around models, tools, and automation. 
 - Provide tolerance of AI faults and unpredictable outputs
 
+<br>
+
 *3 Agents in the master diagram* <br>
 <img src="/assets/M-15-3x.png" alt="drones" width="80%">
 
@@ -19,10 +21,13 @@ Conceptual summary of agents:
 <img src="/assets/zai_evolution7.png" alt="drones" width="42%"> -->
 
 
+<br>
+
+### [3.2.1 CONCEPTS (was Intro)](/3.2.1-ai-agent-intro/)
 
 <br>
 
-### [3.1 Agentic (no AI)](/3.1-agentic/). Core concepts and basic demos
+### [3.1 Agentic (no AI) DEMOS ](/3.1-agentic/). Core concepts and basic demos
 
 The core control loop is traditional non-AI deterministic programming
 
@@ -30,36 +35,9 @@ The core control loop is traditional non-AI deterministic programming
 
 <!-- ### [3.2 Agentic + AI](/3.2-agentic-ai/). Core concepts and basic demos -->
 
-## **3.2 Agentic + AI**
-
-The core control loop is traditional non-AI deterministic programming that performs **(with the help of an LLM)**
-- Input and output (of "messy" human language representations)
-- Task planning (breaking up complex human language tasks into smaller deterministic tasks)
-- Rule injection (by AI into the main loop)
-
-**Conceptual summary**: Traditional deterministic agents existed long before AI, but were rigid and difficult to scale because human language and semantic relationships required hardcoded logic.
-
-Modern TF/UFA systems made such agents vastly more practical by providing semantic capabilities such as:
-
-- Semantic interpretation of human language
-- Structured constrained outputs (JSON, schemas, workflows)
-- Contextual reasoning over long token sequences
-- Task decomposition / workflow synthesis
-- Ontology alignment / semantic normalization
-- Generalization beyond explicit hardcoded rules
-
-The core control loop itself remains ordinary deterministic software (“extAgent”), while the LLM provides semantic functionality.
 
 
-<!-- The core control loop is traditional non-AI deterministic programming that performs (with the help of an LLM) for example:
-- Input and output (of “messy” human language representations)
-- Task planning (breaking up complex human language tasks into smaller deterministic tasks)
-- Rule injection (by AI into the main loop) -->
-
-
-<br>
-
-### [3.2.1 Intro](/3.2.1-ai-agent-intro/)
+<!-- 
 Just like iAgent and TF work together internally, the **extAgent and LLM must work together externally**.
 
 - 1 Deterministic agents existed before AI
@@ -68,11 +46,11 @@ Just like iAgent and TF work together internally, the **extAgent and LLM must wo
 - 4 LLM provides semantic functionality
 - 5 Model Interface Layer (MIL)
 
-<!-- Just like iAgent and TF work together, so **must extAgent and LLM work together**.
+ Just like iAgent and TF work together, so **must extAgent and LLM work together**.
 - 1 Agents existed long before AI
 - 2 Agentic AI (LLMs designed for agents)
 - 3 AI'ic agents
-- 4 Model interface layer (MIL) -->
+- 4 Model interface layer (MIL) 
 
 <br>
 
@@ -88,13 +66,15 @@ Core diagrams (my own) that explain the architecture.
 ### [3.2.3 AI infrastructure](/3.2.3-ai-agent-ai-infrastructure/)
 Agents require external orchestration layers that augment the TF/UFA semantic engine capabilities (such as Tools, Filesystem access, RAG,MCP, APIs, and Workflow orchestration).
 
-<!-- new commands that made them **"agents with AI support"**.
+- new commands that made them **"agents with AI support"**.
 - Connect to LLM
 - Send prompts and process responses
 *The term "AI-ic agents" is my own. I chose it for several reasons: 
 - (1) Agents need AI support, 
 - (2) the awkward formulation reminds us of the limitation of human language (that we are bound to and LLMs must process), and 
-- (3) its a very short term that accurately (and clearly) defines the meaning ("agentic AI" does not). -->
+- (3) its a very short term that accurately (and clearly) defines the meaning ("agentic AI" does not). 
+
+-->
 
 <br>
 
@@ -132,27 +112,7 @@ PAL (Palantir) demos focus on:
 
 -->
 
-26.0614 (0524)
-
-<br>
-
--------------------------------
------------------------------
-------------------
----------------------
-
-<br>
-
-
-#### **from "qs" 26.0615**
-The center of the Agentic AI universe is the AI agent. 
-
-<img src="/assets/0_projects2.png" alt="drones" width="35%"> 
-
-The agent and LLM together can doing amazing things. But they also have severe limitations. "Tuning" then to work together is the core focus. 
-
-<img src="/assets/readfile3.png" alt="drones" width="60%" style="border: 1px solid black;">
-
+26.0616 (0524)
 
 
 
