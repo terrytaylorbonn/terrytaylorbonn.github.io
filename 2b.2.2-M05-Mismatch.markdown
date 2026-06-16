@@ -9,11 +9,11 @@ permalink: /2b.2.2-M05-Mismatch/
 
 <br>
 
-xxxx
-
-<img src="/assets/xxx.png" alt="drones" width="20%">
+<!--  xxxx
+<img src="/assets/xxx.png" alt="drones" width="20%">  -->
 
 **TOC**
+- **Overview**
 - **1 Output**
 - **2 PY scripts**
 - **4 Code with detailed comments**. 
@@ -24,7 +24,61 @@ For details see [#608.docx](https://drive.google.com/drive/folders/1-Adawag9uA8_
 <br>
 
 
+# **Overview**
+
+```text2
+what happens if try to load .pt that does not match the model definition? 
+
+Great question. This is exactly the next mechanical thing to understand.
+Usually PyTorch throws an error.
+Example:
+Saved model:
+  nn.Linear(2,1)
+contains:
+  fc.weight shape = [1,2]
+  fc.bias shape   = [1]
+Now suppose you try to load into:
+  nn.Linear(3,1)
+PyTorch will complain:
+  size mismatch for fc.weight:
+  checkpoint shape [1,2]
+  current model shape [1,3]
+because it doesn't know where to get the extra weight.
+
+Or suppose the layer names differ.
+Saved file:
+  fc.weight
+  fc.bias
+New model:
+  self.fc2 = nn.Linear(2,1)
+Now PyTorch says:
+  Missing key(s): fc2.weight, fc2.bias
+  Unexpected key(s): fc.weight, fc.bias
+because the names don't match.
+```
+
+
+<br>
+
+
 # **1 Output**
+
+```
+python m05_load_pt_model_mismatch.py 
+BEFORE LOAD
+Parameter containing:
+tensor([[-0.5612, -0.3073,  0.2916]], requires_grad=True)
+Parameter containing:
+tensor([-0.3175], requires_grad=True)
+Traceback (most recent call last):
+  File "/mnt/c/Users/terry/Downloads/607_predictive/m05_load_pt_model_mismatch.py", line 32, in <module>
+    model.load_state_dict(torch.load("m01_tiny_model.pt"))
+  File "/mnt/c/Users/terry/Downloads/607_predictive/venv/lib/python3.12/site-packages/torch/nn/modules/module.py", line 2638, in load_state_dict
+    raise RuntimeError(
+RuntimeError: Error(s) in loading state_dict for TinyModel:
+        size mismatch for fc.weight: copying a param with shape torch.Size([1, 2]) from checkpoint, the shape in current model is torch.Size([1, 3]).
+(venv) terry@LAPTOP-HKPDHF7M:/mnt/c/Users/terry/Downloads/607_predictive$
+```
 
 
 <br>
@@ -32,7 +86,45 @@ For details see [#608.docx](https://drive.google.com/drive/folders/1-Adawag9uA8_
 
 # **2 PY scripts**
 
-- xxxxxxxxxxxx
+```
+# m05_load_pt_model_mismatch.py
+
+import torch
+import torch.nn as nn
+
+# -----------------------
+# Model definition
+# -----------------------
+
+class TinyModel(nn.Module):
+    def __init__(self):
+        super().__init__()
+#        self.fc = nn.Linear(2, 1)
+        self.fc = nn.Linear(3, 1)
+    def forward(self, x):
+        return self.fc(x)
+
+# -----------------------
+# New model object
+# -----------------------
+
+model = TinyModel()
+
+print("BEFORE LOAD")
+print(model.fc.weight)
+print(model.fc.bias)
+
+# -----------------------
+# Load weights from disk
+# -----------------------
+
+model.load_state_dict(torch.load("m01_tiny_model.pt"))
+
+print()
+print("AFTER LOAD")
+print(model.fc.weight)
+print(model.fc.bias)
+```
 
 
 <br>

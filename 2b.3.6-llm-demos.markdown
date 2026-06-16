@@ -25,7 +25,23 @@ Define model, .pt load/save, run inference
 
 **[2b.2.2 M05 Mismatch](/2b.2.2-M05-Mismatch/)**
 
-- xxxx
+```text2
+what happens if try to load .pt that does not match the model definition? 
+Usually PyTorch throws an error.
+Example:
+Saved model:
+  nn.Linear(2,1)
+contains:
+  fc.weight shape = [1,2]
+  fc.bias shape   = [1]
+Now suppose you try to load into:
+  nn.Linear(3,1)
+PyTorch will complain:
+  size mismatch for fc.weight:
+  checkpoint shape [1,2]
+  current model shape [1,3]
+because it doesn't know where to get the extra weight.
+```
 
 **[2b.2.3 M06 Manual inference](/2b.2.3-M06-Manual-inference/)**
 
