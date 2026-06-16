@@ -17,14 +17,16 @@ permalink: /0b-demos/
 <br>
 
 **TOC**
-- **1 AI "intelligence"**. How real intelligence and AI work together.
-- **2 AI components**. NNs, models, agents.
-- **3 AI projects**. How to apply to real world problems.
+- **1 AI in general"**. How real intelligence and AI work together.
+- **2 NNs**
+- **2b Models**
+- **3 Agents**
+- **3 AI projects**
 
 <br>
 
 
-## **1 AI "intelligence"**
+## **1 AI in general**
 
 <br>
 
@@ -58,7 +60,7 @@ Agentic AI models have some pretty sophisticated abilities that really resemble 
 
 <br>
 
-## **2 AI components**
+<!-- ## **2 AI components**
 
 <br>
 
@@ -68,9 +70,9 @@ AI major components (see diagram at top of page):
 - **2b Models** (with internal agent)
 - **3 Agents (external)**
 
-<br>
+<br>   -->
 
-### **[2 NNs](/2_models/)**
+## **[2 NNs](/2_models/)**
 
 The NN is the core of AI "intelligence". A NN provides a pattern matching algorithm. The the NN is controlled by Python code ("agent").
 
@@ -178,7 +180,7 @@ class TinyTransformer(nn.Module):
 
 <br>
 
-### **[2b Models](/2b_models/)** (with API)
+## **[2b Models](/2b_models/)** (with API)
 
 The agent and the NN are typically packaged into a **model** that has an API that makes it possible for existing software to **access the model via API**. The **model code that controls the TF NN is the "internal agent" (iAgent)**. 
 
@@ -303,7 +305,7 @@ This is your PAL/agentic-AI world.
 
 <br>
 
-### **[3 Agents](/3_agents/)**
+## **[3 Agents](/3_agents/)**
 
 External agents access the model via API. This supports
 - reliable workflows built around models, tools, and automation. 
