@@ -1,8 +1,9 @@
 ---
 layout: page
-title: "2b.2.xxx xxx"
-permalink: /2b.2.xxx-xxx3/
+title: "2b.2.2 M05 Mismatch"
+permalink: /2b.2.2-M05-Mismatch/
 ---
+
 
 [← 2b.2 Tiny model demos](/2b.3.6-llm-demos/)
 

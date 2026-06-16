@@ -23,11 +23,11 @@ Define model, .pt load/save, run inference
 
 - xxxx
 
-**2b M05 Mismatch**
+**2b [2b.2.2 M05 Mismatch](/2b.2.2-M05-Mismatch/)**
 
 - xxxx
 
-**2b M06 Manual inference**
+**2b [2b.2.3 M06 Manual inference](/2b.2.3-M06-Manual-inference/)**
 
 - xxxx
 

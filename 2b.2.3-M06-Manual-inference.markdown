@@ -1,7 +1,7 @@
 ---
 layout: page
-title: "2b.2.xxx xxx"
-permalink: /2b.2.xxx-xxx4/
+title: "2b.2.3 M06 Manual inference"
+permalink: /2b.2.3-M06-Manual-inference/
 ---
 
 [← 2b.2 Tiny model demos](/2b.3.6-llm-demos/)
