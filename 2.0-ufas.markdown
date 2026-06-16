@@ -29,6 +29,16 @@ Wiki pages about models:
 
 <br>
 
+### [2.2b CNN<>TF comparison](/2.2b-cnn-tf-comparison/) (WIP)
+
+These 2 AI architectures are much more closely related that you might think.
+
+<!-- <img src="/assets/00-side-by-side.png" alt="drones" width="22%"> -->
+
+<img src="/assets/00-MAIN.png" alt="drones" width="30%">
+
+<br>
+
 
 
 <br>

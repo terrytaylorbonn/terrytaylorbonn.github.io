@@ -21,7 +21,6 @@ permalink: /2_models/
 - 2.0 Concepts
 - 2.1 Core NNs 
 - 2.2 Convolution
-- 2.2b CNN<>TF comparison
 - 2.3 Transformers (TFs)
 - 2.5 Robotic AI NNs
 - 2.7 TF training algorithms (TODO)
@@ -56,16 +55,6 @@ A CNN computes the most probable label ("dog", "airplane", etc) for a set of pix
 
 <img src="/assets/M-18.png" alt="drones" width="40%">
 <!-- <img src="/assets/brain1a.png" alt="drones" width="17%"> -->
-
-<br>
-
-### [2.2b CNN<>TF comparison](/2.2b-cnn-tf-comparison/) (WIP)
-
-These 2 AI architectures are much more closely related that you might think.
-
-<!-- <img src="/assets/00-side-by-side.png" alt="drones" width="22%"> -->
-
-<img src="/assets/00-MAIN.png" alt="drones" width="30%">
 
 <br>
 
