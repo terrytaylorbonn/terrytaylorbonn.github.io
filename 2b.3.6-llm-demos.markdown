@@ -16,7 +16,52 @@ See
 
 <br>
 
-<!-- <img src="/assets/brain1b.png" alt="drones" width="22%"> -->
+
+**2b M01 Save .pt**
+
+- xxxx
+
+**2b M02 Inspect .pt**
+
+- xxxx
+
+**2b M03 Load .pt**
+
+- xxxx
+
+**2b M04 Inference**
+
+- xxxx
+
+**2b M05 Mismatch**
+
+- xxxx
+
+**2b M06 Hugging Face**
+
+- xxxx
+
+**2b M07 API Serving**
+
+- xxxx
+
+**2b M09 Protocol / Tool Use**
+
+- xxxx
+
+**2b M10 Trigger / Backdoor**
+
+- xxxx
+
+<br>
+
+-------------------------------------
+-------------------------------------
+-------------------------------------
+-------------------------------------
+-------------------------------------
+
+<br>
 
 ## **M06 Tiny model on HF** 26.0613
 
@@ -101,4 +146,8 @@ tensor([[-0.2226]], grad_fn=<AddmmBackward0>)
 <br>
 
 
-26.0613 (v1 26.0529)
+26.0616 (0613, v1 26.0529)
+
+
+
+<!-- <img src="/assets/brain1b.png" alt="drones" width="22%"> -->

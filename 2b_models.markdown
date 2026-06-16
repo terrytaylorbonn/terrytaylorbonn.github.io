@@ -39,12 +39,22 @@ xxxxx
 
 ### ([2b.1b 2025 demos](/2b.1b-2025-llm-demos/))
 
+- See wiki page [**"AI LLM stacks"**](https://github.com/terrytaylorbonn/auxdrone/wiki/AI-stacks).
+
 
 <br>
 
-### **[2b.2 Tiny demos](/2b.3.6-llm-demos/)**
+### **[2b.2 Tiny demos](/2b.3.6-llm-demos/)** (from 2b.6 LLM demos)
 
-(from 2b.6 LLM demos)
+- 2b M01 Save .pt
+- 2b M02 Inspect .pt
+- 2b M03 Load .pt
+- 2b M04 Inference
+- 2b M05 Mismatch
+- 2b M06 Hugging Face
+- 2b M07 API Serving
+- 2b M09 Protocol / Tool Use
+- 2b M10 Trigger / Backdoor
 
 <br>
 

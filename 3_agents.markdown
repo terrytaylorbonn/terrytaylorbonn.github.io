@@ -17,13 +17,9 @@ Conceptual summary of agents:
 *3 Agents in the master diagram* <br>
 <img src="/assets/M-15-3x.png" alt="drones" width="80%">
 
-<!-- *Agentic AI in ZiptieAI evolution ([about this diagram](/0.1-zai-evolution/))* <br>
-<img src="/assets/zai_evolution7.png" alt="drones" width="42%"> -->
-
-
 <br>
 
-### [3.2.1 CONCEPTS (was Intro)](/3.2.1-ai-agent-intro/)
+### [3.2.1 Concepts (was Intro)](/3.2.1-ai-agent-intro/)
 
 <br>
 
@@ -33,9 +29,44 @@ The core control loop is traditional non-AI deterministic programming
 
 <br>
 
+### [3.2.4 Basic demos](/3.2.4-ai-agent-basic-demos/)
+Very basic demos that show how **deterministic agents use TF/UFA semantic capabilities**. 
+- 1 Basic tool
+- 3 Filesystem
+- 5 RAG
+- 6c MCP + LLM tool choice. 
+
+<br>
+
+### [3.2.5 PAL demos](/3.2.5-ai-agent-pal-demos/)
+
+<!-- Simple demos are the best way to understand agentic AI systems. -->
+
+PAL (Palantir) demos focus on:
+- ontology systems
+- semantic workflows
+- deterministic execution
+- LLM-assisted planning
+- structured outputs
+- external orchestration
+
+<br>
+
+26.0616 (0524)
+
+
+<!-- *Agentic AI in ZiptieAI evolution ([about this diagram](/0.1-zai-evolution/))* <br>
+<img src="/assets/zai_evolution7.png" alt="drones" width="42%"> -->
+
+<!-- 
+### **[3.3 Agentic AI projects](/3.3-ai-projects/)** (full demo projects (WIP) with Github repo and docs)
+
+"Spinning up" real-world projects quickly with minimal code analysis or manual coding. 
+
+<br> 
+
+-->
 <!-- ### [3.2 Agentic + AI](/3.2-agentic-ai/). Core concepts and basic demos -->
-
-
 
 <!-- 
 Just like iAgent and TF work together internally, the **extAgent and LLM must work together externally**.
@@ -75,46 +106,6 @@ Agents require external orchestration layers that augment the TF/UFA semantic en
 - (3) its a very short term that accurately (and clearly) defines the meaning ("agentic AI" does not). 
 
 -->
-
-<br>
-
-### [3.2.4 Basic demos](/3.2.4-ai-agent-basic-demos/)
-Very basic demos that show how **deterministic agents use TF/UFA semantic capabilities**. 
-- 1 Basic tool
-- 3 Filesystem
-- 5 RAG
-- 6c MCP + LLM tool choice. 
-
-<br>
-
-### [3.2.5 PAL demos](/3.2.5-ai-agent-pal-demos/)
-
-<!-- Simple demos are the best way to understand agentic AI systems. -->
-
-PAL (Palantir) demos focus on:
-- ontology systems
-- semantic workflows
-- deterministic execution
-- LLM-assisted planning
-- structured outputs
-- external orchestration
-
-<br>
-
-
-
-<!-- 
-### **[3.3 Agentic AI projects](/3.3-ai-projects/)** (full demo projects (WIP) with Github repo and docs)
-
-"Spinning up" real-world projects quickly with minimal code analysis or manual coding. 
-
-<br> 
-
--->
-
-26.0616 (0524)
-
-
 
 
 <!--
