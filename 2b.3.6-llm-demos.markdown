@@ -17,17 +17,17 @@ See
 <br>
 
 
-**2b [2b.2.1 M01-M04 Model basics](/2b.2.1-M01-M04-Model-basics/)**
+**[2b.2.1 M01-M04 Model basics](/2b.2.1-M01-M04-Model-basics/)**
 
 Define model, .pt load/save, run inference
 
 - xxxx
 
-**2b [2b.2.2 M05 Mismatch](/2b.2.2-M05-Mismatch/)**
+**[2b.2.2 M05 Mismatch](/2b.2.2-M05-Mismatch/)**
 
 - xxxx
 
-**2b [2b.2.3 M06 Manual inference](/2b.2.3-M06-Manual-inference/)**
+**[2b.2.3 M06 Manual inference](/2b.2.3-M06-Manual-inference/)**
 
 - xxxx
 
