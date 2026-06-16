@@ -13,7 +13,7 @@ Conceptual summary of agents:
 - Provide tolerance of AI faults and unpredictable outputs
 
 *3 Agents in the master diagram* <br>
-<img src="/assets/M-15-3.png" alt="drones" width="72%">
+<img src="/assets/M-15-3x.png" alt="drones" width="80%">
 
 <!-- *Agentic AI in ZiptieAI evolution ([about this diagram](/0.1-zai-evolution/))* <br>
 <img src="/assets/zai_evolution7.png" alt="drones" width="42%"> -->

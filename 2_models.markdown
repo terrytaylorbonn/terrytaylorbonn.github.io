@@ -10,7 +10,7 @@ permalink: /2_models/
 <img src="/assets/zai_evolution7.png" alt="drones" width="42%"> -->
 
 *2 NNs in the master diagram* <br>
-<img src="/assets/M-15-2.png" alt="drones" width="52%">
+<img src="/assets/M-15-2x.png" alt="drones" width="80%">
 
 
 
