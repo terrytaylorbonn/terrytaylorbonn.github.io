@@ -5,18 +5,15 @@ permalink: /2.2-cnns/
 description: Last edit 26.0426
 ---
 
-[← 2 AI (models)](/2_models/)
+[← 2 NNs](/2_models/)
 
 <br>
-
 
 <img src="/assets/M-18.png" alt="drones" width="40%">
 
 <!-- <img src="/assets/brain1a.png" alt="drones" width="17%"> -->
 
 <br>
-
-
 
 #### **[2.2.0 CNN concepts](/2.2.0-cnns-concepts/)** (26.0616)
 
@@ -26,10 +23,9 @@ The core of CNNs:
 
 See __ziptieai_book1_CNN_.docx on the [Gdrive](https://drive.google.com/drive/folders/1-Adawag9uA8_bq-hDF-nOuPYaRLz1eEO).
 
-
 <br>
 
-#### **Demo 4: [2.2.1 D4 CNN image classifier](/2.2.1-d4-cnn-image-classifier/)** (26.0528)
+#### **D4: [2.2.1 D4 CNN image classifier](/2.2.1-d4-cnn-image-classifier/)** (26.0528)
 
 Runs on render (CPU mode).
 
@@ -37,24 +33,23 @@ Runs on render (CPU mode).
 
 <br>
 
-#### **Demo 4b: [2.2.1b D4 CNN algorithm details](/2.2.1b-d4-cnn-algorithm-details/)** (26.0528)
+#### **D4b: [2.2.1b D4 CNN algorithm details](/2.2.1b-d4-cnn-algorithm-details/)** (26.0528)
 
 <img src="/assets/d4_alexnet.png" alt="drones" width="15%">
 
 <br>
 
-#### **Demo 9: [2.2.2 D9 CNN defect detector](/2.2.2-d9-cnn-defect-detector/)** (26.0606)
+#### **D9: [2.2.2 D9 CNN defect detector](/2.2.2-d9-cnn-defect-detector/)** (26.0606)
 
 <img src="/assets/d9_cnn_defect_detector.png" alt="drones" width="55%">
 
 <br>
 
-#### **Demo 10: [2.2.3 D10 CNN feature map visualization](/2.2.3-d10-cnn-feature-map-viz/)** (26.0606)
+#### **D10: [2.2.3 D10 CNN feature map visualization](/2.2.3-d10-cnn-feature-map-viz/)** (26.0606)
 
 <img src="/assets/d10_cnn_feature_map_viz.png" alt="drones" width="45%">
 
 <br>
-
 
 26.0616 (0529)
 

@@ -6,7 +6,7 @@ permalink: /2.7-ai-models-training-algos/
 2.7-ai-models-training-algos.markdown
 
 
-[← 2 AI (models)](/2_models/)
+[← 2 NNs](/2_models/)
 
 <br>
 
@@ -170,23 +170,6 @@ loss.backward()
 optimizer.step()
 Those four lines are arguably the most important training code in all of deep learning.
 
-
-
-
-
-
-
-
-
-
-
-
- 
-
-
-
-
-
 <br> 
 
-26.0609 (v1 26.0609)
+26.0616 (v1 26.0609)

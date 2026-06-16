@@ -1,0 +1,41 @@
+---
+layout: page
+title: "D13: Tiny TF sequence predictor"
+permalink: /2.3.13-d13-tiny-tf-sequence-predictor/
+---
+
+[← xxx](/xxx/)
+
+<br>
+
+
+This a demo of xxxxxxx. 
+
+See also 
+- [#607\_2.1\_core\_NNs\_.docx](https://drive.google.com/drive/folders/1-Adawag9uA8_bq-hDF-nOuPYaRLz1eEO). Lab notes. 
+- __ziptieai_BOOK2_LLM_.docx the [Gdrive](https://drive.google.com/drive/folders/1-Adawag9uA8_bq-hDF-nOuPYaRLz1eEO). 
+
+
+**TOC**
+- **1 Output**
+- **2 PY scripts**
+- **3 Render deploy** (TODO).
+
+<br>
+
+
+# **1 Output**
+
+<br>
+
+# **2 PY script**
+
+
+<br>
+
+
+# **3 Render deploy**
+
+<br>
+
+26.0616 (0603)

@@ -25,12 +25,6 @@ permalink: /2_models/
 - 2.5 Robotic AI NNs
 - 2.7 TF training algorithms (TODO)
 
-
-<!-- 3 phases of model demos for each model group:
-- P1 DIY (doit yourself) models / understand mechanics
-- P2 OTS (offtheshelf) models 
-- P3 OTS fine-tuned -->
-
 <br>
 
 ### [2.0 Concepts](/2.0-ufas/)
@@ -43,9 +37,15 @@ The core of every model is the NN that implements a UFA (Univeral Function **App
 
 Small NNs for specific tasks. **Includes DIY demos that give you a real understanding of the core of NNs**.
 
+- D1: [2.1.1 Predictive NN 01 sine (D1)](/2.1.1-predictive-nn-01-sine/) (26.0524-25)
+- D2: [2.1.2 Tiny classifier NN (D2)](/2.1.2-classifier-nn/) (26.0524-25)
+- D3: [2.1.3 Tiny classifier NN on Render (D3)](/2.1.3-classifier-nn-render/) (26.0527)
+- D6 [2.1.4 Pattern detector NN](/2.1.4-pattern_detector-nn/) (26.0604)
+- D7: [2.1.5 Anomaly detector NN](/2.1.5-anomaly-detector-nn/)  (26.0605)
+- D8: [2.1.6 Forecasting NN](/2.1.6-forecasting-nn/) (26.0605) (also D8b: 2.1.6 Forecasting NN noisy)
+
 <img src="/assets/M-17.png" alt="drones" width="24%">
 
-<!-- <img src="/assets/brain1.png" alt="drones" width="14%"> -->
 
 <br>
 
@@ -53,8 +53,12 @@ Small NNs for specific tasks. **Includes DIY demos that give you a real understa
 
 A CNN computes the most probable label ("dog", "airplane", etc) for a set of pixels. **Studying CNNs is great preparation for studying more complex LLMs**.
 
+- D4: [2.2.1 D4 CNN image classifier](/2.2.1-d4-cnn-image-classifier/) (26.0528)
+- D4b: [2.2.1b D4 CNN algorithm details](/2.2.1b-d4-cnn-algorithm-details/) (26.0528)
+- D9: [2.2.2 D9 CNN defect detector](/2.2.2-d9-cnn-defect-detector/) (26.0606)
+- D10: [2.2.3 D10 CNN feature map visualization](/2.2.3-d10-cnn-feature-map-viz/) (26.0606)
+
 <img src="/assets/M-18.png" alt="drones" width="40%">
-<!-- <img src="/assets/brain1a.png" alt="drones" width="17%"> -->
 
 <br>
 
@@ -62,19 +66,21 @@ A CNN computes the most probable label ("dog", "airplane", etc) for a set of pix
 
 An LLM (1) inputs a sequence of tokens, (2) computes the probabilities of all vocabulary tokens as the next token, (3) outputs the selected new token, and finally (4) adds the new token to the next input sequence. An LLM consists of an (1) internal agent and a (2) transformer (TF) NN. **The TF is the core computational engine behind modern AI systems and the mechanism that enables modern LLM behavior**.
 
+- D5: [2.3.1 D5 Tiny TF](/2.3.6.1-d5-tiny-tf/) (26.0529)
+- D5b: [2.3.1b D5 tiny TF algorithm details](/2.3.6.1b-d5-tiny-tf-algorithm-details/) (26.0602)
+- D11: [2.3.11 Tiny TF classifier](/2.3.11-d11-tiny-tf-classifier/) 
+- D12: [2.3.12 Tiny TF sentiment detector](/2.3.12-d12-tiny-tf-sentiment-detector/)
+- D13: [2.3.13 Tiny TF sequence predictor](/2.3.13-d13-tiny-tf-sequence-predictor/)
 
 <img src="/assets/M-19.png" alt="drones" width="40%">
-<!-- <img src="/assets/brain1b.png" alt="drones" width="22%"> -->
-
-<!-- Note: The following diagram shows the **extra functionality ("reasoning", etc) that LLMs added later that enabled [agentic AI](/3.2-agentic-ai/)**.
-
-<img src="/assets/brain1c.png" alt="drones" width="20%"> -->
 
 <br>
 
 ### [2.5 Robotic AI NNs](/2.5-robotic-ai/)
 
 I no longer believe LeCun's hype about his version of JEPA that will supposedly be a fundamentally different type of AI platform (that fixes the fundamental limitations of LLMs; it doesnt, and never will). I have put this section on pauses. ***Robotic AI (that claims to be able to do what humans can do) is about as realistic as LLM intelligence, FSD, or colonizing Mars.**
+
+See the **[Wiki page](https://github.com/terrytaylorbonn/auxdrone/wiki/Robotic-AI-demos)** for list of demos.
 
 *A Waymo "self-drives" into a flooded street.* <br>
 <img src="/assets/waymo.png" alt="drones" width="22%"> 
@@ -90,6 +96,18 @@ TODO
 26.0616 (v1 26.0526)
 
 
+<!-- 3 phases of model demos for each model group:
+- P1 DIY (doit yourself) models / understand mechanics
+- P2 OTS (offtheshelf) models 
+- P3 OTS fine-tuned -->
+<!-- <img src="/assets/brain1.png" alt="drones" width="14%"> -->
+<!-- <img src="/assets/brain1a.png" alt="drones" width="17%"> -->
+
+<!-- <img src="/assets/brain1b.png" alt="drones" width="22%"> -->
+
+<!-- Note: The following diagram shows the **extra functionality ("reasoning", etc) that LLMs added later that enabled [agentic AI](/3.2-agentic-ai/)**.
+
+<img src="/assets/brain1c.png" alt="drones" width="20%"> -->
 
 <!--
 ### **[3.1 NNs](/2_models/)**

@@ -4,8 +4,7 @@ title: "2.5 Robotic AI"
 permalink: /2.5-robotic-ai/
 ---
 
-[← 2 AI (models)](/2_models/)
-
+[← 2 NNs](/2_models/)
 
 <br> 
 
@@ -72,7 +71,7 @@ In any case, its inevitable that eventually AI will pair up with humanoid robots
 
 <br>
 
-26.0523
+26.0616 (0523)
 
 <br>
 
