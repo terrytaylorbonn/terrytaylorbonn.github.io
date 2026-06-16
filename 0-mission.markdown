@@ -85,7 +85,7 @@ ZiptieAI methodically attacks the complexity of the AI ecosystem in a very mecha
 
 ## **6 Anticipation of the future**
 
-AI has a big future even after the pre-IPO hype is over. **Those who understand how to integrate AI into their own workflows will benefit the most. ZiptieAI has a mission to help myself (and others) stay ahead of the AI curve**. In the near future, AI integration skills will be required in the digital infrastructure of all business segments (just like the PC 40 years ago). This work will required a massive number of tech workers who, empowered by AI tools, will help integrate AI **as a helpful assistant** into all areas of life.  
+AI has a big future even after the pre-IPO hype is over. **Those who understand how to integrate AI into their own workflows will benefit the most. ZiptieAI has a mission to help myself (and others) stay ahead of the AI curve**. In the near future, AI integration skills will be required in all business segments (just like with the PC 40 years ago). This work will require a massive number of tech workers who, empowered by AI tools, will integrate AI **as a helpful assistant** into all areas of life.  
 
 *The helpful assistant of the future*<br>
 <img src="/assets/M-10.png" alt="desc" width="35%"> 
