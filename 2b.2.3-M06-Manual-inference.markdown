@@ -8,11 +8,12 @@ permalink: /2b.2.3-M06-Manual-inference/
 
 <br>
 
-xxxx
+<!-- xxxx
 
-<img src="/assets/xxx.png" alt="drones" width="20%">
+<img src="/assets/xxx.png" alt="drones" width="20%"> -->
 
 **TOC**
+- **Summary**
 - **1 Output**
 - **2 PY scripts**
 - **4 Code with detailed comments**. 
@@ -23,7 +24,49 @@ For details see [#608.docx](https://drive.google.com/drive/folders/1-Adawag9uA8_
 <br>
 
 
+# **Summary**
+
+```text2
+Prove that PyTorch output is just:
+y = xWᵀ + b
+Use your loaded weights:
+
+Expected result:
+  model output
+  tensor([[-0.2225]])
+
+  manual output
+  tensor([[-0.2225]])
+
+This proves:
+  architecture code = performs math
+  .pt file = supplies W,b numbers
+  input x = data
+  output y = result
+```
+
+<br>
+
 # **1 Output**
+
+```
+python m06_test.py 
+Downloaded:
+/home/terry/.cache/hf_cache/hub/models--terrytaylorbonn--m06-tiny-pytorch-model/snapshots/0e9dd63cdf7a94a04663a1c5f7618f725c15ce67/m01_tiny_model.pt
+
+Loaded weights:
+Parameter containing:
+tensor([[0.0598, 0.0642]], requires_grad=True)
+Parameter containing:
+tensor([-0.4107], requires_grad=True)
+
+Input:
+tensor([[1., 2.]])
+
+Output:
+tensor([[-0.2226]], grad_fn=<AddmmBackward0>)
+(venv) terry@LAPTOP-HKPDHF7M:/mnt/c/Users/terry/Downloads/607_predictive$
+```
 
 
 <br>
@@ -90,26 +133,7 @@ print()
 
 print("Output:")
 print(y)
-
-python m06_test.py 
-Downloaded:
-/home/terry/.cache/hf_cache/hub/models--terrytaylorbonn--m06-tiny-pytorch-model/snapshots/0e9dd63cdf7a94a04663a1c5f7618f725c15ce67/m01_tiny_model.pt
-
-Loaded weights:
-Parameter containing:
-tensor([[0.0598, 0.0642]], requires_grad=True)
-Parameter containing:
-tensor([-0.4107], requires_grad=True)
-
-Input:
-tensor([[1., 2.]])
-
-Output:
-tensor([[-0.2226]], grad_fn=<AddmmBackward0>)
-(venv) terry@LAPTOP-HKPDHF7M:/mnt/c/Users/terry/Downloads/607_predictive$
 ```
-
-
 
 <br>
 

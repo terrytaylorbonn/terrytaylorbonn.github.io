@@ -45,7 +45,10 @@ because it doesn't know where to get the extra weight.
 
 **[2b.2.3 M06 Manual inference](/2b.2.3-M06-Manual-inference/)**
 
-- xxxx
+```text2
+Prove that PyTorch output is just:
+y = xWᵀ + b
+```
 
 **[2b.2.4 HF deploy](/2b.2.4-HF-deploy/)**
 
