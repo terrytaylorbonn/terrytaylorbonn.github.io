@@ -24,20 +24,19 @@ Conceptual summary of agents:
 
 <br>
 
-### **[3.1 n8n demos (#603)](/3.1-agentic-n8n/)**
+### **[3.1 n8n demos (docx \#603)](/3.1-agentic-n8n/)**
 
 **1) n8n local**
-- N1 cloud n8n / TTBO gmail 26.0408 (BINGO)	722
-- N2 n8n_local install / test (json) 26.0409 (BINGO)	710
-- N3 n8n_local (ttbo) / Gmail (jk) read many (set'd up GCP_jk) (BINGO)	693
-- N4 py script replaces n8n app (Win11/jk) (BINGO)	686
-- N5 py script adds PAL (BINGO) 26.0409	675
-- NX TODO	673
-
+- N1 cloud n8n / TTBO gmail 26.0408 (BINGO)	
+- N2 n8n_local install / test (json) 26.0409 (BINGO)
+- N3 n8n_local (ttbo) / Gmail (jk) read many (set'd up GCP_jk) (BINGO)
+- N4 py script replaces n8n app (Win11/jk) (BINGO)
+- N5 py script adds PAL (BINGO) 26.0409
+- NX TODO	
 
 <br>
 
-### **[3.2 (3.2.5) PAL demos (~no AI) (#603)](/3.2.5-ai-agent-pal-demos/)**
+### **[3.2 (3.2.5) PAL demos (~no AI) (docx \#603)](/3.2.5-ai-agent-pal-demos/)**
 
 <!-- Simple demos are the best way to understand agentic AI systems. -->
 
@@ -49,26 +48,21 @@ PAL (Palantir) demos focus on:
 - structured outputs
 - external orchestration
 
-from #603 and in pic
-- === 2) pal ==============================	351
-- [2.1] pal v1 (BINGO) 26.0326	654
-- [2.8] pal_v1 with local Gemma-4 (win11/gpu) 26.0411 (BINGO)	351
-- [2.2] pal v2 (BINGO) 26.0327	631
-- [2.3] pal v3 (BINGO) 26.0327	607
-- [2.4] pal v4 (BINGO) 26.0328	564
-- [2.4b] pal_v4 deploy to render (BINGO) 26.0329-30	511
-- [2.5a] pal_v5 add mongodb (BINGO) 26.0330	491
-- [2.5b] pal_v5 (with mongo) deploy (NEW) to Render (BINGO) 26.0330	485
-- [2.6] pal_v6 S0-S4 (BINGO) 26.0331-0401	433
-- [2.7] pal_v7 useful functions (BINGO) 26.0401	379
-- === 3) pal core ==============================	9
-- [3.4] pal_core_04 (BINGO) 26.0412 (04 graph / relationships) (see summary)	236
-- [3.5] pal_core_05_operate.py (BINGO) (combine core01-04) 26.0415-16	157
-- [3.8b] pal_core_08_plan.py + LLM (BINGO) 26.0424	46
+**2) pal** 
+- [2.1] pal v1 (BINGO) 26.0326
+- [2.2] pal v2 (BINGO) 26.0327
+- [2.3] pal v3 (BINGO) 26.0327
+- [2.4] pal v4 (BINGO) 26.0328
+- [2.4b] pal_v4 deploy to render (BINGO) 26.0329-30
+- [2.5a] pal_v5 add mongodb (BINGO) 26.0330	
+- [2.5b] pal_v5 (with mongo) deploy (NEW) to Render (BINGO) 26.0330
+- [2.6] pal_v6 S0-S4 (BINGO) 26.0331-0401	
+- [2.7] pal_v7 useful functions (BINGO) 26.0401	
+- [2.8] pal_v1 with local Gemma-4 (win11/gpu) 26.0411 (BINGO)
 
 <br>
 
-### **[3.3 (3.1) Agent PAL core demos (50% AI) (#603)](/3.1-agentic/)**
+### **[3.3 (3.1) Agent PAL core demos (50% AI) (docx \#603)](/3.1-agentic/)**
 
 The core control loop is traditional non-AI deterministic programming
 
@@ -90,7 +84,7 @@ from #603 and in pic
 
 <br>
 
-### **[3.4 (3.2.4) TF semantic demos (AI) (#606)](/3.2.4-ai-agent-basic-demos/)**
+### **[3.4 (3.2.4) TF semantic demos (AI) (docx \#606)](/3.2.4-ai-agent-basic-demos/)**
 (docx #606)
 Very basic demos that show how **deterministic agents use TF/UFA semantic capabilities**. 
 - 1 Basic tool
