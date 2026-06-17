@@ -66,6 +66,25 @@ PAL (Palantir) demos focus on:
 
 The core control loop is traditional non-AI deterministic programming
 
+**OPENAI: 3.4, 3.5, 3.8, 3.8b (??)** 
+
+**3) pal core**
+- [3.1] pal_core_01.detect.py (BINGO) 26.0411 (01 events / alerts)	313
+- [3.2] pal_core_02_predict.py (BINGO) 26.0411 (02 road network / prediction)	288
+- [3.3] pal_core_03_allocate.py (BINGO) 26.0411 (03 resources / allocation)	269
+- [3.4] pal_core_04 (BINGO) 26.0412 (04 graph / relationships) (see summary)	236
+- [3.5] pal_core_05_operate.py (BINGO) (combine core01-04) 26.0415-16	157
+- [3.6] (WIP) pal_core_06: simplest demo of all core LLM roles 26.0416	130
+  - CODEX1 ?? 
+- [3.7] pal_core_07_gmail_alerts.py // real emails as sensor stream (BINGO) 25.0423	114
+- [3.8] pal_core_08_plan.py // natural language → plan JSON → controlled execution (BINGO) 26.0423	81
+- [3.8b] SS/LIN WIP 26.0425	37
+- [3.8b] pal_core_08_plan.py + LLM (BINGO) 26.0424	46
+- [3.9] — pal_core_09_optimize.py // improved allocation / optimization (BINGO) 26.0427	23
+- (todo) [3.10] — pal_core_10_ui.py // dashboard / FastAPI / presentation layer 26.0427	22
+
+
+<!--
 from #603 and in pic
 - === 3) pal core ==============================	9
 - [3.1] pal_core_01.detect.py (BINGO) 26.0411 (01 events / alerts)	313
@@ -80,7 +99,8 @@ from #603 and in pic
 - [3.7] pal_core_07_gmail_alerts.py // real emails as sensor stream (BINGO) 25.0423	114
 - [3.8] pal_core_08_plan.py // natural language → plan JSON → controlled execution (BINGO) 26.0423	81
 - [3.9] — pal_core_09_optimize.py // improved allocation / optimization (BINGO) 26.0427	23
-- 2.6 v6 s_hard_prompts ????
+- 2.6 v6 s_hard_prompts ???? 
+-->
 
 <br>
 
