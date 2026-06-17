@@ -1,10 +1,11 @@
 ---
 layout: page
-title: "3.2.4 Agentic + AI / Basic demos"
+title: "3.4 (3.2.4) Agentic TF semantic demos"
 permalink: /3.2.4-ai-agent-basic-demos/
 ---
 
-[← 3.2 Agents + AI](/3.2-agentic-ai/)
+<!-- [← 3.2 Agents + AI](/3.2-agentic-ai/) -->
+[← 3 Agents](/3_agents/)
 
 <br>
 

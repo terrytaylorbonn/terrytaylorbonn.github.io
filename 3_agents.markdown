@@ -8,9 +8,10 @@ permalink: /3_agents/
 
 Conceptual summary of agents:
 - Agent = any external (to the LLM) program that calls the LLM API. Basically plays the role of a human during chat (but can do much more).
-- Agent + AI = an LLM is used as a useful assistant.
-- Provide reliable workflows built around models, tools, and automation. 
-- Provide tolerance of AI faults and unpredictable outputs
+- AI Agent = an agent that can exploit the higher level abilities of LLM.
+- AI Agents provide
+  - reliable workflows built around models, tools, and automation. 
+  - tolerance of AI faults and unpredictable outputs
 
 <br>
 
@@ -19,44 +20,31 @@ Conceptual summary of agents:
 
 <br>
 
-### [3.2.1 Concepts (was Intro)](/3.2.1-ai-agent-intro/)
+### **[3.0 Concepts (was 3.2.1 Intro)](/3.2.1-ai-agent-intro/)**
 
 <br>
 
-### [3.1 Agentic (no AI) DEMOS ](/3.1-agentic/). Core concepts and basic demos
+### **[3.1 n8n demos (#603)](/3.1-agentic-n8n/)**
 
-The core control loop is traditional non-AI deterministic programming
-
-from #603 and in pic
+- Docx overview (WIP) 26.0415	3
 - === 3) pal core ==============================	9
-- [3.1] pal_core_01.detect.py (BINGO) 26.0411 (01 events / alerts)	313
-- 3.1 ids?????????????????
-- [3.2] pal_core_02_predict.py (BINGO) 26.0411 (02 road network / prediction)	288
-- [3.3] pal_core_03_allocate.py (BINGO) 26.0411 (03 resources / allocation)	269
-- 3.5 ?????????????
-- [3.6] (WIP) pal_core_06: simplest demo of all core LLM roles 26.0416	130
-- 1-8 
-- 3.6-2, 3.6-3, 3.6-4
-- 3.6 no LLM codex1?????
-- [3.7] pal_core_07_gmail_alerts.py // real emails as sensor stream (BINGO) 25.0423	114
-- [3.8] pal_core_08_plan.py // natural language → plan JSON → controlled execution (BINGO) 26.0423	81
-- [3.9] — pal_core_09_optimize.py // improved allocation / optimization (BINGO) 26.0427	23
-- 2.6 v6 s_hard_prompts ????
-
-
-<br>
-
-### [3.2.4 Basic demos](/3.2.4-ai-agent-basic-demos/)
-(docx #606)
-Very basic demos that show how **deterministic agents use TF/UFA semantic capabilities**. 
-- 1 Basic tool
-- 3 Filesystem
-- 5 RAG
-- 6c MCP + LLM tool choice. 
+- S3 future demos	10
+- (todo) [3.10] — pal_core_10_ui.py // dashboard / FastAPI / presentation layer 26.0427	22
+- [3.8b] SS/LIN WIP 26.0425	37
+- [3.0] concepts 26.0411	333
+- === 1) n8n local ====================================	672
+- NX TODO	673
+- N5 py script adds PAL (BINGO) 26.0409	675
+- N4 py script replaces n8n app (Win11/jk) (BINGO)	686
+- N3 n8n_local (ttbo) / Gmail (jk) read many (set'd up GCP_jk) (BINGO)	693
+- N2 n8n_local install / test (json) 26.0409 (BINGO)	710
+- N1 cloud n8n / TTBO gmail 26.0408 (BINGO)	722
+- ---------------------------------------------------	732
+- [3.8b] SS/LIN (todo) 26.0424	732
 
 <br>
 
-### [3.2.5 PAL demos](/3.2.5-ai-agent-pal-demos/)
+### **[3.2 (3.2.5) PAL demos (~no AI) (#603)](/3.2.5-ai-agent-pal-demos/)**
 
 <!-- Simple demos are the best way to understand agentic AI systems. -->
 
@@ -85,30 +73,41 @@ from #603 and in pic
 - [3.5] pal_core_05_operate.py (BINGO) (combine core01-04) 26.0415-16	157
 - [3.8b] pal_core_08_plan.py + LLM (BINGO) 26.0424	46
 
-
 <br>
 
-### OTHER
+### **[3.3 (3.1) Agent PAL core demos (50% AI) (#603)](/3.1-agentic/)**
 
-- Docx overview (WIP) 26.0415	3
+The core control loop is traditional non-AI deterministic programming
+
+from #603 and in pic
 - === 3) pal core ==============================	9
-- S3 future demos	10
-- (todo) [3.10] — pal_core_10_ui.py // dashboard / FastAPI / presentation layer 26.0427	22
-- [3.8b] SS/LIN WIP 26.0425	37
-- [3.0] concepts 26.0411	333
-- === 1) n8n local ====================================	672
-- NX TODO	673
-- N5 py script adds PAL (BINGO) 26.0409	675
-- N4 py script replaces n8n app (Win11/jk) (BINGO)	686
-- N3 n8n_local (ttbo) / Gmail (jk) read many (set'd up GCP_jk) (BINGO)	693
-- N2 n8n_local install / test (json) 26.0409 (BINGO)	710
-- N1 cloud n8n / TTBO gmail 26.0408 (BINGO)	722
-- ---------------------------------------------------	732
-- [3.8b] SS/LIN (todo) 26.0424	732
+- [3.1] pal_core_01.detect.py (BINGO) 26.0411 (01 events / alerts)	313
+- 3.1 ids?????????????????
+- [3.2] pal_core_02_predict.py (BINGO) 26.0411 (02 road network / prediction)	288
+- [3.3] pal_core_03_allocate.py (BINGO) 26.0411 (03 resources / allocation)	269
+- 3.5 ?????????????
+- [3.6] (WIP) pal_core_06: simplest demo of all core LLM roles 26.0416	130
+- 1-8 
+- 3.6-2, 3.6-3, 3.6-4
+- 3.6 no LLM codex1?????
+- [3.7] pal_core_07_gmail_alerts.py // real emails as sensor stream (BINGO) 25.0423	114
+- [3.8] pal_core_08_plan.py // natural language → plan JSON → controlled execution (BINGO) 26.0423	81
+- [3.9] — pal_core_09_optimize.py // improved allocation / optimization (BINGO) 26.0427	23
+- 2.6 v6 s_hard_prompts ????
 
 <br>
 
-26.0616 (0524)
+### **[3.4 (3.2.4) TF semantic demos (AI) (#606)](/3.2.4-ai-agent-basic-demos/)**
+(docx #606)
+Very basic demos that show how **deterministic agents use TF/UFA semantic capabilities**. 
+- 1 Basic tool
+- 3 Filesystem
+- 5 RAG
+- 6c MCP + LLM tool choice. 
+
+<br>
+
+26.0617 (0524)
 
 
 <!-- *Agentic AI in ZiptieAI evolution ([about this diagram](/0.1-zai-evolution/))* <br>

@@ -1,6 +1,6 @@
 ---
 layout: page
-title: "3.1 Agentic (no AI) DEMOS"
+title: "3.3 (3.1) Agent PAL core demos"
 permalink: /3.1-agentic/
 ---
 
@@ -29,6 +29,67 @@ Simple demos are the best way to understand the core of agentic apps. For detail
 <img src="/assets/4_5_3x.png" alt="drones" width="70%"> 
 
 
+
+The core control loop is traditional non-AI deterministic programming
+
+
+from #603 and in pic
+# **3) pal core**
+
+
+## #01 [3.1] pal_core_01.detect.py (BINGO) 26.0411 (01 events / alerts)	313
+
+
 <br>
 
-26.0616 (0515)
+## #02 3.1 ids?????????????????
+
+
+<br>
+
+## #03 [3.2] pal_core_02_predict.py (BINGO) 26.0411 (02 road network / prediction)	288
+
+<br>
+
+## #04 [3.3] pal_core_03_allocate.py (BINGO) 26.0411 (03 resources / allocation)	269
+
+<br>
+
+## #05 3.5 ?????????????
+
+<br>
+
+## #06 [3.6] (WIP) pal_core_06: simplest demo of all core LLM roles 26.0416	130
+
+<br>
+
+## #07 1-8 
+
+<br>
+
+## #08 3.6-2, 3.6-3, 3.6-4
+
+<br>
+
+## #09 3.6 no LLM codex1?????
+
+<br>
+
+## #10 [3.7] pal_core_07_gmail_alerts.py // real emails as sensor stream (BINGO) 25.0423	114
+
+<br>
+
+## #11 [3.8] pal_core_08_plan.py // natural language → plan JSON → controlled execution (BINGO) 26.0423	81
+
+<br>
+
+## #12 [3.9] — pal_core_09_optimize.py // improved allocation / optimization (BINGO) 26.0427	23
+
+<br>
+
+## #13 2.6 v6 s_hard_prompts ????
+
+
+<br>
+
+26.0617 (0515)
