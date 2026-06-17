@@ -450,12 +450,329 @@ Here is a brief summary of the emails:
 
 ## **N5 py script adds PAL (BINGO) 26.0409**
 
+```text2
+What you already have (PAL-like)
+You now have:
+prompt → tool (Gmail) → data → LLM → answer
+That is:
+✔ tool use
+✔ external data
+✔ structured pipeline
+________________________________________
+What is missing (true PAL behavior)
+PAL-style systems add:
+1) Planning layer
+Right now:
+always → read emails → summarize
+PAL:
+LLM decides:
+- search unread?
+- last 7 days?
+- filter sender?
+________________________________________
+2) Structured plan (JSON)
+Instead of direct code:
+{
+  "action": "read_emails",
+  "query": "label:inbox is:unread",
+  "limit": 10
+}
+________________________________________
+3) Deterministic execution
+Your code executes plan:
+plan → Gmail API → results
+(not LLM doing everything)
+________________________________________
+4) Separation (VERY important)
+LLM = planner + explainer
+Python = execution engine
+
+Next upgrade (minimal PAL step)
+Add:
+user prompt → LLM → JSON plan → Python executes → result → LLM explains
+```
+
+```
+# gmail_demo_3_pal_plan.py
+
+import os
+import json
+from dotenv import load_dotenv
+
+from google.auth.transport.requests import Request
+from google.oauth2.credentials import Credentials
+from google_auth_oauthlib.flow import InstalledAppFlow
+from googleapiclient.discovery import build
+
+from openai import OpenAI
+
+load_dotenv()
+
+SCOPES = ["https://www.googleapis.com/auth/gmail.readonly"]
+
+# ============================================================
+# ##1 Gmail auth
+# ============================================================
+def get_gmail_service():
+    creds = None
+
+    if os.path.exists("token.json"):
+        creds = Credentials.from_authorized_user_file("token.json", SCOPES)
+
+    if not creds or not creds.valid:
+        if creds and creds.expired and creds.refresh_token:
+            creds.refresh(Request())
+        else:
+            flow = InstalledAppFlow.from_client_secrets_file("credentials.json", SCOPES)
+            creds = flow.run_local_server(port=0)
+
+        with open("token.json", "w", encoding="utf-8") as f:
+            f.write(creds.to_json())
+
+    return build("gmail", "v1", credentials=creds)
+
+# ============================================================
+# ##2 Gmail helpers
+# ============================================================
+def get_header(headers, name):
+    for h in headers:
+        if h.get("name", "").lower() == name.lower():
+            return h.get("value", "")
+    return ""
+
+def read_emails(service, query="newer_than:7d", max_results=10):
+    res = (
+        service.users()
+        .messages()
+        .list(userId="me", q=query, maxResults=max_results)
+        .execute()
+    )
+
+    msgs = res.get("messages", [])
+    out = []
+
+    for m in msgs:
+        msg = (
+            service.users()
+            .messages()
+            .get(
+                userId="me",
+                id=m["id"],
+                format="metadata",
+                metadataHeaders=["From", "Subject", "Date"],
+            )
+            .execute()
+        )
+
+        headers = msg.get("payload", {}).get("headers", [])
+
+        out.append(
+            {
+                "subject": get_header(headers, "Subject"),
+                "from": get_header(headers, "From"),
+                "date": get_header(headers, "Date"),
+                "snippet": msg.get("snippet", ""),
+            }
+        )
+
+    return out
+
+# ============================================================
+# ##3 OpenAI client
+# ============================================================
+def get_openai_client():
+    api_key = os.getenv("OPENAI_API_KEY")
+    if not api_key:
+        raise RuntimeError("OPENAI_API_KEY not found in .env")
+    return OpenAI(api_key=api_key)
+
+# ============================================================
+# ##4 Planner: user prompt -> JSON plan
+# ============================================================
+def make_plan(client, user_prompt):
+    system = """
+You are a planner for a Gmail read-only agent.
+
+Return ONLY valid JSON.
+No markdown. No explanation.
+
+Allowed schema:
+{
+  "action": "read_emails",
+  "query": "<gmail search query>",
+  "limit": <integer 1..20>
+}
+
+Examples:
+User: get emails
+{"action":"read_emails","query":"newer_than:7d","limit":10}
+
+User: get unread emails
+{"action":"read_emails","query":"is:unread newer_than:7d","limit":10}
+
+User: get emails from amazon
+{"action":"read_emails","query":"from:amazon newer_than:30d","limit":10}
+
+User: summarize latest promotional emails
+{"action":"read_emails","query":"category:promotions newer_than:14d","limit":10}
+""".strip()
+
+    resp = client.chat.completions.create(
+        model="gpt-4.1-mini",
+        messages=[
+            {"role": "system", "content": system},
+            {"role": "user", "content": user_prompt},
+        ],
+        temperature=0,
+    )
+
+    text = resp.choices[0].message.content.strip()
+    plan = json.loads(text)
+
+    if plan.get("action") != "read_emails":
+        raise ValueError("Only action=read_emails is allowed")
+
+    limit = int(plan.get("limit", 10))
+    if limit < 1 or limit > 20:
+        raise ValueError("limit must be between 1 and 20")
+
+    query = str(plan.get("query", "newer_than:7d")).strip()
+    if not query:
+        query = "newer_than:7d"
+
+    return {"action": "read_emails", "query": query, "limit": limit}
+
+# ============================================================
+# ##5 Summarizer: # emails -> natural language answer
+# ============================================================
+def summarize_emails(client, user_prompt, emails):
+    text = "\n\n".join(
+        [
+            f"From: {e['from']}\nSubject: {e['subject']}\nDate: {e['date']}\nSnippet: {e['snippet']}"
+            for e in emails
+        ]
+    )
+
+    prompt = f"""
+User request:
+{user_prompt}
+
+Emails:
+{text}
+
+Give a brief helpful answer.
+""".strip()
+
+    resp = client.chat.completions.create(
+        model="gpt-4.1-mini",
+        messages=[{"role": "user", "content": prompt}],
+        temperature=0.2,
+    )
+
+    return resp.choices[0].message.content
+
+# ============================================================
+# ##6 Main
+# ============================================================
+def main():
+    user_prompt = input("PROMPT: ").strip()
+    if not user_prompt:
+        user_prompt = "get emails"
+
+    client = get_openai_client()
+    service = get_gmail_service()
+
+    plan = make_plan(client, user_prompt)
+
+    print("\n--- PLAN ---")
+    print(json.dumps(plan, indent=2))
+
+    emails = read_emails(
+        service,
+        query=plan["query"],
+        max_results=plan["limit"],
+    )
+
+    print(f"\n--- RAW EMAILS ({len(emails)}) ---")
+    for i, e in enumerate(emails, start=1):
+        print(f"[{i}] {e['subject']} | {e['from']}")
+
+    answer = summarize_emails(client, user_prompt, emails)
+
+    print("\n--- AI RESPONSE ---")
+    print(answer)
+
+if __name__ == "__main__":
+    main()
+```
+
+```text2
+Before:
+always read same emails
+Now:
+user prompt → LLM builds plan → Python executes
+That is the first real PAL-style step.
+
+Later we can add:
+•	sender filter whitelist 
+•	stricter JSON schema 
+•	draft email action 
+But this version is enough to demonstrate planning.
+```
+
+```
+$ python gmail_demo_3_pal_plan.py
+PROMPT: summarize latest promotional emails
+
+--- PLAN ---
+{
+  "action": "read_emails",
+  "query": "category:promotions newer_than:7d",
+  "limit": 10
+}
+
+--- RAW EMAILS (5) ---
+[1] Learn by doing: Make Foundation course 🎓 | Make <info@make.com>
+[2] Stuck getting started, joseph? | Make <info@make.com>
+[3] See what others like you are automating 🔥 | Make <info@make.com>
+[4] Automate in minutes with ready-made templates ⚡ | Make <info@make.com>
+[5] Not sure where to start? See this tutorial  👉 | Make <info@make.com>
+
+--- AI RESPONSE ---
+The latest promotional emails from Make focus on helping users get started with automation through various resources: a beginner-friendly Foundation course, expert guidance for first-time automation, inspiration from real user workflows, ready-made automation templates for quick results, and tutorials on working smarter.
+(venv) 
+terry@LAPTOP-HKPDHF7M MINGW64 ~/Downloads/d1_agent (main)
+```
 
 <br>
 
 ## **NX TODO**
 
-
+```text2
+My suggestion: use n8n now as a feature discovery tool, not as your final platform. n8n is popular for workflow automation, has broad app integrations, AI-agent features, webhook/API support, and can also be self-hosted, so it’s a good way to see what patterns are worth recreating in your own stack. 
+For job relevance, the most valuable functions to study are:
+Gmail / Outlook
+Read, search, classify, draft, escalate. This is close to real operations work. n8n has Gmail integrations, and job postings increasingly mention automation tools plus REST APIs and AI integrations together. 
+Slack / Teams
+Alerts, approvals, summaries, human-in-the-loop. This is one of the most common enterprise patterns. n8n supports Slack-style workflow patterns directly. 
+Google Sheets / Airtable / simple DB
+Very useful because many companies still run ops from tables. Pattern: ingest → analyze → flag → update table. n8n has first-class support for this kind of flow. 
+HTTP Request / REST APIs
+This is the most important technical skill because it generalizes to any enterprise system. n8n explicitly supports raw HTTP/API workflows, which is exactly what you would later rebuild yourself. 
+Webhooks
+Trigger on external events, then fan out to analysis and action. This is very job-relevant because many real systems are event-driven. 
+Best near-term plan:
+•	Use n8n to prototype 2–3 flows fast. 
+•	Pick the best one. 
+•	Rebuild that one in your own Python/FastAPI stack with OAuth, rules, and approval gates. 
+The best demo ecosystem for you is:
+n8n for fast prototyping + PAL-style self-hosted app for secure/serious version
+That combination makes sense because n8n is good for discovering workflow patterns, while your own app is better for security, custom logic, and “Palantir-style” controlled analysis. n8n itself says self-hosting is possible, but also warns self-hosting requires real server/security skill. 
+Most job-relevant first demo, in my view:
+Gmail → analyze emails → group by sender/topic → draft summary → require approval
+That gives you API access, data analysis, AI usage, and guarded action in one compact demo.
+```
+ 
 <br>
 
 26.0617 (v1 0617)
