@@ -7,13 +7,13 @@ permalink: /3.1-agentic-n8n/
 [← 3 Agents](/3_agents/)
 
 
-Simple demos are the best way to understand the core of agentic apps. For details see the lab notes doc **#60xxxxx.docx** on my **[Gdrive](https://drive.google.com/drive/folders/1-Adawag9uA8_bq-hDF-nOuPYaRLz1eEO)**.  
+Simple demos are the best way to understand the core of agentic apps. For details see the lab notes doc **#603.docx** on my **[Gdrive](https://drive.google.com/drive/folders/1-Adawag9uA8_bq-hDF-nOuPYaRLz1eEO)**.  
 
 <!-- <img src="/assets/4_5_3x.png" alt="drones" width="70%">  -->
 
 <br>
 
-## N1 cloud n8n / TTBO gmail 26.0408 (BINGO)	722
+## **N1 cloud n8n / TTBO gmail 26.0408 (BINGO)**
 
 Yes. This is a good first Gmail demo, and the cleanest way to start is a local Python desktop app that uses OAuth, reads a small set of messages, and prints subject/from/snippet. Google’s Gmail Python quickstart is specifically for a Python command-line app, requires Python 3.10.7+, a Google Cloud project, Gmail enabled on the account, and says its auth setup is fine for testing but simplified for production. 
 
@@ -154,12 +154,35 @@ terry@LAPTOP-HKPDHF7M MINGW64 ~/Downloads/d1_agent (main)
 
 <br>
 
-## N2 n8n_local install / test (json) 26.0409 (BINGO)	710
+## **N2 n8n_local install / test (json) 26.0409 (BINGO)**
 
+```text2
+- Make sure you have: Docker Desktop installed (Windows OK with WSL2) 
+- run the n8n command in what? win11 powershell? Yes — Windows 11 PowerShell works fine 👍
+
+Since you already use WSL:
+docker run -it --rm \
+  -p 5678:5678 \
+  -v n8n_data:/home/node/.n8n \
+  n8nio/n8n
+
+Editor is now accessible via:
+http://localhost:5678
+
+9) Key mindset (important)
+Don’t try to “use n8n long-term”
+Use it to answer:
+“What building blocks do I need in my own system?”
+
+10) One-line summary
+Run n8n locally with Docker, use it to prototype workflows, then rebuild the useful parts in your own PAL-style app.
+
+No — local Docker n8n is NOT limited by the trial.
+```
 
 <br>
 
-## N3 n8n_local (ttbo) / Gmail (jk) read many (set'd up GCP_jk) (BINGO)	693
+## **N3 n8n_local (ttbo) / Gmail (jk) read many (set'd up GCP_jk) (BINGO)**
 
 
 <br>
