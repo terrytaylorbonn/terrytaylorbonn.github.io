@@ -6,88 +6,94 @@ permalink: /3.1-agentic/
 
 [← 3 Agents](/3_agents/)
 
-
-
 <!-- **TOC** 
 - **2 Agent concepts**. The agent is the central control loop (I would call this perhaps the agentic app). 
 - **3 Agent demos (no AI)**. Lab notes on my Gdrive. Code on my Github. -->
-
+<!--  
 Notes:
 *In an agentic system a deterministic program (like Python) is the central control loop* <br>
 <img src="/assets/4_4_agent_ball.png" alt="drones" width="30%"> 
+# **3 Agent demos (no AI)** 
+This page is WIP (v1 26.0509). I need to go back through these demos and document. -->
+<!-- Simple demos are the best way to understand the core of agentic apps. For details see the lab notes doc **#603\_PAL\_.docx** (PAL = Palantir) on my **[Gdrive](https://drive.google.com/drive/folders/1-Adawag9uA8_bq-hDF-nOuPYaRLz1eEO)**.  
+<img src="/assets/4_5_3x.png" alt="drones" width="70%"> -->
 
+<br>
 
-<!--  
-# **3 Agent demos (no AI)** -->
-
-This page is WIP (v1 26.0509). I need to go back through these demos and document. 
+**3) pal core**
 
 I believe these files were **named "pal_core" because they show the core deterministic functions in Palantir style non-AI agentic apps**.
 
-Simple demos are the best way to understand the core of agentic apps. For details see the lab notes doc **#603\_PAL\_.docx** (PAL = Palantir) on my **[Gdrive](https://drive.google.com/drive/folders/1-Adawag9uA8_bq-hDF-nOuPYaRLz1eEO)**.  
+For details see the lab notes doc **#603\_PAL\_.docx** (PAL = Palantir) on the **[Gdrive](https://drive.google.com/drive/folders/1-Adawag9uA8_bq-hDF-nOuPYaRLz1eEO)**.  
 
-<img src="/assets/4_5_3x.png" alt="drones" width="70%"> 
+<br>
 
+**PAL_CORE demos 3.4, 3.5, 3.8, 3.8b (??) use openAI**
 
-
-The core control loop is traditional non-AI deterministic programming
-
-
-from #603 and in pic
-# **3) pal core**
-
-
-## #01 [3.1] pal_core_01.detect.py (BINGO) 26.0411 (01 events / alerts)	313
+**TOC** 
+- **[3.1] pal_core_01.detect.py (BINGO) 26.0411 (01 events / alerts)**
+- **[3.2] pal_core_02_predict.py (BINGO) 26.0411 (02 road network / prediction)**
+- **[3.3] pal_core_03_allocate.py (BINGO) 26.0411 (03 resources / allocation)**
+- **[3.4] pal_core_04 (BINGO) 26.0412 (04 graph / relationships) (see summary)**
+- **[3.5] pal_core_05_operate.py (BINGO) (combine core01-04) 26.0415-16**
+- **[3.6] (WIP) pal_core_06: simplest demo of all core LLM roles 26.0416**
+  - CODEX1 ?? 
+- **[3.7] pal_core_07_gmail_alerts.py // real emails as sensor stream (BINGO) 25.0423**
+- **[3.8] pal_core_08_plan.py // natural language → plan JSON → controlled execution (BINGO) 26.0423**
+- **[3.8b] SS/LIN WIP 26.0425**
+- **[3.8b] pal_core_08_plan.py + LLM (BINGO) 26.0424**
+- **[3.9] — pal_core_09_optimize.py // improved allocation / optimization (BINGO) 26.0427**
+- **(todo) [3.10] — pal_core_10_ui.py // dashboard / FastAPI / presentation layer 26.0427**
 
 
 <br>
 
-## #02 3.1 ids?????????????????
-
-
-<br>
-
-## #03 [3.2] pal_core_02_predict.py (BINGO) 26.0411 (02 road network / prediction)	288
+## **[3.1] pal_core_01.detect.py (BINGO) 26.0411 (01 events / alerts)**
 
 <br>
 
-## #04 [3.3] pal_core_03_allocate.py (BINGO) 26.0411 (03 resources / allocation)	269
+## **[3.2] pal_core_02_predict.py (BINGO) 26.0411 (02 road network / prediction)**
 
 <br>
 
-## #05 3.5 ?????????????
+## **[3.3] pal_core_03_allocate.py (BINGO) 26.0411 (03 resources / allocation)**
 
 <br>
 
-## #06 [3.6] (WIP) pal_core_06: simplest demo of all core LLM roles 26.0416	130
+## **[3.4] pal_core_04 (BINGO) 26.0412 (04 graph / relationships) (see summary)**
 
 <br>
 
-## #07 1-8 
+## **[3.5] pal_core_05_operate.py (BINGO) (combine core01-04) 26.0415-16**
 
 <br>
 
-## #08 3.6-2, 3.6-3, 3.6-4
+## **[3.6] (WIP) pal_core_06: simplest demo of all core LLM roles 26.0416**
+  - CODEX1 ?? 
 
 <br>
 
-## #09 3.6 no LLM codex1?????
+## **[3.7] pal_core_07_gmail_alerts.py // real emails as sensor stream (BINGO) 25.0423**
 
 <br>
 
-## #10 [3.7] pal_core_07_gmail_alerts.py // real emails as sensor stream (BINGO) 25.0423	114
+## **[3.8] pal_core_08_plan.py // natural language → plan JSON → controlled execution (BINGO) 26.0423**
 
 <br>
 
-## #11 [3.8] pal_core_08_plan.py // natural language → plan JSON → controlled execution (BINGO) 26.0423	81
+## **[3.8b] SS/LIN WIP 26.0425**
 
 <br>
 
-## #12 [3.9] — pal_core_09_optimize.py // improved allocation / optimization (BINGO) 26.0427	23
+## **[3.8b] pal_core_08_plan.py + LLM (BINGO) 26.0424**
 
 <br>
 
-## #13 2.6 v6 s_hard_prompts ????
+## **[3.9] — pal_core_09_optimize.py // improved allocation / optimization (BINGO) 26.0427**
+
+<br>
+
+## **(todo) [3.10] — pal_core_10_ui.py // dashboard / FastAPI / presentation layer 26.0427**
 
 
 <br>
