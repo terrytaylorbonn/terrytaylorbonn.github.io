@@ -27,7 +27,7 @@ Conceptual summary of agents:
 
 The core control loop is traditional non-AI deterministic programming
 
-from pic
+from #603 and in pic
 - === 3) pal core ==============================	9
 - [3.1] pal_core_01.detect.py (BINGO) 26.0411 (01 events / alerts)	313
 - 3.1 ids?????????????????
@@ -47,6 +47,7 @@ from pic
 <br>
 
 ### [3.2.4 Basic demos](/3.2.4-ai-agent-basic-demos/)
+(docx #606)
 Very basic demos that show how **deterministic agents use TF/UFA semantic capabilities**. 
 - 1 Basic tool
 - 3 Filesystem
@@ -67,7 +68,7 @@ PAL (Palantir) demos focus on:
 - structured outputs
 - external orchestration
 
-from pic
+from #603 and in pic
 - === 2) pal ==============================	351
 - [2.1] pal v1 (BINGO) 26.0326	654
 - [2.8] pal_v1 with local Gemma-4 (win11/gpu) 26.0411 (BINGO)	351
@@ -105,6 +106,7 @@ from pic
 - ---------------------------------------------------	732
 - [3.8b] SS/LIN (todo) 26.0424	732
 
+<br>
 
 26.0616 (0524)
 
