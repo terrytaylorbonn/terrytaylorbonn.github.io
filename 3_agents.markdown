@@ -21,7 +21,7 @@ Conceptual summary of agents:
 Note: 
 - Custom models are not demonstrated in this section (yet). 
 - The only model used is openAI (and Gemma).
-- No "main external system is used (yet)".
+- No external "main system" is used.
 <br>
 <br>
 

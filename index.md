@@ -13,18 +13,18 @@ Primary site content is a **[quick start](/0-qs/)** + hands-on **[demos](/0b-dem
 
 ZiptieAI.com was created in 2024 originally to document my work on Ukrainian style ziptie'd AI drones. The site now focuses on AI. It is now not only a tool to organize my thoughts and work, but also to help others learn AI hands-on ASAP.
 
-*Note: The page and section numbering (such as "2b Models", "3b Projects") will be fixed in the future. I've reorganized this site many times, resulting in temporary "patch" numbering (b,c,...) for many pages and section headings. GPT remembers previous topics for weeks, and the numbering appears in docx files, so not changing the numbering avoids a lot of confusion.* 
+*Note: The page and section numbering (such as "2b Models", "3b Projects") will be fixed in the future. Not changing section numbering (often) avoids a lot of confusion.* 
 
 <br>
 
 Top level pages *(see also the **[Wiki](https://github.com/terrytaylorbonn/auxdrone/wiki)** and other links in the footer)*.  
 
-- **[Mission](/0-mission/)**. ZiptieAI explains (with demos) **the mechanics of how binary-computation-based AI really works**. 
+- **[Mission](/0-mission/)**. ZiptieAI gives you what you need learn AI hands-on ASAP. 
 - **[QS](/0-qs/)**. Hands-on tour of low-level core AI functionality.
 - **[Concepts](/0b-demos/)**. Core concepts learned form the QS.
 - [1 Drones](/1-drones/). ZiptieAI started out as a site about AI drones. 
 - **[2 NNs](/2_models/)**. NNs (CNNs, TFs) are the core of AI "intelligence".
-- **[2b Models](/2b_models/)**. AI NNs are usually packaged into an AI model that has an API. <!-- Fine-tuning, local models, deployment, RAG, and model serving. -->
+- **[2b Models](/2b_models/)**. AI NNs are usually packaged into AI models that have an API. <!-- Fine-tuning, local models, deployment, RAG, and model serving. -->
 - **[3 Agents](/3_agents/)**. Agents provide reliable workflows that use models as helpful assistants.
 - **[3b Projects](/3.3-ai-projects/)**. Real world AI project demos. 
 - [4 Resources](/4_resources/).
