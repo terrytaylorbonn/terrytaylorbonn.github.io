@@ -36,7 +36,7 @@ Conceptual summary of agents:
 
 <br>
 
-### **[3.2 (3.2.5) PAL demos (~no AI) (docx \#603)](/3.2.5-ai-agent-pal-demos/)**
+### **[3.2 (3.2.5) PAL demos (openAI/Gemma) (docx \#603)](/3.2.5-ai-agent-pal-demos/)**
 
 <!-- Simple demos are the best way to understand agentic AI systems. -->
 
@@ -62,7 +62,7 @@ PAL (Palantir) demos focus on:
 
 <br>
 
-### **[3.3 (3.1) Agent PAL core demos (50% AI) (docx \#603)](/3.1-agentic/)**
+### **[3.3 (3.1) Agent PAL_core demos (AI ???) (docx \#603)](/3.1-agentic/)**
 
 The core control loop is traditional non-AI deterministic programming
 

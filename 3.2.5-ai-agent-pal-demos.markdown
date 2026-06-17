@@ -1,6 +1,6 @@
 ---
 layout: page
-title: "3.2 (3.2.5) PAL demos"
+title: "3.2 (3.2.5) PAL demos (openAI)"
 permalink: /3.2.5-ai-agent-pal-demos/
 ---
 
@@ -8,9 +8,11 @@ permalink: /3.2.5-ai-agent-pal-demos/
 
 <br>
 
-Simple demos are the best way to understand the core of agentic+AI apps. For details see the lab notes doc **#603\_PAL\_.docx** (PAL = Palantir) on the **[Gdrive](https://drive.google.com/drive/folders/1-Adawag9uA8_bq-hDF-nOuPYaRLz1eEO)**.  
-<!--
-<img src="/assets/4_6_2x.png" alt="drones" width="40%"> 
+These PAL demos all use openAI API except for 2.8 (uses Gemma).
+
+For details see the lab notes doc **#603\_PAL\_.docx** (PAL = Palantir) on the **[Gdrive](https://drive.google.com/drive/folders/1-Adawag9uA8_bq-hDF-nOuPYaRLz1eEO)**.  
+
+<!-- <img src="/assets/4_6_2x.png" alt="drones" width="40%"> 
 <img src="/assets/4_5_3x_bbb.png" alt="drones" width="40%"> -->
 
 <br>
@@ -18,11 +20,10 @@ Simple demos are the best way to understand the core of agentic+AI apps. For det
 **TOC** 
 - **[2.1] pal v1 (BINGO) 26.0326**
 - **[2.2] pal v2 (BINGO) 26.0327**
-- **[2.3] pal v3 (BINGO) 26.0327**  **OPENAI**  **OPENAI**  **OPENAI**
+- **[2.3] pal v3 (BINGO) 26.0327**
 - **[2.4] pal v4 (BINGO) 26.0328**
 - **[2.4b] pal_v4 deploy to render (BINGO) 26.0329-30**
-- **[2.5a] pal_v5 add mongodb (BINGO) 26.0330**
-- **[2.5b] pal_v5 (with mongo) deploy (NEW) to Render (BINGO) 26.0330**
+- **[2.5a/b] pal_v5 add mongodb/deploy render (BINGO) 26.0330**
 - **[2.6] pal_v6 S0-S4 (BINGO) 26.0331-0401**	
 - **[2.7] pal_v7 useful functions (BINGO) 26.0401**	
 - **[2.8] pal_v1 with local Gemma-4 (win11/gpu) 26.0411 (BINGO)**
@@ -978,7 +979,7 @@ $
 
 <br>
 
-## **[2.3] pal v3 (BINGO) 26.0327** **OPENAI**
+## **[2.3] pal v3 (BINGO) 26.0327**
 
 ```text2
 PAL v3:
@@ -2829,25 +2830,962 @@ terry@LAPTOP-HKPDHF7M MINGW64 ~/Downloads/d1_agent (main)
 
 ## **[2.4b] pal_v4 deploy to render (BINGO) 26.0329-30**
 
+```text2
+the full deployed flow is working on Render:
+•	auth works 
+•	data persisted for this session 
+•	/run works 
+•	multi-step plan works 
+•	compare works 
+•	structured JSON comes back 
+So yes — PAL_v4 is now a working deployed AI app.
+
+Yes — Render is a reasonable place to deploy PAL_v4, if you turn it into a small web app first.
+Best pattern:
+•	keep pal_v4.py as your core logic 
+•	wrap it in FastAPI 
+•	deploy that on Render Web Service 
+Render supports Python web services, and their FastAPI docs use a start command like:
+uvicorn main:app --host 0.0.0.0 --port $PORT
+So not:
+•	just “upload random .py script” 
+Better:
+•	main.py with FastAPI endpoint 
+•	endpoint calls your PAL logic 
+•	Render runs it as an HTTP service 
+If PAL_v4 is long-running or does background jobs, Render also has Background Workers and Cron Jobs. 
+Briefly:
+•	simple API app → Render web service 
+•	scheduled / async jobs → Render worker or cron 
+•	one Python script only → possible, but wrapping with FastAPI is the cleaner way 
+My recommendation:
+Yes, Render + FastAPI is a good first deployment path for PAL_v4.
+```
+
+```
+# pal_v4_main.py
+
+from fastapi import FastAPI, Header, HTTPException
+from pydantic import BaseModel
+import os
+
+# import your existing logic
+#from pal_v4 import run_plan   # <-- adjust this
+# from pal_v4 import run_plan, run_ingest
+# --- FIX: use Mongo version ---
+#from pal_v5_mongo import run_plan, run_ingest
+from pal_v7_patterns import (
+    load_events, run_plan, run_ingest, run_recurring_problems, 
+    run_problem_locations, run_status_summary, run_delete,
+    run_priority_rank, run_entity_history, run_compare_filters,
+    run_compare_filters_explain
+)
+# --------------------------------
+
+app = FastAPI()
+
+# --- API AUTH 01 ---
+API_KEY = os.getenv("PAL_API_KEY")
+
+def check_api_key(x_api_key: str = Header(default="")):
+    print(API_KEY)
+    print(x_api_key)
+    if not API_KEY or x_api_key != API_KEY:
+        raise HTTPException(status_code=401, detail="Unauthorized")
+
+class Request(BaseModel):
+    prompt: str
+
+# --- API INGEST 02 ---
+class EventRequest(BaseModel):
+    entity: str
+    event_type: str
+    location: str
+    status: str
+    note: str
+    timestamp: str | None = None
+
+
+@app.get("/")
+def root():
+    return {"status": "ok"}
+
+#If you want direct check>>> Add this endpoint (optional):
+@app.get("/events")
+def get_events():
+    return load_events()
+
+
+# --- API FIX 03 + AUTH ---
+@app.post("/run")
+def run(req: Request, x_api_key: str = Header(default="")):
+    check_api_key(x_api_key)
+    return run_plan(req.prompt)
+
+# --- API INGEST 03 ---
+@app.post("/ingest")
+def ingest(req: EventRequest, x_api_key: str = Header(default="")):
+    check_api_key(x_api_key)
+    return run_ingest(req.model_dump(exclude_none=True))
+
+# --- S2B 03 ---
+@app.get("/recurring_problems")
+def recurring_problems(x_api_key: str = Header(default="")):
+    check_api_key(x_api_key)
+    return run_recurring_problems()
+# ----------------
+
+# --- S2B 07 ---
+@app.get("/problem_locations")
+def problem_locations(x_api_key: str = Header(default="")):
+    check_api_key(x_api_key)
+    return run_problem_locations()
+
+
+@app.get("/status_summary")
+def status_summary(x_api_key: str = Header(default="")):
+    check_api_key(x_api_key)
+    return run_status_summary()
+# ----------------
+
+# --- S4 02 ---
+class DeleteRequest(BaseModel):
+    filter: dict
+
+@app.post("/delete")
+def delete(req: DeleteRequest, x_api_key: str = Header(default="")):
+    check_api_key(x_api_key)
+    return run_delete(req.filter)
+# ----------------
+
+#166 
+class PriorityRankRequest(BaseModel):
+    filter: dict = {}
+
+#166 
+@app.post("/priority_rank")
+def priority_rank(req: PriorityRankRequest, x_api_key: str = Header(default="")):
+    check_api_key(x_api_key)
+    return run_priority_rank(req.filter)
+
+
+#168 
+class EntityHistoryRequest(BaseModel):
+    entity: str
+
+@app.post("/entity_history")
+def entity_history(req: EntityHistoryRequest, x_api_key: str = Header(default="")):
+    check_api_key(x_api_key)
+    return run_entity_history(req.entity)
+
+#170 
+class CompareFiltersRequest(BaseModel):
+    filter_a: dict = {}
+    filter_b: dict = {}
+
+@app.post("/compare_filters")
+def compare_filters(req: CompareFiltersRequest, x_api_key: str = Header(default="")):
+    check_api_key(x_api_key)
+    return run_compare_filters(req.filter_a, req.filter_b)
+
+#172 
+
+@app.post("/compare_filters_explain")
+def compare_filters_explain(req: CompareFiltersRequest, x_api_key: str = Header(default="")):
+    check_api_key(x_api_key)
+    return run_compare_filters_explain(req.filter_a, req.filter_b)
+```
+
+```
+Add this event
+
+curl -X POST https://pal-app-1qax.onrender.com/ingest \
+  -H "Content-Type: application/json" \
+  -H "x-api-key: SxBx" \
+  -d '{"entity":"truck_31","event_type":"shipment","location":"tainan","status":"blocked","note":"road closure"}'
+
+$ curl -X POST https://pal-app-1qax.onrender.com/ingest \
+  -H "Content-Type: application/json" \
+  -H "x-api-key: SxBx" \
+  -d '{"entity":"truck_31","event_type":"shipment","location":"tainan","status":"blocked","note":"road closure"}'
+{"ok":true,"event":{"entity":"truck_31","event_type":"shipment","location":"tainan","status":"blocked","note":"road closure","timestamp":"2026-03-29T15:19:15.102645+00:00"}}(venv) 
+terry@LAPTOP-HKPDHF7M MINGW64 ~/Downloads/d1_agent (main)
+
+--------------------------
+
+Now use a compare prompt
+curl -X POST https://pal-app-1qax.onrender.com/run \
+  -H "Content-Type: application/json" \
+  -H "x-api-key: SxBx" \
+  -d '{"prompt":"Compare delayed shipments in Taipei vs blocked shipments in Tainan"}'
+
+terry@LAPTOP-HKPDHF7M MINGW64 ~/Downloads/d1_agent (main)
+$ curl -X POST https://pal-app-1qax.onrender.com/run \
+  -H "Content-Type: application/json" \
+  -H "x-api-key: SxBx" \
+  -d '{"prompt":"Compare delayed shipments in Taipei vs blocked shipments in Tainan"}'
+{"ok":true,"result":{"s1":{"action":"query","filter_mode":"filter","filter":{"status":"delayed","location":"taipei"},"events":[{"entity":"truck_99","event_type":"shipment","location":"taipei","status":"delayed","note":"flat tire","timestamp":"2026-03-29T14:37:23.824843+00:00"}],"analysis":{"summary":"One shipment event from truck_99 is delayed in Taipei due to a flat tire.","abnormal_events":[{"entity":"truck_99","event_type":"shipment","location":"taipei","status":"delayed","reason":"flat tire"}],"problem_entities":["truck_99"],"problem_locations":["taipei"]}},"s2":{"action":"query","filter_mode":"filter","filter":{"status":"blocked","location":"tainan"},"events":[{"entity":"truck_31","event_type":"shipment","location":"tainan","status":"blocked","note":"road closure","timestamp":"2026-03-29T15:19:15.102645+00:00"}],"analysis":{"summary":"One shipment event is blocked due to a road closure in Tainan.","abnormal_events":[{"entity":"truck_31","event_type":"shipment","location":"tainan","status":"blocked","reason":"road closure"}],"problem_entities":["truck_31"],"problem_locations":["tainan"]}},"s3":{"action":"compare","inputs":["s1","s2"],"comparison":{"summary":"Both subsets contain one event each, with delayed shipments in Taipei due to a flat tire and blocked shipments in Tainan due to a road closure.","subset_a":{"label":"s1:{\"status\": \"delayed\", \"location\": \"taipei\"}","count":1,"problem_entities":["truck_99"],"problem_locations":["taipei"]},"subset_b":{"label":"s2:{\"status\": \"blocked\", \"location\": \"tainan\"}","count":1,"problem_entities":["truck_31"],"problem_locations":["tainan"]},"differences":["Subset A contains delayed shipments while Subset B contains blocked shipments.","Subset A has an issue with truck_99 in Taipei, while Subset B has an issue with truck_31 in Tainan.","The cause for the problems differs: flat tire in Taipei vs road closure in Tainan."]}}}}(venv) 
+terry@LAPTOP-HKPDHF7M MINGW64 ~/Downloads/d1_agent (main)
+
+
+
+{
+   "ok":true,
+   "result":{
+      "s1":{
+         "action":"query",
+         "filter_mode":"filter",
+         "filter":{
+            "status":"delayed",
+            "location":"taipei"
+         },
+         "events":[
+            {
+               "entity":"truck_99",
+               "event_type":"shipment",
+               "location":"taipei",
+               "status":"delayed",
+               "note":"flat tire",
+               "timestamp":"2026-03-29T14:37:23.824843+00:00"
+            }
+         ],
+         "analysis":{
+            "summary":"One shipment event from truck_99 is delayed in Taipei due to a flat tire.",
+            "abnormal_events":[
+               {
+                  "entity":"truck_99",
+                  "event_type":"shipment",
+                  "location":"taipei",
+                  "status":"delayed",
+                  "reason":"flat tire"
+               }
+            ],
+            "problem_entities":[
+               "truck_99"
+            ],
+            "problem_locations":[
+               "taipei"
+            ]
+         }
+      },
+      "s2":{
+         "action":"query",
+         "filter_mode":"filter",
+         "filter":{
+            "status":"blocked",
+            "location":"tainan"
+         },
+         "events":[
+            {
+               "entity":"truck_31",
+               "event_type":"shipment",
+               "location":"tainan",
+               "status":"blocked",
+               "note":"road closure",
+               "timestamp":"2026-03-29T15:19:15.102645+00:00"
+            }
+         ],
+         "analysis":{
+            "summary":"One shipment event is blocked due to a road closure in Tainan.",
+            "abnormal_events":[
+               {
+                  "entity":"truck_31",
+                  "event_type":"shipment",
+                  "location":"tainan",
+                  "status":"blocked",
+                  "reason":"road closure"
+               }
+            ],
+            "problem_entities":[
+               "truck_31"
+            ],
+            "problem_locations":[
+               "tainan"
+            ]
+         }
+      },
+      "s3":{
+         "action":"compare",
+         "inputs":[
+            "s1",
+            "s2"
+         ],
+         "comparison":{
+            "summary":"Both subsets contain one event each, with delayed shipments in Taipei due to a flat tire and blocked shipments in Tainan due to a road closure.",
+            "subset_a":{
+               "label":"s1:{\"status\": \"delayed\", \"location\": \"taipei\"}",
+               "count":1,
+               "problem_entities":[
+                  "truck_99"
+               ],
+               "problem_locations":[
+                  "taipei"
+               ]
+            },
+            "subset_b":{
+               "label":"s2:{\"status\": \"blocked\", \"location\": \"tainan\"}",
+               "count":1,
+               "problem_entities":[
+                  "truck_31"
+               ],
+               "problem_locations":[
+                  "tainan"
+               ]
+            },
+            "differences":[
+               "Subset A contains delayed shipments while Subset B contains blocked shipments.",
+               "Subset A has an issue with truck_99 in Taipei, while Subset B has an issue with truck_31 in Tainan.",
+               "The cause for the problems differs: flat tire in Taipei vs road closure in Tainan."
+            ]
+         }
+      }
+   }
+}
+```
+
 <br>
 
-## **[2.5a] pal_v5 add mongodb (BINGO) 26.0330**
+## **[2.5a/b] pal_v5 add mongodb/deploy render (BINGO) 26.0330**
 
-<br>
+See docx \#603 for code. 
 
-## **[2.5b] pal_v5 (with mongo) deploy (NEW) to Render (BINGO) 26.0330**
+```
+3 Then test: (BINGO)
+
+curl -X POST https://six02-2-d1-tool-llm.onrender.com/ingest \
+  -H "Content-Type: application/json" \
+  -H "x-api-key: SxBx" \
+  -d '{"entity":"truck_88","event_type":"shipment","location":"taipei","status":"delayed","note":"render test"}'
+
+$ curl -X POST https://six02-2-d1-tool-llm.onrender.com/ingest \
+  -H "Content-Type: application/json" \
+  -H "x-api-key: SxBx " \
+  -d '{"entity":"truck_88","event_type":"shipment","location":"taipei","status":"delayed","note":"render test"}'
+{"ok":true,"event":{"entity":"truck_88","event_type":"shipment","location":"taipei","status":"delayed","note":"render test","timestamp":"2026-03-31T03:24:08.937846+00:00"}}(venv) 
+terry@LAPTOP-HKPDHF7M MINGW64 ~/Downloads/d1_agent (main)
+
+ 
+
+and:
+
+curl -X POST https://six02-2-d1-tool-llm.onrender.com/run \
+  -H "Content-Type: application/json" \
+  -H "x-api-key: SxBx " \
+  -d '{"prompt":"Analyze truck_88"}'
+
+$ curl -X POST https://six02-2-d1-tool-llm.onrender.com/run \
+  -H "Content-Type: application/json" \
+  -H "x-api-key: SxBx " \
+  -d '{"prompt":"Analyze truck_88"}'
+{"ok":true,"result":{"s1":{"action":"query","filter_mode":"filter","filter":{"entity":"truck_88"},"events":[{"entity":"truck_88","event_type":"shipment","location":"taipei","status":"delayed","note":"render test","timestamp":"2026-03-31T03:24:08.937846+00:00"}],"analysis":{"summary":"Truck 88 experienced a delayed shipment in Taipei.","abnormal_events":[{"entity":"truck_88","event_type":"shipment","location":"taipei","status":"delayed","reason":"render test"}],"problem_entities":["truck_88"],"problem_locations":["taipei"]}}}}(venv) 
+terry@LAPTOP-HKPDHF7M MINGW64 ~/Downloads/d1_agent (main)
+```
 
 <br>
 
 ## **[2.6] pal_v6 S0-S4 (BINGO) 26.0331-0401**	
 
+#### **This was quite complex. See \#603 for details.**
+
+```text2
+- S1 ingest from local file (BINGO)
+- S2 build a richer sample dataset (BINGO)
+- S2b derived logic (BINGO)
+- S3 test harder prompts (BINGO)
+- S4 later: selective delete (BINGO)
+
+At the end ================================
+Important (keep it simple)
+
+Do NOT:
+add LLM delete yet 
+add confirmation flows yet 
+add UI yet 
+
+Just:
+delete by filter 
+verify in Mongo 
+
+________________________________________
+My opinion: You now have a clean stack:
+ingest (manual + file) 
+query + compare 
+derived metrics 
+delete (control) 
+That is already a real usable backend.
+________________________________________
+After S4
+Then go back to your real goal:
+👉 “what useful apps can this become?”
+That’s S3 → S4 → S5 (use cases)
+```
+
+
+
 <br>
 
 ## **[2.7] pal_v7 useful functions (BINGO) 26.0401**	
 
+#### **This was quite complex. See \#603 for details.**
+
+- PAL_v7a = deterministic priority ranking (BINGO)
+- PAL_v7b = entity history (BINGO)
+- PAL_v7c = compare (BINGO)
+- PAL_v7d = evidence-first LLM summary (TODO)
+
+
+```text2
+S5 = useful app patterns / demo ideas
+Because now you already have:
+•	ingest 
+•	file ingest 
+•	query/compare 
+•	derived metrics 
+•	delete 
+That is enough backend.
+```
+
 <br>
 
 ## **[2.8] pal_v1 with local Gemma-4 (win11/gpu) 26.0411 (BINGO)**
+
+#### **See \#603 for Gemma setup details.**
+
+```text2
+This demonstrates:
+If architecture is clean, models are replaceable components.
+That is one of the strongest lessons in agentic AI design.
+
+
+\#530 so for this simple demo we did not need anything like palantir MIL (model interface layer)?
+
+Right. For this simple demo, you did not need a separate MIL-like layer.
+Why not
+Because pal_v1 is very small:
+•	one model backend 
+•	one task 
+•	one prompt style 
+•	one output schema 
+•	one app flow 
+So the code can get away with doing this directly:
+PAL app logic -> model call -> JSON result
+That is enough for a demo.
+What the MIL would do
+A MIL-like layer becomes useful when you want to isolate all model-specific details behind one interface.
+For example, hide differences like:
+•	OpenAI vs Ollama vs Anthropic 
+•	chat messages vs plain prompt 
+•	JSON mode differences 
+•	retry logic 
+•	parsing quirks 
+•	model selection 
+•	temperature/max token settings 
+•	fallback models 
+So instead of app code knowing model details, you would have:
+PAL app logic -> MIL -> actual model backend
+In our case
+We effectively did a tiny implicit MIL, just not a formal one.
+These parts are acting like a mini model interface layer:
+•	OLLAMA_BASE_URL 
+•	OLLAMA_MODEL 
+•	ollama_generate(...) 
+•	request_analysis(...) 
+That is already the beginning of a MIL.
+So the answer is
+•	No, you did not need a full Palantir-style MIL for pal_v1_gemma.py 
+•	Yes, you already have a small primitive version of one 
+Rule of thumb
+Use no formal MIL when:
+•	single model 
+•	single backend 
+•	one small demo 
+•	short code preferred 
+Add a real MIL when:
+•	multiple models 
+•	local/cloud switching 
+•	structured retries 
+•	provider-specific quirks 
+•	many demos share same model plumbing 
+For your wiki
+A good way to phrase it:
+In a very small demo, the model interface layer can be minimal and embedded directly in the script.
+As the system grows, that interface should be pulled out into its own layer so the application logic does not depend on provider-specific model details.
+That is probably the cleanest way to connect your simple PAL demo to the larger Palantir architecture idea.
+```
+
+**FINAL RESULTS**
+
+```text2
+\#528 Excellent. This is a real success.
+What you just proved
+Your PAL demo now runs fully local:
+•	Python app logic in Windows Git Bash 
+•	Local model runtime via Ollama 
+•	Model via Gemma 4 gemma4:e2b 
+•	No cloud API required 
+•	Structured JSON analysis works 
+Why this matters for your wiki
+You now have the exact future/security demo you described:
+Same controlled PAL architecture
+Replace hosted model with local model
+Keep deterministic software layer
+That is an important agentic AI lesson.
+One correction in the output
+The summary says:
+... in Taipei and Kaohsiung
+But only Taipei had delays.
+So this also demonstrates a key principle:
+LLM output can be useful but imperfect.
+Deterministic validation layers still matter.
+That supports your whole PAL philosophy.
+Suggested wiki entry
+Demo: PAL Local Model Variant
+Goal: Show PAL architecture using a private local LLM instead of cloud API.
+Stack:
+•	Python 
+•	Ollama 
+•	Gemma 4 
+•	JSON event store 
+What changed:
+•	Replaced OpenAI API with local inference endpoint 
+What stayed the same:
+•	Controlled workflow 
+•	Structured schema 
+•	Deterministic storage and logic 
+Key lesson:
+•	Agent systems can swap models while preserving architecture. 
+My recommendation for next improvement
+Create:
+pal_v1_gemma_guarded.py
+Add deterministic post-checks:
+•	delayed locations computed in Python 
+•	repeated entity counts in Python 
+•	validate summary claims 
+•	reject malformed JSON 
+That would beautifully demonstrate:
+LLM + deterministic software > LLM alone
+Bottom line
+You now have a genuine working local agent demo.
+Not theory — actual execution.
+```
+
+
+
+```
+# pal_v1_gemma.py
+#
+# PAL v1 (local Gemma 4 via Ollama)
+# Two commands:
+#   1) ingest  -> store external data
+#   2) analyze -> analyze stored data with local Gemma 4
+#
+# Examples:
+#   python pal_v1_gemma.py ingest "{\"entity\":\"truck_17\",\"event_type\":\"shipment\",\"location\":\"taipei\",\"status\":\"delayed\",\"note\":\"flat tire\"}"
+#   python pal_v1_gemma.py analyze
+#
+# Requirements:
+#   - Ollama running locally
+#   - A Gemma 4 model pulled into Ollama
+#   - Recommended first model on smaller laptops: gemma4:e2b
+#
+# Optional .env settings:
+#   OLLAMA_BASE_URL=http://localhost:11434
+#   OLLAMA_MODEL=gemma4:e2b
+#
+# Notes:
+#   - This keeps the same PAL v1 CLI shape as pal_v1.py.
+#   - It does not use the OpenAI cloud API.
+#   - It talks directly to Ollama's local HTTP API.
+
+import json
+import os
+import sys
+import urllib.error
+import urllib.request
+from pathlib import Path
+from datetime import datetime, timezone
+from typing import Any, Dict, List
+
+# --------------------------------------------------
+# 0 ENV
+# --------------------------------------------------
+def load_dotenv(dotenv_path: str = ".env") -> None:
+    path = Path(dotenv_path)
+    if not path.exists():
+        return
+
+    for line in path.read_text(encoding="utf-8").splitlines():
+        line = line.strip()
+        if not line or line.startswith("#") or "=" not in line or line.startswith("REM "):
+            continue
+
+        key, value = line.split("=", 1)
+        key = key.strip()
+        value = value.strip().strip('"').strip("'")
+        os.environ.setdefault(key, value)
+
+
+load_dotenv()
+
+OLLAMA_BASE_URL = os.getenv("OLLAMA_BASE_URL", "http://localhost:11434").rstrip("/")
+OLLAMA_MODEL = os.getenv("OLLAMA_MODEL", "gemma4:e2b")
+OLLAMA_TIMEOUT_SECS = int(os.getenv("OLLAMA_TIMEOUT_SECS", "180"))
+
+# --------------------------------------------------
+# 1 FILES / CONSTANTS
+# --------------------------------------------------
+EVENTS_FILE = Path("pal_events.json")
+
+ALLOWED_TOP_KEYS = {
+    "timestamp",
+    "entity",
+    "event_type",
+    "location",
+    "status",
+    "note",
+}
+
+REQUIRED_KEYS = {
+    "entity",
+    "event_type",
+    "location",
+    "status",
+    "note",
+}
+
+ANALYSIS_SCHEMA_TEXT = """
+Return valid JSON only, with this exact top-level structure:
+
+{
+  "summary": "short text summary",
+  "abnormal_events": [
+    {
+      "entity": "string",
+      "event_type": "string",
+      "location": "string",
+      "status": "string",
+      "reason": "string"
+    }
+  ],
+  "problem_entities": ["string"],
+  "problem_locations": ["string"]
+}
+
+Rules:
+- Return valid JSON only.
+- Do not include markdown.
+- "abnormal_events" should contain events that look problematic, unusual, delayed, failed, blocked, missing, or suspicious.
+- "problem_entities" should list repeated or notable problematic entities.
+- "problem_locations" should list repeated or notable problematic locations.
+- If there are no abnormal events, return an empty list.
+"""
+
+# --------------------------------------------------
+# 2 HELPERS
+# --------------------------------------------------
+def utc_now_iso() -> str:
+    return datetime.now(timezone.utc).isoformat()
+
+
+def load_events() -> List[Dict[str, Any]]:
+    if not EVENTS_FILE.exists():
+        return []
+
+    try:
+        data = json.loads(EVENTS_FILE.read_text(encoding="utf-8"))
+        if not isinstance(data, list):
+            raise ValueError("Events file must contain a JSON list.")
+        return data
+    except Exception as e:
+        raise RuntimeError(f"Failed to load {EVENTS_FILE}: {e}")
+
+
+def save_events(events: List[Dict[str, Any]]) -> None:
+    EVENTS_FILE.write_text(
+        json.dumps(events, indent=2, ensure_ascii=False),
+        encoding="utf-8",
+    )
+
+
+def validate_event(event: Dict[str, Any]) -> List[str]:
+    errors: List[str] = []
+
+    if not isinstance(event, dict):
+        return ["Event must be a JSON object."]
+
+    for key in REQUIRED_KEYS:
+        if key not in event:
+            errors.append(f"Missing required key: '{key}'.")
+
+    for key in event.keys():
+        if key not in ALLOWED_TOP_KEYS:
+            errors.append(f"Unexpected key: '{key}'.")
+
+    for key in REQUIRED_KEYS:
+        if key in event and not isinstance(event[key], str):
+            errors.append(f"'{key}' must be a string.")
+
+    if "timestamp" in event and not isinstance(event["timestamp"], str):
+        errors.append("'timestamp' must be a string.")
+
+    return errors
+
+
+def normalize_event(event: Dict[str, Any]) -> Dict[str, Any]:
+    out = dict(event)
+    if "timestamp" not in out:
+        out["timestamp"] = utc_now_iso()
+    return out
+
+
+def print_usage() -> None:
+    print(
+        "Usage:\n"
+        "  python pal_v1_gemma.py ingest '<json_event>'\n"
+        "  python pal_v1_gemma.py analyze\n\n"
+        "Example:\n"
+        '  python pal_v1_gemma.py ingest "{\\"entity\\":\\"truck_17\\",\\"event_type\\":\\"shipment\\",\\"location\\":\\"taipei\\",\\"status\\":\\"delayed\\",\\"note\\":\\"flat tire\\"}"\n'
+        "  python pal_v1_gemma.py analyze\n\n"
+        "Environment:\n"
+        "  OLLAMA_BASE_URL=http://localhost:11434\n"
+        "  OLLAMA_MODEL=gemma4:e2b\n"
+    )
+
+
+# --------------------------------------------------
+# 3 COMMAND: INGEST
+# --------------------------------------------------
+def cmd_ingest(event_json_text: str) -> None:
+    try:
+        event = json.loads(event_json_text)
+    except Exception as e:
+        print("INGEST FAILED")
+        print(f"Invalid JSON input: {e}")
+        return
+
+    errors = validate_event(event)
+    if errors:
+        print("INGEST FAILED")
+        for err in errors:
+            print(f"- {err}")
+        return
+
+    event = normalize_event(event)
+
+    events = load_events()
+    events.append(event)
+    save_events(events)
+
+    print("INGEST OK")
+    print(f"Saved to: {EVENTS_FILE.resolve()}")
+    print("Event:")
+    print(json.dumps(event, indent=2, ensure_ascii=False))
+
+
+# --------------------------------------------------
+# 4 COMMAND: ANALYZE
+# --------------------------------------------------
+def build_analysis_messages(events: List[Dict[str, Any]]) -> List[Dict[str, str]]:
+    events_json = json.dumps(events, indent=2, ensure_ascii=False)
+
+    return [
+        {
+            "role": "system",
+            "content": (
+                "You are a structured data analysis model.\n\n"
+                f"{ANALYSIS_SCHEMA_TEXT}"
+            ),
+        },
+        {
+            "role": "user",
+            "content": (
+                "Analyze the following stored events.\n\n"
+                f"{events_json}"
+            ),
+        },
+    ]
+
+
+def _extract_json_object(text: str) -> Dict[str, Any]:
+    text = text.strip()
+
+    # Best case: pure JSON.
+    try:
+        return json.loads(text)
+    except json.JSONDecodeError:
+        pass
+
+    # Fallback: extract the first {...} block.
+    start = text.find("{")
+    end = text.rfind("}")
+    if start != -1 and end != -1 and end > start:
+        candidate = text[start : end + 1]
+        return json.loads(candidate)
+
+    raise ValueError("Model response did not contain valid JSON.")
+
+
+def request_analysis(events: List[Dict[str, Any]]) -> Dict[str, Any]:
+    messages = build_analysis_messages(events)
+
+    payload = {
+        "model": OLLAMA_MODEL,
+        "messages": messages,
+        "stream": False,
+        "format": "json",
+        "options": {
+            "temperature": 0,
+        },
+    }
+
+    req = urllib.request.Request(
+        url=f"{OLLAMA_BASE_URL}/api/chat",
+        data=json.dumps(payload).encode("utf-8"),
+        headers={"Content-Type": "application/json"},
+        method="POST",
+    )
+
+    try:
+        with urllib.request.urlopen(req, timeout=OLLAMA_TIMEOUT_SECS) as resp:
+            raw = resp.read().decode("utf-8")
+    except urllib.error.HTTPError as e:
+        body = e.read().decode("utf-8", errors="replace") if e.fp else ""
+        raise RuntimeError(f"Ollama HTTP {e.code}: {body}") from e
+    except urllib.error.URLError as e:
+        raise RuntimeError(
+            "Could not reach Ollama. Is it running at "
+            f"{OLLAMA_BASE_URL}? Original error: {e}"
+        ) from e
+
+    response_json = json.loads(raw)
+    content = response_json.get("message", {}).get("content", "")
+    if not content:
+        raise RuntimeError(f"Unexpected Ollama response: {raw}")
+
+    return _extract_json_object(content)
+
+
+def cmd_analyze() -> None:
+    events = load_events()
+
+    if not events:
+        print("ANALYZE FAILED")
+        print("No events stored yet.")
+        return
+
+    print("=== STORED EVENTS ===")
+    print(json.dumps(events, indent=2, ensure_ascii=False))
+
+    print(f"\n=== LOCAL MODEL ===\n{OLLAMA_MODEL}")
+
+    try:
+        analysis = request_analysis(events)
+    except Exception as e:
+        print("ANALYZE FAILED")
+        print(str(e))
+        return
+
+    print("\n=== ANALYSIS ===")
+    print(json.dumps(analysis, indent=2, ensure_ascii=False))
+
+
+# --------------------------------------------------
+# 5 MAIN
+# --------------------------------------------------
+def main() -> None:
+    if len(sys.argv) < 2:
+        print_usage()
+        return
+
+    command = sys.argv[1].strip().lower()
+
+    if command == "ingest":
+        if len(sys.argv) < 3:
+            print("Missing JSON event for ingest.\n")
+            print_usage()
+            return
+        event_json_text = sys.argv[2]
+        cmd_ingest(event_json_text)
+
+    elif command == "analyze":
+        cmd_analyze()
+
+    else:
+        print(f"Unknown command: {command}\n")
+        print_usage()
+
+
+if __name__ == "__main__":
+    main()
+```
+
+
+#### **\#527 run in win11**
+
+```
+$ python pal_v1_gemma.py analyze
+=== STORED EVENTS ===
+[
+  {
+    "entity": "truck_17",
+    "event_type": "shipment",
+    "location": "taipei",
+    "status": "delayed",
+    "note": "flat tire",
+    "timestamp": "2026-03-27T05:30:09.562679+00:00"
+  },
+  {
+    "entity": "truck_22",
+    "event_type": "shipment",
+    "location": "kaohsiung",
+    "status": "ok",
+    "note": "arrived on time",
+    "timestamp": "2026-03-27T11:40:03.351751+00:00"
+  },
+  {
+    "entity": "truck_0411",
+    "event_type": "shipment",
+    "location": "taipei",
+    "status": "delayed",
+    "note": "broken window",
+    "timestamp": "2026-04-11T09:04:02.906750+00:00"
+  }
+]
+
+=== LOCAL MODEL ===
+gemma4:e2b
+
+=== ANALYSIS ===
+{
+  "summary": "Two shipments involving trucks experienced delays due to issues (flat tire and broken window) in Taipei and Kaohsiung.",
+  "abnormal_events": [
+    {
+      "entity": "truck_17",
+      "event_type": "shipment",
+      "location": "taipei",
+      "status": "delayed",
+      "reason": "flat tire"
+    },
+    {
+      "entity": "truck_0411",
+      "event_type": "shipment",
+      "location": "taipei",
+      "status": "delayed",
+      "reason": "broken window"
+    }
+  ],
+  "problem_entities": [
+    "truck_17",
+    "truck_0411"
+  ],
+  "problem_locations": [
+    "taipei"
+  ]
+}
+(venv) 
+terry@LAPTOP-HKPDHF7M MINGW64 ~/Downloads/d1_agent (main)
+$
+```
 
 <br>
 
