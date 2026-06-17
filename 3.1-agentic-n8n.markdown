@@ -184,6 +184,65 @@ No — local Docker n8n is NOT limited by the trial.
 
 ## **N3 n8n_local (ttbo) / Gmail (jk) read many (set'd up GCP_jk) (BINGO)**
 
+```
+#511 setup GCP for JK (follow #505)
+
+Google Auth Platform → Clients → Create Client → Application type = Desktop app.
+
+2.	Enable the Gmail API. 
+3.	Configure the OAuth consent screen / Google Auth Platform branding. 
+4.	Create an OAuth client with Application type = Desktop app.
+
+-------------------------
+PROMPT: get emails
+RESPONSE: Here are the latest emails:
+xxxxxx
+2.	Subject: Want to Know What Technical Writers Are Actually Doing With AI? Start Here!
+o	From: Scott Abel from The Content Wrangler
+xxxxxxxxxxxxx
+5.	Subject: Your free n8n license key to unlock selected paid features
+o	From: n8n.io
+If you need more details about a specific email, let me know!
+-----------------------
+[
+{
+"id": "19d72d13966a2709",
+"threadId": "19d72c5e2eaf7007",
+"snippet": "On Thu, Apr 9, 2026 at 11:04 AM Scott Abel from The Content Wrangler <thecontentwrangler@substack.com> wrote: Grab your free copy of the \"2026 State of AI in Technical Documentation\"",
+"payload": {
+"mimeType": "multipart/alternative"
+},
+"sizeEstimate": 77804,
+"historyId": "64902",
+"internalDate": "1775747806000",
+"labels": [
+{
+"id": "DRAFT",
+"name": "DRAFT"
+}
+],
+"Subject": "Re: Want to Know What Technical Writers Are Actually Doing With AI? Start Here!",
+"From": xxxxxxxxxxxxxxxxxxx
+},
+{
+"id": "19d72c5e2eaf7007",
+"threadId": "19d72c5e2eaf7007",
+........................................................
+```
+
+```text2
+Excellent. That means the important part works:
+•	Gmail auth works 
+•	n8n can read mailbox data 
+•	AI node can summarize results 
+•	raw message JSON is available underneath 
+So now you’ve identified a very realistic pattern:
+tool gets data → model formats/summarizes it
+That is useful.
+What this also shows is the split you care about:
+•	n8n/tool layer = fetches real emails 
+•	LLM layer = turns them into readable output 
+```
 
 <br>
 
