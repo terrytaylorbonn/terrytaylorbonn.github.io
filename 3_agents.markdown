@@ -26,21 +26,14 @@ Conceptual summary of agents:
 
 ### **[3.1 n8n demos (#603)](/3.1-agentic-n8n/)**
 
-- Docx overview (WIP) 26.0415	3
-- === 3) pal core ==============================	9
-- S3 future demos	10
-- (todo) [3.10] — pal_core_10_ui.py // dashboard / FastAPI / presentation layer 26.0427	22
-- [3.8b] SS/LIN WIP 26.0425	37
-- [3.0] concepts 26.0411	333
-- === 1) n8n local ====================================	672
-- NX TODO	673
-- N5 py script adds PAL (BINGO) 26.0409	675
-- N4 py script replaces n8n app (Win11/jk) (BINGO)	686
-- N3 n8n_local (ttbo) / Gmail (jk) read many (set'd up GCP_jk) (BINGO)	693
-- N2 n8n_local install / test (json) 26.0409 (BINGO)	710
+**1) n8n local**
 - N1 cloud n8n / TTBO gmail 26.0408 (BINGO)	722
-- ---------------------------------------------------	732
-- [3.8b] SS/LIN (todo) 26.0424	732
+- N2 n8n_local install / test (json) 26.0409 (BINGO)	710
+- N3 n8n_local (ttbo) / Gmail (jk) read many (set'd up GCP_jk) (BINGO)	693
+- N4 py script replaces n8n app (Win11/jk) (BINGO)	686
+- N5 py script adds PAL (BINGO) 26.0409	675
+- NX TODO	673
+
 
 <br>
 
