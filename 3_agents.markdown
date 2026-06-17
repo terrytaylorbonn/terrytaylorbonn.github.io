@@ -18,6 +18,15 @@ Conceptual summary of agents:
 *3 Agents in the master diagram* <br>
 <img src="/assets/M-15-3x.png" alt="drones" width="80%">
 
+Note: 
+- Custom models are not demonstrated in this section (yet). 
+- The only model used is openAI (and Gemma).
+- No "main external system is used (yet)".
+<br>
+<br>
+
+<img src="/assets/M-22.png" alt="drones" width="26%">
+
 <br>
 
 ### **[3.0 Concepts (was 3.2.1 Intro)](/3.2.1-ai-agent-intro/)**
