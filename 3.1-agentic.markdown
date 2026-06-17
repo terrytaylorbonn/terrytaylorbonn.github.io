@@ -52,7 +52,1765 @@ For details see the lab notes doc **#603\_PAL\_.docx** (PAL = Palantir) on the *
 
 <br>
 
+<img src="/assets/M-20.png" alt="drones" width="35%">
+
+<br>
+
+```text2
+ME: so in pal_core_01_detect cmd_demo there is 
+- A (py script) 
+- S simulated (no ingress, just hard coded "sensor" data) 
+- H run command line 
+- no LLM (not used) 
+- DB simulated (just JSON file)
+
+Core Concept
+Many small events may mean nothing individually.
+But together they may indicate something important.
+Example:
+•	power spike 
+•	camera offline 
+•	truck delay 
+At same site, within 30 minutes.
+→ alert
+________________________________________
+Input Event Schema
+{
+  "site": "A",
+  "type": "power_spike",
+  "severity": 2,
+  "timestamp": "2026-04-11T10:00:00Z"
+}
+Required Fields
+•	site (string) 
+•	type (string) 
+•	severity (int) 
+•	timestamp (ISO string) 
+________________________________________
+Stored Events
+Keep list in:
+pal_core_events.json
+________________________________________
+Rule Schema (hardcoded v1)
+RULES = [
+    {
+        "name": "suspicious_activity",
+        "site_types": ["power_spike", "camera_offline", "truck_delay"],
+        "window_minutes": 30,
+        "min_total_severity": 3
+    }
+]
+________________________________________
+Detection Logic
+For each site:
+1.	load recent events 
+2.	check if required event types exist 
+3.	check timestamps inside window 
+4.	check severity threshold 
+5.	generate alert 
+________________________________________
+Alert Output Schema
+{
+  "alert_type": "suspicious_activity",
+  "site": "A",
+  "matched_events": [
+    "power_spike",
+    "camera_offline",
+    "truck_delay"
+  ],
+  "confidence": 0.82,
+  "reason": "Matched required constellation within 30 minutes"
+}
+________________________________________
+CLI Commands
+Ingest
+python pal_core_01_detect.py ingest '{"site":"A","type":"power_spike","severity":2}'
+Scan
+python pal_core_01_detect.py scan
+Demo Seed Data
+python pal_core_01_detect.py demo
+________________________________________
+OpenAI Role (optional later)
+Not needed for v1 core logic.
+Later use for:
+•	explain alerts 
+•	summarize risks 
+•	convert natural language to rules 
+________________________________________
+Deterministic Role
+Handles:
+•	storage 
+•	time windows 
+•	rule matching 
+•	severity scoring 
+•	alert generation 
+________________________________________
+Why This Is Strong
+This feels like real operational software:
+•	streaming data 
+•	weak signals 
+•	event fusion 
+•	actionable alert 
+```
+
+```
+# pal_core_01_detect_ids.py (IDs)
+#
+# PAL Core 01 - Detect (with IDs)
+#
+# Commands:
+#   1) ingest -> store one event
+#   2) scan   -> scan stored events and generate alerts
+#   3) demo   -> load demo events and scan
+#
+# Examples:
+#   python pal_core_01_detect_ids.py ingest "{\"site\":\"A\",\"type\":\"power_spike\",\"severity\":2}"
+#   python pal_core_01_detect_ids.py scan
+#   python pal_core_01_detect_ids.py demo
+#
+# ID conventions:
+# - Event notes begin with E00x
+# - Rule names begin with R00x
+# - Alert reasons begin with A00x
+
+import json
+import re
+import sys
+from pathlib import Path
+from datetime import datetime, timezone, timedelta
+from typing import Any, Dict, List, Optional
+
+# --------------------------------------------------
+# 1 FILES / CONSTANTS
+# --------------------------------------------------
+EVENTS_FILE = Path("pal_core_events.json")
+
+ALLOWED_TOP_KEYS = {
+    "timestamp",
+    "site",
+    "type",
+    "severity",
+    "note",
+}
+
+REQUIRED_KEYS = {
+    "site",
+    "type",
+    "severity",
+}
+
+RULES = [
+    {
+        "name": "R001 suspicious_activity",
+        "site_types": ["power_spike", "camera_offline", "truck_delay"],
+        "window_minutes": 30,
+        "min_total_severity": 3,
+    }
+]
+
+# --------------------------------------------------
+# 2 HELPERS
+# --------------------------------------------------
+def utc_now_iso() -> str:
+    return datetime.now(timezone.utc).isoformat()
+
+def parse_iso_timestamp(ts: str) -> datetime:
+    ts = ts.strip()
+    if ts.endswith("Z"):
+        ts = ts[:-1] + "+00:00"
+    dt = datetime.fromisoformat(ts)
+    if dt.tzinfo is None:
+        dt = dt.replace(tzinfo=timezone.utc)
+    return dt
+
+def load_events() -> List[Dict[str, Any]]:
+    if not EVENTS_FILE.exists():
+        return []
+    try:
+        data = json.loads(EVENTS_FILE.read_text(encoding="utf-8"))
+        if not isinstance(data, list):
+            raise ValueError("Events file must contain a JSON list.")
+        return data
+    except Exception as e:
+        raise RuntimeError(f"Failed to load {EVENTS_FILE}: {e}")
+
+def save_events(events: List[Dict[str, Any]]) -> None:
+    EVENTS_FILE.write_text(
+        json.dumps(events, indent=2, ensure_ascii=False),
+        encoding="utf-8",
+    )
+
+def strip_id_prefix(text: str) -> str:
+    if not text:
+        return ""
+    return re.sub(r"^[AER]\d{3}\s+", "", text).strip()
+
+def get_next_event_id(events: List[Dict[str, Any]]) -> str:
+    max_n = 0
+    for e in events:
+        note = str(e.get("note", ""))
+        m = re.match(r"^E(\d{3})\b", note)
+        if m:
+            max_n = max(max_n, int(m.group(1)))
+    return f"E{max_n + 1:03d}"
+
+# def format_event_note(event_id: str, note: str) -> str:
+#     clean = strip_id_prefix(note)
+#     return f"{event_id} {clean}".strip()
+
+def format_event_note(event_id: str, note: str) -> str:
+    clean = strip_id_prefix(note)
+    if not clean:
+        clean = "no_note"
+    return f"{event_id} {clean}"
+
+def validate_event(event: Dict[str, Any]) -> List[str]:
+    errors: List[str] = []
+
+    if not isinstance(event, dict):
+        return ["Event must be a JSON object."]
+
+    for key in REQUIRED_KEYS:
+        if key not in event:
+            errors.append(f"Missing required key: '{key}'.")
+
+    for key in event.keys():
+        if key not in ALLOWED_TOP_KEYS:
+            errors.append(f"Unexpected key: '{key}'.")
+
+    if "site" in event and not isinstance(event["site"], str):
+        errors.append("'site' must be a string.")
+
+    if "type" in event and not isinstance(event["type"], str):
+        errors.append("'type' must be a string.")
+
+    if "severity" in event:
+        if not isinstance(event["severity"], int):
+            errors.append("'severity' must be an integer.")
+        elif event["severity"] < 0:
+            errors.append("'severity' must be >= 0.")
+
+    if "note" in event and not isinstance(event["note"], str):
+        errors.append("'note' must be a string.")
+
+    if "timestamp" in event:
+        if not isinstance(event["timestamp"], str):
+            errors.append("'timestamp' must be a string.")
+        else:
+            try:
+                parse_iso_timestamp(event["timestamp"])
+            except Exception:
+                errors.append("'timestamp' must be valid ISO format.")
+
+    return errors
+
+def normalize_event(event: Dict[str, Any], existing_events: List[Dict[str, Any]]) -> Dict[str, Any]:
+    out = dict(event)
+    if "timestamp" not in out:
+        out["timestamp"] = utc_now_iso()
+    if "note" not in out:
+        out["note"] = ""
+
+    event_id = get_next_event_id(existing_events)
+    out["note"] = format_event_note(event_id, out["note"])
+    return out
+
+def print_usage() -> None:
+    print(
+        "Usage:\n"
+        "  python pal_core_01_detect_ids.py ingest '<json_event>'\n"
+        "  python pal_core_01_detect_ids.py scan\n"
+        "  python pal_core_01_detect_ids.py demo\n\n"
+        "Examples:\n"
+        '  python pal_core_01_detect_ids.py ingest "{\\"site\\":\\"A\\",\\"type\\":\\"power_spike\\",\\"severity\\":2}"\n'
+        "  python pal_core_01_detect_ids.py scan\n"
+        "  python pal_core_01_detect_ids.py demo"
+    )
+
+# --------------------------------------------------
+# 3 COMMAND: INGEST
+# --------------------------------------------------
+def cmd_ingest(event_json_text: str) -> None:
+    try:
+        event = json.loads(event_json_text)
+    except Exception as e:
+        print("INGEST FAILED")
+        print(f"Invalid JSON input: {e}")
+        return
+
+    errors = validate_event(event)
+    if errors:
+        print("INGEST FAILED")
+        for err in errors:
+            print(f"- {err}")
+        return
+
+    events = load_events()
+    event = normalize_event(event, events)
+
+    events.append(event)
+    save_events(events)
+
+    print("INGEST OK")
+    print(f"Saved to: {EVENTS_FILE.resolve()}")
+    print("Event:")
+    print(json.dumps(event, indent=2, ensure_ascii=False))
+
+# --------------------------------------------------
+# 4 DETECTION ENGINE
+# --------------------------------------------------
+def group_events_by_site(events: List[Dict[str, Any]]) -> Dict[str, List[Dict[str, Any]]]:
+    out: Dict[str, List[Dict[str, Any]]] = {}
+    for e in events:
+        site = e["site"]
+        out.setdefault(site, []).append(e)
+    return out
+
+def compute_confidence(min_total_severity: int, actual_total_severity: int) -> float:
+    if min_total_severity <= 0:
+        return 0.5
+    ratio = actual_total_severity / float(min_total_severity)
+    return round(max(0.50, min(0.99, 0.50 + 0.20 * (ratio - 1.0))), 2)
+
+def get_next_alert_id(existing_alert_count: int) -> str:
+    return f"A{existing_alert_count + 1:03d}"
+
+def detect_rule_for_site(
+    site: str,
+    site_events: List[Dict[str, Any]],
+    rule: Dict[str, Any],
+    alert_start_index: int,
+) -> List[Dict[str, Any]]:
+    alerts: List[Dict[str, Any]] = []
+
+    required_types = list(rule["site_types"])
+    window_minutes = int(rule["window_minutes"])
+    min_total_severity = int(rule["min_total_severity"])
+
+    sorted_events = sorted(site_events, key=lambda e: parse_iso_timestamp(e["timestamp"]))
+
+    for anchor_event in sorted_events:
+        anchor_time = parse_iso_timestamp(anchor_event["timestamp"])
+        window_start = anchor_time - timedelta(minutes=window_minutes)
+
+        window_events = [
+            e for e in sorted_events
+            if window_start <= parse_iso_timestamp(e["timestamp"]) <= anchor_time
+        ]
+
+        types_in_window = {e["type"] for e in window_events}
+        if not all(req_type in types_in_window for req_type in required_types):
+            continue
+
+        matched_events: List[Dict[str, Any]] = []
+        for req_type in required_types:
+            candidates = [e for e in window_events if e["type"] == req_type]
+            chosen = sorted(candidates, key=lambda e: parse_iso_timestamp(e["timestamp"]))[-1]
+            matched_events.append(chosen)
+
+        matched_events = sorted(matched_events, key=lambda e: parse_iso_timestamp(e["timestamp"]))
+        total_severity = sum(int(e["severity"]) for e in matched_events)
+        if total_severity < min_total_severity:
+            continue
+
+        first_time = parse_iso_timestamp(matched_events[0]["timestamp"])
+        last_time = parse_iso_timestamp(matched_events[-1]["timestamp"])
+        span_minutes = (last_time - first_time).total_seconds() / 60.0
+
+        alert_id = get_next_alert_id(alert_start_index + len(alerts))
+        alert = {
+            "alert_id": alert_id,
+            "alert_type": rule["name"],
+            "site": site,
+            "matched_events": [
+                {
+                    "type": e["type"],
+                    "severity": e["severity"],
+                    "timestamp": e["timestamp"],
+                    "note": e.get("note", ""),
+                }
+                for e in matched_events
+            ],
+            "matched_event_ids": [
+                str(e.get("note", "")).split(" ", 1)[0] if str(e.get("note", "")).startswith("E") else ""
+                for e in matched_events
+            ],
+            "total_severity": total_severity,
+            "confidence": compute_confidence(min_total_severity, total_severity),
+            "reason": (
+                f"{alert_id} Matched rule {rule['name']} within {window_minutes} minutes "
+                f"(actual span: {round(span_minutes, 1)} minutes)."
+            ),
+        }
+        alerts.append(alert)
+
+    deduped: List[Dict[str, Any]] = []
+    seen = set()
+    for alert in alerts:
+        key = (
+            alert["alert_type"],
+            alert["site"],
+            tuple((e["type"], e["timestamp"]) for e in alert["matched_events"]),
+        )
+        if key in seen:
+            continue
+        seen.add(key)
+        deduped.append(alert)
+
+    return deduped
+
+def detect_alerts(events: List[Dict[str, Any]]) -> List[Dict[str, Any]]:
+    alerts: List[Dict[str, Any]] = []
+    by_site = group_events_by_site(events)
+
+    for site, site_events in by_site.items():
+        for rule in RULES:
+            site_alerts = detect_rule_for_site(site, site_events, rule, len(alerts))
+            alerts.extend(site_alerts)
+
+    return alerts
+
+# --------------------------------------------------
+# 5 COMMAND: SCAN
+# --------------------------------------------------
+def cmd_scan() -> None:
+    events = load_events()
+
+    if not events:
+        print("SCAN FAILED")
+        print("No events stored yet.")
+        return
+
+    print("=== STORED EVENTS ===")
+    print(json.dumps(events, indent=2, ensure_ascii=False))
+
+    alerts = detect_alerts(events)
+
+    print("\n=== RULES ===")
+    print(json.dumps(RULES, indent=2, ensure_ascii=False))
+
+    print("\n=== ALERTS ===")
+    if not alerts:
+        print("[]")
+        return
+
+    print(json.dumps(alerts, indent=2, ensure_ascii=False))
+
+# --------------------------------------------------
+# 6 COMMAND: DEMO
+# --------------------------------------------------
+def demo_events() -> List[Dict[str, Any]]:
+    base = datetime(2026, 4, 11, 10, 0, 0, tzinfo=timezone.utc)
+
+    def ts(minutes: int) -> str:
+        return (base + timedelta(minutes=minutes)).isoformat()
+
+    raw = [
+        {
+            "site": "A",
+            "type": "power_spike",
+            "severity": 2,
+            "note": "unexpected jump in electricity usage",
+            "timestamp": ts(0),
+        },
+        {
+            "site": "A",
+            "type": "camera_offline",
+            "severity": 1,
+            "note": "camera feed lost",
+            "timestamp": ts(8),
+        },
+        {
+            "site": "A",
+            "type": "truck_delay",
+            "severity": 2,
+            "note": "vehicle delay near site",
+            "timestamp": ts(20),
+        },
+        {
+            "site": "B",
+            "type": "power_spike",
+            "severity": 1,
+            "note": "minor fluctuation",
+            "timestamp": ts(3),
+        },
+        {
+            "site": "B",
+            "type": "truck_delay",
+            "severity": 1,
+            "note": "small traffic delay",
+            "timestamp": ts(40),
+        },
+    ]
+
+    events: List[Dict[str, Any]] = []
+    for item in raw:
+        events.append(normalize_event(item, events))
+    return events
+
+def cmd_demo() -> None:
+    events = demo_events()
+    save_events(events)
+
+    print("DEMO OK")
+    print(f"Saved demo events to: {EVENTS_FILE.resolve()}")
+    print("\n=== STORED EVENTS ===")
+    print(json.dumps(events, indent=2, ensure_ascii=False))
+
+    alerts = detect_alerts(events)
+
+    print("\n=== ALERTS ===")
+    print(json.dumps(alerts, indent=2, ensure_ascii=False))
+
+# --------------------------------------------------
+# 7 MAIN
+# --------------------------------------------------
+def main() -> None:
+    if len(sys.argv) < 2:
+        print_usage()
+        return
+
+    command = sys.argv[1].strip().lower()
+
+    if command == "ingest":
+        if len(sys.argv) < 3:
+            print("Missing JSON event for ingest.\n")
+            print_usage()
+            return
+        cmd_ingest(sys.argv[2])
+
+    elif command == "scan":
+        cmd_scan()
+
+    elif command == "demo":
+        cmd_demo()
+
+    else:
+        print(f"Unknown command: {command}\n")
+        print_usage()
+
+if __name__ == "__main__":
+    main()
+```
+
+
+```text2
+#545 (1) result attached (seems ok)
+(2) could create a modified code version that names events, rules, alerts?
+  - for each event, add "E00x" to the beginning of the note
+  - for each rule, add "R00x" to the beginning of name
+  - for each alert, add "A00x" to the beginning of the note
+x = 0,1,2,3....
+i will run this again.
+```
+
+```
+python pal_core_01_detect_ids.py demo
+$ python pal_core_01_detect_ids.py demo
+DEMO OK
+Saved demo events to: C:\Users\terry\Downloads\d1_agent\pal_core_events.json
+
+=== STORED EVENTS ===
+[
+  {
+    "site": "A",
+    "type": "power_spike",
+    "severity": 2,
+    "note": "E001 unexpected jump in electricity usage",
+    "timestamp": "2026-04-11T10:00:00+00:00"
+  },
+  {
+    "site": "A",
+    "type": "camera_offline",
+    "severity": 1,
+    "note": "E002 camera feed lost",
+    "timestamp": "2026-04-11T10:08:00+00:00"
+  },
+  {
+    "site": "A",
+    "type": "truck_delay",
+    "severity": 2,
+    "note": "E003 vehicle delay near site",
+    "timestamp": "2026-04-11T10:20:00+00:00"
+  },
+  {
+    "site": "B",
+    "type": "power_spike",
+    "severity": 1,
+    "note": "E004 minor fluctuation",
+    "timestamp": "2026-04-11T10:03:00+00:00"
+  },
+  {
+    "site": "B",
+    "type": "truck_delay",
+    "severity": 1,
+    "note": "E005 small traffic delay",
+    "timestamp": "2026-04-11T10:40:00+00:00"
+  }
+]
+
+=== ALERTS ===
+[
+  {
+    "alert_id": "A001",
+    "alert_type": "R001 suspicious_activity",
+    "site": "A",
+    "matched_events": [
+      {
+        "type": "power_spike",
+        "severity": 2,
+        "timestamp": "2026-04-11T10:00:00+00:00",
+        "note": "E001 unexpected jump in electricity usage"
+      },
+      {
+        "type": "camera_offline",
+        "severity": 1,
+        "timestamp": "2026-04-11T10:08:00+00:00",
+        "note": "E002 camera feed lost"
+      },
+      {
+        "type": "truck_delay",
+        "severity": 2,
+        "timestamp": "2026-04-11T10:20:00+00:00",
+        "note": "E003 vehicle delay near site"
+      }
+    ],
+    "matched_event_ids": [
+      "E001",
+      "E002",
+      "E003"
+    ],
+    "total_severity": 5,
+    "confidence": 0.63,
+    "reason": "A001 Matched rule R001 suspicious_activity within 30 minutes (actual span: 20.0 minutes)."
+  }
+]
+(venv) 
+terry@LAPTOP-HKPDHF7M MINGW64 ~/Downloads/d1_agent (main)
+
+python pal_core_01_detect_ids.py scan
+$ python pal_core_01_detect_ids.py scan
+=== STORED EVENTS ===
+[
+  {
+    "site": "A",
+    "type": "power_spike",
+    "severity": 2,
+    "note": "E001 unexpected jump in electricity usage",
+    "timestamp": "2026-04-11T10:00:00+00:00"
+  },
+  {
+    "site": "A",
+    "type": "camera_offline",
+    "severity": 1,
+    "note": "E002 camera feed lost",
+    "timestamp": "2026-04-11T10:08:00+00:00"
+  },
+  {
+    "site": "A",
+    "type": "truck_delay",
+    "severity": 2,
+    "note": "E003 vehicle delay near site",
+    "timestamp": "2026-04-11T10:20:00+00:00"
+  },
+  {
+    "site": "B",
+    "type": "power_spike",
+    "severity": 1,
+    "note": "E004 minor fluctuation",
+    "timestamp": "2026-04-11T10:03:00+00:00"
+  },
+  {
+    "site": "B",
+    "type": "truck_delay",
+    "severity": 1,
+    "note": "E005 small traffic delay",
+    "timestamp": "2026-04-11T10:40:00+00:00"
+  }
+]
+
+=== RULES ===
+[
+  {
+    "name": "R001 suspicious_activity",
+    "site_types": [
+      "power_spike",
+      "camera_offline",
+      "truck_delay"
+    ],
+    "window_minutes": 30,
+    "min_total_severity": 3
+  }
+]
+
+=== ALERTS ===
+[
+  {
+    "alert_id": "A001",
+    "alert_type": "R001 suspicious_activity",
+    "site": "A",
+    "matched_events": [
+      {
+        "type": "power_spike",
+        "severity": 2,
+        "timestamp": "2026-04-11T10:00:00+00:00",
+        "note": "E001 unexpected jump in electricity usage"
+      },
+      {
+        "type": "camera_offline",
+        "severity": 1,
+        "timestamp": "2026-04-11T10:08:00+00:00",
+        "note": "E002 camera feed lost"
+      },
+      {
+        "type": "truck_delay",
+        "severity": 2,
+        "timestamp": "2026-04-11T10:20:00+00:00",
+        "note": "E003 vehicle delay near site"
+      }
+    ],
+    "matched_event_ids": [
+      "E001",
+      "E002",
+      "E003"
+    ],
+    "total_severity": 5,
+    "confidence": 0.63,
+    "reason": "A001 Matched rule R001 suspicious_activity within 30 minutes (actual span: 20.0 minutes)."
+  }
+]
+(venv) 
+terry@LAPTOP-HKPDHF7M MINGW64 ~/Downloads/d1_agent (main)
+
+python pal_core_01_detect_ids.py ingest "{\"site\":\"A\",\"type\":\"power_spike\",\"severity\":2}"
+$ python pal_core_01_detect_ids.py ingest "{\"site\":\"A\",\"type\":\"power_spike\",\"severity\":2}"
+INGEST OK
+Saved to: C:\Users\terry\Downloads\d1_agent\pal_core_events.json
+Event:
+{
+  "site": "A",
+  "type": "power_spike",
+  "severity": 2,
+  "timestamp": "2026-04-11T20:38:50.999465+00:00",
+  "note": "E006 no_note"
+}
+(venv) 
+terry@LAPTOP-HKPDHF7M MINGW64 ~/Downloads/d1_agent (main)
+
+python pal_core_01_detect_ids.py scan
+$ python pal_core_01_detect_ids.py scan
+=== STORED EVENTS ===
+[
+  {
+    "site": "A",
+    "type": "power_spike",
+    "severity": 2,
+    "note": "E001 unexpected jump in electricity usage",
+    "timestamp": "2026-04-11T10:00:00+00:00"
+  },
+  {
+    "site": "A",
+    "type": "camera_offline",
+    "severity": 1,
+    "note": "E002 camera feed lost",
+    "timestamp": "2026-04-11T10:08:00+00:00"
+  },
+  {
+    "site": "A",
+    "type": "truck_delay",
+    "severity": 2,
+    "note": "E003 vehicle delay near site",
+    "timestamp": "2026-04-11T10:20:00+00:00"
+  },
+  {
+    "site": "B",
+    "type": "power_spike",
+    "severity": 1,
+    "note": "E004 minor fluctuation",
+    "timestamp": "2026-04-11T10:03:00+00:00"
+  },
+  {
+    "site": "B",
+    "type": "truck_delay",
+    "severity": 1,
+    "note": "E005 small traffic delay",
+    "timestamp": "2026-04-11T10:40:00+00:00"
+  },
+  {
+    "site": "A",
+    "type": "power_spike",
+    "severity": 2,
+    "timestamp": "2026-04-11T20:38:50.999465+00:00",
+    "note": "E006 no_note"
+  }
+]
+
+=== RULES ===
+[
+  {
+    "name": "R001 suspicious_activity",
+    "site_types": [
+      "power_spike",
+      "camera_offline",
+      "truck_delay"
+    ],
+    "window_minutes": 30,
+    "min_total_severity": 3
+  }
+]
+
+=== ALERTS ===
+[
+  {
+    "alert_id": "A001",
+    "alert_type": "R001 suspicious_activity",
+    "site": "A",
+    "matched_events": [
+      {
+        "type": "power_spike",
+        "severity": 2,
+        "timestamp": "2026-04-11T10:00:00+00:00",
+        "note": "E001 unexpected jump in electricity usage"
+      },
+      {
+        "type": "camera_offline",
+        "severity": 1,
+        "timestamp": "2026-04-11T10:08:00+00:00",
+        "note": "E002 camera feed lost"
+      },
+      {
+        "type": "truck_delay",
+        "severity": 2,
+        "timestamp": "2026-04-11T10:20:00+00:00",
+        "note": "E003 vehicle delay near site"
+      }
+    ],
+    "matched_event_ids": [
+      "E001",
+      "E002",
+      "E003"
+    ],
+    "total_severity": 5,
+    "confidence": 0.63,
+    "reason": "A001 Matched rule R001 suspicious_activity within 30 minutes (actual span: 20.0 minutes)."
+  }
+]
+(venv) 
+terry@LAPTOP-HKPDHF7M MINGW64 ~/Downloads/d1_agent (main)
+```
+
+```text2
+#546 Looks clean now.
+What you have is a solid v1:
+•	E00x event labeling works 
+•	R00x rule labeling works 
+•	A00x alert labeling works 
+•	matched_event_ids works 
+•	empty-note ingest is now handled nicely 
+One nice side effect: this makes the demo much easier to narrate:
+Events E001, E002, and E003 satisfied rule R001, which generated alert A001.
+That is exactly the kind of traceability you want for PAL-style demos.
+My recommendation: freeze this as the working pal_core_01_detect_ids.py v1 and move next to either:
+•	add a clear command, or 
+•	start pal_core_02_predict.py 
+I would lean toward pal_core_02_predict.py next.
+```
+
+
+<br>
+
 ## **[3.2] pal_core_02_predict.py (BINGO) 26.0411 (02 road network / prediction)**
+
+<br>
+
+<img src="/assets/M-20.png" alt="drones" width="35%">
+
+<br>
+
+```text2
+Bottom line: This is not a toy script. It demonstrates a real class of operational intelligence systems.
+
+This should represent the second core function:
+Predict downstream effects of a change in a system.
+Clean v1 concept
+Use a deterministic network model first.
+No AI required initially.
+________________________________________
+Goal
+Given a disruption, predict:
+•	reroutes 
+•	delays 
+•	overloaded nodes 
+•	impacted destinations 
+________________________________________
+Best first demo
+Road network
+A -> B -> C
+A -> D -> C
+Normal path:
+A-B-C
+Disruption:
+Block B-C
+Prediction:
+Traffic reroutes to A-D-C
+Delay increases
+Node D load increases
+________________________________________
+Why this is best
+•	visual 
+•	easy logic 
+•	very relevant 
+•	deterministic 
+•	expandable later 
+```
+
+```text2
+# pal_core_02_predict.py
+#
+# PAL Core 02 - Predict
+#
+# Commands:
+#   1) demo        -> load demo network, show baseline, apply demo block, show prediction
+#   2) status      -> show current network state and predicted routes
+#   3) reset       -> reset to demo network with no blocked edges
+#   4) block A B   -> block directed edge A -> B, then show prediction
+#   5) unblock A B -> unblock directed edge A -> B, then show prediction
+#
+# Examples:
+#   python pal_core_02_predict.py demo
+#   python pal_core_02_predict.py status
+#   python pal_core_02_predict.py block B C
+#   python pal_core_02_predict.py unblock B C
+#   python pal_core_02_predict.py reset
+#
+# Notes:
+# - Deterministic only
+# - No AI needed in v1
+# - Uses a small hardcoded network
+# - Predicts downstream effects of blocked roads/edges
+
+import json
+import heapq
+import sys
+from pathlib import Path
+from typing import Any, Dict, List, Optional, Set, Tuple
+
+# --------------------------------------------------
+# 1 FILES / CONSTANTS
+# --------------------------------------------------
+STATE_FILE = Path("pal_core_predict_state.json")
+
+DEMO_NETWORK = {
+    "nodes": ["A", "B", "C", "D", "E"],
+    "edges": [
+        {"from": "A", "to": "B", "cost": 2},
+        {"from": "B", "to": "C", "cost": 2},
+        {"from": "A", "to": "D", "cost": 3},
+        {"from": "D", "to": "C", "cost": 2},
+        {"from": "B", "to": "D", "cost": 1},
+        {"from": "D", "to": "E", "cost": 2},
+        {"from": "E", "to": "C", "cost": 1},
+    ],
+    "routes": [
+        {"route_id": "ROUTE_001", "from": "A", "to": "C"},
+        {"route_id": "ROUTE_002", "from": "B", "to": "C"},
+        {"route_id": "ROUTE_003", "from": "A", "to": "E"},
+    ],
+    "blocked_edges": [],
+}
+
+# --------------------------------------------------
+# 2 HELPERS
+# --------------------------------------------------
+def make_edge_key(u: str, v: str) -> str:
+    return f"{u}->{v}"
+
+def parse_edge_key(key: str) -> Tuple[str, str]:
+    parts = key.split("->")
+    if len(parts) != 2:
+        raise ValueError(f"Invalid edge key: {key}")
+    return parts[0], parts[1]
+
+def build_adjacency(state: Dict[str, Any], blocked_edges: Optional[Set[str]] = None) -> Dict[str, List[Tuple[str, int]]]:
+    if blocked_edges is None:
+        blocked_edges = set(state.get("blocked_edges", []))
+
+    adj: Dict[str, List[Tuple[str, int]]] = {n: [] for n in state["nodes"]}
+    for e in state["edges"]:
+        u = e["from"]
+        v = e["to"]
+        c = int(e["cost"])
+        if make_edge_key(u, v) in blocked_edges:
+            continue
+        adj[u].append((v, c))
+    return adj
+
+def dijkstra_path(state: Dict[str, Any], start: str, goal: str, blocked_edges: Optional[Set[str]] = None) -> Optional[Dict[str, Any]]:
+    adj = build_adjacency(state, blocked_edges)
+    pq: List[Tuple[int, str, List[str]]] = [(0, start, [start])]
+    best_cost: Dict[str, int] = {start: 0}
+
+    while pq:
+        cost, node, path = heapq.heappop(pq)
+
+        if node == goal:
+            return {
+                "path": path,
+                "cost": cost,
+            }
+
+        if cost > best_cost.get(node, 10**18):
+            continue
+
+        for nxt, edge_cost in adj.get(node, []):
+            new_cost = cost + edge_cost
+            if new_cost < best_cost.get(nxt, 10**18):
+                best_cost[nxt] = new_cost
+                heapq.heappush(pq, (new_cost, nxt, path + [nxt]))
+
+    return None
+
+def compute_route_predictions(state: Dict[str, Any], blocked_edges: Optional[Set[str]] = None) -> List[Dict[str, Any]]:
+    preds: List[Dict[str, Any]] = []
+    for route in state["routes"]:
+        rid = route["route_id"]
+        start = route["from"]
+        goal = route["to"]
+
+        baseline = dijkstra_path(state, start, goal, blocked_edges=set())
+        current = dijkstra_path(state, start, goal, blocked_edges=blocked_edges)
+
+        row: Dict[str, Any] = {
+            "route_id": rid,
+            "from": start,
+            "to": goal,
+            "baseline_path": baseline["path"] if baseline else None,
+            "baseline_cost": baseline["cost"] if baseline else None,
+            "current_path": current["path"] if current else None,
+            "current_cost": current["cost"] if current else None,
+            "status": "ok",
+            "extra_cost": 0,
+            "rerouted": False,
+        }
+
+        if baseline is None and current is None:
+            row["status"] = "no_path_defined"
+        elif baseline is not None and current is None:
+            row["status"] = "blocked"
+        elif baseline is None and current is not None:
+            row["status"] = "new_path_found"
+        else:
+            row["extra_cost"] = int(current["cost"]) - int(baseline["cost"])
+            row["rerouted"] = current["path"] != baseline["path"]
+            row["status"] = "rerouted" if row["rerouted"] else "ok"
+
+        preds.append(row)
+
+    return preds
+
+def compute_hotspots(predictions: List[Dict[str, Any]]) -> List[Dict[str, Any]]:
+    baseline_counts: Dict[str, int] = {}
+    current_counts: Dict[str, int] = {}
+
+    def add_counts(path: Optional[List[str]], bucket: Dict[str, int]) -> None:
+        if not path:
+            return
+        for node in path[1:-1]:
+            bucket[node] = bucket.get(node, 0) + 1
+
+    for p in predictions:
+        add_counts(p.get("baseline_path"), baseline_counts)
+        add_counts(p.get("current_path"), current_counts)
+
+    all_nodes = sorted(set(baseline_counts.keys()) | set(current_counts.keys()))
+    hotspots: List[Dict[str, Any]] = []
+    for node in all_nodes:
+        base_n = baseline_counts.get(node, 0)
+        curr_n = current_counts.get(node, 0)
+        delta = curr_n - base_n
+        if delta > 0:
+            hotspots.append({
+                "node": node,
+                "baseline_load": base_n,
+                "current_load": curr_n,
+                "delta": delta,
+            })
+
+    hotspots.sort(key=lambda x: (-x["delta"], x["node"]))
+    return hotspots
+
+def summarize_prediction(state: Dict[str, Any]) -> Dict[str, Any]:
+    blocked_edges = set(state.get("blocked_edges", []))
+    predictions = compute_route_predictions(state, blocked_edges)
+    hotspots = compute_hotspots(predictions)
+
+    impacted_routes = sum(1 for p in predictions if p["status"] in ("rerouted", "blocked"))
+    blocked_routes = sum(1 for p in predictions if p["status"] == "blocked")
+    rerouted_routes = sum(1 for p in predictions if p["status"] == "rerouted")
+    total_extra_cost = sum(int(p.get("extra_cost", 0)) for p in predictions if p["current_path"] is not None)
+
+    return {
+        "blocked_edges": sorted(blocked_edges),
+        "route_predictions": predictions,
+        "impacted_routes": impacted_routes,
+        "blocked_routes": blocked_routes,
+        "rerouted_routes": rerouted_routes,
+        "total_extra_cost": total_extra_cost,
+        "hotspots": hotspots,
+    }
+
+def save_state(state: Dict[str, Any]) -> None:
+    STATE_FILE.write_text(json.dumps(state, indent=2, ensure_ascii=False), encoding="utf-8")
+
+def load_state() -> Dict[str, Any]:
+    if not STATE_FILE.exists():
+        return json.loads(json.dumps(DEMO_NETWORK))
+    data = json.loads(STATE_FILE.read_text(encoding="utf-8"))
+    return data
+
+def reset_state() -> Dict[str, Any]:
+    state = json.loads(json.dumps(DEMO_NETWORK))
+    save_state(state)
+    return state
+
+def print_usage() -> None:
+    print(
+        "Usage:\n"
+        "  python pal_core_02_predict.py demo\n"
+        "  python pal_core_02_predict.py status\n"
+        "  python pal_core_02_predict.py reset\n"
+        "  python pal_core_02_predict.py block <FROM> <TO>\n"
+        "  python pal_core_02_predict.py unblock <FROM> <TO>\n\n"
+        "Examples:\n"
+        "  python pal_core_02_predict.py demo\n"
+        "  python pal_core_02_predict.py status\n"
+        "  python pal_core_02_predict.py block B C\n"
+        "  python pal_core_02_predict.py unblock B C\n"
+        "  python pal_core_02_predict.py reset"
+    )
+
+def print_state_and_prediction(state: Dict[str, Any]) -> None:
+    print("=== NETWORK STATE ===")
+    print(json.dumps({
+        "nodes": state["nodes"],
+        "edges": state["edges"],
+        "routes": state["routes"],
+        "blocked_edges": state["blocked_edges"],
+    }, indent=2, ensure_ascii=False))
+
+    print("\n=== PREDICTION ===")
+    print(json.dumps(summarize_prediction(state), indent=2, ensure_ascii=False))
+
+# --------------------------------------------------
+# 3 COMMANDS
+# --------------------------------------------------
+def cmd_demo() -> None:
+    state = reset_state()
+    print("DEMO OK")
+    print(f"Saved state to: {STATE_FILE.resolve()}")
+    print("\n=== BASELINE ===")
+    print(json.dumps(summarize_prediction(state), indent=2, ensure_ascii=False))
+
+    edge_key = make_edge_key("B", "C")
+    state["blocked_edges"] = [edge_key]
+    save_state(state)
+
+    print("\n=== APPLY DEMO BLOCK ===")
+    print(f"Blocked edge: {edge_key}")
+
+    print("\n=== PREDICTION AFTER BLOCK ===")
+    print(json.dumps(summarize_prediction(state), indent=2, ensure_ascii=False))
+
+def cmd_status() -> None:
+    state = load_state()
+    print_state_and_prediction(state)
+
+def cmd_reset() -> None:
+    state = reset_state()
+    print("RESET OK")
+    print(f"Saved state to: {STATE_FILE.resolve()}")
+    print_state_and_prediction(state)
+
+def cmd_block(u: str, v: str) -> None:
+    state = load_state()
+    edge_key = make_edge_key(u, v)
+
+    valid_edges = {make_edge_key(e["from"], e["to"]) for e in state["edges"]}
+    if edge_key not in valid_edges:
+        print("BLOCK FAILED")
+        print(f"Edge not found: {edge_key}")
+        return
+
+    blocked = set(state.get("blocked_edges", []))
+    blocked.add(edge_key)
+    state["blocked_edges"] = sorted(blocked)
+    save_state(state)
+
+    print("BLOCK OK")
+    print(f"Blocked edge: {edge_key}")
+    print_state_and_prediction(state)
+
+def cmd_unblock(u: str, v: str) -> None:
+    state = load_state()
+    edge_key = make_edge_key(u, v)
+
+    blocked = set(state.get("blocked_edges", []))
+    if edge_key not in blocked:
+        print("UNBLOCK OK")
+        print(f"Edge was not blocked: {edge_key}")
+        print_state_and_prediction(state)
+        return
+
+    blocked.remove(edge_key)
+    state["blocked_edges"] = sorted(blocked)
+    save_state(state)
+
+    print("UNBLOCK OK")
+    print(f"Unblocked edge: {edge_key}")
+    print_state_and_prediction(state)
+
+# --------------------------------------------------
+# 4 MAIN // cmd_demo, _status, _reset, _block, _unblock
+# --------------------------------------------------
+def main() -> None:
+    if len(sys.argv) < 2:
+        print_usage()
+        return
+
+    command = sys.argv[1].strip().lower()
+
+    if command == "demo":
+        cmd_demo()
+
+    elif command == "status":
+        cmd_status()
+
+    elif command == "reset":
+        cmd_reset()
+
+    elif command == "block":
+        if len(sys.argv) < 4:
+            print("Missing FROM and TO for block.\n")
+            print_usage()
+            return
+        cmd_block(sys.argv[2], sys.argv[3])
+
+    elif command == "unblock":
+        if len(sys.argv) < 4:
+            print("Missing FROM and TO for unblock.\n")
+            print_usage()
+            return
+        cmd_unblock(sys.argv[2], sys.argv[3])
+
+    else:
+        print(f"Unknown command: {command}\n")
+        print_usage()
+
+if __name__ == "__main__":
+    main()
+```
+
+```
+#548 test
+1 python pal_core_02_predict.py demo
+
+$ python pal_core_02_predict.py demo
+DEMO OK
+Saved state to: C:\Users\terry\Downloads\d1_agent\pal_core_predict_state.json
+
+=== BASELINE ===
+{
+  "blocked_edges": [],
+  "route_predictions": [
+    {
+      "route_id": "ROUTE_001",
+      "from": "A",
+      "to": "C",
+      "baseline_path": [
+        "A",
+        "B",
+        "C"
+      ],
+      "baseline_cost": 4,
+      "current_path": [
+        "A",
+        "B",
+        "C"
+      ],
+      "current_cost": 4,
+      "status": "ok",
+      "extra_cost": 0,
+      "rerouted": false
+    },
+    {
+      "route_id": "ROUTE_002",
+      "from": "B",
+      "to": "C",
+      "baseline_path": [
+        "B",
+        "C"
+      ],
+      "baseline_cost": 2,
+      "current_path": [
+        "B",
+        "C"
+      ],
+      "current_cost": 2,
+      "status": "ok",
+      "extra_cost": 0,
+      "rerouted": false
+    },
+    {
+      "route_id": "ROUTE_003",
+      "from": "A",
+      "to": "E",
+      "baseline_path": [
+        "A",
+        "D",
+        "E"
+      ],
+      "baseline_cost": 5,
+      "current_path": [
+        "A",
+        "D",
+        "E"
+      ],
+      "current_cost": 5,
+      "status": "ok",
+      "extra_cost": 0,
+      "rerouted": false
+    }
+  ],
+  "impacted_routes": 0,
+  "blocked_routes": 0,
+  "rerouted_routes": 0,
+  "total_extra_cost": 0,
+  "hotspots": []
+}
+
+=== APPLY DEMO BLOCK ===
+Blocked edge: B->C
+
+=== PREDICTION AFTER BLOCK ===
+{
+  "blocked_edges": [
+    "B->C"
+  ],
+  "route_predictions": [
+    {
+      "route_id": "ROUTE_001",
+      "from": "A",
+      "to": "C",
+      "baseline_path": [
+        "A",
+        "B",
+        "C"
+      ],
+      "baseline_cost": 4,
+      "current_path": [
+        "A",
+        "D",
+        "C"
+      ],
+      "current_cost": 5,
+      "status": "rerouted",
+      "extra_cost": 1,
+      "rerouted": true
+    },
+    {
+      "route_id": "ROUTE_002",
+      "from": "B",
+      "to": "C",
+      "baseline_path": [
+        "B",
+        "C"
+      ],
+      "baseline_cost": 2,
+      "current_path": [
+        "B",
+        "D",
+        "C"
+      ],
+      "current_cost": 3,
+      "status": "rerouted",
+      "extra_cost": 1,
+      "rerouted": true
+    },
+    {
+      "route_id": "ROUTE_003",
+      "from": "A",
+      "to": "E",
+      "baseline_path": [
+        "A",
+        "D",
+        "E"
+      ],
+      "baseline_cost": 5,
+      "current_path": [
+        "A",
+        "D",
+        "E"
+      ],
+      "current_cost": 5,
+      "status": "ok",
+      "extra_cost": 0,
+      "rerouted": false
+    }
+  ],
+  "impacted_routes": 2,
+  "blocked_routes": 0,
+  "rerouted_routes": 2,
+  "total_extra_cost": 2,
+  "hotspots": [
+    {
+      "node": "D",
+      "baseline_load": 1,
+      "current_load": 3,
+      "delta": 2
+    }
+  ]
+}
+(venv) 
+terry@LAPTOP-HKPDHF7M MINGW64 ~/Downloads/d1_agent (main)
+
+4 python pal_core_02_predict.py block B C
+
+$ python pal_core_02_predict.py block B C
+BLOCK OK
+Blocked edge: B->C
+=== NETWORK STATE ===
+{
+  "nodes": [
+    "A",
+    "B",
+    "C",
+    "D",
+    "E"
+  ],
+  "edges": [
+    {
+      "from": "A",
+      "to": "B",
+      "cost": 2
+    },
+    {
+      "from": "B",
+      "to": "C",
+      "cost": 2
+    },
+    {
+      "from": "A",
+      "to": "D",
+      "cost": 3
+    },
+    {
+      "from": "D",
+      "to": "C",
+      "cost": 2
+    },
+    {
+      "from": "B",
+      "to": "D",
+      "cost": 1
+    },
+    {
+      "from": "D",
+      "to": "E",
+      "cost": 2
+    },
+    {
+      "from": "E",
+      "to": "C",
+      "cost": 1
+    }
+  ],
+  "routes": [
+    {
+      "route_id": "ROUTE_001",
+      "from": "A",
+      "to": "C"
+    },
+    {
+      "route_id": "ROUTE_002",
+      "from": "B",
+      "to": "C"
+    },
+    {
+      "route_id": "ROUTE_003",
+      "from": "A",
+      "to": "E"
+    }
+  ],
+  "blocked_edges": [
+    "B->C"
+  ]
+}
+
+=== PREDICTION ===
+{
+  "blocked_edges": [
+    "B->C"
+  ],
+  "route_predictions": [
+    {
+      "route_id": "ROUTE_001",
+      "from": "A",
+      "to": "C",
+      "baseline_path": [
+        "A",
+        "B",
+        "C"
+      ],
+      "baseline_cost": 4,
+      "current_path": [
+        "A",
+        "D",
+        "C"
+      ],
+      "current_cost": 5,
+      "status": "rerouted",
+      "extra_cost": 1,
+      "rerouted": true
+    },
+    {
+      "route_id": "ROUTE_002",
+      "from": "B",
+      "to": "C",
+      "baseline_path": [
+        "B",
+        "C"
+      ],
+      "baseline_cost": 2,
+      "current_path": [
+        "B",
+        "D",
+        "C"
+      ],
+      "current_cost": 3,
+      "status": "rerouted",
+      "extra_cost": 1,
+      "rerouted": true
+    },
+    {
+      "route_id": "ROUTE_003",
+      "from": "A",
+      "to": "E",
+      "baseline_path": [
+        "A",
+        "D",
+        "E"
+      ],
+      "baseline_cost": 5,
+      "current_path": [
+        "A",
+        "D",
+        "E"
+      ],
+      "current_cost": 5,
+      "status": "ok",
+      "extra_cost": 0,
+      "rerouted": false
+    }
+  ],
+  "impacted_routes": 2,
+  "blocked_routes": 0,
+  "rerouted_routes": 2,
+  "total_extra_cost": 2,
+  "hotspots": [
+    {
+      "node": "D",
+      "baseline_load": 1,
+      "current_load": 3,
+      "delta": 2
+    }
+  ]
+}
+(venv) 
+terry@LAPTOP-HKPDHF7M MINGW64 ~/Downloads/d1_agent (main)
+
+5 python pal_core_02_predict.py unblock B C
+
+$ python pal_core_02_predict.py unblock B C
+UNBLOCK OK
+Unblocked edge: B->C
+=== NETWORK STATE ===
+{
+  "nodes": [
+    "A",
+    "B",
+    "C",
+    "D",
+    "E"
+  ],
+  "edges": [
+    {
+      "from": "A",
+      "to": "B",
+      "cost": 2
+    },
+    {
+      "from": "B",
+      "to": "C",
+      "cost": 2
+    },
+    {
+      "from": "A",
+      "to": "D",
+      "cost": 3
+    },
+    {
+      "from": "D",
+      "to": "C",
+      "cost": 2
+    },
+    {
+      "from": "B",
+      "to": "D",
+      "cost": 1
+    },
+    {
+      "from": "D",
+      "to": "E",
+      "cost": 2
+    },
+    {
+      "from": "E",
+      "to": "C",
+      "cost": 1
+    }
+  ],
+  "routes": [
+    {
+      "route_id": "ROUTE_001",
+      "from": "A",
+      "to": "C"
+    },
+    {
+      "route_id": "ROUTE_002",
+      "from": "B",
+      "to": "C"
+    },
+    {
+      "route_id": "ROUTE_003",
+      "from": "A",
+      "to": "E"
+    }
+  ],
+  "blocked_edges": []
+}
+
+=== PREDICTION ===
+{
+  "blocked_edges": [],
+  "route_predictions": [
+    {
+      "route_id": "ROUTE_001",
+      "from": "A",
+      "to": "C",
+      "baseline_path": [
+        "A",
+        "B",
+        "C"
+      ],
+      "baseline_cost": 4,
+      "current_path": [
+        "A",
+        "B",
+        "C"
+      ],
+      "current_cost": 4,
+      "status": "ok",
+      "extra_cost": 0,
+      "rerouted": false
+    },
+    {
+      "route_id": "ROUTE_002",
+      "from": "B",
+      "to": "C",
+      "baseline_path": [
+        "B",
+        "C"
+      ],
+      "baseline_cost": 2,
+      "current_path": [
+        "B",
+        "C"
+      ],
+      "current_cost": 2,
+      "status": "ok",
+      "extra_cost": 0,
+      "rerouted": false
+    },
+    {
+      "route_id": "ROUTE_003",
+      "from": "A",
+      "to": "E",
+      "baseline_path": [
+        "A",
+        "D",
+        "E"
+      ],
+      "baseline_cost": 5,
+      "current_path": [
+        "A",
+        "D",
+        "E"
+      ],
+      "current_cost": 5,
+      "status": "ok",
+      "extra_cost": 0,
+      "rerouted": false
+    }
+  ],
+  "impacted_routes": 0,
+  "blocked_routes": 0,
+  "rerouted_routes": 0,
+  "total_extra_cost": 0,
+  "hotspots": []
+}
+(venv) 
+terry@LAPTOP-HKPDHF7M MINGW64 ~/Downloads/d1_agent (main)
+```
+
+```text2
+What this demo proves
+You now have a second real PAL core capability:
+Predict consequences of disruption
+Input:
+Block B->C
+System computes:
+•	rerouted paths 
+•	increased cost 
+•	impacted routes 
+•	congestion hotspot at D 
+That is genuine decision-support behavior.
+________________________________________
+Why this demo is strong
+It shows that AI systems are not only about text.
+This is:
+•	graph reasoning 
+•	what-if simulation 
+•	operational planning 
+•	system response modeling 
+Very valuable category.
+________________________________________
+Best output line
+This one:
+"hotspots": [{"node":"D","delta":2}]
+That feels very real-world:
+A disruption elsewhere overloaded node D.
+That is exactly the kind of downstream effect people miss.
+________________________________________
+Suggested wiki framing
+pal_core_02_predict.py
+A deterministic simulation demo that predicts how network disruptions propagate through a system.
+Concepts shown
+•	dependencies 
+•	alternate paths 
+•	congestion migration 
+•	cost increase 
+•	resilience analysis 
+```
 
 <br>
 
@@ -60,7 +1818,30 @@ For details see the lab notes doc **#603\_PAL\_.docx** (PAL = Palantir) on the *
 
 <br>
 
+<img src="/assets/M-20.png" alt="drones" width="35%">
+
+<br>
+
+```text2
+Next logical step: pal_core_03_allocate.py
+Because now the story becomes:
+1.	Detect problem 
+2.	Predict impact 
+3.	Allocate resources to respond 
+That is a beautiful trilogy.
+```
+
+
+
+<br>
+
 ## **[3.4] pal_core_04 (BINGO) 26.0412 (04 graph / relationships) (see summary)**
+
+<br>
+
+<img src="/assets/M-21.png" alt="drones" width="50%">
+
+<br>
 
 <br>
 
