@@ -11,6 +11,14 @@ Simple demos are the best way to understand the core of agentic apps. For detail
 
 <!-- <img src="/assets/4_5_3x.png" alt="drones" width="70%">  -->
 
+**TOC**
+- **N1 cloud n8n / TTBO gmail 26.0408 (BINGO)**
+- **N2 n8n_local install / test (json) 26.0409 (BINGO)**
+- **N3 n8n_local (ttbo) / Gmail (jk) read many (set'd up GCP_jk) (BINGO)**
+- **N4 py script replaces n8n app (Win11/jk) (BINGO)**
+- **N5 py script adds PAL (BINGO) 26.0409**
+- **NX TODO**
+
 <br>
 
 ## **N1 cloud n8n / TTBO gmail 26.0408 (BINGO)**
