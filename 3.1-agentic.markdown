@@ -8,28 +8,30 @@ permalink: /3.1-agentic/
 
 <br>
 
-**This page will have short description for each demo with maybe a small pic in the TOC below.**
+PAL_CORE demos focus on the core deterministic functions of Palantir-style agentic systems. Unlike many AI demos, the emphasis is on traditional software control loops that perform detection, prediction, allocation, planning, and optimization. AI is added only where it provides a clear benefit.
 
-I believe these files were **named "pal_core" because they show the core deterministic functions in Palantir style non-AI agentic apps**. For details see 
+PAL_CORE demos 3.3.4, 3.3.5, 3.3.8, and 3.3.8b use OpenAI models.
+
+For details see 
 - lab notes doc **#603\_PAL\_.docx** (PAL = Palantir) on the **[Gdrive](https://drive.google.com/drive/folders/1-Adawag9uA8_bq-hDF-nOuPYaRLz1eEO)**.  
+
+<!-- I believe these files were **named "pal_core" because they show the core deterministic functions in Palantir style non-AI agentic apps**.  -->
 
 <br>
 
-**PAL_CORE demos 3.3.4, 3.3.5, 3.3.8, 3.3.8b (??) use openAI**
-
 **TOC** 
-- [3.3.1 pal_core_01.detect.py (01 events / alerts)](/3.3.1_pal_core_01_detect/) (BINGO) 26.0411 
-- [3.3.2 pal_core_02_predict.py (02 road network / prediction)](/3.3.2_pal_core_02_predict/) (BINGO) 26.0411
-- [3.3.3 pal_core_03_allocate.py (03 resources / allocation)](/3.3.3_pal_core_03_allocate/) (BINGO) 26.0411
-- [3.3.4 pal_core_04 (graph/relationships)](/3.3.4_pal_core_04_graph/) (BINGO) 26.0412 
-- [3.3.5 pal_core_05_operate.py (combine core01-04)](/3.3.5_pal_core_05_operate/) (BINGO) 26.0415-16
-- [3.3.5b bcd_pal_core_05 \#592 "LLM bcd"](/3.3.5bcd_pal_core_05/)
-- [3.3.6 3.3.6_pal_core_06_all_roles (simplest demo of all core LLM roles)](/3.3.6_pal_core_06_all_roles/) 26.0416
-- [3.3.7 pal_core_07_gmail_alerts.py (real emails as sensor stream)](/3.3.7_pal_core_07_gmail_alerts/) (BINGO) 25.0423
-- [3.3.8 pal_core_08_plan.py (natural language → plan JSON → controlled execution)](/3.3.8_pal_core_08_plan/) (BINGO) 26.0423
-- [3.3.8b pal_core_08_plan.py + LLM](/3.3.8b_pal_core_08_plan_LLM/) (BINGO) 26.0424
-- [3.3.9 pal_core_09_optimize.py (improved allocation / optimization)](/3.3.9_pal_core_09_optimize/) (BINGO) 26.0427
-- 3.3.10 (todo) pal_core_10_ui.py // dashboard / FastAPI / presentation layer 26.0427
+- **[3.3.1 pal_core_01.detect.py (01 events / alerts)](/3.3.1_pal_core_01_detect/) (BINGO) 26.0411.** Demonstrates event detection and alert generation. Serves as the simplest "sensor → detection → alert" workflow. 
+- **[3.3.2 pal_core_02_predict.py (02 road network / prediction)](/3.3.2_pal_core_02_predict/) (BINGO) 26.0411**. Demonstrates prediction using a simplified road-network model. Shows how future conditions can be estimated from current observations.
+- **[3.3.3 pal_core_03_allocate.py (03 resources / allocation)](/3.3.3_pal_core_03_allocate/) (BINGO) 26.0411**. Demonstrates deterministic resource allocation. Assigns available resources to tasks using predefined rules and priorities.
+- **[3.3.4 pal_core_04 (graph/relationships)](/3.3.4_pal_core_04_graph/) (BINGO) 26.0412**. Demonstrates relationship analysis using graph structures. Shows how entities and connections can be explored and queried. 
+- **[3.3.5 pal_core_05_operate.py (combine core01-04)](/3.3.5_pal_core_05_operate/) (BINGO) 26.0415-16**. Combines detection, prediction, allocation, and graph analysis into a single operational workflow. Represents the first complete PAL_CORE system.
+- **[3.3.5b bcd_pal_core_05 \#592 "LLM bcd"](/3.3.5bcd_pal_core_05/)**. Early experiment exploring where an LLM can assist within the PAL_CORE workflow while maintaining deterministic execution.
+- **[3.3.6 3.3.6_pal_core_06_all_roles (simplest demo of all core LLM roles)](/3.3.6_pal_core_06_all_roles/) 26.0416**. Demonstrates the major roles an LLM can play in an agentic system, including classification, extraction, summarization, planning, and explanation.
+- **[3.3.7 pal_core_07_gmail_alerts.py (real emails as sensor stream)](/3.3.7_pal_core_07_gmail_alerts/) (BINGO) 25.0423**. Uses incoming Gmail messages as a real-world event stream. Demonstrates monitoring, filtering, and alert generation using live data.
+- **[3.3.8 pal_core_08_plan.py (natural language → plan JSON → controlled execution)](/3.3.8_pal_core_08_plan/) (BINGO) 26.0423**. Converts natural-language requests into structured plans and executes them through controlled deterministic workflows.
+- **[3.3.8b pal_core_08_plan.py + LLM](/3.3.8b_pal_core_08_plan_LLM/) (BINGO) 26.0424**. Extends the planning demo by using an LLM to generate plans while retaining deterministic validation and execution.
+- **[3.3.9 pal_core_09_optimize.py (improved allocation / optimization)](/3.3.9_pal_core_09_optimize/) (BINGO) 26.0427**. Improves the allocation process by evaluating multiple possible assignments and selecting better solutions.
+- **3.3.10 (todo) pal_core_10_ui.py // dashboard / FastAPI / presentation layer 26.0427**. Planned dashboard and presentation layer. Intended to provide a FastAPI-based user interface for interacting with PAL_CORE services.
 
 <br>
 

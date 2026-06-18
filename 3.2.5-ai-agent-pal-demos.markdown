@@ -8,11 +8,8 @@ permalink: /3.2.5-ai-agent-pal-demos/
 
 <br>
 
-The PAL demos progressively build a Palantir-inspired data-intelligence platform, evolving from simple JSON analysis to cloud-hosted APIs, database-backed workflows, multi-stage analysis pipelines, advanced pattern detection, and local LLM deployment.
-
-These PAL demos all use openAI API except for 2.8 (uses Gemma).
-
-For details see the lab notes doc **#603\_PAL\_.docx** (PAL = Palantir) on the **[Gdrive](https://drive.google.com/drive/folders/1-Adawag9uA8_bq-hDF-nOuPYaRLz1eEO)**.  
+The PAL demos progressively build a Palantir-inspired data-intelligence platform, evolving from simple JSON analysis to cloud-hosted APIs, database-backed workflows, multi-stage analysis pipelines, advanced pattern detection, and local LLM deployment. These PAL demos all use openAI API except for 2.8 (uses Gemma). For details see
+- Lab notes doc **#603\_PAL\_.docx** (PAL = Palantir) on the **[Gdrive](https://drive.google.com/drive/folders/1-Adawag9uA8_bq-hDF-nOuPYaRLz1eEO)**.  
 
 <!-- <img src="/assets/4_6_2x.png" alt="drones" width="40%"> 
 <img src="/assets/4_5_3x_bbb.png" alt="drones" width="40%"> -->
@@ -20,19 +17,22 @@ For details see the lab notes doc **#603\_PAL\_.docx** (PAL = Palantir) on the *
 <br>
 
 **TOC** 
-- **[[2.1] pal v1 (BINGO) 26.0326](/3.2.1_pal_v1_first_prototype/)**
-- **[[2.2] pal v2 (BINGO) 26.0327](/3.2.2_pal_v2_improve_arch/)**
-- **[[2.3] pal v3 (BINGO) 26.0327](/3.2.3_pal_v3_more_complete/)**
-- **[[2.4] pal v4 (BINGO) 26.0328](/3.2.4_pal_v4_fastapi/)**
-- **[[2.4b] pal_v4 deploy to render (BINGO) 26.0329-30](/3.2.4b_pal_v4_render/)**
-- **[[2.5a/b] pal_v5 add mongodb/deploy render (BINGO) 26.0330](/3.2.5ab_pal_v5_mongodb_render/)**
-- **[[2.6] pal_v6 S0-S4 (BINGO) 26.0331-0401](/3.2.6_pal_v6_S0-S4_pipeline/)**	
-- **[[2.7] pal_v7 useful functions (BINGO) 26.0401](/3.2.7_pal_v7_useful_functions/)**	
-- **[[2.8] pal_v1 with local Gemma-4 (win11/gpu) 26.0411 (BINGO)](/3.2.8_pal_v1_gemma4/)**
+- **[[2.1] pal v1 (BINGO) 26.0326](/3.2.1_pal_v1_first_prototype/)**. First working PAL prototype. Demonstrated basic ingestion, querying, and LLM-assisted analysis of structured event data using JSON files.
+- **[[2.2] pal v2 (BINGO) 26.0327](/3.2.2_pal_v2_improve_arch/)**. Improved the PAL architecture and analysis workflow. Added more reliable data handling and expanded the deterministic processing pipeline.
+- **[[2.3] pal v3 (BINGO) 26.0327](/3.2.3_pal_v3_more_complete/)**. Refined the PAL concept into a more complete data-intelligence workflow. Focused on improving query, analysis, and reporting capabilities.
+- **[[2.4] pal v4 (BINGO) 26.0328](/3.2.4_pal_v4_fastapi/)**. Converted PAL into a FastAPI service with API endpoints. Demonstrated how PAL functionality could be exposed as a reusable service.
+- **[[2.4b] pal_v4 deploy to render (BINGO) 26.0329-30](/3.2.4b_pal_v4_render/)**. Deployed PAL v4 to the cloud using Render. Demonstrated remote access, API hosting, and basic production-style deployment.
+- **[[2.5a/b] pal_v5 add Mongodb/deploy Render (BINGO) 26.0330](/3.2.5ab_pal_v5_mongodb_render/)**. Added MongoDB persistence and cloud deployment. PAL moved from file-based storage to a database-backed architecture.
+- **[[2.6] pal_v6 S0-S4 (BINGO) 26.0331-0401](/3.2.6_pal_v6_S0-S4_pipeline/)**. Implemented a structured multi-stage analysis pipeline (S0-S4). Demonstrated how deterministic processing stages can be chained together for more complex workflows.	
+- **[[2.7] pal_v7 useful functions (BINGO) 26.0401](/3.2.7_pal_v7_useful_functions/)**. Added practical analysis functions such as entity history, recurring-event detection, rankings, comparisons, and pattern discovery. This version became the most useful operational PAL demo.	
+- **[[2.8] pal_v1 with local Gemma-4 (win11/gpu) 26.0411 (BINGO)](/3.2.8_pal_v1_gemma4/)**. Replaced the remote OpenAI model with a local Gemma-4 model running on Win11/GPU. Demonstrated that the PAL architecture is model-agnostic and can operate with local LLMs.
 
+<br>
 
+26.0618 (0520)
+
+<!-- 
 Add following to list above.
-
 ```text2
 [2.1] pal v1 (26.0326)
 First working PAL prototype. Demonstrated basic ingestion, querying, and LLM-assisted analysis of structured event data using JSON files.
@@ -53,14 +53,7 @@ Added practical analysis functions such as entity history, recurring-event detec
 [2.8] pal_v1 with local Gemma-4 (26.0411)
 Replaced the remote OpenAI model with a local Gemma-4 model running on Win11/GPU. Demonstrated that the PAL architecture is model-agnostic and can operate with local LLMs.
 ```
-
-<br>
-
-
-
-
-
-26.0618 (0520)
+-->
 
 
 <!--
