@@ -101,6 +101,7 @@ AI is not running the system. AI is converting language into safe machine action
 
 
 
+{% raw %}
 ```
 # pal_core_08_plan.py
 #
@@ -720,6 +721,7 @@ def main() -> None:
 if __name__ == "__main__":
     main()
 ```
+{% endraw %}
 
 ```text2
 #637 very strong... the "errors" (or "adjustments"?) were instructional.

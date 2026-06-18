@@ -58,6 +58,7 @@ Do not merge into 07.
 Make clean rung 08.
 ```
 
+{% raw %}
 ```
 # pal_core_08_plan.py
 #
@@ -559,6 +560,7 @@ def main() -> None:
 if __name__ == "__main__":
     main()
 ```
+{% endraw %}
 
 ```text2
 Recommended workflow

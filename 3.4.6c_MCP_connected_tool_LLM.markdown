@@ -79,6 +79,7 @@ if __name__ == "__main__":
 
 ### 6c.1b client py script
 
+{% raw %}
 ```
 # ai_demo_06c_mcp_llm_client.py
 # MCP exposes tools dynamically.
@@ -150,6 +151,7 @@ Return ONLY JSON in this format:
 
 asyncio.run(main())
 ```
+{% endraw %}
 ### 6c.2 Test 
 
 ```

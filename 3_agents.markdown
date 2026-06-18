@@ -7,8 +7,8 @@ permalink: /3_agents/
 <br> 
 
 Conceptual summary of agents:
-- Agent = any external (to the LLM) program that calls the LLM API. Basically plays the role of a human during chat (but can do much more).
-- AI Agent = an agent that can exploit the higher level conceptual abilities of advanced LLMs.
+- Agent = any external (to the model) program that calls a model API and uses the results to perform actions. Works for OpenAI, Gemma, Ollama, and for future non-LLM models.
+- AI Agent = an agent that combines deterministic software with the semantic capabilities of AI models.
 - AI Agents provide
   - reliable workflows built around models, tools, and automation. 
   - tolerance of AI faults and unpredictable outputs
@@ -51,41 +51,6 @@ n8n demos focus on workflow automation and orchestration. Starting with cloud an
 <!-- Or even shorter:
 
 The n8n demos focus on workflow automation, Gmail integration, and orchestration. The later demos progressively replace n8n components with custom Python and PAL code to better understand the underlying architecture. -->
-
-<br>
-
-### **[3.2 (3.2.5) PAL demos (openAI/Gemma) (docx \#603)](/3.2.5-ai-agent-pal-demos/)**
-
-<!-- Simple demos are the best way to understand agentic AI systems. -->
-
-PAL demos focus on Palantir-style data intelligence systems that combine ontologies, deterministic workflows, structured data analysis, and LLM-assisted planning. The emphasis is on reliable execution rather than autonomous AI behavior.
-
-<!-- 
-or even shorter:
-
-PAL demos focus on Palantir-style data intelligence, combining deterministic workflows, ontologies, structured outputs, and LLM-assisted planning.
-
-
-PAL (Palantir) demos focus on:
-- ontology systems
-- semantic workflows
-- deterministic execution
-- LLM-assisted planning
-- structured outputs
-- external orchestration
-
-**2) pal** 
-- [2.1] pal v1 (BINGO) 26.0326
-- [2.2] pal v2 (BINGO) 26.0327
-- [2.3] pal v3 (BINGO) 26.0327
-- [2.4] pal v4 (BINGO) 26.0328
-- [2.4b] pal_v4 deploy to render (BINGO) 26.0329-30
-- [2.5a] pal_v5 add mongodb (BINGO) 26.0330	
-- [2.5b] pal_v5 (with mongo) deploy (NEW) to Render (BINGO) 26.0330
-- [2.6] pal_v6 S0-S4 (BINGO) 26.0331-0401	
-- [2.7] pal_v7 useful functions (BINGO) 26.0401	
-- [2.8] pal_v1 with local Gemma-4 (win11/gpu) 26.0411 (BINGO)
--->
 
 <br>
 
@@ -152,6 +117,41 @@ from #603 and in pic
 - [3.8] pal_core_08_plan.py // natural language → plan JSON → controlled execution (BINGO) 26.0423	81
 - [3.9] — pal_core_09_optimize.py // improved allocation / optimization (BINGO) 26.0427	23
 - 2.6 v6 s_hard_prompts ???? 
+-->
+
+<br>
+
+### **[3.2 (3.2.5) PAL demos (openAI/Gemma) (docx \#603)](/3.2.5-ai-agent-pal-demos/)**
+
+<!-- Simple demos are the best way to understand agentic AI systems. -->
+
+PAL demos focus on Palantir-style data intelligence systems that combine ontologies, deterministic workflows, structured data analysis, and LLM-assisted planning. The emphasis is on reliable execution rather than autonomous AI behavior.
+
+<!-- 
+or even shorter:
+
+PAL demos focus on Palantir-style data intelligence, combining deterministic workflows, ontologies, structured outputs, and LLM-assisted planning.
+
+
+PAL (Palantir) demos focus on:
+- ontology systems
+- semantic workflows
+- deterministic execution
+- LLM-assisted planning
+- structured outputs
+- external orchestration
+
+**2) pal** 
+- [2.1] pal v1 (BINGO) 26.0326
+- [2.2] pal v2 (BINGO) 26.0327
+- [2.3] pal v3 (BINGO) 26.0327
+- [2.4] pal v4 (BINGO) 26.0328
+- [2.4b] pal_v4 deploy to render (BINGO) 26.0329-30
+- [2.5a] pal_v5 add mongodb (BINGO) 26.0330	
+- [2.5b] pal_v5 (with mongo) deploy (NEW) to Render (BINGO) 26.0330
+- [2.6] pal_v6 S0-S4 (BINGO) 26.0331-0401	
+- [2.7] pal_v7 useful functions (BINGO) 26.0401	
+- [2.8] pal_v1 with local Gemma-4 (win11/gpu) 26.0411 (BINGO)
 -->
 
 <br>
