@@ -8,7 +8,7 @@ permalink: /3_agents/
 
 Conceptual summary of agents:
 - Agent = any external (to the LLM) program that calls the LLM API. Basically plays the role of a human during chat (but can do much more).
-- AI Agent = an agent that can exploit the higher level abilities of LLM.
+- AI Agent = an agent that can exploit the higher level conceptual abilities of advanced LLMs.
 - AI Agents provide
   - reliable workflows built around models, tools, and automation. 
   - tolerance of AI faults and unpredictable outputs
@@ -123,7 +123,7 @@ Very basic demos that show how **deterministic agents use TF/UFA semantic capabi
 
 <br>
 
-26.0617 (0524)
+26.0618 (0524)
 
 
 <!-- *Agentic AI in ZiptieAI evolution ([about this diagram](/0.1-zai-evolution/))* <br>
