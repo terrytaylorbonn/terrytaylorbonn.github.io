@@ -38,17 +38,8 @@ For details on each project demo see
 <br>
 
 #### **TOC** *(both of the current projects were done in earl May and need an update)*
-- **3b.2 AI project 2 JobRadar** (what it does so far 26.0506)
 - **3b.1 Demo 1 n8n** (26.0501)
-
-<br>
-
-### [**3b.2 AI project 2 JobRadar** (what it does so far 26.0506)](/3.3.2-ai-proj-2-jobradar/)
-
-Ingests data from different sources and uses LLM to find matching data and summarize. The results are then sent by email, google docs, etc. Runs locally and on Cursor. Spun up in 4 days. **I did not even look at the code (not necessary). This is probably how such apps will be done in the future.**
-
-
-<img src="/assets/demo2_oauth.png" alt="drones" width="30%"> 
+- **3b.2 AI project 2 JobRadar** (what it does so far 26.0506)
 
 <br>
 
@@ -67,6 +58,23 @@ Ingests data from different sources and uses LLM to find matching data and summa
 
 - **2 Ecosystem diagram** (below) (system integration diagram) <br>
   <img src="/assets/cursor_demo1_00.png" alt="drones" width="44%"> 
+
+<br>
+
+### [**3b.2 AI project 2 JobRadar** (what it does so far 26.0506)](/3.3.2-ai-proj-2-jobradar/)
+
+#### ***I will create 1/2 functional/ecosystem diagrams in future (after app design stabilizes)***
+
+Ingests data from different sources and uses LLM to find matching data and summarize. The results are then sent by email, google docs, etc. Runs locally and on Cursor. Spun up in 4 days. **I did not even look at the code (not necessary). This is probably how such apps will be done in the future.**
+
+Single app that combines:
+1. Ingest — **Pulls jobs from Greenhouse** (configured companies), normalizes and dedupes into **MongoDB**, optional **LLM scoring** (OpenAI primary, Anthropic fallback) with a simple cost tracker.
+2. **Gmail path (CLI)** — With GMAIL_* set, the same script run ingests LinkedIn-style job alerts from a Gmail label over IMAP, parses, dedupes, scores, and writes into the same jobs collection.
+3. API (uvicorn jobradar_unified:app) — **FastAPI with Google OAuth** (session + email allowlist) protecting job routes. Exposes health, jobs (list/detail), status updates, summary, /login / /me / /logout.
+4. **Digest** (Step 7) — GET /digest/preview builds the digest text without sending. POST /digest/send emails it (SMTP to Gmail by default, or Resend via DIGEST_SENDER=resend — S7e).
+5. **Google Doc digest** (Step 7f) — POST /digest/google-doc creates a new, timestamp-titled Google Doc in Drive with the same digest body, using OAuth tokens with Docs + drive; file scopes; optional DIGEST_DRIVE_FOLDER_ID and title prefix. Config is env-driven (Mongo, LLM keys, Gmail, digest, Resend, Drive folder, Google OAuth secrets, etc.).
+
+<img src="/assets/demo2_oauth.png" alt="drones" width="38%"> 
 
 <br>
 
