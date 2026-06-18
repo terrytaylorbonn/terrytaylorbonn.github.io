@@ -2,14 +2,14 @@
 layout: page
 title: "3b Projects"
 permalink: /3.3-ai-projects/
-description: Last edit 26.0501
+description: Last edit 26.0618
 ---
 
 <!-- [← 3 Agents](/3_agents/) -->
 
 <br>
 
-This section focuses on "spinning up" **real-world demo projects** quickly with minimal code analysis or manual coding. There will be **2 customized diagrams for each demo**.
+This section is the **end goal for ZiptieAI.com**. The focus is on "spinning up" **real-world demo projects** quickly with minimal code analysis or manual coding. There will be **2 customized diagrams for each demo**.
 
 <br>
 
@@ -18,14 +18,16 @@ This section focuses on "spinning up" **real-world demo projects** quickly with 
   - "3b Project" description (goals, etc)
   - "3 External agent" functionality. Deployment details (for demo and release versions).
   - "2b Model" type (openAI, Gemma, etc) and location (remote, local WSL2, etc). Will it be fine-tuned, etc.
-  - If the model is custom made: "2 NN" (or CNN, LLM, or something else). The internal design of the NN. Deployment, training data set, HW, etc details. <br>
+  - If the model is custom made: "2 NN/CNN/TF". The internal design of the NN. Deployment, training data set, HW, etc details. <br>
   <img src="/assets/M-15-3b.png" alt="drones" width="80%">
 
 <br>
 
-- **2 Ecosystem diagram** (below) (not sure what to call this). This diagram will focus more on
-  - How all the components are interconnected, where they are located, etc.<br>
-  <img src="/assets/6_main_diagram.png" alt="drones" width="37%"> 
+- **2 Ecosystem diagram** (below) (system integration diagram). This diagram will focus more on how all the components are interconnected, where they are located, etc.
+  - Generic version<br>
+  <img src="/assets/6_main_diagram.png" alt="drones" width="37%"> <br>
+  - Specific demo version (something like this) <br>
+  <img src="/assets/M-23.png" alt="drones" width="41%"> 
 
 <br>
 
@@ -45,15 +47,26 @@ For details on each project demo see
 
 Ingests data from different sources and uses LLM to find matching data and summarize. The results are then sent by email, google docs, etc. Runs locally and on Cursor. Spun up in 4 days. **I did not even look at the code (not necessary). This is probably how such apps will be done in the future.**
 
+
 <img src="/assets/demo2_oauth.png" alt="drones" width="30%"> 
 
 <br>
 
 ### [**3b.1 Demo 1 n8n** (26.0501)](/3.3.1-ai-proj-1-n8n/)
 
-I did analyze the code and manual modify a few times.
+<br>
 
-<img src="/assets/cursor_demo1_00.png" alt="drones" width="40%"> 
+- **1 Functional diagram** (below). 
+  - Main system = n8n LOCAL for test data input.
+  - 3b Project = Input data from n8n > gpt-40-mini LOCAL > mongoDB > index.html (UI).
+  - 3 External agent = cursor_11_llm_canonical.py
+  - 2b Model = gpt-40-mini LOCAL. <br>
+  <img src="/assets/M-15-3b.1.png" alt="drones" width="40%">
+
+<br>
+
+- **2 Ecosystem diagram** (below) (system integration diagram) <br>
+  <img src="/assets/cursor_demo1_00.png" alt="drones" width="44%"> 
 
 <br>
 
