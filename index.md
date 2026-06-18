@@ -11,9 +11,15 @@ Primary site content is a **[quick start](/0-qs/)** + hands-on **[demos](/0b-dem
 
 <br>
 
-ZiptieAI.com was created in 2024 originally to document my work on Ukrainian style ziptie'd AI drones. The site now focuses on AI. It is now not only a tool to organize my thoughts and work, but also to help others learn AI hands-on ASAP.
+ZiptieAI.com was created in 2024 originally to document my work on Ukrainian style ziptie'd AI drones. The site now focuses on AI. It is now not only a tool to organize my thoughts and work, but also to help others learn AI hands-on ASAP. *Note: The page and section numbering (such as "2b Models", "3b Projects") will be fixed in the future. Not changing section numbering (often) avoids a lot of confusion.* 
 
-*Note: The page and section numbering (such as "2b Models", "3b Projects") will be fixed in the future. Not changing section numbering (often) avoids a lot of confusion.* 
+<br>
+
+ZiptieAI takes you methodically through the entire AI stack. The final goal is to create real world projects **([3b Projects](/3.3-ai-projects/))**.<br>
+
+<img src="/assets/M-15.png" alt="drones" width="74%">
+
+
 
 <br>
 
