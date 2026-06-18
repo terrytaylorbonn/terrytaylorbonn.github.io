@@ -1,0 +1,596 @@
+---
+layout: page
+title: "3.2.2 pal v2 improve arch"
+permalink: /3.2.2_pal_v2_improve_arch/
+description: "BINGO 26.0327"
+---
+
+[← 3.2.5 PAL demos](/3.2.5-ai-agent-pal-demos/)
+
+<br>
+
+## **[2.2] pal v2 (BINGO) 26.0327**
+
+```text2
+New commands:
+•	ingest 
+•	analyze 
+•	query 
+What query does:
+•	loads stored events 
+•	selects only matching events 
+•	sends only those events to the LLM for analysis 
+So this is:
+•	selective retrieval 
+•	selective analysis 
+•	still no loop 
+
+What PAL v2 demonstrates:
+- storage 
+- retrieval by exact filter 
+- selective LLM analysis over only matching data 
+```
+
+```
+# pal_v2.py
+#
+# PAL v2
+# Commands:
+#   1) ingest -> store external data
+#   2) analyze -> analyze all stored data
+#   3) query -> select matching events, then analyze only those
+#
+# Bash examples:
+#   python pal_v2.py ingest '{"entity":"truck_17","event_type":"shipment","location":"taipei","status":"delayed","note":"flat tire"}'
+#   python pal_v2.py analyze
+#   python pal_v2.py query '{"entity":"truck_17"}'
+#   python pal_v2.py query '{"status":"delayed"}'
+#   python pal_v2.py query '{"location":"taipei","status":"delayed"}'
+#
+# Requirements:
+#   pip install openai
+#   OPENAI_API_KEY in .env or environment
+
+import json
+import os
+import sys
+from pathlib import Path
+from datetime import datetime, timezone
+from typing import Any, Dict, List
+from openai import OpenAI
+
+# --------------------------------------------------
+# 2.0 ENV / API KEY
+# --------------------------------------------------
+def load_dotenv(dotenv_path: str = ".env") -> None:
+    path = Path(dotenv_path)
+    if not path.exists():
+        return
+
+    for line in path.read_text(encoding="utf-8").splitlines():
+        line = line.strip()
+        if not line or line.startswith("#") or "=" not in line or line.startswith("REM "):
+            continue
+
+        key, value = line.split("=", 1)
+        key = key.strip()
+        value = value.strip().strip('"').strip("'")
+        os.environ.setdefault(key, value)
+
+load_dotenv()
+
+api_key = os.getenv("OPENAI_API_KEY")
+if not api_key:
+    raise RuntimeError("OPENAI_API_KEY missing. Put it in .env or environment.")
+
+client = OpenAI(api_key=api_key)
+
+# --------------------------------------------------
+# 2.1 FILES / CONSTANTS
+# --------------------------------------------------
+EVENTS_FILE = Path("pal_events.json")
+
+ALLOWED_TOP_KEYS = {
+    "timestamp",
+    "entity",
+    "event_type",
+    "location",
+    "status",
+    "note",
+}
+
+REQUIRED_KEYS = {
+    "entity",
+    "event_type",
+    "location",
+    "status",
+    "note",
+}
+
+QUERYABLE_KEYS = {
+    "timestamp",
+    "entity",
+    "event_type",
+    "location",
+    "status",
+    "note",
+}
+
+ANALYSIS_SCHEMA_TEXT = """
+Return valid JSON only, with this exact top-level structure:
+
+{
+  "summary": "short text summary",
+  "abnormal_events": [
+    {
+      "entity": "string",
+      "event_type": "string",
+      "location": "string",
+      "status": "string",
+      "reason": "string"
+    }
+  ],
+  "problem_entities": ["string"],
+  "problem_locations": ["string"]
+}
+
+Rules:
+- Return valid JSON only.
+- Do not include markdown.
+- "abnormal_events" should contain events that look problematic, unusual, delayed, failed, blocked, missing, or suspicious.
+- "problem_entities" should list repeated or notable problematic entities.
+- "problem_locations" should list repeated or notable problematic locations.
+- If there are no abnormal events, return an empty list.
+"""
+
+# --------------------------------------------------
+# 2.2 HELPERS
+# --------------------------------------------------
+def utc_now_iso() -> str:
+    return datetime.now(timezone.utc).isoformat()
+
+def load_events() -> List[Dict[str, Any]]:
+    if not EVENTS_FILE.exists():
+        return []
+
+    try:
+        data = json.loads(EVENTS_FILE.read_text(encoding="utf-8"))
+        if not isinstance(data, list):
+            raise ValueError("Events file must contain a JSON list.")
+        return data
+    except Exception as e:
+        raise RuntimeError(f"Failed to load {EVENTS_FILE}: {e}")
+
+def save_events(events: List[Dict[str, Any]]) -> None:
+    EVENTS_FILE.write_text(
+        json.dumps(events, indent=2, ensure_ascii=False),
+        encoding="utf-8"
+    )
+
+def validate_event(event: Dict[str, Any]) -> List[str]:
+    errors: List[str] = []
+
+    if not isinstance(event, dict):
+        return ["Event must be a JSON object."]
+
+    for key in REQUIRED_KEYS:
+        if key not in event:
+            errors.append(f"Missing required key: '{key}'.")
+
+    for key in event.keys():
+        if key not in ALLOWED_TOP_KEYS:
+            errors.append(f"Unexpected key: '{key}'.")
+
+    for key in REQUIRED_KEYS:
+        if key in event and not isinstance(event[key], str):
+            errors.append(f"'{key}' must be a string.")
+
+    if "timestamp" in event and not isinstance(event["timestamp"], str):
+        errors.append("'timestamp' must be a string.")
+
+    return errors
+
+def normalize_event(event: Dict[str, Any]) -> Dict[str, Any]:
+    out = dict(event)
+    if "timestamp" not in out:
+        out["timestamp"] = utc_now_iso()
+    return out
+
+def validate_query_filter(query_filter: Dict[str, Any]) -> List[str]:
+    errors: List[str] = []
+
+    if not isinstance(query_filter, dict):
+        return ["Query filter must be a JSON object."]
+
+    if len(query_filter) == 0:
+        errors.append("Query filter must not be empty.")
+
+    for key, value in query_filter.items():
+        if key not in QUERYABLE_KEYS:
+            errors.append(f"Query key '{key}' is not allowed.")
+        if not isinstance(value, str):
+            errors.append(f"Query value for '{key}' must be a string.")
+
+    return errors
+
+def event_matches_filter(event: Dict[str, Any], query_filter: Dict[str, str]) -> bool:
+    for key, wanted_value in query_filter.items():
+        actual_value = event.get(key)
+        if not isinstance(actual_value, str):
+            return False
+        if actual_value.lower() != wanted_value.lower():
+            return False
+    return True
+
+def select_matching_events(
+    events: List[Dict[str, Any]],
+    query_filter: Dict[str, str]
+) -> List[Dict[str, Any]]:
+    return [event for event in events if event_matches_filter(event, query_filter)]
+
+def print_usage() -> None:
+    print(
+        "Usage:\n"
+        "  python pal_v2.py ingest '<json_event>'\n"
+        "  python pal_v2.py analyze\n"
+        "  python pal_v2.py query '<json_filter>'\n\n"
+        "Bash examples:\n"
+        '  python pal_v2.py ingest \'{"entity":"truck_17","event_type":"shipment","location":"taipei","status":"delayed","note":"flat tire"}\'\n'
+        '  python pal_v2.py query \'{"entity":"truck_17"}\'\n'
+        '  python pal_v2.py query \'{"status":"delayed"}\'\n'
+        '  python pal_v2.py query \'{"location":"taipei","status":"delayed"}\'\n'
+        "  python pal_v2.py analyze"
+    )
+
+# --------------------------------------------------
+# 2.3 COMMAND: INGEST
+# --------------------------------------------------
+def cmd_ingest(event_json_text: str) -> None:
+    try:
+        event = json.loads(event_json_text)
+    except Exception as e:
+        print("INGEST FAILED")
+        print(f"Invalid JSON input: {e}")
+        return
+
+    errors = validate_event(event)
+    if errors:
+        print("INGEST FAILED")
+        for err in errors:
+            print(f"- {err}")
+        return
+
+    event = normalize_event(event)
+
+    events = load_events()
+    events.append(event)
+    save_events(events)
+
+    print("INGEST OK")
+    print(f"Saved to: {EVENTS_FILE.resolve()}")
+    print("Event:")
+    print(json.dumps(event, indent=2, ensure_ascii=False))
+
+# --------------------------------------------------
+# 2.4 ANALYSIS
+# --------------------------------------------------
+def build_analysis_messages(
+    events: List[Dict[str, Any]],
+    context_label: str
+) -> List[Dict[str, str]]:
+    events_json = json.dumps(events, indent=2, ensure_ascii=False)
+
+    return [
+        {
+            "role": "system",
+            "content": (
+                "You are a structured data analysis model.\n\n"
+                f"{ANALYSIS_SCHEMA_TEXT}"
+            ),
+        },
+        {
+            "role": "user",
+            "content": (
+                f"Analyze the following stored events.\n"
+                f"Context: {context_label}\n\n"
+                f"{events_json}"
+            ),
+        },
+    ]
+
+def request_analysis(events: List[Dict[str, Any]], context_label: str) -> Dict[str, Any]:
+    messages = build_analysis_messages(events, context_label)
+
+    response = client.chat.completions.create(
+        model="gpt-4o-mini",
+        messages=messages,
+        response_format={"type": "json_object"},
+    )
+
+    content = response.choices[0].message.content
+    return json.loads(content)
+
+def print_events_block(title: str, events: List[Dict[str, Any]]) -> None:
+    print(title)
+    print(json.dumps(events, indent=2, ensure_ascii=False))
+
+# --------------------------------------------------
+# 2.4b COMMAND: ANALYZE ALL
+# --------------------------------------------------
+def cmd_analyze() -> None:
+    events = load_events()
+
+    if not events:
+        print("ANALYZE FAILED")
+        print("No events stored yet.")
+        return
+
+    print_events_block("=== STORED EVENTS (ALL) ===", events)
+
+    try:
+        analysis = request_analysis(events, context_label="all events")
+    except Exception as e:
+        print("ANALYZE FAILED")
+        print(str(e))
+        return
+
+    print("\n=== ANALYSIS (ALL) ===")
+    print(json.dumps(analysis, indent=2, ensure_ascii=False))
+
+# --------------------------------------------------
+# 2.5 COMMAND: QUERY
+# --------------------------------------------------
+def cmd_query(query_json_text: str) -> None:
+    try:
+        query_filter = json.loads(query_json_text)
+    except Exception as e:
+        print("QUERY FAILED")
+        print(f"Invalid JSON filter: {e}")
+        return
+
+    errors = validate_query_filter(query_filter)
+    if errors:
+        print("QUERY FAILED")
+        for err in errors:
+            print(f"- {err}")
+        return
+
+    events = load_events()
+    if not events:
+        print("QUERY FAILED")
+        print("No events stored yet.")
+        return
+
+    matching_events = select_matching_events(events, query_filter)
+
+    print("=== QUERY FILTER ===")
+    print(json.dumps(query_filter, indent=2, ensure_ascii=False))
+
+    print(f"\n=== MATCH COUNT ===\n{len(matching_events)}")
+
+    if not matching_events:
+        print("\n=== MATCHING EVENTS ===")
+        print("[]")
+        return
+
+    print_events_block("\n=== MATCHING EVENTS ===", matching_events)
+
+    context_label = f"query filter = {json.dumps(query_filter, ensure_ascii=False)}"
+
+    try:
+        analysis = request_analysis(matching_events, context_label=context_label)
+    except Exception as e:
+        print("QUERY FAILED")
+        print(str(e))
+        return
+
+    print("\n=== ANALYSIS (MATCHING EVENTS ONLY) ===")
+    print(json.dumps(analysis, indent=2, ensure_ascii=False))
+
+# --------------------------------------------------
+# 2.6 MAIN
+# --------------------------------------------------
+def main() -> None:
+    if len(sys.argv) < 2:
+        print_usage()
+        return
+
+    command = sys.argv[1].strip().lower()
+
+    if command == "ingest":
+        if len(sys.argv) < 3:
+            print("Missing JSON event for ingest.\n")
+            print_usage()
+            return
+        cmd_ingest(sys.argv[2])
+
+    elif command == "analyze":
+        cmd_analyze()
+
+    elif command == "query":
+        if len(sys.argv) < 3:
+            print("Missing JSON filter for query.\n")
+            print_usage()
+            return
+        cmd_query(sys.argv[2])
+
+    else:
+        print(f"Unknown command: {command}\n")
+        print_usage()
+
+if __name__ == "__main__":
+    main()
+
+****************************************************** 
+change events file to 2 
+# --------------------------------------------------
+# 1 FILES / CONSTANTS
+# --------------------------------------------------
+EVENTS_FILE = Path("pal_events2.json")
+
+```
+
+#### *Many more examples in docx \#603*
+
+```
+Good bash tests... ingest
+python pal_v2.py ingest '{"entity":"truck_17","event_type":"shipment","location":"taipei","status":"delayed","note":"flat tire"}'
+
+python pal_v2.py ingest '{"entity":"truck_17","event_type":"shipment","location":"taipei","status":"delayed","note":"engine issue"}'
+
+python pal_v2.py ingest '{"entity":"truck_22","event_type":"shipment","location":"kaohsiung","status":"ok","note":"arrived on time"}'
+
+python pal_v2.py ingest '{"entity":"truck_31","event_type":"shipment","location":"tainan","status":"blocked","note":"road closure"}'
+
+(venv) 
+terry@LAPTOP-HKPDHF7M MINGW64 ~/Downloads/d1_agent (main)
+$ python pal_v2.py ingest '{"entity":"truck_17","event_type":"shipment","location":"taipei","status":"delayed","note":"flat tire"}'
+INGEST OK
+Saved to: C:\Users\terry\Downloads\d1_agent\pal_events2.json
+Event:
+{
+  "entity": "truck_17",
+  "event_type": "shipment",
+  "location": "taipei",
+  "status": "delayed",
+  "note": "flat tire",
+  "timestamp": "2026-03-27T13:04:40.095404+00:00"
+}
+(venv) 
+terry@LAPTOP-HKPDHF7M MINGW64 ~/Downloads/d1_agent (main)
+$ python pal_v2.py ingest '{"entity":"truck_17","event_type":"shipment","location":"taipei","status":"delayed","note":"engine issue"}'
+INGEST OK
+Saved to: C:\Users\terry\Downloads\d1_agent\pal_events2.json
+Event:
+{
+  "entity": "truck_17",
+  "event_type": "shipment",
+  "location": "taipei",
+  "status": "delayed",
+  "note": "engine issue",
+  "timestamp": "2026-03-27T13:09:18.778733+00:00"
+}
+(venv) 
+terry@LAPTOP-HKPDHF7M MINGW64 ~/Downloads/d1_agent (main)
+$ python pal_v2.py ingest '{"entity":"truck_22","event_type":"shipment","location":"kaohsiung","status":"ok","note":"arrived on time"}'
+INGEST OK
+Saved to: C:\Users\terry\Downloads\d1_agent\pal_events2.json
+Event:
+{
+  "entity": "truck_22",
+  "event_type": "shipment",
+  "location": "kaohsiung",
+  "status": "ok",
+  "note": "arrived on time",
+  "timestamp": "2026-03-27T13:09:27.448964+00:00"
+}
+(venv) 
+terry@LAPTOP-HKPDHF7M MINGW64 ~/Downloads/d1_agent (main)
+$ python pal_v2.py ingest '{"entity":"truck_31","event_type":"shipment","location":"tainan","status":"blocked","note":"road closure"}'
+INGEST OK
+Saved to: C:\Users\terry\Downloads\d1_agent\pal_events2.json
+Event:
+{
+  "entity": "truck_31",
+  "event_type": "shipment",
+  "location": "tainan",
+  "status": "blocked",
+  "note": "road closure",
+  "timestamp": "2026-03-27T13:09:36.279725+00:00"
+}
+(venv) 
+terry@LAPTOP-HKPDHF7M MINGW64 ~/Downloads/d1_agent (main)
+
+
+
+
+Then analyze / query -------------------------
+
+ 
+python pal_v2.py analyze
+
+
+(venv) 
+terry@LAPTOP-HKPDHF7M MINGW64 ~/Downloads/d1_agent (main)
+$ python pal_v2.py analyze
+=== STORED EVENTS (ALL) ===
+[
+  {
+    "entity": "truck_17",
+    "event_type": "shipment",
+    "location": "taipei",
+    "status": "delayed",
+    "note": "flat tire",
+    "timestamp": "2026-03-27T13:04:40.095404+00:00"
+  },
+  {
+    "entity": "truck_17",
+    "event_type": "shipment",
+    "location": "taipei",
+    "status": "delayed",
+    "note": "engine issue",
+    "timestamp": "2026-03-27T13:09:18.778733+00:00"
+  },
+  {
+    "entity": "truck_22",
+    "event_type": "shipment",
+    "location": "kaohsiung",
+    "status": "ok",
+    "note": "arrived on time",
+    "timestamp": "2026-03-27T13:09:27.448964+00:00"
+  },
+  {
+    "entity": "truck_31",
+    "event_type": "shipment",
+    "location": "tainan",
+    "status": "blocked",
+    "note": "road closure",
+    "timestamp": "2026-03-27T13:09:36.279725+00:00"
+  }
+]
+
+=== ANALYSIS (ALL) ===
+{
+  "summary": "Multiple shipment events indicate delays and a blockage.",
+  "abnormal_events": [
+    {
+      "entity": "truck_17",
+      "event_type": "shipment",
+      "location": "taipei",
+      "status": "delayed",
+      "reason": "flat tire"
+    },
+    {
+      "entity": "truck_17",
+      "event_type": "shipment",
+      "location": "taipei",
+      "status": "delayed",
+      "reason": "engine issue"
+    },
+    {
+      "entity": "truck_31",
+      "event_type": "shipment",
+      "location": "tainan",
+      "status": "blocked",
+      "reason": "road closure"
+    }
+  ],
+  "problem_entities": [
+    "truck_17",
+    "truck_31"
+  ],
+  "problem_locations": [
+    "taipei",
+    "tainan"
+  ]
+}
+(venv) 
+terry@LAPTOP-HKPDHF7M MINGW64 ~/Downloads/d1_agent (main)
+$
+```
+
+<br>
+
+<br>
+
+[← Back to 3.2.5 PAL demos](/3.2.5-ai-agent-pal-demos/)

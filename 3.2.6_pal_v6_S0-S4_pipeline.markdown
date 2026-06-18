@@ -1,0 +1,55 @@
+---
+layout: page
+title: "3.2.6 pal v6 S0-S4 pipeline"
+permalink: /3.2.6_pal_v6_S0-S4_pipeline/
+description: "BINGO 26.0331-0401"
+---
+
+[← 3.2.5 PAL demos](/3.2.5-ai-agent-pal-demos/)
+
+<br>
+
+## **[2.6] pal_v6 S0-S4 (BINGO) 26.0331-0401**	
+
+#### **This was quite complex. See \#603 for details.**
+
+```text2
+- S1 ingest from local file (BINGO)
+- S2 build a richer sample dataset (BINGO)
+- S2b derived logic (BINGO)
+- S3 test harder prompts (BINGO)
+- S4 later: selective delete (BINGO)
+
+At the end ================================
+Important (keep it simple)
+
+Do NOT:
+add LLM delete yet 
+add confirmation flows yet 
+add UI yet 
+
+Just:
+delete by filter 
+verify in Mongo 
+
+________________________________________
+My opinion: You now have a clean stack:
+ingest (manual + file) 
+query + compare 
+derived metrics 
+delete (control) 
+That is already a real usable backend.
+________________________________________
+After S4
+Then go back to your real goal:
+👉 “what useful apps can this become?”
+That’s S3 → S4 → S5 (use cases)
+```
+
+
+
+<br>
+
+<br>
+
+[← Back to 3.2.5 PAL demos](/3.2.5-ai-agent-pal-demos/)

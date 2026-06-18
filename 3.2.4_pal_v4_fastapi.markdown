@@ -1,0 +1,1163 @@
+---
+layout: page
+title: "3.2.4 pal v4 fastapi"
+permalink: /3.2.4_pal_v4_fastapi/
+description: "BINGO 26.0328"
+---
+
+[← 3.2.5 PAL demos](/3.2.5-ai-agent-pal-demos/)
+
+<br>
+
+## **[2.4] pal v4 (BINGO) 26.0328** **OPENAI**
+
+```text2
+PAL v4.
+New idea:
+•	user gives a natural-language analysis request 
+•	model converts it into a plan JSON 
+•	app validates the plan 
+•	app executes multiple query / analyze / compare steps 
+•	app prints the full structured result 
+So pipeline is now: natural language → plan JSON → execute steps → final result
+Still:
+-no loop 
+-no tool APIs 
+-no autonomy 
+```
+
+```
+# pal_v4.py
+
+# PAL v4
+# Commands:
+#   1) ingest  -> store external data
+#   2) analyze -> analyze all stored data
+#   3) query   -> exact structured filter, then analyze matching events
+#   4) ask     -> natural language -> structured filter -> query -> analyze
+#   5) plan    -> natural language -> multi-step plan JSON -> execute
+#
+# Bash examples:
+#   python pal_v4.py ingest '{"entity":"truck_17","event_type":"shipment","location":"taipei","status":"delayed","note":"flat tire"}'
+#   python pal_v4.py plan "Compare delayed shipments in Taipei vs blocked shipments in Tainan"
+#   python pal_v4.py plan "Compare truck_17 with truck_22"
+#   python pal_v4.py plan "Analyze delayed events in Taipei and compare them with all events in Kaohsiung"
+#
+# Requirements:
+#   pip install openai
+#   OPENAI_API_KEY in .env or environment
+
+import json
+import os
+import sys
+from pathlib import Path
+from datetime import datetime, timezone
+from typing import Any, Dict, List
+from openai import OpenAI
+
+# --------------------------------------------------
+# 4.0 ENV / API KEY
+# --------------------------------------------------
+def load_dotenv(dotenv_path: str = ".env") -> None:
+    path = Path(dotenv_path)
+    if not path.exists():
+        return
+
+    for line in path.read_text(encoding="utf-8").splitlines():
+        line = line.strip()
+        if not line or line.startswith("#") or "=" not in line or line.startswith("REM "):
+            continue
+
+        key, value = line.split("=", 1)
+        key = key.strip()
+        value = value.strip().strip('"').strip("'")
+        os.environ.setdefault(key, value)
+
+load_dotenv()
+
+api_key = os.getenv("OPENAI_API_KEY")
+if not api_key:
+    raise RuntimeError("OPENAI_API_KEY missing. Put it in .env or environment.")
+
+client = OpenAI(api_key=api_key)
+
+# --------------------------------------------------
+# 4.1 FILES / CONSTANTS
+# --------------------------------------------------
+EVENTS_FILE = Path("pal_events.json")
+
+ALLOWED_TOP_KEYS = {
+    "timestamp",
+    "entity",
+    "event_type",
+    "location",
+    "status",
+    "note",
+}
+
+REQUIRED_KEYS = {
+    "entity",
+    "event_type",
+    "location",
+    "status",
+    "note",
+}
+
+QUERYABLE_KEYS = {
+    "timestamp",
+    "entity",
+    "event_type",
+    "location",
+    "status",
+    "note",
+}
+
+ANALYSIS_SCHEMA_TEXT = """
+Return valid JSON only, with this exact top-level structure:
+
+{
+  "summary": "short text summary",
+  "abnormal_events": [
+    {
+      "entity": "string",
+      "event_type": "string",
+      "location": "string",
+      "status": "string",
+      "reason": "string"
+    }
+  ],
+  "problem_entities": ["string"],
+  "problem_locations": ["string"]
+}
+
+Rules:
+- Return valid JSON only.
+- Do not include markdown.
+- "abnormal_events" should contain events that look problematic, unusual, delayed, failed, blocked, missing, or suspicious.
+- "problem_entities" should list repeated or notable problematic entities.
+- "problem_locations" should list repeated or notable problematic locations.
+- If there are no abnormal events, return an empty list.
+"""
+
+FILTER_SCHEMA_TEXT = """
+Return valid JSON only, with this exact top-level structure:
+
+{
+  "mode": "all" OR "filter",
+  "filter": {}
+}
+
+Rules:
+- Return valid JSON only.
+- Do not include markdown.
+- Allowed filter keys: timestamp, entity, event_type, location, status, note
+- Filter values must be strings.
+- Use mode = "all" only if the user clearly wants all events.
+- Use mode = "filter" when the user is asking about a subset.
+- The filter object may contain one or more key/value pairs.
+"""
+
+PLAN_SCHEMA_TEXT = """
+Return valid JSON only, with this exact top-level structure:
+
+{
+  "steps": [
+    {
+      "step_id": "s1",
+      "action": "query",
+      "filter_mode": "all" OR "filter",
+      "filter": {}
+    },
+    {
+      "step_id": "s2",
+      "action": "query",
+      "filter_mode": "all" OR "filter",
+      "filter": {}
+    },
+    {
+      "step_id": "s3",
+      "action": "compare",
+      "inputs": ["s1", "s2"]
+    }
+  ]
+}
+
+Rules:
+- Return valid JSON only.
+- Do not include markdown.
+- Allowed actions: "query", "compare"
+- step_id must be sequential: s1, s2, s3, ...
+- A query step must contain:
+  - step_id
+  - action = "query"
+  - filter_mode = "all" or "filter"
+  - filter = {} for all, or one/more allowed key/value pairs for filter
+- A compare step must contain:
+  - step_id
+  - action = "compare"
+  - inputs = ["prior_query_step_id_1", "prior_query_step_id_2"]
+- Allowed filter keys: timestamp, entity, event_type, location, status, note
+- Filter values must be strings
+- Use compare only when the user clearly asks for comparison between two subsets
+- If the user asks for one subset only, return one query step and no compare step
+
+Examples:
+
+User: Compare delayed shipments in Taipei vs blocked shipments in Tainan
+Return:
+{
+  "steps": [
+    {
+      "step_id": "s1",
+      "action": "query",
+      "filter_mode": "filter",
+      "filter": {"status":"delayed","location":"taipei"}
+    },
+    {
+      "step_id": "s2",
+      "action": "query",
+      "filter_mode": "filter",
+      "filter": {"status":"blocked","location":"tainan"}
+    },
+    {
+      "step_id": "s3",
+      "action": "compare",
+      "inputs": ["s1","s2"]
+    }
+  ]
+}
+
+User: Analyze truck_17
+Return:
+{
+  "steps": [
+    {
+      "step_id": "s1",
+      "action": "query",
+      "filter_mode": "filter",
+      "filter": {"entity":"truck_17"}
+    }
+  ]
+}
+"""
+
+COMPARE_SCHEMA_TEXT = """
+Return valid JSON only, with this exact top-level structure:
+
+{
+  "summary": "short comparison summary",
+  "subset_a": {
+    "label": "string",
+    "count": 0,
+    "problem_entities": ["string"],
+    "problem_locations": ["string"]
+  },
+  "subset_b": {
+    "label": "string",
+    "count": 0,
+    "problem_entities": ["string"],
+    "problem_locations": ["string"]
+  },
+  "differences": [
+    "string"
+  ]
+}
+
+Rules:
+- Return valid JSON only.
+- Do not include markdown.
+- Compare the two subsets based on event count, abnormal patterns, entities, and locations.
+- "differences" should be a short list of concrete differences.
+"""
+
+# --------------------------------------------------
+# 4.2 HELPERS
+# --------------------------------------------------
+def utc_now_iso() -> str:
+    return datetime.now(timezone.utc).isoformat()
+
+def load_events() -> List[Dict[str, Any]]:
+    if not EVENTS_FILE.exists():
+        return []
+
+    try:
+        data = json.loads(EVENTS_FILE.read_text(encoding="utf-8"))
+        if not isinstance(data, list):
+            raise ValueError("Events file must contain a JSON list.")
+        return data
+    except Exception as e:
+        raise RuntimeError(f"Failed to load {EVENTS_FILE}: {e}")
+
+def save_events(events: List[Dict[str, Any]]) -> None:
+    EVENTS_FILE.write_text(
+        json.dumps(events, indent=2, ensure_ascii=False),
+        encoding="utf-8"
+    )
+
+def validate_event(event: Dict[str, Any]) -> List[str]:
+    errors: List[str] = []
+
+    if not isinstance(event, dict):
+        return ["Event must be a JSON object."]
+
+    for key in REQUIRED_KEYS:
+        if key not in event:
+            errors.append(f"Missing required key: '{key}'.")
+
+    for key in event.keys():
+        if key not in ALLOWED_TOP_KEYS:
+            errors.append(f"Unexpected key: '{key}'.")
+
+    for key in REQUIRED_KEYS:
+        if key in event and not isinstance(event[key], str):
+            errors.append(f"'{key}' must be a string.")
+
+    if "timestamp" in event and not isinstance(event["timestamp"], str):
+        errors.append("'timestamp' must be a string.")
+
+    return errors
+
+def normalize_event(event: Dict[str, Any]) -> Dict[str, Any]:
+    out = dict(event)
+    if "timestamp" not in out:
+        out["timestamp"] = utc_now_iso()
+    return out
+
+def validate_query_filter(query_filter: Dict[str, Any], allow_empty: bool = False) -> List[str]:
+    errors: List[str] = []
+
+    if not isinstance(query_filter, dict):
+        return ["Query filter must be a JSON object."]
+
+    if not allow_empty and len(query_filter) == 0:
+        errors.append("Query filter must not be empty.")
+
+    for key, value in query_filter.items():
+        if key not in QUERYABLE_KEYS:
+            errors.append(f"Query key '{key}' is not allowed.")
+        if not isinstance(value, str):
+            errors.append(f"Query value for '{key}' must be a string.")
+
+    return errors
+
+def event_matches_filter(event: Dict[str, Any], query_filter: Dict[str, str]) -> bool:
+    for key, wanted_value in query_filter.items():
+        actual_value = event.get(key)
+        if not isinstance(actual_value, str):
+            return False
+        if actual_value.lower() != wanted_value.lower():
+            return False
+    return True
+
+def select_matching_events(events: List[Dict[str, Any]], query_filter: Dict[str, str]) -> List[Dict[str, Any]]:
+    return [event for event in events if event_matches_filter(event, query_filter)]
+
+def print_usage() -> None:
+    print(
+        "Usage:\n"
+        "  python pal_v4.py ingest '<json_event>'\n"
+        "  python pal_v4.py analyze\n"
+        "  python pal_v4.py query '<json_filter>'\n"
+        "  python pal_v4.py ask '<natural language query>'\n"
+        "  python pal_v4.py plan '<natural language analysis request>'\n\n"
+        "Bash examples:\n"
+        '  python pal_v4.py ingest \'{"entity":"truck_17","event_type":"shipment","location":"taipei","status":"delayed","note":"flat tire"}\'\n'
+        '  python pal_v4.py ask "show delayed events in taipei"\n'
+        '  python pal_v4.py plan "Compare delayed shipments in Taipei vs blocked shipments in Tainan"\n'
+        '  python pal_v4.py plan "Compare truck_17 with truck_22"\n'
+    )
+
+def print_events_block(title: str, events: List[Dict[str, Any]]) -> None:
+    print(title)
+    print(json.dumps(events, indent=2, ensure_ascii=False))
+
+# --------------------------------------------------
+# 4.3 LLM CALLS
+# --------------------------------------------------
+def build_analysis_messages(events: List[Dict[str, Any]], context_label: str) -> List[Dict[str, str]]:
+    events_json = json.dumps(events, indent=2, ensure_ascii=False)
+    return [
+        {"role": "system", "content": "You are a structured data analysis model.\n\n" + ANALYSIS_SCHEMA_TEXT},
+        {"role": "user", "content": f"Analyze the following stored events.\nContext: {context_label}\n\n{events_json}"},
+    ]
+
+def request_analysis(events: List[Dict[str, Any]], context_label: str) -> Dict[str, Any]:
+    response = client.chat.completions.create(
+        model="gpt-4o-mini",
+        messages=build_analysis_messages(events, context_label),
+        response_format={"type": "json_object"},
+    )
+    return json.loads(response.choices[0].message.content)
+
+def build_filter_messages(user_query: str) -> List[Dict[str, str]]:
+    return [
+        {"role": "system", "content": "You convert natural language queries into structured event filters.\n\n" + FILTER_SCHEMA_TEXT},
+        {"role": "user", "content": user_query},
+    ]
+
+def request_structured_filter(user_query: str) -> Dict[str, Any]:
+    response = client.chat.completions.create(
+        model="gpt-4o-mini",
+        messages=build_filter_messages(user_query),
+        response_format={"type": "json_object"},
+    )
+    return json.loads(response.choices[0].message.content)
+
+def build_plan_messages(user_request: str) -> List[Dict[str, str]]:
+    return [
+        {"role": "system", "content": "You convert natural language analysis requests into multi-step plan JSON.\n\n" + PLAN_SCHEMA_TEXT},
+        {"role": "user", "content": user_request},
+    ]
+
+def request_plan(user_request: str) -> Dict[str, Any]:
+    response = client.chat.completions.create(
+        model="gpt-4o-mini",
+        messages=build_plan_messages(user_request),
+        response_format={"type": "json_object"},
+    )
+    return json.loads(response.choices[0].message.content)
+
+def build_compare_messages(
+    user_request: str,
+    subset_a_label: str,
+    subset_a_events: List[Dict[str, Any]],
+    subset_a_analysis: Dict[str, Any],
+    subset_b_label: str,
+    subset_b_events: List[Dict[str, Any]],
+    subset_b_analysis: Dict[str, Any],
+) -> List[Dict[str, str]]:
+    payload = {
+        "user_request": user_request,
+        "subset_a": {
+            "label": subset_a_label,
+            "events": subset_a_events,
+            "analysis": subset_a_analysis,
+        },
+        "subset_b": {
+            "label": subset_b_label,
+            "events": subset_b_events,
+            "analysis": subset_b_analysis,
+        },
+    }
+    return [
+        {"role": "system", "content": "You compare two analyzed subsets of events.\n\n" + COMPARE_SCHEMA_TEXT},
+        {"role": "user", "content": json.dumps(payload, indent=2, ensure_ascii=False)},
+    ]
+
+def request_compare(
+    user_request: str,
+    subset_a_label: str,
+    subset_a_events: List[Dict[str, Any]],
+    subset_a_analysis: Dict[str, Any],
+    subset_b_label: str,
+    subset_b_events: List[Dict[str, Any]],
+    subset_b_analysis: Dict[str, Any],
+) -> Dict[str, Any]:
+    response = client.chat.completions.create(
+        model="gpt-4o-mini",
+        messages=build_compare_messages(
+            user_request,
+            subset_a_label, subset_a_events, subset_a_analysis,
+            subset_b_label, subset_b_events, subset_b_analysis,
+        ),
+        response_format={"type": "json_object"},
+    )
+    return json.loads(response.choices[0].message.content)
+
+# --------------------------------------------------
+# 4.4 VALIDATORS
+# --------------------------------------------------
+def validate_filter_request(obj: Dict[str, Any]) -> List[str]:
+    errors: List[str] = []
+
+    if not isinstance(obj, dict):
+        return ["Filter request must be a JSON object."]
+
+    if "mode" not in obj:
+        errors.append("Missing required key: 'mode'.")
+    if "filter" not in obj:
+        errors.append("Missing required key: 'filter'.")
+
+    mode = obj.get("mode")
+    filter_obj = obj.get("filter")
+
+    if mode not in {"all", "filter"}:
+        errors.append("mode must be 'all' or 'filter'.")
+
+    if not isinstance(filter_obj, dict):
+        errors.append("filter must be a JSON object.")
+    else:
+        for key, value in filter_obj.items():
+            if key not in QUERYABLE_KEYS:
+                errors.append(f"Filter key '{key}' is not allowed.")
+            if not isinstance(value, str):
+                errors.append(f"Filter value for '{key}' must be a string.")
+
+    if mode == "filter" and isinstance(filter_obj, dict) and len(filter_obj) == 0:
+        errors.append("filter must not be empty when mode='filter'.")
+
+    if mode == "all" and isinstance(filter_obj, dict) and len(filter_obj) != 0:
+        errors.append("filter must be empty when mode='all'.")
+
+    return errors
+
+def validate_plan(plan: Dict[str, Any]) -> List[str]:
+    errors: List[str] = []
+
+    if not isinstance(plan, dict):
+        return ["Plan must be a JSON object."]
+
+    steps = plan.get("steps")
+    if not isinstance(steps, list) or len(steps) == 0:
+        return ["Plan must contain non-empty 'steps' list."]
+
+    seen_step_ids = set()
+    prior_query_steps = []
+
+    for idx, step in enumerate(steps, start=1):
+        expected_id = f"s{idx}"
+        if not isinstance(step, dict):
+            errors.append(f"steps[{idx-1}] must be an object.")
+            continue
+
+        step_id = step.get("step_id")
+        action = step.get("action")
+
+        if step_id != expected_id:
+            errors.append(f"steps[{idx-1}].step_id must be '{expected_id}'.")
+        if step_id in seen_step_ids:
+            errors.append(f"Duplicate step_id '{step_id}'.")
+        if isinstance(step_id, str):
+            seen_step_ids.add(step_id)
+
+        if action not in {"query", "compare"}:
+            errors.append(f"steps[{idx-1}].action must be 'query' or 'compare'.")
+            continue
+
+        if action == "query":
+            filter_mode = step.get("filter_mode")
+            filter_obj = step.get("filter")
+
+            if filter_mode not in {"all", "filter"}:
+                errors.append(f"{step_id}.filter_mode must be 'all' or 'filter'.")
+            if not isinstance(filter_obj, dict):
+                errors.append(f"{step_id}.filter must be a JSON object.")
+            else:
+                if filter_mode == "all" and len(filter_obj) != 0:
+                    errors.append(f"{step_id}.filter must be empty when filter_mode='all'.")
+                if filter_mode == "filter" and len(filter_obj) == 0:
+                    errors.append(f"{step_id}.filter must not be empty when filter_mode='filter'.")
+                errors.extend([f"{step_id}: {e}" for e in validate_query_filter(filter_obj, allow_empty=True)])
+
+            prior_query_steps.append(step_id)
+
+        if action == "compare":
+            inputs = step.get("inputs")
+            if not isinstance(inputs, list) or len(inputs) != 2:
+                errors.append(f"{step_id}.inputs must be a list of two query step ids.")
+            else:
+                for ref in inputs:
+                    if not isinstance(ref, str):
+                        errors.append(f"{step_id}.inputs must contain strings only.")
+                    elif ref not in prior_query_steps:
+                        errors.append(f"{step_id}.inputs contains invalid or non-prior query step id '{ref}'.")
+
+    return errors
+
+# --------------------------------------------------
+# 4.5 CORE EXECUTION HELPERS
+# --------------------------------------------------
+def run_query_filter_core(events: List[Dict[str, Any]], query_filter: Dict[str, str]) -> List[Dict[str, Any]]:
+    return select_matching_events(events, query_filter)
+
+def run_query_step(events: List[Dict[str, Any]], filter_mode: str, filter_obj: Dict[str, str]) -> List[Dict[str, Any]]:
+    if filter_mode == "all":
+        return list(events)
+    return run_query_filter_core(events, filter_obj)
+
+# --------------------------------------------------
+# 4.6 COMMANDS (cmg_ingest,cmd_analyze,run_query_filter,cmd_query,cmd_ask,cmd_plan)
+# --------------------------------------------------
+def cmd_ingest(event_json_text: str) -> None:
+    try:
+        event = json.loads(event_json_text)
+    except Exception as e:
+        print("INGEST FAILED")
+        print(f"Invalid JSON input: {e}")
+        return
+
+    errors = validate_event(event)
+    if errors:
+        print("INGEST FAILED")
+        for err in errors:
+            print(f"- {err}")
+        return
+
+    event = normalize_event(event)
+
+    events = load_events()
+    events.append(event)
+    save_events(events)
+
+    print("INGEST OK")
+    print(f"Saved to: {EVENTS_FILE.resolve()}")
+    print("Event:")
+    print(json.dumps(event, indent=2, ensure_ascii=False))
+
+def cmd_analyze() -> None:
+    events = load_events()
+    if not events:
+        print("ANALYZE FAILED")
+        print("No events stored yet.")
+        return
+
+    print_events_block("=== STORED EVENTS (ALL) ===", events)
+
+    try:
+        analysis = request_analysis(events, context_label="all events")
+    except Exception as e:
+        print("ANALYZE FAILED")
+        print(str(e))
+        return
+
+    print("\n=== ANALYSIS (ALL) ===")
+    print(json.dumps(analysis, indent=2, ensure_ascii=False))
+
+def run_query_filter(query_filter: Dict[str, str]) -> None:
+    errors = validate_query_filter(query_filter)
+    if errors:
+        print("QUERY FAILED")
+        for err in errors:
+            print(f"- {err}")
+        return
+
+    events = load_events()
+    if not events:
+        print("QUERY FAILED")
+        print("No events stored yet.")
+        return
+
+    matching_events = run_query_filter_core(events, query_filter)
+
+    print("=== QUERY FILTER ===")
+    print(json.dumps(query_filter, indent=2, ensure_ascii=False))
+    print(f"\n=== MATCH COUNT ===\n{len(matching_events)}")
+
+    if not matching_events:
+        print("\n=== MATCHING EVENTS ===")
+        print("[]")
+        return
+
+    print_events_block("\n=== MATCHING EVENTS ===", matching_events)
+
+    try:
+        analysis = request_analysis(matching_events, context_label=f"query filter = {json.dumps(query_filter, ensure_ascii=False)}")
+    except Exception as e:
+        print("QUERY FAILED")
+        print(str(e))
+        return
+
+    print("\n=== ANALYSIS (MATCHING EVENTS ONLY) ===")
+    print(json.dumps(analysis, indent=2, ensure_ascii=False))
+
+def cmd_query(query_json_text: str) -> None:
+    try:
+        query_filter = json.loads(query_json_text)
+    except Exception as e:
+        print("QUERY FAILED")
+        print(f"Invalid JSON filter: {e}")
+        return
+    run_query_filter(query_filter)
+
+def cmd_ask(user_query: str) -> None:
+    events = load_events()
+    if not events:
+        print("ASK FAILED")
+        print("No events stored yet.")
+        return
+
+    print("=== NATURAL LANGUAGE QUERY ===")
+    print(user_query)
+
+    try:
+        filter_request = request_structured_filter(user_query)
+    except Exception as e:
+        print("ASK FAILED")
+        print(f"Filter generation failed: {e}")
+        return
+
+    print("\n=== GENERATED FILTER REQUEST ===")
+    print(json.dumps(filter_request, indent=2, ensure_ascii=False))
+
+    errors = validate_filter_request(filter_request)
+    if errors:
+        print("\nASK FAILED")
+        for err in errors:
+            print(f"- {err}")
+        return
+
+    mode = filter_request["mode"]
+    filter_obj = filter_request["filter"]
+
+    print("\n=== MODE ===")
+    print(mode)
+
+    if mode == "all":
+        cmd_analyze()
+    else:
+        run_query_filter(filter_obj)
+
+def cmd_plan(user_request: str) -> None: 
+    events = load_events()
+    if not events:
+        print("PLAN FAILED")
+        print("No events stored yet.")
+        return
+
+    print("=== NATURAL LANGUAGE ANALYSIS REQUEST ===")
+    print(user_request)
+
+    try:
+        plan = request_plan(user_request)
+    except Exception as e:
+        print("PLAN FAILED")
+        print(f"Plan generation failed: {e}")
+        return
+
+    print("\n=== GENERATED PLAN ===")
+    print(json.dumps(plan, indent=2, ensure_ascii=False))
+
+    errors = validate_plan(plan)
+    if errors:
+        print("\nPLAN FAILED")
+        for err in errors:
+            print(f"- {err}")
+        return
+
+    step_outputs: Dict[str, Dict[str, Any]] = {}
+
+    for step in plan["steps"]:
+        step_id = step["step_id"]
+        action = step["action"]
+
+        print(f"\n=== EXECUTING {step_id} ({action}) ===")
+
+        if action == "query":
+            filter_mode = step["filter_mode"]
+            filter_obj = step["filter"]
+            matched = run_query_step(events, filter_mode, filter_obj)
+
+            print(f"filter_mode: {filter_mode}")
+            print("filter:")
+            print(json.dumps(filter_obj, indent=2, ensure_ascii=False))
+            print(f"match_count: {len(matched)}")
+            print("matched_events:")
+            print(json.dumps(matched, indent=2, ensure_ascii=False))
+
+            analysis = request_analysis(
+                matched,
+                context_label=f"plan step {step_id}, filter_mode={filter_mode}, filter={json.dumps(filter_obj, ensure_ascii=False)}"
+            ) if matched else {
+                "summary": "No matching events.",
+                "abnormal_events": [],
+                "problem_entities": [],
+                "problem_locations": []
+            }
+
+            print("analysis:")
+            print(json.dumps(analysis, indent=2, ensure_ascii=False))
+
+            step_outputs[step_id] = {
+                "action": "query",
+                "filter_mode": filter_mode,
+                "filter": filter_obj,
+                "events": matched,
+                "analysis": analysis,
+            }
+
+        elif action == "compare":
+            s_a, s_b = step["inputs"]
+            out_a = step_outputs[s_a]
+            out_b = step_outputs[s_b]
+
+            label_a = f"{s_a}:{json.dumps(out_a['filter'], ensure_ascii=False)}" if out_a["filter_mode"] == "filter" else f"{s_a}:all"
+            label_b = f"{s_b}:{json.dumps(out_b['filter'], ensure_ascii=False)}" if out_b["filter_mode"] == "filter" else f"{s_b}:all"
+
+            comparison = request_compare(
+                user_request=user_request,
+                subset_a_label=label_a,
+                subset_a_events=out_a["events"],
+                subset_a_analysis=out_a["analysis"],
+                subset_b_label=label_b,
+                subset_b_events=out_b["events"],
+                subset_b_analysis=out_b["analysis"],
+            )
+
+            print("compare_inputs:")
+            print(json.dumps(step["inputs"], indent=2, ensure_ascii=False))
+            print("comparison:")
+            print(json.dumps(comparison, indent=2, ensure_ascii=False))
+
+            step_outputs[step_id] = {
+                "action": "compare",
+                "inputs": step["inputs"],
+                "comparison": comparison,
+            }
+
+    print("\n=== FINAL STEP OUTPUTS ===")
+    print(json.dumps(step_outputs, indent=2, ensure_ascii=False))
+
+# --------------------------------------------------
+# 4.7 MAIN (cmd_ingest,  cmd_analyze,  cmd_query, cmd_ask, cmd_plan)
+# --------------------------------------------------
+def main() -> None:
+    if len(sys.argv) < 2:
+        print_usage()
+        return
+
+    command = sys.argv[1].strip().lower()
+
+    if command == "ingest":
+        if len(sys.argv) < 3:
+            print("Missing JSON event for ingest.\n")
+            print_usage()
+            return
+        cmd_ingest(sys.argv[2])
+
+    elif command == "analyze":
+        cmd_analyze()
+
+    elif command == "query":
+        if len(sys.argv) < 3:
+            print("Missing JSON filter for query.\n")
+            print_usage()
+            return
+        cmd_query(sys.argv[2])
+
+    elif command == "ask":
+        if len(sys.argv) < 3:
+            print("Missing natural language query for ask.\n")
+            print_usage()
+            return
+        cmd_ask(sys.argv[2])
+
+    elif command == "plan":
+        if len(sys.argv) < 3:
+            print("Missing natural language analysis request for plan.\n")
+            print_usage()
+            return
+        cmd_plan(sys.argv[2])
+
+    else:
+        print(f"Unknown command: {command}\n")
+        print_usage()
+
+if __name__ == "__main__":
+    main()
+```
+
+#### **see docx \#603 for more examples**
+
+```
+python pal_v4.py plan "Compare delayed shipments in Taipei vs blocked shipments in Tainan"
+
+terry@LAPTOP-HKPDHF7M MINGW64 ~/Downloads/d1_agent (main)
+$ python pal_v4.py plan "Compare delayed shipments in Taipei vs blocked shipments in Tainan"
+=== NATURAL LANGUAGE ANALYSIS REQUEST ===
+Compare delayed shipments in Taipei vs blocked shipments in Tainan
+
+=== GENERATED PLAN ===
+{
+  "steps": [
+    {
+      "step_id": "s1",
+      "action": "query",
+      "filter_mode": "filter",
+      "filter": {
+        "status": "delayed",
+        "location": "taipei"
+      }
+    },
+    {
+      "step_id": "s2",
+      "action": "query",
+      "filter_mode": "filter",
+      "filter": {
+        "status": "blocked",
+        "location": "tainan"
+      }
+    },
+    {
+      "step_id": "s3",
+      "action": "compare",
+      "inputs": [
+        "s1",
+        "s2"
+      ]
+    }
+  ]
+}
+
+=== EXECUTING s1 (query) ===
+filter_mode: filter
+filter:
+{
+  "status": "delayed",
+  "location": "taipei"
+}
+match_count: 2
+matched_events:
+[
+  {
+    "entity": "truck_17",
+    "event_type": "shipment",
+    "location": "taipei",
+    "status": "delayed",
+    "note": "flat tire",
+    "timestamp": "2026-03-27T13:04:40.095404+00:00"
+  },
+  {
+    "entity": "truck_17",
+    "event_type": "shipment",
+    "location": "taipei",
+    "status": "delayed",
+    "note": "engine issue",
+    "timestamp": "2026-03-27T13:09:18.778733+00:00"
+  }
+]
+analysis:
+{
+  "summary": "Two delayed shipment events reported for truck_17 in Taipei due to mechanical issues.",
+  "abnormal_events": [
+    {
+      "entity": "truck_17",
+      "event_type": "shipment",
+      "location": "taipei",
+      "status": "delayed",
+      "reason": "flat tire"
+    },
+    {
+      "entity": "truck_17",
+      "event_type": "shipment",
+      "location": "taipei",
+      "status": "delayed",
+      "reason": "engine issue"
+    }
+  ],
+  "problem_entities": [
+    "truck_17"
+  ],
+  "problem_locations": [
+    "taipei"
+  ]
+}
+
+=== EXECUTING s2 (query) ===
+filter_mode: filter
+filter:
+{
+  "status": "blocked",
+  "location": "tainan"
+}
+match_count: 1
+matched_events:
+[
+  {
+    "entity": "truck_31",
+    "event_type": "shipment",
+    "location": "tainan",
+    "status": "blocked",
+    "note": "road closure",
+    "timestamp": "2026-03-27T13:09:36.279725+00:00"
+  }
+]
+analysis:
+{
+  "summary": "Shipment blocked due to road closure in Tainan.",
+  "abnormal_events": [
+    {
+      "entity": "truck_31",
+      "event_type": "shipment",
+      "location": "tainan",
+      "status": "blocked",
+      "reason": "road closure"
+    }
+  ],
+  "problem_entities": [
+    "truck_31"
+  ],
+  "problem_locations": [
+    "tainan"
+  ]
+}
+
+=== EXECUTING s3 (compare) ===
+compare_inputs:
+[
+  "s1",
+  "s2"
+]
+comparison:
+{
+  "summary": "The subset of delayed shipments in Taipei reports two events involving one truck with mechanical issues, while the subset of blocked shipments in Tainan reports a single event due to a road closure.",
+  "subset_a": {
+    "label": "s1:{\"status\": \"delayed\", \"location\": \"taipei\"}",
+    "count": 2,
+    "problem_entities": [
+      "truck_17"
+    ],
+    "problem_locations": [
+      "taipei"
+    ]
+  },
+  "subset_b": {
+    "label": "s2:{\"status\": \"blocked\", \"location\": \"tainan\"}",
+    "count": 1,
+    "problem_entities": [
+      "truck_31"
+    ],
+    "problem_locations": [
+      "tainan"
+    ]
+  },
+  "differences": [
+    "Subset A has 2 events, while Subset B has 1 event.",
+    "Subset A's events are classified as delayed, whereas Subset B's event is blocked.",        
+    "Different entities involved: truck_17 in Taipei vs truck_31 in Tainan."
+  ]
+}
+
+=== FINAL STEP OUTPUTS ===
+{
+  "s1": {
+    "action": "query",
+    "filter_mode": "filter",
+    "filter": {
+      "status": "delayed",
+      "location": "taipei"
+    },
+    "events": [
+      {
+        "entity": "truck_17",
+        "event_type": "shipment",
+        "location": "taipei",
+        "status": "delayed",
+        "note": "flat tire",
+        "timestamp": "2026-03-27T13:04:40.095404+00:00"
+      },
+      {
+        "entity": "truck_17",
+        "event_type": "shipment",
+        "location": "taipei",
+        "status": "delayed",
+        "note": "engine issue",
+        "timestamp": "2026-03-27T13:09:18.778733+00:00"
+      }
+    ],
+    "analysis": {
+      "summary": "Two delayed shipment events reported for truck_17 in Taipei due to mechanical issues.",
+      "abnormal_events": [
+        {
+          "entity": "truck_17",
+          "event_type": "shipment",
+          "location": "taipei",
+          "status": "delayed",
+          "reason": "flat tire"
+        },
+        {
+          "entity": "truck_17",
+          "event_type": "shipment",
+          "location": "taipei",
+          "status": "delayed",
+          "reason": "engine issue"
+        }
+      ],
+      "problem_entities": [
+        "truck_17"
+      ],
+      "problem_locations": [
+        "taipei"
+      ]
+    }
+  },
+  "s2": {
+    "action": "query",
+    "filter_mode": "filter",
+    "filter": {
+      "status": "blocked",
+      "location": "tainan"
+    },
+    "events": [
+      {
+        "entity": "truck_31",
+        "event_type": "shipment",
+        "location": "tainan",
+        "status": "blocked",
+        "note": "road closure",
+        "timestamp": "2026-03-27T13:09:36.279725+00:00"
+      }
+    ],
+    "analysis": {
+      "summary": "Shipment blocked due to road closure in Tainan.",
+      "abnormal_events": [
+        {
+          "entity": "truck_31",
+          "event_type": "shipment",
+          "location": "tainan",
+          "status": "blocked",
+          "reason": "road closure"
+        }
+      ],
+      "problem_entities": [
+        "truck_31"
+      ],
+      "problem_locations": [
+        "tainan"
+      ]
+    }
+  },
+  "s3": {
+    "action": "compare",
+    "inputs": [
+      "s1",
+      "s2"
+    ],
+    "comparison": {
+      "summary": "The subset of delayed shipments in Taipei reports two events involving one truck with mechanical issues, while the subset of blocked shipments in Tainan reports a single event due to a road closure.",
+      "subset_a": {
+        "label": "s1:{\"status\": \"delayed\", \"location\": \"taipei\"}",
+        "count": 2,
+        "problem_entities": [
+          "truck_17"
+        ],
+        "problem_locations": [
+          "taipei"
+        ]
+      },
+      "subset_b": {
+        "label": "s2:{\"status\": \"blocked\", \"location\": \"tainan\"}",
+        "count": 1,
+        "problem_entities": [
+          "truck_31"
+        ],
+        "problem_locations": [
+          "tainan"
+        ]
+      },
+      "differences": [
+        "Subset A has 2 events, while Subset B has 1 event.",
+        "Subset A's events are classified as delayed, whereas Subset B's event is blocked.",    
+        "Different entities involved: truck_17 in Taipei vs truck_31 in Tainan."
+      ]
+    }
+  }
+}
+(venv)
+terry@LAPTOP-HKPDHF7M MINGW64 ~/Downloads/d1_agent (main)
+```
+
+<br>
+
+<br>
+
+[← Back to 3.2.5 PAL demos](/3.2.5-ai-agent-pal-demos/)

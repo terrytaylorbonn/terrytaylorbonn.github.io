@@ -1,0 +1,37 @@
+---
+layout: page
+title: "3.2.7 pal v7 useful functions"
+permalink: /3.2.7_pal_v7_useful_functions/
+description: "BINGO 26.0401"
+---
+
+[← 3.2.5 PAL demos](/3.2.5-ai-agent-pal-demos/)
+
+<br>
+
+## **[2.7] pal_v7 useful functions (BINGO) 26.0401**	
+
+#### **This was quite complex. See \#603 for details.**
+
+- PAL_v7a = deterministic priority ranking (BINGO)
+- PAL_v7b = entity history (BINGO)
+- PAL_v7c = compare (BINGO)
+- PAL_v7d = evidence-first LLM summary (TODO)
+
+
+```text2
+S5 = useful app patterns / demo ideas
+Because now you already have:
+•	ingest 
+•	file ingest 
+•	query/compare 
+•	derived metrics 
+•	delete 
+That is enough backend.
+```
+
+<br>
+
+<br>
+
+[← Back to 3.2.5 PAL demos](/3.2.5-ai-agent-pal-demos/)

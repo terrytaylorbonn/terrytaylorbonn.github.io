@@ -1,0 +1,52 @@
+---
+layout: page
+title: "3.2.5ab pal v5 mongodb render"
+permalink: /3.2.5ab_pal_v5_mongodb_render/
+description: "BINGO 26.0330"
+---
+
+[← 3.2.5 PAL demos](/3.2.5-ai-agent-pal-demos/)
+
+<br>
+
+## **[2.5a/b] pal_v5 add mongodb/deploy render (BINGO) 26.0330**
+
+See docx \#603 for code. 
+
+```
+3 Then test: (BINGO)
+
+curl -X POST https://six02-2-d1-tool-llm.onrender.com/ingest \
+  -H "Content-Type: application/json" \
+  -H "x-api-key: SxBx" \
+  -d '{"entity":"truck_88","event_type":"shipment","location":"taipei","status":"delayed","note":"render test"}'
+
+$ curl -X POST https://six02-2-d1-tool-llm.onrender.com/ingest \
+  -H "Content-Type: application/json" \
+  -H "x-api-key: SxBx " \
+  -d '{"entity":"truck_88","event_type":"shipment","location":"taipei","status":"delayed","note":"render test"}'
+{"ok":true,"event":{"entity":"truck_88","event_type":"shipment","location":"taipei","status":"delayed","note":"render test","timestamp":"2026-03-31T03:24:08.937846+00:00"}}(venv) 
+terry@LAPTOP-HKPDHF7M MINGW64 ~/Downloads/d1_agent (main)
+
+ 
+
+and:
+
+curl -X POST https://six02-2-d1-tool-llm.onrender.com/run \
+  -H "Content-Type: application/json" \
+  -H "x-api-key: SxBx " \
+  -d '{"prompt":"Analyze truck_88"}'
+
+$ curl -X POST https://six02-2-d1-tool-llm.onrender.com/run \
+  -H "Content-Type: application/json" \
+  -H "x-api-key: SxBx " \
+  -d '{"prompt":"Analyze truck_88"}'
+{"ok":true,"result":{"s1":{"action":"query","filter_mode":"filter","filter":{"entity":"truck_88"},"events":[{"entity":"truck_88","event_type":"shipment","location":"taipei","status":"delayed","note":"render test","timestamp":"2026-03-31T03:24:08.937846+00:00"}],"analysis":{"summary":"Truck 88 experienced a delayed shipment in Taipei.","abnormal_events":[{"entity":"truck_88","event_type":"shipment","location":"taipei","status":"delayed","reason":"render test"}],"problem_entities":["truck_88"],"problem_locations":["taipei"]}}}}(venv) 
+terry@LAPTOP-HKPDHF7M MINGW64 ~/Downloads/d1_agent (main)
+```
+
+<br>
+
+<br>
+
+[← Back to 3.2.5 PAL demos](/3.2.5-ai-agent-pal-demos/)
