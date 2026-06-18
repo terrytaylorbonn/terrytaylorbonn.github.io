@@ -2,6 +2,7 @@
 layout: page
 title: "2 AI (models)"
 permalink: /2_modelsxxx/
+published: false
 ---
 
 <br> 

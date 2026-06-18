@@ -2,6 +2,7 @@
 layout: page
 title: TL;DR
 permalink: /0-tldrxxxx/
+published: false
 ---
 
 <br>

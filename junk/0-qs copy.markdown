@@ -2,6 +2,7 @@
 layout: page
 title: QS
 permalink: /0-qs/
+published: false
 ---
 
 <br>

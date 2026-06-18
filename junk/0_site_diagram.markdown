@@ -2,6 +2,7 @@
 layout: page
 title: "Site diagram"
 permalink: /site_diagram/
+published: false
 ---
 
 <br>

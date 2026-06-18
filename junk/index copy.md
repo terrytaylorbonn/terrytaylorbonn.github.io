@@ -1,3 +1,7 @@
+---
+published: false
+---
+
 ZiptieAI is my intelligent AI drone project. There are 4 main URLs:
 
 - **[Wiki](https://github.com/terrytaylorbonn/auxdrone/wiki)**. The first place to look for udpated project info.

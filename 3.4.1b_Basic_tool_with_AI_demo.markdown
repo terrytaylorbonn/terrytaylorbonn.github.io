@@ -1,0 +1,224 @@
+---
+layout: page
+title: "3.4.1b Basic tool with AI demo"
+permalink: /3.4.1b_Basic_tool_with_AI_demo/
+---
+
+<!-- [← 3.2 Agents + AI](/3.2-agentic-ai/) -->
+[← 3.4 Agentic TF semantic demos](/3.2.4-ai-agent-basic-demos/)
+
+<br>
+
+## 1b Basic tool (with AI) demo 
+
+This is actually the first demo where TF/UFA semantic capabilities directly enable external deterministic execution.
+
+<img src="/assets/calc1b.png" alt="drones" width="65%"> 
+
+
+
+### 1b.1 py script
+
+```
+# ai_demo_01b_tool_openai.py
+# Basic OpenAI tool-calling style demo
+import json
+import os
+from dotenv import load_dotenv
+from openai import OpenAI
+
+# -----------------------------------
+# Load API key
+# -----------------------------------
+
+load_dotenv()
+client = OpenAI(
+    api_key=os.getenv("OPENAI_API_KEY")
+)
+
+# -----------------------------------
+# Tool implementation
+# -----------------------------------
+
+def calculator(operation, a, b):
+    if operation == "add":
+        return a + b
+    if operation == "subtract":
+        return a - b
+    if operation == "multiply":
+        return a * b
+    if operation == "divide":
+        return a / b
+    raise ValueError(f"Unknown operation: {operation}")
+
+# -----------------------------------
+# Prompt
+# -----------------------------------
+
+user_prompt = "What is 11 multiplied by 6?"
+
+system_prompt = """
+You are an AI agent.
+Return ONLY JSON.
+Valid format:
+{
+  "tool": "calculator",
+  "operation": "multiply",
+  "a": 12,
+  "b": 7
+}
+"""
+
+# -----------------------------------
+# Call OpenAI (REAL LLM OUTPUT)
+# -----------------------------------
+
+response = client.chat.completions.create(
+    model="gpt-4.1-mini",
+    messages=[
+        {"role": "system", "content": system_prompt},
+        {"role": "user", "content": user_prompt}
+    ],
+    temperature=0
+)
+llm_output = response.choices[0].message.content
+print("\nLLM OUTPUT:")
+print(llm_output)
+
+# -----------------------------------
+# Parse JSON
+# -----------------------------------
+
+action = json.loads(llm_output)
+
+# -----------------------------------
+# External agent executes tool 
+# -----------------------------------
+
+if action["tool"] == "calculator":
+
+    result = calculator(
+        action["operation"],
+        action["a"],
+        action["b"]
+    )
+
+    final_result = {
+        "tool": action["tool"],
+        "operation": action["operation"],
+        "result": result
+    }
+
+    print("\nCODE EXECUTED:")
+    print(json.dumps(final_result, indent=2))
+```
+
+### 1b.2 Test
+
+```
+system_prompt = """
+You are an AI agent.
+Return ONLY JSON.
+Valid format:
+{
+  "tool": "calculator",
+  "operation": "multiply",
+  "a": 12,
+  "b": 7
+}
+"""
+```
+
+#### user_prompt = "What is 11 multiplied by 6?"
+
+```
+python ai_demo_01b_tool_openai.py 
+LLM OUTPUT:
+{
+  "tool": "calculator",
+  "operation": "multiply",
+  "a": 11,
+  "b": 6
+}
+CODE EXECUTED:
+{
+  "tool": "calculator",
+  "operation": "multiply",
+  "result": 66
+}
+```
+
+#### user_prompt = "What is 5 plus 3?"
+
+```
+python ai_demo_01b_tool_openai.py
+LLM OUTPUT:
+{
+  "tool": "calculator",
+  "operation": "add",
+  "a": 5,
+  "b": 3
+}
+CODE EXECUTED:
+{
+  "tool": "calculator",
+  "operation": "add",
+  "result": 8
+}
+```
+
+### 1b.3 MOST important TF/UFA capabilities are:
+
+#### @8 Semantic interpretation / inference
+The TF must understand:
+"What is 12 multiplied by 7?"
+That is semantic interpretation.
+
+But it also understood 
+"What is 5 plus 3?"
+with the same system prompt.
+
+#### @7 Structured constrained output generation
+The TF must generate:
+{
+  "tool": "calculator",
+  "operation": "multiply",
+  "a": 12,
+  "b": 7
+}
+in valid machine-readable structure.
+That is constrained structured output generation.
+
+### 1b.4 Weak/minor involvement
+#### @1 Generalization
+Minor involvement.
+The TF can handle:
+"What is 12 times 7?"
+"What is 12 multiplied by 7?"
+"Compute 12 x 7"
+without exact training matches.
+
+#### @4 Human-language robustness
+Minor involvement.
+Could tolerate:
+"wat is 12 tiemz 7"
+
+### 1b.5 NOT really involved
+These are mostly NOT important in Step 1:
+- @2 contextual tracking
+- @3 feature abstraction
+- @5 ontology alignment
+- @6 explanation synthesis
+- @9 planning/workflow synthesis
+
+because the demo is intentionally simple.
+
+<br>
+
+<br>
+
+26.0521
+
+<br>
+
+[← Back to 3.4 Agentic TF semantic demos](/3.2.4-ai-agent-basic-demos/)

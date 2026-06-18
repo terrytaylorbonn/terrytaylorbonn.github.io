@@ -29,7 +29,7 @@ Note:
 
 <br>
 
-### **[3.0 Concepts (was 3.2.1 Intro)](/3.2.1-ai-agent-intro/)**
+### **[3.0 (3.2.1) Concepts](/3.2.1-ai-agent-intro/)**
 
 <br>
 
@@ -157,12 +157,15 @@ from #603 and in pic
 <br>
 
 ### **[3.4 (3.2.4) TF semantic demos (AI) (docx \#606)](/3.2.4-ai-agent-basic-demos/)**
-(docx #606)
+
+These simple demos show how deterministic agents can use TF/UFA semantic capabilities. The focus is not on autonomous AI, but on how traditional software can leverage language models for tasks such as tool use, file analysis, retrieval, and tool selection.
+
+<!-- (docx #606)
 Very basic demos that show how **deterministic agents use TF/UFA semantic capabilities**. 
 - 1 Basic tool
 - 3 Filesystem
 - 5 RAG
-- 6c MCP + LLM tool choice. 
+- 6c MCP + LLM tool choice.  -->
 
 <br>
 

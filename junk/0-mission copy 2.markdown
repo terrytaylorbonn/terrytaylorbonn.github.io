@@ -2,6 +2,7 @@
 layout: page
 title: Mission
 permalink: /0-mission/
+published: false
 ---
 
 <br>

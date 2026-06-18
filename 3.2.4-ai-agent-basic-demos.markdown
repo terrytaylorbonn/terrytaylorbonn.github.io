@@ -9,19 +9,28 @@ permalink: /3.2.4-ai-agent-basic-demos/
 
 <br>
 
-Very basic demos that show how **deterministic agents use TF/UFA semantic capabilities** *(these are marked with "@" and are explained on page [2.5 Agentic LLM (TF/UFA semantic) functionality](/2.4-agentic-llms/))*. 
-- 1b Basic tool (with AI)
-- 3 Filesystem
-- 5 RAG
-- 6c MCP (LLM tool choice)
 
-<!-- *Following copied from docx file [#606_ai_ides_.docx (on Gdrive)](https://drive.google.com/drive/folders/1-Adawag9uA8_bq-hDF-nOuPYaRLz1eEO) .. still need to format, add pics...* -->
+These simple demos show how deterministic agents can **leverage** TF/UFA semantic capabilities. The focus is not on autonomous AI, but on how traditional software can leverage language models for tasks such as tool use, file analysis, retrieval, and tool selection.
+
+The TF/UFA semantic capabilities are marked with "@" and are described in [2.5 Agentic LLM (TF/UFA semantic) functionality](/2.4-agentic-llms/). 
 
 For details see the lab notes docx **#606\_ai\_ides.docx** on the **[Gdrive](https://drive.google.com/drive/folders/1-Adawag9uA8_bq-hDF-nOuPYaRLz1eEO)**. 
 
+**TOC**
+- **[1b Basic tool (with AI)](/3.4.1b_Basic_tool_with_AI_demo/)**. Demonstrates a simple deterministic tool enhanced with LLM semantic capabilities. Shows how AI can improve a traditional tool without changing the overall control flow.
+- **[3 Filesystem](/3.4.3_Filesystem_tool/)**. Demonstrates how an agent can explore, read, and organize files using semantic understanding. Shows the combination of deterministic filesystem operations with LLM-assisted interpretation.
+- **[5 RAG](/3.4.5_RAG_retrieval_tool/)**. Demonstrates Retrieval-Augmented Generation (RAG). The agent retrieves relevant documents and uses an LLM to summarize or answer questions based on the retrieved information.
+- **[6c MCP (LLM tool choice)](/3.4.6c_MCP_connected_tool_LLM/)**. Demonstrates Model Context Protocol (MCP) style tool selection. The LLM determines which tool should be used while deterministic code performs the actual execution.
+
+<!-- *Following copied from docx file [#606_ai_ides_.docx (on Gdrive)](https://drive.google.com/drive/folders/1-Adawag9uA8_bq-hDF-nOuPYaRLz1eEO) .. still need to format, add pics...* -->
+
+
 <br>
 
+26.0618 (0521)
 
+
+<!--
 ## 1b Basic tool (with AI) demo 
 
 This is actually the first demo where TF/UFA semantic capabilities directly enable external deterministic execution.
@@ -807,7 +816,7 @@ Yes — exactly.
 Your confusion is correct: 6b worked, but it did not really demonstrate dynamic MCP tool discovery.
 
 So yes, make:
-- ai_demo_06c_mcp_llm_tool_choice.py -->
+- ai_demo_06c_mcp_llm_tool_choice.py -xxx->
 
 
 Perfect. That demo now proves the real MCP + LLM pattern:
@@ -1008,9 +1017,6 @@ Lightly present in mapping “supplier A” → supplier_a.
 Not used yet because the demo stops at tool result.
 
 
+-->
 
-
-<br>
-
-26.0521
 

@@ -1,0 +1,312 @@
+---
+layout: page
+title: "3.4.5 RAG retrieval tool"
+permalink: /3.4.5_RAG_retrieval_tool/
+---
+
+<!-- [← 3.2 Agents + AI](/3.2-agentic-ai/) -->
+[← 3.4 Agentic TF semantic demos](/3.2.4-ai-agent-basic-demos/)
+
+<br>
+
+## 5 RAG retrieval tool (BINGO)
+
+<img src="/assets/rag222.png" alt="drones" width="45%"> 
+
+
+
+### VERY important insight
+
+You are now seeing why modern RAG depends heavily on TF/UFA capabilities.
+Because the TF must:
+-	semantically interpret retrieved text 
+-	integrate it with user question 
+-	reason over combined context 
+-	synthesize final answer 
+
+Without TF/UFA semantics: RAG is mostly just search.
+The TF is what makes the retrieved text meaningfully usable.
+
+### VERY important conceptual insight
+Your RAG demo now demonstrates:
+- external retrieval
+- +
+- TF/UFA semantic interpretation
+
+And THAT is the key reason modern RAG became practical.
+The retrieval itself is old.
+The revolutionary part is:
+TF semantic understanding of retrieved context.
+
+Expected idea:
+user question
+- → Python retrieves relevant local docs
+- → docs injected into prompt
+- → LLM answers from retrieved context
+- This is the core RAG pattern.
+
+
+### 5.1 py script
+
+```
+# ai_demo_05_rag.py
+# Basic RAG demo:
+# retrieve relevant text
+# inject retrieved text into LLM prompt
+# LLM answers from retrieved context
+
+import os
+from pathlib import Path
+
+from dotenv import load_dotenv
+from openai import OpenAI
+
+# -----------------------------------
+# Load API key
+# -----------------------------------
+
+load_dotenv()
+client = OpenAI(api_key=os.getenv("OPENAI_API_KEY"))
+
+# -----------------------------------
+# Demo documents
+# -----------------------------------
+
+DOCS_DIR = Path("rag_docs")
+DOCS_DIR.mkdir(exist_ok=True)
+
+(DOCS_DIR / "taipei_shipments.txt").write_text(
+    "Truck 12 delayed in Taipei due to flooding. "
+    "Truck 18 is on schedule in Taipei.",
+    encoding="utf-8"
+)
+
+(DOCS_DIR / "supplier_notes.txt").write_text(
+    "Supplier A reported an outage affecting brake components.",
+    encoding="utf-8"
+)
+
+(DOCS_DIR / "weather_notes.txt").write_text(
+    "Heavy rain caused flooding near Taipei logistics routes.",
+    encoding="utf-8"
+)
+
+# -----------------------------------
+# Simple retrieval tool
+# -----------------------------------
+
+def retrieve_docs(query, top_k=2):
+    query_words = set(query.lower().split())
+    scored_docs = []
+
+    for path in DOCS_DIR.glob("*.txt"):
+        text = path.read_text(encoding="utf-8")
+        text_words = set(text.lower().split())
+
+        score = len(query_words.intersection(text_words))
+
+        scored_docs.append({
+            "filename": path.name,
+            "score": score,
+            "text": text
+        })
+
+    scored_docs.sort(key=lambda x: x["score"], reverse=True)
+    return scored_docs[:top_k]
+
+# -----------------------------------
+# User question
+# -----------------------------------
+
+user_question = "Why is Truck 12 delayed?"
+
+# -----------------------------------
+# RAG step 1: retrieve docs
+# -----------------------------------
+
+retrieved = retrieve_docs(user_question)
+
+context = "\n\n".join(
+    f"[{doc['filename']}]\n{doc['text']}"
+    for doc in retrieved
+)
+
+print("\nRETRIEVED CONTEXT:")
+print(context)
+
+# -----------------------------------
+# RAG step 2: inject context into prompt
+# -----------------------------------
+
+system_prompt = """
+You are an AI assistant.
+
+Answer the user question using ONLY the retrieved context.
+If the answer is not in the context, say: "I do not know from the provided context."
+"""
+
+user_prompt = f"""
+Retrieved context:
+
+{context}
+
+User question:
+{user_question}
+"""
+
+response = client.chat.completions.create(
+    model="gpt-4.1-mini",
+    messages=[
+        {"role": "system", "content": system_prompt},
+        {"role": "user", "content": user_prompt}
+    ],
+    temperature=0
+)
+
+answer = response.choices[0].message.content
+
+print("\nLLM ANSWER:")
+print(answer)
+```
+
+### 5.2 Test
+
+
+
+
+#### python ai_demo_05_rag.py
+
+```
+RETRIEVED CONTEXT:
+[taipei_shipments.txt]
+Truck 12 delayed in Taipei due to flooding. Truck 18 is on schedule in Taipei.
+
+[supplier_notes.txt]
+Supplier A reported an outage affecting brake components.
+
+LLM ANSWER:
+Truck 12 is delayed in Taipei due to flooding.
+```
+
+Content of 3 rag_docs
+-	Supplier A reported an outage affecting brake components.
+-	Truck 12 delayed in Taipei due to flooding. Truck 18 is on schedule in Taipei.
+-	Heavy rain caused flooding near Taipei logistics routes.
+
+### VERY important distinction
+Your demo used:
+- non-semantic retrieval
+- +
+- semantic TF interpretation
+
+Modern advanced RAG often additionally uses:
+- semantic embedding retrieval
+Meaning:
+documents are converted into:
+-	embedding vectors 
+
+query is converted into:
+-	embedding vector 
+
+Then:
+- vector similarity search retrieves semantically related docs. 
+
+THAT is:
+vector RAG
+
+But EVEN THEN:
+after retrieval,
+the retrieved text STILL usually gets:
+inserted into the prompt/context window
+for the TF to process semantically.
+
+
+
+## 5.3 TF/UFA capabilites
+
+### Strongly involved
+#### @1 Latent pattern generalization / approximation
+VERY important.
+The TF can connect:
+- "Why is Truck 12 delayed?"
+with retrieved text:
+- "Truck 12 delayed in Taipei due to flooding"
+without rigid hardcoded rules.
+
+#### @2 Contextual token dependency tracking
+VERY important.
+The TF must maintain:
+-	user question 
+-	retrieved documents 
+-	instructions 
+-	entity references 
+inside one evolving context window.
+This is central to RAG.
+
+#### @8 Semantic interpretation / inference
+VERY important.
+The TF must:
+-	understand question meaning 
+-	understand retrieved docs 
+-	connect them semantically 
+-	infer the answer. 
+This is core RAG behavior.
+
+#### @5 Semantic normalization / ontology alignment
+Moderate involvement.
+The TF may connect:
+"delay"
+"late"
+"behind schedule"
+semantically.
+Very important in advanced RAG.
+
+### Moderately involved
+#### @7 Structured constrained output generation
+Moderately involved.
+The TF follows:
+"Answer ONLY using retrieved context."
+This is a constrained semantic behavior.
+Would become even stronger if JSON outputs used.
+
+
+#### @9 Hierarchical planning / workflow synthesis
+Moderately involved.
+The overall RAG pipeline is:
+retrieve
+→ inject context
+→ answer
+Simple workflow orchestration.
+In advanced RAG this becomes much larger.
+Moderately involved
+
+#### @6 Explanation/summarization synthesis
+Moderately involved.
+The TF synthesizes:
+-	retrieved info 
+-	semantic relationships
+into: 
+-	final human-readable answer. 
+
+#### @4 Human-language robustness
+Moderate involvement.
+The TF could still likely answer:
+"y truck 12 late?"
+despite noisy input.
+Weak/directly invisible
+
+#### @3 Semantic feature abstraction
+This underlies EVERYTHING internally.
+But:
+-	not directly visible in demo behavior 
+-	more mechanistic/internal TF operation. 
+
+<br>
+
+<br>
+
+26.0521
+
+<br>
+
+[← Back to 3.4 Agentic TF semantic demos](/3.2.4-ai-agent-basic-demos/)

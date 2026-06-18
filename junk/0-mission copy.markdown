@@ -2,6 +2,7 @@
 layout: page
 title: Mission
 permalink: /0-mission/
+published: false
 ---
 
 *v1 26.0611 **WIP**. I have a lot of notes to still add to this page. But the core organization and concepts are fairly stable. This page replaced **[TL;DR (v1)](/0-tldr/)** on 26.0611 (the old page is still an interesting read).*

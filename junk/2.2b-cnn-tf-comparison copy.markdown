@@ -2,6 +2,7 @@
 layout: page
 title: "2.2b CNN<>TF comparison (WIP)"
 permalink: /2.2b-cnn-tf-comparison/
+published: false
 ---
 
 [← 2 Models](/2_models/)
