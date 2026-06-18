@@ -9,31 +9,39 @@ description: Last edit 26.0501
 
 <br>
 
-This section focuses on "spinning up" real-world projects quickly with minimal code analysis or manual coding. 
+This section focuses on "spinning up" **real-world demo projects** quickly with minimal code analysis or manual coding. There will be **2 customized diagrams for each demo**.
 
-For details see 
-- Documentation: [#606\_ai_ides_.docx](https://drive.google.com/drive/folders/1-Adawag9uA8_bq-hDF-nOuPYaRLz1eEO)
+<br>
+
+- **1 Functional diagram** (below). This diagram will describe
+  - Main system (an existing ERP, etc system). Why it requires AI, etc.
+  - "3b Project" description (goals, etc)
+  - "3 External agent" functionality. Deployment details (for demo and release versions).
+  - "2b Model" type (openAI, Gemma, etc) and location (remote, local WSL2, etc). Will it be fine-tuned, etc.
+  - If the model is custom made: "2 NN" (or CNN, LLM, or something else). The internal design of the NN. Deployment, training data set, HW, etc details. <br>
+  <img src="/assets/M-15-3b.png" alt="drones" width="80%">
+
+<br>
+
+- **2 Ecosystem diagram** (below) (not sure what to call this). This diagram will focus more on
+  - How all the components are interconnected, where they are located, etc.<br>
+  <img src="/assets/6_main_diagram.png" alt="drones" width="37%"> 
+
+<br>
+
+For details on each project demo see 
+- Lab notes (docx): [#606\_ai_ides_.docx](https://drive.google.com/drive/folders/1-Adawag9uA8_bq-hDF-nOuPYaRLz1eEO)
 - Repo [602-2_D1-tool-LLM](https://github.com/terrytaylorbonn/602-2_D1-tool-LLM)
 
 <br>
 
-*3b Project in the master diagram* <br>
-<img src="/assets/M-15-3b.png" alt="drones" width="80%">
-
-
-*Complete project ecosystem*<br>
-<img src="/assets/6_main_diagram.png" alt="drones" width="40%"> 
-
+#### **TOC** *(both of the current projects were done in earl May and need an update)*
+- **3b.2 AI project 2 JobRadar** (what it does so far 26.0506)
+- **3b.1 Demo 1 n8n** (26.0501)
 
 <br>
 
-#### **TOC**
-- **3b.2 AI project 2 JobRadar (what it does so far 26.0506)**
-- **3b.1 Demo 1 n8n (26.0501)**
-
-<br>
-
-### [3b.2 AI project 2 JobRadar (what it does so far 26.0506)](/3.3.2-ai-proj-2-jobradar/)
+### [**3b.2 AI project 2 JobRadar** (what it does so far 26.0506)](/3.3.2-ai-proj-2-jobradar/)
 
 Ingests data from different sources and uses LLM to find matching data and summarize. The results are then sent by email, google docs, etc. Runs locally and on Cursor. Spun up in 4 days. **I did not even look at the code (not necessary). This is probably how such apps will be done in the future.**
 
@@ -41,7 +49,7 @@ Ingests data from different sources and uses LLM to find matching data and summa
 
 <br>
 
-### [3b.1 Demo 1 n8n (26.0501)](/3.3.1-ai-proj-1-n8n/)
+### [**3b.1 Demo 1 n8n** (26.0501)](/3.3.1-ai-proj-1-n8n/)
 
 I did analyze the code and manual modify a few times.
 
@@ -49,7 +57,7 @@ I did analyze the code and manual modify a few times.
 
 <br>
 
-26.0615 (0524)
+26.0618 (0524)
 
 <!-- Bearer token for basic security.
 <img src="/assets/cursor_demo1_01.png" alt="drones" width="50%"> 
