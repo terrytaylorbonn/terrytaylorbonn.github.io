@@ -45,6 +45,8 @@ For details on each project demo see
 
 ### [**3b.1 Demo 1 n8n** (26.0501)](/3.3.1-ai-proj-1-n8n/)
 
+A basic test using Cursor with minimal manual coding. 
+
 <br>
 
 - **1 Functional diagram** (below). 
