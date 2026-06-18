@@ -1,0 +1,756 @@
+---
+layout: page
+title: "3.3.8b pal_core_08 plan LLM"
+permalink: /3.3.8b_pal_core_08_plan_LLM/
+---
+
+[<- 3.1 Agent PAL core demos](/3.1-agentic/)
+
+## **[3.3.8b] pal_core_08_plan.py + LLM (BINGO) 26.0424**
+
+
+<img src="/assets/M-24.png" alt="drones" width="90%">
+
+
+```text2
+(1) fallback_plan(...)
+Creates the plan directly with Python rules.
+user text -> Python if/else -> plan dict
+(2) build_prompt(...)
+Only creates instructions for the LLM.
+user text -> prompt text
+It does not create the final plan by itself.
+________________________________________
+Full LLM Path
+The real replacement for fallback_plan(...) is:
+
+generate_plan_with_openai(...)
+
+Inside that routine:
+
+build_prompt(...)
+-> send prompt to LLM
+-> receive JSON
+-> parse JSON
+-> return plan
+
+________________________________________
+Correct Comparison
+No LLM mode
+fallback_plan()
+LLM mode
+generate_plan_with_openai()
+    uses build_prompt()
+________________________________________
+Simple Mental Model
+build_prompt() = instructions sheet
+LLM = planner 
+generate_plan_with_openai() = whole LLM planning pipeline
+
+
+#641 so execute_plan has no ai
+Correct.
+execute_plan() has no AI
+It is ordinary deterministic Python logic.
+It does things like:
+•	filter rows 
+•	sort rows 
+•	limit rows 
+•	count groups 
+•	compare counts 
+Example
+If plan says:
+{"tool":"count_by","field":"status"}
+execute_plan() calls:
+op_count_by(rows, "status")
+No model. No learning. No reasoning.
+Architecture
+Planner = optional AI
+Executor = normal software
+Why Important
+This is the “AI on rails” pattern:
+•	AI suggests plan 
+•	software performs trusted operations
+
+#642 so you use AI to create a "sanitized" plan (a function somewhat like that of ontology) .. thats the core of this demo.
+Exactly.
+That is the core insight.
+Core Pattern
+Human request
+-> AI translates intent
+-> constrained / sanitized plan
+-> deterministic system executes
+Why “sanitized”
+Because the raw human request is vague, messy, ambiguous.
+The plan becomes:
+•	structured 
+•	schema-bound 
+•	limited to allowed tools 
+•	limited to allowed fields 
+•	validated before execution 
+Why it resembles ontology
+Yes — because it maps human language into approved machine concepts like:
+•	status 
+•	location 
+•	priority 
+•	event_type 
+That is very similar to an ontology / semantic layer.
+Your Demo in One Sentence
+AI is not running the system. AI is converting language into safe machine actions.
+```
+
+
+
+```
+# pal_core_08_plan.py
+#
+# 3.8 -- natural language -> plan JSON -> controlled execution
+#
+# Purpose:
+#   Read PAL events from JSON, ask an LLM to produce a very small plan JSON,
+#   validate that plan, then execute it deterministically.
+#
+# Demo goal:
+#   Show that the LLM does NOT do the data processing directly.
+#   The LLM only proposes a constrained plan.
+#   Deterministic Python executes the plan.
+#
+# Environment variables:
+#   OPENAI_API_KEY=...
+#
+# Optional:
+#   PAL_EVENTS_FILE=pal_events07.json
+#   PAL_OPENAI_MODEL=gpt-4.1-mini
+#
+# Commands:
+#   python pal_core_08_plan.py reset_demo_data
+#   python pal_core_08_plan.py show_events
+#   python pal_core_08_plan.py run --prompt "Show delayed events in taipei"
+#   python pal_core_08_plan.py run --prompt "Compare delayed vs blocked events"
+#
+# Notes:
+#   - Input file must contain {"events":[...]}
+#   - This file can read the output of pal_core_07_gmail_alerts.py
+#   - If you do not want to use real 07 data yet, use reset_demo_data first
+
+import argparse
+import json
+import os
+import sys
+from collections import Counter, defaultdict
+from typing import Any, Dict, List, Tuple
+
+try:
+    from openai import OpenAI
+except ImportError:
+    OpenAI = None
+
+
+# --------------------------------------------------
+# 1. Config
+# --------------------------------------------------
+
+EVENTS_FILE = os.getenv("PAL_EVENTS_FILE", "pal_events07.json")
+DEFAULT_MODEL = os.getenv("PAL_OPENAI_MODEL", "gpt-4.1-mini")
+
+
+# --------------------------------------------------
+# 2. JSON helpers
+# --------------------------------------------------
+
+def load_json(path: str, default: Any) -> Any:
+    if not os.path.exists(path):
+        return default
+    with open(path, "r", encoding="utf-8") as f:
+        return json.load(f)
+
+
+def save_json(path: str, data: Any) -> None:
+    with open(path, "w", encoding="utf-8") as f:
+        json.dump(data, f, indent=2, ensure_ascii=False)
+
+
+def load_events() -> List[Dict[str, Any]]:
+    data = load_json(EVENTS_FILE, {"events": []})
+    events = data.get("events", [])
+    if not isinstance(events, list):
+        raise ValueError(f"{EVENTS_FILE} must contain an 'events' list")
+    return events
+
+
+# --------------------------------------------------
+# 3. Demo seed data
+# --------------------------------------------------
+
+def cmd_reset_demo_data() -> None:
+    demo = {
+        "events": [
+            {
+                "entity": "truck_12",
+                "event_type": "logistics_alert",
+                "status": "delayed",
+                "priority": 7,
+                "location": "taipei",
+                "sender": "alerts@example.com",
+                "subject": "Shipment truck_12 delayed in Taipei",
+                "note": "Carrier delay due to traffic.",
+                "source": "demo",
+                "timestamp": "2026-04-20T10:00:00Z",
+            },
+            {
+                "entity": "truck_18",
+                "event_type": "logistics_alert",
+                "status": "blocked",
+                "priority": 9,
+                "location": "tainan",
+                "sender": "alerts@example.com",
+                "subject": "Shipment truck_18 blocked in Tainan",
+                "note": "Road closure blocked route.",
+                "source": "demo",
+                "timestamp": "2026-04-20T10:05:00Z",
+            },
+            {
+                "entity": "supplier_2",
+                "event_type": "supplier_alert",
+                "status": "warning",
+                "priority": 5,
+                "location": "taipei",
+                "sender": "ops@example.com",
+                "subject": "Supplier risk warning in Taipei",
+                "note": "Late paperwork may impact delivery.",
+                "source": "demo",
+                "timestamp": "2026-04-20T10:10:00Z",
+            },
+            {
+                "entity": "truck_12",
+                "event_type": "resolution_notice",
+                "status": "resolved",
+                "priority": 2,
+                "location": "taipei",
+                "sender": "alerts@example.com",
+                "subject": "Shipment truck_12 recovered in Taipei",
+                "note": "Delay resolved.",
+                "source": "demo",
+                "timestamp": "2026-04-20T11:00:00Z",
+            },
+            {
+                "entity": "api_gateway",
+                "event_type": "system_alert",
+                "status": "failed",
+                "priority": 7,
+                "location": "site_1",
+                "sender": "monitor@example.com",
+                "subject": "API gateway failure at site_1",
+                "note": "HTTP 500 spike detected.",
+                "source": "demo",
+                "timestamp": "2026-04-20T11:05:00Z",
+            },
+        ]
+    }
+    save_json(EVENTS_FILE, demo)
+    print(json.dumps({"ok": True, "reset_demo_data": True, "file": EVENTS_FILE}, indent=2))
+
+
+def cmd_show_events() -> None:
+    events = load_events()
+    print(json.dumps({"ok": True, "count": len(events), "events": events}, indent=2, ensure_ascii=False))
+
+
+# --------------------------------------------------
+# 4. Allowed plan schema
+# --------------------------------------------------
+
+ALLOWED_TOOLS = {
+    "filter_equals",
+    "sort_by",
+    "limit",
+    "count_by",
+    "compare_counts",
+}
+
+ALLOWED_FIELDS = {
+    "entity",
+    "event_type",
+    "status",
+    "priority",
+    "location",
+    "sender",
+    "subject",
+    "source",
+    "timestamp",
+}
+
+
+def validate_plan(plan: Dict[str, Any]) -> Tuple[bool, str]:
+    if not isinstance(plan, dict):
+        return False, "Plan must be a JSON object"
+
+    steps = plan.get("steps")
+    if not isinstance(steps, list) or not steps:
+        return False, "Plan must contain non-empty steps"
+
+    for i, step in enumerate(steps):
+        if not isinstance(step, dict):
+            return False, f"Step {i} must be an object"
+
+        tool = step.get("tool")
+        if tool not in ALLOWED_TOOLS:
+            return False, f"Step {i}: unsupported tool '{tool}'"
+
+        if tool == "filter_equals":
+            if step.get("field") not in ALLOWED_FIELDS:
+                return False, f"Step {i}: invalid field for filter_equals"
+            if "value" not in step:
+                return False, f"Step {i}: missing value for filter_equals"
+
+        elif tool == "sort_by":
+            if step.get("field") not in ALLOWED_FIELDS:
+                return False, f"Step {i}: invalid field for sort_by"
+            direction = step.get("direction", "asc")
+            if direction not in ("asc", "desc"):
+                return False, f"Step {i}: direction must be asc or desc"
+
+        elif tool == "limit":
+            n = step.get("n")
+            if not isinstance(n, int) or n <= 0:
+                return False, f"Step {i}: limit n must be positive integer"
+
+        elif tool == "count_by":
+            if step.get("field") not in ALLOWED_FIELDS:
+                return False, f"Step {i}: invalid field for count_by"
+
+        elif tool == "compare_counts":
+            if step.get("field") not in ALLOWED_FIELDS:
+                return False, f"Step {i}: invalid field for compare_counts"
+            values = step.get("values")
+            if not isinstance(values, list) or len(values) < 2:
+                return False, f"Step {i}: compare_counts needs at least 2 values"
+
+    return True, "ok"
+
+
+# --------------------------------------------------
+# 5. LLM plan generation
+# --------------------------------------------------
+
+################# NEW [3.3.8b] from GPT #######################
+# GPT: Main change: I separated known values from tool rules, 
+# so the LLM is less likely to invent values like urgent or logistics problems.
+# FIX 3 i added 
+#############################################################
+
+def build_prompt(user_prompt: str) -> str:
+    return f"""
+You are planning for a deterministic event-analysis engine.
+
+Return JSON only, no markdown, no prose.
+
+Known status values:
+delayed, blocked, failed, warning, resolved, alert
+
+Known event_type values:
+logistics_alert, system_alert, supplier_alert, resolution_notice, email_alert
+
+Known locations:
+taipei, tainan, site_1, site_2, site_3
+
+Important value rules:
+- Do not invent field values.
+- Use only the known status values when filtering status.
+- Use only the known event_type values when filtering event_type.
+- Use only the known locations when filtering location.
+- Priority is numeric.
+- For urgent/high priority requests, do not filter priority by words.
+- For urgent/high priority requests, sort by priority descending, then limit.
+
+Allowed tools:
+1. filter_equals
+   flat args: field, value
+
+2. sort_by
+   flat args: field, direction
+
+3. limit
+   flat args: n
+
+4. count_by
+   flat args: field
+
+5. compare_counts
+   flat args: field, values
+
+Allowed fields:
+entity, event_type, status, priority, location, sender, subject, source, timestamp
+
+Rules:
+- Output exactly one JSON object.
+- Use this shape:
+  {{
+    "goal": "...",
+    "steps": [ ... ]
+  }}
+- Keep plan short.
+- Do not invent tools.
+- Do not invent fields.
+- Prefer filter_equals for narrowing.
+- Use count_by for grouped summaries.
+- Use compare_counts for requests like "compare delayed vs blocked".
+- If the prompt is vague, still produce the safest minimal valid plan.
+- Return steps with flat arguments only.
+- Do not use an "args" object.
+
+Correct:
+{{"tool":"count_by","field":"status"}}
+
+Wrong:
+{{"tool":"count_by","args":{{"field":"status"}}}}
+
+Correct urgent/high-priority plan:
+{{
+  "goal": "Show urgent problems first",
+  "steps": [
+    {{"tool":"sort_by","field":"priority","direction":"desc"}},
+    {{"tool":"limit","n":5}}
+  ]
+}}
+
+- For direct comparisons like:
+  compare delayed vs blocked
+  compare X and Y
+  use one compare_counts step directly.
+- Do not pre-filter before compare_counts unless the user explicitly requests it.
+
+
+User request:
+{user_prompt}
+""".strip()
+
+# def build_prompt(user_prompt: str) -> str:
+#     return f"""
+# You are planning for a deterministic event-analysis engine.
+
+# Return JSON only, no markdown, no prose.
+
+# Allowed tools:
+# 1. filter_equals
+#    args: field, value
+
+# 2. sort_by
+#    args: field, direction
+
+# 3. limit
+#    args: n
+
+# 4. count_by
+#    args: field
+
+# 5. compare_counts
+#    args: field, values
+
+# Allowed fields:
+# entity, event_type, status, priority, location, sender, subject, source, timestamp
+
+# Rules:
+# - Output exactly one JSON object.
+# - Use this shape:
+#   {{
+#     "goal": "...",
+#     "steps": [ ... ]
+#   }}
+# - Keep plan short.
+# - Do not invent tools.
+# - Do not invent fields.
+# - Prefer filter_equals for narrowing.
+# - Use count_by for grouped summaries.
+# - Use compare_counts for requests like "compare delayed vs blocked".
+# - If the prompt is vague, still produce the safest minimal valid plan.
+
+# Return steps with flat arguments only.
+# Do not use an "args" object.
+# Correct:
+# {"tool":"count_by","field":"status"}
+# Wrong:
+# {"tool":"count_by","args":{"field":"status"}}
+
+# User request:
+# {user_prompt}
+# """.strip()
+
+
+def generate_plan_with_openai(user_prompt: str, model: str) -> Dict[str, Any]:
+    if OpenAI is None:
+        raise RuntimeError("openai package not installed. Run: pip install openai")
+
+    api_key = os.getenv("OPENAI_API_KEY", "").strip()
+    if not api_key:
+        raise RuntimeError("Missing OPENAI_API_KEY")
+
+    client = OpenAI(api_key=api_key)
+
+    resp = client.responses.create(
+        model=model,
+        input=build_prompt(user_prompt),
+    )
+
+    text = resp.output_text.strip()
+    return json.loads(text)
+
+
+# --------------------------------------------------
+# 6. Deterministic executor
+# --------------------------------------------------
+
+def op_filter_equals(rows: List[Dict[str, Any]], field: str, value: Any) -> List[Dict[str, Any]]:
+    value_norm = str(value).strip().lower()
+    out = []
+    for row in rows:
+        row_val = str(row.get(field, "")).strip().lower()
+        if row_val == value_norm:
+            out.append(row)
+    return out
+
+
+def op_sort_by(rows: List[Dict[str, Any]], field: str, direction: str) -> List[Dict[str, Any]]:
+    reverse = (direction == "desc")
+    return sorted(rows, key=lambda r: str(r.get(field, "")), reverse=reverse)
+
+
+def op_limit(rows: List[Dict[str, Any]], n: int) -> List[Dict[str, Any]]:
+    return rows[:n]
+
+
+def op_count_by(rows: List[Dict[str, Any]], field: str) -> Dict[str, int]:
+    c = Counter(str(r.get(field, "")) for r in rows)
+    return dict(sorted(c.items(), key=lambda kv: (-kv[1], kv[0])))
+
+
+def op_compare_counts(rows: List[Dict[str, Any]], field: str, values: List[Any]) -> Dict[str, int]:
+    normalized = [str(v).strip().lower() for v in values]
+    counts = {v: 0 for v in normalized}
+    for row in rows:
+        row_val = str(row.get(field, "")).strip().lower()
+        if row_val in counts:
+            counts[row_val] += 1
+    return counts
+
+
+def execute_plan(plan: Dict[str, Any], events: List[Dict[str, Any]]) -> Dict[str, Any]:
+    rows = list(events)
+    trace = []
+    final_result: Any = rows
+
+    for step in plan["steps"]:
+        tool = step["tool"]
+
+        if tool == "filter_equals":
+            rows = op_filter_equals(rows, step["field"], step["value"])
+            final_result = rows
+            trace.append({
+                "tool": tool,
+                "field": step["field"],
+                "value": step["value"],
+                "remaining": len(rows),
+            })
+
+        elif tool == "sort_by":
+            rows = op_sort_by(rows, step["field"], step.get("direction", "asc"))
+            final_result = rows
+            trace.append({
+                "tool": tool,
+                "field": step["field"],
+                "direction": step.get("direction", "asc"),
+                "remaining": len(rows),
+            })
+
+        elif tool == "limit":
+            rows = op_limit(rows, step["n"])
+            final_result = rows
+            trace.append({
+                "tool": tool,
+                "n": step["n"],
+                "remaining": len(rows),
+            })
+
+        elif tool == "count_by":
+            final_result = op_count_by(rows, step["field"])
+            trace.append({
+                "tool": tool,
+                "field": step["field"],
+                "remaining": len(rows),
+            })
+
+        elif tool == "compare_counts":
+            final_result = op_compare_counts(rows, step["field"], step["values"])
+            trace.append({
+                "tool": tool,
+                "field": step["field"],
+                "values": step["values"],
+                "remaining": len(rows),
+            })
+
+        else:
+            raise ValueError(f"Unsupported tool at runtime: {tool}")
+
+    return {
+        "goal": plan.get("goal", ""),
+        "trace": trace,
+        "result": final_result,
+    }
+
+
+# --------------------------------------------------
+# 7. Fallback planner
+# --------------------------------------------------
+
+def fallback_plan(user_prompt: str) -> Dict[str, Any]:
+    """
+    Deterministic fallback in case API is unavailable.
+    Very crude on purpose.
+    """
+    p = user_prompt.lower()
+
+    steps: List[Dict[str, Any]] = []
+
+    if "delayed" in p:
+        steps.append({"tool": "filter_equals", "field": "status", "value": "delayed"})
+    elif "blocked" in p:
+        steps.append({"tool": "filter_equals", "field": "status", "value": "blocked"})
+    elif "failed" in p:
+        steps.append({"tool": "filter_equals", "field": "status", "value": "failed"})
+    elif "resolved" in p:
+        steps.append({"tool": "filter_equals", "field": "status", "value": "resolved"})
+
+    known_locations = ["taipei", "tainan", "site_1", "site_2", "site_3"]
+    for loc in known_locations:
+        if loc in p:
+            steps.append({"tool": "filter_equals", "field": "location", "value": loc})
+            break
+
+    if "compare" in p and "delayed" in p and "blocked" in p:
+        return {
+            "goal": user_prompt,
+            "steps": [
+                {"tool": "compare_counts", "field": "status", "values": ["delayed", "blocked"]}
+            ]
+        }
+
+    if "count by status" in p or "status summary" in p:
+        steps.append({"tool": "count_by", "field": "status"})
+    elif "count by location" in p or "location summary" in p:
+        steps.append({"tool": "count_by", "field": "location"})
+
+    if "top" in p or "highest" in p:
+        steps.append({"tool": "sort_by", "field": "priority", "direction": "desc"})
+        steps.append({"tool": "limit", "n": 5})
+
+    if not steps:
+        steps = [{"tool": "count_by", "field": "status"}]
+
+    return {
+        "goal": user_prompt,
+        "steps": steps,
+    }
+
+
+# --------------------------------------------------
+# 8. Main run command
+# --------------------------------------------------
+
+def cmd_run(user_prompt: str, model: str, no_llm: bool) -> None:
+    events = load_events()
+
+    if no_llm:
+        plan = fallback_plan(user_prompt)
+        plan_source = "fallback"
+    else:
+        try:
+            plan = generate_plan_with_openai(user_prompt, model=model)
+            plan_source = "openai"
+        except Exception as e:
+            plan = fallback_plan(user_prompt)
+            plan_source = f"fallback_after_error: {str(e)}"
+
+    ok, msg = validate_plan(plan)
+    if not ok:
+        print(json.dumps({
+            "ok": False,
+            "error": msg,
+            "plan": plan,
+            "plan_source": plan_source,
+        }, indent=2, ensure_ascii=False))
+        return
+
+    execution = execute_plan(plan, events)
+
+    print(json.dumps({
+        "ok": True,
+        "plan_source": plan_source,
+        "event_count": len(events),
+        "plan": plan,
+        "execution": execution,
+    }, indent=2, ensure_ascii=False))
+
+
+# --------------------------------------------------
+# 9. CLI
+# --------------------------------------------------
+
+def main() -> None:
+    parser = argparse.ArgumentParser(description="PAL Core 08 - plan JSON and controlled execution")
+    sub = parser.add_subparsers(dest="cmd", required=True)
+
+    sub.add_parser("reset_demo_data")
+    sub.add_parser("show_events")
+
+    p_run = sub.add_parser("run")
+    p_run.add_argument("--prompt", required=True, help="Natural language request")
+    p_run.add_argument("--model", default=DEFAULT_MODEL, help="OpenAI model name")
+    p_run.add_argument("--no_llm", action="store_true", help="Use deterministic fallback planner only")
+
+    args = parser.parse_args()
+
+    if args.cmd == "reset_demo_data":
+        cmd_reset_demo_data()
+    elif args.cmd == "show_events":
+        cmd_show_events()
+    elif args.cmd == "run":
+        cmd_run(user_prompt=args.prompt, model=args.model, no_llm=args.no_llm)
+
+
+if __name__ == "__main__":
+    main()
+```
+
+```text2
+#637 very strong... the "errors" (or "adjustments"?) were instructional.
+Exactly.
+They were not failures — they were instructional iterations.
+What They Revealed
+1. LLMs need constraints
+Without schema/value guidance, they invent labels like:
+•	urgent 
+•	logistics problems 
+2. Validation is essential
+Bad plans were caught before harming logic.
+3. Prompting is engineering
+Small prompt changes materially improved behavior.
+4. Deterministic core stayed stable
+Only planner behavior changed; executor remained reliable.
+Real Lesson
+The strongest AI systems are often built through:
+iterate planner constraints
++ validate outputs
++ keep execution deterministic
+For your writeup
+Call them:
+•	adjustments 
+•	refinements 
+•	tuning iterations 
+•	planner hardening 
+Better than “errors.”
+```
+
+<br>
+
+
+26.0618

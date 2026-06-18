@@ -1,0 +1,882 @@
+---
+layout: page
+title: "3.3.1 pal_core_01 detect"
+permalink: /3.3.1_pal_core_01_detect/
+---
+
+[← 3.1 Agent PAL core demos](/3.1-agentic/)
+
+## **[3.3.1] pal_core_01_detect.py (BINGO) 26.0411 (01 events / alerts)**
+
+<br>
+
+<img src="/assets/M-20.png" alt="drones" width="35%">
+
+<br>
+
+```text2
+ME: so in pal_core_01_detect cmd_demo there is 
+- A (py script) 
+- S simulated (no ingress, just hard coded "sensor" data) 
+- H run command line 
+- no LLM (not used) 
+- DB simulated (just JSON file)
+
+Core Concept
+Many small events may mean nothing individually.
+But together they may indicate something important.
+Example:
+•	power spike 
+•	camera offline 
+•	truck delay 
+At same site, within 30 minutes.
+→ alert
+________________________________________
+Input Event Schema
+{
+  "site": "A",
+  "type": "power_spike",
+  "severity": 2,
+  "timestamp": "2026-04-11T10:00:00Z"
+}
+Required Fields
+•	site (string) 
+•	type (string) 
+•	severity (int) 
+•	timestamp (ISO string) 
+________________________________________
+Stored Events
+Keep list in:
+pal_core_events.json
+________________________________________
+Rule Schema (hardcoded v1)
+RULES = [
+    {
+        "name": "suspicious_activity",
+        "site_types": ["power_spike", "camera_offline", "truck_delay"],
+        "window_minutes": 30,
+        "min_total_severity": 3
+    }
+]
+________________________________________
+Detection Logic
+For each site:
+1.	load recent events 
+2.	check if required event types exist 
+3.	check timestamps inside window 
+4.	check severity threshold 
+5.	generate alert 
+________________________________________
+Alert Output Schema
+{
+  "alert_type": "suspicious_activity",
+  "site": "A",
+  "matched_events": [
+    "power_spike",
+    "camera_offline",
+    "truck_delay"
+  ],
+  "confidence": 0.82,
+  "reason": "Matched required constellation within 30 minutes"
+}
+________________________________________
+CLI Commands
+Ingest
+python pal_core_01_detect.py ingest '{"site":"A","type":"power_spike","severity":2}'
+Scan
+python pal_core_01_detect.py scan
+Demo Seed Data
+python pal_core_01_detect.py demo
+________________________________________
+OpenAI Role (optional later)
+Not needed for v1 core logic.
+Later use for:
+•	explain alerts 
+•	summarize risks 
+•	convert natural language to rules 
+________________________________________
+Deterministic Role
+Handles:
+•	storage 
+•	time windows 
+•	rule matching 
+•	severity scoring 
+•	alert generation 
+________________________________________
+Why This Is Strong
+This feels like real operational software:
+•	streaming data 
+•	weak signals 
+•	event fusion 
+•	actionable alert 
+```
+
+```
+# pal_core_01_detect_ids.py (IDs)
+#
+# PAL Core 01 - Detect (with IDs)
+#
+# Commands:
+#   1) ingest -> store one event
+#   2) scan   -> scan stored events and generate alerts
+#   3) demo   -> load demo events and scan
+#
+# Examples:
+#   python pal_core_01_detect_ids.py ingest "{\"site\":\"A\",\"type\":\"power_spike\",\"severity\":2}"
+#   python pal_core_01_detect_ids.py scan
+#   python pal_core_01_detect_ids.py demo
+#
+# ID conventions:
+# - Event notes begin with E00x
+# - Rule names begin with R00x
+# - Alert reasons begin with A00x
+
+import json
+import re
+import sys
+from pathlib import Path
+from datetime import datetime, timezone, timedelta
+from typing import Any, Dict, List, Optional
+
+# --------------------------------------------------
+# 1 FILES / CONSTANTS
+# --------------------------------------------------
+EVENTS_FILE = Path("pal_core_events.json")
+
+ALLOWED_TOP_KEYS = {
+    "timestamp",
+    "site",
+    "type",
+    "severity",
+    "note",
+}
+
+REQUIRED_KEYS = {
+    "site",
+    "type",
+    "severity",
+}
+
+RULES = [
+    {
+        "name": "R001 suspicious_activity",
+        "site_types": ["power_spike", "camera_offline", "truck_delay"],
+        "window_minutes": 30,
+        "min_total_severity": 3,
+    }
+]
+
+# --------------------------------------------------
+# 2 HELPERS
+# --------------------------------------------------
+def utc_now_iso() -> str:
+    return datetime.now(timezone.utc).isoformat()
+
+def parse_iso_timestamp(ts: str) -> datetime:
+    ts = ts.strip()
+    if ts.endswith("Z"):
+        ts = ts[:-1] + "+00:00"
+    dt = datetime.fromisoformat(ts)
+    if dt.tzinfo is None:
+        dt = dt.replace(tzinfo=timezone.utc)
+    return dt
+
+def load_events() -> List[Dict[str, Any]]:
+    if not EVENTS_FILE.exists():
+        return []
+    try:
+        data = json.loads(EVENTS_FILE.read_text(encoding="utf-8"))
+        if not isinstance(data, list):
+            raise ValueError("Events file must contain a JSON list.")
+        return data
+    except Exception as e:
+        raise RuntimeError(f"Failed to load {EVENTS_FILE}: {e}")
+
+def save_events(events: List[Dict[str, Any]]) -> None:
+    EVENTS_FILE.write_text(
+        json.dumps(events, indent=2, ensure_ascii=False),
+        encoding="utf-8",
+    )
+
+def strip_id_prefix(text: str) -> str:
+    if not text:
+        return ""
+    return re.sub(r"^[AER]\d{3}\s+", "", text).strip()
+
+def get_next_event_id(events: List[Dict[str, Any]]) -> str:
+    max_n = 0
+    for e in events:
+        note = str(e.get("note", ""))
+        m = re.match(r"^E(\d{3})\b", note)
+        if m:
+            max_n = max(max_n, int(m.group(1)))
+    return f"E{max_n + 1:03d}"
+
+# def format_event_note(event_id: str, note: str) -> str:
+#     clean = strip_id_prefix(note)
+#     return f"{event_id} {clean}".strip()
+
+def format_event_note(event_id: str, note: str) -> str:
+    clean = strip_id_prefix(note)
+    if not clean:
+        clean = "no_note"
+    return f"{event_id} {clean}"
+
+def validate_event(event: Dict[str, Any]) -> List[str]:
+    errors: List[str] = []
+
+    if not isinstance(event, dict):
+        return ["Event must be a JSON object."]
+
+    for key in REQUIRED_KEYS:
+        if key not in event:
+            errors.append(f"Missing required key: '{key}'.")
+
+    for key in event.keys():
+        if key not in ALLOWED_TOP_KEYS:
+            errors.append(f"Unexpected key: '{key}'.")
+
+    if "site" in event and not isinstance(event["site"], str):
+        errors.append("'site' must be a string.")
+
+    if "type" in event and not isinstance(event["type"], str):
+        errors.append("'type' must be a string.")
+
+    if "severity" in event:
+        if not isinstance(event["severity"], int):
+            errors.append("'severity' must be an integer.")
+        elif event["severity"] < 0:
+            errors.append("'severity' must be >= 0.")
+
+    if "note" in event and not isinstance(event["note"], str):
+        errors.append("'note' must be a string.")
+
+    if "timestamp" in event:
+        if not isinstance(event["timestamp"], str):
+            errors.append("'timestamp' must be a string.")
+        else:
+            try:
+                parse_iso_timestamp(event["timestamp"])
+            except Exception:
+                errors.append("'timestamp' must be valid ISO format.")
+
+    return errors
+
+def normalize_event(event: Dict[str, Any], existing_events: List[Dict[str, Any]]) -> Dict[str, Any]:
+    out = dict(event)
+    if "timestamp" not in out:
+        out["timestamp"] = utc_now_iso()
+    if "note" not in out:
+        out["note"] = ""
+
+    event_id = get_next_event_id(existing_events)
+    out["note"] = format_event_note(event_id, out["note"])
+    return out
+
+def print_usage() -> None:
+    print(
+        "Usage:\n"
+        "  python pal_core_01_detect_ids.py ingest '<json_event>'\n"
+        "  python pal_core_01_detect_ids.py scan\n"
+        "  python pal_core_01_detect_ids.py demo\n\n"
+        "Examples:\n"
+        '  python pal_core_01_detect_ids.py ingest "{\\"site\\":\\"A\\",\\"type\\":\\"power_spike\\",\\"severity\\":2}"\n'
+        "  python pal_core_01_detect_ids.py scan\n"
+        "  python pal_core_01_detect_ids.py demo"
+    )
+
+# --------------------------------------------------
+# 3 COMMAND: INGEST
+# --------------------------------------------------
+def cmd_ingest(event_json_text: str) -> None:
+    try:
+        event = json.loads(event_json_text)
+    except Exception as e:
+        print("INGEST FAILED")
+        print(f"Invalid JSON input: {e}")
+        return
+
+    errors = validate_event(event)
+    if errors:
+        print("INGEST FAILED")
+        for err in errors:
+            print(f"- {err}")
+        return
+
+    events = load_events()
+    event = normalize_event(event, events)
+
+    events.append(event)
+    save_events(events)
+
+    print("INGEST OK")
+    print(f"Saved to: {EVENTS_FILE.resolve()}")
+    print("Event:")
+    print(json.dumps(event, indent=2, ensure_ascii=False))
+
+# --------------------------------------------------
+# 4 DETECTION ENGINE
+# --------------------------------------------------
+def group_events_by_site(events: List[Dict[str, Any]]) -> Dict[str, List[Dict[str, Any]]]:
+    out: Dict[str, List[Dict[str, Any]]] = {}
+    for e in events:
+        site = e["site"]
+        out.setdefault(site, []).append(e)
+    return out
+
+def compute_confidence(min_total_severity: int, actual_total_severity: int) -> float:
+    if min_total_severity <= 0:
+        return 0.5
+    ratio = actual_total_severity / float(min_total_severity)
+    return round(max(0.50, min(0.99, 0.50 + 0.20 * (ratio - 1.0))), 2)
+
+def get_next_alert_id(existing_alert_count: int) -> str:
+    return f"A{existing_alert_count + 1:03d}"
+
+def detect_rule_for_site(
+    site: str,
+    site_events: List[Dict[str, Any]],
+    rule: Dict[str, Any],
+    alert_start_index: int,
+) -> List[Dict[str, Any]]:
+    alerts: List[Dict[str, Any]] = []
+
+    required_types = list(rule["site_types"])
+    window_minutes = int(rule["window_minutes"])
+    min_total_severity = int(rule["min_total_severity"])
+
+    sorted_events = sorted(site_events, key=lambda e: parse_iso_timestamp(e["timestamp"]))
+
+    for anchor_event in sorted_events:
+        anchor_time = parse_iso_timestamp(anchor_event["timestamp"])
+        window_start = anchor_time - timedelta(minutes=window_minutes)
+
+        window_events = [
+            e for e in sorted_events
+            if window_start <= parse_iso_timestamp(e["timestamp"]) <= anchor_time
+        ]
+
+        types_in_window = {e["type"] for e in window_events}
+        if not all(req_type in types_in_window for req_type in required_types):
+            continue
+
+        matched_events: List[Dict[str, Any]] = []
+        for req_type in required_types:
+            candidates = [e for e in window_events if e["type"] == req_type]
+            chosen = sorted(candidates, key=lambda e: parse_iso_timestamp(e["timestamp"]))[-1]
+            matched_events.append(chosen)
+
+        matched_events = sorted(matched_events, key=lambda e: parse_iso_timestamp(e["timestamp"]))
+        total_severity = sum(int(e["severity"]) for e in matched_events)
+        if total_severity < min_total_severity:
+            continue
+
+        first_time = parse_iso_timestamp(matched_events[0]["timestamp"])
+        last_time = parse_iso_timestamp(matched_events[-1]["timestamp"])
+        span_minutes = (last_time - first_time).total_seconds() / 60.0
+
+        alert_id = get_next_alert_id(alert_start_index + len(alerts))
+        alert = {
+            "alert_id": alert_id,
+            "alert_type": rule["name"],
+            "site": site,
+            "matched_events": [
+                {
+                    "type": e["type"],
+                    "severity": e["severity"],
+                    "timestamp": e["timestamp"],
+                    "note": e.get("note", ""),
+                }
+                for e in matched_events
+            ],
+            "matched_event_ids": [
+                str(e.get("note", "")).split(" ", 1)[0] if str(e.get("note", "")).startswith("E") else ""
+                for e in matched_events
+            ],
+            "total_severity": total_severity,
+            "confidence": compute_confidence(min_total_severity, total_severity),
+            "reason": (
+                f"{alert_id} Matched rule {rule['name']} within {window_minutes} minutes "
+                f"(actual span: {round(span_minutes, 1)} minutes)."
+            ),
+        }
+        alerts.append(alert)
+
+    deduped: List[Dict[str, Any]] = []
+    seen = set()
+    for alert in alerts:
+        key = (
+            alert["alert_type"],
+            alert["site"],
+            tuple((e["type"], e["timestamp"]) for e in alert["matched_events"]),
+        )
+        if key in seen:
+            continue
+        seen.add(key)
+        deduped.append(alert)
+
+    return deduped
+
+def detect_alerts(events: List[Dict[str, Any]]) -> List[Dict[str, Any]]:
+    alerts: List[Dict[str, Any]] = []
+    by_site = group_events_by_site(events)
+
+    for site, site_events in by_site.items():
+        for rule in RULES:
+            site_alerts = detect_rule_for_site(site, site_events, rule, len(alerts))
+            alerts.extend(site_alerts)
+
+    return alerts
+
+# --------------------------------------------------
+# 5 COMMAND: SCAN
+# --------------------------------------------------
+def cmd_scan() -> None:
+    events = load_events()
+
+    if not events:
+        print("SCAN FAILED")
+        print("No events stored yet.")
+        return
+
+    print("=== STORED EVENTS ===")
+    print(json.dumps(events, indent=2, ensure_ascii=False))
+
+    alerts = detect_alerts(events)
+
+    print("\n=== RULES ===")
+    print(json.dumps(RULES, indent=2, ensure_ascii=False))
+
+    print("\n=== ALERTS ===")
+    if not alerts:
+        print("[]")
+        return
+
+    print(json.dumps(alerts, indent=2, ensure_ascii=False))
+
+# --------------------------------------------------
+# 6 COMMAND: DEMO
+# --------------------------------------------------
+def demo_events() -> List[Dict[str, Any]]:
+    base = datetime(2026, 4, 11, 10, 0, 0, tzinfo=timezone.utc)
+
+    def ts(minutes: int) -> str:
+        return (base + timedelta(minutes=minutes)).isoformat()
+
+    raw = [
+        {
+            "site": "A",
+            "type": "power_spike",
+            "severity": 2,
+            "note": "unexpected jump in electricity usage",
+            "timestamp": ts(0),
+        },
+        {
+            "site": "A",
+            "type": "camera_offline",
+            "severity": 1,
+            "note": "camera feed lost",
+            "timestamp": ts(8),
+        },
+        {
+            "site": "A",
+            "type": "truck_delay",
+            "severity": 2,
+            "note": "vehicle delay near site",
+            "timestamp": ts(20),
+        },
+        {
+            "site": "B",
+            "type": "power_spike",
+            "severity": 1,
+            "note": "minor fluctuation",
+            "timestamp": ts(3),
+        },
+        {
+            "site": "B",
+            "type": "truck_delay",
+            "severity": 1,
+            "note": "small traffic delay",
+            "timestamp": ts(40),
+        },
+    ]
+
+    events: List[Dict[str, Any]] = []
+    for item in raw:
+        events.append(normalize_event(item, events))
+    return events
+
+def cmd_demo() -> None:
+    events = demo_events()
+    save_events(events)
+
+    print("DEMO OK")
+    print(f"Saved demo events to: {EVENTS_FILE.resolve()}")
+    print("\n=== STORED EVENTS ===")
+    print(json.dumps(events, indent=2, ensure_ascii=False))
+
+    alerts = detect_alerts(events)
+
+    print("\n=== ALERTS ===")
+    print(json.dumps(alerts, indent=2, ensure_ascii=False))
+
+# --------------------------------------------------
+# 7 MAIN
+# --------------------------------------------------
+def main() -> None:
+    if len(sys.argv) < 2:
+        print_usage()
+        return
+
+    command = sys.argv[1].strip().lower()
+
+    if command == "ingest":
+        if len(sys.argv) < 3:
+            print("Missing JSON event for ingest.\n")
+            print_usage()
+            return
+        cmd_ingest(sys.argv[2])
+
+    elif command == "scan":
+        cmd_scan()
+
+    elif command == "demo":
+        cmd_demo()
+
+    else:
+        print(f"Unknown command: {command}\n")
+        print_usage()
+
+if __name__ == "__main__":
+    main()
+```
+
+
+```text2
+#545 (1) result attached (seems ok)
+(2) could create a modified code version that names events, rules, alerts?
+  - for each event, add "E00x" to the beginning of the note
+  - for each rule, add "R00x" to the beginning of name
+  - for each alert, add "A00x" to the beginning of the note
+x = 0,1,2,3....
+i will run this again.
+```
+
+```
+python pal_core_01_detect_ids.py demo
+$ python pal_core_01_detect_ids.py demo
+DEMO OK
+Saved demo events to: C:\Users\terry\Downloads\d1_agent\pal_core_events.json
+
+=== STORED EVENTS ===
+[
+  {
+    "site": "A",
+    "type": "power_spike",
+    "severity": 2,
+    "note": "E001 unexpected jump in electricity usage",
+    "timestamp": "2026-04-11T10:00:00+00:00"
+  },
+  {
+    "site": "A",
+    "type": "camera_offline",
+    "severity": 1,
+    "note": "E002 camera feed lost",
+    "timestamp": "2026-04-11T10:08:00+00:00"
+  },
+  {
+    "site": "A",
+    "type": "truck_delay",
+    "severity": 2,
+    "note": "E003 vehicle delay near site",
+    "timestamp": "2026-04-11T10:20:00+00:00"
+  },
+  {
+    "site": "B",
+    "type": "power_spike",
+    "severity": 1,
+    "note": "E004 minor fluctuation",
+    "timestamp": "2026-04-11T10:03:00+00:00"
+  },
+  {
+    "site": "B",
+    "type": "truck_delay",
+    "severity": 1,
+    "note": "E005 small traffic delay",
+    "timestamp": "2026-04-11T10:40:00+00:00"
+  }
+]
+
+=== ALERTS ===
+[
+  {
+    "alert_id": "A001",
+    "alert_type": "R001 suspicious_activity",
+    "site": "A",
+    "matched_events": [
+      {
+        "type": "power_spike",
+        "severity": 2,
+        "timestamp": "2026-04-11T10:00:00+00:00",
+        "note": "E001 unexpected jump in electricity usage"
+      },
+      {
+        "type": "camera_offline",
+        "severity": 1,
+        "timestamp": "2026-04-11T10:08:00+00:00",
+        "note": "E002 camera feed lost"
+      },
+      {
+        "type": "truck_delay",
+        "severity": 2,
+        "timestamp": "2026-04-11T10:20:00+00:00",
+        "note": "E003 vehicle delay near site"
+      }
+    ],
+    "matched_event_ids": [
+      "E001",
+      "E002",
+      "E003"
+    ],
+    "total_severity": 5,
+    "confidence": 0.63,
+    "reason": "A001 Matched rule R001 suspicious_activity within 30 minutes (actual span: 20.0 minutes)."
+  }
+]
+(venv) 
+terry@LAPTOP-HKPDHF7M MINGW64 ~/Downloads/d1_agent (main)
+
+python pal_core_01_detect_ids.py scan
+$ python pal_core_01_detect_ids.py scan
+=== STORED EVENTS ===
+[
+  {
+    "site": "A",
+    "type": "power_spike",
+    "severity": 2,
+    "note": "E001 unexpected jump in electricity usage",
+    "timestamp": "2026-04-11T10:00:00+00:00"
+  },
+  {
+    "site": "A",
+    "type": "camera_offline",
+    "severity": 1,
+    "note": "E002 camera feed lost",
+    "timestamp": "2026-04-11T10:08:00+00:00"
+  },
+  {
+    "site": "A",
+    "type": "truck_delay",
+    "severity": 2,
+    "note": "E003 vehicle delay near site",
+    "timestamp": "2026-04-11T10:20:00+00:00"
+  },
+  {
+    "site": "B",
+    "type": "power_spike",
+    "severity": 1,
+    "note": "E004 minor fluctuation",
+    "timestamp": "2026-04-11T10:03:00+00:00"
+  },
+  {
+    "site": "B",
+    "type": "truck_delay",
+    "severity": 1,
+    "note": "E005 small traffic delay",
+    "timestamp": "2026-04-11T10:40:00+00:00"
+  }
+]
+
+=== RULES ===
+[
+  {
+    "name": "R001 suspicious_activity",
+    "site_types": [
+      "power_spike",
+      "camera_offline",
+      "truck_delay"
+    ],
+    "window_minutes": 30,
+    "min_total_severity": 3
+  }
+]
+
+=== ALERTS ===
+[
+  {
+    "alert_id": "A001",
+    "alert_type": "R001 suspicious_activity",
+    "site": "A",
+    "matched_events": [
+      {
+        "type": "power_spike",
+        "severity": 2,
+        "timestamp": "2026-04-11T10:00:00+00:00",
+        "note": "E001 unexpected jump in electricity usage"
+      },
+      {
+        "type": "camera_offline",
+        "severity": 1,
+        "timestamp": "2026-04-11T10:08:00+00:00",
+        "note": "E002 camera feed lost"
+      },
+      {
+        "type": "truck_delay",
+        "severity": 2,
+        "timestamp": "2026-04-11T10:20:00+00:00",
+        "note": "E003 vehicle delay near site"
+      }
+    ],
+    "matched_event_ids": [
+      "E001",
+      "E002",
+      "E003"
+    ],
+    "total_severity": 5,
+    "confidence": 0.63,
+    "reason": "A001 Matched rule R001 suspicious_activity within 30 minutes (actual span: 20.0 minutes)."
+  }
+]
+(venv) 
+terry@LAPTOP-HKPDHF7M MINGW64 ~/Downloads/d1_agent (main)
+
+python pal_core_01_detect_ids.py ingest "{\"site\":\"A\",\"type\":\"power_spike\",\"severity\":2}"
+$ python pal_core_01_detect_ids.py ingest "{\"site\":\"A\",\"type\":\"power_spike\",\"severity\":2}"
+INGEST OK
+Saved to: C:\Users\terry\Downloads\d1_agent\pal_core_events.json
+Event:
+{
+  "site": "A",
+  "type": "power_spike",
+  "severity": 2,
+  "timestamp": "2026-04-11T20:38:50.999465+00:00",
+  "note": "E006 no_note"
+}
+(venv) 
+terry@LAPTOP-HKPDHF7M MINGW64 ~/Downloads/d1_agent (main)
+
+python pal_core_01_detect_ids.py scan
+$ python pal_core_01_detect_ids.py scan
+=== STORED EVENTS ===
+[
+  {
+    "site": "A",
+    "type": "power_spike",
+    "severity": 2,
+    "note": "E001 unexpected jump in electricity usage",
+    "timestamp": "2026-04-11T10:00:00+00:00"
+  },
+  {
+    "site": "A",
+    "type": "camera_offline",
+    "severity": 1,
+    "note": "E002 camera feed lost",
+    "timestamp": "2026-04-11T10:08:00+00:00"
+  },
+  {
+    "site": "A",
+    "type": "truck_delay",
+    "severity": 2,
+    "note": "E003 vehicle delay near site",
+    "timestamp": "2026-04-11T10:20:00+00:00"
+  },
+  {
+    "site": "B",
+    "type": "power_spike",
+    "severity": 1,
+    "note": "E004 minor fluctuation",
+    "timestamp": "2026-04-11T10:03:00+00:00"
+  },
+  {
+    "site": "B",
+    "type": "truck_delay",
+    "severity": 1,
+    "note": "E005 small traffic delay",
+    "timestamp": "2026-04-11T10:40:00+00:00"
+  },
+  {
+    "site": "A",
+    "type": "power_spike",
+    "severity": 2,
+    "timestamp": "2026-04-11T20:38:50.999465+00:00",
+    "note": "E006 no_note"
+  }
+]
+
+=== RULES ===
+[
+  {
+    "name": "R001 suspicious_activity",
+    "site_types": [
+      "power_spike",
+      "camera_offline",
+      "truck_delay"
+    ],
+    "window_minutes": 30,
+    "min_total_severity": 3
+  }
+]
+
+=== ALERTS ===
+[
+  {
+    "alert_id": "A001",
+    "alert_type": "R001 suspicious_activity",
+    "site": "A",
+    "matched_events": [
+      {
+        "type": "power_spike",
+        "severity": 2,
+        "timestamp": "2026-04-11T10:00:00+00:00",
+        "note": "E001 unexpected jump in electricity usage"
+      },
+      {
+        "type": "camera_offline",
+        "severity": 1,
+        "timestamp": "2026-04-11T10:08:00+00:00",
+        "note": "E002 camera feed lost"
+      },
+      {
+        "type": "truck_delay",
+        "severity": 2,
+        "timestamp": "2026-04-11T10:20:00+00:00",
+        "note": "E003 vehicle delay near site"
+      }
+    ],
+    "matched_event_ids": [
+      "E001",
+      "E002",
+      "E003"
+    ],
+    "total_severity": 5,
+    "confidence": 0.63,
+    "reason": "A001 Matched rule R001 suspicious_activity within 30 minutes (actual span: 20.0 minutes)."
+  }
+]
+(venv) 
+terry@LAPTOP-HKPDHF7M MINGW64 ~/Downloads/d1_agent (main)
+```
+
+```text2
+#546 Looks clean now.
+What you have is a solid v1:
+•	E00x event labeling works 
+•	R00x rule labeling works 
+•	A00x alert labeling works 
+•	matched_event_ids works 
+•	empty-note ingest is now handled nicely 
+One nice side effect: this makes the demo much easier to narrate:
+Events E001, E002, and E003 satisfied rule R001, which generated alert A001.
+That is exactly the kind of traceability you want for PAL-style demos.
+My recommendation: freeze this as the working pal_core_01_detect_ids.py v1 and move next to either:
+•	add a clear command, or 
+•	start pal_core_02_predict.py 
+I would lean toward pal_core_02_predict.py next.
+```
+
+
+<br>
+
+<br>
+
+26.0618

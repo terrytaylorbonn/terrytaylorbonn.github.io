@@ -1,0 +1,605 @@
+---
+layout: page
+title: "3.3.9 pal_core_09 optimize"
+permalink: /3.3.9_pal_core_09_optimize/
+---
+
+[<- 3.1 Agent PAL core demos](/3.1-agentic/)
+
+## **[3.3.9] — pal_core_09_optimize.py // improved allocation / optimization (BINGO) 26.0427**
+
+```text2
+pal_core_09_optimize.py — improved allocation / optimization
+Main idea:
+PAL state + tasks/resources
+-> optimizer
+-> better assignment plan
+Why it belongs after 3.8b
+You already showed:
+signals -> structured events -> plan -> controlled execution
+Now show:
+structured state -> decision optimization
+That is a natural next step.
+Keep 3.9 simple
+Do not make it too math-heavy.
+Best version:
+•	tasks have priority, duration, location, required_skill 
+•	workers have skills, location, capacity 
+•	compare: 
+o	greedy assignment 
+o	brute-force optimal assignment 
+Demo message: PAL is not just chat. It can compute better operational decisions.
+
+Yes — that’s exactly the correct full test sequence.
+Full Demo Flow
+python pal_core_09_optimize.py reset
+python pal_core_09_optimize.py show
+python pal_core_09_optimize.py greedy
+python pal_core_09_optimize.py optimal
+python pal_core_09_optimize.py compare
+What each step proves
+•	reset → deterministic starting state 
+•	show → verify data (critical sanity check) 
+•	greedy → baseline (local decision logic) 
+•	optimal → brute-force ground truth 
+•	compare → clear measurable improvement 
+What you should see
+greedy_score   < optimal_score
+improvement    > 0
+That’s the success condition for 3.9.
+Optional (nice for demo)
+Run compare twice to show:
+same input → same output
+reinforces deterministic system behavior.
+```
+
+```
+# pal_core_09_optimize.py
+#
+# 3.9 -- improved allocation / optimization
+#
+# Purpose:
+#   Show that PAL-style systems are not just chat/planning.
+#   They can compute better operational decisions.
+#
+# Demo:
+#   Compare greedy assignment vs brute-force optimal assignment.
+#
+# Commands:
+#   python pal_core_09_optimize.py reset
+#   python pal_core_09_optimize.py show
+#   python pal_core_09_optimize.py greedy
+#   python pal_core_09_optimize.py optimal
+#   python pal_core_09_optimize.py compare
+
+import argparse
+import itertools
+import json
+import os
+from typing import Any, Dict, List, Optional, Tuple
+
+DB_FILE = "pal_optimize09.json"
+
+# --------------------------------------------------
+# 1. JSON helpers
+# --------------------------------------------------
+
+def load_json(path: str, default: Any) -> Any:
+    if not os.path.exists(path):
+        return default
+    with open(path, "r", encoding="utf-8") as f:
+        return json.load(f)
+
+def save_json(path: str, data: Any) -> None:
+    with open(path, "w", encoding="utf-8") as f:
+        json.dump(data, f, indent=2, ensure_ascii=False)
+
+# --------------------------------------------------
+# 2. Demo data
+# --------------------------------------------------
+
+def cmd_reset() -> None:
+    data = {
+        "workers": [
+            {
+                "worker_id": "worker_1",
+                "skills": ["logistics", "supplier"],
+                "location": "taipei",
+                "capacity": 2,
+            },
+            {
+                "worker_id": "worker_2",
+                "skills": ["logistics"],
+                "location": "tainan",
+                "capacity": 2,
+            },
+            {
+                "worker_id": "worker_3",
+                "skills": ["system", "supplier"],
+                "location": "site_1",
+                "capacity": 2,
+            },
+        ],
+        "tasks": [
+            {
+                "task_id": "task_1",
+                "type": "logistics",
+                "priority": 9,
+                "duration": 2,
+                "location": "taipei",
+                "reason": "urgent delayed shipment",
+            },
+            {
+                "task_id": "task_2",
+                "type": "supplier",
+                "priority": 8,
+                "duration": 2,
+                "location": "taipei",
+                "reason": "supplier escalation",
+            },
+            {
+                "task_id": "task_3",
+                "type": "system",
+                "priority": 7,
+                "duration": 2,
+                "location": "site_1",
+                "reason": "api failure",
+            },
+            {
+                "task_id": "task_4",
+                "type": "logistics",
+                "priority": 6,
+                "duration": 2,
+                "location": "tainan",
+                "reason": "secondary route issue",
+            },
+        ],
+    }
+
+    save_json(DB_FILE, data)
+    print(json.dumps({"ok": True, "reset": True, "file": DB_FILE}, indent=2))
+
+def load_data() -> Dict[str, Any]:
+    return load_json(DB_FILE, {"workers": [], "tasks": []})
+
+def cmd_show() -> None:
+    print(json.dumps(load_data(), indent=2, ensure_ascii=False))
+
+# --------------------------------------------------
+# 3. Scoring
+# --------------------------------------------------
+
+def travel_cost(worker: Dict[str, Any], task: Dict[str, Any]) -> int:
+    if worker["location"] == task["location"]:
+        return 0
+    return 25
+
+def can_do(worker: Dict[str, Any], task: Dict[str, Any]) -> bool:
+    return task["type"] in worker["skills"]
+
+def assignment_score(worker: Dict[str, Any], task: Dict[str, Any]) -> int:
+    """
+    Higher is better.
+
+    priority reward:
+      high-priority tasks matter more
+
+    travel penalty:
+      assigning far-away worker is worse
+    """
+    if not can_do(worker, task):
+        return -999
+
+    return task["priority"] * 10 - travel_cost(worker, task)
+
+def total_score(assignments: List[Dict[str, Any]]) -> int:
+    return sum(a["score"] for a in assignments)
+
+# --------------------------------------------------
+# 4. Greedy assignment
+# --------------------------------------------------
+
+def greedy_assign(data: Dict[str, Any]) -> Dict[str, Any]:
+    workers = data["workers"]
+    tasks = sorted(data["tasks"], key=lambda t: t["priority"], reverse=True)
+
+    remaining_capacity = {
+        w["worker_id"]: w["capacity"] for w in workers
+    }
+
+    assignments = []
+    unassigned = []
+
+    for task in tasks:
+        best = None
+
+        for worker in workers:
+            if remaining_capacity[worker["worker_id"]] < task["duration"]:
+                continue
+
+            score = assignment_score(worker, task)
+            if score < 0:
+                continue
+
+            candidate = {
+                "task_id": task["task_id"],
+                "worker_id": worker["worker_id"],
+                "score": score,
+                "priority": task["priority"],
+                "task_type": task["type"],
+                "task_location": task["location"],
+                "worker_location": worker["location"],
+                "reason": task["reason"],
+            }
+
+            if best is None or candidate["score"] > best["score"]:
+                best = candidate
+
+        if best is None:
+            unassigned.append(task)
+        else:
+            assignments.append(best)
+            remaining_capacity[best["worker_id"]] -= task["duration"]
+
+    return {
+        "method": "greedy",
+        "score": total_score(assignments),
+        "assignments": assignments,
+        "unassigned": unassigned,
+        "remaining_capacity": remaining_capacity,
+    }
+
+# --------------------------------------------------
+# 5. Brute-force optimal assignment
+# --------------------------------------------------
+
+def optimal_assign(data: Dict[str, Any]) -> Dict[str, Any]:
+    workers = data["workers"]
+    tasks = data["tasks"]
+
+    worker_options = [w["worker_id"] for w in workers] + [None]
+    worker_by_id = {w["worker_id"]: w for w in workers}
+
+    best_result = None
+
+    for combo in itertools.product(worker_options, repeat=len(tasks)):
+        remaining_capacity = {
+            w["worker_id"]: w["capacity"] for w in workers
+        }
+
+        assignments = []
+        unassigned = []
+        valid = True
+
+        for task, worker_id in zip(tasks, combo):
+            if worker_id is None:
+                unassigned.append(task)
+                continue
+
+            worker = worker_by_id[worker_id]
+
+            if remaining_capacity[worker_id] < task["duration"]:
+                valid = False
+                break
+
+            score = assignment_score(worker, task)
+            if score < 0:
+                valid = False
+                break
+
+            assignments.append({
+                "task_id": task["task_id"],
+                "worker_id": worker_id,
+                "score": score,
+                "priority": task["priority"],
+                "task_type": task["type"],
+                "task_location": task["location"],
+                "worker_location": worker["location"],
+                "reason": task["reason"],
+            })
+
+            remaining_capacity[worker_id] -= task["duration"]
+
+        if not valid:
+            continue
+
+        result = {
+            "method": "optimal_bruteforce",
+            "score": total_score(assignments),
+            "assignments": assignments,
+            "unassigned": unassigned,
+            "remaining_capacity": remaining_capacity,
+        }
+
+        if best_result is None or result["score"] > best_result["score"]:
+            best_result = result
+
+    return best_result or {
+        "method": "optimal_bruteforce",
+        "score": 0,
+        "assignments": [],
+        "unassigned": tasks,
+        "remaining_capacity": {},
+    }
+
+# --------------------------------------------------
+# 6. Commands
+# --------------------------------------------------
+
+def cmd_greedy() -> None:
+    data = load_data()
+    print(json.dumps(greedy_assign(data), indent=2, ensure_ascii=False))
+
+def cmd_optimal() -> None:
+    data = load_data()
+    print(json.dumps(optimal_assign(data), indent=2, ensure_ascii=False))
+
+def cmd_compare() -> None:
+    data = load_data()
+    greedy = greedy_assign(data)
+    optimal = optimal_assign(data)
+
+    print(json.dumps({
+        "ok": True,
+        "greedy_score": greedy["score"],
+        "optimal_score": optimal["score"],
+        "improvement": optimal["score"] - greedy["score"],
+        "greedy": greedy,
+        "optimal": optimal,
+    }, indent=2, ensure_ascii=False))
+
+# --------------------------------------------------
+# 7. CLI
+# --------------------------------------------------
+
+def main() -> None:
+    parser = argparse.ArgumentParser(description="PAL Core 09 - allocation optimization")
+    sub = parser.add_subparsers(dest="cmd", required=True)
+
+    sub.add_parser("reset")
+    sub.add_parser("show")
+    sub.add_parser("greedy")
+    sub.add_parser("optimal")
+    sub.add_parser("compare")
+
+    args = parser.parse_args()
+
+    if args.cmd == "reset":
+        cmd_reset()
+    elif args.cmd == "show":
+        cmd_show()
+    elif args.cmd == "greedy":
+        cmd_greedy()
+    elif args.cmd == "optimal":
+        cmd_optimal()
+    elif args.cmd == "compare":
+        cmd_compare()
+
+if __name__ == "__main__":
+    main()
+
+
+
+
+
+
+$ python pal_core_09_optimize.py show
+{
+  "workers": [
+    {
+      "worker_id": "worker_1",
+      "skills": [
+        "logistics",
+        "supplier"
+      ],
+      "location": "taipei",
+      "capacity": 2
+    },
+    {
+      "worker_id": "worker_2",
+      "skills": [
+        "logistics"
+      ],
+      "location": "tainan",
+      "capacity": 2
+    },
+    {
+      "worker_id": "worker_3",
+      "skills": [
+        "system",
+        "supplier"
+      ],
+      "location": "site_1",
+      "capacity": 2
+    }
+  ],
+  "tasks": [
+    {
+      "task_id": "task_1",
+      "type": "logistics",
+      "priority": 9,
+      "duration": 2,
+      "location": "taipei",
+      "reason": "urgent delayed shipment"
+    },
+    {
+      "task_id": "task_2",
+      "type": "supplier",
+      "priority": 8,
+      "duration": 2,
+      "location": "taipei",
+      "reason": "supplier escalation"
+    },
+    {
+      "task_id": "task_3",
+      "type": "system",
+      "priority": 7,
+      "duration": 2,
+      "location": "site_1",
+      "reason": "api failure"
+    },
+    {
+      "task_id": "task_4",
+      "type": "logistics",
+      "priority": 6,
+      "duration": 2,
+      "location": "tainan",
+      "reason": "secondary route issue"
+    }
+  ]
+}
+(venv) 
+terry@LAPTOP-HKPDHF7M MINGW64 ~/Downloads/d1_agent (main)
+
+
+
+$ python pal_core_09_optimize.py compare
+{
+  "ok": true,
+  "greedy_score": 205,
+  "optimal_score": 220,
+  "improvement": 15,
+  "greedy": {
+    "method": "greedy",
+    "score": 205,
+    "assignments": [
+      {
+        "task_id": "task_1",
+        "worker_id": "worker_1",
+        "score": 90,
+        "priority": 9,
+        "task_type": "logistics",
+        "task_location": "taipei",
+        "worker_location": "taipei",
+        "reason": "urgent delayed shipment"
+      },
+      {
+        "task_id": "task_2",
+        "worker_id": "worker_3",
+        "score": 55,
+        "priority": 8,
+        "task_type": "supplier",
+        "task_location": "taipei",
+        "worker_location": "site_1",
+        "reason": "supplier escalation"
+      },
+      {
+        "task_id": "task_4",
+        "worker_id": "worker_2",
+        "score": 60,
+        "priority": 6,
+        "task_type": "logistics",
+        "task_location": "tainan",
+        "worker_location": "tainan",
+        "reason": "secondary route issue"
+      }
+    ],
+    "unassigned": [
+      {
+        "task_id": "task_3",
+        "type": "system",
+        "priority": 7,
+        "duration": 2,
+        "location": "site_1",
+        "reason": "api failure"
+      }
+    ],
+    "remaining_capacity": {
+      "worker_1": 0,
+      "worker_2": 0,
+      "worker_3": 0
+    }
+  },
+  "optimal": {
+    "method": "optimal_bruteforce",
+    "score": 220,
+    "assignments": [
+      {
+        "task_id": "task_1",
+        "worker_id": "worker_1",
+        "score": 90,
+        "priority": 9,
+        "task_type": "logistics",
+        "task_location": "taipei",
+        "worker_location": "taipei",
+        "reason": "urgent delayed shipment"
+      },
+      {
+        "task_id": "task_3",
+        "worker_id": "worker_3",
+        "score": 70,
+        "priority": 7,
+        "task_type": "system",
+        "task_location": "site_1",
+        "worker_location": "site_1",
+        "reason": "api failure"
+      },
+      {
+        "task_id": "task_4",
+        "worker_id": "worker_2",
+        "score": 60,
+        "priority": 6,
+        "task_type": "logistics",
+        "task_location": "tainan",
+        "worker_location": "tainan",
+        "reason": "secondary route issue"
+      }
+    ],
+    "unassigned": [
+      {
+        "task_id": "task_2",
+        "type": "supplier",
+        "priority": 8,
+        "duration": 2,
+        "location": "taipei",
+        "reason": "supplier escalation"
+      }
+    ],
+    "remaining_capacity": {
+      "worker_1": 0,
+      "worker_2": 0,
+      "worker_3": 0
+    }
+  }
+}
+(venv) 
+terry@LAPTOP-HKPDHF7M MINGW64 ~/Downloads/d1_agent (main)
+$
+```
+
+```text2
+#651 how would you summarize this workflow 
+# python pal_core_09_optimize.py reset 
+# python pal_core_09_optimize.py show 
+# python pal_core_09_optimize.py greedy 
+# python pal_core_09_optimize.py optimal 
+# python pal_core_09_optimize.py compare
+
+Short Summary
+set state → inspect → compute baseline → compute optimal → compare results
+Slightly richer version (recommended for your site)
+initialize scenario → verify inputs → run greedy allocation → run optimal allocation → measure improvement
+One-line (for headers)
+Deterministic state → baseline decision → optimal decision → measurable improvement
+PAL-style framing
+structured data → scoring function → decision search → better outcome
+My pick (clean + professional)
+Initialize → Validate → Greedy → Optimal → Compare
+```
+
+
+
+
+
+
+
+<br>
+
+## **(todo) [3.3.10] — pal_core_10_ui.py // dashboard / FastAPI / presentation layer 26.0427**
+
+
+<br>
+
+26.0617 (0515)
+
+26.0618

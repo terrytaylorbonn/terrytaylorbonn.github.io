@@ -1,0 +1,557 @@
+---
+layout: page
+title: "3.3.7 pal_core_07 gmail alerts"
+permalink: /3.3.7_pal_core_07_gmail_alerts/
+---
+
+[<- 3.1 Agent PAL core demos](/3.1-agentic/)
+
+## **[3.3.7] pal_core_07_gmail_alerts.py // real emails as sensor stream (BINGO) 25.0423**
+
+```text2
+For 3.7, the cleanest interpretation is:
+email inbox = real-world sensor input
+then
+PAL converts selected emails into normalized events
+That gives you a very good bridge from:
+•	earlier deterministic PAL demos
+to 
+•	later 3.8 natural language → plan 
+•	and 3.10 UI 
+________________________________________
+Recommended scope for 3.7
+Keep it minimal:
+•	connect to Gmail via IMAP 
+•	read recent matching emails 
+•	extract basic fields 
+•	convert to PAL event format 
+•	save to JSON db 
+•	avoid LLM for now 
+So this demo is about sensor ingestion, not reasoning.
+
+This keeps the demo atomic:
+•	sensor = Gmail inbox 
+•	ingest = IMAP fetch 
+•	normalize = email → PAL event 
+•	store = JSON db 
+•	dedupe = message-id 
+So it shows a core PAL idea:
+external messy input comes in,
+PAL turns it into structured machine-usable state.
+________________________________________
+Small note
+For a first pass, I would not do OAuth or Gmail API.
+Too much overhead for this demo.
+Use:
+•	Gmail 
+•	IMAP 
+•	App Password 
+That is the simplest path.
+```
+
+```
+# pal_core_07_gmail_alerts.py
+#
+# 3.7 -- real emails as sensor stream
+#
+# Purpose:
+#   Read selected Gmail messages via IMAP and convert them into normalized PAL events.
+#
+# Environment variables:
+#   PAL_EMAIL_ADDRESS=your_email@gmail.com
+#   PAL_EMAIL_APP_PASSWORD=your_16_char_app_password
+#   PAL_IMAP_SERVER=imap.gmail.com
+#
+# Notes:
+#   - For Gmail, use an App Password, not your normal password.
+#   - This demo is deterministic on purpose.
+#   - No LLM used here yet. We only ingest and normalize.
+#
+# Commands:
+#   python pal_core_07_gmail_alerts.py reset
+#   python pal_core_07_gmail_alerts.py fetch
+#   python pal_core_07_gmail_alerts.py show
+#   python pal_core_07_gmail_alerts.py loop --interval 60
+#
+# Example:
+#   Add these values to .env:
+#   PAL_EMAIL_ADDRESS=you@gmail.com
+#   PAL_EMAIL_APP_PASSWORD=xxxx xxxx xxxx xxxx
+#   PAL_IMAP_SERVER=imap.gmail.com
+#   python pal_core_07_gmail_alerts.py fetch
+
+import argparse
+import email
+import imaplib
+import json
+import os
+import re
+import sys
+import time
+from datetime import datetime, timezone
+from email.message import Message
+from email.header import decode_header
+from typing import Any, Dict, List, Optional, Tuple
+
+# --------------------------------------------------
+# 1. Config
+# --------------------------------------------------
+
+# CODEX CHANGE: Load PAL Gmail settings from a local .env file before reading os.getenv.
+def load_dotenv_file(path: str = ".env") -> None:
+    if not os.path.exists(path):
+        return
+
+    with open(path, "r", encoding="utf-8") as f:
+        for line in f:
+            line = line.strip()
+            if not line or line.startswith("#") or "=" not in line:
+                continue
+
+            key, value = line.split("=", 1)
+            key = key.strip()
+            value = value.strip().strip('"').strip("'")
+
+            if key and key not in os.environ:
+                os.environ[key] = value
+
+# CODEX CHANGE: Make .env values available to the config below.
+load_dotenv_file()
+
+DB_FILE = "pal_events07.json"
+STATE_FILE = "pal_email_state07.json"
+
+# CODEX CHANGE: PAL_IMAP_SERVER now comes from .env, with Gmail as the fallback.
+DEFAULT_IMAP_SERVER = os.getenv("PAL_IMAP_SERVER", "imap.gmail.com")
+DEFAULT_LABEL = "INBOX"
+DEFAULT_MAX_RESULTS = 10
+
+# Optional filters to keep the demo clean.
+# You can expand these later.
+WATCH_SENDERS = [
+    # examples:
+    # "alerts@company.com",
+    # "noreply@monitoring.com",
+]
+WATCH_SUBJECT_KEYWORDS = [
+    "alert",
+    "incident",
+    "delay",
+    "blocked",
+    "failure",
+    "warning",
+    "shipment",
+    "delivery",
+]
+
+# --------------------------------------------------
+# 2. Small helpers
+# --------------------------------------------------
+
+def utc_now_iso() -> str:
+    return datetime.now(timezone.utc).isoformat()
+
+def load_json(path: str, default: Any) -> Any:
+    if not os.path.exists(path):
+        return default
+    with open(path, "r", encoding="utf-8") as f:
+        return json.load(f)
+
+def save_json(path: str, data: Any) -> None:
+    with open(path, "w", encoding="utf-8") as f:
+        json.dump(data, f, indent=2, ensure_ascii=False)
+
+def decode_mime_words(value: Optional[str]) -> str:
+    if not value:
+        return ""
+    parts = decode_header(value)
+    out = []
+    for part, enc in parts:
+        if isinstance(part, bytes):
+            out.append(part.decode(enc or "utf-8", errors="replace"))
+        else:
+            out.append(part)
+    return "".join(out)
+
+def normalize_whitespace(s: str) -> str:
+    return re.sub(r"\s+", " ", s).strip()
+
+def safe_lower(s: Optional[str]) -> str:
+    return (s or "").strip().lower()
+
+def ensure_db() -> Dict[str, Any]:
+    db = load_json(DB_FILE, {"events": []})
+    if "events" not in db or not isinstance(db["events"], list):
+        db = {"events": []}
+    return db
+
+def ensure_state() -> Dict[str, Any]:
+    state = load_json(STATE_FILE, {"seen_email_ids": []})
+    if "seen_email_ids" not in state or not isinstance(state["seen_email_ids"], list):
+        state = {"seen_email_ids": []}
+    return state
+
+# --------------------------------------------------
+# 3. Email body extraction
+# --------------------------------------------------
+
+# CODEX CHANGE: Use Message directly so the type annotation does not depend on email.message being loaded as a module attribute.
+def extract_text_from_message(msg: Message) -> str:
+    """
+    Return a plain text body if possible.
+    Keep this simple and deterministic.
+    """
+    if msg.is_multipart():
+        chunks = []
+        for part in msg.walk():
+            content_type = part.get_content_type()
+            content_disposition = str(part.get("Content-Disposition", "")).lower()
+
+            if "attachment" in content_disposition:
+                continue
+
+            if content_type == "text/plain":
+                payload = part.get_payload(decode=True)
+                if payload:
+                    charset = part.get_content_charset() or "utf-8"
+                    chunks.append(payload.decode(charset, errors="replace"))
+        return normalize_whitespace(" ".join(chunks))
+
+    payload = msg.get_payload(decode=True)
+    if payload:
+        charset = msg.get_content_charset() or "utf-8"
+        return normalize_whitespace(payload.decode(charset, errors="replace"))
+    return ""
+
+# --------------------------------------------------
+# 4. Deterministic parsing
+# --------------------------------------------------
+
+def infer_status(subject: str, body: str) -> str:
+    text = f"{subject} {body}".lower()
+
+    if any(x in text for x in ["blocked", "stuck", "halted"]):
+        return "blocked"
+    if any(x in text for x in ["delayed", "delay", "late"]):
+        return "delayed"
+    if any(x in text for x in ["failed", "failure", "error", "exception"]):
+        return "failed"
+    if any(x in text for x in ["warning", "degraded", "risk"]):
+        return "warning"
+    if any(x in text for x in ["delivered", "resolved", "recovered", "restored"]):
+        return "resolved"
+    return "alert"
+
+def infer_priority(status: str, subject: str, body: str) -> int:
+    text = f"{subject} {body}".lower()
+
+    if "critical" in text or "sev1" in text or status == "blocked":
+        return 9
+    if "high" in text or "sev2" in text or status in ("failed", "delayed"):
+        return 7
+    if status == "warning":
+        return 5
+    if status == "resolved":
+        return 2
+    return 4
+
+def extract_entity_id(subject: str, body: str) -> str:
+    text = f"{subject} {body}"
+
+    patterns = [
+        r"\b(truck[_\- ]?\d+)\b",
+        r"\b(shipment[_\- ]?\d+)\b",
+        r"\b(order[_\- ]?\d+)\b",
+        r"\b(site[_\- ]?\d+)\b",
+        r"\b(sensor[_\- ]?\d+)\b",
+        r"\b(device[_\- ]?\d+)\b",
+    ]
+    for pat in patterns:
+        m = re.search(pat, text, re.IGNORECASE)
+        if m:
+            return m.group(1).replace(" ", "_").lower()
+
+    return "email_signal"
+
+def extract_location(subject: str, body: str) -> str:
+    text = f"{subject} {body}".lower()
+
+    known_locations = [
+        "taipei",
+        "tainan",
+        "kaohsiung",
+        "tokyo",
+        "berlin",
+        "kyiv",
+        "warsaw",
+        "new york",
+        "hoboken",
+        "site_1",
+        "site_2",
+        "site_3",
+    ]
+    for loc in known_locations:
+        if loc in text:
+            return loc.replace(" ", "_")
+    return "unknown"
+
+def infer_event_type(status: str, subject: str, body: str) -> str:
+    text = f"{subject} {body}".lower()
+
+    if any(x in text for x in ["shipment", "delivery", "carrier", "warehouse"]):
+        return "logistics_alert"
+    if any(x in text for x in ["server", "service", "api", "database", "latency"]):
+        return "system_alert"
+    if any(x in text for x in ["supplier", "vendor"]):
+        return "supplier_alert"
+    if status == "resolved":
+        return "resolution_notice"
+    return "email_alert"
+
+def should_keep_email(sender: str, subject: str) -> bool:
+    sender_l = safe_lower(sender)
+    subject_l = safe_lower(subject)
+
+    sender_match = (not WATCH_SENDERS) or any(x in sender_l for x in WATCH_SENDERS)
+    subject_match = any(k in subject_l for k in WATCH_SUBJECT_KEYWORDS)
+
+    return sender_match or subject_match
+
+# CODEX CHANGE: Use Message directly for the same reason as above.
+def email_to_pal_event(msg: Message, raw_body: str) -> Dict[str, Any]:
+    subject = decode_mime_words(msg.get("Subject", ""))
+    sender = decode_mime_words(msg.get("From", ""))
+    msg_id = decode_mime_words(msg.get("Message-ID", "")) or f"no_msgid_{int(time.time()*1000)}"
+    date_raw = decode_mime_words(msg.get("Date", ""))
+
+    status = infer_status(subject, raw_body)
+    priority = infer_priority(status, subject, raw_body)
+    entity_id = extract_entity_id(subject, raw_body)
+    location = extract_location(subject, raw_body)
+    event_type = infer_event_type(status, subject, raw_body)
+
+    return {
+        "source": "gmail",
+        "source_message_id": msg_id,
+        "timestamp": utc_now_iso(),
+        "event_time_raw": date_raw,
+        "entity": entity_id,
+        "event_type": event_type,
+        "status": status,
+        "priority": priority,
+        "location": location,
+        "subject": subject,
+        "sender": sender,
+        "note": raw_body[:500],
+    }
+
+# --------------------------------------------------
+# 5. IMAP fetch
+# --------------------------------------------------
+
+def connect_imap() -> imaplib.IMAP4_SSL:
+    email_addr = os.getenv("PAL_EMAIL_ADDRESS", "").strip()
+    email_pw = os.getenv("PAL_EMAIL_APP_PASSWORD", "").strip()
+
+    if not email_addr or not email_pw:
+        print("ERROR: Missing PAL_EMAIL_ADDRESS or PAL_EMAIL_APP_PASSWORD")
+        sys.exit(1)
+
+    mail = imaplib.IMAP4_SSL(DEFAULT_IMAP_SERVER)
+    mail.login(email_addr, email_pw)
+    return mail
+
+# CODEX CHANGE: Use Message directly for the return type annotation.
+def fetch_recent_emails(max_results: int = DEFAULT_MAX_RESULTS, label: str = DEFAULT_LABEL) -> List[Message]:
+    mail = connect_imap()
+    try:
+        status, _ = mail.select(label)
+        if status != "OK":
+            print(f"ERROR: could not open mailbox {label}")
+            return []
+
+        # Pull latest emails. Keep the demo simple.
+        status, data = mail.search(None, "ALL")
+        if status != "OK" or not data or not data[0]:
+            return []
+
+        ids = data[0].split()
+        ids = ids[-max_results:]
+
+        msgs = []
+        for email_id in ids:
+            status, msg_data = mail.fetch(email_id, "(RFC822)")
+            if status != "OK":
+                continue
+            for response_part in msg_data:
+                if isinstance(response_part, tuple):
+                    msg = email.message_from_bytes(response_part[1])
+                    msgs.append(msg)
+        return msgs
+    finally:
+        try:
+            mail.close()
+        except Exception:
+            pass
+        mail.logout()
+
+# --------------------------------------------------
+# 6. Commands
+# --------------------------------------------------
+
+def cmd_reset() -> None:
+    save_json(DB_FILE, {"events": []})
+    save_json(STATE_FILE, {"seen_email_ids": []})
+    print(json.dumps({"ok": True, "reset": True}, indent=2))
+
+def cmd_show() -> None:
+    db = ensure_db()
+    print(json.dumps(db, indent=2, ensure_ascii=False))
+
+def cmd_fetch(max_results: int, label: str) -> None:
+    db = ensure_db()
+    state = ensure_state()
+    seen = set(state["seen_email_ids"])
+
+    msgs = fetch_recent_emails(max_results=max_results, label=label)
+
+    added = []
+    skipped = 0
+
+    for msg in msgs:
+        subject = decode_mime_words(msg.get("Subject", ""))
+        sender = decode_mime_words(msg.get("From", ""))
+        msg_id = decode_mime_words(msg.get("Message-ID", ""))
+
+        if not msg_id:
+            skipped += 1
+            continue
+
+        if msg_id in seen:
+            skipped += 1
+            continue
+
+        if not should_keep_email(sender, subject):
+            skipped += 1
+            continue
+
+        body = extract_text_from_message(msg)
+        event = email_to_pal_event(msg, body)
+
+        db["events"].append(event)
+        seen.add(msg_id)
+        added.append(event)
+
+    state["seen_email_ids"] = sorted(seen)
+    save_json(DB_FILE, db)
+    save_json(STATE_FILE, state)
+
+    print(json.dumps({
+        "ok": True,
+        "fetched_messages": len(msgs),
+        "added_events": len(added),
+        "skipped": skipped,
+        "events": added,
+    }, indent=2, ensure_ascii=False))
+
+def cmd_loop(interval_sec: int, max_results: int, label: str) -> None:
+    print(f"[pal_core_07] polling gmail every {interval_sec}s...")
+    while True:
+        try:
+            cmd_fetch(max_results=max_results, label=label)
+        except KeyboardInterrupt:
+            print("\n[pal_core_07] stopped")
+            break
+        except Exception as e:
+            print(json.dumps({"ok": False, "error": str(e)}, indent=2))
+        time.sleep(interval_sec)
+
+# --------------------------------------------------
+# 7. Main
+# --------------------------------------------------
+
+def main():
+    parser = argparse.ArgumentParser(description="PAL Core 07 - Gmail alerts as sensor stream")
+    sub = parser.add_subparsers(dest="cmd", required=True)
+
+    sub.add_parser("reset")
+    sub.add_parser("show")
+
+    p_fetch = sub.add_parser("fetch")
+    p_fetch.add_argument("--max_results", type=int, default=DEFAULT_MAX_RESULTS)
+    p_fetch.add_argument("--label", type=str, default=DEFAULT_LABEL)
+
+    p_loop = sub.add_parser("loop")
+    p_loop.add_argument("--interval", type=int, default=60)
+    p_loop.add_argument("--max_results", type=int, default=DEFAULT_MAX_RESULTS)
+    p_loop.add_argument("--label", type=str, default=DEFAULT_LABEL)
+
+    args = parser.parse_args()
+
+    if args.cmd == "reset":
+        cmd_reset()
+    elif args.cmd == "show":
+        cmd_show()
+    elif args.cmd == "fetch":
+        cmd_fetch(max_results=args.max_results, label=args.label)
+    elif args.cmd == "loop":
+        cmd_loop(interval_sec=args.interval, max_results=args.max_results, label=args.label)
+
+if __name__ == "__main__":
+    main()
+```
+
+```text2
+$ python pal_core_07_gmail_alerts.py fetch
+{
+  "ok": true,
+  "fetched_messages": 10,
+  "added_events": 10,
+  "skipped": 0,
+  "events": [
+    {
+      "source": "gmail",
+      "source_message_id":
+..........................
+
+$ python pal_core_07_gmail_alerts.py show
+{
+  "events": [
+    {
+      "source": "gmail",
+      "source_message_id":
+.............................
+
+
+$ python pal_core_07_gmail_alerts.py loop --interval 10
+[pal_core_07] polling gmail every 10s...
+{
+.........................................
+{
+  "ok": true,
+  "fetched_messages": 10,
+  "added_events": 1,
+  "skipped": 9,
+  "events": [
+    {
+      "source": "gmail",
+      "source_message_id": "<,,,,,,,,,,,,,,,,,,,,@mail.gmail.com>",     
+      "timestamp": "2026-04-23T17:02:24.902957+00:00",
+      "event_time_raw": "Thu, 23 Apr 2026 13:02:02 -0400",
+      "entity": "email_signal",
+      "event_type": "email_alert",
+      "status": "alert",
+      "priority": 4,
+      "location": "unknown",
+      "subject": "test1",
+      "sender": "T T <terrytaylorbonn@gmail.com>",
+      "note": "111111111111"
+    }
+  ]
+}
+```
+
+<br>
+
+
+26.0618

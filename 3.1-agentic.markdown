@@ -28,28 +28,26 @@ For details see the lab notes doc **#603\_PAL\_.docx** (PAL = Palantir) on the *
 
 <br>
 
-**PAL_CORE demos 3.4, 3.5, 3.8, 3.8b (??) use openAI**
+**PAL_CORE demos 3.3.4, 3.3.5, 3.3.8, 3.3.8b (??) use openAI**
 
 **TOC** 
-- **[3.1] pal_core_01.detect.py (BINGO) 26.0411 (01 events / alerts)**
-- **[3.2] pal_core_02_predict.py (BINGO) 26.0411 (02 road network / prediction)**
-- **[3.3] pal_core_03_allocate.py (BINGO) 26.0411 (03 resources / allocation)**
-- **[3.4] pal_core_04 (BINGO) 26.0412 (04 graph / relationships) (see summary)**
-- **[3.5] pal_core_05_operate.py (BINGO) (combine core01-04) 26.0415-16**
-- **[3.5b] WITH AI \#592 "LLM bcd" xxxxxxxxxxxxxxxxxxxxx**
-- **[3.6] (WIP) pal_core_06: simplest demo of all core LLM roles 26.0416**
-  - CODEX1 ?? 
-- **[3.7] pal_core_07_gmail_alerts.py // real emails as sensor stream (BINGO) 25.0423**
-- **[3.8] pal_core_08_plan.py // natural language → plan JSON → controlled execution (BINGO) 26.0423**
-- **[3.8b] SS/LIN WIP 26.0425**
-- **[3.8b] pal_core_08_plan.py + LLM (BINGO) 26.0424**
-- **[3.9] — pal_core_09_optimize.py // improved allocation / optimization (BINGO) 26.0427**
-- **(todo) [3.10] — pal_core_10_ui.py // dashboard / FastAPI / presentation layer 26.0427**
+- **[3.3.1] [pal_core_01.detect.py (BINGO) 26.0411 (01 events / alerts)](/3.3.1_pal_core_01_detect/)**
+- **[3.3.2] [pal_core_02_predict.py (BINGO) 26.0411 (02 road network / prediction)](/3.3.2_pal_core_02_predict/)**
+- **[3.3.3] [pal_core_03_allocate.py (BINGO) 26.0411 (03 resources / allocation)](/3.3.3_pal_core_03_allocate/)**
+- **[3.3.4] [pal_core_04 (BINGO) 26.0412 (04 graph / relationships) (see summary)](/3.3.4_pal_core_04_graph/)**
+- **[3.3.5] [pal_core_05_operate.py (BINGO) (combine core01-04) 26.0415-16](/3.3.5_pal_core_05_operate/)**
+- **[3.3.5b] [WITH AI \#592 "LLM bcd"](/3.3.5bcd_pal_core_05/)**
+- **[3.3.6] [(WIP) pal_core_06: simplest demo of all core LLM roles 26.0416](/3.3.6_pal_core_06_all_roles/)**
+- **[3.3.7] [pal_core_07_gmail_alerts.py // real emails as sensor stream (BINGO) 25.0423](/3.3.7_pal_core_07_gmail_alerts/)**
+- **[3.3.8] [pal_core_08_plan.py // natural language → plan JSON → controlled execution (BINGO) 26.0423](/3.3.8_pal_core_08_plan/)**
+- **[3.3.8b] [pal_core_08_plan.py + LLM (BINGO) 26.0424](/3.3.8b_pal_core_08_plan_LLM/)**
+- **[3.3.9] [pal_core_09_optimize.py // improved allocation / optimization (BINGO) 26.0427](/3.3.9_pal_core_09_optimize/)**
+- **(todo) [3.3.10] — pal_core_10_ui.py // dashboard / FastAPI / presentation layer 26.0427**
 
-
+<!--
 <br>
 
-## **[3.1] pal_core_01.detect.py (BINGO) 26.0411 (01 events / alerts)**
+## **[3.3.1] pal_core_01.detect.py (BINGO) 26.0411 (01 events / alerts)**
 
 <br>
 
@@ -920,7 +918,7 @@ I would lean toward pal_core_02_predict.py next.
 
 <br>
 
-## **[3.2] pal_core_02_predict.py (BINGO) 26.0411 (02 road network / prediction)**
+## **[3.3.2] pal_core_02_predict.py (BINGO) 26.0411 (02 road network / prediction)**
 
 <br>
 
@@ -1815,7 +1813,7 @@ Concepts shown
 
 <br>
 
-## **[3.3] pal_core_03_allocate.py (BINGO) 26.0411 (03 resources / allocation)**
+## **[3.3.3] pal_core_03_allocate.py (BINGO) 26.0411 (03 resources / allocation)**
 
 <br>
 
@@ -2399,7 +2397,7 @@ Detect issue → Predict impact → Allocate response.
 
 <br>
 
-## **[3.4] pal_core_04 (BINGO) 26.0412 (04 graph / relationships) (see summary)**
+## **[3.3.4] pal_core_04 (BINGO) 26.0412 (04 graph / relationships) (see summary)**
 
 <br>
 
@@ -2731,7 +2729,7 @@ def find_entities_of_type(state: Dict[str, Any], entity_type: str) -> List[Dict[
 def build_through_index(state: Dict[str, Any], source_type: str, through_relation: str) -> Dict[str, List[str]]:
     """
     Example:
-    supplier_1 --owned_by--> parent_1
+    supplier_1 --owned_byxx> parent_1
     returns:
       {
         "parent_1": ["supplier_1", "supplier_2"]
@@ -3344,7 +3342,7 @@ Next best refinement is adding rule IDs like S001 and printing which derived edg
 
 <br>
 
-## **[3.5] pal_core_05_operate.py (BINGO) (combine core01-04) 26.0415-16**
+## **[3.3.5] pal_core_05_operate.py (BINGO) (combine core01-04) 26.0415-16**
 
 ```text2
 After pal_core_04_graph_semantic.py, 
@@ -4227,7 +4225,7 @@ This matters because it proves:
 
 <br>
 
-## **[3.5b] WITH AI**
+## **[3.3.5b] WITH AI**
 
 
 
@@ -5864,7 +5862,7 @@ terry@LAPTOP-HKPDHF7M MINGW64 ~/Downloads/d1_agent (main)
 
 <br>
 
-## **[3.6] (WIP) pal_core_06: simplest demo of all core LLM roles 26.0416**
+## **[3.3.6] (WIP) pal_core_06: simplest demo of all core LLM roles 26.0416**
 
 ```text2
 #585 could you create a minimalistic demo that demos the key ways an LLM capabilities can be used 
@@ -7179,7 +7177,7 @@ terry@LAPTOP-HKPDHF7M MINGW64 ~/Downloads/d1_agent (main)
 
 <br>
 
-## **[3.7] pal_core_07_gmail_alerts.py // real emails as sensor stream (BINGO) 25.0423**
+## **[3.3.7] pal_core_07_gmail_alerts.py // real emails as sensor stream (BINGO) 25.0423**
 
 ```text2
 For 3.7, the cleanest interpretation is:
@@ -7726,7 +7724,7 @@ $ python pal_core_07_gmail_alerts.py loop --interval 10
 
 <br>
 
-## **[3.8] pal_core_08_plan.py // natural language → plan JSON → controlled execution (BINGO) 26.0423**
+## **[3.3.8] pal_core_08_plan.py // natural language → plan JSON → controlled execution (BINGO) 26.0423**
 
 
 <img src="/assets/M-24.png" alt="drones" width="90%">
@@ -7750,7 +7748,7 @@ Gmail → PAL events DB
 User request → plan JSON → execute over DB 
 So 08 builds on 07, not replaces it.
 Flow
-Emails --> pal_events07.json
+Emails xx> pal_events07.json
               |
               v
         pal_core_08_plan.py
@@ -9070,7 +9068,7 @@ This is a successful 3.7 + 3.8 live demo.
 
 <br>
 
-## **[3.8b] pal_core_08_plan.py + LLM (BINGO) 26.0424**
+## **[3.3.8b] pal_core_08_plan.py + LLM (BINGO) 26.0424**
 
 
 <img src="/assets/M-24.png" alt="drones" width="90%">
@@ -9397,7 +9395,7 @@ def validate_plan(plan: Dict[str, Any]) -> Tuple[bool, str]:
 # 5. LLM plan generation
 # --------------------------------------------------
 
-################# NEW [3.8b] from GPT #######################
+################# NEW [3.3.8b] from GPT #######################
 # GPT: Main change: I separated known values from tool rules, 
 # so the LLM is less likely to invent values like urgent or logistics problems.
 # FIX 3 i added 
@@ -9816,7 +9814,7 @@ Better than “errors.”
 
 <br>
 
-## **[3.9] — pal_core_09_optimize.py // improved allocation / optimization (BINGO) 26.0427**
+## **[3.3.9] — pal_core_09_optimize.py // improved allocation / optimization (BINGO) 26.0427**
 
 ```text2
 pal_core_09_optimize.py — improved allocation / optimization
@@ -10405,8 +10403,8 @@ Initialize → Validate → Greedy → Optimal → Compare
 
 <br>
 
-## **(todo) [3.10] — pal_core_10_ui.py // dashboard / FastAPI / presentation layer 26.0427**
-
+## **(todo) [3.3.10] — pal_core_10_ui.py // dashboard / FastAPI / presentation layer 26.0427**
+-->
 
 <br>
 

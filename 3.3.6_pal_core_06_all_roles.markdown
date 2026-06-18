@@ -1,0 +1,1325 @@
+---
+layout: page
+title: "3.3.6 pal_core_06 all roles"
+permalink: /3.3.6_pal_core_06_all_roles/
+---
+
+[<- 3.1 Agent PAL core demos](/3.1-agentic/)
+
+## **[3.3.6] (WIP) pal_core_06: simplest demo of all core LLM roles 26.0416**
+
+```text2
+#585 could you create a minimalistic demo that demos the key ways an LLM capabilities can be used 
+in the types of system we have been creating? 
+for example, 
+(1) input human language commands, 
+(2) insert new rules, etc? 
+for now, could you just list those key ways?
+
+Yes. That would be an excellent meta-demo:
+one small system showing the main ways an LLM adds value inside structured applications.
+For now, here is the concise list of key LLM capabilities relevant to the systems you’ve been building.
+Core LLM Roles in Your Demo Systems
+1. Human Command Interpreter
+Convert vague user language into structured actions.
+"Show delayed shipments in Taipei"
+-> {"action":"query","filter":...}
+________________________________________
+2. Messy Data Ingest / Extraction
+Convert emails, logs, notes, reports into ontology records.
+email text -> event JSON
+________________________________________
+3. Planner / Task Decomposer
+Break complex requests into atomic executable steps.
+compare X vs Y
+-> step1 filter
+-> step2 aggregate
+-> step3 compare
+________________________________________
+4. Rule Generator / Rule Injection
+Create new runtime rules without changing source code.
+"Alert if outage + delay + supplier overlap"
+-> new rule JSON
+________________________________________
+5. Semantic Mapping / Ontology Translation
+Map inconsistent human wording into standard machine concepts.
+"flat tire", "blowout"
+-> tire_failure
+________________________________________
+6. Search / Retrieval Helper
+Turn natural language into queries or rank relevant records/documents.
+"What affects Site 1?"
+-> graph query / ranked docs
+________________________________________
+7. Explanation / Summarization
+Convert machine results into human-readable conclusions.
+3 suppliers affected due to shared parent + route dependency
+________________________________________
+8. Interactive Analyst Assistant
+Support iterative questioning.
+Why?
+Show evidence.
+What changed?
+What if road closed?
+________________________________________
+Important Non-LLM Roles (still critical)
+Your demos also showed what LLM usually does not replace:
+•	storage 
+•	graph traversal 
+•	scheduling 
+•	exact calculations 
+•	rule execution 
+•	validation 
+•	permissions 
+•	APIs 
+•	control loop 
+________________________________________
+Best future meta-demo
+A single script showing toggles for all 8 roles:
+pal_meta_llm_roles.py
+That could become one of your best teaching demos.
+```
+
+```
+pal_core_06_meta_llm_roles.py
+
+#!/usr/bin/env python3
+"""
+pal_core_06_meta_llm_roles.py
+
+One compact meta-demo showing the main ways an LLM can add value
+inside a structured / deterministic PAL-style application.
+
+Design goal
+-----------
+Keep the execution core deterministic.
+Use LLM only at the boundaries where language, semantics, rule authoring,
+and explanations add value.
+
+This script demonstrates 8 roles:
+1) Human Command Interpreter
+2) Messy Data Ingest / Extraction
+3) Planner / Task Decomposer
+4) Rule Generator / Rule Injection
+5) Semantic Mapping / Ontology Translation
+6) Search / Retrieval Helper
+7) Explanation / Summarization
+8) Interactive Analyst Assistant
+
+How to run
+----------
+python pal_core_06_meta_llm_roles.py demo
+python pal_core_06_meta_llm_roles.py demo --llm off
+python pal_core_06_meta_llm_roles.py role command
+python pal_core_06_meta_llm_roles.py role ingest
+python pal_core_06_meta_llm_roles.py role planner
+python pal_core_06_meta_llm_roles.py role rulegen
+python pal_core_06_meta_llm_roles.py role ontology
+python pal_core_06_meta_llm_roles.py role retrieval
+python pal_core_06_meta_llm_roles.py role explain
+python pal_core_06_meta_llm_roles.py role analyst
+
+Notes
+-----
+- By default this file runs in MOCK LLM mode, so it is deterministic and easy to study.
+- You can later replace MockLLM with a real adapter (OpenAI / local model / etc.).
+- The ontology/graph and execution engine remain deterministic.
+"""
+
+from __future__ import annotations
+
+import argparse
+import json
+import math
+import re
+from collections import Counter, defaultdict
+from dataclasses import dataclass, field
+from typing import Any, Dict, List, Optional, Tuple
+
+# ============================================================
+# 1) Helpers
+# ============================================================
+
+def jprint(x: Any):
+    print(json.dumps(x, indent=2, ensure_ascii=False))
+
+def norm_text(s: str) -> str:
+    return re.sub(r"\s+", " ", s.strip().lower())
+
+# ============================================================
+# 2) In-memory ontology / graph store (deterministic)
+# ============================================================
+
+@dataclass
+class Entity:
+    entity_id: str
+    entity_type: str
+    name: str
+    attrs: Dict[str, Any] = field(default_factory=dict)
+
+@dataclass
+class Event:
+    event_id: str
+    entity_id: str
+    event_type: str
+    location: str
+    status: str
+    note: str = ""
+    supplier_id: Optional[str] = None
+    route_id: Optional[str] = None
+    site_id: Optional[str] = None
+    severity: int = 1
+
+class OntologyStore:
+    def __init__(self):
+        self.entities: Dict[str, Entity] = {}
+        self.events: List[Event] = []
+        self.edges_out: Dict[str, List[Tuple[str, str]]] = defaultdict(list)
+        self.edges_in: Dict[str, List[Tuple[str, str]]] = defaultdict(list)
+
+    # --------------------------------------------------------
+    # 2.1 entities / edges / events
+    # --------------------------------------------------------
+    def add_entity(self, entity: Entity):
+        self.entities[entity.entity_id] = entity
+
+    def add_edge(self, src: str, rel: str, dst: str):
+        self.edges_out[src].append((rel, dst))
+        self.edges_in[dst].append((rel, src))
+
+    def add_event(self, event: Event):
+        self.events.append(event)
+
+    # --------------------------------------------------------
+    # 2.2 graph helpers
+    # --------------------------------------------------------
+    def neighbors(self, node_id: str) -> List[Dict[str, str]]:
+        out = []
+        for rel, dst in self.edges_out.get(node_id, []):
+            out.append({"from": node_id, "relation": rel, "to": dst})
+        for rel, src in self.edges_in.get(node_id, []):
+            out.append({"from": src, "relation": rel, "to": node_id})
+        return out
+
+    def two_hop_impacts_from_site(self, site_id: str) -> List[Dict[str, Any]]:
+        results = []
+        seen = set()
+        for rel1, n1 in self.edges_in.get(site_id, []) + self.edges_out.get(site_id, []):
+            key1 = (site_id, rel1, n1, 1)
+            if key1 not in seen:
+                results.append({
+                    "entity_id": n1,
+                    "via_relation": rel1,
+                    "hops": 1,
+                })
+                seen.add(key1)
+            for rel2, n2 in self.edges_in.get(n1, []) + self.edges_out.get(n1, []):
+                if n2 == site_id:
+                    continue
+                key2 = (site_id, n1, rel2, n2, 2)
+                if key2 not in seen:
+                    results.append({
+                        "entity_id": n2,
+                        "via_relation": f"{rel1}->{rel2}",
+                        "hops": 2,
+                    })
+                    seen.add(key2)
+        return results
+
+    # --------------------------------------------------------
+    # 2.3 deterministic search/query layer
+    # --------------------------------------------------------
+    def filter_events(self, filt: Dict[str, Any]) -> List[Event]:
+        out = []
+        for ev in self.events:
+            ok = True
+            for k, v in filt.items():
+                if v is None:
+                    continue
+                if not hasattr(ev, k):
+                    ok = False
+                    break
+                if getattr(ev, k) != v:
+                    ok = False
+                    break
+            if ok:
+                out.append(ev)
+        return out
+
+    def aggregate_counts(self, events: List[Event], field_name: str) -> Dict[str, int]:
+        c = Counter()
+        for ev in events:
+            c[str(getattr(ev, field_name, None))] += 1
+        return dict(c)
+
+    def top_impacted_suppliers(self, events: List[Event]) -> List[Dict[str, Any]]:
+        c = Counter()
+        for ev in events:
+            if ev.supplier_id:
+                c[ev.supplier_id] += 1
+        out = []
+        for supplier_id, count in c.most_common():
+            name = self.entities.get(supplier_id).name if supplier_id in self.entities else supplier_id
+            out.append({"supplier_id": supplier_id, "supplier_name": name, "count": count})
+        return out
+
+# ============================================================
+# 3) Seed demo data
+# ============================================================
+
+def seed_demo_store() -> OntologyStore:
+    db = OntologyStore()
+
+    # entities
+    db.add_entity(Entity("site_1", "site", "Site 1", {"city": "taipei"}))
+    db.add_entity(Entity("site_2", "site", "Site 2", {"city": "tainan"}))
+    db.add_entity(Entity("route_7", "route", "Route 7", {"region": "north"}))
+    db.add_entity(Entity("route_9", "route", "Route 9", {"region": "south"}))
+    db.add_entity(Entity("supplier_1", "supplier", "Acme Rubber"))
+    db.add_entity(Entity("supplier_2", "supplier", "Bolt Logistics"))
+    db.add_entity(Entity("supplier_3", "supplier", "Metro Steel"))
+    db.add_entity(Entity("truck_17", "shipment", "Truck 17"))
+    db.add_entity(Entity("truck_21", "shipment", "Truck 21"))
+    db.add_entity(Entity("truck_33", "shipment", "Truck 33"))
+
+    # graph relations
+    db.add_edge("supplier_1", "supplies", "site_1")
+    db.add_edge("supplier_2", "supplies", "site_1")
+    db.add_edge("supplier_2", "supplies", "site_2")
+    db.add_edge("supplier_3", "supplies", "site_2")
+    db.add_edge("truck_17", "uses_route", "route_7")
+    db.add_edge("truck_21", "uses_route", "route_7")
+    db.add_edge("truck_33", "uses_route", "route_9")
+    db.add_edge("route_7", "serves", "site_1")
+    db.add_edge("route_9", "serves", "site_2")
+    db.add_edge("supplier_1", "related_to", "supplier_2")
+
+    # events
+    db.add_event(Event("E001", "truck_17", "shipment", "taipei", "delayed", "flat tire on highway", "supplier_1", "route_7", "site_1", 2))
+    db.add_event(Event("E002", "truck_21", "shipment", "taipei", "blocked", "road closure near tunnel", "supplier_2", "route_7", "site_1", 3))
+    db.add_event(Event("E003", "truck_33", "shipment", "tainan", "delayed", "supplier backlog", "supplier_3", "route_9", "site_2", 2))
+    db.add_event(Event("E004", "truck_17", "shipment", "taipei", "delayed", "blowout and late unloading", "supplier_1", "route_7", "site_1", 2))
+    db.add_event(Event("E005", "truck_21", "shipment", "taipei", "normal", "route reopened", "supplier_2", "route_7", "site_1", 1))
+    db.add_event(Event("E006", "truck_33", "shipment", "tainan", "blocked", "port equipment outage", "supplier_3", "route_9", "site_2", 3))
+
+    return db
+
+# ============================================================
+# 4) Mock LLM adapter
+# ============================================================
+
+class MockLLM:
+    """
+    Deterministic mock that simulates LLM outputs.
+    This keeps the demo runnable and easy to inspect.
+    """
+
+    def command_to_json(self, text: str) -> Dict[str, Any]:
+        t = norm_text(text)
+        if "delayed shipments in taipei" in t:
+            return {
+                "action": "query_events",
+                "filter": {"status": "delayed", "location": "taipei"},
+            }
+        if "what affects site 1" in t:
+            return {
+                "action": "graph_impact",
+                "site_id": "site_1",
+            }
+        return {
+            "action": "query_events",
+            "filter": {},
+        }
+
+    def extract_event_json(self, raw_text: str) -> Dict[str, Any]:
+        t = norm_text(raw_text)
+        location = "taipei" if "taipei" in t else "tainan"
+        status = "delayed" if ("delay" in t or "late" in t) else "normal"
+        supplier_id = "supplier_1" if ("acme" in t or "rubber" in t) else None
+        route_id = "route_7" if "route 7" in t else None
+        site_id = "site_1" if location == "taipei" else "site_2"
+        note = raw_text.strip()
+        return {
+            "entity_id": "truck_900",
+            "event_type": "shipment",
+            "location": location,
+            "status": status,
+            "note": note,
+            "supplier_id": supplier_id,
+            "route_id": route_id,
+            "site_id": site_id,
+            "severity": 2 if status == "delayed" else 1,
+        }
+
+    def make_plan(self, text: str) -> Dict[str, Any]:
+        t = norm_text(text)
+        if "compare delayed shipments in taipei vs blocked shipments in tainan" in t:
+            return {
+                "steps": [
+                    {
+                        "op": "filter_events",
+                        "name": "A",
+                        "args": {"status": "delayed", "location": "taipei"},
+                    },
+                    {
+                        "op": "filter_events",
+                        "name": "B",
+                        "args": {"status": "blocked", "location": "tainan"},
+                    },
+                    {
+                        "op": "aggregate_counts",
+                        "name": "A_counts",
+                        "input": "A",
+                        "field": "supplier_id",
+                    },
+                    {
+                        "op": "aggregate_counts",
+                        "name": "B_counts",
+                        "input": "B",
+                        "field": "supplier_id",
+                    },
+                    {
+                        "op": "compare_named_results",
+                        "name": "cmp",
+                        "left": "A_counts",
+                        "right": "B_counts",
+                    },
+                ]
+            }
+        return {
+            "steps": [
+                {"op": "filter_events", "name": "A", "args": {}},
+                {"op": "aggregate_counts", "name": "A_counts", "input": "A", "field": "status"},
+            ]
+        }
+
+    def generate_rule_json(self, text: str) -> Dict[str, Any]:
+        return {
+            "rule_id": "R100",
+            "name": "outage_delay_supplier_overlap",
+            "when": {
+                "all": [
+                    {"field": "status", "in": ["delayed", "blocked"]},
+                    {"field": "note_contains_any", "value": ["outage", "closure", "backlog"]},
+                    {"field": "supplier_id", "exists": True},
+                ]
+            },
+            "then": {
+                "action": "create_alert",
+                "priority": 9,
+                "reason": "compound disruption: outage + delay/blocked + supplier overlap",
+            },
+        }
+
+    def semantic_map(self, phrase: str) -> Dict[str, str]:
+        t = norm_text(phrase)
+        if "flat tire" in t or "blowout" in t:
+            return {"canonical": "tire_failure"}
+        if "road closure" in t or "tunnel blocked" in t:
+            return {"canonical": "route_blockage"}
+        return {"canonical": t.replace(" ", "_")}
+
+    def retrieval_query(self, text: str) -> Dict[str, Any]:
+        t = norm_text(text)
+        if "what affects site 1" in t:
+            return {"type": "graph_impact", "site_id": "site_1", "depth": 2}
+        return {"type": "event_search", "filter": {}}
+
+    def explain_result(self, result: Dict[str, Any]) -> str:
+        if result.get("kind") == "query_events":
+            return f"Found {result['count']} matching events. Main statuses and suppliers were computed by deterministic filters over the ontology records."
+        if result.get("kind") == "graph_impact":
+            return f"Site impact analysis found {result['count']} linked entities across one-hop and two-hop graph relationships."
+        return "This result was produced by deterministic execution over structured records."
+
+    def analyst_reply(self, context: Dict[str, Any], question: str) -> Dict[str, Any]:
+        q = norm_text(question)
+        if q == "why?":
+            return {
+                "answer": "Because multiple disruptions cluster around Site 1 via Route 7 and supplier links.",
+                "suggested_next": ["show evidence", "what changed", "what if road closed"],
+            }
+        if q == "show evidence":
+            return {
+                "answer": "Evidence includes delayed and blocked shipment events plus supplier-to-site and route-to-site graph edges.",
+                "suggested_next": ["what changed", "what affects site 1"],
+            }
+        if q == "what changed":
+            return {
+                "answer": "Route 7 had both a blocked event and a later normal event, indicating partial recovery.",
+                "suggested_next": ["show evidence", "what if road closed"],
+            }
+        if q == "what if road closed":
+            return {
+                "answer": "A road closure would likely increase Site 1 disruption because Route 7 serves Site 1 and multiple shipments depend on it.",
+                "suggested_next": ["show evidence"],
+            }
+        return {
+            "answer": "I can help interpret the deterministic results and suggest follow-up questions.",
+            "suggested_next": ["why?", "show evidence"],
+        }
+
+# ============================================================
+# 5) Deterministic PAL core execution engine
+# ============================================================
+
+class RuleEngine:
+    def __init__(self):
+        self.rules: List[Dict[str, Any]] = []
+
+    def add_rule(self, rule: Dict[str, Any]):
+        self.rules.append(rule)
+
+    def evaluate_event(self, ev: Event) -> List[Dict[str, Any]]:
+        alerts = []
+        for rule in self.rules:
+            if self._match_rule(ev, rule):
+                alerts.append({
+                    "rule_id": rule["rule_id"],
+                    "event_id": ev.event_id,
+                    "priority": rule["then"].get("priority", 5),
+                    "reason": rule["then"].get("reason", "rule matched"),
+                })
+        return alerts
+
+    def _match_rule(self, ev: Event, rule: Dict[str, Any]) -> bool:
+        conds = rule.get("when", {}).get("all", [])
+        for cond in conds:
+            field = cond.get("field")
+            if field == "note_contains_any":
+                phrases = cond.get("value", [])
+                note_l = ev.note.lower()
+                if not any(p.lower() in note_l for p in phrases):
+                    return False
+                continue
+            if cond.get("exists") is True:
+                if getattr(ev, field, None) in (None, ""):
+                    return False
+                continue
+            if "in" in cond:
+                if getattr(ev, field, None) not in cond["in"]:
+                    return False
+                continue
+            if "eq" in cond:
+                if getattr(ev, field, None) != cond["eq"]:
+                    return False
+                continue
+        return True
+
+class ExecutionEngine:
+    def __init__(self, db: OntologyStore):
+        self.db = db
+
+    def run_action(self, spec: Dict[str, Any]) -> Dict[str, Any]:
+        action = spec.get("action")
+        if action == "query_events":
+            filt = spec.get("filter", {})
+            events = self.db.filter_events(filt)
+            return {
+                "kind": "query_events",
+                "count": len(events),
+                "events": [self._event_to_dict(ev) for ev in events],
+            }
+        if action == "graph_impact":
+            site_id = spec["site_id"]
+            impacts = self.db.two_hop_impacts_from_site(site_id)
+            return {
+                "kind": "graph_impact",
+                "site_id": site_id,
+                "count": len(impacts),
+                "impacts": impacts,
+            }
+        raise ValueError(f"Unknown action: {action}")
+
+    def run_plan(self, plan: Dict[str, Any]) -> Dict[str, Any]:
+        env: Dict[str, Any] = {}
+        steps = plan.get("steps", [])
+        trace = []
+
+        for step in steps:
+            op = step["op"]
+            name = step["name"]
+
+            if op == "filter_events":
+                result = self.db.filter_events(step.get("args", {}))
+                env[name] = result
+                trace.append({"step": name, "op": op, "count": len(result)})
+                continue
+
+            if op == "aggregate_counts":
+                src = env[step["input"]]
+                result = self.db.aggregate_counts(src, step["field"])
+                env[name] = result
+                trace.append({"step": name, "op": op, "keys": list(result.keys())})
+                continue
+
+            if op == "compare_named_results":
+                left = env[step["left"]]
+                right = env[step["right"]]
+                result = self._compare_dicts(left, right)
+                env[name] = result
+                trace.append({"step": name, "op": op})
+                continue
+
+            raise ValueError(f"Unknown plan op: {op}")
+
+        last_name = steps[-1]["name"] if steps else None
+        return {
+            "trace": trace,
+            "result": env.get(last_name),
+        }
+
+    @staticmethod
+    def _compare_dicts(left: Dict[str, int], right: Dict[str, int]) -> Dict[str, Any]:
+        keys = sorted(set(left) | set(right))
+        rows = []
+        for k in keys:
+            a = left.get(k, 0)
+            b = right.get(k, 0)
+            rows.append({"key": k, "left": a, "right": b, "delta": a - b})
+        return {"rows": rows}
+
+    @staticmethod
+    def _event_to_dict(ev: Event) -> Dict[str, Any]:
+        return {
+            "event_id": ev.event_id,
+            "entity_id": ev.entity_id,
+            "event_type": ev.event_type,
+            "location": ev.location,
+            "status": ev.status,
+            "note": ev.note,
+            "supplier_id": ev.supplier_id,
+            "route_id": ev.route_id,
+            "site_id": ev.site_id,
+            "severity": ev.severity,
+        }
+
+# ============================================================
+# 6) PAL meta-demo wrapper with 8 roles
+# ============================================================
+
+class PALMetaDemo:
+    def __init__(self, llm_mode: str = "mock"):
+        self.db = seed_demo_store()
+        self.engine = ExecutionEngine(self.db)
+        self.rules = RuleEngine()
+        self.llm = MockLLM() if llm_mode == "mock" else MockLLM()
+        self.llm_mode = llm_mode
+
+    # --------------------------------------------------------
+    # Role 1: Human Command Interpreter
+    # --------------------------------------------------------
+    def role_command_interpreter(self) -> Dict[str, Any]:
+        user_text = "Show delayed shipments in Taipei"
+        command_json = self.llm.command_to_json(user_text)
+        result = self.engine.run_action(command_json)
+        return {
+            "role": 1,
+            "name": "Human Command Interpreter",
+            "input_text": user_text,
+            "llm_output": command_json,
+            "deterministic_result": result,
+        }
+
+    # --------------------------------------------------------
+    # Role 2: Messy Data Ingest / Extraction
+    # --------------------------------------------------------
+    def role_ingest_extraction(self) -> Dict[str, Any]:
+        raw_email = (
+            "Truck 900 is running late in Taipei after a flat tire on Route 7. "
+            "Acme Rubber may be involved. Please log it for Site 1."
+        )
+        ev_json = self.llm.extract_event_json(raw_email)
+        new_event = Event(
+            event_id="E900",
+            entity_id=ev_json["entity_id"],
+            event_type=ev_json["event_type"],
+            location=ev_json["location"],
+            status=ev_json["status"],
+            note=ev_json["note"],
+            supplier_id=ev_json.get("supplier_id"),
+            route_id=ev_json.get("route_id"),
+            site_id=ev_json.get("site_id"),
+            severity=ev_json.get("severity", 1),
+        )
+        self.db.add_event(new_event)
+        result = self.engine.run_action({"action": "query_events", "filter": {"entity_id": "truck_900"}})
+        return {
+            "role": 2,
+            "name": "Messy Data Ingest / Extraction",
+            "raw_text": raw_email,
+            "llm_output": ev_json,
+            "deterministic_result": result,
+        }
+
+    # --------------------------------------------------------
+    # Role 3: Planner / Task Decomposer
+    # --------------------------------------------------------
+    def role_planner(self) -> Dict[str, Any]:
+        user_text = "Compare delayed shipments in Taipei vs blocked shipments in Tainan"
+        plan = self.llm.make_plan(user_text)
+        result = self.engine.run_plan(plan)
+        return {
+            "role": 3,
+            "name": "Planner / Task Decomposer",
+            "input_text": user_text,
+            "llm_output": plan,
+            "deterministic_result": result,
+        }
+
+    # --------------------------------------------------------
+    # Role 4: Rule Generator / Rule Injection
+    # --------------------------------------------------------
+    def role_rule_generator(self) -> Dict[str, Any]:
+        user_text = "Alert if outage + delay + supplier overlap"
+        rule = self.llm.generate_rule_json(user_text)
+        self.rules.add_rule(rule)
+
+        alerts = []
+        for ev in self.db.events:
+            alerts.extend(self.rules.evaluate_event(ev))
+
+        return {
+            "role": 4,
+            "name": "Rule Generator / Rule Injection",
+            "input_text": user_text,
+            "llm_output": rule,
+            "deterministic_result": {
+                "rule_count": len(self.rules.rules),
+                "alerts": alerts,
+            },
+        }
+
+    # --------------------------------------------------------
+    # Role 5: Semantic Mapping / Ontology Translation
+    # --------------------------------------------------------
+    def role_ontology_mapping(self) -> Dict[str, Any]:
+        phrases = ["flat tire", "blowout", "road closure"]
+        mapped = {p: self.llm.semantic_map(p)["canonical"] for p in phrases}
+        return {
+            "role": 5,
+            "name": "Semantic Mapping / Ontology Translation",
+            "input_phrases": phrases,
+            "llm_output": mapped,
+            "deterministic_result": {
+                "canonical_terms": sorted(set(mapped.values()))
+            },
+        }
+
+    # --------------------------------------------------------
+    # Role 6: Search / Retrieval Helper
+    # --------------------------------------------------------
+    def role_retrieval_helper(self) -> Dict[str, Any]:
+        user_text = "What affects Site 1?"
+        retrieval_spec = self.llm.retrieval_query(user_text)
+        if retrieval_spec["type"] == "graph_impact":
+            result = self.engine.run_action({
+                "action": "graph_impact",
+                "site_id": retrieval_spec["site_id"],
+            })
+        else:
+            result = {"kind": "unknown"}
+        return {
+            "role": 6,
+            "name": "Search / Retrieval Helper",
+            "input_text": user_text,
+            "llm_output": retrieval_spec,
+            "deterministic_result": result,
+        }
+
+    # --------------------------------------------------------
+    # Role 7: Explanation / Summarization
+    # --------------------------------------------------------
+    def role_explanation(self) -> Dict[str, Any]:
+        base = self.engine.run_action({
+            "action": "query_events",
+            "filter": {"status": "delayed", "location": "taipei"},
+        })
+        explanation = self.llm.explain_result(base)
+        return {
+            "role": 7,
+            "name": "Explanation / Summarization",
+            "machine_result": base,
+            "llm_output": explanation,
+        }
+
+    # --------------------------------------------------------
+    # Role 8: Interactive Analyst Assistant
+    # --------------------------------------------------------
+    def role_analyst_assistant(self) -> Dict[str, Any]:
+        context = self.engine.run_action({
+            "action": "graph_impact",
+            "site_id": "site_1",
+        })
+        turns = []
+        for q in ["Why?", "Show evidence", "What changed?", "What if road closed?"]:
+            reply = self.llm.analyst_reply(context, q)
+            turns.append({"user": q, "assistant": reply})
+        return {
+            "role": 8,
+            "name": "Interactive Analyst Assistant",
+            "context": context,
+            "dialogue": turns,
+        }
+
+    # --------------------------------------------------------
+    # 6.9 run all roles
+    # --------------------------------------------------------
+    def run_all(self) -> Dict[str, Any]:
+        return {
+            "meta_demo": "pal_core_06_meta_llm_roles",
+            "llm_mode": self.llm_mode,
+            "roles": [
+                self.role_command_interpreter(),
+                self.role_ingest_extraction(),
+                self.role_planner(),
+                self.role_rule_generator(),
+                self.role_ontology_mapping(),
+                self.role_retrieval_helper(),
+                self.role_explanation(),
+                self.role_analyst_assistant(),
+            ],
+        }
+
+# ============================================================
+# 7) CLI
+# ============================================================
+
+def main():
+    ap = argparse.ArgumentParser(description="PAL core 06 meta LLM roles demo")
+    sub = ap.add_subparsers(dest="cmd", required=True)
+
+    p_demo = sub.add_parser("demo", help="run all 8 roles")
+    p_demo.add_argument("--llm", default="mock", choices=["mock", "off"], help="LLM mode")
+
+    p_role = sub.add_parser("role", help="run one role")
+    p_role.add_argument(
+        "name",
+        choices=["command", "ingest", "planner", "rulegen", "ontology", "retrieval", "explain", "analyst"],
+    )
+    p_role.add_argument("--llm", default="mock", choices=["mock", "off"], help="LLM mode")
+
+    args = ap.parse_args()
+    app = PALMetaDemo(llm_mode=args.llm)
+
+    if args.cmd == "demo":
+        out = app.run_all()
+        jprint(out)
+        return
+
+    role_map = {
+        "command": app.role_command_interpreter,
+        "ingest": app.role_ingest_extraction,
+        "planner": app.role_planner,
+        "rulegen": app.role_rule_generator,
+        "ontology": app.role_ontology_mapping,
+        "retrieval": app.role_retrieval_helper,
+        "explain": app.role_explanation,
+        "analyst": app.role_analyst_assistant,
+    }
+    out = role_map[args.name]()
+    jprint(out)
+
+if __name__ == "__main__":
+    main()
+```
+
+```text2
+Yes — I drafted pal_core_06_meta_llm_roles.py.
+What it does:
+•	One self-contained meta-demo for the 8 LLM roles 
+•	Deterministic ontology/graph + execution core 
+•	Mock LLM adapter so it runs now without external API setup 
+•	CLI lets you run all roles or one role at a time 
+Main structure:
+•	OntologyStore = entities, graph edges, events 
+•	ExecutionEngine = deterministic query/plan execution 
+•	RuleEngine = deterministic runtime rule evaluation 
+•	MockLLM = simulated LLM outputs for: 
+o	command interpretation 
+o	messy text extraction 
+o	planning 
+o	rule generation 
+o	ontology mapping 
+o	retrieval mapping 
+o	explanation 
+o	analyst dialogue 
+•	PALMetaDemo = wraps the 8 roles 
+Example commands:
+python pal_core_06_meta_llm_roles.py demo
+python pal_core_06_meta_llm_roles.py role command
+python pal_core_06_meta_llm_roles.py role planner
+python pal_core_06_meta_llm_roles.py role rulegen
+My recommendation for next step:
+•	You review this first as the “conceptual meta-demo” 
+•	Then we make pal_core_06b_llm_roles_real_api.py later, where MockLLM is replaced by your real LLM adapter 
+One thing I would improve next:
+•	add a strict --llm off path that does not call mock inference at all, but instead uses hand-coded fallback mappings so the contrast is explicit: 
+o	“with LLM boundary” 
+o	“without LLM boundary” 
+If you want, next I can give you:
+1.	a compact walkthrough of each section, or 
+2.	a revised version in your preferred style with numbered code blocks like ##01, ##02, etc.
+```
+
+```
+$ python pal_core_06_meta_llm_roles.py demo
+{
+  "meta_demo": "pal_core_06_meta_llm_roles",
+  "llm_mode": "mock",
+  "roles": [
+    {
+      "role": 1,
+      "name": "Human Command Interpreter",
+      "input_text": "Show delayed shipments in Taipei",
+      "llm_output": {
+        "action": "query_events",
+        "filter": {
+          "status": "delayed",
+          "location": "taipei"
+        }
+      },
+      "deterministic_result": {
+        "kind": "query_events",
+        "count": 2,
+        "events": [
+          {
+            "event_id": "E001",
+            "entity_id": "truck_17",
+            "event_type": "shipment",
+            "location": "taipei",
+            "status": "delayed",
+            "note": "flat tire on highway",
+            "supplier_id": "supplier_1",
+            "route_id": "route_7",
+            "site_id": "site_1",
+            "severity": 2
+          },
+          {
+            "event_id": "E004",
+            "entity_id": "truck_17",
+            "event_type": "shipment",
+            "location": "taipei",
+            "status": "delayed",
+            "note": "blowout and late unloading",
+            "supplier_id": "supplier_1",
+            "route_id": "route_7",
+            "site_id": "site_1",
+            "severity": 2
+          }
+        ]
+      }
+    },
+    {
+      "role": 2,
+      "name": "Messy Data Ingest / Extraction",
+      "raw_text": "Truck 900 is running late in Taipei after a flat tire on Route 7. Acme Rubber may be involved. Please log it for Site 1.",
+      "llm_output": {
+        "entity_id": "truck_900",
+        "event_type": "shipment",
+        "location": "taipei",
+        "status": "delayed",
+        "note": "Truck 900 is running late in Taipei after a flat tire on Route 7. Acme Rubber may be involved. Please log it for Site 1.",
+        "supplier_id": "supplier_1",
+        "route_id": "route_7",
+        "site_id": "site_1",
+        "severity": 2
+      },
+      "deterministic_result": {
+        "kind": "query_events",
+        "count": 1,
+        "events": [
+          {
+            "event_id": "E900",
+            "entity_id": "truck_900",
+            "event_type": "shipment",
+            "location": "taipei",
+            "status": "delayed",
+            "note": "Truck 900 is running late in Taipei after a flat tire on Route 7. Acme Rubber may be involved. Please log it for Site 1.",
+            "supplier_id": "supplier_1",
+            "route_id": "route_7",
+            "site_id": "site_1",
+            "severity": 2
+          }
+        ]
+      }
+    },
+    {
+      "role": 3,
+      "name": "Planner / Task Decomposer",
+      "input_text": "Compare delayed shipments in Taipei vs blocked shipments in Tainan",
+      "llm_output": {
+        "steps": [
+          {
+            "op": "filter_events",
+            "name": "A",
+            "args": {
+              "status": "delayed",
+              "location": "taipei"
+            }
+          },
+          {
+            "op": "filter_events",
+            "name": "B",
+            "args": {
+              "status": "blocked",
+              "location": "tainan"
+            }
+          },
+          {
+            "op": "aggregate_counts",
+            "name": "A_counts",
+            "input": "A",
+            "field": "supplier_id"
+          },
+          {
+            "op": "aggregate_counts",
+            "name": "B_counts",
+            "input": "B",
+            "field": "supplier_id"
+          },
+          {
+            "op": "compare_named_results",
+            "name": "cmp",
+            "left": "A_counts",
+            "right": "B_counts"
+          }
+        ]
+      },
+      "deterministic_result": {
+        "trace": [
+          {
+            "step": "A",
+            "op": "filter_events",
+            "count": 3
+          },
+          {
+            "step": "B",
+            "op": "filter_events",
+            "count": 1
+          },
+          {
+            "step": "A_counts",
+            "op": "aggregate_counts",
+            "keys": [
+              "supplier_1"
+            ]
+          },
+          {
+            "step": "B_counts",
+            "op": "aggregate_counts",
+            "keys": [
+              "supplier_3"
+            ]
+          },
+          {
+            "step": "cmp",
+            "op": "compare_named_results"
+          }
+        ],
+        "result": {
+          "rows": [
+            {
+              "key": "supplier_1",
+              "left": 3,
+              "right": 0,
+              "delta": 3
+            },
+            {
+              "key": "supplier_3",
+              "left": 0,
+              "right": 1,
+              "delta": -1
+            }
+          ]
+        }
+      }
+    },
+    {
+      "role": 4,
+      "name": "Rule Generator / Rule Injection",
+      "input_text": "Alert if outage + delay + supplier overlap",
+      "llm_output": {
+        "rule_id": "R100",
+        "name": "outage_delay_supplier_overlap",
+        "when": {
+          "all": [
+            {
+              "field": "status",
+              "in": [
+                "delayed",
+                "blocked"
+              ]
+            },
+            {
+              "field": "note_contains_any",
+              "value": [
+                "outage",
+                "closure",
+                "backlog"
+              ]
+            },
+            {
+              "field": "supplier_id",
+              "exists": true
+            }
+          ]
+        },
+        "then": {
+          "action": "create_alert",
+          "priority": 9,
+          "reason": "compound disruption: outage + delay/blocked + supplier overlap"
+        }
+      },
+      "deterministic_result": {
+        "rule_count": 1,
+        "alerts": [
+          {
+            "rule_id": "R100",
+            "event_id": "E002",
+            "priority": 9,
+            "reason": "compound disruption: outage + delay/blocked + supplier overlap"
+          },
+          {
+            "rule_id": "R100",
+            "event_id": "E003",
+            "priority": 9,
+            "reason": "compound disruption: outage + delay/blocked + supplier overlap"
+          },
+          {
+            "rule_id": "R100",
+            "event_id": "E006",
+            "priority": 9,
+            "reason": "compound disruption: outage + delay/blocked + supplier overlap"
+          }
+        ]
+      }
+    },
+    {
+      "role": 5,
+      "name": "Semantic Mapping / Ontology Translation",
+      "input_phrases": [
+        "flat tire",
+        "blowout",
+        "road closure"
+      ],
+      "llm_output": {
+        "flat tire": "tire_failure",
+        "blowout": "tire_failure",
+        "road closure": "route_blockage"
+      },
+      "deterministic_result": {
+        "canonical_terms": [
+          "route_blockage",
+          "tire_failure"
+        ]
+      }
+    },
+    {
+      "role": 6,
+      "name": "Search / Retrieval Helper",
+      "input_text": "What affects Site 1?",
+      "llm_output": {
+        "type": "graph_impact",
+        "site_id": "site_1",
+        "depth": 2
+      },
+      "deterministic_result": {
+        "kind": "graph_impact",
+        "site_id": "site_1",
+        "count": 8,
+        "impacts": [
+          {
+            "entity_id": "supplier_1",
+            "via_relation": "supplies",
+            "hops": 1
+          },
+          {
+            "entity_id": "supplier_2",
+            "via_relation": "supplies->related_to",
+            "hops": 2
+          },
+          {
+            "entity_id": "supplier_2",
+            "via_relation": "supplies",
+            "hops": 1
+          },
+          {
+            "entity_id": "supplier_1",
+            "via_relation": "supplies->related_to",
+            "hops": 2
+          },
+          {
+            "entity_id": "site_2",
+            "via_relation": "supplies->supplies",
+            "hops": 2
+          },
+          {
+            "entity_id": "route_7",
+            "via_relation": "serves",
+            "hops": 1
+          },
+          {
+            "entity_id": "truck_17",
+            "via_relation": "serves->uses_route",
+            "hops": 2
+          },
+          {
+            "entity_id": "truck_21",
+            "via_relation": "serves->uses_route",
+            "hops": 2
+          }
+        ]
+      }
+    },
+    {
+      "role": 7,
+      "name": "Explanation / Summarization",
+      "machine_result": {
+        "kind": "query_events",
+        "count": 3,
+        "events": [
+          {
+            "event_id": "E001",
+            "entity_id": "truck_17",
+            "event_type": "shipment",
+            "location": "taipei",
+            "status": "delayed",
+            "note": "flat tire on highway",
+            "supplier_id": "supplier_1",
+            "route_id": "route_7",
+            "site_id": "site_1",
+            "severity": 2
+          },
+          {
+            "event_id": "E004",
+            "entity_id": "truck_17",
+            "event_type": "shipment",
+            "location": "taipei",
+            "status": "delayed",
+            "note": "blowout and late unloading",
+            "supplier_id": "supplier_1",
+            "route_id": "route_7",
+            "site_id": "site_1",
+            "severity": 2
+          },
+          {
+            "event_id": "E900",
+            "entity_id": "truck_900",
+            "event_type": "shipment",
+            "location": "taipei",
+            "status": "delayed",
+            "note": "Truck 900 is running late in Taipei after a flat tire on Route 7. Acme Rubber may be involved. Please log it for Site 1.",
+            "supplier_id": "supplier_1",
+            "route_id": "route_7",
+            "site_id": "site_1",
+            "severity": 2
+          }
+        ]
+      },
+      "llm_output": "Found 3 matching events. Main statuses and suppliers were computed by deterministic filters over the ontology records."
+    },
+    {
+      "role": 8,
+      "name": "Interactive Analyst Assistant",
+      "context": {
+        "kind": "graph_impact",
+        "site_id": "site_1",
+        "count": 8,
+        "impacts": [
+          {
+            "entity_id": "supplier_1",
+            "via_relation": "supplies",
+            "hops": 1
+          },
+          {
+            "entity_id": "supplier_2",
+            "via_relation": "supplies->related_to",
+            "hops": 2
+          },
+          {
+            "entity_id": "supplier_2",
+            "via_relation": "supplies",
+            "hops": 1
+          },
+          {
+            "entity_id": "supplier_1",
+            "via_relation": "supplies->related_to",
+            "hops": 2
+          },
+          {
+            "entity_id": "site_2",
+            "via_relation": "supplies->supplies",
+            "hops": 2
+          },
+          {
+            "entity_id": "route_7",
+            "via_relation": "serves",
+            "hops": 1
+          },
+          {
+            "entity_id": "truck_17",
+            "via_relation": "serves->uses_route",
+            "hops": 2
+          },
+          {
+            "entity_id": "truck_21",
+            "via_relation": "serves->uses_route",
+            "hops": 2
+          }
+        ]
+      },
+      "dialogue": [
+        {
+          "user": "Why?",
+          "assistant": {
+            "answer": "Because multiple disruptions cluster around Site 1 via Route 7 and supplier links.",
+            "suggested_next": [
+              "show evidence",
+              "what changed",
+              "what if road closed"
+            ]
+          }
+        },
+        {
+          "user": "Show evidence",
+          "assistant": {
+            "answer": "Evidence includes delayed and blocked shipment events plus supplier-to-site and route-to-site graph edges.",
+            "suggested_next": [
+              "what changed",
+              "what affects site 1"
+            ]
+          }
+        },
+        {
+          "user": "What changed?",
+          "assistant": {
+            "answer": "I can help interpret the deterministic results and suggest follow-up questions.",
+            "suggested_next": [
+              "why?",
+              "show evidence"
+            ]
+          }
+        },
+        {
+          "user": "What if road closed?",
+          "assistant": {
+            "answer": "I can help interpret the deterministic results and suggest follow-up questions.",
+            "suggested_next": [
+              "why?",
+              "show evidence"
+            ]
+          }
+        }
+      ]
+    }
+  ]
+}
+(venv)
+terry@LAPTOP-HKPDHF7M MINGW64 ~/Downloads/d1_agent (main)
+```
+
+<br>
+
+
+26.0618

@@ -1,0 +1,1354 @@
+---
+layout: page
+title: "3.3.8 pal_core_08 plan"
+permalink: /3.3.8_pal_core_08_plan/
+---
+
+[<- 3.1 Agent PAL core demos](/3.1-agentic/)
+
+## **[3.3.8] pal_core_08_plan.py // natural language → plan JSON → controlled execution (BINGO) 26.0423**
+
+
+<img src="/assets/M-24.png" alt="drones" width="90%">
+
+
+```text2
+Then 3.8 pal_core_08_plan.py can take the events from pal_events07.json and do:
+•	natural language request 
+•	LLM returns plan JSON 
+•	deterministic executor runs over ingested email events 
+That is a very nice progression.
+If you want, next I’ll give you the tightened v2 of this file with:
+•	sender allowlist 
+•	better subject parsing 
+•	analyze command for status summaries.
+
+Best Structure
+•	07 = ingestion layer
+Gmail → PAL events DB 
+•	08 = reasoning/control layer
+User request → plan JSON → execute over DB 
+So 08 builds on 07, not replaces it.
+Flow
+Emails --> pal_events07.json
+              |
+              v
+        pal_core_08_plan.py
+Why Better
+Keeps demos atomic:
+•	07 proves sensor ingestion 
+•	08 proves planning/execution 
+•	easier to debug 
+•	easier to explain in wiki 
+In Practice
+08 can read:
+pal_events07.json
+Then user says:
+Show delayed shipments in Taipei
+LLM returns:
+{
+  "steps": [
+    {"tool":"filter","field":"status","equals":"delayed"},
+    {"tool":"filter","field":"location","equals":"taipei"}
+  ]
+}
+Then deterministic executor runs it.
+My Recommendation
+Do not merge into 07.
+Make clean rung 08.
+```
+
+```
+# pal_core_08_plan.py
+#
+# 3.8 -- natural language -> plan JSON -> controlled execution
+#
+# Purpose:
+#   Read PAL events from JSON, ask an LLM to produce a very small plan JSON,
+#   validate that plan, then execute it deterministically.
+#
+# Demo goal:
+#   Show that the LLM does NOT do the data processing directly.
+#   The LLM only proposes a constrained plan.
+#   Deterministic Python executes the plan.
+#
+# Environment variables:
+#   OPENAI_API_KEY=...
+#
+# Optional:
+#   PAL_EVENTS_FILE=pal_events07.json
+#   PAL_OPENAI_MODEL=gpt-4.1-mini
+#
+# Commands:
+#   python pal_core_08_plan.py reset_demo_data
+#   python pal_core_08_plan.py show_events
+#   python pal_core_08_plan.py run --prompt "Show delayed events in taipei"
+#   python pal_core_08_plan.py run --prompt "Compare delayed vs blocked events"
+#
+# Notes:
+#   - Input file must contain {"events":[...]}
+#   - This file can read the output of pal_core_07_gmail_alerts.py
+#   - If you do not want to use real 07 data yet, use reset_demo_data first
+
+import argparse
+import json
+import os
+import sys
+from collections import Counter, defaultdict
+from typing import Any, Dict, List, Tuple
+
+try:
+    from openai import OpenAI
+except ImportError:
+    OpenAI = None
+
+# --------------------------------------------------
+# 1. Config
+# --------------------------------------------------
+
+EVENTS_FILE = os.getenv("PAL_EVENTS_FILE", "pal_events07.json")
+DEFAULT_MODEL = os.getenv("PAL_OPENAI_MODEL", "gpt-4.1-mini")
+
+# --------------------------------------------------
+# 2. JSON helpers
+# --------------------------------------------------
+
+def load_json(path: str, default: Any) -> Any:
+    if not os.path.exists(path):
+        return default
+    with open(path, "r", encoding="utf-8") as f:
+        return json.load(f)
+
+def save_json(path: str, data: Any) -> None:
+    with open(path, "w", encoding="utf-8") as f:
+        json.dump(data, f, indent=2, ensure_ascii=False)
+
+def load_events() -> List[Dict[str, Any]]:
+    data = load_json(EVENTS_FILE, {"events": []})
+    events = data.get("events", [])
+    if not isinstance(events, list):
+        raise ValueError(f"{EVENTS_FILE} must contain an 'events' list")
+    return events
+
+# --------------------------------------------------
+# 3. Demo seed data
+# --------------------------------------------------
+
+def cmd_reset_demo_data() -> None:
+    demo = {
+        "events": [
+            {
+                "entity": "truck_12",
+                "event_type": "logistics_alert",
+                "status": "delayed",
+                "priority": 7,
+                "location": "taipei",
+                "sender": "alerts@example.com",
+                "subject": "Shipment truck_12 delayed in Taipei",
+                "note": "Carrier delay due to traffic.",
+                "source": "demo",
+                "timestamp": "2026-04-20T10:00:00Z",
+            },
+            {
+                "entity": "truck_18",
+                "event_type": "logistics_alert",
+                "status": "blocked",
+                "priority": 9,
+                "location": "tainan",
+                "sender": "alerts@example.com",
+                "subject": "Shipment truck_18 blocked in Tainan",
+                "note": "Road closure blocked route.",
+                "source": "demo",
+                "timestamp": "2026-04-20T10:05:00Z",
+            },
+            {
+                "entity": "supplier_2",
+                "event_type": "supplier_alert",
+                "status": "warning",
+                "priority": 5,
+                "location": "taipei",
+                "sender": "ops@example.com",
+                "subject": "Supplier risk warning in Taipei",
+                "note": "Late paperwork may impact delivery.",
+                "source": "demo",
+                "timestamp": "2026-04-20T10:10:00Z",
+            },
+            {
+                "entity": "truck_12",
+                "event_type": "resolution_notice",
+                "status": "resolved",
+                "priority": 2,
+                "location": "taipei",
+                "sender": "alerts@example.com",
+                "subject": "Shipment truck_12 recovered in Taipei",
+                "note": "Delay resolved.",
+                "source": "demo",
+                "timestamp": "2026-04-20T11:00:00Z",
+            },
+            {
+                "entity": "api_gateway",
+                "event_type": "system_alert",
+                "status": "failed",
+                "priority": 7,
+                "location": "site_1",
+                "sender": "monitor@example.com",
+                "subject": "API gateway failure at site_1",
+                "note": "HTTP 500 spike detected.",
+                "source": "demo",
+                "timestamp": "2026-04-20T11:05:00Z",
+            },
+        ]
+    }
+    save_json(EVENTS_FILE, demo)
+    print(json.dumps({"ok": True, "reset_demo_data": True, "file": EVENTS_FILE}, indent=2))
+
+def cmd_show_events() -> None:
+    events = load_events()
+    print(json.dumps({"ok": True, "count": len(events), "events": events}, indent=2, ensure_ascii=False))
+
+# --------------------------------------------------
+# 4. Allowed plan schema
+# --------------------------------------------------
+
+ALLOWED_TOOLS = {
+    "filter_equals",
+    "sort_by",
+    "limit",
+    "count_by",
+    "compare_counts",
+}
+
+ALLOWED_FIELDS = {
+    "entity",
+    "event_type",
+    "status",
+    "priority",
+    "location",
+    "sender",
+    "subject",
+    "source",
+    "timestamp",
+}
+
+def validate_plan(plan: Dict[str, Any]) -> Tuple[bool, str]:
+    if not isinstance(plan, dict):
+        return False, "Plan must be a JSON object"
+
+    steps = plan.get("steps")
+    if not isinstance(steps, list) or not steps:
+        return False, "Plan must contain non-empty steps"
+
+    for i, step in enumerate(steps):
+        if not isinstance(step, dict):
+            return False, f"Step {i} must be an object"
+
+        tool = step.get("tool")
+        if tool not in ALLOWED_TOOLS:
+            return False, f"Step {i}: unsupported tool '{tool}'"
+
+        if tool == "filter_equals":
+            if step.get("field") not in ALLOWED_FIELDS:
+                return False, f"Step {i}: invalid field for filter_equals"
+            if "value" not in step:
+                return False, f"Step {i}: missing value for filter_equals"
+
+        elif tool == "sort_by":
+            if step.get("field") not in ALLOWED_FIELDS:
+                return False, f"Step {i}: invalid field for sort_by"
+            direction = step.get("direction", "asc")
+            if direction not in ("asc", "desc"):
+                return False, f"Step {i}: direction must be asc or desc"
+
+        elif tool == "limit":
+            n = step.get("n")
+            if not isinstance(n, int) or n <= 0:
+                return False, f"Step {i}: limit n must be positive integer"
+
+        elif tool == "count_by":
+            if step.get("field") not in ALLOWED_FIELDS:
+                return False, f"Step {i}: invalid field for count_by"
+
+        elif tool == "compare_counts":
+            if step.get("field") not in ALLOWED_FIELDS:
+                return False, f"Step {i}: invalid field for compare_counts"
+            values = step.get("values")
+            if not isinstance(values, list) or len(values) < 2:
+                return False, f"Step {i}: compare_counts needs at least 2 values"
+
+    return True, "ok"
+
+# --------------------------------------------------
+# 5. LLM plan generation
+# --------------------------------------------------
+
+def build_prompt(user_prompt: str) -> str:
+    return f"""
+You are planning for a deterministic event-analysis engine.
+
+Return JSON only, no markdown, no prose.
+
+Allowed tools:
+1. filter_equals
+   args: field, value
+
+2. sort_by
+   args: field, direction
+
+3. limit
+   args: n
+
+4. count_by
+   args: field
+
+5. compare_counts
+   args: field, values
+
+Allowed fields:
+entity, event_type, status, priority, location, sender, subject, source, timestamp
+
+Rules:
+- Output exactly one JSON object.
+- Use this shape:
+  {{
+    "goal": "...",
+    "steps": [ ... ]
+  }}
+- Keep plan short.
+- Do not invent tools.
+- Do not invent fields.
+- Prefer filter_equals for narrowing.
+- Use count_by for grouped summaries.
+- Use compare_counts for requests like "compare delayed vs blocked".
+- If the prompt is vague, still produce the safest minimal valid plan.
+
+User request:
+{user_prompt}
+""".strip()
+
+def generate_plan_with_openai(user_prompt: str, model: str) -> Dict[str, Any]:
+    if OpenAI is None:
+        raise RuntimeError("openai package not installed. Run: pip install openai")
+
+    api_key = os.getenv("OPENAI_API_KEY", "").strip()
+    if not api_key:
+        raise RuntimeError("Missing OPENAI_API_KEY")
+
+    client = OpenAI(api_key=api_key)
+
+    resp = client.responses.create(
+        model=model,
+        input=build_prompt(user_prompt),
+    )
+
+    text = resp.output_text.strip()
+    return json.loads(text)
+
+# --------------------------------------------------
+# 6. Deterministic executor
+# --------------------------------------------------
+
+def op_filter_equals(rows: List[Dict[str, Any]], field: str, value: Any) -> List[Dict[str, Any]]:
+    value_norm = str(value).strip().lower()
+    out = []
+    for row in rows:
+        row_val = str(row.get(field, "")).strip().lower()
+        if row_val == value_norm:
+            out.append(row)
+    return out
+
+def op_sort_by(rows: List[Dict[str, Any]], field: str, direction: str) -> List[Dict[str, Any]]:
+    reverse = (direction == "desc")
+    return sorted(rows, key=lambda r: str(r.get(field, "")), reverse=reverse)
+
+def op_limit(rows: List[Dict[str, Any]], n: int) -> List[Dict[str, Any]]:
+    return rows[:n]
+
+def op_count_by(rows: List[Dict[str, Any]], field: str) -> Dict[str, int]:
+    c = Counter(str(r.get(field, "")) for r in rows)
+    return dict(sorted(c.items(), key=lambda kv: (-kv[1], kv[0])))
+
+def op_compare_counts(rows: List[Dict[str, Any]], field: str, values: List[Any]) -> Dict[str, int]:
+    normalized = [str(v).strip().lower() for v in values]
+    counts = {v: 0 for v in normalized}
+    for row in rows:
+        row_val = str(row.get(field, "")).strip().lower()
+        if row_val in counts:
+            counts[row_val] += 1
+    return counts
+
+def execute_plan(plan: Dict[str, Any], events: List[Dict[str, Any]]) -> Dict[str, Any]:
+    rows = list(events)
+    trace = []
+    final_result: Any = rows
+
+    for step in plan["steps"]:
+        tool = step["tool"]   ##### ALLOWED_TOOLS = { "filter_equals", .....
+
+        if tool == "filter_equals":
+            rows = op_filter_equals(rows, step["field"], step["value"])
+            final_result = rows
+            trace.append({
+                "tool": tool,
+                "field": step["field"],
+                "value": step["value"],
+                "remaining": len(rows),
+            })
+
+        elif tool == "sort_by":
+            rows = op_sort_by(rows, step["field"], step.get("direction", "asc"))
+            final_result = rows
+            trace.append({
+                "tool": tool,
+                "field": step["field"],
+                "direction": step.get("direction", "asc"),
+                "remaining": len(rows),
+            })
+
+        elif tool == "limit":
+            rows = op_limit(rows, step["n"])
+            final_result = rows
+            trace.append({
+                "tool": tool,
+                "n": step["n"],
+                "remaining": len(rows),
+            })
+
+        elif tool == "count_by":
+            final_result = op_count_by(rows, step["field"])
+            trace.append({
+                "tool": tool,
+                "field": step["field"],
+                "remaining": len(rows),
+            })
+
+        elif tool == "compare_counts":
+            final_result = op_compare_counts(rows, step["field"], step["values"])
+            trace.append({
+                "tool": tool,
+                "field": step["field"],
+                "values": step["values"],
+                "remaining": len(rows),
+            })
+
+        else:
+            raise ValueError(f"Unsupported tool at runtime: {tool}")
+
+    return {
+        "goal": plan.get("goal", ""),
+        "trace": trace,
+        "result": final_result,
+    }
+
+# --------------------------------------------------
+# 7. Fallback planner
+# --------------------------------------------------
+
+def fallback_plan(user_prompt: str) -> Dict[str, Any]:
+    """
+    Deterministic fallback in case API is unavailable.
+    Very crude on purpose.
+    """
+    p = user_prompt.lower()
+
+    steps: List[Dict[str, Any]] = []
+
+
+    if "delayed" in p:
+        steps.append({"tool": "filter_equals", "field": "status", "value": "delayed"})
+    elif "blocked" in p:
+        steps.append({"tool": "filter_equals", "field": "status", "value": "blocked"})
+    elif "failed" in p:
+        steps.append({"tool": "filter_equals", "field": "status", "value": "failed"})
+    elif "resolved" in p:
+        steps.append({"tool": "filter_equals", "field": "status", "value": "resolved"})
+
+    known_locations = ["taipei", "tainan", "site_1", "site_2", "site_3"]
+    for loc in known_locations:
+        if loc in p:
+            steps.append({"tool": "filter_equals", "field": "location", "value": loc})
+            break
+
+    if "compare" in p and "delayed" in p and "blocked" in p:
+        return {
+            "goal": user_prompt,
+            "steps": [
+                {"tool": "compare_counts", "field": "status", "values": ["delayed", "blocked"]}
+            ]
+        }
+
+    if "count by status" in p or "status summary" in p:
+        steps.append({"tool": "count_by", "field": "status"})
+    elif "count by location" in p or "location summary" in p:
+        steps.append({"tool": "count_by", "field": "location"})
+
+    if "top" in p or "highest" in p:
+        steps.append({"tool": "sort_by", "field": "priority", "direction": "desc"})
+        steps.append({"tool": "limit", "n": 5})
+
+    if not steps:
+        steps = [{"tool": "count_by", "field": "status"}]
+
+    return {
+        "goal": user_prompt,
+        "steps": steps,
+    }
+
+# --------------------------------------------------
+# 8. Main run command
+# --------------------------------------------------
+
+def cmd_run(user_prompt: str, model: str, no_llm: bool) -> None:
+    events = load_events()
+
+    if no_llm:
+        plan = fallback_plan(user_prompt)
+        plan_source = "fallback"
+    else:
+        try:
+            plan = generate_plan_with_openai(user_prompt, model=model)
+            plan_source = "openai"
+        except Exception as e:
+            plan = fallback_plan(user_prompt)
+            plan_source = f"fallback_after_error: {str(e)}"
+
+    ok, msg = validate_plan(plan)
+    if not ok:
+        print(json.dumps({
+            "ok": False,
+            "error": msg,
+            "plan": plan,
+            "plan_source": plan_source,
+        }, indent=2, ensure_ascii=False))
+        return
+
+    execution = execute_plan(plan, events)
+
+    print(json.dumps({
+        "ok": True,
+        "plan_source": plan_source,
+        "event_count": len(events),
+        "plan": plan,
+        "execution": execution,
+    }, indent=2, ensure_ascii=False))
+
+# --------------------------------------------------
+# 9. CLI
+# --------------------------------------------------
+
+def main() -> None:
+    parser = argparse.ArgumentParser(description="PAL Core 08 - plan JSON and controlled execution")
+    sub = parser.add_subparsers(dest="cmd", required=True)
+
+    sub.add_parser("reset_demo_data")
+    sub.add_parser("show_events")
+
+    p_run = sub.add_parser("run")
+    p_run.add_argument("--prompt", required=True, help="Natural language request")
+    p_run.add_argument("--model", default=DEFAULT_MODEL, help="OpenAI model name")
+    p_run.add_argument("--no_llm", action="store_true", help="Use deterministic fallback planner only")
+
+    args = parser.parse_args()
+
+    if args.cmd == "reset_demo_data":
+        cmd_reset_demo_data()
+    elif args.cmd == "show_events":
+        cmd_show_events()
+    elif args.cmd == "run":
+        cmd_run(user_prompt=args.prompt, model=args.model, no_llm=args.no_llm)
+
+if __name__ == "__main__":
+    main()
+```
+
+```text2
+Recommended workflow
+1. Clean old test emails
+In the test Gmail account:
+•	delete or archive old messages 
+•	leave only the test emails you want 07 to ingest 
+2. Send yourself several test emails
+From another account, send a few emails to the test account.
+3. Run 07
+Either one-shot:
+python pal_core_07_gmail_alerts.py fetch
+or continuous polling:
+python pal_core_07_gmail_alerts.py loop --interval 10
+For testing, 10 seconds is better than 60.
+4. Check what 07 stored
+python pal_core_07_gmail_alerts.py show
+Make sure pal_events07.json contains the new events.
+5. Run 08 on those events
+Using fallback planner first:
+python pal_core_08_plan.py run --prompt "Show delayed events in taipei" --no_llm
+python pal_core_08_plan.py run --prompt "Compare delayed vs blocked events" --no_llm
+python pal_core_08_plan.py run --prompt "Give me a status summary" --no_llm
+Then later with LLM if desired.
+6. Send more emails and repeat
+Yes. Send more test emails, let 07 ingest them, then run more 08 commands.
+________________________________________
+Important detail
+Do not run: python pal_core_08_plan.py reset_demo_data
+if you want to use real 07 email data.
+That command overwrites pal_events07.json with demo seed data.
+________________________________________
+Even better test order
+1) python pal_core_07_gmail_alerts.py reset
+2) python pal_core_07_gmail_alerts.py loop --interval 10
+3) Then send emails.
+4) Then in another terminal: python pal_core_08_plan.py run --prompt "Give me a status summary" --no_llm
+________________________________________
+3) Suggested first 4 test emails
+Email 1
+Subject:
+Shipment truck_12 delayed in Taipei
+Body:
+Carrier delay due to traffic. truck_12 is delayed in Taipei.
+Email 2
+Subject:
+Shipment truck_18 blocked in Tainan
+Body:
+Road closure blocked truck_18 in Tainan.
+Email 3
+Subject:
+Supplier warning in Taipei
+Body:
+supplier_2 warning in Taipei. Late paperwork may impact delivery.
+Email 4
+Subject:
+API gateway failure at site_1
+Body:
+api_gateway failure at site_1. HTTP 500 spike detected.
+________________________________________
+4) First 08 commands to try
+python pal_core_08_plan.py run --prompt "Give me a status summary" --no_llm
+python pal_core_08_plan.py run --prompt "Show delayed events in taipei" --no_llm
+python pal_core_08_plan.py run --prompt "Compare delayed vs blocked events" --no_llm
+python pal_core_08_plan.py run --prompt "Show failed events at site_1" --no_llm
+
+One small note: if 07 is using subject keyword filters, make sure your test subjects contain words like delay, blocked, warning, failure, or shipment, which these do.
+```
+
+```
+Yes. You understood correctly.
+You want one clean live demo timeline.
+
+
+(1) 0E Delete old emails (no AI in this test)
+
+(2) Terminal A
+
+1A python pal_core_07_gmail_alerts.py reset
+
+$ python pal_core_07_gmail_alerts.py reset
+{
+  "ok": true,
+  "reset": true
+}
+(venv) 
+terry@LAPTOP-HKPDHF7M MINGW64 ~/Downloads/d1_agent (main)
+
+pal_email_state07.json
+{
+  "seen_email_ids": []
+}
+
+pal_events07.json
+{
+  "events": []
+}
+
+2A python pal_core_07_gmail_alerts.py loop --interval 30
+
+ 
+
+terry@LAPTOP-HKPDHF7M MINGW64 ~/Downloads/d1_agent (main)
+$ python pal_core_07_gmail_alerts.py loop --interval 30
+[pal_core_07] polling gmail every 30s...
+{
+  "ok": true,
+  "fetched_messages": 0,
+  "added_events": 0,
+  "skipped": 0,
+  "events": []
+}
+
+
+(3) Email Actions
+
+3E Send Email #1
+
+Subject:
+(1) Shipment truck_12 delayed in Taipei
+Body:
+(1) Carrier delay due to traffic.
+
+Wait ~10 sec.
+
+(4) Terminal A
+
+{
+  "ok": true,
+  "fetched_messages": 1,
+  "added_events": 1,
+  "skipped": 0,
+  "events": [
+    {
+      "source": "gmail",
+      "source_message_id": "<,,,,,,,,,,,,,,,,,,,,,,,,,,,,,@mail.gmail.com>",     
+      "timestamp": "2026-04-23T22:23:25.893166+00:00",
+      "event_time_raw": "Thu, 23 Apr 2026 18:23:06 -0400",
+      "entity": "truck_12",
+      "event_type": "logistics_alert",
+      "status": "delayed",
+      "priority": 7,
+      "location": "taipei",
+      "subject": "(1) Shipment truck_12 delayed in Taipei",
+      "sender": "T T <terrytaylorbonn@gmail.com>",
+      "note": "(1) Carrier delay due to traffic."
+    }
+  ]
+}
+{
+  "ok": true,
+  "fetched_messages": 1,
+  "added_events": 0,
+  "skipped": 1,
+  "events": []
+}
+
+pal_email_state07.json
+{
+  "seen_email_ids": [
+    "<CAK,,,,,,,,,,,,,,,,sh9w@mail.gmail.com>"
+  ]
+}
+
+pal_events07.json
+{
+  "events": [
+    {
+      "source": "gmail",
+      "source_message_id": "<CAK,,,,,,,,,,,,,,,,sh9w@mail.gmail.com>",
+      "timestamp": "2026-04-23T22:23:25.893166+00:00",
+      "event_time_raw": "Thu, 23 Apr 2026 18:23:06 -0400",
+      "entity": "truck_12",
+      "event_type": "logistics_alert",
+      "status": "delayed",
+      "priority": 7,
+      "location": "taipei",
+      "subject": "(1) Shipment truck_12 delayed in Taipei",
+      "sender": "T T <terrytaylorbonn@gmail.com>",
+      "note": "(1) Carrier delay due to traffic."
+    }
+  ]
+}
+
+
+
+(5) Terminal B
+
+4B python pal_core_08_plan.py run --prompt "Give me a status summary" --no_llm
+
+
+$ python pal_core_08_plan.py run --prompt "Give me a status summary" --no_llm
+{
+  "ok": true,
+  "plan_source": "fallback",
+  "event_count": 11,
+  "plan": {
+    "goal": "Give me a status summary",
+    "steps": [
+      {
+        "tool": "count_by",
+        "field": "status"
+      }
+    ]
+  },
+  "execution": {
+    "goal": "Give me a status summary",
+    "trace": [
+      {
+        "tool": "count_by",
+        "field": "status",
+        "remaining": 11
+      }
+    ],
+    "result": {
+      "alert": 9,
+      "delayed": 2
+    }
+  }
+}
+(venv) 
+terry@LAPTOP-HKPDHF7M MINGW64 ~/Downloads/d1_agent (main)
+
+
+(6) Remaining loops: Email Actions / Terminal A/B
+
+5A Send Email #2
+
+Subject:
+(2) Shipment truck_18 blocked in Tainan
+Body:
+(2) Road closure blocked route.
+
+ 
+
+{
+  "ok": true,
+  "fetched_messages": 1,
+  "added_events": 0,
+  "skipped": 1,
+  "events": []
+}
+{
+  "ok": true,
+  "fetched_messages": 2,
+  "added_events": 1,
+  "skipped": 1,
+  "events": [
+    {
+      "source": "gmail",
+      "source_message_id": "<,,,,,,,,,,,,,,,@mail.gmail.com>",     
+      "timestamp": "2026-04-23T22:35:17.424352+00:00",
+      "event_time_raw": "Thu, 23 Apr 2026 18:34:42 -0400",
+      "entity": "truck_18",
+      "event_type": "logistics_alert",
+      "status": "blocked",
+      "priority": 9,
+      "location": "tainan",
+      "subject": "(2) Shipment truck_18 blocked in Tainan",
+      "sender": "T T <terrytaylorbonn@gmail.com>",
+      "note": "(2) Road closure blocked route."
+    }
+  ]
+}
+
+
+pal_email_state07.json
+{
+  "seen_email_ids": [
+    "<,,,,,,,,,,,,@mail.gmail.com>",
+    "<,,,,,,,,,,,,@mail.gmail.com>"
+  ]
+}
+
+pal_events07.json
+{
+  "events": [
+    {
+      ,,,,,,,,,,,,,,,,,,,,,,
+    },
+    {
+      "source": "gmail",
+      "source_message_id": "<CAK,,,,,,,,,f57w@mail.gmail.com>",
+      "timestamp": "2026-04-23T22:35:17.424352+00:00",
+      "event_time_raw": "Thu, 23 Apr 2026 18:34:42 -0400",
+      "entity": "truck_18",
+      "event_type": "logistics_alert",
+      "status": "blocked",
+      "priority": 9,
+      "location": "tainan",
+      "subject": "(2) Shipment truck_18 blocked in Tainan",
+      "sender": "T T <terrytaylorbonn@gmail.com>",
+      "note": "(2) Road closure blocked route."
+    }
+  ]
+}
+
+
+6B python pal_core_08_plan.py run --prompt "Compare delayed vs blocked events" --no_llm
+
+$ python pal_core_08_plan.py run --prompt "Give me a status summary" --no_llm
+{
+  "ok": true,
+  "plan_source": "fallback",
+  "event_count": 2,
+  "plan": {
+    "goal": "Give me a status summary",
+    "steps": [
+      {
+        "tool": "count_by",
+        "field": "status"
+      }
+    ]
+  },
+  "execution": {
+    "goal": "Give me a status summary",
+    "trace": [
+      {
+        "tool": "count_by",
+        "field": "status",
+        "remaining": 2
+      }
+    ],
+    "result": {
+      "blocked": 1,
+      "delayed": 1
+    }
+  }
+}
+(venv) 
+terry@LAPTOP-HKPDHF7M MINGW64 ~/Downloads/d1_agent (main)
+
+
+GPT: Perfect.
+That means:
+•	07 ingested 2 emails 
+•	08 read pal_events07.json 
+•	fallback planner created valid plan 
+•	deterministic executor counted statuses correctly 
+Current state:
+{
+  "blocked": 1,
+  "delayed": 1
+}
+Next run:
+python pal_core_08_plan.py run --prompt "Compare delayed vs blocked events" --no_llm
+
+
+7E Send Email #3
+
+Subject:
+(3) API gateway failure at site_1
+Body:
+(3) HTTP 500 spike detected.
+
+pal_email_state07.json
+{
+  "seen_email_ids": [
+    "<,,,,,,,,,,,,,,,,,@mail.gmail.com>",
+    "<,,,,,,,,,,,,,,,@mail.gmail.com>",
+    "<,,,,,,,,,,,,,,,@mail.gmail.com>"
+  ]
+}
+
+pal_events07.json
+{
+  "events": [
+    {
+,,,,,,,,,,,,,,,,,,,,,,,,,,,
+    },
+    {
+,,,,,,,,,,,,,,,,,,,,,,,,,
+    },
+    {
+      "source": "gmail",
+      "source_message_id": "<,,,,,,,,,,,,,,,,,,,-ow@mail.gmail.com>",
+      "timestamp": "2026-04-23T22:48:08.149064+00:00",
+      "event_time_raw": "Thu, 23 Apr 2026 18:47:48 -0400",
+      "entity": "site_1",
+      "event_type": "system_alert",
+      "status": "failed",
+      "priority": 7,
+      "location": "site_1",
+      "subject": "(3) API gateway failure at site_1",
+      "sender": "T T <terrytaylorbonn@gmail.com>",
+      "note": "(3) HTTP 500 spike detected."
+    }
+  ]
+}
+
+{
+  "ok": true,
+  "fetched_messages": 3,
+  "added_events": 1,
+  "skipped": 2,
+  "events": [
+    {
+      "source": "gmail",
+      "source_message_id": "<CAK,,,,,,,,,,,,,,,,,,,,,,,,,,,f1w-ow@mail.gmail.com>",     
+      "timestamp": "2026-04-23T22:48:08.149064+00:00",
+      "event_time_raw": "Thu, 23 Apr 2026 18:47:48 -0400",
+      "entity": "site_1",
+      "event_type": "system_alert",
+      "status": "failed",
+      "priority": 7,
+      "location": "site_1",
+      "subject": "(3) API gateway failure at site_1",
+      "sender": "T T <terrytaylorbonn@gmail.com>",
+      "note": "(3) HTTP 500 spike detected."
+    }
+  ]
+}
+
+
+8B python pal_core_08_plan.py run --prompt "Show failed events at site_1" --no_llm
+
+$ python pal_core_08_plan.py run --prompt "Show failed events at site_1" --no_llm
+{
+  "ok": true,
+  "plan_source": "fallback",
+  "event_count": 3,
+  "plan": {
+    "goal": "Show failed events at site_1",
+    "steps": [
+      {
+        "tool": "filter_equals",
+        "field": "status",
+        "value": "failed"
+      },
+      {
+        "tool": "filter_equals",
+        "field": "location",
+        "value": "site_1"
+      }
+    ]
+  },
+  "execution": {
+    "goal": "Show failed events at site_1",
+    "trace": [
+      {
+        "tool": "filter_equals",
+        "field": "status",
+        "value": "failed",
+        "remaining": 1
+      },
+      {
+        "tool": "filter_equals",
+        "field": "location",
+        "value": "site_1",
+        "remaining": 1
+      }
+    ],
+    "result": [
+      {
+        "source": "gmail",
+        "source_message_id": "<CAK,,,,,,,,,,,,,,,,,,,,,,,,,,w-ow@mail.gmail.com>",   
+        "timestamp": "2026-04-23T22:48:08.149064+00:00",
+        "event_time_raw": "Thu, 23 Apr 2026 18:47:48 -0400",
+        "entity": "site_1",
+        "event_type": "system_alert",
+        "status": "failed",
+        "priority": 7,
+        "location": "site_1",
+        "subject": "(3) API gateway failure at site_1",
+        "sender": "T T <terrytaylorbonn@gmail.com>",
+        "note": "(3) HTTP 500 spike detected."
+      }
+    ]
+  }
+}
+(venv) 
+terry@LAPTOP-HKPDHF7M MINGW64 ~/Downloads/d1_agent (main)
+
+
+GPT: Excellent. This is a clean success.
+It proves the full chain: email → PAL event → plan → controlled execution → filtered result
+Also note the trace is very good for your writeup:
+status=failed  → 1 remaining
+location=site_1 → 1 remaining
+That clearly shows deterministic execution, not LLM guessing.
+
+
+
+9E Send Email #4
+Subject:
+(4) Supplier warning in Taipei
+Body:
+(4) Late paperwork may impact delivery.
+
+
+pal_email_state07.json
+{
+  "seen_email_ids": [
+    "<,,,,,,,,,,,,,,,,,@mail.gmail.com>",
+    "<,,,,,,,,,,,,,,,@mail.gmail.com>",
+    "<,,,,,,,,,,,,,,,@mail.gmail.com>",
+    "<,,,,,,,,,,,,,,,@mail.gmail.com>"
+  ]
+}
+pal_events07.json
+{
+  "events": [
+    {
+,,,,,,,,,,,,,,,,,,,,,,,,,,,
+    },
+    {
+,,,,,,,,,,,,,,,,,,,,,,,,,
+    },
+    {
+,,,,,,,,,,,,,,,,,,,,,,,,,
+    },
+    {
+      "source": "gmail",
+      "source_message_id": "<,,,,,,,,,,,,,,iCw@mail.gmail.com>",
+      "timestamp": "2026-04-23T22:57:33.000198+00:00",
+      "event_time_raw": "Thu, 23 Apr 2026 18:57:07 -0400",
+      "entity": "email_signal",
+      "event_type": "logistics_alert",
+      "status": "delayed",
+      "priority": 7,
+      "location": "taipei",
+      "subject": "(4) Supplier warning in Taipei",
+      "sender": "T T <terrytaylorbonn@gmail.com>",
+      "note": "(4) Late paperwork may impact delivery."
+    }
+  ]
+}
+
+
+{
+  "ok": true,
+  "fetched_messages": 3,
+  "added_events": 0,
+  "skipped": 3,
+  "events": []
+}
+{
+  "ok": true,
+  "fetched_messages": 4,
+  "added_events": 1,
+  "skipped": 3,
+  "events": [
+    {
+      "source": "gmail",
+      "source_message_id": "<,,,,,,,,,,,,,,,,iCw@mail.gmail.com>",     
+      "timestamp": "2026-04-23T22:57:33.000198+00:00",
+      "event_time_raw": "Thu, 23 Apr 2026 18:57:07 -0400",
+      "entity": "email_signal",
+      "event_type": "logistics_alert",
+      "status": "delayed",
+      "priority": 7,
+      "location": "taipei",
+      "subject": "(4) Supplier warning in Taipei",
+      "sender": "T T <terrytaylorbonn@gmail.com>",
+      "note": "(4) Late paperwork may impact delivery."
+    }
+  ]
+}
+
+
+10B python pal_core_08_plan.py run --prompt "Give me a status summary" --no_llm
+
+$ python pal_core_08_plan.py run --prompt "Give me a status summary" --no_llm
+{
+  "ok": true,
+  "plan_source": "fallback",
+  "event_count": 4,
+  "plan": {
+    "goal": "Give me a status summary",
+    "steps": [
+      {
+        "tool": "count_by",
+        "field": "status"
+      }
+    ]
+  },
+  "execution": {
+    "goal": "Give me a status summary",
+    "trace": [
+      {
+        "tool": "count_by",
+        "field": "status",
+        "remaining": 4
+      }
+    ],
+    "result": {
+      "delayed": 2,
+      "blocked": 1,
+      "failed": 1
+    }
+  }
+}
+(venv)
+terry@LAPTOP-HKPDHF7M MINGW64 ~/Downloads/d1_agent (main)
+
+GPT: Good. Demo works end-to-end.
+One small issue: Email #4 became delayed, not warning.
+Reason is probably body text:
+Late paperwork may impact delivery.
+Your parser sees late and maps it to delayed.
+So current result is correct for the rules:
+{
+  "delayed": 2,
+  "blocked": 1,
+  "failed": 1
+}
+For a clean warning test, use subject/body:
+Supplier warning in Taipei
+Supplier risk warning in Taipei. Paperwork issue may impact delivery.
+
+ 
+11E (9E #2) Send Email #5 (small correction)
+
+Redo with text that wont mess things up
+Subject:
+(5) Supplier warning in Taipei
+Body:
+(5) Supplier risk warning in Taipei. Paperwork issue may impact delivery.
+
+ 
+
+pal_email_state07.json
+{
+  "seen_email_ids": [
+    "<,,,,,,,,,,,,,,,,,@mail.gmail.com>",
+    "<,,,,,,,,,,,,,,,@mail.gmail.com>",
+    "<,,,,,,,,,,,,,,,@mail.gmail.com>",
+    "<,,,,,,,,,,,,,,,@mail.gmail.com>",
+    "<,,,,,,,,,,,,,,,@mail.gmail.com>"
+  ]
+}
+
+pal_events07.json
+{
+  "events": [
+    {
+,,,,,,,,,,,,,,,,,,,,,,,,,,,
+    },
+    {
+,,,,,,,,,,,,,,,,,,,,,,,,,,,
+    },
+    {
+,,,,,,,,,,,,,,,,,,,,,,,,,,,
+    },
+    {
+,,,,,,,,,,,,,,,,,,,,,,,,,,,
+    },
+    {
+      "source": "gmail",
+      "source_message_id": "<,,,,,,,,,,,,,,jJw@mail.gmail.com>",
+      "timestamp": "2026-04-23T23:04:51.531169+00:00",
+      "event_time_raw": "Thu, 23 Apr 2026 19:04:20 -0400",
+      "entity": "email_signal",
+      "event_type": "logistics_alert",
+      "status": "warning",
+      "priority": 5,
+      "location": "taipei",
+      "subject": "(5) Supplier warning in Taipei",
+      "sender": "T T <terrytaylorbonn@gmail.com>",
+      "note": "(5) Supplier risk warning in Taipei. Paperwork issue may impact delivery."
+    }
+  ]
+}
+
+
+{
+  "ok": true,
+  "fetched_messages": 4,
+  "added_events": 0,
+  "skipped": 4,
+  "events": []
+}
+{
+  "ok": true,
+  "fetched_messages": 5,
+  "added_events": 1,
+  "skipped": 4,
+  "events": [
+    {
+      "source": "gmail",
+      "source_message_id": "<,,,,,,,,,,,EjJw@mail.gmail.com>",     
+      "timestamp": "2026-04-23T23:04:51.531169+00:00",
+      "event_time_raw": "Thu, 23 Apr 2026 19:04:20 -0400",
+      "entity": "email_signal",
+      "event_type": "logistics_alert",
+      "status": "warning",
+      "priority": 5,
+      "location": "taipei",
+      "subject": "(5) Supplier warning in Taipei",
+      "sender": "T T <terrytaylorbonn@gmail.com>",
+      "note": "(5) Supplier risk warning in Taipei. Paperwork issue may impact delivery."
+    }
+  ]
+}
+
+
+
+
+$ python pal_core_08_plan.py run --prompt "Give me a status summary" --no_llm
+{
+  "ok": true,
+  "plan_source": "fallback",
+  "event_count": 5,
+  "plan": {
+    "goal": "Give me a status summary",
+    "steps": [
+      {
+        "tool": "count_by",
+        "field": "status"
+      }
+    ]
+  },
+  "execution": {
+    "goal": "Give me a status summary",
+    "trace": [
+      {
+        "tool": "count_by",
+        "field": "status",
+        "remaining": 5
+      }
+    ],
+    "result": {
+      "delayed": 2,
+      "blocked": 1,
+      "failed": 1,
+      "warning": 1
+    }
+  }
+}
+(venv) 
+terry@LAPTOP-HKPDHF7M MINGW64 ~/Downloads/d1_agent (main)
+
+
+
+12B (10B #2) python pal_core_08_plan.py run --prompt "Give me a status summary" --no_llm
+
+
+$ python pal_core_08_plan.py run --prompt "Give me a status summary" --no_llm
+{
+  "ok": true,
+  "plan_source": "fallback",
+  "event_count": 5,
+  "plan": {
+    "goal": "Give me a status summary",
+    "steps": [
+      {
+        "tool": "count_by",
+        "field": "status"
+      }
+    ]
+  },
+  "execution": {
+    "goal": "Give me a status summary",
+    "trace": [
+      {
+        "tool": "count_by",
+        "field": "status",
+        "remaining": 5
+      }
+    ],
+    "result": {
+      "delayed": 2,
+      "blocked": 1,
+      "failed": 1,
+      "warning": 1
+    }
+  }
+}
+(venv) 
+terry@LAPTOP-HKPDHF7M MINGW64 ~/Downloads/d1_agent (main)
+
+
+GPT: Perfect. Now it is clean.
+Final status summary:
+{
+  "delayed": 2,
+  "blocked": 1,
+  "failed": 1,
+  "warning": 1
+}
+This is a successful 3.7 + 3.8 live demo.
+ 
+(7) What This Demonstrates
+•	live external signals arriving by email 
+•	automatic ingestion by 07 
+•	updated machine state 
+•	08 analyzing current state on demand 
+```
+
+<br>
+
+
+26.0618

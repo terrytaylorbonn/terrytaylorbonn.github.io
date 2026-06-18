@@ -1,0 +1,1647 @@
+---
+layout: page
+title: "3.3.5b pal_core_05 with AI"
+permalink: /3.3.5bcd_pal_core_05/
+---
+
+[<- 3.1 Agent PAL core demos](/3.1-agentic/)
+
+## **[3.3.5b] WITH AI**
+
+
+
+```text2
+This looks very good. The combined 05b/05c/05d version is working as intended. 
+What worked well:
+•	05b works: fuzzy human event text was correctly converted into
+{"site_id":"site_1","event_type":"power_spike"}
+•	05c works: the rule-injection path parsed correctly and safely detected that the rule already existed. 
+•	05d works: the explanation step produced a readable summary of the deterministic result. 
+•	The deterministic core remained unchanged and did the real work: 
+o	graph impact 
+o	task generation 
+o	allocation 
+o	utilization 
+o	unassigned task detection 
+What this proves conceptually:
+•	AI input role: human language → structured machine event 
+•	AI rule role: human language → runtime semantic rule 
+•	AI output role: deterministic result → human explanation 
+•	Deterministic core role: actual operational logic 
+That is exactly the architecture you were trying to isolate.
+My main observations:
+•	The timings you added are useful. Roughly 4–6 seconds for LLM-assisted steps versus near-immediate deterministic steps makes the boundary very visible. 
+•	add_rule behaved properly: it did not duplicate an existing rule. 
+•	explain_last is decent, though the explanation still sounds a little generic. It is accurate enough for a demo, but could later be tightened to sound more like an operator report. 
+My verdict: Successful demo. This is probably your clearest demonstration so far of:
+•	Human language -> LLM -> structured/runtime semantics
+•	Deterministic engine -> actual system behavior
+•	LLM -> human-readable explanation
+The only improvement I’d consider next is making the explanation style shorter and more operational, like alert-center language, rather than general prose.
+
+
+That is the key distinction.
+Two separate phases
+1. Rule creation = LLM
+Human says:
+Treat suppliers with same parent as related
+LLM converts that into structured JSON rule.
+That is the AI step.
+________________________________________
+2. Rule execution = deterministic Python
+After the rule exists, the Python script does things like:
+•	scan entities 
+•	compare ownership 
+•	generate related_to edges 
+•	traverse graph 
+•	create tasks 
+•	allocate workers 
+No LLM required for that phase.
+That is deterministic execution.
+________________________________________
+In your words
+The rule came from AI.
+The effect came from Python logic.
+Yes.
+________________________________________
+Why this matters
+Because it means:
+•	AI can configure behavior 
+•	but core operations can remain controlled and auditable 
+•	runtime cost stays lower 
+•	execution is repeatable 
+•	failures are easier to debug 
+________________________________________
+Strong mental model
+LLM = writes instructions
+Agent/Python = carries them out
+________________________________________
+One-line answer
+Yes — I mean the execution of that rule was deterministic Python with no LLM involved.
+```
+
+
+```
+# pal_core_05_operate_ai.py
+#
+# PAL Core 05 - Operate + AI
+#
+# Commands:
+#   1) demo
+#   2) status
+#   3) reset
+#   4) operate <SITE_ID> <EVENT_TYPE>
+#   5) operate_text "<human language event description>"       # 05b
+#   6) add_rule "<human language semantic instruction>"        # 05c
+#   7) explain_last                                           # 05d
+#
+# Examples:
+#   python pal_core_05_operate_ai.py demo
+#   python pal_core_05_operate_ai.py status
+#   python pal_core_05_operate_ai.py reset
+#   python pal_core_05_operate_ai.py operate site_1 power_spike
+#   python pal_core_05_operate_ai.py operate_text "Power anomaly reported at Site 1"
+#   python pal_core_05_operate_ai.py add_rule "For this investigation, treat all suppliers owned by same parent company as related."
+#   python pal_core_05_operate_ai.py explain_last
+#
+# Notes:
+# - Deterministic core remains intact
+# - 05b: LLM interprets human event text into structured event JSON
+# - 05c: LLM converts human semantic instruction into runtime semantic rule
+# - 05d: LLM explains deterministic operation result for human reading
+
+import json
+import os
+import sys
+from pathlib import Path
+from typing import Any, Dict, List, Optional, Set, Tuple
+from openai import OpenAI
+
+# --------------------------------------------------
+# 0 ENV / OPENAI
+# --------------------------------------------------
+def load_dotenv(dotenv_path: str = ".env") -> None:
+    path = Path(dotenv_path)
+    if not path.exists():
+        return
+
+    for line in path.read_text(encoding="utf-8").splitlines():
+        line = line.strip()
+        if not line or line.startswith("#") or "=" not in line or line.startswith("REM "):
+            continue
+
+        key, value = line.split("=", 1)
+        key = key.strip()
+        value = value.strip().strip('"').strip("'")
+        os.environ.setdefault(key, value)
+
+load_dotenv()
+
+api_key = os.getenv("OPENAI_API_KEY")
+client = OpenAI(api_key=api_key) if api_key else None
+
+# --------------------------------------------------
+# 1 FILES / CONSTANTS
+# --------------------------------------------------
+STATE_FILE = Path("pal_core_operate_state.json")
+
+# 05b human-language event input → structured event
+EVENT_INTERPRET_SCHEMA_TEXT = """
+Return valid JSON only, with this exact top-level structure:
+
+{
+  "site_id": "string",
+  "event_type": "string"
+}
+
+Rules:
+- Return valid JSON only.
+- Do not include markdown.
+- Use only site IDs that exist in the provided site list.
+- Use only event_type values that exist in the provided event rule list.
+- If uncertain, choose the closest valid site_id and event_type from the provided lists.
+"""
+
+# 05c human-language rule injection → new semantic rule
+COMMAND_SCHEMA_TEXT = """
+Return valid JSON only, with this exact top-level structure:
+
+{
+  "action": "string",
+  "relationship_rule": {
+    "name": "string",
+    "source_type": "string",
+    "target_type": "string",
+    "through_relation": "string",
+    "new_relation": "string"
+  }
+}
+
+Rules:
+- Return valid JSON only.
+- Do not include markdown.
+- action must be one of:
+  - "add_semantic_rule"
+  - "unknown"
+- Use "add_semantic_rule" only if the user is clearly defining a relationship rule.
+- Example:
+  Input:
+    For this investigation, treat all suppliers owned by same parent company as related.
+  Output:
+  {
+    "action": "add_semantic_rule",
+    "relationship_rule": {
+      "name": "same_parent_company_suppliers_are_related",
+      "source_type": "supplier",
+      "target_type": "supplier",
+      "through_relation": "owned_by",
+      "new_relation": "related_to"
+    }
+  }
+"""
+
+# 05d optional human-readable explanation of operation result
+EXPLAIN_SCHEMA_TEXT = """
+You explain deterministic operation results clearly for a human.
+
+Rules:
+- Use short paragraphs.
+- Be concrete.
+- Mention:
+  1) what was detected,
+  2) what graph relationships mattered,
+  3) what response tasks were created,
+  4) what got assigned or left unassigned.
+- Do not invent data not present in the result JSON.
+"""
+
+DEMO_STATE = {
+    "entities": [
+        {"id": "supplier_1", "type": "supplier", "name": "Supplier 1"},
+        {"id": "supplier_2", "type": "supplier", "name": "Supplier 2"},
+        {"id": "supplier_3", "type": "supplier", "name": "Supplier 3"},
+        {"id": "parent_1", "type": "parent_company", "name": "Parent 1"},
+        {"id": "parent_2", "type": "parent_company", "name": "Parent 2"},
+        {"id": "site_1", "type": "site", "name": "Site 1"},
+        {"id": "site_2", "type": "site", "name": "Site 2"},
+    ],
+    "relations": [
+        {"from": "supplier_1", "relation": "owned_by", "to": "parent_1"},
+        {"from": "supplier_2", "relation": "owned_by", "to": "parent_1"},
+        {"from": "supplier_3", "relation": "owned_by", "to": "parent_2"},
+        {"from": "supplier_1", "relation": "serves", "to": "site_1"},
+        {"from": "supplier_2", "relation": "serves", "to": "site_2"},
+        {"from": "supplier_3", "relation": "serves", "to": "site_1"},
+    ],
+    "semantic_rules": [
+        {
+            "name": "same_parent_company_suppliers_are_related",
+            "source_type": "supplier",
+            "target_type": "supplier",
+            "through_relation": "owned_by",
+            "new_relation": "related_to",
+        }
+    ],
+    "workers": [
+        {
+            "worker_id": "W001",
+            "skills": ["skill_1"],   # skill_1 = repair_power
+            "capacity": 1,
+            "location": "Depot_A",
+        },
+        {
+            "worker_id": "W002",
+            "skills": ["skill_2"],   # skill_2 = supplier_coordination
+            "capacity": 2,
+            "location": "Depot_B",
+        },
+        {
+            "worker_id": "W003",
+            "skills": ["skill_3"],   # skill_3 = site_inspection
+            "capacity": 1,
+            "location": "Depot_C",
+        },
+    ],
+    "event_rules": [
+        {
+            "event_type": "power_spike",
+            "alert_type": "power_incident",
+            "site_task_templates": [
+                {
+                    "task_type": "repair_power",
+                    "priority": 10,
+                    "duration": 1,
+                    "required_skill": "skill_1",
+                    "location_mode": "event_site",
+                },
+                {
+                    "task_type": "site_inspection",
+                    "priority": 7,
+                    "duration": 1,
+                    "required_skill": "skill_3",
+                    "location_mode": "event_site",
+                },
+            ],
+            "supplier_task_templates": [
+                {
+                    "task_type": "supplier_coordination",
+                    "priority": 6,
+                    "duration": 1,
+                    "required_skill": "skill_2",
+                    "location_mode": "supplier_site",
+                }
+            ],
+        }
+    ],
+    "last_operation": None,
+    "last_explanation": None,
+}
+
+# --------------------------------------------------
+# 2 BASIC HELPERS
+# --------------------------------------------------
+def load_state() -> Dict[str, Any]:
+    if not STATE_FILE.exists():
+        return json.loads(json.dumps(DEMO_STATE))
+    return json.loads(STATE_FILE.read_text(encoding="utf-8"))
+
+def save_state(state: Dict[str, Any]) -> None:
+    STATE_FILE.write_text(
+        json.dumps(state, indent=2, ensure_ascii=False),
+        encoding="utf-8",
+    )
+
+def reset_state() -> Dict[str, Any]:
+    state = json.loads(json.dumps(DEMO_STATE))
+    save_state(state)
+    return state
+
+def print_usage() -> None:
+    print(
+        "Usage:\n"
+        "  python pal_core_05_operate_ai.py demo\n"
+        "  python pal_core_05_operate_ai.py status\n"
+        "  python pal_core_05_operate_ai.py reset\n"
+        "  python pal_core_05_operate_ai.py operate <SITE_ID> <EVENT_TYPE>\n"
+        '  python pal_core_05_operate_ai.py operate_text "<human language event description>"\n'
+        '  python pal_core_05_operate_ai.py add_rule "<human language semantic instruction>"\n'
+        "  python pal_core_05_operate_ai.py explain_last\n\n"
+        "Examples:\n"
+        "  python pal_core_05_operate_ai.py demo\n"
+        "  python pal_core_05_operate_ai.py status\n"
+        "  python pal_core_05_operate_ai.py reset\n"
+        "  python pal_core_05_operate_ai.py operate site_1 power_spike\n"
+        '  python pal_core_05_operate_ai.py operate_text "Power anomaly reported at Site 1"\n'
+        '  python pal_core_05_operate_ai.py add_rule "For this investigation, treat all suppliers owned by same parent company as related."\n'
+        "  python pal_core_05_operate_ai.py explain_last"
+    )
+
+def require_openai() -> None:
+    if client is None:
+        raise RuntimeError("OPENAI_API_KEY missing. Put it in .env or environment.")
+
+def entity_by_id(state: Dict[str, Any], entity_id: str) -> Optional[Dict[str, Any]]:
+    for e in state["entities"]:
+        if e["id"] == entity_id:
+            return e
+    return None
+
+def get_event_rule(state: Dict[str, Any], event_type: str) -> Optional[Dict[str, Any]]:
+    for r in state["event_rules"]:
+        if r["event_type"] == event_type:
+            return r
+    return None
+
+# --------------------------------------------------
+# 3 GRAPH LAYER
+# --------------------------------------------------
+def find_entities_of_type(state: Dict[str, Any], entity_type: str) -> List[Dict[str, Any]]:
+    return [e for e in state["entities"] if e["type"] == entity_type]
+
+def build_through_index(state: Dict[str, Any], source_type: str, through_relation: str) -> Dict[str, List[str]]:
+    out: Dict[str, List[str]] = {}
+    valid_ids = {e["id"] for e in find_entities_of_type(state, source_type)}
+
+    for r in state["relations"]:
+        if r["from"] in valid_ids and r["relation"] == through_relation:
+            out.setdefault(r["to"], []).append(r["from"])
+    return out
+
+def build_semantic_edges(state: Dict[str, Any]) -> List[Dict[str, str]]:
+    new_edges: List[Dict[str, str]] = []
+
+    for rule in state.get("semantic_rules", []):
+        source_type = rule["source_type"]
+        target_type = rule["target_type"]
+        through_relation = rule["through_relation"]
+        new_relation = rule["new_relation"]
+
+        if source_type != target_type:
+            continue
+
+        groups = build_through_index(state, source_type, through_relation)
+
+        for _, members in groups.items():
+            members = sorted(set(members))
+            for i in range(len(members)):
+                for j in range(i + 1, len(members)):
+                    a = members[i]
+                    b = members[j]
+                    new_edges.append({"from": a, "relation": new_relation, "to": b})
+                    new_edges.append({"from": b, "relation": new_relation, "to": a})
+
+    return new_edges
+
+def build_all_neighbors(state: Dict[str, Any]) -> Dict[str, List[Tuple[str, str]]]:
+    neighbors: Dict[str, List[Tuple[str, str]]] = {}
+    for e in state["entities"]:
+        neighbors[e["id"]] = []
+
+    for r in state["relations"]:
+        src = r["from"]
+        rel = r["relation"]
+        dst = r["to"]
+        neighbors.setdefault(src, []).append((rel, dst))
+        neighbors.setdefault(dst, []).append((f"rev_{rel}", src))
+
+    for r in build_semantic_edges(state):
+        src = r["from"]
+        rel = r["relation"]
+        dst = r["to"]
+        neighbors.setdefault(src, []).append((rel, dst))
+
+    return neighbors
+
+def bfs_related(state: Dict[str, Any], start_id: str, max_hops: int = 2) -> List[Dict[str, Any]]:
+    neighbors = build_all_neighbors(state)
+    if start_id not in neighbors:
+        return []
+
+    results: List[Dict[str, Any]] = []
+    visited: Set[str] = {start_id}
+    queue: List[Tuple[str, int, Optional[str]]] = [(start_id, 0, None)]
+
+    while queue:
+        node, depth, _ = queue.pop(0)
+        if depth >= max_hops:
+            continue
+
+        for rel, nxt in neighbors.get(node, []):
+            if nxt in visited:
+                continue
+            visited.add(nxt)
+
+            ent = entity_by_id(state, nxt)
+            results.append({
+                "entity_id": nxt,
+                "entity_type": ent["type"] if ent else "unknown",
+                "via_relation": rel,
+                "hops": depth + 1,
+            })
+            queue.append((nxt, depth + 1, rel))
+
+    return results
+
+def suppliers_serving_site(state: Dict[str, Any], site_id: str) -> List[str]:
+    out: List[str] = []
+    for r in state["relations"]:
+        if r["relation"] == "serves" and r["to"] == site_id:
+            src = entity_by_id(state, r["from"])
+            if src and src["type"] == "supplier":
+                out.append(src["id"])
+    return sorted(set(out))
+
+def related_suppliers(state: Dict[str, Any], supplier_id: str) -> List[str]:
+    out: List[str] = []
+    for r in build_semantic_edges(state):
+        if r["from"] == supplier_id and r["relation"] == "related_to":
+            out.append(r["to"])
+    return sorted(set(out))
+
+# --------------------------------------------------
+# 4 TASK BUILDING
+# --------------------------------------------------
+def next_task_id(n: int) -> str:
+    return f"T{n:03d}"
+
+def build_operation_tasks(state: Dict[str, Any], site_id: str, event_type: str) -> List[Dict[str, Any]]:
+    event_rule = get_event_rule(state, event_type)
+    if event_rule is None:
+        return []
+
+    tasks: List[Dict[str, Any]] = []
+    task_n = 1
+
+    for tpl in event_rule.get("site_task_templates", []):
+        tasks.append({
+            "task_id": next_task_id(task_n),
+            "type": tpl["task_type"],
+            "priority": tpl["priority"],
+            "duration": tpl["duration"],
+            "required_skill": tpl["required_skill"],
+            "location": site_id,
+            "reason": f"event:{event_type}@{site_id}",
+        })
+        task_n += 1
+
+    direct_suppliers = suppliers_serving_site(state, site_id)
+    all_supplier_targets: List[str] = []
+
+    for s in direct_suppliers:
+        all_supplier_targets.append(s)
+        for rs in related_suppliers(state, s):
+            all_supplier_targets.append(rs)
+
+    all_supplier_targets = sorted(set(all_supplier_targets))
+
+    supplier_sites: Dict[str, str] = {}
+    for r in state["relations"]:
+        if r["relation"] == "serves":
+            src_ent = entity_by_id(state, r["from"])
+            dst_ent = entity_by_id(state, r["to"])
+            if src_ent and src_ent["type"] == "supplier" and dst_ent and dst_ent["type"] == "site":
+                supplier_sites[src_ent["id"]] = dst_ent["id"]
+
+    for supplier_id in all_supplier_targets:
+        for tpl in event_rule.get("supplier_task_templates", []):
+            supplier_site = supplier_sites.get(supplier_id, site_id)
+            tasks.append({
+                "task_id": next_task_id(task_n),
+                "type": tpl["task_type"],
+                "priority": tpl["priority"],
+                "duration": tpl["duration"],
+                "required_skill": tpl["required_skill"],
+                "location": supplier_site,
+                "reason": f"supplier_impact:{supplier_id}",
+                "supplier_id": supplier_id,
+            })
+            task_n += 1
+
+    return tasks
+
+# --------------------------------------------------
+# 5 ALLOCATION
+# --------------------------------------------------
+def worker_can_do_task(worker: Dict[str, Any], task: Dict[str, Any], remaining_capacity: int) -> bool:
+    return (
+        task["required_skill"] in worker["skills"]
+        and remaining_capacity >= int(task["duration"])
+    )
+
+def sort_tasks(tasks: List[Dict[str, Any]]) -> List[Dict[str, Any]]:
+    return sorted(tasks, key=lambda t: (-int(t["priority"]), int(t["duration"]), t["task_id"]))
+
+def find_best_worker_for_task(
+    workers: List[Dict[str, Any]],
+    remaining_capacity: Dict[str, int],
+    task: Dict[str, Any],
+) -> Optional[Dict[str, Any]]:
+    candidates: List[Dict[str, Any]] = []
+    for w in workers:
+        wid = w["worker_id"]
+        rem = remaining_capacity.get(wid, 0)
+        if worker_can_do_task(w, task, rem):
+            candidates.append(w)
+
+    if not candidates:
+        return None
+
+    def score(w: Dict[str, Any]) -> Tuple[int, int, str]:
+        rem = remaining_capacity[w["worker_id"]]
+        post = rem - int(task["duration"])
+        return (post, len(w["skills"]), w["worker_id"])
+
+    return sorted(candidates, key=score)[0]
+
+def allocate_tasks(state: Dict[str, Any], tasks: List[Dict[str, Any]]) -> Dict[str, Any]:
+    workers = list(state["workers"])
+    tasks = sort_tasks(tasks)
+
+    remaining_capacity: Dict[str, int] = {
+        w["worker_id"]: int(w["capacity"]) for w in workers
+    }
+
+    assignments: List[Dict[str, Any]] = []
+    unassigned: List[Dict[str, Any]] = []
+
+    for task in tasks:
+        best_worker = find_best_worker_for_task(workers, remaining_capacity, task)
+        if best_worker is None:
+            unassigned.append({
+                "task_id": task["task_id"],
+                "type": task["type"],
+                "priority": task["priority"],
+                "duration": task["duration"],
+                "required_skill": task["required_skill"],
+                "location": task["location"],
+                "reason": "no_available_worker_with_skill_and_capacity",
+                "source_reason": task.get("reason", ""),
+                "supplier_id": task.get("supplier_id"),
+            })
+            continue
+
+        wid = best_worker["worker_id"]
+        remaining_capacity[wid] -= int(task["duration"])
+
+        assignments.append({
+            "task_id": task["task_id"],
+            "task_type": task["type"],
+            "priority": task["priority"],
+            "duration": task["duration"],
+            "required_skill": task["required_skill"],
+            "task_location": task["location"],
+            "worker_id": wid,
+            "worker_skills": best_worker["skills"],
+            "worker_location": best_worker["location"],
+            "source_reason": task.get("reason", ""),
+            "supplier_id": task.get("supplier_id"),
+        })
+
+    worker_utilization: List[Dict[str, Any]] = []
+    for w in workers:
+        wid = w["worker_id"]
+        cap = int(w["capacity"])
+        rem = remaining_capacity[wid]
+        used = cap - rem
+        util = round((used / cap), 2) if cap > 0 else 0.0
+        worker_utilization.append({
+            "worker_id": wid,
+            "capacity": cap,
+            "used": used,
+            "remaining": rem,
+            "utilization": util,
+        })
+
+    return {
+        "assignments": assignments,
+        "unassigned_tasks": unassigned,
+        "total_priority_completed": sum(int(a["priority"]) for a in assignments),
+        "total_priority_unassigned": sum(int(t["priority"]) for t in unassigned),
+        "worker_utilization": worker_utilization,
+    }
+
+# --------------------------------------------------
+# 6 OPERATE CORE
+# --------------------------------------------------
+def operate_event(state: Dict[str, Any], site_id: str, event_type: str) -> Dict[str, Any]:
+    site = entity_by_id(state, site_id)
+    if site is None or site["type"] != "site":
+        raise ValueError(f"Unknown site: {site_id}")
+
+    event_rule = get_event_rule(state, event_type)
+    if event_rule is None:
+        raise ValueError(f"No event rule for event_type: {event_type}")
+
+    direct_suppliers = suppliers_serving_site(state, site_id)
+    semantic_related: Dict[str, List[str]] = {}
+    for s in direct_suppliers:
+        semantic_related[s] = related_suppliers(state, s)
+
+    related_entities = bfs_related(state, site_id, max_hops=2)
+    tasks = build_operation_tasks(state, site_id, event_type)
+    allocation = allocate_tasks(state, tasks)
+
+    result = {
+        "input_event": {
+            "site_id": site_id,
+            "event_type": event_type,
+        },
+        "detection": {
+            "alert_type": event_rule["alert_type"],
+            "site_id": site_id,
+            "status": "detected",
+        },
+        "graph_impact": {
+            "direct_suppliers": direct_suppliers,
+            "semantic_related_suppliers": semantic_related,
+            "related_entities_within_2_hops": related_entities,
+        },
+        "response_tasks": tasks,
+        "allocation": allocation,
+    }
+    return result
+
+# --------------------------------------------------
+# 7 LLM HELPERS
+# --------------------------------------------------
+# 05b human-language event input → structured event
+def build_event_interpret_messages(state: Dict[str, Any], user_text: str) -> List[Dict[str, str]]:
+    site_ids = [e["id"] for e in state["entities"] if e["type"] == "site"]
+    event_types = [r["event_type"] for r in state["event_rules"]]
+
+    return [
+        {
+            "role": "system",
+            "content": (
+                "You convert human event descriptions into structured event JSON.\n\n"
+                f"Valid site IDs: {site_ids}\n"
+                f"Valid event types: {event_types}\n\n"
+                f"{EVENT_INTERPRET_SCHEMA_TEXT}"
+            ),
+        },
+        {
+            "role": "user",
+            "content": user_text,
+        },
+    ]
+
+def interpret_event_text_with_llm(state: Dict[str, Any], user_text: str) -> Dict[str, Any]:
+    require_openai()
+    messages = build_event_interpret_messages(state, user_text)
+    response = client.chat.completions.create(
+        model="gpt-4o-mini",
+        messages=messages,
+        response_format={"type": "json_object"},
+    )
+    content = response.choices[0].message.content
+    return json.loads(content)
+
+# 05c human-language rule injection → new semantic rule
+def build_command_messages(user_command: str) -> List[Dict[str, str]]:
+    return [
+        {
+            "role": "system",
+            "content": (
+                "You convert semantic investigation instructions into structured relationship rules.\n\n"
+                f"{COMMAND_SCHEMA_TEXT}"
+            ),
+        },
+        {
+            "role": "user",
+            "content": user_command,
+        },
+    ]
+
+def interpret_command_with_llm(user_command: str) -> Dict[str, Any]:
+    require_openai()
+    messages = build_command_messages(user_command)
+    response = client.chat.completions.create(
+        model="gpt-4o-mini",
+        messages=messages,
+        response_format={"type": "json_object"},
+    )
+    content = response.choices[0].message.content
+    return json.loads(content)
+
+# 05d optional human-readable explanation of operation result
+def build_explain_messages(result: Dict[str, Any]) -> List[Dict[str, str]]:
+    return [
+        {
+            "role": "system",
+            "content": EXPLAIN_SCHEMA_TEXT,
+        },
+        {
+            "role": "user",
+            "content": (
+                "Explain this deterministic operation result:\n\n"
+                f"{json.dumps(result, indent=2, ensure_ascii=False)}"
+            ),
+        },
+    ]
+
+def explain_result_with_llm(result: Dict[str, Any]) -> str:
+    require_openai()
+    messages = build_explain_messages(result)
+    response = client.chat.completions.create(
+        model="gpt-4o-mini",
+        messages=messages,
+    )
+    return response.choices[0].message.content.strip()
+
+# --------------------------------------------------
+# 8 COMMANDS
+# --------------------------------------------------
+def cmd_demo() -> None:
+    state = reset_state()
+    print("DEMO OK")
+    print(f"Saved state to: {STATE_FILE.resolve()}")
+    print("\n=== DEMO OPERATION ===")
+    result = operate_event(state, "site_1", "power_spike")
+    state["last_operation"] = result
+    state["last_explanation"] = None
+    save_state(state)
+    print(json.dumps(result, indent=2, ensure_ascii=False))
+
+def cmd_status() -> None:
+    state = load_state()
+    print("=== STATE ===")
+    print(json.dumps({
+        "entities": state["entities"],
+        "relations": state["relations"],
+        "semantic_rules": state["semantic_rules"],
+        "workers": state["workers"],
+        "event_rules": state["event_rules"],
+        "last_operation": state.get("last_operation"),
+        "last_explanation": state.get("last_explanation"),
+    }, indent=2, ensure_ascii=False))
+
+def cmd_reset() -> None:
+    state = reset_state()
+    print("RESET OK")
+    print(f"Saved state to: {STATE_FILE.resolve()}")
+
+def cmd_operate(site_id: str, event_type: str) -> None:
+    state = load_state()
+    try:
+        result = operate_event(state, site_id, event_type)
+    except Exception as e:
+        print("OPERATE FAILED")
+        print(str(e))
+        return
+
+    state["last_operation"] = result
+    state["last_explanation"] = None
+    save_state(state)
+
+    print("=== OPERATION RESULT ===")
+    print(json.dumps(result, indent=2, ensure_ascii=False))
+
+# 05b human-language event input → structured event
+def cmd_operate_text(user_text: str) -> None:
+    state = load_state()
+    try:
+        parsed = interpret_event_text_with_llm(state, user_text)
+    except Exception as e:
+        print("OPERATE_TEXT FAILED")
+        print(str(e))
+        return
+
+    print("=== LLM PARSED EVENT ===")
+    print(json.dumps(parsed, indent=2, ensure_ascii=False))
+
+    site_id = parsed.get("site_id")
+    event_type = parsed.get("event_type")
+
+    try:
+        result = operate_event(state, site_id, event_type)
+    except Exception as e:
+        print("\nOPERATE_TEXT FAILED")
+        print(str(e))
+        return
+
+    state["last_operation"] = result
+    state["last_explanation"] = None
+    save_state(state)
+
+    print("\n=== OPERATION RESULT ===")
+    print(json.dumps(result, indent=2, ensure_ascii=False))
+
+# 05c human-language rule injection → new semantic rule
+def cmd_add_rule(user_command: str) -> None:
+    state = load_state()
+
+    try:
+        parsed = interpret_command_with_llm(user_command)
+    except Exception as e:
+        print("ADD_RULE FAILED")
+        print(str(e))
+        return
+
+    print("=== LLM PARSED COMMAND ===")
+    print(json.dumps(parsed, indent=2, ensure_ascii=False))
+
+    action = parsed.get("action")
+    if action != "add_semantic_rule":
+        print("\nNo semantic rule added.")
+        return
+
+    rule = parsed.get("relationship_rule", {})
+    required = {"name", "source_type", "target_type", "through_relation", "new_relation"}
+    missing = [k for k in required if k not in rule]
+    if missing:
+        print("\nADD_RULE FAILED")
+        print(f"Missing rule fields: {missing}")
+        return
+
+    existing_names = {r["name"] for r in state.get("semantic_rules", [])}
+    if rule["name"] in existing_names:
+        print("\nADD_RULE OK")
+        print("Rule already exists.")
+        return
+
+    state.setdefault("semantic_rules", []).append(rule)
+    save_state(state)
+
+    print("\n=== RULE ADDED ===")
+    print(json.dumps(rule, indent=2, ensure_ascii=False))
+
+    print("\n=== DERIVED SEMANTIC EDGES ===")
+    print(json.dumps(build_semantic_edges(state), indent=2, ensure_ascii=False))
+
+# 05d optional human-readable explanation of operation result
+def cmd_explain_last() -> None:
+    state = load_state()
+    result = state.get("last_operation")
+
+    if not result:
+        print("EXPLAIN_LAST FAILED")
+        print("No last_operation found.")
+        return
+
+    try:
+        explanation = explain_result_with_llm(result)
+    except Exception as e:
+        print("EXPLAIN_LAST FAILED")
+        print(str(e))
+        return 
+
+    state["last_explanation"] = explanation
+    save_state(state)
+
+    print("=== HUMAN EXPLANATION ===")
+    print(explanation)
+
+# --------------------------------------------------
+# 9 MAIN
+# --------------------------------------------------
+def main() -> None:
+    if len(sys.argv) < 2:
+        print_usage()
+        return
+
+    command = sys.argv[1].strip().lower()
+
+    if command == "demo":
+        cmd_demo()
+    elif command == "status":
+        cmd_status()
+    elif command == "reset":
+        cmd_reset()
+    elif command == "operate":
+        if len(sys.argv) < 4:
+            print("Missing SITE_ID and EVENT_TYPE\n")
+            print_usage()
+            return
+        cmd_operate(sys.argv[2], sys.argv[3])
+# 05b human-language event input → structured event
+    elif command == "operate_text":
+        if len(sys.argv) < 3:
+            print("Missing human language event description\n")
+            print_usage()
+            return
+        cmd_operate_text(sys.argv[2])
+# 05c human-language rule injection → new semantic rule
+    elif command == "add_rule":
+        if len(sys.argv) < 3:
+            print("Missing human language semantic instruction\n")
+            print_usage()
+            return
+        cmd_add_rule(sys.argv[2])
+# 05d optional human-readable explanation of operation result
+    elif command == "explain_last":
+        cmd_explain_last()
+    else:
+        print(f"Unknown command: {command}\n")
+        print_usage()
+
+if __name__ == "__main__":
+    main()
+```
+
+#### **TEST**
+
+```
+Test order:
+python pal_core_05_operate_ai.py demo
+$ python pal_core_05_operate_ai.py demo
+DEMO OK
+Saved state to: C:\Users\terry\Downloads\d1_agent\pal_core_operate_state.json
+
+=== DEMO OPERATION ===
+{
+  "input_event": {
+    "site_id": "site_1",
+    "event_type": "power_spike"
+  },
+  "detection": {
+    "alert_type": "power_incident",
+    "site_id": "site_1",
+    "status": "detected"
+  },
+  "graph_impact": {
+    "direct_suppliers": [
+      "supplier_1",
+      "supplier_3"
+    ],
+    "semantic_related_suppliers": {
+      "supplier_1": [
+        "supplier_2"
+      ],
+      "supplier_3": []
+    },
+    "related_entities_within_2_hops": [
+      {
+        "entity_id": "supplier_1",
+        "entity_type": "supplier",
+        "via_relation": "rev_serves",
+        "hops": 1
+      },
+      {
+        "entity_id": "supplier_3",
+        "entity_type": "supplier",
+        "via_relation": "rev_serves",
+        "hops": 1
+      },
+      {
+        "entity_id": "parent_1",
+        "entity_type": "parent_company",
+        "via_relation": "owned_by",
+        "hops": 2
+      },
+      {
+        "entity_id": "supplier_2",
+        "entity_type": "supplier",
+        "via_relation": "related_to",
+        "hops": 2
+      },
+      {
+        "entity_id": "parent_2",
+        "entity_type": "parent_company",
+        "via_relation": "owned_by",
+        "hops": 2
+      }
+    ]
+  },
+  "response_tasks": [
+    {
+      "task_id": "T001",
+      "type": "repair_power",
+      "priority": 10,
+      "duration": 1,
+      "required_skill": "skill_1",
+      "location": "site_1",
+      "reason": "event:power_spike@site_1"
+    },
+    {
+      "task_id": "T002",
+      "type": "site_inspection",
+      "priority": 7,
+      "duration": 1,
+      "required_skill": "skill_3",
+      "location": "site_1",
+      "reason": "event:power_spike@site_1"
+    },
+    {
+      "task_id": "T003",
+      "type": "supplier_coordination",
+      "priority": 6,
+      "duration": 1,
+      "required_skill": "skill_2",
+      "location": "site_1",
+      "reason": "supplier_impact:supplier_1",
+      "supplier_id": "supplier_1"
+    },
+    {
+      "task_id": "T004",
+      "type": "supplier_coordination",
+      "priority": 6,
+      "duration": 1,
+      "required_skill": "skill_2",
+      "location": "site_2",
+      "reason": "supplier_impact:supplier_2",
+      "supplier_id": "supplier_2"
+    },
+    {
+      "task_id": "T005",
+      "type": "supplier_coordination",
+      "priority": 6,
+      "duration": 1,
+      "required_skill": "skill_2",
+      "location": "site_1",
+      "reason": "supplier_impact:supplier_3",
+      "supplier_id": "supplier_3"
+    }
+  ],
+  "allocation": {
+    "assignments": [
+      {
+        "task_id": "T001",
+        "task_type": "repair_power",
+        "priority": 10,
+        "duration": 1,
+        "required_skill": "skill_1",
+        "task_location": "site_1",
+        "worker_id": "W001",
+        "worker_skills": [
+          "skill_1"
+        ],
+        "worker_location": "Depot_A",
+        "source_reason": "event:power_spike@site_1",
+        "supplier_id": null
+      },
+      {
+        "task_id": "T002",
+        "task_type": "site_inspection",
+        "priority": 7,
+        "duration": 1,
+        "required_skill": "skill_3",
+        "task_location": "site_1",
+        "worker_id": "W003",
+        "worker_skills": [
+          "skill_3"
+        ],
+        "worker_location": "Depot_C",
+        "source_reason": "event:power_spike@site_1",
+        "supplier_id": null
+      },
+      {
+        "task_id": "T003",
+        "task_type": "supplier_coordination",
+        "priority": 6,
+        "duration": 1,
+        "required_skill": "skill_2",
+        "task_location": "site_1",
+        "worker_id": "W002",
+        "worker_skills": [
+          "skill_2"
+        ],
+        "worker_location": "Depot_B",
+        "source_reason": "supplier_impact:supplier_1",
+        "supplier_id": "supplier_1"
+      },
+      {
+        "task_id": "T004",
+        "task_type": "supplier_coordination",
+        "priority": 6,
+        "duration": 1,
+        "required_skill": "skill_2",
+        "task_location": "site_2",
+        "worker_id": "W002",
+        "worker_skills": [
+          "skill_2"
+        ],
+        "worker_location": "Depot_B",
+        "source_reason": "supplier_impact:supplier_2",
+        "supplier_id": "supplier_2"
+      }
+    ],
+    "unassigned_tasks": [
+      {
+        "task_id": "T005",
+        "type": "supplier_coordination",
+        "priority": 6,
+        "duration": 1,
+        "required_skill": "skill_2",
+        "location": "site_1",
+        "reason": "no_available_worker_with_skill_and_capacity",
+        "source_reason": "supplier_impact:supplier_3",
+        "supplier_id": "supplier_3"
+      }
+    ],
+    "total_priority_completed": 29,
+    "total_priority_unassigned": 6,
+    "worker_utilization": [
+      {
+        "worker_id": "W001",
+        "capacity": 1,
+        "used": 1,
+        "remaining": 0,
+        "utilization": 1.0
+      },
+      {
+        "worker_id": "W002",
+        "capacity": 2,
+        "used": 2,
+        "remaining": 0,
+        "utilization": 1.0
+      },
+      {
+        "worker_id": "W003",
+        "capacity": 1,
+        "used": 1,
+        "remaining": 0,
+        "utilization": 1.0
+      }
+    ]
+  }
+}
+(venv)
+terry@LAPTOP-HKPDHF7M MINGW64 ~/Downloads/d1_agent (main)
+
+python pal_core_05_operate_ai.py operate_text "(5b) Power anomaly reported at Site 1"
+4 secs
+$ python pal_core_05_operate_ai.py operate_text "Power anomaly reported at Site 1"
+=== LLM PARSED EVENT ===
+{
+  "site_id": "site_1",
+  "event_type": "power_spike"
+}
+
+=== OPERATION RESULT ===
+{
+  "input_event": {
+    "site_id": "site_1",
+    "event_type": "power_spike"
+  },
+  "detection": {
+    "alert_type": "power_incident",
+    "site_id": "site_1",
+    "status": "detected"
+  },
+  "graph_impact": {
+    "direct_suppliers": [
+      "supplier_1",
+      "supplier_3"
+    ],
+    "semantic_related_suppliers": {
+      "supplier_1": [
+        "supplier_2"
+      ],
+      "supplier_3": []
+    },
+    "related_entities_within_2_hops": [
+      {
+        "entity_id": "supplier_1",
+        "entity_type": "supplier",
+        "via_relation": "rev_serves",
+        "hops": 1
+      },
+      {
+        "entity_id": "supplier_3",
+        "entity_type": "supplier",
+        "via_relation": "rev_serves",
+        "hops": 1
+      },
+      {
+        "entity_id": "parent_1",
+        "entity_type": "parent_company",
+        "via_relation": "owned_by",
+        "hops": 2
+      },
+      {
+        "entity_id": "supplier_2",
+        "entity_type": "supplier",
+        "via_relation": "related_to",
+        "hops": 2
+      },
+      {
+        "entity_id": "parent_2",
+        "entity_type": "parent_company",
+        "via_relation": "owned_by",
+        "hops": 2
+      }
+    ]
+  },
+  "response_tasks": [
+    {
+      "task_id": "T001",
+      "type": "repair_power",
+      "priority": 10,
+      "duration": 1,
+      "required_skill": "skill_1",
+      "location": "site_1",
+      "reason": "event:power_spike@site_1"
+    },
+    {
+      "task_id": "T002",
+      "type": "site_inspection",
+      "priority": 7,
+      "duration": 1,
+      "required_skill": "skill_3",
+      "location": "site_1",
+      "reason": "event:power_spike@site_1"
+    },
+    {
+      "task_id": "T003",
+      "type": "supplier_coordination",
+      "priority": 6,
+      "duration": 1,
+      "required_skill": "skill_2",
+      "location": "site_1",
+      "reason": "supplier_impact:supplier_1",
+      "supplier_id": "supplier_1"
+    },
+    {
+      "task_id": "T004",
+      "type": "supplier_coordination",
+      "priority": 6,
+      "duration": 1,
+      "required_skill": "skill_2",
+      "location": "site_2",
+      "reason": "supplier_impact:supplier_2",
+      "supplier_id": "supplier_2"
+    },
+    {
+      "task_id": "T005",
+      "type": "supplier_coordination",
+      "priority": 6,
+      "duration": 1,
+      "required_skill": "skill_2",
+      "location": "site_1",
+      "reason": "supplier_impact:supplier_3",
+      "supplier_id": "supplier_3"
+    }
+  ],
+  "allocation": {
+    "assignments": [
+      {
+        "task_id": "T001",
+        "task_type": "repair_power",
+        "priority": 10,
+        "duration": 1,
+        "required_skill": "skill_1",
+        "task_location": "site_1",
+        "worker_id": "W001",
+        "worker_skills": [
+          "skill_1"
+        ],
+        "worker_location": "Depot_A",
+        "source_reason": "event:power_spike@site_1",
+        "supplier_id": null
+      },
+      {
+        "task_id": "T002",
+        "task_type": "site_inspection",
+        "priority": 7,
+        "duration": 1,
+        "required_skill": "skill_3",
+        "task_location": "site_1",
+        "worker_id": "W003",
+        "worker_skills": [
+          "skill_3"
+        ],
+        "worker_location": "Depot_C",
+        "source_reason": "event:power_spike@site_1",
+        "supplier_id": null
+      },
+      {
+        "task_id": "T003",
+        "task_type": "supplier_coordination",
+        "priority": 6,
+        "duration": 1,
+        "required_skill": "skill_2",
+        "task_location": "site_1",
+        "worker_id": "W002",
+        "worker_skills": [
+          "skill_2"
+        ],
+        "worker_location": "Depot_B",
+        "source_reason": "supplier_impact:supplier_1",
+        "supplier_id": "supplier_1"
+      },
+      {
+        "task_id": "T004",
+        "task_type": "supplier_coordination",
+        "priority": 6,
+        "duration": 1,
+        "required_skill": "skill_2",
+        "task_location": "site_2",
+        "worker_id": "W002",
+        "worker_skills": [
+          "skill_2"
+        ],
+        "worker_location": "Depot_B",
+        "source_reason": "supplier_impact:supplier_2",
+        "supplier_id": "supplier_2"
+      }
+    ],
+    "unassigned_tasks": [
+      {
+        "task_id": "T005",
+        "type": "supplier_coordination",
+        "priority": 6,
+        "duration": 1,
+        "required_skill": "skill_2",
+        "location": "site_1",
+        "reason": "no_available_worker_with_skill_and_capacity",
+        "source_reason": "supplier_impact:supplier_3",
+        "supplier_id": "supplier_3"
+      }
+    ],
+    "total_priority_completed": 29,
+    "total_priority_unassigned": 6,
+    "worker_utilization": [
+      {
+        "worker_id": "W001",
+        "capacity": 1,
+        "used": 1,
+        "remaining": 0,
+        "utilization": 1.0
+      },
+      {
+        "worker_id": "W002",
+        "capacity": 2,
+        "used": 2,
+        "remaining": 0,
+        "utilization": 1.0
+      },
+      {
+        "worker_id": "W003",
+        "capacity": 1,
+        "used": 1,
+        "remaining": 0,
+        "utilization": 1.0
+      }
+    ]
+  }
+}
+(venv) 
+terry@LAPTOP-HKPDHF7M MINGW64 ~/Downloads/d1_agent (main)
+
+python pal_core_05_operate_ai.py add_rule "(5c) For this investigation, treat all suppliers owned by same parent company as related."
+5 secs
+$ python pal_core_05_operate_ai.py add_rule "For this investigation, treat all suppliers owned by same parent company as related."
+=== LLM PARSED COMMAND ===
+{
+  "action": "add_semantic_rule",
+  "relationship_rule": {
+    "name": "same_parent_company_suppliers_are_related",
+    "source_type": "supplier",
+    "target_type": "supplier",
+    "through_relation": "owned_by",
+    "new_relation": "related_to"
+  }
+}
+
+ADD_RULE OK
+Rule already exists.
+(venv) 
+terry@LAPTOP-HKPDHF7M MINGW64 ~/Downloads/d1_agent (main)
+
+python pal_core_05_operate_ai.py operate_text "(5b#2) There is a power spike at Site 1"
+4 secs
+$ python pal_core_05_operate_ai.py operate_text "There is a power spike at Site 1"
+=== LLM PARSED EVENT ===
+{
+  "site_id": "site_1",
+  "event_type": "power_spike"
+}
+
+=== OPERATION RESULT === 
+{
+  "input_event": {
+    "site_id": "site_1",
+    "event_type": "power_spike"
+  },
+  "detection": {
+    "alert_type": "power_incident",
+    "site_id": "site_1",
+    "status": "detected"
+  },
+  "graph_impact": {
+    "direct_suppliers": [
+      "supplier_1",
+      "supplier_3"
+    ],
+    "semantic_related_suppliers": {
+      "supplier_1": [
+        "supplier_2"
+      ],
+      "supplier_3": []
+    },
+    "related_entities_within_2_hops": [
+      {
+        "entity_id": "supplier_1",
+        "entity_type": "supplier",
+        "via_relation": "rev_serves",
+        "hops": 1
+      },
+      {
+        "entity_id": "supplier_3",
+        "entity_type": "supplier",
+        "via_relation": "rev_serves",
+        "hops": 1
+      },
+      {
+        "entity_id": "parent_1",
+        "entity_type": "parent_company",
+        "via_relation": "owned_by",
+        "hops": 2
+      },
+      {
+        "entity_id": "supplier_2",
+        "entity_type": "supplier",
+        "via_relation": "related_to",
+        "hops": 2
+      },
+      {
+        "entity_id": "parent_2",
+        "entity_type": "parent_company",
+        "via_relation": "owned_by",
+        "hops": 2
+      }
+    ]
+  },
+  "response_tasks": [
+    {
+      "task_id": "T001",
+      "type": "repair_power",
+      "priority": 10,
+      "duration": 1,
+      "required_skill": "skill_1",
+      "location": "site_1",
+      "reason": "event:power_spike@site_1"
+    },
+    {
+      "task_id": "T002",
+      "type": "site_inspection",
+      "priority": 7,
+      "duration": 1,
+      "required_skill": "skill_3",
+      "location": "site_1",
+      "reason": "event:power_spike@site_1"
+    },
+    {
+      "task_id": "T003",
+      "type": "supplier_coordination",
+      "priority": 6,
+      "duration": 1,
+      "required_skill": "skill_2",
+      "location": "site_1",
+      "reason": "supplier_impact:supplier_1",
+      "supplier_id": "supplier_1"
+    },
+    {
+      "task_id": "T004",
+      "type": "supplier_coordination",
+      "priority": 6,
+      "duration": 1,
+      "required_skill": "skill_2",
+      "location": "site_2",
+      "reason": "supplier_impact:supplier_2",
+      "supplier_id": "supplier_2"
+    },
+    {
+      "task_id": "T005",
+      "type": "supplier_coordination",
+      "priority": 6,
+      "duration": 1,
+      "required_skill": "skill_2",
+      "location": "site_1",
+      "reason": "supplier_impact:supplier_3",
+      "supplier_id": "supplier_3"
+    }
+  ],
+  "allocation": {
+    "assignments": [
+      {
+        "task_id": "T001",
+        "task_type": "repair_power",
+        "priority": 10,
+        "duration": 1,
+        "required_skill": "skill_1",
+        "task_location": "site_1",
+        "worker_id": "W001",
+        "worker_skills": [
+          "skill_1"
+        ],
+        "worker_location": "Depot_A",
+        "source_reason": "event:power_spike@site_1",
+        "supplier_id": null
+      },
+      {
+        "task_id": "T002",
+        "task_type": "site_inspection",
+        "priority": 7,
+        "duration": 1,
+        "required_skill": "skill_3",
+        "task_location": "site_1",
+        "worker_id": "W003",
+        "worker_skills": [
+          "skill_3"
+        ],
+        "worker_location": "Depot_C",
+        "source_reason": "event:power_spike@site_1",
+        "supplier_id": null
+      },
+      {
+        "task_id": "T003",
+        "task_type": "supplier_coordination",
+        "priority": 6,
+        "duration": 1,
+        "required_skill": "skill_2",
+        "task_location": "site_1",
+        "worker_id": "W002",
+        "worker_skills": [
+          "skill_2"
+        ],
+        "worker_location": "Depot_B",
+        "source_reason": "supplier_impact:supplier_1",
+        "supplier_id": "supplier_1"
+      },
+      {
+        "task_id": "T004",
+        "task_type": "supplier_coordination",
+        "priority": 6,
+        "duration": 1,
+        "required_skill": "skill_2",
+        "task_location": "site_2",
+        "worker_id": "W002",
+        "worker_skills": [
+          "skill_2"
+        ],
+        "worker_location": "Depot_B",
+        "source_reason": "supplier_impact:supplier_2",
+        "supplier_id": "supplier_2"
+      }
+    ],
+    "unassigned_tasks": [
+      {
+        "task_id": "T005",
+        "type": "supplier_coordination",
+        "priority": 6,
+        "duration": 1,
+        "required_skill": "skill_2",
+        "location": "site_1",
+        "reason": "no_available_worker_with_skill_and_capacity",
+        "source_reason": "supplier_impact:supplier_3",
+        "supplier_id": "supplier_3"
+      }
+    ],
+    "total_priority_completed": 29,
+    "total_priority_unassigned": 6,
+    "worker_utilization": [
+      {
+        "worker_id": "W001",
+        "capacity": 1,
+        "used": 1,
+        "remaining": 0,
+        "utilization": 1.0
+      },
+      {
+        "worker_id": "W002",
+        "capacity": 2,
+        "used": 2,
+        "remaining": 0,
+        "utilization": 1.0
+      },
+      {
+        "worker_id": "W003",
+        "capacity": 1,
+        "used": 1,
+        "remaining": 0,
+        "utilization": 1.0
+      }
+    ]
+  }
+}
+(venv) 
+terry@LAPTOP-HKPDHF7M MINGW64 ~/Downloads/d1_agent (main)
+
+python pal_core_05_operate_ai.py explain_last
+6 secs
+$ python pal_core_05_operate_ai.py explain_last
+=== HUMAN EXPLANATION ===
+In this deterministic operation result, a power spike event was detected at site 1, leading to the classification of a power incident. The detection confirmed that the status was "detected" for the alert type "power_incident" at the same site.
+
+The graph relationships highlighted the direct suppliers affected by this incident: supplier 1 and supplier 3. Additionally, a semantic relationship showed supplier 1 linked to supplier 2, while supplier 3 had no further relationships identified. Entities within two hops included not only the suppliers but also parent companies related to these suppliers.
+
+A set of response tasks was created in response to the incident. They included tasks for repairing power, conducting a site inspection, and coordinating with suppliers 1, 2, and 3. Each task had different priorities and required specific skills, along with designated locations.
+
+In terms of allocation:
+- Tasks T001 and T002 were successfully assigned to workers W001 and W003, respectively, as they matched the required skills.
+- Task T003 was assigned to worker W002 for coordinating with supplier 1.
+- Task T004 was also assigned to W002 for communication with supplier 2.
+- However, Task T005, which involved coordinating with supplier 3, was left unassigned due to no available worker having the required skills and capacity.
+
+The total priority of completed tasks summed to 29, while the unassigned tasks had a total priority of 6. Worker utilization showed that all engaged workers were fully utilized.
+(venv) 
+terry@LAPTOP-HKPDHF7M MINGW64 ~/Downloads/d1_agent (main)
+```
+
+
+
+<br>
+
+
+26.0618
