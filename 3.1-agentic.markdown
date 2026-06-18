@@ -6,6 +6,35 @@ permalink: /3.1-agentic/
 
 [← 3 Agents](/3_agents/)
 
+<br>
+
+**This page will have short description for each demo with maybe a small pic in the TOC below.**
+
+I believe these files were **named "pal_core" because they show the core deterministic functions in Palantir style non-AI agentic apps**. For details see 
+- lab notes doc **#603\_PAL\_.docx** (PAL = Palantir) on the **[Gdrive](https://drive.google.com/drive/folders/1-Adawag9uA8_bq-hDF-nOuPYaRLz1eEO)**.  
+
+<br>
+
+**PAL_CORE demos 3.3.4, 3.3.5, 3.3.8, 3.3.8b (??) use openAI**
+
+**TOC** 
+- [3.3.1 pal_core_01.detect.py (01 events / alerts)](/3.3.1_pal_core_01_detect/) (BINGO) 26.0411 
+- [3.3.2 pal_core_02_predict.py (02 road network / prediction)](/3.3.2_pal_core_02_predict/) (BINGO) 26.0411
+- [3.3.3 pal_core_03_allocate.py (03 resources / allocation)](/3.3.3_pal_core_03_allocate/) (BINGO) 26.0411
+- [3.3.4 pal_core_04 (graph/relationships)](/3.3.4_pal_core_04_graph/) (BINGO) 26.0412 
+- [3.3.5 pal_core_05_operate.py (combine core01-04)](/3.3.5_pal_core_05_operate/) (BINGO) 26.0415-16
+- [3.3.5b bcd_pal_core_05 \#592 "LLM bcd"](/3.3.5bcd_pal_core_05/)
+- [3.3.6 3.3.6_pal_core_06_all_roles (simplest demo of all core LLM roles)](/3.3.6_pal_core_06_all_roles/) 26.0416
+- [3.3.7 pal_core_07_gmail_alerts.py (real emails as sensor stream)](/3.3.7_pal_core_07_gmail_alerts/) (BINGO) 25.0423
+- [3.3.8 pal_core_08_plan.py (natural language → plan JSON → controlled execution)](/3.3.8_pal_core_08_plan/) (BINGO) 26.0423
+- [3.3.8b pal_core_08_plan.py + LLM](/3.3.8b_pal_core_08_plan_LLM/) (BINGO) 26.0424
+- [3.3.9 pal_core_09_optimize.py (improved allocation / optimization)](/3.3.9_pal_core_09_optimize/) (BINGO) 26.0427
+- 3.3.10 (todo) pal_core_10_ui.py // dashboard / FastAPI / presentation layer 26.0427
+
+<br>
+
+26.0618 (0515)
+
 <!-- **TOC** 
 - **2 Agent concepts**. The agent is the central control loop (I would call this perhaps the agentic app). 
 - **3 Agent demos (no AI)**. Lab notes on my Gdrive. Code on my Github. -->
@@ -17,32 +46,6 @@ Notes:
 This page is WIP (v1 26.0509). I need to go back through these demos and document. -->
 <!-- Simple demos are the best way to understand the core of agentic apps. For details see the lab notes doc **#603\_PAL\_.docx** (PAL = Palantir) on my **[Gdrive](https://drive.google.com/drive/folders/1-Adawag9uA8_bq-hDF-nOuPYaRLz1eEO)**.  
 <img src="/assets/4_5_3x.png" alt="drones" width="70%"> -->
-
-<br>
-
-**3) pal core**
-
-I believe these files were **named "pal_core" because they show the core deterministic functions in Palantir style non-AI agentic apps**.
-
-For details see the lab notes doc **#603\_PAL\_.docx** (PAL = Palantir) on the **[Gdrive](https://drive.google.com/drive/folders/1-Adawag9uA8_bq-hDF-nOuPYaRLz1eEO)**.  
-
-<br>
-
-**PAL_CORE demos 3.3.4, 3.3.5, 3.3.8, 3.3.8b (??) use openAI**
-
-**TOC** 
-- **[3.3.1] [pal_core_01.detect.py (BINGO) 26.0411 (01 events / alerts)](/3.3.1_pal_core_01_detect/)**
-- **[3.3.2] [pal_core_02_predict.py (BINGO) 26.0411 (02 road network / prediction)](/3.3.2_pal_core_02_predict/)**
-- **[3.3.3] [pal_core_03_allocate.py (BINGO) 26.0411 (03 resources / allocation)](/3.3.3_pal_core_03_allocate/)**
-- **[3.3.4] [pal_core_04 (BINGO) 26.0412 (04 graph / relationships) (see summary)](/3.3.4_pal_core_04_graph/)**
-- **[3.3.5] [pal_core_05_operate.py (BINGO) (combine core01-04) 26.0415-16](/3.3.5_pal_core_05_operate/)**
-- **[3.3.5b] [WITH AI \#592 "LLM bcd"](/3.3.5bcd_pal_core_05/)**
-- **[3.3.6] [(WIP) pal_core_06: simplest demo of all core LLM roles 26.0416](/3.3.6_pal_core_06_all_roles/)**
-- **[3.3.7] [pal_core_07_gmail_alerts.py // real emails as sensor stream (BINGO) 25.0423](/3.3.7_pal_core_07_gmail_alerts/)**
-- **[3.3.8] [pal_core_08_plan.py // natural language → plan JSON → controlled execution (BINGO) 26.0423](/3.3.8_pal_core_08_plan/)**
-- **[3.3.8b] [pal_core_08_plan.py + LLM (BINGO) 26.0424](/3.3.8b_pal_core_08_plan_LLM/)**
-- **[3.3.9] [pal_core_09_optimize.py // improved allocation / optimization (BINGO) 26.0427](/3.3.9_pal_core_09_optimize/)**
-- **(todo) [3.3.10] — pal_core_10_ui.py // dashboard / FastAPI / presentation layer 26.0427**
 
 <!--
 <br>
@@ -10406,6 +10409,3 @@ Initialize → Validate → Greedy → Optimal → Compare
 ## **(todo) [3.3.10] — pal_core_10_ui.py // dashboard / FastAPI / presentation layer 26.0427**
 -->
 
-<br>
-
-26.0617 (0515)

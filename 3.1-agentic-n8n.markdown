@@ -19,6 +19,32 @@ Simple demos are the best way to understand the core of agentic apps. For detail
 - **N5 py script adds PAL (BINGO) 26.0409**
 - **NX TODO**
 
+```text2
+GPT: 
+My recollection of the individual demos:
+
+Demo	Main idea
+N1	First successful cloud n8n + Gmail workflow
+N2	Local n8n installation and JSON workflow testing
+N3	Local n8n reading multiple Gmail messages through GCP credentials
+N4	Replace the n8n workflow with a Python script
+N5	Add PAL logic to the Python workflow
+
+So the progression was roughly:
+
+Cloud n8n
+    ↓
+Local n8n
+    ↓
+Gmail integration
+    ↓
+Replace n8n with Python
+    ↓
+Add PAL intelligence
+
+Which is actually a nice story because it shows the evolution from no-code automation → custom automation → AI-assisted automation.
+```
+
 <br>
 
 ## **N1 cloud n8n / TTBO gmail 26.0408 (BINGO)**

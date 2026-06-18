@@ -35,6 +35,7 @@ Note:
 
 ### **[3.1 n8n demos (docx \#603)](/3.1-agentic-n8n/)**
 
+<!-- Demo with n8n as the input
 **1) n8n local**
 - N1 cloud n8n / TTBO gmail 26.0408 (BINGO)	
 - N2 n8n_local install / test (json) 26.0409 (BINGO)
@@ -42,12 +43,28 @@ Note:
 - N4 py script replaces n8n app (Win11/jk) (BINGO)
 - N5 py script adds PAL (BINGO) 26.0409
 - NX TODO	
+-->
+
+n8n demos focus on workflow automation and orchestration. Starting with cloud and local n8n installations, the demos connect to Gmail, process real data, and progressively replace no-code workflows with custom Python and PAL components. The goal is to understand what parts of an AI workflow require automation tools and which parts can be implemented directly in code.
+
+
+<!-- Or even shorter:
+
+The n8n demos focus on workflow automation, Gmail integration, and orchestration. The later demos progressively replace n8n components with custom Python and PAL code to better understand the underlying architecture. -->
 
 <br>
 
 ### **[3.2 (3.2.5) PAL demos (openAI/Gemma) (docx \#603)](/3.2.5-ai-agent-pal-demos/)**
 
 <!-- Simple demos are the best way to understand agentic AI systems. -->
+
+PAL demos focus on Palantir-style data intelligence systems that combine ontologies, deterministic workflows, structured data analysis, and LLM-assisted planning. The emphasis is on reliable execution rather than autonomous AI behavior.
+
+<!-- 
+or even shorter:
+
+PAL demos focus on Palantir-style data intelligence, combining deterministic workflows, ontologies, structured outputs, and LLM-assisted planning.
+
 
 PAL (Palantir) demos focus on:
 - ontology systems
@@ -68,12 +85,38 @@ PAL (Palantir) demos focus on:
 - [2.6] pal_v6 S0-S4 (BINGO) 26.0331-0401	
 - [2.7] pal_v7 useful functions (BINGO) 26.0401	
 - [2.8] pal_v1 with local Gemma-4 (win11/gpu) 26.0411 (BINGO)
+-->
 
 <br>
 
-### **[3.3 (3.1) Agent PAL_core demos (AI ???) (docx \#603)](/3.1-agentic/)**
+### **[3.3 (3.1) Agent PAL_core demos (docx \#603)](/3.1-agentic/)**
+
+PAL_CORE demos focus on the core functions of an AI-assisted control system, including detection, prediction, allocation, planning, optimization, and external tool integration. The control loop itself is traditional deterministic software, with AI used only where it adds value.
+
+<!-- or shorter:
+
+PAL_CORE demos focus on deterministic control loops enhanced by AI, including detection, prediction, planning, optimization, and tool orchestration.
+
 
 The core control loop is traditional non-AI deterministic programming
+
+
+**PAL_CORE demos 3.3.4, 3.3.5, 3.3.8, 3.3.8b (??) use openAI**
+
+**TOC** 
+- [3.3.1 pal_core_01.detect.py (01 events / alerts)](/3.3.1_pal_core_01_detect/) (BINGO) 26.0411 
+- [3.3.2 pal_core_02_predict.py (02 road network / prediction)](/3.3.2_pal_core_02_predict/) (BINGO) 26.0411
+- [3.3.3 pal_core_03_allocate.py (03 resources / allocation)](/3.3.3_pal_core_03_allocate/) (BINGO) 26.0411
+- [3.3.4 pal_core_04 (graph/relationships)](/3.3.4_pal_core_04_graph/) (BINGO) 26.0412 
+- [3.3.5 pal_core_05_operate.py (combine core01-04)](/3.3.5_pal_core_05_operate/) (BINGO) 26.0415-16
+- [3.3.5b bcd_pal_core_05 \#592 "LLM bcd"](/3.3.5bcd_pal_core_05/)
+- [3.3.6 3.3.6_pal_core_06_all_roles (simplest demo of all core LLM roles)](/3.3.6_pal_core_06_all_roles/) 26.0416
+- [3.3.7 pal_core_07_gmail_alerts.py (real emails as sensor stream)](/3.3.7_pal_core_07_gmail_alerts/) (BINGO) 25.0423
+- [3.3.8 pal_core_08_plan.py (natural language → plan JSON → controlled execution)](/3.3.8_pal_core_08_plan/) (BINGO) 26.0423
+- [3.3.8b pal_core_08_plan.py + LLM](/3.3.8b_pal_core_08_plan_LLM/) (BINGO) 26.0424
+- [3.3.9 pal_core_09_optimize.py (improved allocation / optimization)](/3.3.9_pal_core_09_optimize/) (BINGO) 26.0427
+- 3.3.10 (todo) pal_core_10_ui.py // dashboard / FastAPI / presentation layer 26.0427
+
 
 **OPENAI: 3.4, 3.5, 3.8, 3.8b (??)** 
 
@@ -91,7 +134,7 @@ The core control loop is traditional non-AI deterministic programming
 - [3.8b] pal_core_08_plan.py + LLM (BINGO) 26.0424	46
 - [3.9] — pal_core_09_optimize.py // improved allocation / optimization (BINGO) 26.0427	23
 - (todo) [3.10] — pal_core_10_ui.py // dashboard / FastAPI / presentation layer 26.0427	22
-
+-->
 
 <!--
 from #603 and in pic

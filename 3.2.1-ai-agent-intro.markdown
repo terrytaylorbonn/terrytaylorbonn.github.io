@@ -1,12 +1,16 @@
 ---
 layout: page
-title: "3.2.1 CONCEPTS (was Agents + AI / Intro)"
+title: "3.0 Concepts"
 permalink: /3.2.1-ai-agent-intro/
 ---
 
 [← 3.2 Agents + AI](/3.2-agentic-ai/)
 
 
+ (was Agents + AI / Intro)
+
+
+## **CONTENT FROM SEVERAL FILES MIXED TOGETHER ON THIS PAGE....** will clean up later....
 
 -------------------------------
 -----------------------------
