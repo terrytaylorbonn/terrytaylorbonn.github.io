@@ -14,11 +14,11 @@ This section is the **end goal for ZiptieAI.com**. The focus is on "spinning up"
 <br>
 
 - **1 Functional diagram** (below). This diagram will describe
-  - Main system (an existing ERP, etc system). Why it requires AI, etc.
-  - "3b Project" description (goals, etc)
-  - "3 External agent" functionality. Deployment details (for demo and release versions).
-  - "2b Model" type (openAI, Gemma, etc) and location (remote, local WSL2, etc). Will it be fine-tuned, etc.
-  - If the model is custom made: "2 NN/CNN/TF". The internal design of the NN. Deployment, training data set, HW, etc details. <br>
+  - **Main system** (an existing ERP, etc system). Why it requires AI, etc.
+  - **3b Project** description (goals, etc)
+  - **3 External agent** functionality. Deployment details (for demo and release versions).
+  - **2b Model** type (openAI, Gemma, etc) and location (remote, local WSL2, etc). Will it be fine-tuned, etc.
+  - If the model is custom made then **2 NN/CNN/TF**. The internal design of the NN. Deployment, training data set, HW, etc details. <br>
   <img src="/assets/M-15-3b.png" alt="drones" width="80%">
 
 <br>
