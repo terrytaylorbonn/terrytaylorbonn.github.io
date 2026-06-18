@@ -4229,34 +4229,6179 @@ This matters because it proves:
 
 ## **[3.5b] WITH AI**
 
-<br>
 
-xxxxxx
+
+```text2
+This looks very good. The combined 05b/05c/05d version is working as intended. 
+What worked well:
+•	05b works: fuzzy human event text was correctly converted into
+{"site_id":"site_1","event_type":"power_spike"}
+•	05c works: the rule-injection path parsed correctly and safely detected that the rule already existed. 
+•	05d works: the explanation step produced a readable summary of the deterministic result. 
+•	The deterministic core remained unchanged and did the real work: 
+o	graph impact 
+o	task generation 
+o	allocation 
+o	utilization 
+o	unassigned task detection 
+What this proves conceptually:
+•	AI input role: human language → structured machine event 
+•	AI rule role: human language → runtime semantic rule 
+•	AI output role: deterministic result → human explanation 
+•	Deterministic core role: actual operational logic 
+That is exactly the architecture you were trying to isolate.
+My main observations:
+•	The timings you added are useful. Roughly 4–6 seconds for LLM-assisted steps versus near-immediate deterministic steps makes the boundary very visible. 
+•	add_rule behaved properly: it did not duplicate an existing rule. 
+•	explain_last is decent, though the explanation still sounds a little generic. It is accurate enough for a demo, but could later be tightened to sound more like an operator report. 
+My verdict: Successful demo. This is probably your clearest demonstration so far of:
+•	Human language -> LLM -> structured/runtime semantics
+•	Deterministic engine -> actual system behavior
+•	LLM -> human-readable explanation
+The only improvement I’d consider next is making the explanation style shorter and more operational, like alert-center language, rather than general prose.
+
+
+That is the key distinction.
+Two separate phases
+1. Rule creation = LLM
+Human says:
+Treat suppliers with same parent as related
+LLM converts that into structured JSON rule.
+That is the AI step.
+________________________________________
+2. Rule execution = deterministic Python
+After the rule exists, the Python script does things like:
+•	scan entities 
+•	compare ownership 
+•	generate related_to edges 
+•	traverse graph 
+•	create tasks 
+•	allocate workers 
+No LLM required for that phase.
+That is deterministic execution.
+________________________________________
+In your words
+The rule came from AI.
+The effect came from Python logic.
+Yes.
+________________________________________
+Why this matters
+Because it means:
+•	AI can configure behavior 
+•	but core operations can remain controlled and auditable 
+•	runtime cost stays lower 
+•	execution is repeatable 
+•	failures are easier to debug 
+________________________________________
+Strong mental model
+LLM = writes instructions
+Agent/Python = carries them out
+________________________________________
+One-line answer
+Yes — I mean the execution of that rule was deterministic Python with no LLM involved.
+```
+
+
+```
+# pal_core_05_operate_ai.py
+#
+# PAL Core 05 - Operate + AI
+#
+# Commands:
+#   1) demo
+#   2) status
+#   3) reset
+#   4) operate <SITE_ID> <EVENT_TYPE>
+#   5) operate_text "<human language event description>"       # 05b
+#   6) add_rule "<human language semantic instruction>"        # 05c
+#   7) explain_last                                           # 05d
+#
+# Examples:
+#   python pal_core_05_operate_ai.py demo
+#   python pal_core_05_operate_ai.py status
+#   python pal_core_05_operate_ai.py reset
+#   python pal_core_05_operate_ai.py operate site_1 power_spike
+#   python pal_core_05_operate_ai.py operate_text "Power anomaly reported at Site 1"
+#   python pal_core_05_operate_ai.py add_rule "For this investigation, treat all suppliers owned by same parent company as related."
+#   python pal_core_05_operate_ai.py explain_last
+#
+# Notes:
+# - Deterministic core remains intact
+# - 05b: LLM interprets human event text into structured event JSON
+# - 05c: LLM converts human semantic instruction into runtime semantic rule
+# - 05d: LLM explains deterministic operation result for human reading
+
+import json
+import os
+import sys
+from pathlib import Path
+from typing import Any, Dict, List, Optional, Set, Tuple
+from openai import OpenAI
+
+# --------------------------------------------------
+# 0 ENV / OPENAI
+# --------------------------------------------------
+def load_dotenv(dotenv_path: str = ".env") -> None:
+    path = Path(dotenv_path)
+    if not path.exists():
+        return
+
+    for line in path.read_text(encoding="utf-8").splitlines():
+        line = line.strip()
+        if not line or line.startswith("#") or "=" not in line or line.startswith("REM "):
+            continue
+
+        key, value = line.split("=", 1)
+        key = key.strip()
+        value = value.strip().strip('"').strip("'")
+        os.environ.setdefault(key, value)
+
+load_dotenv()
+
+api_key = os.getenv("OPENAI_API_KEY")
+client = OpenAI(api_key=api_key) if api_key else None
+
+# --------------------------------------------------
+# 1 FILES / CONSTANTS
+# --------------------------------------------------
+STATE_FILE = Path("pal_core_operate_state.json")
+
+# 05b human-language event input → structured event
+EVENT_INTERPRET_SCHEMA_TEXT = """
+Return valid JSON only, with this exact top-level structure:
+
+{
+  "site_id": "string",
+  "event_type": "string"
+}
+
+Rules:
+- Return valid JSON only.
+- Do not include markdown.
+- Use only site IDs that exist in the provided site list.
+- Use only event_type values that exist in the provided event rule list.
+- If uncertain, choose the closest valid site_id and event_type from the provided lists.
+"""
+
+# 05c human-language rule injection → new semantic rule
+COMMAND_SCHEMA_TEXT = """
+Return valid JSON only, with this exact top-level structure:
+
+{
+  "action": "string",
+  "relationship_rule": {
+    "name": "string",
+    "source_type": "string",
+    "target_type": "string",
+    "through_relation": "string",
+    "new_relation": "string"
+  }
+}
+
+Rules:
+- Return valid JSON only.
+- Do not include markdown.
+- action must be one of:
+  - "add_semantic_rule"
+  - "unknown"
+- Use "add_semantic_rule" only if the user is clearly defining a relationship rule.
+- Example:
+  Input:
+    For this investigation, treat all suppliers owned by same parent company as related.
+  Output:
+  {
+    "action": "add_semantic_rule",
+    "relationship_rule": {
+      "name": "same_parent_company_suppliers_are_related",
+      "source_type": "supplier",
+      "target_type": "supplier",
+      "through_relation": "owned_by",
+      "new_relation": "related_to"
+    }
+  }
+"""
+
+# 05d optional human-readable explanation of operation result
+EXPLAIN_SCHEMA_TEXT = """
+You explain deterministic operation results clearly for a human.
+
+Rules:
+- Use short paragraphs.
+- Be concrete.
+- Mention:
+  1) what was detected,
+  2) what graph relationships mattered,
+  3) what response tasks were created,
+  4) what got assigned or left unassigned.
+- Do not invent data not present in the result JSON.
+"""
+
+DEMO_STATE = {
+    "entities": [
+        {"id": "supplier_1", "type": "supplier", "name": "Supplier 1"},
+        {"id": "supplier_2", "type": "supplier", "name": "Supplier 2"},
+        {"id": "supplier_3", "type": "supplier", "name": "Supplier 3"},
+        {"id": "parent_1", "type": "parent_company", "name": "Parent 1"},
+        {"id": "parent_2", "type": "parent_company", "name": "Parent 2"},
+        {"id": "site_1", "type": "site", "name": "Site 1"},
+        {"id": "site_2", "type": "site", "name": "Site 2"},
+    ],
+    "relations": [
+        {"from": "supplier_1", "relation": "owned_by", "to": "parent_1"},
+        {"from": "supplier_2", "relation": "owned_by", "to": "parent_1"},
+        {"from": "supplier_3", "relation": "owned_by", "to": "parent_2"},
+        {"from": "supplier_1", "relation": "serves", "to": "site_1"},
+        {"from": "supplier_2", "relation": "serves", "to": "site_2"},
+        {"from": "supplier_3", "relation": "serves", "to": "site_1"},
+    ],
+    "semantic_rules": [
+        {
+            "name": "same_parent_company_suppliers_are_related",
+            "source_type": "supplier",
+            "target_type": "supplier",
+            "through_relation": "owned_by",
+            "new_relation": "related_to",
+        }
+    ],
+    "workers": [
+        {
+            "worker_id": "W001",
+            "skills": ["skill_1"],   # skill_1 = repair_power
+            "capacity": 1,
+            "location": "Depot_A",
+        },
+        {
+            "worker_id": "W002",
+            "skills": ["skill_2"],   # skill_2 = supplier_coordination
+            "capacity": 2,
+            "location": "Depot_B",
+        },
+        {
+            "worker_id": "W003",
+            "skills": ["skill_3"],   # skill_3 = site_inspection
+            "capacity": 1,
+            "location": "Depot_C",
+        },
+    ],
+    "event_rules": [
+        {
+            "event_type": "power_spike",
+            "alert_type": "power_incident",
+            "site_task_templates": [
+                {
+                    "task_type": "repair_power",
+                    "priority": 10,
+                    "duration": 1,
+                    "required_skill": "skill_1",
+                    "location_mode": "event_site",
+                },
+                {
+                    "task_type": "site_inspection",
+                    "priority": 7,
+                    "duration": 1,
+                    "required_skill": "skill_3",
+                    "location_mode": "event_site",
+                },
+            ],
+            "supplier_task_templates": [
+                {
+                    "task_type": "supplier_coordination",
+                    "priority": 6,
+                    "duration": 1,
+                    "required_skill": "skill_2",
+                    "location_mode": "supplier_site",
+                }
+            ],
+        }
+    ],
+    "last_operation": None,
+    "last_explanation": None,
+}
+
+# --------------------------------------------------
+# 2 BASIC HELPERS
+# --------------------------------------------------
+def load_state() -> Dict[str, Any]:
+    if not STATE_FILE.exists():
+        return json.loads(json.dumps(DEMO_STATE))
+    return json.loads(STATE_FILE.read_text(encoding="utf-8"))
+
+def save_state(state: Dict[str, Any]) -> None:
+    STATE_FILE.write_text(
+        json.dumps(state, indent=2, ensure_ascii=False),
+        encoding="utf-8",
+    )
+
+def reset_state() -> Dict[str, Any]:
+    state = json.loads(json.dumps(DEMO_STATE))
+    save_state(state)
+    return state
+
+def print_usage() -> None:
+    print(
+        "Usage:\n"
+        "  python pal_core_05_operate_ai.py demo\n"
+        "  python pal_core_05_operate_ai.py status\n"
+        "  python pal_core_05_operate_ai.py reset\n"
+        "  python pal_core_05_operate_ai.py operate <SITE_ID> <EVENT_TYPE>\n"
+        '  python pal_core_05_operate_ai.py operate_text "<human language event description>"\n'
+        '  python pal_core_05_operate_ai.py add_rule "<human language semantic instruction>"\n'
+        "  python pal_core_05_operate_ai.py explain_last\n\n"
+        "Examples:\n"
+        "  python pal_core_05_operate_ai.py demo\n"
+        "  python pal_core_05_operate_ai.py status\n"
+        "  python pal_core_05_operate_ai.py reset\n"
+        "  python pal_core_05_operate_ai.py operate site_1 power_spike\n"
+        '  python pal_core_05_operate_ai.py operate_text "Power anomaly reported at Site 1"\n'
+        '  python pal_core_05_operate_ai.py add_rule "For this investigation, treat all suppliers owned by same parent company as related."\n'
+        "  python pal_core_05_operate_ai.py explain_last"
+    )
+
+def require_openai() -> None:
+    if client is None:
+        raise RuntimeError("OPENAI_API_KEY missing. Put it in .env or environment.")
+
+def entity_by_id(state: Dict[str, Any], entity_id: str) -> Optional[Dict[str, Any]]:
+    for e in state["entities"]:
+        if e["id"] == entity_id:
+            return e
+    return None
+
+def get_event_rule(state: Dict[str, Any], event_type: str) -> Optional[Dict[str, Any]]:
+    for r in state["event_rules"]:
+        if r["event_type"] == event_type:
+            return r
+    return None
+
+# --------------------------------------------------
+# 3 GRAPH LAYER
+# --------------------------------------------------
+def find_entities_of_type(state: Dict[str, Any], entity_type: str) -> List[Dict[str, Any]]:
+    return [e for e in state["entities"] if e["type"] == entity_type]
+
+def build_through_index(state: Dict[str, Any], source_type: str, through_relation: str) -> Dict[str, List[str]]:
+    out: Dict[str, List[str]] = {}
+    valid_ids = {e["id"] for e in find_entities_of_type(state, source_type)}
+
+    for r in state["relations"]:
+        if r["from"] in valid_ids and r["relation"] == through_relation:
+            out.setdefault(r["to"], []).append(r["from"])
+    return out
+
+def build_semantic_edges(state: Dict[str, Any]) -> List[Dict[str, str]]:
+    new_edges: List[Dict[str, str]] = []
+
+    for rule in state.get("semantic_rules", []):
+        source_type = rule["source_type"]
+        target_type = rule["target_type"]
+        through_relation = rule["through_relation"]
+        new_relation = rule["new_relation"]
+
+        if source_type != target_type:
+            continue
+
+        groups = build_through_index(state, source_type, through_relation)
+
+        for _, members in groups.items():
+            members = sorted(set(members))
+            for i in range(len(members)):
+                for j in range(i + 1, len(members)):
+                    a = members[i]
+                    b = members[j]
+                    new_edges.append({"from": a, "relation": new_relation, "to": b})
+                    new_edges.append({"from": b, "relation": new_relation, "to": a})
+
+    return new_edges
+
+def build_all_neighbors(state: Dict[str, Any]) -> Dict[str, List[Tuple[str, str]]]:
+    neighbors: Dict[str, List[Tuple[str, str]]] = {}
+    for e in state["entities"]:
+        neighbors[e["id"]] = []
+
+    for r in state["relations"]:
+        src = r["from"]
+        rel = r["relation"]
+        dst = r["to"]
+        neighbors.setdefault(src, []).append((rel, dst))
+        neighbors.setdefault(dst, []).append((f"rev_{rel}", src))
+
+    for r in build_semantic_edges(state):
+        src = r["from"]
+        rel = r["relation"]
+        dst = r["to"]
+        neighbors.setdefault(src, []).append((rel, dst))
+
+    return neighbors
+
+def bfs_related(state: Dict[str, Any], start_id: str, max_hops: int = 2) -> List[Dict[str, Any]]:
+    neighbors = build_all_neighbors(state)
+    if start_id not in neighbors:
+        return []
+
+    results: List[Dict[str, Any]] = []
+    visited: Set[str] = {start_id}
+    queue: List[Tuple[str, int, Optional[str]]] = [(start_id, 0, None)]
+
+    while queue:
+        node, depth, _ = queue.pop(0)
+        if depth >= max_hops:
+            continue
+
+        for rel, nxt in neighbors.get(node, []):
+            if nxt in visited:
+                continue
+            visited.add(nxt)
+
+            ent = entity_by_id(state, nxt)
+            results.append({
+                "entity_id": nxt,
+                "entity_type": ent["type"] if ent else "unknown",
+                "via_relation": rel,
+                "hops": depth + 1,
+            })
+            queue.append((nxt, depth + 1, rel))
+
+    return results
+
+def suppliers_serving_site(state: Dict[str, Any], site_id: str) -> List[str]:
+    out: List[str] = []
+    for r in state["relations"]:
+        if r["relation"] == "serves" and r["to"] == site_id:
+            src = entity_by_id(state, r["from"])
+            if src and src["type"] == "supplier":
+                out.append(src["id"])
+    return sorted(set(out))
+
+def related_suppliers(state: Dict[str, Any], supplier_id: str) -> List[str]:
+    out: List[str] = []
+    for r in build_semantic_edges(state):
+        if r["from"] == supplier_id and r["relation"] == "related_to":
+            out.append(r["to"])
+    return sorted(set(out))
+
+# --------------------------------------------------
+# 4 TASK BUILDING
+# --------------------------------------------------
+def next_task_id(n: int) -> str:
+    return f"T{n:03d}"
+
+def build_operation_tasks(state: Dict[str, Any], site_id: str, event_type: str) -> List[Dict[str, Any]]:
+    event_rule = get_event_rule(state, event_type)
+    if event_rule is None:
+        return []
+
+    tasks: List[Dict[str, Any]] = []
+    task_n = 1
+
+    for tpl in event_rule.get("site_task_templates", []):
+        tasks.append({
+            "task_id": next_task_id(task_n),
+            "type": tpl["task_type"],
+            "priority": tpl["priority"],
+            "duration": tpl["duration"],
+            "required_skill": tpl["required_skill"],
+            "location": site_id,
+            "reason": f"event:{event_type}@{site_id}",
+        })
+        task_n += 1
+
+    direct_suppliers = suppliers_serving_site(state, site_id)
+    all_supplier_targets: List[str] = []
+
+    for s in direct_suppliers:
+        all_supplier_targets.append(s)
+        for rs in related_suppliers(state, s):
+            all_supplier_targets.append(rs)
+
+    all_supplier_targets = sorted(set(all_supplier_targets))
+
+    supplier_sites: Dict[str, str] = {}
+    for r in state["relations"]:
+        if r["relation"] == "serves":
+            src_ent = entity_by_id(state, r["from"])
+            dst_ent = entity_by_id(state, r["to"])
+            if src_ent and src_ent["type"] == "supplier" and dst_ent and dst_ent["type"] == "site":
+                supplier_sites[src_ent["id"]] = dst_ent["id"]
+
+    for supplier_id in all_supplier_targets:
+        for tpl in event_rule.get("supplier_task_templates", []):
+            supplier_site = supplier_sites.get(supplier_id, site_id)
+            tasks.append({
+                "task_id": next_task_id(task_n),
+                "type": tpl["task_type"],
+                "priority": tpl["priority"],
+                "duration": tpl["duration"],
+                "required_skill": tpl["required_skill"],
+                "location": supplier_site,
+                "reason": f"supplier_impact:{supplier_id}",
+                "supplier_id": supplier_id,
+            })
+            task_n += 1
+
+    return tasks
+
+# --------------------------------------------------
+# 5 ALLOCATION
+# --------------------------------------------------
+def worker_can_do_task(worker: Dict[str, Any], task: Dict[str, Any], remaining_capacity: int) -> bool:
+    return (
+        task["required_skill"] in worker["skills"]
+        and remaining_capacity >= int(task["duration"])
+    )
+
+def sort_tasks(tasks: List[Dict[str, Any]]) -> List[Dict[str, Any]]:
+    return sorted(tasks, key=lambda t: (-int(t["priority"]), int(t["duration"]), t["task_id"]))
+
+def find_best_worker_for_task(
+    workers: List[Dict[str, Any]],
+    remaining_capacity: Dict[str, int],
+    task: Dict[str, Any],
+) -> Optional[Dict[str, Any]]:
+    candidates: List[Dict[str, Any]] = []
+    for w in workers:
+        wid = w["worker_id"]
+        rem = remaining_capacity.get(wid, 0)
+        if worker_can_do_task(w, task, rem):
+            candidates.append(w)
+
+    if not candidates:
+        return None
+
+    def score(w: Dict[str, Any]) -> Tuple[int, int, str]:
+        rem = remaining_capacity[w["worker_id"]]
+        post = rem - int(task["duration"])
+        return (post, len(w["skills"]), w["worker_id"])
+
+    return sorted(candidates, key=score)[0]
+
+def allocate_tasks(state: Dict[str, Any], tasks: List[Dict[str, Any]]) -> Dict[str, Any]:
+    workers = list(state["workers"])
+    tasks = sort_tasks(tasks)
+
+    remaining_capacity: Dict[str, int] = {
+        w["worker_id"]: int(w["capacity"]) for w in workers
+    }
+
+    assignments: List[Dict[str, Any]] = []
+    unassigned: List[Dict[str, Any]] = []
+
+    for task in tasks:
+        best_worker = find_best_worker_for_task(workers, remaining_capacity, task)
+        if best_worker is None:
+            unassigned.append({
+                "task_id": task["task_id"],
+                "type": task["type"],
+                "priority": task["priority"],
+                "duration": task["duration"],
+                "required_skill": task["required_skill"],
+                "location": task["location"],
+                "reason": "no_available_worker_with_skill_and_capacity",
+                "source_reason": task.get("reason", ""),
+                "supplier_id": task.get("supplier_id"),
+            })
+            continue
+
+        wid = best_worker["worker_id"]
+        remaining_capacity[wid] -= int(task["duration"])
+
+        assignments.append({
+            "task_id": task["task_id"],
+            "task_type": task["type"],
+            "priority": task["priority"],
+            "duration": task["duration"],
+            "required_skill": task["required_skill"],
+            "task_location": task["location"],
+            "worker_id": wid,
+            "worker_skills": best_worker["skills"],
+            "worker_location": best_worker["location"],
+            "source_reason": task.get("reason", ""),
+            "supplier_id": task.get("supplier_id"),
+        })
+
+    worker_utilization: List[Dict[str, Any]] = []
+    for w in workers:
+        wid = w["worker_id"]
+        cap = int(w["capacity"])
+        rem = remaining_capacity[wid]
+        used = cap - rem
+        util = round((used / cap), 2) if cap > 0 else 0.0
+        worker_utilization.append({
+            "worker_id": wid,
+            "capacity": cap,
+            "used": used,
+            "remaining": rem,
+            "utilization": util,
+        })
+
+    return {
+        "assignments": assignments,
+        "unassigned_tasks": unassigned,
+        "total_priority_completed": sum(int(a["priority"]) for a in assignments),
+        "total_priority_unassigned": sum(int(t["priority"]) for t in unassigned),
+        "worker_utilization": worker_utilization,
+    }
+
+# --------------------------------------------------
+# 6 OPERATE CORE
+# --------------------------------------------------
+def operate_event(state: Dict[str, Any], site_id: str, event_type: str) -> Dict[str, Any]:
+    site = entity_by_id(state, site_id)
+    if site is None or site["type"] != "site":
+        raise ValueError(f"Unknown site: {site_id}")
+
+    event_rule = get_event_rule(state, event_type)
+    if event_rule is None:
+        raise ValueError(f"No event rule for event_type: {event_type}")
+
+    direct_suppliers = suppliers_serving_site(state, site_id)
+    semantic_related: Dict[str, List[str]] = {}
+    for s in direct_suppliers:
+        semantic_related[s] = related_suppliers(state, s)
+
+    related_entities = bfs_related(state, site_id, max_hops=2)
+    tasks = build_operation_tasks(state, site_id, event_type)
+    allocation = allocate_tasks(state, tasks)
+
+    result = {
+        "input_event": {
+            "site_id": site_id,
+            "event_type": event_type,
+        },
+        "detection": {
+            "alert_type": event_rule["alert_type"],
+            "site_id": site_id,
+            "status": "detected",
+        },
+        "graph_impact": {
+            "direct_suppliers": direct_suppliers,
+            "semantic_related_suppliers": semantic_related,
+            "related_entities_within_2_hops": related_entities,
+        },
+        "response_tasks": tasks,
+        "allocation": allocation,
+    }
+    return result
+
+# --------------------------------------------------
+# 7 LLM HELPERS
+# --------------------------------------------------
+# 05b human-language event input → structured event
+def build_event_interpret_messages(state: Dict[str, Any], user_text: str) -> List[Dict[str, str]]:
+    site_ids = [e["id"] for e in state["entities"] if e["type"] == "site"]
+    event_types = [r["event_type"] for r in state["event_rules"]]
+
+    return [
+        {
+            "role": "system",
+            "content": (
+                "You convert human event descriptions into structured event JSON.\n\n"
+                f"Valid site IDs: {site_ids}\n"
+                f"Valid event types: {event_types}\n\n"
+                f"{EVENT_INTERPRET_SCHEMA_TEXT}"
+            ),
+        },
+        {
+            "role": "user",
+            "content": user_text,
+        },
+    ]
+
+def interpret_event_text_with_llm(state: Dict[str, Any], user_text: str) -> Dict[str, Any]:
+    require_openai()
+    messages = build_event_interpret_messages(state, user_text)
+    response = client.chat.completions.create(
+        model="gpt-4o-mini",
+        messages=messages,
+        response_format={"type": "json_object"},
+    )
+    content = response.choices[0].message.content
+    return json.loads(content)
+
+# 05c human-language rule injection → new semantic rule
+def build_command_messages(user_command: str) -> List[Dict[str, str]]:
+    return [
+        {
+            "role": "system",
+            "content": (
+                "You convert semantic investigation instructions into structured relationship rules.\n\n"
+                f"{COMMAND_SCHEMA_TEXT}"
+            ),
+        },
+        {
+            "role": "user",
+            "content": user_command,
+        },
+    ]
+
+def interpret_command_with_llm(user_command: str) -> Dict[str, Any]:
+    require_openai()
+    messages = build_command_messages(user_command)
+    response = client.chat.completions.create(
+        model="gpt-4o-mini",
+        messages=messages,
+        response_format={"type": "json_object"},
+    )
+    content = response.choices[0].message.content
+    return json.loads(content)
+
+# 05d optional human-readable explanation of operation result
+def build_explain_messages(result: Dict[str, Any]) -> List[Dict[str, str]]:
+    return [
+        {
+            "role": "system",
+            "content": EXPLAIN_SCHEMA_TEXT,
+        },
+        {
+            "role": "user",
+            "content": (
+                "Explain this deterministic operation result:\n\n"
+                f"{json.dumps(result, indent=2, ensure_ascii=False)}"
+            ),
+        },
+    ]
+
+def explain_result_with_llm(result: Dict[str, Any]) -> str:
+    require_openai()
+    messages = build_explain_messages(result)
+    response = client.chat.completions.create(
+        model="gpt-4o-mini",
+        messages=messages,
+    )
+    return response.choices[0].message.content.strip()
+
+# --------------------------------------------------
+# 8 COMMANDS
+# --------------------------------------------------
+def cmd_demo() -> None:
+    state = reset_state()
+    print("DEMO OK")
+    print(f"Saved state to: {STATE_FILE.resolve()}")
+    print("\n=== DEMO OPERATION ===")
+    result = operate_event(state, "site_1", "power_spike")
+    state["last_operation"] = result
+    state["last_explanation"] = None
+    save_state(state)
+    print(json.dumps(result, indent=2, ensure_ascii=False))
+
+def cmd_status() -> None:
+    state = load_state()
+    print("=== STATE ===")
+    print(json.dumps({
+        "entities": state["entities"],
+        "relations": state["relations"],
+        "semantic_rules": state["semantic_rules"],
+        "workers": state["workers"],
+        "event_rules": state["event_rules"],
+        "last_operation": state.get("last_operation"),
+        "last_explanation": state.get("last_explanation"),
+    }, indent=2, ensure_ascii=False))
+
+def cmd_reset() -> None:
+    state = reset_state()
+    print("RESET OK")
+    print(f"Saved state to: {STATE_FILE.resolve()}")
+
+def cmd_operate(site_id: str, event_type: str) -> None:
+    state = load_state()
+    try:
+        result = operate_event(state, site_id, event_type)
+    except Exception as e:
+        print("OPERATE FAILED")
+        print(str(e))
+        return
+
+    state["last_operation"] = result
+    state["last_explanation"] = None
+    save_state(state)
+
+    print("=== OPERATION RESULT ===")
+    print(json.dumps(result, indent=2, ensure_ascii=False))
+
+# 05b human-language event input → structured event
+def cmd_operate_text(user_text: str) -> None:
+    state = load_state()
+    try:
+        parsed = interpret_event_text_with_llm(state, user_text)
+    except Exception as e:
+        print("OPERATE_TEXT FAILED")
+        print(str(e))
+        return
+
+    print("=== LLM PARSED EVENT ===")
+    print(json.dumps(parsed, indent=2, ensure_ascii=False))
+
+    site_id = parsed.get("site_id")
+    event_type = parsed.get("event_type")
+
+    try:
+        result = operate_event(state, site_id, event_type)
+    except Exception as e:
+        print("\nOPERATE_TEXT FAILED")
+        print(str(e))
+        return
+
+    state["last_operation"] = result
+    state["last_explanation"] = None
+    save_state(state)
+
+    print("\n=== OPERATION RESULT ===")
+    print(json.dumps(result, indent=2, ensure_ascii=False))
+
+# 05c human-language rule injection → new semantic rule
+def cmd_add_rule(user_command: str) -> None:
+    state = load_state()
+
+    try:
+        parsed = interpret_command_with_llm(user_command)
+    except Exception as e:
+        print("ADD_RULE FAILED")
+        print(str(e))
+        return
+
+    print("=== LLM PARSED COMMAND ===")
+    print(json.dumps(parsed, indent=2, ensure_ascii=False))
+
+    action = parsed.get("action")
+    if action != "add_semantic_rule":
+        print("\nNo semantic rule added.")
+        return
+
+    rule = parsed.get("relationship_rule", {})
+    required = {"name", "source_type", "target_type", "through_relation", "new_relation"}
+    missing = [k for k in required if k not in rule]
+    if missing:
+        print("\nADD_RULE FAILED")
+        print(f"Missing rule fields: {missing}")
+        return
+
+    existing_names = {r["name"] for r in state.get("semantic_rules", [])}
+    if rule["name"] in existing_names:
+        print("\nADD_RULE OK")
+        print("Rule already exists.")
+        return
+
+    state.setdefault("semantic_rules", []).append(rule)
+    save_state(state)
+
+    print("\n=== RULE ADDED ===")
+    print(json.dumps(rule, indent=2, ensure_ascii=False))
+
+    print("\n=== DERIVED SEMANTIC EDGES ===")
+    print(json.dumps(build_semantic_edges(state), indent=2, ensure_ascii=False))
+
+# 05d optional human-readable explanation of operation result
+def cmd_explain_last() -> None:
+    state = load_state()
+    result = state.get("last_operation")
+
+    if not result:
+        print("EXPLAIN_LAST FAILED")
+        print("No last_operation found.")
+        return
+
+    try:
+        explanation = explain_result_with_llm(result)
+    except Exception as e:
+        print("EXPLAIN_LAST FAILED")
+        print(str(e))
+        return 
+
+    state["last_explanation"] = explanation
+    save_state(state)
+
+    print("=== HUMAN EXPLANATION ===")
+    print(explanation)
+
+# --------------------------------------------------
+# 9 MAIN
+# --------------------------------------------------
+def main() -> None:
+    if len(sys.argv) < 2:
+        print_usage()
+        return
+
+    command = sys.argv[1].strip().lower()
+
+    if command == "demo":
+        cmd_demo()
+    elif command == "status":
+        cmd_status()
+    elif command == "reset":
+        cmd_reset()
+    elif command == "operate":
+        if len(sys.argv) < 4:
+            print("Missing SITE_ID and EVENT_TYPE\n")
+            print_usage()
+            return
+        cmd_operate(sys.argv[2], sys.argv[3])
+# 05b human-language event input → structured event
+    elif command == "operate_text":
+        if len(sys.argv) < 3:
+            print("Missing human language event description\n")
+            print_usage()
+            return
+        cmd_operate_text(sys.argv[2])
+# 05c human-language rule injection → new semantic rule
+    elif command == "add_rule":
+        if len(sys.argv) < 3:
+            print("Missing human language semantic instruction\n")
+            print_usage()
+            return
+        cmd_add_rule(sys.argv[2])
+# 05d optional human-readable explanation of operation result
+    elif command == "explain_last":
+        cmd_explain_last()
+    else:
+        print(f"Unknown command: {command}\n")
+        print_usage()
+
+if __name__ == "__main__":
+    main()
+```
+
+#### **TEST**
+
+```
+Test order:
+python pal_core_05_operate_ai.py demo
+$ python pal_core_05_operate_ai.py demo
+DEMO OK
+Saved state to: C:\Users\terry\Downloads\d1_agent\pal_core_operate_state.json
+
+=== DEMO OPERATION ===
+{
+  "input_event": {
+    "site_id": "site_1",
+    "event_type": "power_spike"
+  },
+  "detection": {
+    "alert_type": "power_incident",
+    "site_id": "site_1",
+    "status": "detected"
+  },
+  "graph_impact": {
+    "direct_suppliers": [
+      "supplier_1",
+      "supplier_3"
+    ],
+    "semantic_related_suppliers": {
+      "supplier_1": [
+        "supplier_2"
+      ],
+      "supplier_3": []
+    },
+    "related_entities_within_2_hops": [
+      {
+        "entity_id": "supplier_1",
+        "entity_type": "supplier",
+        "via_relation": "rev_serves",
+        "hops": 1
+      },
+      {
+        "entity_id": "supplier_3",
+        "entity_type": "supplier",
+        "via_relation": "rev_serves",
+        "hops": 1
+      },
+      {
+        "entity_id": "parent_1",
+        "entity_type": "parent_company",
+        "via_relation": "owned_by",
+        "hops": 2
+      },
+      {
+        "entity_id": "supplier_2",
+        "entity_type": "supplier",
+        "via_relation": "related_to",
+        "hops": 2
+      },
+      {
+        "entity_id": "parent_2",
+        "entity_type": "parent_company",
+        "via_relation": "owned_by",
+        "hops": 2
+      }
+    ]
+  },
+  "response_tasks": [
+    {
+      "task_id": "T001",
+      "type": "repair_power",
+      "priority": 10,
+      "duration": 1,
+      "required_skill": "skill_1",
+      "location": "site_1",
+      "reason": "event:power_spike@site_1"
+    },
+    {
+      "task_id": "T002",
+      "type": "site_inspection",
+      "priority": 7,
+      "duration": 1,
+      "required_skill": "skill_3",
+      "location": "site_1",
+      "reason": "event:power_spike@site_1"
+    },
+    {
+      "task_id": "T003",
+      "type": "supplier_coordination",
+      "priority": 6,
+      "duration": 1,
+      "required_skill": "skill_2",
+      "location": "site_1",
+      "reason": "supplier_impact:supplier_1",
+      "supplier_id": "supplier_1"
+    },
+    {
+      "task_id": "T004",
+      "type": "supplier_coordination",
+      "priority": 6,
+      "duration": 1,
+      "required_skill": "skill_2",
+      "location": "site_2",
+      "reason": "supplier_impact:supplier_2",
+      "supplier_id": "supplier_2"
+    },
+    {
+      "task_id": "T005",
+      "type": "supplier_coordination",
+      "priority": 6,
+      "duration": 1,
+      "required_skill": "skill_2",
+      "location": "site_1",
+      "reason": "supplier_impact:supplier_3",
+      "supplier_id": "supplier_3"
+    }
+  ],
+  "allocation": {
+    "assignments": [
+      {
+        "task_id": "T001",
+        "task_type": "repair_power",
+        "priority": 10,
+        "duration": 1,
+        "required_skill": "skill_1",
+        "task_location": "site_1",
+        "worker_id": "W001",
+        "worker_skills": [
+          "skill_1"
+        ],
+        "worker_location": "Depot_A",
+        "source_reason": "event:power_spike@site_1",
+        "supplier_id": null
+      },
+      {
+        "task_id": "T002",
+        "task_type": "site_inspection",
+        "priority": 7,
+        "duration": 1,
+        "required_skill": "skill_3",
+        "task_location": "site_1",
+        "worker_id": "W003",
+        "worker_skills": [
+          "skill_3"
+        ],
+        "worker_location": "Depot_C",
+        "source_reason": "event:power_spike@site_1",
+        "supplier_id": null
+      },
+      {
+        "task_id": "T003",
+        "task_type": "supplier_coordination",
+        "priority": 6,
+        "duration": 1,
+        "required_skill": "skill_2",
+        "task_location": "site_1",
+        "worker_id": "W002",
+        "worker_skills": [
+          "skill_2"
+        ],
+        "worker_location": "Depot_B",
+        "source_reason": "supplier_impact:supplier_1",
+        "supplier_id": "supplier_1"
+      },
+      {
+        "task_id": "T004",
+        "task_type": "supplier_coordination",
+        "priority": 6,
+        "duration": 1,
+        "required_skill": "skill_2",
+        "task_location": "site_2",
+        "worker_id": "W002",
+        "worker_skills": [
+          "skill_2"
+        ],
+        "worker_location": "Depot_B",
+        "source_reason": "supplier_impact:supplier_2",
+        "supplier_id": "supplier_2"
+      }
+    ],
+    "unassigned_tasks": [
+      {
+        "task_id": "T005",
+        "type": "supplier_coordination",
+        "priority": 6,
+        "duration": 1,
+        "required_skill": "skill_2",
+        "location": "site_1",
+        "reason": "no_available_worker_with_skill_and_capacity",
+        "source_reason": "supplier_impact:supplier_3",
+        "supplier_id": "supplier_3"
+      }
+    ],
+    "total_priority_completed": 29,
+    "total_priority_unassigned": 6,
+    "worker_utilization": [
+      {
+        "worker_id": "W001",
+        "capacity": 1,
+        "used": 1,
+        "remaining": 0,
+        "utilization": 1.0
+      },
+      {
+        "worker_id": "W002",
+        "capacity": 2,
+        "used": 2,
+        "remaining": 0,
+        "utilization": 1.0
+      },
+      {
+        "worker_id": "W003",
+        "capacity": 1,
+        "used": 1,
+        "remaining": 0,
+        "utilization": 1.0
+      }
+    ]
+  }
+}
+(venv)
+terry@LAPTOP-HKPDHF7M MINGW64 ~/Downloads/d1_agent (main)
+
+python pal_core_05_operate_ai.py operate_text "(5b) Power anomaly reported at Site 1"
+4 secs
+$ python pal_core_05_operate_ai.py operate_text "Power anomaly reported at Site 1"
+=== LLM PARSED EVENT ===
+{
+  "site_id": "site_1",
+  "event_type": "power_spike"
+}
+
+=== OPERATION RESULT ===
+{
+  "input_event": {
+    "site_id": "site_1",
+    "event_type": "power_spike"
+  },
+  "detection": {
+    "alert_type": "power_incident",
+    "site_id": "site_1",
+    "status": "detected"
+  },
+  "graph_impact": {
+    "direct_suppliers": [
+      "supplier_1",
+      "supplier_3"
+    ],
+    "semantic_related_suppliers": {
+      "supplier_1": [
+        "supplier_2"
+      ],
+      "supplier_3": []
+    },
+    "related_entities_within_2_hops": [
+      {
+        "entity_id": "supplier_1",
+        "entity_type": "supplier",
+        "via_relation": "rev_serves",
+        "hops": 1
+      },
+      {
+        "entity_id": "supplier_3",
+        "entity_type": "supplier",
+        "via_relation": "rev_serves",
+        "hops": 1
+      },
+      {
+        "entity_id": "parent_1",
+        "entity_type": "parent_company",
+        "via_relation": "owned_by",
+        "hops": 2
+      },
+      {
+        "entity_id": "supplier_2",
+        "entity_type": "supplier",
+        "via_relation": "related_to",
+        "hops": 2
+      },
+      {
+        "entity_id": "parent_2",
+        "entity_type": "parent_company",
+        "via_relation": "owned_by",
+        "hops": 2
+      }
+    ]
+  },
+  "response_tasks": [
+    {
+      "task_id": "T001",
+      "type": "repair_power",
+      "priority": 10,
+      "duration": 1,
+      "required_skill": "skill_1",
+      "location": "site_1",
+      "reason": "event:power_spike@site_1"
+    },
+    {
+      "task_id": "T002",
+      "type": "site_inspection",
+      "priority": 7,
+      "duration": 1,
+      "required_skill": "skill_3",
+      "location": "site_1",
+      "reason": "event:power_spike@site_1"
+    },
+    {
+      "task_id": "T003",
+      "type": "supplier_coordination",
+      "priority": 6,
+      "duration": 1,
+      "required_skill": "skill_2",
+      "location": "site_1",
+      "reason": "supplier_impact:supplier_1",
+      "supplier_id": "supplier_1"
+    },
+    {
+      "task_id": "T004",
+      "type": "supplier_coordination",
+      "priority": 6,
+      "duration": 1,
+      "required_skill": "skill_2",
+      "location": "site_2",
+      "reason": "supplier_impact:supplier_2",
+      "supplier_id": "supplier_2"
+    },
+    {
+      "task_id": "T005",
+      "type": "supplier_coordination",
+      "priority": 6,
+      "duration": 1,
+      "required_skill": "skill_2",
+      "location": "site_1",
+      "reason": "supplier_impact:supplier_3",
+      "supplier_id": "supplier_3"
+    }
+  ],
+  "allocation": {
+    "assignments": [
+      {
+        "task_id": "T001",
+        "task_type": "repair_power",
+        "priority": 10,
+        "duration": 1,
+        "required_skill": "skill_1",
+        "task_location": "site_1",
+        "worker_id": "W001",
+        "worker_skills": [
+          "skill_1"
+        ],
+        "worker_location": "Depot_A",
+        "source_reason": "event:power_spike@site_1",
+        "supplier_id": null
+      },
+      {
+        "task_id": "T002",
+        "task_type": "site_inspection",
+        "priority": 7,
+        "duration": 1,
+        "required_skill": "skill_3",
+        "task_location": "site_1",
+        "worker_id": "W003",
+        "worker_skills": [
+          "skill_3"
+        ],
+        "worker_location": "Depot_C",
+        "source_reason": "event:power_spike@site_1",
+        "supplier_id": null
+      },
+      {
+        "task_id": "T003",
+        "task_type": "supplier_coordination",
+        "priority": 6,
+        "duration": 1,
+        "required_skill": "skill_2",
+        "task_location": "site_1",
+        "worker_id": "W002",
+        "worker_skills": [
+          "skill_2"
+        ],
+        "worker_location": "Depot_B",
+        "source_reason": "supplier_impact:supplier_1",
+        "supplier_id": "supplier_1"
+      },
+      {
+        "task_id": "T004",
+        "task_type": "supplier_coordination",
+        "priority": 6,
+        "duration": 1,
+        "required_skill": "skill_2",
+        "task_location": "site_2",
+        "worker_id": "W002",
+        "worker_skills": [
+          "skill_2"
+        ],
+        "worker_location": "Depot_B",
+        "source_reason": "supplier_impact:supplier_2",
+        "supplier_id": "supplier_2"
+      }
+    ],
+    "unassigned_tasks": [
+      {
+        "task_id": "T005",
+        "type": "supplier_coordination",
+        "priority": 6,
+        "duration": 1,
+        "required_skill": "skill_2",
+        "location": "site_1",
+        "reason": "no_available_worker_with_skill_and_capacity",
+        "source_reason": "supplier_impact:supplier_3",
+        "supplier_id": "supplier_3"
+      }
+    ],
+    "total_priority_completed": 29,
+    "total_priority_unassigned": 6,
+    "worker_utilization": [
+      {
+        "worker_id": "W001",
+        "capacity": 1,
+        "used": 1,
+        "remaining": 0,
+        "utilization": 1.0
+      },
+      {
+        "worker_id": "W002",
+        "capacity": 2,
+        "used": 2,
+        "remaining": 0,
+        "utilization": 1.0
+      },
+      {
+        "worker_id": "W003",
+        "capacity": 1,
+        "used": 1,
+        "remaining": 0,
+        "utilization": 1.0
+      }
+    ]
+  }
+}
+(venv) 
+terry@LAPTOP-HKPDHF7M MINGW64 ~/Downloads/d1_agent (main)
+
+python pal_core_05_operate_ai.py add_rule "(5c) For this investigation, treat all suppliers owned by same parent company as related."
+5 secs
+$ python pal_core_05_operate_ai.py add_rule "For this investigation, treat all suppliers owned by same parent company as related."
+=== LLM PARSED COMMAND ===
+{
+  "action": "add_semantic_rule",
+  "relationship_rule": {
+    "name": "same_parent_company_suppliers_are_related",
+    "source_type": "supplier",
+    "target_type": "supplier",
+    "through_relation": "owned_by",
+    "new_relation": "related_to"
+  }
+}
+
+ADD_RULE OK
+Rule already exists.
+(venv) 
+terry@LAPTOP-HKPDHF7M MINGW64 ~/Downloads/d1_agent (main)
+
+python pal_core_05_operate_ai.py operate_text "(5b#2) There is a power spike at Site 1"
+4 secs
+$ python pal_core_05_operate_ai.py operate_text "There is a power spike at Site 1"
+=== LLM PARSED EVENT ===
+{
+  "site_id": "site_1",
+  "event_type": "power_spike"
+}
+
+=== OPERATION RESULT === 
+{
+  "input_event": {
+    "site_id": "site_1",
+    "event_type": "power_spike"
+  },
+  "detection": {
+    "alert_type": "power_incident",
+    "site_id": "site_1",
+    "status": "detected"
+  },
+  "graph_impact": {
+    "direct_suppliers": [
+      "supplier_1",
+      "supplier_3"
+    ],
+    "semantic_related_suppliers": {
+      "supplier_1": [
+        "supplier_2"
+      ],
+      "supplier_3": []
+    },
+    "related_entities_within_2_hops": [
+      {
+        "entity_id": "supplier_1",
+        "entity_type": "supplier",
+        "via_relation": "rev_serves",
+        "hops": 1
+      },
+      {
+        "entity_id": "supplier_3",
+        "entity_type": "supplier",
+        "via_relation": "rev_serves",
+        "hops": 1
+      },
+      {
+        "entity_id": "parent_1",
+        "entity_type": "parent_company",
+        "via_relation": "owned_by",
+        "hops": 2
+      },
+      {
+        "entity_id": "supplier_2",
+        "entity_type": "supplier",
+        "via_relation": "related_to",
+        "hops": 2
+      },
+      {
+        "entity_id": "parent_2",
+        "entity_type": "parent_company",
+        "via_relation": "owned_by",
+        "hops": 2
+      }
+    ]
+  },
+  "response_tasks": [
+    {
+      "task_id": "T001",
+      "type": "repair_power",
+      "priority": 10,
+      "duration": 1,
+      "required_skill": "skill_1",
+      "location": "site_1",
+      "reason": "event:power_spike@site_1"
+    },
+    {
+      "task_id": "T002",
+      "type": "site_inspection",
+      "priority": 7,
+      "duration": 1,
+      "required_skill": "skill_3",
+      "location": "site_1",
+      "reason": "event:power_spike@site_1"
+    },
+    {
+      "task_id": "T003",
+      "type": "supplier_coordination",
+      "priority": 6,
+      "duration": 1,
+      "required_skill": "skill_2",
+      "location": "site_1",
+      "reason": "supplier_impact:supplier_1",
+      "supplier_id": "supplier_1"
+    },
+    {
+      "task_id": "T004",
+      "type": "supplier_coordination",
+      "priority": 6,
+      "duration": 1,
+      "required_skill": "skill_2",
+      "location": "site_2",
+      "reason": "supplier_impact:supplier_2",
+      "supplier_id": "supplier_2"
+    },
+    {
+      "task_id": "T005",
+      "type": "supplier_coordination",
+      "priority": 6,
+      "duration": 1,
+      "required_skill": "skill_2",
+      "location": "site_1",
+      "reason": "supplier_impact:supplier_3",
+      "supplier_id": "supplier_3"
+    }
+  ],
+  "allocation": {
+    "assignments": [
+      {
+        "task_id": "T001",
+        "task_type": "repair_power",
+        "priority": 10,
+        "duration": 1,
+        "required_skill": "skill_1",
+        "task_location": "site_1",
+        "worker_id": "W001",
+        "worker_skills": [
+          "skill_1"
+        ],
+        "worker_location": "Depot_A",
+        "source_reason": "event:power_spike@site_1",
+        "supplier_id": null
+      },
+      {
+        "task_id": "T002",
+        "task_type": "site_inspection",
+        "priority": 7,
+        "duration": 1,
+        "required_skill": "skill_3",
+        "task_location": "site_1",
+        "worker_id": "W003",
+        "worker_skills": [
+          "skill_3"
+        ],
+        "worker_location": "Depot_C",
+        "source_reason": "event:power_spike@site_1",
+        "supplier_id": null
+      },
+      {
+        "task_id": "T003",
+        "task_type": "supplier_coordination",
+        "priority": 6,
+        "duration": 1,
+        "required_skill": "skill_2",
+        "task_location": "site_1",
+        "worker_id": "W002",
+        "worker_skills": [
+          "skill_2"
+        ],
+        "worker_location": "Depot_B",
+        "source_reason": "supplier_impact:supplier_1",
+        "supplier_id": "supplier_1"
+      },
+      {
+        "task_id": "T004",
+        "task_type": "supplier_coordination",
+        "priority": 6,
+        "duration": 1,
+        "required_skill": "skill_2",
+        "task_location": "site_2",
+        "worker_id": "W002",
+        "worker_skills": [
+          "skill_2"
+        ],
+        "worker_location": "Depot_B",
+        "source_reason": "supplier_impact:supplier_2",
+        "supplier_id": "supplier_2"
+      }
+    ],
+    "unassigned_tasks": [
+      {
+        "task_id": "T005",
+        "type": "supplier_coordination",
+        "priority": 6,
+        "duration": 1,
+        "required_skill": "skill_2",
+        "location": "site_1",
+        "reason": "no_available_worker_with_skill_and_capacity",
+        "source_reason": "supplier_impact:supplier_3",
+        "supplier_id": "supplier_3"
+      }
+    ],
+    "total_priority_completed": 29,
+    "total_priority_unassigned": 6,
+    "worker_utilization": [
+      {
+        "worker_id": "W001",
+        "capacity": 1,
+        "used": 1,
+        "remaining": 0,
+        "utilization": 1.0
+      },
+      {
+        "worker_id": "W002",
+        "capacity": 2,
+        "used": 2,
+        "remaining": 0,
+        "utilization": 1.0
+      },
+      {
+        "worker_id": "W003",
+        "capacity": 1,
+        "used": 1,
+        "remaining": 0,
+        "utilization": 1.0
+      }
+    ]
+  }
+}
+(venv) 
+terry@LAPTOP-HKPDHF7M MINGW64 ~/Downloads/d1_agent (main)
+
+python pal_core_05_operate_ai.py explain_last
+6 secs
+$ python pal_core_05_operate_ai.py explain_last
+=== HUMAN EXPLANATION ===
+In this deterministic operation result, a power spike event was detected at site 1, leading to the classification of a power incident. The detection confirmed that the status was "detected" for the alert type "power_incident" at the same site.
+
+The graph relationships highlighted the direct suppliers affected by this incident: supplier 1 and supplier 3. Additionally, a semantic relationship showed supplier 1 linked to supplier 2, while supplier 3 had no further relationships identified. Entities within two hops included not only the suppliers but also parent companies related to these suppliers.
+
+A set of response tasks was created in response to the incident. They included tasks for repairing power, conducting a site inspection, and coordinating with suppliers 1, 2, and 3. Each task had different priorities and required specific skills, along with designated locations.
+
+In terms of allocation:
+- Tasks T001 and T002 were successfully assigned to workers W001 and W003, respectively, as they matched the required skills.
+- Task T003 was assigned to worker W002 for coordinating with supplier 1.
+- Task T004 was also assigned to W002 for communication with supplier 2.
+- However, Task T005, which involved coordinating with supplier 3, was left unassigned due to no available worker having the required skills and capacity.
+
+The total priority of completed tasks summed to 29, while the unassigned tasks had a total priority of 6. Worker utilization showed that all engaged workers were fully utilized.
+(venv) 
+terry@LAPTOP-HKPDHF7M MINGW64 ~/Downloads/d1_agent (main)
+```
+
+
 
 <br>
 
 ## **[3.6] (WIP) pal_core_06: simplest demo of all core LLM roles 26.0416**
-  - CODEX1 ?? 
+
+```text2
+#585 could you create a minimalistic demo that demos the key ways an LLM capabilities can be used 
+in the types of system we have been creating? 
+for example, 
+(1) input human language commands, 
+(2) insert new rules, etc? 
+for now, could you just list those key ways?
+
+Yes. That would be an excellent meta-demo:
+one small system showing the main ways an LLM adds value inside structured applications.
+For now, here is the concise list of key LLM capabilities relevant to the systems you’ve been building.
+Core LLM Roles in Your Demo Systems
+1. Human Command Interpreter
+Convert vague user language into structured actions.
+"Show delayed shipments in Taipei"
+-> {"action":"query","filter":...}
+________________________________________
+2. Messy Data Ingest / Extraction
+Convert emails, logs, notes, reports into ontology records.
+email text -> event JSON
+________________________________________
+3. Planner / Task Decomposer
+Break complex requests into atomic executable steps.
+compare X vs Y
+-> step1 filter
+-> step2 aggregate
+-> step3 compare
+________________________________________
+4. Rule Generator / Rule Injection
+Create new runtime rules without changing source code.
+"Alert if outage + delay + supplier overlap"
+-> new rule JSON
+________________________________________
+5. Semantic Mapping / Ontology Translation
+Map inconsistent human wording into standard machine concepts.
+"flat tire", "blowout"
+-> tire_failure
+________________________________________
+6. Search / Retrieval Helper
+Turn natural language into queries or rank relevant records/documents.
+"What affects Site 1?"
+-> graph query / ranked docs
+________________________________________
+7. Explanation / Summarization
+Convert machine results into human-readable conclusions.
+3 suppliers affected due to shared parent + route dependency
+________________________________________
+8. Interactive Analyst Assistant
+Support iterative questioning.
+Why?
+Show evidence.
+What changed?
+What if road closed?
+________________________________________
+Important Non-LLM Roles (still critical)
+Your demos also showed what LLM usually does not replace:
+•	storage 
+•	graph traversal 
+•	scheduling 
+•	exact calculations 
+•	rule execution 
+•	validation 
+•	permissions 
+•	APIs 
+•	control loop 
+________________________________________
+Best future meta-demo
+A single script showing toggles for all 8 roles:
+pal_meta_llm_roles.py
+That could become one of your best teaching demos.
+```
+
+```
+pal_core_06_meta_llm_roles.py
+
+#!/usr/bin/env python3
+"""
+pal_core_06_meta_llm_roles.py
+
+One compact meta-demo showing the main ways an LLM can add value
+inside a structured / deterministic PAL-style application.
+
+Design goal
+-----------
+Keep the execution core deterministic.
+Use LLM only at the boundaries where language, semantics, rule authoring,
+and explanations add value.
+
+This script demonstrates 8 roles:
+1) Human Command Interpreter
+2) Messy Data Ingest / Extraction
+3) Planner / Task Decomposer
+4) Rule Generator / Rule Injection
+5) Semantic Mapping / Ontology Translation
+6) Search / Retrieval Helper
+7) Explanation / Summarization
+8) Interactive Analyst Assistant
+
+How to run
+----------
+python pal_core_06_meta_llm_roles.py demo
+python pal_core_06_meta_llm_roles.py demo --llm off
+python pal_core_06_meta_llm_roles.py role command
+python pal_core_06_meta_llm_roles.py role ingest
+python pal_core_06_meta_llm_roles.py role planner
+python pal_core_06_meta_llm_roles.py role rulegen
+python pal_core_06_meta_llm_roles.py role ontology
+python pal_core_06_meta_llm_roles.py role retrieval
+python pal_core_06_meta_llm_roles.py role explain
+python pal_core_06_meta_llm_roles.py role analyst
+
+Notes
+-----
+- By default this file runs in MOCK LLM mode, so it is deterministic and easy to study.
+- You can later replace MockLLM with a real adapter (OpenAI / local model / etc.).
+- The ontology/graph and execution engine remain deterministic.
+"""
+
+from __future__ import annotations
+
+import argparse
+import json
+import math
+import re
+from collections import Counter, defaultdict
+from dataclasses import dataclass, field
+from typing import Any, Dict, List, Optional, Tuple
+
+# ============================================================
+# 1) Helpers
+# ============================================================
+
+def jprint(x: Any):
+    print(json.dumps(x, indent=2, ensure_ascii=False))
+
+def norm_text(s: str) -> str:
+    return re.sub(r"\s+", " ", s.strip().lower())
+
+# ============================================================
+# 2) In-memory ontology / graph store (deterministic)
+# ============================================================
+
+@dataclass
+class Entity:
+    entity_id: str
+    entity_type: str
+    name: str
+    attrs: Dict[str, Any] = field(default_factory=dict)
+
+@dataclass
+class Event:
+    event_id: str
+    entity_id: str
+    event_type: str
+    location: str
+    status: str
+    note: str = ""
+    supplier_id: Optional[str] = None
+    route_id: Optional[str] = None
+    site_id: Optional[str] = None
+    severity: int = 1
+
+class OntologyStore:
+    def __init__(self):
+        self.entities: Dict[str, Entity] = {}
+        self.events: List[Event] = []
+        self.edges_out: Dict[str, List[Tuple[str, str]]] = defaultdict(list)
+        self.edges_in: Dict[str, List[Tuple[str, str]]] = defaultdict(list)
+
+    # --------------------------------------------------------
+    # 2.1 entities / edges / events
+    # --------------------------------------------------------
+    def add_entity(self, entity: Entity):
+        self.entities[entity.entity_id] = entity
+
+    def add_edge(self, src: str, rel: str, dst: str):
+        self.edges_out[src].append((rel, dst))
+        self.edges_in[dst].append((rel, src))
+
+    def add_event(self, event: Event):
+        self.events.append(event)
+
+    # --------------------------------------------------------
+    # 2.2 graph helpers
+    # --------------------------------------------------------
+    def neighbors(self, node_id: str) -> List[Dict[str, str]]:
+        out = []
+        for rel, dst in self.edges_out.get(node_id, []):
+            out.append({"from": node_id, "relation": rel, "to": dst})
+        for rel, src in self.edges_in.get(node_id, []):
+            out.append({"from": src, "relation": rel, "to": node_id})
+        return out
+
+    def two_hop_impacts_from_site(self, site_id: str) -> List[Dict[str, Any]]:
+        results = []
+        seen = set()
+        for rel1, n1 in self.edges_in.get(site_id, []) + self.edges_out.get(site_id, []):
+            key1 = (site_id, rel1, n1, 1)
+            if key1 not in seen:
+                results.append({
+                    "entity_id": n1,
+                    "via_relation": rel1,
+                    "hops": 1,
+                })
+                seen.add(key1)
+            for rel2, n2 in self.edges_in.get(n1, []) + self.edges_out.get(n1, []):
+                if n2 == site_id:
+                    continue
+                key2 = (site_id, n1, rel2, n2, 2)
+                if key2 not in seen:
+                    results.append({
+                        "entity_id": n2,
+                        "via_relation": f"{rel1}->{rel2}",
+                        "hops": 2,
+                    })
+                    seen.add(key2)
+        return results
+
+    # --------------------------------------------------------
+    # 2.3 deterministic search/query layer
+    # --------------------------------------------------------
+    def filter_events(self, filt: Dict[str, Any]) -> List[Event]:
+        out = []
+        for ev in self.events:
+            ok = True
+            for k, v in filt.items():
+                if v is None:
+                    continue
+                if not hasattr(ev, k):
+                    ok = False
+                    break
+                if getattr(ev, k) != v:
+                    ok = False
+                    break
+            if ok:
+                out.append(ev)
+        return out
+
+    def aggregate_counts(self, events: List[Event], field_name: str) -> Dict[str, int]:
+        c = Counter()
+        for ev in events:
+            c[str(getattr(ev, field_name, None))] += 1
+        return dict(c)
+
+    def top_impacted_suppliers(self, events: List[Event]) -> List[Dict[str, Any]]:
+        c = Counter()
+        for ev in events:
+            if ev.supplier_id:
+                c[ev.supplier_id] += 1
+        out = []
+        for supplier_id, count in c.most_common():
+            name = self.entities.get(supplier_id).name if supplier_id in self.entities else supplier_id
+            out.append({"supplier_id": supplier_id, "supplier_name": name, "count": count})
+        return out
+
+# ============================================================
+# 3) Seed demo data
+# ============================================================
+
+def seed_demo_store() -> OntologyStore:
+    db = OntologyStore()
+
+    # entities
+    db.add_entity(Entity("site_1", "site", "Site 1", {"city": "taipei"}))
+    db.add_entity(Entity("site_2", "site", "Site 2", {"city": "tainan"}))
+    db.add_entity(Entity("route_7", "route", "Route 7", {"region": "north"}))
+    db.add_entity(Entity("route_9", "route", "Route 9", {"region": "south"}))
+    db.add_entity(Entity("supplier_1", "supplier", "Acme Rubber"))
+    db.add_entity(Entity("supplier_2", "supplier", "Bolt Logistics"))
+    db.add_entity(Entity("supplier_3", "supplier", "Metro Steel"))
+    db.add_entity(Entity("truck_17", "shipment", "Truck 17"))
+    db.add_entity(Entity("truck_21", "shipment", "Truck 21"))
+    db.add_entity(Entity("truck_33", "shipment", "Truck 33"))
+
+    # graph relations
+    db.add_edge("supplier_1", "supplies", "site_1")
+    db.add_edge("supplier_2", "supplies", "site_1")
+    db.add_edge("supplier_2", "supplies", "site_2")
+    db.add_edge("supplier_3", "supplies", "site_2")
+    db.add_edge("truck_17", "uses_route", "route_7")
+    db.add_edge("truck_21", "uses_route", "route_7")
+    db.add_edge("truck_33", "uses_route", "route_9")
+    db.add_edge("route_7", "serves", "site_1")
+    db.add_edge("route_9", "serves", "site_2")
+    db.add_edge("supplier_1", "related_to", "supplier_2")
+
+    # events
+    db.add_event(Event("E001", "truck_17", "shipment", "taipei", "delayed", "flat tire on highway", "supplier_1", "route_7", "site_1", 2))
+    db.add_event(Event("E002", "truck_21", "shipment", "taipei", "blocked", "road closure near tunnel", "supplier_2", "route_7", "site_1", 3))
+    db.add_event(Event("E003", "truck_33", "shipment", "tainan", "delayed", "supplier backlog", "supplier_3", "route_9", "site_2", 2))
+    db.add_event(Event("E004", "truck_17", "shipment", "taipei", "delayed", "blowout and late unloading", "supplier_1", "route_7", "site_1", 2))
+    db.add_event(Event("E005", "truck_21", "shipment", "taipei", "normal", "route reopened", "supplier_2", "route_7", "site_1", 1))
+    db.add_event(Event("E006", "truck_33", "shipment", "tainan", "blocked", "port equipment outage", "supplier_3", "route_9", "site_2", 3))
+
+    return db
+
+# ============================================================
+# 4) Mock LLM adapter
+# ============================================================
+
+class MockLLM:
+    """
+    Deterministic mock that simulates LLM outputs.
+    This keeps the demo runnable and easy to inspect.
+    """
+
+    def command_to_json(self, text: str) -> Dict[str, Any]:
+        t = norm_text(text)
+        if "delayed shipments in taipei" in t:
+            return {
+                "action": "query_events",
+                "filter": {"status": "delayed", "location": "taipei"},
+            }
+        if "what affects site 1" in t:
+            return {
+                "action": "graph_impact",
+                "site_id": "site_1",
+            }
+        return {
+            "action": "query_events",
+            "filter": {},
+        }
+
+    def extract_event_json(self, raw_text: str) -> Dict[str, Any]:
+        t = norm_text(raw_text)
+        location = "taipei" if "taipei" in t else "tainan"
+        status = "delayed" if ("delay" in t or "late" in t) else "normal"
+        supplier_id = "supplier_1" if ("acme" in t or "rubber" in t) else None
+        route_id = "route_7" if "route 7" in t else None
+        site_id = "site_1" if location == "taipei" else "site_2"
+        note = raw_text.strip()
+        return {
+            "entity_id": "truck_900",
+            "event_type": "shipment",
+            "location": location,
+            "status": status,
+            "note": note,
+            "supplier_id": supplier_id,
+            "route_id": route_id,
+            "site_id": site_id,
+            "severity": 2 if status == "delayed" else 1,
+        }
+
+    def make_plan(self, text: str) -> Dict[str, Any]:
+        t = norm_text(text)
+        if "compare delayed shipments in taipei vs blocked shipments in tainan" in t:
+            return {
+                "steps": [
+                    {
+                        "op": "filter_events",
+                        "name": "A",
+                        "args": {"status": "delayed", "location": "taipei"},
+                    },
+                    {
+                        "op": "filter_events",
+                        "name": "B",
+                        "args": {"status": "blocked", "location": "tainan"},
+                    },
+                    {
+                        "op": "aggregate_counts",
+                        "name": "A_counts",
+                        "input": "A",
+                        "field": "supplier_id",
+                    },
+                    {
+                        "op": "aggregate_counts",
+                        "name": "B_counts",
+                        "input": "B",
+                        "field": "supplier_id",
+                    },
+                    {
+                        "op": "compare_named_results",
+                        "name": "cmp",
+                        "left": "A_counts",
+                        "right": "B_counts",
+                    },
+                ]
+            }
+        return {
+            "steps": [
+                {"op": "filter_events", "name": "A", "args": {}},
+                {"op": "aggregate_counts", "name": "A_counts", "input": "A", "field": "status"},
+            ]
+        }
+
+    def generate_rule_json(self, text: str) -> Dict[str, Any]:
+        return {
+            "rule_id": "R100",
+            "name": "outage_delay_supplier_overlap",
+            "when": {
+                "all": [
+                    {"field": "status", "in": ["delayed", "blocked"]},
+                    {"field": "note_contains_any", "value": ["outage", "closure", "backlog"]},
+                    {"field": "supplier_id", "exists": True},
+                ]
+            },
+            "then": {
+                "action": "create_alert",
+                "priority": 9,
+                "reason": "compound disruption: outage + delay/blocked + supplier overlap",
+            },
+        }
+
+    def semantic_map(self, phrase: str) -> Dict[str, str]:
+        t = norm_text(phrase)
+        if "flat tire" in t or "blowout" in t:
+            return {"canonical": "tire_failure"}
+        if "road closure" in t or "tunnel blocked" in t:
+            return {"canonical": "route_blockage"}
+        return {"canonical": t.replace(" ", "_")}
+
+    def retrieval_query(self, text: str) -> Dict[str, Any]:
+        t = norm_text(text)
+        if "what affects site 1" in t:
+            return {"type": "graph_impact", "site_id": "site_1", "depth": 2}
+        return {"type": "event_search", "filter": {}}
+
+    def explain_result(self, result: Dict[str, Any]) -> str:
+        if result.get("kind") == "query_events":
+            return f"Found {result['count']} matching events. Main statuses and suppliers were computed by deterministic filters over the ontology records."
+        if result.get("kind") == "graph_impact":
+            return f"Site impact analysis found {result['count']} linked entities across one-hop and two-hop graph relationships."
+        return "This result was produced by deterministic execution over structured records."
+
+    def analyst_reply(self, context: Dict[str, Any], question: str) -> Dict[str, Any]:
+        q = norm_text(question)
+        if q == "why?":
+            return {
+                "answer": "Because multiple disruptions cluster around Site 1 via Route 7 and supplier links.",
+                "suggested_next": ["show evidence", "what changed", "what if road closed"],
+            }
+        if q == "show evidence":
+            return {
+                "answer": "Evidence includes delayed and blocked shipment events plus supplier-to-site and route-to-site graph edges.",
+                "suggested_next": ["what changed", "what affects site 1"],
+            }
+        if q == "what changed":
+            return {
+                "answer": "Route 7 had both a blocked event and a later normal event, indicating partial recovery.",
+                "suggested_next": ["show evidence", "what if road closed"],
+            }
+        if q == "what if road closed":
+            return {
+                "answer": "A road closure would likely increase Site 1 disruption because Route 7 serves Site 1 and multiple shipments depend on it.",
+                "suggested_next": ["show evidence"],
+            }
+        return {
+            "answer": "I can help interpret the deterministic results and suggest follow-up questions.",
+            "suggested_next": ["why?", "show evidence"],
+        }
+
+# ============================================================
+# 5) Deterministic PAL core execution engine
+# ============================================================
+
+class RuleEngine:
+    def __init__(self):
+        self.rules: List[Dict[str, Any]] = []
+
+    def add_rule(self, rule: Dict[str, Any]):
+        self.rules.append(rule)
+
+    def evaluate_event(self, ev: Event) -> List[Dict[str, Any]]:
+        alerts = []
+        for rule in self.rules:
+            if self._match_rule(ev, rule):
+                alerts.append({
+                    "rule_id": rule["rule_id"],
+                    "event_id": ev.event_id,
+                    "priority": rule["then"].get("priority", 5),
+                    "reason": rule["then"].get("reason", "rule matched"),
+                })
+        return alerts
+
+    def _match_rule(self, ev: Event, rule: Dict[str, Any]) -> bool:
+        conds = rule.get("when", {}).get("all", [])
+        for cond in conds:
+            field = cond.get("field")
+            if field == "note_contains_any":
+                phrases = cond.get("value", [])
+                note_l = ev.note.lower()
+                if not any(p.lower() in note_l for p in phrases):
+                    return False
+                continue
+            if cond.get("exists") is True:
+                if getattr(ev, field, None) in (None, ""):
+                    return False
+                continue
+            if "in" in cond:
+                if getattr(ev, field, None) not in cond["in"]:
+                    return False
+                continue
+            if "eq" in cond:
+                if getattr(ev, field, None) != cond["eq"]:
+                    return False
+                continue
+        return True
+
+class ExecutionEngine:
+    def __init__(self, db: OntologyStore):
+        self.db = db
+
+    def run_action(self, spec: Dict[str, Any]) -> Dict[str, Any]:
+        action = spec.get("action")
+        if action == "query_events":
+            filt = spec.get("filter", {})
+            events = self.db.filter_events(filt)
+            return {
+                "kind": "query_events",
+                "count": len(events),
+                "events": [self._event_to_dict(ev) for ev in events],
+            }
+        if action == "graph_impact":
+            site_id = spec["site_id"]
+            impacts = self.db.two_hop_impacts_from_site(site_id)
+            return {
+                "kind": "graph_impact",
+                "site_id": site_id,
+                "count": len(impacts),
+                "impacts": impacts,
+            }
+        raise ValueError(f"Unknown action: {action}")
+
+    def run_plan(self, plan: Dict[str, Any]) -> Dict[str, Any]:
+        env: Dict[str, Any] = {}
+        steps = plan.get("steps", [])
+        trace = []
+
+        for step in steps:
+            op = step["op"]
+            name = step["name"]
+
+            if op == "filter_events":
+                result = self.db.filter_events(step.get("args", {}))
+                env[name] = result
+                trace.append({"step": name, "op": op, "count": len(result)})
+                continue
+
+            if op == "aggregate_counts":
+                src = env[step["input"]]
+                result = self.db.aggregate_counts(src, step["field"])
+                env[name] = result
+                trace.append({"step": name, "op": op, "keys": list(result.keys())})
+                continue
+
+            if op == "compare_named_results":
+                left = env[step["left"]]
+                right = env[step["right"]]
+                result = self._compare_dicts(left, right)
+                env[name] = result
+                trace.append({"step": name, "op": op})
+                continue
+
+            raise ValueError(f"Unknown plan op: {op}")
+
+        last_name = steps[-1]["name"] if steps else None
+        return {
+            "trace": trace,
+            "result": env.get(last_name),
+        }
+
+    @staticmethod
+    def _compare_dicts(left: Dict[str, int], right: Dict[str, int]) -> Dict[str, Any]:
+        keys = sorted(set(left) | set(right))
+        rows = []
+        for k in keys:
+            a = left.get(k, 0)
+            b = right.get(k, 0)
+            rows.append({"key": k, "left": a, "right": b, "delta": a - b})
+        return {"rows": rows}
+
+    @staticmethod
+    def _event_to_dict(ev: Event) -> Dict[str, Any]:
+        return {
+            "event_id": ev.event_id,
+            "entity_id": ev.entity_id,
+            "event_type": ev.event_type,
+            "location": ev.location,
+            "status": ev.status,
+            "note": ev.note,
+            "supplier_id": ev.supplier_id,
+            "route_id": ev.route_id,
+            "site_id": ev.site_id,
+            "severity": ev.severity,
+        }
+
+# ============================================================
+# 6) PAL meta-demo wrapper with 8 roles
+# ============================================================
+
+class PALMetaDemo:
+    def __init__(self, llm_mode: str = "mock"):
+        self.db = seed_demo_store()
+        self.engine = ExecutionEngine(self.db)
+        self.rules = RuleEngine()
+        self.llm = MockLLM() if llm_mode == "mock" else MockLLM()
+        self.llm_mode = llm_mode
+
+    # --------------------------------------------------------
+    # Role 1: Human Command Interpreter
+    # --------------------------------------------------------
+    def role_command_interpreter(self) -> Dict[str, Any]:
+        user_text = "Show delayed shipments in Taipei"
+        command_json = self.llm.command_to_json(user_text)
+        result = self.engine.run_action(command_json)
+        return {
+            "role": 1,
+            "name": "Human Command Interpreter",
+            "input_text": user_text,
+            "llm_output": command_json,
+            "deterministic_result": result,
+        }
+
+    # --------------------------------------------------------
+    # Role 2: Messy Data Ingest / Extraction
+    # --------------------------------------------------------
+    def role_ingest_extraction(self) -> Dict[str, Any]:
+        raw_email = (
+            "Truck 900 is running late in Taipei after a flat tire on Route 7. "
+            "Acme Rubber may be involved. Please log it for Site 1."
+        )
+        ev_json = self.llm.extract_event_json(raw_email)
+        new_event = Event(
+            event_id="E900",
+            entity_id=ev_json["entity_id"],
+            event_type=ev_json["event_type"],
+            location=ev_json["location"],
+            status=ev_json["status"],
+            note=ev_json["note"],
+            supplier_id=ev_json.get("supplier_id"),
+            route_id=ev_json.get("route_id"),
+            site_id=ev_json.get("site_id"),
+            severity=ev_json.get("severity", 1),
+        )
+        self.db.add_event(new_event)
+        result = self.engine.run_action({"action": "query_events", "filter": {"entity_id": "truck_900"}})
+        return {
+            "role": 2,
+            "name": "Messy Data Ingest / Extraction",
+            "raw_text": raw_email,
+            "llm_output": ev_json,
+            "deterministic_result": result,
+        }
+
+    # --------------------------------------------------------
+    # Role 3: Planner / Task Decomposer
+    # --------------------------------------------------------
+    def role_planner(self) -> Dict[str, Any]:
+        user_text = "Compare delayed shipments in Taipei vs blocked shipments in Tainan"
+        plan = self.llm.make_plan(user_text)
+        result = self.engine.run_plan(plan)
+        return {
+            "role": 3,
+            "name": "Planner / Task Decomposer",
+            "input_text": user_text,
+            "llm_output": plan,
+            "deterministic_result": result,
+        }
+
+    # --------------------------------------------------------
+    # Role 4: Rule Generator / Rule Injection
+    # --------------------------------------------------------
+    def role_rule_generator(self) -> Dict[str, Any]:
+        user_text = "Alert if outage + delay + supplier overlap"
+        rule = self.llm.generate_rule_json(user_text)
+        self.rules.add_rule(rule)
+
+        alerts = []
+        for ev in self.db.events:
+            alerts.extend(self.rules.evaluate_event(ev))
+
+        return {
+            "role": 4,
+            "name": "Rule Generator / Rule Injection",
+            "input_text": user_text,
+            "llm_output": rule,
+            "deterministic_result": {
+                "rule_count": len(self.rules.rules),
+                "alerts": alerts,
+            },
+        }
+
+    # --------------------------------------------------------
+    # Role 5: Semantic Mapping / Ontology Translation
+    # --------------------------------------------------------
+    def role_ontology_mapping(self) -> Dict[str, Any]:
+        phrases = ["flat tire", "blowout", "road closure"]
+        mapped = {p: self.llm.semantic_map(p)["canonical"] for p in phrases}
+        return {
+            "role": 5,
+            "name": "Semantic Mapping / Ontology Translation",
+            "input_phrases": phrases,
+            "llm_output": mapped,
+            "deterministic_result": {
+                "canonical_terms": sorted(set(mapped.values()))
+            },
+        }
+
+    # --------------------------------------------------------
+    # Role 6: Search / Retrieval Helper
+    # --------------------------------------------------------
+    def role_retrieval_helper(self) -> Dict[str, Any]:
+        user_text = "What affects Site 1?"
+        retrieval_spec = self.llm.retrieval_query(user_text)
+        if retrieval_spec["type"] == "graph_impact":
+            result = self.engine.run_action({
+                "action": "graph_impact",
+                "site_id": retrieval_spec["site_id"],
+            })
+        else:
+            result = {"kind": "unknown"}
+        return {
+            "role": 6,
+            "name": "Search / Retrieval Helper",
+            "input_text": user_text,
+            "llm_output": retrieval_spec,
+            "deterministic_result": result,
+        }
+
+    # --------------------------------------------------------
+    # Role 7: Explanation / Summarization
+    # --------------------------------------------------------
+    def role_explanation(self) -> Dict[str, Any]:
+        base = self.engine.run_action({
+            "action": "query_events",
+            "filter": {"status": "delayed", "location": "taipei"},
+        })
+        explanation = self.llm.explain_result(base)
+        return {
+            "role": 7,
+            "name": "Explanation / Summarization",
+            "machine_result": base,
+            "llm_output": explanation,
+        }
+
+    # --------------------------------------------------------
+    # Role 8: Interactive Analyst Assistant
+    # --------------------------------------------------------
+    def role_analyst_assistant(self) -> Dict[str, Any]:
+        context = self.engine.run_action({
+            "action": "graph_impact",
+            "site_id": "site_1",
+        })
+        turns = []
+        for q in ["Why?", "Show evidence", "What changed?", "What if road closed?"]:
+            reply = self.llm.analyst_reply(context, q)
+            turns.append({"user": q, "assistant": reply})
+        return {
+            "role": 8,
+            "name": "Interactive Analyst Assistant",
+            "context": context,
+            "dialogue": turns,
+        }
+
+    # --------------------------------------------------------
+    # 6.9 run all roles
+    # --------------------------------------------------------
+    def run_all(self) -> Dict[str, Any]:
+        return {
+            "meta_demo": "pal_core_06_meta_llm_roles",
+            "llm_mode": self.llm_mode,
+            "roles": [
+                self.role_command_interpreter(),
+                self.role_ingest_extraction(),
+                self.role_planner(),
+                self.role_rule_generator(),
+                self.role_ontology_mapping(),
+                self.role_retrieval_helper(),
+                self.role_explanation(),
+                self.role_analyst_assistant(),
+            ],
+        }
+
+# ============================================================
+# 7) CLI
+# ============================================================
+
+def main():
+    ap = argparse.ArgumentParser(description="PAL core 06 meta LLM roles demo")
+    sub = ap.add_subparsers(dest="cmd", required=True)
+
+    p_demo = sub.add_parser("demo", help="run all 8 roles")
+    p_demo.add_argument("--llm", default="mock", choices=["mock", "off"], help="LLM mode")
+
+    p_role = sub.add_parser("role", help="run one role")
+    p_role.add_argument(
+        "name",
+        choices=["command", "ingest", "planner", "rulegen", "ontology", "retrieval", "explain", "analyst"],
+    )
+    p_role.add_argument("--llm", default="mock", choices=["mock", "off"], help="LLM mode")
+
+    args = ap.parse_args()
+    app = PALMetaDemo(llm_mode=args.llm)
+
+    if args.cmd == "demo":
+        out = app.run_all()
+        jprint(out)
+        return
+
+    role_map = {
+        "command": app.role_command_interpreter,
+        "ingest": app.role_ingest_extraction,
+        "planner": app.role_planner,
+        "rulegen": app.role_rule_generator,
+        "ontology": app.role_ontology_mapping,
+        "retrieval": app.role_retrieval_helper,
+        "explain": app.role_explanation,
+        "analyst": app.role_analyst_assistant,
+    }
+    out = role_map[args.name]()
+    jprint(out)
+
+if __name__ == "__main__":
+    main()
+```
+
+```text2
+Yes — I drafted pal_core_06_meta_llm_roles.py.
+What it does:
+•	One self-contained meta-demo for the 8 LLM roles 
+•	Deterministic ontology/graph + execution core 
+•	Mock LLM adapter so it runs now without external API setup 
+•	CLI lets you run all roles or one role at a time 
+Main structure:
+•	OntologyStore = entities, graph edges, events 
+•	ExecutionEngine = deterministic query/plan execution 
+•	RuleEngine = deterministic runtime rule evaluation 
+•	MockLLM = simulated LLM outputs for: 
+o	command interpretation 
+o	messy text extraction 
+o	planning 
+o	rule generation 
+o	ontology mapping 
+o	retrieval mapping 
+o	explanation 
+o	analyst dialogue 
+•	PALMetaDemo = wraps the 8 roles 
+Example commands:
+python pal_core_06_meta_llm_roles.py demo
+python pal_core_06_meta_llm_roles.py role command
+python pal_core_06_meta_llm_roles.py role planner
+python pal_core_06_meta_llm_roles.py role rulegen
+My recommendation for next step:
+•	You review this first as the “conceptual meta-demo” 
+•	Then we make pal_core_06b_llm_roles_real_api.py later, where MockLLM is replaced by your real LLM adapter 
+One thing I would improve next:
+•	add a strict --llm off path that does not call mock inference at all, but instead uses hand-coded fallback mappings so the contrast is explicit: 
+o	“with LLM boundary” 
+o	“without LLM boundary” 
+If you want, next I can give you:
+1.	a compact walkthrough of each section, or 
+2.	a revised version in your preferred style with numbered code blocks like ##01, ##02, etc.
+```
+
+```
+$ python pal_core_06_meta_llm_roles.py demo
+{
+  "meta_demo": "pal_core_06_meta_llm_roles",
+  "llm_mode": "mock",
+  "roles": [
+    {
+      "role": 1,
+      "name": "Human Command Interpreter",
+      "input_text": "Show delayed shipments in Taipei",
+      "llm_output": {
+        "action": "query_events",
+        "filter": {
+          "status": "delayed",
+          "location": "taipei"
+        }
+      },
+      "deterministic_result": {
+        "kind": "query_events",
+        "count": 2,
+        "events": [
+          {
+            "event_id": "E001",
+            "entity_id": "truck_17",
+            "event_type": "shipment",
+            "location": "taipei",
+            "status": "delayed",
+            "note": "flat tire on highway",
+            "supplier_id": "supplier_1",
+            "route_id": "route_7",
+            "site_id": "site_1",
+            "severity": 2
+          },
+          {
+            "event_id": "E004",
+            "entity_id": "truck_17",
+            "event_type": "shipment",
+            "location": "taipei",
+            "status": "delayed",
+            "note": "blowout and late unloading",
+            "supplier_id": "supplier_1",
+            "route_id": "route_7",
+            "site_id": "site_1",
+            "severity": 2
+          }
+        ]
+      }
+    },
+    {
+      "role": 2,
+      "name": "Messy Data Ingest / Extraction",
+      "raw_text": "Truck 900 is running late in Taipei after a flat tire on Route 7. Acme Rubber may be involved. Please log it for Site 1.",
+      "llm_output": {
+        "entity_id": "truck_900",
+        "event_type": "shipment",
+        "location": "taipei",
+        "status": "delayed",
+        "note": "Truck 900 is running late in Taipei after a flat tire on Route 7. Acme Rubber may be involved. Please log it for Site 1.",
+        "supplier_id": "supplier_1",
+        "route_id": "route_7",
+        "site_id": "site_1",
+        "severity": 2
+      },
+      "deterministic_result": {
+        "kind": "query_events",
+        "count": 1,
+        "events": [
+          {
+            "event_id": "E900",
+            "entity_id": "truck_900",
+            "event_type": "shipment",
+            "location": "taipei",
+            "status": "delayed",
+            "note": "Truck 900 is running late in Taipei after a flat tire on Route 7. Acme Rubber may be involved. Please log it for Site 1.",
+            "supplier_id": "supplier_1",
+            "route_id": "route_7",
+            "site_id": "site_1",
+            "severity": 2
+          }
+        ]
+      }
+    },
+    {
+      "role": 3,
+      "name": "Planner / Task Decomposer",
+      "input_text": "Compare delayed shipments in Taipei vs blocked shipments in Tainan",
+      "llm_output": {
+        "steps": [
+          {
+            "op": "filter_events",
+            "name": "A",
+            "args": {
+              "status": "delayed",
+              "location": "taipei"
+            }
+          },
+          {
+            "op": "filter_events",
+            "name": "B",
+            "args": {
+              "status": "blocked",
+              "location": "tainan"
+            }
+          },
+          {
+            "op": "aggregate_counts",
+            "name": "A_counts",
+            "input": "A",
+            "field": "supplier_id"
+          },
+          {
+            "op": "aggregate_counts",
+            "name": "B_counts",
+            "input": "B",
+            "field": "supplier_id"
+          },
+          {
+            "op": "compare_named_results",
+            "name": "cmp",
+            "left": "A_counts",
+            "right": "B_counts"
+          }
+        ]
+      },
+      "deterministic_result": {
+        "trace": [
+          {
+            "step": "A",
+            "op": "filter_events",
+            "count": 3
+          },
+          {
+            "step": "B",
+            "op": "filter_events",
+            "count": 1
+          },
+          {
+            "step": "A_counts",
+            "op": "aggregate_counts",
+            "keys": [
+              "supplier_1"
+            ]
+          },
+          {
+            "step": "B_counts",
+            "op": "aggregate_counts",
+            "keys": [
+              "supplier_3"
+            ]
+          },
+          {
+            "step": "cmp",
+            "op": "compare_named_results"
+          }
+        ],
+        "result": {
+          "rows": [
+            {
+              "key": "supplier_1",
+              "left": 3,
+              "right": 0,
+              "delta": 3
+            },
+            {
+              "key": "supplier_3",
+              "left": 0,
+              "right": 1,
+              "delta": -1
+            }
+          ]
+        }
+      }
+    },
+    {
+      "role": 4,
+      "name": "Rule Generator / Rule Injection",
+      "input_text": "Alert if outage + delay + supplier overlap",
+      "llm_output": {
+        "rule_id": "R100",
+        "name": "outage_delay_supplier_overlap",
+        "when": {
+          "all": [
+            {
+              "field": "status",
+              "in": [
+                "delayed",
+                "blocked"
+              ]
+            },
+            {
+              "field": "note_contains_any",
+              "value": [
+                "outage",
+                "closure",
+                "backlog"
+              ]
+            },
+            {
+              "field": "supplier_id",
+              "exists": true
+            }
+          ]
+        },
+        "then": {
+          "action": "create_alert",
+          "priority": 9,
+          "reason": "compound disruption: outage + delay/blocked + supplier overlap"
+        }
+      },
+      "deterministic_result": {
+        "rule_count": 1,
+        "alerts": [
+          {
+            "rule_id": "R100",
+            "event_id": "E002",
+            "priority": 9,
+            "reason": "compound disruption: outage + delay/blocked + supplier overlap"
+          },
+          {
+            "rule_id": "R100",
+            "event_id": "E003",
+            "priority": 9,
+            "reason": "compound disruption: outage + delay/blocked + supplier overlap"
+          },
+          {
+            "rule_id": "R100",
+            "event_id": "E006",
+            "priority": 9,
+            "reason": "compound disruption: outage + delay/blocked + supplier overlap"
+          }
+        ]
+      }
+    },
+    {
+      "role": 5,
+      "name": "Semantic Mapping / Ontology Translation",
+      "input_phrases": [
+        "flat tire",
+        "blowout",
+        "road closure"
+      ],
+      "llm_output": {
+        "flat tire": "tire_failure",
+        "blowout": "tire_failure",
+        "road closure": "route_blockage"
+      },
+      "deterministic_result": {
+        "canonical_terms": [
+          "route_blockage",
+          "tire_failure"
+        ]
+      }
+    },
+    {
+      "role": 6,
+      "name": "Search / Retrieval Helper",
+      "input_text": "What affects Site 1?",
+      "llm_output": {
+        "type": "graph_impact",
+        "site_id": "site_1",
+        "depth": 2
+      },
+      "deterministic_result": {
+        "kind": "graph_impact",
+        "site_id": "site_1",
+        "count": 8,
+        "impacts": [
+          {
+            "entity_id": "supplier_1",
+            "via_relation": "supplies",
+            "hops": 1
+          },
+          {
+            "entity_id": "supplier_2",
+            "via_relation": "supplies->related_to",
+            "hops": 2
+          },
+          {
+            "entity_id": "supplier_2",
+            "via_relation": "supplies",
+            "hops": 1
+          },
+          {
+            "entity_id": "supplier_1",
+            "via_relation": "supplies->related_to",
+            "hops": 2
+          },
+          {
+            "entity_id": "site_2",
+            "via_relation": "supplies->supplies",
+            "hops": 2
+          },
+          {
+            "entity_id": "route_7",
+            "via_relation": "serves",
+            "hops": 1
+          },
+          {
+            "entity_id": "truck_17",
+            "via_relation": "serves->uses_route",
+            "hops": 2
+          },
+          {
+            "entity_id": "truck_21",
+            "via_relation": "serves->uses_route",
+            "hops": 2
+          }
+        ]
+      }
+    },
+    {
+      "role": 7,
+      "name": "Explanation / Summarization",
+      "machine_result": {
+        "kind": "query_events",
+        "count": 3,
+        "events": [
+          {
+            "event_id": "E001",
+            "entity_id": "truck_17",
+            "event_type": "shipment",
+            "location": "taipei",
+            "status": "delayed",
+            "note": "flat tire on highway",
+            "supplier_id": "supplier_1",
+            "route_id": "route_7",
+            "site_id": "site_1",
+            "severity": 2
+          },
+          {
+            "event_id": "E004",
+            "entity_id": "truck_17",
+            "event_type": "shipment",
+            "location": "taipei",
+            "status": "delayed",
+            "note": "blowout and late unloading",
+            "supplier_id": "supplier_1",
+            "route_id": "route_7",
+            "site_id": "site_1",
+            "severity": 2
+          },
+          {
+            "event_id": "E900",
+            "entity_id": "truck_900",
+            "event_type": "shipment",
+            "location": "taipei",
+            "status": "delayed",
+            "note": "Truck 900 is running late in Taipei after a flat tire on Route 7. Acme Rubber may be involved. Please log it for Site 1.",
+            "supplier_id": "supplier_1",
+            "route_id": "route_7",
+            "site_id": "site_1",
+            "severity": 2
+          }
+        ]
+      },
+      "llm_output": "Found 3 matching events. Main statuses and suppliers were computed by deterministic filters over the ontology records."
+    },
+    {
+      "role": 8,
+      "name": "Interactive Analyst Assistant",
+      "context": {
+        "kind": "graph_impact",
+        "site_id": "site_1",
+        "count": 8,
+        "impacts": [
+          {
+            "entity_id": "supplier_1",
+            "via_relation": "supplies",
+            "hops": 1
+          },
+          {
+            "entity_id": "supplier_2",
+            "via_relation": "supplies->related_to",
+            "hops": 2
+          },
+          {
+            "entity_id": "supplier_2",
+            "via_relation": "supplies",
+            "hops": 1
+          },
+          {
+            "entity_id": "supplier_1",
+            "via_relation": "supplies->related_to",
+            "hops": 2
+          },
+          {
+            "entity_id": "site_2",
+            "via_relation": "supplies->supplies",
+            "hops": 2
+          },
+          {
+            "entity_id": "route_7",
+            "via_relation": "serves",
+            "hops": 1
+          },
+          {
+            "entity_id": "truck_17",
+            "via_relation": "serves->uses_route",
+            "hops": 2
+          },
+          {
+            "entity_id": "truck_21",
+            "via_relation": "serves->uses_route",
+            "hops": 2
+          }
+        ]
+      },
+      "dialogue": [
+        {
+          "user": "Why?",
+          "assistant": {
+            "answer": "Because multiple disruptions cluster around Site 1 via Route 7 and supplier links.",
+            "suggested_next": [
+              "show evidence",
+              "what changed",
+              "what if road closed"
+            ]
+          }
+        },
+        {
+          "user": "Show evidence",
+          "assistant": {
+            "answer": "Evidence includes delayed and blocked shipment events plus supplier-to-site and route-to-site graph edges.",
+            "suggested_next": [
+              "what changed",
+              "what affects site 1"
+            ]
+          }
+        },
+        {
+          "user": "What changed?",
+          "assistant": {
+            "answer": "I can help interpret the deterministic results and suggest follow-up questions.",
+            "suggested_next": [
+              "why?",
+              "show evidence"
+            ]
+          }
+        },
+        {
+          "user": "What if road closed?",
+          "assistant": {
+            "answer": "I can help interpret the deterministic results and suggest follow-up questions.",
+            "suggested_next": [
+              "why?",
+              "show evidence"
+            ]
+          }
+        }
+      ]
+    }
+  ]
+}
+(venv)
+terry@LAPTOP-HKPDHF7M MINGW64 ~/Downloads/d1_agent (main)
+```
 
 <br>
 
 ## **[3.7] pal_core_07_gmail_alerts.py // real emails as sensor stream (BINGO) 25.0423**
 
+```text2
+For 3.7, the cleanest interpretation is:
+email inbox = real-world sensor input
+then
+PAL converts selected emails into normalized events
+That gives you a very good bridge from:
+•	earlier deterministic PAL demos
+to 
+•	later 3.8 natural language → plan 
+•	and 3.10 UI 
+________________________________________
+Recommended scope for 3.7
+Keep it minimal:
+•	connect to Gmail via IMAP 
+•	read recent matching emails 
+•	extract basic fields 
+•	convert to PAL event format 
+•	save to JSON db 
+•	avoid LLM for now 
+So this demo is about sensor ingestion, not reasoning.
+
+This keeps the demo atomic:
+•	sensor = Gmail inbox 
+•	ingest = IMAP fetch 
+•	normalize = email → PAL event 
+•	store = JSON db 
+•	dedupe = message-id 
+So it shows a core PAL idea:
+external messy input comes in,
+PAL turns it into structured machine-usable state.
+________________________________________
+Small note
+For a first pass, I would not do OAuth or Gmail API.
+Too much overhead for this demo.
+Use:
+•	Gmail 
+•	IMAP 
+•	App Password 
+That is the simplest path.
+```
+
+```
+# pal_core_07_gmail_alerts.py
+#
+# 3.7 -- real emails as sensor stream
+#
+# Purpose:
+#   Read selected Gmail messages via IMAP and convert them into normalized PAL events.
+#
+# Environment variables:
+#   PAL_EMAIL_ADDRESS=your_email@gmail.com
+#   PAL_EMAIL_APP_PASSWORD=your_16_char_app_password
+#   PAL_IMAP_SERVER=imap.gmail.com
+#
+# Notes:
+#   - For Gmail, use an App Password, not your normal password.
+#   - This demo is deterministic on purpose.
+#   - No LLM used here yet. We only ingest and normalize.
+#
+# Commands:
+#   python pal_core_07_gmail_alerts.py reset
+#   python pal_core_07_gmail_alerts.py fetch
+#   python pal_core_07_gmail_alerts.py show
+#   python pal_core_07_gmail_alerts.py loop --interval 60
+#
+# Example:
+#   Add these values to .env:
+#   PAL_EMAIL_ADDRESS=you@gmail.com
+#   PAL_EMAIL_APP_PASSWORD=xxxx xxxx xxxx xxxx
+#   PAL_IMAP_SERVER=imap.gmail.com
+#   python pal_core_07_gmail_alerts.py fetch
+
+import argparse
+import email
+import imaplib
+import json
+import os
+import re
+import sys
+import time
+from datetime import datetime, timezone
+from email.message import Message
+from email.header import decode_header
+from typing import Any, Dict, List, Optional, Tuple
+
+# --------------------------------------------------
+# 1. Config
+# --------------------------------------------------
+
+# CODEX CHANGE: Load PAL Gmail settings from a local .env file before reading os.getenv.
+def load_dotenv_file(path: str = ".env") -> None:
+    if not os.path.exists(path):
+        return
+
+    with open(path, "r", encoding="utf-8") as f:
+        for line in f:
+            line = line.strip()
+            if not line or line.startswith("#") or "=" not in line:
+                continue
+
+            key, value = line.split("=", 1)
+            key = key.strip()
+            value = value.strip().strip('"').strip("'")
+
+            if key and key not in os.environ:
+                os.environ[key] = value
+
+# CODEX CHANGE: Make .env values available to the config below.
+load_dotenv_file()
+
+DB_FILE = "pal_events07.json"
+STATE_FILE = "pal_email_state07.json"
+
+# CODEX CHANGE: PAL_IMAP_SERVER now comes from .env, with Gmail as the fallback.
+DEFAULT_IMAP_SERVER = os.getenv("PAL_IMAP_SERVER", "imap.gmail.com")
+DEFAULT_LABEL = "INBOX"
+DEFAULT_MAX_RESULTS = 10
+
+# Optional filters to keep the demo clean.
+# You can expand these later.
+WATCH_SENDERS = [
+    # examples:
+    # "alerts@company.com",
+    # "noreply@monitoring.com",
+]
+WATCH_SUBJECT_KEYWORDS = [
+    "alert",
+    "incident",
+    "delay",
+    "blocked",
+    "failure",
+    "warning",
+    "shipment",
+    "delivery",
+]
+
+# --------------------------------------------------
+# 2. Small helpers
+# --------------------------------------------------
+
+def utc_now_iso() -> str:
+    return datetime.now(timezone.utc).isoformat()
+
+def load_json(path: str, default: Any) -> Any:
+    if not os.path.exists(path):
+        return default
+    with open(path, "r", encoding="utf-8") as f:
+        return json.load(f)
+
+def save_json(path: str, data: Any) -> None:
+    with open(path, "w", encoding="utf-8") as f:
+        json.dump(data, f, indent=2, ensure_ascii=False)
+
+def decode_mime_words(value: Optional[str]) -> str:
+    if not value:
+        return ""
+    parts = decode_header(value)
+    out = []
+    for part, enc in parts:
+        if isinstance(part, bytes):
+            out.append(part.decode(enc or "utf-8", errors="replace"))
+        else:
+            out.append(part)
+    return "".join(out)
+
+def normalize_whitespace(s: str) -> str:
+    return re.sub(r"\s+", " ", s).strip()
+
+def safe_lower(s: Optional[str]) -> str:
+    return (s or "").strip().lower()
+
+def ensure_db() -> Dict[str, Any]:
+    db = load_json(DB_FILE, {"events": []})
+    if "events" not in db or not isinstance(db["events"], list):
+        db = {"events": []}
+    return db
+
+def ensure_state() -> Dict[str, Any]:
+    state = load_json(STATE_FILE, {"seen_email_ids": []})
+    if "seen_email_ids" not in state or not isinstance(state["seen_email_ids"], list):
+        state = {"seen_email_ids": []}
+    return state
+
+# --------------------------------------------------
+# 3. Email body extraction
+# --------------------------------------------------
+
+# CODEX CHANGE: Use Message directly so the type annotation does not depend on email.message being loaded as a module attribute.
+def extract_text_from_message(msg: Message) -> str:
+    """
+    Return a plain text body if possible.
+    Keep this simple and deterministic.
+    """
+    if msg.is_multipart():
+        chunks = []
+        for part in msg.walk():
+            content_type = part.get_content_type()
+            content_disposition = str(part.get("Content-Disposition", "")).lower()
+
+            if "attachment" in content_disposition:
+                continue
+
+            if content_type == "text/plain":
+                payload = part.get_payload(decode=True)
+                if payload:
+                    charset = part.get_content_charset() or "utf-8"
+                    chunks.append(payload.decode(charset, errors="replace"))
+        return normalize_whitespace(" ".join(chunks))
+
+    payload = msg.get_payload(decode=True)
+    if payload:
+        charset = msg.get_content_charset() or "utf-8"
+        return normalize_whitespace(payload.decode(charset, errors="replace"))
+    return ""
+
+# --------------------------------------------------
+# 4. Deterministic parsing
+# --------------------------------------------------
+
+def infer_status(subject: str, body: str) -> str:
+    text = f"{subject} {body}".lower()
+
+    if any(x in text for x in ["blocked", "stuck", "halted"]):
+        return "blocked"
+    if any(x in text for x in ["delayed", "delay", "late"]):
+        return "delayed"
+    if any(x in text for x in ["failed", "failure", "error", "exception"]):
+        return "failed"
+    if any(x in text for x in ["warning", "degraded", "risk"]):
+        return "warning"
+    if any(x in text for x in ["delivered", "resolved", "recovered", "restored"]):
+        return "resolved"
+    return "alert"
+
+def infer_priority(status: str, subject: str, body: str) -> int:
+    text = f"{subject} {body}".lower()
+
+    if "critical" in text or "sev1" in text or status == "blocked":
+        return 9
+    if "high" in text or "sev2" in text or status in ("failed", "delayed"):
+        return 7
+    if status == "warning":
+        return 5
+    if status == "resolved":
+        return 2
+    return 4
+
+def extract_entity_id(subject: str, body: str) -> str:
+    text = f"{subject} {body}"
+
+    patterns = [
+        r"\b(truck[_\- ]?\d+)\b",
+        r"\b(shipment[_\- ]?\d+)\b",
+        r"\b(order[_\- ]?\d+)\b",
+        r"\b(site[_\- ]?\d+)\b",
+        r"\b(sensor[_\- ]?\d+)\b",
+        r"\b(device[_\- ]?\d+)\b",
+    ]
+    for pat in patterns:
+        m = re.search(pat, text, re.IGNORECASE)
+        if m:
+            return m.group(1).replace(" ", "_").lower()
+
+    return "email_signal"
+
+def extract_location(subject: str, body: str) -> str:
+    text = f"{subject} {body}".lower()
+
+    known_locations = [
+        "taipei",
+        "tainan",
+        "kaohsiung",
+        "tokyo",
+        "berlin",
+        "kyiv",
+        "warsaw",
+        "new york",
+        "hoboken",
+        "site_1",
+        "site_2",
+        "site_3",
+    ]
+    for loc in known_locations:
+        if loc in text:
+            return loc.replace(" ", "_")
+    return "unknown"
+
+def infer_event_type(status: str, subject: str, body: str) -> str:
+    text = f"{subject} {body}".lower()
+
+    if any(x in text for x in ["shipment", "delivery", "carrier", "warehouse"]):
+        return "logistics_alert"
+    if any(x in text for x in ["server", "service", "api", "database", "latency"]):
+        return "system_alert"
+    if any(x in text for x in ["supplier", "vendor"]):
+        return "supplier_alert"
+    if status == "resolved":
+        return "resolution_notice"
+    return "email_alert"
+
+def should_keep_email(sender: str, subject: str) -> bool:
+    sender_l = safe_lower(sender)
+    subject_l = safe_lower(subject)
+
+    sender_match = (not WATCH_SENDERS) or any(x in sender_l for x in WATCH_SENDERS)
+    subject_match = any(k in subject_l for k in WATCH_SUBJECT_KEYWORDS)
+
+    return sender_match or subject_match
+
+# CODEX CHANGE: Use Message directly for the same reason as above.
+def email_to_pal_event(msg: Message, raw_body: str) -> Dict[str, Any]:
+    subject = decode_mime_words(msg.get("Subject", ""))
+    sender = decode_mime_words(msg.get("From", ""))
+    msg_id = decode_mime_words(msg.get("Message-ID", "")) or f"no_msgid_{int(time.time()*1000)}"
+    date_raw = decode_mime_words(msg.get("Date", ""))
+
+    status = infer_status(subject, raw_body)
+    priority = infer_priority(status, subject, raw_body)
+    entity_id = extract_entity_id(subject, raw_body)
+    location = extract_location(subject, raw_body)
+    event_type = infer_event_type(status, subject, raw_body)
+
+    return {
+        "source": "gmail",
+        "source_message_id": msg_id,
+        "timestamp": utc_now_iso(),
+        "event_time_raw": date_raw,
+        "entity": entity_id,
+        "event_type": event_type,
+        "status": status,
+        "priority": priority,
+        "location": location,
+        "subject": subject,
+        "sender": sender,
+        "note": raw_body[:500],
+    }
+
+# --------------------------------------------------
+# 5. IMAP fetch
+# --------------------------------------------------
+
+def connect_imap() -> imaplib.IMAP4_SSL:
+    email_addr = os.getenv("PAL_EMAIL_ADDRESS", "").strip()
+    email_pw = os.getenv("PAL_EMAIL_APP_PASSWORD", "").strip()
+
+    if not email_addr or not email_pw:
+        print("ERROR: Missing PAL_EMAIL_ADDRESS or PAL_EMAIL_APP_PASSWORD")
+        sys.exit(1)
+
+    mail = imaplib.IMAP4_SSL(DEFAULT_IMAP_SERVER)
+    mail.login(email_addr, email_pw)
+    return mail
+
+# CODEX CHANGE: Use Message directly for the return type annotation.
+def fetch_recent_emails(max_results: int = DEFAULT_MAX_RESULTS, label: str = DEFAULT_LABEL) -> List[Message]:
+    mail = connect_imap()
+    try:
+        status, _ = mail.select(label)
+        if status != "OK":
+            print(f"ERROR: could not open mailbox {label}")
+            return []
+
+        # Pull latest emails. Keep the demo simple.
+        status, data = mail.search(None, "ALL")
+        if status != "OK" or not data or not data[0]:
+            return []
+
+        ids = data[0].split()
+        ids = ids[-max_results:]
+
+        msgs = []
+        for email_id in ids:
+            status, msg_data = mail.fetch(email_id, "(RFC822)")
+            if status != "OK":
+                continue
+            for response_part in msg_data:
+                if isinstance(response_part, tuple):
+                    msg = email.message_from_bytes(response_part[1])
+                    msgs.append(msg)
+        return msgs
+    finally:
+        try:
+            mail.close()
+        except Exception:
+            pass
+        mail.logout()
+
+# --------------------------------------------------
+# 6. Commands
+# --------------------------------------------------
+
+def cmd_reset() -> None:
+    save_json(DB_FILE, {"events": []})
+    save_json(STATE_FILE, {"seen_email_ids": []})
+    print(json.dumps({"ok": True, "reset": True}, indent=2))
+
+def cmd_show() -> None:
+    db = ensure_db()
+    print(json.dumps(db, indent=2, ensure_ascii=False))
+
+def cmd_fetch(max_results: int, label: str) -> None:
+    db = ensure_db()
+    state = ensure_state()
+    seen = set(state["seen_email_ids"])
+
+    msgs = fetch_recent_emails(max_results=max_results, label=label)
+
+    added = []
+    skipped = 0
+
+    for msg in msgs:
+        subject = decode_mime_words(msg.get("Subject", ""))
+        sender = decode_mime_words(msg.get("From", ""))
+        msg_id = decode_mime_words(msg.get("Message-ID", ""))
+
+        if not msg_id:
+            skipped += 1
+            continue
+
+        if msg_id in seen:
+            skipped += 1
+            continue
+
+        if not should_keep_email(sender, subject):
+            skipped += 1
+            continue
+
+        body = extract_text_from_message(msg)
+        event = email_to_pal_event(msg, body)
+
+        db["events"].append(event)
+        seen.add(msg_id)
+        added.append(event)
+
+    state["seen_email_ids"] = sorted(seen)
+    save_json(DB_FILE, db)
+    save_json(STATE_FILE, state)
+
+    print(json.dumps({
+        "ok": True,
+        "fetched_messages": len(msgs),
+        "added_events": len(added),
+        "skipped": skipped,
+        "events": added,
+    }, indent=2, ensure_ascii=False))
+
+def cmd_loop(interval_sec: int, max_results: int, label: str) -> None:
+    print(f"[pal_core_07] polling gmail every {interval_sec}s...")
+    while True:
+        try:
+            cmd_fetch(max_results=max_results, label=label)
+        except KeyboardInterrupt:
+            print("\n[pal_core_07] stopped")
+            break
+        except Exception as e:
+            print(json.dumps({"ok": False, "error": str(e)}, indent=2))
+        time.sleep(interval_sec)
+
+# --------------------------------------------------
+# 7. Main
+# --------------------------------------------------
+
+def main():
+    parser = argparse.ArgumentParser(description="PAL Core 07 - Gmail alerts as sensor stream")
+    sub = parser.add_subparsers(dest="cmd", required=True)
+
+    sub.add_parser("reset")
+    sub.add_parser("show")
+
+    p_fetch = sub.add_parser("fetch")
+    p_fetch.add_argument("--max_results", type=int, default=DEFAULT_MAX_RESULTS)
+    p_fetch.add_argument("--label", type=str, default=DEFAULT_LABEL)
+
+    p_loop = sub.add_parser("loop")
+    p_loop.add_argument("--interval", type=int, default=60)
+    p_loop.add_argument("--max_results", type=int, default=DEFAULT_MAX_RESULTS)
+    p_loop.add_argument("--label", type=str, default=DEFAULT_LABEL)
+
+    args = parser.parse_args()
+
+    if args.cmd == "reset":
+        cmd_reset()
+    elif args.cmd == "show":
+        cmd_show()
+    elif args.cmd == "fetch":
+        cmd_fetch(max_results=args.max_results, label=args.label)
+    elif args.cmd == "loop":
+        cmd_loop(interval_sec=args.interval, max_results=args.max_results, label=args.label)
+
+if __name__ == "__main__":
+    main()
+```
+
+```text2
+$ python pal_core_07_gmail_alerts.py fetch
+{
+  "ok": true,
+  "fetched_messages": 10,
+  "added_events": 10,
+  "skipped": 0,
+  "events": [
+    {
+      "source": "gmail",
+      "source_message_id":
+..........................
+
+$ python pal_core_07_gmail_alerts.py show
+{
+  "events": [
+    {
+      "source": "gmail",
+      "source_message_id":
+.............................
+
+
+$ python pal_core_07_gmail_alerts.py loop --interval 10
+[pal_core_07] polling gmail every 10s...
+{
+.........................................
+{
+  "ok": true,
+  "fetched_messages": 10,
+  "added_events": 1,
+  "skipped": 9,
+  "events": [
+    {
+      "source": "gmail",
+      "source_message_id": "<,,,,,,,,,,,,,,,,,,,,@mail.gmail.com>",     
+      "timestamp": "2026-04-23T17:02:24.902957+00:00",
+      "event_time_raw": "Thu, 23 Apr 2026 13:02:02 -0400",
+      "entity": "email_signal",
+      "event_type": "email_alert",
+      "status": "alert",
+      "priority": 4,
+      "location": "unknown",
+      "subject": "test1",
+      "sender": "T T <terrytaylorbonn@gmail.com>",
+      "note": "111111111111"
+    }
+  ]
+}
+```
+
 <br>
 
 ## **[3.8] pal_core_08_plan.py // natural language → plan JSON → controlled execution (BINGO) 26.0423**
 
-<br>
 
-## **[3.8b] SS/LIN WIP 26.0425**
+<img src="/assets/M-24.png" alt="drones" width="90%">
+
+
+```text2
+Then 3.8 pal_core_08_plan.py can take the events from pal_events07.json and do:
+•	natural language request 
+•	LLM returns plan JSON 
+•	deterministic executor runs over ingested email events 
+That is a very nice progression.
+If you want, next I’ll give you the tightened v2 of this file with:
+•	sender allowlist 
+•	better subject parsing 
+•	analyze command for status summaries.
+
+Best Structure
+•	07 = ingestion layer
+Gmail → PAL events DB 
+•	08 = reasoning/control layer
+User request → plan JSON → execute over DB 
+So 08 builds on 07, not replaces it.
+Flow
+Emails --> pal_events07.json
+              |
+              v
+        pal_core_08_plan.py
+Why Better
+Keeps demos atomic:
+•	07 proves sensor ingestion 
+•	08 proves planning/execution 
+•	easier to debug 
+•	easier to explain in wiki 
+In Practice
+08 can read:
+pal_events07.json
+Then user says:
+Show delayed shipments in Taipei
+LLM returns:
+{
+  "steps": [
+    {"tool":"filter","field":"status","equals":"delayed"},
+    {"tool":"filter","field":"location","equals":"taipei"}
+  ]
+}
+Then deterministic executor runs it.
+My Recommendation
+Do not merge into 07.
+Make clean rung 08.
+```
+
+```
+# pal_core_08_plan.py
+#
+# 3.8 -- natural language -> plan JSON -> controlled execution
+#
+# Purpose:
+#   Read PAL events from JSON, ask an LLM to produce a very small plan JSON,
+#   validate that plan, then execute it deterministically.
+#
+# Demo goal:
+#   Show that the LLM does NOT do the data processing directly.
+#   The LLM only proposes a constrained plan.
+#   Deterministic Python executes the plan.
+#
+# Environment variables:
+#   OPENAI_API_KEY=...
+#
+# Optional:
+#   PAL_EVENTS_FILE=pal_events07.json
+#   PAL_OPENAI_MODEL=gpt-4.1-mini
+#
+# Commands:
+#   python pal_core_08_plan.py reset_demo_data
+#   python pal_core_08_plan.py show_events
+#   python pal_core_08_plan.py run --prompt "Show delayed events in taipei"
+#   python pal_core_08_plan.py run --prompt "Compare delayed vs blocked events"
+#
+# Notes:
+#   - Input file must contain {"events":[...]}
+#   - This file can read the output of pal_core_07_gmail_alerts.py
+#   - If you do not want to use real 07 data yet, use reset_demo_data first
+
+import argparse
+import json
+import os
+import sys
+from collections import Counter, defaultdict
+from typing import Any, Dict, List, Tuple
+
+try:
+    from openai import OpenAI
+except ImportError:
+    OpenAI = None
+
+# --------------------------------------------------
+# 1. Config
+# --------------------------------------------------
+
+EVENTS_FILE = os.getenv("PAL_EVENTS_FILE", "pal_events07.json")
+DEFAULT_MODEL = os.getenv("PAL_OPENAI_MODEL", "gpt-4.1-mini")
+
+# --------------------------------------------------
+# 2. JSON helpers
+# --------------------------------------------------
+
+def load_json(path: str, default: Any) -> Any:
+    if not os.path.exists(path):
+        return default
+    with open(path, "r", encoding="utf-8") as f:
+        return json.load(f)
+
+def save_json(path: str, data: Any) -> None:
+    with open(path, "w", encoding="utf-8") as f:
+        json.dump(data, f, indent=2, ensure_ascii=False)
+
+def load_events() -> List[Dict[str, Any]]:
+    data = load_json(EVENTS_FILE, {"events": []})
+    events = data.get("events", [])
+    if not isinstance(events, list):
+        raise ValueError(f"{EVENTS_FILE} must contain an 'events' list")
+    return events
+
+# --------------------------------------------------
+# 3. Demo seed data
+# --------------------------------------------------
+
+def cmd_reset_demo_data() -> None:
+    demo = {
+        "events": [
+            {
+                "entity": "truck_12",
+                "event_type": "logistics_alert",
+                "status": "delayed",
+                "priority": 7,
+                "location": "taipei",
+                "sender": "alerts@example.com",
+                "subject": "Shipment truck_12 delayed in Taipei",
+                "note": "Carrier delay due to traffic.",
+                "source": "demo",
+                "timestamp": "2026-04-20T10:00:00Z",
+            },
+            {
+                "entity": "truck_18",
+                "event_type": "logistics_alert",
+                "status": "blocked",
+                "priority": 9,
+                "location": "tainan",
+                "sender": "alerts@example.com",
+                "subject": "Shipment truck_18 blocked in Tainan",
+                "note": "Road closure blocked route.",
+                "source": "demo",
+                "timestamp": "2026-04-20T10:05:00Z",
+            },
+            {
+                "entity": "supplier_2",
+                "event_type": "supplier_alert",
+                "status": "warning",
+                "priority": 5,
+                "location": "taipei",
+                "sender": "ops@example.com",
+                "subject": "Supplier risk warning in Taipei",
+                "note": "Late paperwork may impact delivery.",
+                "source": "demo",
+                "timestamp": "2026-04-20T10:10:00Z",
+            },
+            {
+                "entity": "truck_12",
+                "event_type": "resolution_notice",
+                "status": "resolved",
+                "priority": 2,
+                "location": "taipei",
+                "sender": "alerts@example.com",
+                "subject": "Shipment truck_12 recovered in Taipei",
+                "note": "Delay resolved.",
+                "source": "demo",
+                "timestamp": "2026-04-20T11:00:00Z",
+            },
+            {
+                "entity": "api_gateway",
+                "event_type": "system_alert",
+                "status": "failed",
+                "priority": 7,
+                "location": "site_1",
+                "sender": "monitor@example.com",
+                "subject": "API gateway failure at site_1",
+                "note": "HTTP 500 spike detected.",
+                "source": "demo",
+                "timestamp": "2026-04-20T11:05:00Z",
+            },
+        ]
+    }
+    save_json(EVENTS_FILE, demo)
+    print(json.dumps({"ok": True, "reset_demo_data": True, "file": EVENTS_FILE}, indent=2))
+
+def cmd_show_events() -> None:
+    events = load_events()
+    print(json.dumps({"ok": True, "count": len(events), "events": events}, indent=2, ensure_ascii=False))
+
+# --------------------------------------------------
+# 4. Allowed plan schema
+# --------------------------------------------------
+
+ALLOWED_TOOLS = {
+    "filter_equals",
+    "sort_by",
+    "limit",
+    "count_by",
+    "compare_counts",
+}
+
+ALLOWED_FIELDS = {
+    "entity",
+    "event_type",
+    "status",
+    "priority",
+    "location",
+    "sender",
+    "subject",
+    "source",
+    "timestamp",
+}
+
+def validate_plan(plan: Dict[str, Any]) -> Tuple[bool, str]:
+    if not isinstance(plan, dict):
+        return False, "Plan must be a JSON object"
+
+    steps = plan.get("steps")
+    if not isinstance(steps, list) or not steps:
+        return False, "Plan must contain non-empty steps"
+
+    for i, step in enumerate(steps):
+        if not isinstance(step, dict):
+            return False, f"Step {i} must be an object"
+
+        tool = step.get("tool")
+        if tool not in ALLOWED_TOOLS:
+            return False, f"Step {i}: unsupported tool '{tool}'"
+
+        if tool == "filter_equals":
+            if step.get("field") not in ALLOWED_FIELDS:
+                return False, f"Step {i}: invalid field for filter_equals"
+            if "value" not in step:
+                return False, f"Step {i}: missing value for filter_equals"
+
+        elif tool == "sort_by":
+            if step.get("field") not in ALLOWED_FIELDS:
+                return False, f"Step {i}: invalid field for sort_by"
+            direction = step.get("direction", "asc")
+            if direction not in ("asc", "desc"):
+                return False, f"Step {i}: direction must be asc or desc"
+
+        elif tool == "limit":
+            n = step.get("n")
+            if not isinstance(n, int) or n <= 0:
+                return False, f"Step {i}: limit n must be positive integer"
+
+        elif tool == "count_by":
+            if step.get("field") not in ALLOWED_FIELDS:
+                return False, f"Step {i}: invalid field for count_by"
+
+        elif tool == "compare_counts":
+            if step.get("field") not in ALLOWED_FIELDS:
+                return False, f"Step {i}: invalid field for compare_counts"
+            values = step.get("values")
+            if not isinstance(values, list) or len(values) < 2:
+                return False, f"Step {i}: compare_counts needs at least 2 values"
+
+    return True, "ok"
+
+# --------------------------------------------------
+# 5. LLM plan generation
+# --------------------------------------------------
+
+def build_prompt(user_prompt: str) -> str:
+    return f"""
+You are planning for a deterministic event-analysis engine.
+
+Return JSON only, no markdown, no prose.
+
+Allowed tools:
+1. filter_equals
+   args: field, value
+
+2. sort_by
+   args: field, direction
+
+3. limit
+   args: n
+
+4. count_by
+   args: field
+
+5. compare_counts
+   args: field, values
+
+Allowed fields:
+entity, event_type, status, priority, location, sender, subject, source, timestamp
+
+Rules:
+- Output exactly one JSON object.
+- Use this shape:
+  {{
+    "goal": "...",
+    "steps": [ ... ]
+  }}
+- Keep plan short.
+- Do not invent tools.
+- Do not invent fields.
+- Prefer filter_equals for narrowing.
+- Use count_by for grouped summaries.
+- Use compare_counts for requests like "compare delayed vs blocked".
+- If the prompt is vague, still produce the safest minimal valid plan.
+
+User request:
+{user_prompt}
+""".strip()
+
+def generate_plan_with_openai(user_prompt: str, model: str) -> Dict[str, Any]:
+    if OpenAI is None:
+        raise RuntimeError("openai package not installed. Run: pip install openai")
+
+    api_key = os.getenv("OPENAI_API_KEY", "").strip()
+    if not api_key:
+        raise RuntimeError("Missing OPENAI_API_KEY")
+
+    client = OpenAI(api_key=api_key)
+
+    resp = client.responses.create(
+        model=model,
+        input=build_prompt(user_prompt),
+    )
+
+    text = resp.output_text.strip()
+    return json.loads(text)
+
+# --------------------------------------------------
+# 6. Deterministic executor
+# --------------------------------------------------
+
+def op_filter_equals(rows: List[Dict[str, Any]], field: str, value: Any) -> List[Dict[str, Any]]:
+    value_norm = str(value).strip().lower()
+    out = []
+    for row in rows:
+        row_val = str(row.get(field, "")).strip().lower()
+        if row_val == value_norm:
+            out.append(row)
+    return out
+
+def op_sort_by(rows: List[Dict[str, Any]], field: str, direction: str) -> List[Dict[str, Any]]:
+    reverse = (direction == "desc")
+    return sorted(rows, key=lambda r: str(r.get(field, "")), reverse=reverse)
+
+def op_limit(rows: List[Dict[str, Any]], n: int) -> List[Dict[str, Any]]:
+    return rows[:n]
+
+def op_count_by(rows: List[Dict[str, Any]], field: str) -> Dict[str, int]:
+    c = Counter(str(r.get(field, "")) for r in rows)
+    return dict(sorted(c.items(), key=lambda kv: (-kv[1], kv[0])))
+
+def op_compare_counts(rows: List[Dict[str, Any]], field: str, values: List[Any]) -> Dict[str, int]:
+    normalized = [str(v).strip().lower() for v in values]
+    counts = {v: 0 for v in normalized}
+    for row in rows:
+        row_val = str(row.get(field, "")).strip().lower()
+        if row_val in counts:
+            counts[row_val] += 1
+    return counts
+
+def execute_plan(plan: Dict[str, Any], events: List[Dict[str, Any]]) -> Dict[str, Any]:
+    rows = list(events)
+    trace = []
+    final_result: Any = rows
+
+    for step in plan["steps"]:
+        tool = step["tool"]   ##### ALLOWED_TOOLS = { "filter_equals", .....
+
+        if tool == "filter_equals":
+            rows = op_filter_equals(rows, step["field"], step["value"])
+            final_result = rows
+            trace.append({
+                "tool": tool,
+                "field": step["field"],
+                "value": step["value"],
+                "remaining": len(rows),
+            })
+
+        elif tool == "sort_by":
+            rows = op_sort_by(rows, step["field"], step.get("direction", "asc"))
+            final_result = rows
+            trace.append({
+                "tool": tool,
+                "field": step["field"],
+                "direction": step.get("direction", "asc"),
+                "remaining": len(rows),
+            })
+
+        elif tool == "limit":
+            rows = op_limit(rows, step["n"])
+            final_result = rows
+            trace.append({
+                "tool": tool,
+                "n": step["n"],
+                "remaining": len(rows),
+            })
+
+        elif tool == "count_by":
+            final_result = op_count_by(rows, step["field"])
+            trace.append({
+                "tool": tool,
+                "field": step["field"],
+                "remaining": len(rows),
+            })
+
+        elif tool == "compare_counts":
+            final_result = op_compare_counts(rows, step["field"], step["values"])
+            trace.append({
+                "tool": tool,
+                "field": step["field"],
+                "values": step["values"],
+                "remaining": len(rows),
+            })
+
+        else:
+            raise ValueError(f"Unsupported tool at runtime: {tool}")
+
+    return {
+        "goal": plan.get("goal", ""),
+        "trace": trace,
+        "result": final_result,
+    }
+
+# --------------------------------------------------
+# 7. Fallback planner
+# --------------------------------------------------
+
+def fallback_plan(user_prompt: str) -> Dict[str, Any]:
+    """
+    Deterministic fallback in case API is unavailable.
+    Very crude on purpose.
+    """
+    p = user_prompt.lower()
+
+    steps: List[Dict[str, Any]] = []
+
+
+    if "delayed" in p:
+        steps.append({"tool": "filter_equals", "field": "status", "value": "delayed"})
+    elif "blocked" in p:
+        steps.append({"tool": "filter_equals", "field": "status", "value": "blocked"})
+    elif "failed" in p:
+        steps.append({"tool": "filter_equals", "field": "status", "value": "failed"})
+    elif "resolved" in p:
+        steps.append({"tool": "filter_equals", "field": "status", "value": "resolved"})
+
+    known_locations = ["taipei", "tainan", "site_1", "site_2", "site_3"]
+    for loc in known_locations:
+        if loc in p:
+            steps.append({"tool": "filter_equals", "field": "location", "value": loc})
+            break
+
+    if "compare" in p and "delayed" in p and "blocked" in p:
+        return {
+            "goal": user_prompt,
+            "steps": [
+                {"tool": "compare_counts", "field": "status", "values": ["delayed", "blocked"]}
+            ]
+        }
+
+    if "count by status" in p or "status summary" in p:
+        steps.append({"tool": "count_by", "field": "status"})
+    elif "count by location" in p or "location summary" in p:
+        steps.append({"tool": "count_by", "field": "location"})
+
+    if "top" in p or "highest" in p:
+        steps.append({"tool": "sort_by", "field": "priority", "direction": "desc"})
+        steps.append({"tool": "limit", "n": 5})
+
+    if not steps:
+        steps = [{"tool": "count_by", "field": "status"}]
+
+    return {
+        "goal": user_prompt,
+        "steps": steps,
+    }
+
+# --------------------------------------------------
+# 8. Main run command
+# --------------------------------------------------
+
+def cmd_run(user_prompt: str, model: str, no_llm: bool) -> None:
+    events = load_events()
+
+    if no_llm:
+        plan = fallback_plan(user_prompt)
+        plan_source = "fallback"
+    else:
+        try:
+            plan = generate_plan_with_openai(user_prompt, model=model)
+            plan_source = "openai"
+        except Exception as e:
+            plan = fallback_plan(user_prompt)
+            plan_source = f"fallback_after_error: {str(e)}"
+
+    ok, msg = validate_plan(plan)
+    if not ok:
+        print(json.dumps({
+            "ok": False,
+            "error": msg,
+            "plan": plan,
+            "plan_source": plan_source,
+        }, indent=2, ensure_ascii=False))
+        return
+
+    execution = execute_plan(plan, events)
+
+    print(json.dumps({
+        "ok": True,
+        "plan_source": plan_source,
+        "event_count": len(events),
+        "plan": plan,
+        "execution": execution,
+    }, indent=2, ensure_ascii=False))
+
+# --------------------------------------------------
+# 9. CLI
+# --------------------------------------------------
+
+def main() -> None:
+    parser = argparse.ArgumentParser(description="PAL Core 08 - plan JSON and controlled execution")
+    sub = parser.add_subparsers(dest="cmd", required=True)
+
+    sub.add_parser("reset_demo_data")
+    sub.add_parser("show_events")
+
+    p_run = sub.add_parser("run")
+    p_run.add_argument("--prompt", required=True, help="Natural language request")
+    p_run.add_argument("--model", default=DEFAULT_MODEL, help="OpenAI model name")
+    p_run.add_argument("--no_llm", action="store_true", help="Use deterministic fallback planner only")
+
+    args = parser.parse_args()
+
+    if args.cmd == "reset_demo_data":
+        cmd_reset_demo_data()
+    elif args.cmd == "show_events":
+        cmd_show_events()
+    elif args.cmd == "run":
+        cmd_run(user_prompt=args.prompt, model=args.model, no_llm=args.no_llm)
+
+if __name__ == "__main__":
+    main()
+```
+
+```text2
+Recommended workflow
+1. Clean old test emails
+In the test Gmail account:
+•	delete or archive old messages 
+•	leave only the test emails you want 07 to ingest 
+2. Send yourself several test emails
+From another account, send a few emails to the test account.
+3. Run 07
+Either one-shot:
+python pal_core_07_gmail_alerts.py fetch
+or continuous polling:
+python pal_core_07_gmail_alerts.py loop --interval 10
+For testing, 10 seconds is better than 60.
+4. Check what 07 stored
+python pal_core_07_gmail_alerts.py show
+Make sure pal_events07.json contains the new events.
+5. Run 08 on those events
+Using fallback planner first:
+python pal_core_08_plan.py run --prompt "Show delayed events in taipei" --no_llm
+python pal_core_08_plan.py run --prompt "Compare delayed vs blocked events" --no_llm
+python pal_core_08_plan.py run --prompt "Give me a status summary" --no_llm
+Then later with LLM if desired.
+6. Send more emails and repeat
+Yes. Send more test emails, let 07 ingest them, then run more 08 commands.
+________________________________________
+Important detail
+Do not run: python pal_core_08_plan.py reset_demo_data
+if you want to use real 07 email data.
+That command overwrites pal_events07.json with demo seed data.
+________________________________________
+Even better test order
+1) python pal_core_07_gmail_alerts.py reset
+2) python pal_core_07_gmail_alerts.py loop --interval 10
+3) Then send emails.
+4) Then in another terminal: python pal_core_08_plan.py run --prompt "Give me a status summary" --no_llm
+________________________________________
+3) Suggested first 4 test emails
+Email 1
+Subject:
+Shipment truck_12 delayed in Taipei
+Body:
+Carrier delay due to traffic. truck_12 is delayed in Taipei.
+Email 2
+Subject:
+Shipment truck_18 blocked in Tainan
+Body:
+Road closure blocked truck_18 in Tainan.
+Email 3
+Subject:
+Supplier warning in Taipei
+Body:
+supplier_2 warning in Taipei. Late paperwork may impact delivery.
+Email 4
+Subject:
+API gateway failure at site_1
+Body:
+api_gateway failure at site_1. HTTP 500 spike detected.
+________________________________________
+4) First 08 commands to try
+python pal_core_08_plan.py run --prompt "Give me a status summary" --no_llm
+python pal_core_08_plan.py run --prompt "Show delayed events in taipei" --no_llm
+python pal_core_08_plan.py run --prompt "Compare delayed vs blocked events" --no_llm
+python pal_core_08_plan.py run --prompt "Show failed events at site_1" --no_llm
+
+One small note: if 07 is using subject keyword filters, make sure your test subjects contain words like delay, blocked, warning, failure, or shipment, which these do.
+```
+
+```
+Yes. You understood correctly.
+You want one clean live demo timeline.
+
+
+(1) 0E Delete old emails (no AI in this test)
+
+(2) Terminal A
+
+1A python pal_core_07_gmail_alerts.py reset
+
+$ python pal_core_07_gmail_alerts.py reset
+{
+  "ok": true,
+  "reset": true
+}
+(venv) 
+terry@LAPTOP-HKPDHF7M MINGW64 ~/Downloads/d1_agent (main)
+
+pal_email_state07.json
+{
+  "seen_email_ids": []
+}
+
+pal_events07.json
+{
+  "events": []
+}
+
+2A python pal_core_07_gmail_alerts.py loop --interval 30
+
+ 
+
+terry@LAPTOP-HKPDHF7M MINGW64 ~/Downloads/d1_agent (main)
+$ python pal_core_07_gmail_alerts.py loop --interval 30
+[pal_core_07] polling gmail every 30s...
+{
+  "ok": true,
+  "fetched_messages": 0,
+  "added_events": 0,
+  "skipped": 0,
+  "events": []
+}
+
+
+(3) Email Actions
+
+3E Send Email #1
+
+Subject:
+(1) Shipment truck_12 delayed in Taipei
+Body:
+(1) Carrier delay due to traffic.
+
+Wait ~10 sec.
+
+(4) Terminal A
+
+{
+  "ok": true,
+  "fetched_messages": 1,
+  "added_events": 1,
+  "skipped": 0,
+  "events": [
+    {
+      "source": "gmail",
+      "source_message_id": "<,,,,,,,,,,,,,,,,,,,,,,,,,,,,,@mail.gmail.com>",     
+      "timestamp": "2026-04-23T22:23:25.893166+00:00",
+      "event_time_raw": "Thu, 23 Apr 2026 18:23:06 -0400",
+      "entity": "truck_12",
+      "event_type": "logistics_alert",
+      "status": "delayed",
+      "priority": 7,
+      "location": "taipei",
+      "subject": "(1) Shipment truck_12 delayed in Taipei",
+      "sender": "T T <terrytaylorbonn@gmail.com>",
+      "note": "(1) Carrier delay due to traffic."
+    }
+  ]
+}
+{
+  "ok": true,
+  "fetched_messages": 1,
+  "added_events": 0,
+  "skipped": 1,
+  "events": []
+}
+
+pal_email_state07.json
+{
+  "seen_email_ids": [
+    "<CAK,,,,,,,,,,,,,,,,sh9w@mail.gmail.com>"
+  ]
+}
+
+pal_events07.json
+{
+  "events": [
+    {
+      "source": "gmail",
+      "source_message_id": "<CAK,,,,,,,,,,,,,,,,sh9w@mail.gmail.com>",
+      "timestamp": "2026-04-23T22:23:25.893166+00:00",
+      "event_time_raw": "Thu, 23 Apr 2026 18:23:06 -0400",
+      "entity": "truck_12",
+      "event_type": "logistics_alert",
+      "status": "delayed",
+      "priority": 7,
+      "location": "taipei",
+      "subject": "(1) Shipment truck_12 delayed in Taipei",
+      "sender": "T T <terrytaylorbonn@gmail.com>",
+      "note": "(1) Carrier delay due to traffic."
+    }
+  ]
+}
+
+
+
+(5) Terminal B
+
+4B python pal_core_08_plan.py run --prompt "Give me a status summary" --no_llm
+
+
+$ python pal_core_08_plan.py run --prompt "Give me a status summary" --no_llm
+{
+  "ok": true,
+  "plan_source": "fallback",
+  "event_count": 11,
+  "plan": {
+    "goal": "Give me a status summary",
+    "steps": [
+      {
+        "tool": "count_by",
+        "field": "status"
+      }
+    ]
+  },
+  "execution": {
+    "goal": "Give me a status summary",
+    "trace": [
+      {
+        "tool": "count_by",
+        "field": "status",
+        "remaining": 11
+      }
+    ],
+    "result": {
+      "alert": 9,
+      "delayed": 2
+    }
+  }
+}
+(venv) 
+terry@LAPTOP-HKPDHF7M MINGW64 ~/Downloads/d1_agent (main)
+
+
+(6) Remaining loops: Email Actions / Terminal A/B
+
+5A Send Email #2
+
+Subject:
+(2) Shipment truck_18 blocked in Tainan
+Body:
+(2) Road closure blocked route.
+
+ 
+
+{
+  "ok": true,
+  "fetched_messages": 1,
+  "added_events": 0,
+  "skipped": 1,
+  "events": []
+}
+{
+  "ok": true,
+  "fetched_messages": 2,
+  "added_events": 1,
+  "skipped": 1,
+  "events": [
+    {
+      "source": "gmail",
+      "source_message_id": "<,,,,,,,,,,,,,,,@mail.gmail.com>",     
+      "timestamp": "2026-04-23T22:35:17.424352+00:00",
+      "event_time_raw": "Thu, 23 Apr 2026 18:34:42 -0400",
+      "entity": "truck_18",
+      "event_type": "logistics_alert",
+      "status": "blocked",
+      "priority": 9,
+      "location": "tainan",
+      "subject": "(2) Shipment truck_18 blocked in Tainan",
+      "sender": "T T <terrytaylorbonn@gmail.com>",
+      "note": "(2) Road closure blocked route."
+    }
+  ]
+}
+
+
+pal_email_state07.json
+{
+  "seen_email_ids": [
+    "<,,,,,,,,,,,,@mail.gmail.com>",
+    "<,,,,,,,,,,,,@mail.gmail.com>"
+  ]
+}
+
+pal_events07.json
+{
+  "events": [
+    {
+      ,,,,,,,,,,,,,,,,,,,,,,
+    },
+    {
+      "source": "gmail",
+      "source_message_id": "<CAK,,,,,,,,,f57w@mail.gmail.com>",
+      "timestamp": "2026-04-23T22:35:17.424352+00:00",
+      "event_time_raw": "Thu, 23 Apr 2026 18:34:42 -0400",
+      "entity": "truck_18",
+      "event_type": "logistics_alert",
+      "status": "blocked",
+      "priority": 9,
+      "location": "tainan",
+      "subject": "(2) Shipment truck_18 blocked in Tainan",
+      "sender": "T T <terrytaylorbonn@gmail.com>",
+      "note": "(2) Road closure blocked route."
+    }
+  ]
+}
+
+
+6B python pal_core_08_plan.py run --prompt "Compare delayed vs blocked events" --no_llm
+
+$ python pal_core_08_plan.py run --prompt "Give me a status summary" --no_llm
+{
+  "ok": true,
+  "plan_source": "fallback",
+  "event_count": 2,
+  "plan": {
+    "goal": "Give me a status summary",
+    "steps": [
+      {
+        "tool": "count_by",
+        "field": "status"
+      }
+    ]
+  },
+  "execution": {
+    "goal": "Give me a status summary",
+    "trace": [
+      {
+        "tool": "count_by",
+        "field": "status",
+        "remaining": 2
+      }
+    ],
+    "result": {
+      "blocked": 1,
+      "delayed": 1
+    }
+  }
+}
+(venv) 
+terry@LAPTOP-HKPDHF7M MINGW64 ~/Downloads/d1_agent (main)
+
+
+GPT: Perfect.
+That means:
+•	07 ingested 2 emails 
+•	08 read pal_events07.json 
+•	fallback planner created valid plan 
+•	deterministic executor counted statuses correctly 
+Current state:
+{
+  "blocked": 1,
+  "delayed": 1
+}
+Next run:
+python pal_core_08_plan.py run --prompt "Compare delayed vs blocked events" --no_llm
+
+
+7E Send Email #3
+
+Subject:
+(3) API gateway failure at site_1
+Body:
+(3) HTTP 500 spike detected.
+
+pal_email_state07.json
+{
+  "seen_email_ids": [
+    "<,,,,,,,,,,,,,,,,,@mail.gmail.com>",
+    "<,,,,,,,,,,,,,,,@mail.gmail.com>",
+    "<,,,,,,,,,,,,,,,@mail.gmail.com>"
+  ]
+}
+
+pal_events07.json
+{
+  "events": [
+    {
+,,,,,,,,,,,,,,,,,,,,,,,,,,,
+    },
+    {
+,,,,,,,,,,,,,,,,,,,,,,,,,
+    },
+    {
+      "source": "gmail",
+      "source_message_id": "<,,,,,,,,,,,,,,,,,,,-ow@mail.gmail.com>",
+      "timestamp": "2026-04-23T22:48:08.149064+00:00",
+      "event_time_raw": "Thu, 23 Apr 2026 18:47:48 -0400",
+      "entity": "site_1",
+      "event_type": "system_alert",
+      "status": "failed",
+      "priority": 7,
+      "location": "site_1",
+      "subject": "(3) API gateway failure at site_1",
+      "sender": "T T <terrytaylorbonn@gmail.com>",
+      "note": "(3) HTTP 500 spike detected."
+    }
+  ]
+}
+
+{
+  "ok": true,
+  "fetched_messages": 3,
+  "added_events": 1,
+  "skipped": 2,
+  "events": [
+    {
+      "source": "gmail",
+      "source_message_id": "<CAK,,,,,,,,,,,,,,,,,,,,,,,,,,,f1w-ow@mail.gmail.com>",     
+      "timestamp": "2026-04-23T22:48:08.149064+00:00",
+      "event_time_raw": "Thu, 23 Apr 2026 18:47:48 -0400",
+      "entity": "site_1",
+      "event_type": "system_alert",
+      "status": "failed",
+      "priority": 7,
+      "location": "site_1",
+      "subject": "(3) API gateway failure at site_1",
+      "sender": "T T <terrytaylorbonn@gmail.com>",
+      "note": "(3) HTTP 500 spike detected."
+    }
+  ]
+}
+
+
+8B python pal_core_08_plan.py run --prompt "Show failed events at site_1" --no_llm
+
+$ python pal_core_08_plan.py run --prompt "Show failed events at site_1" --no_llm
+{
+  "ok": true,
+  "plan_source": "fallback",
+  "event_count": 3,
+  "plan": {
+    "goal": "Show failed events at site_1",
+    "steps": [
+      {
+        "tool": "filter_equals",
+        "field": "status",
+        "value": "failed"
+      },
+      {
+        "tool": "filter_equals",
+        "field": "location",
+        "value": "site_1"
+      }
+    ]
+  },
+  "execution": {
+    "goal": "Show failed events at site_1",
+    "trace": [
+      {
+        "tool": "filter_equals",
+        "field": "status",
+        "value": "failed",
+        "remaining": 1
+      },
+      {
+        "tool": "filter_equals",
+        "field": "location",
+        "value": "site_1",
+        "remaining": 1
+      }
+    ],
+    "result": [
+      {
+        "source": "gmail",
+        "source_message_id": "<CAK,,,,,,,,,,,,,,,,,,,,,,,,,,w-ow@mail.gmail.com>",   
+        "timestamp": "2026-04-23T22:48:08.149064+00:00",
+        "event_time_raw": "Thu, 23 Apr 2026 18:47:48 -0400",
+        "entity": "site_1",
+        "event_type": "system_alert",
+        "status": "failed",
+        "priority": 7,
+        "location": "site_1",
+        "subject": "(3) API gateway failure at site_1",
+        "sender": "T T <terrytaylorbonn@gmail.com>",
+        "note": "(3) HTTP 500 spike detected."
+      }
+    ]
+  }
+}
+(venv) 
+terry@LAPTOP-HKPDHF7M MINGW64 ~/Downloads/d1_agent (main)
+
+
+GPT: Excellent. This is a clean success.
+It proves the full chain: email → PAL event → plan → controlled execution → filtered result
+Also note the trace is very good for your writeup:
+status=failed  → 1 remaining
+location=site_1 → 1 remaining
+That clearly shows deterministic execution, not LLM guessing.
+
+
+
+9E Send Email #4
+Subject:
+(4) Supplier warning in Taipei
+Body:
+(4) Late paperwork may impact delivery.
+
+
+pal_email_state07.json
+{
+  "seen_email_ids": [
+    "<,,,,,,,,,,,,,,,,,@mail.gmail.com>",
+    "<,,,,,,,,,,,,,,,@mail.gmail.com>",
+    "<,,,,,,,,,,,,,,,@mail.gmail.com>",
+    "<,,,,,,,,,,,,,,,@mail.gmail.com>"
+  ]
+}
+pal_events07.json
+{
+  "events": [
+    {
+,,,,,,,,,,,,,,,,,,,,,,,,,,,
+    },
+    {
+,,,,,,,,,,,,,,,,,,,,,,,,,
+    },
+    {
+,,,,,,,,,,,,,,,,,,,,,,,,,
+    },
+    {
+      "source": "gmail",
+      "source_message_id": "<,,,,,,,,,,,,,,iCw@mail.gmail.com>",
+      "timestamp": "2026-04-23T22:57:33.000198+00:00",
+      "event_time_raw": "Thu, 23 Apr 2026 18:57:07 -0400",
+      "entity": "email_signal",
+      "event_type": "logistics_alert",
+      "status": "delayed",
+      "priority": 7,
+      "location": "taipei",
+      "subject": "(4) Supplier warning in Taipei",
+      "sender": "T T <terrytaylorbonn@gmail.com>",
+      "note": "(4) Late paperwork may impact delivery."
+    }
+  ]
+}
+
+
+{
+  "ok": true,
+  "fetched_messages": 3,
+  "added_events": 0,
+  "skipped": 3,
+  "events": []
+}
+{
+  "ok": true,
+  "fetched_messages": 4,
+  "added_events": 1,
+  "skipped": 3,
+  "events": [
+    {
+      "source": "gmail",
+      "source_message_id": "<,,,,,,,,,,,,,,,,iCw@mail.gmail.com>",     
+      "timestamp": "2026-04-23T22:57:33.000198+00:00",
+      "event_time_raw": "Thu, 23 Apr 2026 18:57:07 -0400",
+      "entity": "email_signal",
+      "event_type": "logistics_alert",
+      "status": "delayed",
+      "priority": 7,
+      "location": "taipei",
+      "subject": "(4) Supplier warning in Taipei",
+      "sender": "T T <terrytaylorbonn@gmail.com>",
+      "note": "(4) Late paperwork may impact delivery."
+    }
+  ]
+}
+
+
+10B python pal_core_08_plan.py run --prompt "Give me a status summary" --no_llm
+
+$ python pal_core_08_plan.py run --prompt "Give me a status summary" --no_llm
+{
+  "ok": true,
+  "plan_source": "fallback",
+  "event_count": 4,
+  "plan": {
+    "goal": "Give me a status summary",
+    "steps": [
+      {
+        "tool": "count_by",
+        "field": "status"
+      }
+    ]
+  },
+  "execution": {
+    "goal": "Give me a status summary",
+    "trace": [
+      {
+        "tool": "count_by",
+        "field": "status",
+        "remaining": 4
+      }
+    ],
+    "result": {
+      "delayed": 2,
+      "blocked": 1,
+      "failed": 1
+    }
+  }
+}
+(venv)
+terry@LAPTOP-HKPDHF7M MINGW64 ~/Downloads/d1_agent (main)
+
+GPT: Good. Demo works end-to-end.
+One small issue: Email #4 became delayed, not warning.
+Reason is probably body text:
+Late paperwork may impact delivery.
+Your parser sees late and maps it to delayed.
+So current result is correct for the rules:
+{
+  "delayed": 2,
+  "blocked": 1,
+  "failed": 1
+}
+For a clean warning test, use subject/body:
+Supplier warning in Taipei
+Supplier risk warning in Taipei. Paperwork issue may impact delivery.
+
+ 
+11E (9E #2) Send Email #5 (small correction)
+
+Redo with text that wont mess things up
+Subject:
+(5) Supplier warning in Taipei
+Body:
+(5) Supplier risk warning in Taipei. Paperwork issue may impact delivery.
+
+ 
+
+pal_email_state07.json
+{
+  "seen_email_ids": [
+    "<,,,,,,,,,,,,,,,,,@mail.gmail.com>",
+    "<,,,,,,,,,,,,,,,@mail.gmail.com>",
+    "<,,,,,,,,,,,,,,,@mail.gmail.com>",
+    "<,,,,,,,,,,,,,,,@mail.gmail.com>",
+    "<,,,,,,,,,,,,,,,@mail.gmail.com>"
+  ]
+}
+
+pal_events07.json
+{
+  "events": [
+    {
+,,,,,,,,,,,,,,,,,,,,,,,,,,,
+    },
+    {
+,,,,,,,,,,,,,,,,,,,,,,,,,,,
+    },
+    {
+,,,,,,,,,,,,,,,,,,,,,,,,,,,
+    },
+    {
+,,,,,,,,,,,,,,,,,,,,,,,,,,,
+    },
+    {
+      "source": "gmail",
+      "source_message_id": "<,,,,,,,,,,,,,,jJw@mail.gmail.com>",
+      "timestamp": "2026-04-23T23:04:51.531169+00:00",
+      "event_time_raw": "Thu, 23 Apr 2026 19:04:20 -0400",
+      "entity": "email_signal",
+      "event_type": "logistics_alert",
+      "status": "warning",
+      "priority": 5,
+      "location": "taipei",
+      "subject": "(5) Supplier warning in Taipei",
+      "sender": "T T <terrytaylorbonn@gmail.com>",
+      "note": "(5) Supplier risk warning in Taipei. Paperwork issue may impact delivery."
+    }
+  ]
+}
+
+
+{
+  "ok": true,
+  "fetched_messages": 4,
+  "added_events": 0,
+  "skipped": 4,
+  "events": []
+}
+{
+  "ok": true,
+  "fetched_messages": 5,
+  "added_events": 1,
+  "skipped": 4,
+  "events": [
+    {
+      "source": "gmail",
+      "source_message_id": "<,,,,,,,,,,,EjJw@mail.gmail.com>",     
+      "timestamp": "2026-04-23T23:04:51.531169+00:00",
+      "event_time_raw": "Thu, 23 Apr 2026 19:04:20 -0400",
+      "entity": "email_signal",
+      "event_type": "logistics_alert",
+      "status": "warning",
+      "priority": 5,
+      "location": "taipei",
+      "subject": "(5) Supplier warning in Taipei",
+      "sender": "T T <terrytaylorbonn@gmail.com>",
+      "note": "(5) Supplier risk warning in Taipei. Paperwork issue may impact delivery."
+    }
+  ]
+}
+
+
+
+
+$ python pal_core_08_plan.py run --prompt "Give me a status summary" --no_llm
+{
+  "ok": true,
+  "plan_source": "fallback",
+  "event_count": 5,
+  "plan": {
+    "goal": "Give me a status summary",
+    "steps": [
+      {
+        "tool": "count_by",
+        "field": "status"
+      }
+    ]
+  },
+  "execution": {
+    "goal": "Give me a status summary",
+    "trace": [
+      {
+        "tool": "count_by",
+        "field": "status",
+        "remaining": 5
+      }
+    ],
+    "result": {
+      "delayed": 2,
+      "blocked": 1,
+      "failed": 1,
+      "warning": 1
+    }
+  }
+}
+(venv) 
+terry@LAPTOP-HKPDHF7M MINGW64 ~/Downloads/d1_agent (main)
+
+
+
+12B (10B #2) python pal_core_08_plan.py run --prompt "Give me a status summary" --no_llm
+
+
+$ python pal_core_08_plan.py run --prompt "Give me a status summary" --no_llm
+{
+  "ok": true,
+  "plan_source": "fallback",
+  "event_count": 5,
+  "plan": {
+    "goal": "Give me a status summary",
+    "steps": [
+      {
+        "tool": "count_by",
+        "field": "status"
+      }
+    ]
+  },
+  "execution": {
+    "goal": "Give me a status summary",
+    "trace": [
+      {
+        "tool": "count_by",
+        "field": "status",
+        "remaining": 5
+      }
+    ],
+    "result": {
+      "delayed": 2,
+      "blocked": 1,
+      "failed": 1,
+      "warning": 1
+    }
+  }
+}
+(venv) 
+terry@LAPTOP-HKPDHF7M MINGW64 ~/Downloads/d1_agent (main)
+
+
+GPT: Perfect. Now it is clean.
+Final status summary:
+{
+  "delayed": 2,
+  "blocked": 1,
+  "failed": 1,
+  "warning": 1
+}
+This is a successful 3.7 + 3.8 live demo.
+ 
+(7) What This Demonstrates
+•	live external signals arriving by email 
+•	automatic ingestion by 07 
+•	updated machine state 
+•	08 analyzing current state on demand 
+```
 
 <br>
 
 ## **[3.8b] pal_core_08_plan.py + LLM (BINGO) 26.0424**
 
+
+<img src="/assets/M-24.png" alt="drones" width="90%">
+
+
+```text2
+(1) fallback_plan(...)
+Creates the plan directly with Python rules.
+user text -> Python if/else -> plan dict
+(2) build_prompt(...)
+Only creates instructions for the LLM.
+user text -> prompt text
+It does not create the final plan by itself.
+________________________________________
+Full LLM Path
+The real replacement for fallback_plan(...) is:
+
+generate_plan_with_openai(...)
+
+Inside that routine:
+
+build_prompt(...)
+-> send prompt to LLM
+-> receive JSON
+-> parse JSON
+-> return plan
+
+________________________________________
+Correct Comparison
+No LLM mode
+fallback_plan()
+LLM mode
+generate_plan_with_openai()
+    uses build_prompt()
+________________________________________
+Simple Mental Model
+build_prompt() = instructions sheet
+LLM = planner 
+generate_plan_with_openai() = whole LLM planning pipeline
+
+
+#641 so execute_plan has no ai
+Correct.
+execute_plan() has no AI
+It is ordinary deterministic Python logic.
+It does things like:
+•	filter rows 
+•	sort rows 
+•	limit rows 
+•	count groups 
+•	compare counts 
+Example
+If plan says:
+{"tool":"count_by","field":"status"}
+execute_plan() calls:
+op_count_by(rows, "status")
+No model. No learning. No reasoning.
+Architecture
+Planner = optional AI
+Executor = normal software
+Why Important
+This is the “AI on rails” pattern:
+•	AI suggests plan 
+•	software performs trusted operations
+
+#642 so you use AI to create a "sanitized" plan (a function somewhat like that of ontology) .. thats the core of this demo.
+Exactly.
+That is the core insight.
+Core Pattern
+Human request
+-> AI translates intent
+-> constrained / sanitized plan
+-> deterministic system executes
+Why “sanitized”
+Because the raw human request is vague, messy, ambiguous.
+The plan becomes:
+•	structured 
+•	schema-bound 
+•	limited to allowed tools 
+•	limited to allowed fields 
+•	validated before execution 
+Why it resembles ontology
+Yes — because it maps human language into approved machine concepts like:
+•	status 
+•	location 
+•	priority 
+•	event_type 
+That is very similar to an ontology / semantic layer.
+Your Demo in One Sentence
+AI is not running the system. AI is converting language into safe machine actions.
+```
+
+
+
+```
+# pal_core_08_plan.py
+#
+# 3.8 -- natural language -> plan JSON -> controlled execution
+#
+# Purpose:
+#   Read PAL events from JSON, ask an LLM to produce a very small plan JSON,
+#   validate that plan, then execute it deterministically.
+#
+# Demo goal:
+#   Show that the LLM does NOT do the data processing directly.
+#   The LLM only proposes a constrained plan.
+#   Deterministic Python executes the plan.
+#
+# Environment variables:
+#   OPENAI_API_KEY=...
+#
+# Optional:
+#   PAL_EVENTS_FILE=pal_events07.json
+#   PAL_OPENAI_MODEL=gpt-4.1-mini
+#
+# Commands:
+#   python pal_core_08_plan.py reset_demo_data
+#   python pal_core_08_plan.py show_events
+#   python pal_core_08_plan.py run --prompt "Show delayed events in taipei"
+#   python pal_core_08_plan.py run --prompt "Compare delayed vs blocked events"
+#
+# Notes:
+#   - Input file must contain {"events":[...]}
+#   - This file can read the output of pal_core_07_gmail_alerts.py
+#   - If you do not want to use real 07 data yet, use reset_demo_data first
+
+import argparse
+import json
+import os
+import sys
+from collections import Counter, defaultdict
+from typing import Any, Dict, List, Tuple
+
+try:
+    from openai import OpenAI
+except ImportError:
+    OpenAI = None
+
+
+# --------------------------------------------------
+# 1. Config
+# --------------------------------------------------
+
+EVENTS_FILE = os.getenv("PAL_EVENTS_FILE", "pal_events07.json")
+DEFAULT_MODEL = os.getenv("PAL_OPENAI_MODEL", "gpt-4.1-mini")
+
+
+# --------------------------------------------------
+# 2. JSON helpers
+# --------------------------------------------------
+
+def load_json(path: str, default: Any) -> Any:
+    if not os.path.exists(path):
+        return default
+    with open(path, "r", encoding="utf-8") as f:
+        return json.load(f)
+
+
+def save_json(path: str, data: Any) -> None:
+    with open(path, "w", encoding="utf-8") as f:
+        json.dump(data, f, indent=2, ensure_ascii=False)
+
+
+def load_events() -> List[Dict[str, Any]]:
+    data = load_json(EVENTS_FILE, {"events": []})
+    events = data.get("events", [])
+    if not isinstance(events, list):
+        raise ValueError(f"{EVENTS_FILE} must contain an 'events' list")
+    return events
+
+
+# --------------------------------------------------
+# 3. Demo seed data
+# --------------------------------------------------
+
+def cmd_reset_demo_data() -> None:
+    demo = {
+        "events": [
+            {
+                "entity": "truck_12",
+                "event_type": "logistics_alert",
+                "status": "delayed",
+                "priority": 7,
+                "location": "taipei",
+                "sender": "alerts@example.com",
+                "subject": "Shipment truck_12 delayed in Taipei",
+                "note": "Carrier delay due to traffic.",
+                "source": "demo",
+                "timestamp": "2026-04-20T10:00:00Z",
+            },
+            {
+                "entity": "truck_18",
+                "event_type": "logistics_alert",
+                "status": "blocked",
+                "priority": 9,
+                "location": "tainan",
+                "sender": "alerts@example.com",
+                "subject": "Shipment truck_18 blocked in Tainan",
+                "note": "Road closure blocked route.",
+                "source": "demo",
+                "timestamp": "2026-04-20T10:05:00Z",
+            },
+            {
+                "entity": "supplier_2",
+                "event_type": "supplier_alert",
+                "status": "warning",
+                "priority": 5,
+                "location": "taipei",
+                "sender": "ops@example.com",
+                "subject": "Supplier risk warning in Taipei",
+                "note": "Late paperwork may impact delivery.",
+                "source": "demo",
+                "timestamp": "2026-04-20T10:10:00Z",
+            },
+            {
+                "entity": "truck_12",
+                "event_type": "resolution_notice",
+                "status": "resolved",
+                "priority": 2,
+                "location": "taipei",
+                "sender": "alerts@example.com",
+                "subject": "Shipment truck_12 recovered in Taipei",
+                "note": "Delay resolved.",
+                "source": "demo",
+                "timestamp": "2026-04-20T11:00:00Z",
+            },
+            {
+                "entity": "api_gateway",
+                "event_type": "system_alert",
+                "status": "failed",
+                "priority": 7,
+                "location": "site_1",
+                "sender": "monitor@example.com",
+                "subject": "API gateway failure at site_1",
+                "note": "HTTP 500 spike detected.",
+                "source": "demo",
+                "timestamp": "2026-04-20T11:05:00Z",
+            },
+        ]
+    }
+    save_json(EVENTS_FILE, demo)
+    print(json.dumps({"ok": True, "reset_demo_data": True, "file": EVENTS_FILE}, indent=2))
+
+
+def cmd_show_events() -> None:
+    events = load_events()
+    print(json.dumps({"ok": True, "count": len(events), "events": events}, indent=2, ensure_ascii=False))
+
+
+# --------------------------------------------------
+# 4. Allowed plan schema
+# --------------------------------------------------
+
+ALLOWED_TOOLS = {
+    "filter_equals",
+    "sort_by",
+    "limit",
+    "count_by",
+    "compare_counts",
+}
+
+ALLOWED_FIELDS = {
+    "entity",
+    "event_type",
+    "status",
+    "priority",
+    "location",
+    "sender",
+    "subject",
+    "source",
+    "timestamp",
+}
+
+
+def validate_plan(plan: Dict[str, Any]) -> Tuple[bool, str]:
+    if not isinstance(plan, dict):
+        return False, "Plan must be a JSON object"
+
+    steps = plan.get("steps")
+    if not isinstance(steps, list) or not steps:
+        return False, "Plan must contain non-empty steps"
+
+    for i, step in enumerate(steps):
+        if not isinstance(step, dict):
+            return False, f"Step {i} must be an object"
+
+        tool = step.get("tool")
+        if tool not in ALLOWED_TOOLS:
+            return False, f"Step {i}: unsupported tool '{tool}'"
+
+        if tool == "filter_equals":
+            if step.get("field") not in ALLOWED_FIELDS:
+                return False, f"Step {i}: invalid field for filter_equals"
+            if "value" not in step:
+                return False, f"Step {i}: missing value for filter_equals"
+
+        elif tool == "sort_by":
+            if step.get("field") not in ALLOWED_FIELDS:
+                return False, f"Step {i}: invalid field for sort_by"
+            direction = step.get("direction", "asc")
+            if direction not in ("asc", "desc"):
+                return False, f"Step {i}: direction must be asc or desc"
+
+        elif tool == "limit":
+            n = step.get("n")
+            if not isinstance(n, int) or n <= 0:
+                return False, f"Step {i}: limit n must be positive integer"
+
+        elif tool == "count_by":
+            if step.get("field") not in ALLOWED_FIELDS:
+                return False, f"Step {i}: invalid field for count_by"
+
+        elif tool == "compare_counts":
+            if step.get("field") not in ALLOWED_FIELDS:
+                return False, f"Step {i}: invalid field for compare_counts"
+            values = step.get("values")
+            if not isinstance(values, list) or len(values) < 2:
+                return False, f"Step {i}: compare_counts needs at least 2 values"
+
+    return True, "ok"
+
+
+# --------------------------------------------------
+# 5. LLM plan generation
+# --------------------------------------------------
+
+################# NEW [3.8b] from GPT #######################
+# GPT: Main change: I separated known values from tool rules, 
+# so the LLM is less likely to invent values like urgent or logistics problems.
+# FIX 3 i added 
+#############################################################
+
+def build_prompt(user_prompt: str) -> str:
+    return f"""
+You are planning for a deterministic event-analysis engine.
+
+Return JSON only, no markdown, no prose.
+
+Known status values:
+delayed, blocked, failed, warning, resolved, alert
+
+Known event_type values:
+logistics_alert, system_alert, supplier_alert, resolution_notice, email_alert
+
+Known locations:
+taipei, tainan, site_1, site_2, site_3
+
+Important value rules:
+- Do not invent field values.
+- Use only the known status values when filtering status.
+- Use only the known event_type values when filtering event_type.
+- Use only the known locations when filtering location.
+- Priority is numeric.
+- For urgent/high priority requests, do not filter priority by words.
+- For urgent/high priority requests, sort by priority descending, then limit.
+
+Allowed tools:
+1. filter_equals
+   flat args: field, value
+
+2. sort_by
+   flat args: field, direction
+
+3. limit
+   flat args: n
+
+4. count_by
+   flat args: field
+
+5. compare_counts
+   flat args: field, values
+
+Allowed fields:
+entity, event_type, status, priority, location, sender, subject, source, timestamp
+
+Rules:
+- Output exactly one JSON object.
+- Use this shape:
+  {{
+    "goal": "...",
+    "steps": [ ... ]
+  }}
+- Keep plan short.
+- Do not invent tools.
+- Do not invent fields.
+- Prefer filter_equals for narrowing.
+- Use count_by for grouped summaries.
+- Use compare_counts for requests like "compare delayed vs blocked".
+- If the prompt is vague, still produce the safest minimal valid plan.
+- Return steps with flat arguments only.
+- Do not use an "args" object.
+
+Correct:
+{{"tool":"count_by","field":"status"}}
+
+Wrong:
+{{"tool":"count_by","args":{{"field":"status"}}}}
+
+Correct urgent/high-priority plan:
+{{
+  "goal": "Show urgent problems first",
+  "steps": [
+    {{"tool":"sort_by","field":"priority","direction":"desc"}},
+    {{"tool":"limit","n":5}}
+  ]
+}}
+
+- For direct comparisons like:
+  compare delayed vs blocked
+  compare X and Y
+  use one compare_counts step directly.
+- Do not pre-filter before compare_counts unless the user explicitly requests it.
+
+
+User request:
+{user_prompt}
+""".strip()
+
+# def build_prompt(user_prompt: str) -> str:
+#     return f"""
+# You are planning for a deterministic event-analysis engine.
+
+# Return JSON only, no markdown, no prose.
+
+# Allowed tools:
+# 1. filter_equals
+#    args: field, value
+
+# 2. sort_by
+#    args: field, direction
+
+# 3. limit
+#    args: n
+
+# 4. count_by
+#    args: field
+
+# 5. compare_counts
+#    args: field, values
+
+# Allowed fields:
+# entity, event_type, status, priority, location, sender, subject, source, timestamp
+
+# Rules:
+# - Output exactly one JSON object.
+# - Use this shape:
+#   {{
+#     "goal": "...",
+#     "steps": [ ... ]
+#   }}
+# - Keep plan short.
+# - Do not invent tools.
+# - Do not invent fields.
+# - Prefer filter_equals for narrowing.
+# - Use count_by for grouped summaries.
+# - Use compare_counts for requests like "compare delayed vs blocked".
+# - If the prompt is vague, still produce the safest minimal valid plan.
+
+# Return steps with flat arguments only.
+# Do not use an "args" object.
+# Correct:
+# {"tool":"count_by","field":"status"}
+# Wrong:
+# {"tool":"count_by","args":{"field":"status"}}
+
+# User request:
+# {user_prompt}
+# """.strip()
+
+
+def generate_plan_with_openai(user_prompt: str, model: str) -> Dict[str, Any]:
+    if OpenAI is None:
+        raise RuntimeError("openai package not installed. Run: pip install openai")
+
+    api_key = os.getenv("OPENAI_API_KEY", "").strip()
+    if not api_key:
+        raise RuntimeError("Missing OPENAI_API_KEY")
+
+    client = OpenAI(api_key=api_key)
+
+    resp = client.responses.create(
+        model=model,
+        input=build_prompt(user_prompt),
+    )
+
+    text = resp.output_text.strip()
+    return json.loads(text)
+
+
+# --------------------------------------------------
+# 6. Deterministic executor
+# --------------------------------------------------
+
+def op_filter_equals(rows: List[Dict[str, Any]], field: str, value: Any) -> List[Dict[str, Any]]:
+    value_norm = str(value).strip().lower()
+    out = []
+    for row in rows:
+        row_val = str(row.get(field, "")).strip().lower()
+        if row_val == value_norm:
+            out.append(row)
+    return out
+
+
+def op_sort_by(rows: List[Dict[str, Any]], field: str, direction: str) -> List[Dict[str, Any]]:
+    reverse = (direction == "desc")
+    return sorted(rows, key=lambda r: str(r.get(field, "")), reverse=reverse)
+
+
+def op_limit(rows: List[Dict[str, Any]], n: int) -> List[Dict[str, Any]]:
+    return rows[:n]
+
+
+def op_count_by(rows: List[Dict[str, Any]], field: str) -> Dict[str, int]:
+    c = Counter(str(r.get(field, "")) for r in rows)
+    return dict(sorted(c.items(), key=lambda kv: (-kv[1], kv[0])))
+
+
+def op_compare_counts(rows: List[Dict[str, Any]], field: str, values: List[Any]) -> Dict[str, int]:
+    normalized = [str(v).strip().lower() for v in values]
+    counts = {v: 0 for v in normalized}
+    for row in rows:
+        row_val = str(row.get(field, "")).strip().lower()
+        if row_val in counts:
+            counts[row_val] += 1
+    return counts
+
+
+def execute_plan(plan: Dict[str, Any], events: List[Dict[str, Any]]) -> Dict[str, Any]:
+    rows = list(events)
+    trace = []
+    final_result: Any = rows
+
+    for step in plan["steps"]:
+        tool = step["tool"]
+
+        if tool == "filter_equals":
+            rows = op_filter_equals(rows, step["field"], step["value"])
+            final_result = rows
+            trace.append({
+                "tool": tool,
+                "field": step["field"],
+                "value": step["value"],
+                "remaining": len(rows),
+            })
+
+        elif tool == "sort_by":
+            rows = op_sort_by(rows, step["field"], step.get("direction", "asc"))
+            final_result = rows
+            trace.append({
+                "tool": tool,
+                "field": step["field"],
+                "direction": step.get("direction", "asc"),
+                "remaining": len(rows),
+            })
+
+        elif tool == "limit":
+            rows = op_limit(rows, step["n"])
+            final_result = rows
+            trace.append({
+                "tool": tool,
+                "n": step["n"],
+                "remaining": len(rows),
+            })
+
+        elif tool == "count_by":
+            final_result = op_count_by(rows, step["field"])
+            trace.append({
+                "tool": tool,
+                "field": step["field"],
+                "remaining": len(rows),
+            })
+
+        elif tool == "compare_counts":
+            final_result = op_compare_counts(rows, step["field"], step["values"])
+            trace.append({
+                "tool": tool,
+                "field": step["field"],
+                "values": step["values"],
+                "remaining": len(rows),
+            })
+
+        else:
+            raise ValueError(f"Unsupported tool at runtime: {tool}")
+
+    return {
+        "goal": plan.get("goal", ""),
+        "trace": trace,
+        "result": final_result,
+    }
+
+
+# --------------------------------------------------
+# 7. Fallback planner
+# --------------------------------------------------
+
+def fallback_plan(user_prompt: str) -> Dict[str, Any]:
+    """
+    Deterministic fallback in case API is unavailable.
+    Very crude on purpose.
+    """
+    p = user_prompt.lower()
+
+    steps: List[Dict[str, Any]] = []
+
+    if "delayed" in p:
+        steps.append({"tool": "filter_equals", "field": "status", "value": "delayed"})
+    elif "blocked" in p:
+        steps.append({"tool": "filter_equals", "field": "status", "value": "blocked"})
+    elif "failed" in p:
+        steps.append({"tool": "filter_equals", "field": "status", "value": "failed"})
+    elif "resolved" in p:
+        steps.append({"tool": "filter_equals", "field": "status", "value": "resolved"})
+
+    known_locations = ["taipei", "tainan", "site_1", "site_2", "site_3"]
+    for loc in known_locations:
+        if loc in p:
+            steps.append({"tool": "filter_equals", "field": "location", "value": loc})
+            break
+
+    if "compare" in p and "delayed" in p and "blocked" in p:
+        return {
+            "goal": user_prompt,
+            "steps": [
+                {"tool": "compare_counts", "field": "status", "values": ["delayed", "blocked"]}
+            ]
+        }
+
+    if "count by status" in p or "status summary" in p:
+        steps.append({"tool": "count_by", "field": "status"})
+    elif "count by location" in p or "location summary" in p:
+        steps.append({"tool": "count_by", "field": "location"})
+
+    if "top" in p or "highest" in p:
+        steps.append({"tool": "sort_by", "field": "priority", "direction": "desc"})
+        steps.append({"tool": "limit", "n": 5})
+
+    if not steps:
+        steps = [{"tool": "count_by", "field": "status"}]
+
+    return {
+        "goal": user_prompt,
+        "steps": steps,
+    }
+
+
+# --------------------------------------------------
+# 8. Main run command
+# --------------------------------------------------
+
+def cmd_run(user_prompt: str, model: str, no_llm: bool) -> None:
+    events = load_events()
+
+    if no_llm:
+        plan = fallback_plan(user_prompt)
+        plan_source = "fallback"
+    else:
+        try:
+            plan = generate_plan_with_openai(user_prompt, model=model)
+            plan_source = "openai"
+        except Exception as e:
+            plan = fallback_plan(user_prompt)
+            plan_source = f"fallback_after_error: {str(e)}"
+
+    ok, msg = validate_plan(plan)
+    if not ok:
+        print(json.dumps({
+            "ok": False,
+            "error": msg,
+            "plan": plan,
+            "plan_source": plan_source,
+        }, indent=2, ensure_ascii=False))
+        return
+
+    execution = execute_plan(plan, events)
+
+    print(json.dumps({
+        "ok": True,
+        "plan_source": plan_source,
+        "event_count": len(events),
+        "plan": plan,
+        "execution": execution,
+    }, indent=2, ensure_ascii=False))
+
+
+# --------------------------------------------------
+# 9. CLI
+# --------------------------------------------------
+
+def main() -> None:
+    parser = argparse.ArgumentParser(description="PAL Core 08 - plan JSON and controlled execution")
+    sub = parser.add_subparsers(dest="cmd", required=True)
+
+    sub.add_parser("reset_demo_data")
+    sub.add_parser("show_events")
+
+    p_run = sub.add_parser("run")
+    p_run.add_argument("--prompt", required=True, help="Natural language request")
+    p_run.add_argument("--model", default=DEFAULT_MODEL, help="OpenAI model name")
+    p_run.add_argument("--no_llm", action="store_true", help="Use deterministic fallback planner only")
+
+    args = parser.parse_args()
+
+    if args.cmd == "reset_demo_data":
+        cmd_reset_demo_data()
+    elif args.cmd == "show_events":
+        cmd_show_events()
+    elif args.cmd == "run":
+        cmd_run(user_prompt=args.prompt, model=args.model, no_llm=args.no_llm)
+
+
+if __name__ == "__main__":
+    main()
+```
+
+```text2
+#637 very strong... the "errors" (or "adjustments"?) were instructional.
+Exactly.
+They were not failures — they were instructional iterations.
+What They Revealed
+1. LLMs need constraints
+Without schema/value guidance, they invent labels like:
+•	urgent 
+•	logistics problems 
+2. Validation is essential
+Bad plans were caught before harming logic.
+3. Prompting is engineering
+Small prompt changes materially improved behavior.
+4. Deterministic core stayed stable
+Only planner behavior changed; executor remained reliable.
+Real Lesson
+The strongest AI systems are often built through:
+iterate planner constraints
++ validate outputs
++ keep execution deterministic
+For your writeup
+Call them:
+•	adjustments 
+•	refinements 
+•	tuning iterations 
+•	planner hardening 
+Better than “errors.”
+```
+
 <br>
 
 ## **[3.9] — pal_core_09_optimize.py // improved allocation / optimization (BINGO) 26.0427**
+
+```text2
+pal_core_09_optimize.py — improved allocation / optimization
+Main idea:
+PAL state + tasks/resources
+-> optimizer
+-> better assignment plan
+Why it belongs after 3.8b
+You already showed:
+signals -> structured events -> plan -> controlled execution
+Now show:
+structured state -> decision optimization
+That is a natural next step.
+Keep 3.9 simple
+Do not make it too math-heavy.
+Best version:
+•	tasks have priority, duration, location, required_skill 
+•	workers have skills, location, capacity 
+•	compare: 
+o	greedy assignment 
+o	brute-force optimal assignment 
+Demo message: PAL is not just chat. It can compute better operational decisions.
+
+Yes — that’s exactly the correct full test sequence.
+Full Demo Flow
+python pal_core_09_optimize.py reset
+python pal_core_09_optimize.py show
+python pal_core_09_optimize.py greedy
+python pal_core_09_optimize.py optimal
+python pal_core_09_optimize.py compare
+What each step proves
+•	reset → deterministic starting state 
+•	show → verify data (critical sanity check) 
+•	greedy → baseline (local decision logic) 
+•	optimal → brute-force ground truth 
+•	compare → clear measurable improvement 
+What you should see
+greedy_score   < optimal_score
+improvement    > 0
+That’s the success condition for 3.9.
+Optional (nice for demo)
+Run compare twice to show:
+same input → same output
+reinforces deterministic system behavior.
+```
+
+```
+# pal_core_09_optimize.py
+#
+# 3.9 -- improved allocation / optimization
+#
+# Purpose:
+#   Show that PAL-style systems are not just chat/planning.
+#   They can compute better operational decisions.
+#
+# Demo:
+#   Compare greedy assignment vs brute-force optimal assignment.
+#
+# Commands:
+#   python pal_core_09_optimize.py reset
+#   python pal_core_09_optimize.py show
+#   python pal_core_09_optimize.py greedy
+#   python pal_core_09_optimize.py optimal
+#   python pal_core_09_optimize.py compare
+
+import argparse
+import itertools
+import json
+import os
+from typing import Any, Dict, List, Optional, Tuple
+
+DB_FILE = "pal_optimize09.json"
+
+# --------------------------------------------------
+# 1. JSON helpers
+# --------------------------------------------------
+
+def load_json(path: str, default: Any) -> Any:
+    if not os.path.exists(path):
+        return default
+    with open(path, "r", encoding="utf-8") as f:
+        return json.load(f)
+
+def save_json(path: str, data: Any) -> None:
+    with open(path, "w", encoding="utf-8") as f:
+        json.dump(data, f, indent=2, ensure_ascii=False)
+
+# --------------------------------------------------
+# 2. Demo data
+# --------------------------------------------------
+
+def cmd_reset() -> None:
+    data = {
+        "workers": [
+            {
+                "worker_id": "worker_1",
+                "skills": ["logistics", "supplier"],
+                "location": "taipei",
+                "capacity": 2,
+            },
+            {
+                "worker_id": "worker_2",
+                "skills": ["logistics"],
+                "location": "tainan",
+                "capacity": 2,
+            },
+            {
+                "worker_id": "worker_3",
+                "skills": ["system", "supplier"],
+                "location": "site_1",
+                "capacity": 2,
+            },
+        ],
+        "tasks": [
+            {
+                "task_id": "task_1",
+                "type": "logistics",
+                "priority": 9,
+                "duration": 2,
+                "location": "taipei",
+                "reason": "urgent delayed shipment",
+            },
+            {
+                "task_id": "task_2",
+                "type": "supplier",
+                "priority": 8,
+                "duration": 2,
+                "location": "taipei",
+                "reason": "supplier escalation",
+            },
+            {
+                "task_id": "task_3",
+                "type": "system",
+                "priority": 7,
+                "duration": 2,
+                "location": "site_1",
+                "reason": "api failure",
+            },
+            {
+                "task_id": "task_4",
+                "type": "logistics",
+                "priority": 6,
+                "duration": 2,
+                "location": "tainan",
+                "reason": "secondary route issue",
+            },
+        ],
+    }
+
+    save_json(DB_FILE, data)
+    print(json.dumps({"ok": True, "reset": True, "file": DB_FILE}, indent=2))
+
+def load_data() -> Dict[str, Any]:
+    return load_json(DB_FILE, {"workers": [], "tasks": []})
+
+def cmd_show() -> None:
+    print(json.dumps(load_data(), indent=2, ensure_ascii=False))
+
+# --------------------------------------------------
+# 3. Scoring
+# --------------------------------------------------
+
+def travel_cost(worker: Dict[str, Any], task: Dict[str, Any]) -> int:
+    if worker["location"] == task["location"]:
+        return 0
+    return 25
+
+def can_do(worker: Dict[str, Any], task: Dict[str, Any]) -> bool:
+    return task["type"] in worker["skills"]
+
+def assignment_score(worker: Dict[str, Any], task: Dict[str, Any]) -> int:
+    """
+    Higher is better.
+
+    priority reward:
+      high-priority tasks matter more
+
+    travel penalty:
+      assigning far-away worker is worse
+    """
+    if not can_do(worker, task):
+        return -999
+
+    return task["priority"] * 10 - travel_cost(worker, task)
+
+def total_score(assignments: List[Dict[str, Any]]) -> int:
+    return sum(a["score"] for a in assignments)
+
+# --------------------------------------------------
+# 4. Greedy assignment
+# --------------------------------------------------
+
+def greedy_assign(data: Dict[str, Any]) -> Dict[str, Any]:
+    workers = data["workers"]
+    tasks = sorted(data["tasks"], key=lambda t: t["priority"], reverse=True)
+
+    remaining_capacity = {
+        w["worker_id"]: w["capacity"] for w in workers
+    }
+
+    assignments = []
+    unassigned = []
+
+    for task in tasks:
+        best = None
+
+        for worker in workers:
+            if remaining_capacity[worker["worker_id"]] < task["duration"]:
+                continue
+
+            score = assignment_score(worker, task)
+            if score < 0:
+                continue
+
+            candidate = {
+                "task_id": task["task_id"],
+                "worker_id": worker["worker_id"],
+                "score": score,
+                "priority": task["priority"],
+                "task_type": task["type"],
+                "task_location": task["location"],
+                "worker_location": worker["location"],
+                "reason": task["reason"],
+            }
+
+            if best is None or candidate["score"] > best["score"]:
+                best = candidate
+
+        if best is None:
+            unassigned.append(task)
+        else:
+            assignments.append(best)
+            remaining_capacity[best["worker_id"]] -= task["duration"]
+
+    return {
+        "method": "greedy",
+        "score": total_score(assignments),
+        "assignments": assignments,
+        "unassigned": unassigned,
+        "remaining_capacity": remaining_capacity,
+    }
+
+# --------------------------------------------------
+# 5. Brute-force optimal assignment
+# --------------------------------------------------
+
+def optimal_assign(data: Dict[str, Any]) -> Dict[str, Any]:
+    workers = data["workers"]
+    tasks = data["tasks"]
+
+    worker_options = [w["worker_id"] for w in workers] + [None]
+    worker_by_id = {w["worker_id"]: w for w in workers}
+
+    best_result = None
+
+    for combo in itertools.product(worker_options, repeat=len(tasks)):
+        remaining_capacity = {
+            w["worker_id"]: w["capacity"] for w in workers
+        }
+
+        assignments = []
+        unassigned = []
+        valid = True
+
+        for task, worker_id in zip(tasks, combo):
+            if worker_id is None:
+                unassigned.append(task)
+                continue
+
+            worker = worker_by_id[worker_id]
+
+            if remaining_capacity[worker_id] < task["duration"]:
+                valid = False
+                break
+
+            score = assignment_score(worker, task)
+            if score < 0:
+                valid = False
+                break
+
+            assignments.append({
+                "task_id": task["task_id"],
+                "worker_id": worker_id,
+                "score": score,
+                "priority": task["priority"],
+                "task_type": task["type"],
+                "task_location": task["location"],
+                "worker_location": worker["location"],
+                "reason": task["reason"],
+            })
+
+            remaining_capacity[worker_id] -= task["duration"]
+
+        if not valid:
+            continue
+
+        result = {
+            "method": "optimal_bruteforce",
+            "score": total_score(assignments),
+            "assignments": assignments,
+            "unassigned": unassigned,
+            "remaining_capacity": remaining_capacity,
+        }
+
+        if best_result is None or result["score"] > best_result["score"]:
+            best_result = result
+
+    return best_result or {
+        "method": "optimal_bruteforce",
+        "score": 0,
+        "assignments": [],
+        "unassigned": tasks,
+        "remaining_capacity": {},
+    }
+
+# --------------------------------------------------
+# 6. Commands
+# --------------------------------------------------
+
+def cmd_greedy() -> None:
+    data = load_data()
+    print(json.dumps(greedy_assign(data), indent=2, ensure_ascii=False))
+
+def cmd_optimal() -> None:
+    data = load_data()
+    print(json.dumps(optimal_assign(data), indent=2, ensure_ascii=False))
+
+def cmd_compare() -> None:
+    data = load_data()
+    greedy = greedy_assign(data)
+    optimal = optimal_assign(data)
+
+    print(json.dumps({
+        "ok": True,
+        "greedy_score": greedy["score"],
+        "optimal_score": optimal["score"],
+        "improvement": optimal["score"] - greedy["score"],
+        "greedy": greedy,
+        "optimal": optimal,
+    }, indent=2, ensure_ascii=False))
+
+# --------------------------------------------------
+# 7. CLI
+# --------------------------------------------------
+
+def main() -> None:
+    parser = argparse.ArgumentParser(description="PAL Core 09 - allocation optimization")
+    sub = parser.add_subparsers(dest="cmd", required=True)
+
+    sub.add_parser("reset")
+    sub.add_parser("show")
+    sub.add_parser("greedy")
+    sub.add_parser("optimal")
+    sub.add_parser("compare")
+
+    args = parser.parse_args()
+
+    if args.cmd == "reset":
+        cmd_reset()
+    elif args.cmd == "show":
+        cmd_show()
+    elif args.cmd == "greedy":
+        cmd_greedy()
+    elif args.cmd == "optimal":
+        cmd_optimal()
+    elif args.cmd == "compare":
+        cmd_compare()
+
+if __name__ == "__main__":
+    main()
+
+
+
+
+
+
+$ python pal_core_09_optimize.py show
+{
+  "workers": [
+    {
+      "worker_id": "worker_1",
+      "skills": [
+        "logistics",
+        "supplier"
+      ],
+      "location": "taipei",
+      "capacity": 2
+    },
+    {
+      "worker_id": "worker_2",
+      "skills": [
+        "logistics"
+      ],
+      "location": "tainan",
+      "capacity": 2
+    },
+    {
+      "worker_id": "worker_3",
+      "skills": [
+        "system",
+        "supplier"
+      ],
+      "location": "site_1",
+      "capacity": 2
+    }
+  ],
+  "tasks": [
+    {
+      "task_id": "task_1",
+      "type": "logistics",
+      "priority": 9,
+      "duration": 2,
+      "location": "taipei",
+      "reason": "urgent delayed shipment"
+    },
+    {
+      "task_id": "task_2",
+      "type": "supplier",
+      "priority": 8,
+      "duration": 2,
+      "location": "taipei",
+      "reason": "supplier escalation"
+    },
+    {
+      "task_id": "task_3",
+      "type": "system",
+      "priority": 7,
+      "duration": 2,
+      "location": "site_1",
+      "reason": "api failure"
+    },
+    {
+      "task_id": "task_4",
+      "type": "logistics",
+      "priority": 6,
+      "duration": 2,
+      "location": "tainan",
+      "reason": "secondary route issue"
+    }
+  ]
+}
+(venv) 
+terry@LAPTOP-HKPDHF7M MINGW64 ~/Downloads/d1_agent (main)
+
+
+
+$ python pal_core_09_optimize.py compare
+{
+  "ok": true,
+  "greedy_score": 205,
+  "optimal_score": 220,
+  "improvement": 15,
+  "greedy": {
+    "method": "greedy",
+    "score": 205,
+    "assignments": [
+      {
+        "task_id": "task_1",
+        "worker_id": "worker_1",
+        "score": 90,
+        "priority": 9,
+        "task_type": "logistics",
+        "task_location": "taipei",
+        "worker_location": "taipei",
+        "reason": "urgent delayed shipment"
+      },
+      {
+        "task_id": "task_2",
+        "worker_id": "worker_3",
+        "score": 55,
+        "priority": 8,
+        "task_type": "supplier",
+        "task_location": "taipei",
+        "worker_location": "site_1",
+        "reason": "supplier escalation"
+      },
+      {
+        "task_id": "task_4",
+        "worker_id": "worker_2",
+        "score": 60,
+        "priority": 6,
+        "task_type": "logistics",
+        "task_location": "tainan",
+        "worker_location": "tainan",
+        "reason": "secondary route issue"
+      }
+    ],
+    "unassigned": [
+      {
+        "task_id": "task_3",
+        "type": "system",
+        "priority": 7,
+        "duration": 2,
+        "location": "site_1",
+        "reason": "api failure"
+      }
+    ],
+    "remaining_capacity": {
+      "worker_1": 0,
+      "worker_2": 0,
+      "worker_3": 0
+    }
+  },
+  "optimal": {
+    "method": "optimal_bruteforce",
+    "score": 220,
+    "assignments": [
+      {
+        "task_id": "task_1",
+        "worker_id": "worker_1",
+        "score": 90,
+        "priority": 9,
+        "task_type": "logistics",
+        "task_location": "taipei",
+        "worker_location": "taipei",
+        "reason": "urgent delayed shipment"
+      },
+      {
+        "task_id": "task_3",
+        "worker_id": "worker_3",
+        "score": 70,
+        "priority": 7,
+        "task_type": "system",
+        "task_location": "site_1",
+        "worker_location": "site_1",
+        "reason": "api failure"
+      },
+      {
+        "task_id": "task_4",
+        "worker_id": "worker_2",
+        "score": 60,
+        "priority": 6,
+        "task_type": "logistics",
+        "task_location": "tainan",
+        "worker_location": "tainan",
+        "reason": "secondary route issue"
+      }
+    ],
+    "unassigned": [
+      {
+        "task_id": "task_2",
+        "type": "supplier",
+        "priority": 8,
+        "duration": 2,
+        "location": "taipei",
+        "reason": "supplier escalation"
+      }
+    ],
+    "remaining_capacity": {
+      "worker_1": 0,
+      "worker_2": 0,
+      "worker_3": 0
+    }
+  }
+}
+(venv) 
+terry@LAPTOP-HKPDHF7M MINGW64 ~/Downloads/d1_agent (main)
+$
+```
+
+```text2
+#651 how would you summarize this workflow 
+# python pal_core_09_optimize.py reset 
+# python pal_core_09_optimize.py show 
+# python pal_core_09_optimize.py greedy 
+# python pal_core_09_optimize.py optimal 
+# python pal_core_09_optimize.py compare
+
+Short Summary
+set state → inspect → compute baseline → compute optimal → compare results
+Slightly richer version (recommended for your site)
+initialize scenario → verify inputs → run greedy allocation → run optimal allocation → measure improvement
+One-line (for headers)
+Deterministic state → baseline decision → optimal decision → measurable improvement
+PAL-style framing
+structured data → scoring function → decision search → better outcome
+My pick (clean + professional)
+Initialize → Validate → Greedy → Optimal → Compare
+```
+
+
+
+
+
+
 
 <br>
 

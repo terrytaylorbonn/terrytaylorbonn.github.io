@@ -37,7 +37,7 @@ For details on each project demo see
 
 <br>
 
-#### **TOC** *(both of the current projects were done in earl May and need an update)*
+#### **TOC** *(both of the current projects were done in early May and need an update)*
 - **3b.1 Demo 1 n8n** (26.0501)
 - **3b.2 AI project 2 JobRadar** (what it does so far 26.0506)
 
