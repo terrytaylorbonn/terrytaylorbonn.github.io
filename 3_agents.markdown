@@ -169,7 +169,7 @@ Very basic demos that show how **deterministic agents use TF/UFA semantic capabi
 
 <br>
 
-26.0618 (0524)
+26.0619 (0524)
 
 
 <!-- *Agentic AI in ZiptieAI evolution ([about this diagram](/0.1-zai-evolution/))* <br>
