@@ -25,16 +25,20 @@ ZiptieAI takes you methodically through the entire AI stack. The final goal is t
 
 Top level pages *(see also the **[Wiki](https://github.com/terrytaylorbonn/auxdrone/wiki)** and other links in the footer)*.  
 
-- **[Mission](/0-mission/)**. ZiptieAI gives you what you need learn AI hands-on ASAP. 
-- **[QS](/0-qs/)**. Hands-on tour of low-level core AI functionality.
-- **[Concepts](/0b-demos/)**. Core concepts learned form the QS.
-- [1 Drones](/1-drones/). ZiptieAI started out as a site about AI drones. 
-- **[2 NNs](/2_models/)**. NNs (CNNs, TFs) are the core of AI "intelligence".
-- **[2b Models](/2b_models/)**. AI NNs are usually packaged into AI models that have an API. <!-- Fine-tuning, local models, deployment, RAG, and model serving. -->
-- **[3 Agents](/3_agents/)**. Agents provide reliable workflows that use models as helpful assistants.
-- **[3b Projects](/3.3-ai-projects/)**. Real world AI project demos. 
-- [4 Resources](/4_resources/).
-- [About](/about/).
+- Intro
+  - **[Mission](/0-mission/)**. ZiptieAI gives you what you need learn AI hands-on ASAP. 
+  - **[QS](/0-qs/)**. Hands-on tour of low-level core AI functionality.
+  - **[Concepts](/0b-demos/)**. Core concepts learned form the QS.<br><br>
+- Where it all began
+  - [1 Drones](/1-drones/). ZiptieAI started out as a site about AI drones. <br><br>
+- Demos
+  - **[2 NNs](/2_models/)**. NNs (CNNs, TFs) are the core of AI "intelligence".
+  - **[2b Models](/2b_models/)**. AI NNs are usually packaged into AI models that have an API. <!-- Fine-tuning, local models, deployment, RAG, and model serving. -->
+  - **[3 Agents](/3_agents/)**. Agents provide reliable workflows that use models as helpful assistants.
+  - **[3b Projects](/3.3-ai-projects/)**. Real world AI project demos. <br><br>
+- Docs
+  - **[4 Resources](/4_resources/)**. Google drive docx's, Github, Wiki.
+  - [About](/about/).
 
 <br>
 
