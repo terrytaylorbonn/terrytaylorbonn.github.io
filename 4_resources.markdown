@@ -26,6 +26,8 @@ But the most important are the 5 docx's listed below, organized by the sections 
 - **\#603.2\_3\_agents\_.docx**. Part 2 (ms.word file limitation.. had to split file).
 - **\#606\_3b\_projects\_.docx**.
 
+Note: I never found a site that presented a 'big-picture' view of AI like ZiptieAI does. I reorganized the site many times, so the numbering is a bit chaotic. I will refactor the whole website (numbering) sometime in the future.
+
 <br>
 
 ### **Github** 
