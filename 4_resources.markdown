@@ -26,7 +26,7 @@ But the most important are the 5 docx's listed below, organized by the sections 
 - **\#603.2\_3\_agents\_.docx**. Part 2 (ms.word file limitation.. had to split file).
 - **\#606\_3b\_projects\_.docx**.
 
-*Note: I never found a site that presented a 'big-picture' view of AI like ZiptieAI does. So I started out from scratch. ChatGPT was a great help with the details, but no for big-picture concepts (GPT simply regurgitates what it was programmed (trained) on). I reorganized this site (previously a wiki) many times, so the numbering is a bit chaotic. I will refactor the whole website (numbering) sometime in the future.*
+*Note: I never found a site that presented a 'big-picture' view of AI like ZiptieAI does. So I started out from scratch. ChatGPT was a great help with the details, but not for big-picture concepts (GPT simply regurgitates what it was programmed ("trained") on). I reorganized this site (previously a wiki) many times, so the numbering is a bit chaotic. I will refactor the whole website (numbering) sometime in the future.*
 
 <br>
 
@@ -54,7 +54,9 @@ I documented my AI drone activities in detail. My original plan was to build my 
 
 <br>
 
-#### **[Books (draft docx files I wrote about AI topics)](/4.0-books/)**
+#### **[Books](/4.0-books/)**
+
+Draft docx files I wrote about several AI topics.
 
 <br>
 
@@ -71,13 +73,13 @@ I documented my AI drone activities in detail. My original plan was to build my 
 
 <br>
 
-#### **Substack** 
-[ziptieai.substack.com](https://ziptieai.substack.com/) contains articles and essays about AI.<br>
+#### **[ziptieai.substack.com](https://ziptieai.substack.com/)** 
+Contains articles and essays about AI.<br>
 
 <br>
 
-#### **Youtube** 
-[youtube.com/@ziptieai](https://www.youtube.com/@ziptieai) contains video demos and overviews (most are outdated).
+#### **[youtube.com/@ziptieai](https://www.youtube.com/@ziptieai)** 
+Contains video demos and overviews (most are outdated).
 
 <br>
 
