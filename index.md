@@ -35,7 +35,7 @@ Top level pages *(see also the **[Wiki](https://github.com/terrytaylorbonn/auxdr
   - **[2 NNs](/2_models/)**. NNs (CNNs, TFs) are the core of AI "intelligence".
   - **[2b Models](/2b_models/)**. AI NNs are usually packaged into AI models that have an API. <!-- Fine-tuning, local models, deployment, RAG, and model serving. -->
   - **[3 Agents](/3_agents/)**. Agents provide reliable workflows that use models as helpful assistants.
-  - **[3b Projects](/3.3-ai-projects/)**. Real world AI project demos. <br><br>
+  - **[3b Projects](/3.3-ai-projects/) *(the end goal)***. Demonstrate how to use AI (chatbots) to rapidly understand unfamiliar systems and create AI solutions (agents, models, NNs) to real-world problems. Inspired by the practical use of zip ties on Ukrainian drones, **the focus is on solving new problems quickly and effectively** rather than pursuing perfect or overly complex solutions. <br><br>
 - Docs
   - **[4 Resources](/4_resources/)**. Google drive docx's, Github, Wiki.
   - [About](/about/).
