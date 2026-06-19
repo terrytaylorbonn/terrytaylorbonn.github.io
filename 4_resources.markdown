@@ -19,16 +19,12 @@ description: Last edit 26.0515
 
 But the most important are the 5 docx's listed below, organized by the sections of this website they cover. These are lab notes, not user docs. They contain my detailed notes while developing this site and demos.
 
-**\#609\_ZAI\_.docx**. General site docs and sections like **Mission**, **QS**, **Concepts*, **1 Drones**, **4 Resources**, and **About**.
-
-**\#607\_2\_NNs\_.docx**. Covers **2 NNS**.
-
-**\#608\_2b\_models\_.docx**. Covers **2b Models**.
-
-**\#603\_3\_agents\_.docx**. Covers **3 Agents**.
-
-**\#606\_3b\_projects\_.docx**. Covers **4 Projects**.
-
+- **\#609\_ZAI\_.docx**. General site docs and sections (Mission, QS, Concepts, 1 Drones, 4 Resources, and About).
+- **\#607\_2\_NNs\_.docx**. 
+- **\#608\_2b\_models\_.docx**. 
+- **\#603.1\_3\_agents\_.docx**. Part 1 (ms.word file limitation.. had to split file).
+- **\#603.2\_3\_agents\_.docx**. Part 2 (ms.word file limitation.. had to split file).
+- **\#606\_3b\_projects\_.docx**.
 
 <br>
 
