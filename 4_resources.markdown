@@ -30,13 +30,13 @@ But the most important are the 5 docx's listed below, organized by the sections 
 
 <br>
 
-### **Github** 
-[github.com/terrytaylorbonn](https://github.com/terrytaylorbonn) contains source code, demos, website repos.
+### **[github.com/terrytaylorbonn](https://github.com/terrytaylorbonn)** 
+Contains source code, demos, website repos.
 
 <br> 
 
-### **Wiki**
-[github.com/terrytaylorbonn/auxdrone/wiki](https://github.com/terrytaylorbonn/auxdrone/wiki) mirrors this website. The wiki has hundreds of pages of tech notes and project history.<br>
+### **[github.com/terrytaylorbonn/auxdrone/wiki](https://github.com/terrytaylorbonn/auxdrone/wiki)**
+My original doc platform was the wiki. I switched to this website in 2026. A lot of content on the wiki was not transferred to this site.<br>
 
 <br> 
 
