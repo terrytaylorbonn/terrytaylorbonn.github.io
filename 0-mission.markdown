@@ -7,7 +7,7 @@ permalink: /0-mission/
 <br>
 
 The **ZiptieAI mission** is to give you  
-- **0 A small sampling of how AI will change our world**
+- **0 One small example of how AI will change our world**
 - **1 Recognition of what works**
 - **2 And what doesnt work**
 - **3 Hands-on demos ([QS](/0-qs/))**
@@ -17,32 +17,30 @@ The **ZiptieAI mission** is to give you
 
 <br>
 
-## **0 A small sampling of how AI will change our world** 
+## **0 One small example of how AI will change our world** 
 
+
+Regardless of what happens with self-driving cars or humanoid robots, AI is already transforming knowledge work, software systems, and business workflows. One example of this is how AI will allow every transaction to simple be recorded "on the chain" (on the ledger) instead of being constrained to a DB. 
 
 *Visualization of a candidate Bitcoin block that is currently sitting in the mempool waiting to be mined (Bitcoin Ledger / Blocks / Transactions; Each rectangle is one transaction)* <br>
 <img src="/assets/M-27.png" alt="drones" width="43%">
 
 
-#### **A ledger is a simply a record of transactions** 
+#### **A ledger is a simply a record of transactions...** 
 
-Who paid what to whom. A bitcoin ledger simply adds very structured encryption information that makes it impossible to alter the contents of a ledger without any noticing. Bitcoin does not need AI to do this, because the data structure in the ledger is fixed. 
+(who paid what to whom). A Bitcoin ledger simply adds very structured encryption information that makes it impossible to alter the contents of the ledger without anyone noticing. Bitcoin does not need AI to do this, because the data structure in the ledger is fixed. 
 
-Such structured data forms the basis of many SaaS systems. You have a very stuctured UI that forces you to enter data as required. The data is verified before becoming part of the DB. This is similar to ontology in Palantir systems, which was essential before AI appeared. You could add complex text that does not realy fit into the ontology as reference material, but its too much effort or too complex to "force feed" it into the system.
+Structured data forms the basis of many SaaS systems (similar to ontology in Palantir systems). Valuable content that does not realy fit into the ontology has be laboriously modified (by humans or with human supervision) or added as attachments.
 
 #### **Now "imagine if you will..."**
 
-(an opening line attributed to Rod Serling's **[Twilight Zone](https://en.wikipedia.org/wiki/The_Twilight_Zone)** series) such a system, but with an AI helpful assistant. All of sudden, untold millions (billions?) of customers can take the messy input from real life business and have AI "force feed" it into the system. AI takes free form human language questions and reformulates to precise input for the legacy system. And takes the output and reformats into human language. 
+(an opening line attributed to Rod Serling's **[Twilight Zone](https://en.wikipedia.org/wiki/The_Twilight_Zone)** series) such a system, but with an AI helpful assistant. All of sudden, untold millions (billions?) of customers can take the messy cryptic (human language) input from real life business processes and have AI "force feed" it into the system.
 
-Or perhaps you simple redesign the whole system. Rather than struggling to make your data fit the system, the system can now process anything you can. Messy human language input, even screenshots and pixelated diagrams. Suddenly the ledger becomes the most important asset (you still have to mantain storage, security, backup, agents, models, etc). But the idea that the ledger becomes central is very powerful.
-
-Suddenly **all you have to maintain is the ledger**, the record of everything you ever did, all emails, all meeting notes etc. The ledger would be massive, but nowadays terabyte storage for home use is normal. The current size for the bitcoin ledger is 750GB (<1TB).
-
-Regardless of what happens with self-driving cars or humanoid robots, AI is already transforming knowledge work, software systems, and business workflows.
+Or imagine even further... a total redesign of the whole system. The DB no longer requires rigidly structured data, but something more like a ledger of messy human language (even photos, screenshots, voice, etc). The ledger stores everthing in the original format, and AI takes care of indexing and runtime analysis consumption. The ledger records everything you ever did, all emails, all meeting notes etc. The ledger would be massive, but nowadays terabyte storage for home use is normal (the current size for the bitcoin ledger is < 1 TB!).
 
 #### **The inspiration for this concept...**
 
-Came from this video on 26.0620 [AI 落地生死战：为什么 90% 的企业软件会被重写？](https://www.youtube.com/watch?v=DlDvYe96cNY). "The life-or-death battle for AI implementation: Why is 90% of enterprise software being rewritten?". Unfortunately there is no English audio or subtitles. But if you had the right AI assistant, thats no problem. If you have a ledger of data and its in multiple languages, no problem. No need to translate and store. Just translate on the fly.
+Came from the video [AI 落地生死战：为什么 90% 的企业软件会被重写？](https://www.youtube.com/watch?v=DlDvYe96cNY) (26.0620). **"The life-or-death battle for AI implementation: Why is 90% of enterprise software being rewritten?"**. Unfortunately there is no English audio or subtitles. But if you have the right AI assistant, thats no problem. Similarly, if you had a ledger of data in multiple languages, no problem. No need to translate and store. 
 
 <br>
 
@@ -51,6 +49,8 @@ Came from this video on 26.0620 [AI 落地生死战：为什么 90% 的企业软
 Recogition and acknowledgement of reality is the most important aspect of a successful AI application. 
 
 Palantir's initial projects were for military applications **without AI** (25 years ago). They were very successful. The applications were basically agentic apps (without AI). The apps were designed to help decision makers. Not to replace mankind. AI later became a very valuable helpful assistant. **Palantir's missions are perfect for AI-assisted agents. Benefits outweigh the negatives. Errors can be tolerated. And a human always makes the final decision**. Its no accident that Palantir is talking straight about many aspects of AI. **Engineers wont go away, their expertise is required in the AI age more than ever**. Palantir's business does **not demand the myth of AI intelligence**. Palantir says that **AI will not replace people, it will empower them**.
+
+https://www.zerohedge.com/military/only-beginning-how-profit-asymmetric-warfare-boom
 
 *A successful mission for AI* <br>
 <img src="/assets/ziptiedrone2.png" alt="drones" width="23%">
