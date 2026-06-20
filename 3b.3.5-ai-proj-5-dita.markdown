@@ -7,7 +7,14 @@ description: Last edit 26.0501
 
 [← 3b Projects](/3.3-ai-projects/)
 
-I have done this before (need to find the wiki page): Maintaining a DITA site but by using AI instead of the DITA tools. For this next demo, I'd like to do something clean.. conforms to DITA, but uses only AI. DITA was created when there was no other way to maintain text reuse that with complex DITA tools (its analogous to the UI's that required strict data entry so that the backend logic could handle the input).
+ For this next demo, I'd like to do something clean.. conforms to DITA, but uses only AI. DITA was created when there was no other way to maintain text reuse that with complex DITA tools (its analogous to the UI's that required strict data entry so that the backend logic could handle the input).
+
+I have done this before. See [Maintaining a DITA site but by using AI instead of the DITA tools](https://github.com/terrytaylorbonn/auxdrone/wiki/LLM-stacks-%5C-2-Demo-deployments#12-docx-436-ch12-simple-dita-ot-demo-created-from-scratch-using-only-cplt--deploy-to-render-250810-httpsfour36b-dita-ot-docs-wsonrendercom-).
+
+<img src="/assets/M-28.png" alt="drones" width="40%"> 
+
+
+<br>
 
 For details see 
 - Documentation: [#606\_ai_ides_.docx](https://drive.google.com/drive/folders/1-Adawag9uA8_bq-hDF-nOuPYaRLz1eEO)
@@ -21,7 +28,5 @@ xxxxxxxx<br>
 <img src="/assets/demo2_oauth.png" alt="drones" width="40%"> 
 
 -->
-
-<br>
 
 26.0620 (v1 26.0620)
