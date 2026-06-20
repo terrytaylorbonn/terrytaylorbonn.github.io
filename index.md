@@ -32,12 +32,12 @@ ZiptieAI.com was created in 2024 to document my work on Ukrainian style ziptie'd
 
 <br>
 
-*3b Project diagram (a central agent with UI/DB that connects AI to legacy systems)* <br>
+*3b Project diagram (a central agent (+UI/DB) that brings together AI and legacy systems)* <br>
 <img src="/assets/M-26.png" alt="drones" width="34%">
 
 <br>
 
-*3b Project diagram with AI internal details* <br>
+*3b Project diagram with AI details* <br>
 <img src="/assets/M-25.png" alt="drones" width="74%">
 
 <!--
