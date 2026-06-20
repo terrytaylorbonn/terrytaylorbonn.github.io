@@ -47,16 +47,10 @@ For details on each project demo see
 ### [**3b.1 Demo 1 n8n** (26.0501)](/3.3.1-ai-proj-1-n8n/)
 
 A basic test using Cursor with minimal manual coding. 
-
-- **1 Functional diagram** (below). 
   - Main system = n8n LOCAL for test data input.
   - 3b Project = Input data from n8n > gpt-40-mini LOCAL > mongoDB > index.html (UI).
   - 3 External agent = cursor_11_llm_canonical.py
-  - 2b Model = gpt-40-mini LOCAL. <br>
-  <img src="/assets/M-15-3b.1.png" alt="drones" width="40%">
-
-- **2 Ecosystem diagram** (below) (system integration diagram) <br>
-  <img src="/assets/cursor_demo1_00.png" alt="drones" width="44%"> 
+  - 2b Model = gpt-40-mini LOCAL. 
 
 <br>
 

@@ -7,8 +7,25 @@ description: Last edit 26.0524
 
 [← 3b Projects](/3.3-ai-projects/)
 
-*Complete project ecosystem*<br>
-<img src="/assets/6_main_diagram.png" alt="drones" width="40%"> 
+<br>
+
+A basic test using Cursor with minimal manual coding.
+
+- **1 Functional diagram** (below). 
+  - Main system = n8n LOCAL for test data input.
+  - 3b Project = Input data from n8n > gpt-40-mini LOCAL > mongoDB > index.html (UI).
+  - 3 External agent = cursor_11_llm_canonical.py
+  - 2b Model = gpt-40-mini LOCAL. <br>
+  <img src="/assets/M-15-3b.1.png" alt="drones" width="40%">
+
+- **2 Ecosystem diagram** (below) (system integration diagram) <br>
+  <img src="/assets/cursor_demo1_00.png" alt="drones" width="44%"> 
+
+
+<!-- *Complete project ecosystem*<br>
+<img src="/assets/6_main_diagram.png" alt="drones" width="40%">  -->
+
+<br>
 
 For details see 
 - Documentation: [#606\_ai_ides_.docx](https://drive.google.com/drive/folders/1-Adawag9uA8_bq-hDF-nOuPYaRLz1eEO)
@@ -16,9 +33,11 @@ For details see
 
 <br>
 
-## Demo 1 Cursor / gpt-40-mini / MongoDB / n8n / index.html (26.0501)
+<!-- ## Demo 1 Cursor / gpt-40-mini / MongoDB / n8n / index.html (26.0501)
 
-<img src="/assets/cursor_demo1_00.png" alt="drones" width="50%"> 
+<img src="/assets/cursor_demo1_00.png" alt="drones" width="50%">  -->
+
+### **Overview**
 
 Bearer token for basic security.
 
@@ -40,4 +59,4 @@ DB contents.
 
 <br> 
 
-26.0524
+26.0620 (0524)
