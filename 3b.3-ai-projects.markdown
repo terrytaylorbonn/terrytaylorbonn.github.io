@@ -66,7 +66,7 @@ A basic test using Cursor with minimal manual coding.
 
 Ingests data from different sources and uses LLM to find matching data and summarize. The results are then sent by email, google docs, etc. Runs locally and on Cursor. Spun up in 4 days. **I did not even look at the code (not necessary). This is probably how such apps will be done in the future.**
 
-<img src="/assets/demo2_oauth.png" alt="drones" width="38%"> 
+<!-- <img src="/assets/demo2_oauth.png" alt="drones" width="38%">  -->
 
 <br>
 
