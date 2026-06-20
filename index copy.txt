@@ -11,38 +11,39 @@ Primary site content is a **[quick start](/0-qs/)** + hands-on **[demos](/0b-dem
 
 <br>
 
-ZiptieAI.com was created in 2024 to document my work on Ukrainian style ziptie'd AI drones. The site now focuses on AI *(see also the **[Wiki](https://github.com/terrytaylorbonn/auxdrone/wiki)** and other links in the footer)*.
+ZiptieAI.com was created in 2024 originally to document my work on Ukrainian style ziptie'd AI drones. The site now focuses on AI. It is now not only a tool to organize my thoughts and work, but also to help others learn AI hands-on ASAP. *Note: The page and section numbering (such as "2b Models", "3b Projects") will be fixed in the future. Not changing section numbering (often) avoids a lot of confusion.* 
 
 <br>
 
-### **First steps**
+ZiptieAI takes you methodically through the entire AI stack. The final goal is to create real world projects **([3b Projects](/3.3-ai-projects/))**.<br>
+
+<img src="/assets/M-15.png" alt="drones" width="74%">
+
+
+
+<br>
+
+Top level pages *(see also the **[Wiki](https://github.com/terrytaylorbonn/auxdrone/wiki)** and other links in the footer)*.  
+
+- Intro
   - **[Mission](/0-mission/)**. ZiptieAI gives you what you need learn AI hands-on ASAP. 
   - **[QS](/0-qs/)**. Hands-on tour of low-level core AI functionality.
   - **[Concepts](/0b-demos/)**. Core concepts learned form the QS.<br><br>
-
-### **Where it all began**
+- Where it all began
   - [1 Drones](/1-drones/). ZiptieAI started out as a site about AI drones. <br><br>
-
-### **Core demos** *(see diagrams below)*
+- Demos
   - **[2 NNs](/2_models/)**. NNs (CNNs, TFs) are the core of AI "intelligence".
   - **[2b Models](/2b_models/)**. AI NNs are usually packaged into AI models that have an API. <!-- Fine-tuning, local models, deployment, RAG, and model serving. -->
   - **[3 Agents](/3_agents/)**. Agents provide reliable workflows that use models as helpful assistants.
-  - **[3b Projects](/3.3-ai-projects/) *(the end goal)***. **Spinning up AI solutions (agents, models, NNs) to real-world problems**.
-  - **[4 Resources](/4_resources/)**. Detailed (docx) lab notes, Github, Wiki.
+  - **[3b Projects](/3.3-ai-projects/) *(the end goal)***. Demonstrate how to use AI (chatbots) to rapidly understand unfamiliar systems and create AI solutions (agents, models, NNs) to real-world problems. Inspired by the practical use of zip ties on Ukrainian drones (*see the pic below*), **the focus is on solving new problems quickly and effectively**. <br><br>
+- Docs
+  - **[4 Resources](/4_resources/)**. Google drive docx's, Github, Wiki.
+  - [About](/about/).
 
 <br>
 
-*3b Project diagram (a central agent with UI/DB that connects AI to legacy systems)* <br>
-<img src="/assets/M-26.png" alt="drones" width="34%">
-
-<br>
-
-*3b Project diagram with AI internal details* <br>
-<img src="/assets/M-25.png" alt="drones" width="74%">
-
-<!--
 *Successful (left) and failed (right) AI deployments* <br>
-<img src="/assets/ziptiedrone2.png" alt="drones" width="26%"> <img src="/assets/waymo.png" alt="drones" width="29%"> -->
+<img src="/assets/ziptiedrone2.png" alt="drones" width="26%"> <img src="/assets/waymo.png" alt="drones" width="29%"> 
 
 
 <!-- (*see [2.3.1 The gist of LLMs](/2.3.1-llm-gist/)*) -->
