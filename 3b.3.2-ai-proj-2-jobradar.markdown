@@ -43,4 +43,73 @@ Cursor generated.
 
 <br>
 
-26.0515
+## 26.020 chat
+
+```text2
+i have no security clearance. and they often dont state at the beginning of a job ad that it requires. what would really be nice is if an AI app could 
+1) read email (already) 
+2) open the link (i think a bot could do this) 
+3) search for keywords like "TS", "poly", "SCI", "clearance", etc.
+4) not try to auto apply for a job, but give me a clean list with (summary) and URL 
+5) interesting idea... could this be the data for the ledger? 
+
+
+Yes — that is a very good JobRadar use case.
+It becomes:
+•	Job email
+  ↓
+Open job link
+  ↓
+Extract job ad text
+  ↓
+Detect clearance blockers
+  ↓
+Summarize
+  ↓
+Store in ledger
+  ↓
+Clean report
+The app should not auto-apply. It should act as a filter/analyst.
+Clearance keywords:
+•	clearance
+security clearance
+active clearance
+TS
+Top Secret
+SCI
+TS/SCI
+polygraph
+CI poly
+full-scope poly
+FS poly
+Secret
+DoD
+IC
+Output could be:
+•	Job: AI Product Manager
+URL: ...
+Clearance status: likely required
+Evidence: "active TS/SCI with polygraph required"
+Recommendation: skip
+And yes — this is a great ledger example.
+Each job becomes an append-only ledger entry:
+•	Entry 001: email received with job link
+Entry 002: page fetched
+Entry 003: clearance analysis
+Entry 004: user decision: skip / maybe / apply
+Then AI can generate the current view:
+•	Jobs worth applying to:
+- ...
+Jobs skipped because clearance required:
+- ...
+Jobs needing manual review:
+- ...
+This is probably more useful than the Nmap demo because it directly solves one of your real problems. 
+
+It also fits 3b perfectly: Gmail + web link + AI + ledger + clean output.
+```
+
+
+<br> 
+
+26.0620 (0515)

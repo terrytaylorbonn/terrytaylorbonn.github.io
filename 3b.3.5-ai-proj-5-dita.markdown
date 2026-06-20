@@ -1,0 +1,29 @@
+---
+layout: page
+title: "3b.3.5 AI project 5 DITA w/o DITA"
+permalink: /3b.3.5-ai-proj-5-dita/
+description: Last edit 26.0501
+---
+
+[← 3b Projects](/3.3-ai-projects/)
+
+I have done this before (need to find the wiki page): Maintaining a DITA site but by using AI instead of the DITA tools. For this next demo, I'd like to do something clean.. conforms to DITA, but uses only AI.
+
+DITA was created when there was no other way to maintain text reuse that with complex DITA tools (its analogous to the UI's that required strict data entry so that the backend logic could handle the input).
+
+For details see 
+- Documentation: [#606\_ai_ides_.docx](https://drive.google.com/drive/folders/1-Adawag9uA8_bq-hDF-nOuPYaRLz1eEO)
+- Repo [602-2_D1-tool-LLM](https://github.com/terrytaylorbonn/602-2_D1-tool-LLM)
+
+<br>
+
+<!-- ## Demo 2 jobradar_unified.py (what it does so far 26.0506)
+xxxxxxxx<br>
+
+<img src="/assets/demo2_oauth.png" alt="drones" width="40%"> 
+
+-->
+
+<br>
+
+26.0620 (v1 26.0620)

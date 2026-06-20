@@ -1,0 +1,46 @@
+---
+layout: page
+title: "3b.3.3 AI project NMAP"
+permalink: /3b.3.3-ai-proj-3-nmap/
+description: Last edit 26.0501
+---
+
+[← 3b Projects](/3.3-ai-projects/)
+
+
+This project began as a simple Nmap demo: scan localhost, parse the XML output, and post a summary to Mattermost. The long-term goal is to build a controlled local AI assistant for learning PC security and maintenance. The assistant will inspect only approved local targets, explain findings in plain English, track results in an append-only ledger, and help the user understand problems such as open ports, unused services, unused apps, and low disk space.
+
+A major point of this demo is that the human developer (myself) was not already an expert in Nmap, Mattermost, or security tooling. GPT/Codex was used as the primary development partner to install tools, write small scripts, connect systems, and explain each result. The demo shows how AI can help a non-expert rapidly build useful proof-of-concept software around unfamiliar systems.
+
+The Nmap demo can grow slowly into: 
+PC Security / Maintenance Assistant — a tightly controlled local AI app that helps inspect my own computer, explain open ports and services, identify unused apps, warn about low disk space, and keep a ledger of system changes.
+The key is tightly controlled:
+- allowed actions:
+  - scan localhost
+  - read safe system info
+  - parse outputs
+  - summarize findings
+  - write ledger entries
+  - suggest next checks
+- not allowed:
+  - exploit
+  - attack
+  - change system settings automatically
+  - delete files automatically
+
+For details see 
+- Documentation: [#606\_ai_ides_.docx](https://drive.google.com/drive/folders/1-Adawag9uA8_bq-hDF-nOuPYaRLz1eEO)
+- Repo [602-2_D1-tool-LLM](https://github.com/terrytaylorbonn/602-2_D1-tool-LLM)
+
+
+
+<!-- ## Demo 2 jobradar_unified.py (what it does so far 26.0506)
+xxxxxxxx<br>
+
+<img src="/assets/demo2_oauth.png" alt="drones" width="40%"> 
+
+-->
+
+<br>
+
+26.0620 (v1 26.0620)

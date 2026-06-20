@@ -9,24 +9,23 @@ description: Last edit 26.0618
 
 <br>
 
-This section is the **end goal for ZiptieAI.com**. The focus is on "spinning up" **real-world demo projects** quickly with minimal code analysis or manual coding. **The goal is not to master one type of system, but to demonstrate the ability to apply AI effectively across many different systems**, workflows, and business environments.
+This section is the **end goal for ZiptieAI.com**. The focus is on "spinning up" **real-world demo projects** quickly with minimal code analysis or manual coding. **The goal is not to master one type of system, but to demonstrate the ability to apply AI effectively across many different systems**, workflows, and business environments. Each demo will have a version of the following 2 main diagrams:
+
 <br>
 
-- **1 Functional diagram** (below). This diagram will describe
+- **1 Project diagram** (below) (system integration diagram). This diagram will focus more on how all the components are interconnected, where they are located, etc.
+<br>
+<img src="/assets/M-26.png" alt="drones" width="37%">
+
+<br>
+
+- **2 Project diagram with AI details** (below). This diagram will describe
   - **Main system** (an existing ERP, etc system). Why it requires AI, etc.
   - **3b Project** description (goals, etc)
   - **3 External agent** functionality. Deployment details (for demo and release versions).
   - **2b Model** type (openAI, Gemma, etc) and location (remote, local WSL2, etc). Will it be fine-tuned, etc.
   - If the model is custom made then **2 NN/CNN/TF**. The internal design of the NN. Deployment, training data set, HW, etc details. <br>
-  <img src="/assets/M-15-3b.png" alt="drones" width="80%">
-
-<br>
-
-- **2 Ecosystem diagram** (below) (system integration diagram). This diagram will focus more on how all the components are interconnected, where they are located, etc.
-  - Generic version<br>
-  <img src="/assets/6_main_diagram.png" alt="drones" width="37%"> <br>
-  - Specific demo version (something like this) <br>
-  <img src="/assets/M-23.png" alt="drones" width="41%"> 
+<img src="/assets/M-25.png" alt="drones" width="80%">
 
 <br>
 
@@ -36,17 +35,18 @@ For details on each project demo see
 
 <br>
 
-#### **TOC** *(both of the current projects were done in early May and need an update)*
-- **3b.1 Demo 1 n8n** (26.0501)
+#### **TOC**
+- **3b.1 Demo 1 n8n** (26.0501) (needs update)
 - **3b.2 AI project 2 JobRadar** (what it does so far 26.0506)
+- **3b.3.3 AI project NMAP** (WIP)
+- **3b.3.4 AI project Ledger** (TODO)
+- **3b.3.5 AI project 5 DITA w/o DITA** (TODO)
 
 <br>
 
 ### [**3b.1 Demo 1 n8n** (26.0501)](/3.3.1-ai-proj-1-n8n/)
 
 A basic test using Cursor with minimal manual coding. 
-
-<br>
 
 - **1 Functional diagram** (below). 
   - Main system = n8n LOCAL for test data input.
@@ -55,8 +55,6 @@ A basic test using Cursor with minimal manual coding.
   - 2b Model = gpt-40-mini LOCAL. <br>
   <img src="/assets/M-15-3b.1.png" alt="drones" width="40%">
 
-<br>
-
 - **2 Ecosystem diagram** (below) (system integration diagram) <br>
   <img src="/assets/cursor_demo1_00.png" alt="drones" width="44%"> 
 
@@ -64,36 +62,52 @@ A basic test using Cursor with minimal manual coding.
 
 ### [**3b.2 AI project 2 JobRadar** (what it does so far 26.0506)](/3.3.2-ai-proj-2-jobradar/)
 
-#### ***I will create 1/2 functional/ecosystem diagrams in future (after app design stabilizes)***
+*I will create 1/2 functional/ecosystem diagrams in future (after app design stabilizes)*
 
 Ingests data from different sources and uses LLM to find matching data and summarize. The results are then sent by email, google docs, etc. Runs locally and on Cursor. Spun up in 4 days. **I did not even look at the code (not necessary). This is probably how such apps will be done in the future.**
-
-Single app that combines:
-1. Ingest — **Pulls jobs from Greenhouse** (configured companies), normalizes and dedupes into **MongoDB**, optional **LLM scoring** (OpenAI primary, Anthropic fallback) with a simple cost tracker.
-2. **Gmail path (CLI)** — With GMAIL_* set, the same script run ingests LinkedIn-style job alerts from a Gmail label over IMAP, parses, dedupes, scores, and writes into the same jobs collection.
-3. API (uvicorn jobradar_unified:app) — **FastAPI with Google OAuth** (session + email allowlist) protecting job routes. Exposes health, jobs (list/detail), status updates, summary, /login / /me / /logout.
-4. **Digest** (Step 7) — GET /digest/preview builds the digest text without sending. POST /digest/send emails it (SMTP to Gmail by default, or Resend via DIGEST_SENDER=resend — S7e).
-5. **Google Doc digest** (Step 7f) — POST /digest/google-doc creates a new, timestamp-titled Google Doc in Drive with the same digest body, using OAuth tokens with Docs + drive; file scopes; optional DIGEST_DRIVE_FOLDER_ID and title prefix. Config is env-driven (Mongo, LLM keys, Gmail, digest, Resend, Drive folder, Google OAuth secrets, etc.).
 
 <img src="/assets/demo2_oauth.png" alt="drones" width="38%"> 
 
 <br>
 
-### Mattermost, Odoo, nmap
+### [**3b.3.3 AI project NMAP** (WIP)](/3b.3.3-ai-proj-3-nmap/)
 
-<!--
+This project began as a simple Nmap demo: scan localhost, parse the XML output, and post a summary to Mattermost. The long-term goal is to build a controlled local AI assistant for learning PC security and maintenance. The assistant will inspect only approved local targets, explain findings in plain English, track results in an append-only ledger, and help the user understand problems such as open ports, unused services, unused apps, and low disk space.
+
+<br>
+
+### [**3b.3.4 AI project Ledger** (TODO)](/3b.3.4-ai-proj-4-ledger/)
+
+Stores messy human text in an append-only encrypted ledger, then uses AI to search, summarize, and generate new entries without requiring a rigid database schema.
+
+The ledger stays immutable:
+- Entry 001: original note
+- Entry 002: correction to Entry 001
+- Entry 003: update to Entry 001
+
+Then the AI/agent produces the current “view”:
+- current version = Entry 001 + Entry 002 + Entry 003
+
+So nothing is edited in place. The system only appends.
+
+<br>
+
+### [**3b.3.5 AI project 5 DITA w/o DITA** (TODO)](/3b.3.5-ai-proj-5-dita/)
+
+I have done this before (need to find the wiki page): Maintaining a DITA site but by using AI instead of the DITA tools. For this next demo, I'd like to do something clean.. conforms to DITA, but uses only AI. DITA was created when there was no other way to maintain text reuse that with complex DITA tools (its analogous to the UI's that required strict data entry so that the backend logic could handle the input).
+
+
+<!-- $$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$
 3b.1 Nmap Security Assistant
 3b.2 DITA Documentation Assistant
 3b.3 Mattermost Chat Assistant
 3b.4 Odoo ERP Assistant
 3b.5 Data Conversion Assistant
--->
+$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$ --> 
 
 <br>
 
-
-
-26.0619 (0524)
+26.0620 (0524)
 
 <!-- Bearer token for basic security.
 <img src="/assets/cursor_demo1_01.png" alt="drones" width="50%"> 
