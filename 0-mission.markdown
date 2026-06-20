@@ -63,7 +63,7 @@ Falling for AI hype (as a product dev or consumer) will cost you dearly. **"No m
 
 If AI was truly intelligent then AI integration would just be connecting AI and letting it rip. **But AI is not intelligent. AI is based 100% on deterministic binary algorithms that compute statistical probabilities. AI is an addon, a helpful assistant.** The most reliable AI systems use the smallest AI component that can provide the required functionality.
 
-**AI is a security risk**. The core NN in AI has what are often referred to as "hidden layers" that perform the massive brute-force number crunching to generate "intelligent" output. **It's impossible (even for AI) to determine how a NN has been programmed by analyzing the parameter settings in these layers**.
+<!-- **AI is a security risk**. The core NN in AI has what are often referred to as "hidden layers" that perform the massive brute-force number crunching to generate "intelligent" output. **It's impossible (even for AI) to determine how a NN has been programmed by analyzing the parameter settings in these layers**. -->
 
 *An unsuccessful mission for AI*<br>
 <img src="/assets/waymo.png" alt="drones" width="26%"> 
