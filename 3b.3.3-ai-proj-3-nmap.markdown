@@ -10,6 +10,8 @@ description: Last edit 26.0501
 
 This project began as a simple Nmap demo: scan localhost, parse the XML output, and post a summary to Mattermost. The long-term goal is to build a controlled local AI assistant for learning PC security and maintenance. The assistant will inspect only approved local targets, explain findings in plain English, track results in an append-only ledger, and help the user understand problems such as open ports, unused services, unused apps, and low disk space.
 
+<img src="/assets/M-29.png" alt="drones" width="40%"> 
+
 A major point of this demo is that the human developer (myself) was not already an expert in Nmap, Mattermost, or security tooling. GPT/Codex was used as the primary development partner to install tools, write small scripts, connect systems, and explain each result. The demo shows how AI can help a non-expert rapidly build useful proof-of-concept software around unfamiliar systems.
 
 The Nmap demo can grow slowly into: 
