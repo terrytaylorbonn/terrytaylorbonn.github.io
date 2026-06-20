@@ -29,10 +29,6 @@ Note:
 
 <br>
 
-## **Part 1: Code-first agents**
-
-<br>
-
 ### **[3.0 (3.2.1) Concepts](/3.2.1-ai-agent-intro/)**
 
 <br>
@@ -56,6 +52,12 @@ n8n demos focus on workflow automation and orchestration. Starting with cloud an
 The n8n demos focus on workflow automation, Gmail integration, and orchestration. The later demos progressively replace n8n components with custom Python and PAL code to better understand the underlying architecture. 
 <br> -->
 
+
+
+
+## **Part 1: Code-first agents**
+
+<br>
 
 ### **[3.3 (3.1) Agent PAL_core demos (docx \#603)](/3.1-agentic/)**
 
