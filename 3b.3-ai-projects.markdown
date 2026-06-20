@@ -79,7 +79,21 @@ Single app that combines:
 
 <br>
 
-26.0618 (0524)
+### Mattermost, Odoo, nmap
+
+<!--
+3b.1 Nmap Security Assistant
+3b.2 DITA Documentation Assistant
+3b.3 Mattermost Chat Assistant
+3b.4 Odoo ERP Assistant
+3b.5 Data Conversion Assistant
+-->
+
+<br>
+
+
+
+26.0619 (0524)
 
 <!-- Bearer token for basic security.
 <img src="/assets/cursor_demo1_01.png" alt="drones" width="50%"> 

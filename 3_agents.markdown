@@ -37,26 +37,25 @@ Note:
 
 <br>
 
-### **[3.1 n8n demos (docx \#603)](/3.1-agentic-n8n/)**
+<!--  ### **[3.1 n8n demos (docx \#603)](/3.1-agentic-n8n/)**
 
-<!-- Demo with n8n as the input
+Demo with n8n as the input
 **1) n8n local**
 - N1 cloud n8n / TTBO gmail 26.0408 (BINGO)	
 - N2 n8n_local install / test (json) 26.0409 (BINGO)
 - N3 n8n_local (ttbo) / Gmail (jk) read many (set'd up GCP_jk) (BINGO)
 - N4 py script replaces n8n app (Win11/jk) (BINGO)
 - N5 py script adds PAL (BINGO) 26.0409
-- NX TODO	
--->
+- NX TODO
 
 n8n demos focus on workflow automation and orchestration. Starting with cloud and local n8n installations, the demos connect to Gmail, process real data, and progressively replace no-code workflows with custom Python and PAL components. The goal is to understand what parts of an AI workflow require automation tools and which parts can be implemented directly in code.
 
 
-<!-- Or even shorter:
+ Or even shorter:
 
-The n8n demos focus on workflow automation, Gmail integration, and orchestration. The later demos progressively replace n8n components with custom Python and PAL code to better understand the underlying architecture. -->
+The n8n demos focus on workflow automation, Gmail integration, and orchestration. The later demos progressively replace n8n components with custom Python and PAL code to better understand the underlying architecture. 
+<br> -->
 
-<br>
 
 ### **[3.3 (3.1) Agent PAL_core demos (docx \#603)](/3.1-agentic/)**
 
@@ -173,6 +172,15 @@ Very basic demos that show how **deterministic agents use TF/UFA semantic capabi
 
 <br>
 
+
+### **3.5 OpenAI Agents SDK**
+
+
+### **3.6 Pydantic AI**
+
+
+<br>
+
 ## **Part 2: Agent frameworks**
 
 <br>
@@ -200,16 +208,16 @@ The n8n demos focus on workflow automation, Gmail integration, and orchestration
 <br>
 
 
-### **3.2 LangChain**
+### **3.7 LangChain**
 
 
-### **3.3 LangGraph**
+### **3.8 LangGraph**
 
 
-### **3.3 CrewAI**
+### **3.9 CrewAI**
 
 
-### **3.2 AutoGen**
+### **3.10 AutoGen**
 
 <br>
 
