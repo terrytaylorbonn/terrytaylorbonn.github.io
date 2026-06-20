@@ -3,12 +3,6 @@ layout: home
 title: Home
 ---
 
-<!-- <br>
-
-The **[Mission](/0-mission/)** page describes the "mission" of this site. 
-
-Primary site content is a **[quick start](/0-qs/)** + hands-on **[demos](/0b-demos/)** for **[NNs](/2_models/)**, **[models](/2b_models/)**, and **[agents](/3_agents/)**.  -->
-
 <br>
 
 ZiptieAI.com was created in 2024 to document my work on Ukrainian style ziptie'd AI drones. The site now focuses on AI *(see also the **[Wiki](https://github.com/terrytaylorbonn/auxdrone/wiki)** and other links in the footer)*.
@@ -39,6 +33,13 @@ ZiptieAI.com was created in 2024 to document my work on Ukrainian style ziptie'd
 
 *3b Project diagram with AI details* <br>
 <img src="/assets/M-25.png" alt="drones" width="80%">
+
+<!-- <br>
+
+The **[Mission](/0-mission/)** page describes the "mission" of this site. 
+
+Primary site content is a **[quick start](/0-qs/)** + hands-on **[demos](/0b-demos/)** for **[NNs](/2_models/)**, **[models](/2b_models/)**, and **[agents](/3_agents/)**.  -->
+
 
 <!--
 *Successful (left) and failed (right) AI deployments* <br>

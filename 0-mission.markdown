@@ -7,12 +7,42 @@ permalink: /0-mission/
 <br>
 
 The **ZiptieAI mission** is to give you  
+- **0 A small sampling of how AI will change our world**
 - **1 Recognition of what works**
 - **2 And what doesnt work**
 - **3 Hands-on demos ([QS](/0-qs/))**
 - **4 Intrinsic understanding of core [concepts](/0b-demos/)**
 - **5 Deep dive ([NNs](/2_models/), [Models](/2b_models/), [Agents](/3_agents/), [Projects](/3.3-ai-projects/))**
 - **6 Anticipation of the future**
+
+<br>
+
+## **0 A small sampling of how AI will change our world** 
+
+
+*Visualization of a candidate Bitcoin block that is currently sitting in the mempool waiting to be mined (Bitcoin Ledger / Blocks / Transactions; Each rectangle is one transaction)* <br>
+<img src="/assets/M-27.png" alt="drones" width="43%">
+
+
+#### **A ledger is a simply a record of transactions** 
+
+Who paid what to whom. A bitcoin ledger simply adds very structured encryption information that makes it impossible to alter the contents of a ledger without any noticing. Bitcoin does not need AI to do this, because the data structure in the ledger is fixed. 
+
+Such structured data forms the basis of many SaaS systems. You have a very stuctured UI that forces you to enter data as required. The data is verified before becoming part of the DB. This is similar to ontology in Palantir systems, which was essential before AI appeared. You could add complex text that does not realy fit into the ontology as reference material, but its too much effort or too complex to "force feed" it into the system.
+
+#### **Now "imagine if you will..."**
+
+(an opening line attributed to Rod Serling's **[Twilight Zone](https://en.wikipedia.org/wiki/The_Twilight_Zone)** series) such a system, but with an AI helpful assistant. All of sudden, untold millions (billions?) of customers can take the messy input from real life business and have AI "force feed" it into the system. AI takes free form human language questions and reformulates to precise input for the legacy system. And takes the output and reformats into human language. 
+
+Or perhaps you simple redesign the whole system. Rather than struggling to make your data fit the system, the system can now process anything you can. Messy human language input, even screenshots and pixelated diagrams. Suddenly the ledger becomes the most important asset (you still have to mantain storage, security, backup, agents, models, etc). But the idea that the ledger becomes central is very powerful.
+
+Suddenly **all you have to maintain is the ledger**, the record of everything you ever did, all emails, all meeting notes etc. The ledger would be massive, but nowadays terabyte storage for home use is normal. The current size for the bitcoin ledger is 750GB (<1TB).
+
+Regardless of what happens with self-driving cars or humanoid robots, AI is already transforming knowledge work, software systems, and business workflows.
+
+#### **The inspiration for this concept...**
+
+Came from this video on 26.0620 [AI 落地生死战：为什么 90% 的企业软件会被重写？](https://www.youtube.com/watch?v=DlDvYe96cNY). "The life-or-death battle for AI implementation: Why is 90% of enterprise software being rewritten?". Unfortunately there is no English audio or subtitles. But if you had the right AI assistant, thats no problem. If you have a ledger of data and its in multiple languages, no problem. No need to translate and store. Just translate on the fly.
 
 <br>
 
