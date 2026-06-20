@@ -40,7 +40,7 @@ Or imagine even further... a total redesign of the whole system. The DB no longe
 
 #### **The inspiration for this concept...**
 
-Came from the video [AI 落地生死战：为什么 90% 的企业软件会被重写？](https://www.youtube.com/watch?v=DlDvYe96cNY) (26.0620). **"The life-or-death battle for AI implementation: Why is 90% of enterprise software being rewritten?"**. Unfortunately there is no English audio or subtitles. But if you have the right AI assistant, thats no problem. Similarly, if you had a ledger of data in multiple languages, no problem. No need to translate and store. 
+Came from the video [AI 落地生死战：为什么 90% 的企业软件会被重写？](https://www.youtube.com/watch?v=DlDvYe96cNY) (26.0620). **"The life-or-death battle for AI implementation: Why is 90% of enterprise software being rewritten?"**. Unfortunately there is no English audio or subtitles. But if you have the right AI assistant (translator), thats no problem (for multilingual ledgers also). 
 
 <br>
 
