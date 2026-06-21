@@ -29,7 +29,8 @@ Building successful AI applications requires a basic understanding of AI.
 
 Palantir's initial projects were for military applications **without AI** (25 years ago). They were very successful. The applications were basically agentic apps (without AI). The apps were designed to help decision makers. Not to replace mankind. AI later became a very valuable helpful assistant. **Palantir's missions are perfect for AI-assisted agents. Benefits outweigh the negatives. Errors can be tolerated. And a human always makes the final decision**. Its no accident that Palantir talks straight about many aspects of AI. **Engineers wont go away, their expertise is required in the AI age more than ever**. Palantir's business does **not demand the myth of AI intelligence**. Palantir says that **AI will not replace people, it will empower them**.
 
-*"...AI software will be as important as hardware, with platforms such as Palantir's Maven Smart System poised to turn massive drone sensor feeds into highly usable battlefield intelligence". [Zerohedge 26.0620](https://www.zerohedge.com/military/only-beginning-how-profit-asymmetric-warfare-boom)*.
+<!-- 
+*"...AI software will be as important as hardware, with platforms such as Palantir's Maven Smart System poised to turn massive drone sensor feeds into highly usable battlefield intelligence". [Zerohedge 26.0620](https://www.zerohedge.com/military/only-beginning-how-profit-asymmetric-warfare-boom)*. -->
 
 *A successful mission for AI* <br>
 <img src="/assets/ziptiedrone2.png" alt="drones" width="23%">
