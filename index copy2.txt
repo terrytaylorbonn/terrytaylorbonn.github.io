@@ -5,29 +5,32 @@ title: Home
 
 <br>
 
-ZiptieAI.com was created in 2024 to document my work on Ukrainian style ziptie'd [AI Drones](/1-drones/). The ZiptieAI **[mission](/0-mission/)** is now to provide
-- **The truth about AI**
-- **Core AI**
-  - **[Quick start (QS) demos](/0-qs/)**. Hands-on tour of low-level core AI functionality.
-  - **[Concepts](/0b-demos/)**. Core concepts learned form the QS.
-- **AI deep dive** *(see diagrams below)*
+ZiptieAI.com was created in 2024 to document my work on Ukrainian style ziptie'd [AI Drones](/1-drones/). 
+
+The **[mission](/0-mission/)** is now to provide
+- The facts about AI
+- Core AI demos and concepts
+- AI deep dive
+### **Core demos** *(see diagrams below)*
   - **[2 NNs](/2_models/)**. NNs (CNNs, TFs) are the core of AI "intelligence".
   - **[2b Models](/2b_models/)**. AI NNs are usually packaged into AI models that have an API. <!-- Fine-tuning, local models, deployment, RAG, and model serving. -->
   - **[3 Agents](/3_agents/)**. Agents provide reliable workflows that use models as helpful assistants.
-  - **[3b Projects](/3.3-ai-projects/) *(the end goal)***. Spinning up AI solutions (agents, models, NNs) to real-world problems.
+  - **[3b Projects](/3.3-ai-projects/) *(the end goal)***. **Spinning up AI solutions (agents, models, NNs) to real-world problems**.
   - **[4 Resources](/4_resources/)**. Detailed (docx) lab notes, Github, Wiki.
-- **Anticipation of the AI future** 
 
-<!--<br>
+
+- Anticipation of the future 
+
+<br>
 
 
 
 ### **Basics**
+  - **[Core AI demo (QS)](/0-qs/)**. Hands-on tour of low-level core AI functionality.
+  - **[Core AI concepts](/0b-demos/)**. Core concepts learned form the QS.<br><br>
 
- ### **Where it all began**
+<!-- ### **Where it all began**
   - [1 Drones](/1-drones/). ZiptieAI started out as a site about AI drones. <br><br> -->
-
-See also the **[Wiki](https://github.com/terrytaylorbonn/auxdrone/wiki)** and other links in the footer.
 
 
 <br>
@@ -42,6 +45,7 @@ See also the **[Wiki](https://github.com/terrytaylorbonn/auxdrone/wiki)** and ot
 
 <br>
 
+See also the **[Wiki](https://github.com/terrytaylorbonn/auxdrone/wiki)** and other links in the footer.
 
 
 <!-- <br>
