@@ -8,7 +8,7 @@ permalink: /0-mission/
 
 <!-- *Page reorganized 26.0621 .... still WIP....* -->
 
-The **ZiptieAI mission** is to give you  
+The **ZiptieAI mission** is to give you a
 
 - 1 Basic understanding of AI
 - 2 Deeper understanding of AI (code)
