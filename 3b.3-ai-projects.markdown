@@ -34,15 +34,15 @@ For details on each project demo see
 <br>
 
 #### **TOC**
-- **3b.1 n8n** (26.0501) (needs update)
-- **3b.2 JobRadar** (what it does so far 26.0506)
+- **3b.3.1 n8n** (26.0501) (needs update)
+- **3b.3.2 JobRadar** (what it does so far 26.0506)
 - **3b.3.3 NMAP** (WIP)
 - **3b.3.4 Ledger** (TODO)
 - **3b.3.5 DITA w/o DITA** (TODO)
 
 <br>
 
-### [**3b.1 n8n** (26.0501)](/3.3.1-ai-proj-1-n8n/)
+### [**3b.3.1 n8n** (26.0501)](/3b.3.1-ai-proj-1-n8n/)
 
 A basic test using Cursor with minimal manual coding. 
   - Main system = n8n LOCAL for test data input.
@@ -52,7 +52,7 @@ A basic test using Cursor with minimal manual coding.
 
 <br>
 
-### [**3b.2 JobRadar** (what it does so far 26.0506)](/3.3.2-ai-proj-2-jobradar/)
+### [**3b.3.2 JobRadar** (what it does so far 26.0506)](/3b.3.2-ai-proj-2-jobradar/)
 
 *I will create 1/2 functional/ecosystem diagrams in future (after app design stabilizes)*
 
