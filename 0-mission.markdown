@@ -6,9 +6,7 @@ permalink: /0-mission/
 
 <br>
 
-*Page reorganized 26.0621 .... still WIP....*
-
-<br>
+<!-- *Page reorganized 26.0621 .... still WIP....* -->
 
 The **ZiptieAI mission** is to give you  
 
