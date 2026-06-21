@@ -5,8 +5,10 @@ title: Home
 
 <br>
 
-ZiptieAI.com was created in 2024 to document my work on Ukrainian style ziptie'd [AI Drones](/1-drones/). The ZiptieAI **[mission](/0-mission/)** is now to provide
-- **The truth about AI**
+ZiptieAI.com was created in 2024 to document my work on Ukrainian style ziptie'd [AI Drones](/1-drones/). 
+
+The ZiptieAI **[mission](/0-mission/)** is now to provide
+- **The truth about AI** (my take)
 - **Core AI**
   - **[Quick start (QS) demos](/0-qs/)**. Hands-on tour of low-level core AI functionality.
   - **[Concepts](/0b-demos/)**. Core concepts learned form the QS.

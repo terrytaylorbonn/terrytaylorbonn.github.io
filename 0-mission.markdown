@@ -10,14 +10,14 @@ permalink: /0-mission/
 
 The **ZiptieAI mission** is to give you a
 
-- 1 Basic understanding of AI
+- 1 The truth about AI
 - 2 Core AI (selected small code demos and core concepts)
 - 3 AI deep dive (code)
 - 4 Anticipation of the AI future
 
 <br>
 
-# **1 Basic understanding of AI**
+# **1 The truth about AI** 
 
 Building successful AI applications requires a basic understanding of AI. 
   - **1.1 What AI can do**
