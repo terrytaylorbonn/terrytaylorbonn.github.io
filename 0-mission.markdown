@@ -21,9 +21,7 @@ The **ZiptieAI mission** is to give you a
 Building successful AI applications requires a basic understanding of AI. 
   - **1.1 What AI can do**
   - **1.2 What AI can't do**
-  - **1.3 How AI will change our lives (civil, military, etc)**
-       palantir... this kidn of stuff can become versy personal.         
-        AI helping you build AI tools.
+  - **1.3 How AI will change our lives
 
 <br>
 
