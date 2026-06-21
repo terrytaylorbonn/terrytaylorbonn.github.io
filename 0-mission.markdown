@@ -56,7 +56,9 @@ Regardless of what happens with self-driving cars or humanoid robots, AI is alre
 
 **Video: Why 90% of enterprise software is being rewritten**. On 26.0620 the Youtube AI algorithm gave me my constantly updated list of videos that match my preferences (I don't have to search, AI does it for me; I can't even remember life before this AI service). One video was pure gold: [AI 落地生死战：为什么 90% 的企业软件会被重写？](https://www.youtube.com/watch?v=DlDvYe96cNY) **"The life-or-death battle for AI implementation: Why is 90% of enterprise software being rewritten?"** (there is no English audio or subtitles, but in the near future, there will be AI assistant/translators and language will cease to be barrier). The video talks about how major business SaaS CRM SW (such as Salesforce) is being threatened by AI.  
  
-**My new DIY [AI project](/3.3-ai-projects/): A mini DIY Salesforce app**. I asked GPT if we could make an app that would record any text messages on an encrypted ledger instead of being stored (constrained) in a DB. This would be somewhere similar to a Bitcoin ledger. A total redesign of the whole system. The DB no longer requires rigidly structured data, but something more like a ledger of messy human language (even photos, screenshots, voice, etc). The ledger stores everthing in the original format, and AI takes care of indexing and runtime analysis consumption. The ledger records everything you ever did, all emails, all meeting notes etc. The ledger would be massive, but nowadays terabyte storage for home use is normal (the current size for the bitcoin ledger is < 1 TB!).
+**My new DIY [AI project](/3.3-ai-projects/): A mini DIY Salesforce app**. I asked GPT if we could make an app that would record any text messages on an encrypted ledger instead of being stored (constrained) in a DB. This would be somewhat similar to a Bitcoin ledger. All human language customer data is stored on a ledger (maybe even photos, screenshots, voice, etc). AI takes care of indexing and runtime analysis. 
+
+<!-- The ledger records everything you ever did, all emails, all meeting notes etc. The ledger would be massive, but nowadays terabyte storage for home use is normal (the current size for the bitcoin ledger is < 1 TB!). -->
 
 *Visualization of a candidate Bitcoin block that is currently sitting in the mempool waiting to be mined (Bitcoin Ledger / Blocks / Transactions; Each rectangle is one transaction)* <br>
 <img src="/assets/M-27.png" alt="drones" width="43%">
@@ -73,7 +75,7 @@ Structured data forms the basis of many SaaS systems (similar to ontology in Pal
 
 # **2 Deeper understanding of AI (code)**
 
-  - **2.1 Core AI demos ([QS](/0-qs/))**. You need hands-on demo experience before you can really understand the concepts.
+  - **2.1 Core AI demos ([QS](/0-qs/))**. You need hands-on demo experience before you can really understand the core AI concepts.
   - **2.2 Core AI [concepts](/0b-demos/)**. The most important concept is that there is no "I"  (no intelligence) in "AI".
   - **2.3 AI deep dive ([NNs](/2_models/), [Models](/2b_models/), [Agents](/3_agents/), [Projects](/3.3-ai-projects/))**
 
