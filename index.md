@@ -9,7 +9,7 @@ ZiptieAI.com was created in 2024 to document my work on Ukrainian style ziptie'd
 
 The ZiptieAI **[mission](/0-mission/)** is now to provide
 - **The truth about AI** (my take)
-- **Core AI**
+- **Core AI demo and concepts**
   - **[Quick start (QS) demos](/0-qs/)**. Hands-on tour of low-level core AI functionality.
   - **[Concepts](/0b-demos/)**. Core concepts learned form the QS.
 - **AI deep dive** *(see diagrams below)*
