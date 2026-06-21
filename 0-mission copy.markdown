@@ -1,37 +1,54 @@
 ---
 layout: page
-title: Mission
-permalink: /0-mission/
+title: Missionxxx
+permalink: /0-missionxxxx/
 ---
 
 <br>
 
-*Page reorganized 26.0621 .... still WIP....*
-
-<br>
-
 The **ZiptieAI mission** is to give you  
-
-- 1 Basic understanding of AI
-- 2 Deeper understanding of AI (code)
-- 3 Anticipation of the AI future
-
-<br>
-
-# **1 Basic understanding of AI**
-
-Building successful AI applications requires a basic understanding of AI. 
-  - **1.1 What AI can do**
-  - **1.2 What AI can't do**
-  - **1.3 How AI will change our lives (civil, military, etc)**
-       palantir... this kidn of stuff can become versy personal.         
-        AI helping you build AI tools.
+- **0 One small example of how AI will change our world**
+- **1 Recognition of what works**
+- **2 And what doesnt work**
+- **3 Hands-on demos ([QS](/0-qs/))**
+- **4 Intrinsic understanding of core [concepts](/0b-demos/)**
+- **5 Deep dive ([NNs](/2_models/), [Models](/2b_models/), [Agents](/3_agents/), [Projects](/3.3-ai-projects/))**
+- **6 Anticipation of the future**
 
 <br>
 
-### **1.1 What AI can do** 
+## **0 One small example of how AI will change our world** 
 
-Palantir's initial projects were for military applications **without AI** (25 years ago). They were very successful. The applications were basically agentic apps (without AI). The apps were designed to help decision makers. Not to replace mankind. AI later became a very valuable helpful assistant. **Palantir's missions are perfect for AI-assisted agents. Benefits outweigh the negatives. Errors can be tolerated. And a human always makes the final decision**. Its no accident that Palantir talks straight about many aspects of AI. **Engineers wont go away, their expertise is required in the AI age more than ever**. Palantir's business does **not demand the myth of AI intelligence**. Palantir says that **AI will not replace people, it will empower them**.
+
+Regardless of what happens with self-driving cars or humanoid robots, AI is already transforming knowledge work, software systems, and business workflows. One example of this is how AI will allow every transaction to simple be recorded "on the chain" (on the ledger) instead of being constrained to a DB. 
+
+*Visualization of a candidate Bitcoin block that is currently sitting in the mempool waiting to be mined (Bitcoin Ledger / Blocks / Transactions; Each rectangle is one transaction)* <br>
+<img src="/assets/M-27.png" alt="drones" width="43%">
+
+
+#### **A ledger is a simply a record of transactions...** 
+
+(who paid what to whom). A Bitcoin ledger simply adds very structured encryption information that makes it impossible to alter the contents of the ledger without anyone noticing. Bitcoin does not need AI to do this, because the data structure in the ledger is fixed. 
+
+Structured data forms the basis of many SaaS systems (similar to ontology in Palantir systems). Valuable content that does not realy fit into the ontology has be laboriously modified (by humans or with human supervision) or added as attachments.
+
+#### **Now "imagine if you will..."**
+
+(an opening line attributed to Rod Serling's **[Twilight Zone](https://en.wikipedia.org/wiki/The_Twilight_Zone)** series) such a system, but with an AI helpful assistant. All of sudden, untold millions (billions?) of customers can take the messy cryptic (human language) input from real life business processes and have AI "force feed" it into the system.
+
+Or imagine even further... a total redesign of the whole system. The DB no longer requires rigidly structured data, but something more like a ledger of messy human language (even photos, screenshots, voice, etc). The ledger stores everthing in the original format, and AI takes care of indexing and runtime analysis consumption. The ledger records everything you ever did, all emails, all meeting notes etc. The ledger would be massive, but nowadays terabyte storage for home use is normal (the current size for the bitcoin ledger is < 1 TB!).
+
+#### **The inspiration for this concept...**
+
+Came from the video [AI 落地生死战：为什么 90% 的企业软件会被重写？](https://www.youtube.com/watch?v=DlDvYe96cNY) (26.0620). **"The life-or-death battle for AI implementation: Why is 90% of enterprise software being rewritten?"**. Unfortunately there is no English audio or subtitles. But if you have the right AI assistant (translator), thats no problem (for multilingual ledgers also). 
+
+<br>
+
+## **1 Recognition of what works** 
+
+Recogition and acknowledgement of reality is the most important aspect of a successful AI application. 
+
+Palantir's initial projects were for military applications **without AI** (25 years ago). They were very successful. The applications were basically agentic apps (without AI). The apps were designed to help decision makers. Not to replace mankind. AI later became a very valuable helpful assistant. **Palantir's missions are perfect for AI-assisted agents. Benefits outweigh the negatives. Errors can be tolerated. And a human always makes the final decision**. Its no accident that Palantir is talking straight about many aspects of AI. **Engineers wont go away, their expertise is required in the AI age more than ever**. Palantir's business does **not demand the myth of AI intelligence**. Palantir says that **AI will not replace people, it will empower them**.
 
 *"...AI software will be as important as hardware, with platforms such as Palantir's Maven Smart System poised to turn massive drone sensor feeds into highly usable battlefield intelligence". [Zerohedge 26.0620](https://www.zerohedge.com/military/only-beginning-how-profit-asymmetric-warfare-boom)*.
 
@@ -40,11 +57,11 @@ Palantir's initial projects were for military applications **without AI** (25 ye
 
 <br>
 
-### **1.2 What AI can't do**
+## **2 And what doesnt work**
 
 Falling for AI hype (as a product dev or consumer) will cost you dearly. **"No more programmers"** (Jensen Huang), **"no more workers"** (Musk, the colonizer of Mars), **"we must pause AI development because its not safe"** (Anthropic CEO), **"AI already has emotions"** (Nobel and Turing prize winner Jeffrey Hinton) etc etc. The general public has no idea how AI really works. Fertile ground for con artists. 
 
-If AI was truly intelligent then AI integration would just involve connecting AI and letting it rip. **But AI is not intelligent. AI is based 100% on deterministic binary algorithms that compute statistical probabilities. AI is an addon, a helpful assistant.** The most reliable AI systems use the smallest AI component that can provide the required functionality.
+If AI was truly intelligent then AI integration would just be connecting AI and letting it rip. **But AI is not intelligent. AI is based 100% on deterministic binary algorithms that compute statistical probabilities. AI is an addon, a helpful assistant.** The most reliable AI systems use the smallest AI component that can provide the required functionality.
 
 <!-- **AI is a security risk**. The core NN in AI has what are often referred to as "hidden layers" that perform the massive brute-force number crunching to generate "intelligent" output. **It's impossible (even for AI) to determine how a NN has been programmed by analyzing the parameter settings in these layers**. -->
 
@@ -53,36 +70,7 @@ If AI was truly intelligent then AI integration would just involve connecting AI
 
 <br>
 
-### **1.3 How AI will change our lives** 
-
-Regardless of what happens with self-driving cars or humanoid robots, AI is already transforming knowledge work, software systems, and business workflows. 
-
-**Video: Why 90% of enterprise software is being rewritten**. On 26.0620 the Youtube AI algorithm gave me my constantly updated list of videos that match my preferences (I don't have to search, AI does it for me; I can't even remember life before this AI service). One video was pure gold: [AI 落地生死战：为什么 90% 的企业软件会被重写？](https://www.youtube.com/watch?v=DlDvYe96cNY) **"The life-or-death battle for AI implementation: Why is 90% of enterprise software being rewritten?"** (there is no English audio or subtitles, but in the near future, there will be AI assistant/translators and language will cease to be barrier). The video talks about how major business SaaS CRM SW (such as Salesforce) is being threatened by AI.  
- 
-**My new DIY [AI project](/3.3-ai-projects/): A mini DIY Salesforce app**. I asked GPT if we could make an app that would record any text messages on an encrypted ledger instead of being stored (constrained) in a DB. This would be somewhere similar to a Bitcoin ledger. A total redesign of the whole system. The DB no longer requires rigidly structured data, but something more like a ledger of messy human language (even photos, screenshots, voice, etc). The ledger stores everthing in the original format, and AI takes care of indexing and runtime analysis consumption. The ledger records everything you ever did, all emails, all meeting notes etc. The ledger would be massive, but nowadays terabyte storage for home use is normal (the current size for the bitcoin ledger is < 1 TB!).
-
-*Visualization of a candidate Bitcoin block that is currently sitting in the mempool waiting to be mined (Bitcoin Ledger / Blocks / Transactions; Each rectangle is one transaction)* <br>
-<img src="/assets/M-27.png" alt="drones" width="43%">
-
-<!-- (who paid what to whom). A Bitcoin ledger simply adds very structured encryption information that makes it impossible to alter the contents of the ledger without anyone noticing. Bitcoin does not need AI to do this, because the data structure in the ledger is fixed. 
-
-Structured data forms the basis of many SaaS systems (similar to ontology in Palantir systems). Valuable content that does not realy fit into the ontology has be laboriously modified (by humans or with human supervision) or added as attachments. -->
-
-<!-- #### **Now "imagine if you will..."**
-
-(an opening line attributed to Rod Serling's **[Twilight Zone](https://en.wikipedia.org/wiki/The_Twilight_Zone)** series) such a system, but with an AI helpful assistant. All of sudden, untold millions (billions?) of customers can take the messy cryptic (human language) input from real life business processes and have AI "force feed" it into the system. -->
-
-<br>
-
-# **2 Deeper understanding of AI (code)**
-
-  - **2.1 Core AI demos ([QS](/0-qs/))**. You need hands-on demo experience before you can really understand the concepts.
-  - **2.2 Core AI [concepts](/0b-demos/)**. The most important concept is that AI has no I (intelligence).
-  - **2.3 AI deep dive ([NNs](/2_models/), [Models](/2b_models/), [Agents](/3_agents/), [Projects](/3.3-ai-projects/))**
-
-<br>
-
-### **2.1 Core AI demos ([QS](/0-qs/))**
+## **3 Hands-on demos ([QS](/0-qs/))**
 
 **You can only learn how AI works by doing code demos (or at least studying the code)**. Chatbots are programmed to inundate you with hype and AI lingo. GPT often remarks about my habit of wanting to describe AI from a **mechanistic** viewpoint. My response has always been **"of course, AI is mechanistic** (binary computation). 
 
@@ -94,9 +82,10 @@ I went down so many rabbit holes when studying AI. **The ONLY way to understand 
 *Code for **[NN](/2.1.1-predictive-nn-01-sine/)** definition (left) and training (right)*<br>
 <img src="/assets/M-14.png" alt="desc" width="60%"> 
 
+
 <br>
 
-### **2.2 Core AI [concepts](/0b-demos/)**
+## **4 Intrinsic understanding of core [concepts](/0b-demos/)**
 
 **AI is first and foremost a man <> machine interface**. A human chats with an LLM via tokens (words). Human eyesight and intelligence converts these tokens into thoughts (an amazing little-understood process). On the LLM side, tokens are converted to numbers before being input to an LLM transformer NN (an LLM sees nothing, has no thoughts, and only crunches numbers).
 
@@ -107,7 +96,7 @@ Without AI tools (chatbots) I never could have accomplished 5% of what I have do
 
 <br>
 
-### **2.3 AI deep dive ([NNs](/2_models/), [Models](/2b_models/), [Agents](/3_agents/), [Projects](/3.3-ai-projects/))**
+## **5 Deep dive ([NNs](/2_models/), [Models](/2b_models/), [Agents](/3_agents/), [Projects](/3.3-ai-projects/))**
 
 ZiptieAI methodically attacks the complexity of the AI ecosystem in a very mechanistic fashion (because AI is first and foremost a mechanical algorithms). 
 - First core NNs (2 NNs).
@@ -124,7 +113,7 @@ ZiptieAI methodically attacks the complexity of the AI ecosystem in a very mecha
 
 <br>
 
-# **3 Anticipation of the AI future**
+## **6 Anticipation of the future**
 
 AI has a big future even after the pre-IPO hype is over. **Those who understand how to integrate AI into their own workflows will benefit the most. ZiptieAI has a mission to help myself (and others) stay ahead of the AI curve**. In the near future, AI integration skills will be required in all business segments (just like with the PC 40 years ago). This work will require a massive number of tech workers who, empowered by AI tools, will integrate AI **as a helpful assistant** into all areas of life.  
 
@@ -134,7 +123,7 @@ AI has a big future even after the pre-IPO hype is over. **Those who understand 
 
 <br>
 
-26.0621 (v1 26.0611)
+26.0616 (v1 26.0611)
 
 <!-- *A successful mission for AI (left) and not so successful mission (right).* <br>
 <img src="/assets/ziptiedrone2.png" alt="drones" width="23%"> <img src="/assets/waymo.png" alt="drones" width="26%">  -->
