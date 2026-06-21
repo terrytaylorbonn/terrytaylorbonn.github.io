@@ -8,10 +8,10 @@ permalink: /0-mission/
 
 <!-- *Page reorganized 26.0621 .... still WIP....* -->
 
-The **ZiptieAI mission** is to give you a
+The **ZiptieAI mission** is to give you 
 
 - 1 The truth about AI
-- 2 Core AI (selected small code demos and core concepts)
+- 2 Core AI demos and concepts
 - 3 AI deep dive (code)
 - 4 Anticipation of the AI future
 
@@ -74,7 +74,7 @@ Structured data forms the basis of many SaaS systems (similar to ontology in Pal
 
 <br>
 
-# **2 Core AI** (selected small code demos and core concepts)
+# **2 Core AI demos and concepts**
 
   - **2.1 Core AI demos ([QS](/0-qs/))**. You need hands-on demo experience before you can really understand the core AI concepts.
   - **2.2 Core AI [concepts](/0b-demos/)**. The most important concept is that there is no "I"  (no intelligence) in "AI".
