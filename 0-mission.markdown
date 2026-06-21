@@ -74,7 +74,7 @@ Structured data forms the basis of many SaaS systems (similar to ontology in Pal
 # **2 Deeper understanding of AI (code)**
 
   - **2.1 Core AI demos ([QS](/0-qs/))**. You need hands-on demo experience before you can really understand the concepts.
-  - **2.2 Core AI [concepts](/0b-demos/)**. The most important concept is that AI has no I (intelligence).
+  - **2.2 Core AI [concepts](/0b-demos/)**. The most important concept is that there is no "I"  (no intelligence) in "AI".
   - **2.3 AI deep dive ([NNs](/2_models/), [Models](/2b_models/), [Agents](/3_agents/), [Projects](/3.3-ai-projects/))**
 
 <br>
