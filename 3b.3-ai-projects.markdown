@@ -11,7 +11,7 @@ description: Last edit 26.0618
 
 This section is the **end goal for ZiptieAI.com**. The focus is on "spinning up" **real-world demo projects** quickly with minimal code analysis or manual coding. **The goal is not to master one type of system, but to demonstrate the ability to apply AI effectively across many different systems**, workflows, and business environments. 
 
-> A central goal of these project demos is to show anyone with basic computer skills can replicate these demos. I had no previous experience on some of the tools involved in these projects, but with AI I was still able to complete the project without human assistance. GPT/Codex was used to explain the tools, generate starter code, connect the systems, and iteratively debug the workflow. Working prototypes were usually produced in a few hours.
+> A central goal of these project demos is to show anyone with basic computer skills can replicate these demos. I had no previous experience with some of the tools involved in these projects, but with AI I was still able to complete the project without human assistance. GPT/Codex was used to explain the tools, generate starter code, connect the systems, and iteratively debug the workflow. Working prototypes were usually produced in a few hours.
 
 Each demo will have a version of the following 2 main diagrams:
 
@@ -34,15 +34,15 @@ For details on each project demo see
 <br>
 
 #### **TOC**
-- **3b.1 Demo 1 n8n** (26.0501) (needs update)
-- **3b.2 AI project 2 JobRadar** (what it does so far 26.0506)
-- **3b.3.3 AI project NMAP** (WIP)
-- **3b.3.4 AI project Ledger** (TODO)
-- **3b.3.5 AI project 5 DITA w/o DITA** (TODO)
+- **3b.1 n8n** (26.0501) (needs update)
+- **3b.2 JobRadar** (what it does so far 26.0506)
+- **3b.3.3 NMAP** (WIP)
+- **3b.3.4 Ledger** (TODO)
+- **3b.3.5 DITA w/o DITA** (TODO)
 
 <br>
 
-### [**3b.1 Demo 1 n8n** (26.0501)](/3.3.1-ai-proj-1-n8n/)
+### [**3b.1 n8n** (26.0501)](/3.3.1-ai-proj-1-n8n/)
 
 A basic test using Cursor with minimal manual coding. 
   - Main system = n8n LOCAL for test data input.
@@ -52,7 +52,7 @@ A basic test using Cursor with minimal manual coding.
 
 <br>
 
-### [**3b.2 AI project 2 JobRadar** (what it does so far 26.0506)](/3.3.2-ai-proj-2-jobradar/)
+### [**3b.2 JobRadar** (what it does so far 26.0506)](/3.3.2-ai-proj-2-jobradar/)
 
 *I will create 1/2 functional/ecosystem diagrams in future (after app design stabilizes)*
 
@@ -62,13 +62,13 @@ Ingests data from different sources and uses LLM to find matching data and summa
 
 <br>
 
-### [**3b.3.3 AI project NMAP** (WIP)](/3b.3.3-ai-proj-3-nmap/)
+### [**3b.3.3 NMAP** (WIP)](/3b.3.3-ai-proj-3-nmap/)
 
 This project began as a simple Nmap demo: scan localhost, parse the XML output, and post a summary to Mattermost. The long-term goal is to build a controlled local AI assistant for learning PC security and maintenance. The assistant will inspect only approved local targets, explain findings in plain English, track results in an append-only ledger, and help the user understand problems such as open ports, unused services, unused apps, and low disk space.
 
 <br>
 
-### [**3b.3.4 AI project Ledger** (TODO)](/3b.3.4-ai-proj-4-ledger/)
+### [**3b.3.4 Ledger** (TODO)](/3b.3.4-ai-proj-4-ledger/)
 
 Stores messy human text in an append-only encrypted ledger, then uses AI to search, summarize, and generate new entries without requiring a rigid database schema.
 
@@ -84,7 +84,7 @@ So nothing is edited in place. The system only appends.
 
 <br>
 
-### [**3b.3.5 AI project 5 DITA w/o DITA** (TODO)](/3b.3.5-ai-proj-5-dita/)
+### [**3b.3.5 DITA w/o DITA** (TODO)](/3b.3.5-ai-proj-5-dita/)
 
 I have done this before (need to find the wiki page): Maintaining a DITA site but by using AI instead of the DITA tools. For this next demo, I'd like to do something clean.. conforms to DITA, but uses only AI. DITA was created when there was no other way to maintain text reuse that with complex DITA tools (its analogous to the UI's that required strict data entry so that the backend logic could handle the input).
 
