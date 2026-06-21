@@ -109,13 +109,12 @@ Without AI tools (chatbots) I never could have accomplished 5% of what I have do
 
 # **3 AI deep dive (code)**
 
-([NNs](/2_models/), [Models](/2b_models/), [Agents](/3_agents/), [Projects](/3.3-ai-projects/))
+<!-- iptieAI methodically attacks the complexity of the AI ecosystem in a very mechanistic fashion (because AI is first and foremost a mechanical algorithms). --> 
 
-ZiptieAI methodically attacks the complexity of the AI ecosystem in a very mechanistic fashion (because AI is first and foremost a mechanical algorithms). 
-- First core NNs (2 NNs).
-- Then models that package core NNs for reuse (2b Models).
-- Then the external agents that provide an interface between models (helpful assistants) and legacy systems.
-- Finally real-word projects (3b Projects).
+- Core [NNs](/2_models/) (2).
+- [Models](/2b_models/) (2b) that package core NNs for reuse.
+- External [Agents](/3_agents/) (3) that provide an interface between models (helpful assistants) and legacy systems.
+- Real-word projects [Projects](/3.3-ai-projects/) (3b).
 
 *The ZiptieAI deep dive takes you methodically through the entire AI stack*<br>
 <img src="/assets/M-15.png" alt="drones" width="78%">
