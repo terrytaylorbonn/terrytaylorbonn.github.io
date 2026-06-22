@@ -34,15 +34,15 @@ For details on each project demo see
 <br>
 
 #### **TOC**
-- **3b.3.1 n8n** (26.0501) (needs update)
-- **3b.3.2 JobRadar** (what it does so far 26.0506)
-- **3b.3.3 NMAP** (WIP)
-- **3b.3.4 Ledger** (TODO)
-- **3b.3.5 DITA w/o DITA** (TODO)
+- **3b.1 n8n** (26.0501) (needs update)
+- **3b.2 JobRadar** (what it does so far 26.0506)
+- **3b.3 NMAP** (26.0621)
+- **3b.4 Ledger** (TODO)
+- **3b.5 DITA w/o DITA** (TODO)
 
 <br>
 
-### [**3b.3.1 n8n** (26.0501)](/3b.3.1-ai-proj-1-n8n/)
+### [**3b.1 n8n** (26.0501)](/3b.3.1-ai-proj-1-n8n/)
 
 A basic test using Cursor with minimal manual coding. 
   - Main system = n8n LOCAL for test data input.
@@ -52,7 +52,7 @@ A basic test using Cursor with minimal manual coding.
 
 <br>
 
-### [**3b.3.2 JobRadar** (what it does so far 26.0506)](/3b.3.2-ai-proj-2-jobradar/)
+### [**3b.2 JobRadar** (what it does so far 26.0506)](/3b.3.2-ai-proj-2-jobradar/)
 
 *I will create 1/2 functional/ecosystem diagrams in future (after app design stabilizes)*
 
@@ -62,13 +62,13 @@ Ingests data from different sources and uses LLM to find matching data and summa
 
 <br>
 
-### [**3b.3.3 NMAP** (WIP)](/3b.3.3-ai-proj-3-nmap/)
+### [**3b.3 NMAP** (26.0621)](/3b.3.3-ai-proj-3-nmap/)
 
 This project began as a simple Nmap demo: scan localhost, parse the XML output, and post a summary to Mattermost. The long-term goal is to build a controlled local AI assistant for learning PC security and maintenance. The assistant will inspect only approved local targets, explain findings in plain English, track results in an append-only ledger, and help the user understand problems such as open ports, unused services, unused apps, and low disk space.
 
 <br>
 
-### [**3b.3.4 Ledger** (TODO)](/3b.3.4-ai-proj-4-ledger/)
+### [**3b.4 Ledger** (TODO)](/3b.3.4-ai-proj-4-ledger/)
 
 Stores messy human text in an append-only encrypted ledger, then uses AI to search, summarize, and generate new entries without requiring a rigid database schema.
 
@@ -84,7 +84,7 @@ So nothing is edited in place. The system only appends.
 
 <br>
 
-### [**3b.3.5 DITA w/o DITA** (TODO)](/3b.3.5-ai-proj-5-dita/)
+### [**3b.5 DITA w/o DITA** (TODO)](/3b.3.5-ai-proj-5-dita/)
 
 I have done this before (need to find the wiki page): Maintaining a DITA site but by using AI instead of the DITA tools. For this next demo, I'd like to do something clean.. conforms to DITA, but uses only AI. DITA was created when there was no other way to maintain text reuse that with complex DITA tools (its analogous to the UI's that required strict data entry so that the backend logic could handle the input).
 
@@ -99,7 +99,7 @@ $$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$ -->
 
 <br>
 
-26.0620 (0524)
+26.0622 (0524)
 
 <!-- Bearer token for basic security.
 <img src="/assets/cursor_demo1_01.png" alt="drones" width="50%"> 

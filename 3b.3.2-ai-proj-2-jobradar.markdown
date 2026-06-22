@@ -1,6 +1,6 @@
 ---
 layout: page
-title: "3b.3.2 AI project JobRadar"
+title: "3b.2 AI project JobRadar"
 permalink: /3b.3.2-ai-proj-2-jobradar/
 description: Last edit 26.0501
 ---

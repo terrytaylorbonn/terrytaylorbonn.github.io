@@ -1,16 +1,29 @@
 ---
 layout: page
-title: "3b.3.3 AI project NMAP"
+title: "3b.3 AI project NMAP"
 permalink: /3b.3.3-ai-proj-3-nmap/
 description: Last edit 26.0501
 ---
 
 [← 3b Projects](/3.3-ai-projects/)
 
+For project details see 
+- Lab notes (docx): [#606\_ai_ides_.docx](https://drive.google.com/drive/folders/1-Adawag9uA8_bq-hDF-nOuPYaRLz1eEO)
+- Repo [602-2_D1-tool-LLM](https://github.com/terrytaylorbonn/602-2_D1-tool-LLM)
 
 This project began as a simple Nmap demo: scan localhost, parse the XML output, and post a summary to Mattermost. The long-term goal is to build a controlled local AI assistant for learning PC security and maintenance. The assistant will inspect only approved local targets, explain findings in plain English, track results in an append-only ledger, and help the user understand problems such as open ports, unused services, unused apps, and low disk space.
 
-<img src="/assets/M-29.png" alt="drones" width="40%"> 
+*NMAP/MatterMost AI project components*<br>
+<img src="/assets/M-31.png" alt="drones" width="34%"> 
+
+*(Generic AI project components)*<br>
+<img src="/assets/M-30.png" alt="drones" width="36%"> 
+
+*NMAP scan alert on MatterMost*<br>
+<img src="/assets/M-29.png" alt="drones" width="45%"> 
+
+*NMAP scan alert / difference from previous alert (AI generated)*<br>
+<img src="/assets/M-32.png" alt="drones" width="45%"> 
 
 A major point of this demo is that the human developer (myself) was not already an expert in Nmap, Mattermost, or security tooling. GPT/Codex was used as the primary development partner to install tools, write small scripts, connect systems, and explain each result. The demo shows how AI can help a non-expert rapidly build useful proof-of-concept software around unfamiliar systems.
 
@@ -45,4 +58,4 @@ xxxxxxxx<br>
 
 <br>
 
-26.0620 (v1 26.0620)
+26.0621 (v1 26.0620)

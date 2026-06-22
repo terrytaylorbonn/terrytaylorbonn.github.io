@@ -1,6 +1,6 @@
 ---
 layout: page
-title: "3b.3.4 AI project Ledger"
+title: "3b.4 AI project Ledger"
 permalink: /3b.3.4-ai-proj-4-ledger/
 description: Last edit 26.0501
 ---
