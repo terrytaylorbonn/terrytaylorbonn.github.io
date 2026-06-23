@@ -46,13 +46,35 @@ Note that **there are many variations of this setup**, and I will try to provide
 
 ### **[2 NN demos](/2_models/)**
 
-- **[2.1 Core NNs (dense/FF)](/2.1-predictive-nns/)**. Basic neural network demos.<br>
-<img src="/assets/classification.png" alt="drones" width="15%"><br> <br> 
-- **[2.2 CNNs (convolution)](/2.2-cnns/).**<br>
+<br>
+
+
+#### **[2.1 Core NNs (dense/FF)](/2.1-predictive-nns/)**. Basic neural network demos.<br>
+
+
+<!-- <img src="/assets/classification.png" alt="drones" width="15%"><br> <br>  -->
+
+
+Tiny NN demo ([demo D2ccc](/2.1.2-classifier-nn/)) (inference)
+
+**This one simple NN demo will give you an understanding of the core of all AI inference** (including CNNs, LLMs TFs, etc). The following diagram shows the core components of the demo:
+- **Encoder**. All NNs only "know" numbers (including ChatGPT, Claude, etc). So if you have a dataset that is not (FP) numbers, it must be encoded (and later decoded).
+- **NN**. The source of "intelligence". A UFA (universal function approximator). 
+  - This NN inputs 2 numbers. And based on that number outputs 2 probabilities. That's it.
+- **Decoder**. Convert from a probability for inside/outside the circle to a binary state (1 or 0; inside/outside circle).  
+
+<img src="/assets/M-05.png" alt="drones" width="50%"> <img src="/assets/M-02.png" alt="drones" width="16%">
+
+
+#### **[2.2 CNNs (convolution)](/2.2-cnns/).** <br>
 <img src="/assets/d4_alexnet.png" alt="drones" width="12%" style="border: 1px solid black;"><br> <br> 
-- **[2.3.6 Transformers](/2.3.6-llm-demos/).**<br>
+
+
+#### **[2.3.6 Transformers](/2.3.6-llm-demos/).**<br>
 <img src="/assets/d5_0.png" alt="drones" width="32%"><br> <br> 
-- **2.5 Robotic AI ([wiki](https://github.com/terrytaylorbonn/auxdrone/wiki/Robotic-AI-demos))**<br>
+
+
+#### **2.5 Robotic AI ([wiki](https://github.com/terrytaylorbonn/auxdrone/wiki/Robotic-AI-demos))**<br>
 <img src="/assets/robotic_ai.png" alt="smol" width="25%" style="border: 1px solid black;"><br> 
 
 <br>

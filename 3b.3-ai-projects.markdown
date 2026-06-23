@@ -36,7 +36,7 @@ For details on each project demo see
 #### **TOC**
 - **3b.1 n8n** (26.0501) (needs update)
 - **3b.2 JobRadar** (what it does so far 26.0506)
-- **3b.3 NMAP** (26.0621)
+- **3b.3 NMAP Security Assistant** (26.0621)
 - **3b.4 Ledger** (TODO)
 - **3b.5 DITA w/o DITA** (TODO)
 
@@ -62,7 +62,7 @@ Ingests data from different sources and uses LLM to find matching data and summa
 
 <br>
 
-### [**3b.3 NMAP** (26.0621)](/3b.3.3-ai-proj-3-nmap/)
+### [**3b.3 NMAP Security Assistant** (26.0621)](/3b.3.3-ai-proj-3-nmap/)
 
 This project began as a simple Nmap demo: scan localhost, parse the XML output, and post a summary to Mattermost. The long-term goal is to build a controlled local AI assistant for learning PC security and maintenance. The assistant will inspect only approved local targets, explain findings in plain English, track results in an append-only ledger, and help the user understand problems such as open ports, unused services, unused apps, and low disk space.
 

@@ -86,7 +86,11 @@ OLD
 
 
 #### **2.1 Defining the NN**
-Tiny NN demo ([demo D2ccc](/2.1.2-classifier-nn/)) (inference)
+
+*NN demo D2 overview* <br>
+<img src="/assets/M-34.png" alt="drones" width="30%">
+
+<!-- Tiny NN demo ([demo D2ccc](/2.1.2-classifier-nn/)) (inference)
 
 **This one simple NN demo will give you an understanding of the core of all AI inference** (including CNNs, LLMs TFs, etc). The following diagram shows the core components of the demo:
 - **Encoder**. All NNs only "know" numbers (including ChatGPT, Claude, etc). So if you have a dataset that is not (FP) numbers, it must be encoded (and later decoded).
@@ -94,7 +98,7 @@ Tiny NN demo ([demo D2ccc](/2.1.2-classifier-nn/)) (inference)
   - This NN inputs 2 numbers. And based on that number outputs 2 probabilities. That's it.
 - **Decoder**. Convert from a probability for inside/outside the circle to a binary state (1 or 0; inside/outside circle).  
 
-<img src="/assets/M-05.png" alt="drones" width="50%"> <img src="/assets/M-02.png" alt="drones" width="16%">
+<img src="/assets/M-05.png" alt="drones" width="50%"> <img src="/assets/M-02.png" alt="drones" width="16%"> -->
 
 <br>
 
@@ -131,18 +135,7 @@ This CNN was released in 2012. Its an important historical version to study, but
 
 #### **2.4 Adding convolution**
 
-4 Tiny CNN ([demo D4](/2.2.1-d4-cnn-image-classifier/))**
-
-A hands on demo. Input a 28x28 pixel screenshot of a digit, and the NN outputs "0", "1", ... "9". For details see 
-- **[2.2.1 D4 CNN image classifier](https://ziptieai.com/2.2.1-d4-cnn-image-classifier/)**
-- **[2.2.1b D4 CNN algorithm details](https://ziptieai.com/2.2.1b-d4-cnn-algorithm-details/)**
-
-<!-- There are 3 main parts.
-- **1 Data input**. In this case the data input is .............
-- **2 Feature extraction (nn.Conv2d + nn.MaxPool2d)**. This is where convolution and pooling are used to turn the original pixel values into "hidden state" values that progressive define higher level features (I typical call these values "pix's"). ...
-- **3 Final NN (nn.Linear) computing CNN "logits"**. This involves
-  - 3.1 Linear NN (like for D2ccc) computes the probabilities of each of 10 possible outputs (digits 0 to 9).
-  - 3.2 The most probable output is converted into a label (such as "7"). -->
+See diagram below. For details see **[2.4 CNN (convolution) concepts](/0b.2.4-concepts-convo/)**.
 
 The following code defines the NN.
 
@@ -157,10 +150,35 @@ class TinyCNN(nn.Module):
         self.fc2 = nn.Linear(64, 10)
 ```
 
-<img src="/assets/M-07.png" alt="drones" width="46%">
-<img src="/assets/M-08.png" alt="drones" width="20%">
+<br>
+
+*CNN demo D4 overview* <br>
+<img src="/assets/M-33.png" alt="drones" width="45%">
 
 <br>
+
+
+<!-- 
+
+4 Tiny CNN ([demo D4](/2.2.1-d4-cnn-image-classifier/))**
+
+A hands on demo. Input a 28x28 pixel screenshot of a digit, and the NN outputs "0", "1", ... "9". For details see 
+- **[2.2.1 D4 CNN image classifier](https://ziptieai.com/2.2.1-d4-cnn-image-classifier/)**
+- **[2.2.1b D4 CNN algorithm details](https://ziptieai.com/2.2.1b-d4-cnn-algorithm-details/)**
+
+There are 3 main parts.
+- **1 Data input**. In this case the data input is .............
+- **2 Feature extraction (nn.Conv2d + nn.MaxPool2d)**. This is where convolution and pooling are used to turn the original pixel values into "hidden state" values that progressive define higher level features (I typical call these values "pix's"). ...
+- **3 Final NN (nn.Linear) computing CNN "logits"**. This involves
+  - 3.1 Linear NN (like for D2ccc) computes the probabilities of each of 10 possible outputs (digits 0 to 9).
+  - 3.2 The most probable output is converted into a label (such as "7"). -->
+
+
+
+<!-- 
+<img src="/assets/M-07.png" alt="drones" width="46%">
+<img src="/assets/M-08.png" alt="drones" width="20%"> -->
+
 
 #### **2.5 Adding transformer**
 
