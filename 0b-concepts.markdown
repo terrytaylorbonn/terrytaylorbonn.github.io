@@ -8,7 +8,7 @@ permalink: /0b-demos/
 
 #### *Goal of this page (WIP): Summarize the concepts learned from doing the hands-on QS demos.*
 
-There already is a "Concepts" section on pages 2 NNs, 2b Models, 3 Agents, and 3b Projects. But the focus of this page is the core conceptual gist 2-3b. Using the simplest example from the QS for each. This section may not be like that right now (26.0623), but its moving in that direction.
+There already is a "Concepts" section on pages 2 NNs, 2b Models, 3 Agents, and 3b Projects. But the focus of this page is the core conceptual gist of 2-3b. Using the simplest example from the QS for each. This section may not be like that right now (26.0623), but its moving in that direction.
 
 *ALSO SEE [2.2b CNN<>TF comparison (WIP)](/2.2b-cnn-tf-comparison/)*.
 
@@ -30,28 +30,42 @@ There already is a "Concepts" section on pages 2 NNs, 2b Models, 3 Agents, and 3
 
 ## **1 Core AI concepts**
 
+Just a simple draft list 26.0623.
+
+#### **Key capabilities**
+
+- Can be autoprogrammed (train).
+- Can use customized architectures (such as CNN or TF).
+- Based on pattern matching. An approximate match will get the highest probability assigned.
+- Can emulate high level thinking (planning, etc).
+- Man machine interface. Flexible input (but output not always predictable).
+
+#### **Limitations**
+
+- A NN has no feelings, no consciousness, no intelligence. It only processes numbers.
+- A NN always requires traditional SW program control (an agent, often in Python). The agent and NN are designed for each other. The pair constitutes the core essence of AI. 
+
+<img src="/assets/M-11.png" alt="drones" width="26%">
+
 <br>
 
-#### **1.1 The human <> machine interface**
-
-This is perhaps the most important function of AI. The problem is AI token output starts to fool humans into believing AI is intelligent.  **These tokens ellicit thoughts in intelligent human** (no explanation necessary or possible). **For a NN these tokens are just a large set of large (FP) numbers**. When you type a prompt into a chatbot, that prompt is converted into a lot of FP numbers. That is all the TF sees.
-
-<br>
-
+<!-- 
 #### **1.2 NNs are always passive; CPU-based agents are in control**
 
 A core lesson from the demos was that a NN is always passive. At least the NN part that does the pattern matching and statisical computation that passes for intelligence. **An NN inputs data and outputs the (100% deterministic) result. Thats it. No control loop.** In the end AI is simply an add-on to CPU-based systems. 
 
+
+This is perhaps the most important function of AI. The problem is AI token output starts to fool humans into believing AI is intelligent.  **These tokens ellicit thoughts in intelligent human** (no explanation necessary or possible). **For a NN these tokens are just a large set of large (FP) numbers**. When you type a prompt into a chatbot, that prompt is converted into a lot of FP numbers. That is all the TF sees.
+
 *Electronic agents still run the world, not electronic "NNs"* <br>
 <img src="/assets/M-12.png" alt="drones" width="22%">
-
 <br>
 
 #### **1.3 NN and agent = Tweedledee and Tweedledum**
 
 A possible analogy for the NN and the agent are Tweedledee and Tweddledum from **[Alice in Wonderland](https://en.wikipedia.org/wiki/Alice%27s_Adventures_in_Wonderland)**. This analogy will help you assess where AI can be deployed successfully and how much effort system integration will cost (if AI was intelligent, you'd just plug AI into the system and finished).
 
-*An intelligent human (left) dealing with the robotic dynamic duo (right)* <br>
+
 <img src="/assets/M-11.png" alt="drones" width="26%">
 
 <br>
@@ -60,7 +74,7 @@ A possible analogy for the NN and the agent are Tweedledee and Tweddledum from *
 
 Agentic AI models have some pretty sophisticated abilities that really resemble higher level thinking. Planning is one of the most interesting. You send a complicated human language plan to a model and you get back a "sanitized" version that consists of basically plan steps that match a format you specified in your prompt to them model. But this is also statistical computation at work. The model TF only communicates with the internal agent via prompts. So the model must be trained specifically for such planning, and the internal agent must know the exact prompt "protocol" to use for maximum results. Basically **the agent and TF and designed to work together to create the illusion of higher level thinking by only exchanging tokens**.
 
-<br>
+<br>-->
 
 ## **[2 NNs](/2_models/)**
 
