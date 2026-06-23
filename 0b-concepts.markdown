@@ -32,6 +32,8 @@ There already is a "Concepts" section on pages 2 NNs, 2b Models, 3 Agents, and 3
 
 Just a simple draft list 26.0623.
 
+The core capabilites and limitations of the AI demos in the QS apply to even the most sophisticated AI projects (they get more 9's after the decimal point, 99.999 for example, but they never reach 100). Keeping these in mind will keep you out of trouble in AI projects. 
+
 #### **Capabilities**
 
 - Can be autoprogrammed (trained).
