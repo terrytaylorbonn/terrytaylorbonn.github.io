@@ -113,9 +113,10 @@ See diagram below. For concepts details see **[Concepts -- 2.2 Inference](/0b.2.
 
 #### **2.3 Training**
 
-2 Tiny NN demo ([demo D2ccc](/2.1.2-classifier-nn/)) (training)
+See diagram below. For concepts details see **[Concepts -- 2.3 Training](/0b.2.3-concepts-training/)**.
 
-Training input/output must match exactly what is desired in inference. The following code defines the training steps (more details later).
+Training input/output must match exactly what is desired in inference. The following code defines the training steps (more details later) for Tiny NN demo ([demo D2ccc](/2.1.2-classifier-nn/)).
+
 
 ```
 for epoch in range(100):
@@ -357,7 +358,7 @@ External agents access the model via API. This supports
 
 <br>
 
-26.0616 (v1 26.0611)
+26.0623 (v1 26.0611)
 
 <br>
 
