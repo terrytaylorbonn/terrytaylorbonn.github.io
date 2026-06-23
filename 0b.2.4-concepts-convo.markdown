@@ -24,7 +24,7 @@ This page gives the best analysis you will find of how a CNN works. Based on the
 
 ## **xxxxx** -->
 
-*The following description is a first draft.. its rather cryptic.. I will "distill" it in plain English in the near future.*
+*The following description is a first draft... its rather cryptic... I will "distill" it into plain English in the near future.*
 
 The following code defines the NN. "(1)", "(2)", etc refers to numbers in diagram.
 
