@@ -40,5 +40,130 @@ for epoch in range(1000):
 
 <br>
 
+```text2
+(why need more memory during inference).
+
+Inference
+
+During inference you only need:
+
+weights
++
+current activations
+input
+ ↓
+forward pass
+ ↓
+output
+
+Once a layer is finished, much of the intermediate data can be discarded.
+
+Memory roughly:
+
+model weights
++
+a few activations
+Training
+
+Training must do:
+
+forward pass
+ ↓
+loss
+ ↓
+backpropagation
+ ↓
+optimizer update
+
+The expensive part is backpropagation.
+
+During the forward pass, PyTorch stores lots of intermediate values:
+
+layer1 output
+layer2 output
+layer3 output
+...
+
+because later it needs them to compute gradients.
+
+So memory becomes:
+
+weights
++
+activations
++
+gradients
+Then the optimizer
+
+For SGD:
+
+weight
+gradient
+
+Not too bad.
+
+For Adam:
+
+weight
+gradient
+moving average
+moving variance
+
+roughly:
+
+3-4x parameter memory
+Your idea about "remembering the past"
+
+You're partially right.
+
+Adam does remember some history:
+
+past gradients
+
+which helps determine:
+
+how much to change each weight
+
+But it is not remembering concepts like:
+
+cat
+dog
+digit 3
+
+or trying to protect occupied weights.
+
+That problem is called:
+
+catastrophic forgetting
+
+and ordinary SGD/Adam do not really solve it.
+
+For a large LLM
+
+A rough mental model:
+
+Inference:
+    weights
+
+Training:
+    weights
+    + activations
+    + gradients
+    + optimizer state
+
+which is why a model that fits on:
+
+8 GB
+
+for inference might require:
+
+40-80+ GB
+
+for training.
+
+For your tiny demos the difference is invisible, but for GPT-sized models it becomes enormous. The biggest memory consumer is usually saved activations for backprop, not the optimizer history.
+```
+
+<br>
 
 26.0623 (v1 26.0623)
