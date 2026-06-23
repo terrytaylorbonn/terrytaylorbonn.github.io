@@ -8,7 +8,7 @@ permalink: /0b-demos/
 
 #### *Goal of this page (WIP): Summarize the concepts learned from doing the hands-on QS demos.*
 
-There is a "Concepts" section in 2 NNs, 2b Models, 3 Agents, 3b Projects, but the goal of this concepts section is different. Its to explain the core gist of all of these. Using the simplest example from the QS. This section may not be like that right now, but its moving in that direction. The QS in 2-3b will be more about details (I plan ZAI as a long-term "hobby").
+There already is a "Concepts" section on pages 2 NNs, 2b Models, 3 Agents, and 3b Projects. But the focus of this page is the core conceptual gist 2-3b. Using the simplest example from the QS for each. This section may not be like that right now (26.0623), but its moving in that direction.
 
 <br>
 
