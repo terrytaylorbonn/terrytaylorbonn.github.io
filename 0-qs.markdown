@@ -65,9 +65,27 @@ Tiny NN demo ([demo D2ccc](/2.1.2-classifier-nn/)) (inference)
 
 <img src="/assets/M-05.png" alt="drones" width="50%"> <img src="/assets/M-02.png" alt="drones" width="16%">
 
+<br>
 
-#### **[2.2 CNNs (convolution)](/2.2-cnns/).** <br>
-<img src="/assets/d4_alexnet.png" alt="drones" width="12%" style="border: 1px solid black;"><br> <br> 
+#### **[2.2 CNNs (convolution)](/2.2-cnns/).**  <br> 
+
+Tiny CNN ([demo D4](/2.2.1-d4-cnn-image-classifier/))
+
+A hands on demo. Input a 28x28 pixel screenshot of a digit, and the NN outputs "0", "1", ... "9". For details see 
+- **[2.2.1 D4 CNN image classifier](https://ziptieai.com/2.2.1-d4-cnn-image-classifier/)**
+- **[2.2.1b D4 CNN algorithm details](https://ziptieai.com/2.2.1b-d4-cnn-algorithm-details/)**
+
+There are 3 main parts.
+- **1 Data input**. In this case the data input is .............
+- **2 Feature extraction (nn.Conv2d + nn.MaxPool2d)**. This is where convolution and pooling are used to turn the original pixel values into "hidden state" values that progressive define higher level features (I typical call these values "pix's"). ...
+- **3 Final NN (nn.Linear) computing CNN "logits"**. This involves
+  - 3.1 Linear NN (like for D2ccc) computes the probabilities of each of 10 possible outputs (digits 0 to 9).
+  - 3.2 The most probable output is converted into a label (such as "7"). -->
+
+*CNN demo D4 overview* <br>
+<img src="/assets/M-33.png" alt="drones" width="40%">
+
+<br>
 
 
 #### **[2.3.6 Transformers](/2.3.6-llm-demos/).**<br>
@@ -112,7 +130,7 @@ This section focuses on "spinning up" real-world projects quickly with minimal c
 
 <br>
 
-26.0616 (v1 26.0527)
+26.0623 (v1 26.0527)
 
 
 <!-- **I wasted so much time going down so many rabbit holes when studying AI**. AI is an awesome technology. Without AI tools (GPT) I never could have accomplished 5% of what I have done on the ZiptieAI project. But **AI chatbots only produce the output they are programmed to produce, and much of that about AI itself is misleading hype (or outright lies)**. The very term "artificial intelligence" is a perfect example. AI is not intelligent, and the very concept of "man-made" intelligence shows a basic lack of understanding of what intelligence is. 

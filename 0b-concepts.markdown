@@ -87,6 +87,9 @@ OLD
 
 #### **2.1 Defining the NN**
 
+See diagram below. For concepts details see **[Concepts -- 2.1 NN](/0b.2.1-concepts-nn/)**.
+
+
 *NN demo D2 overview* <br>
 <img src="/assets/M-34.png" alt="drones" width="30%">
 
@@ -135,7 +138,7 @@ This CNN was released in 2012. Its an important historical version to study, but
 
 #### **2.4 Adding convolution**
 
-See diagram below. For details see **[2.4 CNN (convolution) concepts](/0b.2.4-concepts-convo/)**.
+See diagram below. For concepts details see **[2.4 CNN (convolution) concepts](/0b.2.4-concepts-convo/)**.
 
 The following code defines the NN.
 
