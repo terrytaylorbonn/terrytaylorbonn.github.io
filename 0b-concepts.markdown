@@ -85,8 +85,9 @@ The NN is the core of AI "intelligence". A NN provides a pattern matching algori
 **Concepts**
 - 2.1 NN (Inference)
 - 2.3 Training
-- 2.4 Convolution
-- 2.5 Transformer
+- 2.4 Convolution (CNN)
+- 2.5 Transformer (TF)
+- 2.6 Comparison of NN, CNN, and TF architectures 
 
 <!-- 
 OLD
@@ -219,6 +220,13 @@ class TinyTransformer(nn.Module):
 -->
 
 <img src="/assets/M-09.png" alt="drones" width="60%">
+
+<br>
+
+
+#### **2.6 Comparison of NN, CNN, and TF architectures**
+
+See **[Comparison of NN, CNN, and TF architectures](/0b.2.6-concepts-nn-cnn-tf/)**.
 
 <br>
 
