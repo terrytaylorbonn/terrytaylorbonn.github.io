@@ -1,7 +1,7 @@
 ---
 layout: page
-title: Concepts -- 2.4 CNN convolution
-permalink: /0b.2.4-concepts-convoxxxxx/
+title: Concepts -- 2.1 NN
+permalink: /0b.2.1-concepts-nn/
 ---
 
 <br>
@@ -10,14 +10,12 @@ permalink: /0b.2.4-concepts-convoxxxxx/
 
 <br>
 
-This page gives the best analysis you will find of how a CNN works. Based on the Tiny CNN ([demo D4](/2.2.1-d4-cnn-image-classifier/)) (diagram below). 
-- Before reading this page you should have studied the concepts for the tiny NN ([demo D2ccc](/2.1.2-classifier-nn/)) (inference). 
-- This page is prerequisite for the conepts for the Tiny TF ([demo D5](/2.3.6.1-d5-tiny-tf/)).
+This page gives the best analysis you will find of how an NN works. Based on the tiny NN ([demo D2ccc](/2.1.2-classifier-nn/)) (inference). 
 
 <br>
 
-*CNN demo D4 overview* <br>
-<img src="/assets/M-33.png" alt="drones" width="70%">
+*NN demo D2 overview* <br>
+<img src="/assets/M-34.png" alt="drones" width="30%">
 
 <br>
 
@@ -28,28 +26,7 @@ This page gives the best analysis you will find of how a CNN works. Based on the
 
 ## **xxxxx**
 
-Input a 28x28 pixel screenshot of a digit, and the NN outputs "0", "1", ... "9". For details see 
-- **[2.2.1 D4 CNN image classifier](https://ziptieai.com/2.2.1-d4-cnn-image-classifier/)**
-- **[2.2.1b D4 CNN algorithm details](https://ziptieai.com/2.2.1b-d4-cnn-algorithm-details/)**
-
-
-The following code defines the CNN.
-
-```
-class TinyCNN(nn.Module):
-    def __init__(self):
-        super().__init__()
-        self.conv1 = nn.Conv2d(1, 8, kernel_size=3, padding=1)
-        self.conv2 = nn.Conv2d(8, 16, kernel_size=3, padding=1)
-        self.pool = nn.MaxPool2d(2, 2)
-        self.fc1 = nn.Linear(16 * 7 * 7, 64)
-        self.fc2 = nn.Linear(64, 10)
-```
-
-<!--  OLD DIAGRAMS
-<img src="/assets/M-07.png" alt="drones" width="46%">
-<img src="/assets/M-08.png" alt="drones" width="20%"> -->
-
+xxxxxxxxxxxxxxxxxxxxxxxxxx
 
 <br>
 
