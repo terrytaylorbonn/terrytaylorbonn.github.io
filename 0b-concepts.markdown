@@ -43,8 +43,9 @@ Just a simple draft list 26.0623.
 #### **Limitations**
 
 - Has no feelings, no consciousness, no intelligence. It only processes numbers.
-- A NN always requires traditional SW program control (an agent, often in Python). The agent and NN are designed for each other. The pair constitutes the core essence of AI. 
+- A NN always requires traditional SW program control (an agent, often in Python). The agent and NN are designed for each other. They are a team that constitutes the core essence of AI. 
 
+*A human interacting with team-based intelligence*<br>
 <img src="/assets/M-11.png" alt="drones" width="26%">
 
 <br>
