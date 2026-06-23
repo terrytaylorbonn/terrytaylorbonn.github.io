@@ -188,14 +188,8 @@ There are 3 main parts.
 
 #### **2.5 Adding transformer**
 
-5 Tiny TF ([demo D5](/2.3.6.1-d5-tiny-tf/))** 
+See diagram below. For concepts details see **[Concepts -- 2.5 Transformers](/0b.2.5-concepts-tf/)**.
 
-In D5 (diagram below):
-- Loop 1 inputs the letter "h" (T1) and infers (outputs) "e".
-- Loop 2 inputs the letters "h", "e" (T1,T2) and infers "l" (letter l).
-- The loop continues until the output is "hello world hello world hello world".
-
-The following code defines the NN.
 
 ```
 class TinyTransformer(nn.Module):
