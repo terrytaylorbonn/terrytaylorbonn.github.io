@@ -64,13 +64,12 @@ Agentic AI models have some pretty sophisticated abilities that really resemble 
 
 The NN is the core of AI "intelligence". A NN provides a pattern matching algorithm. The the NN is controlled by Python code ("agent").
 
-
-NEW
-- 2.1 Defining the NN
+**Concepts**
+- 2.1 NN
 - 2.2 Inference
 - 2.3 Training
-- 2.4 Adding convolution
-- 2.5 Adding transformer
+- 2.4 Convolution
+- 2.5 Transformer
 
 <!-- 
 OLD
@@ -85,7 +84,7 @@ OLD
 
 
 
-#### **2.1 Defining the NN**
+#### **2.1 Concepts -- NN**
 
 See diagram below. For concepts details see **[Concepts -- 2.1 NN](/0b.2.1-concepts-nn/)**.
 
@@ -105,13 +104,13 @@ See diagram below. For concepts details see **[Concepts -- 2.1 NN](/0b.2.1-conce
 
 <br>
 
-#### **2.2 Inference**
+#### **2.2 Concepts -- Inference**
 
 See diagram below. For concepts details see **[Concepts -- 2.2 Inference](/0b.2.2-concepts-inference/)**.
 
 <br>
 
-#### **2.3 Training**
+#### **2.3 Concepts -- Training**
 
 See diagram below. For concepts details see **[Concepts -- 2.3 Training](/0b.2.3-concepts-training/)**.
 
@@ -139,7 +138,7 @@ This CNN was released in 2012. Its an important historical version to study, but
 
 <br>  -->
 
-#### **2.4 Adding convolution**
+#### **2.4 Concepts -- Convolution**
 
 See diagram below. For concepts details see **[2.4 CNN (convolution) concepts](/0b.2.4-concepts-convo/)**.
 
@@ -186,7 +185,7 @@ There are 3 main parts.
 <img src="/assets/M-08.png" alt="drones" width="20%"> -->
 
 
-#### **2.5 Adding transformer**
+#### **2.5 Concepts -- Transformer**
 
 See diagram below. For concepts details see **[Concepts -- 2.5 Transformers](/0b.2.5-concepts-tf/)**.
 
@@ -211,7 +210,7 @@ class TinyTransformer(nn.Module):
 
 <br>
 
-## **[2b Models](/2b_models/)** (with API)
+## **[2b Models](/2b_models/)**
 
 The agent and the NN are typically packaged into a **model** that has an API that makes it possible for existing software to **access the model via API**. The **model code that controls the TF NN is the "internal agent" (iAgent)**. 
 
