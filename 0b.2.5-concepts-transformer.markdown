@@ -10,28 +10,21 @@ permalink: /0b.2.5-concepts-tf/
 
 <br>
 
-This page describes how transformers work. Based on the xxx ([demo xxx](/2.1.2-classifier-nn/)) (training). 
-
-<br>
-
-*Transformer demo xxxx overview* <br>
-<img src="/assets/M-xx.png" alt="drones" width="30%">
-
-<br>
-
-**TOC**
-- **1 xxx**. 
-
-<br>
-
-## **Tiny TF ([demo D5](/2.3.6.1-d5-tiny-tf/))** 
+This page describes how transformers work. Based on [demo D5](/2.3.6.1-d5-tiny-tf/). 
 
 In D5 (diagram below):
 - Loop 1 inputs the letter "h" (T1) and infers (outputs) "e".
 - Loop 2 inputs the letters "h", "e" (T1,T2) and infers "l" (letter l).
 - The loop continues until the output is "hello world hello world hello world".
 
+<br>
+
+### **NN definition**
+
 The following code defines the NN.
+
+
+#### Init
 
 ```
 class TinyTransformer(nn.Module):
@@ -49,12 +42,101 @@ class TinyTransformer(nn.Module):
         self.out = nn.Linear(embed_dim, vocab_size)
 ```
 
+#### Forward
+
+```
+    def forward(self, idx):
+        B, T = idx.shape
+        token_vecs = self.token_embed(idx)
+        positions = torch.arange(T, device=device)
+        pos_vecs = self.pos_embed(positions)
+        x = token_vecs + pos_vecs
+        Q = self.q(x)
+        K = self.k(x)
+        V = self.v(x)
+        scores = Q @ K.transpose(-2, -1)
+        scores = scores / math.sqrt(embed_dim)
+        mask = torch.tril(torch.ones(T, T, device=device))
+        scores = scores.masked_fill(mask == 0, float("-inf"))
+        weights = F.softmax(scores, dim=-1)
+        context = weights @ V
+        x = x + context
+        x = x + self.ffn(x)
+        logits = self.out(x)
+        return logits
+```
+
+#### Training
+
+```
+model = TinyTransformer().to(device)
+model = TinyTransformer().to(device)
+
+loss_fn = nn.CrossEntropyLoss()
+optimizer = torch.optim.Adam(model.parameters(), lr=0.01)
+for epoch in range(num_epochs):
+    X, Y = get_batch()
+    logits = model(X)
+    B, T, C = logits.shape
+    loss = loss_fn(
+        logits.reshape(B * T, C),
+        Y.reshape(B * T),
+    )
+    optimizer.zero_grad()
+    loss.backward()
+    optimizer.step()
+```
+
+#### Generate text
+
+```
+model.eval()
+idx = torch.tensor([[stoi["h"]]], dtype=torch.long).to(device)
+with torch.no_grad():
+    for _ in range(40):
+        idx_cond = idx[:, -block_size:]
+        logits = model(idx_cond)
+        last_logits = logits[:, -1, :]
+        probs = F.softmax(last_logits, dim=-1)
+        next_id = torch.multinomial(probs, num_samples=1)
+        idx = torch.cat([idx, next_id], dim=1)
+generated = "".join(itos[i] for i in idx[0].tolist())
+```
+
+<br>
+
 <img src="/assets/M-09.png" alt="drones" width="60%">
 
 <br>
 
-
+---------------------
+---------------------
+---------------------
+---------------------
+---------------------
+---------------------
 
 <br>
+
+# **FROM [2.3.6.1 D5 Tiny TF](/2.3.6.1-d5-tiny-tf/)**
+
+In D5 (diagram below):
+- Loop 1
+  - Input the letter "h" (T1).
+  - Infer. Result = "e".
+- Loop 2
+  - Input the letters "h", "e" (T1,T2).
+  - Infer. Result = "l".
+- ......
+- Loop 8
+  - Input the letters "h", "e", "l", "l", "o", " ", "w", "o", (T1...T8).
+  - Infer. Result = "r".
+- Loop 9
+  - Input the letters "e", "l", "l", "o", " ", "w", "o", "r" (T1...T8).
+  - ............
+
+
+<img src="/assets/M-09.png" alt="drones" width="70%">
+
 
 26.0623 (v1 26.0623)
