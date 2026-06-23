@@ -10,30 +10,52 @@ permalink: /0b.2.4-concepts-convo/
 
 <br>
 
-This page gives the best analysis you will find of how a CNN works. Based on the Tiny CNN ([demo D4](/2.2.1-d4-cnn-image-classifier/)) (diagram below). 
-- Before reading this page you should have studied the concepts for the tiny NN ([demo D2ccc](/2.1.2-classifier-nn/)) (inference). 
-- This page is prerequisite for the conepts for the Tiny TF ([demo D5](/2.3.6.1-d5-tiny-tf/)).
+**This page describes CNN concepts using the D4 demo with 28x28 pixel screenshot of a digit, and the NN outputs "0", "1", ... "9".**
+
+This page gives the best analysis you will find of how a CNN works. Based on the Tiny CNN ([demo D4](/2.2.1-d4-cnn-image-classifier/)) (diagram below). Recommended: First study concepts for the tiny NN ([demo D2ccc](/2.1.2-classifier-nn/)) (inference). 
 
 <br>
 
-*CNN demo D4 overview* <br>
-<img src="/assets/M-33.png" alt="drones" width="70%">
 
-<br>
-
-**TOC**
+<!-- **TOC**
 - **1 xxx**. 
 
 <br>
 
-## **xxxxx**
+## **xxxxx** -->
 
-Input a 28x28 pixel screenshot of a digit, and the NN outputs "0", "1", ... "9". For details see 
-- **[2.2.1 D4 CNN image classifier](https://ziptieai.com/2.2.1-d4-cnn-image-classifier/)**
-- **[2.2.1b D4 CNN algorithm details](https://ziptieai.com/2.2.1b-d4-cnn-algorithm-details/)**
+*The following description is a first draft.. its rather cryptic.. I will "distill" it in plain English in the near future.*
 
+The following code defines the NN. "(1)", "(2)", etc refers to numbers in diagram.
 
-The following code defines the CNN.
+- x = self.pool(F.relu(self.conv1(x)))  # [batch, 8, 14, 14]
+  - self.conv1 = nn.Conv2d(1, 8, kernel_size=3, padding=1)
+    - 1 input dim (dimension) (1) for each pixel (28x28 pixels; not specified)
+    - 8 ouput dims (3)
+    - Kernel is 3x3 (2)
+    - Padding = 1 (2)
+    - Stride = 1 (default) (2) 
+    - SUMMARY: xxx
+  - relu (4) sets negative values to 0
+  - pool (5) changes to 14x14 (these are no longer pixels; I call them "pix's")
+- x = self.pool(F.relu(self.conv2(x)))  # [batch, 16, 7, 7]
+  - self.conv2 = nn.Conv2d(8, 16, kernel_size=3, padding=1)
+    - 8 input dims (dimension) (6) for each pixel (14x14 pixels; not specified)
+    - 16 ouput dims (8)
+    - Kernel is 3x3 (10)
+    - Padding = 1 (10)
+    - Stride = 1 (default) (10) 
+    - SUMMARY: xxx
+  - relu (9) sets negative values to 0
+  - pool (10) changes to 7x7 (pix's)
+- self.pool = nn.MaxPool2d(2, 2) (specifies pool used twice above)
+- x = x.reshape(x.size(0), -1)  # [batch, 784] flatent (12) 
+- x = F.relu(self.fc1(x)) 
+  - self.fc1 = nn.Linear(16 * 7 * 7, 64)
+    - 784 (16*7*7) inputs, 64 outputs
+- x = self.fc2(x) 
+  - self.fc2 = nn.Linear(64, 10)
+    - 64 inputs, 10 outputs
 
 ```
 class TinyCNN(nn.Module):
@@ -44,7 +66,34 @@ class TinyCNN(nn.Module):
         self.pool = nn.MaxPool2d(2, 2)
         self.fc1 = nn.Linear(16 * 7 * 7, 64)
         self.fc2 = nn.Linear(64, 10)
+
+execution pipeline
+        x = self.pool(F.relu(self.conv1(x)))  # [batch, 8, 14, 14]
+        x = self.pool(F.relu(self.conv2(x)))  # [batch, 16, 7, 7]
+        x = x.reshape(x.size(0), -1)          # [batch, 784]
+        x = F.relu(self.fc1(x))               # [batch, 64]
+        x = self.fc2(x)                       # [batch, 10]
 ```
+
+<!--  xxxxxxHow this matches the following sections
+     1   self.pool(F.relu(self.conv1(x)))  # [batch, 8, 14, 14]
+     2   self.pool(F.relu(self.conv2(x)))  # [batch, 16, 7, 7]
+     3     x.reshape(x.size(0), -1)          # [batch, 784]
+     4     F.relu(self.fc1(x))               # [batch, 64]
+     5     self.fc2(x)                       # [batch, 10]
+-->
+
+
+*CNN demo D4 overview* <br>
+<img src="/assets/M-33.png" alt="drones" width="70%">
+
+<br>
+
+
+For more details see 
+- **[2.2.1 D4 CNN image classifier](https://ziptieai.com/2.2.1-d4-cnn-image-classifier/)**
+- **[2.2.1b D4 CNN algorithm details](https://ziptieai.com/2.2.1b-d4-cnn-algorithm-details/)**
+
 
 <!--  OLD DIAGRAMS
 <img src="/assets/M-07.png" alt="drones" width="46%">
@@ -52,6 +101,8 @@ class TinyCNN(nn.Module):
 
 
 <br>
+
+
 
 26.0623 (v1 26.0623)
 

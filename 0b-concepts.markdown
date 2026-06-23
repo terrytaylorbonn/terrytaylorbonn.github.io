@@ -138,22 +138,7 @@ This CNN was released in 2012. Its an important historical version to study, but
 
 #### **2.4 Concepts -- Convolution**
 
-See diagram below. For concepts details see **[2.4 CNN (convolution) concepts](/0b.2.4-concepts-convo/)**.
-
-The following code defines the NN.
-
-```
-class TinyCNN(nn.Module):
-    def __init__(self):
-        super().__init__()
-        self.conv1 = nn.Conv2d(1, 8, kernel_size=3, padding=1)
-        self.conv2 = nn.Conv2d(8, 16, kernel_size=3, padding=1)
-        self.pool = nn.MaxPool2d(2, 2)
-        self.fc1 = nn.Linear(16 * 7 * 7, 64)
-        self.fc2 = nn.Linear(64, 10)
-```
-
-<br>
+See diagram below. For detailed concepts see **[2.4 CNN (convolution) concepts](/0b.2.4-concepts-convo/)**.
 
 *CNN demo D4 overview* <br>
 <img src="/assets/M-33.png" alt="drones" width="45%">
