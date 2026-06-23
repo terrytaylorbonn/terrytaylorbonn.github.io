@@ -107,6 +107,8 @@ See diagram below. For concepts details see **[Concepts -- 2.1 NN](/0b.2.1-conce
 
 #### **2.2 Inference**
 
+See diagram below. For concepts details see **[Concepts -- 2.2 Inference](/0b.2.2-concepts-inference/)**.
+
 <br>
 
 #### **2.3 Training**
