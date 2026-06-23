@@ -20,7 +20,7 @@ There already is a "Concepts" section on pages 2 NNs, 2b Models, 3 Agents, and 3
 <br>
 
 **TOC**
-- **1 Core AI concepts**
+- **1 Core AI capabilities and limitations**
 - **2 NNs**
 - **2b Models**
 - **3 Agents**
@@ -28,7 +28,7 @@ There already is a "Concepts" section on pages 2 NNs, 2b Models, 3 Agents, and 3
 
 <br>
 
-## **1 Core AI concepts**
+## **1 Core AI capabilities and limitations**
 
 Just a simple draft list 26.0623.
 
