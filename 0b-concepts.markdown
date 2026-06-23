@@ -34,15 +34,15 @@ Just a simple draft list 26.0623.
 
 #### **Capabilities**
 
-- Can be autoprogrammed (train).
+- Can be autoprogrammed (trained).
 - Can use customized architectures (such as CNN or TF).
-- Based on pattern matching. An approximate match will get the highest probability assigned.
-- Can emulate high level thinking (planning, etc).
-- Man machine interface. Flexible input (but output not always predictable).
+- Based on pattern matching. The closest match will be assigned the highest probability.
+- Can *simulate* high level thinking (planning, etc).
+- Provides a free-from language man-machine interface (but the output is not predictable).
 
 #### **Limitations**
 
-- A NN has no feelings, no consciousness, no intelligence. It only processes numbers.
+- Has no feelings, no consciousness, no intelligence. It only processes numbers.
 - A NN always requires traditional SW program control (an agent, often in Python). The agent and NN are designed for each other. The pair constitutes the core essence of AI. 
 
 <img src="/assets/M-11.png" alt="drones" width="26%">
