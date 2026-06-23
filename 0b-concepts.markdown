@@ -63,8 +63,7 @@ Agentic AI models have some pretty sophisticated abilities that really resemble 
 The NN is the core of AI "intelligence". A NN provides a pattern matching algorithm. The the NN is controlled by Python code ("agent").
 
 **Concepts**
-- 2.1 NN
-- 2.2 Inference
+- 2.1 NN (Inference)
 - 2.3 Training
 - 2.4 Convolution
 - 2.5 Transformer
@@ -82,15 +81,21 @@ OLD
 
 
 
-#### **2.1 Concepts -- NN**
+#### **2.1 Concepts -- NN (inference)**
 
 See diagram below. For concepts details see **[Concepts -- 2.1 NN](/0b.2.1-concepts-nn/)**.
 
 
+*NN demo D2ccc overview* <br>
+<img src="/assets/D2ccc.png" alt="drones" width="60%">
+
+
+<!-- 
+
 *NN demo D2 overview* <br>
 <img src="/assets/M-34.png" alt="drones" width="30%">
 
-<!-- Tiny NN demo ([demo D2ccc](/2.1.2-classifier-nn/)) (inference)
+Tiny NN demo ([demo D2ccc](/2.1.2-classifier-nn/)) (inference)
 
 **This one simple NN demo will give you an understanding of the core of all AI inference** (including CNNs, LLMs TFs, etc). The following diagram shows the core components of the demo:
 - **Encoder**. All NNs only "know" numbers (including ChatGPT, Claude, etc). So if you have a dataset that is not (FP) numbers, it must be encoded (and later decoded).
@@ -100,17 +105,19 @@ See diagram below. For concepts details see **[Concepts -- 2.1 NN](/0b.2.1-conce
 
 <img src="/assets/M-05.png" alt="drones" width="50%"> <img src="/assets/M-02.png" alt="drones" width="16%"> -->
 
-<br>
+<!-- <br>
 
 #### **2.2 Concepts -- Inference**
 
-See diagram below. For concepts details see **[Concepts -- 2.2 Inference](/0b.2.2-concepts-inference/)**.
+See diagram below. For concepts details see (TODO) **[Concepts -- 2.2 Inference](/0b.2.2-concepts-inference/)**.
+
+-->
 
 <br>
 
-#### **2.3 Concepts -- Training**
+#### **2.3 Concepts -- Training (NN)**
 
-See diagram below. For concepts details see **[Concepts -- 2.3 Training](/0b.2.3-concepts-training/)**.
+See diagram below. For concepts details see (TODO) **[Concepts -- 2.3 Training](/0b.2.3-concepts-training/)**.
 
 Training input/output must match exactly what is desired in inference. The following code defines the training steps (more details later) for Tiny NN demo ([demo D2ccc](/2.1.2-classifier-nn/)).
 

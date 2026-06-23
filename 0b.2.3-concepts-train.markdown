@@ -1,6 +1,6 @@
 ---
 layout: page
-title: Concepts -- 2.3 Training
+title: Concepts -- 2.3 Training (NN)
 permalink: /0b.2.3-concepts-training/
 ---
 
@@ -14,20 +14,31 @@ This page describes how training works (for NN). Based on the xxx ([demo xxx](/2
 
 <br>
 
-*Training demo xxxx overview* <br>
-<img src="/assets/M-xx.png" alt="drones" width="30%">
+
+
+training
+```
+# 3. Loss + optimizer
+loss_fn = nn.CrossEntropyLoss()
+optimizer = torch.optim.Adam(model.parameters(), lr=0.01)
+
+# 4. Train
+for epoch in range(1000):
+#for epoch in range(100):
+    logits = model(X)
+    loss = loss_fn(logits, Y)
+
+    optimizer.zero_grad()
+    loss.backward()
+    optimizer.step()
+```
 
 <br>
 
-**TOC**
-- **1 xxx**. 
+*Training demo D2ccc overview* <br>
+<img src="/assets/D2ccc_train.png" alt="drones" width="75%">
 
 <br>
 
-## **xxxxx**
-
-xxxxxxxxxxxxxxxxxxxxxxxxxx
-
-<br>
 
 26.0623 (v1 26.0623)
