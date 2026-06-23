@@ -6,27 +6,25 @@ permalink: /0b-demos/
 
 <br>
 
-#### ***This page is a work in progress (WIP)***. *The goal is to summarize the concepts learned from doing the hands-on QS demos.*
-
+#### *Goal of this page (WIP): Summarize the concepts learned from doing the hands-on QS demos.*
 
 <br>
 
-*Major AI project components* <br>
+*AI project components* <br>
 <img src="/assets/M-15.png" alt="drones" width="85%">
 
 <br>
 
 **TOC**
-- **1 AI in general"**. How real intelligence and AI work together.
+- **1 Core AI concepts**
 - **2 NNs**
 - **2b Models**
 - **3 Agents**
-- **3 AI projects**
+- **3b Projects**
 
 <br>
 
-
-## **1 AI in general**
+## **1 Core AI concepts**
 
 <br>
 
@@ -343,7 +341,7 @@ External agents access the model via API. This supports
 
 <br>
 
-## **[3b AI projects](/3.3-ai-projects/)**
+## **[3b Projects](/3.3-ai-projects/)**
 
 “Spinning up” real-world projects quickly with minimal code analysis or manual coding (the final demo section in ZiptieAI).
 
