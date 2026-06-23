@@ -10,6 +10,8 @@ permalink: /0b-demos/
 
 There already is a "Concepts" section on pages 2 NNs, 2b Models, 3 Agents, and 3b Projects. But the focus of this page is the core conceptual gist 2-3b. Using the simplest example from the QS for each. This section may not be like that right now (26.0623), but its moving in that direction.
 
+*ALSO SEE [2.2b CNN<>TF comparison (WIP)](/2.2b-cnn-tf-comparison/)*.
+
 <br>
 
 *AI project components* <br>
