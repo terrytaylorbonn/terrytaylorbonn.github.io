@@ -228,6 +228,8 @@ class TinyTransformer(nn.Module):
 
 See **[Comparison of NN, CNN, and TF architectures](/0b.2.6-concepts-nn-cnn-tf/)**.
 
+*(make this simplified version of [2.2b CNN<>TF comparison (WIP)](/2.2b-cnn-tf-comparison/))*
+
 <br>
 
 ## **[2b Models](/2b_models/)**
