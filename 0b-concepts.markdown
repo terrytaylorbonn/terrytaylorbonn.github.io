@@ -15,8 +15,8 @@ There already is a "Concepts" (**ADVANCED**) section on pages 2 NNs, 2b Models, 
 <br>
 
 In the diagram below:
-- **2 Matrix System** (NN only, CNN, TF) 
-- **2b Model** = Internal Agent (procedural system) + Matrix System
+- **2 Matrix System** (NN only, CNN, TF) *(note: The tiny demos have enough minimal basic internal agent code to make the demo work)*.
+- **2b Model** = Packaged version of Internal Agent (procedural system) + Matrix System.
 - **3 External agent** (Custom or Framework) = (external) Procedural System + (Matrix System or Model)
 - **3b Project** 
 
