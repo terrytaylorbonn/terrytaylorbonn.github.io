@@ -1,7 +1,7 @@
 ---
 layout: page
 title: Concepts -- 2.6 NN, CNN, and TF
-permalink: /0b.2.6-concept-nn-cnn-tf/
+permalink: /0b.2.6-concepts-nn-cnn-tf/
 ---
 
 <br>
