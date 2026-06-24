@@ -1,0 +1,24 @@
+---
+layout: page
+title: Concepts -- 2.6 NN, CNN, and TF
+permalink: /0b.2.6-concept-nn-cnn-tf/
+---
+
+<br>
+
+**[← Concepts](/0b-demos/)** 
+
+<br>
+
+*(make this simplified version of [2.2b CNN<>TF comparison (WIP)](/2.2b-cnn-tf-comparison/))*
+
+
+This page describes how xxxx work. Based on [demo xxx](/2.3.6.1-d5-tiny-tf/). 
+
+<br>
+
+<img src="/assets/xxx.png" alt="drones" width="60%">
+
+<br>
+
+26.0624 (v1 26.0624)
