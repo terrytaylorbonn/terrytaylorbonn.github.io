@@ -10,14 +10,121 @@ permalink: /0b.2.6-concepts-nn-cnn-tf/
 
 <br>
 
-*(make this simplified version of [2.2b CNN<>TF comparison (WIP)](/2.2b-cnn-tf-comparison/))*
+This page describes how CNN and TF are quite similar. Based on [demo xxx](/2.3.6.1-d5-tiny-tf/). *(make this simplified version of [2.2b CNN<>TF comparison (WIP)](/2.2b-cnn-tf-comparison/))*
 
+In future I will also add NN description. But basically CNN and TF have 2 sets of NNs.
+- Initial NN
+  - CNN: Convolution (can be compared to NN style matrix math).
+  - TF: QKV computation (context). 
+- Final NN
+  - CNN: Dense layers.  
+  - TF: FFN and final Wunembed. 
 
-This page describes how xxxx work. Based on [demo xxx](/2.3.6.1-d5-tiny-tf/). 
+  Note that TF FFN is performed at every layer. This is probably necessary because language is much more complicated to compute from crude token input compared to the input pixels of a CNN.
+
+<img src="/assets/M-15ddd.png" alt="drones" width="40%">
+
 
 <br>
 
-<img src="/assets/xxx.png" alt="drones" width="60%">
+### **1a CNN convolution**
+
+For one new pixel in one new filter: 
+- 1) For each kernel position Compute (Kernel scalar) * (all old-filter pixel values at that position) 
+- 2) Sum all those products 
+- 3) Add ONE bias 
+- 4) Apply ReLU
+
+Example:
+- (6) 14x14 pix's, 8 dims (feature maps)
+- (7) CONV2 3x3, 16 filters (feature maps to be create from the 8 existing)
+- (7b) Convolution2. 
+  - This shows a new pixel (red) in a new feature map.
+  - The white kernel (3x3) pix's are = 0 (paddding).
+  - The kernel red pix value is used to multiply the same pix location value for all 8 maps.
+  - Same is done for each yellow pix (multiply the same pix location in all other maps).
+  - 1) Add up all the pix sums (4 in this case).
+  - 3) Add bias.
+  - 4) Apply (9) RELU2.
+Repeat the above
+  - For each pixel (14x14) for the first filter.
+    - You now have a 14x14x1 set.
+Repeat the above
+  - For remaining 15 filters. 
+      - Each filter has different Kernel values.
+
+<img src="/assets/M-33bbb.png" alt="drones" width="60%">
+
+<br>
+
+### **1b TF attention heads**
+
+<br>
+
+### **2a CNN max pooling**
+
+- Continue at P2 in the above CNN diagram.
+- In each filter for each set of 4 pix's choose the highest pix value. 
+- All other pixs are discarded.
+- You now have 7x7 with 16 feature maps.
+  - Basically the pix's now represent higher level features than before.
+  
+<br>
+
+### **2b TF feature extraction (FFN)**
+
+<br>
+
+### **3a CNN dense layers**
+
+- The 7x7x16 (784) resulting pix's from convolution/pooling are now fed into NN. 
+- Result is 10 "logits" that represent the probability of what digit was input.
+
+<img src="/assets/M-33ccc.png" alt="drones" width="60%">
+
+
+<br>
+
+### **3b TF FFN / Wunembed**
+
+
+<br>
+
+### **4 How CNN/TF are similar**
+
+CNN and TF are solving the same kind of problem:
+- Providing a computational "surface" that matches the input.
+- Pixels are related to neighbors; for TF relation is context (QKV).
+- etc.....
+
+- I still need to embellish this with more detail.
+- Will do that after I add TF content. 
+- See #609 for source chats.
+
+CNN
+- Fixed local neighbors
+- Neighbor importance = learned kernel weights
+- Values = pixel/filter activations
+- Spatial size often reduced by pooling
+- Final dense classifier
+
+TF
+- Dynamic semantic neighbors
+- Neighbor importance = QK scores + softmax
+- Values = V vectors
+- Sequence length usually preserved
+- Meaning/story builds across many layers
+- Final W_unembed maps hidden state → vocabulary logits
+
+Your key insight is right:
+- CNN kernel = fixed local mixing rule
+- TF attention = dynamic meaning-based mixing rule
+
+And yes, the reason there is no big dense classifier tail like CNN is basically:
+- The transformer block already keeps refining each token vector.
+- The final unembedding is just the last projection into vocab space.
+
+
 
 <br>
 
