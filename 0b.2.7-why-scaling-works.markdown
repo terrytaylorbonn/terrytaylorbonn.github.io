@@ -4,18 +4,23 @@ title: Concepts -- 2.7 Why scaling works
 permalink: /0b.2.7-why-scaling-works/
 ---
 
-
 <br>
 
 **[← Concepts](/0b-demos/)** 
 
 <br>
 
-This page describes how xxxx work. Based on [demo xxx](/2.3.6.1-d5-tiny-tf/). 
+<!-- This page describes how xxxx work. Based on [demo xxx](/2.3.6.1-d5-tiny-tf/). -->
 
-<br>
+GPT: So I think your explanation of scaling is actually cleaner:
+- NN, CNN, and TF are pattern classifiers.
+- Larger models have more weights.
+- More weights allow more complex classification boundaries.
+- Therefore larger models can classify patterns more accurately.
 
-<img src="/assets/xxx.png" alt="drones" width="60%">
+For example, for the Tiny TF demo, the new token is for all practical purposes the classifier of the entire input. In this case only 8 tokens. Scaling increases the number and complexity of patterns that the model can distinguish and classify.
+
+<img src="/assets/M-36.png" alt="drones" width="60%">
 
 <br>
 

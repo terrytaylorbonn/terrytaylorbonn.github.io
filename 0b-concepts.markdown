@@ -247,6 +247,10 @@ See **[Comparison of NN, CNN, and TF architectures](/0b.2.6-concepts-nn-cnn-tf/)
 
 *(make this simplified version of [2.2b CNN<>TF comparison (WIP)](/2.2b-cnn-tf-comparison/))*
 
+<img src="/assets/M-15ddd.png" alt="drones" width="40%">
+
+
+
 <br>
 
 #### **2.7 Why scaling works**

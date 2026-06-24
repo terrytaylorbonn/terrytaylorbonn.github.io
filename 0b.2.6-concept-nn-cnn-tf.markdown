@@ -20,7 +20,9 @@ In future I will also add NN description. But basically CNN and TF have 2 sets o
   - CNN: Dense layers.  
   - TF: FFN and final Wunembed. 
 
-  Note that TF FFN is performed at every layer. This is probably necessary because language is much more complicated to compute from crude token input compared to the input pixels of a CNN.
+  Notes:
+  1) TF FFN is performed at every layer. This is probably necessary because language is much more complicated to compute from crude token input compared to the input pixels of a CNN.
+  2) Each TF token has its own FFN (NN). But the final classification of the input is performed in the dims of the final token only (because this is how the TF is trained). 
 
 <img src="/assets/M-15ddd.png" alt="drones" width="40%">
 
