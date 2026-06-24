@@ -27,14 +27,13 @@ In the diagram below:
 
 **TOC**
 - **1 Key AI capabilities and limitations**
-- **2 NNs**.
+- **2 NNs. Modern architectures are evolutionary (not revolutionary).** The latest architectures are not introducing anything radically different. I recently saw a video where one of the author's of the original paper "Attention is all you need" (the term "attention" is a misleading marketing term) stated that no other ground-breaking architecture has appeared since the paper was pubished. So studying the basics is to understand the foundation of the latest.
   - 2.1 NN only (Inference)
   - 2.3 Training
   - 2.4 Convolution (CNN)
   - 2.5 Transformer (TF)
   - 2.6 Comparison of NN, CNN, and TF architectures
   - 2.7 Why scaling works (a core concept)
-  - 2.8 Modern architectures are evolutionary, not revolutionary. The latest architectures are not introducing anything radically different. 
 - **2b Models**. How the internal agent (procedural) and NN (NN only, CNN, TF) (matrix) work together to create AI **"simulated intelligence" capabilities**.
 - **3 Agents**. How to create external agents that can reliably **exploit model sim-intel capabilities** (***creating agents that accommodate the significant limitations of such sim-intel is the key to building successful AI projects***). 
   - Agent concepts (Planning, Rule Injection, Tools, Memory, Validation, Explanation, Semantic Mapping)
@@ -257,15 +256,19 @@ See **[Comparison of NN, CNN, and TF architectures](/0b.2.6-concepts-nn-cnn-tf/)
 
 See **[Why scaling works](/0b.2.7-why-scaling-works/)**.
 
+<img src="/assets/M-36.png" alt="drones" width="50%">
+
+
 <br>
 
+<!-- 
 #### **2.8 Modern architectures are evolutionary (not revolutionary)**
 
 The latest architectures are not introducing anything radically different. I recently saw a video where one of the author's of the original paper "Attention is all you need" (the term "attention" is a misleading marketing term) stated that no other ground-breaking architecture has appeared since the paper was pubished.
 
 See **[Modern architectures are evolutionary (not revolutionary)](/0b.2.8-modern-arch-evolution/)**.
 
-<br>
+<br>  -->
 
 ## **[2b Models](/2b_models/)**
 

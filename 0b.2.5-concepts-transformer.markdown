@@ -12,17 +12,31 @@ permalink: /0b.2.5-concepts-tf/
 
 This page describes how transformers work. Based on [demo D5](/2.3.6.1-d5-tiny-tf/). 
 
-In D5 (diagram below):
+<!-- In D5 (diagram below):
 - Loop 1 inputs the letter "h" (T1) and infers (outputs) "e".
 - Loop 2 inputs the letters "h", "e" (T1,T2) and infers "l" (letter l).
 - The loop continues until the output is "hello world hello world hello world".
+-->
 
-<br>
+#### In D5 (diagram below):
+- Loop 1
+  - Input the letter "h" (T1).
+  - Infer. Result = "e".
+- Loop 2
+  - Input the letters "h", "e" (T1,T2).
+  - Infer. Result = "l".
+- ......
+- Loop 8
+  - Input the letters "h", "e", "l", "l", "o", " ", "w", "o", (T1...T8).
+  - Infer. Result = "r".
+- Loop 9
+  - Input the letters "e", "l", "l", "o", " ", "w", "o", "r" (T1...T8).
+  - ............
 
+<!-- 
 ### **NN definition**
-
 The following code defines the NN.
-
+-->
 
 #### Init
 
@@ -103,40 +117,10 @@ with torch.no_grad():
 generated = "".join(itos[i] for i in idx[0].tolist())
 ```
 
-<br>
-
-<img src="/assets/M-09.png" alt="drones" width="60%">
-
-<br>
-
----------------------
----------------------
----------------------
----------------------
----------------------
----------------------
+*TF demo D5 overview*<br>
+<img src="/assets/M-09.png" alt="drones" width="65%">
 
 <br>
 
-# **FROM [2.3.6.1 D5 Tiny TF](/2.3.6.1-d5-tiny-tf/)**
 
-In D5 (diagram below):
-- Loop 1
-  - Input the letter "h" (T1).
-  - Infer. Result = "e".
-- Loop 2
-  - Input the letters "h", "e" (T1,T2).
-  - Infer. Result = "l".
-- ......
-- Loop 8
-  - Input the letters "h", "e", "l", "l", "o", " ", "w", "o", (T1...T8).
-  - Infer. Result = "r".
-- Loop 9
-  - Input the letters "e", "l", "l", "o", " ", "w", "o", "r" (T1...T8).
-  - ............
-
-
-<img src="/assets/M-09.png" alt="drones" width="70%">
-
-
-26.0623 (v1 26.0623)
+26.0624 (v1 26.0623)
