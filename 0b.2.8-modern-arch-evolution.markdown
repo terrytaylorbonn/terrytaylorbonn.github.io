@@ -1,0 +1,24 @@
+---
+layout: page
+title: Concepts -- 2.8 Modern architectures are evolutionary (not revolutionary)
+permalink: /0b.2.8-modern-arch-evolution/
+---
+
+<br>
+
+**[← Concepts](/0b-demos/)** 
+
+<br>
+
+The latest architectures are not introducing anything radically different. 
+
+
+This page describes how xxxx work. Based on [demo xxx](/2.3.6.1-d5-tiny-tf/). 
+
+<br>
+
+<img src="/assets/xxx.png" alt="drones" width="60%">
+
+<br>
+
+26.0624 (v1 26.0624)

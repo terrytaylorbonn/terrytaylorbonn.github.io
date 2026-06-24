@@ -1,0 +1,26 @@
+---
+layout: page
+title: Concepts -- 3 Agents
+permalink: /0b.3-concepts-agents/
+---
+
+<br>
+
+**[← Concepts](/0b-demos/)** 
+
+<br>
+
+External agents access the model via API. This supports
+- reliable workflows built around models, tools, and automation. 
+- tolerance of AI faults and unpredictable outputs
+
+
+This page describes how xxxx work. Based on [demo xxx](/2.3.6.1-d5-tiny-tf/). 
+
+<br>
+
+<img src="/assets/xxx.png" alt="drones" width="60%">
+
+<br>
+
+26.0624 (v1 26.0624)
