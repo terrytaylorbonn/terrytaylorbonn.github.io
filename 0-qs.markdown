@@ -22,6 +22,33 @@ permalink: /0-qs/
 <br> 
 
 This QS (quick start) follows the organization of this site as shown in the site "master diagram" (below).
+- **2 NN demos**. Tiny demos that can also run on a CPU. These NNs only know FP numbers as input and output. So if you have any type of other data, you must encode and then decode. 
+  - **2.1 Core NN** means the core NN (also in CNN dense layers / TF FFN). **Demo is D2ccc**. 
+  - **2.2 CNNs (convolution)** has an extra "NN" in the form of convolution. **Demo is D4**.
+  - **2.3.6 Transformers**. **Demo is D5**.
+  - **2.5 Robotic AI** (demos on the wiki). **Demo is ???**.
+- **2b Model demos**. A model contains the **NN/CNN/TF** and an **"internal" agent (iAgent)** that controls and provides access to the NN/CNN/TF. The iAgent implements an **API** that provides external access to the model.
+  - **2b.2 Tiny demos**. **Demo is ???**.
+  - **2b.2b Building models**. **Demo is ???**.
+  - **2b.3 Modifying models**. **Demo is ???**.
+  - **2b.4 Running models locally**. **Demo is ???**.
+- **3 External agent (py script) demos**. Uses a model as a helpful assistant.
+  - **3.1 Code-first agents**. **Demo is ???**.
+  - **3.2 Agent framework**. **Demo is ???**.
+
+After you have done this QS, 
+  - Go back and do other demos (I might make a recommended list on this page in the future).
+  - Do some of the demos in **3b Projects**. These demos all focus on creating agents that integrate with SW I use. **3b.3 NMAP Security Assistant** is a good starter that uses the local PC as the target system. 
+
+
+<!-- Note that **there are many variations of this setup**, and I will try to provide the version of this diagram for each demo (v1 of this diagram created 26.0615). -->
+
+*Master diagram (ZAI original)*<br>
+<img src="/assets/M-15.png" alt="drones" width="78%">
+
+*Note: Old demos are available on [Wiki](https://github.com/terrytaylorbonn/auxdrone/wiki), [Github](https://github.com/terrytaylorbonn?tab=repositories), [Gdrive](https://drive.google.com/drive/folders/1-Adawag9uA8_bq-hDF-nOuPYaRLz1eEO) (docx lab notes).*
+
+<!-- 26.0625 BACKUP
 - **2 NN, CNN, TF**
   - **Core NN (CNN dense, TF FFN)** is the core NN in all demos (except agent only demos with no AI).
   - **CNN convolute, TF QKV (context)** is an extra NN in CNNs and LLM transformers (TFs).
@@ -32,15 +59,7 @@ This QS (quick start) follows the organization of this site as shown in the site
   - iAgent often implements an **API** that allows external access.
 - **3 External agent (py script)** uses the model as a helful assistant.
 - **3b Project** usually provides integrates AI into existing digital infrastructure.
-
-Note that **there are many variations of this setup**, and I will try to provide the version of this diagram for each demo (v1 of this diagram created 26.0615).
-
-*Master diagram*<br>
-<img src="/assets/M-15.png" alt="drones" width="78%">
-
-*Note: Old demos are available on [Wiki](https://github.com/terrytaylorbonn/auxdrone/wiki), [Github](https://github.com/terrytaylorbonn?tab=repositories), [Gdrive](https://drive.google.com/drive/folders/1-Adawag9uA8_bq-hDF-nOuPYaRLz1eEO) (docx lab notes).*
-
-
+-->
 
 <br>
 
@@ -49,7 +68,7 @@ Note that **there are many variations of this setup**, and I will try to provide
 <br>
 
 
-#### **[2.1 Core NNs (dense/FF)](/2.1-predictive-nns/)**. Basic neural network demos.<br>
+#### **[2.1 Core NNs (CNN dense layers / TF FFN)](/2.1-predictive-nns/)**. Basic neural network demos.<br>
 
 
 <!-- <img src="/assets/classification.png" alt="drones" width="15%"><br> <br>  -->
@@ -82,7 +101,7 @@ There are 3 main parts.
   - 3.1 Linear NN (like for D2ccc) computes the probabilities of each of 10 possible outputs (digits 0 to 9).
   - 3.2 The most probable output is converted into a label (such as "7"). -->
 
-*CNN demo D4 overview* <br>
+*CNN demo D4 overview (ZAI/GPT original diagram)* <br>
 <img src="/assets/M-33.png" alt="drones" width="40%">
 
 <br>
@@ -130,7 +149,7 @@ This section focuses on "spinning up" real-world projects quickly with minimal c
 
 <br>
 
-26.0623 (v1 26.0527)
+26.0625 (v1 26.0527)
 
 
 <!-- **I wasted so much time going down so many rabbit holes when studying AI**. AI is an awesome technology. Without AI tools (GPT) I never could have accomplished 5% of what I have done on the ZiptieAI project. But **AI chatbots only produce the output they are programmed to produce, and much of that about AI itself is misleading hype (or outright lies)**. The very term "artificial intelligence" is a perfect example. AI is not intelligent, and the very concept of "man-made" intelligence shows a basic lack of understanding of what intelligence is. 
