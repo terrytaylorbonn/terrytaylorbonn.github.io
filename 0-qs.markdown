@@ -29,27 +29,22 @@ It's chosen because it teaches almost everything someone needs to know about CNN
 
 This QS (quick start) follows the organization of this site as shown in the site "master diagram" (below).
 - **2 NN demos**. Tiny demos that can also run on a CPU. These NNs only know FP numbers as input and output. So if you have any type of other data, you must encode and then decode. 
-  - **2.1 Core NN** (can be used alone or as CNN dense layers / TF FFN). **Demo is D2ccc**. 
-  - **2.2 CNNs (convolution)** has an extra "NN" that performs convolution. **Demo D4** teaches all you need to know about CNNs.
-  - **2.3.6 Transformers**. **Demo D5** contains a bare bones but fully functional TF.
-  - **2.5 Robotic AI** (demos on the wiki; Robotic AI is not a focus right now). GPT recommends **Tiny obstacle detector**.
+  - **2.1 Core NN** (can be used alone or as CNN dense layers / TF FFN).  
+  - **2.2 CNNs (convolution)** has an extra "NN" that performs convolution. 
+  - **2.3.6 Transformers**. A bare bones but fully functional TF.
+  - **2.5 Robotic AI** (Robotic AI is not a core focus right now).
 - **2b Model demos**. A model contains the **NN/CNN/TF** and an **"internal" agent (iAgent)** that controls and provides access to the NN/CNN/TF. The iAgent implements an **API** that provides external access to the model.
-  - **2b.2 Tiny demos**. **Demo is ???**.
-  - **2b.2b Building models**. **Demo is ???**.
-  - **2b.3 Modifying models**. **Demo is ???**.
-  - **2b.4 Running models locally**. **Demo is ???**.
-- **3 External agent (py script) demos**. Uses a model as a helpful assistant.
-  - **3.1 Code-first agents**. **Demo is ???**.
-  - **3.2 Agent framework**. **Demo is ???**.
-
-Note: About **3b Projects**: 
-- The real goal of AI projects is to integrate AI into an existing SW app. 
-- But the demos listed are all basically Palantir style demos, where you create an external agent that is the main app (I don't have (yet) my own app that I'd like to integrate AI into). 
-- The focus is mostly on programming an agent to use external tools and APIs, not on an existing SW calling the agent for assistance. 
-- In any case, you use these demo techniques to give your AI app access to a systems DB (like I do with the JobRadar, which has access to a test Gmail account emails).
-- In any case a good first demo might be 
+  - **2b.2 Tiny demos**. 
+  - **2b.2b Building models**.
+  - **2b.3 Modifying models**.
+  - **2b.4 Running models locally**. 
+- **3 External agent (py script) demos**. Using a model as a helpful assistant.
+  - **3.1 Code-first agents**.
+  - **3.2 Agent framework**. 
+- **3b Projects**. Projects are where all the previous pieces come together. They aren't just "more demos" — they're the integration point. The real goal of AI projects is to integrate AI into an existing SW app. However, there are no such "integration" apps yet... but the following are good initial demos:
   - **3b.3 NMAP Security Assistant**. Uses the local PC as the target system. This is not only a practical tool, but also can help you learn very important security topics for your home PC/network setup.
   - **3b.2 JobRadar**. This intros hope to connect to email, etc to get a daily summary.  
+
 
 <br> 
 
