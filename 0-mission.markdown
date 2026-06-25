@@ -152,6 +152,7 @@ Structured data forms the basis of many SaaS systems (similar to ontology in Pal
 
 <!-- iptieAI methodically attacks the complexity of the AI ecosystem in a very mechanistic fashion (because AI is first and foremost a mechanical algorithms). --> 
 
+The code demos are organized into the 4 groups shown in the diagram below.
 - **Core [NNs](/2_models/) (2)**.
 - **[Models](/2b_models/) (2b)** that package core NNs for reuse.
 - **External [agents](/3_agents/) (3)** that provide an interface between models (helpful assistants) and legacy systems.
