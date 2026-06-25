@@ -19,7 +19,7 @@ The **ZiptieAI mission** is to give you
 
 # **1 The truth about AI** 
 
-Building successful AI applications requires a basic understanding of AI. 
+**I never cease to be amazed by the engineering genius behind AI**. That being said, **building successful AI applications requires a basic understanding of what AI really is**. 
 - 1.1 AI runs on digital computers
 - 1.2 There is no "I" (intelligence) in AI
 - 1.3 Falling for AI hype can cost you... dearly
