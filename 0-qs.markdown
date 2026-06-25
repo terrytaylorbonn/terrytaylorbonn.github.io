@@ -6,16 +6,16 @@ permalink: /0-qs/
 
 <br> 
 
-#### ***This page is a work in progress (WIP)***. *The goal is a start-to-finish low-to-high-level hands-on set of selected demos that give you core AI skills ASAP.*
+#### ***This page is a work in progress (WIP)***. *The goal is a start-to-finish set of representative demos that teaches the core concepts of each section.*
 
 <br> 
 
 This QS (quick start) follows the organization of this site as shown in the site "master diagram" (below).
 - **2 NN demos**. Tiny demos that can also run on a CPU. These NNs only know FP numbers as input and output. So if you have any type of other data, you must encode and then decode. 
-  - **2.1 Core NN** means the core NN (also in CNN dense layers / TF FFN). **Demo is D2ccc**. 
-  - **2.2 CNNs (convolution)** has an extra "NN" in the form of convolution. **Demo is D4**.
-  - **2.3.6 Transformers**. **Demo is D5**.
-  - **2.5 Robotic AI** (demos on the wiki). **Demo is ???**.
+  - **2.1 Core NN** (can be used alone or as CNN dense layers / TF FFN). **Demo is D2ccc**. 
+  - **2.2 CNNs (convolution)** has an extra "NN" that performs convolution. **Demo D4** teaches all you need to know about CNNs.
+  - **2.3.6 Transformers**. **Demo D5** contains a bare bones but fully functional TF.
+  - **2.5 Robotic AI** (demos on the wiki; Robotic AI is not a focus right now). GPT recommends **Tiny obstacle detector**.
 - **2b Model demos**. A model contains the **NN/CNN/TF** and an **"internal" agent (iAgent)** that controls and provides access to the NN/CNN/TF. The iAgent implements an **API** that provides external access to the model.
   - **2b.2 Tiny demos**. **Demo is ???**.
   - **2b.2b Building models**. **Demo is ???**.
@@ -84,13 +84,16 @@ Tiny NN demo ([demo D2ccc](/2.1.2-classifier-nn/)) (inference)
   - This NN inputs 2 numbers. And based on that number outputs 2 probabilities. That's it.
 - **Decoder**. Convert from a probability for inside/outside the circle to a binary state (1 or 0; inside/outside circle).  
 
+*GPT: It teaches tensors, forward(), Linear, ReLU, logits, CrossEntropy, training, inference without overwhelming people.*
+
+
 <img src="/assets/M-05.png" alt="drones" width="50%"> <img src="/assets/M-02.png" alt="drones" width="16%">
 
 <br>
 
 #### **[2.2 CNNs (convolution)](/2.2-cnns/).**  <br> 
 
-Tiny CNN ([demo D4](/2.2.1-d4-cnn-image-classifier/))
+Tiny CNN ([demo D4 MNIST](/2.2.1-d4-cnn-image-classifier/))
 
 A hands on demo. Input a 28x28 pixel screenshot of a digit, and the NN outputs "0", "1", ... "9". For details see 
 - **[2.2.1 D4 CNN image classifier](https://ziptieai.com/2.2.1-d4-cnn-image-classifier/)**
@@ -110,21 +113,55 @@ There are 3 main parts.
 
 
 #### **[2.3.6 Transformers](/2.3.6-llm-demos/).**<br>
+
+D5 Tiny TF.
+
 <img src="/assets/d5_0.png" alt="drones" width="32%"><br> <br> 
 
 
 #### **2.5 Robotic AI ([wiki](https://github.com/terrytaylorbonn/auxdrone/wiki/Robotic-AI-demos))**<br>
+
+*GPT: Tiny obstacle detector (or whichever demo first connects perception to action). The important concept isn't robotics hardware. It's sensor → NN → decision → actuator*.
+
 <img src="/assets/robotic_ai.png" alt="smol" width="25%" style="border: 1px solid black;"><br> 
 
 <br>
 
 ### **[2b Model demos](/2b_models/)**
 
-- ([2b.1b 2025 demos](/2b.1b-2025-llm-demos/))<br><img src="/assets/smol.png" alt="smol" width="35%"><br> <br>
-- **[2b.2 Tiny demos](/2b.3.6-llm-demos/)**<br> <br>
-- **[2b.2b Building models](/2b.2b-build-models/)**<br> <br>
-- **[2b.3 Modifying models](/2b.3-modify-models/)**<br> <br>
-- **[2b.4 Running models locally](/2b.4-run-models-locally/)**<br> <br>
+<!-- - ([2b.1b 2025 demos](/2b.1b-2025-llm-demos/))<br><img src="/assets/smol.png" alt="smol" width="35%"><br> <br> -->
+
+<br>
+
+#### **[2b.2 Tiny demos](/2b.3.6-llm-demos/)**<br> 
+
+```
+GPT: M01 (save model) because it introduces NN + .pt.
+```
+
+<br>
+
+#### **[2b.2b Building models](/2b.2b-build-models/)**<br> 
+
+```
+GPT: M06 HuggingFace publish because suddenly the model becomes portable.
+```
+
+<br>
+
+#### **[2b.3 Modifying models](/2b.3-modify-models/)**<br> 
+
+```
+GPT: M06 HuggingFace publish because suddenly the model becomes portable.
+```
+
+<br>
+
+#### **[2b.4 Running models locally](/2b.4-run-models-locally/)**<br>
+
+```
+GPT: M07 FastAPI. This is where the model becomes a service. I think that's exactly what people need to understand
+```
 
 <br>
 
@@ -132,6 +169,30 @@ There are 3 main parts.
 
 The center of the Agentic AI universe is the AI agent.  The agent and LLM together can doing amazing things. But they also have severe limitations. "Tuning" then to work together is the core focus. 
 
+ 
+
+```
+GPT:
+
+3.1 Code-first agents >> PAL_CORE planning demo
+I'd probably use
+PAL_CORE planning demo
+because it shows
+•	LLM ↓ JSON ↓ Python ↓ Tools ↓ Result
+That is the essence of agent programming.
+
+3.2 Framework > n8n / PydanticAI
+Probably your smallest
+n8n
+or
+PydanticAI
+demo.
+The framework itself isn't important.
+The concept is.
+```
+
+```
+Delete this:
 - **[3.1 Agentic (no AI)](/3.1-agentic/)** <br> 
 <img src="/assets/4_5_3x.png" alt="drones" width="20%"> <br><br>
 - **[3.2.4 Agentic + AI / Basic demos](/3.2.4-ai-agent-basic-demos/)**. <br>
@@ -139,12 +200,71 @@ The center of the Agentic AI universe is the AI agent.  The agent and LLM togeth
 - **[3.2.5 Agentic + AI / PAL demos](/3.2.5-ai-agent-pal-demos/)**.   <br>
 <img src="/assets/4_6_2x.png" alt="drones" width="20%">  <br>
 <img src="/assets/4_5_3x_bbb.png" alt="drones" width="20%"><br><br> 
+```
 
 <br>
 
-### **[3b Projects](/3.3-ai-projects/)**
+### **[3b Projects](/3.3-ai-projects/)** (GPT: this note is extremely important)
 
 This section focuses on "spinning up" real-world projects quickly with minimal code analysis or manual coding. 
+
+- The real goal of AI projects is to integrate AI into an existing SW app. 
+- But the demos listed are all basically Palantir style demos, where you create an external agent that is the main app (I don't have (yet) my own app that I'd like to integrate AI into). 
+- The focus is mostly on programming an agent to use external tools and APIs, not on an existing SW calling the agent for assistance. 
+- In any case, you use these demo techniques to give your AI app access to a systems DB (like I do with the JobRadar, which has access to a test Gmail account emails).  *GPT: Existing system > Gmail > External Agent > LLM > Summary / Alert.*
+- In any case a good first demo might be 
+  - **3b.3 NMAP Security Assistant**. Uses the local PC as the target system. This is not only a practical tool, but also can help you learn very important security topics for your home PC/network setup.
+  - **3b.2 JobRadar**. This intros hope to connect to email, etc to get a daily summary.  
+
+```
+GPT:
+The only thing I'd emphasize a little more is that 3b Projects are where all the previous pieces come together. 
+They aren't just "more demos"—they're the integration point:
+•	2.x teaches how models work. 
+•	2b teaches how models are packaged and served. 
+•	3 teaches how agents use models. 
+•	3b shows how agents solve real problems by integrating with existing software and external systems. 
+That makes 3b feel like the natural culmination of everything that came before, rather than another independent section.
+
+```
+
+
+```
+GPT: 
+Nmap has several advantages:
+•	real system 
+•	real data 
+•	security 
+•	MongoDB 
+•	OpenAI explanation 
+•	Mattermost alerts 
+It demonstrates nearly every important concept in one project.
+```
+
+
+```
+GPT: 
+
+I actually think this note is extremely important.
+Because it explains something almost nobody explains.
+Namely:
+AI projects are almost never "build ChatGPT."
+Instead they're
+Existing software
+
+AI assistant
+Exactly.
+I especially liked this sentence:
+The real goal of AI projects is to integrate AI into an existing SW app.
+I would make that the very first sentence.
+
+The second bullet, however, I would simplify.
+Instead of
+Palantir style demos, where you create an external agent...
+I'd simply say
+My demos use the external agent as the main application because I don't yet have a large production application to integrate AI into.
+That's easier to understand.
+```
 
 <img src="/assets/6_main_diagram.png" alt="drones" width="40%"> 
 
