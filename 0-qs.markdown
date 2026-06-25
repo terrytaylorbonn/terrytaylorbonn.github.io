@@ -128,6 +128,7 @@ There are 3 main parts.
 
 See (**[demo D5 Tiny TF](/2.2.1-d4-cnn-image-classifier/)**).
 
+*TF demo D5 overview (ZAI original diagram)*<br>
 <img src="/assets/M-09.png" alt="drones" width="55%"><br> 
 
 <!-- <img src="/assets/d5_0.png" alt="drones" width="32%"><br> <br> -->

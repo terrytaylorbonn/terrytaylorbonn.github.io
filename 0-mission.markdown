@@ -30,14 +30,12 @@ The **ZiptieAI mission** is to give you
 
 ### **1.1 AI runs on digital computers**
 
-**This site takes a very down-to-earth mechanistic approach to understanding AI. Thats because AI is based on mechanistic binary matrix math algorithms that run on binary circuits.** AI intelligence simulation has only recently become possible because only recently the computational hardware has reached the performance level required to generate responses faster than a human can process the responses.
+**This site takes a very down-to-earth mechanistic approach to understanding AI. Thats because AI is based on mechanistic binary matrix math algorithms that run on binary circuits.** AI intelligence simulation has only recently became possible because only recently the computational hardware has reached the performance level required to generate responses faster than a human can process them.
 
 The diagrams below show (1) a model and (2) the code that defines the model structure and training. Note the components of the model
 - Transformer (TF) generates response tokens based on the input tokens.
 - Internal agent (iAgent) sends and receives tokens to/from the TF.
-- API allows the external agent (eAgent, not shown) (the core control loop you write, usually in Python) to use the model. 
-
-
+- API allows the external agent (the core control loop you write, usually in Python) to use the model. 
 
 <!-- **A "model" in AI is anything that has a neural network (NN) at its core**. It may have a lot of other stuff wrapped around the NN (CNN convolution, LLM attention heads, etc) but **the core statistical pattern matching functionality runs on a NN**. The differences are mainly architecture, training, orchestration, and use case. **All models are first (1) "trained"** (internal NN params are programmed using SW tools) and **then (2) used to infer output from input.**  -->
 
@@ -49,9 +47,9 @@ The diagrams below show (1) a model and (2) the code that defines the model stru
 
 ### **1.2 There is no "I" (intelligence) in AI**
 
-**AI circuits have absolutely no similarity whatsoever to the human brain neurons. None**. Human thought exists not as a snapshot, but as a symphony playing out in time. But AI circuits are clocked state machines that switch from fixed state to fixed state. AI algorithms are referred to as "neural" networks because they have a crude similarity to real biological neural networks. "Crude" is the key word. They are not real NNs and harbor no intelligence. Their creators (the AI gurus) are well aware of this.
+**AI circuits have absolutely no similarity whatsoever to human brain neurons.** Human thought exists not as a snapshot, but as a symphony playing out in time. But AI circuits are clocked state machines that switch from one state to the next. AI algorithms are referred to as "neural" networks because the diagrams for NN matrix math look like a diagram that could be considered to describe biological neural networks. In reality AI NN have no relationship to biological neurons and do not host intelligence of any kind. 
 
-The GPU that runs the AI NN is a 100% deterministic binary computation device. If you put in the same input, you will **always** get the same output. The core basis of a GPU and CPU are the same binary switches. You could run even the most sophisticated LLM on electro-mechanical relays (it would take years to generate a token, consume the entire output of a large nuclear power plant, but its theoreticaly possible).  
+The GPU that runs the AI NN is a 100% deterministic binary computation device. If you put in the same input, you will **always** get the same output. The core basis of both a GPU and a CPU are binary switches. You could run even the most sophisticated LLM on electro-mechanical relays. It might require the entire power output of nuclear plant and take a year or more to generate a token response, but it is theoretically possible.  
 
 *Electro-mechanical relay (a theoretical alternative to the GPU)*<br>
 <img src="/assets/relay.png" alt="drones" width="12%">
@@ -60,7 +58,7 @@ The GPU that runs the AI NN is a 100% deterministic binary computation device. I
 
 ### **1.3 Falling for AI hype can cost you... dearly**
 
-**"No more programmers"** (Jensen Huang), **"no more workers", "self-driving cars will be ready next year"** (Musk, the battery powered car king and colonizer of Mars), **"we must pause AI development because its not safe"** (Anthropic CEO), **"AI already has emotions"** (Nobel and Turing prize winner Jeffrey Hinton) etc etc. These con artists say such things because they know the general public has no idea how AI really works. Such hype can cost you, sometimes dearly (in the case of "self-driving" cars or "colonizing" Mars).
+**"No more programmers"** (Jensen Huang), **"no more workers", "self-driving cars will be ready next year"** (Musk), **"we must pause AI development because its not safe"** (Anthropic CEO), and **"AI already has emotions"** (Nobel and Turing prize winner Jeffrey Hinton). My own explanation for such statements from those who know better is that its just marketing hype. I don't think they believe it. If you yourself fall for such hype it can cost you, sometimes dearly (for example, in the case of "self-driving" cars or "colonizing" Mars).
 
 <!-- **AI is a security risk**. The core NN in AI has what are often referred to as "hidden layers" that perform the massive brute-force number crunching to generate "intelligent" output. **It's impossible (even for AI) to determine how a NN has been programmed by analyzing the parameter settings in these layers**. -->
 
