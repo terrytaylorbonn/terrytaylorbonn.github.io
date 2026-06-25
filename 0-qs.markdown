@@ -8,6 +8,23 @@ permalink: /0-qs/
 
 #### ***This page is a work in progress (WIP)***. *The goal is a start-to-finish set of representative demos that teaches the core concepts of each section.*
 
+```
+GPT:
+Overall, I think this is one of the strongest organizational ideas you've come up with. It answers the question that every newcomer has:
+"What should I actually build first?"
+Your site has become large enough that people need a guided path. A QS page solves that.
+(1) The basic idea
+I would score it 9.5/10.
+The only thing I'd change is the philosophy.
+Instead of
+•	"one demo from each section"
+I'd make it
+•	"one representative demo that teaches the core idea of that section."
+That is a subtle but important distinction.
+For example, D4 isn't chosen because it's "the CNN demo."
+It's chosen because it teaches almost everything someone needs to know about CNNs.
+```
+
 <br> 
 
 This QS (quick start) follows the organization of this site as shown in the site "master diagram" (below).
