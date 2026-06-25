@@ -119,17 +119,15 @@ Structured data forms the basis of many SaaS systems (similar to ontology in Pal
 
 # **2 Core AI demos and concepts**
 
+<!--
   - **2.1 Core AI demos ([QS](/0-qs/))**. You need hands-on demo experience before you can really understand the core AI concepts.
-  - **2.2 Core AI [concepts](/0b-demos/)**. The most important concept is that there is no "I"  (no intelligence) in "AI".
-
+  - **2.2 Core AI [concepts](/0b-demos/)**. The most important concept is that there is no "I"  (no intelligence) in "AI".  -->
 
 <br>
 
 ### **2.1 Core AI demos ([QS](/0-qs/))**
 
-**You can only learn how AI works by doing code demos (or at least studying the code)**. Chatbots are programmed to inundate you with hype and AI lingo. GPT often remarks about my habit of wanting to describe AI from a **mechanistic** viewpoint. My response has always been **"of course, AI is mechanistic** (binary computation). 
-
-I went down so many rabbit holes when studying AI. **The ONLY way to understand AI is by doing examples. Code does not lie**.
+**You can only learn how AI works by doing code demos (or at least studying the code)**. Chatbots are programmed to inundate you with hype and AI lingo. GPT often remarks about my habit of wanting to describe AI from a **mechanistic** viewpoint. My response has always been **"of course, AI is mechanistic** (binary computation). I went down so many rabbit holes when studying AI. **The ONLY way to understand AI is by doing examples. Code does not lie**.
 
 *A simple NN **[demo](/2.1.2-classifier-nn/)** of the core of AI*<br>
 <img src="/assets/M-02.png" alt="drones" width="22%">
@@ -142,11 +140,9 @@ I went down so many rabbit holes when studying AI. **The ONLY way to understand 
 
 ### **2.2 Core AI [concepts](/0b-demos/)**
 
-**AI is first and foremost a man <> machine interface**. A human chats with an LLM via tokens (words). Human eyesight and intelligence converts these tokens into thoughts (an amazing little-understood process). On the LLM side, tokens are converted to numbers before being input to an LLM transformer NN (an LLM sees nothing, has no thoughts, and only crunches numbers).
+**AI is first and foremost a man <> machine interface**. A human chats with an LLM via tokens (words). Human eyesight and intelligence convert these tokens into thoughts (an amazing little-understood process). On the LLM side, tokens are converted to numbers before being input to an LLM transformer NN (an LLM sees nothing, has no thoughts, and only crunches numbers). **AI chatbots only say what they are programmed to say** (sometimes that's pure AI lingo and hype). **The LLM TF generates a token sequence based on the input tokens; the internal agent  (a traditional CPU-based algorithm) controls the TF and interfaces with you.** A Tweedledee-Tweedledum team.  
 
-Without AI tools (chatbots) I never could have accomplished 5% of what I have done on the ZiptieAI project. But **AI chatbots only say what they are programmed to say** (sometimes that's pure AI lingo and hype). **The LLM TF generates a token sequence based on the input tokens; the internal agent  (a traditional CPU-based algorithm) controls the TF and interfaces with you.** A Tweedledee-Tweedledum team.  
-
-*Human (left), LLM agent (center), and LLM transformer (right)*<br>
+<!-- *Human (left), LLM agent (center), and LLM transformer (right)*<br> --> 
 <img src="/assets/M-11.png" alt="drones" width="31%"> 
 
 <br>
