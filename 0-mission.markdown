@@ -26,23 +26,30 @@ Building successful AI applications requires a basic understanding of AI.
 
 <br>
 
-### **1.1 There is no "I" in AI (its a scam)**
+### **1.1 AI runs on digital computers**
 
-This site takes a very down-to-earth mechanistic approach to understanding AI. Thats because that's what AI is. Mechanistic (binary calculation, matrix math) algorithms. These matrix math algorithms are referred to as "neural" networks because they are a very crude similarity to real biological neural networks. Crude is they key word. They are not real NNs, and harbor 0 intelligence. And their creators are well aware of this.
+**This site takes a very down-to-earth mechanistic approach to understanding AI. Thats because AI is based on mechanistic binary matrix math algorithms that run on binary circuits.**
 
-CLOCKED STATE MACHINES.
+The diagrams below show (1) a model and (2) the code that defines the model structure and training. Note the components of the model
+- Transformer (TF) generates response tokens based on the input tokens.
+- Internal agent (iAgent) sends and receives tokens to/from the TF.
+- API allows the external agent (eAgent, not shown) (the core control loop you write, usually in Python) to use the model. 
 
-**A "model" in AI is anything that has a neural network (NN) at its core**. It may have a lot of other stuff wrapped around the NN (CNN convolution, LLM attention heads, etc) but **the core statistical pattern matching functionality runs on a NN**. The differences are mainly architecture, training, orchestration, and use case. **All models are first (1) "trained"** (internal NN params are programmed using SW tools) and **then (2) used to infer output from input.**  
+**AI intelligence simulation has only recently become possible because only recently the computational hardware has reached the performance level required to generate responses faster than a human can process the responses**.
 
-*AI model is a calculator, not intelligence (M-05.png)*<br>
+<!-- **A "model" in AI is anything that has a neural network (NN) at its core**. It may have a lot of other stuff wrapped around the NN (CNN convolution, LLM attention heads, etc) but **the core statistical pattern matching functionality runs on a NN**. The differences are mainly architecture, training, orchestration, and use case. **All models are first (1) "trained"** (internal NN params are programmed using SW tools) and **then (2) used to infer output from input.**  -->
+
+*AI model components and code (code does not lie)*<br>
 <img src="/assets/M-15-2b.png" alt="drones" width="53%"> <br>
 <img src="/assets/M-14.png" alt="desc" width="60%"> 
 
 <br>
 
-### **1.2 AI = deterministic binary computing**
+### **1.2 There is no "I" (intelligence) in AI**
 
-**This section analyzes models from a mechanical perspective, because Models ARE MECHANICAL. They run on clocked binary circuits**. They have no intelligence. You could run even the most sophisticated LLM on electro-mechanical relays (it would take years to generate a token, consume the entire output of a large nuclear power plant, but its theoretically possible). **AI intelligence simulation is based on (1) binary computing structures and (2) massive computing power/speed**. The more you understand how AI models work, the better you can use them in AI projects. 
+AI circuits are clocked state machines that switch from fixed state to fixed state. **AI circuits have absolutely no similarity whatsoever to the human brain neurons. None**. Human thought exists not as a snapshot, but as a symphony playing out in time. AI algorithms are referred to as "neural" networks because they have a crude similarity to real biological neural networks. "Crude" is the key word. They are not real NNs and harbor no intelligence. Their creators (the AI gurus) are well aware of this.
+
+The GPU that runs the AI NN is a 100% deterministic binary computation device. If you put in the same input, you will **always** get the same output. The core basis of a GPU and CPU are the same binary switches. You could run even the most sophisticated LLM on electro-mechanical relays (it would take years to generate a token, consume the entire output of a large nuclear power plant, but its theoreticaly possible).  
 
 *Electro-mechanical relay (a theoretical alternative to the GPU)*<br>
 <img src="/assets/relay.png" alt="drones" width="12%">
@@ -51,12 +58,7 @@ CLOCKED STATE MACHINES.
 
 ### **1.3 Falling for the hype can cost you... dearly**
 
-Falling for AI hype (as a product dev or consumer) will cost you dearly. **"No more programmers"** (Jensen Huang), **"no more workers"** (Musk, the colonizer of Mars), **"we must pause AI development because its not safe"** (Anthropic CEO), **"AI already has emotions"** (Nobel and Turing prize winner Jeffrey Hinton) etc etc. The general public has no idea how AI really works. Fertile ground for con artists. 
-
-They are saying such nonsense for one reason: To scam you.
-
-
-If AI was truly intelligent then AI integration would just involve connecting AI and letting it rip. **But AI is not intelligent. AI is based 100% on deterministic binary algorithms that compute statistical probabilities. AI is an addon, a helpful assistant.** The most reliable AI systems use the smallest AI component that can provide the required functionality.
+**"No more programmers"** (Jensen Huang), **"no more workers", "self-driving cars will be ready next year"** (Musk, the battery powered car king and colonizer of Mars ), **"we must pause AI development because its not safe"** (Anthropic CEO), **"AI already has emotions"** (Nobel and Turing prize winner Jeffrey Hinton) etc etc. These con artists say such things because they know the general public has no idea how AI really works. Such hype can cost you, sometime dearly (in the case of "self-driving" cars).
 
 <!-- **AI is a security risk**. The core NN in AI has what are often referred to as "hidden layers" that perform the massive brute-force number crunching to generate "intelligent" output. **It's impossible (even for AI) to determine how a NN has been programmed by analyzing the parameter settings in these layers**. -->
 
@@ -66,6 +68,9 @@ If AI was truly intelligent then AI integration would just involve connecting AI
 <br>
 
 ### **1.4 AI is an incredible revolutionary engineering marvel.. for the right applications** 
+
+If AI was truly intelligent then AI integration would just involve connecting AI and letting it rip. **But AI is not intelligent. AI is based 100% on deterministic binary algorithms that compute statistical probabilities. AI is an addon, a helpful assistant.** The most reliable AI systems use the smallest AI component that can provide the required functionality.
+
 
 Palantir's initial projects were for military applications **without AI** (25 years ago). They were very successful. The applications were basically agentic apps (without AI). The apps were designed to help decision makers. Not to replace mankind. AI later became a very valuable helpful assistant. **Palantir's missions are perfect for AI-assisted agents. Benefits outweigh the negatives. Errors can be tolerated. And a human always makes the final decision**. Its no accident that Palantir talks straight about many aspects of AI. **Engineers wont go away, their expertise is required in the AI age more than ever**. Palantir's business does **not demand the myth of AI intelligence**. Palantir says that **AI will not replace people, it will empower them**.
 
