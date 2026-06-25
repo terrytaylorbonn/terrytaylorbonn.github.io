@@ -30,26 +30,24 @@ The **ZiptieAI mission** is to give you
 
 ### **1.1 AI runs on digital computers**
 
-**This site takes a very down-to-earth mechanistic approach to understanding AI. Thats because AI is based on mechanistic binary matrix math algorithms that run on binary circuits.** AI intelligence simulation has only recently became possible because only recently the computational hardware has reached the performance level required to generate responses faster than a human can process them.
-
-The diagrams below show (1) a model and (2) the code that defines the model structure and training. Note the components of the model
+**This site takes a very down-to-earth mechanistic approach to understanding AI. Thats because AI is based on mechanistic binary matrix math algorithms that run on binary circuits.** The diagrams below show (1) a model and (2) the code that defines the model structure and training. Note the components of the model
 - Transformer (TF) generates response tokens based on the input tokens.
 - Internal agent (iAgent) sends and receives tokens to/from the TF.
 - API allows the external agent (the core control loop you write, usually in Python) to use the model. 
 
+AI intelligence simulation became possible only recently after the computational hardware reached the performance level required to generate responses faster than a human can process them.
+
 <!-- **A "model" in AI is anything that has a neural network (NN) at its core**. It may have a lot of other stuff wrapped around the NN (CNN convolution, LLM attention heads, etc) but **the core statistical pattern matching functionality runs on a NN**. The differences are mainly architecture, training, orchestration, and use case. **All models are first (1) "trained"** (internal NN params are programmed using SW tools) and **then (2) used to infer output from input.**  -->
 
 *AI model components and code (code does not lie)*<br>
-<img src="/assets/M-15-2b.png" alt="drones" width="53%"> <br>
+<img src="/assets/M-15-2b.png" alt="drones" width="53%"><br><br> 
 <img src="/assets/M-14.png" alt="desc" width="60%"> 
 
 <br>
 
 ### **1.2 There is no "I" (intelligence) in AI**
 
-**AI circuits have absolutely no similarity whatsoever to human brain neurons.** Human thought exists not as a snapshot, but as a symphony playing out in time. But AI circuits are clocked state machines that switch from one state to the next. AI algorithms are referred to as "neural" networks because the diagrams for NN matrix math look like a diagram that could be considered to describe biological neural networks. In reality AI NN have no relationship to biological neurons and do not host intelligence of any kind. 
-
-The GPU that runs the AI NN is a 100% deterministic binary computation device. If you put in the same input, you will **always** get the same output. The core basis of both a GPU and a CPU are binary switches. You could run even the most sophisticated LLM on electro-mechanical relays. It might require the entire power output of nuclear plant and take a year or more to generate a token response, but it is theoretically possible.  
+**AI circuits have absolutely no similarity whatsoever to human brain neurons.** Human thought exists not as a snapshot, but as a symphony playing out in time. But AI circuits host clocked state machines. AI algorithms are referred to as "neural" networks because the diagrams for NN matrix math look like diagrams that could be considered to describe biological neural networks.  GPUs that host AI NN are 100% deterministic binary computation devices. If you put in the same input, you will **always** get the same output. You could even run the most sophisticated LLMs on electro-mechanical relays. It might require the entire power output of nuclear plant and take a year or more to generate a token response, but it is theoretically possible.  
 
 *Electro-mechanical relay (a theoretical alternative to the GPU)*<br>
 <img src="/assets/relay.png" alt="drones" width="12%">
@@ -58,7 +56,7 @@ The GPU that runs the AI NN is a 100% deterministic binary computation device. I
 
 ### **1.3 Falling for AI hype can cost you... dearly**
 
-**"No more programmers"** (Jensen Huang), **"no more workers", "self-driving cars will be ready next year"** (Musk), **"we must pause AI development because its not safe"** (Anthropic CEO), and **"AI already has emotions"** (Nobel and Turing prize winner Jeffrey Hinton). My own explanation for such statements from those who know better is that its just marketing hype. I don't think they believe it. If you yourself fall for such hype it can cost you, sometimes dearly (for example, in the case of "self-driving" cars or "colonizing" Mars).
+**"No more programmers"**, **"no more workers", "self-driving cars will be ready next year"**, **"we must pause AI development because its not safe"**, and **"AI already has emotions"** (that last statement was from a Nobel and Turing prize winner). If you yourself fall for such hype it can cost you, sometimes dearly (for example, in the case of "self-driving" cars or "colonizing" Mars).
 
 <!-- **AI is a security risk**. The core NN in AI has what are often referred to as "hidden layers" that perform the massive brute-force number crunching to generate "intelligent" output. **It's impossible (even for AI) to determine how a NN has been programmed by analyzing the parameter settings in these layers**. -->
 
@@ -81,7 +79,7 @@ Palantir in the past few years has become synonomous with cutting edge **real wo
 
 ### **1.5 AI's place in our world (not our place in AI's world)** 
 
-Its no accident that Palantir talks straight about many aspects of AI. Palantir's business does **not demand the myth of AI intelligence**. Palantir says that **AI will not replace people, it will empower them** and that **"engineers wont go away, because their AI-enhanced expertise will be required even more in the age of AI"**. If AI was truly intelligent then AI integration would just involve connecting AI and letting it rip. But successful AI integration into any system requires extensive technical expertise. In digram below, the small green box (far left) represents the core legacy enterprise SW. **The core algorithms and workflows developed over decades for such systems are not going to be replaced by AI. AI is going to assist**, and in such as way that AI's unavoidable errors will not cause significant problems. 
+Its no accident that Palantir talks straight about many aspects of AI. Palantir's business does **not demand the myth of AI intelligence**. Palantir says that **AI will not replace people, it will empower them** and that **"engineers wont go away, because their AI-enhanced expertise will be required even more in the age of AI"**. If AI was truly intelligent then AI integration would just involve connecting AI and letting it rip. But successful AI integration into any system requires extensive technical expertise. In digram below, the small green box (far left) represents the core legacy enterprise SW. **The core algorithms and workflows developed over decades for such systems are not going to be replaced by AI. AI is going to assist**, and in such a way that AI's unavoidable errors will not cause significant problems. 
 
 <!-- 
  **But AI is not intelligent. AI is based 100% on deterministic binary algorithms that compute statistical probabilities. AI is an addon, a helpful assistant.** The most reliable AI systems use the smallest AI component that can provide the required functionality. -->
@@ -125,7 +123,9 @@ Structured data forms the basis of many SaaS systems (similar to ontology in Pal
 
 ### **2.1 Core AI demos ([QS](/0-qs/))**
 
-**You can only learn how AI works by doing code demos (or at least studying the code). Code does not lie**. Chatbots are programmed to inundate you with hype and AI lingo. GPT often remarks about my habit of wanting to describe AI from a **mechanistic** viewpoint. My response has always been **"of course, AI is mechanistic** (binary computation). <!-- I went down so many rabbit holes when studying AI. **The ONLY way to understand AI is by doing examples. -->
+**You can only learn how AI works by doing code demos** (or at least studying the code). **Code does not lie**. 
+
+<!-- Chatbots are programmed to inundate you with hype and AI lingo. GPT often remarks about my habit of wanting to describe AI from a **mechanistic** viewpoint. My response has always been **"of course, AI is mechanistic**. I went down so many rabbit holes when studying AI. **The ONLY way to understand AI is by doing examples. -->
 
 *A simple NN **[demo](/2.1.2-classifier-nn/)** of the core of AI*<br>
 <img src="/assets/M-02.png" alt="drones" width="22%">
@@ -138,7 +138,10 @@ Structured data forms the basis of many SaaS systems (similar to ontology in Pal
 
 ### **2.2 Core AI [concepts](/0b-demos/)**
 
-**AI is first and foremost a man <> machine interface**. A human chats with an LLM via tokens (words). Human eyesight and intelligence convert these tokens into thoughts (an amazing little-understood process). On the LLM side, tokens are converted to numbers before being input to an LLM transformer NN. An LLM sees nothing, has no thoughts. It only crunches numbers. **AI chatbots only say what they are programmed to say** (often that's pure AI lingo and hype). **The LLM TF generates a token sequence based on the input tokens; the LLM internal agent (a traditional CPU-based algorithm) controls the TF and interfaces with the outside world.** A true Tweedledee-Tweedledum team.  
+**An AI LLM is first and foremost a man <> machine interface with hard coded language skills and memory**. A human chats with an LLM via tokens (words). Human eyesight and intelligence convert these tokens into thoughts (an amazing little-understood process). **The LLM internal agent (a traditional CPU-based algorithm) controls the transformer (TF) and interfaces with the outside world. The TF generates a token sequence based on the input tokens (nothing more).** The closely synchronized teamwork of the internal agent and the TF result in a convincing simulation of intelligent thought.
+
+<!-- On the LLM side, tokens are converted by the internal agent to FP numbers before being input to the LLM transformer (TF). An LLM sees nothing and has no thoughts. It only crunches numbers. **AI chatbots only say what they are programmed to say**. -->
+
 
 <!-- *Human (left), LLM agent (center), and LLM transformer (right)*<br> --> 
 <img src="/assets/M-11.png" alt="drones" width="31%"> 
