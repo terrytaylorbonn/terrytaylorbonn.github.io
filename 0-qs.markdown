@@ -6,18 +6,7 @@ permalink: /0-qs/
 
 <br> 
 
-<!-- 
-**The ONLY way to understand AI is by doing examples.** This page currently is an overview of all the demos on this site. But it will slowly morph into a Quick Start with specific demos to focus on. 
-
-**TOC**
-- **1 Master diagram**
-- **2 NN demos**
-- **2b Model demos**
-- **3 Agent demos**
-- **3b Projects**  -->
-
 #### ***This page is a work in progress (WIP)***. *The goal is a start-to-finish low-to-high-level hands-on set of selected demos that give you core AI skills ASAP.*
-
 
 <br> 
 
@@ -36,11 +25,14 @@ This QS (quick start) follows the organization of this site as shown in the site
   - **3.1 Code-first agents**. **Demo is ???**.
   - **3.2 Agent framework**. **Demo is ???**.
 
-Note: About **3b Projects**: The real goal of AI projects is to integrate AI into an existing SW app. But the demos listed are all basically Palantir style demos, where you create an external agent that is the main app (I don't have (yet) my own app that I'd like to integrate AI into). In any case a good first demo might be 
+Note: About **3b Projects**: 
+- The real goal of AI projects is to integrate AI into an existing SW app. 
+- But the demos listed are all basically Palantir style demos, where you create an external agent that is the main app (I don't have (yet) my own app that I'd like to integrate AI into). 
+- The focus is mostly on programming an agent to use external tools and APIs, not on an existing SW calling the agent for assistance. 
+- In any case, you use these demo techniques to give your AI app access to a systems DB (like I do with the JobRadar, which has access to a test Gmail account emails).
+- In any case a good first demo might be 
   - **3b.3 NMAP Security Assistant**. Uses the local PC as the target system. This is not only a practical tool, but also can help you learn very important security topics for your home PC/network setup.
   - **3b.2 JobRadar**. This intros hope to connect to email, etc to get a daily summary.  
-
-<!-- Note that **there are many variations of this setup**, and I will try to provide the version of this diagram for each demo (v1 of this diagram created 26.0615). -->
 
 <br> 
 
@@ -49,6 +41,15 @@ Note: About **3b Projects**: The real goal of AI projects is to integrate AI int
 
 *Note: Old demos are available on [Wiki](https://github.com/terrytaylorbonn/auxdrone/wiki), [Github](https://github.com/terrytaylorbonn?tab=repositories), [Gdrive](https://drive.google.com/drive/folders/1-Adawag9uA8_bq-hDF-nOuPYaRLz1eEO) (docx lab notes).*
 
+<!-- Note that **there are many variations of this setup**, and I will try to provide the version of this diagram for each demo (v1 of this diagram created 26.0615). -->
+<!-- 
+**The ONLY way to understand AI is by doing examples.** This page currently is an overview of all the demos on this site. But it will slowly morph into a Quick Start with specific demos to focus on. 
+**TOC**
+- **1 Master diagram**
+- **2 NN demos**
+- **2b Model demos**
+- **3 Agent demos**
+- **3b Projects**  -->
 <!-- 26.0625 BACKUP
 - **2 NN, CNN, TF**
   - **Core NN (CNN dense, TF FFN)** is the core NN in all demos (except agent only demos with no AI).
