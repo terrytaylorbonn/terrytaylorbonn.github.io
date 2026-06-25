@@ -105,7 +105,7 @@ Tiny NN demo ([demo D2ccc](/2.1.2-classifier-nn/)) (inference)
 
 #### **[2.2 CNNs (convolution)](/2.2-cnns/).**  <br> 
 
-Tiny CNN ([demo D4 MNIST](/2.2.1-d4-cnn-image-classifier/))
+See Tiny CNN (**[demo D4 MNIST](/2.2.1-d4-cnn-image-classifier/)**).
 
 A hands on demo. Input a 28x28 pixel screenshot of a digit, and the NN outputs "0", "1", ... "9". For details see 
 - **[2.2.1 D4 CNN image classifier](https://ziptieai.com/2.2.1-d4-cnn-image-classifier/)**
@@ -126,19 +126,50 @@ There are 3 main parts.
 
 #### **[2.3.6 Transformers](/2.3.6-llm-demos/).**<br>
 
-D5 Tiny TF.
+See (**[demo D5 Tiny TF](/2.2.1-d4-cnn-image-classifier/)**).
 
-<img src="/assets/d5_0.png" alt="drones" width="32%"><br> <br> 
+<img src="/assets/M-09.png" alt="drones" width="55%"><br> 
 
+<!-- <img src="/assets/d5_0.png" alt="drones" width="32%"><br> <br> -->
+
+<br>
 
 #### **2.5 Robotic AI ([wiki](https://github.com/terrytaylorbonn/auxdrone/wiki/Robotic-AI-demos))**<br>
 
 ```
 GPT: 
-Tiny obstacle detector (or whichever demo first connects perception to action). The important concept isn't robotics hardware. It's sensor → NN → decision → actuator.
+Tiny obstacle detector (or whichever demo first connects perception to action). 
+The important concept isn't robotics hardware. It's sensor → NN → decision → actuator.
 ```
 
-<img src="/assets/robotic_ai.png" alt="smol" width="25%" style="border: 1px solid black;"><br> 
+```
+ME: i think D30 (28bbb) is the robotic AI demo you mentioned. 
+#502_3_robotics_AI_no_jepa_v31_26.0131.docx
+GPT: 
+28bbb D30 add GIF (BINGO) #174 is there any way to create a gif with just the resulting path and obstacle? 
+Yep — very easy, and this is a good next step because visualizing the trajectory is what makes D30 click for robotics readers. 
+There are three simple ways, depending on how fancy you want it:
+
+Yes — D30 / 28bbb “avoid the rock” is probably the right 2.5 Robotic AI QS demo.
+It has the key robotics loop:
+start position
+→ perceive obstacle
+→ plan path
+→ avoid obstacle
+→ reach goal
+→ visualize trajectory
+That is much better than a drone-specific demo for QS, because it is simple, visual, and general.
+For QS I’d write:
+- **2.5 Robotic AI**. Connects AI to action: perceive the world, choose a path, avoid an obstacle, and move toward a goal. **Demo is D30 “avoid the rock” / 28bbb GIF**.
+Why it works:
+  “rock” makes the problem intuitive.
+  the GIF makes the result instantly understandable.
+  it shows robotics without requiring robot hardware.
+  it connects perception + planning + action, which is the core idea.
+So yes: D30 28bbb is the pick.
+```
+
+<img src="/assets/robotic_ai.png" alt="smol" width="55%" style="border: 1px solid black;"><br> 
 
 <br>
 
