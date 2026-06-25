@@ -20,9 +20,11 @@ The **ZiptieAI mission** is to give you
 # **1 The truth about AI** 
 
 Building successful AI applications requires a basic understanding of AI. 
-  - **1.1 Wxxxx**
-  - **1.2 Wxxxxxxxxdo**
-  - **1.3 Howxxxxxxxxves**
+- 1.1 AI runs on digital computers
+- 1.2 There is no "I" (intelligence) in AI
+- 1.3 Falling for AI hype can cost you... dearly
+- 1.4 AI is an incredible revolutionary engineering marvel.. for the right applications
+- 1.5 AI's place in our world (not our place in AI's world) 
 
 <br>
 
@@ -69,9 +71,7 @@ The GPU that runs the AI NN is a 100% deterministic binary computation device. I
 
 ### **1.4 AI is an incredible revolutionary engineering marvel.. for the right applications** 
 
-Palantir in the past few years has become synonomous with cutting edge **real world** AI applications. But Palantir only recently adopted AI. 25 years ago Palantir's initial projects were for military applications **without AI**. They were very successful. The applications were basically agentic apps (without AI). The apps were designed to help decision makers. Not to replace mankind. 
-
-AI later became for Palantir a very valuable helpful assistant. **Palantir's missions are perfect for AI-assisted agents. Benefits outweigh the negatives. Errors can be tolerated. And a human always makes the final decision**.  
+Palantir in the past few years has become synonomous with cutting edge **real world** AI applications. But Palantir only recently adopted AI. 25 years ago Palantir's initial projects were for military applications **without AI**. They were very successful. The applications were basically agentic apps (without AI). The apps were designed to help decision makers. Not to replace mankind. AI later became for Palantir a very valuable helpful assistant. **Palantir's missions are perfect for AI-assisted agents. Benefits outweigh the negatives. Errors can be tolerated. And a human always makes the final decision**.  
 
 <!-- 
 *"...AI software will be as important as hardware, with platforms such as Palantir's Maven Smart System poised to turn massive drone sensor feeds into highly usable battlefield intelligence". [Zerohedge 26.0620](https://www.zerohedge.com/military/only-beginning-how-profit-asymmetric-warfare-boom)*. -->
@@ -83,18 +83,14 @@ AI later became for Palantir a very valuable helpful assistant. **Palantir's mis
 
 ### **1.5 AI's place in our world (not our place in AI's world)** 
 
-Its no accident that Palantir talks straight about many aspects of AI. Palantir's business does **not demand the myth of AI intelligence**. Palantir says that **AI will not replace people, it will empower them** and that **Engineers wont go away, their expertise is required in the AI age more than ever**.
+Its no accident that Palantir talks straight about many aspects of AI. Palantir's business does **not demand the myth of AI intelligence**. Palantir says that **AI will not replace people, it will empower them** and that **Engineers wont go away, their expertise is required in the AI age more than ever**. Thats because Palantir understands that if AI was truly intelligent then AI integration would just involve connecting AI and letting it rip. **But AI is not intelligent. AI is based 100% on deterministic binary algorithms that compute statistical probabilities. AI is an addon, a helpful assistant.** The most reliable AI systems use the smallest AI component that can provide the required functionality.
 
-If AI was truly intelligent then AI integration would just involve connecting AI and letting it rip. **But AI is not intelligent. AI is based 100% on deterministic binary algorithms that compute statistical probabilities. AI is an addon, a helpful assistant.** The most reliable AI systems use the smallest AI component that can provide the required functionality.
+A recent video from one of my favorite bloggers illustrates how a lack of understanding of AI leads to a very mistaken "AI first" world view. The video [AI 落地生死战：为什么 90% 的企业软件会被重写？](https://www.youtube.com/watch?v=DlDvYe96cNY) **"The life-or-death battle for AI implementation: Why 90% of enterprise software is being rewritten"**. He is right about "90%" but not about "rewriting" (replacing) existing SW. AI is never the core logic loop in any app. **AI is always an assistant**. Below is the core diagram for this website. That small green box represents the core legacy enterprise SW (such as Salesforce, the topic of the video). **The core algorithms and workflows developed over decades for Salesforce are not going to be replace by AI. AI is going to assist**, in ways that AI's unavoidable errors will not cause significant problems. 
 
 
-Regardless of what happens with self-driving cars or humanoid robots, AI is already transforming knowledge work, software systems, and business workflows. 
+<!-- (there are no English audio or subtitles, but rest assured that such a service will become standard in the near future). The video talks about how major business SaaS CRM SW (such as Salesforce) is being threatened by AI.  --> 
 
-For example, the video **Why 90% of enterprise software is being rewritten** recently appeared on my AI-generated list of videos of interest (another AI service that changed my life). One video was pure gold: [AI 落地生死战：为什么 90% 的企业软件会被重写？](https://www.youtube.com/watch?v=DlDvYe96cNY) **"The life-or-death battle for AI implementation: Why 90% of enterprise software is being rewritten"** (there are no English audio or subtitles, but rest assured that such a service will become standard in the near future). The video talks about how major business SaaS CRM SW (such as Salesforce) is being threatened by AI.  
-
-#### **NOT SO FAST.............................**
-
-*AI is an add-on, a helpful assistant, never in the driver's seat (remember the Waymo pic above?)*<br>
+*AI is an add-on, a helpful assistant, never in the driver's seat (see the earlier Waymo pic above)*<br>
 <img src="/assets/M-15.png" alt="drones" width="78%">
 
 
@@ -183,7 +179,7 @@ AI has a big future even after the pre-IPO hype is over. **Those who understand 
 
 <br>
 
-26.0621 (v1 26.0611)
+26.0625 (v1 26.0611)
 
 <!-- *A successful mission for AI (left) and not so successful mission (right).* <br>
 <img src="/assets/ziptiedrone2.png" alt="drones" width="23%"> <img src="/assets/waymo.png" alt="drones" width="26%">  -->
