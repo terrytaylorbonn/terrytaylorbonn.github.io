@@ -28,14 +28,14 @@ Building successful AI applications requires a basic understanding of AI.
 
 ### **1.1 AI runs on digital computers**
 
-**This site takes a very down-to-earth mechanistic approach to understanding AI. Thats because AI is based on mechanistic binary matrix math algorithms that run on binary circuits.**
+**This site takes a very down-to-earth mechanistic approach to understanding AI. Thats because AI is based on mechanistic binary matrix math algorithms that run on binary circuits.** AI intelligence simulation has only recently become possible because only recently the computational hardware has reached the performance level required to generate responses faster than a human can process the responses.
 
 The diagrams below show (1) a model and (2) the code that defines the model structure and training. Note the components of the model
 - Transformer (TF) generates response tokens based on the input tokens.
 - Internal agent (iAgent) sends and receives tokens to/from the TF.
 - API allows the external agent (eAgent, not shown) (the core control loop you write, usually in Python) to use the model. 
 
-**AI intelligence simulation has only recently become possible because only recently the computational hardware has reached the performance level required to generate responses faster than a human can process the responses**.
+
 
 <!-- **A "model" in AI is anything that has a neural network (NN) at its core**. It may have a lot of other stuff wrapped around the NN (CNN convolution, LLM attention heads, etc) but **the core statistical pattern matching functionality runs on a NN**. The differences are mainly architecture, training, orchestration, and use case. **All models are first (1) "trained"** (internal NN params are programmed using SW tools) and **then (2) used to infer output from input.**  -->
 
@@ -47,7 +47,7 @@ The diagrams below show (1) a model and (2) the code that defines the model stru
 
 ### **1.2 There is no "I" (intelligence) in AI**
 
-AI circuits are clocked state machines that switch from fixed state to fixed state. **AI circuits have absolutely no similarity whatsoever to the human brain neurons. None**. Human thought exists not as a snapshot, but as a symphony playing out in time. AI algorithms are referred to as "neural" networks because they have a crude similarity to real biological neural networks. "Crude" is the key word. They are not real NNs and harbor no intelligence. Their creators (the AI gurus) are well aware of this.
+**AI circuits have absolutely no similarity whatsoever to the human brain neurons. None**. Human thought exists not as a snapshot, but as a symphony playing out in time. But AI circuits are clocked state machines that switch from fixed state to fixed state. AI algorithms are referred to as "neural" networks because they have a crude similarity to real biological neural networks. "Crude" is the key word. They are not real NNs and harbor no intelligence. Their creators (the AI gurus) are well aware of this.
 
 The GPU that runs the AI NN is a 100% deterministic binary computation device. If you put in the same input, you will **always** get the same output. The core basis of a GPU and CPU are the same binary switches. You could run even the most sophisticated LLM on electro-mechanical relays (it would take years to generate a token, consume the entire output of a large nuclear power plant, but its theoreticaly possible).  
 
@@ -56,9 +56,9 @@ The GPU that runs the AI NN is a 100% deterministic binary computation device. I
 
 <br>
 
-### **1.3 Falling for the hype can cost you... dearly**
+### **1.3 Falling for AI hype can cost you... dearly**
 
-**"No more programmers"** (Jensen Huang), **"no more workers", "self-driving cars will be ready next year"** (Musk, the battery powered car king and colonizer of Mars ), **"we must pause AI development because its not safe"** (Anthropic CEO), **"AI already has emotions"** (Nobel and Turing prize winner Jeffrey Hinton) etc etc. These con artists say such things because they know the general public has no idea how AI really works. Such hype can cost you, sometime dearly (in the case of "self-driving" cars).
+**"No more programmers"** (Jensen Huang), **"no more workers", "self-driving cars will be ready next year"** (Musk, the battery powered car king and colonizer of Mars), **"we must pause AI development because its not safe"** (Anthropic CEO), **"AI already has emotions"** (Nobel and Turing prize winner Jeffrey Hinton) etc etc. These con artists say such things because they know the general public has no idea how AI really works. Such hype can cost you, sometimes dearly (in the case of "self-driving" cars).
 
 <!-- **AI is a security risk**. The core NN in AI has what are often referred to as "hidden layers" that perform the massive brute-force number crunching to generate "intelligent" output. **It's impossible (even for AI) to determine how a NN has been programmed by analyzing the parameter settings in these layers**. -->
 
@@ -69,10 +69,9 @@ The GPU that runs the AI NN is a 100% deterministic binary computation device. I
 
 ### **1.4 AI is an incredible revolutionary engineering marvel.. for the right applications** 
 
-If AI was truly intelligent then AI integration would just involve connecting AI and letting it rip. **But AI is not intelligent. AI is based 100% on deterministic binary algorithms that compute statistical probabilities. AI is an addon, a helpful assistant.** The most reliable AI systems use the smallest AI component that can provide the required functionality.
+Palantir in the past few years has become synonomous with cutting edge **real world** AI applications. But Palantir only recently adopted AI. 25 years ago Palantir's initial projects were for military applications **without AI**. They were very successful. The applications were basically agentic apps (without AI). The apps were designed to help decision makers. Not to replace mankind. 
 
-
-Palantir's initial projects were for military applications **without AI** (25 years ago). They were very successful. The applications were basically agentic apps (without AI). The apps were designed to help decision makers. Not to replace mankind. AI later became a very valuable helpful assistant. **Palantir's missions are perfect for AI-assisted agents. Benefits outweigh the negatives. Errors can be tolerated. And a human always makes the final decision**. Its no accident that Palantir talks straight about many aspects of AI. **Engineers wont go away, their expertise is required in the AI age more than ever**. Palantir's business does **not demand the myth of AI intelligence**. Palantir says that **AI will not replace people, it will empower them**.
+AI later became for Palantir a very valuable helpful assistant. **Palantir's missions are perfect for AI-assisted agents. Benefits outweigh the negatives. Errors can be tolerated. And a human always makes the final decision**.  
 
 <!-- 
 *"...AI software will be as important as hardware, with platforms such as Palantir's Maven Smart System poised to turn massive drone sensor feeds into highly usable battlefield intelligence". [Zerohedge 26.0620](https://www.zerohedge.com/military/only-beginning-how-profit-asymmetric-warfare-boom)*. -->
@@ -82,8 +81,12 @@ Palantir's initial projects were for military applications **without AI** (25 ye
 
 <br>
 
-
 ### **1.5 AI's place in our world (not our place in AI's world)** 
+
+Its no accident that Palantir talks straight about many aspects of AI. Palantir's business does **not demand the myth of AI intelligence**. Palantir says that **AI will not replace people, it will empower them** and that **Engineers wont go away, their expertise is required in the AI age more than ever**.
+
+If AI was truly intelligent then AI integration would just involve connecting AI and letting it rip. **But AI is not intelligent. AI is based 100% on deterministic binary algorithms that compute statistical probabilities. AI is an addon, a helpful assistant.** The most reliable AI systems use the smallest AI component that can provide the required functionality.
+
 
 Regardless of what happens with self-driving cars or humanoid robots, AI is already transforming knowledge work, software systems, and business workflows. 
 
