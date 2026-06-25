@@ -20,13 +20,52 @@ The **ZiptieAI mission** is to give you
 # **1 The truth about AI** 
 
 Building successful AI applications requires a basic understanding of AI. 
-  - **1.1 What AI can do**
-  - **1.2 What AI can't do**
-  - **1.3 How AI will change our lives**
+  - **1.1 Wxxxx**
+  - **1.2 Wxxxxxxxxdo**
+  - **1.3 Howxxxxxxxxves**
 
 <br>
 
-### **1.1 What AI can do** 
+### **1.1 There is no "I" in AI (its a scam)**
+
+This site takes a very down-to-earth mechanistic approach to understanding AI. Thats because that's what AI is. Mechanistic (binary calculation, matrix math) algorithms. These matrix math algorithms are referred to as "neural" networks because they are a very crude similarity to real biological neural networks. Crude is they key word. They are not real NNs, and harbor 0 intelligence. And their creators are well aware of this.
+
+CLOCKED STATE MACHINES.
+
+**A "model" in AI is anything that has a neural network (NN) at its core**. It may have a lot of other stuff wrapped around the NN (CNN convolution, LLM attention heads, etc) but **the core statistical pattern matching functionality runs on a NN**. The differences are mainly architecture, training, orchestration, and use case. **All models are first (1) "trained"** (internal NN params are programmed using SW tools) and **then (2) used to infer output from input.**  
+
+*AI model is a calculator, not intelligence (M-05.png)*<br>
+<img src="/assets/M-15-2b.png" alt="drones" width="53%"> <br>
+<img src="/assets/M-14.png" alt="desc" width="60%"> 
+
+<br>
+
+### **1.2 AI = deterministic binary computing**
+
+**This section analyzes models from a mechanical perspective, because Models ARE MECHANICAL. They run on clocked binary circuits**. They have no intelligence. You could run even the most sophisticated LLM on electro-mechanical relays (it would take years to generate a token, consume the entire output of a large nuclear power plant, but its theoretically possible). **AI intelligence simulation is based on (1) binary computing structures and (2) massive computing power/speed**. The more you understand how AI models work, the better you can use them in AI projects. 
+
+*Electro-mechanical relay (a theoretical alternative to the GPU)*<br>
+<img src="/assets/relay.png" alt="drones" width="12%">
+
+<br>
+
+### **1.3 Falling for the hype can cost you... dearly**
+
+Falling for AI hype (as a product dev or consumer) will cost you dearly. **"No more programmers"** (Jensen Huang), **"no more workers"** (Musk, the colonizer of Mars), **"we must pause AI development because its not safe"** (Anthropic CEO), **"AI already has emotions"** (Nobel and Turing prize winner Jeffrey Hinton) etc etc. The general public has no idea how AI really works. Fertile ground for con artists. 
+
+They are saying such nonsense for one reason: To scam you.
+
+
+If AI was truly intelligent then AI integration would just involve connecting AI and letting it rip. **But AI is not intelligent. AI is based 100% on deterministic binary algorithms that compute statistical probabilities. AI is an addon, a helpful assistant.** The most reliable AI systems use the smallest AI component that can provide the required functionality.
+
+<!-- **AI is a security risk**. The core NN in AI has what are often referred to as "hidden layers" that perform the massive brute-force number crunching to generate "intelligent" output. **It's impossible (even for AI) to determine how a NN has been programmed by analyzing the parameter settings in these layers**. -->
+
+*An unsuccessful mission for AI*<br>
+<img src="/assets/waymo.png" alt="drones" width="26%"> 
+
+<br>
+
+### **1.4 AI is an incredible revolutionary engineering marvel.. for the right applications** 
 
 Palantir's initial projects were for military applications **without AI** (25 years ago). They were very successful. The applications were basically agentic apps (without AI). The apps were designed to help decision makers. Not to replace mankind. AI later became a very valuable helpful assistant. **Palantir's missions are perfect for AI-assisted agents. Benefits outweigh the negatives. Errors can be tolerated. And a human always makes the final decision**. Its no accident that Palantir talks straight about many aspects of AI. **Engineers wont go away, their expertise is required in the AI age more than ever**. Palantir's business does **not demand the myth of AI intelligence**. Palantir says that **AI will not replace people, it will empower them**.
 
@@ -38,33 +77,33 @@ Palantir's initial projects were for military applications **without AI** (25 ye
 
 <br>
 
-### **1.2 What AI can't do**
 
-Falling for AI hype (as a product dev or consumer) will cost you dearly. **"No more programmers"** (Jensen Huang), **"no more workers"** (Musk, the colonizer of Mars), **"we must pause AI development because its not safe"** (Anthropic CEO), **"AI already has emotions"** (Nobel and Turing prize winner Jeffrey Hinton) etc etc. The general public has no idea how AI really works. Fertile ground for con artists. 
-
-If AI was truly intelligent then AI integration would just involve connecting AI and letting it rip. **But AI is not intelligent. AI is based 100% on deterministic binary algorithms that compute statistical probabilities. AI is an addon, a helpful assistant.** The most reliable AI systems use the smallest AI component that can provide the required functionality.
-
-<!-- **AI is a security risk**. The core NN in AI has what are often referred to as "hidden layers" that perform the massive brute-force number crunching to generate "intelligent" output. **It's impossible (even for AI) to determine how a NN has been programmed by analyzing the parameter settings in these layers**. -->
-
-*An unsuccessful mission for AI*<br>
-<img src="/assets/waymo.png" alt="drones" width="26%"> 
-
-<br>
-
-### **1.3 How AI will change our lives** 
+### **1.5 AI's place in our world (not our place in AI's world)** 
 
 Regardless of what happens with self-driving cars or humanoid robots, AI is already transforming knowledge work, software systems, and business workflows. 
 
 For example, the video **Why 90% of enterprise software is being rewritten** recently appeared on my AI-generated list of videos of interest (another AI service that changed my life). One video was pure gold: [AI 落地生死战：为什么 90% 的企业软件会被重写？](https://www.youtube.com/watch?v=DlDvYe96cNY) **"The life-or-death battle for AI implementation: Why 90% of enterprise software is being rewritten"** (there are no English audio or subtitles, but rest assured that such a service will become standard in the near future). The video talks about how major business SaaS CRM SW (such as Salesforce) is being threatened by AI.  
- 
+
+#### **NOT SO FAST.............................**
+
+*AI is an add-on, a helpful assistant, never in the driver's seat (remember the Waymo pic above?)*<br>
+<img src="/assets/M-15.png" alt="drones" width="78%">
+
+
+
+<!--
+-------------------------
+-------------------------
+-------------------------
+
 That video was the source of inspiration for a new **DIY [AI project](/3.3-ai-projects/)** for an **[AI project ledger](/3b.3.4-ai-proj-4-ledger/)** (basically a mini DIY Salesforce app). I asked GPT if we could make an app that would record any text messages on an encrypted ledger instead of being stored (constrained) in a DB. This would be somewhat similar to a Bitcoin ledger. All human language customer data is stored on a ledger (maybe even photos, screenshots, voice, etc). AI takes care of indexing and runtime analysis. 
 
-<!-- The ledger records everything you ever did, all emails, all meeting notes etc. The ledger would be massive, but nowadays terabyte storage for home use is normal (the current size for the bitcoin ledger is < 1 TB!). -->
+<!-- The ledger records everything you ever did, all emails, all meeting notes etc. The ledger would be massive, but nowadays terabyte storage for home use is normal (the current size for the bitcoin ledger is < 1 TB!). 
 
 *Visualization of a candidate Bitcoin block that is currently sitting in the mempool waiting to be mined (Bitcoin Ledger / Blocks / Transactions; Each rectangle is one transaction)* <br>
 <img src="/assets/M-27.png" alt="drones" width="43%">
 
-<!-- (who paid what to whom). A Bitcoin ledger simply adds very structured encryption information that makes it impossible to alter the contents of the ledger without anyone noticing. Bitcoin does not need AI to do this, because the data structure in the ledger is fixed. 
+ (who paid what to whom). A Bitcoin ledger simply adds very structured encryption information that makes it impossible to alter the contents of the ledger without anyone noticing. Bitcoin does not need AI to do this, because the data structure in the ledger is fixed. 
 
 Structured data forms the basis of many SaaS systems (similar to ontology in Palantir systems). Valuable content that does not realy fit into the ontology has be laboriously modified (by humans or with human supervision) or added as attachments. -->
 
@@ -86,13 +125,14 @@ Structured data forms the basis of many SaaS systems (similar to ontology in Pal
 
 **You can only learn how AI works by doing code demos (or at least studying the code)**. Chatbots are programmed to inundate you with hype and AI lingo. GPT often remarks about my habit of wanting to describe AI from a **mechanistic** viewpoint. My response has always been **"of course, AI is mechanistic** (binary computation). 
 
-*A simple NN **[demo](/2.1.2-classifier-nn/)** of the core of AI*<br>
-<img src="/assets/M-05.png" alt="drones" width="53%"> <img src="/assets/M-02.png" alt="drones" width="17%">
-
 I went down so many rabbit holes when studying AI. **The ONLY way to understand AI is by doing examples. Code does not lie**.
 
+*A simple NN **[demo](/2.1.2-classifier-nn/)** of the core of AI*<br>
+<img src="/assets/M-02.png" alt="drones" width="22%">
+
+<!--
 *Code for **[NN](/2.1.1-predictive-nn-01-sine/)** definition (left) and training (right)*<br>
-<img src="/assets/M-14.png" alt="desc" width="60%"> 
+<img src="/assets/M-14.png" alt="desc" width="60%"> -->
 
 <br>
 

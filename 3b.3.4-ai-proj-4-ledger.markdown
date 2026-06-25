@@ -13,6 +13,25 @@ For details see
 - Documentation: [#606\_ai_ides_.docx](https://drive.google.com/drive/folders/1-Adawag9uA8_bq-hDF-nOuPYaRLz1eEO)
 - Repo [602-2_D1-tool-LLM](https://github.com/terrytaylorbonn/602-2_D1-tool-LLM)
 
+
+For example, the video **Why 90% of enterprise software is being rewritten** recently appeared on my AI-generated list of videos of interest (another AI service that changed my life). One video was pure gold: [AI 落地生死战：为什么 90% 的企业软件会被重写？](https://www.youtube.com/watch?v=DlDvYe96cNY) **"The life-or-death battle for AI implementation: Why 90% of enterprise software is being rewritten"** (there are no English audio or subtitles, but rest assured that such a service will become standard in the near future). The video talks about how major business SaaS CRM SW (such as Salesforce) is being threatened by AI.  
+
+
+*AI is an add-on, a helpful assistant, never in the driver's seat (remember the Waymo pic above?)*<br>
+<img src="/assets/M-15.png" alt="drones" width="78%">
+
+
+-------------------------
+-------------------------
+-------------------------
+
+That video was the source of inspiration for a new **DIY [AI project](/3.3-ai-projects/)** for an **[AI project ledger](/3b.3.4-ai-proj-4-ledger/)** (basically a mini DIY Salesforce app). I asked GPT if we could make an app that would record any text messages on an encrypted ledger instead of being stored (constrained) in a DB. This would be somewhat similar to a Bitcoin ledger. All human language customer data is stored on a ledger (maybe even photos, screenshots, voice, etc). AI takes care of indexing and runtime analysis. 
+
+<!-- The ledger records everything you ever did, all emails, all meeting notes etc. The ledger would be massive, but nowadays terabyte storage for home use is normal (the current size for the bitcoin ledger is < 1 TB!). -->
+
+*Visualization of a candidate Bitcoin block that is currently sitting in the mempool waiting to be mined (Bitcoin Ledger / Blocks / Transactions; Each rectangle is one transaction)* <br>
+<img src="/assets/M-27.png" alt="drones" width="43%">
+
 <br>
 
 ```text2
