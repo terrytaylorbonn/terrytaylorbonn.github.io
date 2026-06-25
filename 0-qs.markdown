@@ -36,12 +36,13 @@ This QS (quick start) follows the organization of this site as shown in the site
   - **3.1 Code-first agents**. **Demo is ???**.
   - **3.2 Agent framework**. **Demo is ???**.
 
-After you have done this QS, 
-  - Go back and do other demos (I might make a recommended list on this page in the future).
-  - Do some of the demos in **3b Projects**. These demos all focus on creating agents that integrate with SW I use. **3b.3 NMAP Security Assistant** is a good starter that uses the local PC as the target system. 
-
+Note: About **3b Projects**: The real goal of AI projects is to integrate AI into an existing SW app. But the demos listed are all basically Palantir style demos, where you create an external agent that is the main app (I don't have (yet) my own app that I'd like to integrate AI into). In any case a good first demo might be 
+  - **3b.3 NMAP Security Assistant**. Uses the local PC as the target system. This is not only a practical tool, but also can help you learn very important security topics for your home PC/network setup.
+  - **3b.2 JobRadar**. This intros hope to connect to email, etc to get a daily summary.  
 
 <!-- Note that **there are many variations of this setup**, and I will try to provide the version of this diagram for each demo (v1 of this diagram created 26.0615). -->
+
+<br> 
 
 *Master diagram (ZAI original)*<br>
 <img src="/assets/M-15.png" alt="drones" width="78%">
