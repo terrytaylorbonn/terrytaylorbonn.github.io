@@ -121,7 +121,10 @@ D5 Tiny TF.
 
 #### **2.5 Robotic AI ([wiki](https://github.com/terrytaylorbonn/auxdrone/wiki/Robotic-AI-demos))**<br>
 
-*GPT: Tiny obstacle detector (or whichever demo first connects perception to action). The important concept isn't robotics hardware. It's sensor → NN → decision → actuator*.
+```
+GPT: 
+Tiny obstacle detector (or whichever demo first connects perception to action). The important concept isn't robotics hardware. It's sensor → NN → decision → actuator.
+```
 
 <img src="/assets/robotic_ai.png" alt="smol" width="25%" style="border: 1px solid black;"><br> 
 
