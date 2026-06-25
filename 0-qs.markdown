@@ -145,11 +145,11 @@ The important concept isn't robotics hardware. It's sensor → NN → decision �
 ```
 ME: i think D30 (28bbb) is the robotic AI demo you mentioned. 
 #502_3_robotics_AI_no_jepa_v31_26.0131.docx
-GPT: 
 28bbb D30 add GIF (BINGO) #174 is there any way to create a gif with just the resulting path and obstacle? 
 Yep — very easy, and this is a good next step because visualizing the trajectory is what makes D30 click for robotics readers. 
 There are three simple ways, depending on how fancy you want it:
 
+GPT: 
 Yes — D30 / 28bbb “avoid the rock” is probably the right 2.5 Robotic AI QS demo.
 It has the key robotics loop:
 start position
