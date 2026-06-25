@@ -42,7 +42,7 @@ See also the **[Wiki](https://github.com/terrytaylorbonn/auxdrone/wiki)** and ot
 *3b Project diagram with AI details* <br>
 <img src="/assets/M-25.png" alt="drones" width="80%">
 
-<br>
+
 
 
 
