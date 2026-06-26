@@ -69,7 +69,7 @@ But AI has 0 intelligence. **AI circuits have absolutely no similarity whatsoeve
 
 ### **1.3 Falling for AI hype can cost you... dearly**
 
-**"No more programmers"**, **"no more workers", "self-driving cars will be ready next year"**, **"we must pause AI development because its not safe"**, and **"AI already has emotions"** (that last statement was from a Nobel and Turing prize winner). If you yourself fall for such hype it can cost you, sometimes dearly (for example, in the case of "self-driving" cars or "colonizing" Mars).
+**"No more programmers"**, **"no more workers", "self-driving cars will be ready next year"**, **"we must pause AI development because its not safe"**, and **"AI already has emotions"** (that last statement was from a winner of both the Nobel and Turing prizes). If you yourself fall for such hype it can cost you, sometimes dearly.
 
 <!-- **AI is a security risk**. The core NN in AI has what are often referred to as "hidden layers" that perform the massive brute-force number crunching to generate "intelligent" output. **It's impossible (even for AI) to determine how a NN has been programmed by analyzing the parameter settings in these layers**. -->
 
