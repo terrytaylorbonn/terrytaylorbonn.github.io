@@ -20,7 +20,7 @@ The **ZiptieAI mission** is to give you
 # **1 The truth about AI** 
 
 **I never cease to be amazed by the engineering genius behind AI**. That being said, **building successful AI applications requires a basic understanding of what AI really is**. 
-- 1.1 AI runs on digital computers
+- 1.1 AI = deterministic algorithms running on digital HW
 - 1.2 There is no "I" (intelligence) in AI
 - 1.3 Falling for AI hype can cost you... dearly
 - 1.4 AI is an incredible revolutionary engineering marvel.. for the right applications
@@ -28,26 +28,38 @@ The **ZiptieAI mission** is to give you
 
 <br>
 
-### **1.1 AI runs on digital computers**
+### **1.1 AI = deterministic algorithms running on digital HW**
 
-**This site takes a very down-to-earth mechanistic approach to understanding AI. Thats because AI is based on mechanistic binary matrix math algorithms that run on binary circuits.** The diagrams below show (1) a model and (2) the code that defines the model structure and training. Note the components of the model
+The diagram below show the components for a basic LLM model. 
 - Transformer (TF) generates response tokens based on the input tokens.
 - Internal agent (iAgent) sends and receives tokens to/from the TF.
 - API allows the external agent (the core control loop you write, usually in Python) to use the model. 
 
-AI intelligence simulation became possible only recently after the computational hardware reached the performance level required to generate responses faster than a human can process them.
+<img src="/assets/M-15-2b.png" alt="drones" width="53%"><br><br> 
 
-<!-- **A "model" in AI is anything that has a neural network (NN) at its core**. It may have a lot of other stuff wrapped around the NN (CNN convolution, LLM attention heads, etc) but **the core statistical pattern matching functionality runs on a NN**. The differences are mainly architecture, training, orchestration, and use case. **All models are first (1) "trained"** (internal NN params are programmed using SW tools) and **then (2) used to infer output from input.**  -->
+The following shows the code that defines the NN structure and the training algorithm.  
+
+<img src="/assets/M-14.png" alt="desc" width="60%"> 
+
+
+<!-- 
+**This site takes a very down-to-earth mechanistic approach to understanding AI. Thats because AI is based on mechanistic binary matrix math algorithms that run on binary circuits.** 
+
+**A "model" in AI is anything that has a neural network (NN) at its core**. It may have a lot of other stuff wrapped around the NN (CNN convolution, LLM attention heads, etc) but **the core statistical pattern matching functionality runs on a NN**. The differences are mainly architecture, training, orchestration, and use case. **All models are first (1) "trained"** (internal NN params are programmed using SW tools) and **then (2) used to infer output from input.** 
 
 *AI model components and code (code does not lie)*<br>
 <img src="/assets/M-15-2b.png" alt="drones" width="53%"><br><br> 
 <img src="/assets/M-14.png" alt="desc" width="60%"> 
+ -->
+
 
 <br>
 
 ### **1.2 There is no "I" (intelligence) in AI**
 
-**AI circuits have absolutely no similarity whatsoever to human brain neurons.** Human thought exists not as a snapshot, but as a symphony playing out in time. But AI circuits host clocked state machines. AI algorithms are referred to as "neural" networks because the diagrams for NN matrix math look like diagrams that could be considered to describe biological neural networks.  GPUs that host AI NN are 100% deterministic binary computation devices. If you put in the same input, you will **always** get the same output. You could even run the most sophisticated LLMs on electro-mechanical relays. It might require the entire power output of nuclear plant and take a year or more to generate a token response, but it is theoretically possible.  
+The AI simulation of intelligence started to seem intelligent only recently after the computational hardware reached the performance level required to (1) generate responses at least as fast as a human would respond and (2) with a level of accuracy that at least initially convinced the human user that AI had some level of genuine intelligence. 
+
+But AI has 0 intelligence. **AI circuits have absolutely no similarity whatsoever to human brain neurons.** Human thought exists not as a snapshot, but as a symphony playing out in time. But AI circuits host clocked state machines. AI algorithms are referred to as "neural" networks because the diagrams for NN matrix math look like diagrams that could be considered to describe biological neural networks.  GPUs that host AI NN are 100% deterministic binary computation devices. If you put in the same input, you will **always** get the same output. You could even run the most sophisticated LLMs on electro-mechanical relays. It might require the entire power output of nuclear plant and take a year or more to generate a token response, but it is theoretically possible.  
 
 *Electro-mechanical relay (a theoretical alternative to the GPU)*<br>
 <img src="/assets/relay.png" alt="drones" width="12%">
