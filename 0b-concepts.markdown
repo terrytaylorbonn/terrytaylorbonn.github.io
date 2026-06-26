@@ -11,44 +11,39 @@ This page (WIP) summarizes the basic concepts learned while doing the hands-on Q
 <!-- - See "Concepts" (**ADVANCED**) section on pages 2 NNs, 2b Models, 3 Agents, and 3b Projects. But the focus of this page is the **BASIC** core conceptual gist of 2-3b. Using the simplest example from the QS for each. This section may not be like that right now (26.0623), but its moving in that direction. -->
 
 
-The diagram below shows the
-- **2 NNs** (NN, CNN, TF). The core matrix math engines.
-- **2b Model**. THe packaged version of Internal Agent (procedural system) + Matrix math engine.
+**TOC** 
+- **2 NNs** (NN, CNN, TF). The core matrix math classification mechanisms that are the basis of all AI.
+- **2b Model**. The packaged version of Internal Agent (procedural system) + Matrix math engine that work together to create AI "simulated intelligence" capabilities.
 - **3 External agent** (Custom or Framework). The (external) Procedural System + (Matrix math engine or packaged Model).
-- **3b Project**. All the components required to assist the main system. 
+- **3b Project**. Real world demo implementations of AI assistance for existing SW. 
+
 
 *AI project components* <br>
 <img src="/assets/M-15.png" alt="drones" width="85%">
 
-<br>
 
-**TOC**
-- **2 NNs.** The core matrix math classification mechanisms that are the basis of all AI.
-  - 2.0 Modern architectures are evolutionary (not revolutionary)
+<!--   - 2.0 Modern architectures are evolutionary (not revolutionary)
   - 2.1 NN only (Inference)
   - 2.3 Training
   - 2.4 Convolution (CNN)
   - 2.5 Transformer (TF)
   - 2.6 Comparison of NN, CNN, and TF architectures
   - 2.7 Why scaling works
-- **2b Models**. How the internal agent (procedural) and NN (NN only, CNN, TF) (matrix) work together to create AI "simulated intelligence" capabilities.
   - 2b.1 What is a Model?
   - 2b.2 Internal Agent (iAgent)
   - 2b.3 APIs
   - 2b.4 Local vs Cloud Models
   - 2b.5 Building Models
   - 2b.6 Modifying Models
-- **3 Agents**. How to create external agents that can reliably exploit AI model capabilities while handing the limitations.
   - 3.1 Agent Concepts (Planning, Rule Injection, Tools, Memory, Validation, Explanation, Semantic Mapping)
   - 3.2 Code-first Agents
   - 3.3 Agent Frameworks (n8n, LangChain, LangGraph, CrewAI, OpenAI Agents SDK)
-- **3b Projects**. How to create real world implementations of AI assistance for existing SW.
   - 3b.1 Existing Systems
   - 3b.2 External Tools & APIs
   - 3b.3 Data Integration
   - 3b.4 AI-assisted Workflows
   - 3b.5 Reliability
-  - 3b.6 End-to-end Architectures
+  - 3b.6 End-to-end Architectures -->
 
 <br>
 
@@ -186,7 +181,7 @@ class TinyTransformer(nn.Module):
 
 <br>
 
-#### **[2.7 Why scaling works]](/0b.2.7-why-scaling-works/)**
+#### **[2.7 Why scaling works](/0b.2.7-why-scaling-works/)**
 
 <img src="/assets/M-36.png" alt="drones" width="50%">
 
@@ -209,11 +204,7 @@ The agent and the NN are typically packaged into a **model** that has an API tha
 
 ## **[3 Agent concepts](/0b.3-concepts-agents/)**
 
-External agents access the model via API. This supports
-- reliable workflows built around models, tools, and automation. 
-- tolerance of AI faults and unpredictable outputs
-
-Discusses 
+External agents access the model via API. This supports (1) reliable workflows built around models, tools, and automation and (2) tolerance of AI faults and unpredictable outputs. This section discusses 
  - 3.1 Agent Concepts
  - 3.2 Code-first Agents
  - 3.3 Agent Frameworks
@@ -222,9 +213,7 @@ Discusses
 
 ## **[3b AI project concepts](/0b.3b-concepts-projects/)**
 
-“Spinning up” real-world projects quickly with minimal code analysis or manual coding (the final demo section in ZiptieAI).
-
-Discusses
+“Spinning up” real-world projects quickly with minimal code analysis or manual coding (the final demo section in ZiptieAI). This section discusses
   - 3b.1 Existing Systems
   - 3b.2 External Tools & APIs
   - 3b.3 Data Integration
