@@ -1,0 +1,23 @@
+---
+layout: page
+title: Concepts -- 3b Projects
+permalink: /0b.3b-concepts-projects/
+---
+
+<br>
+
+**[← Concepts](/0b-demos/)** 
+
+<br>
+
+xxxxx
+
+
+
+<br>
+
+<img src="/assets/xxx.png" alt="drones" width="60%">
+
+<br>
+
+26.0626 (v1 26.0626)

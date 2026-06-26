@@ -6,19 +6,16 @@ permalink: /0b-demos/
 
 <br>
 
-#### *Goal of this page (WIP): Summarize the **BASIC** concepts learned from doing the hands-on QS demos.*
+This page (WIP) summarizes the basic concepts learned while doing the hands-on QS demos.
 
-There already is a "Concepts" (**ADVANCED**) section on pages 2 NNs, 2b Models, 3 Agents, and 3b Projects. But the focus of this page is the **BASIC** core conceptual gist of 2-3b. Using the simplest example from the QS for each. This section may not be like that right now (26.0623), but its moving in that direction.
+<!-- - See "Concepts" (**ADVANCED**) section on pages 2 NNs, 2b Models, 3 Agents, and 3b Projects. But the focus of this page is the **BASIC** core conceptual gist of 2-3b. Using the simplest example from the QS for each. This section may not be like that right now (26.0623), but its moving in that direction. -->
 
-*ALSO SEE [2.2b CNN<>TF comparison (WIP)](/2.2b-cnn-tf-comparison/)*.
 
-<br>
-
-In the diagram below:
-- **2 Matrix System** (NN only, CNN, TF) *(note: The tiny demos have enough minimal basic internal agent code to make the demo work)*.
-- **2b Model** = Packaged version of Internal Agent (procedural system) + Matrix System.
-- **3 External agent** (Custom or Framework) = (external) Procedural System + (Matrix System or Model)
-- **3b Project** 
+The diagram below shows the
+- **2 NNs** (NN, CNN, TF). The core matrix math engines.
+- **2b Model**. THe packaged version of Internal Agent (procedural system) + Matrix math engine.
+- **3 External agent** (Custom or Framework). The (external) Procedural System + (Matrix math engine or packaged Model).
+- **3b Project**. All the components required to assist the main system. 
 
 *AI project components* <br>
 <img src="/assets/M-15.png" alt="drones" width="85%">
@@ -26,84 +23,47 @@ In the diagram below:
 <br>
 
 **TOC**
-- **1 Key AI capabilities and limitations**
-- **2 NNs. Modern architectures are evolutionary (not revolutionary).** The latest architectures are not introducing anything radically different. I recently saw a video where one of the author's of the original paper "Attention is all you need" (the term "attention" is a misleading marketing term) stated that no other ground-breaking architecture has appeared since the paper was pubished. So studying the basics is to understand the foundation of the latest.
+- **2 NNs.** The core matrix math classification mechanisms that are the basis of all AI.
+  - 2.0 Modern architectures are evolutionary (not revolutionary)
   - 2.1 NN only (Inference)
   - 2.3 Training
   - 2.4 Convolution (CNN)
   - 2.5 Transformer (TF)
   - 2.6 Comparison of NN, CNN, and TF architectures
-  - 2.7 Why scaling works (a core concept)
-- **2b Models**. How the internal agent (procedural) and NN (NN only, CNN, TF) (matrix) work together to create AI **"simulated intelligence" capabilities**.
-- **3 Agents**. How to create external agents that can reliably **exploit model sim-intel capabilities** (***creating agents that accommodate the significant limitations of such sim-intel is the key to building successful AI projects***). 
-  - Agent concepts (Planning, Rule Injection, Tools, Memory, Validation, Explanation, Semantic Mapping)
-  - Custom Agents
-  - Agent Frameworks (n8n, LangChain, LangGraph, CrewAI, OpenAI Agents SDK)
-- **3b Projects**. Create projects whose central mission can be assisted successfully by AI capabilities and can tolerate AI limitations.
+  - 2.7 Why scaling works
+- **2b Models**. How the internal agent (procedural) and NN (NN only, CNN, TF) (matrix) work together to create AI "simulated intelligence" capabilities.
+  - 2b.1 What is a Model?
+  - 2b.2 Internal Agent (iAgent)
+  - 2b.3 APIs
+  - 2b.4 Local vs Cloud Models
+  - 2b.5 Building Models
+  - 2b.6 Modifying Models
+- **3 Agents**. How to create external agents that can reliably exploit AI model capabilities while handing the limitations.
+  - 3.1 Agent Concepts (Planning, Rule Injection, Tools, Memory, Validation, Explanation, Semantic Mapping)
+  - 3.2 Code-first Agents
+  - 3.3 Agent Frameworks (n8n, LangChain, LangGraph, CrewAI, OpenAI Agents SDK)
+- **3b Projects**. How to create real world implementations of AI assistance for existing SW.
+  - 3b.1 Existing Systems
+  - 3b.2 External Tools & APIs
+  - 3b.3 Data Integration
+  - 3b.4 AI-assisted Workflows
+  - 3b.5 Reliability
+  - 3b.6 End-to-end Architectures
 
 <br>
 
-## **1 Key AI capabilities and limitations**
-
-Just a simple draft list 26.0623.
-
-The core capabilites and limitations of the AI demos in the QS apply to even the most sophisticated AI projects (they get more 9's after the decimal point, 99.999 for example, but they never reach 100). Keeping these in mind will keep you out of trouble in AI projects. 
-
-#### **Capabilities**
-
-- Can be autoprogrammed (trained).
-- Can use customized architectures (such as CNN or TF).
-- Based on pattern matching. The closest match will be assigned the highest probability.
-- Can *simulate* high level thinking (planning, etc).
-- Provides a free-from language man-machine interface (but the output is not predictable).
-
-#### **Limitations**
-
-- Has no feelings, no consciousness, no intelligence. It only processes numbers.
-- A NN always requires traditional SW program control (an agent, often in Python). The agent and NN are designed specifically for each other. They are a team that constitutes the core essence of AI. 
-
-<img src="/assets/M-11.png" alt="drones" width="26%">
-
-<br>
-
-<!-- 
-#### **1.2 NNs are always passive; CPU-based agents are in control**
-
-A core lesson from the demos was that a NN is always passive. At least the NN part that does the pattern matching and statisical computation that passes for intelligence. **An NN inputs data and outputs the (100% deterministic) result. Thats it. No control loop.** In the end AI is simply an add-on to CPU-based systems. 
-
-
-This is perhaps the most important function of AI. The problem is AI token output starts to fool humans into believing AI is intelligent.  **These tokens ellicit thoughts in intelligent human** (no explanation necessary or possible). **For a NN these tokens are just a large set of large (FP) numbers**. When you type a prompt into a chatbot, that prompt is converted into a lot of FP numbers. That is all the TF sees.
-
-*Electronic agents still run the world, not electronic "NNs"* <br>
-<img src="/assets/M-12.png" alt="drones" width="22%">
-<br>
-
-#### **1.3 NN and agent = Tweedledee and Tweedledum**
-
-A possible analogy for the NN and the agent are Tweedledee and Tweddledum from **[Alice in Wonderland](https://en.wikipedia.org/wiki/Alice%27s_Adventures_in_Wonderland)**. This analogy will help you assess where AI can be deployed successfully and how much effort system integration will cost (if AI was intelligent, you'd just plug AI into the system and finished).
-
-
-<img src="/assets/M-11.png" alt="drones" width="26%">
-
-<br>
-
-#### **1.4 Agentic AI higher level "thinking" is statistical probability**
-
-Agentic AI models have some pretty sophisticated abilities that really resemble higher level thinking. Planning is one of the most interesting. You send a complicated human language plan to a model and you get back a "sanitized" version that consists of basically plan steps that match a format you specified in your prompt to them model. But this is also statistical computation at work. The model TF only communicates with the internal agent via prompts. So the model must be trained specifically for such planning, and the internal agent must know the exact prompt "protocol" to use for maximum results. Basically **the agent and TF and designed to work together to create the illusion of higher level thinking by only exchanging tokens**.
-
-<br>-->
 
 ## **[2 NNs](/2_models/)**
 
 The NN is the core of AI "intelligence". A NN provides a pattern matching algorithm. The the NN is controlled by Python code ("agent").
 
+- 2.0 Modern architectures are evolutionary (not revolutionary)
 - 2.1 NN (Inference)
 - 2.3 Training
 - 2.4 Convolution (CNN)
 - 2.5 Transformer (TF)
 - 2.6 Comparison of NN, CNN, and TF architectures 
 - 2.7 Why scaling works
-- 2.8 Modern architectures are evolutionary, not revolutionary. The latest architectures are not introducing anything radically different. 
 
 <!-- 
 OLD
@@ -116,56 +76,48 @@ OLD
 
 <br>
 
-#### **2.1 Concepts -- NN (inference)**
+#### **[2.0 Modern architectures are evolutionary (not revolutionary)](/0b.2.8-modern-arch-evolution/)**
 
-See diagram below. For concepts details see **[Concepts -- 2.1 NN (inference)](/0b.2.1-concepts-nn/)**.
+The latest architectures are not introducing anything radically different. I recently saw a video where one of the author's of the original paper "Attention is all you need" (attention is a core functionality of LLM transformers) stated that no other ground-breaking architecture has appeared since the paper was pubished. **So the concepts learned from basic demos apply to the latest foundation models.**
+
+<br> 
+
+#### **[2.1 Concepts -- NN (inference)](/0b.2.1-concepts-nn/)**
 
 
 *NN demo D2ccc overview (first draft diagram generated by GPT)* <br>
 <img src="/assets/D2ccc.png" alt="drones" width="60%">
 
-
 <!-- 
-
 *NN demo D2 overview* <br>
 <img src="/assets/M-34.png" alt="drones" width="30%">
-
 Tiny NN demo ([demo D2ccc](/2.1.2-classifier-nn/)) (inference)
-
 **This one simple NN demo will give you an understanding of the core of all AI inference** (including CNNs, LLMs TFs, etc). The following diagram shows the core components of the demo:
 - **Encoder**. All NNs only "know" numbers (including ChatGPT, Claude, etc). So if you have a dataset that is not (FP) numbers, it must be encoded (and later decoded).
 - **NN**. The source of "intelligence". A UFA (universal function approximator). 
   - This NN inputs 2 numbers. And based on that number outputs 2 probabilities. That's it.
 - **Decoder**. Convert from a probability for inside/outside the circle to a binary state (1 or 0; inside/outside circle).  
-
 <img src="/assets/M-05.png" alt="drones" width="50%"> <img src="/assets/M-02.png" alt="drones" width="16%"> -->
-
 <!-- <br>
-
 #### **2.2 Concepts -- Inference**
-
-See diagram below. For concepts details see (TODO) **[Concepts -- 2.2 Inference](/0b.2.2-concepts-inference/)**.
-
--->
+See diagram below. For concepts details see (TODO) **[Concepts -- 2.2 Inference](/0b.2.2-concepts-inference/)**.-->
 
 <br>
 
-#### **2.3 Concepts -- Training (NN)**
+#### **[2.3 Concepts -- Training (NN)](/0b.2.3-concepts-training/)**
 
-See diagram below. For concepts details see (TODO) **[Concepts -- 2.3 Training](/0b.2.3-concepts-training/)**.
+<!-- See diagram below. For concepts details see (TODO) **[Concepts -- 2.3 Training](/0b.2.3-concepts-training/)**. -->
 
 Training input/output must match exactly what is desired in inference. The following code defines the training steps (more details later) for Tiny NN demo ([demo D2ccc](/2.1.2-classifier-nn/)).
 
-<!-- 
-```
+<!-- ```
 for epoch in range(100):
     logits = model(X)
     loss = loss_fn(logits, Y)
     optimizer.zero_grad()
     loss.backward()
     optimizer.step()
-```
--->
+```-->
 
 *Training demo D2ccc overview (first draft diagram generated by GPT)*<br>
 <img src="/assets/D2ccc_train.png" alt="drones" width="60%">
@@ -173,34 +125,23 @@ for epoch in range(100):
 
 <br>
 
-<!-- 
-#### **#3 AlexNet CNN** 
-
+<!-- #### **#3 AlexNet CNN** 
 This CNN was released in 2012. Its an important historical version to study, but too complicated to use as a hands on demo (most demos now abstract behind APIs much of the programming details that were required in 2012). *Diagram from **[2.2.1b D4 CNN algorithm details](https://ziptieai.com/2.2.1b-d4-cnn-algorithm-details/)***.
+<img src="/assets/M-06.png" alt="drones" width="36%"><br>  -->
 
-<img src="/assets/M-06.png" alt="drones" width="36%">
+#### **[2.4 Concepts -- Convolution](/0b.2.4-concepts-convo/)**
 
-
-<br>  -->
-
-#### **2.4 Concepts -- Convolution**
-
-See diagram below. For detailed concepts see **[2.4 CNN (convolution) concepts](/0b.2.4-concepts-convo/)**.
+<!-- See diagram below. For detailed concepts see **[2.4 CNN (convolution) concepts](/0b.2.4-concepts-convo/)**. -->
 
 *CNN demo D4 overview* <br>
 <img src="/assets/M-33.png" alt="drones" width="45%">
 
 <br>
 
-
-<!-- 
-
-4 Tiny CNN ([demo D4](/2.2.1-d4-cnn-image-classifier/))**
-
+<!-- 4 Tiny CNN ([demo D4](/2.2.1-d4-cnn-image-classifier/))**
 A hands on demo. Input a 28x28 pixel screenshot of a digit, and the NN outputs "0", "1", ... "9". For details see 
 - **[2.2.1 D4 CNN image classifier](https://ziptieai.com/2.2.1-d4-cnn-image-classifier/)**
 - **[2.2.1b D4 CNN algorithm details](https://ziptieai.com/2.2.1b-d4-cnn-algorithm-details/)**
-
 There are 3 main parts.
 - **1 Data input**. In this case the data input is .............
 - **2 Feature extraction (nn.Conv2d + nn.MaxPool2d)**. This is where convolution and pooling are used to turn the original pixel values into "hidden state" values that progressive define higher level features (I typical call these values "pix's"). ...
@@ -211,14 +152,11 @@ There are 3 main parts.
 <img src="/assets/M-07.png" alt="drones" width="46%">
 <img src="/assets/M-08.png" alt="drones" width="20%"> -->
 
+#### **[2.5 Concepts -- Transformer](/0b.2.5-concepts-tf/)**
 
-#### **2.5 Concepts -- Transformer**
+<!--See diagram below. For concepts details see **[Concepts -- 2.5 Transformers](/0b.2.5-concepts-tf/)**. -->
 
-See diagram below. For concepts details see **[Concepts -- 2.5 Transformers](/0b.2.5-concepts-tf/)**.
-
-
-<!--
-```
+<!--```
 class TinyTransformer(nn.Module):
     def __init__(self):
         super().__init__()
@@ -232,85 +170,83 @@ class TinyTransformer(nn.Module):
             nn.ReLU(),
             nn.Linear(64, embed_dim), )
         self.out = nn.Linear(embed_dim, vocab_size)
-```
--->
+```-->
 
 <img src="/assets/M-09.png" alt="drones" width="60%">
 
 <br>
 
+#### **[2.6 Comparison of NN, CNN, and TF architectures](/0b.2.6-concepts-nn-cnn-tf/)**
 
-#### **2.6 Comparison of NN, CNN, and TF architectures**
+<!-- See **[Comparison of NN, CNN, and TF architectures](/0b.2.6-concepts-nn-cnn-tf/)**.-->
 
-See **[Comparison of NN, CNN, and TF architectures](/0b.2.6-concepts-nn-cnn-tf/)**.
-
-*(make this simplified version of [2.2b CNN<>TF comparison (WIP)](/2.2b-cnn-tf-comparison/))*
+*(make this a simplified version of [2.2b CNN<>TF comparison (WIP)](/2.2b-cnn-tf-comparison/))*
 
 <img src="/assets/M-15ddd.png" alt="drones" width="40%">
 
-
-
 <br>
 
-#### **2.7 Why scaling works**
-
-See **[Why scaling works](/0b.2.7-why-scaling-works/)**.
+#### **[2.7 Why scaling works]](/0b.2.7-why-scaling-works/)**
 
 <img src="/assets/M-36.png" alt="drones" width="50%">
 
-
 <br>
 
-<!-- 
-#### **2.8 Modern architectures are evolutionary (not revolutionary)**
+## **[2b Model concepts](/0b.2b-concepts-models/)**
 
-The latest architectures are not introducing anything radically different. I recently saw a video where one of the author's of the original paper "Attention is all you need" (the term "attention" is a misleading marketing term) stated that no other ground-breaking architecture has appeared since the paper was pubished.
-
-See **[Modern architectures are evolutionary (not revolutionary)](/0b.2.8-modern-arch-evolution/)**.
-
-<br>  -->
-
-## **[2b Models](/2b_models/)**
-
-**[Basic concepts](/0b.2b-concepts-models/)**
-
-The agent and the NN are typically packaged into a **model** that has an API that makes it possible for existing software to **access the model via API**. The **model code that controls the TF NN is the "internal agent" (iAgent)**. 
+The agent and the NN are typically packaged into a **model** that has an API that makes it possible for existing software to **access the model via API**. The **model code that controls the TF NN is the "internal agent" (iAgent)**. Discusses
+ - 2b.1 What is a Model?
+ - 2b.2 Internal Agent (iAgent)
+ - 2b.3 APIs
+ - 2b.4 Local vs Cloud Models
+ - 2b.5 Building Models
+ - 2b.6 Modifying Models
 
 *This is a first draft (junk) diagram generated by GPT*<br>
 <img src="/assets/M-35.png" alt="drones" width="60%">
 
-
 <br>
 
-## **[3 Agents](/3_agents/)**
-
-**[Basic concepts](/0b.3-concepts-agents/)**
+## **[3 Agent concepts](/0b.3-concepts-agents/)**
 
 External agents access the model via API. This supports
 - reliable workflows built around models, tools, and automation. 
 - tolerance of AI faults and unpredictable outputs
 
+Discusses 
+ - 3.1 Agent Concepts
+ - 3.2 Code-first Agents
+ - 3.3 Agent Frameworks
+
 <br>
 
-## **[3b Projects](/3.3-ai-projects/)**
+## **[3b AI project concepts](/0b.3b-concepts-projects/)**
 
 “Spinning up” real-world projects quickly with minimal code analysis or manual coding (the final demo section in ZiptieAI).
+
+Discusses
+  - 3b.1 Existing Systems
+  - 3b.2 External Tools & APIs
+  - 3b.3 Data Integration
+  - 3b.4 AI-assisted Workflows
+  - 3b.5 Reliability
+  - 3b.6 End-to-end Architectures
 
 <img src="/assets/M-16.png" alt="drones" width="35%">
 
 <br>
 
-26.0623 (v1 26.0611)
+26.0626 (v1 26.0611)
 
 <br>
 
-
-
-
-<!--
-```
-my focus here is what i can create.. 
-
+<!-- ------------------------------------------------------------------------------
+------------------------------------------------------------------------------
+------------------------------------------------------------------------------
+------------------------------------------------------------------------------
+------------------------------------------------------------------------------
+------------------------------------------------------------------------------
+```my focus here is what i can create.. 
 (1) I CREATE THE NN. NO EXISTING MODEL. JUST PT. 
 i create the NN , i train, infer, total control. and all visible. 
 i need no infrastructure. 
@@ -464,3 +400,54 @@ AI major components (see diagram at top of page):
 - **3 Agents (external)**
 
 <br>   -->
+
+<!-- 
+## **1 Key AI capabilities and limitations**
+
+Just a simple draft list 26.0623.
+
+The core capabilites and limitations of the AI demos in the QS apply to even the most sophisticated AI projects (they get more 9's after the decimal point, 99.999 for example, but they never reach 100). Keeping these in mind will keep you out of trouble in AI projects. 
+
+#### **Capabilities**
+
+- Can be autoprogrammed (trained).
+- Can use customized architectures (such as CNN or TF).
+- Based on pattern matching. The closest match will be assigned the highest probability.
+- Can *simulate* high level thinking (planning, etc).
+- Provides a free-from language man-machine interface (but the output is not predictable).
+
+#### **Limitations**
+
+- Has no feelings, no consciousness, no intelligence. It only processes numbers.
+- A NN always requires traditional SW program control (an agent, often in Python). The agent and NN are designed specifically for each other. They are a team that constitutes the core essence of AI. 
+
+<img src="/assets/M-11.png" alt="drones" width="26%">
+
+<br>
+
+!-- 
+#### **1.2 NNs are always passive; CPU-based agents are in control**
+
+A core lesson from the demos was that a NN is always passive. At least the NN part that does the pattern matching and statisical computation that passes for intelligence. **An NN inputs data and outputs the (100% deterministic) result. Thats it. No control loop.** In the end AI is simply an add-on to CPU-based systems. 
+
+
+This is perhaps the most important function of AI. The problem is AI token output starts to fool humans into believing AI is intelligent.  **These tokens ellicit thoughts in intelligent human** (no explanation necessary or possible). **For a NN these tokens are just a large set of large (FP) numbers**. When you type a prompt into a chatbot, that prompt is converted into a lot of FP numbers. That is all the TF sees.
+
+*Electronic agents still run the world, not electronic "NNs"* <br>
+<img src="/assets/M-12.png" alt="drones" width="22%">
+<br>
+
+#### **1.3 NN and agent = Tweedledee and Tweedledum**
+
+A possible analogy for the NN and the agent are Tweedledee and Tweddledum from **[Alice in Wonderland](https://en.wikipedia.org/wiki/Alice%27s_Adventures_in_Wonderland)**. This analogy will help you assess where AI can be deployed successfully and how much effort system integration will cost (if AI was intelligent, you'd just plug AI into the system and finished).
+
+
+<img src="/assets/M-11.png" alt="drones" width="26%">
+
+<br>
+
+#### **1.4 Agentic AI higher level "thinking" is statistical probability**
+
+Agentic AI models have some pretty sophisticated abilities that really resemble higher level thinking. Planning is one of the most interesting. You send a complicated human language plan to a model and you get back a "sanitized" version that consists of basically plan steps that match a format you specified in your prompt to them model. But this is also statistical computation at work. The model TF only communicates with the internal agent via prompts. So the model must be trained specifically for such planning, and the internal agent must know the exact prompt "protocol" to use for maximum results. Basically **the agent and TF and designed to work together to create the illusion of higher level thinking by only exchanging tokens**.
+
+<br> -->

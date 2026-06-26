@@ -69,7 +69,7 @@ But AI has 0 intelligence. **AI circuits have absolutely no similarity whatsoeve
 
 ### **1.3 Falling for AI hype can cost you... dearly**
 
-**"No more programmers"**, **"no more workers", "self-driving cars will be ready next year"**, **"we must pause AI development because its not safe"**, and **"AI already has emotions"** (that last statement was from a winner of both the Nobel and Turing prizes). If you yourself fall for such hype it can cost you, sometimes dearly.
+**"No more programmers"**, **"no more workers", "self-driving cars will be ready next year"**, **"we must pause AI development because its not safe"**, and **"AI already has emotions"** (that last statement was from a winner of both the Nobel and Turing prizes). If you yourself fall for such hype, it can cost you dearly.
 
 <!-- **AI is a security risk**. The core NN in AI has what are often referred to as "hidden layers" that perform the massive brute-force number crunching to generate "intelligent" output. **It's impossible (even for AI) to determine how a NN has been programmed by analyzing the parameter settings in these layers**. -->
 
@@ -127,6 +127,8 @@ Structured data forms the basis of many SaaS systems (similar to ontology in Pal
 <br>
 
 # **2 Core AI demos and concepts**
+
+Note: The latest architectures are not introducing anything radically different from the core AI functionality of these simple demos. I recently saw a video where one of the author's of the original paper "Attention is all you need" stated that no other ground-breaking architecture has appeared since the paper was pubished.
 
 <!--
   - **2.1 Core AI demos ([QS](/0-qs/))**. You need hands-on demo experience before you can really understand the core AI concepts.
@@ -190,7 +192,7 @@ AI has a big future even after the pre-IPO hype is over. **Those who understand 
 
 <br>
 
-26.0625 (v1 26.0611)
+26.0626 (v1 26.0611)
 
 <!-- *A successful mission for AI (left) and not so successful mission (right).* <br>
 <img src="/assets/ziptiedrone2.png" alt="drones" width="23%"> <img src="/assets/waymo.png" alt="drones" width="26%">  -->
