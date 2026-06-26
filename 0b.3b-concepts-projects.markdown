@@ -12,6 +12,26 @@ permalink: /0b.3b-concepts-projects/
 
 xxxxx
 
+```
+GPT:
+3b Projects
+I actually think this section needs one additional concept.
+Right now it says
+build AI projects.
+But I think your site is really teaching
+Integrate AI into existing software.
+That's a different mindset.
+So I'd mentally think of 3b as
+•	Existing system  ↓ External agent  ↓ Model ↓ Useful result
+That's the architecture almost every one of your recent demos follows:
+•	Gmail → Agent → LLM 
+•	Nmap → Agent → MongoDB → LLM 
+•	Mattermost alerts 
+•	JobRadar 
+•	PAL 
+They're all the same pattern.
+```
+
 
 
 <br>

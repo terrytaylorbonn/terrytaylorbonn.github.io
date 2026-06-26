@@ -17,7 +17,23 @@ External agents access the model via API. This supports
 
 This page describes how xxxx work. Based on [demo xxx](/2.3.6.1-d5-tiny-tf/). 
 
-<br>
+```
+GPT: 
+3 Agents... This is where I'd make one important change.
+Instead of organizing by implementation...
+•	Concepts
+Custom agents
+Frameworks
+I'd organize by increasing abstraction.
+•	3.1 Agent concepts
+3.2 Code-first agents
+3.3 Agent frameworks
+because that's exactly how people learn.
+First understand the ideas.
+Then write Python.
+Then let a framework automate some of the plumbing.
+That also matches your philosophy that people should understand the code before using frameworks.
+```
 
 <img src="/assets/xxx.png" alt="drones" width="60%">
 
