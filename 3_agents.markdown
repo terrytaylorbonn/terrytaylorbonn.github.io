@@ -101,20 +101,20 @@ TF Semantic
 
 <br>
 
-#### **[3.3 (3.1) Agent PAL_core demos (docx \#603)](/3.1-agentic/)**
+#### **[3.3.1 (3.1) Agent PAL_core demos (docx \#603)](/3.1-agentic/)**
 
 PAL_CORE demos focus on the core functions of an AI-assisted control system, including detection, prediction, allocation, planning, optimization, and external tool integration. The control loop itself is traditional deterministic software, with AI used only where it adds value.
 
 <br>
 
-#### **[3.2 (3.2.5) PAL demos (openAI/Gemma) (docx \#603)](/3.2.5-ai-agent-pal-demos/)**
+#### **[3.3.2 (3.2.5) PAL demos (openAI/Gemma) (docx \#603)](/3.2.5-ai-agent-pal-demos/)**
 
 
 PAL demos focus on Palantir-style data intelligence systems that combine ontologies, deterministic workflows, structured data analysis, and LLM-assisted planning. The emphasis is on reliable execution rather than autonomous AI behavior.
 
 <br>
 
-#### **[3.4 (3.2.4) TF semantic demos (AI) (docx \#606)](/3.2.4-ai-agent-basic-demos/)**
+#### **[3.3.3 (3.4,3.2.4) TF semantic demos (AI) (docx \#606)](/3.2.4-ai-agent-basic-demos/)**
 
 These simple demos show how deterministic agents can use TF/UFA semantic capabilities. The focus is not on autonomous AI, but on how traditional software can leverage language models for tasks such as tool use, file analysis, retrieval, and tool selection.
 
@@ -128,27 +128,27 @@ These simple demos show how deterministic agents can use TF/UFA semantic capabil
 
 <br>
  
-#### **3.5 OpenAI Agents SDK**
+#### **3.4.1 OpenAI Agents SDK**
 
 <br>
 
-#### **3.6 Pydantic AI**
+#### **3.4.2 Pydantic AI**
 
 <br>
 
-#### **LangChain**
+#### **3.4.3 LangChain**
 
 <br>
 
-#### **LangGraph**
+#### **3.4.4 LangGraph**
 
 <br>
 
-#### **CrewAI**
+#### **3.4.5 CrewAI**
 
 <br>
 
-#### **AutoGen**
+#### **3.4.6 AutoGen**
 
 
 
