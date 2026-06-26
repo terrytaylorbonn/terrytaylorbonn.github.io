@@ -32,10 +32,11 @@ The **ZiptieAI mission** is to give you
 
 The diagram below show the components for a basic LLM model. 
 - Transformer (TF) generates response tokens based on the input tokens.
+  - Note that the actual NN inside the TF only computes FP numbers. It understands nothing, sees nothing, has absolutely no consicousness. 
 - Internal agent (iAgent) sends and receives tokens to/from the TF.
 - API allows the external agent (the core control loop you write, usually in Python) to use the model. 
 
-<img src="/assets/M-15-2b.png" alt="drones" width="53%"><br><br> 
+<img src="/assets/M-15-2b.png" alt="drones" width="53%"><br>
 
 The following shows the code that defines the NN structure and the training algorithm.  
 
