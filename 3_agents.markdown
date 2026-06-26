@@ -6,34 +6,165 @@ permalink: /3_agents/
 
 <br> 
 
-Conceptual summary of agents:
-- Agent = any external (to the model) program that calls a model API and uses the results to perform actions. Works for OpenAI, Gemma, Ollama, and for future non-LLM models.
-- AI Agent = an agent that combines deterministic software with the semantic capabilities of AI models.
-- AI Agents provide
-  - reliable workflows built around models, tools, and automation. 
-  - tolerance of AI faults and unpredictable outputs
-
-<br>
+This section describes agent demos. 
+- An (external) agent is software that contains the main control loop.
+- The agent uses tools, APIs, and databases to perform useful work.
+- AI is an optional add-on.
+- AI-assisted agents call one or more model APIs as part of their workflow.
 
 *3 Agents in the master diagram* <br>
 <img src="/assets/M-15-3x.png" alt="drones" width="80%">
 
-Note: 
-- Custom models are not demonstrated in this section (yet). 
+<!-- Note: - Custom models are not demonstrated in this section (yet). 
 - The only model used is openAI (and Gemma).
 - No external "main system" is used.
-<br>
-<br>
-
-<img src="/assets/M-22.png" alt="drones" width="26%">
+<img src="/assets/M-22.png" alt="drones" width="26%">  -->
 
 <br>
 
-### **[3.0 (3.2.1) Concepts](/3.2.1-ai-agent-intro/)**
+**TOC**
+- **Concepts** 
+- **Part 1: No AI**   
+  - **3.1 Code-first** 
+  - **3.2 Frameworks** 
+- **Part 2: AI-assisted** 
+  - **3.3 Code-first** 
+  - **3.4 Frameworks** 
 
 <br>
 
-<!--  ### **[3.1 n8n demos (docx \#603)](/3.1-agentic-n8n/)**
+# **[3.0 (3.2.1) Concepts](/3.2.1-ai-agent-intro/)**
+
+<br>
+
+--------------------------------
+--------------------------------
+--------------------------------
+
+<br>
+
+# **Part 1: No AI**
+
+<br>
+
+--------------------------------
+
+<br>
+
+### **3.1 Code-first**
+
+(Python, FastAPI, APIs, databases, deterministic workflows)
+
+<br>
+
+--------------------------------
+
+<br>
+
+### **3.2 Frameworks**
+
+n8n (other automation frameworks in the future)
+
+<br>
+
+#### **[3.2.1 (3.1) n8n demos (docx \#603)](/3.1-agentic-n8n/)**
+
+n8n demos focus on workflow automation and orchestration. Starting with cloud and local n8n installations, the demos connect to Gmail, process real data, and progressively replace no-code workflows with custom Python and PAL components. The goal is to understand what parts of an AI workflow require automation tools and which parts can be implemented directly in code.
+
+<br>
+
+--------------------------------
+--------------------------------
+--------------------------------
+
+<br>
+
+
+# **Part 2: AI-assisted**
+
+- AI Agent = deterministic software enhanced with AI semantic capabilities.
+- Reliable workflows built around models, tools, and automation.
+- Designed to tolerate AI mistakes and unpredictable outputs.
+
+
+<br>
+
+--------------------------------
+
+<br>
+
+### **3.3 Code-first**
+
+PAL_CORE
+PAL
+TF Semantic
+
+<br>
+
+#### **[3.3 (3.1) Agent PAL_core demos (docx \#603)](/3.1-agentic/)**
+
+PAL_CORE demos focus on the core functions of an AI-assisted control system, including detection, prediction, allocation, planning, optimization, and external tool integration. The control loop itself is traditional deterministic software, with AI used only where it adds value.
+
+<br>
+
+#### **[3.2 (3.2.5) PAL demos (openAI/Gemma) (docx \#603)](/3.2.5-ai-agent-pal-demos/)**
+
+
+PAL demos focus on Palantir-style data intelligence systems that combine ontologies, deterministic workflows, structured data analysis, and LLM-assisted planning. The emphasis is on reliable execution rather than autonomous AI behavior.
+
+<br>
+
+#### **[3.4 (3.2.4) TF semantic demos (AI) (docx \#606)](/3.2.4-ai-agent-basic-demos/)**
+
+These simple demos show how deterministic agents can use TF/UFA semantic capabilities. The focus is not on autonomous AI, but on how traditional software can leverage language models for tasks such as tool use, file analysis, retrieval, and tool selection.
+
+<br>
+
+--------------------------------
+
+<br>
+
+### **3.4 Frameworks**
+
+<br>
+ 
+#### **3.5 OpenAI Agents SDK**
+
+<br>
+
+#### **3.6 Pydantic AI**
+
+<br>
+
+#### **LangChain**
+
+<br>
+
+#### **LangGraph**
+
+<br>
+
+#### **CrewAI**
+
+<br>
+
+#### **AutoGen**
+
+
+
+
+<!--  ====================================================================
+====================================================================
+====================================================================
+====================================================================
+====================================================================
+====================================================================
+====================================================================
+====================================================================
+====================================================================
+====================================================================
+
+### **[3.1 n8n demos (docx \#603)](/3.1-agentic-n8n/)**
 
 Demo with n8n as the input
 **1) n8n local**
@@ -50,8 +181,7 @@ n8n demos focus on workflow automation and orchestration. Starting with cloud an
  Or even shorter:
 
 The n8n demos focus on workflow automation, Gmail integration, and orchestration. The later demos progressively replace n8n components with custom Python and PAL code to better understand the underlying architecture. 
-<br> -->
-
+<br> 
 
 
 
@@ -63,7 +193,7 @@ The n8n demos focus on workflow automation, Gmail integration, and orchestration
 
 PAL_CORE demos focus on the core functions of an AI-assisted control system, including detection, prediction, allocation, planning, optimization, and external tool integration. The control loop itself is traditional deterministic software, with AI used only where it adds value.
 
-<!-- or shorter:
+!-- or shorter:
 
 PAL_CORE demos focus on deterministic control loops enhanced by AI, including detection, prediction, planning, optimization, and tool orchestration.
 
@@ -104,9 +234,9 @@ The core control loop is traditional non-AI deterministic programming
 - [3.8b] pal_core_08_plan.py + LLM (BINGO) 26.0424	46
 - [3.9] — pal_core_09_optimize.py // improved allocation / optimization (BINGO) 26.0427	23
 - (todo) [3.10] — pal_core_10_ui.py // dashboard / FastAPI / presentation layer 26.0427	22
--->
+--
 
-<!--
+!--
 from #603 and in pic
 - === 3) pal core ==============================	9
 - [3.1] pal_core_01.detect.py (BINGO) 26.0411 (01 events / alerts)	313
@@ -122,13 +252,13 @@ from #603 and in pic
 - [3.8] pal_core_08_plan.py // natural language → plan JSON → controlled execution (BINGO) 26.0423	81
 - [3.9] — pal_core_09_optimize.py // improved allocation / optimization (BINGO) 26.0427	23
 - 2.6 v6 s_hard_prompts ???? 
--->
+--
 
 <br>
 
 ### **[3.2 (3.2.5) PAL demos (openAI/Gemma) (docx \#603)](/3.2.5-ai-agent-pal-demos/)**
 
-<!-- Simple demos are the best way to understand agentic AI systems. -->
+!-- Simple demos are the best way to understand agentic AI systems. --
 
 PAL demos focus on Palantir-style data intelligence systems that combine ontologies, deterministic workflows, structured data analysis, and LLM-assisted planning. The emphasis is on reliable execution rather than autonomous AI behavior.
 
@@ -157,7 +287,7 @@ PAL (Palantir) demos focus on:
 - [2.6] pal_v6 S0-S4 (BINGO) 26.0331-0401	
 - [2.7] pal_v7 useful functions (BINGO) 26.0401	
 - [2.8] pal_v1 with local Gemma-4 (win11/gpu) 26.0411 (BINGO)
--->
+--
 
 <br>
 
@@ -170,7 +300,7 @@ Very basic demos that show how **deterministic agents use TF/UFA semantic capabi
 - 1 Basic tool
 - 3 Filesystem
 - 5 RAG
-- 6c MCP + LLM tool choice.  -->
+- 6c MCP + LLM tool choice.  --
 
 <br>
 
@@ -198,14 +328,14 @@ Very basic demos that show how **deterministic agents use TF/UFA semantic capabi
 - N4 py script replaces n8n app (Win11/jk) (BINGO)
 - N5 py script adds PAL (BINGO) 26.0409
 - NX TODO	
--->
+--
 
 n8n demos focus on workflow automation and orchestration. Starting with cloud and local n8n installations, the demos connect to Gmail, process real data, and progressively replace no-code workflows with custom Python and PAL components. The goal is to understand what parts of an AI workflow require automation tools and which parts can be implemented directly in code.
 
 
 <!-- Or even shorter:
 
-The n8n demos focus on workflow automation, Gmail integration, and orchestration. The later demos progressively replace n8n components with custom Python and PAL code to better understand the underlying architecture. -->
+The n8n demos focus on workflow automation, Gmail integration, and orchestration. The later demos progressively replace n8n components with custom Python and PAL code to better understand the underlying architecture. --
 
 <br>
 

@@ -180,12 +180,94 @@ GPT: M07 FastAPI. This is where the model becomes a service. I think that's exac
 
 ### **[3 External Agent demos](/3_agents/)**
 
-The center of the Agentic AI universe is the AI agent.  The agent and LLM together can doing amazing things. But they also have severe limitations. "Tuning" then to work together is the core focus. 
+This is on the QS /0-qs.markdown/ page. 
 
-Using a model as a helpful assistant.
-  - **3.1 Code-first agents**.
-  - **3.2 Agent framework**. 
+- 3.1 Code-first (no AI) (some demos)
 
+- 3.2 Frameworks (no AI / automation) (n8n demo)
+
+```
+GPT: 
+General-purpose (non-AI) frameworks
+These are designed for any application, whether it uses AI or not.
+Examples:
+ n8n (I added)
+ FastAPI
+ Flask
+ Django
+ Express.js
+ Spring Boot
+They know nothing about LLMs.
+```
+
+- 3.3 Code-first (AI-assisted) (representative PAL/PAL_CORE demo)
+
+- 3.4 AI Frameworks (representative LangChain/OpenAI Agents SDK/PydanticAI demo)
+
+```
+GPT:
+AI frameworks
+These are specifically designed to make building AI applications easier.
+Examples:
+ n8n (general automation, but now widely used for AI workflows)
+ LangChain
+ LangGraph
+ CrewAI
+ OpenAI Agents SDK
+ PydanticAI
+These assume that one or more models/LLMs are part of the application.
+
+LangChain, CrewAI, etc.
+These are different.
+Without an LLM, they don't provide much value. Their purpose is to orchestrate AI models, tools, memory, and workflows.
+```
+
+<br>
+
+------------------------
+------------------
+
+<br>
+
+```
+GPT:
+n8n is interesting
+n8n is not AI-only.
+Originally it was built as a workflow automation platform.
+or example:
+Gmail
+    ↓
+Save attachment
+    ↓
+Dropbox
+    ↓
+Send Slack message
+No AI involved.
+
+Later, AI nodes were added:
+Gmail
+    ↓
+LLM summarizes email
+    ↓
+Store in MongoDB
+    ↓
+Mattermost alert
+
+So n8n is really an automation framework, not an AI framework that happens to automate things.
+```
+
+<!-- The center of the Agentic AI universe is the AI agent.  The agent and LLM together can doing amazing things. But they also have severe limitations. "Tuning" then to work together is the core focus. Agents can also run without AI.  
+- **[3.1 Agentic (no AI)](/3.1-agentic/)** <br> 
+- **[3.2.5 Agentic + AI / PAL demos](/3.2.5-ai-agent-pal-demos/)**.   <br>
+- **[3.2.4 Agentic + AI / Basic demos](/3.2.4-ai-agent-basic-demos/)**. <br>
+-->
+
+<!-- <img src="/assets/4_5_3x.png" alt="drones" width="20%"> <br><br>
+<img src="/assets/calc1b.png" alt="drones" width="35%"> <br><br>
+<img src="/assets/4_6_2x.png" alt="drones" width="20%">  <br>
+<img src="/assets/4_5_3x_bbb.png" alt="drones" width="20%"><br><br>  -->
+
+<!-- 
 ```
 GPT:
 
@@ -204,18 +286,7 @@ PydanticAI
 demo.
 The framework itself isn't important.
 The concept is.
-```
-
-```
-Delete this:
-- **[3.1 Agentic (no AI)](/3.1-agentic/)** <br> 
-<img src="/assets/4_5_3x.png" alt="drones" width="20%"> <br><br>
-- **[3.2.4 Agentic + AI / Basic demos](/3.2.4-ai-agent-basic-demos/)**. <br>
-<img src="/assets/calc1b.png" alt="drones" width="35%"> <br><br>
-- **[3.2.5 Agentic + AI / PAL demos](/3.2.5-ai-agent-pal-demos/)**.   <br>
-<img src="/assets/4_6_2x.png" alt="drones" width="20%">  <br>
-<img src="/assets/4_5_3x_bbb.png" alt="drones" width="20%"><br><br> 
-```
+```  -->
 
 <br>
 
