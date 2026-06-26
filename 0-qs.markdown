@@ -165,7 +165,22 @@ GPT: M06 HuggingFace publish because suddenly the model becomes portable.
 #### **[2b.3 Modifying models](/2b.3-modify-models/)**<br> 
 
 ```
-GPT: M06 HuggingFace publish because suddenly the model becomes portable.
+GPT:
+A tiny fine-tuning demo would be excellent
+For example:
+M08 Tiny Fine Tune
+1. Load M01 model.pt
+2. Run inference
+3. Continue training for 100 epochs on slightly different data
+4. Save model_v2.pt
+5. Compare outputs before/after
+This would teach the core idea:
+Fine-tuning = continue training an existing model on additional data.
+No transformers required. The exact same concept applies to LLMs, just at a much larger scale.
+I actually think this would become one of the best demos in your 2b Models section because it bridges the gap between:
+training from scratch (Section 2), and
+using pre-trained models (Section 2b).
+So yes—I would make Tiny Fine Tune the representative demo for 2b.3 Modifying models. It fits the section much better than the backdoor example.
 ```
 
 <br>
@@ -173,7 +188,21 @@ GPT: M06 HuggingFace publish because suddenly the model becomes portable.
 #### **[2b.4 Running models locally](/2b.4-run-models-locally/)**<br>
 
 ```
-GPT: M07 FastAPI. This is where the model becomes a service. I think that's exactly what people need to understand
+GPT1: 
+M07 FastAPI. This is where the model becomes a service. I think that's exactly what people need to understand
+```
+
+```
+GPT2: 
+Yes. I actually think Ollama is a better representative demo for 2b.4 Running models locally than M07 FastAPI.
+The purpose of 2b.4 is not to teach FastAPI. It's to teach:
+"How do I run a model on my own computer?"
+Most people today will use something like:
+  Ollama
+  LM Studio
+  vLLM
+  llama.cpp
+rather than writing their own FastAPI server.
 ```
 
 <br>
