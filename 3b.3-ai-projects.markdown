@@ -50,7 +50,7 @@ For details on each project demo see
 
 <br>
 
-### **Part 1:Enterprise SW demos**
+### **Part 1: Enterprise SW demos**
 
 Target system exists. FUTURE: Slack, Odoo, Jira, GitHub.
 
