@@ -7,6 +7,18 @@ description: Last edit 26.0501
 
 [← 3b Projects](/3.3-ai-projects/)
 
+Stores messy human text in an append-only encrypted ledger, then uses AI to search, summarize, and generate new entries without requiring a rigid database schema.
+
+The ledger stays immutable:
+- Entry 001: original note
+- Entry 002: correction to Entry 001
+- Entry 003: update to Entry 001
+
+Then the AI/agent produces the current “view”:
+- current version = Entry 001 + Entry 002 + Entry 003
+
+So nothing is edited in place. The system only appends.
+
 xxxxx
 
 For details see 
