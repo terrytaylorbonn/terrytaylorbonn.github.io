@@ -348,7 +348,7 @@ The architecture differs, but the key educational point is the same: You didn't 
 
 <br>
 
-*3b Project ecosystem for stages S1-S4*<br>
+*3b Project ecosystem for stages S1-S4 (for Slack demo)*<br>
 <img src="/assets/M-37.png" alt="drones" width="55%"> 
 
 <br>
