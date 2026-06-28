@@ -5,7 +5,7 @@ title: Home
 
 <br>
 
-I recently **added an AI chatbot to a Slack workspace. Quickly. The code worked the first time.** I had never programmed Slack before. I call this **Ziptie coding** (not "vibe coding"). See the page **[demo](/0-demo/)** for details.   
+I recently **added an AI chatbot to a Slack workspace. Quickly. The code worked the first time.** See the page **[demo](/0-demo/)** for details.   
 
 ZiptieAI.com was created in 2024 to document my work on Ukrainian style ziptie'd [AI Drones](/1-drones/). 
 
