@@ -67,7 +67,7 @@ Target system exists. FUTURE: Slack, Odoo, Jira, GitHub.
 
 <br>
 
-#### [**3b.11 Slack** (26.0501)](/3b.3.11-ai-proj-11-slack/)
+#### [**3b.11 Slack** (26.0627)](/3b.3.11-ai-proj-11-slack/)
 
 <br>
 
