@@ -37,7 +37,7 @@ Lessons learned...
 - I am very critical of the hype and outright lies from the gurus about AI. But AI is not a bubble. And this demo proves that. 
 - AI is basically a souped-up search engine with coding capbilities.
 - But those capabilities (when developed to the max) are incredibly useful for humanity.
-- **Learn how to Ziptie together extremely useful AI apps quickly using the ZiptieAI site (thats start from the bottom and works up to demos like the Slack demo).**&
+- **Learn how to Ziptie together extremely useful AI apps quickly using the ZiptieAI site (thats start from the bottom and works up to demos like the Slack demo).**
 
 *Ziptie coding*<br>
 <img src="/assets/ziptiedrone2.png" alt="drones" width="27%">
