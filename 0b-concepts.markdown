@@ -213,13 +213,87 @@ External agents access the model via API. This supports (1) reliable workflows b
 
 ## **[3b AI project concepts](/0b.3b-concepts-projects/)**
 
-“Spinning up” real-world projects quickly with minimal code analysis or manual coding (the final demo section in ZiptieAI). This section discusses
+“Spinning up” real-world projects quickly with minimal code analysis or manual coding (the final demo section in ZiptieAI). 
+
+The real goal of AI projects is to integrate AI into an existing SW app. 
+Projects are where all the previous pieces come together. They aren't just "more demos" — they're the integration point. 
+-	2 teaches how models work. 
+-	2b teaches how models are packaged and served. 
+-	3 teaches how agents use models. 
+-	3b shows how agents solve real problems by integrating with existing software and external systems. 
+
+#### **PART 1: Enterprise SW demos** 
+
+```
+GPT:  AI projects are almost never "build ChatGPT."
+Instead they're Existing software. AI assistant
+""The real goal of AI projects is to integrate AI into an existing SW app.""
+I would make that the very first sentence.
+```
+Demos include
+  - **3b.2 GMAIL (JobRadar)**. This intros hope to connect to email, etc to get a daily summary. (has access to a test Gmail account emails).  *Existing system > Gmail > External Agent > LLM > Summary / Alert.*
+  - **3b.11 SLACK** S2a Claude + MCP → Slack ✅ (your demo). S2b Claude Tag in Slack ✅ (future demo). 
+
+<br>
+
+#### **The 4 stages (S1-S4) for ESW demos**
+
+**S1 The traditional UI and ESw** (#1)
+
+**S2 Native/Managed AI** (= #4 (this is easiest to do with AI) ) 
+
+The target platform itself provides the AI agent.
+You configure the connection rather than build the agent.
+Then both fit:
+- **S2a** Claude + MCP → Slack ✅ (your demo) 
+- **S2b** Claude Tag in Slack ✅ (future demo) 
+
+S2a demo was: - Claude UI ↓ MCP ↓  Slack.
+So you did not build the agent—Claude is the agent. However, it's not "the target platform provides the AI agent." Slack is not providing the AI; Claude is.
+The architecture differs, but the key educational point is the same: You didn't build the agent—you connected an existing agent to the enterprise system.
+
+
+**S3 Integrated AI agent** (= #3 (ai agent inside target)) 
+- Your agent works INSIDE the target.
+- Official plugin, extension, app, webhook, API integration, etc.
+- Users interact through the target application's UI. 
+
+**S4 External AI agent / works OUTSIDE the target** (= #2 (external AI... most difficult to setup)) 
+- Your agent works OUTSIDE the target.
+- Uses databases, files, unofficial interfaces, or even official APIs.
+- The target application is unaware of your agent.
+
+<br>
+
+*3b Project ecosystem for stages S1-S4 (for Slack demo)*<br>
+<img src="/assets/M-37.png" alt="drones" width="55%"> 
+
+<br>
+
+----------------
+
+<br>
+
+#### **Part 2: Standalone AI Applications**
+
+Ceate an external agent that is the main app (I don't have (yet) my own app that I'd like to integrate AI into).  The focus is mostly on programming an agent to use external tools and APIs, not on an existing SW calling the agent for assistance. In any case, you use these demo techniques to give your AI app access to a systems DB.
+
+Demos include:
+  - **3b.3 NMAP Security Assistant**. Uses the local PC as the target system. This is not only a practical tool, but also can help you learn very important security topics for your home PC/network setup. Nmap has real system, real data, security, MongoDB,	OpenAI explanation, Mattermost alerts. It demonstrates nearly every important concept in one project.
+
+<br>
+
+*3b standalone AI app (need to modify diagram (this is for 3, not 3b))*<br>
+<img src="/assets/6_main_diagram.png" alt="drones" width="40%"> 
+
+
+<!-- This section discusses
   - 3b.1 Existing Systems
   - 3b.2 External Tools & APIs
   - 3b.3 Data Integration
   - 3b.4 AI-assisted Workflows
   - 3b.5 Reliability
-  - 3b.6 End-to-end Architectures
+  - 3b.6 End-to-end Architectures -->
 
 <img src="/assets/M-16.png" alt="drones" width="35%">
 

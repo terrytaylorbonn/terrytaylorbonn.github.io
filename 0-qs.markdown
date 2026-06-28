@@ -204,51 +204,17 @@ The focus of this sections is the actual agents.
 
 <!-- This is on the QS /0-qs.markdown/ page. -->
 
-- 3.1 Code-first (no AI) (some demos)
+**3.1 Code-first (no AI)**. Most of the demos start out without AI to verify.
 
-- 3.2 Frameworks (no AI / automation) (n8n demo)
+**3.2 Frameworks (no AI / automation)**. These are designed for any application, whether it uses AI or not. Examples: n8n, FastAPI, Flask, Django, Express.js, Spring Boot. One the best demos would be the n8n demo. The test things about n8n is you can run it easily locally (for free). n8n is not AI-only. Originally it was built as a workflow automation platform. For example: Gmail ↓ Save attachment ↓ Dropbox ↓ Send Slack message. No AI involved.
 
-```
-GPT: General-purpose (non-AI) frameworks
-These are designed for any application, whether it uses AI or not.
-Examples:  n8n (I added),  FastAPI,  Flask,  Django,  Express.js, Spring Boot
-They know nothing about LLMs.
-```
+**3.3 Code-first (AI-assisted)**. The PAL/PAL_CORE demos. 
 
-- 3.3 Code-first (AI-assisted) (representative PAL/PAL_CORE demo)
-
-- 3.4 AI Frameworks (representative LangChain/OpenAI Agents SDK/PydanticAI demo)
-
-```
-GPT: AI frameworks
-These are specifically designed to make building AI applications easier.
-Examples:
- n8n (general automation, but now widely used for AI workflows)
- LangChain,  LangGraph,  CrewAI,  OpenAI Agents SDK.  PydanticAI
-These assume that one or more models/LLMs are part of the application.
-LangChain, CrewAI, etc. These are different. Without an LLM, they don't provide much value. 
-Their purpose is to orchestrate AI models, tools, memory, and workflows.
-```
-
-<br>
+**3.4 AI Frameworks**. These are specifically designed to make building AI applications easier.
+Examples: n8n (general automation, but now widely used for AI workflows). Gmail ↓ LLM summarizes email ↓ Store in MongoDB ↓ Mattermost alert. Other examples: LangChain,  LangGraph,  CrewAI,  OpenAI Agents SDK, PydanticAI. These assume that one or more models/LLMs are part of the application. *Note that LangChain, CrewAI, etc don't provide much value without AI. Their purpose is to orchestrate AI models, tools, memory, and workflows.*
 
 *3 External agent ecosystem*<br>
 <img src="/assets/6_main_diagram.png" alt="drones" width="40%"> 
-
-
-<br>
-
-
-```
-GPT: n8n is interesting. n8n is not AI-only.
-Originally it was built as a workflow automation platform. For example:
-  Gmail     ↓   Save attachment     ↓   Dropbox     ↓   Send Slack message
-No AI involved.
-Later, AI nodes were added: 
-  Gmail     ↓   LLM summarizes email     ↓   Store in MongoDB     ↓   Mattermost alert
-So n8n is really an automation framework, not an AI framework that happens to automate things.
-```
-
 
 <!-- The center of the Agentic AI universe is the AI agent.  The agent and LLM together can doing amazing things. But they also have severe limitations. "Tuning" then to work together is the core focus. Agents can also run without AI.  
 - **[3.1 Agentic (no AI)](/3.1-agentic/)** <br> 
@@ -270,10 +236,7 @@ because it shows
 That is the essence of agent programming.
 3.2 Framework > n8n / PydanticAI
 Probably your smallest
-n8n
-or
-PydanticAI
-demo.
+n8n or PydanticAI demo.
 The framework itself isn't important.
 The concept is.
 ```  -->
@@ -282,108 +245,36 @@ The concept is.
 
 ### **[3b Projects](/3.3-ai-projects/)**
 
-<!--This section focuses on "spinning up" real-world projects quickly with minimal code analysis or manual coding. -->
-
-The real goal of AI projects is to integrate AI into an existing SW app. 
-Projects are where all the previous pieces come together. They aren't just "more demos" — they're the integration point. 
-
-
-```
-GPT:
-The only thing I'd emphasize a little more is that 3b Projects are where all the previous pieces come together. 
-They aren't just "more demos"—they're the integration point:
-•	2.x teaches how models work. 
-•	2b teaches how models are packaged and served. 
-•	3 teaches how agents use models. 
-•	3b shows how agents solve real problems by integrating with existing software and external systems. 
-That makes 3b feel like the natural culmination of everything that came before, rather than another independent section.
-```
-
-<br>
-
-------------
-
-<br>
-
-#### **PART 1: Enterprise SW demos** 
-
-```
-GPT:  AI projects are almost never "build ChatGPT."
-Instead they're Existing software. AI assistant
-""The real goal of AI projects is to integrate AI into an existing SW app.""
-I would make that the very first sentence.
-```
-Demos include
-  - **3b.2 GMAIL (JobRadar)**. This intros hope to connect to email, etc to get a daily summary. (has access to a test Gmail account emails).  *Existing system > Gmail > External Agent > LLM > Summary / Alert.*
-  - **3b.11 SLACK** S2a Claude + MCP → Slack ✅ (your demo). S2b Claude Tag in Slack ✅ (future demo). 
-
-<br>
-
-#### **The 4 stages (S1-S4) for ESW demos**
-
-**S1 The traditional UI and ESw** (#1)
-
-**S2 Native/Managed AI** (= #4 (this is easiest to do with AI) ) 
-
-The target platform itself provides the AI agent.
-You configure the connection rather than build the agent.
-Then both fit:
-- **S2a** Claude + MCP → Slack ✅ (your demo) 
-- **S2b** Claude Tag in Slack ✅ (future demo) 
-
-S2a demo was: - Claude UI ↓ MCP ↓  Slack.
-So you did not build the agent—Claude is the agent. However, it's not "the target platform provides the AI agent." Slack is not providing the AI; Claude is.
-The architecture differs, but the key educational point is the same: You didn't build the agent—you connected an existing agent to the enterprise system.
-
-
-**S3 Integrated AI agent** (= #3 (ai agent inside target)) 
-- Your agent works INSIDE the target.
-- Official plugin, extension, app, webhook, API integration, etc.
-- Users interact through the target application's UI. 
-
-**S4 External AI agent / works OUTSIDE the target** (= #2 (external AI... most difficult to setup)) 
-- Your agent works OUTSIDE the target.
-- Uses databases, files, unofficial interfaces, or even official APIs.
-- The target application is unaware of your agent.
-
-<br>
-
-*3b Project ecosystem for stages S1-S4 (for Slack demo)*<br>
-<img src="/assets/M-37.png" alt="drones" width="55%"> 
-
-<br>
-
-----------------
-
-<br>
-
-#### **Part 2: Standalone AI Applications**
-
-Ceate an external agent that is the main app (I don't have (yet) my own app that I'd like to integrate AI into).  The focus is mostly on programming an agent to use external tools and APIs, not on an existing SW calling the agent for assistance. In any case, you use these demo techniques to give your AI app access to a systems DB.
-
-Demos include:
-  - **3b.3 NMAP Security Assistant**. Uses the local PC as the target system. This is not only a practical tool, but also can help you learn very important security topics for your home PC/network setup. Nmap has real system, real data, security, MongoDB,	OpenAI explanation, Mattermost alerts. It demonstrates nearly every important concept in one project.
-
-<br>
-
-*3b standalone AI app (need to modify diagram (this is for 3, not 3b))*<br>
-<img src="/assets/6_main_diagram.png" alt="drones" width="40%"> 
-
-<br>
-
-------------------------------
-
-
-
-
+<!--This section focuses on "spinning up" real-world projects quickly with minimal code analysis or manual coding. --> 
 <!-- ALSO: simply say "My demos use the external agent as the main application 
 because I don't yet have a large production application to integrate AI into.""
 That's easier to understand. -->
 
+See "Concepts" for an explanation of S1-S4.
+
+**PART 1: Enterprise SW demos** 
+
+The real goal of AI projects is to integrate AI into an existing SW (ESW) app.
+
+- **3b.11 SLACK** 
+  - S2a Claude + MCP → Slack ✅ (your demo). 
+  - S2b Claude **Tag** in Slack ✅ (future demo). This would be an **S2 Native/Managed AI**. 
+- **3b.2 GMAIL (JobRadar)**. This intros hope to connect to email, etc to get a daily summary. (has access to a test Gmail account emails).  *Existing system > Gmail > External Agent > LLM > Summary / Alert.* This is an example of **S3 Integrated AI agent**. (????)
+
+*3b Slack Project demo ecosystem for stages S1-S3 (no S4 for Slack)*<br>
+<img src="/assets/M-37.png" alt="drones" width="55%"> 
+
+**Part 2: Standalone AI Applications**.
+
+- **3b.3 NMAP Security Assistant**. Uses the local PC as the target system. **S4 External AI agent / works OUTSIDE the target**.
+  
+*3b standalone AI app (need to modify diagram (this is for 3, not 3b))*<br>
+<img src="/assets/6_main_diagram.png" alt="drones" width="40%"> 
+
 
 <br>
 
-26.0627 (v1 26.0527)
+26.0628 (v1 26.0527)
 
 <!-- **I wasted so much time going down so many rabbit holes when studying AI**. AI is an awesome technology. Without AI tools (GPT) I never could have accomplished 5% of what I have done on the ZiptieAI project. But **AI chatbots only produce the output they are programmed to produce, and much of that about AI itself is misleading hype (or outright lies)**. The very term "artificial intelligence" is a perfect example. AI is not intelligent, and the very concept of "man-made" intelligence shows a basic lack of understanding of what intelligence is. 
 **Code does not lie**. Do this QS and see for yourself what AI really is. Then go to the **[concepts section](/0b-demos/)** to get a firm conceptual grasp of the big picture. You need to do the QS first because otherwise you will struggle greatly to understand much of the **AI lingo (which can be quite misleading)**.
