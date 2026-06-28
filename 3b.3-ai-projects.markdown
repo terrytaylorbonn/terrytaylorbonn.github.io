@@ -70,6 +70,11 @@ Target system exists. FUTURE: Slack, Odoo, Jira, GitHub.
 
 #### [**3b.11 Slack** (26.0627)](/3b.3.11-ai-proj-11-slack/)
 
+(GPT) Slack is a representative enterprise software (ESW) application used to demonstrate several approaches to integrating AI into an existing system. Rather than focusing on Slack itself, the goal is to understand the different architectural patterns for adding AI capabilities to enterprise software.
+
+The demos progress from using Slack as a normal application (S1), to connecting an existing AI agent such as Claude through MCP (S2), to creating a custom Slack App/Bot that integrates an external AI agent directly into the Slack user interface (S3). Together these demos illustrate the evolution from simply using AI to building AI-assisted enterprise applications.
+
+
 <br>
 
 --------------------------------
