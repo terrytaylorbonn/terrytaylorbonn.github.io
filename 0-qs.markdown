@@ -12,7 +12,7 @@ This page (WIP) describes a set of start-to-finish demos that teach the core con
 - **2 NN demos**. Tiny demos that can also run on a CPU. These NNs only know FP numbers as input and output. So if you have any type of other data, you must encode and then decode. 
 - **2b Model demos**. A model contains the **NN/CNN/TF** and an **"internal" agent (iAgent)** that controls and provides access to the NN/CNN/TF. The iAgent implements an **API** that provides external access to the model.
 - **3 External agent (py script) demos**. Using a model as a helpful assistant.
-- **3b Projects**. Projects are where all the previous pieces come together. They aren't just "more demos" — they're the integration point. The real goal of AI projects is to integrate AI into an existing SW app. However, there are no such "integration" apps yet... but the following are good initial demos:
+- **3b Project demos**. Projects are where all the previous pieces come together. They aren't just "more demos" — they're the integration point. The real goal of AI projects is to integrate AI into an existing SW app. However, there are no such "integration" apps yet... but the following are good initial demos:
 
 *Master diagram (ZAI original)*<br>
 <img src="/assets/M-15.png" alt="drones" width="78%">
@@ -243,7 +243,7 @@ The concept is.
 
 <br>
 
-### **[3b Projects](/3.3-ai-projects/)**
+### **[3b Project demos](/3.3-ai-projects/)** (the end goal of ZiptieAI)
 
 <!--This section focuses on "spinning up" real-world projects quickly with minimal code analysis or manual coding. --> 
 <!-- ALSO: simply say "My demos use the external agent as the main application 
@@ -252,25 +252,24 @@ That's easier to understand. -->
 
 See "Concepts" for an explanation of S1-S4.
 
-**PART 1: Enterprise SW demos** 
+#### **PART 1: Enterprise SW demos** 
 
 The real goal of AI projects is to integrate AI into an existing SW (ESW) app.
 
 - **3b.11 SLACK** 
-  - S2a Claude + MCP → Slack ✅ (your demo). 
-  - S2b Claude **Tag** in Slack ✅ (future demo). This would be an **S2 Native/Managed AI**. 
-- **3b.2 GMAIL (JobRadar)**. This intros hope to connect to email, etc to get a daily summary. (has access to a test Gmail account emails).  *Existing system > Gmail > External Agent > LLM > Summary / Alert.* This is an example of **S3 Integrated AI agent**. (????)
+  - S1 Simply use the browser to access Slack.
+  - S2a Claude + MCP → Slack ✅ (current demo). 
+  - S2b Claude **Tag** in Slack ✅ (future demo after Claude gives acccess to the tag function my subscription class). This would be an **S2 Native/Managed AI**. 
+  - S3 Slack app + OpenAI. Agent works as a Slack App / Bot (uses Slack APIs / users interact via Slack UI).
 
-*3b Slack Project demo ecosystem for stages S1-S3 (no S4 for Slack)*<br>
-<img src="/assets/M-37.png" alt="drones" width="55%"> 
+*3b Slack Project demo ecosystem for stages S1-S4*<br><img src="/assets/M-38.png" alt="drones" width="55%"> 
 
-**Part 2: Standalone AI Applications**.
+#### **Part 2: Standalone AI Application demos**.
 
 - **3b.3 NMAP Security Assistant**. Uses the local PC as the target system. **S4 External AI agent / works OUTSIDE the target**.
-  
-*3b standalone AI app (need to modify diagram (this is for 3, not 3b))*<br>
-<img src="/assets/6_main_diagram.png" alt="drones" width="40%"> 
+- **3b.2 GMAIL (JobRadar)**. Standalone that happenst to access email.  *Existing system > Gmail > External Agent > LLM > Summary / Alert.* 
 
+*3b standalone AI app*<br><img src="/assets/6_main_diagram.png" alt="drones" width="40%"> 
 
 <br>
 
