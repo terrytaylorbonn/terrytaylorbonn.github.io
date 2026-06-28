@@ -42,7 +42,7 @@ Lessons learned...
 *Ziptie coding*<br>
 <img src="/assets/ziptiedrone2.png" alt="drones" width="27%">
 
-*Vibe coding*<br>
+*Vibe/hype coding*<br>
 <img src="/assets/waymo.png" alt="drones" width="27%">
 
 
