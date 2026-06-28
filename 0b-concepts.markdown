@@ -224,6 +224,11 @@ Projects are where all the previous pieces come together. They aren't just "more
 -	3 teaches how agents use models. 
 -	**3b shows how agents solve real problems by integrating with existing software and external systems**. 
 
+There are 2 kinds of Ai projects:
+
+- **PART 1: Enterprise SW demos**. An existing application is the primary system. The AI is integrated to assist the application's users and workflows.
+- **Part 2: Standalone AI Applications**. The AI agent is the primary application. It may use external APIs, databases, files, or enterprise software as tools or data sources.
+
 <br>
 
 #### **PART 1: Enterprise SW demos** 
