@@ -212,7 +212,9 @@ External agents access the model via API. This supports (1) reliable workflows b
 
 <br>
 
-## **[3b AI project concepts](/0b.3b-concepts-projects/)**
+## **3b AI project concepts**
+
+<!-- ## **[3b AI project concepts](/0b.3b-concepts-projects/)** -->
 
 The real goal of AI projects is to integrate AI into an existing SW app. 
 “Spinning up” real-world projects quickly with minimal code analysis or manual coding.
