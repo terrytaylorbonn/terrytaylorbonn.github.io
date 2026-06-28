@@ -5,11 +5,13 @@ title: Home
 
 <br>
 
+I recently **added an AI chatbot to a Slack workspace. Quickly. The code worked the first time.** I had never programmed Slack before. I call this **Ziptie coding** (not "vibe coding"). See the page **[demo](/0-demo/)** for details.   
+
 ZiptieAI.com was created in 2024 to document my work on Ukrainian style ziptie'd [AI Drones](/1-drones/). 
 
-The ZiptieAI **[mission](/0-mission/)** is now to provide
+The ZiptieAI **[mission](/0-mission/)** now is to provide
 - **The truth about AI** (my take)
-- **Core AI demo and concepts**
+- **Core AI demos and concepts**
   - **[Quick start (QS) demos](/0-qs/)**. Hands-on tour of low-level core AI functionality.
   - **[Concepts](/0b-demos/)**. Core concepts learned form the QS.
 - **AI deep dive** *(see diagrams below)*

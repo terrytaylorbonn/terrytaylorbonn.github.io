@@ -32,6 +32,7 @@ wiki_url: "https://github.com/terrytaylorbonn/auxdrone/wiki"
 # Header navigation order
 header_pages:
   - index.md
+  - 0-demo.markdown
   - 0-mission.markdown
   - 0-qs.markdown
   - 0b-concepts.markdown

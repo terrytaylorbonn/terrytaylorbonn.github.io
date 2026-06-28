@@ -27,6 +27,9 @@ document.addEventListener('DOMContentLoaded', function() {
   background: transparent;
   border: 1px solid #e1e5e9;
   color: #424242;
+  width: 44px;
+  padding: 0;
+  justify-content: center;
 }
 
 .DocSearch-Button:hover {
@@ -35,7 +38,7 @@ document.addEventListener('DOMContentLoaded', function() {
 }
 
 .DocSearch-Button-Placeholder {
-  font-size: 14px;
+  display: none;
 }
 
 @media (max-width: 768px) {
@@ -51,10 +54,22 @@ document.addEventListener('DOMContentLoaded', function() {
 }
 
 /* Ensure search integrates well with minima theme */
+.site-nav .page-link:not(:last-child) {
+  margin-right: 12px;
+}
+
 .site-nav .trigger #docsearch {
   display: inline-block;
-  margin-right: 1rem;
+  margin-left: 0;
   vertical-align: middle;
+}
+
+@media screen and (min-width: 601px) and (max-width: 1100px) {
+  .site-nav {
+    clear: both;
+    float: none;
+    text-align: left;
+  }
 }
 
 @media screen and (max-width: 600px) {
