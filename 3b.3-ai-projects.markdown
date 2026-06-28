@@ -9,15 +9,13 @@ description: Last edit 26.0618
 
 <br>
 
-This section is the **end goal for ZiptieAI.com**. The focus is on "spinning up" **real-world demo projects** quickly with minimal code analysis or manual coding. **The goal is not to master one type of system, but to demonstrate the ability to apply AI effectively across many different systems**, workflows, and business environments. 
-
 <!-- Each demo will have a version of the following 2 main diagrams:
 
 - **1 Project diagram** (below) (system integration diagram). 
--->
 
 *3b focuses on how all the components are interconnected*<br>
-<img src="/assets/M-26.png" alt="drones" width="37%">
+<img src="/assets/M-26.png" alt="drones" width="37%">-->
+
 
 <!-- - **2 Project diagram with AI details** (below). This diagram will describe
   - **Main system** (an existing ERP, etc system). Why it requires AI, etc.
@@ -26,6 +24,9 @@ This section is the **end goal for ZiptieAI.com**. The focus is on "spinning up"
   - **2b Model** type (openAI, Gemma, etc) and location (remote, local WSL2, etc). Will it be fine-tuned, etc.
   - If the model is custom made then **2 NN/CNN/TF**. The internal design of the NN. Deployment, training data set, HW, etc details. <br>
 <img src="/assets/M-25.png" alt="drones" width="80%">  -->
+
+
+This section is the **end goal for ZiptieAI.com**. The focus is on "spinning up" **real-world demo projects** quickly with minimal code analysis or manual coding. **The goal is not to master one type of system, but to demonstrate the ability to apply AI effectively across many different systems**, workflows, and business environments. 
 
 
 A central goal of these project demos is to show anyone with basic computer skills can replicate these demos. I had no previous experience with some of the tools involved in these projects, but with AI I was still able to complete the project without human assistance. GPT/Codex was used to explain the tools, generate starter code, connect the systems, and iteratively debug the workflow. Working prototypes were usually produced in a few hours.
@@ -54,14 +55,13 @@ For details on each project demo see
 
 Target system exists. FUTURE: Slack, Odoo, Jira, GitHub.
 
+*3b Project ecosystem for stages S1-S4 (add S4 DB?)*<br>
+<img src="/assets/M-39.png" alt="drones" width="55%"> 
+
 <!--   - **3b.11 Slack**
   - **3b.2 JobRadar** (what it does so far 26.0506)-->
 
-<br>
 
-#### [**3b.2 JobRadar** (what it does so far 26.0506)](/3b.3.2-ai-proj-2-jobradar/)
-
-Ingests data from different sources and uses LLM to find matching data and summarize. The results are then sent by email, google docs, etc. Runs locally and on Cursor. Spun up in 4 days. **I did not even look at the code (not necessary). This is probably how such apps will be done in the future.** *I will create 1/2 functional/ecosystem diagrams in future (after app design stabilizes)*.
 
 <!-- <img src="/assets/demo2_oauth.png" alt="drones" width="38%">  -->
 
@@ -80,6 +80,12 @@ Ingests data from different sources and uses LLM to find matching data and summa
 ### **Part 2: Standalone AI Applications**
 
 No target enterprise system. 
+Instead external APIs (Gmail, MongoDB, Nmap, GitHub, Jira, REST APIs, Local files).
+
+
+*3b standalone AI app (S4 only)*<br>
+<img src="/assets/M-41.png" alt="drones" width="30%"> 
+
 
 <!-- 
 Examples: n8n, Nmap Security Assistant, Ledger     DITA without DITA
@@ -87,6 +93,8 @@ Examples: n8n, Nmap Security Assistant, Ledger     DITA without DITA
   - **3b.3 NMAP Security Assistant** (26.0621)
   - **3b.4 Ledger** (TODO)
   - **3b.5 DITA w/o DITA** (TODO) -->
+
+
 
 <br>
 
@@ -97,6 +105,13 @@ A basic test using Cursor with minimal manual coding.
   - 3b Project = Input data from n8n > gpt-40-mini LOCAL > mongoDB > index.html (UI).
   - 3 External agent = cursor_11_llm_canonical.py
   - 2b Model = gpt-40-mini LOCAL. 
+
+<br>
+
+#### [**3b.2 JobRadar** (what it does so far 26.0506)](/3b.3.2-ai-proj-2-jobradar/)
+
+Ingests data from different sources and uses LLM to find matching data and summarize. The results are then sent by email, google docs, etc. Runs locally and on Cursor. Spun up in 4 days. **I did not even look at the code (not necessary). This is probably how such apps will be done in the future.** *I will create 1/2 functional/ecosystem diagrams in future (after app design stabilizes)*.
+
 
 <br>
 

@@ -250,7 +250,7 @@ For example
 - The target application is unaware of your agent.
 - External AI. Most difficult to setup. 
 
-*3b Project ecosystem for stages S1-S4*<br>
+*3b Project ecosystem for stages S1-S4 (add S4 DB?)*<br>
 <img src="/assets/M-39.png" alt="drones" width="55%"> 
 
 <br>

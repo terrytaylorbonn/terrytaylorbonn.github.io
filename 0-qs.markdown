@@ -262,14 +262,15 @@ The real goal of AI projects is to integrate AI into an existing SW (ESW) app.
   - S2b Claude **Tag** in Slack ✅ (future demo after Claude gives acccess to the tag function my subscription class). This would be an **S2 Native/Managed AI**. 
   - S3 Slack app + OpenAI. Agent works as a Slack App / Bot (uses Slack APIs / users interact via Slack UI).
 
-*3b Slack Project demo ecosystem for stages S1-S4*<br><img src="/assets/M-38.png" alt="drones" width="55%"> 
+*3b Slack Project demo ecosystem for stages S1-S4 (S4 add DB?)*<br><img src="/assets/M-38.png" alt="drones" width="55%"> 
 
 #### **Part 2: Standalone AI Application demos**.
 
 - **3b.3 NMAP Security Assistant**. Uses the local PC as the target system. **S4 External AI agent / works OUTSIDE the target**.
-- **3b.2 GMAIL (JobRadar)**. Standalone that happenst to access email.  *Existing system > Gmail > External Agent > LLM > Summary / Alert.* 
+- **3b.2 GMAIL (JobRadar)**. Standalone that happens to access Gmail API.  *Existing system > Gmail > External Agent > LLM > Summary / Alert.* 
 
-*3b standalone AI app*<br><img src="/assets/6_main_diagram.png" alt="drones" width="40%"> 
+*3b standalone AI app (S4 only)*<br>
+<img src="/assets/M-41.png" alt="drones" width="30%"> 
 
 <br>
 
