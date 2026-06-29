@@ -5,7 +5,7 @@ title: Home
 
 <br>
 
-I recently **added an AI chatbot to a Slack workspace. Quickly. The code worked the first time.** See the page **[demo](/0-demo/)** for details.   
+Nothing tells you what a site is about more than a demo. This **[demo](/0-demo/)** shows how I recently **added an AI chatbot to a Slack workspace. Quickly. The code worked the first time.**  
 
 ZiptieAI.com was created in 2024 to document my work on Ukrainian style ziptie'd [AI Drones](/1-drones/). 
 

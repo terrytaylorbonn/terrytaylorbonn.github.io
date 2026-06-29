@@ -8,6 +8,10 @@ permalink: /0-demo/
 
 *work in progress (v1 26.0628)... below are my working notes...* 
 
+This site has many demos. In fact, its a demo-oriented website. Its about doing things to understand how AI really works. Code does not lie.
+
+This page talks about the lessons learned from a single demo, the **[Slack AI project demo](/3b.3.11-ai-proj-11-slack/)**. I've spent a couple of years working on ZiptieAI, starting at the basics of AI neural networks and working my way up (slowly, methodically, sometimes haphazardly) to the higher level demos and concepts. The **[Slack AI project demo](/3b.3.11-ai-proj-11-slack/)** (26.0628) is the first example of my real goal: Adding AI to enterprise SW (ESW). 
+
 <br>
 
 *Slack AI project diagram* <br>
@@ -35,7 +39,6 @@ message flow
 
 <br>
 
-The **[Slack AI project page](/3b.3.11-ai-proj-11-slack/)** (another WIP page!) describes how revolutionary AI is using a great demo that GPT gave handed me on a silver platter and worked the first time.  
 
 Why I did the demo and what I did, what I learned.....
 - I saw a video talking about how scary some new function in Anthropic would be. Watched a lot of the long video.. and understood nothing really. Just some fuzzy ideas.
