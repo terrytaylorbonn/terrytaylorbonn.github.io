@@ -6,9 +6,6 @@ permalink: /0-demo/
 
 <br>
 
-*work in progress (v1 26.0628)...*
-
-<br>
 
 This site is all about doing AI demos to understand how AI really works. **Code does not lie.**
 
