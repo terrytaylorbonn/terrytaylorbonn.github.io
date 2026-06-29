@@ -16,6 +16,10 @@ This page talks about the lessons learned from a single demo, the **[Slack AI pr
 
 <br>
 
+------------------------------------
+
+<br>
+
 *Slack AI project diagram* <br>
 <img src="/assets/M-42.png" alt="drones" width="55%">
 
@@ -41,19 +45,25 @@ message flow
 
 <br>
 
+------------------------------------
 
-Why I did the demo and what I did, what I learned.....
-- I saw a video talking about how scary some new function in Anthropic would be. Watched a lot of the long video.. and understood nothing really. Just some fuzzy ideas.
-- So I looked for some Youtube video. Found a great one for Anthropic. A really complex demo. Lots of likes, views.... I doubt anyone did the demo (lots of details seemed to be missing).
-- So I asked GPT. It wasnt easy... But after a few hours it worked. The first time.
-- Then came the hard part .... understanding all the steps. But GPT also help in this.
-- Most time spent on deciphering Slack concepts... but I did not really have to do that. But I wanted to understand how it all fit together.
+<br>
 
-What was the scary part?
-- Anthropic has a new feature that basically allows Claude to become a regular worker bee in a Slack channel (using a new tag feature). Claude has its own control look, and it is pro-active.
-- What could go wrong? After all, AI gurus can be trusted right? :)
+### 1 The motivation for this demo 
+- I saw a video talking about how scary some new function in Anthropic would be. Watched a lot of the long video.. and understood nothing really. Just some fuzzy ideas. 
+- What was the scary part? Basically more Anthropic hype. Anthropic has a new feature that basically allows Claude to become a regular worker bee in a Slack channel (using a new tag feature). Claude has its own control look, and it is pro-active.
+- What could go wrong? 
 
-What I did instead of tags....
+<img src="/assets/waymo.png" alt="drones" width="27%">
+
+### 2 What I did, what I learned.....
+- So I looked for some Youtube video. Found a great one for Anthropic. A really complex demo (they took some complex existing demo and modified it as an example.. wow, impressive, but useless to me... ). Lots of likes, views.... I doubt anyone did the demo (lots of details seemed to be missing).
+- So I asked GPT if we could just do the simplest video. It wasnt easy... But after a few hours it worked. The first time.
+- Then came the hard part .... understanding all the steps. But GPT also help in this. Most time spent on deciphering Slack concepts... 
+- I was finally able to to create **the main diagram at the top of this page that shows the core concepts**.
+
+
+### 3 If you want to do this demo, you have to upgrade (hahaha)
 - I tried to duplicate the Claude tag setup, but you have to be a pro subscriber to get that feature.
 - So I added Claude using MCP. If all these term confuse you, well... they confuse me too. I always need to refresh my memory with a demo. 
 - The MCP demo really helped me to understand the mechanics of how  Claude MCP (and thus by association tags) really works.
