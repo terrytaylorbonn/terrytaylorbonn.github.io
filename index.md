@@ -16,7 +16,7 @@ The ZiptieAI **[mission](/0-mission/)** is to provide
 - **Core AI demos and concepts**
   - **[Quick start (QS) demos](/0-qs/)**. Hands-on tour of low-level core AI functionality.
   - **[Concepts](/0b-demos/)**. Core concepts learned form the QS.
-- **AI deep dive** *(see diagrams below)*
+- **AI deep dive** *(see diagram below)*
   - **[2 NNs](/2_models/)**. NNs (CNNs, TFs) are the core of AI "intelligence".
   - **[2b Models](/2b_models/)**. AI NNs are usually packaged into AI models that have an API. <!-- Fine-tuning, local models, deployment, RAG, and model serving. -->
   - **[3 Agents](/3_agents/)**. Agents provide reliable workflows that use models as helpful assistants.
