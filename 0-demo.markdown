@@ -114,6 +114,7 @@ message flow
 ### **6 But AI is not intelligent (so dont treat it as such)**
 
 - As long as someone else did what you want to do, and AI was programmed ("trained") on that plagiarized material, AI can find the info and present it to you in a method it was programmed to.
+- Thats why scaling matters. Without intelligence, all AI can do is try to program as many "patterns" as possible into massive NNs, trying to cover as many possible combinations of tokens, pixels, whatever, so make the simulation of intelligence more convincing. *Note, however, that AI does not need intelligence to be extremely useful*.
 - AI could never have created ZiptieAI. But now that I chatted with GPT aboout ZAI the past 2 years, any original material of value (and also not of of value) GPT could share with the world. 
 - But anytime you need real orginal thinking, AI will fail you. For example: 
 
