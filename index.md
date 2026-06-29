@@ -7,9 +7,11 @@ title: Home
 
 Nothing tells you what a site is about more than a demo. This **[demo](/0-demo/)** shows how I recently **added an AI chatbot to a Slack workspace. Quickly. The code worked the first time** (GPT wrote the workflow and the code).  
 
-ZiptieAI.com was created in 2024 to document my work on Ukrainian style ziptie'd [AI Drones](/1-drones/). 
+<br>
 
-The ZiptieAI **[mission](/0-mission/)** now is to provide
+<!-- ZiptieAI.com was created in 2024 to document my work on Ukrainian style ziptie'd [AI Drones](/1-drones/). -->
+
+The ZiptieAI **[mission](/0-mission/)** is to provide
 - **The truth about AI** (my take)
 - **Core AI demos and concepts**
   - **[Quick start (QS) demos](/0-qs/)**. Hands-on tour of low-level core AI functionality.
@@ -36,19 +38,22 @@ See also the **[Wiki](https://github.com/terrytaylorbonn/auxdrone/wiki)** and ot
 
 <br>
 
-*3b Project diagram (a central agent (+UI/DB) that brings together AI and legacy systems)* <br>
-<img src="/assets/M-26.png" alt="drones" width="37%">
-
-<br>
-
-*3b Project diagram with AI details* <br>
+*Diagram of the components an AI "helpful" assistant (2,2b,3,3b)* <br>
 <img src="/assets/M-25.png" alt="drones" width="80%">
 
 
 
 
 
-<!-- <br>
+<!-- 
+<img src="/assets/M-26.png" alt="drones" width="37%">
+
+<br>
+
+*3b Project diagram with AI details* <br>
+
+
+<br>
 
 The **[Mission](/0-mission/)** page describes the "mission" of this site. 
 
