@@ -9,7 +9,7 @@ permalink: /0-demo/
 
 This site is all about doing AI demos to understand how AI really works. **Code does not lie.**
 
-This page talks about the lessons learned from a single demo, the **[Slack AI project demo](/3b.3.11-ai-proj-11-slack/)**. I've spent a couple of years working on ZiptieAI, starting at the basics of AI neural networks and working my way up (slowly, methodically, sometimes haphazardly) to the higher level demos and concepts. The **[Slack AI project demo](/3b.3.11-ai-proj-11-slack/)** (26.0628) is the first example of my real goal: Adding AI to enterprise SW (ESW). 
+This page talks about the lessons learned from a single demo, the **[Slack AI project demo](/3b.3.11-ai-proj-11-slack/)**. I've spent a couple of years working on ZiptieAI, starting at the basics of AI neural networks and working my way up (slowly, methodically, sometimes haphazardly) to the higher level demos and concepts. This demo is the first example of my end goal: Adding AI to enterprise SW (ESW). 
 
 <br>
 
@@ -31,7 +31,7 @@ The following diagrams summarize the result (see docx \#609 on the Gdrive for de
 This diagram is the general diagram for S3-type demos. It shows a target system (enterprise SW) that has an AI agent added within the target. This agent is the only part of the 3b Project. An external LLM model is used for AI.
 
 *General S3 diagram* <br>
-<img src="/assets/slack01aaa.png" alt="drones" width="35%">
+<img src="/assets/slack01aaa.png" alt="drones" width="27%">
 
 This is the same S3 diagram, but for the Slack AI demo. The detail are described on page **[3b.3.11 AI project 11 Slack](/3b.3.11-ai-proj-11-slack/)**.
 
