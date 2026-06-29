@@ -9,7 +9,7 @@ permalink: /0-demo/
 
 This site is all about doing AI demos to understand how AI really works. **Code does not lie.**
 
-This page talks about the lessons learned from a single demo, the **[Slack AI project demo](/3b.3.11-ai-proj-11-slack/)**. I've spent a couple of years working on ZiptieAI, starting at the basics of AI neural networks and working my way up (slowly, methodically, sometimes haphazardly) to the higher level demos and concepts. This demo is the first example of my end goal: Adding AI to enterprise SW (ESW). 
+This page talks about the lessons learned from a single demo, the **[Slack AI project demo](/3b.3.11-ai-proj-11-slack/)**. I've spent a couple of years working on ZiptieAI, starting with the basics of AI neural networks and working my way up (slowly, methodically, sometimes haphazardly) to the higher level demos and concepts. This demo is the first example of my end goal: Adding AI to enterprise SW (ESW). 
 
 <br>
 
