@@ -17,8 +17,8 @@ xxxxxx
 
 
 *Slack AI project diagram* <br>
-<img src="/assets/M-42.png" alt="drones" width="80%">
+<img src="/assets/M-42.png" alt="drones" width="55%">
 
 <br> 
 
-26.0627 (0524)
+26.0629 (0524)

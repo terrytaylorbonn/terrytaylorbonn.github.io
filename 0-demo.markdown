@@ -8,6 +8,14 @@ permalink: /0-demo/
 
 *work in progress (v1 26.0628)... below are my working notes...* 
 
+<br>
+
+*Slack AI project diagram* <br>
+<img src="/assets/M-42.png" alt="drones" width="55%">
+
+<br>
+
+
 The **[Slack AI project page](/3b.3.11-ai-proj-11-slack/)** (another WIP page!) describes how revolutionary AI is using a great demo that GPT gave handed me on a silver platter and worked the first time.  
 
 Why I did the demo and what I did, what I learned.....
@@ -46,7 +54,47 @@ Lessons learned...
 <img src="/assets/waymo.png" alt="drones" width="27%">
 
 
+```
+GPT
+i think this diagram is key..  i am very focused on concepts. 
+for each demo i want such a diagram.
+what you said about labeling issue.. to me that is minor. 
+its a matter of opinion.
+to me the app agent is part of the agent.. not just the py script. 
+
+I agree with you.
+
+For your conceptual framework, the "agent" is everything that implements the agent behavior, not just the Python process.
+
+That includes:
+
+Slack App registration
+OAuth scopes
+Bot identity
+Socket Mode
+Event subscriptions
+Python Bolt code
+OpenAI calls
+
+Those pieces together form the integrated agent.
+
+I actually think this reflects how enterprise systems are built. The "agent" is a subsystem, not a single executable.
+
+In fact, I'd encourage you to keep using that approach consistently:
+
+Concept diagrams → treat the agent as a black box (all implementation details inside).
+Demo diagrams → open the black box and show what's inside (OAuth, Bolt, tokens, MCP, etc.).
+
+That's a very nice teaching progression:
+
+Learn the architecture.
+Then open one box at a time to see how it's implemented.
+
+I think that's one of the strongest ideas you've developed for ZiptieAI.
+```
+
+
 <br>
 
-26.0628 (v1 26.0628)
+26.0629 (v1 26.0628)
 
