@@ -55,15 +55,13 @@ Lessons learned...
 
 
 ```
-GPT
-i think this diagram is key..  i am very focused on concepts. 
+ME: i think this diagram is key..  i am very focused on concepts. 
 for each demo i want such a diagram.
 what you said about labeling issue.. to me that is minor. 
 its a matter of opinion.
 to me the app agent is part of the agent.. not just the py script. 
 
-I agree with you.
-
+GPT: I agree with you.
 For your conceptual framework, the "agent" is everything that implements the agent behavior, not just the Python process.
 
 That includes:
