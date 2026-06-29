@@ -15,6 +15,25 @@ permalink: /0-demo/
 
 <br>
 
+*15 code*<br>
+<img src="/assets/slack15.png" alt="drones" width="55%">
+
+<br>
+
+*16 test results*<br>
+<img src="/assets/slack16.png" alt="drones" width="55%">
+
+
+```
+message flow
+  Slack UI     ↓
+  @ZiptieAI Agent     ↓
+  Python Slack App     ↓
+  OpenAI API     ↓
+  Slack reply
+```
+
+<br>
 
 The **[Slack AI project page](/3b.3.11-ai-proj-11-slack/)** (another WIP page!) describes how revolutionary AI is using a great demo that GPT gave handed me on a silver platter and worked the first time.  
 
