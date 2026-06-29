@@ -13,7 +13,18 @@ These are the lab notes for this demo from docx \#609 on Gdrive.
 
 <br>
 
-# **Overview**
+**TOC**
+- 0 Overview
+- 1 Concepts
+- 2 requirements (MCP only for Claude Enterprise or Team plan)
+- 3 create slack free account (web based)
+- 4 config slack for claude (install/connector)
+- 5 S3 Integrated AI agent (ai agent inside target)
+- 6 Python script and test
+
+<br>
+
+# **0 Overview**
 
 - This is the first real Integrated AI agent inside enterprise software demo.
 - GPT supplied directions/py-script worked the first time (no errors).
@@ -24,11 +35,11 @@ These are the lab notes for this demo from docx \#609 on Gdrive.
 
 <br>
 
-# 1 Concepts
+# **1 Concepts**
 
 <br>
 
-### 1.1 what we will do (S3 in slack)
+### **1.1 what we will do (S3 in slack)**
 
 ```
 S3 Integrated AI agent (ai agent inside target)
@@ -40,7 +51,26 @@ The capabilities of an AI system are determined much more by its integration arc
 
 <br>
 
-### **MAIN DIAGRAM**
+### **1.2 Diagrams**
+
+This diagram is the general diagram for S3-type demos. It shows a target system (enterprise SW) that has an AI agent added within the target. This agent is the only part of the 3b Project. An external LLM model is used for AI.
+
+*General S3 diagram* <br>
+<img src="/assets/slack01aaa.png" alt="drones" width="35%">
+
+This is the same S3 diagram, but for the Slack AI demo. The detail are described on page **[3b.3.11 AI project 11 Slack](/3b.3.11-ai-proj-11-slack/)**.
+
+*Slack AI project diagram* <br>
+<img src="/assets/slack01ccc.png" alt="drones" width="55%">
+
+Below (left) shows the message flow and (right) the configuration steps.
+
+*Slack AI project message flow (left) and setup steps (right)* <br>
+<img src="/assets/slack01bbb.png" alt="drones" width="55%">
+
+<br>
+
+<!-- ### **MAIN DIAGRAM**
 
 This diagrams sums it all up
 - at top: the S3 diagram (general)
@@ -51,9 +81,23 @@ This diagrams sums it all up
 *01 Slack AI project diagram* <br>
 <img src="/assets/slack01.png" alt="drones" width="55%">
 
+<br> -->
+
+### **1.3 Code and results**
+
+The following is the core py code (very simple).
+
+*15 code*<br>
+<img src="/assets/slack15.png" alt="drones" width="55%">
+
+Test results.
+
+*16 test results*<br>
+<img src="/assets/slack16.png" alt="drones" width="55%">
+
 <br>
 
-### 1.2 difference between legacy bot / tag
+### **1.4 difference between legacy bot / tag**
 
 ```
 With the legacy bot:
@@ -79,7 +123,7 @@ In fact, your own Python agent could implement daily summaries today by running 
  
 <br>
 
-### 1.3 mcp connect (used in this demo) vs tag (future) 
+### **1.5 mcp connect (used in this demo) vs tag (future)**
 
 02<br>
 <img src="/assets/slack02.png" alt="drones" width="55%">
@@ -98,7 +142,7 @@ With Claude Tag, the goal is that you can say things like:
 
 <br>
 
-### 1.4 about S4 in slack (different integration)
+### **1.6 About S4 in slack (different integration)**
 
 ```
 S4 (DB backdoor) needs self-hosted app like Odoo, Mattermost, GitLab, or local DB app would be better.
@@ -118,7 +162,7 @@ Slack still “knows” an app/API token is being used, but it does not know or 
  
 <br>
 
-# 2 requirements (MCP only for Claude Enterprise or Team plan)
+# **2 requirements (MCP only for Claude Enterprise or Team plan)**
 
 ```
 no web available (right) because only free subscription 
@@ -128,15 +172,15 @@ It requires a Claude Enterprise or Team plan. If you're on Pro, Claude Tag isn't
  
 <br>
 
-# 3 create slack free account (web based)
- 
-<br>
-
-# 4 config slack for claude (install/connector) 
+# **3 create slack free account (web based)**
 
 <br>
 
-### 4.1 install claude in slack
+# **4 config slack for claude (install/connector)** 
+
+<br>
+
+### **4.1 install claude in slack**
 
 03<br>
 <img src="/assets/slack03.png" alt="drones" width="55%">
@@ -144,7 +188,7 @@ It requires a Claude Enterprise or Team plan. If you're on Pro, Claude Tag isn't
 
 <br>
 
-### 4.2 enable claude code
+### **4.2 enable claude code**
 
 
 04<br>
@@ -152,7 +196,7 @@ It requires a Claude Enterprise or Team plan. If you're on Pro, Claude Tag isn't
 
 <br>
 
-### 4.3 setup connector (required: code + chat)
+### **4.3 setup connector (required: code + chat)**
 
 
 05<br>
@@ -163,11 +207,11 @@ It requires a Claude Enterprise or Team plan. If you're on Pro, Claude Tag isn't
 
 <br>
 
-# 5 S3 Integrated AI agent (ai agent inside target)
+# **5 S3 Integrated AI agent (ai agent inside target)**
 
 <br>
 
-### #1 Create Slack app " ZiptieAI Agent" for workspace
+### **#1 Create Slack app " ZiptieAI Agent" for workspace**
 
 ```
 Slack API → Your Apps → Create New App.
@@ -188,7 +232,7 @@ https://api.slack.com/apps/A0BDJ4P2HQD?created=1
 
 <br>
 
-### #2 create Token "ziptieai-socket" / Enable Socket Mode
+### **#2 create Token "ziptieai-socket" / Enable Socket Mode**
 
 ```
 https://app.slack.com/app-settings/T0Q3JHSGH/A0BEFR9NCSC/socket-mode 
@@ -220,7 +264,7 @@ SLACK_APP_TOKEN="xapp-..."
 
 <br>
 
-### #3 Add bot oauth and token (chaos)
+### **#3 Add bot oauth and token (chaos)**
 
 ```
 https://app.slack.com/app-settings/T0Q3JHSGH/A0BEFR9NCSC/oauth 
@@ -260,7 +304,7 @@ SLACK_BOT_TOKEN=xoxb-...
 
 <br>
 
-### #4 Subscribe to bot event
+### **#4 Subscribe to bot event**
 
 ```
 enable the app_mention event
@@ -293,11 +337,11 @@ This tells Slack: if someone types @MyAgent send the event to my app."
  
 <br>
 
-# 6 Python script and test
+# **6 Python script and test**
 
 <br>
 
-### #5 python (for an @MyAgent bot that replies inside Slack)
+### **#5 python (for an @MyAgent bot that replies inside Slack)**
 
 ```
 The only remaining step is the Python program that listens for app_mention events and calls OpenAI. 
@@ -332,7 +376,7 @@ bot is connected to Slack (ME: its logically inside slack)
 
 <br>
 
-### #6 test (invite bot to channel; send prompt to openAI)
+### **#6 test (invite bot to channel; send prompt to openAI)**
 
 ```
 1 Invite the bot to a channel, for example #general: 
