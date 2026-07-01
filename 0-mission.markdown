@@ -11,7 +11,7 @@ permalink: /0-mission/
 The **ZiptieAI mission** is to provide 
 
 - 1 Basic AI concepts (this page)
-- 2 AI demos and technical concepts (top level pages "QS", "Concepts")
+- 2 AI demos / concepts (top level pages "QS", "Concepts")
 - 3 AI deep dive (code) (top level pages "2 NNs", "2b Models", "3 Agents", "3b Projects")
 - 4 A window to the AI future
 
@@ -183,7 +183,7 @@ Structured data forms the basis of many SaaS systems (similar to ontology in Pal
 
 <br>
 
-### **2 Core AI demos and technical concepts**
+### **2 AI demos / concepts**
 
 Note: The latest architectures are not introducing anything radically different from the core AI functionality of these simple demos. I recently saw a video where one of the author's of the original paper "Attention is all you need" stated that no other ground-breaking architecture has appeared since the paper was pubished.
 
