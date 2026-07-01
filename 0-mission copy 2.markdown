@@ -1,14 +1,12 @@
 ---
 layout: page
 title: Mission
-permalink: /0-mission/
+permalink: /0-missionhhhhhh/
 ---
 
 <br>
 
 <!-- *Page reorganized 26.0621 .... still WIP....* -->
-
-**This page is being reorganized 26.0701**
 
 The **ZiptieAI mission** is to give you 
 
@@ -21,15 +19,12 @@ The **ZiptieAI mission** is to give you
 
 # **1 The truth about AI** 
 
-**I never cease to be amazed by the engineering genius behind AI**. That being said, **building successful AI applications requires a basic understanding of what AI really is**. *Section "Concepts" is more technical.... this section is more big picture, the market, getting the gist of AI.*
+**I never cease to be amazed by the engineering genius behind AI**. That being said, **building successful AI applications requires a basic understanding of what AI really is**. 
 - 1.1 AI = deterministic algorithms running on digital HW
 - 1.2 There is no "I" (intelligence) in AI
-- 1.3 (1.2b) So what is AI? AI = classification, pattern matching (simple NN)
-- 1.4 (1.2c) Variations of the simple NN theme (CNNs, TFs)
-- 1.5 (1.2d) KV saved (HACKS) (cant get better algo to work)
-- 1.6 (1.4) AI is an incredible revolutionary engineering marvel.. for the right applications
-- 1.7 (1.3) Falling for AI hype can cost you... dearly
-- 1.8 (1.5) AI's place in our world (not our place in AI's world)
+- 1.3 Falling for AI hype can cost you... dearly
+- 1.4 AI is an incredible revolutionary engineering marvel.. for the right applications
+- 1.5 AI's place in our world (not our place in AI's world) 
 
 <br>
 
@@ -47,11 +42,17 @@ The following shows the code that defines the NN structure and the training algo
 
 <img src="/assets/M-14.png" alt="desc" width="60%"> 
 
-<!-- **This site takes a very down-to-earth mechanistic approach to understanding AI. Thats because AI is based on mechanistic binary matrix math algorithms that run on binary circuits.** 
+
+<!-- 
+**This site takes a very down-to-earth mechanistic approach to understanding AI. Thats because AI is based on mechanistic binary matrix math algorithms that run on binary circuits.** 
+
 **A "model" in AI is anything that has a neural network (NN) at its core**. It may have a lot of other stuff wrapped around the NN (CNN convolution, LLM attention heads, etc) but **the core statistical pattern matching functionality runs on a NN**. The differences are mainly architecture, training, orchestration, and use case. **All models are first (1) "trained"** (internal NN params are programmed using SW tools) and **then (2) used to infer output from input.** 
+
 *AI model components and code (code does not lie)*<br>
 <img src="/assets/M-15-2b.png" alt="drones" width="53%"><br><br> 
-<img src="/assets/M-14.png" alt="desc" width="60%">  -->
+<img src="/assets/M-14.png" alt="desc" width="60%"> 
+ -->
+
 
 <br>
 
@@ -66,42 +67,18 @@ But AI has 0 intelligence. **AI circuits have absolutely no similarity whatsoeve
 
 <br>
 
-### **1.3 (1.2b) So what is AI? AI = classification, pattern matching (simple NN)**
+### **1.3 Falling for AI hype can cost you... dearly**
 
-clever engineering. this is why it works, why its so valuable. for a simple NN, you take an incredible amount of input (any kind of input), **convert it to FP numbers**, and program the patterns in this numerical data into parameters for GPU-based algorithms (can run on CPU if the NN is small). 
+**"No more programmers"**, **"no more workers", "self-driving cars will be ready next year"**, **"we must pause AI development because its not safe"**, and **"AI already has emotions"** (that last statement was from a winner of both the Nobel and Turing prizes). If you yourself fall for such hype, it can cost you dearly.
 
-Inference is when those algorithms are used to regenerate patterns when a "seed" is input to the NN. **The seed does not have to match any of the trained input. The algorithms, however, still compute the best probability of the CLASSIFICATION OF THE INPUT. THIS IS THE MAGIC OF AI.** 
+<!-- **AI is a security risk**. The core NN in AI has what are often referred to as "hidden layers" that perform the massive brute-force number crunching to generate "intelligent" output. **It's impossible (even for AI) to determine how a NN has been programmed by analyzing the parameter settings in these layers**. -->
 
-<img src="/assets/M-50.png" alt="drones" width="23%">
-
-<br>
-
-### **1.4 (1.2c) Variations of the simple NN theme (CNNs, TFs)**
-
-the clever engineering has been extended to different media types. Pics, words. Thus AI = many different types of classification.
-
-But for images and words more complex algorithms were required. CNN and TF.
-
-you take an incredible amount of good images (CNNs) or text (TFs), convert it to FP numbers, and program the patterns in this numerical data into parameters for GPU-based algorithms (can run on CPU theoretically, but not practically). 
-
-The result is CLASSIFICATION. what you are told about the TF creating a new token from the last token is NONSENSE. The FP computational results for the classification of the entire input ends in the FP representation stored in what started out as the last token. **The new token is actually based on a CLASSIFICATION of the entire input**. 
-
-<img src="/assets/M-51.png" alt="drones" width="15%">
+*An unsuccessful mission for AI*<br>
+<img src="/assets/waymo.png" alt="drones" width="26%"> 
 
 <br>
 
-
-### **1.5 (1.2d) KV saved (HACKS) (cant get better algo to work)**
-
-TFs algorithms use a clever "context" mechanism that basically converts artibrary words into FP numbers that are much more accurate description of the meaning of a word (humans do this with intelligent thinking, but AI has no thinking or intelligence, so must use patterns).
-
-That context mechanism (discussed in detail in section xxxx)
-
-<img src="/assets/M-52.png" alt="drones" width="21%">
-
-<br>
-
-### **1.6 (1.4) AI is an incredible revolutionary engineering marvel.. for the right applications** 
+### **1.4 AI is an incredible revolutionary engineering marvel.. for the right applications** 
 
 Palantir in the past few years has become synonomous with cutting edge **real world** AI applications. But Palantir only recently adopted AI. 25 years ago Palantir's initial projects were for military applications **without AI**. These non-AI apps were designed as helpful assistants for decision makers, not as as a replacement for mankind. **AI later became the ultimate helpful assistant for Palantir's missions**. AI had limitations, but the benefits of AI far outweighed the negatives **when AI was applied properly**.  
 
@@ -113,18 +90,7 @@ Palantir in the past few years has become synonomous with cutting edge **real wo
 
 <br>
 
-### **1.7 (1.3) Falling for AI hype can cost you... dearly**
-
-**"No more programmers"**, **"no more workers", "self-driving cars will be ready next year"**, **"we must pause AI development because its not safe"**, and **"AI already has emotions"** (that last statement was from a winner of both the Nobel and Turing prizes). If you yourself fall for such hype, it can cost you dearly.
-
-<!-- **AI is a security risk**. The core NN in AI has what are often referred to as "hidden layers" that perform the massive brute-force number crunching to generate "intelligent" output. **It's impossible (even for AI) to determine how a NN has been programmed by analyzing the parameter settings in these layers**. -->
-
-*An unsuccessful mission for AI*<br>
-<img src="/assets/waymo.png" alt="drones" width="26%"> 
-
-<br>
-
-### **1.8 (1.5) AI's place in our world (not our place in AI's world)** 
+### **1.5 AI's place in our world (not our place in AI's world)** 
 
 Its no accident that Palantir talks straight about many aspects of AI. Palantir's business does **not demand the myth of AI intelligence**. Palantir says that **AI will not replace people, it will empower them** and that **"engineers wont go away, because their AI-enhanced expertise will be required even more in the age of AI"**. If AI was truly intelligent then AI integration would just involve connecting AI and letting it rip. But successful AI integration into any system requires extensive technical expertise. In digram below, the small green box (far left) represents the core legacy enterprise SW. **The core algorithms and workflows developed over decades for such systems are not going to be replaced by AI. AI is going to assist**, and in such a way that AI's unavoidable errors will not cause significant problems. 
 
@@ -226,7 +192,7 @@ AI has a big future even after the pre-IPO hype is over. **Those who understand 
 
 <br>
 
-26.0701 (v1 26.0611)
+26.0626 (v1 26.0611)
 
 <!-- *A successful mission for AI (left) and not so successful mission (right).* <br>
 <img src="/assets/ziptiedrone2.png" alt="drones" width="23%"> <img src="/assets/waymo.png" alt="drones" width="26%">  -->
