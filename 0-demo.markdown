@@ -17,10 +17,10 @@ This page talks about the lessons learned from a single demo, the **[Slack AI pr
 - 0 Demo summary
 - 1 The motivation for this demo 
 - 2 What I did
-- 3 If you want to do this demo, you have to upgrade (hahaha)
-- 4 Lessons learned...
+- 3 If you want to do this demo, you have to upgrade :)
+- 4 Lessons learned
 - 5 AI is not a bubble
-- 6 But AI is not intelligent (so dont treat it as such)
+- 6 AI is not intelligent (so dont treat it as such)
 
 <br>
 
@@ -90,7 +90,7 @@ message flow
 
 <br>
 
-#### **4 Lessons learned...**
+#### **4 Lessons learned**
 
 - The MCP demo really helped me to understand the mechanics of how Claude MCP really works. It also gives me a feeling for what tags would be like.
 - In the MCP demo the agent py script is in control. Claude only responds to agent prompts.
