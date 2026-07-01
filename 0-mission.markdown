@@ -17,7 +17,7 @@ The **ZiptieAI mission** is to give you
 
 <br>
 
-# **1 Core AI concepts** 
+### **1 Core AI concepts** 
 
 **I never cease to be amazed by the engineering genius behind AI**. That being said, **building successful AI applications requires a basic understanding of what AI really is**. *Section "Concepts" is more technical.... this section is more big picture, the market, getting the gist of AI.*
 - 1.1 AI = deterministic algorithms running on digital HW
@@ -42,7 +42,7 @@ The **ZiptieAI mission** is to give you
 
 <br>
 
-### **1.1 AI = deterministic algorithms running on digital HW**
+#### **1.1 AI = deterministic algorithms running on digital HW**
 
 The following shows the code that defines the NN structure and the training algorithm.  Clocked circuit state machine. It will always output the EXACT same result for the same input.
 
@@ -61,7 +61,7 @@ You could even run the most sophisticated LLMs on electro-mechanical relays. It 
 
 <br>
 
-### **1.2 LLM agent + transformer = simulated intelligence**
+#### **1.2 LLM agent + transformer = simulated intelligence**
 
 LLM AI is based on 2 very distinct computational components.
 
@@ -85,7 +85,7 @@ Note: TF algorithms are referred to as "neural" networks because the diagrams fo
 
 <br>
 
-### **1.3 The core of AI: NN classification (matrix math based pattern matching)**
+#### **1.3 The core of AI: NN classification (matrix math based pattern matching)**
 
 **"Training" = programming a NN (not teaching; a NN does not learn)**. The process involves
 - Feed FP numbers (converted input text prompt and answer) to the NN.
@@ -100,7 +100,7 @@ Note: TF algorithms are referred to as "neural" networks because the diagrams fo
 
 <br>
 
-### **1.4 Extensions of the simple NN (CNNs, TFs)**
+#### **1.4 Extensions of the simple NN (CNNs, TFs)**
 
 Detecting simple patterns (classification) worked fine with a simple NN. But for images and text, some extra "pre-processing" is required for classification. 
 
@@ -113,7 +113,7 @@ For text a **transformers** is added. This basically computes the real meaning o
 <br>
 
 
-### **1.5 The TF algorithm (QKV context computation from 2020) is still the basis of LLM AI**
+#### **1.5 The TF algorithm (QKV context computation from 2020) is still the basis of LLM AI**
 
 The TF QKV context computation algorithm modifies the token "hidden layers" (12288 FP numbers that are called "hidden" because you can not determine what the computations do by analyzing the programmed parameters) based on other tokens (thus computing context adjustments). *[2.3.6.1b D5 tiny TF algorithm details](/2.3.6.1b-d5-tiny-tf-algorithm-details/)* (draft, WIP) explains in detail the simplest demo (its not simple) of the LLM TF QKV (context) mechanism.
 
@@ -128,7 +128,7 @@ The core of AI is not rapidly evolving. Thats one reason why AI continues to foc
 
 <br>
 
-### **1.6 AI is an incredible revolutionary engineering marvel.. for the right applications** 
+#### **1.6 AI is an incredible revolutionary engineering marvel.. for the right applications** 
 
 Palantir in the past few years has become synonomous with cutting edge **real world** AI applications. But Palantir only recently adopted AI. 25 years ago Palantir's initial projects were for military applications **without AI**. These non-AI apps were designed as helpful assistants for decision makers, not as as a replacement for mankind. **AI later became the ultimate helpful assistant for Palantir's missions**. AI had limitations, but the benefits of AI far outweighed the negatives **when AI was applied properly**.  
 
@@ -140,7 +140,7 @@ Palantir in the past few years has become synonomous with cutting edge **real wo
 
 <br>
 
-### **1.7 Falling for AI hype can cost you... dearly**
+#### **1.7 Falling for AI hype can cost you... dearly**
 
 **"No more programmers"**, **"no more workers", "self-driving cars will be ready next year"**, **"we must pause AI development because its not safe"**, and **"AI already has emotions"** (that last statement was from a winner of both the Nobel and Turing prizes). If you yourself fall for such hype, it can cost you dearly.
 
@@ -151,7 +151,7 @@ Palantir in the past few years has become synonomous with cutting edge **real wo
 
 <br>
 
-### **1.8 AI's place in our world (not our place in AI's world)** 
+#### **1.8 AI's place in our world (not our place in AI's world)** 
 
 Its no accident that Palantir talks straight about many aspects of AI. Palantir's business does **not demand the myth of AI intelligence**. Palantir says that **AI will not replace people, it will empower them** and that **"engineers wont go away, because their AI-enhanced expertise will be required even more in the age of AI"**. If AI was truly intelligent then AI integration would just involve connecting AI and letting it rip. But successful AI integration into any system requires extensive technical expertise. In the diagram below, the small green box (far left) represents the core legacy enterprise SW. **The core algorithms and workflows developed over decades for such systems are not going to be replaced by AI. AI is going to assist**, and in such a way that AI's unavoidable errors will not cause significant problems. 
 
@@ -187,7 +187,7 @@ Structured data forms the basis of many SaaS systems (similar to ontology in Pal
 
 <br>
 
-# **2 Core AI demos and technical concepts**
+### **2 Core AI demos and technical concepts**
 
 Note: The latest architectures are not introducing anything radically different from the core AI functionality of these simple demos. I recently saw a video where one of the author's of the original paper "Attention is all you need" stated that no other ground-breaking architecture has appeared since the paper was pubished.
 
@@ -197,7 +197,7 @@ Note: The latest architectures are not introducing anything radically different 
 
 <br>
 
-### **2.1 Core AI demos ([QS](/0-qs/))**
+#### **2.1 Core AI demos ([QS](/0-qs/))**
 
 **You can only learn how AI works by doing code demos** (or at least studying the code). **Code does not lie**. 
 
@@ -220,7 +220,7 @@ Note: The latest architectures are not introducing anything radically different 
 
 <br>
 
-### **2.2 Core AI technical [concepts](/0b-demos/)**
+#### **2.2 Core AI technical [concepts](/0b-demos/)**
 
 This section focuses on a conceptual understanding of the technical aspects (especially the algorithm details) of the demos. 
 
@@ -241,7 +241,7 @@ This section focuses on a conceptual understanding of the technical aspects (esp
 
 <br>
 
-# **3 AI deep dive (code)**
+### **3 AI deep dive (code)**
 
 <!-- iptieAI methodically attacks the complexity of the AI ecosystem in a very mechanistic fashion (because AI is first and foremost a mechanical algorithms). --> 
 
@@ -260,7 +260,7 @@ The code demos are organized into the 4 groups shown in the diagram below.
 
 <br>
 
-# **4 Anticipation of the AI future**
+### **4 Anticipation of the AI future**
 
 AI has a big future even after the pre-IPO hype is over. **Those who understand how to integrate AI into their own workflows will benefit the most. ZiptieAI has a mission to help myself (and others) stay ahead of the AI curve**. In the near future, AI integration skills will be required in all business segments (just like with the PC 40 years ago). This work will require a massive number of tech workers who, empowered by AI tools, will integrate AI **as a helpful assistant** into all areas of life.  
 
