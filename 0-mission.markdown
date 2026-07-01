@@ -10,14 +10,14 @@ permalink: /0-mission/
 
 The **ZiptieAI mission** is to provide 
 
-- 1 Core AI concepts
-- 2 Core AI demos and technical concepts
-- 3 AI deep dive (code)
+- 1 Basic AI concepts (this page)
+- 2 AI demos and technical concepts (top level pages "QS", "Concepts")
+- 3 AI deep dive (code) (top level pages "2 NNs", "2b Models", "3 Agents", "3b Projects")
 - 4 A window to the AI future
 
 <br>
 
-### **1 Core AI concepts** 
+### **1 Basic AI concepts** 
 
 **The engineering genius behind AI is amazing**. But **building successful AI applications requires a basic understanding of what AI really is**.
 - 1.1 AI = deterministic algorithms running on digital HW
