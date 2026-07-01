@@ -1,0 +1,31 @@
+---
+layout: page
+title: "3b.3.12 AI project 12 Odoo"
+permalink: /3b.3.12-ai-proj-12-odoo/
+description: Last edit 26.0524
+---
+
+[← 3b Projects](/3.3-ai-projects/)
+
+<br>
+
+The full lab notes for this demo are in docx \#606.2 on Gdrive.
+
+<br>
+
+**TOC**
+
+<br>
+
+# **0 Overview**
+
+
+<br>
+
+# **xxxxxxx**
+
+<img src="/assets/slack01aaa.png" alt="drones" width="35%">
+
+<br> 
+
+26.0701 (0524)

@@ -8,18 +8,18 @@ permalink: /0-mission/
 
 <!-- *Page reorganized 26.0701 -->
 
-The **ZiptieAI mission** is to give you 
+The **ZiptieAI mission** is to provide 
 
 - 1 Core AI concepts
 - 2 Core AI demos and technical concepts
 - 3 AI deep dive (code)
-- 4 Anticipation of the AI future
+- 4 A window to the AI future
 
 <br>
 
 ### **1 Core AI concepts** 
 
-**I never cease to be amazed by the engineering genius behind AI**. That being said, **building successful AI applications requires a basic understanding of what AI really is**. *Section "Concepts" is more technical.... this section is more big picture, the market, getting the gist of AI.*
+**The engineering genius behind AI is amazing**. But **building successful AI applications requires a basic understanding of what AI really is**.
 - 1.1 AI = deterministic algorithms running on digital HW
 - 1.2 LLM agent + transformer = simulated intelligence
 - 1.3 The core of AI: NN classification (matrix math based pattern matching)
@@ -44,17 +44,13 @@ The **ZiptieAI mission** is to give you
 
 #### **1.1 AI = deterministic algorithms running on digital HW**
 
-The following shows the code that defines the NN structure and the training algorithm.  Clocked circuit state machine. It will always output the EXACT same result for the same input.
+The following is an example of the python code that defines the structure and training algorithm of a very simple NN.  Such a NN runs on clocked binary circuits and will always output the EXACT same result for the same input.
 
 <img src="/assets/M-14.png" alt="desc" width="60%"> 
 
-The AI simulation of intelligence started to seem intelligent only recently after the computational hardware reached the performance level required to (1) generate responses at least as fast as a human would respond and (2) with a level of accuracy that at least initially convinced the human user that AI had some level of genuine intelligence. 
+The AI simulation of intelligence started to seem intelligent only recently after the computational hardware reached the performance level required to (1) generate responses at least as fast as a human could read them and (2) with a level of accuracy that (at least initially) convinced users that AI had some level of genuine intelligence. But AI has no intelligence. **AI algorithms and the circuitry they run on have little similarity to human brain neurons.** You could run the most sophisticated LLMs on GPUs based on electro-mechanical relays. It might require its power plant and take years to answer a prompt, but it is theoretically possible.  
 
-But AI has 0 intelligence. **AI circuits have absolutely no similarity whatsoever to human brain neurons.** Human thought exists not as a snapshot, but as a symphony playing out in time. But AI circuits host clocked state machines.  
-
-You could even run the most sophisticated LLMs on electro-mechanical relays. It might require the entire power output of nuclear plant and take a year or more to generate a token response, but it is theoretically possible.  
-
-*Electro-mechanical relay (a theoretical alternative to the GPU)*<br>
+*Electro-mechanical relay*<br>
 <img src="/assets/relay.png" alt="drones" width="12%">
 
 
@@ -260,7 +256,7 @@ The code demos are organized into the 4 groups shown in the diagram below.
 
 <br>
 
-### **4 Anticipation of the AI future**
+### **4 A window to the AI future**
 
 AI has a big future even after the pre-IPO hype is over. **Those who understand how to integrate AI into their own workflows will benefit the most. ZiptieAI has a mission to help myself (and others) stay ahead of the AI curve**. In the near future, AI integration skills will be required in all business segments (just like with the PC 40 years ago). This work will require a massive number of tech workers who, empowered by AI tools, will integrate AI **as a helpful assistant** into all areas of life.  
 

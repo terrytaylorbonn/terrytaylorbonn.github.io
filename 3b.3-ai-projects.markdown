@@ -74,6 +74,13 @@ Target system exists. FUTURE: Slack, Odoo, Jira, GitHub.
 
 The demos progress from using Slack as a normal application (S1), to connecting an existing AI agent such as Claude through MCP (S2), to creating a custom Slack App/Bot that integrates an external AI agent directly into the Slack user interface (S3). Together these demos illustrate the evolution from simply using AI to building AI-assisted enterprise applications.
 
+<br>
+
+#### [**3b.12 Odoo** (26.0701)](/3b.3.12-ai-proj-12-odoo/)
+
+(GPT) Odoo is a representative enterprise software (ESW) platform used to demonstrate how AI can be integrated into real business applications and workflows. Rather than focusing on Odoo itself, the goal is to understand practical techniques for adding AI to existing enterprise systems, such as analyzing business data, automating workflows, generating summaries, detecting unusual activity, and assisting users within ERP applications. These demos illustrate how external AI agents can augment complex enterprise software while preserving the existing business logic and user interface.
+
+<!-- (GPT) I actually like Odoo even more than Slack for your long-term direction. Slack demonstrates communication-centric AI, while Odoo demonstrates business-process AI (ERP, CRM, Helpdesk, Inventory, Accounting, Projects, etc.), which is closer to the kind of enterprise AI adoption work you want to showcase. -->
 
 <br>
 
