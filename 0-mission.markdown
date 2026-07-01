@@ -19,7 +19,7 @@ The **ZiptieAI mission** is to give you
 
 <br>
 
-# **1 The truth about AI** 
+# **1 A "quick" overview of the core of AI** 
 
 **I never cease to be amazed by the engineering genius behind AI**. That being said, **building successful AI applications requires a basic understanding of what AI really is**. *Section "Concepts" is more technical.... this section is more big picture, the market, getting the gist of AI.*
 - 1.1 AI = deterministic algorithms running on digital HW
@@ -30,6 +30,7 @@ The **ZiptieAI mission** is to give you
 - 1.6 (1.4) AI is an incredible revolutionary engineering marvel.. for the right applications
 - 1.7 (1.3) Falling for AI hype can cost you... dearly
 - 1.8 (1.5) AI's place in our world (not our place in AI's world)
+
 
 <br>
 
@@ -104,13 +105,18 @@ For text a **transformers** is added. This basically computes the real meaning o
 <br>
 
 
-### **1.5 (1.2d) KV saved (HACKS) (cant get better algo to work)**
+### **1.5 (1.2d) The TF algorithm (QKV context computation from 2020) is still the basis of LLM AI**
 
-TFs algorithms use a clever "context" mechanism that basically converts artibrary words into FP numbers that are much more accurate description of the meaning of a word (humans do this with intelligent thinking, but AI has no thinking or intelligence, so must use patterns).
-
-That context mechanism (discussed in detail in section xxxx)
+The TF QKV context computation algorithm modifies the token "hidden layers" (12288 FP numbers that are called "hidden" because you can not determine what the computations do by analyzing the programmed parameters) based on other tokens (thus computing context adjustments). *[2.3.6.1b D5 tiny TF algorithm details](/2.3.6.1b-d5-tiny-tf-algorithm-details/)* (draft, WIP) explains in detail the simplest demo (its not simple) of the LLM TF QKV (context) mechanism.
 
 <img src="/assets/M-52.png" alt="drones" width="19%">
+
+
+The core of AI is not rapidly evolving. Thats one reason why AI continues to focus on ramping up brute-force computation ("scaling"). The pic below is from a video I was watching on 26.0629. That one line "key-value (KV) caches need to be maintained" explains (part of) the reason why AI needs so much memory. Google "what is a kv cache" for details. 
+
+*QKV is still the core of LLM AI (**[video](https://youtu.be/lSDC6-BdVus?t=357)**)* <br>
+<img src="/assets/kv.png" alt="drones" width="40%">
+
 
 <br>
 
@@ -121,7 +127,7 @@ Palantir in the past few years has become synonomous with cutting edge **real wo
 <!-- 
 *"...AI software will be as important as hardware, with platforms such as Palantir's Maven Smart System poised to turn massive drone sensor feeds into highly usable battlefield intelligence". [Zerohedge 26.0620](https://www.zerohedge.com/military/only-beginning-how-profit-asymmetric-warfare-boom)*. -->
 
-*A successful mission for AI* <br>
+*A very successful real-word application of AI* <br>
 <img src="/assets/ziptiedrone2.png" alt="drones" width="23%">
 
 <br>
@@ -173,7 +179,7 @@ Structured data forms the basis of many SaaS systems (similar to ontology in Pal
 
 <br>
 
-# **2 Core AI demos and concepts**
+# **2 Core AI demos and technical concepts**
 
 Note: The latest architectures are not introducing anything radically different from the core AI functionality of these simple demos. I recently saw a video where one of the author's of the original paper "Attention is all you need" stated that no other ground-breaking architecture has appeared since the paper was pubished.
 
@@ -193,7 +199,7 @@ Note: The latest architectures are not introducing anything radically different 
 <img src="/assets/M-02.png" alt="drones" width="22%">
 
 
-**NOTE: About my use of "tiny" demos and analysis based on Alex-Net CNNs (2012) and GPT-3 (2020) throughout this site**. The core of AI is not rapidly evolving. Thats one reason why AI continues to focus on ramping up brute-force computation ("scaling"). The simple demos on this site are the best demos if you want to understand the core mechanics of how AI really works. For example, page **[2.3.6.1b D5 tiny TF algorithm details](/2.3.6.1b-d5-tiny-tf-algorithm-details/)** (draft, WIP) explains in detail the simplest demo (its not simple) of the LLM TF QKV (context) mechanism (*see "TF QKV (context)" in the center of the diagram above*). The pic below is from a video I was watching on 26.0629. That one line "key-value caches need to be maintained" explains (part of) the reason why AI needs so much memory. Google "what is a kv cache" for details. 
+**NOTE: About my use of "tiny" demos and analysis based on Alex-Net CNNs (2012) and GPT-3 (2020) throughout this site**. The core of AI is not rapidly evolving. The simple demos on this site are the best demos if you want to understand the core mechanics of how AI really works. For example, page **[2.3.6.1b D5 tiny TF algorithm details](/2.3.6.1b-d5-tiny-tf-algorithm-details/)** (draft, WIP) explains in detail the simplest demo (its not simple) of the LLM TF QKV (context) mechanism  
 
 *QKV is still the core of LLM AI (**[video](https://youtu.be/lSDC6-BdVus?t=357)**)* <br>
 <img src="/assets/kv.png" alt="drones" width="40%">
@@ -206,15 +212,18 @@ Note: The latest architectures are not introducing anything radically different 
 
 <br>
 
-### **2.2 Core AI [concepts](/0b-demos/)**
+### **2.2 Core AI technical [concepts](/0b-demos/)**
 
-**An AI LLM is first and foremost a man <> machine interface with hard coded language skills and memory**. A human chats with an LLM via tokens (words). Human eyesight and intelligence convert these tokens into thoughts (an amazing little-understood process). **The LLM internal agent (a traditional CPU-based algorithm) controls the transformer (TF) and interfaces with the outside world. The TF generates a token sequence based on the input tokens (nothing more).** The closely synchronized teamwork of the internal agent and the TF result in a convincing simulation of intelligent thought.
+This section focuses on a conceptual understanding of the technical aspects (especially the algorithm details) of the demos. 
+
+<!-- **An AI LLM is first and foremost a man <> machine interface with hard coded language skills and memory**. A human chats with an LLM via tokens (words). Human eyesight and intelligence convert these tokens into thoughts (an amazing little-understood process). **The LLM internal agent (a traditional CPU-based algorithm) controls the transformer (TF) and interfaces with the outside world. The TF generates a token sequence based on the input tokens (nothing more).** The closely synchronized teamwork of the internal agent and the TF result in a convincing simulation of intelligent thought. -->
 
 <!-- On the LLM side, tokens are converted by the internal agent to FP numbers before being input to the LLM transformer (TF). An LLM sees nothing and has no thoughts. It only crunches numbers. **AI chatbots only say what they are programmed to say**. -->
 
+<img src="/assets/M-09.png" alt="drones" width="58%"> 
 
-<!-- *Human (left), LLM agent (center), and LLM transformer (right)*<br> --> 
-<img src="/assets/M-11.png" alt="drones" width="31%"> 
+<!-- *Human (left), LLM agent (center), and LLM transformer (right)*<br>  
+<img src="/assets/M-11.png" alt="drones" width="31%"> -->
 
 <br>
 
