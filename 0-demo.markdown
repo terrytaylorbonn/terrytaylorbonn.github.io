@@ -31,12 +31,12 @@ The following diagrams summarize the result (see docx \#609 on the Gdrive for de
 Below is the general diagram for S3-type demos. It shows a target system (enterprise SW) that has an AI agent added within the target. This agent is the only part of the 3b Project. An external LLM model is used for AI.
 
 *General S3 diagram* <br>
-<img src="/assets/slack01aaa.png" alt="drones" width="27%">
+<img src="/assets/slack01aaa.png" alt="drones" width="24%">
 
 This is the same S3 diagram, but for the Slack AI demo. The detail are described on page **[3b.3.11 AI project 11 Slack](/3b.3.11-ai-proj-11-slack/)**.
 
 *Slack AI project diagram* <br>
-<img src="/assets/slack01ccc.png" alt="drones" width="55%">
+<img src="/assets/slack01ccc.png" alt="drones" width="50%">
 
 Below (left) shows the message flow and (right) the configuration steps.
 
@@ -131,9 +131,7 @@ I think that's one of the strongest ideas you've developed for ZiptieAI.
 <!-- 
 #### **Learn how to Ziptie together extremely useful AI apps quickly using the ZiptieAI site (thats start from the bottom and works up to demos like the Slack demo).** -->
 
-<br>
-
-*Always focus on using AI only for suitable applications*<br>
+*Only use AI for suitable applications*<br>
 <img src="/assets/ziptiedrone2.png" alt="drones" width="27%">
 
 
