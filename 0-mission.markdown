@@ -35,17 +35,38 @@ The **ZiptieAI mission** is to give you
 
 ### **1.1 AI = deterministic algorithms running on digital HW**
 
-The diagram below show the components for a basic LLM model. 
-- Transformer (TF) generates response tokens based on the input tokens.
-  - Note that the actual NN inside the TF only computes FP numbers. It understands nothing, sees nothing, has absolutely no consicousness. 
-- Internal agent (iAgent) sends and receives tokens to/from the TF.
-- API allows the external agent (the core control loop you write, usually in Python) to use the model. 
-
-<img src="/assets/M-15-2b.png" alt="drones" width="53%"><br>
-
-The following shows the code that defines the NN structure and the training algorithm.  
+The following shows the code that defines the NN structure and the training algorithm.  Clocked circuit state machine. It will always output the EXACT same result for the same input.
 
 <img src="/assets/M-14.png" alt="desc" width="60%"> 
+
+The AI simulation of intelligence started to seem intelligent only recently after the computational hardware reached the performance level required to (1) generate responses at least as fast as a human would respond and (2) with a level of accuracy that at least initially convinced the human user that AI had some level of genuine intelligence. 
+
+But AI has 0 intelligence. **AI circuits have absolutely no similarity whatsoever to human brain neurons.** Human thought exists not as a snapshot, but as a symphony playing out in time. But AI circuits host clocked state machines.  
+
+You could even run the most sophisticated LLMs on electro-mechanical relays. It might require the entire power output of nuclear plant and take a year or more to generate a token response, but it is theoretically possible.  
+
+*Electro-mechanical relay (a theoretical alternative to the GPU)*<br>
+<img src="/assets/relay.png" alt="drones" width="12%">
+
+
+
+<br>
+
+### **1.1b LLM agent + transformer = simulated intelligence**
+
+LLM AI is based on 2 very distinct computational components.
+
+- **Transformer (TF)** generates response tokens based on the input tokens. The actual TF algorithm only computes FP numbers. **The TF computational process is a straight shot (not procedural)**. The TF computes a classification of the entire input. This classification is used to select the next token. That new token is added to the input. The TF is reset, and the process for the next token starts. This process continues until the TF stops or the iAgent comands a stop.
+- **Internal agent (iAgent)** sends and receives tokens to/from the TF. The iAgent is the core control loop, the typical **procedural program** (usually confusing referred to as **the** deterministic program; the problem is the GPU is also 100% deterministic). The iAgent has an API that allows the external world (a human or an "external Agent") to use the model. 
+
+Note: TF algorithms are referred to as "neural" networks because the diagrams for NN matrix math look like diagrams that could be considered similar to those for biological neural networks.   
+
+<img src="/assets/M-15-2bbb.png" alt="drones" width="63%"><br>
+
+
+*The LLM agent and transformer are the inseparable duo that simulates intelligence*<br>
+<img src="/assets/M-11b.png" alt="drones" width="33%"><br>
+
 
 <!-- **This site takes a very down-to-earth mechanistic approach to understanding AI. Thats because AI is based on mechanistic binary matrix math algorithms that run on binary circuits.** 
 **A "model" in AI is anything that has a neural network (NN) at its core**. It may have a lot of other stuff wrapped around the NN (CNN convolution, LLM attention heads, etc) but **the core statistical pattern matching functionality runs on a NN**. The differences are mainly architecture, training, orchestration, and use case. **All models are first (1) "trained"** (internal NN params are programmed using SW tools) and **then (2) used to infer output from input.** 
@@ -55,22 +76,16 @@ The following shows the code that defines the NN structure and the training algo
 
 <br>
 
-### **1.2 There is no "I" (intelligence) in AI**
+### **1.3 (1.2b) The core of AI: NN classification (matrix math based pattern matching)**
 
-The AI simulation of intelligence started to seem intelligent only recently after the computational hardware reached the performance level required to (1) generate responses at least as fast as a human would respond and (2) with a level of accuracy that at least initially convinced the human user that AI had some level of genuine intelligence. 
+**"Training" = programming a NN (not teaching; a NN does not learn)**. The process involves
+- Feed FP numbers (converted input text prompt and answer) to the NN.
+- Compare the input against the shifted (one token) output.
+- Adjust the internal parameters of the NN every so slightly so that the error from the expected output is reduced (without messing up significantly other already trained inputs).
+- Repeat this a massive number of times. This "training" can take weeks. 
+- Hope for a stable result. The training process is not predictable.
 
-But AI has 0 intelligence. **AI circuits have absolutely no similarity whatsoever to human brain neurons.** Human thought exists not as a snapshot, but as a symphony playing out in time. But AI circuits host clocked state machines. AI algorithms are referred to as "neural" networks because the diagrams for NN matrix math look like diagrams that could be considered to describe biological neural networks.  GPUs that host AI NN are 100% deterministic binary computation devices. If you put in the same input, you will **always** get the same output. You could even run the most sophisticated LLMs on electro-mechanical relays. It might require the entire power output of nuclear plant and take a year or more to generate a token response, but it is theoretically possible.  
-
-*Electro-mechanical relay (a theoretical alternative to the GPU)*<br>
-<img src="/assets/relay.png" alt="drones" width="12%">
-
-<br>
-
-### **1.3 (1.2b) So what is AI? AI = classification, pattern matching (simple NN)**
-
-clever engineering. this is why it works, why its so valuable. for a simple NN, you take an incredible amount of input (any kind of input), **convert it to FP numbers**, and program the patterns in this numerical data into parameters for GPU-based algorithms (can run on CPU if the NN is small). 
-
-Inference is when those algorithms are used to regenerate patterns when a "seed" is input to the NN. **The seed does not have to match any of the trained input. The algorithms, however, still compute the best probability of the CLASSIFICATION OF THE INPUT. THIS IS THE MAGIC OF AI.** 
+**Inference** is when the TF is used to recognize the pattern of the some never before encountered input (not matching **exactly** anything the TF was trained on). This is the "magic" of AI. The TF computes the probabilities of all possible outputs (usually 50K vocab tokens) and the best token is selected (unless "tempearture" is used; this is a gimmick where the TF selects randomly one of the more probable tokens to give the illusion that the TF is non-deterministic). 
 
 <img src="/assets/M-50.png" alt="drones" width="23%">
 
@@ -178,6 +193,14 @@ Note: The latest architectures are not introducing anything radically different 
 
 *A simple NN **[demo](/2.1.2-classifier-nn/)** of the core of AI*<br>
 <img src="/assets/M-02.png" alt="drones" width="22%">
+
+
+**NOTE: About my use of "tiny" demos and analysis based on Alex-Net CNNs (2012) and GPT-3 (2020) throughout this site**. The core of AI is not rapidly evolving. Thats one reason why AI continues to focus on ramping up brute-force computation ("scaling"). The simple demos on this site are the best demos if you want to understand the core mechanics of how AI really works. For example, page **[2.3.6.1b D5 tiny TF algorithm details](/2.3.6.1b-d5-tiny-tf-algorithm-details/)** (draft, WIP) explains in detail the simplest demo (its not simple) of the LLM TF QKV (context) mechanism (*see "TF QKV (context)" in the center of the diagram above*). The pic below is from a video I was watching on 26.0629. That one line "key-value caches need to be maintained" explains (part of) the reason why AI needs so much memory. Google "what is a kv cache" for details. 
+
+*QKV is still the core of LLM AI (**[video](https://youtu.be/lSDC6-BdVus?t=357)**)* <br>
+<img src="/assets/kv.png" alt="drones" width="40%">
+
+
 
 <!--
 *Code for **[NN](/2.1.1-predictive-nn-01-sine/)** definition (left) and training (right)*<br>
