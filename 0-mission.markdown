@@ -91,17 +91,15 @@ Note: TF algorithms are referred to as "neural" networks because the diagrams fo
 
 <br>
 
-### **1.4 (1.2c) Variations of the simple NN theme (CNNs, TFs)**
+### **1.4 (1.2c) Extensions of the simple NN (CNNs, TFs)**
 
-the clever engineering has been extended to different media types. Pics, words. Thus AI = many different types of classification.
+Detecting simple patterns (classification) worked fine with a simple NN. But for images and text, some extra "pre-processing" is required for classification. 
 
-But for images and words more complex algorithms were required. CNN and TF.
+For text **convolution** is added (thus convoluted NN). Convolution is matrix math performed before the core classification NN (the "dense layers"). This is required because of the nature of recognizing pixelated input (pixels are convoluted with neighboring related pixels).
 
-you take an incredible amount of good images (CNNs) or text (TFs), convert it to FP numbers, and program the patterns in this numerical data into parameters for GPU-based algorithms (can run on CPU theoretically, but not practically). 
+For text a **transformers** is added. This basically computes the real meaning of the original tokens based on the "neighboring" **by meaning** tokens. There is also the core NN in the form of an "FFN" (no need to translate, the name is meaningless) for each token. The tokens adjust each other and go through the FFN for many layers, and the classification "percolates" into the FP numbers (12288 for each token in GPT-3) of the last token. **The new token is actually based on a CLASSIFICATION of the entire input**.
 
-The result is CLASSIFICATION. what you are told about the TF creating a new token from the last token is NONSENSE. The FP computational results for the classification of the entire input ends in the FP representation stored in what started out as the last token. **The new token is actually based on a CLASSIFICATION of the entire input**. 
-
-<img src="/assets/M-51.png" alt="drones" width="15%">
+<img src="/assets/M-51.png" alt="drones" width="13%">
 
 <br>
 
@@ -112,7 +110,7 @@ TFs algorithms use a clever "context" mechanism that basically converts artibrar
 
 That context mechanism (discussed in detail in section xxxx)
 
-<img src="/assets/M-52.png" alt="drones" width="21%">
+<img src="/assets/M-52.png" alt="drones" width="19%">
 
 <br>
 
