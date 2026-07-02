@@ -44,7 +44,7 @@ The **ZiptieAI mission** is to provide
 
 #### **1.1 AI = deterministic algorithms running on digital HW**
 
-The following is an example of the python code that defines the structure and training algorithm of a very simple NN.  Such a NN runs on clocked binary circuits and will always output the EXACT same result for the same input.
+The following is an example of the python code that defines the structure and training algorithm of a very simple NN.  Such a NN runs on clocked binary circuits and will always output the EXACT same result for the same input. **The inputs and outputs are ONLY FP (floating point) numbers. NNs are pure number crunchers.**
 
 <img src="/assets/M-14.png" alt="desc" width="60%"> 
 
