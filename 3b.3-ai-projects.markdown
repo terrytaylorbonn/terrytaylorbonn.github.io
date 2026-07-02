@@ -36,8 +36,8 @@ A central goal of these project demos is to show anyone with basic computer skil
 <br>
 
 #### **TOC**
-- **Part 1: Enterprise SW demos**
-- **Part 2: Standalone AI Applications**
+- **Part 1: Enterprise SW demos**. 
+- **Part 2: Standalone AI Applications**. Applications you build yourself, where AI is the primary product rather than an add-on to an existing ESW
 
 <!-- ************** PUT THIS IN EACH SUBSECTION **************************************
 For details on each project demo see 
@@ -81,6 +81,11 @@ The demos progress from using Slack as a normal application (S1), to connecting 
 (GPT) Odoo is a representative enterprise software (ESW) platform used to demonstrate how AI can be integrated into real business applications and workflows. Rather than focusing on Odoo itself, the goal is to understand practical techniques for adding AI to existing enterprise systems, such as analyzing business data, automating workflows, generating summaries, detecting unusual activity, and assisting users within ERP applications. These demos illustrate how external AI agents can augment complex enterprise software while preserving the existing business logic and user interface.
 
 <!-- (GPT) I actually like Odoo even more than Slack for your long-term direction. Slack demonstrates communication-centric AI, while Odoo demonstrates business-process AI (ERP, CRM, Helpdesk, Inventory, Accounting, Projects, etc.), which is closer to the kind of enterprise AI adoption work you want to showcase. -->
+
+<br>
+
+
+#### **3b.13 Github (CI/CD) (TODO)**
 
 <br>
 
