@@ -1,0 +1,140 @@
+---
+layout: page
+title: "3b.3.0 AI project demo main"
+permalink: /3b.3.0-ai-proj-demo-main/
+description: Last edit 26.0524
+---
+
+[← 3b Projects](/3.3-ai-projects/)
+
+<br>
+
+The full lab notes for this demo are in docx \#606.2 on Gdrive.
+
+```
+but thinking about what do to next. 
+my thoughts below.
+(answer briefly, if you want give me your suggested plan...
+do not zero in on too many details... what we actually do will be different;
+the main thing we have some kind of project plan).
+
+-------------------------------------
+
+in 3b we have 
+Part 1: ESW (there is a control loop in both the target app and our agent)
+Part 2: standalone AI apps (only our agent has a control loop)
+
+Part 0: (my suggested addition): 
+       Our main test project
+       this is a "running" demo that is constantly modified.
+       goal is not a perfect polished demo. it is a tech demonstrator.
+       demo techniques using 3b (parts 1 and 2), 3, 2b, 2 components.
+       we start out with 3b and "drill down" to 3,2b, then 2.
+       (this kind of approach is what you would use for real world projects).
+
+-------------------------------------
+
+For Part 0 I suggest something like the following steps. 
+
+Step1 get components installed/working (Part 1, 2 intial demos)
+Step2 non-ai agentic functions, 
+Step 3 add ai,
+Step 4 models, 
+Step5 (possibly) Tiny NNs (for certain apps).
+Steps 4 and 5 would be important for apps with limited power, mobile apps, etc.
+                      standalone Robotics in the future.
+
+then continue (endless loop) with new agent algorithm tests, new components, etc.
+
+-------------------------------
+
+Step 1: GET COMPONENTS (ESW/STANDALONE) INSTALLED, BASIC DEMOS (3B)
+
+we have been doing this. slack, odoo, gmail, etc...
+	
+-------------------------------
+
+Step 2: FOCUS ON AGENTS (3) NO AI
+
+(skip AI at first to concentrate on interfaces and control loops)
+
+2 no ai
+2.1 py script to  create problems or suspicious activity in the odoo db. 
+2.2 create a non-ai agent that detects the issue ... this agent constantly scans like palantir
+2.3 create alerts for this issue in (at first maybe just one of these)
+   2.3.1 odoo
+   2.3.2 mongodb
+   2.3.3 gmail
+   2.3.4 mattermost
+   2.3.5 ledger (future)
+   2.3.6 github
+   
+-------------------------------
+
+Step 3: FOCUS ON AGENTS (3) WITH AI
+
+3 add ai
+3.1 script creates more complex issues that require ai to be detected
+3.2 ai detects
+       focus on detection algorithms
+       (concepts demo'd already in section "3 Agents")
+3.3 alerts (via mattermost, gmail, etc) contain recommended action
+3.3 ai analyzes response (user response to alerts with recommend action)
+       in particular performs rule injection, planning
+3.4 agent takes action
+3.5 documentiation
+     3.5.1 summary sent about what was done
+     3.5.2 added to dbs, etc
+     3.53 maybe add to docs, dita
+
+-------------------------------
+
+Step 4: FOCUS ON MODELS (2b)
+
+use local model?  
+different smaller models?
+create our own model (or just fine tune existing)
+
+-------------------------------
+
+Step 5: FOCUS ON TINY NNs (2)
+
+could we just define/train/infer a custom NN in the agent script?
+(again, the idea is tech demos)
+
+
+
+Yes — I like Part 0 a lot.
+I would describe it as:
+Part 0: Main Integration Lab
+A running technical demonstrator where all major ideas come together: enterprise software, agents, models, data storage, alerts, reports, and eventually tiny custom NNs.
+Suggested plan:
+Part 0: Main Integration Lab
+
+Step 1 — Connect systems
+Odoo, Mattermost, MongoDB, Gmail, GitHub, ledger, DITA.
+
+Step 2 — Non-AI agent loop
+Create suspicious Odoo activity → scan/detect with Python → alert/log results.
+
+Step 3 — AI agent loop
+Use AI to classify, explain, recommend action, interpret user responses, and execute approved actions.
+
+Step 4 — Model experiments
+Try OpenAI, Claude, local Ollama models, smaller models, maybe fine-tuning later.
+
+Step 5 — Tiny NN experiments
+Use small custom NNs for narrow detection/classification tasks inside the agent.
+
+Step 6 — Repeat
+Add new systems, new scenarios, new detection logic, new agent algorithms.
+The key idea is:
+Start at 3b real-world projects, then drill down into 3 Agents, 2b Models, and 2 Neural Networks only when needed.
+That is exactly how real enterprise AI work usually happens. You begin with a business situation, then add deeper AI/model/NN work only when the situation requires it.
+```
+
+<!-- <img src="/assets/xxx.png" alt="drones" width="35%"> -->
+
+<br> 
+
+26.0701 (v1 26.0701)

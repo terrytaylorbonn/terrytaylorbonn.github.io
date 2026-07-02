@@ -167,7 +167,7 @@ $$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$ -->
 
 ### **Part 3: [Main integration demo](/3b.3.0-ai-proj-demo-main/)**
 
-An ongoing technical demonstrator where ESW components (3b parts 1 and 2), AI agents (3), and models (2b) are are continuously integrated and tested. 
+An ongoing technical demonstrator where ESW components (3b parts 1 and 2), AI agents (3), and models (2b; possibly with custom NNs from 2) are are continuously integrated and tested.
 
 <br>
 
