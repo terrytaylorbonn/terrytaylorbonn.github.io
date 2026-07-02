@@ -19,13 +19,607 @@ The full lab notes for this demo are in docx \#606.2 on Gdrive.
 
 # **0 Overview**
 
+```
+Overview of steps (GPT) 
+The goal:
+Odoo ERP ↓ Python XML-RPC ↓ OpenAI business analysis ↓ Mattermost REST API ↓ team alert
 
-<br>
+S1  Install Odoo
+S2  Python creates customers
+S3  Python reads customers
+S4  AI summarizes customers
+S5  AI creates quotation
+S6  AI daily business report
+S7  Slack/Mattermost notification
 
-# **xxxxxxx**
 
-<img src="/assets/slack01aaa.png" alt="drones" width="35%">
+Create docker-compose.yml:
+
+services:
+  db:
+    image: postgres:15
+    environment:
+      POSTGRES_DB: postgres
+      POSTGRES_USER: odoo
+      POSTGRES_PASSWORD: odoo
+    volumes:
+      - odoo-db-data:/var/lib/postgresql/data
+
+  odoo:
+    image: odoo:18
+    depends_on:
+      - db
+    ports:
+      - "8069:8069"
+    environment:
+      HOST: db
+      USER: odoo
+      PASSWORD: odoo
+    volumes:
+      - odoo-web-data:/var/lib/odoo
+
+volumes:
+  odoo-db-data:
+  odoo-web-data:
+
+Run:
+
+docker compose up -d
+```
+
+
+<img src="/assets/odoo-01.png" alt="drones" width="65%">
+ 
+
+```
+# odoo_populate_01.py
+
+import xmlrpc.client
+
+URL = "http://localhost:8069"
+DB = "odoo_demo"
+USERNAME = "admin@example.com"
+PASSWORD = "admin"   # or your Odoo login password
+
+common = xmlrpc.client.ServerProxy(f"{URL}/xmlrpc/2/common")
+uid = common.authenticate(DB, USERNAME, PASSWORD, {})
+
+if not uid:
+    raise Exception("Login failed. Check DB, email, password.")
+
+models = xmlrpc.client.ServerProxy(f"{URL}/xmlrpc/2/object")
+
+def create_customer(name, email, phone):
+    return models.execute_kw(
+        DB, uid, PASSWORD,
+        "res.partner", "create",
+        [{
+            "name": name,
+            "email": email,
+            "phone": phone,
+        }]
+    )
+
+def create_product(name, price):
+    return models.execute_kw(
+        DB, uid, PASSWORD,
+        "product.template", "create",
+        [{
+            "name": name,
+            "list_price": price,
+            "sale_ok": True,
+        }]
+    )
+
+customers = [
+    ("Alpha Dental", "contact@alphadental.local", "555-1001"),
+    ("Bonn Bike Shop", "info@bonnbike.local", "555-1002"),
+    ("Green Leaf Accounting", "hello@greenleaf.local", "555-1003"),
+]
+
+products = [
+    ("AI setup consultation", 500.00),
+    ("Monthly support", 300.00),
+    ("Workflow automation audit", 750.00),
+]
+
+print("Creating customers...")
+for c in customers:
+    print(create_customer(*c), c[0])
+
+print("Creating products...")
+for p in products:
+    print(create_product(*p), p[0])
+
+print("Done.")
+
+
+$ python odoo_populate_01.py
+Creating customers...
+45 Alpha Dental
+46 Bonn Bike Shop
+47 Green Leaf Accounting
+Creating products...
+37 AI setup consultation
+38 Monthly support
+39 Workflow automation audit
+Done.
+(.venv) 
+terry@LAPTOP-HKPDHF7M MINGW64 ~/Downloads/odoo_demo
+```
+
+<img src="/assets/odoo-02.png" alt="drones" width="65%">
+ 
+
+```
+# odoo_02_crud.py
+
+import xmlrpc.client
+
+URL = "http://localhost:8069"
+DB = "odoo_demo"
+USERNAME = "admin@example.com"
+PASSWORD = "admin"      # your Odoo password
+
+common = xmlrpc.client.ServerProxy(f"{URL}/xmlrpc/2/common")
+uid = common.authenticate(DB, USERNAME, PASSWORD, {})
+
+models = xmlrpc.client.ServerProxy(f"{URL}/xmlrpc/2/object")
+
+# -------------------------------
+# Customers
+# -------------------------------
+
+customers = models.execute_kw(
+    DB,
+    uid,
+    PASSWORD,
+    "res.partner",
+    "search_read",
+    [[]],
+    {
+        "fields": ["name", "email", "phone"],
+        "limit": 20,
+    },
+)
+
+print("\nCUSTOMERS")
+print("-" * 60)
+
+for c in customers:
+    print(
+        f"{c['name']:30} "
+        f"{c.get('email',''):30} "
+        f"{c.get('phone','')}"
+    )
+
+# -------------------------------
+# Products
+# -------------------------------
+
+products = models.execute_kw(
+    DB,
+    uid,
+    PASSWORD,
+    "product.template",
+    "search_read",
+    [[]],
+    {
+        "fields": ["name", "list_price"],
+        "limit": 20,
+    },
+)
+
+print("\nPRODUCTS")
+print("-" * 60)
+
+for p in products:
+    print(
+        f"{p['name']:35} ${p['list_price']:.2f}"
+    )
+
+
+$ python odoo_02_crud.py 
+
+CUSTOMERS
+------------------------------------------------------------
+Acme Corporation               acme_corp@yourcompany.example.com (603)-996-3829
+Addison Olson                  addison.olson28@example.com    (223)-399-7637
+Douglas Fletcher               douglas.fletcher51@example.com (132)-553-7242
+Floyd Steward                  floyd.steward34@example.com    (145)-138-3401
+Alpha Dental                   contact@alphadental.local      555-1001
+.........
+
+PRODUCTS
+------------------------------------------------------------
+AI setup consultation               $500.00
+Acoustic Bloc Screens               $295.00
+Cabinet with Doors                  $140.00
+Chair floor protection              $12.00
+.................
+(.venv) 
+terry@LAPTOP-HKPDHF7M MINGW64 ~/Downloads/odoo_demo
+
+
+
+ $ python odoo_03_quote.py 
+Created quotation ID: 22
+(.venv) 
+terry@LAPTOP-HKPDHF7M MINGW64 ~/Downloads/odoo_demo
+
+import xmlrpc.client
+
+URL = "http://localhost:8069"
+DB = "odoo_demo"
+USERNAME = "admin@example.com"
+PASSWORD = "admin"   # change if needed
+
+common = xmlrpc.client.ServerProxy(f"{URL}/xmlrpc/2/common")
+uid = common.authenticate(DB, USERNAME, PASSWORD, {})
+
+if not uid:
+    raise Exception("Login failed")
+
+models = xmlrpc.client.ServerProxy(f"{URL}/xmlrpc/2/object")
+
+
+def search_one(model, domain):
+    ids = models.execute_kw(
+        DB, uid, PASSWORD,
+        model, "search",
+        [domain],
+        {"limit": 1},
+    )
+    if not ids:
+        raise Exception(f"Not found: {model} {domain}")
+    return ids[0]
+
+
+customer_id = search_one(
+    "res.partner",
+    [["name", "=", "Alpha Dental"]],
+)
+
+product_id = search_one(
+    "product.product",
+    [["name", "=", "AI setup consultation"]],
+)
+
+product = models.execute_kw(
+    DB, uid, PASSWORD,
+    "product.product", "read",
+    [[product_id]],
+    {"fields": ["name", "list_price"]},
+)[0]
+
+quotation_id = models.execute_kw(
+    DB, uid, PASSWORD,
+    "sale.order", "create",
+    [{
+        "partner_id": customer_id,
+        "order_line": [
+            (0, 0, {
+                "product_id": product_id,
+                "name": product["name"],
+                "product_uom_qty": 1,
+                "price_unit": product["list_price"],
+            })
+        ],
+    }],
+)
+
+print(f"Created quotation ID: {quotation_id}")
+```
+
+<img src="/assets/odoo-03.png" alt="drones" width="65%">
+ 
+
+```
+Edit docker-compose.yml.
+Change the db service to:
+
+db:
+  image: postgres:15
+  environment:
+    POSTGRES_DB: postgres
+    POSTGRES_USER: odoo
+    POSTGRES_PASSWORD: odoo
+
+  ports:
+    - "5433:5432"
+
+  volumes:
+    - odoo-db-data:/var/lib/postgresql/data
+
+
+Then in pgAdmin create a new server:
+Host: localhost
+Port: 5433
+Database: postgres
+Username: odoo
+Password: odoo
+```
+
+<img src="/assets/odoo-04.png" alt="drones" width="65%">
+ 
+
+```
+# odoo_04_ai_report.py
+
+import xmlrpc.client
+import json
+
+URL = "http://localhost:8069"
+DB = "odoo_demo"
+USERNAME = "admin@example.com"
+PASSWORD = "admin"
+
+common = xmlrpc.client.ServerProxy(f"{URL}/xmlrpc/2/common")
+uid = common.authenticate(DB, USERNAME, PASSWORD, {})
+
+models = xmlrpc.client.ServerProxy(f"{URL}/xmlrpc/2/object")
+
+customers = models.execute_kw(
+    DB, uid, PASSWORD,
+    "res.partner", "search_read",
+    [[["id", "in", [45, 46, 47]]]],
+    {"fields": ["id", "name", "email", "phone"]},
+)
+
+products = models.execute_kw(
+    DB, uid, PASSWORD,
+    "product.template", "search_read",
+    [[]],
+    {"fields": ["id", "name", "list_price"], "limit": 10},
+)
+
+orders = models.execute_kw(
+    DB, uid, PASSWORD,
+    "sale.order", "search_read",
+    [[]],
+    {"fields": ["id", "name", "partner_id", "amount_total", "state"], "limit": 10},
+)
+
+data = {
+    "customers": customers,
+    "products": products,
+    "orders": orders,
+}
+
+print(json.dumps(data, indent=2))
+
+
+
+Run:
+
+python odoo_04_ai_report.py 
+{
+  "customers": [
+    {
+      "id": 45,
+      "name": "Alpha Dental",
+      "email": "contact@alphadental.local",
+      "phone": "555-1001"
+    },
+    {
+      "id": 46,
+      "name": "Bonn Bike Shop",
+      "email": "info@bonnbike.local",
+      "phone": "555-1002"
+    },
+...................
+  ],
+  "orders": [
+    {
+      "id": 23,
+      "name": "S00023",
+      "partner_id": [
+        45,
+        "Alpha Dental"
+      ],
+      "amount_total": 575.0,
+      "state": "draft"
+    },
+........................
+  ]
+}
+(.venv) 
+terry@LAPTOP-HKPDHF7M MINGW64 ~/Downloads/odoo_demo
+
+
+=2 Yes. Now add AI.
+Install/check OpenAI package:
+pip install openai
+Set your key:
+
+export OPENAI_API_KEY="your_key_here"
+
+Add this to the bottom of odoo_04_ai_report.py:
+
+
+from openai import OpenAI
+
+client = OpenAI()
+
+prompt = f"""
+You are a small-business operations assistant.
+
+Summarize this Odoo ERP data in plain English.
+
+Mention:
+1. customers
+2. products
+3. quotations/orders
+4. one suggested next action
+
+Odoo data:
+{json.dumps(data, indent=2)}
+"""
+
+response = client.chat.completions.create(
+    model="gpt-4o-mini",
+    messages=[
+        {"role": "user", "content": prompt}
+    ],
+)
+
+print("\nAI BUSINESS SUMMARY")
+print("-" * 60)
+print(response.choices[0].message.content)
+
+
+AI BUSINESS SUMMARY
+------------------------------------------------------------
+Here's a summary of your Odoo ERP data:
+
+1. **Customers**: You have three customers listed: 
+   - **Alpha Dental** (Contact: contact@alphadental.local, Phone: 555-1001)
+   - **Bonn Bike Shop** (Contact: info@bonnbike.local, Phone: 555-1002)
+   - **Green Leaf Accounting** (Contact: hello@greenleaf.local, Phone: 555-1003)
+
+2. **Products**: There are ten products available for sale:
+   - AI setup consultation ($500)
+   - Acoustic Bloc Screens ($295)
+   - Cabinet with Doors ($140)
+   - Chair floor protection ($12)
+   - Conference Chair ($33)
+   - Corner Desk Left Sit ($85)
+   - Corner Desk Right Sit ($147)
+   - Customizable Desk ($750)
+   - Deposit ($150)
+   - Desk Combination ($450)
+
+3. **Quotations/Orders**: There are several orders recorded:
+   - Two draft orders for **Alpha Dental**, each totaling $575.
+   - Multiple completed sales orders for **Gemini Furniture** with amounts ranging from $415.5 to $4965.4.
+
+4. **Suggested Next Action**: Follow up with Alpha Dental regarding their draft orders to move them forward to completion.
+(.venv) 
+terry@LAPTOP-HKPDHF7M MINGW64 ~/Downloads/odoo_demo
+
+
+# odoo_04_ai_report.py  (MATTERMOST)
+
+import xmlrpc.client
+import json
+
+URL = "http://localhost:8069"
+DB = "odoo_demo"
+USERNAME = "admin@example.com"
+PASSWORD = "admin"
+
+common = xmlrpc.client.ServerProxy(f"{URL}/xmlrpc/2/common")
+uid = common.authenticate(DB, USERNAME, PASSWORD, {})
+
+models = xmlrpc.client.ServerProxy(f"{URL}/xmlrpc/2/object")
+
+customers = models.execute_kw(
+    DB, uid, PASSWORD,
+    "res.partner", "search_read",
+    [[["id", "in", [45, 46, 47]]]],
+    {"fields": ["id", "name", "email", "phone"]},
+)
+
+products = models.execute_kw(
+    DB, uid, PASSWORD,
+    "product.template", "search_read",
+    [[]],
+    {"fields": ["id", "name", "list_price"], "limit": 10},
+)
+
+orders = models.execute_kw(
+    DB, uid, PASSWORD,
+    "sale.order", "search_read",
+    [[]],
+    {"fields": ["id", "name", "partner_id", "amount_total", "state"], "limit": 10},
+)
+
+data = {
+    "customers": customers,
+    "products": products,
+    "orders": orders,
+}
+
+#### print(json.dumps(data, indent=2))
+
+#############################################
+
+from openai import OpenAI
+
+client = OpenAI()
+
+prompt = f"""
+You are a small-business operations assistant.
+
+Summarize this Odoo ERP data in plain English.
+
+Mention:
+1. customers
+2. products
+3. quotations/orders
+4. one suggested next action
+
+Odoo data:
+{json.dumps(data, indent=2)}
+"""
+
+response = client.chat.completions.create(
+    model="gpt-4o-mini",
+    messages=[
+        {"role": "user", "content": prompt}
+    ],
+)
+
+# print("\nAI BUSINESS SUMMARY")
+# print("-" * 60)
+# print(response.choices[0].message.content)
+
+### MATTERMOST########################################
+
+import requests
+
+MATTERMOST_SERVER = "http://localhost:8065"
+MATTERMOST_TOKEN = "61tcpmwpx3ydiynbt48918q9oo"
+CHANNEL_ID = "4qpjddhwxif6umbmr8bprzksza"
+
+message = response.choices[0].message.content
+
+headers = {
+    "Authorization": f"Bearer {MATTERMOST_TOKEN}",
+    "Content-Type": "application/json",
+}
+
+payload = {
+    "channel_id": CHANNEL_ID,
+    "message": f"### Odoo AI Business Summary\n\n{message}",
+}
+
+r = requests.post(
+    f"{MATTERMOST_SERVER}/api/v4/posts",
+    headers=headers,
+    json=payload,
+)
+
+print()
+print("Mattermost status:", r.status_code)
+
+if r.status_code == 201:
+    print("Posted successfully.")
+else:
+    print(r.text)
+
+
+$ python odoo_05_ai_mattermost.py 
+
+Mattermost status: 201
+Posted successfully.
+(.venv) 
+terry@LAPTOP-HKPDHF7M MINGW64 ~/Downloads/odoo_demo
+```
+
+<img src="/assets/odoo-05.png" alt="drones" width="65%">
+ 
 
 <br> 
 
-26.0701 (0524)
+26.0702 (0524)

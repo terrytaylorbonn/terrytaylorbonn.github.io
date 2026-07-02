@@ -268,7 +268,7 @@ AI has a big future even after the pre-IPO hype is over. **Those who understand 
 
 <br>
 
-26.0701 (v1 26.0611)
+26.0702 (v1 26.0611)
 
 <!-- *A successful mission for AI (left) and not so successful mission (right).* <br>
 <img src="/assets/ziptiedrone2.png" alt="drones" width="23%"> <img src="/assets/waymo.png" alt="drones" width="26%">  -->
