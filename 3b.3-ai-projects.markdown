@@ -28,29 +28,13 @@ description: Last edit 26.0618
 
 (GPT) This section is the long-term goal of ZiptieAI.com. The focus is on building a central AI agent that integrates with many different enterprise systems and demonstrates practical AI-assisted workflows. Rather than mastering a single application, the goal is to show how AI can be applied quickly and effectively across a wide variety of enterprise software (ESW), business processes, and real-world situations.
 
-Each demo follows a complete scenario from start to finish. The emphasis is not on the application itself, but on how the AI agent detects a situation, gathers information, makes decisions, interacts with one or more enterprise systems, and communicates the results. The demos are intentionally small and focused, illustrating practical patterns that can be adapted to many different environments.
-
-There are currently only a few demos in this section because I spent many months building the foundation for them. The earlier sections of ZiptieAI.com cover the underlying AI models, agents, and technologies that make these higher-level projects possible. I did not begin concentrating on these integrated projects until June 2026.
-
-A primary objective is to demonstrate that modern AI tools allow developers to become productive with unfamiliar enterprise systems very quickly. Many of these projects were built with little or no prior experience using the target software. GPT, Claude, and other AI tools were used to explain APIs, generate starter code, connect multiple systems, and iteratively debug the workflows. Working end-to-end prototypes were often completed within a few hours.
+A primary objective is to demonstrate that AI allows developers to become productive with unfamiliar enterprise systems very quickly. GPT, Claude, and other AI tools were used to explain APIs, generate starter code, connect multiple systems, and iteratively debug the workflows. Many working prototypes were completed within a few hours.
 
 **TOC**
 - **Part 1: Enterprise Software demos**. AI integrated with existing enterprise systems such as Odoo, GitHub, Mattermost, Slack, MongoDB, and other business applications.
 - **Part 2: Standalone AI Applications**. Applications built from the ground up where AI is the primary product rather than an enhancement to an existing enterprise system.
+- **Part 3: Main integration demo**. An ongoing technical demonstrator where ESW components (3b parts 1 and 2), AI agents (3), and models (2b) are are continuously integrated and tested. 
 
-<!-- 
-This section is the **end goal for ZiptieAI.com**. The focus is on "spinning up" **real-world demo projects** quickly with minimal code analysis or manual coding. **The goal is not to master one type of system, but to demonstrate the ability to apply AI effectively across many different systems**, workflows, and business environments. 
-
-Note that there are not that many demos yet. That's because I spent months working up to this section, doing lower level demos until I could put the pieces of the high level concepts puzzle together. I did not really start to focus on this section until June 2026.
-
-A central goal of these project demos is to show anyone with basic computer skills can replicate these demos. I had no previous experience with some of the tools involved in these projects, but with AI I was still able to complete the project without human assistance. GPT/Codex was used to explain the tools, generate starter code, connect the systems, and iteratively debug the workflow. Working prototypes were usually produced in a few hours.
-
-
-<br>
-
-#### **TOC**
-- **Part 1: Enterprise SW demos**. 
-- **Part 2: Standalone AI Applications**. Applications you build yourself, where AI is the primary product rather than an add-on to an existing ESW -->
 
 <!-- ************** PUT THIS IN EACH SUBSECTION **************************************
 For details on each project demo see 
@@ -173,7 +157,22 @@ $$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$ -->
 
 <br>
 
-26.0627 (0524)
+
+
+--------------------------------
+--------------------------------
+
+<br>
+
+
+### **Part 3: [Main integration demo](/3b.3.0-ai-proj-demo-main/)**
+
+An ongoing technical demonstrator where ESW components (3b parts 1 and 2), AI agents (3), and models (2b) are are continuously integrated and tested. 
+
+<br>
+
+
+26.0702 (0524)
 
 <!-- Bearer token for basic security.
 <img src="/assets/cursor_demo1_01.png" alt="drones" width="50%"> 
