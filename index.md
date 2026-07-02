@@ -5,7 +5,7 @@ title: Home
 
 <br>
 
-Nothing tells you what a site is about more than a demo. This **[demo](/0-demo/)** shows how I recently **added an AI chatbot to a Slack workspace. Quickly. The code worked the first time** (GPT wrote the workflow and the code).  
+This site is all about extracting core AI concepts from demos. For example, a **[demo](/0-demo/)** of AI in Slack.  
 
 <br>
 
