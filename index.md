@@ -14,13 +14,13 @@ Nothing tells you what a site is about more than a demo. This **[demo](/0-demo/)
 The ZiptieAI **[mission](/0-mission/)** is to provide
 - **Basic AI concepts**
 - **AI demos and concepts**
-  - **[Quick start (QS) demos](/0-qs/)**. Hands-on tour of low-level core AI functionality.
-  - **[Concepts](/0b-demos/)**. Core concepts learned form the QS.
+  - **[Quick start (QS) demos](/0-qs/)** (selected demos).
+  - **[Concepts](/0b-demos/)** (for the QS demos).
 - **AI deep dive** *(see diagram below)*
-  - **[2 NNs](/2_models/)**. NNs (CNNs, TFs) are the core of AI "intelligence".
-  - **[2b Models](/2b_models/)**. AI NNs are usually packaged into AI models that have an API. <!-- Fine-tuning, local models, deployment, RAG, and model serving. -->
-  - **[3 Agents](/3_agents/)**. Agents provide reliable workflows that use models as helpful assistants.
-  - **[3b Projects](/3.3-ai-projects/) *(the end goal)***. Spinning up AI solutions (agents, models, NNs) to real-world problems.
+  - **[2 NNs](/2_models/)**. NNs, CNNs, and TFs (the core of AI).
+  - **[2b Models](/2b_models/)**. Packaged NNs available via an API. <!-- Fine-tuning, local models, deployment, RAG, and model serving. -->
+  - **[3 Agents](/3_agents/)**. Python scripts that provide reliable workflows that use models as helpful assistants.
+  - **[3b Projects](/3.3-ai-projects/)**. Spinning up AI solutions (agents, models, NNs) to real-world problems.
   - **[4 Resources](/4_resources/)**. Detailed (docx) lab notes, Github, Wiki.
 - **A window to the AI future** 
 
