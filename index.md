@@ -38,7 +38,7 @@ See also the **[Wiki](https://github.com/terrytaylorbonn/auxdrone/wiki)** and ot
 
 <br>
 
-*Components of an AI "helpful" assistant (2,2b,3,3b)* <br>
+*Components of an AI "helpful" assistant (2, 2b, 3, 3b)* <br>
 <img src="/assets/M-25.png" alt="drones" width="80%">
 
 <!-- <br>
