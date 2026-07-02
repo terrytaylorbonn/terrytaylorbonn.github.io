@@ -14,8 +14,8 @@ This site is all about extracting core AI concepts from demos. For example, a **
 The ZiptieAI **[mission](/0-mission/)** is to provide
 - **Basic AI concepts**
 - **AI quickstart**
-  - **[QS demos](/0-qs/)** (selected demos).
-  - **[QS concepts](/0b-demos/)**.
+  - **[QS (demos)](/0-qs/)** (selected demos).
+  - **[(QS) concepts](/0b-demos/)**.
 - **AI deep dive** *(see diagram below)*
   - **[2 NNs](/2_models/)**. NNs, CNNs, and TFs (the core of AI).
   - **[2b Models](/2b_models/)**. Packaged NNs available via an API. <!-- Fine-tuning, local models, deployment, RAG, and model serving. -->
