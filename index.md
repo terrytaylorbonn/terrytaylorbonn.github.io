@@ -12,8 +12,8 @@ Nothing tells you what a site is about more than a demo. This **[demo](/0-demo/)
 <!-- ZiptieAI.com was created in 2024 to document my work on Ukrainian style ziptie'd [AI Drones](/1-drones/). -->
 
 The ZiptieAI **[mission](/0-mission/)** is to provide
-- **The truth about AI** (my take)
-- **Core AI demos and concepts**
+- **Basic AI concepts**
+- **AI demos and concepts**
   - **[Quick start (QS) demos](/0-qs/)**. Hands-on tour of low-level core AI functionality.
   - **[Concepts](/0b-demos/)**. Core concepts learned form the QS.
 - **AI deep dive** *(see diagram below)*
@@ -22,7 +22,7 @@ The ZiptieAI **[mission](/0-mission/)** is to provide
   - **[3 Agents](/3_agents/)**. Agents provide reliable workflows that use models as helpful assistants.
   - **[3b Projects](/3.3-ai-projects/) *(the end goal)***. Spinning up AI solutions (agents, models, NNs) to real-world problems.
   - **[4 Resources](/4_resources/)**. Detailed (docx) lab notes, Github, Wiki.
-- **Anticipation of the AI future** 
+- **A window to the AI future** 
 
 <!--<br>
 
