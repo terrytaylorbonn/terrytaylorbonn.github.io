@@ -123,6 +123,7 @@ An ongoing technical demonstrator where ESW components (3b parts 1 and 2), AI ag
 - [Lab 001 – Non-AI rules (what you just built)](/3b.3.0-001/)
 - Lab 002 – Same loop, but GPT explains why the activity is suspicious. 
 - Lab 003 – GPT recommends an action ("freeze product", "notify manager", etc.). 
+- **(TODO) Lab 003b... use fake vocab / 1) add to prompt or 2) fine tune**
 - Lab 004 – User replies in Mattermost ("approve"), and the agent updates Odoo. 
 - Lab 005 – Add logging to MongoDB and the ledger. 
 - Lab 006 – Generate a DITA report. 
