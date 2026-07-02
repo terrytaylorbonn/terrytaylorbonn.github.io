@@ -15,7 +15,9 @@ The **ZiptieAI mission** is to provide
 - 3 AI deep dive (code) (top level pages "2 NNs", "2b Models", "3 Agents", "3b Projects")
 - 4 A window to the AI future
 
-*https://www.youtube.com/watch?v=lSDC6-BdVus?t=341 HBM, diagram of NN, interconnecting multiple GPUs*
+Notes:
+- *https://www.youtube.com/watch?v=lSDC6-BdVus?t=341 HBM, diagram of NN, interconnecting multiple GPUs*
+- *https://www.zerohedge.com/ai/something-has-gone-completely-wrong-palantirs-alex-karp-goes-ballistic-openai-anthropic*
 
 <br>
 

@@ -44,17 +44,13 @@ For details on each project demo see
 
 <br>
 
---------------------------------
---------------------------------
-
-<br>
 
 ### **Part 1: Enterprise SW demos**
 
 Target system exists. FUTURE: Slack, Odoo, Jira, GitHub.
 
 *3b Project ecosystem for stages S1-S4 (add S4 DB?)*<br>
-<img src="/assets/M-39.png" alt="drones" width="55%"> 
+<img src="/assets/M-39.png" alt="drones" width="45%"> 
 
 <!--   - **3b.11 Slack**
   - **3b.2 JobRadar** (what it does so far 26.0506)-->
@@ -65,29 +61,13 @@ Target system exists. FUTURE: Slack, Odoo, Jira, GitHub.
 
 <br>
 
-#### [**3b.11 Slack** (26.0627)](/3b.3.11-ai-proj-11-slack/)
-
-(GPT) Slack is a representative enterprise software (ESW) application used to demonstrate several approaches to integrating AI into an existing system. Rather than focusing on Slack itself, the goal is to understand the different architectural patterns for adding AI capabilities to enterprise software.
-
-The demos progress from using Slack as a normal application (S1), to connecting an existing AI agent such as Claude through MCP (S2), to creating a custom Slack App/Bot that integrates an external AI agent directly into the Slack user interface (S3). Together these demos illustrate the evolution from simply using AI to building AI-assisted enterprise applications.
-
-<br>
-
-#### [**3b.12 Odoo** (26.0701)](/3b.3.12-ai-proj-12-odoo/)
-
-(GPT) Odoo is a representative enterprise software (ESW) platform used to demonstrate how AI can be integrated into real business applications and workflows. Rather than focusing on Odoo itself, the goal is to understand practical techniques for adding AI to existing enterprise systems, such as analyzing business data, automating workflows, generating summaries, detecting unusual activity, and assisting users within ERP applications. These demos illustrate how external AI agents can augment complex enterprise software while preserving the existing business logic and user interface.
+- [**3b.11 Slack** (26.0627)](/3b.3.11-ai-proj-11-slack/). (GPT) Slack is a representative enterprise software (ESW) application used to demonstrate several approaches to integrating AI into an existing system. Rather than focusing on Slack itself, the goal is to understand the different architectural patterns for adding AI capabilities to enterprise software. 
+  - The demos progress from using Slack as a normal application (S1), to connecting an existing AI agent such as Claude through MCP (S2), to creating a custom Slack App/Bot that integrates an external AI agent directly into the Slack user interface (S3). Together these demos illustrate the evolution from simply using AI to building AI-assisted enterprise applications.
+- [**3b.12 Odoo** (26.0701)](/3b.3.12-ai-proj-12-odoo/). (GPT) Odoo is a representative enterprise software (ESW) platform used to demonstrate how AI can be integrated into real business applications and workflows. Rather than focusing on Odoo itself, the goal is to understand practical techniques for adding AI to existing enterprise systems, such as analyzing business data, automating workflows, generating summaries, detecting unusual activity, and assisting users within ERP applications. These demos illustrate how external AI agents can augment complex enterprise software while preserving the existing business logic and user interface.
+- **3b.13 Github (CI/CD) (TODO)**
 
 <!-- (GPT) I actually like Odoo even more than Slack for your long-term direction. Slack demonstrates communication-centric AI, while Odoo demonstrates business-process AI (ERP, CRM, Helpdesk, Inventory, Accounting, Projects, etc.), which is closer to the kind of enterprise AI adoption work you want to showcase. -->
 
-<br>
-
-
-#### **3b.13 Github (CI/CD) (TODO)**
-
-<br>
-
---------------------------------
---------------------------------
 
 <br>
 
@@ -99,7 +79,7 @@ Instead external APIs (Gmail, MongoDB, Nmap, GitHub, Jira, REST APIs, Local file
 
 
 *3b standalone AI app (S4 only)*<br>
-<img src="/assets/M-41.png" alt="drones" width="30%"> 
+<img src="/assets/M-41.png" alt="drones" width="26%"> 
 
 
 <!-- 
@@ -113,38 +93,15 @@ Examples: n8n, Nmap Security Assistant, Ledger     DITA without DITA
 
 <br>
 
-#### [**3b.1 n8n** (26.0501)](/3b.3.1-ai-proj-1-n8n/)
-
-A basic test using Cursor with minimal manual coding. 
+- [**3b.1 n8n** (26.0501)](/3b.3.1-ai-proj-1-n8n/). A basic test using Cursor with minimal manual coding. 
   - Main system = n8n LOCAL for test data input.
   - 3b Project = Input data from n8n > gpt-40-mini LOCAL > mongoDB > index.html (UI).
   - 3 External agent = cursor_11_llm_canonical.py
   - 2b Model = gpt-40-mini LOCAL. 
-
-<br>
-
-#### [**3b.2 JobRadar** (what it does so far 26.0506)](/3b.3.2-ai-proj-2-jobradar/)
-
-Ingests data from different sources and uses LLM to find matching data and summarize. The results are then sent by email, google docs, etc. Runs locally and on Cursor. Spun up in 4 days. **I did not even look at the code (not necessary). This is probably how such apps will be done in the future.** *I will create 1/2 functional/ecosystem diagrams in future (after app design stabilizes)*.
-
-
-<br>
-
-#### [**3b.3 NMAP Security Assistant** (26.0621)](/3b.3.3-ai-proj-3-nmap/)
-
-This project began as a simple Nmap demo: scan localhost, parse the XML output, and post a summary to Mattermost. The long-term goal is to build a controlled local AI assistant for learning PC security and maintenance. The assistant will inspect only approved local targets, explain findings in plain English, track results in an append-only ledger, and help the user understand problems such as open ports, unused services, unused apps, and low disk space.
-
-<br>
-
-#### [**3b.4 Ledger** (TODO)](/3b.3.4-ai-proj-4-ledger/)
-
-Stores messy human text in an append-only encrypted ledger, then uses AI to search, summarize, and generate new entries without requiring a rigid database schema. The ledger stays immutable. Then the AI/agent produces the current “view”. So nothing is edited in place. The system only appends.
-
-<br>
-
-#### [**3b.5 DITA w/o DITA** (TODO)](/3b.3.5-ai-proj-5-dita/)
-
-I have done this before (need to find the wiki page): Maintaining a DITA site but by using AI instead of the DITA tools. For this next demo, I'd like to do something clean.. conforms to DITA, but uses only AI. DITA was created when there was no other way to maintain text reuse that with complex DITA tools (its analogous to the UI's that required strict data entry so that the backend logic could handle the input).
+- [**3b.2 JobRadar** (what it does so far 26.0506)](/3b.3.2-ai-proj-2-jobradar/). Ingests data from different sources and uses LLM to find matching data and summarize. The results are then sent by email, google docs, etc. Runs locally and on Cursor. Spun up in 4 days. **I did not even look at the code (not necessary). This is probably how such apps will be done in the future.** *I will create 1/2 functional/ecosystem diagrams in future (after app design stabilizes)*.
+- [**3b.3 NMAP Security Assistant** (26.0621)](/3b.3.3-ai-proj-3-nmap/). This project began as a simple Nmap demo: scan localhost, parse the XML output, and post a summary to Mattermost. The long-term goal is to build a controlled local AI assistant for learning PC security and maintenance. The assistant will inspect only approved local targets, explain findings in plain English, track results in an append-only ledger, and help the user understand problems such as open ports, unused services, unused apps, and low disk space.
+- [**3b.4 Ledger** (TODO)](/3b.3.4-ai-proj-4-ledger/). Stores messy human text in an append-only encrypted ledger, then uses AI to search, summarize, and generate new entries without requiring a rigid database schema. The ledger stays immutable. Then the AI/agent produces the current “view”. So nothing is edited in place. The system only appends.
+- [**3b.5 DITA w/o DITA** (TODO)](/3b.3.5-ai-proj-5-dita/). I have done this before (need to find the wiki page): Maintaining a DITA site but by using AI instead of the DITA tools. For this next demo, I'd like to do something clean.. conforms to DITA, but uses only AI. DITA was created when there was no other way to maintain text reuse that with complex DITA tools (its analogous to the UI's that required strict data entry so that the backend logic could handle the input).
 
 
 <!-- $$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$
@@ -157,12 +114,6 @@ $$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$ -->
 
 <br>
 
-
-
---------------------------------
---------------------------------
-
-<br>
 
 
 ### **Part 3: [Main integration demo](/3b.3.0-ai-proj-demo-main/)**
