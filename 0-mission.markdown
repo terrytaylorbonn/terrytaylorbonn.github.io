@@ -15,6 +15,8 @@ The **ZiptieAI mission** is to provide
 - 3 AI deep dive (code) (top level pages "2 NNs", "2b Models", "3 Agents", "3b Projects")
 - 4 A window to the AI future
 
+*https://www.youtube.com/watch?v=lSDC6-BdVus?t=341 HBM, diagram of NN, interconnecting multiple GPUs*
+
 <br>
 
 ### **1 Basic AI concepts** 
@@ -90,7 +92,7 @@ Note: TF algorithms are referred to as "neural" networks because the diagrams fo
 - Repeat this a massive number of times. This "training" can take weeks. 
 - Hope for a stable result. The training process is not predictable.
 
-**Inference** is when the TF is used to recognize the pattern of the some never before encountered input (not matching **exactly** anything the TF was trained on). This is the "magic" of AI. The TF computes the probabilities of all possible outputs (usually 50K vocab tokens) and the best token is selected (unless "tempearture" is used; this is a gimmick where the TF selects randomly one of the more probable tokens to give the illusion that the TF is non-deterministic). 
+**Inference** is when the TF is used to recognize the pattern of the some never before encountered input (not matching **exactly** anything the TF was trained on). This is the "magic" of AI. The TF computes the probabilities of all possible outputs (usually 50K vocab tokens) and the best token is selected (unless "temperature" is used; this is a gimmick where the TF selects randomly one of the more probable tokens to give the illusion that the TF is non-deterministic). 
 
 <img src="/assets/M-50.png" alt="drones" width="23%">
 
