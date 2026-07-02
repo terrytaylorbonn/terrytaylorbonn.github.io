@@ -1,0 +1,258 @@
+---
+layout: page
+title: "3b.3.0-001"
+permalink: /3b.3.0-001/
+description: Last edit 26.0524
+---
+
+[← 3b Projects](/3.3-ai-projects/)
+
+<br>
+
+The full lab notes for this demo are in docx \#606.2 on Gdrive.
+
+<img src="/assets/odoo-001-1.png" alt="drones" width="35%">
+
+
+```
+so now do 
+Step 2 — Non-AI agent loop 
+Create suspicious Odoo activity → scan/detect with Python → alert/log results.
+
+lab_001_s2_no_ai.py
+the last demo was odoo_05_ai_mattermost.py
+use that as a starter (or whatever you want).
+
+i suggest something like this (do what you think best)
+1 create whatever suspicious activity you think is a good demo. in odoo.
+     add something that can be detected without AI, and something that cant.
+2 add agent code to detect.
+3 alert on mattermost 
+
+ 
+
+
+# lab_001_s2_no_ai.py
+
+import json
+import xmlrpc.client
+from datetime import datetime, timezone
+
+import requests
+
+# ODOO CONFIG
+URL = "http://localhost:8069"
+DB = "odoo_demo"
+USERNAME = "admin@example.com"
+PASSWORD = "admin"
+
+# MATTERMOST CONFIG
+MATTERMOST_SERVER = "http://localhost:8065"
+MATTERMOST_TOKEN = "61tcpmwpx3ydiynbt48918q9oo"
+CHANNEL_ID = "4qpjddhwxif6umbmr8bprzksza"
+
+common = xmlrpc.client.ServerProxy(f"{URL}/xmlrpc/2/common")
+uid = common.authenticate(DB, USERNAME, PASSWORD, {})
+
+if not uid:
+    raise Exception("Odoo login failed.")
+
+models = xmlrpc.client.ServerProxy(f"{URL}/xmlrpc/2/object")
+
+def create_product(name, price, note):
+    return models.execute_kw(
+        DB, uid, PASSWORD,
+        "product.template",
+        "create",
+        [{
+            "name": name,
+            "list_price": price,
+            "description_sale": note,
+            "sale_ok": True,
+        }],
+    )
+
+def create_demo_activity():
+    normal_id = create_product(
+        "LAB normal product",
+        49.99,
+        "Normal product for lab demo.",
+    )
+
+    suspicious_id = create_product(
+        "LAB SUSPICIOUS zero-price service",
+        0.00,
+        "Detectable without AI because price is zero.",
+    )
+
+    ambiguous_id = create_product(
+        "LAB ambiguous consulting item",
+        250.00,
+        "May need AI review later, but not detected in Step 2.",
+    )
+
+    return normal_id, suspicious_id, ambiguous_id
+
+def detect_suspicious_products():
+    domain = [
+        ["name", "ilike", "LAB"],
+        "|",
+        ["list_price", "<=", 0],
+        ["list_price", ">", 10000],
+    ]
+
+    return models.execute_kw(
+        DB,
+        uid,
+        PASSWORD,
+        "product.template",
+        "search_read",
+        [domain],
+        {"fields": ["id", "name", "list_price", "description_sale"]},
+    )
+
+def log_event(records):
+    event = {
+        "time": datetime.now(timezone.utc).isoformat(),
+        "source": "lab_001_s2_no_ai.py",
+        "event_type": "odoo_rule_based_detection",
+        "detected_count": len(records),
+        "records": records,
+    }
+
+    with open("lab_001_events.jsonl", "a", encoding="utf-8") as f:
+        f.write(json.dumps(event) + "\n")
+
+    return event
+
+def post_to_mattermost(event):
+    headers = {
+        "Authorization": f"Bearer {MATTERMOST_TOKEN}",
+        "Content-Type": "application/json",
+    }
+
+    lines = [
+        "### Odoo Non-AI Agent Alert",
+        "",
+        f"Detected **{event['detected_count']}** suspicious Odoo product(s).",
+        "",
+        "**Detection rule:**",
+        "- product name contains `LAB`",
+        "- price is `<= 0` or `> 10000`",
+        "",
+        "**Detected records:**",
+    ]
+
+    for r in event["records"]:
+        lines.append(f"- ID {r['id']}: {r['name']} | price={r['list_price']}")
+
+    payload = {
+        "channel_id": CHANNEL_ID,
+        "message": "\n".join(lines),
+    }
+
+    r = requests.post(
+        f"{MATTERMOST_SERVER}/api/v4/posts",
+        headers=headers,
+        json=payload,
+    )
+
+    print("Mattermost status:", r.status_code)
+
+    if r.status_code == 201:
+        print("Posted successfully.")
+    else:
+        print(r.text)
+
+def main():
+    print("Creating demo Odoo activity...")
+    create_demo_activity()
+
+    print("Scanning Odoo for suspicious activity...")
+    suspicious = detect_suspicious_products()
+
+    print("\nDetected suspicious records:")
+    for r in suspicious:
+        print(r)
+
+    event = log_event(suspicious)
+    post_to_mattermost(event)
+
+    print("\nDone.")
+
+if __name__ == "__main__":
+    main()
+
+
+python lab_001_s2_no_ai.py
+
+
+PS C:\Users\terry\Downloads\odoo_demo> python lab_001_s2_no_ai.py
+Creating demo Odoo activity...
+Scanning Odoo for suspicious activity...
+
+Detected suspicious records:
+{'id': 41, 'name': 'LAB SUSPICIOUS zero-price service', 'list_price': 0.0, 'description_sale': 'Detectable without AI because price is zero.'}
+Mattermost status: 201
+Posted successfully.
+
+Done.
+PS C:\Users\terry\Downloads\odoo_demo>
+
+ 
+
+In pgAdmin:
+1.	Expand:
+Servers
+  → PostgreSQL
+    → Databases
+      → odoo_demo
+        → Schemas
+          → public
+            → Tables
+2.	Find:
+product_template
+3.	Right-click → View/Edit Data → All Rows
+
+SELECT
+id,
+name->>'en_US' AS name,
+list_price,
+description_sale
+FROM product_template
+WHERE name->>'en_US' LIKE 'LAB%';
+
+ 
+
+
+Excellent. I actually like this demo because it's simple but demonstrates the complete loop:
+Python script
+      ↓
+Create Odoo activity
+      ↓
+Rule-based agent scans Odoo
+      ↓
+Suspicious record detected
+      ↓
+Mattermost alert
+This is a true agent even though it contains no AI. It continuously:
+•	observes, 
+•	applies rules, 
+•	detects, 
+•	communicates. 
+That's exactly the kind of deterministic control loop found in many enterprise systems (including Palantir-style workflows).
+I would keep this as Lab 001.
+Then the progression becomes very natural:
+•	Lab 001 – Non-AI rules (what you just built). 
+•	Lab 002 – Same loop, but GPT explains why the activity is suspicious. 
+•	Lab 003 – GPT recommends an action ("freeze product", "notify manager", etc.). 
+•	Lab 004 – User replies in Mattermost ("approve"), and the agent updates Odoo. 
+•	Lab 005 – Add logging to MongoDB and the ledger. 
+•	Lab 006 – Generate a DITA report. 
+Notice that the control loop never changes. You simply make the agent progressively smarter. That's a very clean architecture and a strong story for your portfolio.
+```
+
+
+<br> 
+
+26.0702 (v1 26.0701)
