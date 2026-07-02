@@ -11,16 +11,22 @@ description: Last edit 26.0524
 
 The full lab notes for this demo are in docx \#606.2 on Gdrive.
 
-<br>
-
 **TOC**
+- 1 Overview of steps (GPT)
+- 2 Create docker-compose.yml
+- 3 odoo_populate_01.py
+- 4 odoo_02_crud.py
+- 5 python odoo_03_quote.py
+- 6 Edit docker-compose.yml
+- 7 odoo_04_ai_report.py
+- 8 Add AI
+- 9 odoo_04_ai_report.py (MATTERMOST)
 
 <br>
 
-# **0 Overview**
+### 1 Overview of steps (GPT) 
 
 ```
-Overview of steps (GPT) 
 The goal:
 Odoo ERP ↓ Python XML-RPC ↓ OpenAI business analysis ↓ Mattermost REST API ↓ team alert
 
@@ -31,10 +37,13 @@ S4  AI summarizes customers
 S5  AI creates quotation
 S6  AI daily business report
 S7  Slack/Mattermost notification
+```
 
+<br>
 
-Create docker-compose.yml:
+### 2 Create docker-compose.yml:
 
+```
 services:
   db:
     image: postgres:15
@@ -67,13 +76,13 @@ Run:
 docker compose up -d
 ```
 
-
 <img src="/assets/odoo-01.png" alt="drones" width="65%">
- 
+
+<br>
+
+### 3 odoo_populate_01.py
 
 ```
-# odoo_populate_01.py
-
 import xmlrpc.client
 
 URL = "http://localhost:8069"
@@ -149,11 +158,12 @@ terry@LAPTOP-HKPDHF7M MINGW64 ~/Downloads/odoo_demo
 ```
 
 <img src="/assets/odoo-02.png" alt="drones" width="65%">
- 
+
+<br>
+
+### 4 # odoo_02_crud.py
 
 ```
-# odoo_02_crud.py
-
 import xmlrpc.client
 
 URL = "http://localhost:8069"
@@ -239,10 +249,13 @@ Chair floor protection              $12.00
 .................
 (.venv) 
 terry@LAPTOP-HKPDHF7M MINGW64 ~/Downloads/odoo_demo
+```
 
+<br>
 
+### 5 python odoo_03_quote.py 
 
- $ python odoo_03_quote.py 
+```
 Created quotation ID: 22
 (.venv) 
 terry@LAPTOP-HKPDHF7M MINGW64 ~/Downloads/odoo_demo
@@ -313,9 +326,11 @@ print(f"Created quotation ID: {quotation_id}")
 
 <img src="/assets/odoo-03.png" alt="drones" width="65%">
  
+<br>
+
+### 6 Edit docker-compose.yml.
 
 ```
-Edit docker-compose.yml.
 Change the db service to:
 
 db:
@@ -342,10 +357,11 @@ Password: odoo
 
 <img src="/assets/odoo-04.png" alt="drones" width="65%">
  
+<br>
+
+### 7 odoo_04_ai_report.py
 
 ```
-# odoo_04_ai_report.py
-
 import xmlrpc.client
 import json
 
@@ -425,9 +441,13 @@ python odoo_04_ai_report.py
 }
 (.venv) 
 terry@LAPTOP-HKPDHF7M MINGW64 ~/Downloads/odoo_demo
+```
 
+<br>
 
-=2 Yes. Now add AI.
+### 8 Yes. Now add AI.
+
+```
 Install/check OpenAI package:
 pip install openai
 Set your key:
@@ -496,10 +516,13 @@ Here's a summary of your Odoo ERP data:
 4. **Suggested Next Action**: Follow up with Alpha Dental regarding their draft orders to move them forward to completion.
 (.venv) 
 terry@LAPTOP-HKPDHF7M MINGW64 ~/Downloads/odoo_demo
+```
 
+<br>
 
-# odoo_04_ai_report.py  (MATTERMOST)
+### 9 odoo_04_ai_report.py  (MATTERMOST)
 
+```
 import xmlrpc.client
 import json
 
