@@ -124,6 +124,15 @@ An ongoing technical demonstrator where ESW components (3b parts 1 and 2), AI ag
 - Lab 002 – Same loop, but GPT explains why the activity is suspicious. 
 - Lab 003 – GPT recommends an action ("freeze product", "notify manager", etc.). 
 - **(TODO) Lab 003b... use fake vocab / 1) add to prompt or 2) fine tune**
+```
+GTP: I think that's an excellent next lab.
+TODO: Lab 003b – Domain Vocabulary Demo
+Create fake enterprise terms (e.g., ZARK, MIBO, TULP).
+Show that the base model does not understand them.
+Option 1: Add a glossary to the prompt → model succeeds.
+Option 2: Fine-tune the same model → model succeeds without the glossary.
+It's a clean demonstration of the difference between prompt engineering and fine-tuning, using a realistic enterprise scenario rather than a generic benchmark.
+```
 - Lab 004 – User replies in Mattermost ("approve"), and the agent updates Odoo. 
 - Lab 005 – Add logging to MongoDB and the ledger. 
 - Lab 006 – Generate a DITA report. 
