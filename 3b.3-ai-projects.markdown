@@ -5,120 +5,56 @@ permalink: /3.3-ai-projects/
 description: Last edit 26.0618
 ---
 
-<!-- [← 3 Agents](/3_agents/) -->
-
 <br>
 
-<!-- Each demo will have a version of the following 2 main diagrams:
+*Reorganized 26.0703*
 
-- **1 Project diagram** (below) (system integration diagram). 
-
-*3b focuses on how all the components are interconnected*<br>
-<img src="/assets/M-26.png" alt="drones" width="37%">-->
-
-
-<!-- - **2 Project diagram with AI details** (below). This diagram will describe
-  - **Main system** (an existing ERP, etc system). Why it requires AI, etc.
-  - **3b Project** description (goals, etc)
-  - **3 External agent** functionality. Deployment details (for demo and release versions).
-  - **2b Model** type (openAI, Gemma, etc) and location (remote, local WSL2, etc). Will it be fine-tuned, etc.
-  - If the model is custom made then **2 NN/CNN/TF**. The internal design of the NN. Deployment, training data set, HW, etc details. <br>
-<img src="/assets/M-25.png" alt="drones" width="80%">  -->
-
-
-(GPT) This section is the long-term goal of ZiptieAI.com. The focus is on building a central AI agent that integrates with many different enterprise systems and demonstrates practical AI-assisted workflows. Rather than mastering a single application, the goal is to show how AI can be applied quickly and effectively across a wide variety of enterprise software (ESW), business processes, and real-world situations.
-
-A primary objective is to demonstrate that AI allows developers to become productive with unfamiliar enterprise systems very quickly. GPT, Claude, and other AI tools were used to explain APIs, generate starter code, connect multiple systems, and iteratively debug the workflows. Many working prototypes were completed within a few hours.
+This section is the long-term goal of ZiptieAI.com. The focus is on building practical AI applications and rapidly integrating AI with real-world software systems. Rather than mastering individual products, the objective is to demonstrate reliable AI agents that solve practical problems, automate workflows, and adapt quickly to unfamiliar environments.
 
 **TOC**
-- **Part 1: Enterprise Software demos**. AI integrated with existing enterprise systems such as Odoo, GitHub, Mattermost, Slack, MongoDB, and other business applications.
-- **Part 2: Standalone AI Applications**. Applications built from the ground up where AI is the primary product rather than an enhancement to an existing enterprise system.
-- **Part 3: Main integration demo**. An ongoing technical demonstrator where ESW components (3b parts 1 and 2), AI agents (3), and models (2b) are are continuously integrated and tested. 
 
-
-<!-- ************** PUT THIS IN EACH SUBSECTION **************************************
-For details on each project demo see 
-- Lab notes (docx): [#606\_ai_ides_.docx](https://drive.google.com/drive/folders/1-Adawag9uA8_bq-hDF-nOuPYaRLz1eEO)
-- Repo [602-2_D1-tool-LLM](https://github.com/terrytaylorbonn/602-2_D1-tool-LLM) -->
+- **Part 1: Projects**. Practical AI applications that provide useful functionality.
+- **Part 2: Integration Demos**. Demonstrations of integrating the central AI agent with existing software and enterprise systems.
+- **Part 3: Lab Demos**. Experimental prototypes used to develop, test, and evaluate new AI techniques.
 
 
 <br>
 
+### **Part 1: Projects**
 
-### **Part 1: Enterprise SW demos**
+Practical AI applications that provide useful functionality.
 
-Target system exists. FUTURE: Slack, Odoo, Jira, GitHub.
+- [**3b.2 JobRadar** (what it does so far 26.0506)](/3b.3.2-ai-proj-2-jobradar/). Ingests data from different sources and uses LLM to find matching data and summarize. The results are then sent by email, google docs, etc. Runs locally and on Cursor. Spun up in 4 days. **I did not even look at the code (not necessary). This is probably how such apps will be done in the future.** *I will create 1/2 functional/ecosystem diagrams in future (after app design stabilizes)*.
+- [**3b.3 (NMAP) Security Assistant** (26.0621)](/3b.3.3-ai-proj-3-nmap/). This project began as a simple Nmap demo: scan localhost, parse the XML output, and post a summary to Mattermost. The long-term goal is to build a controlled local AI assistant for learning PC security and maintenance. The assistant will inspect only approved local targets, explain findings in plain English, track results in an append-only ledger, and help the user understand problems such as open ports, unused services, unused apps, and low disk space.
+- [**3b.4 Ledger** (TODO)](/3b.3.4-ai-proj-4-ledger/). Stores messy human text in an append-only encrypted ledger, then uses AI to search, summarize, and generate new entries without requiring a rigid database schema. The ledger stays immutable. Then the AI/agent produces the current “view”. So nothing is edited in place. The system only appends.
+- [**3b.5 DITA assistant** (TODO)](/3b.3.5-ai-proj-5-dita/). I have done this before (need to find the wiki page): Maintaining a DITA site but by using AI instead of the DITA tools. For this next demo, I'd like to do something clean.. conforms to DITA, but uses only AI. DITA was created when there was no other way to maintain text reuse that with complex DITA tools (its analogous to the UI's that required strict data entry so that the backend logic could handle the input).
+- **(future) Inventory Assistant**
+- **(future) Compliance Assistant**
 
-*3b Project ecosystem for stages S1-S4 (add S4 DB?)*<br>
+<br>
+
+### **Part 2: Integration demos**
+
+Demonstrations of integrating the central AI agent with existing software and enterprise systems.
+
+*Integration stages*<br>
 <img src="/assets/M-39.png" alt="drones" width="45%"> 
-
-<!--   - **3b.11 Slack**
-  - **3b.2 JobRadar** (what it does so far 26.0506)-->
-
-
-
-<!-- <img src="/assets/demo2_oauth.png" alt="drones" width="38%">  -->
-
-<br>
-
-- [**3b.11 Slack** (26.0627)](/3b.3.11-ai-proj-11-slack/). (GPT) Slack is a representative enterprise software (ESW) application used to demonstrate several approaches to integrating AI into an existing system. Rather than focusing on Slack itself, the goal is to understand the different architectural patterns for adding AI capabilities to enterprise software. 
-  - The demos progress from using Slack as a normal application (S1), to connecting an existing AI agent such as Claude through MCP (S2), to creating a custom Slack App/Bot that integrates an external AI agent directly into the Slack user interface (S3). Together these demos illustrate the evolution from simply using AI to building AI-assisted enterprise applications.
-- [**3b.12 Odoo** (26.0701)](/3b.3.12-ai-proj-12-odoo/). (GPT) Odoo is a representative enterprise software (ESW) platform used to demonstrate how AI can be integrated into real business applications and workflows. Rather than focusing on Odoo itself, the goal is to understand practical techniques for adding AI to existing enterprise systems, such as analyzing business data, automating workflows, generating summaries, detecting unusual activity, and assisting users within ERP applications. These demos illustrate how external AI agents can augment complex enterprise software while preserving the existing business logic and user interface.
-- **3b.13 Github (CI/CD) (TODO)**
-
-<!-- (GPT) I actually like Odoo even more than Slack for your long-term direction. Slack demonstrates communication-centric AI, while Odoo demonstrates business-process AI (ERP, CRM, Helpdesk, Inventory, Accounting, Projects, etc.), which is closer to the kind of enterprise AI adoption work you want to showcase. -->
-
-
-<br>
-
-
-### **Part 2: Standalone AI Applications**
-
-No target enterprise system. 
-Instead external APIs (Gmail, MongoDB, Nmap, GitHub, Jira, REST APIs, Local files).
-
-
-*3b standalone AI app (S4 only)*<br>
-<img src="/assets/M-41.png" alt="drones" width="26%"> 
-
-
-<!-- 
-Examples: n8n, Nmap Security Assistant, Ledger     DITA without DITA
-  - **3b.1 n8n** (26.0501) (needs update)
-  - **3b.3 NMAP Security Assistant** (26.0621)
-  - **3b.4 Ledger** (TODO)
-  - **3b.5 DITA w/o DITA** (TODO) -->
-
-
-
-<br>
 
 - [**3b.1 n8n** (26.0501)](/3b.3.1-ai-proj-1-n8n/). A basic test using Cursor with minimal manual coding. 
   - Main system = n8n LOCAL for test data input.
   - 3b Project = Input data from n8n > gpt-40-mini LOCAL > mongoDB > index.html (UI).
   - 3 External agent = cursor_11_llm_canonical.py
   - 2b Model = gpt-40-mini LOCAL. 
-- [**3b.2 JobRadar** (what it does so far 26.0506)](/3b.3.2-ai-proj-2-jobradar/). Ingests data from different sources and uses LLM to find matching data and summarize. The results are then sent by email, google docs, etc. Runs locally and on Cursor. Spun up in 4 days. **I did not even look at the code (not necessary). This is probably how such apps will be done in the future.** *I will create 1/2 functional/ecosystem diagrams in future (after app design stabilizes)*.
-- [**3b.3 NMAP Security Assistant** (26.0621)](/3b.3.3-ai-proj-3-nmap/). This project began as a simple Nmap demo: scan localhost, parse the XML output, and post a summary to Mattermost. The long-term goal is to build a controlled local AI assistant for learning PC security and maintenance. The assistant will inspect only approved local targets, explain findings in plain English, track results in an append-only ledger, and help the user understand problems such as open ports, unused services, unused apps, and low disk space.
-- [**3b.4 Ledger** (TODO)](/3b.3.4-ai-proj-4-ledger/). Stores messy human text in an append-only encrypted ledger, then uses AI to search, summarize, and generate new entries without requiring a rigid database schema. The ledger stays immutable. Then the AI/agent produces the current “view”. So nothing is edited in place. The system only appends.
-- [**3b.5 DITA w/o DITA** (TODO)](/3b.3.5-ai-proj-5-dita/). I have done this before (need to find the wiki page): Maintaining a DITA site but by using AI instead of the DITA tools. For this next demo, I'd like to do something clean.. conforms to DITA, but uses only AI. DITA was created when there was no other way to maintain text reuse that with complex DITA tools (its analogous to the UI's that required strict data entry so that the backend logic could handle the input).
-
-
-<!-- $$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$
-3b.1 Nmap Security Assistant
-3b.2 DITA Documentation Assistant
-3b.3 Mattermost Chat Assistant
-3b.4 Odoo ERP Assistant
-3b.5 Data Conversion Assistant
-$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$ --> 
+- [**3b.11 Slack** (26.0627)](/3b.3.11-ai-proj-11-slack/). (GPT) Slack is a representative enterprise software (ESW) application used to demonstrate several approaches to integrating AI into an existing system. Rather than focusing on Slack itself, the goal is to understand the different architectural patterns for adding AI capabilities to enterprise software. 
+  - The demos progress from using Slack as a normal application (S1), to connecting an existing AI agent such as Claude through MCP (S2), to creating a custom Slack App/Bot that integrates an external AI agent directly into the Slack user interface (S3). Together these demos illustrate the evolution from simply using AI to building AI-assisted enterprise applications.
+- [**3b.12 Odoo** (26.0701)](/3b.3.12-ai-proj-12-odoo/). (GPT) Odoo is a representative enterprise software (ESW) platform used to demonstrate how AI can be integrated into real business applications and workflows. Rather than focusing on Odoo itself, the goal is to understand practical techniques for adding AI to existing enterprise systems, such as analyzing business data, automating workflows, generating summaries, detecting unusual activity, and assisting users within ERP applications. These demos illustrate how external AI agents can augment complex enterprise software while preserving the existing business logic and user interface.
+- **3b.13 Github (CI/CD) (TODO)**
 
 <br>
 
+### **Part 3: Lab demos**
 
-
-### **Part 3: [Main integration demo](/3b.3.0-ai-proj-demo-main/)**
-
-An ongoing technical demonstrator where ESW components (3b parts 1 and 2), AI agents (3), and models (2b; possibly with custom NNs from 2) are are continuously integrated and tested.
+Experimental prototypes used to develop, test, and evaluate new AI techniques.
 
 - [Lab 001 – Non-AI rules (what you just built)](/3b.3.0-001/)
 - Lab 002 – Same loop, but GPT explains why the activity is suspicious. 
@@ -141,7 +77,7 @@ It's a clean demonstration of the difference between prompt engineering and fine
 <br>
 
 
-26.0702 (0524)
+26.0703 (0524)
 
 <!-- Bearer token for basic security.
 <img src="/assets/cursor_demo1_01.png" alt="drones" width="50%"> 

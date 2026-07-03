@@ -1,6 +1,6 @@
 ---
 layout: page
-title: "3b.5 AI project 5 DITA w/o DITA"
+title: "3b.5 AI project DITA assistant"
 permalink: /3b.3.5-ai-proj-5-dita/
 description: Last edit 26.0501
 ---

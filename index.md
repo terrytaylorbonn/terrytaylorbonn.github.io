@@ -39,8 +39,16 @@ See also the **[Wiki](https://github.com/terrytaylorbonn/auxdrone/wiki)** and ot
 
 <br>
 
-*Components of an AI "helpful" assistant (2, 2b, 3, 3b)* <br>
+The following 2 diagrams summarize the core ZiptieAI take on AI.
+
+*AI = deterministic computational algorithms that are extremely useful for specific types of applications* <br>
 <img src="/assets/M-25.png" alt="drones" width="80%">
+
+*Believing the fairy tale that AI has intelligence will cost your dearly*<br>
+<img src="/assets/M-11b.png" alt="drones" width="27%"><br>
+
+
+
 
 <!-- <br>
 

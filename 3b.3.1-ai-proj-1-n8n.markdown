@@ -1,6 +1,6 @@
 ---
 layout: page
-title: "3b.1 AI project n8n"
+title: "3b.1 AI integration demo n8n"
 permalink: /3b.3.1-ai-proj-1-n8n/
 description: Last edit 26.0524
 ---

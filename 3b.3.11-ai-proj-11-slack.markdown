@@ -1,6 +1,6 @@
 ---
 layout: page
-title: "3b.3.11 AI project 11 Slack"
+title: "3b.3.11 AI integration demo Slack"
 permalink: /3b.3.11-ai-proj-11-slack/
 description: Last edit 26.0524
 ---
