@@ -263,13 +263,16 @@ The code demos are organized into the 4 groups shown in the diagram below.
 
 AI has a big future even after the pre-IPO hype is over. **Those who understand how to integrate AI into their own workflows will benefit the most. ZiptieAI has a mission to help myself (and others) stay ahead of the AI curve**. In the near future, AI integration skills will be required in all business segments (just like with the PC 40 years ago). This work will require a massive number of tech workers who, empowered by AI tools, will integrate AI **as a helpful assistant** into all areas of life.  
 
+
 *The helpful assistant of the future*<br>
 <img src="/assets/M-10.png" alt="desc" width="35%"> 
 
+*The future man-machine interface ([NL](/nl/))*<br>
+<img src="/assets/nl-01.png" alt="desc" width="15%"> 
 
 <br>
 
-26.0702 (v1 26.0611)
+26.0703 (v1 26.0611)
 
 <!-- *A successful mission for AI (left) and not so successful mission (right).* <br>
 <img src="/assets/ziptiedrone2.png" alt="drones" width="23%"> <img src="/assets/waymo.png" alt="drones" width="26%">  -->
