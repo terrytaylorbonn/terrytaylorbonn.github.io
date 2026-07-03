@@ -42,6 +42,7 @@ header_pages:
   - 3_agents.markdown
   - 3b.3-ai-projects.markdown
   - 4_resources.markdown
+  - pal.markdown
   - 5-about.markdown
 
 # Build settings
