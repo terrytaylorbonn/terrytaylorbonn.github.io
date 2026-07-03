@@ -23,15 +23,7 @@ The ZiptieAI **[mission](/0-mission/)** is to provide
   - **[4 Resources](/4_resources/)**. Detailed (docx) lab notes, Github, Wiki.
   - [PAL](/pal/). Palantir Foundry demos.
 - **A window to the AI future** ([NL](/nl/))
-
-<!--<br>
-
-
-
-### **Basics**
-
- ### **Where it all began**
-  - [1 Drones](/1-drones/). ZiptieAI started out as a site about AI drones. <br><br> -->
+ 
 
 See also the **[Wiki](https://github.com/terrytaylorbonn/auxdrone/wiki)** and other links in the footer.
 
