@@ -22,6 +22,7 @@ The ZiptieAI **[mission](/0-mission/)** is to provide
   - **[3 Agents](/3_agents/)**. Python agents that implement reliable workflows, using AI models as helpful assistants.
   - **[3b Projects](/3.3-ai-projects/)**. Practical Agentic AI projects that integrate enterprise software or implement standalone AI applications. The Main Integration Lab demonstrates rapid, flexible AI integration across multiple systems.
   - **[4 Resources](/4_resources/)**. Detailed (docx) lab notes, Github, Wiki.
+  - [PAL](/pal/)**. Palantir Foundry demos (TODO).
 - **A window to the AI future** 
 
 <!--<br>
