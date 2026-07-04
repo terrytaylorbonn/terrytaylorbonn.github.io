@@ -15,7 +15,8 @@ The ZiptieAI **[mission](/0-mission/)** is to provide
 - **Basic AI concepts**
 - **AI quickstart**
   - **[QS (demos)](/0-qs/)** (selected demos).
-  - **[(QS) concepts](/0b-demos/)**.- **AI deep dive** *(see diagram below)*
+  - **[(QS) concepts](/0b-demos/)**.
+- **AI deep dive** *(see diagram below)*
   - **[2 NNs](/2_models/)**. NNs, CNNs, and TFs (the source of the "I" in AI).
   - **[2b Models](/2b_models/)**. Packaged AI models (primarily LLMs) available through an API. Fine-tuning, local models, deployment, and model serving. 
   - **[3 Agents](/3_agents/)**. Python agents that implement reliable workflows, using AI models as helpful assistants.
@@ -35,7 +36,7 @@ The following 2 diagrams summarize the core ZiptieAI take on AI.
 *AI = deterministic computational algorithms that are extremely useful for specific types of applications* <br>
 <img src="/assets/M-25.png" alt="drones" width="80%">
 
-*Believing the fairy tale that AI has intelligence (fed to you by AI gurus who know better) could cost your dearly ("dont bother learning programming or training for a job, our AI will do everything for you")*<br>
+*Believing the fairy tale that AI has intelligence (fed to you by AI gurus who know better) could cost you dearly ("dont bother learning programming or training for a job, our AI will do everything for you")*<br>
 <img src="/assets/M-11b.png" alt="drones" width="27%"><br>
 
 
