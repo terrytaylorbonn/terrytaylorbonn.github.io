@@ -36,7 +36,7 @@ The following 2 diagrams summarize the core ZiptieAI take on AI.
 *AI = deterministic computational algorithms that are extremely useful for specific types of applications* <br>
 <img src="/assets/M-25.png" alt="drones" width="80%">
 
-*Believing the fairy tale that AI has intelligence (fed to you by AI gurus who know better) could cost you dearly ("dont bother learning programming or training for a job, our AI will do everything for you")*<br>
+*Believing the fairy tale that AI has intelligence (fed to you by AI gurus who know better) could cost you dearly ("dont bother learning programming or training for a job, our AI will do everything for you") (internal agent + transformer (TF) = LLM)*<br>
 <img src="/assets/M-11b.png" alt="drones" width="27%"><br>
 
 
