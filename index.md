@@ -18,7 +18,7 @@ The ZiptieAI **[mission](/0-mission/)** is to provide
   - **[(QS) concepts](/0b-demos/)**.
 - **AI deep dive** *(see diagram below)*
   - **[2 NNs](/2_models/)**. NNs, CNNs, and TFs (the source of the "I" in AI).
-  - **[2b Models](/2b_models/)**. Packaged AI models (primarily LLMs) available through an API. Fine-tuning, local models, deployment, and model serving. 
+  - **[2b Models](/2b_models/)**. Packaged AI models (primarily LLMs) available through an API. Fine-tuning, local models, deployment, and model serving [(eventually we all need to host our own models)](https://www.youtube.com/watch?v=zMhz7JUvJZA&t=36s).
   - **[3 Agents](/3_agents/)**. Python agents that implement reliable workflows, using AI models as helpful assistants.
   - **[3b Projects](/3.3-ai-projects/)**. Practical Agentic AI applications, integration demos, and lab demos.
   - **[4 Resources](/4_resources/)**. Detailed (docx) lab notes, Github, Wiki.
