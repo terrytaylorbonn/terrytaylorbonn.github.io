@@ -6,6 +6,12 @@ permalink: /pal/
 
 <br>
 
+**Current Palantir "speedrun" (quick start) working docs (26.0705)**
+- **[#611\_pal\_aip\_.docx](https://drive.google.com/drive/folders/1-Adawag9uA8_bq-hDF-nOuPYaRLz1eEO)**
+- **[#610\_pal\_foundry\_.docx](https://drive.google.com/drive/folders/1-Adawag9uA8_bq-hDF-nOuPYaRLz1eEO)**
+
+<br>
+
 Palantir's Artificial Intelligence Platform (AIP) securely connects generative AI to enterprise data and operations, allowing users to automate processes and build AI-driven workflows. It features tools like AIP Logic and AIP Chatbot Studio for creating compliant, production-ready AI agents, and AIP Evals to test AI performance.
 
 ### Key Components of Palantir AIP
@@ -34,4 +40,4 @@ To explore the platform's capabilities, starter packs, and example applications,
 
 <br>
 
-26.0703 (v1 26.0702)
+26.0705 (v1 26.0702)
