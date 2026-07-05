@@ -10,6 +10,8 @@ permalink: /2b_models/
 
 This **WIP** page (v1 26.0610) describes model internals. The agent and the NN are typically packed into a **model** that has an API that makes it possible for existing software to **use the model as a "helpful" assistant**. The internal agent (iAgent) that has been programmed to interact with the transformer (TF) via a very specific token-only protocol. The TF has also been trained to follow this protocol. 
 
+*[Eventually we all need to host our own models](https://www.youtube.com/watch?v=zMhz7JUvJZA&t=36s)*
+
 <br>  
 
 *2b Models in the master diagram* <br>
