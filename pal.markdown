@@ -28,6 +28,16 @@ permalink: /pal/
 
 <br>
 
+<img src="/assets/aip-03.png" alt="drones" width="85%"> 
+
+<br>
+
+**AI FDE**
+
+<img src="/assets/aip-04.png" alt="drones" width="85%"> 
+
+<br>
+
 ------------------------
 -----------------------------
 -----------------
