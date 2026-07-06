@@ -26,15 +26,23 @@ permalink: /pal/
 
 <img src="/assets/aip-01.png" alt="drones" width="85%"> 
 
-<br>
 
-<img src="/assets/aip-03.png" alt="drones" width="85%"> 
+<!-- <img src="/assets/aip-03.png" alt="drones" width="85%"> -->
 
 <br>
 
 **AI FDE**
 
 <img src="/assets/aip-04.png" alt="drones" width="85%"> 
+
+
+<img src="/assets/aip-05.png" alt="drones" width="85%"> 
+
+<br>
+
+**Final app (BINGO!)**
+
+<img src="/assets/aip-06.png" alt="drones" width="85%"> 
 
 <br>
 
