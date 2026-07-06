@@ -5,7 +5,9 @@ title: Home
 
 <br>
 
-This site is all about extracting core AI concepts from demos. For example, a **[demo](/0-demo/)** of AI in Slack.  
+This site is all about extracting core AI concepts from demos. For example:
+- **[Demo](/0-demo/)** of AI in Slack (26.0703).  
+- **[Demos](/pal/)** of Palantir AIP and Foundry (26.0706).
 
 <br>
 
