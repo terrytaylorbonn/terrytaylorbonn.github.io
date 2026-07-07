@@ -62,6 +62,8 @@ permalink: /pal/
 ------------------------
 -----------------------------
 -----------------
+------------------------
+-----------------------------
 
 <br>
 
@@ -96,19 +98,16 @@ To explore the platform's capabilities, starter packs, and example applications,
 <br>
 <br>
 <br>
-<br>
-<br>
-<br>
-<br>
-<br>
-<br>
-<br>
-<br>
-<br>
 
----
+------------------------
+-----------------------------
+-----------------
+------------------------
+-----------------------------
 
 <br>
+
+
 
 ***From PAL FDE AI***
 
@@ -267,6 +266,16 @@ This pipeline implements a **document intelligence workflow**: it ingests scient
 
 <br><br><br><br>
 
+------------------------
+-----------------------------
+-----------------
+------------------------
+-----------------------------
+
+<br>
+
+
+
 ## ME1: why did you not include "Get Join Table" in 6b-ii ??
 
 ## ME2: i dont understand what you wrote.. in any case, every pipeline box is shown except that one.
@@ -335,6 +344,16 @@ So the complete list of all **8 pipeline boxes** is:
 
 <br>
 
+------------------------
+-----------------------------
+-----------------
+------------------------
+-----------------------------
+
+<br>
+
+
+
 ## OK, i see why you did it that way
 
 Please confirm what i wrote below.
@@ -375,6 +394,15 @@ Yes, your understanding is correct! Let me confirm each point:
 And for terminology: the correct Foundry term for what you're calling a "box" is a **transform path** (or informally, a "step" or "board" in Pipeline Builder). Each named grouping of operations in Pipeline Builder is one transform path.
 
 <br>
+
+------------------------
+-----------------------------
+-----------------
+------------------------
+-----------------------------
+
+<br>
+
 
 
 ## you wrote "Backs object type: TT2 Entity".. what does that mean
@@ -418,5 +446,128 @@ The Ontology is what makes everything in Foundry "come alive." Once a dataset ba
 Think of it as: the dataset is the **raw data**, and the object type is the **meaningful interpretation** of that data that the rest of the platform can work with.
 
 <br>
+
+------------------------
+-----------------------------
+-----------------
+------------------------
+-----------------------------
+
+<br>
+
+
+## 0-1 what this demo is about (my take with FDE help)
+
+This is my understanding of the goal of the "Speedrun: Your First AIP Workflow".
+i took this from the course introduction (included at the end of this prompt).
+NOTE: the chapter (ch) numbers are from my own docx. the chapters in the speedrun are not numbered.
+
+- 1) transform pdf into entities (ch3 "upload data" - ch5 "configure ontology".
+- 2) create knowledge graph (KG) (ch6 "Explore object relations") 
+- 3) create AIP agent to use KG to answer questions (ch 7 "create aip logic function")
+- 4) create interactive app (ch8 "build app" and ch9 "conclusion" (has a test section)) to
+   - 4.1) allow users to ask questions
+   - 4.2) see segment of KG 
+
+<br>
+
+------------------------
+
+<br>
+
+### Course Introduction
+(https://learn.palantir.com/speedrun-your-e2e-aip-workflow/1961844) 
+
+
+*In this course, you will build a fully functional, end-to-end workflow using AIP.*
+
+*You will start off with a set of PDF documents provided in the curriculum. (If you are feeling up for a challenge, do bring your own samples.) You will then build a data transformation to extract their contents and split them into short chunks of text. Going forward, we'll assume that each of these chunks contains a single point of information, which can be combined to answer related questions. In this first section, you will also use an LLM to batch process these chunks and extract the most important entities they mention. Your output datasets will then be added to the Ontology, Foundry's semantic layer which underpins the rapid development of a host of interactive applications.*
+
+*With your Ontology Objects ready - Chunks and Entities - you'll get your first view of your knowledge graph. This graph allows you to understand the most significant entities covered by your documents, and investigate their relationships by reviewing mutually related text chunks. In fact, you will also configure your first AIP Agent to leverage this graph and respond to your questions reliably, without hallucinations.*
+
+*Finally, you will build an interactive app to allow users to ask such questions and see the segment of your knowledge graph used to formulate the answers.*
+
+*By the end of the Speedrun you will have experienced a large portion of the full-stack Foundry toolkit. You will be ready to take on the Deep Dive training courses or even dive into our documentation and get building your use-cases.*
+
+
+<br>
+
+
+## FDE: 
+
+Your summary captures the course arc perfectly: **raw data → structured knowledge → AI reasoning → user-facing application**.
+
+Your understanding is correct! That's a clean and accurate breakdown of the Speedrun's goals. Let me confirm and add a bit of nuance:
+
+<br>
+
+---
+
+<br>
+
+### ✅ Your Breakdown — Confirmed
+
+| Phase | Your Description | What's Happening |
+|---|---|---|
+| **1. Transform PDFs → Entities** (ch3–ch5) | Upload data, process it, configure ontology | The Pipeline Builder pipeline we just analyzed. PDFs → Chunks + Entities + Join Table → mapped into Ontology as object types |
+| **2. Create Knowledge Graph** (ch6) | Explore object relations | The KG emerges from the **links** between TT2 Chunk and TT2 Entity objects (powered by the Join Table). You're not "building" a KG per se — you're *viewing* the relationships that were created in step 1 |
+| **3. Create AIP Agent** (ch7) | AIP Logic function to answer questions using KG | An LLM-powered function that can traverse the KG (find relevant entities → find related chunks → use those chunks as context to answer questions without hallucinating) |
+| **4. Build Interactive App** (ch8–ch9) | Workshop app for end users | A UI where users can (4.1) ask natural language questions and (4.2) see which part of the KG was used to formulate the answer |
+
+<br>
+
+---
+
+<br>
+
+### One Nuance
+
+The **knowledge graph isn't a separate thing you build** — it's the natural result of:
+- **Chunks** (objects) + **Entities** (objects) + **Links between them** (from the Join Table)
+
+So phases 1 and 2 are really:
+- **Phase 1** = create the data + Ontology structure
+- **Phase 2** = explore/visualize what you just created
+
+The KG is just the Ontology viewed as a network of interconnected objects.
+
+
+<br>
+
+---
+
+<br>
+
+### The Big Picture
+
+<img src="/assets/aip-07.png" alt="drones" width="85%"> 
+
+
+
+```mermaid
+graph LR
+    A["📄 PDFs"] --> B["⚙️ Pipeline Builder<br/>(ch3-ch5)"]
+    B --> C["🧠 Ontology<br/>Chunks + Entities + Links"]
+    C --> D["🔍 Knowledge Graph<br/>(ch6)"]
+    C --> E["🤖 AIP Agent<br/>(ch7)"]
+    C --> F["🖥️ Workshop App<br/>(ch8-ch9)"]
+    E --> F
+    D --> F
+```
+
+Your summary captures the course arc perfectly: **raw data → structured knowledge → AI reasoning → user-facing application**.
+
+
+
+<br>
+
+------------------------
+-----------------------------
+-----------------
+------------------------
+-----------------------------
+
+<br>
+
 
 26.0707 (v1 26.0702)
