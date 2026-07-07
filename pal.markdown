@@ -265,6 +265,157 @@ graph TD
 This pipeline implements a **document intelligence workflow**: it ingests scientific PDFs, breaks them into searchable chunks, uses an LLM to summarize and extract structured entities, generates vector embeddings for semantic search, and produces three output datasets that together form a knowledge graph (chunks with embeddings, unique entities, and a chunk-entity mapping table).
 
 
+<br><br><br><br>
+
+## ME1: why did you not include "Get Join Table" in 6b-ii ??
+
+## ME2: i dont understand what you wrote.. in any case, every pipeline box is shown except that one.
+
+You're right — I apologize for the confusion. I combined "Get Join Table" and "Drop Duplicates (FIX)" into a single entry instead of giving each its own step. Here's the corrected version with **every pipeline box** as its own step:
+
+---
+
+### Step 6b-i: Get Join Table
+
+| Aspect | Detail |
+|---|---|
+| **Input** | Get Entities |
+| **Operation** | Select columns: `entityName` and `chunkId` only |
+| **What it does** | Narrows the data down to just the entity-to-chunk mapping (drops all other columns like content, pageNumber, etc.) |
+| **Output columns** | `entityName` (String), `chunkId` (String) |
+
+---
+
+### Step 6b-ii: Drop Duplicates (FIX)
+
+| Aspect | Detail |
+|---|---|
+| **Input** | Get Join Table |
+| **Operation** | Drop duplicates on `entityName` + `chunkId` |
+| **What it does** | Removes any duplicate entity–chunk pairs |
+
+#### ✅ Output: **:resource[ri.foundry.main.dataset.8ca33a29-6530-4032-a301-b20753fc1a79]** ("Join Table")
+
+| Column | Type |
+|---|---|
+| `entityName` | String |
+| `chunkId` | String |
+
+---
+
+### Step 6b-iii: Deduplicate Entities
+
+| Aspect | Detail |
+|---|---|
+| **Input** | Get Entities (directly, not from Get Join Table) |
+| **Operation** | Select `entityName` only → Drop duplicates |
+| **What it does** | Creates a master list of all unique entity names |
+
+#### ✅ Output: **:resource[ri.foundry.main.dataset.b66c6ce1-8604-45a9-8f6d-c36b2f5aa8b6]** ("Entities")
+
+| Column | Type |
+|---|---|
+| `entityName` | String |
+
+---
+
+So the complete list of all **8 pipeline boxes** is:
+
+1. **Process PDFs**
+2. **Extract Chunks**
+3. **Create Chunk ID**
+4. **Use LLM**
+5. **Embed Chunks** → ✅ Chunks dataset
+6. **Get Entities**
+7. **Get Join Table**
+8. **Drop Duplicates (FIX)** → ✅ Join Table dataset
+9. **Deduplicate Entities** → ✅ Entities dataset
+
+(Plus the input media set, that's 9 named boxes + 1 input + 3 outputs in the pipeline.)
+
+<br>
+
+## OK, i see why you did it that way
+
+Please confirm what i wrote below.
+I am a new AIP user so this is all very complicated for me..
+
+```
+The speedrun (AIP tutorial) had an error. 
+it says only to create a "Get Join Table" box
+(i used the word "box".. not sure what the correct word is).
+in that box there is no "drop duplicates".
+that caused an error.
+I asked GPT (I think), not you how to fix. 
+and GPT said to added a new box "Drop duplicates (FIX)".
+
+what i should have done was 
+1) rename "Get join table" to "Deduplicate Entities 2".
+2) added the drop duplicates fix into that box.
+
+This is how it was done for fox "Deduplicate Entities".
+And thats probably why you put the 2 boxes together. 
+But i want them separate so the speedrun error is obvious.
+```
+
+Yes, your understanding is correct! Let me confirm each point:
+
+1. **The speedrun tutorial had an omission** — it told you to create a "Get Join Table" box that only does a `select` (keeps `entityName` + `chunkId`), but did **not** include a `dropDuplicates` operation inside that same box.
+
+2. **This caused an error** — likely because duplicate entity–chunk pairs caused problems downstream (possibly primary key conflicts when backing an object type, or just unwanted duplicate rows).
+
+3. **GPT's fix was to add a separate box** — "Drop Duplicates (FIX)" — which deduplicates on both columns. This works, it's just an extra box.
+
+4. **The "cleaner" approach** (matching the pattern already used in the pipeline) would have been to add the `dropDuplicates` operation *inside* the "Get Join Table" box — exactly how "Deduplicate Entities" already combines a `select` + `dropDuplicates` in a single box.
+
+5. **Why I originally combined them** — yes, exactly. Since they logically belong together (select → dedupe is one conceptual step), I merged them. But you're right to keep them separate so the tutorial error and the fix remain visible.
+
+---
+
+And for terminology: the correct Foundry term for what you're calling a "box" is a **transform path** (or informally, a "step" or "board" in Pipeline Builder). Each named grouping of operations in Pipeline Builder is one transform path.
+
+<br>
+
+
+## you wrote "Backs object type: TT2 Entity".. what does that mean
+
+Great question! "Backs" means that the dataset is the **data source** behind an object type in the Ontology.
+
+Here's what that means in plain terms:
+
+### The two layers
+
+| Layer | What it is |
+|---|---|
+| **Data layer** | Datasets — rows and columns, like a spreadsheet |
+| **Ontology layer** | Object types — real-world concepts like "Entity", "Chunk", etc. |
+
+### What "backs" means
+
+When we say the :resource[ri.foundry.main.dataset.b66c6ce1-8604-45a9-8f6d-c36b2f5aa8b6] dataset **backs** the object type **TT2 Entity**, it means:
+
+- Each **row** in the Entities dataset becomes an **object** (a single Entity instance) in the Ontology
+- Each **column** in the dataset maps to a **property** on the object type (in this case, `entityName` becomes a property on every TT2 Entity object)
+- When the dataset updates (e.g., you re-run the pipeline and new entities are extracted), the objects in the Ontology update automatically
+
+### Why does this matter?
+
+The Ontology is what makes everything in Foundry "come alive." Once a dataset backs an object type:
+
+- You can **search, filter, and browse** entities as real-world concepts (not just rows)
+- You can **link** entities to other object types (e.g., link a TT2 Entity to the TT2 Chunks where it was mentioned — that's what the Join Table dataset is for!)
+- You can build **Workshop apps** and **AIP agents** that understand and operate on these objects
+- You can define **actions** that let users modify objects
+
+### In your pipeline
+
+| Dataset | Backs Object Type | Meaning |
+|---|---|---|
+| **Chunks** | TT2 Chunk | Each text chunk becomes a "Chunk" object with searchable properties and an embedding |
+| **Entities** | TT2 Entity | Each unique entity name becomes an "Entity" object |
+| **Join Table** | *(none directly)* | Provides the many-to-many **link** between TT2 Entity and TT2 Chunk (which entities appear in which chunks) |
+
+Think of it as: the dataset is the **raw data**, and the object type is the **meaningful interpretation** of that data that the rest of the platform can work with.
 
 <br>
 
