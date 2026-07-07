@@ -543,17 +543,17 @@ The KG is just the Ontology viewed as a network of interconnected objects.
 <img src="/assets/aip-07.png" alt="drones" width="85%"> 
 
 
-
+<!--
 ```mermaid
 graph LR
-    A["📄 PDFs"] --> B["⚙️ Pipeline Builder<br/>(ch3-ch5)"]
-    B --> C["🧠 Ontology<br/>Chunks + Entities + Links"]
-    C --> D["🔍 Knowledge Graph<br/>(ch6)"]
-    C --> E["🤖 AIP Agent<br/>(ch7)"]
-    C --> F["🖥️ Workshop App<br/>(ch8-ch9)"]
-    E --> F
-    D --> F
-```
+    A["📄 PDFs"] -> B["⚙️ Pipeline Builder<br/>(ch3-ch5)"]
+    B -> C["🧠 Ontology<br/>Chunks + Entities + Links"]
+    C -> D["🔍 Knowledge Graph<br/>(ch6)"]
+    C-> E["🤖 AIP Agent<br/>(ch7)"]
+    C -> F["🖥️ Workshop App<br/>(ch8-ch9)"]
+    E -> F
+    D -> F
+```  -->
 
 Your summary captures the course arc perfectly: **raw data → structured knowledge → AI reasoning → user-facing application**.
 
