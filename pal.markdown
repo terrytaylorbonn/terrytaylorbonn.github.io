@@ -1100,7 +1100,7 @@ That AIP Logic function in ch7 is the brain that ties together everything you bu
 
 <br>
 
-# **MAIN DIAGRAM FLOW (RAG PIPELINE)**
+# **MAIN DIAGRAM FLOW (RAG PIPELINE, ch7)**
 
 ```
 Main dialog flow
@@ -1354,12 +1354,112 @@ So the clean sentence is:
 
 Yes — your diagram and numbered explanation are a good way to make the confusing Logic UI understandable.
 
+<br>
+
+------------------------
+-----------------------------
+-----------------
+------------------------
+-----------------------------
 
 
 <br>
 
+# **FIRST PAGE (doc overview / goal of this demo**
+
+Your overview is good and understandable. I would make a few wording corrections so it is technically accurate and clearer for future-you.
+
+Here is a cleaned-up version you can use:
+
+---
+
+# 0. Doc overview
+
+## Goal of this demo
+
+The goal is to build the app shown below.
+
+The app lets a user ask a natural-language question about the uploaded PDF articles. The app then finds the most relevant text chunks, displays the related knowledge graph, and generates an AI answer grounded in those chunks.
+
+## App layout
+
+### Top: User prompt
+
+The user enters a question, for example:
+
+> What is the recommended treatment for Tuberculosis?
+
+---
+
+### Center left: Relevant Chunks object list widget
+
+This is the **Object List widget** configured to show the relevant `TT2 Chunk` objects.
+
+The relevant chunks are selected using:
+
+```text
+TT2 Chunk embedding → K-nearest neighbors
+```
+
+The user's question is embedded and compared against the stored embeddings on all `TT2 Chunk` objects. The closest matching chunks are returned and displayed in the list.
+
+These chunks are the evidence/context used by the app.
+
+---
+
+### Center right: Knowledge graph / Vertex Graph widget
+
+This is the **Vertex Graph widget** using the **Knowledge Graph Template** from chapter 6.
+
+It shows the relevant subgraph produced from the selected chunks:
+
+- **Chunks** — brown nodes  
+- **Entities** — magenta nodes  
+- **Join table links** — lines connecting entities to chunks  
+
+The graph helps the user visually inspect which chunks and entities are relevant to the prompt.
+
+---
+
+### Bottom: AI response
+
+The bottom section displays the response from the **Ontology Augmented Generation** AIP Logic function.
+
+The function:
+
+1. Takes the user question
+2. Searches the `TT2 Chunk` objects using semantic search over the `embedding` property
+3. Formats the retrieved chunk text
+4. Sends the question + retrieved chunk text to GPT-4o
+5. Returns an answer based only on the provided chunks
+
+---
+
+## Short summary
+
+```text
+User question
+   ↓
+Find relevant chunks using embedding KNN search
+   ↓
+Show chunks in object list
+   ↓
+Show linked entities/chunks in graph
+   ↓
+Send relevant chunk text to GPT-4o
+   ↓
+Display grounded AI answer
+```
+
+---
+
+## Important note
+
+The **entities and join table are used mainly for the visual knowledge graph**.  
+The **AIP Logic function itself answers using semantic search over chunk embeddings**, then passes the retrieved chunk text to the LLM.
 
 
+<br>
 
 
 26.0709 (v1 26.0702)
