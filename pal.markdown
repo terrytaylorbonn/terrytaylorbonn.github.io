@@ -1365,7 +1365,26 @@ Yes — your diagram and numbered explanation are a good way to make the confusi
 
 <br>
 
-# **FIRST PAGE (doc overview / goal of this demo**
+# **FIRST PAGE (doc overview / goal of this demo)**
+
+<br>
+
+Goal is to build the app shown below.
+- **top:** The user prompt.
+- **center left:**  (8.5) object list widget (from 5.4): "Relevant chunks" , Select chunk embeddings / K nearest. Listed are the most closed related chunks selected via ontology.
+- **center right:**  (8.6) Knowledge graph (= ch6 vertex). shows the relevant items from phase 1 (data/ontology)
+  - Chunks (brown)
+  - Entities (magenta)
+  - Join table links (lines)
+- **bottom:** The AI prompt response based on the selected chunks.
+
+<br>
+
+<img src="/assets/final-01-numbered.png" alt="drones" width="85%"> 
+
+<br>
+
+## **FDE/GPT5.5**
 
 Your overview is good and understandable. I would make a few wording corrections so it is technically accurate and clearer for future-you.
 
