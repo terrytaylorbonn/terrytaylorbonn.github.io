@@ -1549,6 +1549,155 @@ The graph helps the user inspect the relevant portion of the Ontology that is co
 
 <br>
 
+-------------------
+-------------------
+-------------------
+-------------------
 
+<br>
+
+# **10b APP center widgets connection ?????????**
+
+
+## **ME: do you know when (where, what dialog) param "TT2 Chunk" was created?**
+
+Yes — but there are **two different things** that sound almost the same:
+
+## 1. `TT2 Chunk` object type
+
+This was created earlier during **Configure Ontology**.
+
+It comes from the **Chunks** dataset.
+
+```text
+Chunks dataset
+   ↓
+backs
+TT2 Chunk object type
+```
+
+So the actual Ontology object type **TT2 Chunk** was created in the Ontology configuration part of the Speedrun.
+
+---
+
+## 2. `TT2 CHUNKS` parameter in the Vertex Graph widget
+
+This is different.
+
+The `TT2 CHUNKS *` field you see in the Workshop Vertex Graph widget was **not created inside Workshop**.
+
+It comes from the **Knowledge Graph Template**.
+
+In other words:
+
+```text
+Knowledge Graph Template
+   ↓
+defines required input parameter:
+TT2 CHUNKS
+   ↓
+Workshop Vertex Graph widget asks you:
+"What object set should I use for this template input?"
+```
+
+That is why, in your Workshop UI, you see:
+
+```text
+Parameter inputs
+    TT2 CHUNKS *
+```
+
+The `*` means it is required by the template.
+
+---
+
+## Where was it probably created?
+
+Most likely in the **Vertex / Knowledge Graph Template** step, when the tutorial had you create or save the graph as a **template**.
+
+The template needs an input object set so it can dynamically draw a graph around selected chunks.
+
+So somewhere in the Vertex app / Knowledge Graph Template editor, the template was configured with an input parameter like:
+
+```text
+Parameter name: TT2 CHUNKS
+Expected object type: TT2 Chunk
+Multiplicity: multiple objects / object set
+```
+
+Then, later in Workshop, you bind that parameter to:
+
+```text
+Object list 1 Active object
+```
+
+or whatever clean KNN object set contains the relevant chunks.
+
+---
+
+## Important distinction
+
+In Workshop:
+
+```text
+TT2 CHUNKS *
+```
+
+does **not** mean “show all TT2 Chunks.”
+
+It means:
+
+> “This graph template requires you to provide an object set of `TT2 Chunk` objects.”
+
+You then choose which object set to provide.
+
+In your working version, you provide the KNN-selected chunks.
+
+---
+
+## Short answer
+
+The `TT2 CHUNKS` parameter was created as part of the **Knowledge Graph Template**, not in the AIP Logic function and not in the Workshop app itself.
+
+Workshop only **uses** that parameter when you configure the Vertex Graph widget:
+
+```text
+Vertex Graph widget
+   → Resource = Knowledge Graph Template
+   → Parameter inputs
+   → TT2 CHUNKS = [your relevant chunks object set]
+```
+
+<br>
+
+## **for #2 above.. yes TT2 Chunks came from KG widget... but the KG widget got it from TT2 Chunk object type.**
+
+Yes — exactly.
+
+More precise chain:
+
+```text
+Chunks dataset
+   ↓ backs
+TT2 Chunk object type in the Ontology
+   ↓ used in
+Knowledge Graph / Knowledge Graph Template
+   ↓ creates required template parameter
+TT2 CHUNKS
+   ↓ appears in
+Workshop Vertex Graph widget parameter input
+```
+
+So your statement is correct:
+
+> The Workshop `TT2 CHUNKS` parameter came from the Knowledge Graph Template, and the Knowledge Graph Template got that parameter from the `TT2 Chunk` object type.
+
+In plain words:
+
+- **`TT2 Chunk`** = the Ontology object type
+- **`TT2 CHUNKS`** = the graph template input parameter expecting one or more `TT2 Chunk` objects
+- The Workshop app fills that parameter with the relevant chunks selected by embedding/KNN search.
+
+<br>
 
 26.0709 (v1 26.0702)
