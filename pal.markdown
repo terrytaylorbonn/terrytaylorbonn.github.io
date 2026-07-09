@@ -1380,6 +1380,8 @@ Goal is to build the app shown below.
 
 <br>
 
+<img src="/assets/kb-02.png" alt="drones" width="20%"> 
+
 <img src="/assets/final-01-numbered.png" alt="drones" width="85%"> 
 
 <br>
