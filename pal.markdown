@@ -1089,4 +1089,277 @@ That AIP Logic function in ch7 is the brain that ties together everything you bu
 
 <br>
 
-26.0707 (v1 26.0702)
+
+
+
+------------------------
+-----------------------------
+-----------------
+------------------------
+-----------------------------
+
+<br>
+
+# **MAIN DIAGRAM FLOW (RAG PIPELINE)**
+
+```
+Main dialog flow
+The diagram describes the RAG pipeline.
+(this pipeline has many names... "AIP logic function", "ontology aided generation", etc).
+(I added the colored numbering and arrows to the diagram....
+this helps understand the confusing UI).
+
+
+This is the flow:
+
+1 input "userQuestion". 
+2 if not "Empty string" start RAG pipeline.
+--- RAG PIPELINE ---
+3 input "Starting object set = "All TT2 Chunks".
+     output = "Create new object set (2)".
+4 input = "Create new object set (2)"
+    output = "Searched all TT2 chunks"
+5 input = "Searched all TT2 chunks"
+   output = "Searched all TT2 chunks - formatted"
+6 input1 = "userQuestion"
+    input2 = "Searched all TT2 chunks - formatted"
+    output = "use LLM"
+7 output = "Ontology Augmented Generation"
+```
+
+
+<img src="/assets/rag-01.png" alt="drones" width="75%"> 
+
+<br>
+
+
+**FDE/GPT** Yes — your flow is basically correct. I would only make a few wording refinements so it is precise.
+
+## Corrected / confirmed flow
+
+### 1. Input: `userQuestion`
+
+The Logic function starts with one user input:
+
+```text
+userQuestion : String
+```
+
+This is the natural-language question typed by the user.
+
+---
+
+### 2. Check for empty input
+
+The Logic checks:
+
+```text
+IF userQuestion == empty string
+    return "Please enter a question."
+ELSE
+    run RAG Pipeline
+```
+
+So yes: if the question is **not empty**, it enters the RAG Pipeline.
+
+---
+
+## RAG Pipeline
+
+### 3. Create new object set
+
+Input:
+
+```text
+Starting object set = All TT2 Chunks
+```
+
+Output:
+
+```text
+Create new object set (2)
+```
+
+Meaning:
+
+> Start with every `TT2 Chunk` object in the Ontology.
+
+This is the full searchable universe of chunks.
+
+---
+
+### 4. Semantic search over chunks
+
+Input:
+
+```text
+Create new object set (2)
+```
+
+Operation:
+
+```text
+Search embedding property using userQuestion
+Return top 10 chunks
+Minimum similarity threshold = 0
+```
+
+Output:
+
+```text
+Searched all TT2 chunks
+```
+
+This is the core retrieval step.
+
+It takes the user's question, embeds it, compares it against the stored `embedding` property on all `TT2 Chunk` objects, and returns the most similar chunks.
+
+---
+
+### 5. Format the retrieved chunks
+
+Input:
+
+```text
+Searched all TT2 chunks
+```
+
+Operation:
+
+```text
+For each retrieved chunk:
+    output "Content: " + chunk.content
+```
+
+Output:
+
+```text
+Searched all TT2 chunks - formatted
+```
+
+This converts the object set into plain text that can be inserted into the LLM prompt.
+
+---
+
+### 6. Use LLM
+
+Inputs:
+
+```text
+input 1 = userQuestion
+input 2 = Searched all TT2 chunks - formatted
+```
+
+Model:
+
+```text
+GPT-4o
+```
+
+Output:
+
+```text
+Use LLM : String
+```
+
+This is where the answer is generated.
+
+The LLM receives:
+
+```text
+Question:
+[userQuestion]
+
+Reference text:
+[Searched all TT2 chunks - formatted]
+```
+
+And the system prompt tells it:
+
+> Answer only using the provided reference text. Do not use prior knowledge.
+
+---
+
+### 7. Output: Ontology Augmented Generation
+
+Yes. The output of the Logic function is the `Use LLM` string.
+
+That published Logic/function is what the Workshop UI app calls.
+
+So:
+
+```text
+Use LLM output
+    ↓
+Ontology Augmented Generation function result
+    ↓
+Displayed in the UI app
+```
+
+---
+
+## One important terminology clarification
+
+You wrote:
+
+> this pipeline has many names... "AIP logic function", "ontology aided generation", etc.
+
+I would say it this way:
+
+| Term | Meaning |
+|---|---|
+| **AIP Logic function** | The Foundry/AIP object you are building |
+| **RAG pipeline** | The pattern inside the function: retrieve context → feed to LLM → generate answer |
+| **Ontology Augmented Generation** | The specific name of this Logic function in your project |
+| **Ontology-aided / ontology-augmented generation** | The general idea: use Ontology objects as the retrieval source |
+
+So the clean sentence is:
+
+> This is an **AIP Logic function** named **Ontology Augmented Generation**, and inside it is a **RAG pipeline** that retrieves relevant `TT2 Chunk` objects from the Ontology and sends their text to GPT-4o.
+
+---
+
+## Your flow, cleaned up
+
+```text
+1. userQuestion enters the Logic function
+
+2. If userQuestion is empty:
+       return "Please enter a question."
+   Else:
+       run RAG Pipeline
+
+--- RAG PIPELINE ---
+
+3. Start with all TT2 Chunk objects
+       output: Create new object set (2)
+
+4. Semantic search over TT2 Chunk.embedding
+       query: userQuestion
+       return: top 10 chunks
+       output: Searched all TT2 chunks
+
+5. Format retrieved chunks as text
+       input: Searched all TT2 chunks
+       output: Searched all TT2 chunks - formatted
+
+6. Call GPT-4o
+       input 1: userQuestion
+       input 2: formatted chunk text
+       output: answer string
+
+7. Return that answer as the output of:
+       Ontology Augmented Generation
+```
+
+Yes — your diagram and numbered explanation are a good way to make the confusing Logic UI understandable.
+
+
+
+<br>
+
+
+
+
+
+26.0709 (v1 26.0702)
