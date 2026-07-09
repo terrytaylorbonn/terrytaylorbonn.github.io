@@ -87,7 +87,7 @@ That AIP Logic function in ch7 is the brain that ties together everything you bu
 
 ### **3 Final app ch8/9 BINGO!**
 
-<img src="/assets/aip-06.png" alt="drones" width="85%"> 
+<img src="/assets/final-01.png" alt="drones" width="85%"> 
 
 <br>
 
