@@ -1481,4 +1481,72 @@ The **AIP Logic function itself answers using semantic search over chunk embeddi
 <br>
 
 
+# ME: great explanation... but "ontology" does not appear in "center left" or "center right"
+
+
+
+Good point. Since this is an **AIP / Ontology** demo, the overview should explicitly say where the Ontology is being used.
+
+Here is the revised wording for those two sections.
+
+---
+
+## Center left: Relevant Chunks object list widget
+
+This is the **Object List widget** displaying `TT2 Chunk` objects from the **Ontology**.
+
+The `TT2 Chunk` object type is backed by the **Chunks** dataset created in the data pipeline. Each `TT2 Chunk` object has properties such as:
+
+- `content`
+- `summary`
+- `embedding`
+- `chunkId`
+- `pageNumber`
+- `chunkNumber`
+
+The object list is configured to show the most relevant `TT2 Chunk` objects using:
+
+```text
+TT2 Chunk.embedding → K-nearest neighbors
+```
+
+In other words, the user's question is embedded and compared against the stored `embedding` property on all `TT2 Chunk` objects in the **Ontology**. The closest matching chunks are returned and displayed in the list.
+
+So this panel is not reading raw PDF text directly. It is querying the **Ontology object type** `TT2 Chunk`.
+
+---
+
+## Center right: Knowledge graph / Vertex Graph widget
+
+This is the **Vertex Graph widget** using the **Knowledge Graph Template** from chapter 6.
+
+The graph displays a selected subgraph from the **Ontology**:
+
+- **`TT2 Chunk` objects** — brown nodes  
+- **`TT2 Entity` objects** — magenta nodes  
+- **Ontology links between entities and chunks** — lines  
+
+Those links are backed by the **Join Table** dataset created in the data pipeline.
+
+So the graph is not just a drawing. It is a visual representation of the **Ontology relationships** created from:
+
+```text
+Chunks dataset → TT2 Chunk object type
+Entities dataset → TT2 Entity object type
+Join Table dataset → link between TT2 Entity and TT2 Chunk
+```
+
+The graph helps the user inspect the relevant portion of the Ontology that is connected to the selected chunks.
+
+---
+
+### One-sentence version
+
+- **Center left** = semantic search over `TT2 Chunk` objects in the **Ontology**
+- **Center right** = visual graph of linked `TT2 Chunk` and `TT2 Entity` objects in the **Ontology**
+
+<br>
+
+
+
 26.0709 (v1 26.0702)
