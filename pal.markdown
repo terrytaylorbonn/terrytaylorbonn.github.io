@@ -1700,4 +1700,171 @@ In plain words:
 
 <br>
 
+---------------
+---------------
+---------------
+---------------
+---------------
+
+<br>
+
+# **Chunks progression OVERVIEW**
+
+<br>
+
+```
+the pasted pics show
+
+Chunks progression OVERVIEW
+#1 Chunks dataset
+↓ backs
+#2 TT2 Chunk object type in the Ontology
+↓ used in
+#3 Knowledge Graph / Knowledge Graph Template
+↓ creates required template parameter
+#4 TT2 CHUNKS (widget "Relevant chunks object list" (center left))
+↓ appears in
+#5 Workshop Vertex Graph widget (center right) parameter input
+NOTE: "5.2.s2" means ch5 section 2 step 2 in my speedrun doc.
+
+my goal here is to understand the progression.
+does it look right?
+```
+
+Yes — your **overall progression is right**, but I would adjust **#4 and #5** slightly because two things are getting mixed together:
+
+1. the **`TT2 Chunk` object type**
+2. the **`TT2 CHUNKS` template parameter**
+3. the **Workshop object set variable** used by the object list / graph
+
+Your chain is conceptually correct, but the exact flow should be written like this:
+
+---
+
+## Corrected Chunks progression overview
+
+```text
+#1 Chunks dataset
+   ↓ backs
+
+#2 TT2 Chunk object type in the Ontology
+   ↓ used in two places
+
+   ├─ #3a Knowledge Graph / Knowledge Graph Template
+   │      ↓ creates required graph template parameter
+   │
+   │   TT2 CHUNKS parameter
+   │      ↓ appears in
+   │
+   │   #5 Workshop Vertex Graph widget parameter input
+   │      where TT2 CHUNKS = selected relevant TT2 Chunk object set
+   │
+   └─ #3b Workshop Object Set variable
+          e.g. "Object list 1 Active object" / "Relevant Chunks"
+          configured as:
+          TT2 Chunk.embedding → K-nearest neighbors
+          query = User Question
+          K = 5
+          ↓ used by
+
+       #4 Relevant Chunks Object List widget
+          shows selected TT2 Chunk objects
+
+       #5 Vertex Graph widget
+          passed into template parameter:
+          TT2 CHUNKS
+```
+
+---
+
+## Important correction to your wording
+
+You wrote:
+
+> `#4 TT2 CHUNKS (widget "Relevant chunks object list" center left)`
+
+I would not write it that way.
+
+Better:
+
+> **#4 Relevant Chunks Object List widget uses a Workshop object set variable of `TT2 Chunk` objects selected by K-nearest-neighbor embedding search.**
+
+The object list does **not** itself create the `TT2 CHUNKS` parameter.
+
+The `TT2 CHUNKS` parameter belongs to the **Knowledge Graph Template** and appears in the **Vertex Graph widget**.
+
+---
+
+## Better final version for your doc
+
+You could write:
+
+```text
+Chunks progression OVERVIEW
+
+#1 Chunks dataset
+   ↓ backs
+
+#2 TT2 Chunk object type in the Ontology
+   ↓ used by
+
+#3 Knowledge Graph Template
+   - defines an object parameter named "TT2 CHUNKS"
+   - parameter type = TT2 Chunk
+   - parameter accepts multiple TT2 Chunk objects
+   - template also defines search-around from TT2 Chunk to TT2 Entity
+   ↓ used by
+
+#4 Workshop "Relevant Chunks" / "Object list 1 Active object" object set
+   - object type = TT2 Chunk
+   - selected using TT2 Chunk.embedding → K-nearest neighbors
+   - query = User Question
+   - K = 5
+   ↓ used by
+
+#4a Relevant Chunks Object List widget, center left
+   - displays the selected TT2 Chunk objects
+
+#5 Workshop Vertex Graph widget, center right
+   - Resource = Knowledge Graph Template
+   - Parameter input "TT2 CHUNKS" = the selected relevant TT2 Chunk object set
+   - graph template expands from those chunks to linked TT2 Entities
+```
+
+---
+
+## Short answer
+
+Yes, your progression is right, but the cleanest mental model is:
+
+```text
+Dataset → Ontology object type → graph template parameter → Workshop object set → UI widgets
+```
+
+More specifically:
+
+```text
+Chunks dataset
+   → TT2 Chunk object type
+   → Knowledge Graph Template parameter "TT2 CHUNKS"
+   → Workshop passes relevant TT2 Chunks into that parameter
+   → Vertex Graph displays those chunks + linked entities
+```
+
+And separately:
+
+```text
+TT2 Chunk object type
+   → Workshop KNN object set
+   → Object List displays relevant chunks
+```
+
+So the **object list** and the **vertex graph** are siblings in the UI: both consume the relevant `TT2 Chunk` object set, but only the graph uses the `TT2 CHUNKS` template parameter.
+
+
+
+
+
+<br>
+
 26.0709 (v1 26.0702)
