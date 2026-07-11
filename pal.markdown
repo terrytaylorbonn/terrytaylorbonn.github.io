@@ -1861,10 +1861,264 @@ TT2 Chunk object type
 
 So the **object list** and the **vertex graph** are siblings in the UI: both consume the relevant `TT2 Chunk` object set, but only the graph uses the `TT2 CHUNKS` template parameter.
 
+<br> 
+<br> 
+<br> 
+
+-----------
+-----------
+-----------
+-----------
+-----------
+-----------
+-----------
+
+<br> 
+<br> 
+<br> 
+
+# **26.0711**
 
 
+
+# **Speedrun does not use Onto??** 26.0711
+
+ok, now i have reache the last chapter "8c add object relations to UI (KG)". But before that, you said that in previous test the ontology was not being used to generate the answer. do i need to do something (now that I have complete ontology) so that generation of prompt response uses onotology?
+
+FDE/OPUS: 
+
+Short answer: **No, you do not need to do anything extra for the existing prompt response to use the completed entity ontology/KG.**
+
+But there is an important distinction:
+
+## Current RAG answer already uses Ontology
+
+Your AIP Logic function already uses the Ontology through:
+
+```text
+TT2 Chunk object type
+TT2 Chunk.embedding
+TT2 Chunk.content
+```
+
+So the answer generation is ontology-based in the sense that it searches `TT2 Chunk` objects.
+
+## What it does **not** use
+
+Even after you complete the full ontology, the existing RAG function still does **not** automatically use:
+
+```text
+TT2 Entity
+TT2 Chunk ↔ TT2 Entity relation
+Knowledge Graph Template
+Vertex Graph widget
+```
+
+Those are mainly used by the UI graph for visual analysis.
+
+## If you want the prompt response to use the entity/KG relation
+
+Then yes, you would need to modify the Logic function.
+
+For example, you could change the RAG function to:
+
+```text
+userQuestion
+   ↓
+semantic search finds relevant TT2 Chunks
+   ↓
+search around from those chunks to linked TT2 Entities
+   ↓
+optionally search back from those entities to more chunks
+   ↓
+format chunks + entity names
+   ↓
+send all that context to GPT-4o
+```
+
+But the Speedrun’s default Logic function does not do that.
+
+## For completing 8c
+
+For chapter 8c / object relations UI, you are only adding the graph visualization:
+
+```text
+Relevant chunks
+   ↓
+KG Template
+   ↓
+Search Around
+   ↓
+linked entities displayed in Vertex Graph
+```
+
+This helps the **user see** the related entities/chunks. It does not change the AIP answer generation unless you separately edit the Logic function.
+
+## Practical recommendation
+
+For your doc, say:
+
+```text
+Completing the entity ontology and KG widget adds visual explainability.
+It does not change the RAG answer path.
+The RAG answer path continues to use semantic search over TT2 Chunk embeddings.
+```
+
+That is the clean distinction.
+
+<br>
+
+------------
+
+<br>
+
+<img src="/assets/onto_in_rag_error.png" alt="drones" width="85%"> 
+
+This screenshot is exactly the source of the confusion.
+
+The diagram makes it look like both paths are equally “Ontology Aided”:
+
+```text
+AIP Logic / Ontology Aided Generation
+Knowledge Graph / Vertex
+```
+
+But in the actual demo implementation, they use the Ontology differently.
+
+## What AIP Logic uses
+
+The AIP Logic function uses:
+
+```text
+TT2 Chunk objects
+TT2 Chunk.embedding
+TT2 Chunk.content
+```
+
+So yes, it uses the Ontology.
+
+But it does **not** use:
+
+```text
+TT2 Entity objects
+TT2 Chunk ↔ TT2 Entity relations
+Knowledge Graph Template
+Vertex graph
+```
+
+## What Vertex/KG uses
+
+The Vertex graph uses:
+
+```text
+TT2 Chunk objects
+TT2 Entity objects
+TT2 Chunk ↔ TT2 Entity relations
+KG Template
+Search Around
+```
+
+That is the visual knowledge graph path.
+
+## So the correct interpretation is
+
+```text
+Ontology Aided Generation
+= RAG over TT2 Chunk objects in the Ontology
+
+Knowledge Graph
+= visual exploration of TT2 Chunk ↔ TT2 Entity relations
+```
+
+They both use the Ontology, but not the same parts of it.
+
+## Do you need to change anything now?
+
+No.
+
+Completing the full ontology and KG does not automatically change the prompt response generation.
+
+Your bottom AI response will still use the ch7 Logic function:
+
+```text
+userQuestion
+→ semantic search over TT2 Chunk.embedding
+→ retrieve chunk.content
+→ GPT-4o answer
+```
+
+The right-side KG will use the full ontology relation:
+
+```text
+relevant chunks
+→ Search Around
+→ linked entities
+→ visual graph
+```
+
+## Best sentence for your doc
+
+> The AIP Logic/RAG function uses the Ontology only through the `TT2 Chunk` object type and its `embedding` / `content` properties. The completed `TT2 Entity` object type and `Chunk↔Entity` relation are used by the Vertex Knowledge Graph for visual analysis, not by the default prompt response generation.
 
 
 <br>
 
-26.0709 (v1 26.0702)
+-------------------------------
+
+<br>
+
+like i said, the docs ...... that has confused me from the beginning .. why object relations , onotology , and KG BEFORE AIP RAG (!!). there was no reason ! i kept looking for how RAG was using the ontology
+
+
+Yes — that confusion is completely understandable.
+
+The course order strongly implies:
+
+```text
+Object relations / KG
+   ↓
+AIP RAG uses that KG
+```
+
+But the actual implementation is:
+
+```text
+AIP RAG uses TT2 Chunk.embedding + TT2 Chunk.content
+```
+
+and **does not use**:
+
+```text
+TT2 Entity
+Chunk↔Entity relation
+KG Template
+Vertex graph
+```
+
+So the chapter order creates a false mental model.
+
+## What the docs should have said clearly
+
+Something like:
+
+> In this demo, the AIP Logic function uses the `TT2 Chunk` object type and its embedding property for semantic retrieval. The Entity object type and Chunk↔Entity relation are used later for visual analysis in the Vertex graph, not for the RAG answer generation.
+
+That one sentence would have prevented a lot of confusion.
+
+## The real dependency
+
+```text
+RAG dependency:
+Chunks dataset → TT2 Chunk object type → embedding/content properties → AIP Logic
+```
+
+```text
+KG dependency:
+Entities dataset + Join Table → TT2 Entity + Chunk↔Entity relation → Vertex graph
+```
+
+So yes: there was no technical reason that the KG/object relation chapter had to come before RAG, except perhaps for storytelling or course flow. Mechanically, it obscures the actual architecture.
+
+<br> 
+
+26.0711 (v1 26.0702)
