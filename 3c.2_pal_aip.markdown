@@ -1,0 +1,82 @@
+---
+layout: page
+title: 3c.2 PAL AIP
+permalink: /3c.2_pal_aip/
+---
+
+
+<br>
+
+
+[← 3c PAL](/pal/)
+
+
+<br>
+
+## PAL-DEMO-2: Palantir AIP "speedrun" (quick start) (26.0706)
+
+This is just a rough summary for now...
+
+### **1 Summary of phase 1 (build the pipeline) [#611\_pal\_aip\_.docx](https://drive.google.com/drive/folders/1-Adawag9uA8_bq-hDF-nOuPYaRLz1eEO)**
+
+
+<img src="/assets/aip-02.png" alt="drones" width="85%"> 
+
+<br>
+
+### **2 ch7 AIP Logic Function ("ontology aided generation")** 
+
+#### **Test**
+
+<img src="/assets/aip-01.png" alt="drones" width="85%"> 
+
+<br>
+
+#### **Explanation**
+
+(22) you said "AIP (the Agent / Logic function)"....  in my version of the speedrun there is chapter 7 "Create AIP Logic Function ("ontology aided generation") ". that is what you are referring to?
+
+Yes, exactly. Chapter 7 is where you build the **AIP Logic function** that does the retrieval + generation at query time. That's the piece that:
+
+1. Takes a user's question
+2. Searches the Ontology (vector search against Chunk embeddings, graph traversal via Entity links)
+3. Passes the retrieved chunk text + question to the LLM
+4. Returns a grounded answer
+
+The name they give it — **"Ontology Aided Generation"** — is Palantir's term for this pattern. It's essentially RAG, but specifically emphasizing that the retrieval happens through the **Ontology** (not just a generic vector database):
+
+| Generic term | Palantir term | What it means |
+|---|---|---|
+| RAG (Retrieval-Augmented Generation) | Ontology Aided Generation | Retrieve context → feed to LLM → generate answer |
+| Vector database | Ontology with embedding properties | Where the searchable vectors live |
+| Knowledge graph | Ontology with linked object types | Where the structured relationships live |
+
+#### Why "Ontology Aided" matters
+
+A plain RAG system has just a vector store. "Ontology Aided Generation" means the retrieval can use **all** the structure you built:
+- Embeddings (vector search)
+- Entities + links (graph traversal)
+- Properties (filters — e.g., "only search chunks from documents published after 2022")
+
+That AIP Logic function in ch7 is the brain that ties together everything you built in ch3–ch6, and the Workshop app in ch8 is just a UI that calls it.
+
+<br>
+
+<!-- <img src="/assets/aip-03.png" alt="drones" width="85%"> 
+<br>
+**AI FDE**
+<img src="/assets/aip-04.png" alt="drones" width="85%"> 
+<img src="/assets/aip-05.png" alt="drones" width="85%"> -->
+
+<br>
+
+### **3 Final app ch8/9 BINGO!**
+
+<img src="/assets/final-01.png" alt="drones" width="85%"> 
+
+<br>
+
+
+<br>
+
+26.0713 (v1 26.0713)

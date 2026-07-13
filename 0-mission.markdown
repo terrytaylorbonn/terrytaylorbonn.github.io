@@ -249,6 +249,8 @@ The code demos are organized into the 4 groups shown in the diagram below.
 - **(2b) [Models](/2b_models/)** that package core NNs for reuse.
 - **(3) External [agents](/3_agents/)** that provide an interface between models (helpful assistants) and legacy systems.
 - **(3b) Real-world [projects](/3.3-ai-projects/)**.
+- **(3c) [Palantir projects](/pal/)**. Palantir Foundry demos (still need to add to diagram).
+
 
 *The ZiptieAI deep dive takes you methodically through the entire AI stack*<br>
 <img src="/assets/M-15.png" alt="drones" width="78%">
@@ -272,7 +274,7 @@ AI has a big future even after the pre-IPO hype is over. **Those who understand 
 
 <br>
 
-26.0703 (v1 26.0611)
+26.0713 (v1 26.0611)
 
 <!-- *A successful mission for AI (left) and not so successful mission (right).* <br>
 <img src="/assets/ziptiedrone2.png" alt="drones" width="23%"> <img src="/assets/waymo.png" alt="drones" width="26%">  -->

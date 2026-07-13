@@ -1,0 +1,27 @@
+---
+layout: page
+title: 3c.1 PAL Foundry
+permalink: /3c.1_pal_foundry/
+---
+
+
+<br>
+
+
+[← 3c PAL](/pal/)
+
+
+<br>
+
+
+## **PAL-DEMO-1: Palantir Foundry "speedrun" (quick start) (26.0705)**
+
+This is link to docx... might add it to this page in future **[#610\_pal\_foundry\_.docx](https://drive.google.com/drive/folders/1-Adawag9uA8_bq-hDF-nOuPYaRLz1eEO)**.
+
+<br>
+
+
+
+<br>
+
+26.0713 (v1 26.0713)
