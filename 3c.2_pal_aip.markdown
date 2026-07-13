@@ -13,7 +13,15 @@ permalink: /3c.2_pal_aip/
 
 <br>
 
+**Docx's**
 
+- [#611vvv\_aip\_qs\_.docx](https://drive.google.com/drive/folders/1-Adawag9uA8_bq-hDF-nOuPYaRLz1eEO). Rewriting #611_pal_aip_v06ccc-01_ for the content of this page. Lots of my own concepts, etc. 
+- [#611\_pal\_aip\_v06ccc-01\_.docx](https://drive.google.com/drive/folders/1-Adawag9uA8_bq-hDF-nOuPYaRLz1eEO). Took the original working versions and reworked my way through it from finish to start. **BINGO**.
+- [#613\_pal\_aip\_REORG\_TEST\_.docx](https://drive.google.com/drive/folders/1-Adawag9uA8_bq-hDF-nOuPYaRLz1eEO). Attempted reorg test. Ran into error for the KG Vertex graph that I could not solve..
+- [#611bbb\_pal\_aip\v03\_NOTES\_.docx](https://drive.google.com/drive/folders/1-Adawag9uA8_bq-hDF-nOuPYaRLz1eEO). Tons of notes.
+
+
+<br>
 
 ### **Overview**
 
@@ -41,7 +49,7 @@ To explore the platform's capabilities, starter packs, and example applications,
 
 This is just a rough summary for now...
 
-### **1 Summary of phase 1 (build the pipeline) [#611\_pal\_aip\_.docx](https://drive.google.com/drive/folders/1-Adawag9uA8_bq-hDF-nOuPYaRLz1eEO)**
+### **1 Summary of phase 1 (build the pipeline)**
 
 
 <img src="/assets/aip-02.png" alt="drones" width="85%"> 
