@@ -23,91 +23,17 @@ permalink: /3c.2_pal_aip/
 
 <br>
 
-### **Overview**
 
-Palantir's Artificial Intelligence Platform (AIP) securely connects generative AI to enterprise data and operations, allowing users to automate processes and build AI-driven workflows. It features tools like AIP Logic and AIP Chatbot Studio for creating compliant, production-ready AI agents, and AIP Evals to test AI performance.
+### **AIP QS (my version of Speedrun)**
 
-#### Key Components of Palantir AIP
-
-- The Ontology: AIP acts as a semantic bridge, mapping an organization's unstructured data (like documents or video feeds) into a structured digital model of operations.
-- AIP Chatbot Studio: Formerly known as AIP Agent Studio, it allows users to build context-aware assistants equipped with enterprise data to perform dynamic read and write tasks.
-- AIP Logic: A development environment for building, evaluating, and deploying AI agents that can automate repetitive, manual tasks.
-- AIP Now: Provides pre-built AI applications, builder starter packs, and workflow examples for a faster implementation timeline.
-
-#### Security and Governance
-
-Palantir is known for operating in highly sensitive environments, including defense, intelligence, and heavily regulated commercial sectors. AIP’s security framework limits AI access to data based on granular permission models, meaning LLMs can only access and take actions on what is necessary and compliant. Every AI-driven action generates a traceable digital record to maintain ethical, regulatory, and legal oversight.
-
-To explore the platform's capabilities, starter packs, and example applications, visit the official **[Palantir Artificial Intelligence Platform page](https://www.palantir.com/platforms/aip/)**. You can also review developer tooling details and guides in the **[AIP Features Overview](https://www.palantir.com/docs/foundry/aip/aip-features)**.
+- [Ch1 Concepts](/3c.2.1_pal_aip_qs_ch1_concepts/)
 
 
-<img src="/assets/pal.png" alt="drones" width="40%"> 
 
 <br>
 
-## PAL-DEMO-2: Palantir AIP "speedrun" (quick start) (26.0706)
-
-This is just a rough summary for now...
-
-### **1 Summary of phase 1 (build the pipeline)**
-
-
-<img src="/assets/aip-02.png" alt="drones" width="85%"> 
-
-<br>
-
-### **2 ch7 AIP Logic Function ("ontology aided generation")** 
-
-#### **Test**
-
-<img src="/assets/aip-01.png" alt="drones" width="85%"> 
-
-<br>
-
-#### **Explanation**
-
-(22) you said "AIP (the Agent / Logic function)"....  in my version of the speedrun there is chapter 7 "Create AIP Logic Function ("ontology aided generation") ". that is what you are referring to?
-
-Yes, exactly. Chapter 7 is where you build the **AIP Logic function** that does the retrieval + generation at query time. That's the piece that:
-
-1. Takes a user's question
-2. Searches the Ontology (vector search against Chunk embeddings, graph traversal via Entity links)
-3. Passes the retrieved chunk text + question to the LLM
-4. Returns a grounded answer
-
-The name they give it — **"Ontology Aided Generation"** — is Palantir's term for this pattern. It's essentially RAG, but specifically emphasizing that the retrieval happens through the **Ontology** (not just a generic vector database):
-
-| Generic term | Palantir term | What it means |
-|---|---|---|
-| RAG (Retrieval-Augmented Generation) | Ontology Aided Generation | Retrieve context → feed to LLM → generate answer |
-| Vector database | Ontology with embedding properties | Where the searchable vectors live |
-| Knowledge graph | Ontology with linked object types | Where the structured relationships live |
-
-#### Why "Ontology Aided" matters
-
-A plain RAG system has just a vector store. "Ontology Aided Generation" means the retrieval can use **all** the structure you built:
-- Embeddings (vector search)
-- Entities + links (graph traversal)
-- Properties (filters — e.g., "only search chunks from documents published after 2022")
-
-That AIP Logic function in ch7 is the brain that ties together everything you built in ch3–ch6, and the Workshop app in ch8 is just a UI that calls it.
-
-<br>
-
-<!-- <img src="/assets/aip-03.png" alt="drones" width="85%"> 
-<br>
-**AI FDE**
-<img src="/assets/aip-04.png" alt="drones" width="85%"> 
-<img src="/assets/aip-05.png" alt="drones" width="85%"> -->
-
-<br>
-
-### **3 Final app ch8/9 BINGO!**
-
-<img src="/assets/final-01.png" alt="drones" width="85%"> 
-
-<br>
-
+*Final app* <br>
+<img src="/assets/final-01.png" alt="drones" width="70%" style="border: 1px solid #999;">
 
 <br>
 
