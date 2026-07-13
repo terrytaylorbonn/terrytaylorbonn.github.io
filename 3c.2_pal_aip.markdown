@@ -30,6 +30,18 @@ permalink: /3c.2_pal_aip/
 
 
 
+**Remaining chapters to add**
+- 2 Set Up Project and Folder
+- 3 Upload Data
+- 4 Transform Data
+- 5 Configure Ontology
+- 6 Explore Object Relations = CREATE "KG" Chunks<>Entities links
+- 7 Create AIP Logic Function ("ontology aided generation")
+- 8 Build App
+
+
+
+
 <br>
 
 *Final app* <br>
