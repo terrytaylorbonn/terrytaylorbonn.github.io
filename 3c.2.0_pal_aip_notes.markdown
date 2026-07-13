@@ -1,7 +1,7 @@
 ---
 layout: page
-title: 3c.0 PAL notes
-permalink: /3c.0_pal_notes/
+title: 3c.2.0 PAL AIP notes
+permalink: /3c.2.0_pal_aip_notes/
 ---
 
 
