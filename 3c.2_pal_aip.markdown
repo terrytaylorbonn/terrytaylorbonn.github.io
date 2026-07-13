@@ -13,17 +13,17 @@ permalink: /3c.2_pal_aip/
 
 <br>
 
-The goal of this page is not to duplicate the content of either the 
+The goal of this page is not to duplicate the content of these docx's 
 - Palantir **["AIP workflow speedrun"](https://learn.palantir.com/speedrun-your-e2e-aip-workflow)** or
-- My main lab notes docx **[#611vvv\_aip\_qs\_.docx](https://drive.google.com/drive/folders/1-Adawag9uA8_bq-hDF-nOuPYaRLz1eEO)** (this docx contains exhaustive details of my setup).
+- My main lab notes docx **[#611vvv\_aip\_qs\_.docx](https://drive.google.com/drive/folders/1-Adawag9uA8_bq-hDF-nOuPYaRLz1eEO)** (this docx contains only the changes from \#611) or
+- **[#611\_pal\_aip\_v06ccc-02\_.docx](https://drive.google.com/drive/folders/1-Adawag9uA8_bq-hDF-nOuPYaRLz1eEO)**. \#613 (a reorg of the speedrun) failed, so I took the first successful demo in \#611 and reworked my way through it from finish to start (I replaced ch8 UI first, then ch6 Knowledge Graph, ..., and finally the pipeline). **BINGO** (it all worked). *To me the easiest demo would be to do things in that order; take a working demo and modifying it, starting at the finish, and drilling down to the start*.
 
-Instead, its meant as a commentary (WIP) about some of the details of the speedrun and my own take on the core concepts. 
+Rather its meant as a commentary (WIP) about some of the details of the speedrun and my own take on the core concepts. 
 
-There are also other lab notes docx's:
-- **[#611\_pal\_aip\_v06ccc-01\_.docx](https://drive.google.com/drive/folders/1-Adawag9uA8_bq-hDF-nOuPYaRLz1eEO)**. Took the original working versions and reworked my way through it from finish to start. **BINGO**.
-- **[#613\_pal\_aip\_REORG\_TEST\_.docx](https://drive.google.com/drive/folders/1-Adawag9uA8_bq-hDF-nOuPYaRLz1eEO)**. Attempted reorg test. Ran into error for the KG Vertex graph that I could not solve..
+There are also a few other lab notes docx's of interest:
+- **[#613\_pal\_aip\_REORG\_TEST\_.docx](https://drive.google.com/drive/folders/1-Adawag9uA8_bq-hDF-nOuPYaRLz1eEO)**. Attempted reorg test. Ran into error for the KG Vertex graph that I could not solve. I think the problem was in the pipeline (I changed the variable names and probably made a mistake; I tried debugging the backend code with FDE/OPUS/GPT, but no luck).
 - **[#611bbb\_pal\_aip\_v03\_NOTES\_.docx](https://drive.google.com/drive/folders/1-Adawag9uA8_bq-hDF-nOuPYaRLz1eEO)**. Tons of notes.
-
+- **[#610\_pal\_foundry\_.docx](https://drive.google.com/drive/folders/1-Adawag9uA8_bq-hDF-nOuPYaRLz1eEO)**. Foundry was the prerequisite of this demo.
 
 <br>
 
