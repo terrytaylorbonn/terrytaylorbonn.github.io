@@ -13,9 +13,13 @@ permalink: /3c.2_pal_aip/
 
 <br>
 
-**Docx's**
+The goal of this page is not to duplicate the content of either the 
+- Palantir **["AIP workflow speedrun"](https://learn.palantir.com/speedrun-your-e2e-aip-workflow)** or
+- My main lab notes docx **[#611vvv\_aip\_qs\_.docx](https://drive.google.com/drive/folders/1-Adawag9uA8_bq-hDF-nOuPYaRLz1eEO)** (this docx contains exhaustive details of my setup).
 
-- **[#611vvv\_aip\_qs\_.docx](https://drive.google.com/drive/folders/1-Adawag9uA8_bq-hDF-nOuPYaRLz1eEO)**. Rewriting #611\_pal\_aip\_v06ccc-01\_ for the content of this page. Lots of my own concepts, etc. 
+Instead, its meant as a commentary (WIP) about some of the details of the speedrun and my own take on the core concepts. 
+
+There are also other lab notes docx's:
 - **[#611\_pal\_aip\_v06ccc-01\_.docx](https://drive.google.com/drive/folders/1-Adawag9uA8_bq-hDF-nOuPYaRLz1eEO)**. Took the original working versions and reworked my way through it from finish to start. **BINGO**.
 - **[#613\_pal\_aip\_REORG\_TEST\_.docx](https://drive.google.com/drive/folders/1-Adawag9uA8_bq-hDF-nOuPYaRLz1eEO)**. Attempted reorg test. Ran into error for the KG Vertex graph that I could not solve..
 - **[#611bbb\_pal\_aip\_v03\_NOTES\_.docx](https://drive.google.com/drive/folders/1-Adawag9uA8_bq-hDF-nOuPYaRLz1eEO)**. Tons of notes.
