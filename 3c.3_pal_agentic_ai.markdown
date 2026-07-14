@@ -73,5 +73,220 @@ This makes it important to rigorously evaluate the performance and reliability o
 
 <br>
 
+# xxxxxxxxxxxxxxxxxxxxxxxxx
+
+Yes — exactly. In this speedrun setup, those labels come from the **imported Marketplace Workshop app’s Ontology resources**, specifically the action type and object type definitions that were installed with the marketplace package.
+
+For this case:
+
+- **Workshop table column labels** like `Eligibility Decision` / `Eligibility Decision Reasoning` come from the **Patient object type property display names**.
+- **Action form labels** come from the **action type parameter display names**.
+- The **AIP Logic action block labels** come from the **action type parameters** on `[Ttbonn] Modify Eligibility Decision`.
+- The **rules mapping** connects those action parameters to the Patient object properties with matching display names.
+
+So the same words appear in multiple places because the imported package created coordinated Ontology resources:
+
+```text
+Marketplace install
+  └─ Ontology
+      ├─ [Ttbonn] Patient object type
+      │   ├─ property: Eligibility Decision
+      │   └─ property: Eligibility Decision Reasoning
+      │
+      └─ [Ttbonn] Modify Eligibility Decision action type
+          ├─ parameter: Eligibility Decision
+          ├─ parameter: Eligibility Decision Reasoning
+          └─ rule maps parameters → Patient properties
+```
+
+And yes — it’s complicated because the text is not “defined in the dialog” directly. The dialog is rendering Ontology metadata from the imported solution.
+
+# yyyyyyyyyyyyyyyyyyy
+
+Right — that screenshot shows where the **`[ttbonn]` prefix** is configured during the Marketplace installation.
+
+Specifically:
+
+- The install step is **“Step 7: Customize your…”**
+- In **Outputs**
+- Under **“Prefix ontology entities”**
+- The prefix value is set to:
+
+```text
+ttbonn
+```
+
+Because **“Display name and API name”** is selected, Foundry applies that prefix to both:
+
+1. **Ontology display names**, e.g.
+   - `[Ttbonn] Patient`
+   - `[Ttbonn] Clinical Trial`
+   - `[Ttbonn] Modify Eligibility Decision`
+
+2. **Ontology API names**, e.g.
+   - `ttbonn...`
+
+That prefixing is separate from the field labels like:
+
+- `Eligibility Decision`
+- `Eligibility Decision Reasoning`
+
+Those field labels are still defined by the imported Ontology entities themselves — object type properties and action type parameters — but the marketplace installer is adding the `[Ttbonn]` namespace/prefix around the imported entities so multiple users can install the same speedrun package without name collisions.
+
+# zzzzzzzzzzzzzzzzzzzzzzzz
+
+ME: i've been trying to figure out where the "agent" in this "agent demo" is and what it does. seems like its in the "action" (red square in diagram). and all it does? just takes LLM-prompt-defined outputs from LLM and maps them to the ontology-defined outputs. thats it????
+
+Pretty much, yes — for this speedrun, the “agentic” part appears to be **very thin**.
+
+From the screenshot, the workflow is essentially:
+
+```text
+Inputs
+  patient
+  clinicalTrial
+    ↓
+Use LLM
+  returns struct:
+    eligibility_decision: String
+    eligibility_reasoning: String
+    ↓
+Apply ontology action:
+  [Ttbonn] Modify Eligibility Decision
+    patient = patient
+    Eligibility Decision = Use LLM.eligibility_decision
+    Eligibility Decision Reasoning = Use LLM.eligibility_reasoning
+    ↓
+Patient object is updated
+```
+
+So the red-square block is **not really the agent reasoning step**. It is an **ontology edit/action application block**. Its job is to take outputs from the previous `Use LLM` block and pass them into the `[Ttbonn] Modify Eligibility Decision` action.
+
+The actual “AI” part is the **Use LLM** block above it.
+
+And the overall “agent” is probably being used loosely to mean:
+
+1. **Receives contextual inputs**: `patient`, `clinicalTrial`
+2. **Uses an LLM prompt** to decide eligibility and generate reasoning
+3. **Takes an action** by writing the decision back to the Ontology
+4. **Can be triggered by Automation or manually from Workshop**
+
+But if by “agent” you mean a system that plans, chooses among tools, loops, searches, self-corrects, or dynamically decides what action to take — then no, this does not look like that.
+
+It looks more like:
+
+> LLM classification + explanation + writeback action
+
+or
+
+> Prompted decision function with ontology edit
+
+The action block itself is just the bridge from the LLM output into the Ontology:
+
+| Component | What it does |
+|---|---|
+| `Use LLM` | Reads patient/trial context and produces `eligibility_decision`, `eligibility_reasoning` |
+| `[Ttbonn] Modify Eligibility Decision` action block | Writes those values to Patient fields |
+| Action type | Defines the editable parameters and rules |
+| Workshop app | Displays the Patient table and lets users review/run things |
+| Automation | Runs the Logic function on some trigger/schedule |
+
+So your summary is basically right:
+
+> The “agent” takes LLM-prompt-defined outputs and maps them into ontology-defined action parameters, which update ontology properties.
+
+That’s likely the entire demo pattern. “Agentic” here mostly means **LLM + tool/action side effect**, not autonomous multi-step agency.
+
+
+# ffffffffffffffffffffffffff
+
+ME: i think what the demo means by agent is possibly the entire ""Review Patient for Clinical Trial" block... they never really say clearly what the agent is. 
+
+FDE/GPT: Yes — that’s probably the most charitable reading.
+
+In this demo, **“the agent” is likely the whole Logic function**:
+
+> `Review Patient for Clinical Trial`
+
+That Logic function contains:
+
+1. **Inputs**
+   - `patient`
+   - `clinicalTrial`
+
+2. **LLM decision step**
+   - The `Use LLM` block prompts the model to review the patient against the trial.
+   - It returns structured fields:
+     - `eligibility_decision`
+     - `eligibility_reasoning`
+
+3. **Action / ontology edit step**
+   - The `[Ttbonn] Modify Eligibility Decision` block writes those fields back to the Patient object.
+
+4. **Automation / app integration**
+   - The function can be triggered from Workshop or by Automation.
+
+So the demo is probably using **agent** to mean:
+
+> An AI-enabled workflow that observes ontology context, uses an LLM to make a decision, and takes an action in the Ontology.
+
+But you’re right: they do not seem to clearly define the boundary of the agent.
+
+They could have said something like:
+
+> In this speedrun, the “agent” is the `Review Patient for Clinical Trial` Logic function. It uses an LLM to evaluate a patient against a selected clinical trial, then applies an Ontology action to save the eligibility decision and reasoning back to the Patient object.
+
+That would make the architecture much clearer. Currently, the word “agent” can be interpreted as:
+
+| Possible interpretation | Is that what the demo shows? |
+|---|---|
+| The `Use LLM` block only | Partially — this is the reasoning step |
+| The action block | No — this only writes values |
+| The whole Logic function | Most likely |
+| The automation that runs the function | Part of deployment, not the agent itself |
+| A persistent autonomous assistant | No |
+| A multi-tool planner/agent loop | No |
+
+So yes: the demo calls it “agentic,” but what it actually builds is more specifically a **Logic-based LLM workflow with an ontology action side effect**.
+
+
+# ggggggggggggggggggggggggg
+
+ME: "charitable" ??? :)
+
+
+🙂 Fair again.
+
+Less polite version:
+
+They’re calling the whole **`Review Patient for Clinical Trial` Logic function** the “agent,” but they don’t clearly define that.
+
+And what it actually does is simple:
+
+```text
+patient + clinicalTrial
+        ↓
+Use LLM prompt
+        ↓
+structured output:
+  eligibility_decision
+  eligibility_reasoning
+        ↓
+Ontology action
+        ↓
+write those two values onto the Patient object
+```
+
+So yes:
+
+> The “agent” is probably just the full Logic workflow: LLM call + ontology writeback.
+
+Not a planner.  
+Not autonomous.  
+Not choosing tools.  
+Not looping.  
+Not really “agentic” in the stronger sense.
+
+It’s an LLM-backed workflow/function that updates ontology fields.
 
 26.0714 (v1 26.0713)
