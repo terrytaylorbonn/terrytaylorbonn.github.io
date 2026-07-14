@@ -25,7 +25,8 @@ The ZiptieAI **[mission](/0-mission/)** is to provide
   - **[3b Projects](/3.3-ai-projects/)**. Practical Agentic AI applications, integration demos, and lab demos.
   - **[3c PAL](/pal/)**. Palantir demos.
   - **[4 Resources](/4_resources/)**. Detailed (docx) lab notes, Github, Wiki.
-- **A window to the AI future** ([NL](/nl/))
+
+<!-- - **A window to the AI future** ([NL](/nl/)) -->
  
 
 See also the **[Wiki](https://github.com/terrytaylorbonn/auxdrone/wiki)** and other links in the footer.
