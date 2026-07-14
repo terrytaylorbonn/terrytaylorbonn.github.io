@@ -29,4 +29,294 @@ See the working text for this QS in
 
 <br>
 
-26.0713 (v1 26.0713)
+### ME: in the speedrun it says 
+
+"5.9 Summary
+Large Language Models (LLMs) are inherently non-deterministic, meaning their responses can vary even when given the same input. 
+"
+
+that is false. 
+
+
+FDE/GPT: 
+
+You’re right that the statement is too categorical.
+
+A better version would be:
+
+> **Large Language Models (LLMs) are often non-deterministic in practice**, meaning their responses can vary even for the same input depending on model settings, sampling parameters, backend implementation, model updates, and execution environment.  
+>
+> Even when configured for more deterministic behavior, AI systems built on LLMs should still be rigorously evaluated for performance, reliability, and regression risk.
+
+Why the original wording is misleading:
+
+- LLMs are not *inherently* non-deterministic in the strict sense.
+- With fixed weights, fixed input, deterministic decoding, fixed infrastructure, and no stochastic sampling, an LLM can produce deterministic outputs.
+- However, many deployed LLM-powered systems are non-deterministic or only approximately deterministic because of sampling, temperature, tool use, retrieval variation, parallelism, model/version changes, or provider-side implementation details.
+
+So the core evaluation recommendation is valid, but the explanation should be more precise.
+
+
+ME: "too categorical" :)
+
+FDE: 🙂 Fair.
+
+“False” is more direct.
+
+Suggested replacement:
+
+Large Language Models (LLMs) are not inherently non-deterministic. With fixed weights, fixed inputs, deterministic decoding, and a stable execution environment, an LLM can produce deterministic outputs.
+
+However, LLM-powered applications often exhibit non-deterministic behavior in practice due to sampling settings, model/version changes, retrieval variability, tool use, distributed serving infrastructure, or other system-level factors.
+
+This makes it important to rigorously evaluate the performance and reliability of AI agents built on top of LLMs.
+
+<br>
+
+----------------------------
+----------------------------
+----------------------------
+----------------------------
+
+<br>
+
+# NOTES
+
+<br>
+
+### **FDE 1**
+
+Yes — I looked at the code/config. There are **two likely problems**, and one immediate fix.
+
+## Immediate blocker for running the eval
+
+The eval run is blocked because the project is missing the model import:
+
+```text
+ri.language-model-service..language-model.gemini-3-1-pro
+```
+
+Your Logic function uses that model here:
+
+```ts
+model: L.literals.model("ri.language-model-service..language-model.gemini-3-1-pro")
+```
+
+### Fix
+
+Import that model into the project before running the evaluation.
+
+I can do that for you, but I want your confirmation first.
+
+Reply:
+
+> **Import the missing model**
+
+and I’ll add the missing project import.
+
+---
+
+## Also suspicious in the Logic/action setup
+
+The Logic function is **not bound to an ontology**:
+
+```text
+ontologyRids: empty
+```
+
+But it uses ontology objects:
+
+- Patient
+- Clinical Trial
+
+That may cause problems later.
+
+Also, the action called by the function has strange defaults for string parameters:
+
+```text
+eligibility_decision
+eligibility_decision_reasoning
+```
+
+They appear to default from the whole `patient` object, which is not right for string fields. That may be another outdated speedrun-doc issue.
+
+---
+
+## First thing I recommend
+
+Do the smallest fix first:
+
+> Import the missing model.
+
+Then try running the eval again.
+
+If it still fails, the next fixes are:
+
+1. Bind the Logic to the ontology.
+2. Remove bad defaults from the action parameters.
+
+I will not change anything until you confirm.
+
+<br>
+
+### Import the missing model
+
+Done.
+
+I imported the missing model:
+
+```text
+ri.language-model-service..language-model.gemini-3-1-pro
+```
+
+The evaluation suite readiness check now passes:
+
+```text
+readyForProjectScopedRun = true
+```
+
+So try running the evaluation again now.
+
+<br>
+
+ERROR
+ 
+
+{
+  "body": {
+    "errorCode": "INTERNAL",
+    "errorName": "Default:Internal",
+    "errorInstanceId": "4fb5af19-8af8-4cb1-9477-0694071fca04",
+    "parameters": {}
+  },
+  "qos": {},
+  "status": 500,
+  "type": "STATUS"
+}
+
+### FDE
+
+I’ll try running the suite from the tool side so we can see whether it gives a more useful error than the UI’s generic 500.
+
+The tool gets the same generic 500. Next I’ll check if the Logic itself can preview-run on one test case; that tells us whether the issue is the function/action or just Evals.
+
+The preview failed because I guessed the primary-key property IDs wrong. I’ll load the Patient and Clinical Trial object types to get the exact primary keys.
+
+Now I’ll preview-run the Logic with the correct primary-key property IDs (`id`) to see the real function/action failure, if any.
+
+The Logic itself runs successfully on the first test case. That means the function is not fundamentally broken. I’ll try the eval in user-scoped mode next; that can help determine whether the failure is project-scoped execution/submission rather than the test logic.
+
+User-scoped run started and build succeeded. I’ll load the results.
+
+
+<img src="/assets/err-01.png" alt="drones" width="60%"> 
+
+I found the problem.
+
+## The function/eval code is OK
+
+I ran the evaluation suite in **user-scoped mode**, and it passed:
+
+```text
+3 / 3 tests passed
+```
+
+Evaluation suite:
+
+:resource[ri.evals..evaluation-suite.9c2186e1-93d7-44cd-8355-c3f5a6fa8f07]
+
+Logic function:
+
+:resource[ri.eddie.main.logic.c0fed952-b144-41dd-92af-10d2f6759fb1]
+
+## What was wrong
+
+The first problem was the missing model import. I fixed that.
+
+The remaining UI error is because the eval run is likely trying to run in **project-scoped mode**, but this Logic function is **user-scoped** and performs an **ontology edit/action**. That combination appears to be causing the generic 500 error.
+
+## Fix
+
+In the eval run configuration:
+
+1. Open **Run configuration**
+2. Scroll down
+3. Find **Execution mode**
+4. Choose:
+
+```text
+User scoped
+```
+
+5. Run again
+
+## Proof
+
+I ran it user-scoped and it succeeded:
+
+```text
+Suitable: pass
+Not suitable patient: pass
+Manual review patient: pass
+```
+
+So the immediate fix is: **run the eval in user-scoped mode, not project-scoped mode.**
+
+# I refresh 
+
+<img src="/assets/err-02.png" alt="drones" width="100%"> 
+
+
+# same error when i try in UI
+
+That is the **same project-scoped run failure**, not a code/test failure.
+
+We proved this:
+
+- **Project-scoped eval run** → 500 internal error ❌
+- **User-scoped eval run** → 3/3 passed ✅
+
+## Fix in the UI
+
+In the **Run configuration** modal, scroll lower and look for something like:
+
+- **Execution mode**
+- **Run mode**
+- **Run visibility**
+- **Project scoped / User scoped**
+
+Set it to:
+
+```text
+User scoped
+```
+
+Then run again.
+
+Also make sure any option like this is **off**:
+
+```text
+Force target to execute in project-scoped mode
+```
+
+## Why
+
+
+FDE: 
+Your Logic function is user-scoped and performs an ontology edit/action. Project-scoped eval execution is choking and returning a bad generic 500.
+
+So the working config is:
+
+```text
+Execution mode: User scoped
+Target: latest saved version
+Input mappings:
+  patient -> patient
+  clinicalTrial -> clinicalTrial
+```
+
+The eval suite itself is fine. The UI run config is the issue.
+
+
+
+26.0714 (v1 26.0713)
