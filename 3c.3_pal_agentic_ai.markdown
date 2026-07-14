@@ -1,0 +1,27 @@
+---
+layout: page
+title: 3c.3 PAL Agentic AI
+permalink: /3c.3_pal_agentic_ai/
+---
+
+
+<br>
+
+
+[← 3c.2 PAL AIP](/3c.2_pal_aip/)
+
+
+<!-- <br>
+**See the working text for this QS in**
+- **[#611vvv\_aip\_qs\_.docx](https://drive.google.com/drive/folders/1-Adawag9uA8_bq-hDF-nOuPYaRLz1eEO)**. Rewriting #611\_pal\_aip\_v06ccc-01\_ for the content of this page. Lots of my own concepts, etc.  -->
+
+<br>
+
+## **PAL-DEMO-3: Palantir agentic AI "speedrun" (quick start) (26.0713)**
+
+
+<!-- <img src="/assets/final-01.png" alt="drones" width="85%">  -->
+
+<br>
+
+26.0713 (v1 26.0713)
