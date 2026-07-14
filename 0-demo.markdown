@@ -1,13 +1,132 @@
 ---
 layout: page
-title: Demo
+title: Hack
 permalink: /0-demo/
 ---
 
 <br>
 
 
-This site is all about doing AI demos to understand how AI really works. **Code does not lie.**
+To work effectively with AI, the most important thing is to understand that **"Artificial intelligence" is a hack (see diagram below)**. Its also a misnomer (AI has no intelligence and is not artificial).
+
+<br>
+
+## **The hack**
+
+**I asked Google**: "what does it mean to hack something together"
+
+**Answer:** "To hack something together means to quickly assemble a prototype, program, or physical object using whatever materials and methods are immediately available. .... 
+
+Key Characteristics
+- **Speed Over Polish**: The primary goal is functionality. .....
+- **Unconventional Methods**: It involves using parts or code in ways they were not originally intended to be used (colloquially known as a "kluge" or "jerry-rigging"). 
+- **Tech Origins**: Heavily used in software development to describe a quick, temporary script or "dirty code" written to test a feature or bypass a bug. 
+
+While sometimes viewed as a negative sign of poor planning, it is often a celebrated, creative process in "hackathons" where building a working concept rapidly is the entire point. "
+
+Note: If you ask the same question again, Google AI will intentionally give you a different answer to give the impression that AI is not deterministic.
+
+<br>
+
+The following diagram shows how the GPT-3 transformer (TF) works. TF is the core of AI. The latest models are basically the same.
+- Loop X inputs 2048 token embeddings (12288 FP16 #s for each token)
+- The TF runs > 1 million billion computations to compute the next token (these computations are 100% deterministic; they will always give the same results for the same inputs).
+- At the end of 96 computational layers the 12288 FP16 #s  for the last token are the classification of the pattern formed by (up to) 2048 input embeddings. 
+- The TF has 175 billion parameters used to compute the pattern. These parameters were programmed by special SW that took massive input examples, and for each example (1) compared the output to the desired and (2) adjusted slightly the params to improve the accuracy for the one input example. Even at computer speeds, such training can take weeks. 
+- The number of pattern combinations represented by the training data is beyond imagination.
+- Yet the possible number of combinations are far greater. 
+- The TF works because the input tokens are a combination that the TF was never trained on, but the TF algorithm will match the input to the closest matching input combo the TF was programmed ("trained") on.
+
+NOTE the following:  
+- The output 12288 FP #s are a classifier. They are used to select a new token that is (out of ~50K tokens, the vocabulary) the best classifier of the input sequence. Note: TF's are sometimes programmed to not select the best match, because this will give the impression of non-deterministic intelligence, not binary computation. 
+- After that, the new token is appended to the input. To compute the next token (loop X+1) the calculations start from 0 (KV calculations can be reused). This hack (one of many) must be done because of algorithm limitations (nobody has figured out a better algorithm). 
+- The TF can run on a CPU, but that is extremely slow. The TF computations are 100% deterministic, but they are not procedural like for most CPU programs (no branching, etc). TF algorithms are shotgun algorithms (I call them that, inspired by "shotgun" homes that were thin and long and just ran from front to back).  Data just races through the GPU from start to finish.
+
+<br>
+
+***The hack: The transformer (LLM core) computes a numerical probability of possible classifications of the (numerical) input combination (an LLM sees nothing, has no thoughts, no emotions, etc etc etc)***<br>
+<img src="/assets/hack-01.png" alt="drones" width="45%">
+
+<br>
+
+## **The Ziptie AI site focus**
+
+<br>
+
+### **[2 NNs](https://ziptieai.com/2_models/) explains with demos the core of NN's** 
+
+details inside the TF.
+ 
+<img src="/assets/hack-02.png" alt="drones" width="75%">
+
+<br>
+
+### **[2b models](https://ziptieai.com/2b_models/) explains models (internal Agent + TF)**  
+
+
+TFs are packaged into models (GPT, etc). They have
+- an internal agent (iAgent, CPU-based) that is the only way for data into and out of the TF.
+- The iAgent is a procedural program that only exchanges tokens with the TF.
+- The API allows external agents (programs you write) to use the model.
+
+<img src="/assets/hack-03.png" alt="drones" width="65%">
+
+<br>
+ 
+### **[3 Agents](https://ziptieai.com/3_agents/) describes (external) agents that use the model**
+ 
+<img src="/assets/hack-04.png" alt="drones" width="75%">
+
+<br>
+
+
+### **[3b Projects](https://ziptieai.com/3.3-ai-projects/) describes practical apps**
+
+where the external agent integrates AI capabilities into main system (enterprise SW like Slack). Its not simple or easy, because AI is a hack whos outputs are unpredictable that is unpredictable.
+IF AI HAD REAL INTELLIGENCE, YOU WOULD JUST CONNECT IT TO TARGET SYSTEMS AND DONE. The AI  gurus who tell you AI has emotions, will surpass human intelligence, etc, all know that what they are saying is false. They totally understand the limitations (and the money to be made from those who dont understand).
+ 
+<img src="/assets/hack-05.png" alt="drones" width="75%">
+
+<br>
+
+
+### **[3c PAL (Palantir)](https://ziptieai.com/pal/) provides the infrastructure needed to create production systems**
+
+Without massive investments. I started out with Palantir demos in early July 2026. It is my core focus now, because I believe that this is a very effective way to create practical AI.
+
+<br>
+
+#### ***[PAL-DEMO-2: Palantir AIP “speedrun” (quick start)](https://ziptieai.com/3c.2_pal_aip/)***<br>
+<img src="/assets/hack-06.png" alt="drones" width="70%">
+
+<br>
+
+#### ***[PAL-DEMO-3: Palantir agentic AI](https://ziptieai.com/3c.3_pal_agentic_ai/)***<br>
+<img src="/assets/hack-07.png" alt="drones" width="70%">
+
+
+
+
+
+<br>
+<br><br>
+<br><br>
+<br><br>
+<br>
+<br>
+
+-------------------------------
+-------------------------------
+-------------------------------
+-------------------------------
+-------------------------------
+
+<br>
+
+# **Previous content of this page ("Demo") before 26.0714 rewrite**
+
+<br>
+
 
 This page talks about the lessons learned from a single demo, the **[Slack AI project demo](/3b.3.11-ai-proj-11-slack/)**. I've spent a couple of years working on ZiptieAI, starting with the basics of AI neural networks and working my way up (slowly, methodically, sometimes haphazardly) to the higher level demos and concepts. This demo is the first example of my end goal: Adding AI to enterprise SW (ESW). 
 
@@ -137,5 +256,5 @@ I think that's one of the strongest ideas you've developed for ZiptieAI.
 
 <br>
 
-26.0701 (v1 26.0628)
+26.0714 (v1 26.0714 (0628))
 

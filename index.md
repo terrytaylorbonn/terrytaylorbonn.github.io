@@ -5,9 +5,9 @@ title: Home
 
 <br>
 
-This site is all about extracting core AI concepts from demos. For example:
-- **[Demos](/pal/) of Palantir AIP and Foundry** (26.0706).
-- **[Demo](/0-demo/)** of AI in Slack (26.0703).  
+Latest updates:
+- **[Hack](/0-demo/)** explains the core of what makes AI tick.  
+- Palantir **[Demos](/pal/)** (v1 26.0706).
 
 <br>
 
@@ -23,7 +23,7 @@ The ZiptieAI **[mission](/0-mission/)** is to provide
   - **[2b Models](/2b_models/)**. Packaged AI models (primarily LLMs) available through an API. Fine-tuning, local models, deployment, and model serving (eventually we all need to **[host our own models](https://www.youtube.com/watch?v=zMhz7JUvJZA&t=36s)**).
   - **[3 Agents](/3_agents/)**. Python agents that implement reliable workflows, using AI models as helpful assistants.
   - **[3b Projects](/3.3-ai-projects/)**. Practical Agentic AI applications, integration demos, and lab demos.
-  - **[3c PAL](/pal/)**. Palantir Foundry demos.
+  - **[3c PAL](/pal/)**. Palantir demos.
   - **[4 Resources](/4_resources/)**. Detailed (docx) lab notes, Github, Wiki.
 - **A window to the AI future** ([NL](/nl/))
  
