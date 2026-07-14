@@ -20,6 +20,11 @@ permalink: /3c.3_pal_agentic_ai/
 ## **PAL-DEMO-3: Palantir agentic AI "speedrun" (quick start) (26.0713)**
 
 
+
+See the working text for this QS in
+- **[#614\_pal\_agentic\_ai\_qs\_.docx](https://drive.google.com/drive/folders/1-Adawag9uA8_bq-hDF-nOuPYaRLz1eEO)**.  
+
+
 <!-- <img src="/assets/final-01.png" alt="drones" width="85%">  -->
 
 <br>
