@@ -11,9 +11,7 @@ To work effectively with AI, the most important thing is to understand that **"A
 
 <br>
 
-## **The hack**
-
-**I asked Google**: "what does it mean to hack something together"
+## **Google: "what does it mean to hack something together?"**
 
 **Answer:** "To hack something together means to quickly assemble a prototype, program, or physical object using whatever materials and methods are immediately available. .... 
 
@@ -28,7 +26,11 @@ Note: If you ask the same question again, Google AI will intentionally give you 
 
 <br>
 
-The following diagram shows how the GPT-3 transformer (TF) works. TF is the core of AI. The latest models are basically the same.
+## **The following diagram explains the core GPT-3 transformer (TF) hack**
+
+*Note: Even the latest LLM TFs use the same basic algorithm*.
+
+TF is the core of AI. The latest models are basically the same.
 - Loop X inputs 2048 token embeddings (12288 FP16 #s for each token)
 - The TF runs > 1 million billion computations to compute the next token (these computations are 100% deterministic; they will always give the same results for the same inputs).
 - At the end of 96 computational layers the 12288 FP16 #s  for the last token are the classification of the pattern formed by (up to) 2048 input embeddings. 
@@ -110,6 +112,10 @@ Without massive investments. I started out with Palantir demos in early July 202
 
 <br>
 <br><br>
+<br><br>
+<br><br><br><br>
+<br><br>
+<br><br><br><br>
 <br><br>
 <br><br>
 <br>
