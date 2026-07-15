@@ -18,7 +18,7 @@ To work effectively with AI, the most important thing is to understand that **"A
 - 2 The “artificial intelligence” hack (the TF half of an LLM)
 - 3 Google: “what does it mean to hack something together?”
 - 4 The hack in detail: Astounding engineering (GPT-3 transformer (TF))
-- 5 The Ziptie AI site evolution
+- 5 Ziptie AI site evolution
 
 <br>
 
@@ -107,7 +107,7 @@ NOTE the following:
 
 <br>
 
-## **5 The ZiptieAI.com site evolution**
+## **5 ZiptieAI.com site evolution**
 
 I started out focusing on page "1 drones" (with AI = CNNs, object recognition). 
 
