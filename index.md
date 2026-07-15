@@ -6,7 +6,7 @@ title: Home
 <br>
 
 Latest updates:
-- **[Hack](/0-demo/)** explains the core of what makes AI tick.  
+- **[Hack](/0-demo/)** explains the core of what makes AI tick (WIP, v1 26.0715).  
 - Palantir **[Demos](/pal/)** (v1 26.0706).
 
 <br>
