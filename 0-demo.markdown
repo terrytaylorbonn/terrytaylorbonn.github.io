@@ -6,6 +6,10 @@ permalink: /0-demo/
 
 <br>
 
+*This page rewritten 26.0714... its still very rough draft WIP*
+
+<br>
+
 
 To work effectively with AI, the most important thing is to understand that **"Artificial intelligence" is a hack**. But an **extremely valuable hack when engineered into target systems properly**. That's what ZiptieAI is all about.
 
