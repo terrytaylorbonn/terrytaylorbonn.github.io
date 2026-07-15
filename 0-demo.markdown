@@ -113,7 +113,7 @@ I started out focusing on page "1 drones" (with AI = CNNs, object recognition).
 
 My interest shifted to the AI that powered the CNNs. I wanted to understand the core of how it worked, but I struggled to find a clear mechanistic straightforward explanation. So with the help of GPT I learned on my own, and ZiptieAI become a site primarily about AI. The evolution continued, steadily moving up the AI "food chain", only recently focusing on Palantir-style systems.
 
-This section documents that evolution. If you really want to understand AI, I recommend following the same path. A solid understanding of core AI in invaluable when building Palantir type systems.
+This section documents that evolution. If you really want to understand AI, I recommend following the same path. A solid understanding of core AI is invaluable when building Palantir type systems.
 
 **TOC**
 - 5.1 Page "2 NNs" explains with demos the core of NN’s

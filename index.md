@@ -13,8 +13,7 @@ Latest updates:
 
 <!-- ZiptieAI.com was created in 2024 to document my work on Ukrainian style ziptie'd [AI Drones](/1-drones/). -->
 
-The ZiptieAI **[mission](/0-mission/)** is to provide
-- **Basic AI concepts**
+The ZiptieAI **[mission](/0-mission/)** is to document my path from simple AI NNs (neural networks (matrix math)) to Palantir style systems.
 - **AI quickstart**
   - **[QS (demos)](/0-qs/)** (selected demos).
   - **[(QS) concepts](/0b-demos/)**.
