@@ -109,7 +109,11 @@ NOTE the following:
 
 ## **5 The ZiptieAI.com site evolution**
 
-I started out focusing on page "1 drones" (with AI = CNNs, object recognition). Currently the focus is on Palantir type systems.
+I started out focusing on page "1 drones" (with AI = CNNs, object recognition). 
+
+My interest shifted to the AI that powered the CNNs. I wanted to understand the core of how it worked, but I struggled to find a clear mechanistic straightforward explanation. So with the help of GPT I learned on my own, and ZiptieAI become a site primarily about AI. The evolution continued, steadily moving up the AI "food chain", only recently focusing on Palantir-style systems.
+
+This section documents that evolution. If you really want to understand AI, I recommend following the same path. A solid understanding of core AI in invaluable when building Palantir type systems.
 
 **TOC**
 - 5.1 Page "2 NNs" explains with demos the core of NN’s
@@ -171,7 +175,7 @@ Following diagram shows how in 3b "Projects" you have to create the infrastrucur
 I started out with Palantir demos in early July 2026. It is my core focus now, because I believe that this is a very effective way to create practical AI. Palantir started out 25 years ago before AI was useful. They built data analysis tools that worked. And recently they started adding AI **as a helpful assistant** (that is all AI can do; if you let AI drive your car or manager your bank accounts... good luck).
 
 
-<img src="/assets/hack-09.png" alt="drones" width="42%">
+<img src="/assets/hack-09.png" alt="drones" width="45%">
 
 
 
