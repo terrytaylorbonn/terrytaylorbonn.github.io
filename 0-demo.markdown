@@ -44,7 +44,7 @@ PS:
 
 <br>
 
-## **2 The "artificial intelligence" hack (the TF half)**
+## **2 The "artificial intelligence" hack (the TF half of an LLM)**
 
 (the other half is the internal agent; together they make up an LLM)
 
