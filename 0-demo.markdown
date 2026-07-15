@@ -39,12 +39,14 @@ for the "jely" demo, The following diagram (left to right) shows how AI does it 
 - The main system is YOU and your browser.
 - External agent is all the logic on the Google side, that interface between you and the LLM.
 - 2b Model is Gemma, etc. Has internal agent (interface between outside model and TF) and TF.
-- **2 TF transformer is where the AI magic happens. Its all matrix math on GPUs.**
+- **2 TF transformer is where the AI magic happens. Its all matrix math on GPUs.** 
 
 <img src="/assets/hack-05.png" alt="drones" width="75%">
 
 
 PS: 
+- **The true TF magic (there's so much magic in a TF) is that if the input does not match any of the example ("training") data used to program ("train") the TF, then it will still find the closest SEMANTIC (MEANING) MATCH. So you dont have to worry about covering all possible examples**
+- **but the more examples you train on the better the results; thats why the race is on for scaling and massive GPU computing; thats why nuclear power is "safe and effective"** all of a sudden, now that the tech titans need massive amounts of electricity).
 - And if its not programmed into the TF, the model can tell the external agent to find the required text (search) and then process the text into response. Amazing.  
 - the model can also simulate thinking, planning, creating subtasks.. all from the example text it was programmed on (and with the complex logic of the internal agent that controls the model).
 
