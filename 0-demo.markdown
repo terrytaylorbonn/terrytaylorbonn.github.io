@@ -11,7 +11,48 @@ To work effectively with AI, the most important thing is to understand that **"A
 
 <br>
 
-## **Google: "what does it mean to hack something together?"**
+## **1 "what does jely made of?"**
+
+**Google answers "The ingredients in jelly depend on the type...."**. The technical wizardry behind that simple answer is amazing. That's AI. That has changed our world (many of us have forgotten what it was like when all input to computers had to be be perfect).
+
+Without AI a computer could not answer such a question.  A procedural program would have to 
+- check all possible combinations of letters against all possible meanings and contexts.
+- encode all possible topics. 
+- account for all possible grammar formulations and errors.
+- misspelled words.
+- bad punctuation.  
+
+A procedural program can do simple things like checking capital/lower-case letter combos, etc, but that's about it.  Imagine what would be required for what AI does now (complete discussions, etc). Impossible without AI.
+
+for the "jely" demo, The following diagram (left to right) shows how AI does it (MODIFY DIAGRAM). 
+- The main system is YOU and your browser.
+- External agent is all the logic on the Google side, that interface between you and the LLM.
+- 2b Model is Gemma, etc. Has internal agent (interface between outside model and TF) and TF.
+- **2 TF transformer is where the AI magic happens. Its all matrix math on GPUs.**
+
+<img src="/assets/hack-05.png" alt="drones" width="75%">
+
+
+PS: 
+- And if its not programmed into the TF, the model can tell the external agent to find the required text (search) and then process the text into response. Amazing.  
+- the model can also simulate thinking, planning, creating subtasks.. all from the example text it was programmed on (and with the complex logic of the internal agent that controls the model).
+
+
+<br>
+
+## **2 The "artificial intelligence" hack (the TF half)**
+
+(the other half is the internal agent; together they make up an LLM)
+
+The following diagram shows what an LLM TF (and CNN, NN in general) really does. You often read that it computes the new token from the last token. Nonsense (the computed data for the new token ends up in the last token, but this data was computed from all tokens). The TF runs a complex pattern matching algorithm that generates an output that classifies the input. Matrix math is used to compute the most likely token for that classification output (12288 FP-16 #s) (1 token out of ~50K tokens).
+
+**What is inside the TF is an engineering marvel**. But intelligence? Nonsense (and the AI gurus all very well aware of this fact). **As a source of intelligence, its a crude brute-force hack**. Thats works well enough to make it extremely valuable.
+
+<img src="/assets/hack-08.png" alt="drones" width="40%">
+
+<br>
+
+## **3 Google: "what does it mean to hack something together?"**
 
 **Answer:** "To hack something together means to quickly assemble a prototype, program, or physical object using whatever materials and methods are immediately available. .... 
 
@@ -20,13 +61,15 @@ Key Characteristics
 - **Unconventional Methods**: It involves using parts or code in ways they were not originally intended to be used (colloquially known as a "kluge" or "jerry-rigging"). 
 - **Tech Origins**: Heavily used in software development to describe a quick, temporary script or "dirty code" written to test a feature or bypass a bug. 
 
-While sometimes viewed as a negative sign of poor planning, it is often a celebrated, creative process in "hackathons" where building a working concept rapidly is the entire point. "
+While sometimes viewed as a negative sign of poor planning, it is often a celebrated, creative process in "hackathons" where building a working concept rapidly is the entire point. 
+- **This is what AI has been for over half a century... technical experiment, a hack that only recently (thanks to powerful GPUs that could perform the brute-force computations) worked well enough to market as "intelligent"**.
+- **But the hack performs some vital functions extremely well, which makes it valuable.**
+- **The challenge: Project Engineering so that it works well enough for specific applications.**
 
-Note: If you ask the same question again, Google AI will intentionally give you a different answer to give the impression that AI is not deterministic.
 
 <br>
 
-## **The following diagram explains the core GPT-3 transformer (TF) hack**
+## **4 The hack in detail: Astounding engineering (GPT-3 transformer (TF))**
 
 *Note: Even the latest LLM TFs use the same basic algorithm*.
 
@@ -51,7 +94,7 @@ NOTE the following:
 
 <br>
 
-## **The Ziptie AI site focus**
+## **5 The Ziptie AI site focus**
 
 <br>
 
