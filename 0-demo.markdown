@@ -57,7 +57,9 @@ NOTE the following:
 
 ### **[2 NNs](https://ziptieai.com/2_models/) explains with demos the core of NN's** 
 
-details inside the TF.
+details inside the TF. The TF has basically 2 types of NNs:
+- **QKV**. THis is for computing the real meaning of words based on context. Its called "attention", a total marketing hype term, to give the impression of intelligence.
+- FFN. This detects higher level meaning in the 12288 FP #s of each token embedding.
  
 <img src="/assets/hack-02.png" alt="drones" width="75%">
 
@@ -69,6 +71,7 @@ details inside the TF.
 TFs are packaged into models (GPT, etc). They have
 - an internal agent (iAgent, CPU-based) that is the only way for data into and out of the TF.
 - The iAgent is a procedural program that only exchanges tokens with the TF.
+- iAgent is closely designed to work together with a specific trained TF. 
 - The API allows external agents (programs you write) to use the model.
 
 <img src="/assets/hack-03.png" alt="drones" width="65%">
@@ -76,7 +79,9 @@ TFs are packaged into models (GPT, etc). They have
 <br>
  
 ### **[3 Agents](https://ziptieai.com/3_agents/) describes (external) agents that use the model**
- 
+
+The real challenge is writing external programs that can handle those big errors when the LLM algorithms fail (these are called "hallucinations", a rediculous marketing term). 
+
 <img src="/assets/hack-04.png" alt="drones" width="75%">
 
 <br>
@@ -84,8 +89,7 @@ TFs are packaged into models (GPT, etc). They have
 
 ### **[3b Projects](https://ziptieai.com/3.3-ai-projects/) describes practical apps**
 
-where the external agent integrates AI capabilities into main system (enterprise SW like Slack). Its not simple or easy, because AI is a hack whos outputs are unpredictable that is unpredictable.
-IF AI HAD REAL INTELLIGENCE, YOU WOULD JUST CONNECT IT TO TARGET SYSTEMS AND DONE. The AI  gurus who tell you AI has emotions, will surpass human intelligence, etc, all know that what they are saying is false. They totally understand the limitations (and the money to be made from those who dont understand).
+where the external agent integrates AI capabilities into the main system (enterprise SW like Slack). Its not simple or easy, because AI is a hack whos outputs are unpredictable that is unpredictable. **IF AI HAD REAL INTELLIGENCE, YOU WOULD JUST CONNECT IT TO TARGET SYSTEMS AND DONE**. 
  
 <img src="/assets/hack-05.png" alt="drones" width="75%">
 
@@ -94,32 +98,26 @@ IF AI HAD REAL INTELLIGENCE, YOU WOULD JUST CONNECT IT TO TARGET SYSTEMS AND DON
 
 ### **[3c PAL (Palantir)](https://ziptieai.com/pal/) provides the infrastructure needed to create production systems**
 
-Without massive investments. I started out with Palantir demos in early July 2026. It is my core focus now, because I believe that this is a very effective way to create practical AI.
+I started out with Palantir demos in early July 2026. It is my core focus now, because I believe that this is a very effective way to create practical AI. Palantir started out 25 years ago before AI was useful. They built data analysis tools that worked. And recently they started adding AI **as a helpful assistant** (that is all AI can do; if you let AI drive your car or manager your bank accounts... good luck).
 
 <br>
 
-#### ***[PAL-DEMO-2: Palantir AIP “speedrun” (quick start)](https://ziptieai.com/3c.2_pal_aip/)***<br>
+#### ***[PAL-DEMO-2: Palantir AIP “speedrun” (quick start)](https://ziptieai.com/3c.2_pal_aip/)***
+
+My second Palantir demo. Quite a challenge. What impressed me the most was I was able to get a complex data pipeline running. The actual AI portion of the app was very small. This is way to do things. You must simple the world that AI has to deal with to increase reliablity.
+
 <img src="/assets/hack-06.png" alt="drones" width="70%">
 
 <br>
 
-#### ***[PAL-DEMO-3: Palantir agentic AI](https://ziptieai.com/3c.3_pal_agentic_ai/)***<br>
+#### ***[PAL-DEMO-3: Palantir agentic AI](https://ziptieai.com/3c.3_pal_agentic_ai/)***
+
+This was an interesting demo. Not sure it was a good example of an agent. But still, I like Palantir's approach. 
+
 <img src="/assets/hack-07.png" alt="drones" width="70%">
 
-
-
-
-
-<br>
-<br><br>
-<br><br>
-<br><br><br><br>
-<br><br>
-<br><br><br><br>
-<br><br>
-<br><br>
-<br>
-<br>
+<br><br><br> <br><br><br><br><br><br> <br><br>
+<br><br><br><br> <br><br><br><br><br> <br>
 
 -------------------------------
 -------------------------------
