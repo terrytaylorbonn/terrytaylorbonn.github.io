@@ -245,11 +245,11 @@ This section focuses on a conceptual understanding of the technical aspects (esp
 <!-- iptieAI methodically attacks the complexity of the AI ecosystem in a very mechanistic fashion (because AI is first and foremost a mechanical algorithms). --> 
 
 The code demos are organized into the 4 groups shown in the diagram below.
-- **(2) Core [NNs](/2_models/)**.
+- **(2) [NNs](/2_models/)**.
 - **(2b) [Models](/2b_models/)** that package core NNs for reuse.
-- **(3) External [agents](/3_agents/)** that provide an interface between models (helpful assistants) and legacy systems.
-- **(3b) Real-world [projects](/3.3-ai-projects/)**.
-- **(3c) [Palantir projects](/pal/)**. Palantir Foundry demos (still need to add to diagram).
+- **(3) External [agents](/3_agents/)** that provide an interface to models.
+- **(3b) [Workflow](/3.3-ai-projects/)** platforms that control parts of the architecture.
+- **(3c) [Enterprise](/pal/)** platforms that control almost everything. For now this is just Palantir.
 
 
 *The ZiptieAI deep dive takes you methodically through the entire AI stack*<br>

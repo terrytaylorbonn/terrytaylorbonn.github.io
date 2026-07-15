@@ -272,7 +272,53 @@ The real goal of AI projects is to integrate AI into an existing SW (ESW) app.
 *3b standalone AI app (S4 only)*<br>
 <img src="/assets/M-41.png" alt="drones" width="30%"> 
 
+<br><br><br><br><br><br>
+
+
+--------------------------------------------
+--------------------------------------------
+--------------------------------------------
+--------------------------------------------
+--------------------------------------------
+--------------------------------------------
+--------------------------------------------
+
+<br><br><br><br><br><br>
+
+#### **2.1 Core AI demos ([QS](/0-qs/))**
+
+**You can only learn how AI works by doing code demos** (or at least studying the code). **Code does not lie**. 
+
+<!-- Chatbots are programmed to inundate you with hype and AI lingo. GPT often remarks about my habit of wanting to describe AI from a **mechanistic** viewpoint. My response has always been **"of course, AI is mechanistic**. I went down so many rabbit holes when studying AI. **The ONLY way to understand AI is by doing examples. -->
+
+*A simple NN **[demo](/2.1.2-classifier-nn/)** of the core of AI*<br>
+<img src="/assets/M-02.png" alt="drones" width="22%">
+
+
+**NOTE: About my use of "tiny" demos and analysis based on Alex-Net CNNs (2012) and GPT-3 (2020) throughout this site**. The core of AI is not rapidly evolving. The simple demos on this site are the best demos if you want to understand the core mechanics of how AI really works. For example, page **[2.3.6.1b D5 tiny TF algorithm details](/2.3.6.1b-d5-tiny-tf-algorithm-details/)** (draft, WIP) explains in detail the simplest demo (its not simple) of the LLM TF QKV (context) mechanism  
+
+*QKV is still the core of LLM AI (**[video](https://youtu.be/lSDC6-BdVus?t=357)**)* <br>
+<img src="/assets/kv.png" alt="drones" width="40%">
+
+
+
+<!--
+*Code for **[NN](/2.1.1-predictive-nn-01-sine/)** definition (left) and training (right)*<br>
+<img src="/assets/M-14.png" alt="desc" width="60%"> -->
+
+
+
+<!--
+<img src="/assets/M-09.png" alt="drones" width="58%"> -->
+
+
+
+<!-- *Human (left), LLM agent (center), and LLM transformer (right)*<br>  
+<img src="/assets/M-11.png" alt="drones" width="31%"> -->
+
 <br>
+
+
 
 26.0628 (v1 26.0527)
 

@@ -284,6 +284,193 @@ For example:
 -->
 
 <br>
+<br>
+<br>
+<br>
+
+----------------------------------------------
+----------------------------------------------
+----------------------------------------------
+----------------------------------------------
+
+<br>
+<br>
+<br>
+<br>
+
+
+## **5 ZiptieAI.com site evolution**
+
+I started out focusing on page "1 drones" (with AI = CNNs, object recognition). 
+
+My interest shifted to the AI that powered the CNNs. I wanted to understand the core of how it worked, but I struggled to find a clear mechanistic straightforward explanation. So with the help of GPT I learned on my own, and ZiptieAI become a site primarily about AI. The evolution continued, steadily moving up the AI "food chain", only recently focusing on Palantir-style systems.
+
+This section documents that evolution. If you really want to understand AI, I recommend following the same path. A solid understanding of core AI is invaluable when building Palantir type systems.
+
+**TOC**
+- 5.1 Page "2 NNs" explains with demos the core of NN’s
+- 5.2 Page "2b models" explains models (internal Agent + TF)
+- 5.3 Page "3 Agents" describes (external) agents that use the model
+- 5.4 Page "3b Projects" describes practical apps
+- 5.5 Page "3c PAL" (Palantir) provides the infrastructure needed to create production systems
+
+<br>
+
+### **5.1 Page [2 NNs](https://ziptieai.com/2_models/) explains with demos the core of NN's** 
+
+details inside the TF. The TF has basically 2 types of NNs:
+- **QKV**. THis is for computing the real meaning of words based on context. Its called "attention", a total marketing hype term, to give the impression of intelligence.
+- FFN. This detects higher level meaning in the 12288 FP #s of each token embedding.
+ 
+<img src="/assets/hack-02.png" alt="drones" width="75%">
+
+<br>
+
+### **5.2 Page [2b models](https://ziptieai.com/2b_models/) explains models (internal Agent + TF)**  
+
+
+TFs are packaged into models (GPT, etc). They have
+- an internal agent (iAgent, CPU-based) that is the only way for data into and out of the TF.
+- The iAgent is a procedural program that only exchanges tokens with the TF.
+- iAgent is closely designed to work together with a specific trained TF. 
+- The API allows external agents (programs you write) to use the model.
+
+<img src="/assets/hack-03.png" alt="drones" width="65%">
+
+<br>
+ 
+### **5.3 Page [3 Agents](https://ziptieai.com/3_agents/) describes (external) agents that use the model**
+
+The real challenge is writing external programs that can handle those big errors when the LLM algorithms fail (these are called "hallucinations", a rediculous marketing term). 
+
+<img src="/assets/hack-04.png" alt="drones" width="75%">
+
+<br>
+
+
+### **5.4 Page [3b Projects](https://ziptieai.com/3.3-ai-projects/) describes practical apps**
+
+where the external agent integrates AI capabilities into the main system (enterprise SW like Slack). Its not simple or easy, because AI is a hack whos outputs are unpredictable that is unpredictable. **IF AI HAD REAL INTELLIGENCE, YOU WOULD JUST CONNECT IT TO TARGET SYSTEMS AND DONE**. 
+ 
+<img src="/assets/hack-05.png" alt="drones" width="75%">
+
+Following diagram shows how in 3b "Projects" you have to create the infrastrucure yourself (in 3b I did not even start to do security, logins, DB conversions, etc etc). With Palantir this is all dramatically simplified and **standardized**.
+
+<img src="/assets/hack-10.png" alt="drones" width="70%">
+
+
+<br>
+
+
+### **5.5 Page [3c PAL (Palantir)](https://ziptieai.com/pal/) provides the infrastructure needed to create production systems**
+
+I started out with Palantir demos in early July 2026. It is my core focus now, because I believe that this is a very effective way to create practical AI. Palantir started out 25 years ago before AI was useful. They built data analysis tools that worked. And recently they started adding AI **as a helpful assistant** (that is all AI can do; if you let AI drive your car or manager your bank accounts... good luck).
+
+
+<img src="/assets/hack-09.png" alt="drones" width="45%">
+
+
+
+<br>
+
+#### **FDE/GPT:** 
+
+That diagram is a solid high-level mental model.
+
+Interpreting it with your page labels:
+
+```text
+Legacy system / DB
+        ↔
+3c Palantir platform boundary
+        ├─ Security
+        ├─ Ontology
+        └─ 3b Project
+              ├─ UI
+              └─ 3 Agent
+                    ↔ MIL
+                         ↔ 2b Models
+```
+
+A few observations:
+
+- **3c Palantir** is the overall Foundry/AIP environment.
+- **Security** and **Ontology** sit inside Palantir as platform-level layers.
+- The **3b project** contains the concrete application/workflow implementation.
+- The **3 Agent** is your project-level AI workflow/function/app logic.
+- **MIL** looks like your model-integration layer / model inference layer / model interface layer.
+- **2b Models** are outside or adjacent to Palantir, depending on how you’re presenting them.
+- The **legacy system DB** feeds Palantir via integration, and Palantir can potentially write back.
+
+For the speedrun specifically, I’d map it like this:
+
+| Your diagram node | Speedrun equivalent |
+|---|---|
+| Legacy system DB | Source data / installed demo datasets |
+| Security | Foundry permissions, markings, ontology access |
+| Ontology | Patient, Clinical Trial, links, actions |
+| 3b project | Installed speedrun project/folder |
+| UI | Clinical Trial Recruitment Hub Workshop app |
+| 3 Agent | `Review Patient for Clinical Trial` Logic function |
+| MIL | The `Use LLM` block / model invocation layer |
+| 2b Model | The underlying LLM selected by AIP Logic |
+
+The main caveat is that in Foundry, **Ontology and Security are not just passive boxes**. They strongly shape what the agent can see and do:
+
+- Ontology defines the object types, links, actions, and semantic vocabulary.
+- Security constrains which objects/properties/actions/models are accessible.
+- The Logic function operates through those layers rather than directly against the raw DB.
+
+So if your goal is to explain “where the agent is,” this diagram helps: the speedrun’s “agent” belongs inside the **3b project**, uses the **Ontology**, is governed by **Security**, and calls out through **MIL** to an LLM/model.
+
+
+<br>
+
+#### ***[PAL-DEMO-2: Palantir AIP “speedrun” (quick start)](https://ziptieai.com/3c.2_pal_aip/)***
+
+My second Palantir demo. Quite a challenge. What impressed me the most was I was able to get a complex data pipeline running. The actual AI portion of the app was very small. This is way to do things. You must simple the world that AI has to deal with to increase reliablity.
+
+<img src="/assets/hack-06.png" alt="drones" width="70%">
+
+<br>
+
+#### ***[PAL-DEMO-3: Palantir agentic AI](https://ziptieai.com/3c.3_pal_agentic_ai/)***
+
+This was an interesting demo. Not sure it was a good example of an agent. But still, I like Palantir's approach. 
+
+<img src="/assets/hack-07.png" alt="drones" width="70%">
+
+
+<br>
+
+<br><br><br><br><br><br>
+
+
+--------------------------------------------
+--------------------------------------------
+--------------------------------------------
+--------------------------------------------
+--------------------------------------------
+--------------------------------------------
+--------------------------------------------
+
+<br><br><br><br><br><br>
+
+
+
+#### **2.2 Core AI technical [concepts](/0b-demos/)**
+
+This section focuses on a conceptual understanding of the technical aspects (especially the algorithm details) of the demos. 
+
+<!-- **An AI LLM is first and foremost a man <> machine interface with hard coded language skills and memory**. A human chats with an LLM via tokens (words). Human eyesight and intelligence convert these tokens into thoughts (an amazing little-understood process). **The LLM internal agent (a traditional CPU-based algorithm) controls the transformer (TF) and interfaces with the outside world. The TF generates a token sequence based on the input tokens (nothing more).** The closely synchronized teamwork of the internal agent and the TF result in a convincing simulation of intelligent thought. -->
+
+<!-- On the LLM side, tokens are converted by the internal agent to FP numbers before being input to the LLM transformer (TF). An LLM sees nothing and has no thoughts. It only crunches numbers. **AI chatbots only say what they are programmed to say**. -->
+
+*The similarities of the CNN and TF algorithms*<br>
+<img src="/assets/00-MAIN.png" alt="drones" width="58%"> 
+
+
+
 
 26.0628 (v1 26.0611)
 

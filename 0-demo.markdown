@@ -109,148 +109,182 @@ NOTE the following:
 
 <br>
 
-## **5 ZiptieAI.com site evolution**
+<br><br><br> 
 
-I started out focusing on page "1 drones" (with AI = CNNs, object recognition). 
+### **1 Basic AI concepts** 
 
-My interest shifted to the AI that powered the CNNs. I wanted to understand the core of how it worked, but I struggled to find a clear mechanistic straightforward explanation. So with the help of GPT I learned on my own, and ZiptieAI become a site primarily about AI. The evolution continued, steadily moving up the AI "food chain", only recently focusing on Palantir-style systems.
+**The engineering genius behind AI is amazing**. But **building successful AI applications requires a basic understanding of what AI really is**.
+- 1.1 AI = deterministic algorithms running on digital HW
+- 1.2 LLM agent + transformer = simulated intelligence
+- 1.3 The core of AI: NN classification (matrix math based pattern matching)
+- 1.4 Extensions of the simple NN (CNNs, TFs)
+- 1.5 The TF algorithm (QKV context computation from 2020) is still the basis of LLM AI
+- 1.6 AI is an incredible revolutionary engineering marvel.. for the right applications
+- 1.7 Falling for AI hype can cost you... dearly
+- 1.8 AI's place in our world (not our place in AI's world)
 
-This section documents that evolution. If you really want to understand AI, I recommend following the same path. A solid understanding of core AI is invaluable when building Palantir type systems.
-
-**TOC**
-- 5.1 Page "2 NNs" explains with demos the core of NN’s
-- 5.2 Page "2b models" explains models (internal Agent + TF)
-- 5.3 Page "3 Agents" describes (external) agents that use the model
-- 5.4 Page "3b Projects" describes practical apps
-- 5.5 Page "3c PAL" (Palantir) provides the infrastructure needed to create production systems
-
-<br>
-
-### **5.1 Page [2 NNs](https://ziptieai.com/2_models/) explains with demos the core of NN's** 
-
-details inside the TF. The TF has basically 2 types of NNs:
-- **QKV**. THis is for computing the real meaning of words based on context. Its called "attention", a total marketing hype term, to give the impression of intelligence.
-- FFN. This detects higher level meaning in the 12288 FP #s of each token embedding.
- 
-<img src="/assets/hack-02.png" alt="drones" width="75%">
-
-<br>
-
-### **5.2 Page [2b models](https://ziptieai.com/2b_models/) explains models (internal Agent + TF)**  
-
-
-TFs are packaged into models (GPT, etc). They have
-- an internal agent (iAgent, CPU-based) that is the only way for data into and out of the TF.
-- The iAgent is a procedural program that only exchanges tokens with the TF.
-- iAgent is closely designed to work together with a specific trained TF. 
-- The API allows external agents (programs you write) to use the model.
-
-<img src="/assets/hack-03.png" alt="drones" width="65%">
-
-<br>
- 
-### **5.3 Page [3 Agents](https://ziptieai.com/3_agents/) describes (external) agents that use the model**
-
-The real challenge is writing external programs that can handle those big errors when the LLM algorithms fail (these are called "hallucinations", a rediculous marketing term). 
-
-<img src="/assets/hack-04.png" alt="drones" width="75%">
-
-<br>
-
-
-### **5.4 Page [3b Projects](https://ziptieai.com/3.3-ai-projects/) describes practical apps**
-
-where the external agent integrates AI capabilities into the main system (enterprise SW like Slack). Its not simple or easy, because AI is a hack whos outputs are unpredictable that is unpredictable. **IF AI HAD REAL INTELLIGENCE, YOU WOULD JUST CONNECT IT TO TARGET SYSTEMS AND DONE**. 
- 
-<img src="/assets/hack-05.png" alt="drones" width="75%">
-
-Following diagram shows how in 3b "Projects" you have to create the infrastrucure yourself (in 3b I did not even start to do security, logins, DB conversions, etc etc). With Palantir this is all dramatically simplified and **standardized**.
-
-<img src="/assets/hack-10.png" alt="drones" width="70%">
+<!-- - 1.1 AI = deterministic algorithms running on digital HW
+- 1.2 There is no "I" (intelligence) in AI
+- 1.3 (1.2b) So what is AI? AI = classification, pattern matching (simple NN)
+- 1.4 (1.2c) Variations of the simple NN theme (CNNs, TFs)
+- 1.5 (1.2d) KV saved (HACKS) (cant get better algo to work)
+- 1.6 (1.4) AI is an incredible revolutionary engineering marvel.. for the right applications
+- 1.7 (1.3) Falling for AI hype can cost you... dearly
+- 1.8 (1.5) AI's place in our world (not our place in AI's world)
+-->
 
 
 <br>
 
+#### **1.1 AI = deterministic algorithms running on digital HW**
 
-### **5.5 Page [3c PAL (Palantir)](https://ziptieai.com/pal/) provides the infrastructure needed to create production systems**
+The following is an example of the python code that defines the structure and training algorithm of a very simple NN.  Such a NN runs on clocked binary circuits and will always output the EXACT same result for the same input. **The inputs and outputs are ONLY FP (floating point) numbers. NNs are pure number crunchers.**
 
-I started out with Palantir demos in early July 2026. It is my core focus now, because I believe that this is a very effective way to create practical AI. Palantir started out 25 years ago before AI was useful. They built data analysis tools that worked. And recently they started adding AI **as a helpful assistant** (that is all AI can do; if you let AI drive your car or manager your bank accounts... good luck).
+<img src="/assets/M-14.png" alt="desc" width="60%"> 
 
+The AI simulation of intelligence started to seem intelligent only recently after the computational hardware reached the performance level required to (1) generate responses at least as fast as a human could read them and (2) with a level of accuracy that (at least initially) convinced users that AI had some level of genuine intelligence. But AI has no intelligence. **AI algorithms and the circuitry they run on have little similarity to human brain neurons.** You could run the most sophisticated LLMs on GPUs based on electro-mechanical relays. It might require its power plant and take years to answer a prompt, but it is theoretically possible.  
 
-<img src="/assets/hack-09.png" alt="drones" width="45%">
+*Electro-mechanical relay*<br>
+<img src="/assets/relay.png" alt="drones" width="12%">
 
 
 
 <br>
 
-#### **FDE/GPT:** 
+#### **1.2 LLM agent + transformer = simulated intelligence**
 
-That diagram is a solid high-level mental model.
+LLM AI is based on 2 very distinct computational components.
 
-Interpreting it with your page labels:
+- **Transformer (TF)** generates response tokens based on the input tokens. The actual TF algorithm only computes FP numbers. **The TF computational process is a straight shot (not procedural)**. The TF computes a classification of the entire input. This classification is used to select the next token. That new token is added to the input. The TF is reset, and the process for the next token starts. This process continues until the TF stops or the iAgent comands a stop.
+- **Internal agent (iAgent)** sends and receives tokens to/from the TF. The iAgent is the core control loop, the typical **procedural program** (usually confusing referred to as **the** deterministic program; the problem is the GPU is also 100% deterministic). The iAgent has an API that allows the external world (a human or an "external Agent") to use the model. 
 
-```text
-Legacy system / DB
-        ↔
-3c Palantir platform boundary
-        ├─ Security
-        ├─ Ontology
-        └─ 3b Project
-              ├─ UI
-              └─ 3 Agent
-                    ↔ MIL
-                         ↔ 2b Models
-```
+Note: TF algorithms are referred to as "neural" networks because the diagrams for NN matrix math look like diagrams that could be considered similar to those for biological neural networks.   
 
-A few observations:
+<img src="/assets/M-15-2bbb.png" alt="drones" width="63%"><br>
 
-- **3c Palantir** is the overall Foundry/AIP environment.
-- **Security** and **Ontology** sit inside Palantir as platform-level layers.
-- The **3b project** contains the concrete application/workflow implementation.
-- The **3 Agent** is your project-level AI workflow/function/app logic.
-- **MIL** looks like your model-integration layer / model inference layer / model interface layer.
-- **2b Models** are outside or adjacent to Palantir, depending on how you’re presenting them.
-- The **legacy system DB** feeds Palantir via integration, and Palantir can potentially write back.
 
-For the speedrun specifically, I’d map it like this:
+*The LLM agent and transformer are the inseparable duo that simulates intelligence*<br>
+<img src="/assets/M-11b.png" alt="drones" width="33%"><br>
 
-| Your diagram node | Speedrun equivalent |
-|---|---|
-| Legacy system DB | Source data / installed demo datasets |
-| Security | Foundry permissions, markings, ontology access |
-| Ontology | Patient, Clinical Trial, links, actions |
-| 3b project | Installed speedrun project/folder |
-| UI | Clinical Trial Recruitment Hub Workshop app |
-| 3 Agent | `Review Patient for Clinical Trial` Logic function |
-| MIL | The `Use LLM` block / model invocation layer |
-| 2b Model | The underlying LLM selected by AIP Logic |
 
-The main caveat is that in Foundry, **Ontology and Security are not just passive boxes**. They strongly shape what the agent can see and do:
+<!-- **This site takes a very down-to-earth mechanistic approach to understanding AI. Thats because AI is based on mechanistic binary matrix math algorithms that run on binary circuits.** 
+**A "model" in AI is anything that has a neural network (NN) at its core**. It may have a lot of other stuff wrapped around the NN (CNN convolution, LLM attention heads, etc) but **the core statistical pattern matching functionality runs on a NN**. The differences are mainly architecture, training, orchestration, and use case. **All models are first (1) "trained"** (internal NN params are programmed using SW tools) and **then (2) used to infer output from input.** 
+*AI model components and code (code does not lie)*<br>
+<img src="/assets/M-15-2b.png" alt="drones" width="53%"><br><br> 
+<img src="/assets/M-14.png" alt="desc" width="60%">  -->
 
-- Ontology defines the object types, links, actions, and semantic vocabulary.
-- Security constrains which objects/properties/actions/models are accessible.
-- The Logic function operates through those layers rather than directly against the raw DB.
+<br>
 
-So if your goal is to explain “where the agent is,” this diagram helps: the speedrun’s “agent” belongs inside the **3b project**, uses the **Ontology**, is governed by **Security**, and calls out through **MIL** to an LLM/model.
+#### **1.3 The core of AI: NN classification (matrix math based pattern matching)**
+
+**"Training" = programming a NN (not teaching; a NN does not learn)**. The process involves
+- Feed FP numbers (converted input text prompt and answer) to the NN.
+- Compare the input against the shifted (one token) output.
+- Adjust the internal parameters of the NN every so slightly so that the error from the expected output is reduced (without messing up significantly other already trained inputs).
+- Repeat this a massive number of times. This "training" can take weeks. 
+- Hope for a stable result. The training process is not predictable.
+
+**Inference** is when the TF is used to recognize the pattern of the some never before encountered input (not matching **exactly** anything the TF was trained on). This is the "magic" of AI. The TF computes the probabilities of all possible outputs (usually 50K vocab tokens) and the best token is selected (unless "temperature" is used; this is a gimmick where the TF selects randomly one of the more probable tokens to give the illusion that the TF is non-deterministic). 
+
+<img src="/assets/M-50.png" alt="drones" width="23%">
+
+<br>
+
+#### **1.4 Extensions of the simple NN (CNNs, TFs)**
+
+Detecting simple patterns (classification) worked fine with a simple NN. But for images and text, some extra "pre-processing" is required for classification. 
+
+For text **convolution** is added (thus convoluted NN). Convolution is matrix math performed before the core classification NN (the "dense layers"). This is required because of the nature of recognizing pixelated input (pixels are convoluted with neighboring related pixels).
+
+For text a **transformers** is added. This basically computes the real meaning of the original tokens based on the "neighboring" **by meaning** tokens. There is also the core NN in the form of an "FFN" (no need to translate, the name is meaningless) for each token. The tokens adjust each other and go through the FFN for many layers, and the classification "percolates" into the FP numbers (12288 for each token in GPT-3) of the last token. **The new token is actually based on a CLASSIFICATION of the entire input**.
+
+<img src="/assets/M-51.png" alt="drones" width="13%">
+
+<br>
+
+
+#### **1.5 The TF algorithm (QKV context computation from 2020) is still the basis of LLM AI**
+
+The TF QKV context computation algorithm modifies the token "hidden layers" (12288 FP numbers that are called "hidden" because you can not determine what the computations do by analyzing the programmed parameters) based on other tokens (thus computing context adjustments). *[2.3.6.1b D5 tiny TF algorithm details](/2.3.6.1b-d5-tiny-tf-algorithm-details/)* (draft, WIP) explains in detail the simplest demo (its not simple) of the LLM TF QKV (context) mechanism.
+
+<img src="/assets/M-52.png" alt="drones" width="19%">
+
+
+The core of AI is not rapidly evolving. Thats one reason why AI continues to focus on ramping up brute-force computation ("scaling"). The pic below is from a video I was watching on 26.0629. That one line "key-value (KV) caches need to be maintained" explains (part of) the reason why AI needs so much memory. Google "what is a kv cache" for details. 
+
+*QKV is still the core of LLM AI (**[video](https://youtu.be/lSDC6-BdVus?t=357)**)* <br>
+<img src="/assets/kv.png" alt="drones" width="40%">
 
 
 <br>
 
-#### ***[PAL-DEMO-2: Palantir AIP “speedrun” (quick start)](https://ziptieai.com/3c.2_pal_aip/)***
+#### **1.6 AI is an incredible revolutionary engineering marvel.. for the right applications** 
 
-My second Palantir demo. Quite a challenge. What impressed me the most was I was able to get a complex data pipeline running. The actual AI portion of the app was very small. This is way to do things. You must simple the world that AI has to deal with to increase reliablity.
+Palantir in the past few years has become synonomous with cutting edge **real world** AI applications. But Palantir only recently adopted AI. 25 years ago Palantir's initial projects were for military applications **without AI**. These non-AI apps were designed as helpful assistants for decision makers, not as as a replacement for mankind. **AI later became the ultimate helpful assistant for Palantir's missions**. AI had limitations, but the benefits of AI far outweighed the negatives **when AI was applied properly**.  
 
-<img src="/assets/hack-06.png" alt="drones" width="70%">
+<!-- 
+*"...AI software will be as important as hardware, with platforms such as Palantir's Maven Smart System poised to turn massive drone sensor feeds into highly usable battlefield intelligence". [Zerohedge 26.0620](https://www.zerohedge.com/military/only-beginning-how-profit-asymmetric-warfare-boom)*. -->
+
+*A very successful real-word application of AI* <br>
+<img src="/assets/ziptiedrone2.png" alt="drones" width="23%">
 
 <br>
 
-#### ***[PAL-DEMO-3: Palantir agentic AI](https://ziptieai.com/3c.3_pal_agentic_ai/)***
+#### **1.7 Falling for AI hype can cost you... dearly**
 
-This was an interesting demo. Not sure it was a good example of an agent. But still, I like Palantir's approach. 
+**"No more programmers"**, **"no more workers", "self-driving cars will be ready next year"**, **"we must pause AI development because its not safe"**, and **"AI already has emotions"** (that last statement was from a winner of both the Nobel and Turing prizes). If you yourself fall for such hype, it can cost you dearly.
 
-<img src="/assets/hack-07.png" alt="drones" width="70%">
+- *[Palantir CEO火力全开，场面控制不住了！](https://www.youtube.com/watch?v=feUFT1Q-oBA)*
+- *[zerohedge.com/ai/something-has-gone-completely-wrong-palantirs-alex-karp-goes-ballistic-openai-anthropic](https://www.zerohedge.com/ai/something-has-gone-completely-wrong-palantirs-alex-karp-goes-ballistic-openai-anthropic)*
 
-<br><br><br> <br><br><br><br><br><br> <br><br>
+<!-- **AI is a security risk**. The core NN in AI has what are often referred to as "hidden layers" that perform the massive brute-force number crunching to generate "intelligent" output. **It's impossible (even for AI) to determine how a NN has been programmed by analyzing the parameter settings in these layers**. -->
+
+*An unsuccessful mission for AI*<br>
+<img src="/assets/waymo.png" alt="drones" width="26%"> 
+
+<br>
+
+#### **1.8 AI's place in our world (not our place in AI's world)** 
+
+Its no accident that Palantir talks straight about many aspects of AI. Palantir's business does **not demand the myth of AI intelligence**. Palantir says that **AI will not replace people, it will empower them** and that **"engineers wont go away, because their AI-enhanced expertise will be required even more in the age of AI"**. If AI was truly intelligent then AI integration would just involve connecting AI and letting it rip. But successful AI integration into any system requires extensive technical expertise. In the diagram below, the small green box (far left) represents the core legacy enterprise SW. **The core algorithms and workflows developed over decades for such systems are not going to be replaced by AI. AI is going to assist**, and in such a way that AI's unavoidable errors will not cause significant problems. 
+
+<!-- 
+ **But AI is not intelligent. AI is based 100% on deterministic binary algorithms that compute statistical probabilities. AI is an addon, a helpful assistant.** The most reliable AI systems use the smallest AI component that can provide the required functionality. -->
+
+<!-- A recent video from one of my favorite bloggers illustrates how a lack of understanding of AI leads to a very mistaken "AI first" world view. The video [AI 落地生死战：为什么 90% 的企业软件会被重写？](https://www.youtube.com/watch?v=DlDvYe96cNY) **"The life-or-death battle for AI implementation: Why 90% of enterprise software is being rewritten"**. He is right about "90%" but not about "rewriting" (replacing) existing SW. AI is never the core logic loop in any app. **AI is always an assistant**.  -->
+
+<!-- (there are no English audio or subtitles, but rest assured that such a service will become standard in the near future). The video talks about how major business SaaS CRM SW (such as Salesforce) is being threatened by AI.  --> 
+
+*AI is an add-on, a helpful assistant, never in the driver's seat*<br>
+<img src="/assets/M-15ccc.png" alt="drones" width="78%">
+
+
+
+
+
+
+
+
+
+<br><br><br><br><br><br> <br><br>
+
+
+
+### **4 A window to the AI future**
+
+AI has a big future even after the pre-IPO hype is over. **Those who understand how to integrate AI into their own workflows will benefit the most. ZiptieAI has a mission to help myself (and others) stay ahead of the AI curve**. In the near future, AI integration skills will be required in all business segments (just like with the PC 40 years ago). This work will require a massive number of tech workers who, empowered by AI tools, will integrate AI **as a helpful assistant** into all areas of life.  
+
+
+*The helpful assistant of the future*<br>
+<img src="/assets/M-10.png" alt="desc" width="35%"> 
+
+*The future man-machine interface ([NL](/nl/))*<br>
+<img src="/assets/nl-01.png" alt="desc" width="15%"> 
+
+<br>
+
+
+
 <br><br><br><br> <br><br><br><br><br> <br>
 
 -------------------------------
