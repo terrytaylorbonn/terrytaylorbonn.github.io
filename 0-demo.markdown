@@ -13,6 +13,13 @@ permalink: /0-demo/
 
 To work effectively with AI, the most important thing is to understand that **"Artificial intelligence" is a hack**. But an **extremely valuable hack when engineered into target systems properly**. That's what ZiptieAI is all about.
 
+**TOC**
+- 1 “what does jely made of?”
+- 2 The “artificial intelligence” hack (the TF half of an LLM)
+- 3 Google: “what does it mean to hack something together?”
+- 4 The hack in detail: Astounding engineering (GPT-3 transformer (TF))
+- 5 The Ziptie AI site evolution
+
 <br>
 
 ## **1 "what does jely made of?"**
@@ -100,7 +107,16 @@ NOTE the following:
 
 <br>
 
-## **5 The Ziptie AI site focus**
+## **5 The ZiptieAI.com site evolution**
+
+I started out focusing on page "1 drones" (with AI = CNNs, object recognition). Currently the focus is on Palantir type systems.
+
+**TOC**
+- 5.1 Page "2 NNs" explains with demos the core of NN’s
+- 5.2 Page "2b models" explains models (internal Agent + TF)
+- 5.3 Page "3 Agents" describes (external) agents that use the model
+- 5.4 Page "3b Projects" describes practical apps
+- 5.5 Page "3c PAL" (Palantir) provides the infrastructure needed to create production systems
 
 <br>
 
@@ -144,7 +160,7 @@ where the external agent integrates AI capabilities into the main system (enterp
 
 Following diagram shows how in 3b "Projects" you have to create the infrastrucure yourself (in 3b I did not even start to do security, logins, DB conversions, etc etc). With Palantir this is all dramatically simplified and **standardized**.
 
-<img src="/assets/hack-10.png" alt="drones" width="65%">
+<img src="/assets/hack-10.png" alt="drones" width="70%">
 
 
 <br>
@@ -155,7 +171,7 @@ Following diagram shows how in 3b "Projects" you have to create the infrastrucur
 I started out with Palantir demos in early July 2026. It is my core focus now, because I believe that this is a very effective way to create practical AI. Palantir started out 25 years ago before AI was useful. They built data analysis tools that worked. And recently they started adding AI **as a helpful assistant** (that is all AI can do; if you let AI drive your car or manager your bank accounts... good luck).
 
 
-<img src="/assets/hack-09.png" alt="drones" width="40%">
+<img src="/assets/hack-09.png" alt="drones" width="42%">
 
 
 
