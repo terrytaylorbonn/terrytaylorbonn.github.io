@@ -70,6 +70,7 @@ While sometimes viewed as a negative sign of poor planning, it is often a celebr
 - **But the hack performs some vital functions extremely well, which makes it valuable.**
 - **The challenge: Project Engineering so that it works well enough for specific applications.**
 
+Note: **PC Multi-tasking is not a hack**. Computers may not actually run all tasks concurrently, but the net effect for a human is multi-tasking. **The net effect of TF's for humans IS NOT INTELLIGENCE**. The AI titans do all they can to make them appear to be intelligent, and they claim they are possibly intelligent (a false statement they are well aware of). 
 
 <br>
 
@@ -86,15 +87,16 @@ TF is the core of AI. The latest models are basically the same.
 - Yet the possible number of combinations are far greater. 
 - The TF works because the input tokens are a combination that the TF was never trained on, but the TF algorithm will match the input to the closest matching input combo the TF was programmed ("trained") on.
 
+***The hack: The transformer (LLM core) computes a numerical probability of possible classifications of the (numerical) input combination (an LLM sees nothing, has no thoughts, no emotions, etc etc etc)***<br>
+<img src="/assets/hack-01.png" alt="drones" width="45%">
+
+<br>
+
 NOTE the following:  
 - The output 12288 FP #s are a classifier. They are used to select a new token that is (out of ~50K tokens, the vocabulary) the best classifier of the input sequence. Note: TF's are sometimes programmed to not select the best match, because this will give the impression of non-deterministic intelligence, not binary computation. 
 - After that, the new token is appended to the input. To compute the next token (loop X+1) the calculations start from 0 (KV calculations can be reused). This hack (one of many) must be done because of algorithm limitations (nobody has figured out a better algorithm). 
 - The TF can run on a CPU, but that is extremely slow. The TF computations are 100% deterministic, but they are not procedural like for most CPU programs (no branching, etc). TF algorithms are shotgun algorithms (I call them that, inspired by "shotgun" homes that were thin and long and just ran from front to back).  Data just races through the GPU from start to finish.
 
-<br>
-
-***The hack: The transformer (LLM core) computes a numerical probability of possible classifications of the (numerical) input combination (an LLM sees nothing, has no thoughts, no emotions, etc etc etc)***<br>
-<img src="/assets/hack-01.png" alt="drones" width="45%">
 
 <br>
 
@@ -102,7 +104,7 @@ NOTE the following:
 
 <br>
 
-### **[2 NNs](https://ziptieai.com/2_models/) explains with demos the core of NN's** 
+### **5.1 Page [2 NNs](https://ziptieai.com/2_models/) explains with demos the core of NN's** 
 
 details inside the TF. The TF has basically 2 types of NNs:
 - **QKV**. THis is for computing the real meaning of words based on context. Its called "attention", a total marketing hype term, to give the impression of intelligence.
@@ -112,7 +114,7 @@ details inside the TF. The TF has basically 2 types of NNs:
 
 <br>
 
-### **[2b models](https://ziptieai.com/2b_models/) explains models (internal Agent + TF)**  
+### **5.2 Page [2b models](https://ziptieai.com/2b_models/) explains models (internal Agent + TF)**  
 
 
 TFs are packaged into models (GPT, etc). They have
@@ -125,7 +127,7 @@ TFs are packaged into models (GPT, etc). They have
 
 <br>
  
-### **[3 Agents](https://ziptieai.com/3_agents/) describes (external) agents that use the model**
+### **5.3 Page [3 Agents](https://ziptieai.com/3_agents/) describes (external) agents that use the model**
 
 The real challenge is writing external programs that can handle those big errors when the LLM algorithms fail (these are called "hallucinations", a rediculous marketing term). 
 
@@ -134,18 +136,81 @@ The real challenge is writing external programs that can handle those big errors
 <br>
 
 
-### **[3b Projects](https://ziptieai.com/3.3-ai-projects/) describes practical apps**
+### **5.4 Page [3b Projects](https://ziptieai.com/3.3-ai-projects/) describes practical apps**
 
 where the external agent integrates AI capabilities into the main system (enterprise SW like Slack). Its not simple or easy, because AI is a hack whos outputs are unpredictable that is unpredictable. **IF AI HAD REAL INTELLIGENCE, YOU WOULD JUST CONNECT IT TO TARGET SYSTEMS AND DONE**. 
  
 <img src="/assets/hack-05.png" alt="drones" width="75%">
 
+Following diagram shows how in 3b "Projects" you have to create the infrastrucure yourself (in 3b I did not even start to do security, logins, DB conversions, etc etc). With Palantir this is all dramatically simplified and **standardized**.
+
+<img src="/assets/hack-10.png" alt="drones" width="65%">
+
+
 <br>
 
 
-### **[3c PAL (Palantir)](https://ziptieai.com/pal/) provides the infrastructure needed to create production systems**
+### **5.5 Page [3c PAL (Palantir)](https://ziptieai.com/pal/) provides the infrastructure needed to create production systems**
 
 I started out with Palantir demos in early July 2026. It is my core focus now, because I believe that this is a very effective way to create practical AI. Palantir started out 25 years ago before AI was useful. They built data analysis tools that worked. And recently they started adding AI **as a helpful assistant** (that is all AI can do; if you let AI drive your car or manager your bank accounts... good luck).
+
+
+<img src="/assets/hack-09.png" alt="drones" width="40%">
+
+
+
+<br>
+
+#### **FDE/GPT:** 
+
+That diagram is a solid high-level mental model.
+
+Interpreting it with your page labels:
+
+```text
+Legacy system / DB
+        ↔
+3c Palantir platform boundary
+        ├─ Security
+        ├─ Ontology
+        └─ 3b Project
+              ├─ UI
+              └─ 3 Agent
+                    ↔ MIL
+                         ↔ 2b Models
+```
+
+A few observations:
+
+- **3c Palantir** is the overall Foundry/AIP environment.
+- **Security** and **Ontology** sit inside Palantir as platform-level layers.
+- The **3b project** contains the concrete application/workflow implementation.
+- The **3 Agent** is your project-level AI workflow/function/app logic.
+- **MIL** looks like your model-integration layer / model inference layer / model interface layer.
+- **2b Models** are outside or adjacent to Palantir, depending on how you’re presenting them.
+- The **legacy system DB** feeds Palantir via integration, and Palantir can potentially write back.
+
+For the speedrun specifically, I’d map it like this:
+
+| Your diagram node | Speedrun equivalent |
+|---|---|
+| Legacy system DB | Source data / installed demo datasets |
+| Security | Foundry permissions, markings, ontology access |
+| Ontology | Patient, Clinical Trial, links, actions |
+| 3b project | Installed speedrun project/folder |
+| UI | Clinical Trial Recruitment Hub Workshop app |
+| 3 Agent | `Review Patient for Clinical Trial` Logic function |
+| MIL | The `Use LLM` block / model invocation layer |
+| 2b Model | The underlying LLM selected by AIP Logic |
+
+The main caveat is that in Foundry, **Ontology and Security are not just passive boxes**. They strongly shape what the agent can see and do:
+
+- Ontology defines the object types, links, actions, and semantic vocabulary.
+- Security constrains which objects/properties/actions/models are accessible.
+- The Logic function operates through those layers rather than directly against the raw DB.
+
+So if your goal is to explain “where the agent is,” this diagram helps: the speedrun’s “agent” belongs inside the **3b project**, uses the **Ontology**, is governed by **Security**, and calls out through **MIL** to an LLM/model.
+
 
 <br>
 
@@ -307,5 +372,5 @@ I think that's one of the strongest ideas you've developed for ZiptieAI.
 
 <br>
 
-26.0714 (v1 26.0714 (0628))
+26.0715 (v1 26.0714 (0628))
 
