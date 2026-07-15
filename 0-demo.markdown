@@ -7,7 +7,7 @@ permalink: /0-demo/
 <br>
 
 
-To work effectively with AI, the most important thing is to understand that **"Artificial intelligence" is a hack (see diagram below)**. Its also a misnomer (AI has no intelligence and is not artificial).
+To work effectively with AI, the most important thing is to understand that **"Artificial intelligence" is a hack**. But an **extremely valuable hack when engineered into target systems properly**. That's what ZiptieAI is all about.
 
 <br>
 
