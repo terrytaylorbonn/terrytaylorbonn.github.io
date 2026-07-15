@@ -9,10 +9,16 @@ permalink: /2_models/
 <!-- *NNs (inside the models)* <br>
 <img src="/assets/zai_evolution7.png" alt="drones" width="42%"> -->
 
+You control the mathematics.
+
 *2 NNs in the master diagram* <br>
 <img src="/assets/M-15-2x.png" alt="drones" width="80%">
 
-
+<!--
+You build the NN/CNN/TF yourself.
+Job value: ★☆☆☆☆
+Purpose: understand how AI works.
+-->
 
 <br>
 

@@ -1,17 +1,35 @@
 ---
 layout: page
-title: 3c PAL
+title: 3c Enterprise
 permalink: /pal/
 ---
 
 <br>
+
+The enterprise platform controls almost everything. For now this is just Palantir.
 
 Demos
 - **[PAL-DEMO-1: Palantir Foundry "speedrun" (quick start) (26.0705)](/3c.1_pal_foundry/)**. Demo complete... still need to write the webpage.
 - **[PAL-DEMO-2: Palantir AIP "speedrun" (quick start) (26.0706)](/3c.2_pal_aip/)**. This is just a rough summary for now...
 - **[PAL-DEMO-3: Palantir agentic AI "speedrun" (quick start) (26.0713)](/3c.3_pal_agentic_ai/)**. (WIP)
 
-
+<!--
+Palantir
+Microsoft Fabric
+Vertex AI
+Databricks
+Snowflake
+Now you're inside a governed ecosystem.
+Security.
+Permissions.
+Lineage.
+Governance.
+Enterprise data.
+Job value: ★★★★★
+Highest salaries.
+Fewest jobs.
+Hardest to enter.
+-->
 
 <br>
 
@@ -24,4 +42,4 @@ See also:
 
 <br>
 
-26.0713 (v1 26.0702)
+26.0715 (v1 26.0702)

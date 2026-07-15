@@ -1,13 +1,15 @@
 ---
 layout: page
-title: "3b Projects"
+title: "3b Workflows"
 permalink: /3.3-ai-projects/
 description: Last edit 26.0618
 ---
 
 <br>
 
-*Reorganized 26.0703*
+*Reorganized 26.0715*
+
+The workflow platform controls part of the architecture.
 
 This section is the long-term goal of ZiptieAI.com. The focus is on building practical AI applications and rapidly integrating AI with real-world software systems. Rather than mastering individual products, the objective is to demonstrate reliable AI agents that solve practical problems, automate workflows, and adapt quickly to unfamiliar environments.
 
@@ -16,6 +18,19 @@ This section is the long-term goal of ZiptieAI.com. The focus is on building pra
 - **Part 1: Projects**. Practical AI applications that provide useful functionality.
 - **Part 2: Integration Demos**. Demonstrations of integrating the central AI agent with existing software and enterprise systems.
 - **Part 3: Lab Demos**. Experimental prototypes used to develop, test, and evaluate new AI techniques.
+
+<!--
+n8n
+Zapier
+Power Automate
+Make
+You build automation inside someone else's workflow engine.
+Less coding.
+Less flexibility.
+Faster development.
+Job value: ★★★☆☆
+Lots of SMB consulting and internal automation jobs.
+-->
 
 
 <br>

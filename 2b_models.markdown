@@ -6,6 +6,14 @@ permalink: /2b_models/
 
 <br> 
 
+You control the model.
+
+<!--
+You build the NN/CNN/TF yourself.
+Job value: ★☆☆☆☆
+Purpose: understand how AI works.
+-->
+
 <!-- *I spun off the content of this from page "NNs" on 26.0610 because I became convinced that creating custom models and deploying locally were going to be a big trend in the future. There is a lot of demo stuff on the Wiki that I need to move to this wepage or replicate.* -->
 
 This **WIP** page (v1 26.0610) describes model internals. The agent and the NN are typically packed into a **model** that has an API that makes it possible for existing software to **use the model as a "helpful" assistant**. The internal agent (iAgent) that has been programmed to interact with the transformer (TF) via a very specific token-only protocol. The TF has also been trained to follow this protocol. 

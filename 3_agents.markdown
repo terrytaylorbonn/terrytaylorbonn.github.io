@@ -6,6 +6,8 @@ permalink: /3_agents/
 
 <br> 
 
+You control the application.
+
 This section describes agent demos. 
 - An (external) agent is software that contains the main control loop.
 - The agent uses tools, APIs, and databases to perform useful work.
@@ -14,6 +16,15 @@ This section describes agent demos.
 
 *3 Agents in the master diagram* <br>
 <img src="/assets/M-15-3x.png" alt="drones" width="80%">
+
+<!--
+You write Python.
+You choose the libraries.
+You design the control loop.
+Whether you use OpenAI SDK, LangGraph, or no framework doesn't really matter—you still own the architecture.
+Job value: ★★★★☆
+This is where many startups and internal company AI projects live.
+-->
 
 <!-- Note: - Custom models are not demonstrated in this section (yet). 
 - The only model used is openAI (and Gemma).
