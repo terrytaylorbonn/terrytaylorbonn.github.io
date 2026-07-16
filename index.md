@@ -5,18 +5,18 @@ title: Home
 
 <br>
 
-Latest updates:
-- **[Hack](/0-demo/)** explains the core of what makes AI tick (WIP, v1 26.0715).  
-- Palantir **[Demos](/pal/)** (v1 26.0706).
+Current focus: 
+- Palantir **[Enterprise](/pal/)** AI demos.
 
 <br>
 
 <!-- ZiptieAI.com was created in 2024 to document my work on Ukrainian style ziptie'd [AI Drones](/1-drones/). -->
 
 The ZiptieAI documents my path from simple AI NNs (neural networks (matrix math)) to Palantir style systems.
-- **AI quickstart**
+- **AI basics**
+  - **[Hack](/0-demo/)** explains the core of what makes AI tick (WIP, v1 26.0715).  
   - **[QS (demos)](/0-qs/)** (selected demos).
-  - **[(QS) concepts](/0b-demos/)**.
+  - **[Concepts](/0b-demos/)**.
 - **AI deep dive** *(see diagram below)*
   - **[2 NNs](/2_models/)**. NNs, CNNs, and TFs (the source of the "I" in AI). *You control the mathematics.*
   - **[2b Models](/2b_models/)**. Packaged AI models (primarily LLMs) available through an API. Fine-tuning, local models, deployment, and model serving (eventually we all need to **[host our own models](https://www.youtube.com/watch?v=zMhz7JUvJZA&t=36s)**). *You control the model.*
