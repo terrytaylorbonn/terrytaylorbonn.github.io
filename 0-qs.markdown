@@ -10,24 +10,23 @@ permalink: /0-qs/
 
 <br>
 
-This page (WIP) describes a set of start-to-finish demos that teach the core concepts of AI.
+This page (WIP) describes a set of selected start-to-finish demos for learning the core concepts of AI quickly. If you are new to AI, its best to **get hands-on demo experience first**, and **then study the [concepts](/0b-demos/)**.
 
 **TOC**
-- **2 NN demos**. Tiny demos that can also run on a CPU. These NNs only know FP numbers as input and output. So if you have any type of other data, you must encode and then decode. 
-- **2b Model demos**. A model contains the **NN/CNN/TF** and an **"internal" agent (iAgent)** that controls and provides access to the NN/CNN/TF. The iAgent implements an **API** that provides external access to the model.
-- **3 External agent (py script) demos**. Using a model as a helpful assistant.
-- **3b Workflow (framework) demos**. The workflow platform controls part of the architecture.
-- **3c Enterprise**. The enterprise platform controls almost everything. 
+- **2 NN demos**. Tiny demos that can also run on a CPU.  
+- **2b Model demos**. Creating your own tiny models.
+- **3 External agent demos**. Using a model as a helpful assistant (as a standalone system or as a helpful assistant for a target system).
+- **3b Workflow framework demos**. The workflow platform controls the architecture.
+- **3c Enterprise demos** (Palantir). The enterprise platform controls almost everything. 
 
 
-*Right to left: 2 NNs, 2b Model, 3 External agent, 3b Workflow framework, 3c Enterprise platform (will update diagram)*<br>
+*Right to left: 2 NNs, 2b Model, 3 External agent, 3b Workflow framework (need to add 3c Enterprise platform)*<br>
 <img src="/assets/M-15.png" alt="drones" width="78%">
-
-*Note: Old demos are available on [Wiki](https://github.com/terrytaylorbonn/auxdrone/wiki), [Github](https://github.com/terrytaylorbonn?tab=repositories), [Gdrive](https://drive.google.com/drive/folders/1-Adawag9uA8_bq-hDF-nOuPYaRLz1eEO) (docx lab notes).*
 
 <br> 
 
 <!--
+*Note: Old demos are available on [Wiki](https://github.com/terrytaylorbonn/auxdrone/wiki), [Github](https://github.com/terrytaylorbonn?tab=repositories), [Gdrive](https://drive.google.com/drive/folders/1-Adawag9uA8_bq-hDF-nOuPYaRLz1eEO) (docx lab notes).*
 ```
 GPT:
 Overall, I think this is one of the strongest organizational ideas you've come up with. It answers the question that every newcomer has:
@@ -45,7 +44,6 @@ For example, D4 isn't chosen because it's "the CNN demo."
 It's chosen because it teaches almost everything someone needs to know about CNNs.
 ``` -->
 
-<br>
 
 ### **[2 NN demos](/2_models/)**
 
