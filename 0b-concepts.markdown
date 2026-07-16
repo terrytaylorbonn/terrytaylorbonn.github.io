@@ -6,11 +6,7 @@ permalink: /0b-demos/
 
 <br>
 
-*Reorganized 26.0716 (WIP)*
-
-<br>
-
-This page summarizes the basic concepts introduced in the hands-on [QS demos](/0-qs/). More detailed concepts will be found in top level sections (in site header) 2 NNs, 2b Models, 3 Agents, 3b Workflows, and 3c Enterprise. 
+This page summarizes the basic concepts introduced in the hands-on **[QS demos](/0-qs/)**. A link to more detailed concepts will be found in top level pages (in site header) **2 NNs**, **2b Models**, **3 Agents**, **3b Workflows**, and **3c Enterprise**. 
 
 <!-- - See "Concepts" (**ADVANCED**) section on pages 2 NNs, 2b Models, 3 Agents, and 3b Projects. But the focus of this page is the **BASIC** core conceptual gist of 2-3b. Using the simplest example from the QS for each. This section may not be like that right now (26.0623), but its moving in that direction. -->
 
@@ -194,46 +190,37 @@ class TinyTransformer(nn.Module):
 
 #### **[2.5 Concepts -- Transformer](/0b.2.5-concepts-tf/)**
 
-details inside the TF. The TF has basically 2 types of NNs:
-- **QKV**. THis is for computing the real meaning of words based on context. Its called "attention", a total marketing hype term, to give the impression of intelligence.
-- FFN. This detects higher level meaning in the 12288 FP #s of each token embedding.
- 
 
-<img src="/assets/M-09.png" alt="drones" width="60%">
+Detecting simple patterns (classification) worked fine with a simple NN. But for text, some extra "pre-processing" is required for classification. This requires a transformer with **QKV attention** (left below) and **FFN feature detection (right below). 
 
 
-**1.5 The TF algorithm (QKV context computation from 2020) is still the basis of LLM AI**
-
-The TF QKV context computation algorithm modifies the token "hidden layers" (12288 FP numbers that are called "hidden" because you can not determine what the computations do by analyzing the programmed parameters) based on other tokens (thus computing context adjustments). *[2.3.6.1b D5 tiny TF algorithm details](/2.3.6.1b-d5-tiny-tf-algorithm-details/)* (draft, WIP) explains in detail the simplest demo (its not simple) of the LLM TF QKV (context) mechanism.
-
-<img src="/assets/M-52.png" alt="drones" width="19%">
+*QKV attention and FFN NNs*<br>
+<img src="/assets/M-15ddd.png" alt="drones" width="35%">
 
 
-The core of AI is not rapidly evolving. Thats one reason why AI continues to focus on ramping up brute-force computation ("scaling"). The pic below is from a video I was watching on 26.0629. That one line "key-value (KV) caches need to be maintained" explains (part of) the reason why AI needs so much memory. Google "what is a kv cache" for details. 
+- **"Attention"** basically computes the real meaning of the original tokens based on the "neighboring" (**by meaning**) tokens using **QKV** computation. QKV computes the real meaning of words based on context. Its called "attention" (a marketing term) to give the impression of intelligence.
+- **FFNs** detect higher level meaning ("features") in the 12288 FP #s of each token embedding (what FFN stands for is meaningless). 
+- The tokens adjust each other in QKV (attention) and the FFN (separate for each token) for many layers. The classification "percolates" into the FP numbers (12288 for each token in GPT-3) of the last token (the new token is actually based on a classification of all input tokens.
+- How exactly those features are encoded is determined apparently fairly randomly by the HW architecture, the training SW, and the training data (it is not specified by humans or algorithms).
+- This is why the computational layers between (1) the initial prompt token embedding and (2) the output token unembedding are called "hidden layers" (12288 FP numbers that represent features in a way that can not be determined by analyzing the programmed parameters). <br><br>*QKV and FFN details*<br><img src="/assets/M-09.png" alt="drones" width="60%">
 
-*QKV is still the core of LLM AI (**[video](https://youtu.be/lSDC6-BdVus?t=357)**)* <br>
+<!-- based on other tokens (thus computing context adjustments). *[2.3.6.1b D5 tiny TF algorithm details](/2.3.6.1b-d5-tiny-tf-algorithm-details/)* (draft, WIP) explains in detail the simplest demo (its not simple) of the LLM TF QKV (context) mechanism. -->
+
+
+- The core of AI is not rapidly evolving. Thats one reason why AI continues to focus on ramping up brute-force computation ("scaling"), because that is the main hope for improvement (a larger TF means more and bigger patterns to match against). The pic below is from a video I was watching on 26.0629. That one line "key-value (KV) caches need to be maintained" explains (part of) the reason why AI needs so much memory. Google "what is a kv cache" for details.  <br>*QKV is still the core of LLM AI (**[video](https://youtu.be/lSDC6-BdVus?t=357)**)* <br>
 <img src="/assets/kv.png" alt="drones" width="40%">
 
-
-**1.4 Extensions of the simple NN (TFs)**
-
-Detecting simple patterns (classification) worked fine with a simple NN. But fortext, some extra "pre-processing" is required for classification. 
-
-
-For text a **transformers** is added. This basically computes the real meaning of the original tokens based on the "neighboring" **by meaning** tokens. There is also the core NN in the form of an "FFN" (no need to translate, the name is meaningless) for each token. The tokens adjust each other and go through the FFN for many layers, and the classification "percolates" into the FP numbers (12288 for each token in GPT-3) of the last token. **The new token is actually based on a CLASSIFICATION of the entire input**.
-
-<img src="/assets/M-51.png" alt="drones" width="13%">
 
 <br>
 
 
 #### **[2.6 Comparison of NN, CNN, and TF architectures](/0b.2.6-concepts-nn-cnn-tf/)**
 
-<!-- See **[Comparison of NN, CNN, and TF architectures](/0b.2.6-concepts-nn-cnn-tf/)**.-->
+<!-- See **[Comparison of NN, CNN, and TF architectures](/0b.2.6-concepts-nn-cnn-tf/)**.
 
 *(make this a simplified version of [2.2b CNN<>TF comparison (WIP)](/2.2b-cnn-tf-comparison/))*
 
-<img src="/assets/M-15ddd.png" alt="drones" width="40%">
+<img src="/assets/M-15ddd.png" alt="drones" width="40%"> -->
 
 <!--#### **2.2 Core AI technical [concepts](/0b-demos/)**
 
@@ -251,6 +238,14 @@ This section focuses on a conceptual understanding of the technical aspects (esp
 
 #### **[2.7 Why scaling works](/0b.2.7-why-scaling-works/)**
 
+- NN, CNN, and TF are pattern classifiers.
+- Larger models have more weights.
+- More weights allow more complex classification boundaries (red square below).
+- Therefore larger models can classify patterns more accurately.
+
+For example, for the Tiny TF demo, the new token is for all practical purposes the classifier of the entire input. In this case only 8 tokens (blue square below). Scaling increases the number and complexity of patterns that the model can distinguish and classify.
+
+*Scaling for more tokens (blue) and more weights (red) makes the pattern to be matched much more precise*<br>
 <img src="/assets/M-36.png" alt="drones" width="50%">
 
 
@@ -263,126 +258,51 @@ This section focuses on a conceptual understanding of the technical aspects (esp
 
 The agent and the NN are typically packaged into a **model** that has an API that makes it possible for existing software to **access the model via API**. The **model code that controls the TF NN is the "internal agent" (iAgent)**. Discusses
  - 2b.1 What is a Model?
- - 2b.2 Internal Agent (iAgent)
- - 2b.3 APIs
+ - 2b.2 Internal Agent (iAgent) is a procedural program that is designed to closely work together with a specific trained TF and is the only path for data into and out of the TF.
+ - 2b.3 The API allows external agents (programs you write) to use the model.
  - 2b.4 Local vs Cloud Models
  - 2b.5 Building Models
  - 2b.6 Modifying Models
 
-*This is a first draft (junk) diagram generated by GPT*<br>
+*This is a first draft diagram generated by GPT*<br>
 <img src="/assets/M-35.png" alt="drones" width="60%">
 
-
-#### **5.2 Page [2b models](https://ziptieai.com/2b_models/) explains models (internal Agent + TF)**  
-
-
-TFs are packaged into models (GPT, etc). They have
-- an internal agent (iAgent, CPU-based) that is the only way for data into and out of the TF.
-- The iAgent is a procedural program that only exchanges tokens with the TF.
-- iAgent is closely designed to work together with a specific trained TF. 
-- The API allows external agents (programs you write) to use the model.
-
-<img src="/assets/hack-03.png" alt="drones" width="65%">
-
-<br>
- 
 
 <br>
 
 ## **[3 Agent concepts](/0b.3-concepts-agents/)**
 
 External agents access the model via API. This supports (1) reliable workflows built around models, tools, and automation and (2) tolerance of AI faults and unpredictable outputs. This section discusses 
- - 3.1 Agent Concepts
- - 3.2 Code-first Agents
- - 3.3 Agent Frameworks
 
-#### **5.3 Page [3 Agents](https://ziptieai.com/3_agents/) describes (external) agents that use the model**
+Agents on this site are organized as follows: 
+- **3.1 Code-first**. Demos of core agent functionality.
+- **3.2 Frameworks** (Langchain, OpenAI Agents SDK, CrewAI, etc). 
+- **3.3 Projects (standalone AI apps)** have no existing enterprise application to integrate with. The AI agent is the primary application. It may use external APIs, databases, files, or enterprise software as tools or data sources. <br> *In 3 Agents you create the infrastructure.*<br> <img src="/assets/hack-10.png" alt="drones" width="65%" style="border: 1px solid #999;">
+- **3.4 Integration demos**. An existing application is the primary system. The AI is integrated to assist the application's users and workflows. The 4 stages (S1-S4):
+  - **S1 The traditional UI and ESW** (#1). You use a browser to access the system.
+  - **S2 Native/Managed AI** (#4). This is easiest to do with AI. An existing AI agent is connected to the target system. You configure the connection rather than build the agent. For example
+    - **S2a** Claude + MCP → Slack ✅ (current demo) 
+    - **S2b** Claude Tag in Slack ✅ (future demo)
+  - **S3 Integrated AI agent** (#3).
+    - Your agent works INSIDE the target.
+    - Official plugin, extension, app, webhook, API integration, etc.
+    - Users interact through the target application's UI. 
+  - **S4 External AI agent / works OUTSIDE the target** (#2). 
+    - Users interact with your external agent rather than the target application's UI.
+    - The target application is unaware of your agent.
+    - External AI. Most difficult to setup. <br>*3b Project ecosystem for stages S1-S4 (add S4 DB?)*<br><img src="/assets/M-39.png" alt="drones" width="50%"> 
+- **3.5 Lab demos** (tests).
 
-The real challenge is writing external programs that can handle those big errors when the LLM algorithms fail (these are called "hallucinations", a rediculous marketing term). 
-
-<img src="/assets/hack-04.png" alt="drones" width="75%">
 
 <br>
 
-
-
-<br>
 
 ## **3b Workflow (frameworks)**
 
 <!-- ## **[3b AI project concepts](/0b.3b-concepts-projects/)** -->
 
-The real goal of AI projects is to integrate AI into an existing SW app. 
-“Spinning up” real-world projects quickly with minimal code analysis or manual coding.
-Projects are where all the previous pieces come together. They aren't just "more demos" — they're the integration point. 
--	2 teaches how models work. 
--	2b teaches how models are packaged and served. 
--	3 teaches how agents use models. 
--	**3b shows how agents solve real problems by integrating with existing software and external systems**. 
+“Spinning up” real-world projects quickly with minimal code analysis or manual coding (only n8n demos for now).
 
-There are 2 kinds of Ai projects:
-
-- **PART 1: Enterprise SW demos**. An existing application is the primary system. The AI is integrated to assist the application's users and workflows.
-- **Part 2: Standalone AI Applications**. The AI agent is the primary application. It may use external APIs, databases, files, or enterprise software as tools or data sources.
-
-<br>
-
-#### **PART 1: Enterprise SW demos** 
-
-Integrate AI into existing software (AI assistant).
-
-**The 4 stages (S1-S4) for ESW demos**
-
-**S1 The traditional UI and ESW** (#1). You use a browser to access the system.
-
-**S2 Native/Managed AI** (#4). This is easiest to do with AI. An existing AI agent is connected to the target system. You configure the connection rather than build the agent. 
-
-For example
-  - **S2a** Claude + MCP → Slack ✅ (current demo) 
-  - **S2b** Claude Tag in Slack ✅ (future demo)
-
-**S3 Integrated AI agent** (#3).
-- Your agent works INSIDE the target.
-- Official plugin, extension, app, webhook, API integration, etc.
-- Users interact through the target application's UI. 
-
-**S4 External AI agent / works OUTSIDE the target** (#2). 
-- Users interact with your external agent rather than the target application's UI.
-- The target application is unaware of your agent.
-- External AI. Most difficult to setup. 
-
-*3b Project ecosystem for stages S1-S4 (add S4 DB?)*<br>
-<img src="/assets/M-39.png" alt="drones" width="55%"> 
-
-<br>
-
-#### **Part 2: Standalone AI Applications**
-
-Standalone AI applications have no existing enterprise application to integrate with. The external agent is the main application.
-
-<!-- The focus is on programming an agent to use external tools and APIs, not on an existing SW calling the agent for assistance. -->
-
-For example:
-  - **3b.3 NMAP Security Assistant**. Accesses the local PC (target system). This is not only a practical tool, but also can help you learn very important security topics for your home PC/network setup. Nmap has real system, real data, security, MongoDB,	OpenAI explanation, Mattermost alerts. It demonstrates nearly every important concept in one project.
-
-
-*3b standalone AI app (S4 only)*<br>
-<img src="/assets/M-41.png" alt="drones" width="30%"> 
-
-
-
-#### **5.4 Page [3b Projects](https://ziptieai.com/3.3-ai-projects/) describes practical apps**
-
-where the external agent integrates AI capabilities into the main system (enterprise SW like Slack). Its not simple or easy, because AI is a hack whos outputs are unpredictable that is unpredictable. **IF AI HAD REAL INTELLIGENCE, YOU WOULD JUST CONNECT IT TO TARGET SYSTEMS AND DONE**. 
- 
-<img src="/assets/hack-05.png" alt="drones" width="75%">
-
-Following diagram shows how in 3b "Projects" you have to create the infrastrucure yourself (in 3b I did not even start to do security, logins, DB conversions, etc etc). With Palantir this is all dramatically simplified and **standardized**.
-
-<img src="/assets/hack-10.png" alt="drones" width="70%">
-
-
-<br>
 
 
 <!-- This section discusses
@@ -397,12 +317,9 @@ Following diagram shows how in 3b "Projects" you have to create the infrastrucur
 
 <br>
 
-## **3c Enterprise concepts**
+## **3c Enterprise AI** ([3c PAL (Palantir)](https://ziptieai.com/pal/))
 
-
-### **5.5 Page [3c PAL (Palantir)](https://ziptieai.com/pal/) provides the infrastructure needed to create production systems**
-
-I started out with Palantir demos in early July 2026. It is my core focus now, because I believe that this is a very effective way to create practical AI. Palantir started out 25 years ago before AI was useful. They built data analysis tools that worked. And recently they started adding AI **as a helpful assistant** (that is all AI can do; if you let AI drive your car or manager your bank accounts... good luck).
+Provides the infrastructure needed to create production systems. I started out with Palantir demos in early July 2026. It is my core focus now. Seems to be a very effective way to create practical Enterprise AI. Palantir started out 25 years ago before AI was useful. They built data analysis tools that worked. And recently they started adding AI **as a helpful assistant**.
 
 
 <img src="/assets/hack-09.png" alt="drones" width="45%">
