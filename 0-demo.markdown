@@ -8,7 +8,7 @@ permalink: /0-demo/
 
 *This page rewritten 26.0714 (WIP)*
 
-<br>
+<br> 
 
 
 To work effectively with AI, the most important thing is to understand that **"Artificial intelligence" is a hack**. But an **extremely valuable hack when engineered into target systems properly**. That's what ZiptieAI is all about.
@@ -140,7 +140,7 @@ Note: TF algorithms are referred to as "neural" networks because the diagrams fo
 <img src="/assets/M-11b.png" alt="drones" width="33%"><br>
 
 
-<!-- **This site takes a very down-to-earth mechanistic approach to understanding AI. Thats because AI is based on mechanistic binary matrix math algorithms that run on binary circuits.** 
+<!-- xxxx **This site takes a very down-to-earth mechanistic approach to understanding AI. Thats because AI is based on mechanistic binary matrix math algorithms that run on binary circuits.** 
 **A "model" in AI is anything that has a neural network (NN) at its core**. It may have a lot of other stuff wrapped around the NN (CNN convolution, LLM attention heads, etc) but **the core statistical pattern matching functionality runs on a NN**. The differences are mainly architecture, training, orchestration, and use case. **All models are first (1) "trained"** (internal NN params are programmed using SW tools) and **then (2) used to infer output from input.** 
 *AI model components and code (code does not lie)*<br>
 <img src="/assets/M-15-2b.png" alt="drones" width="53%"><br><br> 
