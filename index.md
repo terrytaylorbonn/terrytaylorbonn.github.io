@@ -5,34 +5,35 @@ title: Home
 
 <br>
 
-Current focus: Palantir **[3c Enterprise](/pal/)** AI demos.
+Current focus: **[3c Enterprise](/pal/)** AI demos (Palantir).
 
 <br>
 
 <!-- ZiptieAI.com was created in 2024 to document my work on Ukrainian style ziptie'd [AI Drones](/1-drones/). -->
 
-The ZiptieAI documents my path from simple AI NNs (neural networks (matrix math)) to Palantir style systems.
+The ZiptieAI documents the core of AI from "tiny" neural networks to enterprise AI (Palantir).
 - **AI basics**
   - **[Hack](/0-demo/)** explains the core of what makes AI tick.  
-  - **[QS](/0-qs/)** (selected demos).
-  - **[Concepts](/0b-demos/)**.
-- **AI deep dive** *(see diagram below)*
-  - **[2 NNs](/2_models/)**. NNs, CNNs, and TFs (the source of the "I" in AI). *You control the mathematics.*
-  - **[2b Models](/2b_models/)**. Packaged AI models (primarily LLMs) available through an API. Fine-tuning, local models, deployment, and model serving (eventually we all need to **[host our own models](https://www.youtube.com/watch?v=zMhz7JUvJZA&t=36s)**). *You control the model.*
+  - **[QS](/0-qs/)** provides details for selected demos.
+  - **[Concepts](/0b-demos/)** summarizes the core concepts in the QS demos.
+- **AI deep dive**
+  - **[2 NNs](/2_models/)** demos NNs, CNNs, and transformers (TFs) (the source of the "I" in AI). *In this section you control the AI mathematics.*
+  - **[2b Models](/2b_models/)** demos how to build packaged AI models (primarily LLMs). Covers fine-tuning, local models, deployment, and model serving. *In this section you control the model.*
   - **[3 Agents](/3_agents/)**. Python agents that implement reliable workflows, using AI models as helpful assistants. *You control the application.*
-  - **[3b Workflows](/3.3-ai-projects/)**. Practical Agentic AI applications, integration demos, and lab demos. *The workflow platform controls part of the architecture.*
-  - **[3c Enterprise](/pal/)**. Palantir demos. *The enterprise platform controls almost everything.*
-  - **[4 Resources](/4_resources/)**. Detailed (docx) lab notes, Github, Wiki.
+  - **[3b Workflow](/3.3-ai-projects/)** platforms (such as n8n). for creating practical agentic AI applications. *The workflow platform controls the architecture.*
+  - **[3c Enterprise](/pal/)** AI demos (for now just Palantir). *The enterprise platform controls almost everything.*
+  - **[4 Resources](/4_resources/)** such as (docx) lab notes, Github, Wiki, etc (links in the footer).
 
-<!-- - **A window to the AI future** ([NL](/nl/)) -->
- 
+<!-- - **A window to the AI future** ([NL](/nl/)) 
+ (eventually we all need to **[host our own models](https://www.youtube.com/watch?v=zMhz7JUvJZA&t=36s)**)  
 
-See also the **[Wiki](https://github.com/terrytaylorbonn/auxdrone/wiki)** and other links in the footer.
+See also the **[Wiki](https://github.com/terrytaylorbonn/auxdrone/wiki)** and other links in the footer. -->
+
 
 
 <br>
 
-The following 2 diagrams summarize the core ZiptieAI take on AI.
+The following diagrams summarize the core ZiptieAI take on AI.
 
 *AI = deterministic computational algorithms that are extremely useful for specific types of applications* <br>
 <img src="/assets/M-25.png" alt="drones" width="80%">
