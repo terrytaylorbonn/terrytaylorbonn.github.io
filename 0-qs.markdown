@@ -47,13 +47,13 @@ It's chosen because it teaches almost everything someone needs to know about CNN
 
 ### **[2 NN demos](/2_models/)**
 
-Tiny demos that can also run on a CPU.  
+Tiny demos that can also run on a CPU (the numbering in the partial list of demos below matches the numbering of the demos).  
   - **2.1.2 Tiny NN** (very basic NN).  
   - **2.2.1 Tiny CNN** (very basic CNN for recognizing digits 0-9).
   - **2.3.6.1 Tiny transformer** (very basic TF that outputs "hello world..." for input "h").
   - **2.5 Tiny Robotic NN** (very basic demo of using NN to avoid obstacles).
 
-**NOTE: About my use of "tiny" demos and analysis based on Alex-Net CNNs (2012) and GPT-3 (2020) throughout this site**. The core of AI is not rapidly evolving. The simple demos on this site are the best demos if you want to understand the core mechanics of how AI really works. For example, page **[2.3.6.1b D5 tiny TF algorithm details](/2.3.6.1b-d5-tiny-tf-algorithm-details/)** (draft, WIP) explains in detail the simplest demo (its not simple) of the LLM TF QKV (context) mechanism  
+NOTE: The core of AI is not rapidly evolving. The simple demos on this site are the best demos if you want to understand the core mechanics of how AI really works. For example, page **[2.3.6.1b D5 tiny TF algorithm details](/2.3.6.1b-d5-tiny-tf-algorithm-details/) (draft, WIP) explains in detail the simplest demo (its not simple) of the LLM TF QKV (context) mechanism.
 
 *QKV is still the core of LLM AI (**[video](https://youtu.be/lSDC6-BdVus?t=357)**)* <br>
 <img src="/assets/kv.png" alt="drones" width="40%">
@@ -67,39 +67,34 @@ Tiny demos that can also run on a CPU.
 <!-- <img src="/assets/classification.png" alt="drones" width="15%"><br> <br>  
 Tiny NN demo ([demo D2ccc](/2.1.2-classifier-nn/)) (inference) -->
 
-**This one simple NN demo will give you an understanding of the core of all AI inference** (including CNNs, LLMs TFs, etc). The following diagram shows the core components of the demo:
-- **Encoder**. All NNs only "know" numbers (including ChatGPT, Claude, etc). So if you have a dataset that is not (FP) numbers, it must be encoded (and later decoded).
-- **NN**. The source of "intelligence". A UFA (universal function approximator). 
-  - This NN inputs 2 numbers. And based on that number outputs 2 probabilities. That's it.
-- **Decoder**. Convert from a probability for inside/outside the circle to a binary state (1 or 0; inside/outside circle).  
+**This one simple NN demo will give you an understanding of the core of AI inference** (used in NNs, CNNs, LLM TFs, etc). The following diagram shows the core components of the demo:
+- **Encoder**. All NNs only "know" numbers (including the NNs at the heart of ChatGPT, Claude, etc). So if you have a dataset that is not (FP) numbers, it must be encoded (and later decoded).
+- **NN**. The source of "intelligence". A UFA (universal function approximator). This NN inputs 2 numbers and outputs 2 probabilities. That's it.
+- **Decoder**. Convert from a probability for inside/outside the circle to a binary state (1/0 = inside/outside circle).  
 
-```
-GPT: It teaches tensors, forward(), Linear, ReLU, logits, CrossEntropy, training, inference without overwhelming people.*
-```
-
-<img src="/assets/M-05.png" alt="drones" width="50%"> <img src="/assets/M-02.png" alt="drones" width="16%">
+*GPT: "This demo teaches tensors, forward(), Linear, ReLU, logits, CrossEntropy, training, inference without overwhelming people."*<br> <img src="/assets/M-05.png" alt="drones" width="52%"> <img src="/assets/M-02.png" alt="drones" width="15%">
 
 <br>
 
 #### **2.2 Tiny CNN [demo D4 MNIST](/2.2.1-d4-cnn-image-classifier/)** 
 
-A hands on demo. Input a 28x28 pixel screenshot of a digit, and the NN outputs "0", "1", ... "9". See also **[2.2.1b D4 CNN algorithm details](https://ziptieai.com/2.2.1b-d4-cnn-algorithm-details/)**.
+Input a 28x28 pixel screenshot of a digit, and the NN outputs "0", "1", ... "9". *See also **[2.2.1b D4 CNN algorithm details](https://ziptieai.com/2.2.1b-d4-cnn-algorithm-details/)***.
 
 There are 3 main parts.
-- **1 Data input**. In this case the data input is .............
-- **2 Feature extraction (nn.Conv2d + nn.MaxPool2d)**. This is where convolution and pooling are used to turn the original pixel values into "hidden state" values that progressive define higher level features (I typical call these values "pix's"). ...
-- **3 Final NN (nn.Linear) computing CNN "logits"**. This involves
-  - 3.1 Linear NN (like for D2ccc) computes the probabilities of each of 10 possible outputs (digits 0 to 9).
-  - 3.2 The most probable output is converted into a label (such as "7"). -->
+- **1 Data input**. In this case the data input is from MNIST.
+- **2 Feature extraction (nn.Conv2d + nn.MaxPool2d)**. This is where convolution and pooling are used to turn the original pixel values into "hidden state" values that progressively define higher level features (I typically call these values "pix's"). 
+- **3 Final NN (nn.Linear) computes CNN "logits"**. This involves
+  - 3.1 Linear NN (like for D2ccc) that computes the probabilities of each of 10 possible outputs (digits 0 to 9).
+  - 3.2 The most probable output is converted into a label (such as "7"). 
 
-*CNN demo D4 overview (ZAI/GPT original diagram)* <br>
+*CNN demo D4 overview (original ZiptieAI/GPT diagram)* <br>
 <img src="/assets/M-33.png" alt="drones" width="40%">
 
 <br>
 
 #### **2.3.6.1 Tiny TF [demo D5](/2.3.6.1-d5-tiny-tf/)**
 
-*TF demo D5 overview (ZAI original diagram)*<br>
+*TF demo D5 overview (original ZiptieAI diagram)*<br>
 <img src="/assets/M-09.png" alt="drones" width="55%"><br> 
 
 <!-- <img src="/assets/d5_0.png" alt="drones" width="32%"><br> <br> -->
@@ -108,7 +103,9 @@ There are 3 main parts.
 
 #### **2.5 Tiny Robotic NN ([wiki](https://github.com/terrytaylorbonn/auxdrone/wiki/Robotic-AI-demos))**
 
-```
+You might want to skip this demo. I was going to focus on robotic AI more, but decided not to. 
+
+<!-- ```
 GPT: 
 Tiny obstacle detector (or whichever demo first connects perception to action). 
 The important concept isn't robotics hardware. It's sensor → NN → decision → actuator.
@@ -139,7 +136,7 @@ Why it works:
   it shows robotics without requiring robot hardware.
   it connects perception + planning + action, which is the core idea.
 So yes: D30 28bbb is the pick.
-```
+```-->
 
 <img src="/assets/robotic_ai.png" alt="smol" width="55%" style="border: 1px solid black;"><br> 
 
