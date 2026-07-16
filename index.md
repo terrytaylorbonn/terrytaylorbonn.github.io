@@ -5,7 +5,7 @@ title: Home
 
 <br>
 
-Current focus: - Palantir **[3c Enterprise](/pal/)** AI demos.
+Current focus: Palantir **[3c Enterprise](/pal/)** AI demos.
 
 <br>
 
@@ -14,7 +14,7 @@ Current focus: - Palantir **[3c Enterprise](/pal/)** AI demos.
 The ZiptieAI documents my path from simple AI NNs (neural networks (matrix math)) to Palantir style systems.
 - **AI basics**
   - **[Hack](/0-demo/)** explains the core of what makes AI tick (WIP, v1 26.0715).  
-  - **[QS (demos)](/0-qs/)** (selected demos).
+  - **[QS](/0-qs/)** (selected demos).
   - **[Concepts](/0b-demos/)**.
 - **AI deep dive** *(see diagram below)*
   - **[2 NNs](/2_models/)**. NNs, CNNs, and TFs (the source of the "I" in AI). *You control the mathematics.*
@@ -37,7 +37,7 @@ The following 2 diagrams summarize the core ZiptieAI take on AI.
 *AI = deterministic computational algorithms that are extremely useful for specific types of applications* <br>
 <img src="/assets/M-25.png" alt="drones" width="80%">
 
-*Believing the fairy tale that AI has intelligence (fed to you by AI gurus who told you "dont bother learning programming or training for a job, our AI will do everything for you") could cost you dearly (internal agent + transformer (TF) = LLM)*<br>
+*Believing the fairy tale that AI has intelligence could cost you dearly (an LLM consists of an (internal) agent + transformer (TF))*<br>
 <img src="/assets/M-11b.png" alt="drones" width="27%"><br>
 
 

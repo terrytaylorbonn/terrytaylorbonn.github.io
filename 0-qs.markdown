@@ -6,21 +6,28 @@ permalink: /0-qs/
 
 <br> 
 
+*Reorganized 26.0716 (WIP)*
+
+<br>
+
 This page (WIP) describes a set of start-to-finish demos that teach the core concepts of AI.
 
 **TOC**
 - **2 NN demos**. Tiny demos that can also run on a CPU. These NNs only know FP numbers as input and output. So if you have any type of other data, you must encode and then decode. 
 - **2b Model demos**. A model contains the **NN/CNN/TF** and an **"internal" agent (iAgent)** that controls and provides access to the NN/CNN/TF. The iAgent implements an **API** that provides external access to the model.
 - **3 External agent (py script) demos**. Using a model as a helpful assistant.
-- **3b Project demos**. Projects are where all the previous pieces come together. They aren't just "more demos" — they're the integration point. The real goal of AI projects is to integrate AI into an existing SW app. However, there are no such "integration" apps yet... but the following are good initial demos:
+- **3b Workflow (framework) demos**. The workflow platform controls part of the architecture.
+- **3c Enterprise**. The enterprise platform controls almost everything. 
 
-*Master diagram (ZAI original)*<br>
+
+*Right to left: 2 NNs, 2b Model, 3 External agent, 3b Workflow framework, 3c Enterprise platform (will update diagram)*<br>
 <img src="/assets/M-15.png" alt="drones" width="78%">
 
 *Note: Old demos are available on [Wiki](https://github.com/terrytaylorbonn/auxdrone/wiki), [Github](https://github.com/terrytaylorbonn?tab=repositories), [Gdrive](https://drive.google.com/drive/folders/1-Adawag9uA8_bq-hDF-nOuPYaRLz1eEO) (docx lab notes).*
 
 <br> 
 
+<!--
 ```
 GPT:
 Overall, I think this is one of the strongest organizational ideas you've come up with. It answers the question that every newcomer has:
@@ -36,7 +43,7 @@ I'd make it
 That is a subtle but important distinction.
 For example, D4 isn't chosen because it's "the CNN demo."
 It's chosen because it teaches almost everything someone needs to know about CNNs.
-```
+``` -->
 
 <br>
 
@@ -47,6 +54,13 @@ Tiny demos that can also run on a CPU.
   - **2.2.1 Tiny CNN** (very basic CNN for recognizing digits 0-9).
   - **2.3.6.1 Tiny transformer** (very basic TF that outputs "hello world..." for input "h").
   - **2.5 Tiny Robotic NN** (very basic demo of using NN to avoid obstacles).
+
+**NOTE: About my use of "tiny" demos and analysis based on Alex-Net CNNs (2012) and GPT-3 (2020) throughout this site**. The core of AI is not rapidly evolving. The simple demos on this site are the best demos if you want to understand the core mechanics of how AI really works. For example, page **[2.3.6.1b D5 tiny TF algorithm details](/2.3.6.1b-d5-tiny-tf-algorithm-details/)** (draft, WIP) explains in detail the simplest demo (its not simple) of the LLM TF QKV (context) mechanism  
+
+*QKV is still the core of LLM AI (**[video](https://youtu.be/lSDC6-BdVus?t=357)**)* <br>
+<img src="/assets/kv.png" alt="drones" width="40%">
+
+
 
 <br>
 
@@ -198,11 +212,29 @@ rather than writing their own FastAPI server.
 
 <br>
 
-### **[3 External Agent demos](/3_agents/)**
+### **[3 (External) Agent demos](/3_agents/)**
 
 The focus of this sections is the actual agents.
 
-<!-- This is on the QS /0-qs.markdown/ page. -->
+
+- **3b.11 SLACK** 
+  - S1 Simply use the browser to access Slack.
+  - S2a Claude + MCP → Slack ✅ (current demo). 
+  - S2b Claude **Tag** in Slack ✅ (future demo after Claude gives acccess to the tag function my subscription class). This would be an **S2 Native/Managed AI**. 
+  - S3 Slack app + OpenAI. Agent works as a Slack App / Bot (uses Slack APIs / users interact via Slack UI).
+- **3b.3 NMAP Security Assistant**. Uses the local PC as the target system. **S4 External AI agent / works OUTSIDE the target**.
+- **3b.2 GMAIL (JobRadar)**. Standalone that happens to access Gmail API.  *Existing system > Gmail > External Agent > LLM > Summary / Alert.* 
+
+<!--
+*3b Slack Project demo ecosystem for stages S1-S4 (S4 add DB?)*<br><img src="/assets/M-38.png" alt="drones" width="55%"> 
+
+*3b standalone AI app (S4 only)*<br>
+<img src="/assets/M-41.png" alt="drones" width="30%"> 
+-->
+
+
+
+<!-- This is on the QS /0-qs.markdown/ page. 
 
 **3.1 Code-first (no AI)**. Most of the demos start out without AI to verify.
 
@@ -211,10 +243,10 @@ The focus of this sections is the actual agents.
 **3.3 Code-first (AI-assisted)**. The PAL/PAL_CORE demos. 
 
 **3.4 AI Frameworks**. These are specifically designed to make building AI applications easier.
-Examples: n8n (general automation, but now widely used for AI workflows). Gmail ↓ LLM summarizes email ↓ Store in MongoDB ↓ Mattermost alert. Other examples: LangChain,  LangGraph,  CrewAI,  OpenAI Agents SDK, PydanticAI. These assume that one or more models/LLMs are part of the application. *Note that LangChain, CrewAI, etc don't provide much value without AI. Their purpose is to orchestrate AI models, tools, memory, and workflows.*
+Examples: n8n (general automation, but now widely used for AI workflows). Gmail ↓ LLM summarizes email ↓ Store in MongoDB ↓ Mattermost alert. Other examples: LangChain,  LangGraph,  CrewAI,  OpenAI Agents SDK, PydanticAI. These assume that one or more models/LLMs are part of the application. *Note that LangChain, CrewAI, etc don't provide much value without AI. Their purpose is to orchestrate AI models, tools, memory, and workflows.* -->
 
-*3 External agent ecosystem*<br>
-<img src="/assets/6_main_diagram.png" alt="drones" width="40%"> 
+*External agent ecosystem*<br>
+<img src="/assets/6_main_diagram.png" alt="drones" width="33%"> 
 
 <!-- The center of the Agentic AI universe is the AI agent.  The agent and LLM together can doing amazing things. But they also have severe limitations. "Tuning" then to work together is the core focus. Agents can also run without AI.  
 - **[3.1 Agentic (no AI)](/3.1-agentic/)** <br> 
@@ -243,62 +275,50 @@ The concept is.
 
 <br>
 
-### **[3b Project demos](/3.3-ai-projects/)** (the end goal of ZiptieAI)
+### **[3b Workflow (Framework) demos](/3.3-ai-projects/)**
+
+
+- [**3b.1 n8n** (26.0501)](/3b.3.1-ai-proj-1-n8n/). A basic test using Cursor with minimal manual coding. 
+  - Main system = n8n LOCAL for test data input.
+  - 3b Project = Input data from n8n > gpt-40-mini LOCAL > mongoDB > index.html (UI).
+  - 3 External agent = cursor_11_llm_canonical.py
+  - 2b Model = gpt-40-mini LOCAL.<br> *Functional diagram*<br>  <img src="/assets/M-15-3b.1.png" alt="drones" width="40%"><br>*Ecosystem diagram*<br><img src="/assets/cursor_demo1_00.png" alt="drones" width="44%"> 
+
+
+
+<!-- *Integration stages*<br> 
+
+<img src="/assets/M-39.png" alt="drones" width="41%"> -->
+
+
+
 
 <!--This section focuses on "spinning up" real-world projects quickly with minimal code analysis or manual coding. --> 
 <!-- ALSO: simply say "My demos use the external agent as the main application 
 because I don't yet have a large production application to integrate AI into.""
 That's easier to understand. -->
 
-See "Concepts" for an explanation of S1-S4.
+<br>
 
-#### **PART 1: Enterprise SW demos** 
+### **[3c Enterprise demos](/3.3-ai-projects/)** (Palantir)
 
-The real goal of AI projects is to integrate AI into an existing SW (ESW) app.
+- **[PAL-DEMO-2: Palantir AIP "speedrun" (quick start)](/3c.2_pal_aip/)**.<br>*Final app* <br><img src="/assets/final-01.png" alt="drones" width="44%" style="border: 1px solid #999;">
 
-- **3b.11 SLACK** 
-  - S1 Simply use the browser to access Slack.
-  - S2a Claude + MCP → Slack ✅ (current demo). 
-  - S2b Claude **Tag** in Slack ✅ (future demo after Claude gives acccess to the tag function my subscription class). This would be an **S2 Native/Managed AI**. 
-  - S3 Slack app + OpenAI. Agent works as a Slack App / Bot (uses Slack APIs / users interact via Slack UI).
-
-*3b Slack Project demo ecosystem for stages S1-S4 (S4 add DB?)*<br><img src="/assets/M-38.png" alt="drones" width="55%"> 
-
-#### **Part 2: Standalone AI Application demos**.
-
-- **3b.3 NMAP Security Assistant**. Uses the local PC as the target system. **S4 External AI agent / works OUTSIDE the target**.
-- **3b.2 GMAIL (JobRadar)**. Standalone that happens to access Gmail API.  *Existing system > Gmail > External Agent > LLM > Summary / Alert.* 
-
-*3b standalone AI app (S4 only)*<br>
-<img src="/assets/M-41.png" alt="drones" width="30%"> 
-
-<br><br><br><br><br><br>
+<br>
 
 
---------------------------------------------
---------------------------------------------
---------------------------------------------
---------------------------------------------
---------------------------------------------
---------------------------------------------
---------------------------------------------
+26.0716 (0628, v1 26.0527)
 
-<br><br><br><br><br><br>
-
+<!--
 #### **2.1 Core AI demos ([QS](/0-qs/))**
 
 **You can only learn how AI works by doing code demos** (or at least studying the code). **Code does not lie**. 
 
-<!-- Chatbots are programmed to inundate you with hype and AI lingo. GPT often remarks about my habit of wanting to describe AI from a **mechanistic** viewpoint. My response has always been **"of course, AI is mechanistic**. I went down so many rabbit holes when studying AI. **The ONLY way to understand AI is by doing examples. -->
+<!- Chatbots are programmed to inundate you with hype and AI lingo. GPT often remarks about my habit of wanting to describe AI from a **mechanistic** viewpoint. My response has always been **"of course, AI is mechanistic**. I went down so many rabbit holes when studying AI. **The ONLY way to understand AI is by doing examples. ->
 
 *A simple NN **[demo](/2.1.2-classifier-nn/)** of the core of AI*<br>
-<img src="/assets/M-02.png" alt="drones" width="22%">
+<img src="/assets/M-02.png" alt="drones" width="22%"> -->
 
-
-**NOTE: About my use of "tiny" demos and analysis based on Alex-Net CNNs (2012) and GPT-3 (2020) throughout this site**. The core of AI is not rapidly evolving. The simple demos on this site are the best demos if you want to understand the core mechanics of how AI really works. For example, page **[2.3.6.1b D5 tiny TF algorithm details](/2.3.6.1b-d5-tiny-tf-algorithm-details/)** (draft, WIP) explains in detail the simplest demo (its not simple) of the LLM TF QKV (context) mechanism  
-
-*QKV is still the core of LLM AI (**[video](https://youtu.be/lSDC6-BdVus?t=357)**)* <br>
-<img src="/assets/kv.png" alt="drones" width="40%">
 
 
 
@@ -316,11 +336,7 @@ The real goal of AI projects is to integrate AI into an existing SW (ESW) app.
 <!-- *Human (left), LLM agent (center), and LLM transformer (right)*<br>  
 <img src="/assets/M-11.png" alt="drones" width="31%"> -->
 
-<br>
 
-
-
-26.0628 (v1 26.0527)
 
 <!-- **I wasted so much time going down so many rabbit holes when studying AI**. AI is an awesome technology. Without AI tools (GPT) I never could have accomplished 5% of what I have done on the ZiptieAI project. But **AI chatbots only produce the output they are programmed to produce, and much of that about AI itself is misleading hype (or outright lies)**. The very term "artificial intelligence" is a perfect example. AI is not intelligent, and the very concept of "man-made" intelligence shows a basic lack of understanding of what intelligence is. 
 **Code does not lie**. Do this QS and see for yourself what AI really is. Then go to the **[concepts section](/0b-demos/)** to get a firm conceptual grasp of the big picture. You need to do the QS first because otherwise you will struggle greatly to understand much of the **AI lingo (which can be quite misleading)**.

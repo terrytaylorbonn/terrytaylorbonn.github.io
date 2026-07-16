@@ -37,11 +37,12 @@ This is where many startups and internal company AI projects live.
 
 **TOC**
 - 3.0 Concepts
-- 3.1 Code-first
-- 3.2 Frameworks
+- 3.1 Code-first. Most of the demos start out without AI to verify.
+- 3.2 Frameworks. (no AI / automation). These are designed for any application, whether it uses AI or not. Examples: FastAPI, Flask, Django, Express.js, Spring Boot. LangChain,  LangGraph,  CrewAI,  OpenAI Agents SDK, PydanticAI. These assume that one or more models/LLMs are part of the application. *Note that LangChain, CrewAI, etc don't provide much value without AI. Their purpose is to orchestrate AI models, tools, memory, and workflows.*
 - 3.3 Projects
 - 3.4 Integration demos
 - 3.5 Lab demos
+
 
 <br>
 

@@ -11,6 +11,8 @@ description: Last edit 26.0524
 
 These are the lab notes for this demo from docx \#609 on Gdrive.
 
+*See also [Demo (old)](/0-demo-old/).*
+
 <br>
 
 **TOC**
