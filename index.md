@@ -5,8 +5,7 @@ title: Home
 
 <br>
 
-Current focus: 
-- Palantir **[Enterprise](/pal/)** AI demos.
+Current focus: - Palantir **[3c Enterprise](/pal/)** AI demos.
 
 <br>
 
