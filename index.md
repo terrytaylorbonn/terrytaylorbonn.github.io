@@ -13,7 +13,7 @@ Current focus: Palantir **[3c Enterprise](/pal/)** AI demos.
 
 The ZiptieAI documents my path from simple AI NNs (neural networks (matrix math)) to Palantir style systems.
 - **AI basics**
-  - **[Hack](/0-demo/)** explains the core of what makes AI tick (WIP, v1 26.0715).  
+  - **[Hack](/0-demo/)** explains the core of what makes AI tick.  
   - **[QS](/0-qs/)** (selected demos).
   - **[Concepts](/0b-demos/)**.
 - **AI deep dive** *(see diagram below)*
