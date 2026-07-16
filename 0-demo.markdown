@@ -6,10 +6,7 @@ permalink: /0-demo/
 
 <br>
 
-*Rewritten 26.0714 (WIP)*
-
-<br> 
-
+<!-- *Rewritten 26.0714 (WIP)* -->
 
 To work effectively with AI, the most important thing is to understand that **AI is a hack**. But **an extremely valuable** (with the right engineering). 
 
