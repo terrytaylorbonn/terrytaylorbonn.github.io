@@ -18,7 +18,9 @@ To work effectively with AI, the most important thing is to understand that **"A
 - 2 The “artificial intelligence” hack (the TF half of an LLM)
 - 3 Google: “what does it mean to hack something together?”
 - 4 The hack in detail: Astounding engineering (GPT-3 transformer (TF))
-- 5 Ziptie AI site evolution
+- 5 (1.1) TF GPU-based algorithms are 100% deterministic
+- 6 (1.2) LLM agent + transformer = simulated intelligence
+- 7 The glorious future of the simulated intelligence hack
 
 <br>
 
@@ -109,34 +111,7 @@ NOTE the following:
 
 <br>
 
-<br><br><br> 
-
-### **1 Basic AI concepts** 
-
-**The engineering genius behind AI is amazing**. But **building successful AI applications requires a basic understanding of what AI really is**.
-- 1.1 AI = deterministic algorithms running on digital HW
-- 1.2 LLM agent + transformer = simulated intelligence
-- 1.3 The core of AI: NN classification (matrix math based pattern matching)
-- 1.4 Extensions of the simple NN (CNNs, TFs)
-- 1.5 The TF algorithm (QKV context computation from 2020) is still the basis of LLM AI
-- 1.6 AI is an incredible revolutionary engineering marvel.. for the right applications
-- 1.7 Falling for AI hype can cost you... dearly
-- 1.8 AI's place in our world (not our place in AI's world)
-
-<!-- - 1.1 AI = deterministic algorithms running on digital HW
-- 1.2 There is no "I" (intelligence) in AI
-- 1.3 (1.2b) So what is AI? AI = classification, pattern matching (simple NN)
-- 1.4 (1.2c) Variations of the simple NN theme (CNNs, TFs)
-- 1.5 (1.2d) KV saved (HACKS) (cant get better algo to work)
-- 1.6 (1.4) AI is an incredible revolutionary engineering marvel.. for the right applications
-- 1.7 (1.3) Falling for AI hype can cost you... dearly
-- 1.8 (1.5) AI's place in our world (not our place in AI's world)
--->
-
-
-<br>
-
-#### **1.1 AI = deterministic algorithms running on digital HW**
+## **5 (1.1) TF GPU-based algorithms are 100% deterministic**
 
 The following is an example of the python code that defines the structure and training algorithm of a very simple NN.  Such a NN runs on clocked binary circuits and will always output the EXACT same result for the same input. **The inputs and outputs are ONLY FP (floating point) numbers. NNs are pure number crunchers.**
 
@@ -147,11 +122,9 @@ The AI simulation of intelligence started to seem intelligent only recently afte
 *Electro-mechanical relay*<br>
 <img src="/assets/relay.png" alt="drones" width="12%">
 
-
-
 <br>
 
-#### **1.2 LLM agent + transformer = simulated intelligence**
+## **6 (1.2) LLM agent + transformer = simulated intelligence**
 
 LLM AI is based on 2 very distinct computational components.
 
@@ -173,64 +146,33 @@ Note: TF algorithms are referred to as "neural" networks because the diagrams fo
 <img src="/assets/M-15-2b.png" alt="drones" width="53%"><br><br> 
 <img src="/assets/M-14.png" alt="desc" width="60%">  -->
 
-<br>
 
-#### **1.3 The core of AI: NN classification (matrix math based pattern matching)**
+<!-- ### **1 Basic AI concepts** 
 
-**"Training" = programming a NN (not teaching; a NN does not learn)**. The process involves
-- Feed FP numbers (converted input text prompt and answer) to the NN.
-- Compare the input against the shifted (one token) output.
-- Adjust the internal parameters of the NN every so slightly so that the error from the expected output is reduced (without messing up significantly other already trained inputs).
-- Repeat this a massive number of times. This "training" can take weeks. 
-- Hope for a stable result. The training process is not predictable.
+**The engineering genius behind AI is amazing**. But **building successful AI applications requires a basic understanding of what AI really is**.
+- 1.1 AI = deterministic algorithms running on digital HW
+- 1.2 LLM agent + transformer = simulated intelligence
+- 1.6 AI is an incredible revolutionary engineering marvel.. for the right applications
+- 1.7 Falling for AI hype can cost you... dearly
+- 1.8 AI's place in our world (not our place in AI's world)
 
-**Inference** is when the TF is used to recognize the pattern of the some never before encountered input (not matching **exactly** anything the TF was trained on). This is the "magic" of AI. The TF computes the probabilities of all possible outputs (usually 50K vocab tokens) and the best token is selected (unless "temperature" is used; this is a gimmick where the TF selects randomly one of the more probable tokens to give the illusion that the TF is non-deterministic). 
-
-<img src="/assets/M-50.png" alt="drones" width="23%">
-
-<br>
-
-#### **1.4 Extensions of the simple NN (CNNs, TFs)**
-
-Detecting simple patterns (classification) worked fine with a simple NN. But for images and text, some extra "pre-processing" is required for classification. 
-
-For text **convolution** is added (thus convoluted NN). Convolution is matrix math performed before the core classification NN (the "dense layers"). This is required because of the nature of recognizing pixelated input (pixels are convoluted with neighboring related pixels).
-
-For text a **transformers** is added. This basically computes the real meaning of the original tokens based on the "neighboring" **by meaning** tokens. There is also the core NN in the form of an "FFN" (no need to translate, the name is meaningless) for each token. The tokens adjust each other and go through the FFN for many layers, and the classification "percolates" into the FP numbers (12288 for each token in GPT-3) of the last token. **The new token is actually based on a CLASSIFICATION of the entire input**.
-
-<img src="/assets/M-51.png" alt="drones" width="13%">
-
-<br>
-
-
-#### **1.5 The TF algorithm (QKV context computation from 2020) is still the basis of LLM AI**
-
-The TF QKV context computation algorithm modifies the token "hidden layers" (12288 FP numbers that are called "hidden" because you can not determine what the computations do by analyzing the programmed parameters) based on other tokens (thus computing context adjustments). *[2.3.6.1b D5 tiny TF algorithm details](/2.3.6.1b-d5-tiny-tf-algorithm-details/)* (draft, WIP) explains in detail the simplest demo (its not simple) of the LLM TF QKV (context) mechanism.
-
-<img src="/assets/M-52.png" alt="drones" width="19%">
-
-
-The core of AI is not rapidly evolving. Thats one reason why AI continues to focus on ramping up brute-force computation ("scaling"). The pic below is from a video I was watching on 26.0629. That one line "key-value (KV) caches need to be maintained" explains (part of) the reason why AI needs so much memory. Google "what is a kv cache" for details. 
-
-*QKV is still the core of LLM AI (**[video](https://youtu.be/lSDC6-BdVus?t=357)**)* <br>
-<img src="/assets/kv.png" alt="drones" width="40%">
+ - 1.1 AI = deterministic algorithms running on digital HW
+- 1.2 There is no "I" (intelligence) in AI
+- 1.3 (1.2b) So what is AI? AI = classification, pattern matching (simple NN)
+- 1.4 (1.2c) Variations of the simple NN theme (CNNs, TFs)
+- 1.5 (1.2d) KV saved (HACKS) (cant get better algo to work)
+- 1.6 (1.4) AI is an incredible revolutionary engineering marvel.. for the right applications
+- 1.7 (1.3) Falling for AI hype can cost you... dearly
+- 1.8 (1.5) AI's place in our world (not our place in AI's world)
+-->
 
 
 <br>
 
-#### **1.6 AI is an incredible revolutionary engineering marvel.. for the right applications** 
+## **7 The glorious future of the simulated intelligence hack** 
 
-Palantir in the past few years has become synonomous with cutting edge **real world** AI applications. But Palantir only recently adopted AI. 25 years ago Palantir's initial projects were for military applications **without AI**. These non-AI apps were designed as helpful assistants for decision makers, not as as a replacement for mankind. **AI later became the ultimate helpful assistant for Palantir's missions**. AI had limitations, but the benefits of AI far outweighed the negatives **when AI was applied properly**.  
 
-<!-- 
-*"...AI software will be as important as hardware, with platforms such as Palantir's Maven Smart System poised to turn massive drone sensor feeds into highly usable battlefield intelligence". [Zerohedge 26.0620](https://www.zerohedge.com/military/only-beginning-how-profit-asymmetric-warfare-boom)*. -->
-
-*A very successful real-word application of AI* <br>
-<img src="/assets/ziptiedrone2.png" alt="drones" width="23%">
-
-<br>
-
-#### **1.7 Falling for AI hype can cost you... dearly**
+#### **7.1 The hype and the costly (to end customer) failures**
 
 **"No more programmers"**, **"no more workers", "self-driving cars will be ready next year"**, **"we must pause AI development because its not safe"**, and **"AI already has emotions"** (that last statement was from a winner of both the Nobel and Turing prizes). If you yourself fall for such hype, it can cost you dearly.
 
@@ -244,7 +186,22 @@ Palantir in the past few years has become synonomous with cutting edge **real wo
 
 <br>
 
-#### **1.8 AI's place in our world (not our place in AI's world)** 
+
+
+
+#### **7.2 But AI is an incredible revolutionary engineering marvel.. for the right applications** 
+
+Palantir in the past few years has become synonomous with cutting edge **real world** AI applications. But Palantir only recently adopted AI. 25 years ago Palantir's initial projects were for military applications **without AI**. These non-AI apps were designed as helpful assistants for decision makers, not as as a replacement for mankind. **AI later became the ultimate helpful assistant for Palantir's missions**. AI had limitations, but the benefits of AI far outweighed the negatives **when AI was applied properly**.  
+
+<!-- 
+*"...AI software will be as important as hardware, with platforms such as Palantir's Maven Smart System poised to turn massive drone sensor feeds into highly usable battlefield intelligence". [Zerohedge 26.0620](https://www.zerohedge.com/military/only-beginning-how-profit-asymmetric-warfare-boom)*. -->
+
+*A very successful real-word application of AI* <br>
+<img src="/assets/ziptiedrone2.png" alt="drones" width="23%">
+
+<br>
+
+#### **7.3 AI's place in our world (not our place in AI's world)** 
 
 Its no accident that Palantir talks straight about many aspects of AI. Palantir's business does **not demand the myth of AI intelligence**. Palantir says that **AI will not replace people, it will empower them** and that **"engineers wont go away, because their AI-enhanced expertise will be required even more in the age of AI"**. If AI was truly intelligent then AI integration would just involve connecting AI and letting it rip. But successful AI integration into any system requires extensive technical expertise. In the diagram below, the small green box (far left) represents the core legacy enterprise SW. **The core algorithms and workflows developed over decades for such systems are not going to be replaced by AI. AI is going to assist**, and in such a way that AI's unavoidable errors will not cause significant problems. 
 
@@ -258,19 +215,9 @@ Its no accident that Palantir talks straight about many aspects of AI. Palantir'
 *AI is an add-on, a helpful assistant, never in the driver's seat*<br>
 <img src="/assets/M-15ccc.png" alt="drones" width="78%">
 
+<br>
 
-
-
-
-
-
-
-
-<br><br><br><br><br><br> <br><br>
-
-
-
-### **4 A window to the AI future**
+#### **7.4 A window to the AI future**
 
 AI has a big future even after the pre-IPO hype is over. **Those who understand how to integrate AI into their own workflows will benefit the most. ZiptieAI has a mission to help myself (and others) stay ahead of the AI curve**. In the near future, AI integration skills will be required in all business segments (just like with the PC 40 years ago). This work will require a massive number of tech workers who, empowered by AI tools, will integrate AI **as a helpful assistant** into all areas of life.  
 

@@ -443,6 +443,70 @@ This was an interesting demo. Not sure it was a good example of an agent. But st
 
 <br>
 
+
+
+
+<br><br><br><br><br><br>
+<br><br><br><br><br><br>
+<br><br><br><br><br><br>
+
+
+--------------------------------------------
+--------------------------------------------
+--------------------------------------------
+--------------------------------------------
+--------------------------------------------
+--------------------------------------------
+
+- 1.3 The core of AI: NN classification (matrix math based pattern matching)
+- 1.4 Extensions of the simple NN (CNNs, TFs)
+- 1.5 The TF algorithm (QKV context computation from 2020) is still the basis of LLM AI
+
+
+#### **1.3 The core of AI: NN classification (matrix math based pattern matching)**
+
+**"Training" = programming a NN (not teaching; a NN does not learn)**. The process involves
+- Feed FP numbers (converted input text prompt and answer) to the NN.
+- Compare the input against the shifted (one token) output.
+- Adjust the internal parameters of the NN every so slightly so that the error from the expected output is reduced (without messing up significantly other already trained inputs).
+- Repeat this a massive number of times. This "training" can take weeks. 
+- Hope for a stable result. The training process is not predictable.
+
+**Inference** is when the TF is used to recognize the pattern of the some never before encountered input (not matching **exactly** anything the TF was trained on). This is the "magic" of AI. The TF computes the probabilities of all possible outputs (usually 50K vocab tokens) and the best token is selected (unless "temperature" is used; this is a gimmick where the TF selects randomly one of the more probable tokens to give the illusion that the TF is non-deterministic). 
+
+<img src="/assets/M-50.png" alt="drones" width="23%">
+
+<br>
+
+#### **1.4 Extensions of the simple NN (CNNs, TFs)**
+
+Detecting simple patterns (classification) worked fine with a simple NN. But for images and text, some extra "pre-processing" is required for classification. 
+
+For text **convolution** is added (thus convoluted NN). Convolution is matrix math performed before the core classification NN (the "dense layers"). This is required because of the nature of recognizing pixelated input (pixels are convoluted with neighboring related pixels).
+
+For text a **transformers** is added. This basically computes the real meaning of the original tokens based on the "neighboring" **by meaning** tokens. There is also the core NN in the form of an "FFN" (no need to translate, the name is meaningless) for each token. The tokens adjust each other and go through the FFN for many layers, and the classification "percolates" into the FP numbers (12288 for each token in GPT-3) of the last token. **The new token is actually based on a CLASSIFICATION of the entire input**.
+
+<img src="/assets/M-51.png" alt="drones" width="13%">
+
+<br>
+
+
+#### **1.5 The TF algorithm (QKV context computation from 2020) is still the basis of LLM AI**
+
+The TF QKV context computation algorithm modifies the token "hidden layers" (12288 FP numbers that are called "hidden" because you can not determine what the computations do by analyzing the programmed parameters) based on other tokens (thus computing context adjustments). *[2.3.6.1b D5 tiny TF algorithm details](/2.3.6.1b-d5-tiny-tf-algorithm-details/)* (draft, WIP) explains in detail the simplest demo (its not simple) of the LLM TF QKV (context) mechanism.
+
+<img src="/assets/M-52.png" alt="drones" width="19%">
+
+
+The core of AI is not rapidly evolving. Thats one reason why AI continues to focus on ramping up brute-force computation ("scaling"). The pic below is from a video I was watching on 26.0629. That one line "key-value (KV) caches need to be maintained" explains (part of) the reason why AI needs so much memory. Google "what is a kv cache" for details. 
+
+*QKV is still the core of LLM AI (**[video](https://youtu.be/lSDC6-BdVus?t=357)**)* <br>
+<img src="/assets/kv.png" alt="drones" width="40%">
+
+
+<br>
+
+
 <br><br><br><br><br><br>
 
 
