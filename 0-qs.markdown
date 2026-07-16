@@ -6,11 +6,7 @@ permalink: /0-qs/
 
 <br> 
 
-*Reorganized 26.0716 (WIP)*
-
-<br>
-
-This page (WIP) describes a set of selected start-to-finish demos for learning the core concepts of AI quickly. If you are new to AI, its best to **get hands-on demo experience first**, and **then study the [concepts](/0b-demos/)**.
+This page (WIP) describes a set of selected start-to-finish demos for learning the core concepts of AI quickly. If you are new to AI, its best to **get hands-on demo experience first** (with this QS), and **then study the [concepts](/0b-demos/)**.
 
 **TOC**
 - **2 NN demos**. Tiny demos that can also run on a CPU.  
@@ -103,7 +99,7 @@ There are 3 main parts.
 
 #### **2.5 Tiny Robotic NN ([wiki](https://github.com/terrytaylorbonn/auxdrone/wiki/Robotic-AI-demos))**
 
-You might want to skip this demo. I was going to focus on robotic AI more, but decided not to. 
+You might want to skip this demo. I was going to focus on robotics AI more, but decided not to. 
 
 <!-- ```
 GPT: 
@@ -162,52 +158,35 @@ For example: M08 Tiny Fine Tune
 
 ### **[3 (External) Agent demos](/3_agents/)**
 
-The focus of this sections is the actual agents.
+Any one of the following demos would be a good start. The focus of these demos is how to create an agent that interacts with several external systems using AI as a helpful assistant.
 
-
-- **3b.11 SLACK** 
-  - S1 Simply use the browser to access Slack.
-  - S2a Claude + MCP → Slack ✅ (current demo). 
-  - S2b Claude **Tag** in Slack ✅ (future demo after Claude gives acccess to the tag function my subscription class). This would be an **S2 Native/Managed AI**. 
-  - S3 Slack app + OpenAI. Agent works as a Slack App / Bot (uses Slack APIs / users interact via Slack UI).
-- **3b.3 NMAP Security Assistant**. Uses the local PC as the target system. **S4 External AI agent / works OUTSIDE the target**.
-- **3b.2 GMAIL (JobRadar)**. Standalone that happens to access Gmail API.  *Existing system > Gmail > External Agent > LLM > Summary / Alert.* 
-
-<!--
-*3b Slack Project demo ecosystem for stages S1-S4 (S4 add DB?)*<br><img src="/assets/M-38.png" alt="drones" width="55%"> 
-
-*3b standalone AI app (S4 only)*<br>
-<img src="/assets/M-41.png" alt="drones" width="30%"> 
--->
-
-
-
-<!-- This is on the QS /0-qs.markdown/ page. 
-
-**3.1 Code-first (no AI)**. Most of the demos start out without AI to verify.
-
-**3.2 Frameworks (no AI / automation)**. These are designed for any application, whether it uses AI or not. Examples: n8n, FastAPI, Flask, Django, Express.js, Spring Boot. One the best demos would be the n8n demo. The test things about n8n is you can run it easily locally (for free). n8n is not AI-only. Originally it was built as a workflow automation platform. For example: Gmail ↓ Save attachment ↓ Dropbox ↓ Send Slack message. No AI involved.
-
-**3.3 Code-first (AI-assisted)**. The PAL/PAL_CORE demos. 
-
-**3.4 AI Frameworks**. These are specifically designed to make building AI applications easier.
-Examples: n8n (general automation, but now widely used for AI workflows). Gmail ↓ LLM summarizes email ↓ Store in MongoDB ↓ Mattermost alert. Other examples: LangChain,  LangGraph,  CrewAI,  OpenAI Agents SDK, PydanticAI. These assume that one or more models/LLMs are part of the application. *Note that LangChain, CrewAI, etc don't provide much value without AI. Their purpose is to orchestrate AI models, tools, memory, and workflows.* -->
-
-*External agent ecosystem*<br>
+- **[3b.11 Slack](/3b.3.11-ai-proj-11-slack/)** 
+  - Simply use the browser to access Slack.
+  - Claude + MCP → Slack ✅ (current demo). 
+  - Claude Tag in Slack ✅ (future demo after Claude gives acccess to the tag function my subscription class). 
+  - Slack app + OpenAI. Agent works as a Slack App / Bot (uses Slack APIs / users interact via Slack UI).
+- **[3b.3 (NMAP) Security Assistant](/3b.3.3-ai-proj-3-nmap/)**. Uses the local PC as the target system. Works outside the target.
+- **[3b.2 JobRadar](/3b.3.2-ai-proj-2-jobradar/)**. Standalone that accesses Gmail API. Existing system > Gmail > External Agent > LLM > Summary / Alert. <br>*External agent ecosystem*<br> 
 <img src="/assets/6_main_diagram.png" alt="drones" width="33%"> 
 
+<!--*3b Slack Project demo ecosystem for stages S1-S4 (S4 add DB?)*<br><img src="/assets/M-38.png" alt="drones" width="55%"> 
+*3b standalone AI app (S4 only)*<br>
+<img src="/assets/M-41.png" alt="drones" width="30%"> -->
+<!-- This is on the QS /0-qs.markdown/ page. 
+**3.1 Code-first (no AI)**. Most of the demos start out without AI to verify.
+**3.2 Frameworks (no AI / automation)**. These are designed for any application, whether it uses AI or not. Examples: n8n, FastAPI, Flask, Django, Express.js, Spring Boot. One the best demos would be the n8n demo. The test things about n8n is you can run it easily locally (for free). n8n is not AI-only. Originally it was built as a workflow automation platform. For example: Gmail ↓ Save attachment ↓ Dropbox ↓ Send Slack message. No AI involved.
+**3.3 Code-first (AI-assisted)**. The PAL/PAL_CORE demos. 
+**3.4 AI Frameworks**. These are specifically designed to make building AI applications easier.
+Examples: n8n (general automation, but now widely used for AI workflows). Gmail ↓ LLM summarizes email ↓ Store in MongoDB ↓ Mattermost alert. Other examples: LangChain,  LangGraph,  CrewAI,  OpenAI Agents SDK, PydanticAI. These assume that one or more models/LLMs are part of the application. *Note that LangChain, CrewAI, etc don't provide much value without AI. Their purpose is to orchestrate AI models, tools, memory, and workflows.* -->
 <!-- The center of the Agentic AI universe is the AI agent.  The agent and LLM together can doing amazing things. But they also have severe limitations. "Tuning" then to work together is the core focus. Agents can also run without AI.  
 - **[3.1 Agentic (no AI)](/3.1-agentic/)** <br> 
 - **[3.2.5 Agentic + AI / PAL demos](/3.2.5-ai-agent-pal-demos/)**.   <br>
-- **[3.2.4 Agentic + AI / Basic demos](/3.2.4-ai-agent-basic-demos/)**. <br>
--->
+- **[3.2.4 Agentic + AI / Basic demos](/3.2.4-ai-agent-basic-demos/)**. <br>-->
 <!-- <img src="/assets/4_5_3x.png" alt="drones" width="20%"> <br><br>
 <img src="/assets/calc1b.png" alt="drones" width="35%"> <br><br>
 <img src="/assets/4_6_2x.png" alt="drones" width="20%">  <br>
 <img src="/assets/4_5_3x_bbb.png" alt="drones" width="20%"><br><br>  -->
-<!-- 
-```
-GPT:
+<!-- ```GPT:
 3.1 Code-first agents >> PAL_CORE planning demo
 I'd probably use
 PAL_CORE planning demo
@@ -218,8 +197,7 @@ That is the essence of agent programming.
 Probably your smallest
 n8n or PydanticAI demo.
 The framework itself isn't important.
-The concept is.
-```  -->
+The concept is.```  -->
 
 <br>
 
@@ -232,15 +210,8 @@ The concept is.
   - 3 External agent = cursor_11_llm_canonical.py
   - 2b Model = gpt-40-mini LOCAL.<br> *Functional diagram*<br>  <img src="/assets/M-15-3b.1.png" alt="drones" width="40%"><br>*Ecosystem diagram*<br><img src="/assets/cursor_demo1_00.png" alt="drones" width="44%"> 
 
-
-
 <!-- *Integration stages*<br> 
-
 <img src="/assets/M-39.png" alt="drones" width="41%"> -->
-
-
-
-
 <!--This section focuses on "spinning up" real-world projects quickly with minimal code analysis or manual coding. --> 
 <!-- ALSO: simply say "My demos use the external agent as the main application 
 because I don't yet have a large production application to integrate AI into.""
