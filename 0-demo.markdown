@@ -24,7 +24,7 @@ To work effectively with AI, the most important thing is to understand that **"A
 
 <br>
 
-## **1 "what does jely made of?"**
+### **1 "what does jely made of?"**
 
 **Google answers "The ingredients in jelly depend on the type...."**. The technical wizardry behind that simple answer is amazing. That's AI. That has changed our world (many of us have forgotten what it was like when all input to computers had to be be perfect).
 
@@ -55,7 +55,7 @@ PS:
 
 <br>
 
-## **2 The "artificial intelligence" hack (the TF half of an LLM)**
+### **2 The "artificial intelligence" hack (the TF half of an LLM)**
 
 (the other half is the internal agent; together they make up an LLM)
 
@@ -67,7 +67,7 @@ The following diagram shows what an LLM TF (and CNN, NN in general) really does.
 
 <br>
 
-## **3 Google: "what does it mean to hack something together?"**
+### **3 Google: "what does it mean to hack something together?"**
 
 **Answer:** "To hack something together means to quickly assemble a prototype, program, or physical object using whatever materials and methods are immediately available. .... 
 
@@ -85,7 +85,7 @@ Note: **PC Multi-tasking is not a hack**. Computers may not actually run all tas
 
 <br>
 
-## **4 The hack in detail: Astounding engineering (GPT-3 transformer (TF))**
+### **4 The hack in detail: Astounding engineering (GPT-3 transformer (TF))**
 
 *Note: Even the latest LLM TFs use the same basic algorithm*.
 
@@ -111,7 +111,7 @@ NOTE the following:
 
 <br>
 
-## **5 TF GPU-based algorithms are 100% deterministic**
+### **5 TF GPU-based algorithms are 100% deterministic**
 
 The following is an example of the python code that defines the structure and training algorithm of a very simple NN.  Such a NN runs on clocked binary circuits and will always output the EXACT same result for the same input. **The inputs and outputs are ONLY FP (floating point) numbers. NNs are pure number crunchers.**
 
@@ -124,14 +124,14 @@ The AI simulation of intelligence started to seem intelligent only recently afte
 
 <br>
 
-## **6 LLM agent + transformer = the hack becomes intelligent**
+### **6 LLM agent + transformer = the hack becomes intelligent**
 
-LLM AI is based on 2 very distinct computational components.
+LLM AI is based not only on the TF, but also on the **Internal agent (iAgent)** that sends and receives tokens to/from the TF. The iAgent is the core control loop, the typical **procedural program** (usually confusing referred to as **the** deterministic program; the problem is the GPU is also 100% deterministic). The iAgent has an API that allows the external world (a human or an "external Agent") to use the model. 
 
-- **Transformer (TF)** generates response tokens based on the input tokens. The actual TF algorithm only computes FP numbers. **The TF computational process is a straight shot (not procedural)**. The TF computes a classification of the entire input. This classification is used to select the next token. That new token is added to the input. The TF is reset, and the process for the next token starts. This process continues until the TF stops or the iAgent comands a stop.
-- **Internal agent (iAgent)** sends and receives tokens to/from the TF. The iAgent is the core control loop, the typical **procedural program** (usually confusing referred to as **the** deterministic program; the problem is the GPU is also 100% deterministic). The iAgent has an API that allows the external world (a human or an "external Agent") to use the model. 
 
-Note: TF algorithms are referred to as "neural" networks because the diagrams for NN matrix math look like diagrams that could be considered similar to those for biological neural networks.   
+<!-- - **Transformer (TF)** generates response tokens based on the input tokens. The actual TF algorithm only computes FP numbers. **The TF computational process is a straight shot (not procedural)**. The TF computes a classification of the entire input. This classification is used to select the next token. That new token is added to the input. The TF is reset, and the process for the next token starts. This process continues until the TF stops or the iAgent comands a stop.  Note: TF algorithms are referred to as "neural" networks because the diagrams for NN matrix math look like diagrams that could be considered similar to those for biological neural networks.   
+ -->
+
 
 <img src="/assets/M-15-2bbb.png" alt="drones" width="63%"><br>
 
@@ -169,30 +169,21 @@ Note: TF algorithms are referred to as "neural" networks because the diagrams fo
 
 <br>
 
-## **7 The glorious future of the simulated intelligence hack** 
+### **7 The glorious future of the simulated intelligence hack** 
 
-<br>
+**The hype and the costly (to end customer) failures**. "No more programmers", "no more workers", "self-driving cars will be ready next year", "we must pause AI development because its not safe", and "AI already has emotions" (that last statement was from a winner of both the Nobel and Turing prizes). If you yourself fall for such hype, it can cost you dearly.
 
-#### **7.1 The hype and the costly (to end customer) failures**
-
-**"No more programmers"**, **"no more workers", "self-driving cars will be ready next year"**, **"we must pause AI development because its not safe"**, and **"AI already has emotions"** (that last statement was from a winner of both the Nobel and Turing prizes). If you yourself fall for such hype, it can cost you dearly.
-
-- *[Palantir CEO火力全开，场面控制不住了！](https://www.youtube.com/watch?v=feUFT1Q-oBA)*
+<!-- - *[Palantir CEO火力全开，场面控制不住了！](https://www.youtube.com/watch?v=feUFT1Q-oBA)*
 - *[zerohedge.com/ai/something-has-gone-completely-wrong-palantirs-alex-karp-goes-ballistic-openai-anthropic](https://www.zerohedge.com/ai/something-has-gone-completely-wrong-palantirs-alex-karp-goes-ballistic-openai-anthropic)*
 
-<!-- **AI is a security risk**. The core NN in AI has what are often referred to as "hidden layers" that perform the massive brute-force number crunching to generate "intelligent" output. **It's impossible (even for AI) to determine how a NN has been programmed by analyzing the parameter settings in these layers**. -->
+**AI is a security risk**. The core NN in AI has what are often referred to as "hidden layers" that perform the massive brute-force number crunching to generate "intelligent" output. **It's impossible (even for AI) to determine how a NN has been programmed by analyzing the parameter settings in these layers**. -->
 
 *An unsuccessful mission for AI*<br>
 <img src="/assets/waymo.png" alt="drones" width="26%"> 
 
-<br>
 
 
-
-
-#### **7.2 But AI is an incredible revolutionary engineering marvel.. for the right applications** 
-
-Palantir in the past few years has become synonomous with cutting edge **real world** AI applications. But Palantir only recently adopted AI. 25 years ago Palantir's initial projects were for military applications **without AI**. These non-AI apps were designed as helpful assistants for decision makers, not as as a replacement for mankind. **AI later became the ultimate helpful assistant for Palantir's missions**. AI had limitations, but the benefits of AI far outweighed the negatives **when AI was applied properly**.  
+**But AI is an incredible revolutionary engineering marvel.. for the right applications**. Palantir in the past few years has become synonomous with cutting edge **real world** AI applications. But Palantir only recently adopted AI. 25 years ago Palantir's initial projects were for military applications **without AI**. These non-AI apps were designed as helpful assistants for decision makers, not as as a replacement for mankind. **AI later became the ultimate helpful assistant for Palantir's missions**. AI had limitations, but the benefits of AI far outweighed the negatives **when AI was applied properly**.  
 
 <!-- 
 *"...AI software will be as important as hardware, with platforms such as Palantir's Maven Smart System poised to turn massive drone sensor feeds into highly usable battlefield intelligence". [Zerohedge 26.0620](https://www.zerohedge.com/military/only-beginning-how-profit-asymmetric-warfare-boom)*. -->
@@ -200,11 +191,9 @@ Palantir in the past few years has become synonomous with cutting edge **real wo
 *A very successful real-word application of AI* <br>
 <img src="/assets/ziptiedrone2.png" alt="drones" width="23%">
 
-<br>
 
-#### **7.3 AI's place in our world (not our place in AI's world)** 
 
-Its no accident that Palantir talks straight about many aspects of AI. Palantir's business does **not demand the myth of AI intelligence**. Palantir says that **AI will not replace people, it will empower them** and that **"engineers wont go away, because their AI-enhanced expertise will be required even more in the age of AI"**. If AI was truly intelligent then AI integration would just involve connecting AI and letting it rip. But successful AI integration into any system requires extensive technical expertise. In the diagram below, the small green box (far left) represents the core legacy enterprise SW. **The core algorithms and workflows developed over decades for such systems are not going to be replaced by AI. AI is going to assist**, and in such a way that AI's unavoidable errors will not cause significant problems. 
+**AI's place in our world (not our place in AI's world)**. Its no accident that Palantir talks straight about many aspects of AI. Palantir's business does **not demand the myth of AI intelligence**. Palantir says that **AI will not replace people, it will empower them** and that **"engineers wont go away, because their AI-enhanced expertise will be required even more in the age of AI"**. If AI was truly intelligent then AI integration would just involve connecting AI and letting it rip. But successful AI integration into any system requires extensive technical expertise. In the diagram below, the small green box (far left) represents the core legacy enterprise SW. **The core algorithms and workflows developed over decades for such systems are not going to be replaced by AI. AI is going to assist**, and in such a way that AI's unavoidable errors will not cause significant problems. 
 
 <!-- 
  **But AI is not intelligent. AI is based 100% on deterministic binary algorithms that compute statistical probabilities. AI is an addon, a helpful assistant.** The most reliable AI systems use the smallest AI component that can provide the required functionality. -->
@@ -216,11 +205,9 @@ Its no accident that Palantir talks straight about many aspects of AI. Palantir'
 *AI is an add-on, a helpful assistant, never in the driver's seat*<br>
 <img src="/assets/M-15ccc.png" alt="drones" width="78%">
 
-<br>
 
-#### **7.4 A window to the AI future**
 
-AI has a big future even after the pre-IPO hype is over. **Those who understand how to integrate AI into their own workflows will benefit the most. ZiptieAI has a mission to help myself (and others) stay ahead of the AI curve**. In the near future, AI integration skills will be required in all business segments (just like with the PC 40 years ago). This work will require a massive number of tech workers who, empowered by AI tools, will integrate AI **as a helpful assistant** into all areas of life.  
+**AI has a big future. Those who understand how to integrate AI into their own workflows will benefit the most**. In the near future, AI integration skills will be required in all business segments (just like with the PC 40 years ago). This work will require a massive number of tech workers who, empowered by AI tools, will integrate AI **as a helpful assistant** into all areas of life.  
 
 
 *The helpful assistant of the future*<br>
