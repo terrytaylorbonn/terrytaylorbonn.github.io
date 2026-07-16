@@ -11,7 +11,7 @@ This page summarizes the basic concepts introduced in the hands-on **[QS demos](
 <!-- - See "Concepts" (**ADVANCED**) section on pages 2 NNs, 2b Models, 3 Agents, and 3b Projects. But the focus of this page is the **BASIC** core conceptual gist of 2-3b. Using the simplest example from the QS for each. This section may not be like that right now (26.0623), but its moving in that direction. -->
 
 **TOC** 
-- **2 NNs** (NN, CNN, TF) 
+- **2 NN** (NN, CNN, TF) 
 - **2b Model** 
 - **3 External agent**
 - **3b Workflow (framework)**
@@ -49,7 +49,7 @@ My interest shifted to the AI that powered the CNNs. I wanted to understand the 
 
 <br>
 
-## **[2 NNs](/2_models/)**
+## **[2 NN](/2_models/) concepts**
 
 The NN is the core of AI "intelligence". A NN provides a pattern matching algorithm. The the NN is controlled by Python code ("agent").
 
@@ -233,7 +233,6 @@ This section focuses on a conceptual understanding of the technical aspects (esp
 *The similarities of the CNN and TF algorithms*<br>
 <img src="/assets/00-MAIN.png" alt="drones" width="58%"> 
 
-
 <br>
 
 #### **[2.7 Why scaling works](/0b.2.7-why-scaling-works/)**
@@ -248,13 +247,11 @@ For example, for the Tiny TF demo, the new token is for all practical purposes t
 *Scaling for more tokens (blue) and more weights (red) makes the pattern to be matched much more precise*<br>
 <img src="/assets/M-36.png" alt="drones" width="50%">
 
-
-
-
-
 <br>
 
-## **[2b Model concepts](/0b.2b-concepts-models/)**
+## **[2b Model](/2b_models/) concepts**
+
+*[Notes](/0b.2b-concepts-models/)*
 
 The agent and the NN are typically packaged into a **model** that has an API that makes it possible for existing software to **access the model via API**. The **model code that controls the TF NN is the "internal agent" (iAgent)**. Discusses
  - 2b.1 What is a Model?
@@ -270,7 +267,10 @@ The agent and the NN are typically packaged into a **model** that has an API tha
 
 <br>
 
-## **[3 Agent concepts](/0b.3-concepts-agents/)**
+## **[3 Agent](/3_agents/) concepts**
+
+*[Notes](/0b.3-concepts-agents/)*
+
 
 External agents access the model via API. This supports (1) reliable workflows built around models, tools, and automation and (2) tolerance of AI faults and unpredictable outputs. This section discusses 
 
@@ -297,7 +297,9 @@ Agents on this site are organized as follows:
 <br>
 
 
-## **3b Workflow (frameworks)**
+## **[3b Workflow (frameworks)](/3.3-ai-projects/) concepts**
+
+
 
 <!-- ## **[3b AI project concepts](/0b.3b-concepts-projects/)** -->
 
@@ -317,7 +319,7 @@ Agents on this site are organized as follows:
 
 <br>
 
-## **3c Enterprise AI** ([3c PAL (Palantir)](https://ziptieai.com/pal/))
+## **[3c Enterprise AI](https://ziptieai.com/pal/) concepts**
 
 Provides the infrastructure needed to create production systems. I started out with Palantir demos in early July 2026. It is my core focus now. Seems to be a very effective way to create practical Enterprise AI. Palantir started out 25 years ago before AI was useful. They built data analysis tools that worked. And recently they started adding AI **as a helpful assistant**.
 
