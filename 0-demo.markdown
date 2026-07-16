@@ -171,6 +171,7 @@ Note: TF algorithms are referred to as "neural" networks because the diagrams fo
 
 ## **7 The glorious future of the simulated intelligence hack** 
 
+<br>
 
 #### **7.1 The hype and the costly (to end customer) failures**
 
@@ -225,8 +226,9 @@ AI has a big future even after the pre-IPO hype is over. **Those who understand 
 *The helpful assistant of the future*<br>
 <img src="/assets/M-10.png" alt="desc" width="35%"> 
 
+<!--
 *The future man-machine interface ([NL](/nl/))*<br>
-<img src="/assets/nl-01.png" alt="desc" width="15%"> 
+<img src="/assets/nl-01.png" alt="desc" width="15%"> -->
 
 <br>
 
