@@ -154,20 +154,40 @@ For example: M08 Tiny Fine Tune
   3. Save model_v2.pt, 5. Compare outputs before/after
 - **[2b.4 Running models locally](/2b.4-run-models-locally/)**. GPT recommends M07 FastAPI. This is where the model becomes a service. But GPT also says that Ollama is a better representative demo for 2b.4 Running models locally than M07 FastAPI. The purpose of 2b.4 is not to teach FastAPI. It's to teach: "How do I run a model on my own computer?" Most people today will use something like: Ollama, LM Studio, vLLM, llama.cpp rather than writing their own FastAPI server.
 
+
 <br>
+
 
 ### **[3 (External) Agent demos](/3_agents/)**
 
 Any one of the following demos would be a good start. The focus of these demos is how to create an agent that interacts with several external systems using AI as a helpful assistant.
 
-- **[3b.11 Slack](/3b.3.11-ai-proj-11-slack/)** 
+<!-- - **[3b.11 Slack](/3b.3.11-ai-proj-11-slack/)** 
   - Simply use the browser to access Slack.
   - Claude + MCP → Slack ✅ (current demo). 
   - Claude Tag in Slack ✅ (future demo after Claude gives acccess to the tag function my subscription class). 
   - Slack app + OpenAI. Agent works as a Slack App / Bot (uses Slack APIs / users interact via Slack UI).
 - **[3b.3 (NMAP) Security Assistant](/3b.3.3-ai-proj-3-nmap/)**. Uses the local PC as the target system. Works outside the target.
 - **[3b.2 JobRadar](/3b.3.2-ai-proj-2-jobradar/)**. Standalone that accesses Gmail API. Existing system > Gmail > External Agent > LLM > Summary / Alert. <br>*External agent ecosystem*<br> 
-<img src="/assets/6_main_diagram.png" alt="drones" width="33%"> 
+<img src="/assets/6_main_diagram.png" alt="drones" width="33%"> -->
+
+
+
+- **3.1 Code-first**. I'd recommend one demo from each of these sections.
+  - **[3.1.1 Agent PAL_core demos (docx \#603)](/3.1-agentic/)**. 
+  - **[3.1.2 PAL demos (openAI/Gemma) (docx \#603)](/3.2.5-ai-agent-pal-demos/)**. 
+  - **[3.1.3 TF semantic demos (AI) (docx \#606)](/3.2.4-ai-agent-basic-demos/)**. 
+- **3.2 Frameworks**. I dont have examples for these right now. They are not my priority. I have done LangX demos, but the code intensive nature of the LangX is not what I want to focus on right now. I think its not the way for most newcomers to go, and I wonder about the opportunities in the future (I think higher levels frameworks such as n8n and Palantir are the way to go; if not these tools, then other newcomer tools in the near future).
+  - OpenAI Agents SDK, Pydantic AI, LangChain, LangGraph, CrewAI, AutoGen
+- **3.3 Projects**. Practical AI applications that provide useful functionality. Either of the following.
+  - **[3b.3 (NMAP) Security Assistant](/3b.3.3-ai-proj-3-nmap/)**. Uses the local PC as the target system. Works outside the target.
+  - **[3b.4 Ledger](/3b.3.4-ai-proj-4-ledger/)**. Stores messy human text in an append-only encrypted ledger, then uses AI to search, summarize, and generate new entries without requiring a rigid database schema. The ledger stays immutable. Then the AI/agent produces the current “view”. So nothing is edited in place. The system only appends.
+- **3.4 Integration demos**. Demonstrations of integrating the central AI agent with existing software and enterprise systems.
+  - **[3b.12 Odoo)](/3b.3.12-ai-proj-12-odoo/)**. The focus is on adding AI to Odoo.
+- **3.5 Lab demos**. Just hacking around. Avoid these..
+
+*External agent ecosystem*<br> 
+<img src="/assets/6_main_diagram.png" alt="drones" width="33%">
 
 <!--*3b Slack Project demo ecosystem for stages S1-S4 (S4 add DB?)*<br><img src="/assets/M-38.png" alt="drones" width="55%"> 
 *3b standalone AI app (S4 only)*<br>
