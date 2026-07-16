@@ -18,8 +18,8 @@ To work effectively with AI, the most important thing is to understand that **"A
 - 2 The “artificial intelligence” hack (the TF half of an LLM)
 - 3 Google: “what does it mean to hack something together?”
 - 4 The hack in detail: Astounding engineering (GPT-3 transformer (TF))
-- 5 (1.1) TF GPU-based algorithms are 100% deterministic
-- 6 (1.2) LLM agent + transformer = simulated intelligence
+- 5 TF GPU-based algorithms are 100% deterministic
+- 6 LLM agent + transformer = the hack becomes intelligent
 - 7 The glorious future of the simulated intelligence hack
 
 <br>
@@ -111,7 +111,7 @@ NOTE the following:
 
 <br>
 
-## **5 (1.1) TF GPU-based algorithms are 100% deterministic**
+## **5 TF GPU-based algorithms are 100% deterministic**
 
 The following is an example of the python code that defines the structure and training algorithm of a very simple NN.  Such a NN runs on clocked binary circuits and will always output the EXACT same result for the same input. **The inputs and outputs are ONLY FP (floating point) numbers. NNs are pure number crunchers.**
 
@@ -124,7 +124,7 @@ The AI simulation of intelligence started to seem intelligent only recently afte
 
 <br>
 
-## **6 (1.2) LLM agent + transformer = simulated intelligence**
+## **6 LLM agent + transformer = the hack becomes intelligent**
 
 LLM AI is based on 2 very distinct computational components.
 
