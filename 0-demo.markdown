@@ -6,49 +6,47 @@ permalink: /0-demo/
 
 <br>
 
-*This page rewritten 26.0714 (WIP)*
+*Rewritten 26.0714 (WIP)*
 
 <br> 
 
 
-To work effectively with AI, the most important thing is to understand that **"Artificial intelligence" is a hack**. But an **extremely valuable hack when engineered into target systems properly**. That's what ZiptieAI is all about.
+To work effectively with AI, the most important thing is to understand that **AI is a hack**. But **an extremely valuable** (with the right engineering). 
 
 **TOC**
 - 1 “what does jely made of?”
 - 2 The “artificial intelligence” hack (the TF half of an LLM)
 - 3 Google: “what does it mean to hack something together?”
-- 4 The hack in detail: Astounding engineering (GPT-3 transformer (TF))
+- 4 The hack in detail (the amazing engineering of the GPT-3 transformer)
 - 5 TF GPU-based algorithms are 100% deterministic
-- 6 LLM agent + transformer = the hack becomes intelligent
-- 7 The glorious future of the simulated intelligence hack
+- 6 LLM agent + transformer = very good simulated "intelligence"
+- 7 The very bright future of simulated intelligence
 
 <br>
 
 ### **1 "what does jely made of?"**
 
-**Google answers "The ingredients in jelly depend on the type...."**. The technical wizardry behind that simple answer is amazing. That's AI. That has changed our world (many of us have forgotten what it was like when all input to computers had to be be perfect).
+**Google answers "The ingredients in jelly depend on the type of...."**. The technical wizardry behind such a simple answer is rapidly changing our world.
 
-Without AI a computer could not answer such a question.  A procedural program would have to 
-- check all possible combinations of letters against all possible meanings and contexts.
-- encode all possible topics. 
-- account for all possible grammar formulations and errors.
-- misspelled words.
-- bad punctuation.  
+Many of us have forgotten (or never knew) what it was like when all input to computers had to be be perfect. Without AI a computer could not answer messy human language questions.  A procedural program would have to 
+- Detect all possible topics. 
+- Check all possible combinations of letters against all possible meanings and contexts.
+- Account for all possible grammar formulations and errors (misspelled words, bad punctuation, etc).  
 
 A procedural program can do simple things like checking capital/lower-case letter combos, etc, but that's about it.  Imagine what would be required for what AI does now (complete discussions, etc). Impossible without AI.
 
-for the "jely" demo, The following diagram (left to right) shows how AI does it (MODIFY DIAGRAM). 
+The following diagram shows the main components of the typical AI system.
 - The main system is YOU and your browser.
-- External agent is all the logic on the Google side, that interface between you and the LLM.
-- 2b Model is Gemma, etc. Has internal agent (interface between outside model and TF) and TF.
-- **2 TF transformer is where the AI magic happens. Its all matrix math on GPUs.** 
+- External agent is all the logic that interfaces between you and the LLM.
+- LLM has an internal agent and TF. The internal agent is the interface between the outside world and the TF.
+- **TF (transformer) is where the AI magic happens (matrix math on GPUs).** 
 
 <img src="/assets/hack-05.png" alt="drones" width="75%">
 
 
-PS: 
-- **The true TF magic (there's so much magic in a TF) is that if the input does not match any of the example ("training") data used to program ("train") the TF, then it will still find the closest SEMANTIC (MEANING) MATCH. So you dont have to worry about covering all possible examples**
-- **but the more examples you train on the better the results; thats why the race is on for scaling and massive GPU computing; thats why nuclear power is "safe and effective"** all of a sudden, now that the tech titans need massive amounts of electricity).
+Note: 
+- The true magic of the TF is that if the input does not exactly match any of the example ("training") data used to program ("train") the TF, **the TF will still find the closest semantic (meaning) match.** 
+- **The more examples you train the TF on, the better the inference (response) results will be**. Thats why the focus is on scaling and massive GPU computing (and the required power sources).
 - And if its not programmed into the TF, the model can tell the external agent to find the required text (search) and then process the text into response. Amazing.  
 - the model can also simulate thinking, planning, creating subtasks.. all from the example text it was programmed on (and with the complex logic of the internal agent that controls the model).
 
@@ -85,7 +83,7 @@ Note: **PC Multi-tasking is not a hack**. Computers may not actually run all tas
 
 <br>
 
-### **4 The hack in detail: Astounding engineering (GPT-3 transformer (TF))**
+### **4 The hack in detail (the amazing engineering of the GPT-3 transformer)**
 
 *Note: Even the latest LLM TFs use the same basic algorithm*.
 
@@ -124,7 +122,7 @@ The AI simulation of intelligence started to seem intelligent only recently afte
 
 <br>
 
-### **6 LLM agent + transformer = the hack becomes intelligent**
+### **6 LLM agent + transformer = very good simulated "intelligence"**
 
 LLM AI is based not only on the TF, but also on the **Internal agent (iAgent)** that sends and receives tokens to/from the TF. The iAgent is the core control loop, the typical **procedural program** (usually confusing referred to as **the** deterministic program; the problem is the GPU is also 100% deterministic). The iAgent has an API that allows the external world (a human or an "external Agent") to use the model. 
 
@@ -169,7 +167,7 @@ LLM AI is based not only on the TF, but also on the **Internal agent (iAgent)** 
 
 <br>
 
-### **7 The glorious future of the simulated intelligence hack** 
+### **7 The very bright future of simulated intelligence** 
 
 **The hype and the costly (to end customer) failures**. "No more programmers", "no more workers", "self-driving cars will be ready next year", "we must pause AI development because its not safe", and "AI already has emotions" (that last statement was from a winner of both the Nobel and Turing prizes). If you yourself fall for such hype, it can cost you dearly.
 
