@@ -37,7 +37,23 @@ These are all about:
 changing an existing model
 ```
 
+```
+GPT: A tiny fine-tuning demo would be excellent
+For example: M08 Tiny Fine Tune
+  1. Load M01 model.pt, 2. Run inference, 
+  3. Continue training for 100 epochs on slightly different data
+  4. Save model_v2.pt, 5. Compare outputs before/after
+This would teach the core idea:
+  Fine-tuning = continue training an existing model on additional data.
+  No transformers required. The exact same concept applies to LLMs, just at a much larger scale.
+I actually think this would become one of the best demos in your 2b Models section because it bridges the gap between:
+  training from scratch (Section 2), and
+  using pre-trained models (Section 2b).
+So yes—I would make Tiny Fine Tune the representative demo for 2b.3 Modifying models. It fits the section much better than the backdoor example.
+```
+
+
 <br>
 
 
-26.0613 (v1 26.0613)
+26.0716 (0613, v1 26.0613)
