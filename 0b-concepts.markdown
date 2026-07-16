@@ -51,6 +51,8 @@ My interest shifted to the AI that powered the CNNs. I wanted to understand the 
 
 ## **[2 NN](/2_models/) concepts**
 
+*[Notes](/2.0-ufas/)*
+
 The NN is the core of AI "intelligence". A NN provides a pattern matching algorithm. The the NN is controlled by Python code ("agent").
 
 - 2.0 Modern architectures are evolutionary (not revolutionary)
@@ -269,7 +271,9 @@ The agent and the NN are typically packaged into a **model** that has an API tha
 
 ## **[3 Agent](/3_agents/) concepts**
 
-*[Notes](/0b.3-concepts-agents/)*
+- *[Notes 1](/0b.3-concepts-agents/)*
+- *[Notes 2](/3.2.1-ai-agent-intro/)*
+
 
 
 External agents access the model via API. This supports (1) reliable workflows built around models, tools, and automation and (2) tolerance of AI faults and unpredictable outputs. This section discusses 
