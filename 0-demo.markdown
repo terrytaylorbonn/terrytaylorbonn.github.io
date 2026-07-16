@@ -8,7 +8,7 @@ permalink: /0-demo/
 
 <!-- *Rewritten 26.0714 (WIP)* -->
 
-To work effectively with AI, the most important thing is to understand that **AI is a hack**. But **an extremely valuable** (with the right engineering). 
+The most important thing to understand about AI is that **AI is a hack. An extremely valuable hack** (when used properly). 
 
 **TOC**
 - 1 “what does jely made of?”
