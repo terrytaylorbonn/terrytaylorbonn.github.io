@@ -33,7 +33,7 @@ See the working text for this QS in
 
 <br>
 
-## **selecting in the "INLINE ACTION FORM OR TABLE" does not show a result in the "CHART: XY".**
+# 1 **selecting in the "INLINE ACTION FORM OR TABLE" does not show a result in the "CHART: XY".**
 
 when I select in "OBJECT TABLE" it works. could you compare the code and find error?
 
@@ -175,7 +175,302 @@ Possible approaches:
 
 The current code does none of these, so the chart only responds to the object table.
 
+<br>
 
+# **2 Yes — I can modify the Workshop module code, and I did it on a new branch.**
+
+Module edited:
+
+:resource[ri.workshop.main.module.8e56100f-095a-43e9-b904-62829182d29b]{globalBranchRid="ri.branch..branch.5aeae78f-8244-46d7-b01b-be009cad66ca"}
+
+Branch:
+
+:resource[ri.branch..branch.5aeae78f-8244-46d7-b01b-be009cad66ca]
+
+## What I changed
+
+The `OBJECT TABLE` already writes its active selected clinic into:
+
+```ts
+objectTable1ActiveObject
+```
+
+The chart appears to depend on that same variable.
+
+The inline action form previously had no connection to that variable:
+
+```ts
+onSubmitSuccess: [],
+scenarioApply: undefined,
+```
+
+I changed it to:
+
+```ts
+onSubmitSuccess: [{ type: "refreshDataInModule" }],
+hideHeader: false,
+scenarioApply: undefined,
+outputObjectSet: objectTable1ActiveObject,
+```
+
+So now the inline action form config is:
+
+```ts
+const inlineActionFormOrTable1 = W.widget.inlineActionFormOrTable({
+    actionConfigs: [{
+        actionConfig: {
+            action: {
+                actionRid: "ri.actions.main.action-type.03f7a9fc-3e92-4f1b-a1a2-2f3ef433b1ed",
+                parameters: {}
+            },
+            defaultLayout: "FORM",
+            isLayoutToggleEnabled: false,
+            isFileUploadEnabled: true,
+            tableLayout: {
+                frozenColumnCount: 0,
+                isFileUploadEnabled: true,
+                isRowAddEnabled: true,
+                isRowRemovalEnabled: true,
+                rowHeightInLines: 1
+            },
+            disableIfInvalid: true
+        },
+        onSubmitSuccess: [{ type: "refreshDataInModule" }],
+        hideHeader: false,
+        scenarioApply: undefined,
+        outputObjectSet: objectTable1ActiveObject,
+    }],
+}, { editorLabel: "Inline Action Form or Table 1", id: "e6019863-cb49-4117-8d3f-b8f4a4955735" });
+```
+
+## Important limitation
+
+This probably makes the chart update **after the action is submitted**, not immediately when you merely choose a clinic inside the inline action form.
+
+Reason: the inline action form widget does not appear to expose the currently selected action parameter as a normal Workshop variable. It can expose an `outputObjectSet` after submission, so I wired that output into the same object-set variable that the chart already responds to.
+
+So the expected behavior is:
+
+```text
+choose clinic in inline action form
+submit action
+  ↓
+inline action outputs affected clinic object set
+  ↓
+objectTable1ActiveObject is updated
+  ↓
+chart refreshes / updates
+```
+
+But this likely will **not** do:
+
+```text
+choose clinic in inline action form
+  ↓
+chart instantly updates before submit
+```
+
+## If you want the instant-update behavior
+
+The cleaner design would be to add a separate shared **Object Dropdown / Object Selector** for `Clinic`, then wire:
+
+- the chart to that shared selected-clinic variable
+- the inline action form’s `clinic` parameter to that shared selected-clinic variable
+- optionally the object table selection to the same variable
+
+That would make selection truly shared across the UI. The inline action form by itself is not a great “selection controller”; it is primarily an action submission widget.
+
+<br>
+
+# **3 FAIL**
+TypeError
+network error
+Here are the details of the error:
+
+[TypeError] network error
+
+Actually, it **is possible**, but my first attempted fix was wrong.
+
+The failed part was this idea:
+
+```ts
+outputObjectSet: objectTable1ActiveObject
+```
+
+That produced the UI error you saw:
+
+> Failed to apply changes due to a configuration issue.
+
+So I backed away from that approach.
+
+## What I changed instead
+
+I added a new **Clinic Selector** dropdown to the UI and wired it to the same selected-clinic variable that the object table uses:
+
+```ts
+objectTable1ActiveObject
+```
+
+That means:
+
+```text
+Clinic Selector
+      ↓
+objectTable1ActiveObject
+      ↓
+Chart: XY
+```
+
+And I also changed the inline action form so its `clinic` parameter uses that same selected clinic:
+
+```ts
+parameters: {
+  clinic: {
+    value: {
+      type: "variableReference",
+      variable: objectTable1ActiveObject
+    },
+    displayType: "DISABLED"
+  }
+}
+```
+
+So now the intended flow is:
+
+```text
+Select Clinic in new dropdown
+        ↓
+Chart updates
+        ↓
+Inline Action Form uses the selected clinic
+        ↓
+Submit action
+```
+
+## Where I made the edit
+
+Workshop module:
+
+:resource[ri.workshop.main.module.8e56100f-095a-43e9-b904-62829182d29b]{globalBranchRid="ri.branch..branch.5aeae78f-8244-46d7-b01b-be009cad66ca"}
+
+Branch:
+
+:resource[ri.branch..branch.5aeae78f-8244-46d7-b01b-be009cad66ca]
+
+## Important nuance
+
+I **cannot make the inline action form’s internal clinic picker itself drive the chart directly**, at least not cleanly through the Workshop DSL exposed here.
+
+The inline action form’s parameter value is internal to the action widget. It does not appear to expose “currently selected clinic parameter” as a reusable Workshop variable.
+
+So the practical fix is to add a real shared selector widget and make both the chart and action form use that shared selection.
+
+## Capability summary
+
+So, capability-wise:
+
+- ✅ I can inspect the Workshop module DSL.
+- ✅ I can compare widget wiring.
+- ✅ I can edit the Workshop module on a branch.
+- ✅ I can add widgets and wire variables/events.
+- ✅ I can bind an action parameter to a Workshop variable.
+- ⚠️ I cannot fully inspect/edit unsupported widget internals like the `Chart: XY` config because it appears as:
+
+  ```ts
+  W.unsupportedWorkshopConfig("16bqcke")
+  ```
+
+- ⚠️ I cannot directly bind to the inline action form’s internal picker state unless Workshop exposes it as a variable or output.
+
+So the answer is: **possible, but not by making the original inline action form picker magically behave like a selection widget. The fix requires a shared selector.**
+
+<br>
+
+# **3 what did you ??? its working :)**
+
+Nice 🙂 — then the second fix worked.
+
+What I changed was:
+
+## 1. Added a new shared clinic selector
+
+I added an **Object Dropdown** widget called:
+
+```text
+Clinic Selector
+```
+
+It uses the same `Clinics` object set as the table:
+
+```ts
+objectSet: clinics
+```
+
+and writes its selected clinic into the existing variable:
+
+```ts
+selectedObjectSet: objectTable1ActiveObject
+```
+
+That variable was already the one used by the object table selection.
+
+So now both of these can control the same selected clinic:
+
+```text
+OBJECT TABLE selection
+CLINIC SELECTOR dropdown
+        ↓
+objectTable1ActiveObject
+```
+
+## 2. Rewired the inline action form to use that same selected clinic
+
+Before, the inline action form had its own independent clinic input:
+
+```ts
+parameters: {}
+```
+
+So selecting a clinic inside the form did not update the chart.
+
+I changed it to:
+
+```ts
+parameters: {
+  clinic: {
+    value: {
+      type: "variableReference",
+      variable: objectTable1ActiveObject
+    },
+    displayType: "DISABLED"
+  }
+}
+```
+
+So the inline action form now uses the currently selected clinic from the shared variable.
+
+## 3. Resulting behavior
+
+Now the flow is:
+
+```text
+Select clinic in new dropdown or object table
+        ↓
+objectTable1ActiveObject updates
+        ↓
+CHART: XY updates
+        ↓
+Inline action form receives same clinic
+        ↓
+Submit action for that clinic
+```
+
+So the reason it works is that I stopped trying to use the inline action form as the selector. Instead, I made the app use a shared selected-clinic variable and connected both the chart and the action form to it.
+
+
+<br>*01* <br><img src="/assets/pal-demo-4-01.png" alt="drones" width="85%" style="border: 1px solid #999;">
+
+<br>*02* <br><img src="/assets/pal-demo-4-02.png" alt="drones" width="65%" style="border: 1px solid #999;">
 
 <br>
 

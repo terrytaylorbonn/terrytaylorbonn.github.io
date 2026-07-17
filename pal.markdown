@@ -12,7 +12,7 @@ Demos
 - **[PAL-DEMO-1: Palantir Foundry "speedrun" (quick start) (26.0705)](/3c.1_pal_foundry/)**. Demo complete... still need to write the webpage.
 - **[PAL-DEMO-2: Palantir AIP "speedrun" (quick start) (26.0706)](/3c.2_pal_aip/)**. This is just a rough summary for now...
 - **[PAL-DEMO-3: Palantir agentic AI "speedrun" (quick start) (26.0713)](/3c.3_pal_agentic_ai/)**. (WIP)
-- **[PAL-DEMO-4: Palantir ontology function "speedrun" (quick start) (26.0717)](/3c.4_pal_ontology_function/)**.
+- **[PAL-DEMO-4: Palantir ontology function "speedrun" (quick start) (26.0717)](/3c.4_pal_ontology_function/)**. At the end of this page is **good demo of how FDE/GPT5.5 fixed a problem with the demo**.
 
 
 <!--
