@@ -58,7 +58,7 @@ The following diagram shows the main components of the typical AI system.
 
 The following diagram summarizes the core function performed by an LLM TF. You often read that it computes the new token from the last token. Nonsense. The computed data for the new token ends up in the last token, but this data was computed from all tokens. The TF runs a complex pattern matching algorithm on the last token embeddings (12288 FP16 #s in GPT-3) that generates an output that is a classification of the input (used to select 1 token out of ~50K tokens as the next token).
 
-**The TF is an engineering marvel** that has applications everywhere in the digital world. But intelligence? Nonsense. Its a brute-force hack using matrix math, not neurons (the term "neural network" is a marketing term, convincing because the matrix math diagrams look like a crude simplification of a neural net). 
+**The TF is an engineering marvel** that has applications everywhere in the digital world. But intelligence? Nonsense. Its a brute-force hack using matrix math, not neurons (the term "neural network" is a marketing term, convincing because the matrix math diagrams look like a crude simplification of a neural net). **AI does not deliver human-style intelligence**. Its more like (1) a knowledge store / pattern matching algorithm with (2) language capabilities.  
 
 <img src="/assets/hack-08.png" alt="drones" width="40%">
 
@@ -81,7 +81,7 @@ While sometimes viewed as a negative sign of poor planning, it is often a celebr
 
 **This is what AI has been for over half a century. A hack that only recently (thanks to powerful GPUs that could perform the brute-force computations) worked well enough to be marketed as "intelligent"**. The hack works well enough in certain situations that are extrememly useful to mankind. The challenge is building systems that exploit AI capabilities while minimizing its limitations. 
 
-A **limited** analogy with AI is the multi-tasking feature of everyday computers. Computers may not actually run all tasks concurrently, but computers run fast enough that the net effect is real multi-tasking. That is also a hack, but it is vastly different from the AI hack, because it delivers real effective multi-tasking with no errors (OK, there are race conditions, deadlock, etc, but these are unavoidable aspects of multi-tasking). **AI does not deliver human-style intelligence**. Its more like (1) a knowledge store / pattern matching algorithm with (2) language capabilities.  
+**Not all hacks are as problematic as AI**. A **limited** analogy with AI is the multi-tasking feature of everyday computers. Computers may not actually run all tasks concurrently, but computers run fast enough that the net effect is real multi-tasking. That is also a hack, but it is vastly different from the AI hack, because it delivers real effective multi-tasking with no errors (OK, there are race conditions, deadlock, etc, but these are unavoidable aspects of multi-tasking). 
 
 <br>
 
