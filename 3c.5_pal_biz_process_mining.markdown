@@ -1,0 +1,44 @@
+---
+layout: page
+title: 3c.5 PAL biz process mining
+permalink: /3c.5_pal_biz_process_mining//
+---
+
+<br>
+
+[← 3c PAL](/pal/)
+
+<br>
+
+## PAL-DEMO-5: Speedrun: Mining Your First Business Process (26.0717)
+
+
+See the working text for this QS in
+- **[\#616\_pal\_biz\_process\_mining\_qs\_.docx](https://drive.google.com/drive/folders/1-Adawag9uA8_bq-hDF-nOuPYaRLz1eEO)**.  
+
+<!-- <img src="/assets/final-01.png" alt="drones" width="85%">  -->
+
+<br>*03* <br><img src="/assets/pal-demo-5-xx.png" alt="drones" width="75%" style="border: 1px solid #999;">
+
+<br>
+
+----------------------------
+----------------------------
+----------------------------
+----------------------------
+
+
+<br>
+<br>
+
+# **NOTES**
+
+<br>
+
+# 1 **xxxx**
+
+xxxxxx
+
+<br>
+
+26.0717 (v1 26.0717)
