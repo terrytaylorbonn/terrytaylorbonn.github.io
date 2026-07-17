@@ -12,6 +12,7 @@ The most important thing to understand about AI is that **AI is a hack. An extre
 
 **TOC**
 - 1 “what does jely made of?”
+- 1b The main components of an AI computational system
 - 2 The “artificial intelligence” hack (the TF half of an LLM)
 - 3 Google: “what does it mean to hack something together?”
 - 4 The hack in detail (the amazing engineering of the GPT-3 transformer)
@@ -25,14 +26,18 @@ The most important thing to understand about AI is that **AI is a hack. An extre
 
 **Google answers "The ingredients in jelly depend on the type of...."**.
 
-To build a computer that can answer such a simple question (especially with spelling and grammar errors) is a massive engineering challenge, because **computers have absolutely no intelligence**. They can only compute numbers. **Geoffery Hinton, who received the Turing and Nobel prizes for his ground breaking work on AI, stated mnany times that he believed AI already had emotions. He knew what he was saying was not true** (my non-AI engineering background was more than enough to understand this, and the ridiculous claims about AI from Hinton and other experts during recent years was one of reasons I shifted the focus of ZiptieAI to LLMs). He understood in detail how AI really works, and he understood that the vast majority of people did not. But people are slowly learning the facts about AI, which is perhaps why Hinton recently admitted that his statement about emotional computing machines was not true.
+To build a computer that can answer such a simple question (especially with spelling and grammar errors) is a massive engineering challenge, because **computers have absolutely no intelligence**. They can only compute numbers. **Geoffery Hinton, who received the Turing and Nobel prizes for his ground breaking work on AI, stated many times that he believed AI already had emotions. He knew what he was saying was not true** (my non-AI engineering background was more than enough to understand this, and such ridiculous claims about AI from Hinton and other experts during recent years was one of reasons I shifted the focus of ZiptieAI to LLMs). He has always understood in detail how AI really works, and he understood that the vast majority of people did not. But people are slowly learning the facts about AI, which is perhaps why Hinton recently admitted that his statement about emotional computing machines was a mistake.
 
-**But the massive engineering effort to build AI computers is well worth the investment**. The technical wizardry behind such a simple answer is rapidly changing our world. Many of us (8 billion all over the world) have forgotten (or never knew) what it was like when all input to computers had to be be perfect. When a search engine simply returned articles with the most keyword matches.Without AI a computer could not answer messy human language questions.  A procedural program (traditional CPU based languages like Python, Java, etc) would have to 
+**But the massive engineering effort to build AI computers is well worth the investment**. The technical wizardry behind such a simple answer is rapidly changing our world. Many of us (8 billion all over the world) have forgotten (or never knew) what it was like when all input to computers had to be be perfect. When a search engine simply returned articles with the most keyword matches. Without AI a computer could not answer messy human language questions.  A procedural program (traditional CPU based languages like Python, Java, etc) would have to 
 - Detect all possible topics. 
 - Check all possible combinations of letters against all possible meanings and contexts.
 - Account for all possible grammar formulations and errors (misspelled words, bad punctuation, etc).  
 
 A procedural program can do simple things like checking capital/lower-case letter combos, etc, but that's about it.  Imagine what would be required for what AI does now (complete discussions, etc). Impossible without AI.
+
+<br>
+
+### **1b The main components of an AI computational system**
 
 The following diagram shows the main components of the typical AI system.
 - The main system is YOU and your browser.
@@ -197,4 +202,4 @@ Palantir says that **AI will not replace people, it will empower them** and that
 
 <br>
 
-26.0716 (v1 26.0714 (0628))
+26.0717 (v1 26.0714 (0628))
