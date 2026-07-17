@@ -85,7 +85,7 @@ While sometimes viewed as a negative sign of poor planning, it is often a celebr
 
 ### **4 The hack in detail (the amazing engineering of the GPT-3 transformer)**
 
-The diagram below summarizes how the TF in GPT-3 works:
+The diagram below summarizes how the TF in GPT-3 works (even the latest and greatest "frontier" LLM TFs use the same basic algorithms as in GPT-3):
 - Loop X inputs 2048 token embeddings (12288 FP16 #s for each token)
 - The TF runs over 1 million billion computations to compute the next token (these computations are 100% deterministic; they will always give the same result for the same inputs).
 - At the end of 96 computational layers the 12288 FP16 #s for the last token are the classification of the entire input pattern (formed by up to 2048 input embeddings). 
@@ -99,8 +99,7 @@ The diagram below summarizes how the TF in GPT-3 works:
 
 <br>
 
-Note the following:  
-- Even the latest and greatest ("frontier") LLM TFs use the same basic algorithm.
+Even more hack details for the really curious:  
 - The classifier is used to select the new token out of a ~50K token vocabulary. 
 - TFs are sometimes programmed to not select the best match, because this will give the impression of non-deterministic intelligence. 
 - The new token is appended to the input. To compute the next token (loop X+1) the calculations starts from 0 (all previous calculations are reset with possible exception of some KV calculations). This hack (one of many) must be done because of algorithm limitations (nobody has come up with a better algorithm). 
