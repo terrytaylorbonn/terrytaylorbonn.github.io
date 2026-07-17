@@ -1,0 +1,182 @@
+---
+layout: page
+title: 3c.4 PAL ontology function
+permalink: /3c.4_pal_ontology_function/
+---
+
+<br>
+
+[← 3c.2 PAL AIP](/3c.2_pal_aip/)
+
+<br>
+
+## **PAL-DEMO-4: Palantir ontology function "speedrun" (quick start) (26.0717)**
+
+See the working text for this QS in
+- **[\#615_\pal\_onto\_function\_qs\_.docx](https://drive.google.com/drive/folders/1-Adawag9uA8_bq-hDF-nOuPYaRLz1eEO)**.  
+
+<!-- <img src="/assets/final-01.png" alt="drones" width="85%">  -->
+
+<br>
+<br>
+
+----------------------------
+----------------------------
+----------------------------
+----------------------------
+
+
+<br>
+<br>
+
+# **NOTES**
+
+<br>
+
+## **selecting in the "INLINE ACTION FORM OR TABLE" does not show a result in the "CHART: XY".**
+
+when I select in "OBJECT TABLE" it works. could you compare the code and find error?
+
+FDE/GPT5.5: I inspected the Workshop DSL for :resource[ri.workshop.main.module.8e56100f-095a-43e9-b904-62829182d29b]. The mismatch is here:
+
+## What works: `OBJECT TABLE`
+
+The object table is wired to write its selected row into this variable:
+
+```ts
+const objectTable1ActiveObject = W.variable.objectSet(
+  "Object table 1 Active object",
+  undefined,
+  { id: "0450e19e-4811-64a5-ee5d-9dba81e99aec" }
+);
+```
+
+Then the table uses that variable in its selection config:
+
+```ts
+Selection: {
+  activeObjectConfig: {
+    activeObjectSet: objectTable1ActiveObject,
+    enableAutoSelection: true,
+    onObjectSelect: [],
+  },
+},
+```
+
+So when you click a clinic in **OBJECT TABLE**, Workshop updates `objectTable1ActiveObject`.
+
+The **CHART: XY** is almost certainly configured internally to use that same active-object variable as its input/filter. The chart config is stored as an unsupported DSL blob:
+
+```ts
+const chartXy1 = W.widget.chartXy(
+  W.unsupportedWorkshopConfig("16bqcke"),
+  { editorLabel: "Chart: XY 1", id: "9968a213-70c6-4b2d-8dbf-576cc5fdf65b" }
+);
+```
+
+So we cannot see the chart’s internals directly in DSL, but the behavior proves it is listening to the object-table active selection.
+
+---
+
+## What does **not** work: `INLINE ACTION FORM OR TABLE`
+
+The inline action form is **not wired to the same selected-object variable**.
+
+Its config is:
+
+```ts
+const inlineActionFormOrTable1 = W.widget.inlineActionFormOrTable({
+  actionConfigs: [{
+    actionConfig: {
+      action: {
+        actionRid: "ri.actions.main.action-type.03f7a9fc-3e92-4f1b-a1a2-2f3ef433b1ed",
+        parameters: {}
+      },
+      defaultLayout: "FORM",
+      isLayoutToggleEnabled: false,
+      isFileUploadEnabled: true,
+      tableLayout: {
+        frozenColumnCount: 0,
+        isFileUploadEnabled: true,
+        isRowAddEnabled: true,
+        isRowRemovalEnabled: true,
+        rowHeightInLines: 1
+      },
+      disableIfInvalid: true
+    },
+    onSubmitSuccess: [],
+    hideHeader: false,
+    scenarioApply: undefined,
+  }],
+});
+```
+
+The important problems:
+
+```ts
+parameters: {}
+```
+
+and
+
+```ts
+onSubmitSuccess: []
+```
+
+and no:
+
+```ts
+outputObjectSet
+```
+
+So the inline action form lets the user choose a `Clinic` parameter for the action, but that choice is **local to the action form**. It does **not** update `objectTable1ActiveObject`.
+
+That is why the chart does not react.
+
+---
+
+## The error / mismatch
+
+The bug is not in the chart. The bug is the wiring mismatch:
+
+| Widget | User selects clinic | Does it update `objectTable1ActiveObject`? | Chart updates? |
+|---|---:|---:|---:|
+| `OBJECT TABLE` | Yes | Yes | Yes |
+| `INLINE ACTION FORM OR TABLE` | Yes | No | No |
+
+The action form is currently only a submit form for the action **Set Clinic Goal**. It is not acting as a shared selection controller.
+
+---
+
+## Plain-language explanation
+
+Selecting a clinic in the action form is not the same thing as selecting a clinic in the object table.
+
+The object table selection is connected to the chart.  
+The action form parameter is not connected to the chart.
+
+So when you choose a clinic inside **INLINE ACTION FORM OR TABLE**, Workshop knows which clinic to submit to the action, but it does not treat that clinic as the page’s active selected clinic.
+
+---
+
+## Likely fix
+
+Use one shared clinic-selection variable and wire both widgets to it.
+
+Possible approaches:
+
+1. **Best UX:** Add/use an `Object Dropdown` or selector widget for clinic selection, bind it to a shared `selectedClinic` object-set variable, and have both:
+   - chart use `selectedClinic`
+   - action form parameter use `selectedClinic`
+
+2. **Submit-based behavior:** Configure the inline action form with an `outputObjectSet` and `onSubmitSuccess` event so that after the action submits, it updates/recomputes the selected clinic / chart. This would update only after submit, not immediately when the form dropdown changes.
+
+3. **Keep object table as source of truth:** Require selecting the clinic in the object table first, then have the action form use the table’s active object as the hidden or disabled `clinic` parameter.
+
+The current code does none of these, so the chart only responds to the object table.
+
+
+
+<br>
+
+26.0717 (v1 26.0717)
