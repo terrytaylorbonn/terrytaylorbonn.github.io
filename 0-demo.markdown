@@ -56,9 +56,9 @@ The following diagram shows the main components of the typical AI system.
 *(the other half is the internal agent; together they make up an LLM)*<br>
 <img src="/assets/M-11b.png" alt="drones" width="27%"><br>
 
-The following diagram shows what an LLM TF (and CNN, NN in general) really does. You often read that it computes the new token from the last token. Nonsense (the computed data for the new token ends up in the last token, but this data was computed from all tokens). The TF runs a complex pattern matching algorithm that generates an output (in GPT-3 12288 FP-16 #s) that is a classification of the input (which is then used to selecxt 1 token out of ~50K tokens).
+The following diagram summarizes the core function performed by an LLM TF. You often read that it computes the new token from the last token. Nonsense. The computed data for the new token ends up in the last token, but this data was computed from all tokens. The TF runs a complex pattern matching algorithm on the last token embeddings (12288 FP16 #s in GPT-3) that generates an output that is a classification of the input (used to select 1 token out of ~50K tokens as the next token).
 
-**The TF is an engineering marvel** that has incredibly valuable applications. But intelligence? Nonsense. Its a brute-force hack using matrix math, not neurons (the term "neural network" is a marketing term, convincing because the matrix math diagrams roughly look like a neural net). 
+**The TF is an engineering marvel** that has applications everywhere in the digital world. But intelligence? Nonsense. Its a brute-force hack using matrix math, not neurons (the term "neural network" is a marketing term, convincing because the matrix math diagrams look like a crude simplification of a neural net). 
 
 <img src="/assets/hack-08.png" alt="drones" width="40%">
 
