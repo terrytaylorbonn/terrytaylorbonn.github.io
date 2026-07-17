@@ -8,7 +8,7 @@ permalink: /3c.3_pal_agentic_ai/
 <br>
 
 
-[← 3c.2 PAL AIP](/3c.2_pal_aip/)
+[← 3c PAL](/pal/)
 
 
 <!-- <br>
@@ -23,6 +23,9 @@ permalink: /3c.3_pal_agentic_ai/
 
 See the working text for this QS in
 - **[#614\_pal\_agentic\_ai\_qs\_.docx](https://drive.google.com/drive/folders/1-Adawag9uA8_bq-hDF-nOuPYaRLz1eEO)**.  
+
+
+<br>*01* <br><img src="/assets/pal-demo-3-01.png" alt="drones" width="100%" style="border: 1px solid #999;">
 
 
 <!-- <img src="/assets/final-01.png" alt="drones" width="85%">  -->
