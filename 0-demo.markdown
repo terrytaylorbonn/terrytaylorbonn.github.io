@@ -79,7 +79,9 @@ While sometimes viewed as a negative sign of poor planning, it is often a celebr
 
 <br>
 
-**This is what AI has been for over half a century. A hack that only recently (thanks to powerful GPUs that could perform the brute-force computations) worked well enough to be marketed as "intelligent"**. The hack works well enough in certain situations that are extrememly useful to mankind. The challenge is building systems that exploit AI capabilities while minimizing its limitations. A good analogy with AI is the multi-tasking feature of everyday computers. Computers may not actually run all tasks concurrently, but computers run fast enough that the net effect is real multi-tasking. **The net effect of AI is not is not intelligence**. Its more like (1) a knowledge store with (2) language abilities.  
+**This is what AI has been for over half a century. A hack that only recently (thanks to powerful GPUs that could perform the brute-force computations) worked well enough to be marketed as "intelligent"**. The hack works well enough in certain situations that are extrememly useful to mankind. The challenge is building systems that exploit AI capabilities while minimizing its limitations. 
+
+A **limited** analogy with AI is the multi-tasking feature of everyday computers. Computers may not actually run all tasks concurrently, but computers run fast enough that the net effect is real multi-tasking. That is also a hack, but it is vastly different from the AI hack, because it delivers real effective multi-tasking with no errors (OK, there are race conditions, deadlock, etc, but these are unavoidable aspects of multi-tasking). **AI does not deliver human-style intelligence**. Its more like (1) a knowledge store / pattern matching algorithm with (2) language capabilities.  
 
 <br>
 
