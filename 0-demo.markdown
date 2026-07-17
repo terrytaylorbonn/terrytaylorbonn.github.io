@@ -81,7 +81,7 @@ While sometimes viewed as a negative sign of poor planning, it is often a celebr
 
 **This is what AI has been for over half a century. A hack that only recently (thanks to powerful GPUs that could perform the brute-force computations) worked well enough to be marketed as "intelligent"**. The hack works well enough in certain situations that are extrememly useful to mankind. The challenge is building systems that exploit AI capabilities while minimizing its limitations. 
 
-**Not all hacks are as problematic as AI**. A **limited** analogy with AI is the multi-tasking feature of everyday computers. Computers dont actually run all tasks concurrently (at least before multicore CPUs), but switch quickly between tasks. But they do this fast enough that the net effect for the human user is geniune multi-tasking. That is also a hack, but delivers what is effectively multi-tasking with hype or serious limitations (OK, there are race conditions, deadlock, etc, but these are unavoidable aspects of multi-tasking). 
+**Not all hacks are as problematic as AI**. A **limited** analogy with AI is the multi-tasking feature of everyday computers. Computers dont actually run all tasks concurrently (at least before multicore CPUs), but switch quickly between tasks. But they do this fast enough that the net effect for the human user is geniune multi-tasking. That is also a hack, but delivers what is effectively multi-tasking without hype or serious limitations (OK, there are race conditions, deadlock, etc, but these are unavoidable aspects of multi-tasking). 
 
 <br>
 
