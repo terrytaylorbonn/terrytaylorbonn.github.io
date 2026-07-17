@@ -40,19 +40,14 @@ A procedural program can do simple things like checking capital/lower-case lette
 ### **1b The main components of an AI computational system**
 
 The following diagram shows the main components of the typical AI system.
-- The main system is YOU and your browser.
-- External agent is all the logic that interfaces between you and the LLM.
-- LLM has an internal agent and TF. The internal agent is the interface between the outside world and the TF.
-- **TF (transformer) is where the AI magic happens (matrix math on GPUs).** 
+- The main system (left) could be you/browser or a company's vitally important non-AI computer systems.
+- The external agent is all the logic that interfaces between the main system and the AI helpful assistant.
+- The LLM has an internal agent and TF. The internal agent is the interface between the outside world and the TF.
+- **The TF (transformer) is where the AI magic happens (matrix math computation on GPUs).** 
 
 <img src="/assets/hack-05.png" alt="drones" width="75%">
 
 
-Note: 
-- The true magic of the TF is that if the input does not exactly match any of the example ("training") data used to program ("train") the TF, **the TF will still find the closest semantic (meaning) match.** 
-- **The more examples you train the TF on, the better the inference (response) results will be**. Thats why the focus is on scaling and massive GPU computing (and the required power sources).
-- And if the required info has not been programmed into the TF, the model can tell the external agent to find the required text (the TF's only interface to the outside world is to the internal agent via tokens; the iAgent feeds this text to the TF as part of a prompt).  
-- The model can also simulate thinking, planning, creating subtasks, etc (if the model TF was programmed on such example text pattens). 
 
 <br>
 
@@ -104,12 +99,17 @@ The diagram below summarizes how the TF in GPT-3 works:
 
 <br>
 
-NOTE the following:  
+Note the following:  
 - Even the latest and greatest ("frontier") LLM TFs use the same basic algorithm.
 - The classifier is used to select the new token out of a ~50K token vocabulary. 
 - TFs are sometimes programmed to not select the best match, because this will give the impression of non-deterministic intelligence. 
 - The new token is appended to the input. To compute the next token (loop X+1) the calculations starts from 0 (all previous calculations are reset with possible exception of some KV calculations). This hack (one of many) must be done because of algorithm limitations (nobody has come up with a better algorithm). 
 - The TF can run on a CPU, but that is extremely slow. TF computations are 100% deterministic, but they are not procedural as in CPU programs (no branching, etc). Data races through the GPU from start to finish with no procedural branching.
+- The true magic of the TF is that if the input does not exactly match any of the example ("training") data used to program ("train") the TF, **the TF will still find the closest semantic (meaning) match.** 
+- **The more examples you train the TF on, the better the inference (response) results will be**. Thats why the focus is on scaling and massive GPU computing (and the required power sources).
+- And if the required info has not been programmed into the TF, the model can tell the external agent to find the required text (the TF's only interface to the outside world is to the internal agent via tokens; the iAgent feeds this text to the TF as part of a prompt).  
+- The model can also simulate thinking, planning, creating subtasks, etc (if the model TF was programmed on such example text pattens). 
+
 
 <br>
 
