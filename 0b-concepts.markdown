@@ -6,9 +6,11 @@ permalink: /0b-demos/
 
 <br>
 
-This page summarizes the basic concepts introduced in the hands-on **[QS demos](/0-qs/)**. A link to more detailed concepts will be found in top level pages (in site header) **2 NNs**, **2b Models**, **3 Agents**, **3b Workflows**, and **3c Enterprise**. 
+This page summarizes the basic concepts introduced in the hands-on **[QS demos](/0-qs/)**. 
 
-<!-- - See "Concepts" (**ADVANCED**) section on pages 2 NNs, 2b Models, 3 Agents, and 3b Projects. But the focus of this page is the **BASIC** core conceptual gist of 2-3b. Using the simplest example from the QS for each. This section may not be like that right now (26.0623), but its moving in that direction. -->
+<!-- A link to more detailed concepts will be found in top level pages (in site header) **2 NNs**, **2b Models**, **3 Agents**, **3b Workflows**, and **3c Enterprise**. 
+
+ - See "Concepts" (**ADVANCED**) section on pages 2 NNs, 2b Models, 3 Agents, and 3b Projects. But the focus of this page is the **BASIC** core conceptual gist of 2-3b. Using the simplest example from the QS for each. This section may not be like that right now (26.0623), but its moving in that direction. -->
 
 **TOC** 
 - **2 NN** (NN, CNN, TF) 
