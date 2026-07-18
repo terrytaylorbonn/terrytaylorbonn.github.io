@@ -35,6 +35,29 @@ See the working text for this QS in
 
 <br>
 
+**Problem:**  
+A company has many claims moving through different states, but the process is hidden inside raw event/log data. It is hard to see:
+
+- where claims get stuck,
+- which paths claims actually follow,
+- how many claims end approved/rejected/investigation,
+- which claims need attention.
+
+**How the demo solves it:**  
+The demo turns claim history into a process app:
+
+1. **Claim logs** record state changes over time.
+2. **Ontology** models real business objects: `Claim`, `Customer`, and claim state logs.
+3. **Machinery** mines the logs into a visual process graph.
+4. **Workshop** embeds the graph into an app with filters and a claims table.
+5. **Automate** can create alerts for claims/process issues.
+
+**In one sentence:**  
+It converts messy claim event history into an interactive process-monitoring application.
+
+
+<br><br><br>
+
 # **1 FDE**
 
 That makes sense: **clicking “Ready to mine” starts a mining/aggregation calculation**, but it does **not necessarily save the mined result**.
