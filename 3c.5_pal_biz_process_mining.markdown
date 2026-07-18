@@ -689,4 +689,287 @@ But you do **not** need those to make a good first summary. The flow above is al
 <br>
 
 
+
+<br>
+<br>
+<br>
+<br>
+<br>
+
+----------------------------------
+----------------------------------
+----------------------------------
+----------------------------------
+----------------------------------
+----------------------------------
+----------------------------------
+----------------------------------
+----------------------------------
+----------------------------------
+
+<br>
+<br>
+<br>
+<br>
+<br>
+<br>
+
+
+# **Yes — absolutely possible.**
+
+For **Speedrun: Mining Your First Business Process**, the equivalent “single summary diagram” should probably show **the whole end-to-end journey**, not just one screen. The best central image would be the **final Workshop Claims Process Application**, with callouts around it for the major stages.
+
+Your diagram should answer:
+
+> “What tools did I use, in what order, and what did each one produce?”
+
+---
+
+## Recommended single-summary diagram structure
+
+Use the final **Claims Process Application** as the center screenshot:
+
+```text
+┌──────────────────────────────────────────────────────────────────────┐
+│                  Claims Process Application / Workshop                │
+│                                                                      │
+│   ┌───────────────┐     ┌──────────────────────────────┐             │
+│   │ Filters       │     │ Process Explorer              │             │
+│   │               │     │ Embedded Machinery Graph      │             │
+│   └───────────────┘     └──────────────────────────────┘             │
+│                                                                      │
+│   ┌────────────────────────────────────────────────────┐             │
+│   │ Filtered Claims Object Table                        │             │
+│   └────────────────────────────────────────────────────┘             │
+└──────────────────────────────────────────────────────────────────────┘
+```
+
+Then put numbered callout boxes around it:
+
+```text
+5.2.s1  Marketplace install
+5.2.s2  Inspect Customers and Claims
+5.2.s3  Inspect Claim Logs
+6.2.s1  Add Machinery process graph
+6.2.s2  Configure process mining
+6.3.s1  OMA = Ontology Manager
+6.3.s2  Rename generated ontology artifacts
+7.2.s1  Set up Workshop app
+7.3.s1  Explore layout graph
+7.3.s2  Explore process
+7.3.s4  Filter claims
+7.4.s1  Create custom view
+7.4.s2  Save and publish app
+7.5.s1  Create alert in Automate
+```
+
+---
+
+# Draft single-page diagram content
+
+You could title it:
+
+## Speedrun: Mining Your First Business Process — End-to-End Summary
+
+Then show this flow:
+
+
+<br>*01* <br><img src="/assets/pal-demo-5-03.png" alt="drones" width="100%" style="border: 1px solid #999;">
+
+That is the **process flow diagram**.
+
+But if you want something more like the example screenshot you showed — one app screenshot with labeled boxes — I would design it like this:
+
+---
+
+# Visual layout for your final diagram
+
+```text
+┌─────────────────────────────────────────────────────────────────────────────┐
+│  5.2.s1 Marketplace Install                                                 │
+│  Installs starter data, ontology objects, Workshop app, and resources        │
+└───────────────────────────────┬─────────────────────────────────────────────┘
+                                │
+                                ▼
+
+┌─────────────────────────────────────────────────────────────────────────────┐
+│  5.2.s2 / 5.2.s3 Data + Ontology Inspection                                  │
+│                                                                             │
+│  Ontology Manager: Customer, Claim                                           │
+│  Object Explorer / Insight: preview objects                                  │
+│  Dataset Preview: claim_logs                                                 │
+│                                                                             │
+│  claim_logs fields: log_id, claim_id, new_state, timestamp                   │
+└───────────────────────────────┬─────────────────────────────────────────────┘
+                                │
+                                ▼
+
+┌─────────────────────────────────────────────────────────────────────────────┐
+│  6.2.s1 / 6.2.s2 Machinery                                                   │
+│                                                                             │
+│  Create process graph                                                        │
+│  Process object = Claim                                                      │
+│  State property = State                                                      │
+│  Transition log = [Claim state] Log                                          │
+│  Mine result = 7 states, 9 transitions                                       │
+│                                                                             │
+│  Ready to mine → Confirm → Save                                              │
+└───────────────────────────────┬─────────────────────────────────────────────┘
+                                │
+                                ▼
+
+┌─────────────────────────────────────────────────────────────────────────────┐
+│  6.3.s1 / 6.3.s2 Ontology Manager                                            │
+│                                                                             │
+│  Docs say OMA, current UI says Ontology Manager                              │
+│  Rename generated ontology artifacts                                         │
+│  Verify Claim ↔ [Claim state] Log link                                       │
+└───────────────────────────────┬─────────────────────────────────────────────┘
+                                │
+                                ▼
+
+┌─────────────────────────────────────────────────────────────────────────────┐
+│  7.2.s1 - 7.4.s2 Workshop                                                    │
+│                                                                             │
+│  Claims Process Application                                                  │
+│                                                                             │
+│  ┌───────────────┐   ┌──────────────────────────────────────┐                │
+│  │ Filters       │   │ Process Explorer                     │                │
+│  │               │   │ Embedded Machinery process graph     │                │
+│  └───────────────┘   └──────────────────────────────────────┘                │
+│                                                                             │
+│  ┌─────────────────────────────────────────────────────────┐                 │
+│  │ Filtered Claims object table                            │                 │
+│  └─────────────────────────────────────────────────────────┘                 │
+│                                                                             │
+│  Add widget → Embed graph → Explore → Custom view → Save and publish         │
+└───────────────────────────────┬─────────────────────────────────────────────┘
+                                │
+                                ▼
+
+┌─────────────────────────────────────────────────────────────────────────────┐
+│  7.5.s1 Automate                                                             │
+│  Create alert based on claim/process conditions                              │
+└─────────────────────────────────────────────────────────────────────────────┘
+```
+
+---
+
+# Better single-slide version
+
+If you want it to look like your example image, I would make the center of the slide the **final Workshop app**, then put callouts around it like this:
+
+```text
+┌───────────────────────────────────────────────┐
+│ 5.2.s1 Marketplace Install                     │
+│ Starter data, ontology, app resources          │
+└───────────────────────────────────────────────┘
+
+┌───────────────────────────────────────────────┐
+│ 5.2.s2 Inspect Customers / Claims              │
+│ Ontology Manager, Object Explorer, Insight     │
+└───────────────────────────────────────────────┘
+
+┌───────────────────────────────────────────────┐
+│ 5.2.s3 Inspect Claim Logs                      │
+│ claim_id, new_state, timestamp                 │
+└───────────────────────────────────────────────┘
+
+
+                 ┌──────────────────────────────────────────────┐
+                 │ Claims Process Application                    │
+                 │ Workshop edit mode / final app                │
+                 │                                              │
+                 │  ┌─────────┐  ┌──────────────────────────┐   │
+                 │  │ Filters │  │ Process Explorer          │   │
+                 │  │         │  │ Machinery process graph   │   │
+                 │  └─────────┘  └──────────────────────────┘   │
+                 │                                              │
+                 │  ┌────────────────────────────────────────┐  │
+                 │  │ Filtered Claims object table            │  │
+                 │  └────────────────────────────────────────┘  │
+                 └──────────────────────────────────────────────┘
+
+
+┌───────────────────────────────────────────────┐
+│ 6.2.s1 / 6.2.s2 Machinery                      │
+│ Configure process mining                       │
+│ Claim + State + Claim State Log                │
+│ Result: 7 states, 9 transitions                │
+└───────────────────────────────────────────────┘
+
+┌───────────────────────────────────────────────┐
+│ 6.3.s1 / 6.3.s2 Ontology Manager               │
+│ OMA in docs = Ontology Manager                 │
+│ Rename generated artifacts                     │
+└───────────────────────────────────────────────┘
+
+┌───────────────────────────────────────────────┐
+│ 7.2.s1 - 7.4.s2 Workshop                       │
+│ Add widget, embed graph, filter, custom view,  │
+│ save and publish                               │
+└───────────────────────────────────────────────┘
+
+┌───────────────────────────────────────────────┐
+│ 7.5.s1 Automate                                │
+│ Create alert                                   │
+└───────────────────────────────────────────────┘
+```
+
+---
+
+# Suggested callout labels
+
+For a single final diagram, I would use these exact callout titles:
+
+| Callout | Label |
+|---|---|
+| 1 | **5.2.s1 Marketplace install** |
+| 2 | **5.2.s2 Inspect Customer + Claim objects** |
+| 3 | **5.2.s3 Inspect claim logs** |
+| 4 | **6.2.s1 Add Machinery process graph** |
+| 5 | **6.2.s2 Configure process mining** |
+| 6 | **6.3.s1 OMA = Ontology Manager** |
+| 7 | **6.3.s2 Rename generated artifacts** |
+| 8 | **7.2.s1 Set up Workshop app** |
+| 9 | **7.3.s1 Explore graph layout** |
+| 10 | **7.3.s2 Explore process** |
+| 11 | **7.3.s4 Filter claims** |
+| 12 | **7.4.s1 Create custom view** |
+| 13 | **7.4.s2 Save and publish** |
+| 14 | **7.5.s1 Create alert in Automate** |
+
+---
+
+# Recommended final diagram title
+
+I would title it:
+
+> **Speedrun: Mining Your First Business Process — One-Page Flow**
+
+Subtitle:
+
+> **Marketplace → Ontology Manager → Dataset Preview → Machinery → Workshop → Automate**
+
+That subtitle alone explains the “byzantine UI” better than the original docs.
+
+---
+
+# Key note to include on the diagram
+
+I would add a small warning box:
+
+```text
+Important UI translations:
+- OMA = Ontology Manager
+- Add Widget appears only in Workshop edit mode
+- Ready to mine previews the process graph
+- Confirm + Save persists the graph
+```
+
+That warning box is very important because those were the confusing parts.
+
+So yes — this is completely possible, and your summary diagram would probably be more useful than the original speedrun page.
+
+
 26.0718 (v1 26.0717)
