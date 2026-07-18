@@ -56,7 +56,318 @@ The demo turns claim history into a process app:
 It converts messy claim event history into an interactive process-monitoring application.
 
 
-<br><br><br>
+<br><br><br><br><br><br>
+
+
+--------------------------------------
+
+<br>
+
+# **FDE: Yes — this is the right direction.** 
+
+It’s much better than a pure flowchart because it anchors everything on the **final application**, which is what the speedrun is really building toward.
+
+My opinion: **keep this structure**, but refine the labels so it tells the story more clearly.
+
+## What works well
+
+- The **final Workshop app** is in the center. Good.
+- The dotted boxes show which chapter created/configured each part.
+- It connects:
+  - Marketplace package,
+  - process mining,
+  - Workshop app,
+  - filters,
+  - alerting.
+- It makes the hidden architecture visible.
+
+## What I would improve
+
+### 1. Rename “object set” to “object type” unless the docs truly mean object set
+
+Your orange boxes say:
+
+```text
+customers object set
+claims object set
+```
+
+But from what we inspected, these are primarily **Ontology object types**:
+
+- `Customer`
+- `Claim`
+
+So I’d label them:
+
+```text
+Customer object type
+Claim object type
+claim_logs dataset
+```
+
+or:
+
+```text
+Marketplace package:
+- Customer object type
+- Claim object type
+- claim_logs dataset
+```
+
+If the tutorial specifically creates object sets later, then use “object set”; otherwise “object type” is more accurate.
+
+---
+
+### 2. Add the “Claim State Log” generated object
+
+The process mining part depends on the generated transition log ontology object. I would include it in the chapter 6 box:
+
+```text
+6 Process Mining
+Machinery graph
+Claim + State
+[Claim State] Log
+7 states / 9 transitions
+```
+
+This explains how the raw `claim_logs` dataset becomes the graph.
+
+---
+
+### 3. Clarify “7 Application”
+
+Instead of just:
+
+```text
+7 Application
+```
+
+I’d label it:
+
+```text
+7 Workshop Application
+Claims Process Application
+```
+
+Because “Application” alone does not tell the tool.
+
+---
+
+### 4. Label the center graph as Machinery
+
+Inside the process explorer area, add:
+
+```text
+Embedded Machinery process graph
+```
+
+That is the key connection.
+
+---
+
+### 5. Add a small UI translation note
+
+Your diagram would be even more useful if it includes a small note:
+
+```text
+UI translations:
+OMA = Ontology Manager
+Application edit mode = Workshop builder
+Ready to mine ≠ Save
+Confirm + Save persists graph
+```
+
+This captures the real pain points.
+
+---
+
+## Suggested revised labels
+
+### Left chapter box
+
+Current:
+
+```text
+Docx chapters
+5 Uploading the Data
+6 Process Mining
+7 Building an Application
+7b Alerting with automate
+```
+
+Maybe change to:
+
+```text
+Speedrun chapters
+5 Marketplace / Data setup
+6 Process Mining in Machinery
+7 Build Workshop Application
+7b Alerting with Automate
+```
+
+---
+
+### Orange box
+
+Current:
+
+```text
+5 Marketplace package
+customers object set
+claims object set
+claim logs dataset
+```
+
+Suggested:
+
+```text
+5 Marketplace package
+Customer object type
+Claim object type
+claim_logs dataset
+```
+
+Optionally add:
+
+```text
+starter Workshop app
+```
+
+---
+
+### Process mining box
+
+Current:
+
+```text
+6 process mining
+```
+
+Suggested:
+
+```text
+6 Process Mining / Machinery
+Claim state history → process graph
+7 states / 9 transitions
+```
+
+---
+
+### Application box
+
+Current:
+
+```text
+7 Application
+```
+
+Suggested:
+
+```text
+7 Workshop Application
+Claims Process Application
+```
+
+---
+
+### Filter box
+
+Current:
+
+```text
+7.3.s4 filter claims
+```
+
+Suggested:
+
+```text
+7.3.s4 Filter claims
+High Risk = Yes/No
+Filters drive graph + table
+```
+
+---
+
+### Alert box
+
+Current:
+
+```text
+7b alert
+```
+
+Suggested:
+
+```text
+7.5.s1 Automate alert
+Trigger from process condition
+```
+
+---
+
+## Overall verdict
+
+Yes — this is exactly the right kind of diagram.
+
+It shows the speedrun as:
+
+```text
+Marketplace data/resources
+        ↓
+Machinery mines process
+        ↓
+Workshop embeds process graph
+        ↓
+Filters/table make it operational
+        ↓
+Automate adds alerting
+```
+
+That is much clearer than the original docs.
+
+
+
+<br><br><br><br><br><br><br><br>
+
+
+
+
+
+# **Yes — then your diagram should be the first “what are we doing?” diagram.**
+
+
+
+
+It should not try to explain every click. It should explain the **purpose** of the whole speedrun.
+
+## Suggested first diagram title
+
+> **What are we doing in this speedrun?**
+
+## Core message
+
+```text
+We turn claim event history into an operational process-monitoring app.
+```
+
+<br>*06* <br><img src="/assets/pal-demo-5-06.png" alt="xxxxxx" width="100%" style="border: 1px solid #999;">
+
+Your screenshot-based diagram should come **after these**, because it explains where those pieces appear in the final UI.
+
+Suggested document order:
+
+```text
+1. What problem are we solving?
+2. What are we building?  ← first diagram
+3. Which Foundry tools are used?  ← second diagram
+4. Final app anatomy  ← your screenshot diagram
+5. Detailed chapter-by-chapter flowcharts
+```
+
+That will make your document much easier to understand than the original speedrun.
+
+
+<br><br><br><br><br><br><br><br><br>
 
 # **1 FDE**
 
