@@ -113,7 +113,7 @@ Your source data still looks okay — the `Claim` object has data and the linked
 
 <br>
 
-# 3 **i clicked "ready to mine" again.. and seems it worked.. did you fix something?**
+# **3 i clicked "ready to mine" again.. and seems it worked.. did you fix something?**
 
 No — I did **not change or fix anything** in the resource. I only inspected the saved Machinery graph and the underlying Ontology/log data.
 
@@ -135,5 +135,558 @@ Your saved Machinery resource is still:
 So the important point is: **Ready to mine only previews/adds mined results; Confirm + Save is what makes them persist in the document.**
 
 <br>
+
+# **4 another confusing oudated section in the core beginner docs**
+
+let ai fix them.
+
+FDE/GPT: Agreed. This is exactly the kind of thing AI should help fix: when the product UI changes, the speedrun docs should be corrected or at least annotated.
+
+Here’s a clearer replacement for that section:
+
+---
+
+## Updated instruction draft
+
+### Add the mined process graph to the Claims Process Application
+
+1. Open **Claims Process Application**.
+
+2. Make sure you are in **Workshop edit mode**, not the published/view-only app.
+   - In edit mode, you should see builder controls such as **Add widget**, **Set layout**, section controls, and the left-side configuration panel.
+   - If you only see the running app with filters and a table, you are in view mode and cannot add widgets.
+
+3. In the center panel labeled **Process Explorer**, click **Add widget**.
+
+4. Choose the process graph / Machinery widget option.
+
+5. Select your saved mined process graph, for example:
+
+   :resource[ri.machinery.main.document.79e3414f-3357-4caa-8b29-ca7541c2774d]
+
+6. Save the Workshop application.
+
+---
+
+And for the earlier OMA wording, I’d rewrite it as:
+
+---
+
+## Updated OMA wording
+
+The docs may refer to **OMA**, the **Object Management Application**. In the current UI, this is typically called **Ontology Manager**.
+
+To inspect the `Claim` object type:
+
+1. Open **Ontology Manager**.
+2. Search for and open the **Claim** object type.
+3. Use the left navigation to inspect **Overview**, **Properties**, **Datasources**, and related link types.
+4. The transition log object should appear as **`[Claim state] Log`**.
+
+---
+
+The key correction is:
+
+> The tutorial must explicitly distinguish **Workshop view mode** from **Workshop edit mode**. The **Add widget** button only appears in edit mode.
+
+That one missing sentence would have saved you a lot of confusion.
+
+
+<br>
+<br>
+<br>
+<br>
+<br>
+
+----------------------------------
+----------------------------------
+----------------------------------
+----------------------------------
+----------------------------------
+----------------------------------
+----------------------------------
+----------------------------------
+----------------------------------
+----------------------------------
+
+<br>
+<br>
+<br>
+<br>
+<br>
+<br>
+
+Yes — this is enough to create a **first useful summary + diagram**. Your rough notes already show the real sequence. The main improvement is to organize it by **Foundry tool/app** and **purpose**, because the speedrun jumps between tools without explaining the map.
+
+Below is a cleaned-up version you can use as the basis for your summary and diagram.
+
+---
+
+# Speedrun 5: Mining Your First Business Process — Summary Draft
+
+## Goal
+
+Build a **Claims Process Application** that shows how insurance claims move through states such as:
+
+```text
+submitted → claimant extracted → data entry in progress → fields complete → approved / rejected / under investigation
+```
+
+The speedrun uses existing marketplace-installed data and ontology objects, then creates a **Machinery process graph**, embeds it into a **Workshop application**, and optionally creates an alert with **Automate**.
+
+---
+
+# High-level tool map
+
+| Step | Foundry tool | Purpose |
+|---|---|---|
+| 1 | Marketplace | Install the speedrun resources |
+| 2 | Ontology Manager | Inspect `Customer`, `Claim`, and generated log object types |
+| 3 | Object Explorer / Insight | Preview objects and understand data |
+| 4 | Dataset preview | Inspect the raw claim logs dataset |
+| 5 | Machinery | Configure and mine the process graph |
+| 6 | Ontology Manager | Rename automatically created ontology artifacts |
+| 7 | Workshop | Embed the process graph into the Claims Process Application |
+| 8 | Workshop | Add filters, custom views, layout, publish |
+| 9 | Automate | Create alert/automation |
+
+---
+
+# Main resources involved
+
+## Input / source data
+
+The raw claim log dataset:
+
+:resource[ri.foundry.main.dataset.8127aae1-bc2c-4b3a-9ed9-b1bc4d2d7915]{branchName="master"}
+
+Important columns:
+
+| Column | Meaning |
+|---|---|
+| `log_id` | Unique row/log identifier |
+| `claim_id` | Claim/process identifier |
+| `new_state` | New state of the claim |
+| `timestamp` | Time when the claim reached that state |
+
+---
+
+## Ontology object types
+
+### Customer object
+
+:resource[ri.ontology.main.object-type.d2ccbb6f-d31d-4834-a9ee-96f6c497aa4c]
+
+Used to represent customers/claimants.
+
+### Claim object
+
+:resource[ri.ontology.main.object-type.4e9e8375-adf1-4fad-9bec-d94876386718]
+
+This is the main **process entity**.
+
+Each `Claim` has a `State` property. Machinery mines how claims move between states.
+
+### Generated Claim State Log object
+
+You saw generated log objects like:
+
+:resource[ri.ontology.main.object-type.e5ddda4e-1769-4aa5-829b-8782f970bf69]
+
+and/or:
+
+:resource[ri.ontology.main.object-type.8d14bd55-6e3f-4bb5-83a5-7cae0d6dd91b]
+
+These represent the transition history used by Machinery.
+
+---
+
+## Machinery graph
+
+Your mined process graph:
+
+:resource[ri.machinery.main.document.79e3414f-3357-4caa-8b29-ca7541c2774d]
+
+This is the resource that gets embedded into the Workshop app.
+
+---
+
+# Clean sequence of what happened
+
+## 1. Install speedrun resources from Marketplace
+
+The speedrun starts by installing prebuilt resources from Marketplace.
+
+This creates or provides:
+
+- Claim data
+- Customer data
+- Claim log data
+- Ontology object types
+- A starter Workshop application
+- Resources needed for the process mining exercise
+
+---
+
+## 2. Inspect Customers and Claims
+
+Using **Ontology Manager**, **Object Explorer**, and **Insight**, you inspect the main business objects.
+
+### Customer
+
+Used to represent the claimant/customer.
+
+### Claim
+
+Used as the main process object.
+
+The `Claim` object has about **1,000 objects** and includes properties such as:
+
+- Claim ID
+- Claim date
+- Claimant ID
+- Country
+- High risk
+- Letter
+- State
+- Type
+- Value
+
+The `State` property is the key process-state property used by Machinery.
+
+---
+
+## 3. Inspect Claim Logs
+
+The claim log dataset contains historical state changes.
+
+The key fields are:
+
+```text
+claim_id
+new_state
+timestamp
+```
+
+Conceptually:
+
+```text
+A claim_id tells us which process instance changed state.
+new_state tells us what state it moved into.
+timestamp tells us when that happened.
+```
+
+This historical log is what allows Foundry/Machinery to derive transitions between states.
+
+---
+
+## 4. Create Machinery process graph
+
+In **Machinery**, you create a new process graph.
+
+The process graph is configured with:
+
+| Configuration area | Selected value |
+|---|---|
+| Process object | `Claim` |
+| State property | `State` |
+| Transition log object | `[Claim state] Log` |
+| Old state | `Old State` |
+| New state | `New State` |
+| Timestamp | `Timestamp` |
+
+Then you click **Ready to mine**.
+
+Machinery computes the process graph from the claim state history.
+
+The mined result included:
+
+```text
+7 states
+9 transitions
+```
+
+Example states:
+
+```text
+submitted
+claimant extracted
+data entry in progress
+fields complete
+approved
+rejected
+under investigation
+```
+
+Important UI behavior:
+
+```text
+Ready to mine → preview mining result
+Confirm → add mined states/transitions to graph
+Save → persist the Machinery graph
+```
+
+This was a major source of confusion because **Ready to mine is not the same as Save**.
+
+---
+
+## 5. Rename generated ontology artifacts
+
+The speedrun then asks you to rename automatically created ontology artifacts.
+
+The docs refer to **OMA**, but in the current UI this is **Ontology Manager**.
+
+So the correct translation is:
+
+```text
+OMA = Object Management Application = Ontology Manager
+```
+
+In Ontology Manager, you inspect or rename the generated log object type, such as:
+
+```text
+[Claim state] Log
+```
+
+This object type is linked to `Claim` and represents claim state transition logs.
+
+---
+
+## 6. Open Claims Process Application in Workshop edit mode
+
+The next step happens in **Workshop**, not Machinery and not Ontology Manager.
+
+The Workshop app is called:
+
+```text
+Claims Process Application
+```
+
+Important distinction:
+
+| Mode | What you can do |
+|---|---|
+| View mode | Use the app only |
+| Edit mode / builder mode | Add widgets and configure layout |
+
+The docs say:
+
+> In the center of the application, hit the Add Widget button.
+
+But this only appears in **Workshop edit mode**.
+
+In edit mode, the center section has a placeholder labeled something like:
+
+```text
+Process Explorer
+Embed your process here!
+```
+
+You click **Add widget** there and add the process graph / embedded resource / Machinery graph.
+
+---
+
+## 7. Embed the Machinery graph into Workshop
+
+In the Workshop app:
+
+1. Open the app in edit mode.
+2. Select the center process section.
+3. Click **Add widget**.
+4. Add the process graph / Machinery resource.
+5. Select the saved Machinery graph:
+
+   :resource[ri.machinery.main.document.79e3414f-3357-4caa-8b29-ca7541c2774d]
+
+6. Save the Workshop app.
+
+This creates the final app layout:
+
+```text
+Left: filters
+Center: process graph
+Bottom: filtered claims object table
+```
+
+---
+
+## 8. Explore and customize the Workshop app
+
+The later speedrun steps are about using and improving the app.
+
+These include:
+
+| Step | Purpose |
+|---|---|
+| Explore / layout graph | Adjust how the process graph appears |
+| Explore / process | Use the graph to understand claim flows |
+| Explore / filtering claims | Filter claims based on process criteria |
+| Workshop app / custom view | Customize how claims are displayed |
+| Workshop app / save and publish | Save and publish the final application |
+
+---
+
+## 9. Create alert with Automate
+
+The final step uses **Automate** to create an alert.
+
+Conceptually:
+
+```text
+If certain claim/process conditions are met,
+then notify or trigger an alert.
+```
+
+This uses the process app and ontology objects operationally.
+
+---
+
+# Diagram draft
+
+You can use this as your first diagram.
+
+<br>*02* <br><img src="/assets/pal-demo-5-02.png" alt="drones" width="120%" style="border: 1px solid #999;">
+
+
+<!-- ```mermaid
+flowchart TD
+    A[Marketplace install<br/>Speedrun resources] -xxxxxxx-> B[Datasets created<br/>Customers, Claims, Claim Logs]
+
+    B -xxxxxxx-> C[Ontology Manager<br/>Inspect object types]
+    C -xxxxxxx-> C1[Customer object type]
+    C -xxxxxxx-> C2[Claim object type]
+    C -xxxxxxx-> C3[Generated Claim State Log object type]
+
+    B -xxxxxxx-> D[Dataset Preview / Object Explorer / Insight<br/>Inspect data]
+    D -xxxxxxx-> D1[Verify claim_logs fields<br/>log_id, claim_id, new_state, timestamp]
+    D -xxxxxxx-> D2[Verify Claim objects and State property]
+
+    C2 -xxxxxxx-> E[Machinery<br/>Create process graph]
+    C3 -xxxxxxx-> E
+    D1 -xxxxxxx-> E
+
+    E -xxxxxxx-> F[Configure Machinery]
+    F -xxxxxxx-> F1[Process object = Claim]
+    F -xxxxxxx-> F2[State property = State]
+    F -xxxxxxx-> F3[Transition log = Claim State Log]
+    F -xxxxxxx-> F4[Map old state, new state, timestamp]
+
+    F -xxxxxxx-> G[Ready to mine]
+    G -xxxxxxx-> H[Mining result<br/>7 states, 9 transitions]
+    H -xxxxxxx-> I[Confirm mined graph]
+    I -xxxxxxx-> J[Save Machinery graph]
+
+    J -xxxxxxx-> K[Ontology Manager<br/>Rename generated artifacts]
+
+    J -xxxxxxx-> L[Workshop edit mode<br/>Claims Process Application]
+    L -xxxxxxx-> M[Add widget in Process Explorer section]
+    M -xxxxxxx-> N[Embed saved Machinery graph]
+
+    N -xxxxxxx-> O[Configure app layout]
+    O -xxxxxxx-> O1[Left filters]
+    O -xxxxxxx-> O2[Center process graph]
+    O -xxxxxxx-> O3[Bottom filtered claims table]
+
+    O -xxxxxxx-> P[Save and publish Workshop app]
+
+    P -xxxxxxx-> Q[Automate<br/>Create alert]
+``` --->
+
+---
+
+# Even simpler architecture diagram
+
+This one is better for explaining the overall concept.
+
+<br>*01* <br><img src="/assets/pal-demo-5-01.png" alt="drones" width="100%" style="border: 1px solid #999;">
+
+<!-- ```mermaid
+flowchart LR
+    A[Raw datasets<br/>Claims, Customers, Claim Logs] -xxxxxxx-> B[Ontology Manager<br/>Claim, Customer, Claim State Log]
+    B -xxxxxxx-> C[Machinery<br/>Mine claim state transitions]
+    C -xxxxxxx-> D[Workshop<br/>Claims Process Application]
+    D -xxxxxxx-> E[Automate<br/>Alerts and operational workflows]
+```-->
+
+---
+
+# Important UI translation table
+
+This may be the most useful part of your summary because the docs are confusing.
+
+| Docs wording | Current UI / actual meaning |
+|---|---|
+| OMA | Ontology Manager |
+| Open the application | Could mean view mode or edit mode |
+| Add Widget | Only visible in Workshop edit mode |
+| Process graph | Machinery graph / process graph resource |
+| Ready to mine | Run mining calculation |
+| Confirm | Add mined states/transitions to the graph |
+| Save | Persist the resource |
+| Claims Process Application | Workshop app/module |
+| Object table | Workshop object table |
+| Link types graph | Related object/link view in Ontology Manager |
+
+---
+
+# Suggested final document structure
+
+You could structure your summary like this:
+
+```text
+1. Purpose of the speedrun
+2. Main Foundry tools used
+   2.1 Marketplace
+   2.2 Ontology Manager
+   2.3 Object Explorer / Insight
+   2.4 Dataset Preview
+   2.5 Machinery
+   2.6 Workshop
+   2.7 Automate
+
+3. Data and ontology model
+   3.1 Customers
+   3.2 Claims
+   3.3 Claim logs
+   3.4 Generated claim state log object
+
+4. Building the process graph
+   4.1 Configure process object
+   4.2 Configure transition log
+   4.3 Mine graph
+   4.4 Confirm and save
+
+5. Embedding the graph in Workshop
+   5.1 Open Workshop edit mode
+   5.2 Add process graph widget
+   5.3 Configure filters and claim table
+   5.4 Save and publish
+
+6. Alerting with Automate
+
+7. UI translation / pitfalls
+```
+
+---
+
+# Missing information that would improve the diagram
+
+Your draft is already enough for a first version. If you want a more precise final diagram, the useful missing pieces are:
+
+1. Exact final name of the renamed log object type.
+2. Exact widget name you selected in Workshop to embed the Machinery graph.
+3. Whether the alert in Automate used:
+   - high-risk claims,
+   - a specific state,
+   - overdue claims,
+   - rejected claims,
+   - or some other condition.
+4. Final published app name/version.
+5. Any final custom view name created in Workshop.
+
+But you do **not** need those to make a good first summary. The flow above is already the core story.
+
+<br>
+
 
 26.0718 (v1 26.0717)
