@@ -12,7 +12,7 @@ ZiptieAI documents the core of AI from "tiny" neural networks to enterprise AI (
 - **AI basics**
   - **[Hack](/0-demo/)** explains the core of what makes AI tick.  
   - **[QS](/0-qs/)** provides details for selected demos.
-  - **[Concepts](/0b-demos/)** summarizes the core concepts in the QS demos. <br><br>
+  - **[Concepts](/0b-demos/)** summarizes the core concepts (mainly from the QS demos). <br><br>
 
 - **AI deep dive**
   - **[2 NNs](/2_models/)** demos NNs, CNNs, and transformers (TFs) (the source of the "I" in AI). *In this section you control the AI mathematics.*
