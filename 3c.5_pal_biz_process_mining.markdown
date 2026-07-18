@@ -35,10 +35,105 @@ See the working text for this QS in
 
 <br>
 
-# 1 **xxxx**
+# **1 FDE**
 
-xxxxxx
+That makes sense: **clicking “Ready to mine” starts a mining/aggregation calculation**, but it does **not necessarily save the mined result**.
+
+I checked the saved Machinery document again, and your file **does exist**:
+
+:resource[ri.machinery.main.document.79e3414f-3357-4caa-8b29-ca7541c2774d]
+
+I also checked the underlying Ontology data. The data is present:
+
+- Process object type: :resource[ri.ontology.main.object-type.4e9e8375-adf1-4fad-9bec-d94876386718]
+- It has **1,000 Claims**
+- It has **7 states**
+- The process log object has **4,574 log rows**
+- There are valid state transitions in the log
+
+So: **your source data is not gone**.
+
+What is probably happening is:
+
+1. You saved `mine_process_1`.
+2. That saved the Machinery file / setup.
+3. You clicked **Ready to mine**.
+4. The mining aggregation failed immediately.
+5. Because the mining result never loaded, there were **no mined elements to Confirm**.
+6. When you refresh, Foundry reloads the saved file, but the failed in-browser mining attempt disappears.
+
+So the saved file exists, but the **mined process graph was not saved**, because the mining step failed before producing elements.
+
+One thing I noticed: the Mine configuration has **Actions and automations** enabled, but I found **no action types** on the `Claim` object. Try this:
+
+1. Reopen `mine_process_1`.
+2. Go to **Mine**.
+3. Turn **Actions and automations** **off**.
+4. Keep **States** and **Transitions** on.
+5. Click **Ready to mine** again.
+
+If it still errors, click **Show error** and send me the expanded error text. The short message “Failed to load aggregation result” is too generic, but the expanded error may identify the exact failing aggregation.
 
 <br>
 
-26.0717 (v1 26.0717)
+# **2 You’re right — in this screen there is no “Actions and automations” toggle**. 
+
+I was referring to the later **Mining configuration** panel from the previous error screen, but if the error appears immediately after **Ready to mine**, you may not be able to reach that option. So ignore that step.
+
+More importantly, your screenshot shows **two different things**:
+
+## 1. `mine_process_1` is saved / exists
+
+Your Machinery file exists here:
+
+:resource[ri.machinery.main.document.79e3414f-3357-4caa-8b29-ca7541c2774d]
+
+So the **Machinery document itself** is not gone.
+
+## 2. The embedded Insight is **not saved**
+
+At the bottom of your screenshot, I see:
+
+> **New Insight — Unsaved workbook**
+
+That means the **Insight workbook inside the Machinery page is not saved yet**. If you refresh, that embedded Insight view/configuration may disappear unless you click **Save as** inside that Insight panel.
+
+So before refreshing, do this:
+
+1. Click the top **Save** button for `mine_process_1`.
+2. In the embedded Insight panel at the bottom, click **Save as** if you want to keep that workbook.
+3. Then try **Ready to mine** again.
+4. If the red error screen appears, click **Show error** and send me the expanded details.
+
+## Why the mined graph disappears
+
+Clicking **Ready to mine** starts the mining aggregation. But because it errors immediately, the mined states/transitions are never successfully produced and confirmed. So after refresh, Foundry reloads the saved setup, but **not the failed mining result**.
+
+Your source data still looks okay — the `Claim` object has data and the linked log object has valid transition rows. This looks more like a **mining aggregation/UI failure** than deleted data.
+
+<br>
+
+# 3 **i clicked "ready to mine" again.. and seems it worked.. did you fix something?**
+
+No — I did **not change or fix anything** in the resource. I only inspected the saved Machinery graph and the underlying Ontology/log data.
+
+What likely happened is that the earlier **“Failed to load aggregation result”** was a **transient loading / aggregation / browser-state issue**, and when you clicked **Ready to mine** again the aggregation succeeded.
+
+Now that it worked, do these steps **before refreshing**:
+
+1. Click **Confirm** in the Mining configuration panel.
+   - Your screen says: **Adding 7 states and 9 transitions**.
+   - Until you click **Confirm**, those mined elements may not be added to the graph.
+2. After the graph updates, click the top **Save** button for `mine_process_1`.
+3. Wait until the save completes / the Save button no longer indicates unsaved changes.
+4. Then it should be safe to refresh or reopen.
+
+Your saved Machinery resource is still:
+
+:resource[ri.machinery.main.document.79e3414f-3357-4caa-8b29-ca7541c2774d]
+
+So the important point is: **Ready to mine only previews/adds mined results; Confirm + Save is what makes them persist in the document.**
+
+<br>
+
+26.0718 (v1 26.0717)
