@@ -8,13 +8,13 @@ title: Home
 
 <!-- ZiptieAI.com was created in 2024 to document my work on Ukrainian style ziptie'd [AI Drones](/1-drones/). -->
 
-ZiptieAI demos/documents AI (primarily LLMs) from "tiny" neural networks to **[enterprise AI (Palantir)](/pal/)**. <br><br>
+ZiptieAI demos/documents AI (primarily LLMs), from "tiny" neural networks to **[enterprise AI (Palantir)](/pal/)**. <br><br>
 
 
 
 - **AI fast track**
   - **[Hack](/0-demo/)** explains the core of what makes AI tick.  
-  - **[QS](/0-qs/)** provides details for selected demos.
+  - **[QS](/0-qs/)** covers selected demos.
   - **[Concepts](/0b-demos/)** summarizes the core concepts (mainly from the QS demos). <br><br>
 
 - **AI deep dive**
