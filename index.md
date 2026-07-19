@@ -8,11 +8,11 @@ title: Home
 
 <!-- ZiptieAI.com was created in 2024 to document my work on Ukrainian style ziptie'd [AI Drones](/1-drones/). -->
 
-ZiptieAI demos/documents AI basics and an AI "deep dive" (from "tiny" neural networks to **[enterprise AI (Palantir)](/pal/)**). <br><br>
+ZiptieAI demos/documents AI (primarily LLMs) from "tiny" neural networks to **[enterprise AI (Palantir)](/pal/)**. <br><br>
 
 
 
-- **AI basics**
+- **AI fast track**
   - **[Hack](/0-demo/)** explains the core of what makes AI tick.  
   - **[QS](/0-qs/)** provides details for selected demos.
   - **[Concepts](/0b-demos/)** summarizes the core concepts (mainly from the QS demos). <br><br>
@@ -39,7 +39,7 @@ The following diagrams summarize the core ZiptieAI take on AI.
 *AI = deterministic computational algorithms that are extremely useful for specific types of applications* <br>
 <img src="/assets/M-25.png" alt="drones" width="80%">
 
-*Believing the fairy tale that AI has intelligence could cost you dearly (an LLM consists of an (internal) agent + transformer (TF))*<br>
+*AI intelligence is a fairy tale ((internal) agent + TF (transformer) = LLM)*<br>
 <img src="/assets/M-11b.png" alt="drones" width="27%"><br>
 
 
