@@ -9,13 +9,28 @@ permalink: /pal/
 The enterprise platform controls almost everything. For now this is just Palantir.
 
 Demos (*I added numbering, conceptual diagrams, and a few error updates to the original demos*)
-- **[PAL-DEMO-1: Palantir Foundry "speedrun" (quick start) (26.0705)](/3c.1_pal_foundry/)**. Demo complete... still need to write the webpage.
-- **[PAL-DEMO-2: Palantir AIP "speedrun" (quick start) (26.0706)](/3c.2_pal_aip/)**. This is just a rough summary for now...
-- **[PAL-DEMO-3: Palantir agentic AI "speedrun" (quick start) (26.0713)](/3c.3_pal_agentic_ai/)**. (WIP)
-- **[PAL-DEMO-4: Palantir ontology function "speedrun" (quick start) (26.0717)](/3c.4_pal_ontology_function/)**. At the end of this page is **good demo of how FDE/GPT5.5 fixed a problem with the demo**.
-- **[PAL-DEMO-5: Speedrun: Mining Your First Business Process (26.0718)](/3c.5_pal_biz_process_mining/)**. 
-- **PAL demo #6 (WIP)**. FILENAME: #617_pal_6_first_app_v01_26.0719_ss. https://learn.palantir.com/deep-dive-building-your-first-application 
-
+- **[D1: Palantir Foundry "speedrun" (quick start) (26.0705)](/3c.1_pal_foundry/)**. 
+  - Demo complete... still need to write the webpage.
+  - #610_pal_1_foundry_v02_26.0704_SS.docx  
+  - https://learn.palantir.com/speedrun-your-first-e2e-workflow/1944887 
+- **[D2: Palantir AIP "speedrun" (quick start) (26.0706)](/3c.2_pal_aip/)**. 
+  - Tis is just a rough summary for now...
+  - 611vvv_pal_2_aip_qs_v07_26.0713_SS (2).docx
+  - https://learn.palantir.com/speedrun-your-e2e-aip-workflow
+- **[D3: Palantir agentic AI "speedrun" (quick start) (26.0713)](/3c.3_pal_agentic_ai/)**.
+  - #614_pal_3_agentic_ai_qs_v03_26.0715_ss.docx 
+  - https://learn.palantir.com/speedrun-your-first-agentic-aip-workflow
+- **[D4: Palantir ontology function "speedrun" (quick start) (26.0717)](/3c.4_pal_ontology_function/)**. 
+  - At the end of this page is *good demo of how FDE/GPT5.5 fixed a problem with the demo*.
+  - #615_pal_4_onto_function_qs_v02_26.0717_ss (2).docx 
+  - https://learn.palantir.com/speedrun-your-first-ontology-function/2131538
+- **[D5: Speedrun: Mining Your First Business Process (26.0718)](/3c.5_pal_biz_process_mining/)**. 
+  - #616_pal_5_biz_process_mining_qs_v02_26.0718_ss (1).docx
+  - https://learn.palantir.com/speedrun-mining-your-first-business-process
+- **D6: Deep Dive: Building Your First Pipeline**.
+  - Some of this failed. FDE/GPT/OPUS could not fix. oudated (2+ years) demo? frustrating.
+  - #617_pal_6_first_app_v01_26.0719_ss.docx. 
+  - https://learn.palantir.com/deep-dive-building-your-first-application 
 
 
 <br>*01* <br><img src="/assets/pal-demo-01.png" alt="drones" width="50%" style="border: 1px solid #999;">
