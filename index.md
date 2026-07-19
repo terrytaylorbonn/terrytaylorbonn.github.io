@@ -8,7 +8,10 @@ title: Home
 
 <!-- ZiptieAI.com was created in 2024 to document my work on Ukrainian style ziptie'd [AI Drones](/1-drones/). -->
 
-ZiptieAI documents the core of AI from "tiny" neural networks to enterprise AI (Palantir). <br><br>
+ZiptieAI demos/documents AI basics and an AI "deep dive" (from "tiny" neural networks to **[enterprise AI (Palantir)](/pal/)**). <br><br>
+
+
+
 - **AI basics**
   - **[Hack](/0-demo/)** explains the core of what makes AI tick.  
   - **[QS](/0-qs/)** provides details for selected demos.
@@ -19,17 +22,17 @@ ZiptieAI documents the core of AI from "tiny" neural networks to enterprise AI (
   - **[2b Models](/2b_models/)** demos how to build packaged AI models (primarily LLMs). Covers fine-tuning, local models, deployment, and model serving (**I am convinced that local models, like local computers 40 years ago, will become the norm**). *In this section you control the model.*
   - **[3 Agents](/3_agents/)**. Python agents that implement reliable workflows, using AI models as helpful assistants. *You control the application.*
   - **[3b Workflow platform](/3.3-ai-projects/)** (such as n8n) demos of practical agentic AI applications. *The workflow platform controls the architecture.*
-  - **[3c Enterprise AI](/pal/)** demos (**current focus in on Palantir**). *The enterprise platform controls almost everything.*
-  - **[4 Resources](/4_resources/)** such as (docx) lab notes, Github, Wiki, etc (links in the footer).
+  - **[3c Enterprise AI](/pal/)** demos (**current focus in on Palantir**). *The enterprise platform controls almost everything.*<br><br>
 
-<!-- - **A window to the AI future** ([NL](/nl/)) 
+<!-- - [4 Resources](/4_resources/) such as (docx) lab notes, Github, Wiki, etc (links in the footer).
+
+ - **A window to the AI future** ([NL](/nl/)) 
  (eventually we all need to **[host our own models](https://www.youtube.com/watch?v=zMhz7JUvJZA&t=36s)**)  
 
 See also the **[Wiki](https://github.com/terrytaylorbonn/auxdrone/wiki)** and other links in the footer. -->
 
 
 
-<br>
 
 The following diagrams summarize the core ZiptieAI take on AI.
 
