@@ -14,6 +14,8 @@ Demos (*I added numbering, conceptual diagrams, and a few error updates to the o
 - **[PAL-DEMO-3: Palantir agentic AI "speedrun" (quick start) (26.0713)](/3c.3_pal_agentic_ai/)**. (WIP)
 - **[PAL-DEMO-4: Palantir ontology function "speedrun" (quick start) (26.0717)](/3c.4_pal_ontology_function/)**. At the end of this page is **good demo of how FDE/GPT5.5 fixed a problem with the demo**.
 - **[PAL-DEMO-5: Speedrun: Mining Your First Business Process (26.0718)](/3c.5_pal_biz_process_mining/)**. 
+- **PAL demo #6 (WIP)**. FILENAME: #617_pal_6_first_app_v01_26.0719_ss. https://learn.palantir.com/deep-dive-building-your-first-application 
+
 
 
 <br>*01* <br><img src="/assets/pal-demo-01.png" alt="drones" width="50%" style="border: 1px solid #999;">
@@ -47,4 +49,4 @@ See also:
 
 <br>
 
-26.0718 (v1 26.0702)
+26.0719 (v1 26.0702)
