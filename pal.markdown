@@ -8,7 +8,7 @@ permalink: /pal/
 
 The enterprise platform controls almost everything. For now this is just Palantir.
 
-Demos
+Demos (*I added much needed numbering and updates to the original demos*)
 - **[PAL-DEMO-1: Palantir Foundry "speedrun" (quick start) (26.0705)](/3c.1_pal_foundry/)**. Demo complete... still need to write the webpage.
 - **[PAL-DEMO-2: Palantir AIP "speedrun" (quick start) (26.0706)](/3c.2_pal_aip/)**. This is just a rough summary for now...
 - **[PAL-DEMO-3: Palantir agentic AI "speedrun" (quick start) (26.0713)](/3c.3_pal_agentic_ai/)**. (WIP)
