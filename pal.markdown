@@ -27,10 +27,14 @@ Demos (*I added numbering, conceptual diagrams, and a few error updates to the o
 - **[D5: Speedrun: Mining Your First Business Process (26.0718)](/3c.5_pal_biz_process_mining/)**. 
   - #616_pal_5_biz_process_mining_qs_v02_26.0718_ss (1).docx
   - https://learn.palantir.com/speedrun-mining-your-first-business-process
-- **D6: Deep Dive: Building Your First Pipeline**.
-  - Some of this failed. FDE/GPT/OPUS could not fix. oudated (2+ years) demo? frustrating.
+- **D6: Deep Dive: Building Your First Pipeline (26.0719)**.
+  - **Some of this failed**. FDE/GPT/OPUS could not fix. 
+  - outdated (2+ years) demo? MAKE THE DEMOS SIMPLER AND KEEP THEM UPDATED. frustrating.
   - #617_pal_6_first_app_v01_26.0719_ss.docx. 
   - https://learn.palantir.com/deep-dive-building-your-first-application 
+- **D7: Deep Dive: Building Your First Pipeline (26.0720)**.
+  - #618_pal_7_first_pipeline_v01_26.0719_ss.docx
+  - https://learn.palantir.com/deep-dive-building-your-first-pipeline
 
 
 <br>*01* <br><img src="/assets/pal-demo-01.png" alt="drones" width="50%" style="border: 1px solid #999;">
