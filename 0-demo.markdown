@@ -12,9 +12,10 @@ The most important thing to understand about AI is that **AI is a hack. An extre
 
 **TOC**
 - 1 “what does jely made of?”
-- 1b The main components of an AI computational system
+- 1b The main components of an AI computational system *(added 26.0717)*
 - 2 The “artificial intelligence” hack (the TF half of an LLM)
 - 3 Google: “what does it mean to hack something together?”
+- 3b AI = artificial instinct, not intelligence *(added 26.0720)*
 - 4 The hack in detail (the amazing engineering of the GPT-3 transformer)
 - 5 TF GPU-based algorithms are 100% deterministic
 - 6 The LLM internal agent is just as important as the TF
@@ -64,6 +65,7 @@ The following diagram summarizes the core function performed by an LLM TF. You o
 
 <br>
 
+
 ### **3 Google: "what does it mean to hack something together?"**
 
 **Answer:** "To hack something together means to quickly assemble a prototype, program, or physical object using whatever materials and methods are immediately available. ... Key Characteristics are
@@ -82,6 +84,21 @@ While sometimes viewed as a negative sign of poor planning, it is often a celebr
 **This is what AI has been for over half a century. A hack that only recently (thanks to powerful GPUs that could perform the brute-force computations) worked well enough to be marketed as "intelligent"**. The hack works well enough in certain situations that are extrememly useful to mankind. The challenge is building systems that exploit AI capabilities while minimizing its limitations. 
 
 **Not all hacks are as problematic as AI**. A **limited** analogy with AI is the multi-tasking feature of everyday computers. Computers dont actually run all tasks concurrently (at least before multicore CPUs), but switch quickly between tasks. But they do this fast enough that the net effect for the human user is geniune multi-tasking. That is also a hack, but delivers what is effectively multi-tasking without hype or serious limitations (OK, there are race conditions, deadlock, etc, but these are unavoidable aspects of multi-tasking). 
+
+<br>
+
+### **3b AI = artificial instinct, not intelligence**
+
+AI is pattern matching. An input produces a classification output that determines which of the trained inputs the current input most closely matches. Thats not intelligence (at least my definition of the word). 
+
+But maybe the acronym AI and the comparison with nature has merits? I suggest that **AI = artificial instinct**, that the mechanistic functionality of AI matrix math closely resembles that of the NNs that support lower level instincts (in animals and even some plants). The reptile part of our own brain. AI = a toad lying in wait for some input that sets it off. No high level thinking. Like Tweedledee and Tweedledum. No high level thoughts. No thinking, no planning, no reasoning. All of these higher-level intelligent processes are simulated in AI, not replicated.
+
+This is why Palantir-style systems are important. Guard rails, controls, limiting the world that AI sees. Limiting what can be sent to AI for analysis (cleaning up data, ontology). Making sure that someone never trusts a computer to drive their car (never allowing someone to interact with AI in an unsafe manner, such as allowing AI to do something dangerous on the local system or AI to access company secrets). If you let AI drive your car, sooner or later catastrope will strike.
+
+*If it moves like a worm, then strike; else ignore ([video link](https://www.youtube.com/watch?v=l3Es9cNH7I8&t=239s))*<br>
+<img src="/assets/toad.png" alt="drones" width="24%">
+
+
 
 <br>
 
@@ -203,4 +220,4 @@ Palantir says that **AI will not replace people, it will empower them** and that
 
 <br>
 
-26.0717 (v1 26.0714 (0628))
+26.0720 (v1 26.0714 (0628))
