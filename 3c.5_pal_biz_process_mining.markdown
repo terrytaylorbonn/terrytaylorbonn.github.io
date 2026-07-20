@@ -1,7 +1,7 @@
 ---
 layout: page
 title: 3c.5 PAL biz process mining
-permalink: /3c.5_pal_biz_process_mining//
+permalink: /3c.5_pal_biz_process_mining/
 ---
 
 <br>

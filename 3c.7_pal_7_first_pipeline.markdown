@@ -1,0 +1,41 @@
+---
+layout: page
+title: 3c.7 PAL 7 First pipeline
+permalink: /3c.7_pal_7_first_pipeline/
+---
+
+<br>
+
+[← 3c PAL](/pal/)
+
+<br>
+
+## PAL DEMO D7: Deep Dive: Building Your First Pipeline (26.0720)
+
+See the working text for this QS in
+- **[\#618\_pal\_7\_first\_pipeline\_.docx](https://drive.google.com/drive/folders/1-Adawag9uA8_bq-hDF-nOuPYaRLz1eEO)**.  
+- **[Demo URL](https://learn.palantir.com/deep-dive-building-your-first-pipeline)**  
+
+
+
+<!-- <img src="/assets/final-01.png" alt="drones" width="85%">  -->
+
+<br>*05* <br><img src="/assets/pal-demo-xxxx.png" alt="xxxxxx" width="100%" style="border: 1px solid #999;">
+
+<br>
+
+----------------------------
+----------------------------
+----------------------------
+----------------------------
+
+<br>
+<br>
+
+# **NOTES**
+
+xxxxxx
+
+<br>
+
+26.xxxx (v1 26.xxxx)

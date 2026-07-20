@@ -15,7 +15,7 @@ The most important thing to understand about AI is that **AI is a hack. An extre
 - 1b The main components of an AI computational system *(added 26.0717)*
 - 2 The “artificial intelligence” hack (the TF half of an LLM)
 - 3 Google: “what does it mean to hack something together?”
-- 3b AI TF provides artificial instinct, not intelligence *(added 26.0720)*
+- 3b The TF provides artificial instinct, not intelligence *(added 26.0720)*
 - 4 The hack in detail (the amazing engineering of the GPT-3 transformer)
 - 5 TF GPU-based algorithms are 100% deterministic
 - 6 The LLM internal agent is just as important as the TF
@@ -87,7 +87,7 @@ While sometimes viewed as a negative sign of poor planning, it is often a celebr
 
 <br>
 
-### **3b AI TF provides artificial instinct, not intelligence**
+### **3b The TF provides artificial instinct, not intelligence**
 
 **An AI TF performs pattern matching**. An input produces a classification output that determines which one of the massive number of input/output-classifier pairs the current input most closely matches. Thats not intelligence. And the internal agent if nothing but a traditional procedural computation algorithm. Tweedledee and Tweedledum. 
 

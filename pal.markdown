@@ -6,7 +6,7 @@ permalink: /pal/
 
 <br>
 
-The enterprise platform controls almost everything. For now this is just Palantir.
+The enterprise platform controls almost everything. For now (and the foreseeable future) this section is just Palantir demos.
 
 Demos (*I added numbering, conceptual diagrams, and a few error updates to the original demos*)
 - **[D1: Palantir Foundry "speedrun" (quick start) (26.0705)](/3c.1_pal_foundry/)**. 
@@ -27,12 +27,12 @@ Demos (*I added numbering, conceptual diagrams, and a few error updates to the o
 - **[D5: Speedrun: Mining Your First Business Process (26.0718)](/3c.5_pal_biz_process_mining/)**. 
   - #616_pal_5_biz_process_mining_qs_v02_26.0718_ss (1).docx
   - https://learn.palantir.com/speedrun-mining-your-first-business-process
-- **D6: Deep Dive: Building Your First Pipeline (26.0719)**.
+- **[D6: Deep Dive: Building Your First Pipeline (26.0719)](/3c.6_pal_6_first_app/)**.
   - **Some of this failed**. FDE/GPT/OPUS could not fix. 
-  - outdated (2+ years) demo? MAKE THE DEMOS SIMPLER AND KEEP THEM UPDATED. frustrating.
+  - outdated (2+ years) demo? MAKE THE DEMOS SIMPLER AND KEEP THEM UPDATED.
   - #617_pal_6_first_app_v01_26.0719_ss.docx. 
   - https://learn.palantir.com/deep-dive-building-your-first-application 
-- **D7: Deep Dive: Building Your First Pipeline (26.0720)**.
+- **[D7: Deep Dive: Building Your First Pipeline (26.0720)](/3c.7_pal_7_first_pipeline/)**.
   - #618_pal_7_first_pipeline_v01_26.0719_ss.docx
   - https://learn.palantir.com/deep-dive-building-your-first-pipeline
 
@@ -423,4 +423,4 @@ So yes — this is verified.
 
 <br>
 
-26.0719 (v1 26.0702)xx
+26.0720 (v1 26.0702)
