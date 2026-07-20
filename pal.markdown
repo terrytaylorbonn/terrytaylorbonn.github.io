@@ -13,7 +13,7 @@ The enterprise platform controls almost everything. For now this section focuses
 ### **Concepts / planning docs**
 - **[PAL demo strategy (I am redoing into my own demos)](/3c.aaa_pal_strategy_demos/)**. docx files that are detailed and can be realistically maintained (the official demos seem to not be updated often; videos are nice, but they get outdated quickly and are impossible to update).
 - **[PAL AI usage strategy (FDE)](/3c.bbb_pal_strategy_fde/)**. How to maximize AI usage with PAL (by using FDE). 
-- **[PAL concepts (my own take on PAL)](/3c.ccc_pal_concepts/)**. This is a long term goal (just like creating core concepts for AI has been). <br><br>*(placeholder pic; need pic that sums up core concepts)* <br><img src="/assets/pal-demo-01.png" alt="drones" width="65%" style="border: 1px solid #999;">
+- **[PAL concepts (my own take on PAL)](/3c.ccc_pal_concepts/)**. This is a long term goal (just like creating core concepts for AI has been). <br><br>*(placeholder pic; eventually I will create master pic that sums up core concepts)* <br><img src="/assets/pal-demo-01.png" alt="drones" width="65%" style="border: 1px solid #999;">
 
 <br>
 
