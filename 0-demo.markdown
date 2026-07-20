@@ -15,7 +15,7 @@ The most important thing to understand about AI is that **AI is a hack. An extre
 - 1b The main components of an AI computational system *(added 26.0717)*
 - 2 The “artificial intelligence” hack (the TF half of an LLM)
 - 3 Google: “what does it mean to hack something together?”
-- 3b AI = artificial instinct, not intelligence *(added 26.0720)*
+- 3b AI TF provides artificial instinct, not intelligence *(added 26.0720)*
 - 4 The hack in detail (the amazing engineering of the GPT-3 transformer)
 - 5 TF GPU-based algorithms are 100% deterministic
 - 6 The LLM internal agent is just as important as the TF
@@ -87,15 +87,15 @@ While sometimes viewed as a negative sign of poor planning, it is often a celebr
 
 <br>
 
-### **3b AI = artificial instinct, not intelligence**
+### **3b AI TF provides artificial instinct, not intelligence**
 
-AI is pattern matching. An input produces a classification output that determines which one of the massive number of input/output-classifier pairs the current input most closely matches. Thats not intelligence. 
+**An AI TF performs pattern matching**. An input produces a classification output that determines which one of the massive number of input/output-classifier pairs the current input most closely matches. Thats not intelligence. And the internal agent if nothing but a traditional procedural computation algorithm. Tweedledee and Tweedledum. 
 
-BUt what is it? Maybe the acronym AI and the comparison with nature has merits? I suggest that **AI = artificial instinct** (I have not seen this idea elsewhere), that the mechanistic functionality of AI matrix math closely resembles that of the NNs that support lower level instincts (in animals and even some plants). The reptile part of our own brain. AI = a toad lying in wait for some input that sets it off. Or like Tweedledee and Tweedledum. No high level thinking, no planning, no reasoning. All of these higher-level intelligent processes are simulated in AI, not replicated.
+But the acronym AI and the comparison with nature has merits. **AI = artificial instinct** (I have not seen this idea elsewhere). The mechanistic functionality of AI matrix math closely resembles that of the NNs that support lower level animal instincts (such as the reptile part of our own brain). AI = a toad lying in wait for some input that sets it off. No high level thinking, no planning, no reasoning. All of these higher-level intelligent processes are simulated in AI, not replicated.
 
-This is why Palantir-style systems are important. They provide guard rails, controls, limiting the world that AI sees. Limiting what can be sent to AI for analysis (by cleaning up and restricting data (pipelines, ontology), restricting access to LLMs, etc). Letting AI have free reign in an enterprise (or even your home office) is like letting an alligator guard your house, a computer drive you car, or a electric-actuator-powered humanoid robot take care of your children. Sooner or later catastrope will strike.
+This is why Palantir-style systems are important. They provide guard rails, controls, limiting the world that AI sees. Limiting what can be sent to AI for analysis (by cleaning up and restricting data (pipelines, ontology), restricting access to LLMs, etc). **Letting AI have free reign in an enterprise (or even your home office)** is like letting an alligator guard your house, a computer drive you car, or a electric-actuator-powered humanoid robot take care of your children. **Sooner or later catastrope will strike**.
 
-*If it moves like a worm, then strike; else ignore ([video link](https://www.youtube.com/watch?v=l3Es9cNH7I8&t=239s))*<br>
+*If any linear object moves like a worm, then strike (otherwise ignore) ([video link](https://www.youtube.com/watch?v=l3Es9cNH7I8&t=239s))*<br>
 <img src="/assets/toad.png" alt="drones" width="24%">
 
 
