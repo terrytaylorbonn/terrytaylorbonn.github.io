@@ -89,11 +89,11 @@ While sometimes viewed as a negative sign of poor planning, it is often a celebr
 
 ### **3b AI = artificial instinct, not intelligence**
 
-AI is pattern matching. An input produces a classification output that determines which of the trained inputs the current input most closely matches. Thats not intelligence (at least my definition of the word). 
+AI is pattern matching. An input produces a classification output that determines which one of the massive number of input/output-classifier pairs the current input most closely matches. Thats not intelligence. 
 
-But maybe the acronym AI and the comparison with nature has merits? I suggest that **AI = artificial instinct**, that the mechanistic functionality of AI matrix math closely resembles that of the NNs that support lower level instincts (in animals and even some plants). The reptile part of our own brain. AI = a toad lying in wait for some input that sets it off. No high level thinking. Like Tweedledee and Tweedledum. No high level thoughts. No thinking, no planning, no reasoning. All of these higher-level intelligent processes are simulated in AI, not replicated.
+BUt what is it? Maybe the acronym AI and the comparison with nature has merits? I suggest that **AI = artificial instinct** (I have not seen this idea elsewhere), that the mechanistic functionality of AI matrix math closely resembles that of the NNs that support lower level instincts (in animals and even some plants). The reptile part of our own brain. AI = a toad lying in wait for some input that sets it off. Or like Tweedledee and Tweedledum. No high level thinking, no planning, no reasoning. All of these higher-level intelligent processes are simulated in AI, not replicated.
 
-This is why Palantir-style systems are important. Guard rails, controls, limiting the world that AI sees. Limiting what can be sent to AI for analysis (cleaning up data, ontology). Making sure that someone never trusts a computer to drive their car (never allowing someone to interact with AI in an unsafe manner, such as allowing AI to do something dangerous on the local system or AI to access company secrets). If you let AI drive your car, sooner or later catastrope will strike.
+This is why Palantir-style systems are important. They provide guard rails, controls, limiting the world that AI sees. Limiting what can be sent to AI for analysis (by cleaning up and restricting data (pipelines, ontology), restricting access to LLMs, etc). Letting AI have free reign in an enterprise (or even your home office) is like letting an alligator guard your house, a computer drive you car, or a electric-actuator-powered humanoid robot take care of your children. Sooner or later catastrope will strike.
 
 *If it moves like a worm, then strike; else ignore ([video link](https://www.youtube.com/watch?v=l3Es9cNH7I8&t=239s))*<br>
 <img src="/assets/toad.png" alt="drones" width="24%">
