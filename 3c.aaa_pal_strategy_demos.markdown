@@ -27,12 +27,6 @@ See the working text for this QS in
 - **[Demo URL](https://learn.palantir.com/xxxxxxxxxxxxxxxxxxx)**  
 
 
-
-<br>*00* <br><img src="/assets/pal-demo-xxxx.png" alt="xxxxxx" width="100%" style="border: 1px solid #999;">
--->
-
-
-
 <br>
 
 ----------------------------
@@ -46,6 +40,8 @@ See the working text for this QS in
 # **NOTES**
 
 xxxxxx
+
+<br> -->
 
 <br>
 
