@@ -15,13 +15,11 @@ Content:
 - Especially how any PAL competitors in the future will follow the same routes. 
 
 
-
+<!--
 See the working text for this QS in
 - **[\#xxx_\xxxxxxx.docx](https://drive.google.com/drive/folders/1-Adawag9uA8_bq-hDF-nOuPYaRLz1eEO)**. 
 - **[Demo URL](https://learn.palantir.com/xxxxxxxxxxxxxxxxxxx)**  
 
-
-<!-- <img src="/assets/final-01.png" alt="drones" width="85%">  -->
 
 <br>*00* <br><img src="/assets/pal-demo-xxxx.png" alt="xxxxxx" width="100%" style="border: 1px solid #999;">
 
@@ -38,6 +36,9 @@ See the working text for this QS in
 # **NOTES**
 
 xxxxxx
+
+<br>
+-->
 
 <br>
 
