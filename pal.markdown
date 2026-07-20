@@ -277,4 +277,150 @@ So yes: the file was processed, and the result is the dataset currently open in 
 
 <br>
 
+------------------------
+
+# this all looks correct (amazing .. thanks for your expert help)... but do i need to verify ? or is this already verification (looks like in the speedrun demo)
+
+Yes — this preview is already a **basic verification**.
+
+It shows the join is working:
+
+- Left table: `clean transactions`
+- Right table: `clean products`
+- Join condition:
+
+  ```text
+  clean transactions.product_id = clean products.product_id
+  ```
+
+- Output preview has product fields added:
+
+  ```text
+  products_price
+  products_product_name
+  products_category
+  ```
+
+So visually, this matches the speedrun expectation.
+
+## But I would still do two quick checks
+
+### 1. Check for unmatched products
+
+Because this is a **left join**, all transactions stay even if no product match exists. If there are unmatched rows, the product columns will be `null`.
+
+In the preview, look at:
+
+```text
+products_price
+products_product_name
+products_category
+```
+
+If many are `null`, the join is not fully matching.
+
+### 2. Check row count
+
+Your input had **50 transaction rows**, but this preview shows:
+
+```text
+Previewing 172 rows
+```
+
+That could be okay if the products table has multiple rows per `product_id`, but it may also mean the join is multiplying rows.
+
+This is important.
+
+If each transaction should match exactly one product, then the joined result should still have about:
+
+```text
+50 rows
+```
+
+not 172.
+
+## Possible issue
+
+You are joining only on:
+
+```text
+product_id
+```
+
+But your data also has:
+
+```text
+variation_id
+```
+
+and the products table appears to have:
+
+```text
+products_variation_id
+products_product_id
+```
+
+If product variations are unique, the correct join may need **both**:
+
+```text
+transaction.product_id = products.product_id
+transaction.variation_id = products.variation_id
+```
+
+That would prevent row multiplication.
+
+## Recommendation
+
+Before moving on, add a second match condition:
+
+```text
+variation_id is equal to variation_id
+```
+
+or if prefixed on the right:
+
+```text
+variation_id is equal to products_variation_id
+```
+
+Then preview again.
+
+Expected result:
+
+```text
+50 rows
+```
+
+If it becomes 50 rows, that is the correct join.
+
+
+------------------
+
+
+# yes, 50 rows :)
+
+Great — that verifies the join is correct.
+
+Before adding the second condition, the join produced 172 rows, which meant rows were being multiplied. After adding the variation/product match, it produces:
+
+
+12
+That matches the transaction input row count.
+
+So your join is now logically correct:
+
+
+123
+And the output keeps:
+
+
+12
+with product details added.
+
+So yes — this is verified.
+
+<br>*01* <br><img src="/assets/pal-demo-7-01.png" alt="drones" width="100%" style="border: 1px solid #999;">
+
+<br>
+
 26.0719 (v1 26.0702)
