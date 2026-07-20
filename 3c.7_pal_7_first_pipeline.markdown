@@ -17,10 +17,33 @@ See the working text for this QS in
 - **[Demo URL](https://learn.palantir.com/deep-dive-building-your-first-pipeline)**  
 
 
+```
+2 Setting up your Project and Folder
+  2.1 Introduction	
+  2.2 Create a Foundry Learning Project
+  2.3 Create a Course-Specific Training Folder
+3 Raw data (Data Preprocessing and Cleaning)
+  3.1 Introduction
+  3.2 Download the Data Sources
+  xx3.3 [Optional] Deploy Datasets via Marketplace
+  3.4 Create a New Pipeline
+3b clean data
+  3.5 Basic Transforms: Clean the Products Dataset
+  3.6 Advanced Transforms: Clean the Customers Dataset
+  3.6b fix the json file (BINGO BINGO) 
+  3.7 Work with Different File Types: Preprocess and Clean the Transactions Dataset	
+4 Joined data (Data Integration, Joining, and Aggregations)
+  4.1 Introduction	
+  4.2 Simple Joins: Join Transactions and Products (BINGO)	
+  4.3 Chaining Joins: Join Transactions x Products with Customers	
+4b business ready dataset	
+  4.4 Add a Dataset Output	
+  4.5 Identify a Bad Join: Drill into Transactions x Products	
+  4.6 Create an Operationally Valuable Dataset	
+```
 
-<!-- <img src="/assets/final-01.png" alt="drones" width="85%">  -->
 
-<br>*05* <br><img src="/assets/pal-demo-xxxx.png" alt="xxxxxx" width="100%" style="border: 1px solid #999;">
+<br>*7-03* <br><img src="/assets/pal-demo-7-03.png" alt="xxxxxx" width="100%" style="border: 1px solid #999;">
 
 <br>
 
