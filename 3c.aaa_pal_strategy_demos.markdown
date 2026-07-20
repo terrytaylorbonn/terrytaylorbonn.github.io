@@ -1,0 +1,49 @@
+---
+layout: page
+title: 3c(a) PAL demo strategy
+permalink: /3c.aaa_pal_strategy_demos/
+---
+
+<br>
+
+[← 3c PAL](/pal/)
+
+<br>
+
+Content:
+  - docx files that are detailed and can be realistically maintained (some of the official demos are outdated).
+  - videos are nice, but they get outdated quickly and are impossible to update.
+  - the new user gets totally lost in the complexity of the UI dialogs; the demos need to be accurate and focus on minimal demo app complexity (its not about creating realistic apps; its about helping newcomers know how to use the product)
+  - demos should start out with a race to the finish; then go back and embellish; then repeat this process. this is how to learn.... not a drawn-out example (the longer it is, the more likely the student will hit a roadblock).
+    - if possible, first provide a full setup (this is one the best aspects of the Palantir demos; they often do this). test and verify. then student attempts to modify.
+  - the student documents their demos (like I did), and then goes back later and tries to modify things (but keeps a carefully organized set of versions in case things go wrong)
+  - Organizing docx files into a conceptual hierarchy.
+  - Numbered headings, steps, etc. 
+  - Core concept diagrams (what we are doing in this demo).
+
+See the working text for this QS in
+- **[\#xxx_\xxxxxxx.docx](https://drive.google.com/drive/folders/1-Adawag9uA8_bq-hDF-nOuPYaRLz1eEO)**. 
+- **[Demo URL](https://learn.palantir.com/xxxxxxxxxxxxxxxxxxx)**  
+
+
+<!-- <img src="/assets/final-01.png" alt="drones" width="85%">  -->
+
+<br>*00* <br><img src="/assets/pal-demo-xxxx.png" alt="xxxxxx" width="100%" style="border: 1px solid #999;">
+
+<br>
+
+----------------------------
+----------------------------
+----------------------------
+----------------------------
+
+<br>
+<br>
+
+# **NOTES**
+
+xxxxxx
+
+<br>
+
+26.0720 (v1 26.0720)
