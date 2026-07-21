@@ -22,7 +22,7 @@ ZiptieAI demos/documents AI (primarily LLMs), from "tiny" neural networks to **[
   - **[2b Models](/2b_models/)** demos how to build packaged AI models (primarily LLMs). Covers fine-tuning, local models, deployment, and model serving (**I am convinced that local models, like local computers 40 years ago, will become the norm**). *In this section you control the model.*
   - **[3 Agents](/3_agents/)**. Python agents that implement reliable workflows, using AI models as helpful assistants. *You control the application.*
   - **[3b Workflow platform](/3.3-ai-projects/)** (such as n8n) demos of practical agentic AI applications. *The workflow platform controls the architecture.*
-  - **[3c Enterprise AI](/pal/)** demos (**current focus in on Palantir**). *The enterprise platform controls almost everything.*<br><br>
+  - **[3c Enterprise AI](/pal/)** demos (**current focus is on Palantir**). *The enterprise platform controls almost everything.*<br><br>
 
 <!-- - [4 Resources](/4_resources/) such as (docx) lab notes, Github, Wiki, etc (links in the footer).
 
