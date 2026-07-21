@@ -113,6 +113,43 @@ shipments/orders → pipeline → ontology → dashboard → actions → alerts
 So yes: small demos first, then compose them into real workflows/projects. That would be much easier than trying to learn everything through long speedruns with unclear UI jumps.
 
 <br>
+
+## how many applications are there?
+
+If you mean **major Palantir/Foundry applications/tools**, there are many — roughly **20–30 core user-facing apps**, depending on what is enabled in your environment.
+
+Main ones you have touched or seen:
+
+1. **Foundry / Files** — project and resource browser  
+2. **Dataset Preview** — inspect datasets  
+3. **Pipeline Builder** — no-code data pipelines  
+4. **Code Workspaces / Code Repositories** — pro-code transforms/functions  
+5. **Ontology Manager** — define object types, links, actions  
+6. **Object Explorer** — explore ontology objects  
+7. **Workshop** — build operational applications  
+8. **Automate** — alerts and automation  
+9. **Machinery** — process mining / process modeling  
+10. **AIP Assist** — AI assistant in Foundry  
+11. **AIP Agent Studio** — build AI agents  
+12. **AIP Logic** — no-code AI/function logic  
+13. **AIP Evals** — evaluate AI/logic behavior  
+14. **Modeling / Model Studio** — train and manage ML models  
+15. **Quiver** — time series analysis  
+16. **Contour** — exploratory data analysis / analysis notebooks  
+17. **Notepad** — document-style analytical workflows  
+18. **Dashboarding / Workshop dashboards** — app dashboards/views  
+19. **Data Connection** — configure external data sources  
+20. **Marketplace** — install templates, datasets, examples  
+21. **Monocle / Lineage graph** — inspect data lineage/resources  
+22. **Admin / Control Panel** — permissions, users, governance  
+23. **Search** — global search across resources  
+24. **Notifications** — alerts/tasks/messages  
+
+So a practical answer:
+
+> There are about **two dozen major Foundry apps/tools**, but most workflows use only a handful: **Files, Dataset Preview, Pipeline Builder, Ontology Manager, Object Explorer, Workshop, Automate, Code Workspaces, and AIP tools**.
+
+<br>
 <br>
 <br>
 <br>
