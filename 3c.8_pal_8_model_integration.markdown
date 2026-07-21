@@ -1,0 +1,351 @@
+---
+layout: page
+title: 3c.8 PAL Model integration
+permalink: /3c.8_pal_8_model_integration/
+---
+
+<br>
+
+[← 3c PAL](/pal/)
+
+<br>
+
+## PAL DEMO D8: Model integration (26.0721)
+
+See the working text for this QS in
+- **[\#619\_.docx](https://drive.google.com/drive/folders/1-Adawag9uA8_bq-hDF-nOuPYaRLz1eEO)**.  
+- **[Demo URL](https://www.palantir.com/docs/foundry/model-studio/overview/)** there are actually many ... this was a chaotic demo.  
+
+
+```
+TOC	
+```
+
+
+<!-- <br>*7-03* <br><img src="/assets/pal-demo-7-03.png" alt="xxxxxx" width="100%" style="border: 1px solid #999;"> -->
+
+<br>
+
+----------------------------
+----------------------------
+----------------------------
+----------------------------
+
+<br>
+<br>
+
+# **NOTES**
+
+<br>
+
+# **ME: 01 at the URL is the following tutorial text**
+
+```
+"Action: Download data
+the labeled American Housing data source and upload it in the data folder as housing_features_and_labels. Download the unlabeled American Census data source and upload it to the data folder as housing_inference_data. You can upload a CSV file into Foundry by dragging it into the folder structure - for this tutorial, upload it as a structured dataset."
+
+below are the 2 files
+- file name
+- columns
+- sample data
+
+i cant make sense of the data... can you?
+
+housing_features_and_labels.csv
+longitude	latitude	housing_median_age	total_rooms	total_bedrooms	population	households	median_income	median_house_value	id
+-118.49	34.2	35	1109	206	515	202	5.2118	215800	8500
+-118.49	34.19	23	2087	571	1809	553	3.1667	202000	8501
+-118.49	34.18	31	3073	674	1486	684	4.8984	311700	8502
+-118.49	34.16	37	3333	488	1171	485	6.4958	500001	8503
+
+housing_inference_data.csv columns and rows
+longitude	latitude	housing_median_age	total_rooms	total_bedrooms	population	households	median_income
+-117.1168977	34.684977139164296	33.41529033324941	1107.0950571425185	206.14122690195296	515.3616070616154	200.96441266513685	4.744947497396011
+-118.7941044	35.61620336	22.38140796823065	2087.2893080486674	572.6807934576076	1808.8155056894122	553.1940466869836	4.159838759559566
+-118.0265845	33.75109689167518	31.62426649663079	3073.2576680241095	674.6271680285655	1483.7335280756172	685.3894404	5.456310913332794
+..............................
+```
+
+<br>
+<br>
+
+
+FDE: Yes. The data makes sense once you separate **features** from **label/target**.
+
+This is a simple supervised machine learning setup.
+
+---
+
+# What the tutorial is doing
+
+It wants to train a model that predicts:
+
+```text
+median_house_value
+```
+
+from census/housing features such as:
+
+```text
+longitude
+latitude
+housing_median_age
+total_rooms
+population
+median_income
+```
+
+So the model learns:
+
+```text
+housing features → predicted house value
+```
+
+---
+
+# File 1: `housing_features_and_labels.csv`
+
+This is the **training dataset**.
+
+It has both:
+
+## Input features
+
+These are the columns the model uses to make a prediction:
+
+```text
+longitude
+latitude
+housing_median_age
+total_rooms
+total_bedrooms
+population
+households
+median_income
+```
+
+## Label / target
+
+This is the value the model is trying to learn to predict:
+
+```text
+median_house_value
+```
+
+## ID column
+
+This is just an identifier:
+
+```text
+id
+```
+
+So one row means:
+
+> For a census area at this longitude/latitude, with this number of rooms, bedrooms, people, households, and median income, the known median house value was X.
+
+Example:
+
+| longitude | latitude | median_income | median_house_value |
+|---:|---:|---:|---:|
+| -118.49 | 34.2 | 5.2118 | 215800 |
+
+Meaning:
+
+> This area had median income `5.2118`, and the known median house value was `$215,800`.
+
+---
+
+# File 2: `housing_inference_data.csv`
+
+This is the **inference / prediction dataset**.
+
+It has only the input features:
+
+```text
+longitude
+latitude
+housing_median_age
+total_rooms
+total_bedrooms
+population
+households
+median_income
+```
+
+It does **not** have:
+
+```text
+median_house_value
+```
+
+Because that is what the model is supposed to predict.
+
+So one row means:
+
+> Here is a census area with known features, but unknown house value. Use the trained model to estimate the median house value.
+
+---
+
+# Why there are two files
+
+```text
+Training file:
+features + known label
+Used to train/test model
+
+Inference file:
+features only
+Used to generate predictions
+```
+
+Diagram:
+
+```mermaid
+flowchart LR
+    A["housing_features_and_labels.csv<br/><br/>Features + known median_house_value"] --> B["Train model<br/><br/>Learn relationship between features and value"]
+
+    B --> C["Trained regression model"]
+
+    D["housing_inference_data.csv<br/><br/>Features only<br/>No median_house_value"] --> C
+
+    C --> E["Predictions<br/><br/>estimated median_house_value"]
+```
+
+---
+
+# What each column means
+
+| Column | Meaning |
+|---|---|
+| `longitude` | Geographic longitude of the census area |
+| `latitude` | Geographic latitude of the census area |
+| `housing_median_age` | Median age of houses in the area |
+| `total_rooms` | Total rooms in the area/block group |
+| `total_bedrooms` | Total bedrooms in the area/block group |
+| `population` | Population in the area |
+| `households` | Number of households in the area |
+| `median_income` | Median income in the area, usually scaled |
+| `median_house_value` | **Target label**: actual median home value |
+| `id` | Row identifier |
+
+---
+
+# Important simplification
+
+This is not individual houses.
+
+It is more like:
+
+```text
+one row = one geographic census district / block group
+```
+
+The model is not predicting the price of a specific house. It is predicting:
+
+```text
+median house value for an area
+```
+
+---
+
+# In one sentence
+
+> The first file trains a regression model using census-area features and known house values; the second file contains new census-area features where the house value is unknown and should be predicted by the trained model.
+
+
+<br>
+<br>
+<br>
+
+# **ME: 02 thats great info... but what i really cant understand is what the numbers represent. the units.**
+
+<br>
+
+Good question — the column names are misleading unless you know the original dataset.
+
+This is based on the **California Housing** dataset from the 1990 U.S. Census. Each row is a **census block group**, not one house.
+
+## Units / meaning of the numbers
+
+| Column | What the number represents | Unit / scale |
+|---|---|---|
+| `longitude` | Geographic longitude | Decimal degrees |
+| `latitude` | Geographic latitude | Decimal degrees |
+| `housing_median_age` | Median age of houses in that block group | Years |
+| `total_rooms` | Total number of rooms across all households in the block group | Count of rooms |
+| `total_bedrooms` | Total number of bedrooms across all households in the block group | Count of bedrooms |
+| `population` | Number of people living in the block group | Count of people |
+| `households` | Number of households in the block group | Count of households |
+| `median_income` | Median household income in the block group | Tens of thousands of USD, approximately |
+| `median_house_value` | Median house value in the block group | USD |
+| `id` | Row identifier | No real-world unit |
+
+---
+
+## Example row
+
+```text
+longitude: -118.49
+latitude: 34.20
+housing_median_age: 35
+total_rooms: 1109
+total_bedrooms: 206
+population: 515
+households: 202
+median_income: 5.2118
+median_house_value: 215800
+id: 8500
+```
+
+Means:
+
+> Census block group `8500` is located around longitude `-118.49`, latitude `34.20`.  
+> The median housing age is about **35 years**.  
+> Across the whole block group, there are **1,109 rooms**, **206 bedrooms**, **515 people**, and **202 households**.  
+> Median income is about **5.2118 × $10,000 = $52,118**.  
+> Median house value is **$215,800**.
+
+---
+
+## Important: not individual homes
+
+This row does **not** mean:
+
+```text
+one house has 1109 rooms
+```
+
+It means:
+
+```text
+the whole census block group has 1109 total rooms
+```
+
+So the row is an area summary.
+
+---
+
+## Why inference data has decimals
+
+Your inference file has values like:
+
+```text
+housing_median_age = 33.415
+total_rooms = 1107.095
+population = 515.36
+```
+
+Those are strange because counts normally should be whole numbers.
+
+That likely means the inference data was synthetically generated or perturbed from original census rows. For modeling, decimals are acceptable because the model treats them as numeric features, but real census counts would usually be integers.
+
+---
+
+## One-line interpretation
+
+> Each row describes one geographic census block group using location, housing totals, population, household count, income, and known/predicted median house value.
+
+<br>
+
+26.0721 (v1 26.0721)

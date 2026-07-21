@@ -45,6 +45,8 @@ The enterprise platform controls almost everything. For now this section focuses
 - **[D7: Deep Dive: Building Your First Pipeline (26.0720)](/3c.7_pal_7_first_pipeline/)**.
   - #618_pal_7_first_pipeline_v01_26.0719_ss.docx
   - https://learn.palantir.com/deep-dive-building-your-first-pipeline
+- **[D8: Deep Dive: Model integration (26.0721)](/3c.8_pal_8_model_integration/)**.
+  - #619_.docx
 
 <br>
 
@@ -56,7 +58,7 @@ Notes:
 
 <br>
 
-26.0720 (v1 26.0702)x
+26.0721 (v1 26.0702)x
 
 <!--
 Palantir
