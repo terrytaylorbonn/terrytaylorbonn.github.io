@@ -14,7 +14,7 @@ permalink: /3c.0_pal_notes/
 <br>
 
 
-# **0 lets start at top.... **
+# **0 lets start at top....**
 how are palantir apps typically deployed? 
 are they run within some palantir app, hosted on palantir. 
 thats something missing in the demo docs.
