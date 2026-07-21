@@ -13,6 +13,193 @@ permalink: /3c.0_pal_notes/
 <br>
 <br>
 
+
+# **0 lets start at top.... **
+how are palantir apps typically deployed? 
+are they run within some palantir app, hosted on palantir. 
+thats something missing in the demo docs.
+
+Yes — the demos often skip this, but it is fundamental.
+
+## Short answer
+
+Palantir apps are typically **built and hosted inside Foundry**.
+
+Users access them through the Foundry web interface, not by installing software locally.
+
+---
+
+# Typical deployment model
+
+```text
+Foundry platform
+│
+├── Data layer
+│   ├── datasets
+│   ├── pipelines
+│   └── transforms
+│
+├── Ontology layer
+│   ├── object types
+│   ├── links
+│   ├── actions
+│   └── functions
+│
+└── Application layer
+    ├── Workshop apps
+    ├── dashboards
+    ├── Automate alerts
+    ├── AIP agents
+    └── custom OSDK apps/widgets
+```
+
+The app usually runs **on top of Foundry data and ontology objects**.
+
+---
+
+# Main types of Palantir apps
+
+## 1. Workshop apps
+
+These are the most common in demos.
+
+They are:
+
+- built inside **Workshop**,
+- hosted by Foundry,
+- accessed in the browser,
+- connected to Ontology objects and actions,
+- governed by Foundry permissions.
+
+Example:
+
+```text
+Claims Process Application
+```
+
+You build it in Workshop edit mode, then publish/share it.
+
+---
+
+## 2. Automate workflows
+
+These are not visual apps in the same way, but operational automations.
+
+They are:
+
+- configured inside Foundry,
+- triggered by data/object conditions,
+- send alerts or run actions.
+
+Example:
+
+```text
+Alert when a high-risk claim enters investigation
+```
+
+---
+
+## 3. AIP agents / AI apps
+
+These are AI assistants or workflows.
+
+They are:
+
+- configured in Foundry/AIP,
+- grounded in Ontology/data/documents,
+- exposed through AIP interfaces or embedded into workflows.
+
+---
+
+## 4. Custom OSDK apps
+
+These are more like traditional web apps.
+
+They can be:
+
+- React/TypeScript applications,
+- built with Palantir’s OSDK,
+- hosted in Foundry or externally depending on setup,
+- connected to Foundry via APIs.
+
+This is more advanced than the speedruns you’re doing.
+
+---
+
+# So where does the app “run”?
+
+For most speedrun apps:
+
+```text
+It runs inside Foundry, in the browser, hosted by Palantir/Foundry.
+```
+
+The user opens a Foundry URL and uses the app there.
+
+The underlying compute/data stays in Foundry:
+
+- datasets live in Foundry,
+- pipelines run in Foundry,
+- ontology objects are served by Foundry,
+- functions/actions execute in Foundry,
+- Workshop renders the UI.
+
+---
+
+# Deployment lifecycle
+
+Typical flow:
+
+```text
+Build app in Workshop
+        ↓
+Preview/test
+        ↓
+Save
+        ↓
+Publish / deploy version
+        ↓
+Share with users/groups
+        ↓
+Users access app in Foundry browser UI
+```
+
+---
+
+# Important distinction
+
+There are two things:
+
+## 1. The application shell
+
+Example:
+
+```text
+Workshop app
+```
+
+This is the UI users see.
+
+## 2. The operational backend
+
+This includes:
+
+```text
+datasets → ontology → functions → actions → automations
+```
+
+The app is mostly a front end on top of those governed backend objects.
+
+---
+
+# One-sentence version
+
+> Palantir apps are usually web applications hosted inside Foundry, built with tools like Workshop or AIP, backed by Foundry datasets and Ontology objects, and deployed by saving/publishing them to users with governed permissions.
+
+
+<br>
+<br>
+
 # **1 could you summarize (very brief text) the 10-20 main capabilities of palantir.?? right now seems like i have touched on foundry, aip, agentic ai, mining, pipelines**
 
 
