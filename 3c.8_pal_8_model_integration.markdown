@@ -347,5 +347,129 @@ That likely means the inference data was synthetically generated or perturbed fr
 > Each row describes one geographic census block group using location, housing totals, population, household count, income, and known/predicted median house value.
 
 <br>
+<br>
+
+--------------------------------
+
+<br>
+<br>
+
+
+# **FDE: Yes. That output means the dataset object was created/written, but Jupyter is just showing the Python object reference:**
+
+```text
+<foundry.transforms._dataset.Dataset at ...>
+```
+
+To view the data, do one of these.
+
+## Option 1: Read it back in the notebook
+
+Run:
+
+```python
+housing_test_data.read_table(format="pandas").head()
+```
+
+or:
+
+```python
+test_saved = housing_test_data.read_table(format="pandas")
+test_saved
+```
+
+## Option 2: Open it in Foundry
+
+In the left **Data** panel, click:
+
+```text
+housing_test_data
+```
+
+or click the `...` menu next to it and choose something like:
+
+```text
+Open
+Open in dataset preview
+```
+
+## Option 3: Check row count
+
+Run:
+
+```python
+housing_test_data.read_table(format="pandas").shape
+```
+
+You should see something like:
+
+```text
+(number_of_rows, number_of_columns)
+```
+
+## Why you saw that object text
+
+This line:
+
+```python
+housing_test_data = Dataset.get("housing_test_data")
+```
+
+returns a dataset handle, not the table contents.
+
+To see contents, use:
+
+```python
+.read_table(format="pandas")
+```
+
+<br><br>
+
+--------------------------------------
+
+<br><br>
+
+
+Yes — this cell was successful.
+
+Evidence:
+
+- No error traceback appeared.
+- The model pipeline was displayed.
+- The final object shows:
+
+```text
+Pipeline
+ ├─ SimpleImputer
+ ├─ StandardScaler
+ └─ LinearRegression
+```
+
+That means this ran successfully:
+
+```python
+model.fit(X_train, y_train)
+```
+
+So your linear regression model has been trained.
+
+Small note: the step name says `"classifier"`, but the model is actually:
+
+```python
+LinearRegression()
+```
+
+So it is a regression model, not a classifier. The name is harmless, but cleaner would be:
+
+```python
+("regressor", LinearRegression())
+```
+
+But yes — training succeeded.
+
+
+<img src="/assets/pal_9_02.png" alt="drones" width="60%" style="border: 1px solid #999;">
+
+<br>
 
 26.0721 (v1 26.0721)
