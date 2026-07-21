@@ -11,8 +11,9 @@ permalink: /3c.0_pal_notes/
 [← 3c PAL](/pal/)
 
 <br>
+<br>
 
-## could you summarize (very brief text) the 10-20 main capabilities of palantir.?? right now seems like i have touched on foundry, aip, agentic ai, mining, pipelines
+# **1 could you summarize (very brief text) the 10-20 main capabilities of palantir.?? right now seems like i have touched on foundry, aip, agentic ai, mining, pipelines**
 
 
 
@@ -45,7 +46,11 @@ Very short summary:
 
 > Palantir Foundry turns enterprise data into governed datasets, business objects, applications, workflows, automations, and AI-powered operational systems.
 
-## just curious ... could you help me
+<br>
+<br>
+
+
+# **2 just curious ... could you help me**
 (1) do very brief simple demos
 (2) and then start to combine them into projects
 
@@ -113,8 +118,9 @@ shipments/orders → pipeline → ontology → dashboard → actions → alerts
 So yes: small demos first, then compose them into real workflows/projects. That would be much easier than trying to learn everything through long speedruns with unclear UI jumps.
 
 <br>
+<br>
 
-## how many applications are there?
+# **3 how many applications are there?**
 
 If you mean **major Palantir/Foundry applications/tools**, there are many — roughly **20–30 core user-facing apps**, depending on what is enabled in your environment.
 
