@@ -6,19 +6,32 @@ permalink: /pal/
 
 <br>
 
-The enterprise platform controls almost everything. For now this section focuses solely on Palantir demos.
+The enterprise platform controls almost everything. For now this section focuses solely on the Palantir platform.
 
 <br>
 
-### **Concepts / planning docs**
-- **[PAL demo strategy (I am redoing into my own demos)](/3c.aaa_pal_strategy_demos/)**. docx files that are detailed and can be realistically maintained (the official demos seem to not be updated often; videos are nice, but they get outdated quickly and are impossible to update).
-- **[PAL AI usage strategy (FDE)](/3c.bbb_pal_strategy_fde/)**. How to maximize AI usage with PAL (by using FDE). 
-- **[PAL concepts (my own take on PAL)](/3c.ccc_pal_concepts/)**. This is a long term goal (just like creating core concepts for AI has been). <br><br>*(placeholder pic; eventually I will create master pic that sums up core concepts)* <br><img src="/assets/pal-demo-01.png" alt="drones" width="65%" style="border: 1px solid #999;">
+### **[1 PAL AI usage strategy](/3c.bbb_pal_strategy_fde/)**
+
+How to maximize AI usage when using PAL (by using AIP/FDE). 
+
 
 <br>
 
-### **Demo list** 
-(*I added numbering, conceptual diagrams, and a few error updates to the original demos*)
+### **[2 PAL concepts (my own take on PAL)](/3c.ccc_pal_concepts/)**
+
+This is a long term goal (just like creating core concepts for AI has been). <br><br>*(placeholder pic; eventually I will create master pic that sums up core concepts)* <br><img src="/assets/pal-demo-01.png" alt="drones" width="65%" style="border: 1px solid #999;">
+
+<br>
+
+### **3 Demos (my modified versions)** 
+
+**[PAL demo strategy)](/3c.aaa_pal_strategy_demos/)** i based on:
+- docx files are detailed and can be realistically maintained (the official demos seem to not be updated often; videos are nice, but they get outdated quickly and are impossible to update)
+- maximum usage of AI (AIP/FDE) within PAL to get things done.
+
+
+Following is the list of demos. I added numbering, conceptual diagrams, and a few error updates to the original demos. I will probably come up with my own set of demos. 
+
 - **[D1: Palantir Foundry "speedrun" (quick start) (26.0705)](/3c.1_pal_foundry/)**. 
   - Demo complete... still need to write the webpage.
   - #610_pal_1_foundry_v02_26.0704_SS.docx  
@@ -50,7 +63,7 @@ The enterprise platform controls almost everything. For now this section focuses
 
 <br>
 
-Notes: 
+### **Notes**
 - *[PAL general notes](/3c.0_pal_notes/)*
 - *[Palantir CEO火力全开，场面控制不住了！](https://www.youtube.com/watch?v=feUFT1Q-oBA)*
 - *[zerohedge.com/ai/something-has-gone-completely-wrong-palantirs-alex-karp-goes-ballistic-openai-anthropic](https://www.zerohedge.com/ai/something-has-gone-completely-wrong-palantirs-alex-karp-goes-ballistic-openai-anthropic)*
@@ -58,7 +71,7 @@ Notes:
 
 <br>
 
-26.0721 (v1 26.0702)x
+26.0722 (v1 26.0702)x
 
 <!--
 Palantir
