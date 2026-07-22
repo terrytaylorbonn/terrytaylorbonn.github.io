@@ -16,11 +16,11 @@ On the (rather short) page **[Hack](/0-demo/)** I layout the gist of what an AI 
 
 *Transformer AI hack* <br><img src="/assets/hack-08.png" alt="drones" width="35%" style="border: 1px solid #999;">
 
-The goal of this page is roughly the same, but the topic is Palantir (and any systems like Palantir (PAL)). You've probably heard about Palantir, about how PAL basically detects needles (unusual situations) in haystacks of data. With the help of AI. But what exactly does that mean? 
+The goal of this page is roughly the same, but the topic is Palantir (PAL) (and similar systems; there are not any right now, but undoubtedly will be soon). You've probably heard about how basically detects needles (unusual situations) in haystacks of data with the help of AI. But what exactly does that mean? 
 
 *The crystal ball that can find a needle in a haystack is called a "palantir" ("seeing stone") in Lord of the Rings* <br><img src="/assets/pal_9_06.png" alt="drones" width="25%" style="border: 1px solid #999;">
 
-I spent several weeks doing Palantir demos (on a trial account that Palantir so graciously offers) to get a grounded understanding of what Palantir does. After a little over 2 weeks I finally got the gist. I suggested to PAL AI that we create **a demo that I thought demo the core of the needle in the haystack search (the idea was my original). PAL AI (AIP) agreed with the core of my thinking**. AIP and I were able to create a demo that showed by example the core of how PAL does the needle search. Of course, PAL does much more, but this was my first goal, the needle search algorithm. 
+I spent several weeks doing PAL demos (on a trial account that PAl so graciously offers) to get a grounded understanding of what PAL does (of course, PAL does much more, but this to me is the core ability, where it all started, the haystack needle search algorithm). After a little over 2 weeks I finally got the gist. I suggested to PAL AI that we create **a demo that I thought would reveal the gist of the needle in the haystack search (this demo was my original idea). The built-in PAL AI (AIP) chatbot agreed "whole-heartedly"**. AIP and I were able to create a demo that showed by example the core of how PAL does the needle search.  
 
 *Left: A training data point; right: An inference test point similar to that training point (if the result is not ~=162178.45 then we found a needle in a haystack)* <br><img src="/assets/pal_9_05.png" alt="drones" width="90%" style="border: 1px solid #999;">
 
