@@ -947,5 +947,174 @@ So yes: this is your batch inference output.
 <img src="/assets/pal_9_04.png" alt="drones" width="80%">
 
 <br>
+<br>
+<br>
+
+----------------------------------
+
+<br>
+<br>
+<br>
+
+
+# **yes, need to add a few columns maybe. but now, is it possible to take the current result and add it to a UI app where I can entere the data and the result computed?**
+
+
+
+Yes — absolutely possible.
+
+But it is a **different pattern** from the pipeline test.
+
+## What you have now: batch inference
+
+Current flow:
+
+```text
+dataset rows → model → prediction dataset
+```
+
+This is good for predicting many rows at once.
+
+---
+
+## What you want next: interactive inference app
+
+Desired flow:
+
+```text
+user enters values in UI
+        ↓
+model runs once
+        ↓
+prediction shown on screen
+```
+
+Example user inputs:
+
+```text
+median_income = 5.2
+housing_median_age = 30
+total_rooms = 3000
+```
+
+Output:
+
+```text
+predicted median house value = 256,000
+```
+
+---
+
+## Simplest Palantir architecture
+
+```text
+Workshop app
+   ↓
+Input widgets / variables
+   ↓
+Function or published model function
+   ↓
+Live model deployment
+   ↓
+Display prediction
+```
+
+## Steps at high level
+
+### 1. Deploy the model
+
+You need a live model deployment, like the one you created earlier.
+
+The model must be able to accept:
+
+```text
+median_income
+housing_median_age
+total_rooms
+```
+
+and return:
+
+```text
+prediction
+```
+
+---
+
+### 2. Publish the model as a Function
+
+On the model deployment page, there is usually a section like:
+
+```text
+Publish Function
+```
+
+This creates a callable function around the model.
+
+That function is what Workshop can use.
+
+---
+
+### 3. Create a Workshop app
+
+Create a small Workshop app with three inputs:
+
+```text
+median_income
+housing_median_age
+total_rooms
+```
+
+Use number input widgets.
+
+---
+
+### 4. Add a function-backed value
+
+Configure a Workshop variable or output value that calls the model function.
+
+Pass the three input values into the function.
+
+---
+
+### 5. Display the result
+
+Add a text/card widget showing:
+
+```text
+Predicted median house value: $X
+```
+
+---
+
+## Concept diagram
+
+```mermaid
+flowchart LR
+    A["Workshop UI<br/>User enters 3 values"] --> B["Function call<br/>predict_house_value"]
+
+    B --> C["Live model deployment<br/>linear_regression_model"]
+
+    C --> D["Prediction shown in app"]
+```
+
+---
+
+## Important distinction
+
+| Use case | Tool |
+|---|---|
+| Predict many rows and save dataset | Pipeline Builder batch inference |
+| Let user enter values and get one prediction | Workshop + Function + live model |
+| Compare predictions to actual values | Dataset / pipeline / notebook |
+| Operational app for users | Workshop |
+
+So yes: your next logical demo can be:
+
+> **Build a tiny Workshop app that lets me type three numbers and returns a model prediction.**
+
+
+<br>
+
 
 26.0721 (v1 26.0721)
