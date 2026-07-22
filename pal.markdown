@@ -10,7 +10,7 @@ The enterprise platform controls almost everything. For now this section focuses
 
 <br>
 
-### **[0 PAL gist (based on demo D8 listed in section "3 Demos" later on this page)](/3c.xxx_pal_gist/)**
+### **[0 The gist of Palantir (based on demo D8 listed in section "3 Demos" later on this page)](/3c.xxx_pal_gist/)**
 
 On the (rather short) page **[Hack](/0-demo/)** I layout the gist of what an AI LLM transformer (TF) does (which shows the core of AI really is). That single page required over a year of hands-on experience and research to put together. It summarizes the gist of AI in a way I have never seen.
 
