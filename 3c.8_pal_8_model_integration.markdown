@@ -471,5 +471,481 @@ But yes — training succeeded.
 <img src="/assets/pal_9_02.png" alt="drones" width="60%" style="border: 1px solid #999;">
 
 <br>
+<br>
+<br>
+<br>
+
+
+----------------------------------
+----------------------------------
+----------------------------------
+----------------------------------
+
+<br>
+<br>
+<br>
+
+
+# **2b.6 ME: how can i test this model? using pipeline, or just some simple verification test**
+
+
+
+You can test it **simply in the notebook first**. That is the easiest verification.
+
+## Simple notebook test
+
+Run this in a new cell:
+
+```python
+X_test = test_df[numeric_features]
+y_test = test_df["median_house_value"]
+
+predictions = model.predict(X_test)
+
+predictions[:10]
+```
+
+That should show the first 10 predicted house values.
+
+---
+
+## Compare predictions to actual values
+
+Run:
+
+```python
+import pandas as pd
+
+results = test_df.copy()
+results["predicted_median_house_value"] = predictions
+results["error"] = results["predicted_median_house_value"] - results["median_house_value"]
+
+results[
+    [
+        "median_income",
+        "housing_median_age",
+        "total_rooms",
+        "median_house_value",
+        "predicted_median_house_value",
+        "error",
+    ]
+].head(10)
+```
+
+This gives you a simple visual check:
+
+```text
+actual value vs predicted value
+```
+
+---
+
+## Calculate basic error metric
+
+Run:
+
+```python
+from sklearn.metrics import mean_absolute_error, r2_score
+
+mae = mean_absolute_error(y_test, predictions)
+r2 = r2_score(y_test, predictions)
+
+mae, r2
+```
+
+Interpretation:
+
+- **MAE** = average prediction error in dollars.
+- **R²** = how much variation the model explains.
+  - closer to `1.0` is better,
+  - around `0` means weak,
+  - negative means bad.
+
+---
+
+## Quick single-row test
+
+```python
+sample = X_test.head(1)
+model.predict(sample)
+```
+
+---
+
+## Do you need a pipeline?
+
+Not yet.
+
+Use:
+
+```text
+Notebook test first
+```
+
+Then later:
+
+```text
+batch inference pipeline
+```
+
+if you want to apply the model to a full dataset and write predictions to Foundry.
+
+## Minimal verification
+
+Run this:
+
+```python
+X_test = test_df[numeric_features]
+y_test = test_df["median_house_value"]
+
+predictions = model.predict(X_test)
+
+from sklearn.metrics import mean_absolute_error, r2_score
+
+print("MAE:", mean_absolute_error(y_test, predictions))
+print("R2:", r2_score(y_test, predictions))
+print(predictions[:10])
+```
+
+<br>
+<br>
+<br>
+
+--------------------------------
+
+<br>
+<br>
+<br>
+
+# **2b.7 ME: pipeline test step by step**
+
+<br>
+
+The simplest pipeline test is:
+
+```text
+housing_test_data → apply model → housing_test_predictions
+```
+
+You are testing whether the **published model** can take a Foundry dataset as input and produce predictions as a new dataset.
+
+---
+
+## Step 0 — Know what you already have
+
+You already have:
+
+### Input dataset
+
+```text
+housing_test_data
+```
+
+This has actual known values, including:
+
+```text
+median_house_value
+```
+
+### Published model
+
+```text
+linear_regression_model
+```
+
+Your model expects these input columns:
+
+```text
+median_income
+housing_median_age
+total_rooms
+```
+
+---
+
+# Step-by-step pipeline test
+
+## 1. Create a new Pipeline Builder pipeline
+
+Go to your project/folder and create a new pipeline.
+
+Name it something simple:
+
+```text
+test_model_pipeline
+```
+
+or:
+
+```text
+housing_model_inference_test
+```
+
+---
+
+## 2. Add input dataset
+
+Add dataset:
+
+```text
+housing_test_data
+```
+
+This is the dataset you saved from `test_df`.
+
+---
+
+## 3. Add model inference transform
+
+Add a transform/node. Search for one of these terms:
+
+```text
+model
+predict
+inference
+apply model
+batch inference
+```
+
+You are looking for something like:
+
+```text
+Apply model
+Run model
+Model inference
+Batch inference
+Predict with model
+```
+
+The exact UI name may differ.
+
+---
+
+## 4. Select the model
+
+In the model inference transform, select:
+
+```text
+linear_regression_model
+```
+
+If it asks for a version, choose the published version you just created.
+
+---
+
+## 5. Map input columns
+
+The model only needs these columns:
+
+```text
+median_income
+housing_median_age
+total_rooms
+```
+
+Map them like this:
+
+| Model input | Dataset column |
+|---|---|
+| `median_income` | `median_income` |
+| `housing_median_age` | `housing_median_age` |
+| `total_rooms` | `total_rooms` |
+
+Do **not** feed `median_house_value` into the model. That is the actual answer used for comparison.
+
+---
+
+## 6. Configure output prediction column
+
+If the transform asks for an output column name, use:
+
+```text
+predicted_median_house_value
+```
+
+If Foundry auto-generates a name like:
+
+```text
+prediction
+```
+
+that is also fine.
+
+---
+
+## 7. Keep useful columns
+
+In the output, keep at least:
+
+```text
+median_income
+housing_median_age
+total_rooms
+median_house_value
+predicted_median_house_value
+```
+
+The key is to keep both:
+
+```text
+actual value = median_house_value
+predicted value = predicted_median_house_value
+```
+
+---
+
+## 8. Add output dataset
+
+Create/write the result to a new dataset:
+
+```text
+housing_test_predictions
+```
+
+So the flow becomes:
+
+```text
+housing_test_data
+        ↓
+model inference using linear_regression_model
+        ↓
+housing_test_predictions
+```
+
+---
+
+## 9. Preview
+
+Preview the output.
+
+Check:
+
+1. It has rows.
+2. It has the original columns.
+3. It has a prediction column.
+4. Row count should match `housing_test_data`.
+
+Expected:
+
+```text
+housing_test_data rows = housing_test_predictions rows
+```
+
+---
+
+## 10. Optional: add error column
+
+If Pipeline Builder lets you add a calculated column, create:
+
+```text
+prediction_error = predicted_median_house_value - median_house_value
+```
+
+This helps compare prediction vs actual.
+
+---
+
+# Final expected output
+
+Your final dataset should look conceptually like:
+
+| median_income | housing_median_age | total_rooms | median_house_value | predicted_median_house_value | prediction_error |
+|---:|---:|---:|---:|---:|---:|
+| 4.8984 | 31 | 3073 | 311700 | 256476 | -55224 |
+| 6.4958 | 37 | 3333 | 500001 | 337128 | -162873 |
+
+---
+
+# Simplest diagram
+
+```mermaid
+flowchart LR
+    A["housing_test_data<br/>test rows with actual values"] --> B["Apply model<br/>linear_regression_model"]
+
+    B --> C["housing_test_predictions<br/>actual + predicted values"]
+```
+
+---
+
+## If you cannot find “Apply model”
+
+If Pipeline Builder does **not** show any model/prediction/inference transform, then the simplest test is not through Pipeline Builder. The fallback is a tiny Python transform/notebook step.
+
+But first try searching Pipeline Builder for:
+
+```text
+model
+inference
+predict
+```
+<br> 
+<br> 
+<br> 
+
+----------------------------
+
+<br> 
+<br> 
+<br> 
+
+# **is this the result?**
+
+Yes — this is the result.
+
+You created the output dataset:
+
+```text
+housing_test_predictions
+```
+
+It has:
+
+```text
+3.4K rows
+4 columns
+```
+
+And the columns are:
+
+```text
+median_income
+housing_median_age
+total_rooms
+prediction
+```
+
+So the pipeline successfully did:
+
+```text
+housing_test_data
+        ↓
+linear_regression_model
+        ↓
+housing_test_predictions
+```
+
+The left panel confirms the inputs:
+
+- `housing_test_data`
+- `linear_regression_model`
+
+And it says it was updated via:
+
+```text
+housing_model_inference_test
+```
+
+So yes: this is your batch inference output.
+
+## **One note: this output only has the model input columns plus `prediction`. If you want to compare prediction to actual value, include `median_house_value` in the pipeline output too.**
+
+
+<img src="/assets/pal_9_03.png" alt="drones" width="100%">
+
+<br>
+
+<img src="/assets/pal_9_04.png" alt="drones" width="80%">
+
+<br>
 
 26.0721 (v1 26.0721)
