@@ -10,48 +10,41 @@ The enterprise platform controls almost everything. For now this section focuses
 
 <br>
 
-### **[0 PAL gist (based on demo D8 listed in section "3 Demos" later on this page)](/3x.pal_gist/)**
+### **[0 PAL gist (based on demo D8 listed in section "3 Demos" later on this page)](/3c.xxx_pal_gist/)**
 
 On the (rather short) page **[Hack](/0-demo/)** I layout the gist of what an AI LLM transformer (TF) does (which shows the core of AI really is). That single page required over a year of hands-on experience and research to put together. It summarizes the gist of AI in a way I have never seen.
 
 *Transformer AI hack* <br><img src="/assets/hack-08.png" alt="drones" width="35%" style="border: 1px solid #999;">
 
-
 The goal of this page is roughly the same, but the topic is Palantir (and any systems like Palantir (PAL)). You've probably heard about Palantir, about how PAL basically detects needles (unusual situations) in haystacks of data. With the help of AI. But what exactly does that mean? 
 
 *The crystal ball that can find a needle in a haystack is called a "palantir" ("seeing stone") in Lord of the Rings* <br><img src="/assets/pal_9_06.png" alt="drones" width="25%" style="border: 1px solid #999;">
-
-
 
 I spent several weeks doing Palantir demos (on a trial account that Palantir so graciously offers) to get a grounded understanding of what Palantir does. After a little over 2 weeks I finally got the gist. I suggested to PAL AI that we create **a demo that I thought demo the core of the needle in the haystack search (the idea was my original). PAL AI (AIP) agreed with the core of my thinking**. AIP and I were able to create a demo that showed by example the core of how PAL does the needle search. Of course, PAL does much more, but this was my first goal, the needle search algorithm. 
 
 *Left: A training data point; right: An inference test point similar to that training point (if the result is not ~=162178.45 then we found a needle in a haystack)* <br><img src="/assets/pal_9_05.png" alt="drones" width="90%" style="border: 1px solid #999;">
 
-
 The best thing about the demo: **I did most of the demo by not reading docs, but rather chatting with PAL AI** (AIP and FDE chat agents built into PAL). Thats the focus of the next section "1 PAL AI usage strategy" (below).
 
+<br>
+
+### **[1 PAL AI usage strategy (WIP)](/3c.bbb_pal_strategy_fde/)**
+
+How to maximize AI usage when using PAL (by using AIP/FDE). In particular (WIP) how I believe AI inside of PAL (and other apps) will vastly improve in the few years, and how this will revolutionize end user programming (**PAL's built-in AI has made using PAL vastly easier**, but there is still much room for improvement). This is just another example of how **AI is not a tech bubble (its only getting started)**.
 
 <br>
 
-### **[1 PAL AI usage strategy](/3c.bbb_pal_strategy_fde/)**
-
-How to maximize AI usage when using PAL (by using AIP/FDE). 
-
-
-<br>
-
-### **[2 PAL concepts (my own take on PAL)](/3c.ccc_pal_concepts/)**
+### **[2 PAL concepts (my own take on PAL) (WIP)](/3c.ccc_pal_concepts/)**
 
 This is a long term goal (just like creating core concepts for AI has been). <br><br>*(placeholder pic; eventually I will create master pic that sums up core concepts)* <br><img src="/assets/pal-demo-01.png" alt="drones" width="65%" style="border: 1px solid #999;">
 
 <br>
 
-### **3 Demos (docx files that detail the results from my testing of Palantir demos)** 
+### **3 Demos (detailed results from my testing of Palantir demos)** 
 
 **[PAL demo strategy](/3c.aaa_pal_strategy_demos/)** is 
 - Document in docx (MS.Word) files. These are detailed and can be realistically maintained (the official demos seem to not be updated often; videos are nice, but they get outdated quickly and are impossible to update).
 - Use AI (internal PAL AIP/FDE) as much as possible (avoid docs and tutorials if possible).
-
 
 Following is the list of demos. I added numbering, conceptual diagrams, and a few error updates to the original demos. I will probably come up with my own set of demos. 
 

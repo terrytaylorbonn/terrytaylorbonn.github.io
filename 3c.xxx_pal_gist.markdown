@@ -1,0 +1,42 @@
+---
+layout: page
+title: 3.0 PAL gist
+permalink: /3c.xxx_pal_gist/
+---
+
+<br>
+
+[← 3c PAL](/pal/)
+
+<br>
+
+xxxxxxxxxxxxxxxx
+
+<!--
+See the working text for this QS in
+- **[\#xxx_\xxxxxxx.docx](https://drive.google.com/drive/folders/1-Adawag9uA8_bq-hDF-nOuPYaRLz1eEO)**. 
+- **[Demo URL](https://learn.palantir.com/xxxxxxxxxxxxxxxxxxx)**  
+
+
+<br>*00* <br><img src="/assets/pal-demo-xxxx.png" alt="xxxxxx" width="100%" style="border: 1px solid #999;">
+
+<br>
+
+----------------------------
+----------------------------
+----------------------------
+----------------------------
+
+<br>
+<br>
+
+# **NOTES**
+
+xxxxxx
+
+<br>
+-->
+
+<br>
+
+26.0722 (v1 26.0722)
