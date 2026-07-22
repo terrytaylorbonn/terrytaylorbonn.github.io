@@ -7,6 +7,13 @@ permalink: /pal/
 <br>
 
 The enterprise platform controls almost everything. For now this section focuses solely on the Palantir (PAL) platform.
+ 
+**TOC** 
+- 0 The gist of Palantir (based on demo D8 listed in section "3 Demos" later on this page)
+- 1 PAL AI usage strategy 
+- 2 PAL concepts (my own take on PAL)
+- 3 Demos (detailed results from my testing of Palantir demos)
+
 
 <br>
 
