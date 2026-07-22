@@ -25,9 +25,9 @@ This is a long term goal (just like creating core concepts for AI has been). <br
 
 ### **3 Demos (my modified versions)** 
 
-**[PAL demo strategy)](/3c.aaa_pal_strategy_demos/)** i based on:
-- docx files are detailed and can be realistically maintained (the official demos seem to not be updated often; videos are nice, but they get outdated quickly and are impossible to update)
-- maximum usage of AI (AIP/FDE) within PAL to get things done.
+**[PAL demo strategy](/3c.aaa_pal_strategy_demos/)** is 
+- Document in docx (MS.Word) files. These are detailed and can be realistically maintained (the official demos seem to not be updated often; videos are nice, but they get outdated quickly and are impossible to update).
+- Use AI (internal PAL AIP/FDE) as much as possible (avoid docs and tutorials if possible).
 
 
 Following is the list of demos. I added numbering, conceptual diagrams, and a few error updates to the original demos. I will probably come up with my own set of demos. 
