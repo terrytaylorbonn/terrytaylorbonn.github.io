@@ -23,7 +23,7 @@ The goal of this page is roughly the same, but the topic is Palantir (and any sy
 
 
 
-I spent several weeks doing Palantir demos (on a trial account that Palantir so graciously offers) to get a grounded understanding of what Palantir does. After a little over 2 weeks I finally got it. I suggested to PAL AI that we create **a demo that I thought demo the core of the needle in the haystack search (the idea was my original). PAL AI (AIP) agreed with the core of my thinking**. AIP and I were able to create a demo that showed by example the core of how PAL does the needle search. Of course, PAL does much more, but this was my first goal, the needle search algorithm. 
+I spent several weeks doing Palantir demos (on a trial account that Palantir so graciously offers) to get a grounded understanding of what Palantir does. After a little over 2 weeks I finally got the gist. I suggested to PAL AI that we create **a demo that I thought demo the core of the needle in the haystack search (the idea was my original). PAL AI (AIP) agreed with the core of my thinking**. AIP and I were able to create a demo that showed by example the core of how PAL does the needle search. Of course, PAL does much more, but this was my first goal, the needle search algorithm. 
 
 *Left: A training data point; right: An inference test point similar to that training point (if the result is not ~=162178.45 then we found a needle in a haystack)* <br><img src="/assets/pal_9_05.png" alt="drones" width="90%" style="border: 1px solid #999;">
 
@@ -34,8 +34,6 @@ The best thing about the demo: **I did most of the demo by not reading docs, but
 <br>
 
 ### **[1 PAL AI usage strategy](/3c.bbb_pal_strategy_fde/)**
-
-
 
 How to maximize AI usage when using PAL (by using AIP/FDE). 
 
@@ -48,7 +46,7 @@ This is a long term goal (just like creating core concepts for AI has been). <br
 
 <br>
 
-### **3 Demos (my modified versions)** 
+### **3 Demos (docx files that detail the results from my testing of Palantir demos)** 
 
 **[PAL demo strategy](/3c.aaa_pal_strategy_demos/)** is 
 - Document in docx (MS.Word) files. These are detailed and can be realistically maintained (the official demos seem to not be updated often; videos are nice, but they get outdated quickly and are impossible to update).
