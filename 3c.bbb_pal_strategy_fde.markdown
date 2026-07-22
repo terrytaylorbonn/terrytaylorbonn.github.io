@@ -1,6 +1,6 @@
 ---
 layout: page
-title: 3c(b) PAL demo FDE usage maximize
+title: 3c.1 PAL AI usage strategy
 permalink: /3c.bbb_pal_strategy_fde/
 ---
 
@@ -14,6 +14,48 @@ Content:
 - Maximize FDE usage.
 - How AI helps to complete (without FDE I could not have completed half of the demo content).
 - **LEARN USING FDE.**  
+
+<br>
+
+-----------------------
+-----------------------
+-----------------------
+-----------------------
+-----------------------
+-----------------------
+-----------------------
+-----------------------
+-----------------------
+
+<br>
+
+This is PAL demo #8. 
+- #619_pal_8_model_integration_v02_26.0722_ss
+https://ziptieai.com/3c.8_pal_8_model_integration/ 
+
+AI used: 
+- FDE (GPT5.5)
+- AIP (assist)
+
+<br>
+
+
+-----------------------
+
+<br>
+
+- (1) Tutorial - Set up a machine learning project in Foundry
+- 2a. Tutorial: Train a model in Model Studio
+- 2b. Tutorial: Train a model in a Jupyter notebook
+2c interactive inference app (using only AIP/FDE (no tutorial/demo docs))
+- 2c.0 overview
+  - 2c.1 ME: how can i test this model? using pipeline, or just some simple verification test
+  - 2c.2 ME: pipeline test step by step 
+  - 2c.3 Deploy the model (done already in 2b in Jupyter notebook)
+  - 2c.4 Publish the model as a Function
+  - 2d.5 Create a Workshop app (UI)
+
+
 
 <!--
 See the working text for this QS in
@@ -42,4 +84,4 @@ xxxxxx
 
 <br>
 
-26.0720 (v1 26.0720)
+26.0722 (v1 26.0720)
