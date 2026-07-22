@@ -9,10 +9,10 @@ permalink: /pal/
 The enterprise platform controls almost everything. For now this section focuses solely on the Palantir (PAL) platform.
  
 **TOC** 
-- 0 The gist of Palantir (based on demo D8 listed in section "3 Demos" later on this page)
-- 1 PAL AI usage strategy 
-- 2 PAL concepts (my own take on PAL)
-- 3 Demos (detailed results from my testing of Palantir demos)
+- **0 The gist of Palantir** (based on demo D8 listed in section "3 Demos" later on this page)
+- **1 PAL AI usage strategy** 
+- **2 PAL concepts** (my own take on PAL)
+- **3 Demos** (detailed results from my testing of Palantir demos)
 
 
 <br>
@@ -27,11 +27,6 @@ The goal of this page is roughly the same, but the topic is Palantir (PAL) (and 
 
 *The crystal ball that can find a needle in a haystack is called a "palantir" ("seeing stone") in Lord of the Rings* <br><img src="/assets/pal_9_06.png" alt="drones" width="25%" style="border: 1px solid #999;">
 
-I spent several weeks doing PAL demos (on a trial account that PAl so graciously offers) to get a grounded understanding of what PAL does (of course, PAL does much more, but this to me is the core ability, where it all started, the haystack needle search algorithm). After a little over 2 weeks I finally got the gist. I suggested to PAL AI that we create **a demo that I thought would reveal the gist of the needle in the haystack search (this demo was my original idea). The built-in PAL AI (AIP) chatbot agreed "whole-heartedly"**. AIP and I were able to create a demo that showed by example the core of how PAL does the needle search.  
-
-*Left: A training data point; right: An inference test point similar to that training point (if the result is not ~=162178.45 then we found a needle in a haystack)* <br><img src="/assets/pal_9_05.png" alt="drones" width="90%" style="border: 1px solid #999;">
-
-The best thing about the demo: **I did most of the demo by not reading docs, but rather chatting with PAL AI** (AIP and FDE chat agents built into PAL). Thats the focus of the next section "1 PAL AI usage strategy" (below).
 
 <br>
 
@@ -42,6 +37,8 @@ How to maximize AI usage when using PAL (by using AIP/FDE). In particular (WIP) 
 <br>
 
 ### **[2 PAL concepts (my own take on PAL) (WIP)](/3c.ccc_pal_concepts/)**
+
+(include summaries of tool usage)
 
 This is a long term goal (just like creating core concepts for AI has been). <br><br>*(placeholder pic; eventually I will create master pic that sums up core concepts)* <br><img src="/assets/pal-demo-01.png" alt="drones" width="65%" style="border: 1px solid #999;">
 

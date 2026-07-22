@@ -10,6 +10,8 @@ permalink: /3c.ccc_pal_concepts/
 
 <br>
 
+(include summaries of tool usage)
+
 Content:
 - PAL concepts (This is a long term goal (just like creating core concepts for AI has been)).
 - Especially how any PAL competitors in the future will follow the same routes. 

@@ -11,17 +11,17 @@ permalink: /3c.xxx_pal_gist/
 <br>
 
 **TOC**
-- xxxxxxxxxx
-- xxxxxxxxxx
+- **1 The gist of non-AI PAL**
+- **2 The gist of AI PAL**
+- **3 Demo 8-1 (2c.2)**: pipeline + AI model » results
+- **4 Demo 8-2 (2c.3-5)**: deploy model / function / UI app (individual input / results)
+- **5 Demo 8-3 (2c.X)**: REAL WORLD detect from big data input (streaming??)
 
 <br>
 
-# **1 The gist of a non-AI haystack needle detection (PAL's original algorithms)**
+# **1 The gist of non-AI PAL**
 
-<br>
-
-
-
+non-AI PAL haystack needle detection (PAL's original algorithms)
 
 #### **ME:** 
 No AI, searching for haystack needles. 
@@ -32,7 +32,21 @@ You can do this, but you have to be very clever to get everthing just right.
 
 <br>
 
-# **2c.2 TEST: pipeline + AI model >> results**
+# **2 The gist of AI PAL**
+
+AI haystack needle detection demos**
+
+I spent several weeks doing PAL demos (on a trial account that PAl so graciously offers) to get a grounded understanding of what PAL does (of course, PAL does much more, but this to me is the core ability, where it all started, the haystack needle search algorithm). After a little over 2 weeks I finally got the gist. I suggested to PAL AI that we create **a demo that I thought would reveal the gist of the needle in the haystack search (this demo was my original idea). The built-in PAL AI (AIP) chatbot agreed "whole-heartedly"**. AIP and I were able to create a demo that showed by example the core of how PAL does the needle search.  
+
+The best thing about the demo: **I did most of the demo by not reading docs, but rather chatting with PAL AI** (AIP and FDE chat agents built into PAL). Thats the focus of the next section "1 PAL AI usage strategy" (below).
+
+
+*Green = URL; Blue = Input; Red = Output (from model)* <br><img src="/assets/pal_9_09.png" alt="drones" width="100%" style="border: 1px solid #999;">
+
+
+<br>
+
+# **3 Demo 8-1 (2c.2 ): pipeline + AI model >> results**
 
 
 #### **AIP:** 
@@ -49,7 +63,7 @@ In this first test, the test inference data was run through the pipeline/model. 
 
 <br>
 
-# **2c.3-5 TEST: deploy model / function / UI app (individual input / results)**
+# **4 Demo 8-2 (2c.3-5): deploy model / function / UI app (individual input / results)**
 
 #### (1) In Your Housing Demo — What Anomalies Could You Detect?
 Your model predicts house prices based on features like square footage, location, etc. Anomalies would be records where the actual value diverges sharply from the predicted value, which could indicate:
@@ -63,7 +77,7 @@ Your model predicts house prices based on features like square footage, location
  
 <br>
 
-# **2c.X REAL WORLD: detect from big data input (streaming??)**
+# **5 Demo 8-3 (2c.X): REAL WORLD detect from big data input (streaming??)**
 
 #### **AIP:** 
 So the progression from your demo is clean: same model, same tools, just pointed at a larger dataset with a pipeline that runs continuously or on schedule — and suddenly you have a genuine threat-detection or anomaly-detection system, which is exactly what Palantir was originally designed to power.
