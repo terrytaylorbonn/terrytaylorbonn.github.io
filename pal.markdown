@@ -25,7 +25,7 @@ The goal of this page it to explain (via demos) the gist of a portion of the Pal
 
 PS: The basic idea is similar to the (rather short) page **[Hack](/0-demo/)** where I layout the gist of what an AI LLM transformer (TF) does (which shows the core of AI really is). That single page required over a year of hands-on experience and research to put together. It summarizes my own unique take on the gist of AI.
 
-*The gist of the LLM transformer (a hack; Palantir is not a hack, but a tool designed to magnify the AI LLM hack's positives and dimish the negatives)* <br><img src="/assets/hack-08.png" alt="drones" width="35%" style="border: 1px solid #999;">
+*The gist of the LLM transformer (a hack; Palantir is not a hack, but a tool designed to magnify the AI LLM hack's positives and dimish the negatives)* <br><img src="/assets/hack-08.png" alt="drones" width="35%" style="border: 1px solid #999;"> 
 
 <br>
 

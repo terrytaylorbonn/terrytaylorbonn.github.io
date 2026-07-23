@@ -32,7 +32,9 @@ You can do this, but you have to be very clever to get everthing just right.
 
 <br>
 
-# **2 The gist of AI PAL**
+
+
+# **2b The gist of AI PAL**
 
 AI haystack needle detection demos**
 
