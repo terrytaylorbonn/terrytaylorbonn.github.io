@@ -26,7 +26,7 @@ The enterprise platform controls almost everything. For now this section focuses
 
 #### **3c.1.1 The PAL framework simplifies tasks**
 
-**Real world apps change quickly**. PAL apps are used to analyze complex environments that are constantly changing. You need a framework to allow focus on the parts that matter. **[3.1 code-first agents](/3_agents/)** was my attempt to do show how to create app agents (AI, non-AI) without a framework (I did not really understand how PAL worked then). Its a lot of work. Complexity. Its difficult to focus on the core task.  
+**Real world apps change quickly**. PAL apps are used to analyze complex environments that are constantly changing. You need a framework to allow focus on the parts that matter. **[3.1 code-first agents](/3_agents/)** was my attempt to do show how to create app agents (AI, non-AI) without a framework (I did not really understand how PAL worked then). Its a lot of work. Complexity. Its difficult to focus on the core task. **PAL is a framework that manages the complexity of creating AI apps**.  
 
 <img src="/assets/pal_9_13.png" alt="drones" width="85%" style="border: 1px solid #999;">
 
@@ -42,24 +42,30 @@ This was the original PAL architecture (25 years ago, shortly after 9/11). This 
 
 #### **3c.1.3 PAL + AI (in end user app)**
 
-On the (rather short) page **[Hack](/0-demo/)** I layout the gist of what an AI LLM transformer (TF) does (which shows the core of AI really is). Most importantly on that page I show that **LLM TF's are simply pattern classification algorithms**. The classification of input tokens determines the output tokens (TF's understand nothing about language, they only generate a classification number for the input numbers). Recent GPU performance breakthroughs mean the patterns can scale to massive sizes, increasing the sheer number of patterns that can be reliably classified. **That is not intelligence, but pattern matching. An amazing hack. And it works.. mostly. But it needs guardrails.** 
+on page **[3.3 Agent PAL core demos](/3.1-agentic/)** were also demos with AI.
 
-**That's where PAL comes in**. 
-- **The LLM transformer is a hack, but PAL is not**. PAL is a tool designed to magnify the AI LLM hack's positives and dimish the negatives. 
-- **PAL is a framework that manages the complexity of creating AI apps**. 
+<img src="/assets/pal_9_15.png" alt="drones" width="85%" style="border: 1px solid #999;">
 
-*The gist of the LLM transformer (a hack; Palantir is not a hack, but a tool designed to magnify the AI LLM hack's positives and dimish the negatives)* <br><img src="/assets/hack-08.png" alt="drones" width="35%" style="border: 1px solid #999;"> 
+There are 2 problems when using AI for detection 
+- (1) **Data sources are often messy**. You need something like PAL pipelines and ontology to clean things up.
+- (2) **Thats important because AI is just pattern recognition**. On the (rather short) page **[Hack](/0-demo/)** I layout the gist of what an AI LLM transformer (TF) does (which shows the core of AI really is). Most importantly on that page I show that **LLM TF's are simply pattern classification algorithms**. The classification of input tokens determines the output tokens (TF's understand nothing about language, they only generate a classification number for the input numbers). Recent GPU performance breakthroughs mean the patterns can scale to massive sizes, increasing the sheer number of patterns that can be reliably classified. **That is not intelligence, but pattern matching. An amazing hack. And it works.. mostly. But it needs guardrails.** 
+
+That's where PAL comes in. **PAL minimizes the limitations of the AI hack while maximizing its effectiveness**. 
+
+*The LLM transformer is a hack, but Palantir provides the guard rails that maximize its effectiveness* <br><img src="/assets/hack-08.png" alt="drones" width="35%" style="border: 1px solid #999;"> 
 
 <br>
 
 <!-- This is a long term goal (just like creating core concepts for AI has been). <br><br>*(placeholder pic; eventually I will create master pic that sums up core concepts)* <br><img src="/assets/pal-demo-01.png" alt="drones" width="65%" style="border: 1px solid #999;">
 <br> -->
 
-### **[3c.2 PAL AI dev assistants (WIP)](/3c.bbb_pal_strategy_fde/)**
+### **3c.2 PAL AI dev assistants**
 
-**Real world apps change quickly**. This ZiptieAI site is constantly evolving. I can manage this task by myself thanks to the AI tools that vastly simplify website management. Its the same when creating apps with PAL tools. **[3c.2 PAL AI dev assistants (WIP)](/3c.bbb_pal_strategy_fde/) shows how to maximize AI usage when using PAL (by using AIP/FDE)**. 
+<!-- /3c.bbb_pal_strategy_fde/ 
+**[3c.2 PAL AI dev assistants (WIP)](/3c.bbb_pal_strategy_fde/) shows how to maximize AI usage when using PAL (by using AIP/FDE)**. 
+-->
 
-AI inside of PAL (and other apps) will vastly improve in the few years, and this will revolutionize end user programming (**PAL's built-in AI has made using PAL vastly easier already**, but there is still much room for improvement). This is just another example of how **AI is not a tech bubble (its only getting started)**.
+**Real world apps change quickly**. This ZiptieAI site is constantly evolving. I can manage this task by myself thanks to the AI tools that vastly simplify website management. Its the same when creating apps with PAL tools. AI inside of PAL (and other apps) will vastly improve in the few years, and this will revolutionize end user programming (**PAL's built-in AI has made using PAL vastly easier already**, but there is still much room for improvement). This is just another example of how **AI is not a tech bubble (its only getting started)**.
 
 *No need for traditional docs (that you have to sift through to find what you need); PAL's built in AI answers your questions with details instructions* <br>
 <img src="/assets/pal_9_10.png" alt="drones" width="100%" style="border: 1px solid #999;">
