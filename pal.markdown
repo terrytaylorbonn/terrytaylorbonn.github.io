@@ -11,32 +11,42 @@ The enterprise platform controls almost everything. For now this section focuses
 <br>
 
 **TOC** 
-- **2 PAL app concepts (without/with AI)** (my own take)
-- **1 PAL AI assistant usage strategy** (Understanding how to use PAL's AI tools is critical for learning to use PAL). 
-- **0 The gist of Palantir "haystack needle" (HN) apps** (demos that show this)
-- **3 Demos** (right now this is just a chronological list of what I did, but I might reorganize this in the future)
+- **1 PAL app concepts (without/with AI)** (my own take)
+- **2 PAL AI assistant usage strategy** (Understanding how to use PAL's AI tools is critical for learning to use PAL). 
+- **3 The gist of Palantir "haystack needle" (HN) apps** (demos that show this)
+- **4 Demos** (right now this is just a chronological list of what I did, but I might reorganize this in the future)
 
 <br>
 
-### **[2 PAL app concepts (without/with AI) (WIP)](/3c.ccc_pal_concepts/)**
+### **1 PAL app concepts (without/with AI) (WIP)**
 
-#### **The PAL framework simplifies tasks**
+<!-- (/3c.ccc_pal_concepts/) -->
+
+<br>
+
+#### **1.1 The PAL framework simplifies tasks**
 
 **Real world apps change quickly**. PAL apps are used to analyze complex environments that are constantly changing. You need a framework to allow focus on the parts that matter. **[3.1 code-first agents](/3_agents/)** was my attempt to do show how to create app agents (AI, non-AI) without a framework (I did not really understand how PAL worked then). Its a lot of work. Complexity. Its difficult to focus on the core task.  
 
 <img src="/assets/pal_9_13.png" alt="drones" width="85%" style="border: 1px solid #999;">
 
-#### **Without AI**
+<br>
 
-This was the original PAL architecture (25 years ago, shortly after 9/11). This is what demos D1-D7 (below on this page) are all about. Detecting situations without AI.
+#### **1.2 PAL (no end user app AI)**
 
-#### **With AI**
+This was the original PAL architecture (25 years ago, shortly after 9/11). This is what demos D1-D7 (below on this page) are all about. Detecting situations without AI. I did some demos to test this kind of functionality without a framework on page **[3.3 Agent PAL core demos](/3.1-agentic/)** (again, my knowledge of PAL back then was limited to what I read).
 
-On the (rather short) page **[Hack](/0-demo/)** I layout the gist of what an AI LLM transformer (TF) does (which shows the core of AI really is). Most importantly on that page I show that LLM TF's are simply pattern classification algorithms. The classification of input tokens determines the output tokens (TF's understand nothing about language, they only generate a classification number for the input numbers). Recent GPU performance breakthroughs mean the patterns can scale to massive sizes, increasing the sheer number of patterns that can be reliably classified. That is not intelligence, but pattern matching. An amazing hack. And it works.. mostly. But it needs guardrails. 
+<img src="/assets/pal_9_14.png" alt="drones" width="85%" style="border: 1px solid #999;">
 
-That's where PAL comes in. 
-- The LLM transformer is a hack, but PAL is not. PAL is a tool designed to magnify the AI LLM hack's positives and dimish the negatives. 
-- Another critical aspect of PAL is that it is a framework that manages the complexity of creating AI apps. 
+<br>
+
+#### **1.3 PAL + AI (in end user app)**
+
+On the (rather short) page **[Hack](/0-demo/)** I layout the gist of what an AI LLM transformer (TF) does (which shows the core of AI really is). Most importantly on that page I show that **LLM TF's are simply pattern classification algorithms**. The classification of input tokens determines the output tokens (TF's understand nothing about language, they only generate a classification number for the input numbers). Recent GPU performance breakthroughs mean the patterns can scale to massive sizes, increasing the sheer number of patterns that can be reliably classified. **That is not intelligence, but pattern matching. An amazing hack. And it works.. mostly. But it needs guardrails.** 
+
+**That's where PAL comes in**. 
+- **The LLM transformer is a hack, but PAL is not**. PAL is a tool designed to magnify the AI LLM hack's positives and dimish the negatives. 
+- **PAL is a framework that manages the complexity of creating AI apps**. 
 
 *The gist of the LLM transformer (a hack; Palantir is not a hack, but a tool designed to magnify the AI LLM hack's positives and dimish the negatives)* <br><img src="/assets/hack-08.png" alt="drones" width="35%" style="border: 1px solid #999;"> 
 
@@ -45,7 +55,7 @@ That's where PAL comes in.
 <!-- This is a long term goal (just like creating core concepts for AI has been). <br><br>*(placeholder pic; eventually I will create master pic that sums up core concepts)* <br><img src="/assets/pal-demo-01.png" alt="drones" width="65%" style="border: 1px solid #999;">
 <br> -->
 
-### **[1 PAL AI usage strategy (WIP)](/3c.bbb_pal_strategy_fde/)**
+### **[2 PAL AI usage strategy (WIP)](/3c.bbb_pal_strategy_fde/)**
 
 **Real world apps change quickly**. This ZiptieAI site is constantly evolving. I can manage this task by myself thanks to the AI tools that vastly simplify website management. Its the same when creating apps with PAL tools. **[1 PAL AI usage strategy (WIP)](/3c.bbb_pal_strategy_fde/) shows how to maximize AI usage when using PAL (by using AIP/FDE)**. 
 
@@ -56,7 +66,7 @@ AI inside of PAL (and other apps) will vastly improve in the few years, and this
 
 <br>
 
-### **[0 The gist of Palantir "haystack needle" (HN) apps](/3c.xxx_pal_gist/)**
+### **[3 The gist of Palantir "haystack needle" (HN) apps](/3c.xxx_pal_gist/)**
 
 <!-- (based on demo D8 listed in section "3 Demos" later on this page) -->
 
@@ -68,7 +78,7 @@ But how exactly did they do that? That's of practical interest currently because
 
 <br>
 
-### **3 Demos (detailed results from my testing of Palantir demos)**
+### **4 Demos (detailed results from my testing of Palantir demos)**
 
 **[PAL demo strategy](/3c.aaa_pal_strategy_demos/)** is 
 - Document in docx (MS.Word) files. These are detailed and can be realistically maintained (the official demos seem to not be updated often; videos are nice, but they get outdated quickly and are impossible to update). **My personal opinion (and the future direction of my own demos) is that demo documentation should rely more on describing how to work with AI to do hands-on step-by-step demos** (not describing the actual details).<br><img src="/assets/pal_9_11.png" alt="drones" width="44%" style="border: 1px solid #999;"><br><br> 
