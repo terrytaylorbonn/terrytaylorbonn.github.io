@@ -22,11 +22,19 @@ The enterprise platform controls almost everything. For now this section focuses
 
 <!-- (/3c.ccc_pal_concepts/) -->
 
+This is a rough draft.... I only started using PAL in July 2026, so I still dont have a good grasp of the spectrum of what PAL apps do. Following diagram shows the parts that the PAL tools in Foundy used for the "haystack needle" demos. There is so much more. So this section just focuses on a narrow portion of the PAL toolset. 
+
+
 <br>
 
 #### **3c.1.1 The PAL framework simplifies tasks**
 
-**Real world apps change quickly**. PAL apps are used to analyze complex environments that are constantly changing. You need a framework to allow focus on the parts that matter. **[3.1 code-first agents](/3_agents/)** was my attempt to do show how to create app agents (AI, non-AI) without a framework (I did not really understand how PAL worked then). Its a lot of work. Complexity. Its difficult to focus on the core task. **PAL is a framework that manages the complexity of creating AI apps**.  
+**Real world apps change quickly**. PAL apps are used to analyze complex environments that are constantly changing. You need a framework to allow focus on the parts that matter. **PAL is a framework that manages the complexity of creating AI apps**. 
+
+<img src="/assets/pal_9_16.png" alt="drones" width="65%" style="border: 1px solid #999;">
+
+
+*I attempted to show how to create app agents (AI, non-AI) without a framework in **[3.1 code-first agents](/3_agents/)** (I did not really understand how PAL worked then). Its a lot of work. Complexity. Its difficult to focus on the core task.*
 
 <img src="/assets/pal_9_13.png" alt="drones" width="85%" style="border: 1px solid #999;">
 
@@ -34,7 +42,12 @@ The enterprise platform controls almost everything. For now this section focuses
 
 #### **3c.1.2 PAL (no end user app AI)**
 
-This was the original PAL architecture (25 years ago, shortly after 9/11). This is what demos D1-D7 (below on this page) are all about. Detecting situations without AI. I did some demos to test this kind of functionality without a framework on page **[3.3 Agent PAL core demos](/3.1-agentic/)** (again, my knowledge of PAL back then was limited to what I read).
+This was the original PAL architecture (25 years ago, shortly after 9/11). This is what demos D1-D7 (below on this page) are all about. Detecting situations without AI. 
+
+<img src="/assets/pal_9_17.png" alt="drones" width="65%" style="border: 1px solid #999;">
+
+
+*I did some demos to test this kind of functionality without a framework on page **[3.3 Agent PAL core demos](/3.1-agentic/)** (again, my knowledge of PAL back then was limited to what I read).*
 
 <img src="/assets/pal_9_14.png" alt="drones" width="85%" style="border: 1px solid #999;">
 
@@ -42,9 +55,10 @@ This was the original PAL architecture (25 years ago, shortly after 9/11). This 
 
 #### **3c.1.3 PAL + AI (in end user app)**
 
-on page **[3.3 Agent PAL core demos](/3.1-agentic/)** were also demos with AI.
+I started adding AI to the end user app in demo D8.
 
-<img src="/assets/pal_9_15.png" alt="drones" width="85%" style="border: 1px solid #999;">
+<img src="/assets/pal_9_18.png" alt="drones" width="25%" style="border: 1px solid #999;">
+
 
 There are 2 problems when using AI for detection 
 - (1) **Data sources are often messy**. You need something like PAL pipelines and ontology to clean things up.
@@ -53,6 +67,11 @@ There are 2 problems when using AI for detection
 That's where PAL comes in. **PAL minimizes the limitations of the AI hack while maximizing its effectiveness**. 
 
 *The LLM transformer is a hack, but Palantir provides the guard rails that maximize its effectiveness* <br><img src="/assets/hack-08.png" alt="drones" width="35%" style="border: 1px solid #999;"> 
+
+
+*I did demos to test this kind of functionality without a framework and with AI in the app on page **[3.3 Agent PAL core demos](/3.1-agentic/)**.*
+
+<img src="/assets/pal_9_15.png" alt="drones" width="85%" style="border: 1px solid #999;">
 
 <br>
 
