@@ -11,20 +11,20 @@ The enterprise platform controls almost everything. For now this section focuses
 <br>
 
 **TOC** 
-- **1 PAL app concepts (without/with AI)** (my own take)
-- **2 PAL AI dev assistants** (Understanding how to use PAL's AI tools is critical for learning to use PAL). 
-- **3 The gist of Palantir "haystack needle" (HN) apps** (demos that show this)
-- **4 Demos** (right now this is just a chronological list of what I did, but I might reorganize this in the future)
+- **3c.1 PAL app concepts** (my own take)
+- **3c.2 PAL AI dev assistants** (Understanding how to use PAL's AI tools is critical for learning to use PAL). 
+- **3c.3 The gist of Palantir "haystack needle" (HN) apps** (demos that show this)
+- **3c.4 Demos** (right now this is just a chronological list of what I did, but I might reorganize this in the future)
 
 <br>
 
-### **1 PAL app concepts (without/with AI) (WIP)**
+### **3c.1 PAL app concepts (WIP)**
 
 <!-- (/3c.ccc_pal_concepts/) -->
 
 <br>
 
-#### **1.1 The PAL framework simplifies tasks**
+#### **3c.1.1 The PAL framework simplifies tasks**
 
 **Real world apps change quickly**. PAL apps are used to analyze complex environments that are constantly changing. You need a framework to allow focus on the parts that matter. **[3.1 code-first agents](/3_agents/)** was my attempt to do show how to create app agents (AI, non-AI) without a framework (I did not really understand how PAL worked then). Its a lot of work. Complexity. Its difficult to focus on the core task.  
 
@@ -32,7 +32,7 @@ The enterprise platform controls almost everything. For now this section focuses
 
 <br>
 
-#### **1.2 PAL (no end user app AI)**
+#### **3c.1.2 PAL (no end user app AI)**
 
 This was the original PAL architecture (25 years ago, shortly after 9/11). This is what demos D1-D7 (below on this page) are all about. Detecting situations without AI. I did some demos to test this kind of functionality without a framework on page **[3.3 Agent PAL core demos](/3.1-agentic/)** (again, my knowledge of PAL back then was limited to what I read).
 
@@ -40,7 +40,7 @@ This was the original PAL architecture (25 years ago, shortly after 9/11). This 
 
 <br>
 
-#### **1.3 PAL + AI (in end user app)**
+#### **3c.1.3 PAL + AI (in end user app)**
 
 On the (rather short) page **[Hack](/0-demo/)** I layout the gist of what an AI LLM transformer (TF) does (which shows the core of AI really is). Most importantly on that page I show that **LLM TF's are simply pattern classification algorithms**. The classification of input tokens determines the output tokens (TF's understand nothing about language, they only generate a classification number for the input numbers). Recent GPU performance breakthroughs mean the patterns can scale to massive sizes, increasing the sheer number of patterns that can be reliably classified. **That is not intelligence, but pattern matching. An amazing hack. And it works.. mostly. But it needs guardrails.** 
 
@@ -55,9 +55,9 @@ On the (rather short) page **[Hack](/0-demo/)** I layout the gist of what an AI 
 <!-- This is a long term goal (just like creating core concepts for AI has been). <br><br>*(placeholder pic; eventually I will create master pic that sums up core concepts)* <br><img src="/assets/pal-demo-01.png" alt="drones" width="65%" style="border: 1px solid #999;">
 <br> -->
 
-### **[2 PAL AI dev assistants (WIP)](/3c.bbb_pal_strategy_fde/)**
+### **[3c.2 PAL AI dev assistants (WIP)](/3c.bbb_pal_strategy_fde/)**
 
-**Real world apps change quickly**. This ZiptieAI site is constantly evolving. I can manage this task by myself thanks to the AI tools that vastly simplify website management. Its the same when creating apps with PAL tools. **[1 PAL AI usage strategy (WIP)](/3c.bbb_pal_strategy_fde/) shows how to maximize AI usage when using PAL (by using AIP/FDE)**. 
+**Real world apps change quickly**. This ZiptieAI site is constantly evolving. I can manage this task by myself thanks to the AI tools that vastly simplify website management. Its the same when creating apps with PAL tools. **[3c.2 PAL AI dev assistants (WIP)](/3c.bbb_pal_strategy_fde/) shows how to maximize AI usage when using PAL (by using AIP/FDE)**. 
 
 AI inside of PAL (and other apps) will vastly improve in the few years, and this will revolutionize end user programming (**PAL's built-in AI has made using PAL vastly easier already**, but there is still much room for improvement). This is just another example of how **AI is not a tech bubble (its only getting started)**.
 
@@ -66,7 +66,7 @@ AI inside of PAL (and other apps) will vastly improve in the few years, and this
 
 <br>
 
-### **[3 The gist of Palantir "haystack needle" (HN) apps](/3c.xxx_pal_gist/)**
+### **[3c.3 The gist of Palantir "haystack needle" (HN) apps](/3c.xxx_pal_gist/)**
 
 <!-- (based on demo D8 listed in section "3 Demos" later on this page) -->
 
@@ -78,7 +78,7 @@ But how exactly did they do that? That's of practical interest currently because
 
 <br>
 
-### **4 Demos (detailed results from my testing of Palantir demos)**
+### **3c.4 Demos (detailed results from my testing of Palantir demos)**
 
 **[PAL demo strategy](/3c.aaa_pal_strategy_demos/)** is 
 - Document in docx (MS.Word) files. These are detailed and can be realistically maintained (the official demos seem to not be updated often; videos are nice, but they get outdated quickly and are impossible to update). **My personal opinion (and the future direction of my own demos) is that demo documentation should rely more on describing how to work with AI to do hands-on step-by-step demos** (not describing the actual details).<br><img src="/assets/pal_9_11.png" alt="drones" width="44%" style="border: 1px solid #999;"><br><br> 
