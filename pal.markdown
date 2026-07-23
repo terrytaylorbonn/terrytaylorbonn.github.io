@@ -21,12 +21,13 @@ The enterprise platform controls almost everything. For now this section focuses
 
 On the (rather short) page **[Hack](/0-demo/)** I layout the gist of what an AI LLM transformer (TF) does (which shows the core of AI really is). That single page required over a year of hands-on experience and research to put together. It summarizes the gist of AI in a way I have never seen.
 
+<!-- 
 *The gist of the LLM transformer (a hack)* <br><img src="/assets/hack-08.png" alt="drones" width="35%" style="border: 1px solid #999;">
 
 The goal of this page is roughly the same, but the topic is Palantir (PAL) (and similar systems; there are not any right now, but undoubtedly will be soon). You've probably heard about how basically detects needles (unusual situations) in haystacks of data with the help of AI. But what exactly does that mean? 
 
 *The crystal ball that can find a needle in a haystack is called a "palantir" ("seeing stone") in Lord of the Rings* <br><img src="/assets/pal_9_06.png" alt="drones" width="25%" style="border: 1px solid #999;">
-
+-->
 
 <br>
 
