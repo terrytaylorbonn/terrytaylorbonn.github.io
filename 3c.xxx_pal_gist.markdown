@@ -1,6 +1,6 @@
 ---
 layout: page
-title: 3.0 PAL gist
+title: 3c.3 PAL "haystack needle" algorithms gist (demo details)
 permalink: /3c.xxx_pal_gist/
 ---
 

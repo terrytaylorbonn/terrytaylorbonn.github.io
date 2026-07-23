@@ -13,8 +13,8 @@ The enterprise platform controls almost everything. For now this section focuses
 **TOC** 
 - **3c.1 PAL app concepts** (my own take)
 - **3c.2 PAL AI dev assistants** (Understanding how to use PAL's AI tools is critical for learning to use PAL). 
-- **3c.3 The gist of Palantir "haystack needle" (HN) apps** (demos that show this)
-- **3c.4 Demos** (right now this is just a chronological list of what I did, but I might reorganize this in the future)
+- **3c.3 The gist of Palantir "haystack needle" (HN) apps (demo details)** (demos that show this)
+- **3c.4 All demos (chronological order; detailed results from my tests)** (right now this is just a chronological list of what I did, but I might reorganize this in the future)
 
 <br>
 
@@ -72,19 +72,23 @@ That's where PAL comes in. **PAL minimizes the limitations of the AI hack while 
 
 <br>
 
-### **[3c.3 The gist of Palantir "haystack needle" (HN) apps](/3c.xxx_pal_gist/)**
+### **[3c.3 The gist of Palantir "haystack needle" (HN) apps (demo details)](/3c.xxx_pal_gist/)**
 
 <!-- (based on demo D8 listed in section "3 Demos" later on this page) -->
 
 What has interested me the most about Palantir for over a year now are the **"haystack needle" (HN) algorithms**. This was the original reason for the founding of PAL. 9/11 occured because the US government failed to detect obvious warning signs in a sea of data. PAL's job was to make sure that that did not happen again by creating a system that could sift through vast amounts of data (about, for example, a sudden surge in foreigners studying to fly large airliners) to flag potential threats. To find the needle in the haystack.
 
-But how exactly did they do that? That's of practical interest currently because (1) those HN techniques are being used in all business segments (not just military and intelligence) and (2) you can discover this for yourself by getting a PAL trial license (I have only a trial license and I am working alone). The goal of this page is to explain (via demos) the gist of a portion of the Palantir (PAL) toolset (there are not many competitors to PAL right now, but there will be in the near future, and they will follow a lot of the PAL methodologies). How to use that toolset to create HN apps.
+But how exactly did they implement the HN algorithms? That's of practical interest currently because 
+- (1) those **HN techniques are being used in all business segments** (not just military and intelligence) and 
+- (2) **you can learn the details hands-on yourself for free with no assistance**by getting a PAL trial license (I have only a trial license and I am working alone). 
+
+The goal of this page is to explain (via demos) the gist of a portion of the Palantir (PAL) toolset (there are not many competitors to PAL right now, but there will be in the near future, and they will follow a lot of the PAL methodologies). How to use that toolset to create HN apps.
 
 *The gist of Palantir: A crystal ball (called a "palantir" ("seeing stone") in Lord of the Rings) that can find a haystack needle (HN)* <br><img src="/assets/pal_9_06.png" alt="drones" width="25%" style="border: 1px solid #999;">
 
 <br>
 
-### **3c.4 Demos (detailed results from my testing of Palantir demos)**
+### **3c.4 All demos (chronological order; detailed results from my tests)**
 
 **[PAL demo strategy](/3c.aaa_pal_strategy_demos/)** is 
 - Document in docx (MS.Word) files. These are detailed and can be realistically maintained (the official demos seem to not be updated often; videos are nice, but they get outdated quickly and are impossible to update). **My personal opinion (and the future direction of my own demos) is that demo documentation should rely more on describing how to work with AI to do hands-on step-by-step demos** (not describing the actual details).<br><img src="/assets/pal_9_11.png" alt="drones" width="44%" style="border: 1px solid #999;"><br><br> 
