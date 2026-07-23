@@ -20,19 +20,23 @@ The enterprise platform controls almost everything. For now this section focuses
 
 ### **[2 PAL app concepts (without/with AI) (WIP)](/3c.ccc_pal_concepts/)**
 
-#### **The framework**
+#### **The PAL framework simplifies tasks**
 
+**Real world apps change quickly**. PAL apps are used to analyze complex environments that are constantly changing. You need a framework to allow focus on the parts that matter. **[3.1 code-first agents](/3_agents/)** was my attempt to do show how to create app agents (AI, non-AI) without a framework (I did not really understand how PAL worked then). Its a lot of work. Complexity. Its difficult to focus on the core task.  
 
+<img src="/assets/pal_9_13.png" alt="drones" width="85%" style="border: 1px solid #999;">
 
 #### **Without AI**
 
-This was the original PAL architecture. This is what demos D1-D7 are all about. 
+This was the original PAL architecture (25 years ago, shortly after 9/11). This is what demos D1-D7 (below on this page) are all about. Detecting situations without AI.
 
 #### **With AI**
 
-The basic idea is similar to the (rather short) page **[Hack](/0-demo/)** where I layout the gist of what an AI LLM transformer (TF) does (which shows the core of AI really is). Most importantly on that page I show that LLM TF's are simply pattern classification algorithms. The classification of input tokens determines the output tokens (TF's understand nothing about language, they only generate a classification number for the input numbers). Recent GPU performance breakthroughs mean the patterns can scale to massive sizes, increasing the sheer number of patterns that can be reliably classified. That is not intelligence, but pattern matching. An amazing hack. And it works.. mostly. But it needs guardrails. 
+On the (rather short) page **[Hack](/0-demo/)** I layout the gist of what an AI LLM transformer (TF) does (which shows the core of AI really is). Most importantly on that page I show that LLM TF's are simply pattern classification algorithms. The classification of input tokens determines the output tokens (TF's understand nothing about language, they only generate a classification number for the input numbers). Recent GPU performance breakthroughs mean the patterns can scale to massive sizes, increasing the sheer number of patterns that can be reliably classified. That is not intelligence, but pattern matching. An amazing hack. And it works.. mostly. But it needs guardrails. 
 
-That's where PAL comes in. The LLM transformer is a hack, but PAL is not. PAL is a tool designed to magnify the AI LLM hack's positives and dimish the negatives. Another critical aspect of PAL is that it is a framework that manages the complexity of creating AI apps. 
+That's where PAL comes in. 
+- The LLM transformer is a hack, but PAL is not. PAL is a tool designed to magnify the AI LLM hack's positives and dimish the negatives. 
+- Another critical aspect of PAL is that it is a framework that manages the complexity of creating AI apps. 
 
 *The gist of the LLM transformer (a hack; Palantir is not a hack, but a tool designed to magnify the AI LLM hack's positives and dimish the negatives)* <br><img src="/assets/hack-08.png" alt="drones" width="35%" style="border: 1px solid #999;"> 
 
