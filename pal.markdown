@@ -10,7 +10,7 @@ The enterprise platform controls almost everything. For now this section focuses
  
 **TOC** 
 - **1 PAL AI usage strategy** (Understanding how to use PAL's AI tools is critical for learning to use PAL). 
-- **0 The gist of Palantir "haystack needle" apps**
+- **0 The gist of Palantir "haystack needle" (HN) apps**
 - **2 PAL concepts** (my own take)
 - **3 Demos** (detailed results Palantir demos and my own demos (created with help of AI))
 
@@ -18,10 +18,11 @@ The enterprise platform controls almost everything. For now this section focuses
 
 ### **[1 PAL AI usage strategy (WIP)](/3c.bbb_pal_strategy_fde/)**
 
-**Real world apps change quickly**. This ZiptieAI site is constantly evolving. That's only possible thanks to the AI tools that make my job managing this site vastly easier. Its the same when creating apps with PAL tools. **[1 PAL AI usage strategy (WIP)](/3c.bbb_pal_strategy_fde/) shows how to maximize AI usage when using PAL (by using AIP/FDE)**. 
+**Real world apps change quickly**. This ZiptieAI site is constantly evolving. I can manage this task by myself thanks to the AI tools that vastly simplify website management. Its the same when creating apps with PAL tools. **[1 PAL AI usage strategy (WIP)](/3c.bbb_pal_strategy_fde/) shows how to maximize AI usage when using PAL (by using AIP/FDE)**. 
 
 AI inside of PAL (and other apps) will vastly improve in the few years, and this will revolutionize end user programming (**PAL's built-in AI has made using PAL vastly easier already**, but there is still much room for improvement). This is just another example of how **AI is not a tech bubble (its only getting started)**.
 
+*No need for traditional docs (that you have to sift through to find what you need); PAL's built in AI answers your questions with details instructions* <br>
 <img src="/assets/pal_9_10.png" alt="drones" width="100%" style="border: 1px solid #999;">
 
 <br>
@@ -32,12 +33,11 @@ AI inside of PAL (and other apps) will vastly improve in the few years, and this
 
 What has interested me the most about Palantir are the **"haystack needle" (HN) algorithms**. This was the original reason for the founding of PAL. 9/11 had occurred because the US government failed to detect obvious warning signs in a sea of data. PAL's job was to make sure that did not happen again by creating a system that could sift through vast amounts of data (about, for example, a sudden surge in foreigners studying to fly large airliners) to flag potential threats. To find the needle in the haystack.
 
-But how exactly did they do that? That's of practical interest currently because (1) those HN techniques are being used in all business segments and (2) you can now find out yourself by using the PAL trial demo license (what I am doing right now). The goal of this page is to explain (via demos) the gist of a portion of the Palantir (PAL) toolset (and similar systems; there are not many (any?) right now, but undoubtedly will be soon). How to use that toolset to create HN apps.
+But how exactly did they do that? That's of practical interest currently because (1) those HN techniques are being used in all business segments (not just military and intelligence) and (2) you can now find out yourself by using the PAL trial demo license (what I did to do these demos and discover the core concepts). The goal of this page is to explain (via demos) the gist of a portion of the Palantir (PAL) toolset (and similar systems; there are not many (any?) right now, but undoubtedly will be soon). How to use that toolset to create HN apps.
 
-*The gist of Palantir: A crystal ball that can find a needle in a haystack (called a "palantir" ("seeing stone") in Lord of the Rings)* <br><img src="/assets/pal_9_06.png" alt="drones" width="25%" style="border: 1px solid #999;">
+*The gist of Palantir: A crystal ball (called a "palantir" ("seeing stone") in Lord of the Rings) that can find a haystack needle (HN)* <br><img src="/assets/pal_9_06.png" alt="drones" width="25%" style="border: 1px solid #999;">
 
 <br>
-
 
 ### **[2 PAL concepts (my own take on PAL) (WIP)](/3c.ccc_pal_concepts/)**
 
