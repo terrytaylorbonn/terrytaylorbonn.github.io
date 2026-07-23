@@ -11,14 +11,10 @@ The enterprise platform controls almost everything. For now this section focuses
 <br>
 
 **TOC** 
-
-The main goal of this section is to understand the following:
 - **2 PAL app concepts (without/with AI)** (my own take)
 - **1 PAL AI assistant usage strategy** (Understanding how to use PAL's AI tools is critical for learning to use PAL). 
-- **0 The gist of Palantir "haystack needle" (HN) apps**
-
-The only way to truly reach that goal is hands-on demos
-- **3 Demos** (detailed results Palantir demos and my own demos; right now this is just a chronological list of what I did, but I might reorganize this in the future)
+- **0 The gist of Palantir "haystack needle" (HN) apps** (demos that show this)
+- **3 Demos** (right now this is just a chronological list of what I did, but I might reorganize this in the future)
 
 <br>
 
@@ -30,7 +26,7 @@ The only way to truly reach that goal is hands-on demos
 
 #### **Without AI**
 
-This was the original PAL architecture. This is what demos D1-D7 were all about. 
+This was the original PAL architecture. This is what demos D1-D7 are all about. 
 
 #### **With AI**
 
