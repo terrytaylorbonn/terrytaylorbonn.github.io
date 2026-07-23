@@ -9,41 +9,50 @@ permalink: /pal/
 The enterprise platform controls almost everything. For now this section focuses solely on the Palantir (PAL) platform.
  
 **TOC** 
-- **0 The gist of Palantir** (based on demo D8 listed in section "3 Demos" later on this page)
-- **1 PAL AI usage strategy** 
-- **2 PAL concepts** (my own take on PAL)
-- **3 Demos** (detailed results from my testing of Palantir demos)
-
-
-<br>
-
-### **[0 The gist of Palantir (based on demo D8 listed in section "3 Demos" later on this page)](/3c.xxx_pal_gist/)**
-
-The goal of this page it to explain (via demos) the gist of a portion of the Palantir (PAL) toolset (and similar systems; there are not many (any?) right now, but undoubtedly will be soon). You've probably heard about how basically detects needles (unusual situations) in haystacks of data with the help of AI. These demos will show exactly what that means.
-
-*The gist of Palantir: A crystal ball that can find a needle in a haystack (called a "palantir" ("seeing stone") in Lord of the Rings)* <br><img src="/assets/pal_9_06.png" alt="drones" width="25%" style="border: 1px solid #999;">
-
-PS: The basic idea is similar to the (rather short) page **[Hack](/0-demo/)** where I layout the gist of what an AI LLM transformer (TF) does (which shows the core of AI really is). That single page required over a year of hands-on experience and research to put together. It summarizes my own unique take on the gist of AI.
-
-*The gist of the LLM transformer (a hack; Palantir is not a hack, but a tool designed to magnify the AI LLM hack's positives and dimish the negatives)* <br><img src="/assets/hack-08.png" alt="drones" width="35%" style="border: 1px solid #999;"> 
+- **1 PAL AI usage strategy** (Understanding how to use PAL's AI tools is critical for learning to use PAL). 
+- **0 The gist of Palantir "haystack needle" apps**
+- **2 PAL concepts** (my own take)
+- **3 Demos** (detailed results Palantir demos and my own demos (created with help of AI))
 
 <br>
 
 ### **[1 PAL AI usage strategy (WIP)](/3c.bbb_pal_strategy_fde/)**
 
-How to maximize AI usage when using PAL (by using AIP/FDE). In particular (WIP) how I believe AI inside of PAL (and other apps) will vastly improve in the few years, and how this will revolutionize end user programming (**PAL's built-in AI has made using PAL vastly easier**, but there is still much room for improvement). This is just another example of how **AI is not a tech bubble (its only getting started)**.
+**Real world apps change quickly**. This ZiptieAI site is constantly evolving. That's only possible thanks to the AI tools that make my job managing this site vastly easier. Its the same when creating apps with PAL tools. **[1 PAL AI usage strategy (WIP)](/3c.bbb_pal_strategy_fde/) shows how to maximize AI usage when using PAL (by using AIP/FDE)**. 
+
+AI inside of PAL (and other apps) will vastly improve in the few years, and this will revolutionize end user programming (**PAL's built-in AI has made using PAL vastly easier already**, but there is still much room for improvement). This is just another example of how **AI is not a tech bubble (its only getting started)**.
 
 <img src="/assets/pal_9_10.png" alt="drones" width="100%" style="border: 1px solid #999;">
 
 <br>
 
-### **[2 PAL concepts (my own take on PAL) (WIP)](/3c.ccc_pal_concepts/)**
+### **[0 The gist of Palantir "haystack needle" (HN) apps](/3c.xxx_pal_gist/)**
 
-(include summaries of tool usage)
+<!-- (based on demo D8 listed in section "3 Demos" later on this page) -->
 
-This is a long term goal (just like creating core concepts for AI has been). <br><br>*(placeholder pic; eventually I will create master pic that sums up core concepts)* <br><img src="/assets/pal-demo-01.png" alt="drones" width="65%" style="border: 1px solid #999;">
+What has interested me the most about Palantir are the **"haystack needle" (HN) algorithms**. This was the original reason for the founding of PAL. 9/11 had occurred because the US government failed to detect obvious warning signs in a sea of data. PAL's job was to make sure that did not happen again by creating a system that could sift through vast amounts of data (about, for example, a sudden surge in foreigners studying to fly large airliners) to flag potential threats. To find the needle in the haystack.
+
+But how exactly did they do that? That's of practical interest currently because (1) those HN techniques are being used in all business segments and (2) you can now find out yourself by using the PAL trial demo license (what I am doing right now). The goal of this page is to explain (via demos) the gist of a portion of the Palantir (PAL) toolset (and similar systems; there are not many (any?) right now, but undoubtedly will be soon). How to use that toolset to create HN apps.
+
+*The gist of Palantir: A crystal ball that can find a needle in a haystack (called a "palantir" ("seeing stone") in Lord of the Rings)* <br><img src="/assets/pal_9_06.png" alt="drones" width="25%" style="border: 1px solid #999;">
 
 <br>
+
+
+### **[2 PAL concepts (my own take on PAL) (WIP)](/3c.ccc_pal_concepts/)**
+
+The basic idea is similar to the (rather short) page **[Hack](/0-demo/)** where I layout the gist of what an AI LLM transformer (TF) does (which shows the core of AI really is). Most importantly on that page I show that LLM TF's are simply pattern classification algorithms. The classification of input tokens determines the output tokens (TF's understand nothing about language, they only generate a classification number for the input numbers). Recent GPU performance breakthroughs mean the patterns can scale to massive sizes, increasing the sheer number of patterns that can be reliably classified. That is not intelligence, but pattern matching. An amazing hack. And it works.. mostly. But it needs guardrails. 
+
+That's where PAL comes in. The LLM transformer is a hack, but PAL is not. PAL is a tool designed to magnify the AI LLM hack's positives and dimish the negatives. 
+
+Another critical aspect of PAL is that it is a framework that manages the complexity of creating AI apps. 
+
+*The gist of the LLM transformer (a hack; Palantir is not a hack, but a tool designed to magnify the AI LLM hack's positives and dimish the negatives)* <br><img src="/assets/hack-08.png" alt="drones" width="35%" style="border: 1px solid #999;"> 
+
+<br>
+
+<!-- This is a long term goal (just like creating core concepts for AI has been). <br><br>*(placeholder pic; eventually I will create master pic that sums up core concepts)* <br><img src="/assets/pal-demo-01.png" alt="drones" width="65%" style="border: 1px solid #999;">
+<br> -->
 
 ### **3 Demos (detailed results from my testing of Palantir demos)**
 
@@ -92,7 +101,7 @@ Following is the list of demos. I added numbering, conceptual diagrams, and a fe
 
 <br>
 
-26.0722 (v1 26.0702)x
+26.0723 (v1 26.0702)
 
 <!--
 Palantir
