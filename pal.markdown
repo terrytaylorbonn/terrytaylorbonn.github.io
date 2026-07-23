@@ -48,7 +48,7 @@ This is a long term goal (just like creating core concepts for AI has been). <br
 ### **3 Demos (detailed results from my testing of Palantir demos)**
 
 **[PAL demo strategy](/3c.aaa_pal_strategy_demos/)** is 
-- Document in docx (MS.Word) files. These are detailed and can be realistically maintained (the official demos seem to not be updated often; videos are nice, but they get outdated quickly and are impossible to update).<br><img src="/assets/pal_9_11.png" alt="drones" width="44%" style="border: 1px solid #999;"><br><br> 
+- Document in docx (MS.Word) files. These are detailed and can be realistically maintained (the official demos seem to not be updated often; videos are nice, but they get outdated quickly and are impossible to update). **My personal opinion (and the future direction of my own demos) is that demo documentation should rely more on describing how to work with AI to do hands-on step-by-step demos** (not describing the action details).<br><img src="/assets/pal_9_11.png" alt="drones" width="44%" style="border: 1px solid #999;"><br><br> 
 - Use AI (internal PAL AIP/FDE) as much as possible (avoid docs and tutorials if possible; I first started to do demos based on AIP/FDE chats in demo D8).<br><img src="/assets/pal_9_12.png" alt="drones" width="64%" style="border: 1px solid #999;">
 
 Following is the list of demos. I added numbering, conceptual diagrams, and a few error updates to the original demos. I will probably come up with my own set of demos. 
