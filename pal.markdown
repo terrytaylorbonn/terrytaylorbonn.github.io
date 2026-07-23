@@ -12,7 +12,7 @@ The enterprise platform controls almost everything. For now this section focuses
 
 **TOC** 
 - **1 PAL app concepts (without/with AI)** (my own take)
-- **2 PAL AI assistant usage strategy** (Understanding how to use PAL's AI tools is critical for learning to use PAL). 
+- **2 PAL AI dev assistants** (Understanding how to use PAL's AI tools is critical for learning to use PAL). 
 - **3 The gist of Palantir "haystack needle" (HN) apps** (demos that show this)
 - **4 Demos** (right now this is just a chronological list of what I did, but I might reorganize this in the future)
 
@@ -55,7 +55,7 @@ On the (rather short) page **[Hack](/0-demo/)** I layout the gist of what an AI 
 <!-- This is a long term goal (just like creating core concepts for AI has been). <br><br>*(placeholder pic; eventually I will create master pic that sums up core concepts)* <br><img src="/assets/pal-demo-01.png" alt="drones" width="65%" style="border: 1px solid #999;">
 <br> -->
 
-### **[2 PAL AI usage strategy (WIP)](/3c.bbb_pal_strategy_fde/)**
+### **[2 PAL AI dev assistants (WIP)](/3c.bbb_pal_strategy_fde/)**
 
 **Real world apps change quickly**. This ZiptieAI site is constantly evolving. I can manage this task by myself thanks to the AI tools that vastly simplify website management. Its the same when creating apps with PAL tools. **[1 PAL AI usage strategy (WIP)](/3c.bbb_pal_strategy_fde/) shows how to maximize AI usage when using PAL (by using AIP/FDE)**. 
 
