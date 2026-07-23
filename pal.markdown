@@ -33,6 +33,8 @@ PS: The basic idea is similar to the (rather short) page **[Hack](/0-demo/)** wh
 
 How to maximize AI usage when using PAL (by using AIP/FDE). In particular (WIP) how I believe AI inside of PAL (and other apps) will vastly improve in the few years, and how this will revolutionize end user programming (**PAL's built-in AI has made using PAL vastly easier**, but there is still much room for improvement). This is just another example of how **AI is not a tech bubble (its only getting started)**.
 
+<img src="/assets/pal_9_10.png" alt="drones" width="100%" style="border: 1px solid #999;">
+
 <br>
 
 ### **[2 PAL concepts (my own take on PAL) (WIP)](/3c.ccc_pal_concepts/)**
@@ -43,11 +45,11 @@ This is a long term goal (just like creating core concepts for AI has been). <br
 
 <br>
 
-### **3 Demos (detailed results from my testing of Palantir demos)** 
+### **3 Demos (detailed results from my testing of Palantir demos)**
 
 **[PAL demo strategy](/3c.aaa_pal_strategy_demos/)** is 
-- Document in docx (MS.Word) files. These are detailed and can be realistically maintained (the official demos seem to not be updated often; videos are nice, but they get outdated quickly and are impossible to update).
-- Use AI (internal PAL AIP/FDE) as much as possible (avoid docs and tutorials if possible).
+- Document in docx (MS.Word) files. These are detailed and can be realistically maintained (the official demos seem to not be updated often; videos are nice, but they get outdated quickly and are impossible to update).<br><img src="/assets/pal_9_11.png" alt="drones" width="44%" style="border: 1px solid #999;"><br><br> 
+- Use AI (internal PAL AIP/FDE) as much as possible (avoid docs and tutorials if possible; I first started to do demos based on AIP/FDE chats in demo D8).<br><img src="/assets/pal_9_12.png" alt="drones" width="64%" style="border: 1px solid #999;">
 
 Following is the list of demos. I added numbering, conceptual diagrams, and a few error updates to the original demos. I will probably come up with my own set of demos. 
 
