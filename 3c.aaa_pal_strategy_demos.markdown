@@ -21,6 +21,10 @@ Content:
   - Numbered headings, steps, etc. 
   - Core concept diagrams (what we are doing in this demo).
 
+- Document in docx (MS.Word) files. These are detailed and can be realistically maintained (the official demos seem to not be updated often; videos are nice, but they get outdated quickly and are impossible to update). **My personal opinion (and the future direction of my own demos) is that demo documentation should rely more on describing how to work with AI to do hands-on step-by-step demos** (not describing the actual details).<br><img src="/assets/pal_9_11.png" alt="drones" width="44%" style="border: 1px solid #999;"><br><br> 
+- Use AI (internal PAL AIP/FDE) as much as possible (avoid docs and tutorials if possible; I first started to do demos based on AIP/FDE chats in demo D8).<br><img src="/assets/pal_9_12.png" alt="drones" width="64%" style="border: 1px solid #999;">
+
+
 <!-- 
 See the working text for this QS in
 - **[\#xxx_\xxxxxxx.docx](https://drive.google.com/drive/folders/1-Adawag9uA8_bq-hDF-nOuPYaRLz1eEO)**. 
