@@ -43,9 +43,7 @@ But how exactly did they do that? That's of practical interest currently because
 
 The basic idea is similar to the (rather short) page **[Hack](/0-demo/)** where I layout the gist of what an AI LLM transformer (TF) does (which shows the core of AI really is). Most importantly on that page I show that LLM TF's are simply pattern classification algorithms. The classification of input tokens determines the output tokens (TF's understand nothing about language, they only generate a classification number for the input numbers). Recent GPU performance breakthroughs mean the patterns can scale to massive sizes, increasing the sheer number of patterns that can be reliably classified. That is not intelligence, but pattern matching. An amazing hack. And it works.. mostly. But it needs guardrails. 
 
-That's where PAL comes in. The LLM transformer is a hack, but PAL is not. PAL is a tool designed to magnify the AI LLM hack's positives and dimish the negatives. 
-
-Another critical aspect of PAL is that it is a framework that manages the complexity of creating AI apps. 
+That's where PAL comes in. The LLM transformer is a hack, but PAL is not. PAL is a tool designed to magnify the AI LLM hack's positives and dimish the negatives. Another critical aspect of PAL is that it is a framework that manages the complexity of creating AI apps. 
 
 *The gist of the LLM transformer (a hack; Palantir is not a hack, but a tool designed to magnify the AI LLM hack's positives and dimish the negatives)* <br><img src="/assets/hack-08.png" alt="drones" width="35%" style="border: 1px solid #999;"> 
 
@@ -60,7 +58,7 @@ Another critical aspect of PAL is that it is a framework that manages the comple
 - Document in docx (MS.Word) files. These are detailed and can be realistically maintained (the official demos seem to not be updated often; videos are nice, but they get outdated quickly and are impossible to update). **My personal opinion (and the future direction of my own demos) is that demo documentation should rely more on describing how to work with AI to do hands-on step-by-step demos** (not describing the actual details).<br><img src="/assets/pal_9_11.png" alt="drones" width="44%" style="border: 1px solid #999;"><br><br> 
 - Use AI (internal PAL AIP/FDE) as much as possible (avoid docs and tutorials if possible; I first started to do demos based on AIP/FDE chats in demo D8).<br><img src="/assets/pal_9_12.png" alt="drones" width="64%" style="border: 1px solid #999;">
 
-Following is the list of demos. I added numbering, conceptual diagrams, and a few error updates to the original demos. I will probably come up with my own set of demos. 
+Following is the list of demos in chronological order. I added numbering, conceptual diagrams, and a few error updates to the original demos. I will probably come up with my own set of demos. 
 
 - **[D1: Palantir Foundry "speedrun" (quick start) (26.0705)](/3c.1_pal_foundry/)**. 
   - Demo complete... still need to write the webpage.
