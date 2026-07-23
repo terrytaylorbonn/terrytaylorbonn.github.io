@@ -13,14 +13,37 @@ The enterprise platform controls almost everything. For now this section focuses
 **TOC** 
 
 The main goal of this section is to understand the following:
-- **1 PAL AI usage strategy** (Understanding how to use PAL's AI tools is critical for learning to use PAL). 
+- **2 PAL app concepts (without/with AI)** (my own take)
+- **1 PAL AI assistant usage strategy** (Understanding how to use PAL's AI tools is critical for learning to use PAL). 
 - **0 The gist of Palantir "haystack needle" (HN) apps**
-- **2 PAL concepts** (my own take)
 
 The only way to truly reach that goal is hands-on demos
 - **3 Demos** (detailed results Palantir demos and my own demos; right now this is just a chronological list of what I did, but I might reorganize this in the future)
 
 <br>
+
+### **[2 PAL app concepts (without/with AI) (WIP)](/3c.ccc_pal_concepts/)**
+
+#### **The framework**
+
+
+
+#### **Without AI**
+
+This was the original PAL architecture. This is what demos D1-D7 were all about. 
+
+#### **With AI**
+
+The basic idea is similar to the (rather short) page **[Hack](/0-demo/)** where I layout the gist of what an AI LLM transformer (TF) does (which shows the core of AI really is). Most importantly on that page I show that LLM TF's are simply pattern classification algorithms. The classification of input tokens determines the output tokens (TF's understand nothing about language, they only generate a classification number for the input numbers). Recent GPU performance breakthroughs mean the patterns can scale to massive sizes, increasing the sheer number of patterns that can be reliably classified. That is not intelligence, but pattern matching. An amazing hack. And it works.. mostly. But it needs guardrails. 
+
+That's where PAL comes in. The LLM transformer is a hack, but PAL is not. PAL is a tool designed to magnify the AI LLM hack's positives and dimish the negatives. Another critical aspect of PAL is that it is a framework that manages the complexity of creating AI apps. 
+
+*The gist of the LLM transformer (a hack; Palantir is not a hack, but a tool designed to magnify the AI LLM hack's positives and dimish the negatives)* <br><img src="/assets/hack-08.png" alt="drones" width="35%" style="border: 1px solid #999;"> 
+
+<br>
+
+<!-- This is a long term goal (just like creating core concepts for AI has been). <br><br>*(placeholder pic; eventually I will create master pic that sums up core concepts)* <br><img src="/assets/pal-demo-01.png" alt="drones" width="65%" style="border: 1px solid #999;">
+<br> -->
 
 ### **[1 PAL AI usage strategy (WIP)](/3c.bbb_pal_strategy_fde/)**
 
@@ -44,19 +67,6 @@ But how exactly did they do that? That's of practical interest currently because
 *The gist of Palantir: A crystal ball (called a "palantir" ("seeing stone") in Lord of the Rings) that can find a haystack needle (HN)* <br><img src="/assets/pal_9_06.png" alt="drones" width="25%" style="border: 1px solid #999;">
 
 <br>
-
-### **[2 PAL concepts (my own take on PAL) (WIP)](/3c.ccc_pal_concepts/)**
-
-The basic idea is similar to the (rather short) page **[Hack](/0-demo/)** where I layout the gist of what an AI LLM transformer (TF) does (which shows the core of AI really is). Most importantly on that page I show that LLM TF's are simply pattern classification algorithms. The classification of input tokens determines the output tokens (TF's understand nothing about language, they only generate a classification number for the input numbers). Recent GPU performance breakthroughs mean the patterns can scale to massive sizes, increasing the sheer number of patterns that can be reliably classified. That is not intelligence, but pattern matching. An amazing hack. And it works.. mostly. But it needs guardrails. 
-
-That's where PAL comes in. The LLM transformer is a hack, but PAL is not. PAL is a tool designed to magnify the AI LLM hack's positives and dimish the negatives. Another critical aspect of PAL is that it is a framework that manages the complexity of creating AI apps. 
-
-*The gist of the LLM transformer (a hack; Palantir is not a hack, but a tool designed to magnify the AI LLM hack's positives and dimish the negatives)* <br><img src="/assets/hack-08.png" alt="drones" width="35%" style="border: 1px solid #999;"> 
-
-<br>
-
-<!-- This is a long term goal (just like creating core concepts for AI has been). <br><br>*(placeholder pic; eventually I will create master pic that sums up core concepts)* <br><img src="/assets/pal-demo-01.png" alt="drones" width="65%" style="border: 1px solid #999;">
-<br> -->
 
 ### **3 Demos (detailed results from my testing of Palantir demos)**
 
