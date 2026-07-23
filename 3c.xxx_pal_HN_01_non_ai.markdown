@@ -1,0 +1,77 @@
+---
+layout: page
+title: PAL HN 01 non AI demo
+permalink: /3c.xxx_pal_HN_01_non_ai/
+---
+
+<br>
+
+[← 3c PAL](/pal/)
+
+<br>
+
+
+# **1 Demo X**: Non-AI PAL demos
+
+**(TODO: ask FDE for details)**.
+
+- non-AI PAL haystack needle detection (PAL's original algorithms)
+- No AI, searching for haystack needles. 
+- This was how PAL started 25 years ago.
+- You can do this, but you have to be very clever to get everthing just right.
+- Much more data massaging and big procedural programming for needle search.
+- ontology (token library)
+- CPU program detection?
+
+<br>
+
+# **1 so palantir started out with no ai. detecting events, anomalies. could we still do such a demo? would that make sense?**
+
+Yes. That would make a lot of sense.
+
+A non-AI Palantir-style demo could focus on:
+
+```text
+data integration → rules/logic → anomaly detection → operational alert → investigation workflow
+```
+
+No LLMs. No ML required.
+
+## Simple demo idea
+
+Use sterile generated data:
+
+```text
+event_log
+entity_table
+threshold_rules
+```
+
+Detect:
+
+- unusually high value,
+- too many events in short time,
+- missing expected event,
+- state transition violation,
+- duplicate IDs,
+- suspicious relationship pattern.
+
+## Minimal flow
+
+<img src="/assets/pal_9_19.png" alt="drones" width="100%" style="border: 1px solid #999;">
+
+## Why it makes sense
+
+This captures classic Palantir value:
+
+> connect messy operational data, detect something important, and put it into a workflow where a human can investigate and act.
+
+That is foundational Palantir, even without AI.
+
+
+
+
+
+<br>
+
+26.0723 (v1 26.0723)

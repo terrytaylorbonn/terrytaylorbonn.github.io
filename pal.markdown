@@ -14,7 +14,7 @@ The enterprise platform controls almost everything. For now this section focuses
 - **3c.1 PAL app concepts** (my own take)
 - **3c.2 PAL AI dev assistants** (learn to use PAL's AI tools and you will never need to read docs). 
 - **3c.3 Palantir "haystack needle" (HN) app demos** (demos that show this)
-- **3c.4 All demos (chronological order; detailed results from my tests)** (right now this is just a chronological list of what I did, but I might reorganize this in the future)
+- **3c.4 All demos BY DOCX (chronological order; detailed results from my tests)** (right now this is just a chronological list of what I did, but I might reorganize this in the future)
 
 <br>
 
@@ -22,7 +22,7 @@ The enterprise platform controls almost everything. For now this section focuses
 
 <!-- (/3c.ccc_pal_concepts/) -->
 
-This is a rough draft.... I only started using PAL in July 2026, so I still dont have a good grasp of the spectrum of what PAL apps do. Following diagram shows the parts that the PAL tools in Foundy used for the "haystack needle" demos. There is so much more. So this section just focuses on a narrow portion of the PAL toolset. 
+This is a rough draft.... I only started using PAL in July 2026, so I still dont have a good grasp of the spectrum of what PAL apps do.  
 
 
 <br>
@@ -58,7 +58,7 @@ The goal of this page is to explain (via demos) the gist of a portion of the Pal
 
 <br>
 
-### **3c.4 All demos (chronological order; detailed results from my tests)**
+### **3c.4 All demos BY DOCX (chronological order; detailed results from my tests)**
 
 **[PAL demo strategy](/3c.aaa_pal_strategy_demos/)**
 
