@@ -1,6 +1,6 @@
 ---
 layout: page
-title: 3c.3 AIP/FDE "haystack needle" (HN) demos
+title: 3c.3 AIP/FDE demos
 permalink: /3c.xxx_pal_gist/
 ---
 
@@ -10,11 +10,7 @@ permalink: /3c.xxx_pal_gist/
 
 <br>
 
-**What has interested me the most about Palantir for over a year now are the "haystack needle" (HN) algorithms**. This was the original reason for the founding of PAL. 9/11 occured because the US government failed to detect obvious warning signs in a sea of data. PAL's job was to make sure that that did not happen again by creating a system that could sift through vast amounts of data (about, for example, a sudden surge in foreigners studying to fly large airliners) to flag potential threats. To find the needle in the haystack.
 
-But how exactly did they implement the HN algorithms? That's of practical interest currently because 
-- (1) those **HN techniques are being used in all business segments** (not just military and intelligence) and 
-- (2) **you can learn the details hands-on yourself for free with no assistance**by getting a PAL trial license (I have only a trial license and I am working alone). 
 
 
 **These demos are my own, created by prompting AIP/FDE for the steps.** (for details see **[3c.2 PAL AI dev assistants](/3c.bbb_pal_strategy_fde/)** about AIP/FDE led help.)
@@ -28,9 +24,15 @@ But how exactly did they implement the HN algorithms? That's of practical intere
 
 <br>
 
-**TOC**
+#### **TOC**
 
-- **[Demo 9: HN demos](/3c.xxx_pal_HN_01_non_ai/)** (haystack needle, with/without AI model).
+- **[Demo 9: HN demos](/3c.xxx_pal_HN_01_non_ai/)** (haystack needle, with/without AI model). (HN = find small anomalies in mountains of data)
+  - **What has interested me the most about Palantir for over a year now are the "haystack needle" (HN) algorithms**. This was the original reason for the founding of PAL. 9/11 occured because the US government failed to detect obvious warning signs in a sea of data. PAL's job was to make sure that that did not happen again by creating a system that could sift through vast amounts of data (about, for example, a sudden surge in foreigners studying to fly large airliners) to flag potential threats. To find the needle in the haystack.
+  - But how exactly did they implement the HN algorithms? That's of practical interest currently because 
+    - (1) those **HN techniques are being used in all business segments** (not just military and intelligence) and 
+    - (2) **you can learn the details hands-on yourself for free with no assistance**by getting a PAL trial license (I have only a trial license and I am working alone). <br><br>
+
+- **Other types of AIP/FDE demos (FUTURE)** 
 
 
 <br>

@@ -29,13 +29,13 @@ For now **the focus is 100% on Palantir Foundry** because
 
 - **[3c.2 First PAL demos](/3c.2_pal_aip/)** D1-D8. Following PAL docs (step by step tutorials). For your first demos its probably best way to start (consult my docx notes for details).
 
-- **[3c.2b PAL AI usage strategy](/3c.bbb_pal_strategy_fde/)**. D8 was the first demo to use AIP/FDE to create demos.
+- **[3c.2b PAL AI usage strategy](/3c.bbb_pal_strategy_fde/)**. D8 was the first demo to use AIP/FDE (to create just a few demo subsections as an add-on to PAL demo).
 
-- **[3c.3 AIP/FDE "haystack needle" (HN) demos](/3c.xxx_pal_gist/)** (HN = find small anomalies in mountains of data).
+- **[3c.3 AIP/FDE demos](/3c.xxx_pal_gist/)**.
   - I use AI (AIP/FDE) to do my own demos (no PAL demos or PAL docs).
-  - A big focus (at least initially) is on prompt techniques and workflows to maximize effectiveness of using AI (my initial impression is that both AIP and FDE help have limitations; using both of them together (primarily FDE) seems to be the best solution).<br><br>
+  - A big focus (at least initially) is on prompt techniques and workflows to maximize effectiveness of using AI (my initial impression is that both AIP and FDE help have limitations; using both of them together (primarily FDE) seems to be the best solution).
 
-- **3c.4 Other "deep dive ASAP" PAL demos** (for finance, etc). (TODO)
+<!-- - **3c.4 Other "deep dive ASAP" PAL demos** (for finance, etc). (TODO) -->
 
 <br>
 

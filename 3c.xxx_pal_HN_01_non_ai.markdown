@@ -1,6 +1,6 @@
 ---
 layout: page
-title: PAL HN 01 non AI demo
+title: HN (haystack needle) demos (D9)
 permalink: /3c.xxx_pal_HN_01_non_ai/
 ---
 
