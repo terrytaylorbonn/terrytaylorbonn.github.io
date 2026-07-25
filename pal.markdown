@@ -36,7 +36,7 @@ For now **the focus is 100% on Palantir Foundry** because
   - I look forward to when AIP/FDE are combined into a single tool that can "see" dialogs and guide a user through various tasks.
   - In general, a big focus (at least initially) is on prompt techniques and workflows to maximize effectiveness of using AI.<br><br>
 
-- **[3c.2 Initial PAL demos](/3c.2_pal_aip/)**. Currently just D1-D8, the first PAL demos I did (step by step tutorials). For your first demos its probably best way to start (I kept detailed docx notes of what I did in these demos).
+- **[3c.2 Initial PAL demos](/3c.2_pal_initial_demos/)**. Currently just D1-D8, the first PAL demos I did (step by step tutorials). For your first demos its probably best way to start (I kept detailed docx notes of what I did in these demos).
 
 - **[3c.3 AIP/FDE demos](/3c.xxx_pal_gist/)**.
   - I use AI (AIP/FDE) to do my own demos (no PAL demos or PAL docs).

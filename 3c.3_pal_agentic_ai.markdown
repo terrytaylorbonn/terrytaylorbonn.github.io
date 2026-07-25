@@ -8,7 +8,8 @@ permalink: /3c.3_pal_agentic_ai/
 <br>
 
 
-[← 3c PAL](/pal/)
+[← 3c.2 Initial PAL demos](/3c.2_pal_initial_demos/)
+
 
 
 <!-- <br>

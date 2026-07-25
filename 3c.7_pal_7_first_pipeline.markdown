@@ -6,7 +6,7 @@ permalink: /3c.7_pal_7_first_pipeline/
 
 <br>
 
-[← 3c PAL](/pal/)
+[← 3c.2 Initial PAL demos](/3c.2_pal_initial_demos/)
 
 <br>
 

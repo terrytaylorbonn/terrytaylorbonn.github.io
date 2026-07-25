@@ -6,7 +6,8 @@ permalink: /3c.5_pal_biz_process_mining/
 
 <br>
 
-[← 3c PAL](/pal/)
+[← 3c.2 Initial PAL demos](/3c.2_pal_initial_demos/)
+
 
 <br>
 

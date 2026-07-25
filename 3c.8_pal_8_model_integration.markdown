@@ -6,7 +6,7 @@ permalink: /3c.8_pal_8_model_integration/
 
 <br>
 
-[← 3c PAL](/pal/)
+[← 3c.2 Initial PAL demos](/3c.2_pal_initial_demos/)
 
 <br>
 
