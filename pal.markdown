@@ -27,7 +27,7 @@ For now **the focus is 100% on Palantir Foundry** because
   - What problems are solved
   - This section is WIP (I only started using PAL in July 2026).<br><br>
 
-- **[3c.2 PAL demos](/3c.2_pal_aip/)**. Currently just D1-D8, the first PAL demos I did (step by step tutorials). For your first demos its probably best way to start (I kept detailed docx notes of what I did in these demos).
+- **[3c.2 Initial PAL demos](/3c.2_pal_aip/)**. Currently just D1-D8, the first PAL demos I did (step by step tutorials). For your first demos its probably best way to start (I kept detailed docx notes of what I did in these demos).
 
 - **[3c.2b PAL AI usage strategy](/3c.bbb_pal_strategy_fde/)**. D8 was the first demo to use AIP/FDE (to create just a few demo subsections as an add-on to PAL demo).
 
