@@ -8,6 +8,9 @@ permalink: /pal/
 
 The enterprise AI dev platform controls almost everything. For now this is limited to enterprise customers, but I believe the tech will "trickle down" to non-experts in the near future. 
 
+**TL;DR (too long; didn't read)?** If you are in a hurry, skip to 
+- **[3c.3 Palantir "haystack needle" (HN) app demos](/3c.xxx_pal_gist/)**
+
 For now this section **focuses solely on the Palantir (PAL) platform**. For several reasons:
 - market leader
 - **i was able to get generous free demo account for handson experience**
@@ -18,41 +21,17 @@ For now this section **focuses solely on the Palantir (PAL) platform**. For seve
 
 <br>
 
-**TOC NEW 26.0725 (WIP)** 
-- 1 PAL concepts 
+**TOC** 
+- **3c.1 PAL concepts** (my own take)
   - what problems are solved
-  - i complete this section last (just like section **[Hack](/0-demo/)** was only completed after much research and testing)
-- 2 first demos follow PAL docs (step by step tutorials)... see demos D1-D7 below.
-- 3 (CORE FOCUS) at first core focus is HN (haystack needle) demos (final anomalies in data)
+  - i will complete this section last (just like section **[Hack](/0-demo/)** was only completed after a lot of hands on learning)
+- **3c.2 first demos** D1-D7. follow PAL docs (step by step tutorials)..
+- **3c.3 Palantir "haystack needle" (HN) app demos**. (find anomalies in data)
   - uses AI (AIP/FDE) to do what I want to do (not a PAL demo)
   - big focus (at least initially) on prompting and techniques to maximize effectiveness
-- 4 later after HN: create same kind of "deep dive ASAP" for other segments (finance, etc)
-- 5 chrono list of all demos (based on docx files)
-
-```
-(PUT IN CONCEPTS)
-- 0 for now my learning is the focus (teaching myself)
-  - later: how to support sales... how to get potential customers fluent in PAL asap 
-  - (right now this is probably not that important.. the business model focuses on FDE's doing the groundwork) 
-- 2b how i document, maintain docs
-  - website overview, docx details, video maybe for high level overview (that does not change much)
-  - focus on big picture; doc hierarchy
-  - keep doc system very simple, easy to update (OR USE AI TO VERIFY DOCS)
-- 3 big focus is on using AIP (docs) / FDE (engineer feedback) to help fill in missing details.
-- **4 (CORE FOCUS) then start my own learning structural focus, using only AIP (for general direction) and FDE (for step by step).**
-- 5a future focus #1: focus on prompt techniques... assume that AIP/FDE will lead user by the hand.
-- **5b future focus #2: assume that AIP/FDE will someday soon become integral to workflows.** 
-  - they can "see" dialogs and the complete config (**and they can auto update docs**). 
-  - user can tell them what to setup... this would be next higher level of programming abstraction 
-  - **the ultimate UX (user experience) upgrade!**
-  - basically the tech reqs to become FDE are drastically lower, widening user base
-```
-
-**TOC (up to 26.0726)** 
-- **3c.1 PAL app concepts** (my own take)
-- **3c.2 PAL AI dev assistants** (learn to use PAL's AI tools and you will never need to read docs). 
-- **3c.3 Palantir "haystack needle" (HN) app demos** (demos that show this)
+- **3c.3b create other "deep dive ASAP" demos** (for finance, etc)
 - **3c.4 All demos BY DOCX (chronological order; detailed results from my tests)** (right now this is just a chronological list of what I did, but I might reorganize this in the future)
+
 
 <br>
 
@@ -65,19 +44,7 @@ This is a rough draft.... I only started using PAL in July 2026, so I still dont
 
 <br>
 
-### **[3c.2 PAL AI dev assistants](/3c.bbb_pal_strategy_fde/)**
 
-<!-- /3c.bbb_pal_strategy_fde/ 
-**[3c.2 PAL AI dev assistants (WIP)](/3c.bbb_pal_strategy_fde/) shows how to maximize AI usage when using PAL (by using AIP/FDE)**. 
--->
-
-**Real world apps change quickly**. This ZiptieAI site is constantly evolving. I can manage this task by myself thanks to the AI tools that vastly simplify website management. Its the same when creating apps with PAL tools. AI inside of PAL (and other apps) will vastly improve in the few years, and this will revolutionize end user programming (**PAL's built-in AI has made using PAL vastly easier already**, but there is still much room for improvement). This is just another example of how **AI is not a tech bubble (its only getting started)**.
-
-<!-- 
-*No need for traditional docs (that you have to sift through to find what you need); PAL's built in AI answers your questions with details instructions* <br>
-<img src="/assets/pal_9_10.png" alt="drones" width="100%" style="border: 1px solid #999;">-->
-
-<br>
 
 ### **[3c.3 Palantir "haystack needle" (HN) app demos](/3c.xxx_pal_gist/)**
 

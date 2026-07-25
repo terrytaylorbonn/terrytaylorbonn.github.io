@@ -11,6 +11,8 @@ permalink: /3c.xxx_pal_gist/
 <br>
 
 
+
+
 What has interested me the most about Palantir for over a year now are the **"haystack needle" (HN) algorithms**. This was the original reason for the founding of PAL. 9/11 occured because the US government failed to detect obvious warning signs in a sea of data. PAL's job was to make sure that that did not happen again by creating a system that could sift through vast amounts of data (about, for example, a sudden surge in foreigners studying to fly large airliners) to flag potential threats. To find the needle in the haystack.
 
 But how exactly did they implement the HN algorithms? That's of practical interest currently because 
@@ -50,6 +52,20 @@ Second set of demos are about AI apps:
 title: PAL HN 01 non AI demo
 permalink: /3c.xxx_pal_HN_01_non_ai/
 
+
+### **[3c.2 PAL AI dev assistants](/3c.bbb_pal_strategy_fde/)** ########################
+
+<!-- /3c.bbb_pal_strategy_fde/ 
+**[3c.2 PAL AI dev assistants (WIP)](/3c.bbb_pal_strategy_fde/) shows how to maximize AI usage when using PAL (by using AIP/FDE)**. 
+-->
+
+**Real world apps change quickly**. This ZiptieAI site is constantly evolving. I can manage this task by myself thanks to the AI tools that vastly simplify website management. Its the same when creating apps with PAL tools. AI inside of PAL (and other apps) will vastly improve in the few years, and this will revolutionize end user programming (**PAL's built-in AI has made using PAL vastly easier already**, but there is still much room for improvement). This is just another example of how **AI is not a tech bubble (its only getting started)**.
+
+<!-- 
+*No need for traditional docs (that you have to sift through to find what you need); PAL's built in AI answers your questions with details instructions* <br>
+<img src="/assets/pal_9_10.png" alt="drones" width="100%" style="border: 1px solid #999;">-->
+
+<br>
 
 <br>
 
