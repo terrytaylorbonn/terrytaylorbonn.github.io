@@ -15,8 +15,8 @@ For now **the focus is 100% on Palantir Foundry** because
   - This would lead to a much larger customer base that does not depend on human FDE's. 
   - Competitors will come out with similar products soon (a lot of PAL expertise will transfer to these new systems).
 
-**TL;DR** (too long; dont (want to) read)? If you are in a hurry, skip to 
-- **[3c.3 AIP/FDE "haystack needle" (HN) demos](/3c.xxx_pal_gist/)**
+<!-- **TL;DR** (too long; dont (want to) read)? If you are in a hurry, skip to 
+- **[3c.3 AIP/FDE "haystack needle" (HN) demos](/3c.xxx_pal_gist/)** -->
 
 <br>
 
@@ -28,6 +28,8 @@ For now **the focus is 100% on Palantir Foundry** because
   - This section is WIP (I only started using PAL in July 2026).<br><br>
 
 - **[3c.2 First PAL demos](/3c.2_pal_aip/)** D1-D8. Following PAL docs (step by step tutorials). For your first demos its probably best way to start (consult my docx notes for details).
+
+- **[3c.2b PAL AI usage strategy](/3c.bbb_pal_strategy_fde/)**. D8 was the first demo to use AIP/FDE to create demos.
 
 - **[3c.3 AIP/FDE "haystack needle" (HN) demos](/3c.xxx_pal_gist/)** (HN = find small anomalies in mountains of data).
   - I use AI (AIP/FDE) to do my own demos (no PAL demos or PAL docs).

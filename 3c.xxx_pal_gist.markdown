@@ -10,68 +10,55 @@ permalink: /3c.xxx_pal_gist/
 
 <br>
 
-**These demos are my own, created by prompting AIP/FDE for the steps.** This was my goal from the beginning:
-- In 3c.2 get enough experience so that 
-  - I had an idea how to prompt AIP/FDE and
-  - I could complete what they told me. 
-- I did not really have enough experience, but still **I found out how to get FDE to lead me by the hand step-by-step through some difficult parts (Workshop config). This was perhaps the most important lesson.**
-
 **What has interested me the most about Palantir for over a year now are the "haystack needle" (HN) algorithms**. This was the original reason for the founding of PAL. 9/11 occured because the US government failed to detect obvious warning signs in a sea of data. PAL's job was to make sure that that did not happen again by creating a system that could sift through vast amounts of data (about, for example, a sudden surge in foreigners studying to fly large airliners) to flag potential threats. To find the needle in the haystack.
 
 But how exactly did they implement the HN algorithms? That's of practical interest currently because 
 - (1) those **HN techniques are being used in all business segments** (not just military and intelligence) and 
 - (2) **you can learn the details hands-on yourself for free with no assistance**by getting a PAL trial license (I have only a trial license and I am working alone). 
 
-<!-- The goal of this page is to explain (via demos) the gist of a portion of the Palantir (PAL) toolset (there are not many competitors to PAL right now, but there will be in the near future, and they will follow a lot of the PAL methodologies). How to use that toolset to create HN apps. -->
 
-*The gist of Palantir haystack needle search: A crystal ball (called a "palantir" ("seeing stone") in Lord of the Rings)* <br><img src="/assets/pal_9_06.png" alt="drones" width="25%" style="border: 1px solid #999;">
+**These demos are my own, created by prompting AIP/FDE for the steps.** (for details see **[3c.2 PAL AI dev assistants](/3c.bbb_pal_strategy_fde/)** about AIP/FDE led help.)
+
+<!-- This was my goal from the beginning:
+- In 3c.2 get enough experience so that 
+  - I had an idea how to prompt AIP/FDE and
+  - I could complete what they told me. 
+- I did not really have enough experience, but still **I found out how to get FDE to lead me by the hand step-by-step through some difficult parts (Workshop config). This was perhaps the most important lesson.** -->
+
 
 <br>
 
 **TOC**
 
-First set of demos will be (TODO) about non-AI apps:
-- **1 Demo X**: Non-AI PAL demos
+- **[Demo 9: HN demos](/3c.xxx_pal_HN_01_non_ai/)** (haystack needle, with/without AI model).
 
-Second set of demos are about AI apps:
-- **3 Demo 8-1 (2c.2)**: pipeline + AI model » results
-- **4 Demo 8-2 (2c.3-5)**: deploy model / function / UI app (individual input / results)
-- **5 Demo 8-3 (2c.X)**: REAL WORLD detect from big data input (streaming??)
 
 <br>
 
-# **[1 Demo X: Non-AI PAL demos](/3c.xxx_pal_HN_01_non_ai/)**
 
-**(TODO: ask FDE for details)**.
+*The gist of Palantir haystack needle search: A crystal ball (called a "palantir" ("seeing stone") in Lord of the Rings)* <br><img src="/assets/pal_9_06.png" alt="drones" width="25%" style="border: 1px solid #999;">
 
-- non-AI PAL haystack needle detection (PAL's original algorithms)
-- No AI, searching for haystack needles. 
-- This was how PAL started 25 years ago.
-- You can do this, but you have to be very clever to get everthing just right.
-- Much more data massaging and big procedural programming for needle search.
-- ontology (token library)
-- CPU program detection?
-
-title: PAL HN 01 non AI demo
-permalink: /3c.xxx_pal_HN_01_non_ai/
+<!-- The goal of this page is to explain (via demos) the gist of a portion of the Palantir (PAL) toolset (there are not many competitors to PAL right now, but there will be in the near future, and they will follow a lot of the PAL methodologies). How to use that toolset to create HN apps. -->
 
 
-### **[3c.2 PAL AI dev assistants](/3c.bbb_pal_strategy_fde/)** ########################
+<br>
+
+
+
+26.0725 (v1 26.0722)
 
 <!-- /3c.bbb_pal_strategy_fde/ 
 **[3c.2 PAL AI dev assistants (WIP)](/3c.bbb_pal_strategy_fde/) shows how to maximize AI usage when using PAL (by using AIP/FDE)**. 
 -->
 
-**Real world apps change quickly**. This ZiptieAI site is constantly evolving. I can manage this task by myself thanks to the AI tools that vastly simplify website management. Its the same when creating apps with PAL tools. AI inside of PAL (and other apps) will vastly improve in the few years, and this will revolutionize end user programming (**PAL's built-in AI has made using PAL vastly easier already**, but there is still much room for improvement). This is just another example of how **AI is not a tech bubble (its only getting started)**.
 
 <!-- 
 *No need for traditional docs (that you have to sift through to find what you need); PAL's built in AI answers your questions with details instructions* <br>
 <img src="/assets/pal_9_10.png" alt="drones" width="100%" style="border: 1px solid #999;">-->
 
-<br>
 
-<br>
 
+<!--
 # **3 Demo 8-1 (2c.2 ): pipeline + AI model >> results**
 
 
@@ -92,12 +79,6 @@ In this first test, the test inference data was run through the pipeline/model. 
 # **4 Demo 8-2 (2c.3-5): deploy model / function / UI app (individual input / results)**
 
 I spent several weeks doing PAL demos (on a trial account that PAl so graciously offers) to get a grounded understanding of what PAL does (of course, PAL does much more, but this to me is the core ability, where it all started, the haystack needle search algorithm). After a little over 2 weeks I finally got the gist. I suggested to PAL AI that we create **a demo that I thought would reveal the gist of the needle in the haystack search (this demo was my original idea). The built-in PAL AI (AIP) chatbot agreed "whole-heartedly"**. AIP and I were able to create a demo that showed by example the core of how PAL does the needle search.  
-
-<!-- The best thing about the demo: **I did most of the demo by not reading docs, but rather chatting with PAL AI** (AIP and FDE chat agents built into PAL). Thats the focus of the next section "1 PAL AI usage strategy" (below).
-
-
-*Green = URL; Blue = Input; Red = Output (from model)* <br><img src="/assets/pal_9_09.png" alt="drones" width="100%" style="border: 1px solid #999;"> -->
-
 
 #### (1) In Your Housing Demo — What Anomalies Could You Detect?
 Your model predicts house prices based on features like square footage, location, etc. Anomalies would be records where the actual value diverges sharply from the predicted value, which could indicate:
@@ -127,8 +108,6 @@ Once anomalies are flagged, the Foundry stack lets you operationalize them:
 - Workshop — analysts see a live operational UI showing flagged cases
 - Foundry Rules — trigger automated alerts when thresholds are breached 
 - Actions — analysts can act directly on flagged objects (escalate, dismiss, investigate)
-
-
 
 #### (2) & (3) Real-World Examples
 This is where Palantir's original mission becomes clear. The pattern is always the same: **model what "normal" looks like, then flag deviations at scale**.
@@ -211,7 +190,7 @@ a state actor quietly buying large quantities of specific industrial components 
 
 **The common thread across all of these is exactly what you described**:  
 a very large, noisy dataset, a model of what normal looks like, and a pipeline that continuously scores incoming data and surfaces the deviations for human analysts to act on. That is the Palantir loop — ingest, model, detect, operationalize, act.
-
+-->
 
 <!--
 See the working text for this QS in
@@ -238,6 +217,3 @@ xxxxxx
 <br>
 -->
 
-<br>
-
-26.0722 (v1 26.0722)

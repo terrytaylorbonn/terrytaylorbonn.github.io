@@ -1,6 +1,6 @@
 ---
 layout: page
-title: 3c.1 PAL AI usage strategy
+title: 3c.2b PAL AI usage strategy
 permalink: /3c.bbb_pal_strategy_fde/
 ---
 
@@ -9,6 +9,20 @@ permalink: /3c.bbb_pal_strategy_fde/
 [← 3c PAL](/pal/)
 
 <br>
+
+- **[Demo 8 (model integration)](/3c.8_pal_8_model_integration/)** sections with AIP/FDE:
+  - **2c.2**: pipeline + AI model » results
+  - **2c.3-5**: deploy model / function / UI app (individual input / results)
+  - **2c.X**: REAL WORLD detect from big data input (streaming??)<br><br>
+
+This was my goal from the beginning:
+- In first demos D1-D8 get enough experience so that 
+  - I had an idea how to prompt AIP/FDE and
+  - I could complete what they told me. 
+- I did not really have enough experience, but still **I found out how to get FDE to lead me by the hand step-by-step through some difficult parts (Workshop config). This was perhaps the most important lesson.**
+
+
+
 
 Content:
 - Maximize FDE usage.
