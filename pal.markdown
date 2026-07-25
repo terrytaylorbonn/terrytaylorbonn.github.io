@@ -10,7 +10,7 @@ This section is about enterprise AI dev platforms that control almost everything
 For now **the focus is 100% on Palantir Foundry** because 
 - PAL is a market leader.
 - **PAL offers a generous free demo account for hands-on experience for Foundry.**
-- **The built AI help (AIP/FDE) made it possible to complete the demos (quickly)**. Without AI this would have taken at least 5x longer to do.
+- **The built-in AI help (AIP/FDE) made it possible to complete the demos (quickly)**. Without AI this would have taken at least 5x longer to do.
 - In the near future AIP/FDE could develop into higher level AI assistant that would lead the user by the hand through complex setups.
   - This would lead to a much larger customer base that does not depend on human FDE's. 
   - Competitors will come out with similar products soon (a lot of PAL expertise will transfer to these new systems).
@@ -27,7 +27,7 @@ For now **the focus is 100% on Palantir Foundry** because
   - What problems are solved
   - This section is WIP (I only started using PAL in July 2026).<br><br>
 
-- **[3c.2 First PAL demos](/3c.2_pal_aip/)** D1-D8. Following PAL docs (step by step tutorials). For your first demos its probably best way to start (consult my docx notes for details).
+- **[3c.2 PAL demos](/3c.2_pal_aip/)**. Currently just D1-D8, the first PAL demos I did (step by step tutorials). For your first demos its probably best way to start (I kept detailed docx notes of what I did in these demos).
 
 - **[3c.2b PAL AI usage strategy](/3c.bbb_pal_strategy_fde/)**. D8 was the first demo to use AIP/FDE (to create just a few demo subsections as an add-on to PAL demo).
 
