@@ -1,6 +1,6 @@
 ---
 layout: page
-title: 3c.3 Palantir "haystack needle" (HN) app demos
+title: 3c.3 AIP/FDE "haystack needle" (HN) demos
 permalink: /3c.xxx_pal_gist/
 ---
 
@@ -10,10 +10,13 @@ permalink: /3c.xxx_pal_gist/
 
 <br>
 
+**These demos are my own, created by prompting AIP/FDE for the steps.** This was my goal from the beginning:
+- In 3c.2 get enough experience so that 
+  - I had an idea how to prompt AIP/FDE and
+  - I could complete what they told me. 
+- I did not really have enough experience, but still **I found out how to get FDE to lead me by the hand step-by-step through some difficult parts (Workshop config). This was perhaps the most important lesson.**
 
-
-
-What has interested me the most about Palantir for over a year now are the **"haystack needle" (HN) algorithms**. This was the original reason for the founding of PAL. 9/11 occured because the US government failed to detect obvious warning signs in a sea of data. PAL's job was to make sure that that did not happen again by creating a system that could sift through vast amounts of data (about, for example, a sudden surge in foreigners studying to fly large airliners) to flag potential threats. To find the needle in the haystack.
+**What has interested me the most about Palantir for over a year now are the "haystack needle" (HN) algorithms**. This was the original reason for the founding of PAL. 9/11 occured because the US government failed to detect obvious warning signs in a sea of data. PAL's job was to make sure that that did not happen again by creating a system that could sift through vast amounts of data (about, for example, a sudden surge in foreigners studying to fly large airliners) to flag potential threats. To find the needle in the haystack.
 
 But how exactly did they implement the HN algorithms? That's of practical interest currently because 
 - (1) those **HN techniques are being used in all business segments** (not just military and intelligence) and 

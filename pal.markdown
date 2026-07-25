@@ -6,48 +6,71 @@ permalink: /pal/
 
 <br>
 
-The enterprise AI dev platform controls almost everything. For now this tool is pretty much (from what I know) limited to FDE (Forward Deployed Engineer) experts installing systems for enterprise customers, but I believe the tech will "trickle down" to non-experts in the near future. 
-
-**TL;DR (too long; dont (want to) read)?** If you are in a hurry, skip to 
-- **[3c.3 Palantir "haystack needle" (HN) app demos](/3c.xxx_pal_gist/)**
-
-<br>
-
-For now this section **focuses solely on the Palantir (PAL) platform**. For several reasons:
+This section is about enterprise AI dev platforms that control almost everything. 
+For now **the focus is 100% on Palantir Foundry** because 
 - PAL is a market leader.
-- **I got a generous free demo account for hands-on experience.**
+- **PAL offers a generous free demo account for hands-on experience for Foundry.**
 - **The built AI help (AIP/FDE) made it possible to complete the demos (quickly)**. Without AI this would have taken at least 5x longer to do.
 - **In the near future AIP/FDE could develop into higher level AI assistant** that would lead the user by the hand through complex setups.
   - This would lead to a much larger customer base that does not depend on human FDE's. 
   - Competitors will come out with similar products soon (a lot of PAL expertise will transfer to these new systems).
 
+**TL;DR** (too long; dont (want to) read)? If you are in a hurry, skip to 
+- **[3c.3 AIP/FDE "haystack needle" (HN) demos](/3c.xxx_pal_gist/)**
+
 <br>
 
-**TOC** 
-- **3c.1 PAL concepts** (my own take)
+### **TOC** 
+
+
+- **[3c.1 PAL app concepts (WIP)](/3c.ccc_pal_concepts/)** (my own take)
   - What problems are solved
-  - Note: This section will be completed later after I have more hands-on experience (just like section **[Hack](/0-demo/)** was only completed after a lot of AI hands-on experience).
-- **3c.2 First PAL demos** D1-D8. Following PAL docs (step by step tutorials). For your first demos its probably best to do these (following my docx notes).
-- **3c.3 Palantir "haystack needle" (HN) app demos** (HN = find small anomalies in mountains of data).
+  - This section is WIP (I only started using PAL in July 2026).<br><br>
+
+- **[3c.2 First PAL demos](/3c.2_pal_aip/)** D1-D8. Following PAL docs (step by step tutorials). For your first demos its probably best way to start (consult my docx notes for details).
+
+- **[3c.3 AIP/FDE "haystack needle" (HN) demos](/3c.xxx_pal_gist/)** (HN = find small anomalies in mountains of data).
   - I use AI (AIP/FDE) to do my own demos (no PAL demos or PAL docs).
-  - A big focus (at least initially) is on prompt techniques and workflows to maximize effectiveness of using AI (my initial impression is that both AIP and FDE help have limitations; using both of them together (primarily FDE) seems to be the best solution).
+  - A big focus (at least initially) is on prompt techniques and workflows to maximize effectiveness of using AI (my initial impression is that both AIP and FDE help have limitations; using both of them together (primarily FDE) seems to be the best solution).<br><br>
+
 - **3c.4 Other "deep dive ASAP" PAL demos** (for finance, etc).
 
+<br>
+
+*The gist of Palantir: A crystal ball (called a "palantir" ("seeing stone") in Lord of the Rings) that can find a haystack needle (HN)* <br><img src="/assets/pal_9_06.png" alt="drones" width="25%" style="border: 1px solid #999;">
 
 <br>
 
-### **[3c.1 PAL app concepts (WIP)](/3c.ccc_pal_concepts/)**
+### **Notes**
+- *[PAL general notes](/3c.0_pal_notes/)*
+- *[Palantir CEO火力全开，场面控制不住了！](https://www.youtube.com/watch?v=feUFT1Q-oBA)*
+- *[zerohedge.com/ai/something-has-gone-completely-wrong-palantirs-alex-karp-goes-ballistic-openai-anthropic](https://www.zerohedge.com/ai/something-has-gone-completely-wrong-palantirs-alex-karp-goes-ballistic-openai-anthropic)*
+- *https://www.youtube.com/watch?v=lSDC6-BdVus?t=341 HBM, diagram of NN, interconnecting multiple GPUs*
 
-<!-- (/3c.ccc_pal_concepts/) -->
+<br>
+
+26.0725 (v1 26.0702) 
+
+<!-- ### **3c.4 Other AIP/FDE-led demos** (for finance, etc).**
+
+(TODO)
+
+<br> -->
+
+<!-- ### **[3c.1 PAL app concepts (WIP)](/3c.ccc_pal_concepts/)**
+
+(/3c.ccc_pal_concepts/)
 
 This is a rough draft.... I only started using PAL in July 2026, so I still dont have a good grasp of the spectrum of what PAL apps do.  
 
 
 <br>
 
-### **3c.2 First PAL demos**
+### **[3c.2 First PAL demos](/3c.2_pal_aip/)**
 
-For your first demos its probably best to do these (following my docx notes).  See also: 
+For your first demos its probably best to do these (following my docx notes).  
+
+See also: 
 - **[PAL demo strategy](/3c.aaa_pal_strategy_demos/)**
 
 I added numbering, conceptual diagrams, and a few error updates to the original demos. I will probably come up with my own set of demos. 
@@ -80,18 +103,22 @@ I added numbering, conceptual diagrams, and a few error updates to the original 
   - https://learn.palantir.com/deep-dive-building-your-first-pipeline
 - **[D8: Deep Dive: Model integration (26.0721)](/3c.8_pal_8_model_integration/)**.
   - #619_.docx
+  - **Sections 2c, 2d were not in the demos. I prompted AIP/FDE for directions.** 
 
+<br> -->
 
+<!-- ### **[3c.3 AIP/FDE "haystack needle" (HN) demos](/3c.xxx_pal_gist/)**
 
-<br>
+(based on demo D8 listed in section "3 Demos" later on this page) -->
 
+<!-- **These demos are my own, created by prompting AIP/FDE for the steps.** This was my goal from the beginning:
+- In 3c.2 get enough experience so that 
+  - I had an idea how to prompt AIP/FDE and
+  - I could complete what they told me. 
+- I did not really have enough experience, but still **I found out how to get FDE to lead me by the hand step-by-step through some difficult parts (Workshop config). This was perhaps the most important lesson.**
 
+**What has interested me the most about Palantir for over a year now are the "haystack needle" (HN) algorithms**. This was the original reason for the founding of PAL. 9/11 occured because the US government failed to detect obvious warning signs in a sea of data. PAL's job was to make sure that that did not happen again by creating a system that could sift through vast amounts of data (about, for example, a sudden surge in foreigners studying to fly large airliners) to flag potential threats. To find the needle in the haystack. -->
 
-### **[3c.3 Palantir "haystack needle" (HN) app demos](/3c.xxx_pal_gist/)**
-
-<!-- (based on demo D8 listed in section "3 Demos" later on this page) -->
-
-What has interested me the most about Palantir for over a year now are the **"haystack needle" (HN) algorithms**. This was the original reason for the founding of PAL. 9/11 occured because the US government failed to detect obvious warning signs in a sea of data. PAL's job was to make sure that that did not happen again by creating a system that could sift through vast amounts of data (about, for example, a sudden surge in foreigners studying to fly large airliners) to flag potential threats. To find the needle in the haystack.
 
 <!--
 But how exactly did they implement the HN algorithms? That's of practical interest currently because 
@@ -100,28 +127,6 @@ But how exactly did they implement the HN algorithms? That's of practical intere
 
 The goal of this page is to explain (via demos) the gist of a portion of the Palantir (PAL) toolset (there are not many competitors to PAL right now, but there will be in the near future, and they will follow a lot of the PAL methodologies). How to use that toolset to create HN apps. -->
 
-*The gist of Palantir: A crystal ball (called a "palantir" ("seeing stone") in Lord of the Rings) that can find a haystack needle (HN)* <br><img src="/assets/pal_9_06.png" alt="drones" width="25%" style="border: 1px solid #999;">
-
-<br>
-
-
-
-### **3c.4 Other "deep dive ASAP" PAL demos** (for finance, etc).** (TODO)
-
-xxxxxx
-
-<br>
-
-
-### **Notes**
-- *[PAL general notes](/3c.0_pal_notes/)*
-- *[Palantir CEO火力全开，场面控制不住了！](https://www.youtube.com/watch?v=feUFT1Q-oBA)*
-- *[zerohedge.com/ai/something-has-gone-completely-wrong-palantirs-alex-karp-goes-ballistic-openai-anthropic](https://www.zerohedge.com/ai/something-has-gone-completely-wrong-palantirs-alex-karp-goes-ballistic-openai-anthropic)*
-- *https://www.youtube.com/watch?v=lSDC6-BdVus?t=341 HBM, diagram of NN, interconnecting multiple GPUs*
-
-<br>
-
-26.0725 (v1 26.0702) 
 
 <!--
 Palantir
