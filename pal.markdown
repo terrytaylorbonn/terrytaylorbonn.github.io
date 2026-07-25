@@ -11,7 +11,7 @@ For now **the focus is 100% on Palantir Foundry** because
 - PAL is a market leader.
 - **PAL offers a generous free demo account for hands-on experience for Foundry.**
 - **The built AI help (AIP/FDE) made it possible to complete the demos (quickly)**. Without AI this would have taken at least 5x longer to do.
-- **In the near future AIP/FDE could develop into higher level AI assistant** that would lead the user by the hand through complex setups.
+- In the near future AIP/FDE could develop into higher level AI assistant that would lead the user by the hand through complex setups.
   - This would lead to a much larger customer base that does not depend on human FDE's. 
   - Competitors will come out with similar products soon (a lot of PAL expertise will transfer to these new systems).
 
@@ -33,7 +33,7 @@ For now **the focus is 100% on Palantir Foundry** because
   - I use AI (AIP/FDE) to do my own demos (no PAL demos or PAL docs).
   - A big focus (at least initially) is on prompt techniques and workflows to maximize effectiveness of using AI (my initial impression is that both AIP and FDE help have limitations; using both of them together (primarily FDE) seems to be the best solution).<br><br>
 
-- **3c.4 Other "deep dive ASAP" PAL demos** (for finance, etc).
+- **3c.4 Other "deep dive ASAP" PAL demos** (for finance, etc). (TODO)
 
 <br>
 
