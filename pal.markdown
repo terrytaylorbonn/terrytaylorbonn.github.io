@@ -11,26 +11,28 @@ The enterprise AI dev platform controls almost everything. For now this is limit
 **TL;DR (too long; didn't read)?** If you are in a hurry, skip to 
 - **[3c.3 Palantir "haystack needle" (HN) app demos](/3c.xxx_pal_gist/)**
 
+<br>
+
 For now this section **focuses solely on the Palantir (PAL) platform**. For several reasons:
-- market leader
-- **i was able to get generous free demo account for handson experience**
-- **great built in AI help (AIP/FDE) ... without them this would have taken at least 5x longer to do** (this is true in general of the whole ZiptieAI project... I could have accomplished 5% of what I have if I did not have AI assitants)
-- I believe that **AIP/FDE could in the future morph into a higher level AI assistant** that would lead the user by the hand through complex setups.
-- this will lead to a much larger customer base that does not depend on human FDE's. 
-- and competitors will come out with similar products soon... the knowledge of PAL will transfer to these new systems.
+- PAL is a market leader.
+- **I got a generous free demo account for hands-on experience.**
+- **The built AI help (AIP/FDE) made it possible to complete the demos (quickly)**. Without AI this would have taken at least 5x longer to do.
+- **In the near future AIP/FDE could develop into higher level AI assistant** that would lead the user by the hand through complex setups.
+  - This would lead to a much larger customer base that does not depend on human FDE's. 
+  - Competitors will come out with similar products soon (a lot of PAL expertise will transfer to these new systems).
 
 <br>
 
 **TOC** 
 - **3c.1 PAL concepts** (my own take)
-  - what problems are solved
-  - i will complete this section last (just like section **[Hack](/0-demo/)** was only completed after a lot of hands on learning)
-- **3c.2 first demos** D1-D7. follow PAL docs (step by step tutorials)..
-- **3c.3 Palantir "haystack needle" (HN) app demos**. (find anomalies in data)
-  - uses AI (AIP/FDE) to do what I want to do (not a PAL demo)
-  - big focus (at least initially) on prompting and techniques to maximize effectiveness
-- **3c.3b create other "deep dive ASAP" demos** (for finance, etc)
-- **3c.4 All demos BY DOCX (chronological order; detailed results from my tests)** (right now this is just a chronological list of what I did, but I might reorganize this in the future)
+  - What problems are solved
+  - Note: This section will be completed later after I have more hands-on experience (just like section **[Hack](/0-demo/)** was only completed after a lot of AI hands-on experience).
+- **3c.2 First demos** D1-D7. Following PAL docs (step by step tutorials). For your first demos its probably best to do these (following my docx notes).
+- **3c.3 Palantir "haystack needle" (HN) app demos** (HN = find small anomalies in mountains of data).
+  - I use AI (AIP/FDE) to do my own demos (no PAL demos or PAL docs).
+  - A big focus (at least initially) is on prompt techniques and workflows to maximize effectiveness of using AI (my initial impression is that both AIP and FDE help have limitations; using both of them together (primarily FDE) seems to be the best solution).
+- **3c.3b Other "deep dive ASAP" PAL demos** (for finance, etc).
+- **3c.4 List of all demo docx's**  (MS.Word files with detailed instructions). A chronological list of what I did.
 
 
 <br>
