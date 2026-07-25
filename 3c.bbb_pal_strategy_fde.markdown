@@ -14,9 +14,10 @@ Perhaps the most important thing to understand when working in PAL Foundry is ho
 - AIP
 - FDE
 
-to do 2 things
+to do the following:
 - solve problems
-- get workflow directions
+- get general workflow directions
+- led you by the hand step by step through complicated tasks (using FDE with screenshot recognition)
 
 <br>
 

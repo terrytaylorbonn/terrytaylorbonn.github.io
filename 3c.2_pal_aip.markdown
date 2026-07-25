@@ -10,12 +10,7 @@ permalink: /3c.2_pal_aip/
 
 <br>
 
-For your first demos its probably best to do these (following my docx notes).  
-
-See also: 
-- **[PAL demo strategy](/3c.aaa_pal_strategy_demos/)**
-
-I added numbering, conceptual diagrams, and a few error updates to the original demos. I will probably come up with my own set of demos. 
+For your first demos its probably best to do these (following my docx notes; see also **[PAL demo strategy](/3c.aaa_pal_strategy_demos/)**). I added numbering, conceptual diagrams, and a few error updates to the original demos (in my docx notes). 
 
 - **[D1: Palantir Foundry "speedrun" (quick start) (26.0705)](/3c.1_pal_foundry/)**. 
   - Demo complete... still need to write the webpage.
