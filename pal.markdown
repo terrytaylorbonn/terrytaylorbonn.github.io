@@ -6,7 +6,7 @@ permalink: /pal/
 
 <br>
 
-The enterprise AI dev platform controls almost everything. For now this is limited to enterprise customers, but I believe the tech will "trickle down" to non-experts in the near future. 
+The enterprise AI dev platform controls almost everything. For now this tool is pretty much (from what I know) limited to FDE (Forward Deployed Engineer) experts installing systems for enterprise customers, but I believe the tech will "trickle down" to non-experts in the near future. 
 
 **TL;DR (too long; didn't read)?** If you are in a hurry, skip to 
 - **[3c.3 Palantir "haystack needle" (HN) app demos](/3c.xxx_pal_gist/)**
