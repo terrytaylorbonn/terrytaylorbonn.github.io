@@ -6,7 +6,7 @@ permalink: /pal/
 
 <br>
 
-The enterprise platform controls almost everything. 
+The enterprise AI dev platform controls almost everything. For now this is limited to enterprise customers, but I believe the tech will "trickle down" to non-experts in the near future. 
 
 For now this section **focuses solely on the Palantir (PAL) platform**. For several reasons:
 - market leader
