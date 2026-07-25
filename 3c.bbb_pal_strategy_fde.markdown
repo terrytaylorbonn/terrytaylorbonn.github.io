@@ -10,24 +10,48 @@ permalink: /3c.bbb_pal_strategy_fde/
 
 <br>
 
-- **[Demo 8 (model integration)](/3c.8_pal_8_model_integration/)** sections with AIP/FDE:
-  - **2c.2**: pipeline + AI model » results
-  - **2c.3-5**: deploy model / function / UI app (individual input / results)
-  - **2c.X**: REAL WORLD detect from big data input (streaming??)<br><br>
+Perhaps the most important thing to understand when working in PAL Foundry is how to use 2 sources of PAL help 
+- AIP
+- FDE
 
-This was my goal from the beginning:
-- In first demos D1-D8 get enough experience so that 
-  - I had an idea how to prompt AIP/FDE and
-  - I could complete what they told me. 
-- I did not really have enough experience, but still **I found out how to get FDE to lead me by the hand step-by-step through some difficult parts (Workshop config). This was perhaps the most important lesson.**
+to do 2 things
+- solve problems
+- get workflow directions
 
+<br>
 
+#### **TOC**
+- **1 Summary of AIP/FDE combined usage**
+- **2 AIP usage** 
+- **3 FDE usage** 
+- **4 Future capabilities**
 
+<br>
 
-Content:
-- Maximize FDE usage.
-- How AI helps to complete (without FDE I could not have completed half of the demo content).
-- **LEARN USING FDE.**  
+### **1 Summary of AIP/FDE combined usage**
+
+ (of AIP/FDE limits, and how they make up for each other). There are limits they dont make up for 
+  - **Neither can see the dialogs**
+  
+<br>
+
+### **2 AIP usage**
+
+(seems to come mainly from PAL docs; good for workflows, but no screenshot recognition and not so good at solving complex problems)
+
+<br>
+
+### **3 FDE usage**
+
+(seems to have the hard core experience of human FDE's embedded into it; **can recognize screenshots (a critically important capability)**, and can lead accurately thru stepbystep processes, and can drill down into the backend code)
+
+<br>
+
+### **4 Future capabilities**
+
+I see a time when you can chat or talk with the help system, and it can walk you thru entire processes, filling in required info, etc. **This will revolutionize the use of such enterprise SW. PAL right now is quite close to that ability** (needs to combine AIP and FDE into one unit that can see dialog and entere commands)
+
+<br>
 
 **Real world apps change quickly**. This ZiptieAI site is constantly evolving. I can manage this task by myself thanks to the AI tools that vastly simplify website management. Its the same when creating apps with PAL tools. AI inside of PAL (and other apps) will vastly improve in the few years, and this will revolutionize end user programming (**PAL's built-in AI has made using PAL vastly easier already**, but there is still much room for improvement). This is just another example of how **AI is not a tech bubble (its only getting started)**.
 
@@ -36,6 +60,12 @@ Content:
 
 I spent several weeks doing PAL demos (on a trial account that PAl so graciously offers) to get a grounded understanding of what PAL does (of course, PAL does much more, but this to me is the core ability, where it all started, the haystack needle search algorithm). After a little over 2 weeks I finally got the gist. I suggested to PAL AI that we create **a demo that I thought would reveal the gist of the needle in the haystack search (this demo was my original idea). The built-in PAL AI (AIP) chatbot agreed "whole-heartedly"**. AIP and I were able to create a demo that showed by example the core of how PAL does the needle search.  
 
+
+<br>
+
+26.0725 (v1 26.0720)
+
+<!--
 The best thing about the demo: **I did most of the demo by not reading docs, but rather chatting with PAL AI** (AIP and FDE chat agents built into PAL). Thats the focus of the next section "1 PAL AI usage strategy" (below).
 
 
@@ -81,7 +111,7 @@ AI used:
   - 2c.3 Deploy the model (done already in 2b in Jupyter notebook)
   - 2c.4 Publish the model as a Function
   - 2d.5 Create a Workshop app (UI)
-
+-->
 
 
 <!--
@@ -108,7 +138,3 @@ xxxxxx
 
 <br>
 -->
-
-<br>
-
-26.0722 (v1 26.0720)
