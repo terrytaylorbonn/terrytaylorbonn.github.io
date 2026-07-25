@@ -1,6 +1,6 @@
 ---
 layout: page
-title: 3c.2 First PAL demos
+title: 3c.2 Initial PAL demos
 permalink: /3c.2_pal_aip/
 ---
 

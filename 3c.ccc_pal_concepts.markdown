@@ -1,6 +1,6 @@
 ---
 layout: page
-title: 3c(c) PAL concepts (based on demos)
+title: 3c.0 PAL app concepts
 permalink: /3c.ccc_pal_concepts/
 ---
 

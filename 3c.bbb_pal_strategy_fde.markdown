@@ -1,6 +1,6 @@
 ---
 layout: page
-title: 3c.2b PAL AI usage strategy
+title: 3c.1 PAL AI usage strategy
 permalink: /3c.bbb_pal_strategy_fde/
 ---
 

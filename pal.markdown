@@ -23,17 +23,26 @@ For now **the focus is 100% on Palantir Foundry** because
 ### **TOC** 
 
 
-- **[3c.1 PAL app concepts (WIP)](/3c.ccc_pal_concepts/)** (my own take)
+- **[3c.0 PAL app concepts (WIP)](/3c.ccc_pal_concepts/)** (my own take)
   - What problems are solved
   - This section is WIP (I only started using PAL in July 2026).<br><br>
 
-- **[3c.2 Initial PAL demos](/3c.2_pal_aip/)**. Currently just D1-D8, the first PAL demos I did (step by step tutorials). For your first demos its probably best way to start (I kept detailed docx notes of what I did in these demos).
+- **[3c.1 PAL AI usage strategy](/3c.bbb_pal_strategy_fde/)**. PAL Foundry has 2 helps systems: (1) AIP and (2) FDE. 
+  - I used both during the first 8 "Initial PAL demos" (3c.2). 
+  - During demo 8 (of 3c.2) I asked AIP/FDE to show me how to do something that was not in the demo. The advantages of each tool slowly became apparent.
+  - During the AIP/FDDE demos (3c.3) I uses only AIP/FDE. It became apparent that
+    - AIP is better for getting initial workflows.
+    - FDE is the lifesaver that can solve problems and especially recognize screen shots (just past in the window). In one example, FDE led me step by step in setting up a Workshop demo that I just could not get right (for good reasons).
+  - I look forward to when AIP/FDE are combined into a single tool that can "see" dialogs and guide a user through various tasks.
+  - In general, a big focus (at least initially) is on prompt techniques and workflows to maximize effectiveness of using AI.<br><br>
 
-- **[3c.2b PAL AI usage strategy](/3c.bbb_pal_strategy_fde/)**. D8 was the first demo to use AIP/FDE (to create just a few demo subsections as an add-on to PAL demo).
+- **[3c.2 Initial PAL demos](/3c.2_pal_aip/)**. Currently just D1-D8, the first PAL demos I did (step by step tutorials). For your first demos its probably best way to start (I kept detailed docx notes of what I did in these demos).
 
 - **[3c.3 AIP/FDE demos](/3c.xxx_pal_gist/)**.
   - I use AI (AIP/FDE) to do my own demos (no PAL demos or PAL docs).
-  - A big focus (at least initially) is on prompt techniques and workflows to maximize effectiveness of using AI (my initial impression is that both AIP and FDE help have limitations; using both of them together (primarily FDE) seems to be the best solution).
+  - The focus for now is on what I call "haystack needle" demos (finding some small indication in a sea of data) with or without AI. 
+  - I imagine AIP/FDE can lead me through other demos. In general, my planned initial demos are to focus more on demonstrating functionality with minimal examples.
+  
 
 <!-- - **3c.4 Other "deep dive ASAP" PAL demos** (for finance, etc). (TODO) -->
 
