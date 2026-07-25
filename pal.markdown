@@ -25,9 +25,9 @@ This section is about enterprise AI dev platforms that do a lot of the heavy lif
 ### **TOC** 
 
 
-- **[3c.0 PAL app concepts (WIP)](/3c.ccc_pal_concepts/)** (my own take)
+- **[3c.0 Concepts](/3c.ccc_pal_concepts/)** (my own take)
   - What problems are solved
-  - This section is WIP (I only started using PAL in July 2026).<br><br>
+  - This section is a long term WIP (I started using PAL in July 2026).<br><br>
 
 - **[3c.1 PAL AI usage strategy](/3c.bbb_pal_strategy_fde/)**. PAL Foundry has 2 helps systems: (1) AIP and (2) FDE. 
   - I used both during the first 8 "Initial PAL demos" (3c.2). 

@@ -1,6 +1,6 @@
 ---
 layout: page
-title: 3c.0 PAL app concepts
+title: 3c.0 PAL Concepts
 permalink: /3c.ccc_pal_concepts/
 ---
 
@@ -10,34 +10,14 @@ permalink: /3c.ccc_pal_concepts/
 
 <br>
 
-```
-(PUT IN CONCEPTS)
-- 0 for now my learning is the focus (teaching myself)
-  - later: how to support sales... how to get potential customers fluent in PAL asap 
-  - (right now this is probably not that important.. the business model focuses on FDE's doing the groundwork) 
-- 2b how i document, maintain docs
-  - website overview, docx details, video maybe for high level overview (that does not change much)
-  - focus on big picture; doc hierarchy
-  - keep doc system very simple, easy to update (OR USE AI TO VERIFY DOCS)
-- 3 big focus is on using AIP (docs) / FDE (engineer feedback) to help fill in missing details.
-- **4 (CORE FOCUS) then start my own learning structural focus, using only AIP (for general direction) and FDE (for step by step).**
-- 5a future focus #1: focus on prompt techniques... assume that AIP/FDE will lead user by the hand.
-- **5b future focus #2: assume that AIP/FDE will someday soon become integral to workflows.** 
-  - they can "see" dialogs and the complete config (**and they can auto update docs**). 
-  - user can tell them what to setup... this would be next higher level of programming abstraction 
-  - **the ultimate UX (user experience) upgrade!**
-  - basically the tech reqs to become FDE are drastically lower, widening user base
-```
+#### **TOC**
+- 3c.0.1 The PAL framework simplifies AI app tasks
+- 3c.0.2 PAL (no app AI)
+- 3c.0.3 PAL + app AI
 
+<br>
 
-
-(include summaries of tool usage)
-
-Content:
-- PAL concepts (This is a long term goal (just like creating core concepts for AI has been)).
-- Especially how any PAL competitors in the future will follow the same routes. 
-
-#### **3c.1.1 The PAL framework simplifies tasks**
+#### **3c.0.1 The PAL framework simplifies AI app tasks**
 
 **Real world apps change quickly**. PAL apps are used to analyze complex environments that are constantly changing. You need a framework to allow focus on the parts that matter. **PAL is a framework that manages the complexity of creating AI apps**. 
 
@@ -50,7 +30,7 @@ Content:
 
 <br>
 
-#### **3c.1.2 PAL (no end user app AI)**
+#### **3c.0.2 PAL (no app AI)**
 
 This was the original PAL architecture (25 years ago, shortly after 9/11). This is what demos D1-D7 (below on this page) are all about. Detecting situations without AI. 
 
@@ -63,7 +43,7 @@ This was the original PAL architecture (25 years ago, shortly after 9/11). This 
 
 <br>
 
-#### **3c.1.3 PAL + AI (in end user app)**
+#### **3c.0.3 PAL + app AI**
 
 I started adding AI to the end user app in demo D8.
 
@@ -72,12 +52,11 @@ I started adding AI to the end user app in demo D8.
 
 There are 2 problems when using AI for detection 
 - (1) **Data sources are often messy**. You need something like PAL pipelines and ontology to clean things up.
-- (2) **Thats important because AI is just pattern recognition**. On the (rather short) page **[Hack](/0-demo/)** I layout the gist of what an AI LLM transformer (TF) does (which shows the core of AI really is). Most importantly on that page I show that **LLM TF's are simply pattern classification algorithms**. The classification of input tokens determines the output tokens (TF's understand nothing about language, they only generate a classification number for the input numbers). Recent GPU performance breakthroughs mean the patterns can scale to massive sizes, increasing the sheer number of patterns that can be reliably classified. **That is not intelligence, but pattern matching. An amazing hack. And it works.. mostly. But it needs guardrails.** 
+- (2) **Thats important because AI is just pattern recognition**. On the (rather short) page **[Hack](/0-demo/)** I layout the gist of what an AI LLM transformer (TF) does (which shows the core of AI really is). Most importantly on that page I show that **LLM TF's are simply pattern classification algorithms**. The classification of input tokens determines the output tokens (TF's understand nothing about language, they only generate a classification number for the input numbers). Recent GPU performance breakthroughs mean the patterns can scale to massive sizes, increasing the sheer number of patterns that can be reliably classified. **That is not intelligence, but pattern matching. An amazing hack. And it works for the most part. But it needs guardrails.** 
 
 That's where PAL comes in. **PAL minimizes the limitations of the AI hack while maximizing its effectiveness**. 
 
 *The LLM transformer is a hack, but Palantir provides the guard rails that maximize its effectiveness* <br><img src="/assets/hack-08.png" alt="drones" width="35%" style="border: 1px solid #999;"> 
-
 
 *I did demos to test this kind of functionality without a framework and with AI in the app on page **[3.3 Agent PAL core demos](/3.1-agentic/)**.*
 
@@ -85,37 +64,43 @@ That's where PAL comes in. **PAL minimizes the limitations of the AI hack while 
 
 <br>
 
+26.0725 (v1 26.0720)
+
+<!-- **3c.0.0 ZiptieAI focus on enterprise AI** 
+- **S) then start my own learning structural focus, using only AIP (for general direction) and FDE (for step by step).**
+- 5a future focus #1: focus on prompt techniques... assume that AIP/FDE will lead user by the hand.
+- **5b future focus #2: assume that AIP/FDE will someday soon become integral to workflows.** 
+  - they can "see" dialogs and the complete config (**and they can auto update docs**). 
+  - user can tell them what to setup... this would be next higher level of programming abstraction 
+  - **the ultimate UX (user experience) upgrade!**
+  - basically the tech reqs to become FDE are drastically lower, widening user base
+- 2b how i document, maintain docs
+  - website overview, docx details, video maybe for high level overview (that does not change much)
+  - focus on big picture; doc hierarchy
+  - keep doc system very simple, easy to update (OR USE AI TO VERIFY DOCS)
+- 3 big focus is on using AIP (docs) / FDE (engineer feedback) to help fill in missing details.
+(include summaries of tool usage)
+Content:
+- PAL concepts (This is a long term goal (just like creating core concepts for AI has been)).
+- Especially how any PAL competitors in the future will follow the same routes. 
+-->
+
+
 <!-- This is a long term goal (just like creating core concepts for AI has been). <br><br>*(placeholder pic; eventually I will create master pic that sums up core concepts)* <br><img src="/assets/pal-demo-01.png" alt="drones" width="65%" style="border: 1px solid #999;">
 <br> -->
-
-
-
-
 <!--
 See the working text for this QS in
 - **[\#xxx_\xxxxxxx.docx](https://drive.google.com/drive/folders/1-Adawag9uA8_bq-hDF-nOuPYaRLz1eEO)**. 
 - **[Demo URL](https://learn.palantir.com/xxxxxxxxxxxxxxxxxxx)**  
-
-
 <br>*00* <br><img src="/assets/pal-demo-xxxx.png" alt="xxxxxx" width="100%" style="border: 1px solid #999;">
-
 <br>
-
 ----------------------------
 ----------------------------
 ----------------------------
 ----------------------------
-
 <br>
 <br>
-
 # **NOTES**
-
 xxxxxx
-
 <br>
 -->
-
-<br>
-
-26.0725 (v1 26.0720)
