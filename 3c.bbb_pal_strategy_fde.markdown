@@ -35,7 +35,47 @@ I spent several weeks doing PAL demos (on a trial account that PAl so graciously
 
  (of AIP/FDE limits, and how they make up for each other). There are limits they dont make up for 
   - **Neither can see the dialogs**
-  
+
+
+#### **1.1 FDE confirms this**
+
+**ME: the built in AI/help:**
+```
+(1) you (FDE) 
+(1.1) you can see pasted  screenshots (of dialogs). 
+(1.2) but you dont have access to the current tool i am in.
+(1.3) you seem to have been trained on really useful data and workflows. 
+(2) AIP
+(2.1) cant see pasted screen shots
+(2.2) has access to tool i am in.
+(2.3) seems to only scan the (somewhat oudated and in complete) docs for info. often not correct.
+```
+
+**FDE: Yes — that’s a good diagnosis.**
+
+The two assistants have complementary weaknesses:
+
+| Assistant | Strength | Weakness |
+|---|---|---|
+| **Me / FDE** | Can reason from screenshots, conversation history, workflows, and symptoms | I may not directly control or inspect the exact UI state unless you share it |
+| **AIP Assist in product** | Knows current app/tool context and may offer UI-aware actions | Often cannot interpret screenshots you paste elsewhere and may rely heavily on docs/UI metadata |
+
+So the best practical workflow is:
+
+```text
+Use FDE for reasoning, diagnosis, diagrams, and “what is happening?”
+Use AIP Assist for “where is this exact button/control in the current app?”
+```
+
+For complicated UI, the ideal loop is:
+
+1. Ask AIP Assist: “where is the setting for X in this current app?”
+2. Screenshot the result/dialog.
+3. Ask me: “what should I set here and why?”
+
+That combines tool context with reasoning.
+
+
 <br>
 
 ### **2 AIP usage**
@@ -45,7 +85,7 @@ I spent several weeks doing PAL demos (on a trial account that PAl so graciously
 *AIP is "built into" the dialogs and seems to know where you are; it can show general directions well, but seems to be more limited in helping with problems (I think AIP primarily searches the docs, not a knowledge store of real world problems)* <br>
 <img src="/assets/pal_9_10.png" alt="drones" width="100%" style="border: 1px solid #999;">
 
-#### **AIP's own summary of itself**
+#### **2.1 AIP's own summary of itself**
 
 ME: where are you getting your info? from training, from palantir docs, or ????
 
@@ -74,7 +114,7 @@ I can see things you share with me directly — like the RID ri.eddie.main.pipel
 (seems to have the hard core experience of human FDE's embedded into it; **can recognize screenshots (a critically important capability)**, and can lead accurately thru stepbystep processes, and can drill down into the backend code)
 
 
-#### **Example**
+#### **3.1 Example**
 
 I pasted the following screenshot into the FDE chat window (no text, just the screenshot). Just one screenshot in a long list.
 
@@ -119,15 +159,12 @@ Right now the table is still showing all rows because those two filter variables
 *Result: Problem solved"*<br>
 <img src="/assets/pal_9_22.png" alt="drones" width="45%" style="border: 1px solid #999;">
 
-This was just the last step in a quite challenging configuration of the Workshop as summarized in the following diagram. Once you get used to the terminology and the UI, things become much easier. But without FDE it would have taken a long time to track down the problem. 
+This was just the last step in a quite challenging configuration of the Workshop as summarized in the following diagram. I tried to do it myself, and could not get it right. FDE led me by the hand through a clean config step by step, with me pasting screenshots and FDE describing what to do. Once you get used to the terminology and the UI, things become much easier. But without FDE it would have taken a long time to track down the problem. 
 
 *A rough diagram of all the setup"*<br>
 <img src="/assets/pal_9_20.png" alt="drones" width="100%" style="border: 1px solid #999;">
 
-
-
-
-#### **FDE's own summary of itself**
+#### **3.2 FDE's own summary of itself**
 
 ME: where are you getting your information? from palantir docs or from an FDE database or ????
 
