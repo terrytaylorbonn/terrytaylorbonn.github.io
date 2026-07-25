@@ -8,7 +8,7 @@ permalink: /pal/
 
 The enterprise AI dev platform controls almost everything. For now this tool is pretty much (from what I know) limited to FDE (Forward Deployed Engineer) experts installing systems for enterprise customers, but I believe the tech will "trickle down" to non-experts in the near future. 
 
-**TL;DR (too long; didn't read)?** If you are in a hurry, skip to 
+**TL;DR (too long; dont (want to) read)?** If you are in a hurry, skip to 
 - **[3c.3 Palantir "haystack needle" (HN) app demos](/3c.xxx_pal_gist/)**
 
 <br>
@@ -27,12 +27,11 @@ For now this section **focuses solely on the Palantir (PAL) platform**. For seve
 - **3c.1 PAL concepts** (my own take)
   - What problems are solved
   - Note: This section will be completed later after I have more hands-on experience (just like section **[Hack](/0-demo/)** was only completed after a lot of AI hands-on experience).
-- **3c.2 First demos** D1-D7. Following PAL docs (step by step tutorials). For your first demos its probably best to do these (following my docx notes).
+- **3c.2 First PAL demos** D1-D8. Following PAL docs (step by step tutorials). For your first demos its probably best to do these (following my docx notes).
 - **3c.3 Palantir "haystack needle" (HN) app demos** (HN = find small anomalies in mountains of data).
   - I use AI (AIP/FDE) to do my own demos (no PAL demos or PAL docs).
   - A big focus (at least initially) is on prompt techniques and workflows to maximize effectiveness of using AI (my initial impression is that both AIP and FDE help have limitations; using both of them together (primarily FDE) seems to be the best solution).
-- **3c.3b Other "deep dive ASAP" PAL demos** (for finance, etc).
-- **3c.4 List of all demo docx's**  (MS.Word files with detailed instructions). A chronological list of what I did.
+- **3c.4 Other "deep dive ASAP" PAL demos** (for finance, etc).
 
 
 <br>
@@ -46,30 +45,12 @@ This is a rough draft.... I only started using PAL in July 2026, so I still dont
 
 <br>
 
+### **3c.2 First PAL demos**
 
+For your first demos its probably best to do these (following my docx notes).  See also: 
+- **[PAL demo strategy](/3c.aaa_pal_strategy_demos/)**
 
-### **[3c.3 Palantir "haystack needle" (HN) app demos](/3c.xxx_pal_gist/)**
-
-<!-- (based on demo D8 listed in section "3 Demos" later on this page) -->
-
-What has interested me the most about Palantir for over a year now are the **"haystack needle" (HN) algorithms**. This was the original reason for the founding of PAL. 9/11 occured because the US government failed to detect obvious warning signs in a sea of data. PAL's job was to make sure that that did not happen again by creating a system that could sift through vast amounts of data (about, for example, a sudden surge in foreigners studying to fly large airliners) to flag potential threats. To find the needle in the haystack.
-
-<!--
-But how exactly did they implement the HN algorithms? That's of practical interest currently because 
-- (1) those **HN techniques are being used in all business segments** (not just military and intelligence) and 
-- (2) **you can learn the details hands-on yourself for free with no assistance**by getting a PAL trial license (I have only a trial license and I am working alone). 
-
-The goal of this page is to explain (via demos) the gist of a portion of the Palantir (PAL) toolset (there are not many competitors to PAL right now, but there will be in the near future, and they will follow a lot of the PAL methodologies). How to use that toolset to create HN apps. -->
-
-*The gist of Palantir: A crystal ball (called a "palantir" ("seeing stone") in Lord of the Rings) that can find a haystack needle (HN)* <br><img src="/assets/pal_9_06.png" alt="drones" width="25%" style="border: 1px solid #999;">
-
-<br>
-
-### **3c.4 All demos BY DOCX (chronological order; detailed results from my tests)**
-
-**[PAL demo strategy](/3c.aaa_pal_strategy_demos/)**
-
-Following is the list of demos in chronological order. I added numbering, conceptual diagrams, and a few error updates to the original demos. I will probably come up with my own set of demos. 
+I added numbering, conceptual diagrams, and a few error updates to the original demos. I will probably come up with my own set of demos. 
 
 - **[D1: Palantir Foundry "speedrun" (quick start) (26.0705)](/3c.1_pal_foundry/)**. 
   - Demo complete... still need to write the webpage.
@@ -100,7 +81,37 @@ Following is the list of demos in chronological order. I added numbering, concep
 - **[D8: Deep Dive: Model integration (26.0721)](/3c.8_pal_8_model_integration/)**.
   - #619_.docx
 
+
+
 <br>
+
+
+
+### **[3c.3 Palantir "haystack needle" (HN) app demos](/3c.xxx_pal_gist/)**
+
+<!-- (based on demo D8 listed in section "3 Demos" later on this page) -->
+
+What has interested me the most about Palantir for over a year now are the **"haystack needle" (HN) algorithms**. This was the original reason for the founding of PAL. 9/11 occured because the US government failed to detect obvious warning signs in a sea of data. PAL's job was to make sure that that did not happen again by creating a system that could sift through vast amounts of data (about, for example, a sudden surge in foreigners studying to fly large airliners) to flag potential threats. To find the needle in the haystack.
+
+<!--
+But how exactly did they implement the HN algorithms? That's of practical interest currently because 
+- (1) those **HN techniques are being used in all business segments** (not just military and intelligence) and 
+- (2) **you can learn the details hands-on yourself for free with no assistance**by getting a PAL trial license (I have only a trial license and I am working alone). 
+
+The goal of this page is to explain (via demos) the gist of a portion of the Palantir (PAL) toolset (there are not many competitors to PAL right now, but there will be in the near future, and they will follow a lot of the PAL methodologies). How to use that toolset to create HN apps. -->
+
+*The gist of Palantir: A crystal ball (called a "palantir" ("seeing stone") in Lord of the Rings) that can find a haystack needle (HN)* <br><img src="/assets/pal_9_06.png" alt="drones" width="25%" style="border: 1px solid #999;">
+
+<br>
+
+
+
+### **3c.4 Other "deep dive ASAP" PAL demos** (for finance, etc).** (TODO)
+
+xxxxxx
+
+<br>
+
 
 ### **Notes**
 - *[PAL general notes](/3c.0_pal_notes/)*
