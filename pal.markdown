@@ -18,6 +18,9 @@ For now **the focus is 100% on Palantir Foundry** because
 <!-- **TL;DR** (too long; dont (want to) read)? If you are in a hurry, skip to 
 - **[3c.3 AIP/FDE "haystack needle" (HN) demos](/3c.xxx_pal_gist/)** -->
 
+
+*The gist of Palantir: A crystal ball (called a "palantir" ("seeing stone") in Lord of the Rings) that can find a haystack needle (HN)* <br><img src="/assets/pal_9_06.png" alt="drones" width="25%" style="border: 1px solid #999;">
+
 <br>
 
 ### **TOC** 
@@ -48,9 +51,7 @@ For now **the focus is 100% on Palantir Foundry** because
 
 <br>
 
-*The gist of Palantir: A crystal ball (called a "palantir" ("seeing stone") in Lord of the Rings) that can find a haystack needle (HN)* <br><img src="/assets/pal_9_06.png" alt="drones" width="25%" style="border: 1px solid #999;">
 
-<br>
 
 ### **Notes**
 - *[PAL general notes](/3c.0_pal_notes/)*
