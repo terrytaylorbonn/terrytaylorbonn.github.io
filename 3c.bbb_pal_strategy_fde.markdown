@@ -31,6 +31,8 @@ to do the following:
 
 ### **1 Summary of AIP/FDE combined usage**
 
+I spent several weeks doing PAL demos (on a trial account that PAl so graciously offers) to get a grounded understanding of what PAL does (of course, PAL does much more, but this to me is the core ability, where it all started, the haystack needle search algorithm). After a little over 2 weeks I finally got the gist. I suggested to PAL AI that we create **a demo that I thought would reveal the gist of the needle in the haystack search (this demo was my original idea). The built-in PAL AI (AIP) chatbot agreed "whole-heartedly"**. AIP and I were able to create a demo that showed by example the core of how PAL does the needle search.  
+
  (of AIP/FDE limits, and how they make up for each other). There are limits they dont make up for 
   - **Neither can see the dialogs**
   
@@ -40,29 +42,131 @@ to do the following:
 
 (seems to come mainly from PAL docs; good for workflows, but no screenshot recognition and not so good at solving complex problems)
 
+*AIP is "built into" the dialogs and seems to know where you are; it can show general directions well, but seems to be more limited in helping with problems (I think AIP primarily searches the docs, not a knowledge store of real world problems)* <br>
+<img src="/assets/pal_9_10.png" alt="drones" width="100%" style="border: 1px solid #999;">
+
+#### **AIP's own summary of itself**
+
+ME: where are you getting your info? from training, from palantir docs, or ????
+
+AIP: Good question. Here is exactly where my answers come from:
+
+**My Information Sources**
+1. Palantir Documentation (primary source) 
+When you ask me something, I search the official Palantir/Foundry documentation in real time. Every claim I make that comes from those docs gets an inline citation like ABC1. You can see those throughout my previous answers.
+2. My Training Data (fallback) 
+For general coding questions (Python, SQL, etc.) with no Palantir-specific meaning, I may draw on general programming knowledge. I try to be clear when I am doing this versus citing docs.
+3. Your Session Context 
+I can see things you share with me directly — like the RID ri.eddie.main.pipeline.eedc60df-64da-475d-9a8b-1efaa4d9ce93 that was passed along with your message. I cannot access what is inside that pipeline — your actual data, transforms, or configurations. I only see what is explicitly shared in our conversation.
+
+**What I Cannot Do**
+- I cannot browse the internet or Palantir's website live
+- I cannot see inside your Foundry environment — your datasets, object types, or pipeline logic
+- I cannot guarantee my documentation search covers every Palantir feature, especially very new ones
+
+**The Honest Bottom Line**. If I cite something, it came from the docs. If I do not cite it, ask me to verify — I should either find a source or tell you I am not certain. That is the standard I try to hold myself to.
+
+
 <br>
 
 ### **3 FDE usage**
 
 (seems to have the hard core experience of human FDE's embedded into it; **can recognize screenshots (a critically important capability)**, and can lead accurately thru stepbystep processes, and can drill down into the backend code)
 
+
+#### **Example**
+
+I pasted the following screenshot into the FDE chat window (no text, just the screenshot). Just one screenshot in a long list.
+
+*Screenshot of the problem: I check only "HIGH_VALUE (right) but all values are shown (left)"*<br>
+<img src="/assets/pal_9_21.png" alt="drones" width="55%" style="border: 1px solid #999;">
+
+
+FDE: The filter list is working, but the **table is not using the same filter variable**.
+In your earlier screenshots there were likely **two similar variables**:
+
+```text
+Selected Anomaly Reason Filter
+Selected Anomaly Reason Filter1
+```
+
+Your filter widget is probably outputting to one, while `Filtered Anomaly Events` is using the other.
+
+**Next step**. Open the variable:
+
+```text
+Filtered Anomaly Events
+```
+
+In its definition, check the **Using a variable** field.
+Set it to the **exact same variable shown in the filter widget’s Output Data**.
+From your recent setup, that is probably:
+
+```text
+Selected Anomaly Reason Filter1
+```
+
+So the wiring must be:
+
+```text
+Filter widget output = Selected Anomaly Reason Filter1
+Filtered Anomaly Events uses = Selected Anomaly Reason Filter1
+Object table input = Filtered Anomaly Events
+```
+
+Right now the table is still showing all rows because those two filter variables do not match.
+
+*Result: Problem solved"*<br>
+<img src="/assets/pal_9_22.png" alt="drones" width="45%" style="border: 1px solid #999;">
+
+This was just the last step in a quite challenging configuration of the Workshop as summarized in the following diagram. Once you get used to the terminology and the UI, things become much easier. But without FDE it would have taken a long time to track down the problem. 
+
+*A rough diagram of all the setup"*<br>
+<img src="/assets/pal_9_20.png" alt="drones" width="100%" style="border: 1px solid #999;">
+
+
+
+
+#### **FDE's own summary of itself**
+
+ME: where are you getting your information? from palantir docs or from an FDE database or ????
+
+FDE: I’m using a combination of:
+
+1. **General model training**
+   - Broad knowledge about Palantir concepts, software patterns, UI concepts, and data/ML/app-building workflows.
+   - This is not a live database.
+
+2. **Tool-provided context in this chat**
+   - When you provide a Foundry resource, I can sometimes inspect it with available tools.
+   - Example: Workshop module definitions, Ontology object types, datasets, functions, etc.
+   - For your Workshop app, I inspected the actual Workshop DSL definition.
+
+3. **Screenshots and text you paste**
+   - A lot of the practical troubleshooting came from reading your screenshots and inferring the UI state.
+
+4. **Documentation loaded into the chat**
+   - Sometimes I can load or use relevant Palantir docs/tool documentation.
+   - Docs are useful for API/structure, but often do not explain the exact UI wiring clearly.
+
+5. **Reasoning from first principles**
+   - For example, the Workshop filter/table issue was mostly reasoning about data flow:
+     ```text
+     source object set → filter criteria variable → filtered object set → table
+     ```
+
+So it is **not** one hidden FDE database. It is: model knowledge + live tool context + screenshots + docs + reasoning.
+
+
+
 <br>
 
 ### **4 Future capabilities**
 
-I see a time when you can chat or talk with the help system, and it can walk you thru entire processes, filling in required info, etc. **This will revolutionize the use of such enterprise SW. PAL right now is quite close to that ability** (needs to combine AIP and FDE into one unit that can see dialog and entere commands)
+**Real world apps change quickly**. This ZiptieAI site is constantly evolving. I can manage this task by myself thanks to the AI tools that vastly simplify website management. Its the same when creating apps with PAL tools. AI inside of PAL (and other apps) will vastly improve in the few years, and this will revolutionize end user programming (**PAL's built-in AI has made using PAL vastly easier already**, but there is still much room for improvement). I see a time when you can chat or talk with the help system, and it can walk you thru entire processes, filling in required info, etc. **This will revolutionize the use of such enterprise SW. PAL right now is quite close to that ability** (needs to combine AIP and FDE into one unit that can see dialog and entere commands). This is just another example of how **AI is not a tech bubble (its only getting started)**.
 
 <br>
 
-**Real world apps change quickly**. This ZiptieAI site is constantly evolving. I can manage this task by myself thanks to the AI tools that vastly simplify website management. Its the same when creating apps with PAL tools. AI inside of PAL (and other apps) will vastly improve in the few years, and this will revolutionize end user programming (**PAL's built-in AI has made using PAL vastly easier already**, but there is still much room for improvement). This is just another example of how **AI is not a tech bubble (its only getting started)**.
-
-*No need for traditional docs (that you have to sift through to find what you need); PAL's built in AI answers your questions with details instructions* <br>
-<img src="/assets/pal_9_10.png" alt="drones" width="100%" style="border: 1px solid #999;">
-
-I spent several weeks doing PAL demos (on a trial account that PAl so graciously offers) to get a grounded understanding of what PAL does (of course, PAL does much more, but this to me is the core ability, where it all started, the haystack needle search algorithm). After a little over 2 weeks I finally got the gist. I suggested to PAL AI that we create **a demo that I thought would reveal the gist of the needle in the haystack search (this demo was my original idea). The built-in PAL AI (AIP) chatbot agreed "whole-heartedly"**. AIP and I were able to create a demo that showed by example the core of how PAL does the needle search.  
-
-
-<br>
 
 26.0725 (v1 26.0720)
 

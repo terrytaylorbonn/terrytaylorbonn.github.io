@@ -30,7 +30,7 @@ For now **the focus is 100% on Palantir Foundry** because
 - **[3c.1 PAL AI usage strategy](/3c.bbb_pal_strategy_fde/)**. PAL Foundry has 2 helps systems: (1) AIP and (2) FDE. 
   - I used both during the first 8 "Initial PAL demos" (3c.2). 
   - During demo 8 (of 3c.2) I asked AIP/FDE to show me how to do something that was not in the demo. The advantages of each tool slowly became apparent.
-  - During the AIP/FDDE demos (3c.3) I uses only AIP/FDE. It became apparent that
+  - During the AIP/FDE demos (3c.3) I uses only AIP/FDE. It became apparent that
     - AIP is better for getting initial workflows.
     - FDE is the lifesaver that can solve problems and especially recognize screen shots (just past in the window). In one example, FDE led me step by step in setting up a Workshop demo that I just could not get right (for good reasons).
   - I look forward to when AIP/FDE are combined into a single tool that can "see" dialogs and guide a user through various tasks.
