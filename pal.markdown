@@ -19,31 +19,33 @@ For now this section **focuses solely on the Palantir (PAL) platform**. For seve
 <br>
 
 **TOC NEW 26.0725 (WIP)** 
-- 0 for now my learning is the focus (teaching myself)
-  - later: how to support sales... how to get potential customers fluent in PAL asap 
-  - (right now this is probably not that important.. the business model focuses on FDE's doing the groundwork) 
 - 1 PAL concepts 
   - what problems are solved
   - i complete this section last (just like section **[Hack](/0-demo/)** was only completed after much research and testing)
 - 2 first demos follow PAL docs (step by step tutorials)... see demos D1-D7 below.
+- 3 (CORE FOCUS) at first core focus is HN (haystack needle) demos (final anomalies in data)
+  - first following demos
+  - then switching to AI only
+- 4 later after HN: create same kind of "deep dive ASAP" for other segments (finance, etc)
+
+```
+(PUT IN CONCEPTS)
+- 0 for now my learning is the focus (teaching myself)
+  - later: how to support sales... how to get potential customers fluent in PAL asap 
+  - (right now this is probably not that important.. the business model focuses on FDE's doing the groundwork) 
 - 2b how i document, maintain docs
   - website overview, docx details, video maybe for high level overview (that does not change much)
   - focus on big picture; doc hierarchy
   - keep doc system very simple, easy to update (OR USE AI TO VERIFY DOCS)
 - 3 big focus is on using AIP (docs) / FDE (engineer feedback) to help fill in missing details.
 - **4 (CORE FOCUS) then start my own learning structural focus, using only AIP (for general direction) and FDE (for step by step).**
-  - (CORE FOCUS) at first core focus is HN (haystack needle) demos (final anomalies in data)
-  - later after HN: create same kind of "deep dive ASAP" for other segments (finance, etc)
 - 5a future focus #1: focus on prompt techniques... assume that AIP/FDE will lead user by the hand.
 - **5b future focus #2: assume that AIP/FDE will someday soon become integral to workflows.** 
   - they can "see" dialogs and the complete config (**and they can auto update docs**). 
   - user can tell them what to setup... this would be next higher level of programming abstraction 
   - **the ultimate UX (user experience) upgrade!**
   - basically the tech reqs to become FDE are drastically lower, widening user base
-
-
-
-
+```
 
 **TOC (up to 26.0726)** 
 - **3c.1 PAL app concepts** (my own take)
