@@ -6,11 +6,46 @@ permalink: /pal/
 
 <br>
 
-The enterprise platform controls almost everything. For now this section focuses solely on the Palantir (PAL) platform.
+The enterprise platform controls almost everything. 
+
+For now this section **focuses solely on the Palantir (PAL) platform**. For several reasons:
+- market leader
+- **i was able to get generous free demo account for handson experience**
+- **great built in AI help (AIP/FDE) ... without them this would have taken at least 5x longer to do** (this is true in general of the whole ZiptieAI project... I could have accomplished 5% of what I have if I did not have AI assitants)
+- I believe that **AIP/FDE could in the future morph into a higher level AI assistant** that would lead the user by the hand through complex setups.
+- this will lead to a much larger customer base that does not depend on human FDE's. 
+- and competitors will come out with similar products soon... the knowledge of PAL will transfer to these new systems.
 
 <br>
 
-**TOC** 
+**TOC NEW 26.0725 (WIP)** 
+- 0 for now my learning is the focus (teaching myself)
+  - later: how to support sales... how to get potential customers fluent in PAL asap 
+  - (right now this is probably not that important.. the business model focuses on FDE's doing the groundwork) 
+- 1 PAL concepts 
+  - what problems are solved
+  - i complete this section last (just like section **[Hack](/0-demo/)** was only completed after much research and testing)
+- 2 first demos follow PAL docs (step by step tutorials)... see demos D1-D7 below.
+- 2b how i document, maintain docs
+  - website overview, docx details, video maybe for high level overview (that does not change much)
+  - focus on big picture; doc hierarchy
+  - keep doc system very simple, easy to update (OR USE AI TO VERIFY DOCS)
+- 3 big focus is on using AIP (docs) / FDE (engineer feedback) to help fill in missing details.
+- **4 (CORE FOCUS) then start my own learning structural focus, using only AIP (for general direction) and FDE (for step by step).**
+  - (CORE FOCUS) at first core focus is HN (haystack needle) demos (final anomalies in data)
+  - later after HN: create same kind of "deep dive ASAP" for other segments (finance, etc)
+- 5a future focus #1: focus on prompt techniques... assume that AIP/FDE will lead user by the hand.
+- **5b future focus #2: assume that AIP/FDE will someday soon become integral to workflows.** 
+  - they can "see" dialogs and the complete config (**and they can auto update docs**). 
+  - user can tell them what to setup... this would be next higher level of programming abstraction 
+  - **the ultimate UX (user experience) upgrade!**
+  - basically the tech reqs to become FDE are drastically lower, widening user base
+
+
+
+
+
+**TOC (up to 26.0726)** 
 - **3c.1 PAL app concepts** (my own take)
 - **3c.2 PAL AI dev assistants** (learn to use PAL's AI tools and you will never need to read docs). 
 - **3c.3 Palantir "haystack needle" (HN) app demos** (demos that show this)
