@@ -27,6 +27,7 @@ For now this section **focuses solely on the Palantir (PAL) platform**. For seve
   - first following demos
   - then switching to AI only
 - 4 later after HN: create same kind of "deep dive ASAP" for other segments (finance, etc)
+- 5 chrono list of all demos (based on docx files)
 
 ```
 (PUT IN CONCEPTS)
