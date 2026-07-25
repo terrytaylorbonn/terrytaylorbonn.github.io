@@ -24,8 +24,8 @@ For now this section **focuses solely on the Palantir (PAL) platform**. For seve
   - i complete this section last (just like section **[Hack](/0-demo/)** was only completed after much research and testing)
 - 2 first demos follow PAL docs (step by step tutorials)... see demos D1-D7 below.
 - 3 (CORE FOCUS) at first core focus is HN (haystack needle) demos (final anomalies in data)
-  - first following demos
-  - then switching to AI only
+  - uses AI (AIP/FDE) to do what I want to do (not a PAL demo)
+  - big focus (at least initially) on prompting and techniques to maximize effectiveness
 - 4 later after HN: create same kind of "deep dive ASAP" for other segments (finance, etc)
 - 5 chrono list of all demos (based on docx files)
 
