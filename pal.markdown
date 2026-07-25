@@ -6,8 +6,7 @@ permalink: /pal/
 
 <br>
 
-This section is about enterprise AI dev platforms that control almost everything. 
-For now **the focus is 100% on Palantir Foundry** because 
+This section is about enterprise AI dev platforms that do a lot of the heavy lifting of creating an enterprise level AI app for you. For now **the focus is 100% on Palantir Foundry** because 
 - PAL is a market leader.
 - **PAL offers a generous free demo account for hands-on experience for Foundry.**
 - **The built-in AI help (AIP/FDE) made it possible to complete the demos (quickly)**. Without AI this would have taken at least 5x longer to do.
