@@ -6,9 +6,9 @@ permalink: /pal/
 
 <br>
 
-Enterprise AI dev platforms do the heavy lifting of creating an enterprise level AI app. **My focus is 100% on Palantir Foundry** because 
+Enterprise AI dev platforms do the heavy lifting of creating an enterprise level AI app. **My focus (for now) is 100% on Palantir Foundry** because 
 - PAL is a market leader.
-- **PAL offers a generous free demo account for hands-on experience for Foundry.**
+- **PAL offers a generous free demo account for hands-on experience with Foundry.**
 - **The built-in AI help (AIP/FDE) made it possible to complete the demos (quickly)**. Without AI this would have taken at least 5x longer to do.
 
 I give you what you need to get started ASAP with PAL. This section shows you 
@@ -32,6 +32,8 @@ I give you what you need to get started ASAP with PAL. This section shows you
 <br>
 
 ### **TOC** 
+
+#### **First: Sign up and concepts**
 
 - **3c.0a Sign up to PAL (REQUIRED)**. If you cant get a trial version of PAL running, then there's no reason to read further. You will not understand PAL by just reading about it.
   - I dont remember the URL. Just Google it.
@@ -59,7 +61,9 @@ I give you what you need to get started ASAP with PAL. This section shows you
   - In general, a big focus (at least initially) is on prompt techniques and workflows to maximize effectiveness of using AI.
   <br><br>
 
-- **[3c.2 Initial PAL demos](/3c.2_pal_initial_demos/) (RECOMMENDED)**. 
+#### **Then, finally, what its all about: The demos!** 
+
+- **[3c.2 Initial PAL demos](/3c.2_pal_initial_demos/) (RECOMMENDED)**. It does matter what demos you do at first as long as you are doing hands-on and learning the UI (without getting stuck in a rabbit hole).
   - **Your initial focus will be on 2 things**
     - **What button to press or where to click next.** The PAL dialogs are well done, but they require a lot of time to get used to.
     - **"I'm stuck.... how do I find a solution"**. PAL has AIP and FDE to help. 
@@ -76,8 +80,8 @@ I give you what you need to get started ASAP with PAL. This section shows you
     - Without/with AI.
   - Future: Other AIP/FDE/Pilot demos.<br><br>  
 
-- **[3c.4 Certification](/cert/)**.  
-  - Foundry Application Developer Certification
+- **[3c.4 Certification](/cert/)**. Demos that match the certification.
+  - Foundry Application Developer Certification.
   - Use the PDF as a guide for what to study.
 
 <br>
