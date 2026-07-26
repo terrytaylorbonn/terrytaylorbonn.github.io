@@ -70,17 +70,17 @@ I give you what you need to get started ASAP with PAL. This section shows you
     - **The MS.Word docs use numbered headings**. This makes it much easier to follow the demos and avoid mistakes. In the future I might number every step (using MS.Word seq function).<br><br>
  
 - **[3c.3 AIP/FDE demos](/3c.xxx_pal_gist/)**.
-  - I use AI (AIP/FDE) to do my own demos (no PAL demos or PAL docs).
-  - The focus for now is on what I call "haystack needle" demos (finding some small indication in a sea of data) with or without AI. 
-  - I imagine AIP/FDE can lead me through other demos. In general, my planned initial demos are to focus more on demonstrating functionality with minimal examples.<br><br>
+  - **Use AI (AIP/FDE) to do demos from scratch** (not following PAL demos or PAL docs; I might get inspiration from those demos, but I just use AIP/FDE to execute; in the future PAL Pilot would do this).
+  - **D9 (demo set 9) = "haystack needle" demos**. I believe this was Palantir's original focus when founded:
+    - Finding some small indication in a sea of data
+    - Without then with AI.<br><br>
+  - Future: Other AIP/FDE/Pilot demos.  
 
-- **3c.4 Certification ???????????????????**
-
-<!-- - **3c.4 Other "deep dive ASAP" PAL demos** (for finance, etc). (TODO) -->
+- **[3c.4 Certification](/cert/)**.  
+  - Foundry Application Developer Certification
+  - Use the PDF as a guide for what to study.
 
 <br>
-
-
 
 ### **Notes**
 - *[PAL general notes](/3c.0_pal_notes/)*
