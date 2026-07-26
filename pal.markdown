@@ -73,8 +73,8 @@ I give you what you need to get started ASAP with PAL. This section shows you
   - **Use AI (AIP/FDE) to do demos from scratch** (not following PAL demos or PAL docs; I might get inspiration from those demos, but I just use AIP/FDE to execute; in the future PAL Pilot would do this).
   - **D9 (demo set 9) = "haystack needle" demos**. I believe this was Palantir's original focus when founded:
     - Finding some small indication in a sea of data
-    - Without then with AI.<br><br>
-  - Future: Other AIP/FDE/Pilot demos.  
+    - Without/with AI.
+  - Future: Other AIP/FDE/Pilot demos.<br><br>  
 
 - **[3c.4 Certification](/cert/)**.  
   - Foundry Application Developer Certification
