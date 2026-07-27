@@ -63,7 +63,15 @@ I give you what you need to get started ASAP with PAL. This section shows you
 
 #### **Then, finally, what its all about: The demos! (GOAL)** 
 
-- **[3c.1b First PAL demos](/3c.1b_pal_first_demo/) (GOAL)**. It does matter what demos you do at first as long as you 
+- **[3c.1b First PAL Foundry example (pipeline)](/3c.1b_pal_f_example_first/) (GOAL)**. This first demo
+  - You first install a PAL example and focus on 
+    - Running Foundry pipeline.
+    - Using FDE/AIP.
+    - Testing, debugging.
+  - Then try to recreate the example from scratch
+    - Creating projects. 
+    - Getting input data.
+    - Setting up the entire pipeline and testing.
 
 - **[3c.2 Initial PAL demos](/3c.2_pal_initial_demos/) (GOAL)**. It does matter what demos you do at first as long as you are doing hands-on and learning the UI (without getting stuck in a rabbit hole).
   - **Your initial focus will be on 2 things**

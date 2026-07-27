@@ -1,0 +1,31 @@
+---
+layout: page
+title: 3c.1b First PAL Foundry example
+permalink: /3c.1b_pal_f_example_first/
+---
+
+
+<br>
+
+
+[← 3c PAL](/pal/)
+
+
+
+<br>
+
+
+## **D10: Palantir Foundry example "Parse PDFs with LLMs in Pipeline Builder (26.0727)**
+
+
+This is link to docx... might add it to this page in future **[#621\_.docx](https://drive.google.com/drive/folders/1-Adawag9uA8_bq-hDF-nOuPYaRLz1eEO)**.
+
+<br>
+
+
+*xxx*<br><img src="/assets/pal_10_01.png" alt="drones" width="100%" style="border: 1px solid #999;">
+
+
+<br>
+
+26.0727 (v1 26.0727)
