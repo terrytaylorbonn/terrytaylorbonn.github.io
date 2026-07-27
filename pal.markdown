@@ -38,7 +38,7 @@ I give you what you need to get started ASAP with PAL. This section shows you
 - **3c.0a Sign up to PAL (REQUIRED)**. If you cant get a trial version of PAL running, then there's no reason to read further. You will not understand PAL by just reading about it.
   - I dont remember the URL. Just Google it.
   - Unfortunately, I did not record how I signed up, and its not a process I can repeat. But I can tell you this
-    - **You must be a country that PAL supports** (thats only a few countries).
+    - **You must be in a country that PAL supports** (thats only a few countries).
     - **You can NOT use a VPN**.
     - **You must have a passport or some picture ID of good enough quality for facial recognition verification**. My passport is almost 10 years old, but it still worked. My drivers licence pic was of such low quality that I doubt it would have worked. 
     - **You need a camera on your PC to take a pic of yourself. PAL will compare your ID and the pic.**
@@ -61,9 +61,11 @@ I give you what you need to get started ASAP with PAL. This section shows you
   - In general, a big focus (at least initially) is on prompt techniques and workflows to maximize effectiveness of using AI.
   <br><br>
 
-#### **Then, finally, what its all about: The demos!** 
+#### **Then, finally, what its all about: The demos! (GOAL)** 
 
-- **[3c.2 Initial PAL demos](/3c.2_pal_initial_demos/) (RECOMMENDED)**. It does matter what demos you do at first as long as you are doing hands-on and learning the UI (without getting stuck in a rabbit hole).
+- **[3c.1b First PAL demos](/3c.1b_pal_first_demo/) (GOAL)**. It does matter what demos you do at first as long as you 
+
+- **[3c.2 Initial PAL demos](/3c.2_pal_initial_demos/) (GOAL)**. It does matter what demos you do at first as long as you are doing hands-on and learning the UI (without getting stuck in a rabbit hole).
   - **Your initial focus will be on 2 things**
     - **What button to press or where to click next.** The PAL dialogs are well done, but they require a lot of time to get used to.
     - **"I'm stuck.... how do I find a solution"**. PAL has AIP and FDE to help. 
@@ -73,16 +75,20 @@ I give you what you need to get started ASAP with PAL. This section shows you
     - I documented all details with screenshots. 
     - **The MS.Word docs use numbered headings**. This makes it much easier to follow the demos and avoid mistakes. In the future I might number every step (using MS.Word seq function).<br><br>
  
-- **[3c.3 AIP/FDE demos](/3c.xxx_pal_gist/)**.
+- **[3c.3 AIP/FDE demos](/3c.xxx_pal_gist/) (GOAL)**.
   - **Use AI (AIP/FDE) to do demos from scratch** (not following PAL demos or PAL docs; I might get inspiration from those demos, but I just use AIP/FDE to execute; in the future PAL Pilot would do this).
   - **D9 (demo set 9) = "haystack needle" demos**. I believe this was Palantir's original focus when founded:
     - Finding some small indication in a sea of data
     - Without/with AI.
   - Future: Other AIP/FDE/Pilot demos.<br><br>  
 
-- **[3c.4 Certification](/cert/)**. Demos that match the certification.
+- **3c.3b Pilot demos (FUTURE)**.
+
+
+- **[3c.4 Certification (Foundry app dev)](/cert/) (GOAL)**. Demos that match the certification.
   - Foundry Application Developer Certification.
-  - Use the PDF as a guide for what to study.
+  - We've been using the PDF as a guide for what to study.
+  - For a system like PAL, most job will be in big projects. Certification matters. 
 
 <br>
 
@@ -94,7 +100,7 @@ I give you what you need to get started ASAP with PAL. This section shows you
 
 <br>
 
-26.0725 (v1 26.0702) 
+26.0727 (v1 26.0702) 
 
 <!-- ### **3c.4 Other AIP/FDE-led demos** (for finance, etc).**
 
