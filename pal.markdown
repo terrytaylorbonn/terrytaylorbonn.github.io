@@ -10,17 +10,15 @@ permalink: /pal/
 
 <br>
 
-Enterprise AI dev platforms do the heavy lifting of creating an enterprise level AI app. **My focus (for now) is 100% on Palantir (Foundry)** because 
+Enterprise AI dev platforms do the heavy lifting of creating an enterprise level AI app. **My focus (for now) is on Palantir (Foundry)** because 
 - PAL is a market leader.
 - **PAL offers a generous free demo account for hands-on experience with Foundry.**
 - **The built-in AI help (AIP/FDE) made it possible to complete the demos (quickly)**. Without AI this would have taken at least 5x longer to do.
 
-I give you what you need to get started ASAP with PAL. This section shows you 
-- **Step by step hands-on how to get started using Palantir (PAL) Foundry**. No links to "resources", no "make sure you do this first", rather just **a straight shot through the process that I went through.** 
-- Very organized, up-to-date (WIP) and detailed (docx files that still need some work, but I can easily update my website and docx's; I can not easily update videos). . 
-- In particular I focus on
-  - **Navigating the many many dialogs**.
-  - How to use **PAL help (especially FDE)** to get directions or solved problems. **FDE was critical for my success with PAL**.
+This section shows you 
+- **Step by step hands-on how to get started using Palantir (PAL) Foundry**. A straight shot learning process that I myself am going through (so some sections may be very WIP).** 
+- Very organized, up-to-date (WIP) and detailed (docx files that can be easily updated are my primary working notes). 
+- I pay particular attention to dialog details and using PAL help (AIP/FDE) to get directions or solve problems (**FDE was critical for my success with PAL**).
 
 <!-- 
 - In the near future AIP/FDE could develop into higher level AI assistant that would lead the user by the hand through complex setups.
@@ -31,7 +29,7 @@ I give you what you need to get started ASAP with PAL. This section shows you
 - **[3c.3 AIP/FDE "haystack needle" (HN) demos](/3c.xxx_pal_gist/)** -->
 
 
-*The gist of Palantir: A crystal ball (called a "palantir" ("seeing stone") in Lord of the Rings) that can find a haystack needle (HN)* <br><img src="/assets/pal_9_06.png" alt="drones" width="25%" style="border: 1px solid #999;">
+*A crystal ball (called a "palantir" ("seeing stone") in The Lord of the Rings) that can find a needle in a haystack* <br><img src="/assets/pal_9_06.png" alt="drones" width="25%" style="border: 1px solid #999;">
 
 <br>
 
