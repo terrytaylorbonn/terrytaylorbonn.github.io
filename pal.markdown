@@ -6,6 +6,10 @@ permalink: /pal/
 
 <br>
 
+*To learn PAL ASAP, you need a very logically structured set of the simplest step-by-step demos with the required details to for you to train yourself, get the gist, and avoid rabbit holes. Thats what this section "3c Enterprise" provides (WIP).* 
+
+<br>
+
 Enterprise AI dev platforms do the heavy lifting of creating an enterprise level AI app. **My focus (for now) is 100% on Palantir Foundry** because 
 - PAL is a market leader.
 - **PAL offers a generous free demo account for hands-on experience with Foundry.**
@@ -35,7 +39,7 @@ I give you what you need to get started ASAP with PAL. This section shows you
 
 #### **First: Sign up and concepts**
 
-- **3c.0a Sign up to PAL (REQUIRED)**. If you cant get a trial version of PAL running, then there's no reason to read further. You will not understand PAL by just reading about it.
+- **1 (3c.0a) Sign up to PAL (REQUIRED)**. If you cant get a trial version of PAL running, then there's no reason to read further. You will not understand PAL by just reading about it.
   - I dont remember the URL. Just Google it.
   - Unfortunately, I did not record how I signed up, and its not a process I can repeat. But I can tell you this
     - **You must be in a country that PAL supports** (thats only a few countries).
@@ -43,27 +47,26 @@ I give you what you need to get started ASAP with PAL. This section shows you
     - **You must have a passport or some picture ID of good enough quality for facial recognition verification**. My passport is almost 10 years old, but it still worked. My drivers licence pic was of such low quality that I doubt it would have worked. 
     - **You need a camera on your PC to take a pic of yourself. PAL will compare your ID and the pic.**
     - I think you need a **mobile phone number** (and email).
-  - It was a fairly long process, but very professionally done (I was impressed).<br><br>
+  - It was a fairly long process, but very professionally done (I was impressed).<br><img src="/assets/pal_10_08.png" alt="drones" width="37%" style="border: 1px solid #999;"><br><br>
 
-- **[3c.0 Concepts](/3c.ccc_pal_concepts/) (OPTIONAL)**. My own take.
+- **[2 (3c.0) Concepts](/3c.ccc_pal_concepts/) (OPTIONAL)**. My own take.
   - What problems PAL solves. 
-  - This section is a long term WIP (I started using PAL in July 2026, and I need more experience before I can sum up the concepts).<br><br>
+  - This section is a long term WIP (I started using PAL in July 2026, and I need more experience before I can sum up the concepts).<br><img src="/assets/pal_10_09.png" alt="drones" width="67%" style="border: 1px solid #999;"><br><br>
 
-- **[3c.1 PAL AI usage strategy](/3c.bbb_pal_strategy_fde/) (RECOMMENDED)**. 
+- **[3 (3c.1) PAL AI usage strategy](/3c.bbb_pal_strategy_fde/) (RECOMMENDED)**. 
   - PAL Foundry has 2 helps systems: (1) AIP and (2) FDE. 
   - I used both during the first 8 "Initial PAL demos" (3c.2). 
   - During demo 8 (of 3c.2) I asked AIP/FDE to show me how to do something that was not in the demo. The advantages of each tool slowly became apparent.
   - During the AIP/FDE demos (3c.3) I uses only AIP/FDE. It became apparent that
     - AIP is better for getting initial workflows.
-    - FDE is the lifesaver that can solve problems and especially recognize screen shots (just past in the window). In one example, FDE led me step by step in setting up a Workshop demo that I just could not get right (for good reasons).
+    - **FDE is the lifesaver that can solve problems and (most of all) recognize screen shots (just paste in the window)**. In one example, FDE led me step by step in setting up a Workshop demo that I just could not get right (for good reasons).
   - I look forward to when AIP/FDE are combined into a single tool that can "see" dialogs and guide a user through various tasks.
     - NOTE: After almost a month of using PAL, I noticed PAL has a beta product called **"Pilot"**. That appears to be what I was talking about.
-  - In general, a big focus (at least initially) is on prompt techniques and workflows to maximize effectiveness of using AI.
-  <br><br>
+  - In general, a big focus (at least initially) is on prompt techniques and workflows to maximize effectiveness of using AI.<br>*FDE*<br><img src="/assets/pal_10_10.png" alt="drones" width="42%" style="border: 1px solid #999;"><br><br>
 
-#### **Then, finally, what its all about: The demos! (GOAL)** 
+#### **Then what its all about: Hands-on demos!** 
 
-- **[3c.1b First PAL Foundry example (pipeline)](/3c.1b_pal_f_example_first/) (GOAL)**. This first demo
+- **[4 (3c.1b) First PAL Foundry example (pipeline)](/3c.1b_pal_f_example_first/) (GOAL)**. This first demo
   - You first install a PAL example and focus on 
     - Running Foundry pipeline.
     - Using FDE/AIP.
@@ -71,10 +74,10 @@ I give you what you need to get started ASAP with PAL. This section shows you
   - Then try to recreate the example from scratch
     - Creating projects. 
     - Getting input data.
-    - Setting up the entire pipeline and testing.<br><img src="/assets/pal_10_02.png" alt="drones" width="27%" style="border: 1px solid #999;"><br><br>
+    - Setting up the entire pipeline and testing.<br><img src="/assets/pal_10_02.png" alt="drones" width="30%" style="border: 1px solid #999;"><br><br>
 
 
-- **[3c.2 Initial PAL demos](/3c.2_pal_initial_demos/) (GOAL)**. It does matter what demos you do at first as long as you are doing hands-on and learning the UI (without getting stuck in a rabbit hole).
+- **[5 (3c.2) Initial PAL demos](/3c.2_pal_initial_demos/) (GOAL)**. It does matter what demos you do at first as long as you are doing hands-on and learning the UI (without getting stuck in a rabbit hole).
   - **Your initial focus will be on 2 things**
     - **What button to press or where to click next.** The PAL dialogs are well done, but they require a lot of time to get used to.
     - **"I'm stuck.... how do I find a solution"**. PAL has AIP and FDE to help. 
@@ -83,18 +86,26 @@ I give you what you need to get started ASAP with PAL. This section shows you
     - They are MS.Word docx files that I can update easily. You can download that file and use it as your working notebook. **You need to keep lab notes**.
     - I documented all details with screenshots. 
     - **The MS.Word docs use numbered headings**. This makes it much easier to follow the demos and avoid mistakes. In the future I might number every step (using MS.Word seq function).<br><br>
- 
-- **[3c.3 AIP/FDE demos](/3c.xxx_pal_gist/) (GOAL)**.
+
+
+- **6 (3c.2b) Operational apps (GOAL)**. 
+  - Up to this point you only use the apps in the framework.
+  - Create app that works 24/7, notifies, etc.<br><img src="/assets/pal_10_06.png" alt="drones" width="80%" style="border: 1px solid #999;"><br><br>
+
+
+- **[7 (3c.3) AIP/FDE demos](/3c.xxx_pal_gist/) (GOAL)**.
   - **Use AI (AIP/FDE) to do demos from scratch** (not following PAL demos or PAL docs; I might get inspiration from those demos, but I just use AIP/FDE to execute; in the future PAL Pilot would do this).
   - **D9 (demo set 9) = "haystack needle" demos**. I believe this was Palantir's original focus when founded:
     - Finding some small indication in a sea of data
     - Without/with AI.
   - Future: Other AIP/FDE/Pilot demos.<br><br>  
 
-- **3c.3b Pilot demos (FUTURE)**.
+- **8 (3c.3b) Pilot demos (NEAR FUTURE)** ([PAL site](https://www.palantir.com/docs/foundry/pilot/getting-started/)).
+  - Pilot (in beta now) will probably be
+    - FDE/AIP combo 
+    - that can see the dialogs and lead you by the hand through complicated setups<br><img src="/assets/pal_10_07.png" alt="drones" width="40%" style="border: 1px solid #999;"><br><br> 
 
-
-- **[3c.4 Certification (Foundry app dev)](/cert/) (GOAL)**. Demos that match the certification.
+- **[9 (3c.4) Certification (Foundry app dev)](/cert/) (GOAL)**. Demos that match the certification.
   - Foundry Application Developer Certification.
   - We've been using the PDF as a guide for what to study.
   - For a system like PAL, most job will be in big projects. Certification matters. 
