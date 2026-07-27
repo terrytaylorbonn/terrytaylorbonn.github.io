@@ -35,11 +35,11 @@ I give you what you need to get started ASAP with PAL. This section shows you
 
 <br>
 
-### **TOC (WIP)** 
+### **From PAL Foundry novice to [Certified Foundry Application Developer](https://learn.palantir.com/page/exam-guides) in 9 steps (WIP)** 
 
 *(the screenshots below are just first version placeholders)*
 
-#### **First: Sign up and concepts**
+#### **Steps 1-3: Sign up and concepts**
 
 - **1 (3c.0a) Sign up to PAL (REQUIRED)**. If you cant get a trial version of PAL running, then there's no reason to read further. You will not understand PAL by just reading about it.
   - I dont remember the URL. Just Google it.
@@ -66,7 +66,7 @@ I give you what you need to get started ASAP with PAL. This section shows you
     - NOTE: After almost a month of using PAL, I noticed PAL has a beta product called **"Pilot"**. That appears to be what I was talking about.
   - In general, a big focus (at least initially) is on prompt techniques and workflows to maximize effectiveness of using AI.<br>*FDE*<br><img src="/assets/pal_10_10.png" alt="drones" width="42%" style="border: 1px solid #999;"><br><br>
 
-#### **Then what its all about: Hands-on demos! (5 GOALS)** 
+#### **Step 4-8: Hands-on demos (5 GOALS)** 
 
 - **[4 (3c.1b) First PAL Foundry example (pipeline)](/3c.1b_pal_f_example_first/) (GOAL 1)**. This first demo
   - You first install a PAL example and focus on 
@@ -236,21 +236,19 @@ Upload PDFs to media set
 
 -->
 
-- **[7 (3c.3) AIP/FDE real-world projects](/3c.xxx_pal_gist/) (GOAL 4)**. This is the main goal. Creating real-world projects by working as a team with FDE (and AIP).
+- **[7 (3c.3) AIP/FDE (Pilot) real-world projects](/3c.xxx_pal_gist/) (GOAL 4)**. This is the main goal. Creating real-world projects by working as a team with FDE (and AIP).
   - **Use AI (AIP/FDE) to do demos from scratch** (not following PAL demos or PAL docs; I might get inspiration from those demos, but I just use AIP/FDE to execute; in the future PAL Pilot would do this).
   - **D9 (demo set 9) = "haystack needle" demos**. I believe this was Palantir's original focus when founded:
     - Finding some small indication in a sea of data
     - Without/with AI.
-  - Future: Other AIP/FDE/Pilot demos.<br><img src="/assets/pal_10_12.png" alt="drones" width="50%" style="border: 1px solid #999;"><br><br>
+  - Coming soon: Other AIP/FDE/Pilot demos.<br><img src="/assets/pal_10_12.png" alt="drones" width="50%" style="border: 1px solid #999;"><br>
+  - **[PAL Pilot](https://www.palantir.com/docs/foundry/pilot/getting-started/)** (in beta now) will probably be an "FDE/AIP combo" that can "see" the dialogs and lead you by the hand through complicated setups.<br><img src="/assets/pal_10_07.png" alt="drones" width="40%" style="border: 1px solid #999;"><br><br> 
 
-- **[8 (3c.3b) Pilot real-world projects](/3c.3b_pal_pilot/) (NEAR FUTURE?)** ([PAL site](https://www.palantir.com/docs/foundry/pilot/getting-started/)).
-  - Pilot (in beta now) will probably be
-    - FDE/AIP combo 
-    - that can see the dialogs and lead you by the hand through complicated setups.<br><img src="/assets/pal_10_07.png" alt="drones" width="40%" style="border: 1px solid #999;"><br><br> 
+<!--   - **[8 (3c.3b) Pilot real-world projects](/3c.3b_pal_pilot/) (NEAR FUTURE?)** .-->
 
-- **[9 (3c.4) Certification](/cert/) (GOAL 5)**. 
+- **[8 (3c.4) Certification](/cert/) (GOAL 5)** (Foundry Application Developer). 
   - We've been (hopefully) using the PDF as a guide for what to study/build in goals (1-4).
-  - Now need some certification (for me its Foundry Application Developer Certification). For a system like PAL, most job will be in big projects. Certification matters.<br><img src="/assets/pal_10_11.png" alt="drones" width="28%" style="border: 1px solid #999;"><br><br> 
+  - Now need some certification (for me its **[Foundry Application Developer Certification](https://learn.palantir.com/page/exam-guides)**). For a system like PAL, most job will be in big projects. Certification matters.<br><img src="/assets/pal_10_11.png" alt="drones" width="28%" style="border: 1px solid #999;"><br><br> 
 
 <br>
 
