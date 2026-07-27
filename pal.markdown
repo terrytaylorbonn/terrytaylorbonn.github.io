@@ -6,7 +6,7 @@ permalink: /pal/
 
 <br>
 
-*To learn the PAL Enterprise FW ASAP, you need a very logically structured set of the simplest step-by-step demos (with critical details!) so that you can train yourself and (most importantly) avoid rabbit holes. Thats the goal of this section "3c Enterprise" (WIP).* 
+*To train yourself how to use the PAL Enterprise SW Foundry, you need a very logically structured set of the simplest step-by-step demos (with critical details). Thats the goal of this section "3c Enterprise" (WIP).* 
 
 <br>
 
