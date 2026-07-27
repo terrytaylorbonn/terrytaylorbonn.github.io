@@ -89,7 +89,7 @@ I give you what you need to get started ASAP with PAL. This section shows you
     - I documented all details with screenshots. 
     - **The MS.Word docs use numbered headings**. This makes it much easier to follow the demos and avoid mistakes. In the future I might number every step (using MS.Word seq function).<br>*Demos of core functionality*<br><img src="/assets/pal_10_13.png" alt="drones" width="37%" style="border: 1px solid #999;">  <img src="/assets/pal_10_14.png" alt="drones" width="50%" style="border: 1px solid #999;"><br><br>
 
-- **6 (3c.2b) Operational (deployed) apps (GOAL 3)**. 
+- **[6 (3c.2b) Operational (deployed) apps](/3c.2b_operational_apps/) (GOAL 3)**. 
   - Up to this point you only use the apps for testing. They are not setup for end user usage, for real deployment ("deployment in the UI in the previous apps was more like "compile/run").
   - Create app that works 24/7, notifies, etc.<br><img src="/assets/pal_10_06.png" alt="drones" width="80%" style="border: 1px solid #999;"><br><br>
 
@@ -243,7 +243,7 @@ Upload PDFs to media set
     - Without/with AI.
   - Future: Other AIP/FDE/Pilot demos.<br><img src="/assets/pal_10_12.png" alt="drones" width="50%" style="border: 1px solid #999;"><br><br>
 
-- **8 (3c.3b) Pilot real-world projects (NEAR FUTURE?)** ([PAL site](https://www.palantir.com/docs/foundry/pilot/getting-started/)).
+- **[8 (3c.3b) Pilot real-world projects](/3c.3b_pal_pilot/) (NEAR FUTURE?)** ([PAL site](https://www.palantir.com/docs/foundry/pilot/getting-started/)).
   - Pilot (in beta now) will probably be
     - FDE/AIP combo 
     - that can see the dialogs and lead you by the hand through complicated setups.<br><img src="/assets/pal_10_07.png" alt="drones" width="40%" style="border: 1px solid #999;"><br><br> 

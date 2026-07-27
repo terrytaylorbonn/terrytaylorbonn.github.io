@@ -1,0 +1,22 @@
+---
+layout: page
+title: 3c.3b PAL Pilot real-word projects (FUTURE)
+permalink: /3c.3b_pal_pilot/
+---
+
+<br>
+
+[← 3c PAL](/pal/)
+
+<br>
+
+
+([PAL site](https://www.palantir.com/docs/foundry/pilot/getting-started/)).
+  - Pilot (in beta now) will probably be
+    - FDE/AIP combo 
+    - that can see the dialogs and lead you by the hand through complicated setups.<br><img src="/assets/pal_10_07.png" alt="drones" width="40%" style="border: 1px solid #999;"><br><br> 
+
+<br>
+
+26.0727 (v1 26.0727)
+

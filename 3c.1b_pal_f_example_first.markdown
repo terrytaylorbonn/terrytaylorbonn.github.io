@@ -7,15 +7,12 @@ permalink: /3c.1b_pal_f_example_first/
 
 <br>
 
-
 [← 3c PAL](/pal/)
-
-
 
 <br>
 
 
-## **D10: Palantir Foundry example "Parse PDFs with LLMs in Pipeline Builder (26.0727)**
+## **E10: Palantir Foundry example "Parse PDFs with LLMs in Pipeline Builder (26.0727)**
 
 
 This is link to docx... might add it to this page in future **[#621\_.docx](https://drive.google.com/drive/folders/1-Adawag9uA8_bq-hDF-nOuPYaRLz1eEO)**.
