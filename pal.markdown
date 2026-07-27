@@ -71,7 +71,7 @@ I give you what you need to get started ASAP with PAL. This section shows you
   - Then try to recreate the example from scratch
     - Creating projects. 
     - Getting input data.
-    - Setting up the entire pipeline and testing.
+    - Setting up the entire pipeline and testing.<br><br>
 
 - **[3c.2 Initial PAL demos](/3c.2_pal_initial_demos/) (GOAL)**. It does matter what demos you do at first as long as you are doing hands-on and learning the UI (without getting stuck in a rabbit hole).
   - **Your initial focus will be on 2 things**
