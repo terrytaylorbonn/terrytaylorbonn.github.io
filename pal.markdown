@@ -67,11 +67,12 @@ I give you what you need to get started ASAP with PAL. This section shows you
   - You first install a PAL example and focus on 
     - Running Foundry pipeline.
     - Using FDE/AIP.
-    - Testing, debugging.
+    - Testing, debugging.<br><img src="/assets/pal_10_01.png" alt="drones" width="25%" style="border: 1px solid #999;">  <img src="/assets/pal_10_05.png" alt="drones" width="33%" style="border: 1px solid #999;">
   - Then try to recreate the example from scratch
     - Creating projects. 
     - Getting input data.
-    - Setting up the entire pipeline and testing.<br><br>
+    - Setting up the entire pipeline and testing.<br><img src="/assets/pal_10_02.png" alt="drones" width="27%" style="border: 1px solid #999;"><br><br>
+
 
 - **[3c.2 Initial PAL demos](/3c.2_pal_initial_demos/) (GOAL)**. It does matter what demos you do at first as long as you are doing hands-on and learning the UI (without getting stuck in a rabbit hole).
   - **Your initial focus will be on 2 things**
