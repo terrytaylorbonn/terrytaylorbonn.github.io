@@ -35,9 +35,9 @@ I give you what you need to get started ASAP with PAL. This section shows you
 
 <br>
 
-### **From PAL Foundry novice to [Certified Foundry Application Developer](https://learn.palantir.com/page/exam-guides) in 9 steps (WIP)** 
+### **From PAL Foundry novice to [Certified App Developer](https://learn.palantir.com/page/exam-guides) in 9 steps (WIP)** 
 
-*(the screenshots below are just first version placeholders)*
+The following is a (WIP) **hands-on demo course that shows step-by-step how to learn Foundry basics** (from my perspective) and become a [Certified Foundry Application Developer](https://learn.palantir.com/page/exam-guides). The PAL certification exam guide says you need about 6 months experience with Foundry before taking the exam, so my personal goal is to "finish" this little project (that focuses on what you need to know for the exam) and take the exam myself around the end of 2026 (I started using Foundry in early July 2026).
 
 #### **Steps 1-3: Sign up and concepts**
 
