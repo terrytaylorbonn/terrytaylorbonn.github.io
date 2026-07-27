@@ -6,7 +6,7 @@ permalink: /pal/
 
 <br>
 
-*To learn PAL ASAP, you need a very logically structured set of the simplest step-by-step demos with the required details to for you to train yourself, get the gist, and avoid rabbit holes. Thats what this section "3c Enterprise" provides (WIP).* 
+*To learn PAL ASAP, you need a very logically structured set of the simplest step-by-step demos (with critical details!) so that you can train yourself and (most important) avoid rabbit holes. Thats what this section "3c Enterprise" provides (WIP).* 
 
 <br>
 
