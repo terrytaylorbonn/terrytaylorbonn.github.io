@@ -10,7 +10,7 @@ permalink: /pal/
 
 <br>
 
-Enterprise AI dev platforms do the heavy lifting of creating an enterprise level AI app. **My focus (for now) is 100% on Palantir Foundry** because 
+Enterprise AI dev platforms do the heavy lifting of creating an enterprise level AI app. **My focus (for now) is 100% on Palantir (Foundry)** because 
 - PAL is a market leader.
 - **PAL offers a generous free demo account for hands-on experience with Foundry.**
 - **The built-in AI help (AIP/FDE) made it possible to complete the demos (quickly)**. Without AI this would have taken at least 5x longer to do.
@@ -35,7 +35,9 @@ I give you what you need to get started ASAP with PAL. This section shows you
 
 <br>
 
-### **TOC** 
+### **TOC (WIP)** 
+
+*(the screenshots below are just first version placeholders)*
 
 #### **First: Sign up and concepts**
 
@@ -64,9 +66,9 @@ I give you what you need to get started ASAP with PAL. This section shows you
     - NOTE: After almost a month of using PAL, I noticed PAL has a beta product called **"Pilot"**. That appears to be what I was talking about.
   - In general, a big focus (at least initially) is on prompt techniques and workflows to maximize effectiveness of using AI.<br>*FDE*<br><img src="/assets/pal_10_10.png" alt="drones" width="42%" style="border: 1px solid #999;"><br><br>
 
-#### **Then what its all about: Hands-on demos!** 
+#### **Then what its all about: Hands-on demos! (5 GOALS)** 
 
-- **[4 (3c.1b) First PAL Foundry example (pipeline)](/3c.1b_pal_f_example_first/) (GOAL)**. This first demo
+- **[4 (3c.1b) First PAL Foundry example (pipeline)](/3c.1b_pal_f_example_first/) (GOAL 1)**. This first demo
   - You first install a PAL example and focus on 
     - Running Foundry pipeline.
     - Using FDE/AIP.
@@ -77,7 +79,7 @@ I give you what you need to get started ASAP with PAL. This section shows you
     - Setting up the entire pipeline and testing.<br><img src="/assets/pal_10_02.png" alt="drones" width="30%" style="border: 1px solid #999;"><br><br>
 
 
-- **[5 (3c.2) Initial PAL demos](/3c.2_pal_initial_demos/) (GOAL)**. It does matter what demos you do at first as long as you are doing hands-on and learning the UI (without getting stuck in a rabbit hole).
+- **[5 (3c.2) Initial PAL demos](/3c.2_pal_initial_demos/) (GOAL 2)**. It does matter what demos you do at first as long as you are doing hands-on and learning the UI (without getting stuck in a rabbit hole).
   - **Your initial focus will be on 2 things**
     - **What button to press or where to click next.** The PAL dialogs are well done, but they require a lot of time to get used to.
     - **"I'm stuck.... how do I find a solution"**. PAL has AIP and FDE to help. 
@@ -88,27 +90,169 @@ I give you what you need to get started ASAP with PAL. This section shows you
     - **The MS.Word docs use numbered headings**. This makes it much easier to follow the demos and avoid mistakes. In the future I might number every step (using MS.Word seq function).<br><br>
 
 
-- **6 (3c.2b) Operational apps (GOAL)**. 
+- **6 (3c.2b) Operational apps (GOAL 3)**. 
   - Up to this point you only use the apps in the framework.
   - Create app that works 24/7, notifies, etc.<br><img src="/assets/pal_10_06.png" alt="drones" width="80%" style="border: 1px solid #999;"><br><br>
 
+<!--
+Yes.
 
-- **[7 (3c.3) AIP/FDE demos](/3c.xxx_pal_gist/) (GOAL)**.
+To turn this from a **data/LLM pipeline** into a more representative Foundry operational app, add:
+
+1. **Ontology**
+   - Create an object type backed by the output dataset.
+   - Example object: `Receipt`
+   - Properties:
+     - `path`
+     - `summary`
+     - `extracted_text`
+     - `category`
+     - `cost`
+     - maybe `media_reference`
+
+2. **Workshop UI**
+   - Build an app to view/search/filter receipt objects.
+   - Add:
+     - receipt table,
+     - category/cost filters,
+     - detail panel,
+     - PDF/media preview if available.
+
+Optional later:
+
+3. **Actions**
+   - Mark receipt as reviewed.
+   - Correct category/cost.
+
+4. **Automate**
+   - Notify if cost > threshold or category is missing.
+
+Representative Foundry flow:
+
+```text
+PDF media set
+→ Pipeline Builder + LLM extraction
+→ structured dataset
+→ Ontology Receipt objects
+→ Workshop review app
+→ Actions / Automate
+```
+
+Yes — the current version is “one shot”:
+
+```text
+fixed PDF set → manual deploy/build → output dataset
+```
+
+To make it operational/continuous:
+
+## On demand
+
+Pattern:
+
+```text
+user uploads new PDFs
+→ user clicks run/build
+→ output updates
+→ Workshop app shows results
+```
+
+How:
+
+- Keep media set as input.
+- Add new PDFs to the media set.
+- Rebuild/deploy the pipeline.
+- Output dataset refreshes.
+- Ontology/Workshop app reads updated output.
+
+This is simplest.
+
+## Scheduled
+
+Pattern:
+
+```text
+new PDFs arrive
+→ pipeline runs every N minutes/hours
+→ output updates
+```
+
+How:
+
+- Attach a schedule to the pipeline/output dataset.
+- Example: hourly/daily.
+- Users do not manually run it.
+
+## Incremental
+
+Pattern:
+
+```text
+only process new PDFs
+```
+
+How:
+
+- Use incremental processing if supported/configured.
+- Avoid re-running LLM extraction on old PDFs.
+- Important for cost/time because LLM calls can be expensive.
+
+## Streaming
+
+Usually not for PDFs.
+
+PDFs are file/media inputs, not event streams. More realistic is:
+
+```text
+continuous file arrivals + scheduled/incremental batch processing
+```
+
+Streaming would make sense for event records, logs, sensor data, transactions — not usually PDF documents.
+
+## Operational app
+
+Add:
+
+```text
+Pipeline output dataset
+→ Ontology Receipt objects
+→ Workshop review app
+→ Actions for corrections/review
+→ Automate alerts
+```
+
+Then the app is always reading the latest processed output.
+
+## Best practical version
+
+For this receipt/PDF use case:
+
+```text
+Upload PDFs to media set
+→ scheduled/incremental pipeline processes new files
+→ Receipt objects update
+→ Workshop app shows receipts needing review
+→ Automate notifies on high-cost/missing category
+```
+
+-->
+
+- **[7 (3c.3) AIP/FDE demos](/3c.xxx_pal_gist/) (GOAL 4)**.
   - **Use AI (AIP/FDE) to do demos from scratch** (not following PAL demos or PAL docs; I might get inspiration from those demos, but I just use AIP/FDE to execute; in the future PAL Pilot would do this).
   - **D9 (demo set 9) = "haystack needle" demos**. I believe this was Palantir's original focus when founded:
     - Finding some small indication in a sea of data
     - Without/with AI.
-  - Future: Other AIP/FDE/Pilot demos.<br><br>  
+  - Future: Other AIP/FDE/Pilot demos.<br><img src="/assets/pal_10_12.png" alt="drones" width="50%" style="border: 1px solid #999;"><br><br>
 
 - **8 (3c.3b) Pilot demos (NEAR FUTURE)** ([PAL site](https://www.palantir.com/docs/foundry/pilot/getting-started/)).
   - Pilot (in beta now) will probably be
     - FDE/AIP combo 
-    - that can see the dialogs and lead you by the hand through complicated setups<br><img src="/assets/pal_10_07.png" alt="drones" width="40%" style="border: 1px solid #999;"><br><br> 
+    - that can see the dialogs and lead you by the hand through complicated setups.<br><img src="/assets/pal_10_07.png" alt="drones" width="40%" style="border: 1px solid #999;"><br><br> 
 
-- **[9 (3c.4) Certification (Foundry app dev)](/cert/) (GOAL)**. Demos that match the certification.
+- **[9 (3c.4) Certification (Foundry app dev)](/cert/) (GOAL 5)**. Demos that match the certification.
   - Foundry Application Developer Certification.
   - We've been using the PDF as a guide for what to study.
-  - For a system like PAL, most job will be in big projects. Certification matters. 
+  - For a system like PAL, most job will be in big projects. Certification matters.<br><img src="/assets/pal_10_11.png" alt="drones" width="28%" style="border: 1px solid #999;"><br><br> 
 
 <br>
 
@@ -122,7 +266,13 @@ I give you what you need to get started ASAP with PAL. This section shows you
 
 26.0727 (v1 26.0702) 
 
-<!-- ### **3c.4 Other AIP/FDE-led demos** (for finance, etc).**
+<!-- 
+###############################################################################################################
+###############################################################################################################
+###############################################################################################################
+###############################################################################################################
+###############################################################################################################
+### **3c.4 Other AIP/FDE-led demos** (for finance, etc).**
 
 (TODO)
 
