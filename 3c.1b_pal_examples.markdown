@@ -58,9 +58,9 @@ This just makes sense. This is the way to do things. **So thats what this page w
 
 ### **The following is a chat with PAL's built-in FDE chat assistant.**
 
-#### **ME: if i can install examples that work, test them, analyze, then (1) delete a part and try to create the missing part myself or (2) just delete everything but the data and replicate everything....**
+#### **ME: if i can (1) install examples that work, test them, analyze, then (2a) delete a part and try to create the missing part myself or (2b) just delete everything but the data and replicate everything....**
 
-then why do the demos at all? why doesnt palantir simply start a new user with examples? ?? one of the first example i did.. it took me 2 days to get everything right. i was overwhelmed by all the new stuff, the dialogs.
+then (3) why do the demos at all? (4) why doesnt palantir simply start a new user with examples??? one of the first demos i did.. it took me 2 days to get everything right. i was overwhelmed by all the new stuff, the dialogs.
 
 
 #### **FDE (PAL HELP CHAT): I think your approach is actually the better learning method.**
