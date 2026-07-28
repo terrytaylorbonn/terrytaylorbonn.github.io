@@ -1,0 +1,168 @@
+---
+layout: page
+title: 3c.1b PAL examples
+permalink: /3c.1b_pal_examples/
+---
+
+<br>
+
+[← 3c PAL](/pal/)
+
+<br>
+
+**TOC**:
+- 1 List of examples 
+- 2 Why do examples instead of demos
+
+<br>
+
+# **1 List of examples**
+
+#### **[3c.1b-E10: Palantir Foundry example "Parse PDFs with LLMs in Pipeline Builder (26.0727)](/3c.1b_pal_f_example_first/)**. 
+- Docx for this example: **[#621\_.docx](https://drive.google.com/drive/folders/1-Adawag9uA8_bq-hDF-nOuPYaRLz1eEO)**.
+- Note that this example only covers part 1 of an operational app (as defined by FDE).
+
+*xxx*<br><img src="/assets/pal_10_15.png" alt="drones" width="35%" style="border: 1px solid #999;">
+
+<br>
+
+# **2 Why do examples instead of demos**
+
+I got my start in early July 2026 with Foundry by doing the PAL Foundry **demos**. I got lost. A lot. A very long demo with tons of new stuff to setup, spending half a day just configuring it all... and it doesn't work. When you are just starting out with PAL Foundry you are overwhelmed with all the details, the dialogs, the terminlogy. 
+
+But then I discovered PAL **examples**. At first I did could not do them or even use them because
+- I found no simmple explanation about them. 
+- The demos did give step by step instructions on how there were setup. 
+
+But after a few weeks of demos, I finally installed an example, and then tried to duplicate it. I made 2 mistakes, because I did not have the details of how to set up. Took me about half a day to fix those 2 errors. But I unerstood that this is the way to teach Foundry. 
+
+My technique:
+1. Install, run, and document (in docx file) an example.
+2. Install again, to a different directory, and delete what I wanted to learn (maybe delete everything but the input data).
+3. Build the missing parts, constantly comparing with the running installation.
+4. **Document the missing details in my docx file.**
+
+This just makes sense. This is the way to do things. **So thats what this page will be about. Examples.** 
+
+<!-- I got my start in early July 2026 with Foundry by doing the PAL Foundry **demos**. I got lost. A lot. A very long demo with tons of new stuff to setup, spending half a day just configuring it all... and it doesn't work. When you are just starting out with PAL Foundry you are overwhelmed with all the details, the dialogs, the terminlogy. 
+  - But then I discovered PAL **examples**. At first I did could not do them or even use them because
+    - I found no simmple explanation about them. 
+   - The demos did give step by step instructions on how there were setup. 
+  - But after a few weeks of demos, I finally installed an example, and then tried to duplicate it. I made 2 mistakes, because I did not have the details of how to set up. Took me about half a day to fix those 2 errors. But I understood that this is the way to teach Foundry. -->
+
+<br>
+
+------------
+
+<br>
+
+### **The following is a chat with PAL's built-in FDE chat assistant.**
+
+#### **ME: if i can install examples that work, test them, analyze, then (1) delete a part and try to create the missing part myself or (2) just delete everything but the data and replicate everything....**
+
+then why do the demos at all? why doesnt palantir simply start a new user with examples? ?? one of the first example i did.. it took me 2 days to get everything right. i was overwhelmed by all the new stuff, the dialogs.
+
+
+#### **FDE (PAL HELP CHAT): I think your approach is actually the better learning method.**
+
+The official demos often assume you already understand Foundry vocabulary:
+
+```text
+dataset
+pipeline
+object type
+ontology
+media set
+deploy
+preview
+sampling
+Workshop variable
+action
+```
+
+For a new user, that is too much at once.
+
+#### Why examples are useful
+
+Installed examples give you a **known-good reference**:
+
+```text
+working pipeline
+working ontology
+working app
+working data
+```
+
+Then you can learn by controlled damage:
+
+1. Break one part.
+2. Rebuild that part.
+3. Compare against the working version.
+4. Repeat.
+
+That is much better than starting from blank with 20 unfamiliar screens.
+
+#### Why Palantir still has walkthroughs
+
+Walkthroughs are meant to teach the intended workflow, but they often skip the “beginner friction”:
+
+- what each icon means,
+- what is a node vs dataset vs object type,
+- when preview is just preview,
+- why deploy means build,
+- why `/column_name` matters,
+- why sampling changes row count,
+- why an Ontology object and a dataset can have the same display name.
+
+Those missing micro-details are exactly what confused you.
+
+#### Best learning pattern
+
+For you, I would use this pattern:
+
+```text
+Install example
+→ run/verify it works
+→ inspect each resource
+→ duplicate/recreate with same data
+→ intentionally change one thing
+→ add Ontology
+→ add Workshop
+→ add Automate
+```
+
+That turns examples into a “lab bench” instead of a vague tutorial.
+
+So yes — Palantir probably should onboard new users with small working examples first, then ask them to modify/replicate them step by step.
+
+
+<br>
+
+
+
+26.0728 (v1 26.0728)
+
+<!-- 
+<br>
+
+### **Install and run the example**
+
+*xxx*<br><img src="/assets/pal_10_01.png" alt="drones" width="30%" style="border: 1px solid #999;">
+
+*xxx*<br><img src="/assets/pal_10_05.png" alt="drones" width="45%" style="border: 1px solid #999;">
+
+<br>
+
+---------------
+
+<br>
+
+### **Replicate the example (from scratch)**
+
+
+*xxx*<br><img src="/assets/pal_10_02.png" alt="drones" width="50%" style="border: 1px solid #999;">
+
+*xxx*<br><img src="/assets/pal_10_03.png" alt="drones" width="65%" style="border: 1px solid #999;">
+
+*xxx*<br><img src="/assets/pal_10_04.png" alt="drones" width="65%" style="border: 1px solid #999;">
+-->

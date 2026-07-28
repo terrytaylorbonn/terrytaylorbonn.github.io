@@ -33,13 +33,22 @@ This section shows you
 
 <br>
 
-### **From PAL Foundry novice to [Certified App Developer](https://learn.palantir.com/page/exam-guides) in 9 steps (WIP)** 
+### **From PAL Foundry novice to App dev in 5 steps (WIP)** 
 
-The following is a (WIP) **hands-on demo course that shows step-by-step how to learn Foundry basics** (from my perspective) and become a [Certified Foundry Application Developer](https://learn.palantir.com/page/exam-guides). The PAL certification exam guide says you need about 6 months experience with Foundry before taking the exam, so my personal goal is to "finish" this little project (that focuses on what you need to know for the exam) and take the exam myself around the end of 2026 (I started using Foundry in early July 2026).
+The rest of this page describes my (WIP) **Foundry basics hands-on demo course** (based on selected PAL examples and demos) 
+- S1-S2: Quick start (QS)
+- S3-S5: “Deep” dive
 
-#### **Steps 1-3: Sign up and concepts**
+and reference material:
+- A6-A8: AI usage / concepts / certification ([Certified Foundry Application Developer](https://learn.palantir.com/page/exam-guides))
 
-- **1 (3c.0a) Sign up to PAL (REQUIRED)**. If you cant get a trial version of PAL running, then there's no reason to read further. You will not understand PAL by just reading about it.
+The PAL certification exam guide says you need about 6 months experience with Foundry before taking the exam, so my personal goal is to (1) (write and) finish the SQS and (2) take the exam around the end of 2026 (I started using Foundry in early July 2026).
+
+<br>
+
+#### **Steps 1-2: Quick start (QS)**
+
+- **S1 (3c.0a) Sign up to PAL**. If you cant get a trial version of PAL running, then there's no reason to read further. You will not understand PAL by just reading about it.
   - I dont remember the URL. Just Google it.
   - Unfortunately, I did not record how I signed up, and its not a process I can repeat. But I can tell you this
     - **You must be in a country that PAL supports** (thats only a few countries).
@@ -49,11 +58,45 @@ The following is a (WIP) **hands-on demo course that shows step-by-step how to l
     - I think you need a **mobile phone number** (and email).
   - It was a fairly long process, but very professionally done (I was impressed).<br><img src="/assets/pal_10_08.png" alt="drones" width="37%" style="border: 1px solid #999;"><br><br>
 
-- **[2 (3c.0) Concepts](/3c.ccc_pal_concepts/) (OPTIONAL)**. My own take.
-  - What problems PAL solves. 
-  - This section is a long term WIP (I started using PAL in July 2026, and I need more experience before I can sum up the concepts).<br><img src="/assets/pal_10_09.png" alt="drones" width="67%" style="border: 1px solid #999;"><br><br>
+- **[S2 (3c.1b) PAL examples](/3c.1b_pal_examples/)**. Do examples instead of demos to get started.
+  - Install PAL examples (just install and run) and then try to rebuild parts of the examples.
+  - I document the details you need to avoid the typical rabbit holes new users get lost in.  <br>*PAL example (left, center) and my own build (right)*<br><img src="/assets/pal_10_01.png" alt="drones" width="25%" style="border: 1px solid #999;">  <img src="/assets/pal_10_05.png" alt="drones" width="33%" style="border: 1px solid #999;">  <img src="/assets/pal_10_02.png" alt="drones" width="30%" style="border: 1px solid #999;"><br><br>
 
-- **[3 (3c.1) PAL AI usage strategy](/3c.bbb_pal_strategy_fde/) (RECOMMENDED)**. 
+<br>
+
+#### **Steps 3-5: "Deep" dive**
+
+
+- **[S3 (3c.2) Initial PAL demos](/3c.2_pal_initial_demos/) (GOAL 2)**. You just did project setup / pipeline (goal 1). You know your way around Foundry. Now do demos that cover the rest of basic core Foundry functionality. Get hands-on experience before doing "operational" apps (goal 3).
+  - Current demos consist of just D1-D8, the first PAL demos I did (step by step tutorials). 
+  - **Your initial focus will be on 2 things**
+    - **What button to press or where to click next.** The PAL dialogs are well done, but they require a lot of time to get used to.
+    - **"I'm stuck.... how do I find a solution"**. PAL has AIP and FDE to help. 
+  - When I started, I was overwhelmed by the many dialogs. I just wanted to be shown what do. I did not care about options. So D1-D8 are a bit messy and not perfect, but 
+    - They are MS.Word docx files that I can update easily. You can download that file and use it as your working notebook. **You need to keep lab notes**.
+    - I documented all details with screenshots. 
+    - **The MS.Word docs use numbered headings**. This makes it much easier to follow the demos and avoid mistakes. In the future I might number every step (using MS.Word seq function).<br>*Demos of core functionality*<br><img src="/assets/pal_10_13.png" alt="drones" width="37%" style="border: 1px solid #999;">  <img src="/assets/pal_10_14.png" alt="drones" width="50%" style="border: 1px solid #999;"><br><br>
+
+- **[S4 (3c.2b) DIY Operational (deployed) apps / examples / marketplace](/3c.2b_operational_apps/) (GOAL 3)**. 
+  - Up to this point you only use the apps for testing. They are not setup for end user usage, for real deployment ("deployment in the UI in the previous apps was more like "compile/run").
+  - Create app that works 24/7, notifies, etc.<br><img src="/assets/pal_10_06.png" alt="drones" width="80%" style="border: 1px solid #999;"><br><br>
+
+- **[S5 (3c.3) AIP/FDE (Pilot) real-world projects](/3c.xxx_pal_gist/) (GOAL 4)**. This is the main goal. Creating real-world projects by working as a team with FDE (and AIP).
+  - **Use AI (AIP/FDE) to do demos from scratch** (not following PAL demos or PAL docs; I might get inspiration from those demos, but I just use AIP/FDE to execute; in the future PAL Pilot would do this).
+  - **D9 (demo set 9) = "haystack needle" demos**. I believe this was Palantir's original focus when founded:
+    - Finding some small indication in a sea of data
+    - Without/with AI.
+  - Coming soon: Other AIP/FDE/Pilot demos.<br><img src="/assets/pal_10_12.png" alt="drones" width="50%" style="border: 1px solid #999;"><br>
+  - **[PAL Pilot](https://www.palantir.com/docs/foundry/pilot/getting-started/)** (in beta now) will probably be an "FDE/AIP combo" that can "see" the dialogs and lead you by the hand through complicated setups.<br><img src="/assets/pal_10_07.png" alt="drones" width="40%" style="border: 1px solid #999;"><br><br> 
+
+<!--   - **[8 (3c.3b) Pilot real-world projects](/3c.3b_pal_pilot/) (NEAR FUTURE?)** .-->
+
+
+<br>
+
+#### **Steps 6-8: AI usage / concepts / certification** 
+
+- **[A6 (3c.1) PAL AI usage strategy](/3c.bbb_pal_strategy_fde/)**. 
   - PAL Foundry has 2 helps systems: (1) AIP and (2) FDE. 
   - I used both during the first 8 "Initial PAL demos" (3c.2). 
   - During demo 8 (of 3c.2) I asked AIP/FDE to show me how to do something that was not in the demo. The advantages of each tool slowly became apparent.
@@ -64,189 +107,18 @@ The following is a (WIP) **hands-on demo course that shows step-by-step how to l
     - NOTE: After almost a month of using PAL, I noticed PAL has a beta product called **"Pilot"**. That appears to be what I was talking about.
   - In general, a big focus (at least initially) is on prompt techniques and workflows to maximize effectiveness of using AI.<br>*FDE*<br><img src="/assets/pal_10_10.png" alt="drones" width="42%" style="border: 1px solid #999;"><br><br>
 
-#### **Step 4-8: Hands-on demos (5 GOALS)** 
 
-- **[4 (3c.1b) First PAL Foundry example (pipeline)](/3c.1b_pal_f_example_first/) (GOAL 1)**. This first demo
-  - You first install a PAL example and focus on 
-    - Running Foundry pipeline.
-    - Using FDE/AIP.
-    - Testing, debugging.<br><img src="/assets/pal_10_01.png" alt="drones" width="25%" style="border: 1px solid #999;">  <img src="/assets/pal_10_05.png" alt="drones" width="33%" style="border: 1px solid #999;">
-  - Then try to recreate the example from scratch
-    - Creating projects. 
-    - Getting input data.
-    - Setting up the entire pipeline and testing.<br><img src="/assets/pal_10_02.png" alt="drones" width="30%" style="border: 1px solid #999;"><br><br>
+- **[A7 (3c.0) Concepts](/3c.ccc_pal_concepts/)**. My own take.
+  - What problems PAL solves. 
+  - This section is a long term WIP (I started using PAL in July 2026, and I need more experience before I can sum up the concepts).<br><img src="/assets/pal_10_09.png" alt="drones" width="67%" style="border: 1px solid #999;"><br><br>
 
 
-- **[5 (3c.2) Initial PAL demos](/3c.2_pal_initial_demos/) (GOAL 2)**. You just did project setup / pipeline (goal 1). You know your way around Foundry. Now do demos that cover the rest of basic core Foundry functionality. Get hands-on experience before doing "operational" apps (goal 3).
-  - Current demos consist of just D1-D8, the first PAL demos I did (step by step tutorials). 
-  - **Your initial focus will be on 2 things**
-    - **What button to press or where to click next.** The PAL dialogs are well done, but they require a lot of time to get used to.
-    - **"I'm stuck.... how do I find a solution"**. PAL has AIP and FDE to help. 
-  - When I started, I was overwhelmed by the many dialogs. I just wanted to be shown what do. I did not care about options. So D1-D8 are a bit messy and not perfect, but 
-    - They are MS.Word docx files that I can update easily. You can download that file and use it as your working notebook. **You need to keep lab notes**.
-    - I documented all details with screenshots. 
-    - **The MS.Word docs use numbered headings**. This makes it much easier to follow the demos and avoid mistakes. In the future I might number every step (using MS.Word seq function).<br>*Demos of core functionality*<br><img src="/assets/pal_10_13.png" alt="drones" width="37%" style="border: 1px solid #999;">  <img src="/assets/pal_10_14.png" alt="drones" width="50%" style="border: 1px solid #999;"><br><br>
-
-- **[6 (3c.2b) Operational (deployed) apps](/3c.2b_operational_apps/) (GOAL 3)**. 
-  - Up to this point you only use the apps for testing. They are not setup for end user usage, for real deployment ("deployment in the UI in the previous apps was more like "compile/run").
-  - Create app that works 24/7, notifies, etc.<br><img src="/assets/pal_10_06.png" alt="drones" width="80%" style="border: 1px solid #999;"><br><br>
-
-<!--
-Yes.
-
-To turn this from a **data/LLM pipeline** into a more representative Foundry operational app, add:
-
-1. **Ontology**
-   - Create an object type backed by the output dataset.
-   - Example object: `Receipt`
-   - Properties:
-     - `path`
-     - `summary`
-     - `extracted_text`
-     - `category`
-     - `cost`
-     - maybe `media_reference`
-
-2. **Workshop UI**
-   - Build an app to view/search/filter receipt objects.
-   - Add:
-     - receipt table,
-     - category/cost filters,
-     - detail panel,
-     - PDF/media preview if available.
-
-Optional later:
-
-3. **Actions**
-   - Mark receipt as reviewed.
-   - Correct category/cost.
-
-4. **Automate**
-   - Notify if cost > threshold or category is missing.
-
-Representative Foundry flow:
-
-```text
-PDF media set
-→ Pipeline Builder + LLM extraction
-→ structured dataset
-→ Ontology Receipt objects
-→ Workshop review app
-→ Actions / Automate
-```
-
-Yes — the current version is “one shot”:
-
-```text
-fixed PDF set → manual deploy/build → output dataset
-```
-
-To make it operational/continuous:
-
-## On demand
-
-Pattern:
-
-```text
-user uploads new PDFs
-→ user clicks run/build
-→ output updates
-→ Workshop app shows results
-```
-
-How:
-
-- Keep media set as input.
-- Add new PDFs to the media set.
-- Rebuild/deploy the pipeline.
-- Output dataset refreshes.
-- Ontology/Workshop app reads updated output.
-
-This is simplest.
-
-## Scheduled
-
-Pattern:
-
-```text
-new PDFs arrive
-→ pipeline runs every N minutes/hours
-→ output updates
-```
-
-How:
-
-- Attach a schedule to the pipeline/output dataset.
-- Example: hourly/daily.
-- Users do not manually run it.
-
-## Incremental
-
-Pattern:
-
-```text
-only process new PDFs
-```
-
-How:
-
-- Use incremental processing if supported/configured.
-- Avoid re-running LLM extraction on old PDFs.
-- Important for cost/time because LLM calls can be expensive.
-
-## Streaming
-
-Usually not for PDFs.
-
-PDFs are file/media inputs, not event streams. More realistic is:
-
-```text
-continuous file arrivals + scheduled/incremental batch processing
-```
-
-Streaming would make sense for event records, logs, sensor data, transactions — not usually PDF documents.
-
-## Operational app
-
-Add:
-
-```text
-Pipeline output dataset
-→ Ontology Receipt objects
-→ Workshop review app
-→ Actions for corrections/review
-→ Automate alerts
-```
-
-Then the app is always reading the latest processed output.
-
-## Best practical version
-
-For this receipt/PDF use case:
-
-```text
-Upload PDFs to media set
-→ scheduled/incremental pipeline processes new files
-→ Receipt objects update
-→ Workshop app shows receipts needing review
-→ Automate notifies on high-cost/missing category
-```
-
--->
-
-- **[7 (3c.3) AIP/FDE (Pilot) real-world projects](/3c.xxx_pal_gist/) (GOAL 4)**. This is the main goal. Creating real-world projects by working as a team with FDE (and AIP).
-  - **Use AI (AIP/FDE) to do demos from scratch** (not following PAL demos or PAL docs; I might get inspiration from those demos, but I just use AIP/FDE to execute; in the future PAL Pilot would do this).
-  - **D9 (demo set 9) = "haystack needle" demos**. I believe this was Palantir's original focus when founded:
-    - Finding some small indication in a sea of data
-    - Without/with AI.
-  - Coming soon: Other AIP/FDE/Pilot demos.<br><img src="/assets/pal_10_12.png" alt="drones" width="50%" style="border: 1px solid #999;"><br>
-  - **[PAL Pilot](https://www.palantir.com/docs/foundry/pilot/getting-started/)** (in beta now) will probably be an "FDE/AIP combo" that can "see" the dialogs and lead you by the hand through complicated setups.<br><img src="/assets/pal_10_07.png" alt="drones" width="40%" style="border: 1px solid #999;"><br><br> 
-
-<!--   - **[8 (3c.3b) Pilot real-world projects](/3c.3b_pal_pilot/) (NEAR FUTURE?)** .-->
-
-- **[8 (3c.4) Certification](/cert/) (GOAL 5)** (Foundry Application Developer). 
+- **[A8 (3c.4) Certification](/cert/)** (Foundry Application Developer). 
   - We've been (hopefully) using the PDF as a guide for what to study/build in goals (1-4).
   - Now need some certification (for me its **[Foundry Application Developer Certification](https://learn.palantir.com/page/exam-guides)**). For a system like PAL, most job will be in big projects. Certification matters.<br><img src="/assets/pal_10_11.png" alt="drones" width="28%" style="border: 1px solid #999;"><br><br> 
+
+
+
 
 <br>
 
