@@ -102,7 +102,7 @@ The PAL certification exam guide says you need about 6 months experience with Fo
 
 <br>
 
-#### **Steps 6-8: AI usage / concepts / certification** 
+#### **A6-A8: AI usage / concepts / certification** 
 
 - **[A6 (3c.1) PAL AI usage strategy](/3c.bbb_pal_strategy_fde/)**. 
   - PAL Foundry has 2 helps systems: (1) AIP and (2) FDE. 
