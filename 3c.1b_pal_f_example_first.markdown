@@ -14,8 +14,13 @@ permalink: /3c.1b_pal_f_example_first/
 
 ## **E10: Palantir Foundry example "Parse PDFs with LLMs in Pipeline Builder (26.0727)**
 
+Docx for this example: **[#621\_.docx](https://drive.google.com/drive/folders/1-Adawag9uA8_bq-hDF-nOuPYaRLz1eEO)**.
 
-This is link to docx... might add it to this page in future **[#621\_.docx](https://drive.google.com/drive/folders/1-Adawag9uA8_bq-hDF-nOuPYaRLz1eEO)**.
+Note that this example only covers part 1 of an operational app (as defined by FDE).
+
+*xxx*<br><img src="/assets/pal_10_15.png" alt="drones" width="35%" style="border: 1px solid #999;">
+
+
 
 <br>
 
