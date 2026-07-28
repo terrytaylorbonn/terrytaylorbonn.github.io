@@ -67,7 +67,7 @@ The PAL certification exam guide says you need about 6 months experience with Fo
 #### **Steps 3-5: "Deep" dive**
 
 
-- **[S3 (3c.2) Initial PAL demos](/3c.2_pal_initial_demos/) (GOAL 2)**. You just did project setup / pipeline (goal 1). You know your way around Foundry. Now do demos that cover the rest of basic core Foundry functionality. Get hands-on experience before doing "operational" apps (goal 3).
+- **[S3 (3c.2) PAL demos](/3c.2_pal_initial_demos/)**. You just did project setup / pipeline (goal 1). You know your way around Foundry. Now do demos that cover the rest of basic core Foundry functionality. Get hands-on experience before doing "operational" apps (goal 3).
   - Current demos consist of just D1-D8, the first PAL demos I did (step by step tutorials). 
   - **Your initial focus will be on 2 things**
     - **What button to press or where to click next.** The PAL dialogs are well done, but they require a lot of time to get used to.
@@ -77,11 +77,11 @@ The PAL certification exam guide says you need about 6 months experience with Fo
     - I documented all details with screenshots. 
     - **The MS.Word docs use numbered headings**. This makes it much easier to follow the demos and avoid mistakes. In the future I might number every step (using MS.Word seq function).<br>*Demos of core functionality*<br><img src="/assets/pal_10_13.png" alt="drones" width="37%" style="border: 1px solid #999;">  <img src="/assets/pal_10_14.png" alt="drones" width="50%" style="border: 1px solid #999;"><br><br>
 
-- **[S4 (3c.2b) DIY Operational (deployed) apps / examples / marketplace](/3c.2b_operational_apps/) (GOAL 3)**. 
+- **[S4 (3c.2b) DIY Operational (deployed) apps / examples / marketplace](/3c.2b_operational_apps/)**. 
   - Up to this point you only use the apps for testing. They are not setup for end user usage, for real deployment ("deployment in the UI in the previous apps was more like "compile/run").
   - Create app that works 24/7, notifies, etc.<br><img src="/assets/pal_10_06.png" alt="drones" width="80%" style="border: 1px solid #999;"><br><br>
 
-- **[S5 (3c.3) AIP/FDE (Pilot) real-world projects](/3c.xxx_pal_gist/) (GOAL 4)**. This is the main goal. Creating real-world projects by working as a team with FDE (and AIP).
+- **[S5 (3c.3) AIP/FDE (Pilot) real-world projects](/3c.xxx_pal_gist/)**. This is the main goal. Creating real-world projects by working as a team with FDE (and AIP).
   - **Use AI (AIP/FDE) to do demos from scratch** (not following PAL demos or PAL docs; I might get inspiration from those demos, but I just use AIP/FDE to execute; in the future PAL Pilot would do this).
   - **D9 (demo set 9) = "haystack needle" demos**. I believe this was Palantir's original focus when founded:
     - Finding some small indication in a sea of data
