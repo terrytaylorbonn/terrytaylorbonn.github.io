@@ -26,6 +26,15 @@ permalink: /3c.1b_pal_examples/
 
 <br>
 
+#### **[3c.1b-E11: Palantir Foundry example "Integrate GeoSpatial data with Gaia (26.0728) (26.0728)](/3c.1b_pal_E11_geospatial/)**. 
+
+- Docx for this example: **[#622\_.docx](https://drive.google.com/drive/folders/1-Adawag9uA8_bq-hDF-nOuPYaRLz1eEO)**.
+- xxxxxxxxxxxxxxxxxxxx.
+
+*xxx*<br><img src="/assets/pal_10_16.png" alt="drones" width="60%" style="border: 1px solid #999;">
+
+<br>
+
 # **2 Why do examples instead of demos**
 
 I got my start in early July 2026 with Foundry by doing the PAL Foundry **demos**. I got lost. A lot. A very long demo with tons of new stuff to setup, spending half a day just configuring it all... and it doesn't work. When you are just starting out with PAL Foundry you are overwhelmed with all the details, the dialogs, the terminlogy. 

@@ -1,0 +1,174 @@
+---
+layout: page
+title: 3c.1b-E11 Example 2 Geospatial
+permalink: /3c.1b_pal_E11_geospatial/
+---
+
+
+<br>
+
+[← 3c.1b PAL examples](/3c.1b_pal_examples/)
+
+<br>
+
+
+## **E11: Palantir Foundry example "Geospatial xxxxx (26.0728)**
+
+#### **All details in this Docx: [#622\_.docx](https://drive.google.com/drive/folders/1-Adawag9uA8_bq-hDF-nOuPYaRLz1eEO)**.
+
+
+
+
+*xxx*<br><img src="/assets/pal_10_16.png" alt="drones" width="65%" style="border: 1px solid #999;">
+
+*xxx*<br><img src="/assets/pal_10_17.png" alt="drones" width="65%" style="border: 1px solid #999;">
+
+*xxx*<br><img src="/assets/pal_10_18.png" alt="drones" width="65%" style="border: 1px solid #999;">
+
+
+<br>
+
+26.0727 (v1 26.0727)
+
+<!--
+Yes.
+
+To turn this from a **data/LLM pipeline** into a more representative Foundry operational app, add:
+
+1. **Ontology**
+   - Create an object type backed by the output dataset.
+   - Example object: `Receipt`
+   - Properties:
+     - `path`
+     - `summary`
+     - `extracted_text`
+     - `category`
+     - `cost`
+     - maybe `media_reference`
+
+2. **Workshop UI**
+   - Build an app to view/search/filter receipt objects.
+   - Add:
+     - receipt table,
+     - category/cost filters,
+     - detail panel,
+     - PDF/media preview if available.
+
+Optional later:
+
+3. **Actions**
+   - Mark receipt as reviewed.
+   - Correct category/cost.
+
+4. **Automate**
+   - Notify if cost > threshold or category is missing.
+
+Representative Foundry flow:
+
+```text
+PDF media set
+→ Pipeline Builder + LLM extraction
+→ structured dataset
+→ Ontology Receipt objects
+→ Workshop review app
+→ Actions / Automate
+```
+
+Yes — the current version is “one shot”:
+
+```text
+fixed PDF set → manual deploy/build → output dataset
+```
+
+To make it operational/continuous:
+
+## On demand
+
+Pattern:
+
+```text
+user uploads new PDFs
+→ user clicks run/build
+→ output updates
+→ Workshop app shows results
+```
+
+How:
+
+- Keep media set as input.
+- Add new PDFs to the media set.
+- Rebuild/deploy the pipeline.
+- Output dataset refreshes.
+- Ontology/Workshop app reads updated output.
+
+This is simplest.
+
+## Scheduled
+
+Pattern:
+
+```text
+new PDFs arrive
+→ pipeline runs every N minutes/hours
+→ output updates
+```
+
+How:
+
+- Attach a schedule to the pipeline/output dataset.
+- Example: hourly/daily.
+- Users do not manually run it.
+
+## Incremental
+
+Pattern:
+
+```text
+only process new PDFs
+```
+
+How:
+
+- Use incremental processing if supported/configured.
+- Avoid re-running LLM extraction on old PDFs.
+- Important for cost/time because LLM calls can be expensive.
+
+## Streaming
+
+Usually not for PDFs.
+
+PDFs are file/media inputs, not event streams. More realistic is:
+
+```text
+continuous file arrivals + scheduled/incremental batch processing
+```
+
+Streaming would make sense for event records, logs, sensor data, transactions — not usually PDF documents.
+
+## Operational app
+
+Add:
+
+```text
+Pipeline output dataset
+→ Ontology Receipt objects
+→ Workshop review app
+→ Actions for corrections/review
+→ Automate alerts
+```
+
+Then the app is always reading the latest processed output.
+
+## Best practical version
+
+For this receipt/PDF use case:
+
+```text
+Upload PDFs to media set
+→ scheduled/incremental pipeline processes new files
+→ Receipt objects update
+→ Workshop app shows receipts needing review
+→ Automate notifies on high-cost/missing category
+```
+
+-->
