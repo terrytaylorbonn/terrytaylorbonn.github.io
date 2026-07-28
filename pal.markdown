@@ -6,9 +6,17 @@ permalink: /pal/
 
 <br>
 
-*To train yourself how to use the PAL Enterprise SW Foundry, you need a very logically structured set of the simplest step-by-step demos (with critical details). Thats the goal of this section "3c Enterprise" (WIP).* 
+To train yourself how to use the PAL Enterprise SW Foundry, you need a very logically structured set of the simplest step-by-step demos (with critical details). Thats the goal of this section "3c Enterprise" (WIP).
 
 <br>
+
+**TOC**:
+- 1 Concepts
+- 2 From PAL Foundry novice to App dev in 5 steps (WIP)
+
+<br>
+
+## **1 Concepts**
 
 Enterprise AI dev platforms do the heavy lifting of creating an enterprise level AI app. **My focus (for now) is on Palantir (Foundry)** because 
 - PAL is a market leader.
@@ -33,7 +41,7 @@ This section shows you
 
 <br>
 
-### **From PAL Foundry novice to App dev in 5 steps (WIP)** 
+## **2 From PAL Foundry novice to App dev in 5 steps (WIP)** 
 
 The rest of this page describes my (WIP) **Foundry basics hands-on demo course** (based on selected PAL examples and demos) 
 - S1-S2: Quick start (QS)
@@ -117,20 +125,29 @@ The PAL certification exam guide says you need about 6 months experience with Fo
   - We've been (hopefully) using the PDF as a guide for what to study/build in goals (1-4).
   - Now need some certification (for me its **[Foundry Application Developer Certification](https://learn.palantir.com/page/exam-guides)**). For a system like PAL, most job will be in big projects. Certification matters.<br><img src="/assets/pal_10_11.png" alt="drones" width="28%" style="border: 1px solid #999;"><br><br> 
 
+<br>
 
+26.0727 (v1 26.0702) 
 
+<br>
+<br>
+<br>
+<br>
+<br>
+
+----------------
+----------------
+----------------
 
 <br>
 
-### **Notes**
+#### **Notes**
 - *[PAL general notes](/3c.0_pal_notes/)*
 - *[Palantir CEO火力全开，场面控制不住了！](https://www.youtube.com/watch?v=feUFT1Q-oBA)*
 - *[zerohedge.com/ai/something-has-gone-completely-wrong-palantirs-alex-karp-goes-ballistic-openai-anthropic](https://www.zerohedge.com/ai/something-has-gone-completely-wrong-palantirs-alex-karp-goes-ballistic-openai-anthropic)*
 - *https://www.youtube.com/watch?v=lSDC6-BdVus?t=341 HBM, diagram of NN, interconnecting multiple GPUs*
 
-<br>
 
-26.0727 (v1 26.0702) 
 
 <!-- 
 ###############################################################################################################
