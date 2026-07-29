@@ -18,13 +18,14 @@ This is the best way to become proficient with PAL Foundry as quick as possible:
   - Repeat the above process for other examples.
   - I document (in docx files) all the details you need to avoid typical mistakes. 
   
-*PAL example (left, center) and ZAI (ZiptieAI) build (right)*<br><img src="/assets/pal_10_01.png" alt="drones" width="25%" style="border: 1px solid #999;">  <img src="/assets/pal_10_05.png" alt="drones" width="33%" style="border: 1px solid #999;">  <img src="/assets/pal_10_02.png" alt="drones" width="30%" style="border: 1px solid #999;"><br><br>
+*PAL example (left, center) and ZAI (ZiptieAI) build (right)*<br><img src="/assets/pal_10_01.png" alt="drones" width="25%" style="border: 1px solid #999;">  <img src="/assets/pal_10_05.png" alt="drones" width="33%" style="border: 1px solid #999;">  <img src="/assets/pal_10_02.png" alt="drones" width="30%" style="border: 1px solid #999;"><br>
 
 **Note that this is also how real projects are developed**: *Not sure about this*, but maybe 
 - You first think about the result you (or your customers) want (pipeline output, UI output, etc). You start thinking about your project at the top.
 - UI output requires onotology. 
 - Then you need to figure out how what datasets and how to build a pipeline that will provide ontology input.
 
+<br>
 
 **TOC**:
 - 1 Why start with PAL/ZAI examples (instead of PAL demos)
@@ -106,6 +107,16 @@ The basic idea of this section is shown in the diagram below:
 - Uses PAL maps for view. You only rebuild ontology and pipeline (much more complex than E10). <br>*E11*<br><img src="/assets/pal_10_24.png" alt="drones" width="60%" style="border: 1px solid #999;">
 - Docx for this example: **[#622\_.docx](https://drive.google.com/drive/folders/1-Adawag9uA8_bq-hDF-nOuPYaRLz1eEO)**.
 
+<br>
+
+#### **[E11: Palantir Foundry example "Integrate GeoSpatial data with Gaia (26.0728) (26.0728)](/3c.1b_pal_E11_geospatial/)**. 
+- Very interesting app. 
+  - Inputs 2 sets of intelligence data (ELINT and ATR GEOINT).
+  - Finds ~3 million matching entries. 
+  - Sifts through the 3 million to find 4 entries of interest. 
+  - Displays the 4 entries on a map.<br>*E11 output*<br><img src="/assets/pal_10_20.png" alt="drones" width="60%" style="border: 1px solid #999;">
+- Uses PAL maps for view. You only rebuild ontology and pipeline (much more complex than E10). <br>*E11*<br><img src="/assets/pal_10_24.png" alt="drones" width="60%" style="border: 1px solid #999;">
+- Docx for this example: **[#622\_.docx](https://drive.google.com/drive/folders/1-Adawag9uA8_bq-hDF-nOuPYaRLz1eEO)**.
 
 <br>
 
