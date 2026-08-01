@@ -1,7 +1,7 @@
 ---
 layout: page
 title: Why I want to work at Palantir
-permalink: /palantir/
+permalink: /palantirxxx/
 ---
 
 I am applying for a tech writer job at palantir. below area 2 questionss on the application and my answers. 
