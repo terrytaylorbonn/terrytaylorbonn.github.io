@@ -13,25 +13,67 @@ permalink: /3c.1b_pal_E17_anomalies_time_series/
 - Complicated demo, but quite interesting.  
   - Code for model to detect time series anomalies.
   - Quiver for display data.
-  - Requires quite a bit of manual action to process data.<br>*E17 output (the green boxes show my modifications to the input data)*<br><img src="/assets/pal_10_26.png" alt="drones" width="60%" style="border: 1px solid #999;">
+  - Requires quite a bit of manual action to process data.
+  - **All details in this Docx: [#626\_.docx](https://drive.google.com/drive/folders/1-Adawag9uA8_bq-hDF-nOuPYaRLz1eEO)**.
 
+<br>
 
-**All details in this Docx: [#626\_.docx](https://drive.google.com/drive/folders/1-Adawag9uA8_bq-hDF-nOuPYaRLz1eEO)**.
+----------------------------
+----------------------------
 
-<br><br>
+<br>
 
 *At a high level, the demo uses Foundry pipelines, a Prophet time series model, and Quiver visualization to show anomalous points in a time series. The intended flow is*<br><img src="/assets/pal_17_04.png" alt="drones" width="40%" style="border: 1px solid #999;">
 
 
 *Required modifications to get E17 to process new data (the example was not a start-to-finish process)*<br><img src="/assets/pal_17_02.png" alt="drones" width="70%" style="border: 1px solid #999;">
 
-*xxxx*<br><img src="/assets/pal_17_03.png" alt="drones" width="40%" style="border: 1px solid #999;">
+<!-- *xxxx*<br><img src="/assets/pal_17_03.png" alt="drones" width="40%" style="border: 1px solid #999;"> -->
 
-*xxxxxx*<br><img src="/assets/pal_17_04.png" alt="drones" width="40%" style="border: 1px solid #999;">
+*17_05*<br><img src="/assets/pal_17_05.png" alt="drones" width="40%" style="border: 1px solid #999;">
 
-*xxxx*<br><img src="/assets/pal_17_05.png" alt="drones" width="40%" style="border: 1px solid #999;">
+<br>
+
+### B4.1 PIPELINE 1: MODIFY DATA 
+
+*17_06*<br><img src="/assets/pal_17_06.png" alt="drones" width="60%" style="border: 1px solid #999;">
 
 
+*17_07*<br><img src="/assets/pal_17_07.png" alt="drones" width="60%" style="border: 1px solid #999;">
+
+<br>
+
+### B4.2 Modeling: Fix, Publish, and Manually Score
+
+This is a long section ... see docx \#626 for details.
+
+*17_09*<br><img src="/assets/pal_17_09.png" alt="drones" width="60%" style="border: 1px solid #999;">
+
+*17_08*<br><img src="/assets/pal_17_08.png" alt="drones" width="60%" style="border: 1px solid #999;">
+
+*17_10*<br><img src="/assets/pal_17_10.png" alt="drones" width="60%" style="border: 1px solid #999;">
+
+*17_11*<br><img src="/assets/pal_17_11.png" alt="drones" width="40%" style="border: 1px solid #999;">
+
+*17_12*<br><img src="/assets/pal_17_12.png" alt="drones" width="50%" style="border: 1px solid #999;">
+
+<br>
+
+### B4.3 PIPELINE 2: REPOINT CREATE SERIES
+
+*17_13*<br><img src="/assets/pal_17_13.png" alt="drones" width="50%" style="border: 1px solid #999;">
+
+*17_14*<br><img src="/assets/pal_17_14.png" alt="drones" width="70%" style="border: 1px solid #999;">
+
+<br>
+
+### B4.4 VISUALIZATION (QUIVER) 
+
+*17_15*<br><img src="/assets/pal_17_15.png" alt="drones" width="40%" style="border: 1px solid #999;">
+
+
+
+<br>*E17 output (the green boxes show my modifications to the input data)*<br><img src="/assets/pal_10_26.png" alt="drones" width="80%" style="border: 1px solid #999;">
 
 <br>
 
