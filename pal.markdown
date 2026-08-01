@@ -6,7 +6,7 @@ permalink: /pal/
 
 <br>
 
-To train yourself how to use the PAL Enterprise SW Foundry, you need a very logically structured set of the simplest step-by-step demos (with critical details). Thats the goal of this section "3c Enterprise" (WIP).
+To train yourself how to use the Enterprise software Palantir Foundry, you need a very logically structured set of the simplest step-by-step demos (with critical details). Thats the (eventual) goal of this section "3c Enterprise" (WIP).
 
 <br>
 
@@ -20,13 +20,9 @@ To train yourself how to use the PAL Enterprise SW Foundry, you need a very logi
 
 Enterprise AI dev platforms do the heavy lifting of creating an enterprise level AI app. **My focus (for now) is on Palantir (Foundry)** because 
 - PAL is a market leader.
-- **PAL offers a generous free demo account for hands-on experience with Foundry.**
-- **The built-in AI help (AIP/FDE) made it possible to complete the demos (quickly)**. Without AI this would have taken at least 5x longer to do.
+- **PAL offers a generous free trial account for Foundry.**
+- **The built-in AI help (AIP/FDE) makes it possible to complete the demos**.
 
-This section shows you 
-- **Step by step hands-on how to get started using Palantir (PAL) Foundry**. A straight shot learning process that I myself am going through (so some sections may be very WIP).** 
-- Very organized, up-to-date (WIP) and detailed (docx files that can be easily updated are my primary working notes). 
-- I pay particular attention to dialog details and using PAL help (AIP/FDE) to get directions or solve problems (**FDE was critical for my success with PAL**).
 
 <!-- 
 - In the near future AIP/FDE could develop into higher level AI assistant that would lead the user by the hand through complex setups.
@@ -41,22 +37,22 @@ This section shows you
 
 <br>
 
-## **2 From PAL Foundry novice to App dev in 5 steps (WIP)** 
+## **2 From PAL Foundry novice to App dev in 5 phases (WIP)** 
 
 The rest of this page describes my (WIP) **Foundry basics hands-on demo course** (based on selected PAL examples and demos) 
-- S1-S2: Quick start (QS)
-- S3-S5: “Deep” dive
+- P1-P2: Quick start (QS)
+- P3-P5: “Deep” dive
 
 and reference material:
 - A6-A8: AI usage / concepts / certification ([Certified Foundry Application Developer](https://learn.palantir.com/page/exam-guides))
-
-The PAL certification exam guide says you need about 6 months experience with Foundry before taking the exam, so my personal goal is to (1) (write and) finish the SQS and (2) take the exam around the end of 2026 (I started using Foundry in early July 2026).
+  - The PAL certification exam guide says you need about 6 months experience with Foundry before taking the exam, so my personal goal is to (1) (write and) finish the SQS and (2) take the exam around the end of 2026 (I started using Foundry in early July 2026).
+- Very organized, up-to-date (WIP) and detailed docx lab notes. 
 
 <br>
 
-#### **Steps 1-2: Quick start (QS)**
+#### **Phases 1-2: Quick start (QS)**
 
-- **S1 (3c.0a) Sign up to PAL**. If you cant get a trial version of PAL running, then there's no reason to read further. You will not understand PAL by just reading about it.
+- **P1 (3c.0a) Sign up to PAL**. If you cant get a trial version of PAL running, then there's no reason to read further. You will not understand PAL by just reading about it.
   - I dont remember the URL. Just Google it.
   - Unfortunately, I did not record how I signed up, and its not a process I can repeat. But I can tell you this
     - **You must be in a country that PAL supports** (thats only a few countries).
@@ -64,18 +60,20 @@ The PAL certification exam guide says you need about 6 months experience with Fo
     - **You must have a passport or some picture ID of good enough quality for facial recognition verification**. My passport is almost 10 years old, but it still worked. My drivers licence pic was of such low quality that I doubt it would have worked. 
     - **You need a camera on your PC to take a pic of yourself. PAL will compare your ID and the pic.**
     - I think you need a **mobile phone number** (and email).
-  - It was a fairly long process, but very professionally done (I was impressed).<br><img src="/assets/pal_10_08.png" alt="drones" width="37%" style="border: 1px solid #999;"><br><br>
+  - It was a fairly long process, but very professionally done (I was impressed).<br><br><img src="/assets/pal_10_08.png" alt="drones" width="37%" style="border: 1px solid #999;"><br><br>
 
-- **[S2 (3c.1b) PAL examples](/3c.1b_pal_examples/)**. Do examples instead of demos to get started.
-  - Install PAL examples (just install and run) and then try to rebuild parts of the examples.
-  - I document the details you need to avoid the typical rabbit holes new users get lost in.  <br>*PAL example (left, center) and my own build (right)*<br><img src="/assets/pal_10_01.png" alt="drones" width="25%" style="border: 1px solid #999;">  <img src="/assets/pal_10_05.png" alt="drones" width="33%" style="border: 1px solid #999;">  <img src="/assets/pal_10_02.png" alt="drones" width="30%" style="border: 1px solid #999;"><br><br>
+- **[P2 (3c.1b) PAL examples](/3c.1b_pal_examples/)** 
+  - Install a PAL example.
+  - Run the example.
+  - Try to rebuild the examples (from top to bottom, from downstream to upstream).
+  - Note: These examples are excellent, but are often quite complicated (*my long-term goal is create more simple examples, but from what FDE has told me, publishing examples is not a simple process*). But you don't have to do everything at first step-by-step before you see the the final results. Once you have a working first (reference) example, you can install a second (experimental) example that you can modify at your pace. This allows you to (1) appreciate quickly the capabilities of PAL and (2) focus on learning the UI and basic concepts/terminology. <br><br>*PAL example (left, center) and my own build (right)*<br><img src="/assets/pal_10_01.png" alt="drones" width="25%" style="border: 1px solid #999;">  <img src="/assets/pal_10_05.png" alt="drones" width="33%" style="border: 1px solid #999;">  <img src="/assets/pal_10_02.png" alt="drones" width="30%" style="border: 1px solid #999;"><br><br>
 
 <br>
 
-#### **Steps 3-5: "Deep" dive**
+#### **Phases 3-5: "Deep" dive**
 
 
-- **[S3 (3c.2) PAL demos](/3c.2_pal_initial_demos/)**. You just did project setup / pipeline (goal 1). You know your way around Foundry. Now do demos that cover the rest of basic core Foundry functionality. Get hands-on experience before doing "operational" apps (goal 3).
+- **[P3 (3c.2) PAL demos](/3c.2_pal_initial_demos/)**. You just did project setup / pipeline (goal 1). You know your way around Foundry. Now do demos that cover the rest of basic core Foundry functionality. Get hands-on experience before doing "operational" apps (goal 3).
   - Current demos consist of just D1-D8, the first PAL demos I did (step by step tutorials). 
   - **Your initial focus will be on 2 things**
     - **What button to press or where to click next.** The PAL dialogs are well done, but they require a lot of time to get used to.
@@ -85,11 +83,11 @@ The PAL certification exam guide says you need about 6 months experience with Fo
     - I documented all details with screenshots. 
     - **The MS.Word docs use numbered headings**. This makes it much easier to follow the demos and avoid mistakes. In the future I might number every step (using MS.Word seq function).<br>*Demos of core functionality*<br><img src="/assets/pal_10_13.png" alt="drones" width="37%" style="border: 1px solid #999;">  <img src="/assets/pal_10_14.png" alt="drones" width="50%" style="border: 1px solid #999;"><br><br>
 
-- **[S4 (3c.2b) DIY Operational (deployed) apps / examples / marketplace](/3c.2b_operational_apps/)**. 
+- **[P4 (3c.2b) DIY Operational (deployed) apps / examples / marketplace](/3c.2b_operational_apps/)**. 
   - Up to this point you only use the apps for testing. They are not setup for end user usage, for real deployment ("deployment in the UI in the previous apps was more like "compile/run").
   - Create app that works 24/7, notifies, etc.<br><img src="/assets/pal_10_06.png" alt="drones" width="80%" style="border: 1px solid #999;"><br><br>
 
-- **[S5 (3c.3) AIP/FDE (Pilot) real-world projects](/3c.xxx_pal_gist/)**. This is the main goal. Creating real-world projects by working as a team with FDE (and AIP).
+- **[P5 (3c.3) AIP/FDE (Pilot) real-world projects](/3c.xxx_pal_gist/)**. This is the main goal. Creating real-world projects by working as a team with FDE (and AIP).
   - **Use AI (AIP/FDE) to do demos from scratch** (not following PAL demos or PAL docs; I might get inspiration from those demos, but I just use AIP/FDE to execute; in the future PAL Pilot would do this).
   - **D9 (demo set 9) = "haystack needle" demos**. I believe this was Palantir's original focus when founded:
     - Finding some small indication in a sea of data
@@ -127,7 +125,7 @@ The PAL certification exam guide says you need about 6 months experience with Fo
 
 <br>
 
-26.0727 (v1 26.0702) 
+26.0801 (v1 26.0702) 
 
 <br>
 <br>

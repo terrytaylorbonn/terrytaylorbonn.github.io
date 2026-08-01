@@ -10,6 +10,20 @@ permalink: /3c.1b_pal_examples/
 
 <br>
 
+
+**TOC**:
+- 1 Why start with PAL/ZAI examples
+- 2 Workflows
+- 3 List of **working** examples 
+- 4 List of **failed/TODO** examples
+
+
+
+<br>
+
+# **1 Why start with PAL/ZAI examples**
+
+
 This is the best way to become proficient with PAL Foundry as quick as possible:
   - Install a PAL example (just install and run). Use this as a reference installation.
   - Install a second PAL example to use as your own project. 
@@ -26,15 +40,6 @@ This is the best way to become proficient with PAL Foundry as quick as possible:
 - Then you need to figure out how what datasets and how to build a pipeline that will provide ontology input.
 
 <br>
-
-**TOC**:
-- 1 Why start with PAL/ZAI examples (instead of PAL demos)
-- 2 Workflows
-- 3 List of examples 
-
-<br>
-
-# **1 Why start with PAL/ZAI examples (instead of PAL demos)**
 
 I started with PAL (Foundry) in early July 2026 by doing the PAL Foundry **demos**. The demo was excellent, but 
 - I was not ready for it. **I got lost in all the new dialogs and terminology**. 
@@ -78,7 +83,7 @@ The basic idea of this section is shown in the diagram below:
 
 <br>
 
-# **3 List of examples**
+# **3 List of working examples**
 
 <br>
 
@@ -109,11 +114,7 @@ The basic idea of this section is shown in the diagram below:
 
 <br>
 
-#### **[E12: Palantir Foundry example "Build a common operating picture with geospatial data" (26.0729)](/3c.1b_pal_E12_geospatial_workshop/)**. 
-- **(FOR NOW PASS ON THIS... TOO COMPLICATED (WORKSHOP))**<br>*E12*<br><img src="/assets/pal_10_25.png" alt="drones" width="60%" style="border: 1px solid #999;">
-- Docx for this example: **[#623\_.docx](https://drive.google.com/drive/folders/1-Adawag9uA8_bq-hDF-nOuPYaRLz1eEO)**.
 
-<br>
 
 <!-- # **2 Why do examples instead of demos**
 
@@ -139,7 +140,28 @@ This just makes sense. This is the way to do things. **So thats what this page w
    - The demos did give step by step instructions on how there were setup. 
   - But after a few weeks of demos, I finally installed an example, and then tried to duplicate it. I made 2 mistakes, because I did not have the details of how to set up. Took me about half a day to fix those 2 errors. But I understood that this is the way to teach Foundry. -->
 
-<br><br><br><br><br><br><br>
+<br>
+
+# **4 List of failed/TODO examples**
+"Failed" = I could not get the example running.
+
+<br>
+
+#### **[E12: Palantir Foundry example "Build a common operating picture with geospatial data" (26.0729)](/3c.1b_pal_E12_geospatial_workshop/)**. 
+- **(FOR NOW PASS ON THIS... TOO COMPLICATED (WORKSHOP))**<br>*E12*<br><img src="/assets/pal_10_25.png" alt="drones" width="60%" style="border: 1px solid #999;">
+- Docx for this example: **[#623\_.docx](https://drive.google.com/drive/folders/1-Adawag9uA8_bq-hDF-nOuPYaRLz1eEO)**.
+
+
+
+
+
+<br>
+
+
+
+
+
+<br><br><br><br><br><br>
 
 ------------
 ------------
