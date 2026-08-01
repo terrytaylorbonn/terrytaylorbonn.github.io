@@ -4,21 +4,22 @@ title: Why I want to work at Palantir
 permalink: /palantir/
 ---
 
-#### what has been your favorite project or proudest accomplishment
+I am applying for a tech writer job at palantir. below area 2 questionss on the application and my answers. 
 
-My favorite project has been ZiptieAI.com. 
-- I created ZiptieAI.com without (human) assistance. 
-- ZiptieAI.com describes (with demos) the gist of AI drones, AI (neural networks, CNNs, and LLM models), and agents. 
-- My core focus has been AI algorithms and how to effectively use AI. 
-- My current focus is on Palantir Foundry (see https://ziptieai.com/pal/). 
+
+#### What has been your favorite project or proudest accomplishment?
+
+My favorite project has been ZiptieAI.com, a technical learning website that I created independently.
+- ZiptieAI.com explains AI drones, neural networks, CNNs, LLMs, models, and AI agents through hands-on demos, diagrams, and detailed lab notes. 
+- The current focus is Palantir Foundry (Ziptieai.com/pal). 
 - Lab notes for all demos are available at https://drive.google.com/drive/folders/1-Adawag9uA8_bq-hDF-nOuPYaRLz1eEO.
 
 
-#### why do you want to work at palantir?
+#### Why do you want to work at Palantir?
 
-- I have been working on Palantir Foundry for a month. I have been doing Foundry demos and examples on my own (with the help of FDE). Foundry is the logical final phase of ZiptieAI. 
-- I could make significant contributions to Palantir documentation. Currently I am updating ZiptieAI to show new Foundry users step-by-step (WIP) how to (1) install, (2) use, and (3) modify Palantir examples (see https://ziptieai.com/3c.1b_pal_examples/).
-- I am proficient in Chinese (spoken and written), Russian, and German. I have basic skills in Ukrainian and Hebrew. I have 20 years experience in these countries (CN/TW, RU/BY, DE, UA, and IL). I appreciate the vital role that Palantir plays in the defense of civilization. 
+- I have been working on Palantir Foundry for a month. I have been doing Foundry demos and examples on my own (with the help of FDE). Foundry is the logical next step in the evolution of ZiptieAI. 
+- I could make significant contributions to Palantir documentation. Currently I am updating ZiptieAI to show new Foundry users step-by-step (WIP) how to (1) install, (2) use, and (3) modify Palantir examples (ziptieai.com/3c.1b_pal_examples).
+- I am proficient in Chinese (spoken and written), Russian, and German. I have basic skills in Ukrainian and Hebrew. I have spent 20 years abroad working exclusively in local private sector tech companies as a local hire. 
 
 
 
