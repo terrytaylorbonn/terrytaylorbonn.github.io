@@ -18,6 +18,10 @@ permalink: /3c.1b_pal_E17_anomalies_time_series/
 
 **All details in this Docx: [#626\_.docx](https://drive.google.com/drive/folders/1-Adawag9uA8_bq-hDF-nOuPYaRLz1eEO)**.
 
+<br><br>
+
+*Required modifications to get E17 to process new data (the example was not a start-to-finish process)*<br><img src="/assets/pal_17_02.png" alt="drones" width="70%" style="border: 1px solid #999;">
+
 
 
 
