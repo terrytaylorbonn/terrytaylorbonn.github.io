@@ -110,6 +110,17 @@ The basic workflow concepts is shown in the diagram below (not every example wil
 
 <br>
 
+#### **[E11: Palantir Foundry example "Integrate GeoSpatial data with Gaia" (26.0728)](/3c.1b_pal_E11_geospatial/)**. 
+- Very interesting app. 
+  - Inputs 2 sets of intelligence data (ELINT and ATR GEOINT).
+  - Finds ~3 million matching entries. 
+  - Sifts through the 3 million to find 4 entries of interest. 
+  - Displays the 4 entries on a map.<br>*E11 output*<br><img src="/assets/pal_10_20.png" alt="drones" width="60%" style="border: 1px solid #999;">
+- Uses PAL maps for view. You only rebuild ontology and pipeline (much more complex than E10). <br>*E11*<br><img src="/assets/pal_10_24.png" alt="drones" width="60%" style="border: 1px solid #999;">
+- Docx for this example: **[#622\_.docx](https://drive.google.com/drive/folders/1-Adawag9uA8_bq-hDF-nOuPYaRLz1eEO)**.
+
+<br>
+
 #### **[E17: Detect anomalies in time series data with Code Workspaces (26.0731)](/3c.1b_pal_E17_anomalies_time_series/)**. 
 - Complicated demo, but quite interesting.  
   - Code for model to detect time series anomalies.

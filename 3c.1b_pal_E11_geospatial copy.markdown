@@ -20,7 +20,12 @@ permalink: /3c.1b_pal_E17_anomalies_time_series/
 
 <br><br>
 
+*At a high level, the demo uses Foundry pipelines, a Prophet time series model, and Quiver visualization to show anomalous points in a time series. The intended flow is*<br><img src="/assets/pal_17_04.png" alt="drones" width="40%" style="border: 1px solid #999;">
+
+
 *Required modifications to get E17 to process new data (the example was not a start-to-finish process)*<br><img src="/assets/pal_17_02.png" alt="drones" width="70%" style="border: 1px solid #999;">
+
+*Required modifications to get E17 to process new data (the example was not a start-to-finish process)*<br><img src="/assets/pal_17_03.png" alt="drones" width="40%" style="border: 1px solid #999;">
 
 
 
