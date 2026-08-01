@@ -130,51 +130,53 @@ The basic workflow concepts is shown in the diagram below (not every example wil
 
 <br>
 
-
-
-<!-- # **2 Why do examples instead of demos**
-
-I got my start in early July 2026 with Foundry by doing the PAL Foundry **demos**. I got lost. A lot. A very long demo with tons of new stuff to setup, spending half a day just configuring it all... and it doesn't work. When you are just starting out with PAL Foundry you are overwhelmed with all the details, the dialogs, the terminlogy. 
-
-But then I discovered PAL **examples**. At first I did could not do them or even use them because
-- I found no simmple explanation about them. 
-- The demos did give step by step instructions on how there were setup. 
-
-But after a few weeks of demos, I finally installed an example, and then tried to duplicate it. I made 2 mistakes, because I did not have the details of how to set up. Took me about half a day to fix those 2 errors. But I unerstood that this is the way to teach Foundry. 
-
-My technique:
-1. Install, run, and document (in docx file) an example.
-2. Install again, to a different directory, and delete what I wanted to learn (maybe delete everything but the input data).
-3. Build the missing parts, constantly comparing with the running installation.
-4. **Document the missing details in my docx file.**
-
-This just makes sense. This is the way to do things. **So thats what this page will be about. Examples.** 
-
- I got my start in early July 2026 with Foundry by doing the PAL Foundry **demos**. I got lost. A lot. A very long demo with tons of new stuff to setup, spending half a day just configuring it all... and it doesn't work. When you are just starting out with PAL Foundry you are overwhelmed with all the details, the dialogs, the terminlogy. 
-  - But then I discovered PAL **examples**. At first I did could not do them or even use them because
-    - I found no simmple explanation about them. 
-   - The demos did give step by step instructions on how there were setup. 
-  - But after a few weeks of demos, I finally installed an example, and then tried to duplicate it. I made 2 mistakes, because I did not have the details of how to set up. Took me about half a day to fix those 2 errors. But I understood that this is the way to teach Foundry. -->
+# **4a List of TODO examples**
 
 <br>
 
-# **4 List of failed/TODO examples**
-"Failed" = I could not get the example running.
+#### **E13: Protect sensitive images using visual obfuscation in Cipher**. 
+- no Docx??
+- https://ziptieai.usw-17.palantirfoundry.com/workspace/now/platform/b88675ed-e8f9-4bc9-b75b-aa446930d07b
+- *E13*<br><img src="/assets/pal_13_01.png" alt="drones" width="60%" style="border: 1px solid #999;">
 
 <br>
 
-#### **[E12: Palantir Foundry example "Build a common operating picture with geospatial data" (26.0729)](/3c.1b_pal_E12_geospatial_workshop/)**. 
-- **(FOR NOW PASS ON THIS... TOO COMPLICATED (WORKSHOP))**<br>*E12*<br><img src="/assets/pal_10_25.png" alt="drones" width="60%" style="border: 1px solid #999;">
+
+#### **E14: Evaluate Retrieval-Augmented Generation (RAG) methods**. 
+- no Docx??
+- https://ziptieai.usw-17.palantirfoundry.com/workspace/now/platform/7997a708-4d1e-4efb-bfca-882dc172b4e8
+- *E14*<br><img src="/assets/pal_14_01.png" alt="drones" width="60%" style="border: 1px solid #999;">
+
+<br>
+
+
+
+
+# **4b List of failed/xxxx examples**
+
+<br>
+
+#### **[xxxx (TOO COMPLEX) E12: Build a common operating picture with geospatial data (26.0729)](/3c.1b_pal_E12_geospatial_workshop/)**. 
 - Docx for this example: **[#623\_.docx](https://drive.google.com/drive/folders/1-Adawag9uA8_bq-hDF-nOuPYaRLz1eEO)**.
-
-
-
-
+- https://ziptieai.usw-17.palantirfoundry.com/workspace/now/platform/266edc4b-05f6-46ed-b724-65aa8453ce02
+- **(FOR NOW PASS ON THIS... TOO COMPLICATED (WORKSHOP))**<br>*E12*<br><img src="/assets/pal_10_25.png" alt="drones" width="60%" style="border: 1px solid #999;">
 
 <br>
 
 
+#### **xxxx FAIL ### E15: Cross-validate Images and Documents using AIP**. 
+- #624_pal_E15_cross_validate_images_docs_aip_v02_26.0730_ss
+- https://ziptieai.usw-17.palantirfoundry.com/workspace/now/platform/e99a7898-6dc2-4394-a5ec-a583a2d87568
+- *E15*<br><img src="/assets/pal_15_01.png" alt="drones" width="60%" style="border: 1px solid #999;">
 
+<br>
+
+#### **xxxx E16: Basic Pyspark Transform references**
+
+<br>
+
+#### **xxxx #625_pal_E16_cluster_time_series_datad_v01_26.0730_ss**
+- junk, fails during install.
 
 
 <br><br><br><br><br><br>
@@ -270,12 +272,38 @@ That turns examples into a “lab bench” instead of a vague tutorial.
 
 So yes — Palantir probably should onboard new users with small working examples first, then ask them to modify/replicate them step by step.
 
-
 <br>
 
+26.0801 (v1 26.0728)
 
 
-26.0728 (v1 26.0728)
+
+
+<!-- # **2 Why do examples instead of demos**
+
+I got my start in early July 2026 with Foundry by doing the PAL Foundry **demos**. I got lost. A lot. A very long demo with tons of new stuff to setup, spending half a day just configuring it all... and it doesn't work. When you are just starting out with PAL Foundry you are overwhelmed with all the details, the dialogs, the terminlogy. 
+
+But then I discovered PAL **examples**. At first I did could not do them or even use them because
+- I found no simmple explanation about them. 
+- The demos did give step by step instructions on how there were setup. 
+
+But after a few weeks of demos, I finally installed an example, and then tried to duplicate it. I made 2 mistakes, because I did not have the details of how to set up. Took me about half a day to fix those 2 errors. But I unerstood that this is the way to teach Foundry. 
+
+My technique:
+1. Install, run, and document (in docx file) an example.
+2. Install again, to a different directory, and delete what I wanted to learn (maybe delete everything but the input data).
+3. Build the missing parts, constantly comparing with the running installation.
+4. **Document the missing details in my docx file.**
+
+This just makes sense. This is the way to do things. **So thats what this page will be about. Examples.** 
+
+ I got my start in early July 2026 with Foundry by doing the PAL Foundry **demos**. I got lost. A lot. A very long demo with tons of new stuff to setup, spending half a day just configuring it all... and it doesn't work. When you are just starting out with PAL Foundry you are overwhelmed with all the details, the dialogs, the terminlogy. 
+  - But then I discovered PAL **examples**. At first I did could not do them or even use them because
+    - I found no simmple explanation about them. 
+   - The demos did give step by step instructions on how there were setup. 
+  - But after a few weeks of demos, I finally installed an example, and then tried to duplicate it. I made 2 mistakes, because I did not have the details of how to set up. Took me about half a day to fix those 2 errors. But I understood that this is the way to teach Foundry. -->
+
+<br>
 
 <!-- 
 <br>
