@@ -6,9 +6,9 @@ permalink: /palantir/
 
 #### what has been your favorite project or proudest accomplishment
 
-I favorite project has been ZiptieAI.com. I created ZiptieAI.com without (human) assistance. ZiptieAI.com documents my experience with AI drones, AI, agents, and Palantir Foundry. My core focus has been AI algorithms and how to effectively use AI. My current focus is on Palantir Foundry (see https://ziptieai.com/pal/). 
+My favorite project has been ZiptieAI.com. I created ZiptieAI.com without (human) assistance. ZiptieAI.com describes (with demos) the gist of AI drones, AI, and agents. My core focus has been AI algorithms and how to effectively use AI. My current focus is on Palantir Foundry (see https://ziptieai.com/pal/). 
 
-I reorganized the ZiptieAI wiki/website a dozen times during the past 3 years. The result is a very accurate guide (still very WIP) for anyone who wants to understand what AI really is and how to use it. All based on hands-on demos (lab notes for all demos are available at https://drive.google.com/drive/folders/1-Adawag9uA8_bq-hDF-nOuPYaRLz1eEO).
+I reorganized the ZiptieAI wiki/website a dozen times during the past 3 years. The result is a very practical and conceptual guide (still WIP) to AI. Lab notes for all demos are available at https://drive.google.com/drive/folders/1-Adawag9uA8_bq-hDF-nOuPYaRLz1eEO.
 
 
 #### why do you want to work at palantir?
