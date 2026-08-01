@@ -11,15 +11,15 @@ I am applying for a tech writer job at palantir. below area 2 questionss on the 
 
 My favorite project has been ZiptieAI.com, a technical learning website that I created independently.
 - ZiptieAI.com explains AI drones, neural networks, CNNs, LLMs, models, and AI agents through hands-on demos, diagrams, and detailed lab notes. 
-- The current focus is Palantir Foundry (Ziptieai.com/pal). 
-- Lab notes for all demos are available at https://drive.google.com/drive/folders/1-Adawag9uA8_bq-hDF-nOuPYaRLz1eEO.
+- The current focus is Palantir Foundry (ZiptieAI.com/pal). 
+- Lab notes for all demos are available at drive.google.com/drive/folders/1-Adawag9uA8_bq-hDF-nOuPYaRLz1eEO.
 
 
 #### Why do you want to work at Palantir?
 
 - I have been working on Palantir Foundry for a month. I have been doing Foundry demos and examples on my own (with the help of FDE). Foundry is the logical next step in the evolution of ZiptieAI. 
-- I could make significant contributions to Palantir documentation. Currently I am updating ZiptieAI to show new Foundry users step-by-step (WIP) how to (1) install, (2) use, and (3) modify Palantir examples (ziptieai.com/3c.1b_pal_examples).
-- I am proficient in Chinese (spoken and written), Russian, and German. I have basic skills in Ukrainian and Hebrew. I have spent 20 years abroad working exclusively in local private sector tech companies as a local hire. 
+- I could make significant contributions to Palantir documentation. Currently I am updating ZiptieAI to show new Foundry users step-by-step (WIP) how to (1) install, (2) use, and (3) modify Palantir examples (ZiptieAI.com/3c.1b_pal_examples).
+- I am proficient in Chinese (spoken and written), Russian, and German. I have basic skills in Ukrainian and Hebrew. I spent 20 years abroad working exclusively in local private sector tech companies as a local hire. I appreciate Palantir's role in supporting critical government, defense, and commercial missions.
 
 
 
