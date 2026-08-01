@@ -17,8 +17,8 @@ My favorite project has been ZiptieAI.com.
 #### why do you want to work at palantir?
 
 - I have been working on Palantir Foundry for a month. I have been doing Foundry demos and examples on my own (with the help of FDE). Foundry is the logical final phase of ZiptieAI. 
-- I could make significant contributions to Palantir documentation. Currently I am updating ZiptieAI to show new Foundry users step-by-step (WIP) how to (1) install, (2) use, and (3) modify Palantir examples (see https://ziptieai.com/3c.1b_pal_examples/ for an overview and links to lab notes).
-- I am proficient in Chinese (spoken and written), Russian, and German. I have basic skills in Ukrainian and Hebrew. I have 20 years experience in these countries. I appreciate the vital role that Palantir plays in the defense of civilization. 
+- I could make significant contributions to Palantir documentation. Currently I am updating ZiptieAI to show new Foundry users step-by-step (WIP) how to (1) install, (2) use, and (3) modify Palantir examples (see https://ziptieai.com/3c.1b_pal_examples/).
+- I am proficient in Chinese (spoken and written), Russian, and German. I have basic skills in Ukrainian and Hebrew. I have 20 years experience in these countries (CN/TW, RU/BY, DE, UA, and IL). I appreciate the vital role that Palantir plays in the defense of civilization. 
 
 
 
