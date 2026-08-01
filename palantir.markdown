@@ -4,17 +4,17 @@ title: Why I want to work at Palantir
 permalink: /palantir/
 ---
 
-#### proud
+#### what has been your favorite project or proudest accomplishment
 
-I am proud of ZiptieAI.com. Its my own personal project that I have created without (human) assistance. (1) Almost 3 years ago I started building AI drones. (2) My focus switched from drones to AI (object recognition CNNs). What interested me most were the core principles (the gist) that make AI "tick". I knew that AI was at its core purely clocked binary logic. Luckily the internal details of GPT-3 were public and the latest version of GPT was more than willing to discuss GPT-3 internals. (3) I then studied (did hands-on demos) for agents. And recently (4) the focus switched to Palantir Foundry. 
+I favorite project has been ZiptieAI.com. I created ZiptieAI.com without (human) assistance. ZiptieAI.com documents my experience with AI drones, AI, agents, and Palantir Foundry. My core focus has been AI algorithms and how to effectively use AI. My current focus is on Palantir Foundry (see https://ziptieai.com/pal/). 
 
-I reorgnized my wiki/website a dozen times during those 3 years. But the end result is a very accurate guide (still very WIP) for anyone who wants to understand what AI really is and how to use it. All based on hands-on demos (not AI generated verbiage). All of my lab notes are available on my Gdrive at https://drive.google.com/drive/folders/1-Adawag9uA8_bq-hDF-nOuPYaRLz1eEO.
+I reorganized the ZiptieAI wiki/website a dozen times during the past 3 years. The result is a very accurate guide (still very WIP) for anyone who wants to understand what AI really is and how to use it. All based on hands-on demos (lab notes for all demos are available at https://drive.google.com/drive/folders/1-Adawag9uA8_bq-hDF-nOuPYaRLz1eEO).
 
 
-#### why work?
+#### why do you want to work at palantir?
 
-- Systems like Palantir are the logical final phase in ZiptieAI.com. I have been working on Palantir Foundry for a month. Foundry is like a book you can't put down. I have been doing demos and examples on my own (with the help of FDE). 
-- I could make significant contributions to Palantir documentation. Currently for ZiptieAI I am (WIP) showing how to (1) install, (2) use, and (3) modify examples. ZiptieAI.com/palantir explains in detail.  
+- I have been working on Palantir Foundry for a month. Foundry is like a book you can't put down. I have been doing demos and examples on my own (with the help of FDE). Foundry is the logical final phase of ZiptieAI. 
+- I could make significant contributions to Palantir documentation. Currently for ZiptieAI I am (WIP) showing how to (1) install, (2) use, and (3) modify Palantir examples. ZiptieAI.com/palantir explains in detail.  
 - I am proficient in Chinese (spoken and written), Russian, and German. I have basic skills in Ukrainian and Hebrew. I have 20 years experience in these countries. I appreciate the vital role that Palantir plays in the defense of civilization. 
 
 
