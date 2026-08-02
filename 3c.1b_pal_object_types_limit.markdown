@@ -11,7 +11,7 @@ permalink: /3c.1b_pal_object_types_limit/
 
 Just a few rabbit holes I got lost in.
 
-- **1 Complicated setup in Workshop**
+- **1 Workshop setup**
 - **2 P1b Object type limitations**
 
 <!-- This is something I ran into after a few weeks. I had reached the limit of 60 object types (on the free plan). 
@@ -20,17 +20,18 @@ Just a few rabbit holes I got lost in.
 
 <br>
 
-# **1 Complicated setup in Workshop** 26.0802
+# **1 WOrkshop setup** 26.0802
 
-I spent 2 days trying to figure out how to setup Workshop. I've done it before, but it was always unclear, I could not finish without FDE help. I finally took a day (whole day) to get it clear. There were several problems:
-- FDE gave me a workflow that although worked, was wrong in a key place
-- You need to use unique names to sift thru the confusion...
-- And need a diagram (i will add this on 26.0803)
-- Seemed like a strange bug in workshop (FDE agrees with this assessment.. more later)
+It took me a while to figure out some key configurations details in Workshop. 
+- FDE gave me a workflow that although worked (with several fixes). Tool a while to figure out the fix. 
+- You need to use unique names to keep things straight.
+- You also need a diagram (i will add this on 26.0803)
+- Seemed like a small bug (??) in workshop (FDE agreed with that assessment). Probably I am missing something... will have to find out for sure later.
 
-THe following TOC snippet from [\#620](https://drive.google.com/drive/folders/1-Adawag9uA8_bq-hDF-nOuPYaRLz1eEO) docx shows how I finally figure out the correct workflow.
+<!-- I spent 2 days trying to figure out how to setup Workshop. I've done it before, but it was always unclear, I could not finish without FDE help. I finally took a day (whole day) to get it clear. There were several problems:-->
 
-**TAKEAWAY: I will create a very detailed demo to show the gist of this... be aware that this is not simple.**
+
+The following TOC snippet from [\#620](https://drive.google.com/drive/folders/1-Adawag9uA8_bq-hDF-nOuPYaRLz1eEO) docx shows how I finally figure out the correct workflow.
 
 [\#620\_pal\_9\_aip-fde\_demo\_hn\_.docx](https://drive.google.com/drive/folders/1-Adawag9uA8_bq-hDF-nOuPYaRLz1eEO)
 
