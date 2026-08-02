@@ -20,7 +20,7 @@ Just a few rabbit holes I got lost in.
 
 <br>
 
-# **1 WOrkshop setup** 26.0802
+# **1 Workshop setup** 26.0802
 
 It took me a while to figure out some key configurations details in Workshop. 
 - FDE gave me a workflow that although worked (with several fixes). Tool a while to figure out the fix. 
