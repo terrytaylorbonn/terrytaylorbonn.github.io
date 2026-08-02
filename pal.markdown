@@ -6,7 +6,7 @@ permalink: /pal/
 
 <br>
 
-This section provides what you need to quickly master the basics of Palantir Foundry. 
+This section provides what you need to master the basics of Palantir Foundry ASAP. 
 
 <!-- 
  **Reorganized 26.0802**.
