@@ -22,7 +22,7 @@ This section provides what you need to learn (only with the help of an AI assist
   - **PAL examples/demos**
   - **DIY demos** (team up with FDE (AI assistant) to create your own demos)
 - **3 Advanced (with FDE)**. This will focus on partnering with FDE to cover 2 major topics areas
-  - Demos for topics in **Foundry certification exam guide for application developer**.  
+  - Demos for topics in **Foundry certification exam guide for application developer** (the exam involves answering questions; the focus of this section is to use the exam to determine what demos to do).
   - Other demos for topics such as **managing Foundry environment, 24/7 operation, streams, deployments, packaging, sharing, etc** (I don't have a clear idea yet what the topics in this section would be).
 
 <br>
