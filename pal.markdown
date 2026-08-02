@@ -6,12 +6,13 @@ permalink: /pal/
 
 <br>
 
-This section for the foreseeable future only covers Palantir Foundry. **Reorganized 26.0802**.
+This section provides what you need to learn (only with the help of an AI assistant) how to use Palantir Foundry. This section for the foreseeable future will only cover Palantir Foundry.
 
-This section provides what you need to learn (only with the help of an AI assistant) how to use Palantir Foundry: 
+<!-- 
+ **Reorganized 26.0802**.
 - A very logically structured set of the simplest step-by-step demos (with critical details). 
 - Gradually more complex demos (future)
-- Core concepts (future)
+- Core concepts (future) -->
 
 <br>
 
