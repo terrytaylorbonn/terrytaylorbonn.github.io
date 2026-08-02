@@ -6,21 +6,13 @@ permalink: /pal/
 
 <br>
 
-This section for the foreseeable future only covers Palantir Foundry. **Reorganized 26.0802**.
-
-This section provides what you need to learn (only with the help of an AI assistant) how to use Palantir Foundry: 
-- A very logically structured set of the simplest step-by-step demos (with critical details). 
-- Gradually more complex demos (future)
-- Core concepts (future)
+To train yourself how to use the Enterprise software Palantir Foundry, you need a very logically structured set of the simplest step-by-step demos (with critical details). Thats the (eventual) goal of this section "3c Enterprise" (WIP).
 
 <br>
 
 **TOC**:
-- **1 Concepts** (right now this is just a placeholder; the concepts section is always the last section to be completed; after I had enough experience I will know what to write).
-- **2 Getting started** (GS). I originally called this "quick start", but it kept growing in size.
-- **3 Advanced (with FDE)**. This will focus on partnering with FDE to cover 2 major topics areas
-  - Demos for topics in **Foundry certification exam guide for application developer**.  
-  - Other demos for topics such as **managing Foundry environment, 24/7 operation, streams, deployments, packaging, sharing, etc** (I don't have a clear idea yet what the topics in this section would be).
+- 1 Concepts
+- 2 From PAL Foundry novice to App dev in 5 steps (WIP)
 
 <br>
 
@@ -31,20 +23,34 @@ Enterprise AI dev platforms do the heavy lifting of creating an enterprise level
 - **PAL offers a generous free trial account for Foundry.**
 - **The built-in AI help (AIP/FDE) makes it possible to complete the demos**.
 
+
+<!-- 
+- In the near future AIP/FDE could develop into higher level AI assistant that would lead the user by the hand through complex setups.
+  - This would lead to a much larger customer base that does not depend on human FDE's. 
+  - Competitors will come out with similar products soon (a lot of PAL expertise will transfer to these new systems).
+
+**TL;DR** (too long; dont (want to) read)? If you are in a hurry, skip to 
+- **[3c.3 AIP/FDE "haystack needle" (HN) demos](/3c.xxx_pal_gist/)** -->
+
+
 *A crystal ball (called a "palantir" ("seeing stone") in The Lord of the Rings) that can find a needle in a haystack* <br><img src="/assets/pal_9_06.png" alt="drones" width="25%" style="border: 1px solid #999;">
 
-*The real world components that make it all work (get a better diagram)*<br><img src="/assets/pal_10_09.png" alt="drones" width="67%" style="border: 1px solid #999;"><br><br>
+<br>
+
+## **2 From PAL Foundry novice to App dev in 5 phases (WIP)** 
+
+The rest of this page describes my (WIP) **Foundry basics hands-on demo course** (based on selected PAL examples and demos) 
+- P1-P2: Quick start (QS)
+- P3-P5: “Deep” dive
+
+and reference material:
+- A6-A8: AI usage / concepts / certification ([Certified Foundry Application Developer](https://learn.palantir.com/page/exam-guides))
+  - The PAL certification exam guide says you need about 6 months experience with Foundry before taking the exam, so my personal goal is to (1) (write and) finish the SQS and (2) take the exam around the end of 2026 (I started using Foundry in early July 2026).
+- Very organized, up-to-date (WIP) and detailed docx lab notes. 
 
 <br>
 
-## **2 Getting started** 
-
-- **P1 Sign up to PAL**
-- **P2 PAL examples**. These are complicated, but they have an autoinstaller that allows you to start with a (usually) working version that you can modify.
-- **P3 PAL demos**. These are less complicated, but you start from 0, and getting a working demo at the end requires a lot of skill (including debugging).
-- **P4 DIY demos**. Go free style (not "vibe") by teaming up with FDE (AI assistant) to create your own demos.
-
-<br>
+#### **Phases 1-4: Quick start (QS)**
 
 - **P1 (3c.0a) Sign up to PAL**. If you cant get a trial version of PAL running, then there's no reason to read further. You will not understand PAL by just reading about it.
   - I dont remember the URL. Just Google it.
@@ -73,7 +79,17 @@ Enterprise AI dev platforms do the heavy lifting of creating an enterprise level
     - I documented all details with screenshots. 
     - **The MS.Word docs use numbered headings**. This makes it much easier to follow the demos and avoid mistakes. In the future I might number every step (using MS.Word seq function).<br>*Demos of core functionality*<br><img src="/assets/pal_10_13.png" alt="drones" width="37%" style="border: 1px solid #999;">  <img src="/assets/pal_10_14.png" alt="drones" width="50%" style="border: 1px solid #999;"><br><br>
 
-- **[P4 (3c.3) AIP/FDE (Pilot) example-demos](/3c.xxx_pal_gist/)**. This is the main goal. Creating real-world projects by working as a team with FDE (and AIP).
+
+<br>
+
+#### **Phases 3-5: "Deep" dive**
+
+
+- **[P4 (3c.2b) DIY Operational (deployed) apps / examples / marketplace](/3c.2b_operational_apps/)**. 
+  - Up to this point you only use the apps for testing. They are not setup for end user usage, for real deployment ("deployment in the UI in the previous apps was more like "compile/run").
+  - Create app that works 24/7, notifies, etc.<br><img src="/assets/pal_10_06.png" alt="drones" width="80%" style="border: 1px solid #999;"><br><br>
+
+- **[P5 (3c.3) AIP/FDE (Pilot) real-world projects](/3c.xxx_pal_gist/)**. This is the main goal. Creating real-world projects by working as a team with FDE (and AIP).
   - **Use AI (AIP/FDE) to do demos from scratch** (not following PAL demos or PAL docs; I might get inspiration from those demos, but I just use AIP/FDE to execute; in the future PAL Pilot would do this).
   - **D9 (demo set 9) = "haystack needle" demos**. I believe this was Palantir's original focus when founded:
     - Finding some small indication in a sea of data
@@ -86,64 +102,44 @@ Enterprise AI dev platforms do the heavy lifting of creating an enterprise level
 
 <br>
 
-## **3 Advanced (with FDE) (FUTURE)**
+#### **A6-A8: AI usage / concepts / certification** 
 
-<br> 
+- **[A6 (3c.1) PAL AI usage strategy](/3c.bbb_pal_strategy_fde/)**. 
+  - PAL Foundry has 2 helps systems: (1) AIP and (2) FDE. 
+  - I used both during the first 8 "Initial PAL demos" (3c.2). 
+  - During demo 8 (of 3c.2) I asked AIP/FDE to show me how to do something that was not in the demo. The advantages of each tool slowly became apparent.
+  - During the AIP/FDE demos (3c.3) I uses only AIP/FDE. It became apparent that
+    - AIP is better for getting initial workflows.
+    - **FDE is the lifesaver that can solve problems and (most of all) recognize screen shots (just paste in the window)**. In one example, FDE led me step by step in setting up a Workshop demo that I just could not get right (for good reasons).
+  - I look forward to when AIP/FDE are combined into a single tool that can "see" dialogs and guide a user through various tasks.
+    - NOTE: After almost a month of using PAL, I noticed PAL has a beta product called **"Pilot"**. That appears to be what I was talking about.
+  - In general, a big focus (at least initially) is on prompt techniques and workflows to maximize effectiveness of using AI.<br>*FDE*<br><img src="/assets/pal_10_10.png" alt="drones" width="42%" style="border: 1px solid #999;"><br><br>
 
-<!-- This will focus on partnering with FDE to cover 2 major topics areas
-  - Demos for topics in **Foundry certification exam guide for application developer**.  
-  - Other demos for topics such as **managing Foundry environment, 24/7 operation, streams, deployments, packaging, sharing, etc** (I don't have a clear idea yet what the topics in this section would be). -->
-
-- **P5 Foundry certification exam guide for application developer**. 
-  <br><img src="/assets/pal_15_02.png" alt="drones" width="70%" style="border: 1px solid #999;"><br><br>
-
-- **[P6 (3c.2b)"Other" demos (not sure exactly what yet)](/3c.2b_operational_apps/)**. (I don’t have a clear idea yet what the topics in this section would be). Up to this point you only use the apps for testing. They are not setup for end user usage, for real deployment ("deployment in the UI in the previous apps was more like "compile/run"). Demos for topics not covered yet. Maybe
-  - managing Foundry environment, 
-  - 24/7 operation, 
-  - streams, 
-  - packaging, sharing, deployments, dev social media, etc <br>*app that works 24/7, notifies, etc*<br><img src="/assets/pal_10_06.png" alt="drones" width="80%" style="border: 1px solid #999;">
-
-<br>
-
-26.0802 (v1 26.0702) 
-
-<br>
-<br>
-<br><br>
-<br>
-<br><br>
-<br>
-<br>
-<br>
-<br>
-
-----------------
-----------------
-----------------
-
-<br>
-
-#### **OLD**
 
 - **[A7 (3c.0) Concepts](/3c.ccc_pal_concepts/)**. My own take.
   - What problems PAL solves. 
   - This section is a long term WIP (I started using PAL in July 2026, and I need more experience before I can sum up the concepts).<br><img src="/assets/pal_10_09.png" alt="drones" width="67%" style="border: 1px solid #999;"><br><br>
 
-  - xxxx**[A6 (3c.1) PAL AI usage strategy](/3c.bbb_pal_strategy_fde/)**. 
-    - PAL Foundry has 2 helps systems: (1) AIP and (2) FDE. 
-    - I used both during the first 8 "Initial PAL demos" (3c.2). 
-    - During demo 8 (of 3c.2) I asked AIP/FDE to show me how to do something that was not in the demo. The advantages of each tool slowly became apparent.
-    - During the AIP/FDE demos (3c.3) I uses only AIP/FDE. It became apparent that
-      - AIP is better for getting initial workflows.
-      - **FDE is the lifesaver that can solve problems and (most of all) recognize screen shots (just paste in the window)**. In one example, FDE led me step by step in setting up a Workshop demo that I just could not get right (for good reasons).
-    - I look forward to when AIP/FDE are combined into a single tool that can "see" dialogs and guide a user through various tasks.
-      - NOTE: After almost a month of using PAL, I noticed PAL has a beta product called **"Pilot"**. That appears to be what I was talking about.
-    - In general, a big focus (at least initially) is on prompt techniques and workflows to maximize effectiveness of using AI.<br>*FDE*<br><img src="/assets/pal_10_10.png" alt="drones" width="42%" style="border: 1px solid #999;"><br><br>
 
-  - **[A8 (3c.4) Certification](/cert/)** (Foundry Application Developer). 
-    - We've been (hopefully) using the PDF as a guide for what to study/build in goals (1-4).
-    - Now need some certification (for me its **[Foundry Application Developer Certification](https://learn.palantir.com/page/exam-guides)**). For a system like PAL, most job will be in big projects. Certification matters.<br><img src="/assets/pal_10_11.png" alt="drones" width="28%" style="border: 1px solid #999;"><br><br> 
+- **[A8 (3c.4) Certification](/cert/)** (Foundry Application Developer). 
+  - We've been (hopefully) using the PDF as a guide for what to study/build in goals (1-4).
+  - Now need some certification (for me its **[Foundry Application Developer Certification](https://learn.palantir.com/page/exam-guides)**). For a system like PAL, most job will be in big projects. Certification matters.<br><img src="/assets/pal_10_11.png" alt="drones" width="28%" style="border: 1px solid #999;"><br><br> 
 
+<br>
+
+26.0801 (v1 26.0702) 
+
+<br>
+<br>
+<br>
+<br>
+<br>
+
+----------------
+----------------
+----------------
+
+<br>
 
 #### **Notes**
 - *[PAL general notes](/3c.0_pal_notes/)*
@@ -152,10 +148,6 @@ Enterprise AI dev platforms do the heavy lifting of creating an enterprise level
 - *https://www.youtube.com/watch?v=lSDC6-BdVus?t=341 HBM, diagram of NN, interconnecting multiple GPUs*
 
 
-<!-- and reference material:
-- A6-A8: AI usage / concepts / certification ([Certified Foundry Application Developer](https://learn.palantir.com/page/exam-guides))
-  - The PAL certification exam guide says you need about 6 months experience with Foundry before taking the exam, so my personal goal is to (1) (write and) finish the SQS and (2) take the exam around the end of 2026 (I started using Foundry in early July 2026).
-- Very organized, up-to-date (WIP) and detailed docx lab notes.  -->
 
 <!-- 
 ###############################################################################################################
@@ -257,12 +249,3 @@ Highest salaries.
 Fewest jobs.
 Hardest to enter.
 -->
-
-<!-- 
-- In the near future AIP/FDE could develop into higher level AI assistant that would lead the user by the hand through complex setups.
-  - This would lead to a much larger customer base that does not depend on human FDE's. 
-  - Competitors will come out with similar products soon (a lot of PAL expertise will transfer to these new systems).
-
-**TL;DR** (too long; dont (want to) read)? If you are in a hurry, skip to 
-- **[3c.3 AIP/FDE "haystack needle" (HN) demos](/3c.xxx_pal_gist/)** -->
-
