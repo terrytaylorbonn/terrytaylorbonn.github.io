@@ -66,7 +66,6 @@ If you cant get a trial version of PAL running, then there's no reason to read f
 #### **[P1b Things to look out for while doing examples/demos](/3c.1b_pal_object_types_limit/)** 
 Just a few rabbit holes I got lost in.
 
-
 <!-- #### **[P1b Object type limitations](/3c.1b_pal_object_types_limit/)** 
 - This is something I ran into after a few weeks. I had reached the limit of 60 object types (on the free plan). 
 - This problem is a bit of challenge when you hit it, because deleting objects is not simple. You have to solve it though if you want to do more examples/demos.

@@ -1,6 +1,6 @@
 ---
 layout: page
-title: Things to look out for while doing demos
+title: Things to look out for while doing examples/demos
 permalink: /3c.1b_pal_object_types_limit/
 ---
 
@@ -8,8 +8,7 @@ permalink: /3c.1b_pal_object_types_limit/
 
 [← 3c PAL](/pal/)
 
-
-Just a few rabbit holes I got lost in.
+A few problems I ran into that you might want to watch out for.
 
 - **1 Workshop setup**
 - **2 P1b Object type limitations**
