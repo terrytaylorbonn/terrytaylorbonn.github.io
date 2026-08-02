@@ -17,7 +17,10 @@ This section provides what you need to learn (only with the help of an AI assist
 
 **TOC**:
 - **1 Concepts** (right now this is just a placeholder; the concepts section is always the last section to be completed; after I had enough experience I will know what to write).
-- **2 Getting started** (GS). I originally called this "quick start", but it kept growing in size.
+- **2 Getting started** (GS). I originally called this "quick start", but it kept growing in size. Covers
+  - **Sign up to PAL**
+  - **PAL examples/demos**
+  - **DIY demos** (team up with FDE (AI assistant) to create your own demos)
 - **3 Advanced (with FDE)**. This will focus on partnering with FDE to cover 2 major topics areas
   - Demos for topics in **Foundry certification exam guide for application developer**.  
   - Other demos for topics such as **managing Foundry environment, 24/7 operation, streams, deployments, packaging, sharing, etc** (I don't have a clear idea yet what the topics in this section would be).
