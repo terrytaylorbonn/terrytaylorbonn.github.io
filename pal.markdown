@@ -20,6 +20,7 @@ This section provides what you need to quickly master the basics of Palantir Fou
 - **1 Concepts** (right now this is just a placeholder; the concepts section is always the last section to be completed; I need more (hands-on) experience before I truly understand the concepts).
 - **2 Getting started** (GS). I originally called this "quick start", but it kept growing in size. Covers
   - **Sign up to PAL**
+  - **Object type limitations**
   - **PAL examples/demos**
   - **DIY demos** (team up with FDE (AI assistant) to create your own demos)
 - **3 Advanced (with FDE)**. This will focus on partnering with FDE to cover 2 major topics areas
@@ -44,6 +45,7 @@ Enterprise AI dev platforms do the heavy lifting of creating an enterprise level
 ## **2 Getting started** 
 
 - **P1 Sign up to PAL**
+- **P1b Object type limitations**
 - **P2 PAL examples**. These are complicated, but they have an autoinstaller that allows you to start with a (usually) working version that you can modify.
 - **P3 PAL demos**. These are less complicated, but you start from 0, and getting a working demo at the end requires a lot of skill (including debugging).
 - **P4 DIY demos**. Go free style (not "vibe") by teaming up with FDE (AI assistant) to create your own demos.
@@ -60,6 +62,13 @@ If you cant get a trial version of PAL running, then there's no reason to read f
     - **You need a camera on your PC to take a pic of yourself. PAL will compare your ID and the pic.**
     - I think you need a **mobile phone number** (and email).
   - It was a fairly long process, but very professionally done (I was impressed).<br><br><img src="/assets/pal_10_08.png" alt="drones" width="37%" style="border: 1px solid #999;"><br><br>
+
+#### **[P1b Object type limitations](/3c.1b_pal_object_types_limit/)** 
+- This is something I ran into after a few weeks. I had reached the limit of 60 object types (on the free plan). 
+- This problem is a bit of challenge when you hit it, because deleting objects is not simple. You have to solve it though if you want to do more examples/demos.
+- You dont have to do this now, but you need to be aware of it if you hit the limit.
+
+<br>
 
 #### **[P2 (3c.1b) PAL examples](/3c.1b_pal_examples/)** 
   - Install a PAL example.
