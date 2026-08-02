@@ -49,7 +49,8 @@ Enterprise AI dev platforms do the heavy lifting of creating an enterprise level
 
 <br>
 
-- **P1 (3c.0a) Sign up to PAL**. If you cant get a trial version of PAL running, then there's no reason to read further. You will not understand PAL by just reading about it.
+#### **P1 (3c.0a) Sign up to PAL**
+If you cant get a trial version of PAL running, then there's no reason to read further. You will not understand PAL by just reading about it.
   - I dont remember the URL. Just Google it.
   - Unfortunately, I did not record how I signed up, and its not a process I can repeat. But I can tell you this
     - **You must be in a country that PAL supports** (thats only a few countries).
@@ -59,14 +60,15 @@ Enterprise AI dev platforms do the heavy lifting of creating an enterprise level
     - I think you need a **mobile phone number** (and email).
   - It was a fairly long process, but very professionally done (I was impressed).<br><br><img src="/assets/pal_10_08.png" alt="drones" width="37%" style="border: 1px solid #999;"><br><br>
 
-- **[P2 (3c.1b) PAL examples](/3c.1b_pal_examples/)** 
+#### **[P2 (3c.1b) PAL examples](/3c.1b_pal_examples/)** 
   - Install a PAL example.
   - Run the example.
   - Try to rebuild the examples (from top to bottom, from downstream to upstream).
   - Note: These examples are excellent, but are often quite complicated (*my long-term goal is create more simple examples, but from what FDE has told me, publishing examples is not a simple process*). But you don't have to do everything at first step-by-step before you see the the final results. Once you have a working first (reference) example, you can install a second (experimental) example that you can modify at your pace. This allows you to (1) appreciate quickly the capabilities of PAL and (2) focus on learning the UI and basic concepts/terminology. <br><br>*PAL example (left, center) and my own build (right)*<br><img src="/assets/pal_10_01.png" alt="drones" width="25%" style="border: 1px solid #999;">  <img src="/assets/pal_10_05.png" alt="drones" width="33%" style="border: 1px solid #999;">  <img src="/assets/pal_10_02.png" alt="drones" width="30%" style="border: 1px solid #999;"><br><br>
 
 
-- **[P3 (3c.2) PAL demos](/3c.2_pal_initial_demos/)**. You just did project setup / pipeline (goal 1). You know your way around Foundry. Now do demos that cover the rest of basic core Foundry functionality. Get hands-on experience before doing "operational" apps (goal 3).
+#### **[P3 (3c.2) PAL demos](/3c.2_pal_initial_demos/)**
+You just did project setup / pipeline (goal 1). You know your way around Foundry. Now do demos that cover the rest of basic core Foundry functionality. Get hands-on experience before doing "operational" apps (goal 3).
   - Current demos consist of just D1-D8, the first PAL demos I did (step by step tutorials). 
   - **Your initial focus will be on 2 things**
     - **What button to press or where to click next.** The PAL dialogs are well done, but they require a lot of time to get used to.
@@ -76,7 +78,8 @@ Enterprise AI dev platforms do the heavy lifting of creating an enterprise level
     - I documented all details with screenshots. 
     - **The MS.Word docs use numbered headings**. This makes it much easier to follow the demos and avoid mistakes. In the future I might number every step (using MS.Word seq function).<br>*Demos of core functionality*<br><img src="/assets/pal_10_13.png" alt="drones" width="37%" style="border: 1px solid #999;">  <img src="/assets/pal_10_14.png" alt="drones" width="50%" style="border: 1px solid #999;"><br><br>
 
-- **[P4 (3c.3) AIP/FDE (Pilot) example-demos](/3c.xxx_pal_gist/)**. This is the main goal. Creating real-world projects by working as a team with FDE (and AIP).
+#### **[P4 (3c.3) AIP/FDE (Pilot) example-demos](/3c.xxx_pal_gist/)**
+This is the main goal. Creating real-world projects by working as a team with FDE (and AIP).
   - **Use AI (AIP/FDE) to do demos from scratch** (not following PAL demos or PAL docs; I might get inspiration from those demos, but I just use AIP/FDE to execute; in the future PAL Pilot would do this).
   - **D9 (demo set 9) = "haystack needle" demos**. I believe this was Palantir's original focus when founded:
     - Finding some small indication in a sea of data
@@ -91,16 +94,17 @@ Enterprise AI dev platforms do the heavy lifting of creating an enterprise level
 
 ## **3 Advanced (with FDE) (FUTURE)**
 
+This will focus on partnering with FDE to cover 2 major topics areas
+  - **P1 Demos for *Foundry certification exam guide for application developer* topics**  
+  - **P2 Other demos** 
+  
 <br> 
 
-<!-- This will focus on partnering with FDE to cover 2 major topics areas
-  - Demos for topics in **Foundry certification exam guide for application developer**.  
-  - Other demos for topics such as **managing Foundry environment, 24/7 operation, streams, deployments, packaging, sharing, etc** (I don't have a clear idea yet what the topics in this section would be). -->
+#### **P5 Demos for *Foundry certification exam guide for application developer* topics**
+Use the exam as a guide for what the core topics are. <br><img src="/assets/pal_15_02.png" alt="drones" width="65%" style="border: 1px solid #999;"><br><br>
 
-- **P5 Foundry certification exam guide for application developer**. 
-  <br><img src="/assets/pal_15_02.png" alt="drones" width="70%" style="border: 1px solid #999;"><br><br>
-
-- **[P6 (3c.2b)"Other" demos (not sure exactly what yet)](/3c.2b_operational_apps/)**. (I don’t have a clear idea yet what the topics in this section would be). Up to this point you only use the apps for testing. They are not setup for end user usage, for real deployment ("deployment in the UI in the previous apps was more like "compile/run"). Demos for topics not covered yet. Maybe
+#### **[P6 (3c.2b)"Other" demos (not sure exactly what yet)](/3c.2b_operational_apps/)**
+(I don’t have a clear idea yet what the topics in this section would be). Up to this point you only use the apps for testing. They are not setup for end user usage, for real deployment ("deployment in the UI in the previous apps was more like "compile/run"). Demos for topics not covered yet. Maybe
   - managing Foundry environment, 
   - 24/7 operation, 
   - streams, 
