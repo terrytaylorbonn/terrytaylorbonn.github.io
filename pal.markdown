@@ -101,10 +101,10 @@ This will focus on partnering with FDE to cover 2 major topics areas
 <br> 
 
 #### **P5 Demos for *Foundry certification exam guide for application developer* topics**
-Use the exam as a guide for what the core topics are. <br><img src="/assets/pal_15_02.png" alt="drones" width="65%" style="border: 1px solid #999;"><br><br>
+Use the exam as a guide for what demos to do to cover all the core topics that were not covered earlier.<br><img src="/assets/pal_15_02.png" alt="drones" width="65%" style="border: 1px solid #999;"><br><br>
 
 #### **[P6 (3c.2b)"Other" demos (not sure exactly what yet)](/3c.2b_operational_apps/)**
-(I don’t have a clear idea yet what the topics in this section would be). Up to this point you only use the apps for testing. They are not setup for end user usage, for real deployment ("deployment in the UI in the previous apps was more like "compile/run"). Demos for topics not covered yet. Maybe
+Demos not covered earlier (and not in the exam; I don’t have a clear idea yet what the topics in this section would be). Up to this point you only use the apps for testing. They are not setup for end user usage, for real deployment ("deployment in the UI in the previous apps was more like "compile/run"). Demos for topics not covered yet. Maybe
   - managing Foundry environment, 
   - 24/7 operation, 
   - streams, 
