@@ -17,7 +17,7 @@ This section provides what you need to quickly master the basics of Palantir Fou
 <br>
 
 **TOC**:
-- **1 Concepts** (right now this is just a placeholder; the concepts section is always the last section to be completed; I need more (hand-on) experience before I truly understand the concepts).
+- **1 Concepts** (right now this is just a placeholder; the concepts section is always the last section to be completed; I need more (hands-on) experience before I truly understand the concepts).
 - **2 Getting started** (GS). I originally called this "quick start", but it kept growing in size. Covers
   - **Sign up to PAL**
   - **PAL examples/demos**
