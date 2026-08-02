@@ -6,7 +6,7 @@ permalink: /pal/
 
 <br>
 
-This section provides what you need to learn (only with the help of an AI assistant) how to use Palantir Foundry. This section for the foreseeable future will only cover Palantir Foundry.
+This section provides what you need to quickly master the basics of Palantir Foundry. 
 
 <!-- 
  **Reorganized 26.0802**.
