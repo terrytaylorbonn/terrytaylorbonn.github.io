@@ -36,7 +36,7 @@ This readme discusses various things to keep in mind as you work your way throug
 
 <!-- I spent almost 3 days trying to figure out how the wiring worked and how to duplicate the process (one problem was that FDE/GPT-5.5 itself made mistakes). -->
 
-It took me a long time to get the Workshop in that DIY demo working. Even FDE made a mistake during the configuration. Afterwards I created this simple diagram (with numbered steps). If I had had such a diagram for the step-by-step demos I had done earlier, I would have understood better what I had been doing (I tried but gave up). When you get your first Workshop running, spend extra time to trace through all the connections. Experiment and try using unique names.<br>
+It took me a long time to get the Workshop in that DIY demo working. Even FDE made a mistake during the configuration. Afterwards I created this simple diagram (with numbered steps). If I had had such a diagram for the step-by-step demos I had done earlier, I would have understood better what I had been doing (I tried but gave up). When you get your first Workshop running, spend extra time to trace through all the connections. Experiment and try using unique names. Do this for other tools besides Workshop. Take your time when doing the examples/demos.<br>
 <img src="/assets/777_04.png" alt="drones" width="75%" style="border: 1px solid #999;"> 
 
 
