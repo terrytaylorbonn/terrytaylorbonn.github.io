@@ -36,9 +36,9 @@ This section provides what you need to master the basics of Palantir Foundry ASA
 
 Its amazing how a simple diagram, numbered steps, vars with numbered step names, etc can vastly simplify your life. 
 
-*This is the demo D9 UI (Workshop); I spent almost 3 days trying to figure out how the wiring worked and duplicate the process (one reason was FDE itself made mistakes on this one)*<br><img src="/assets/777_05.png" alt="drones" width="75%" style="border: 1px solid #999;"> 
+*This is the demo D9 UI (Workshop); I spent almost 3 days trying to figure out how the wiring worked and how to duplicate the process (one reason was FDE itself made mistakes)*<br><img src="/assets/777_05.png" alt="drones" width="75%" style="border: 1px solid #999;"> 
 
-*This "simple" (as simple as possible) diagram (with numbered steps) is all I needed* <br><img src="/assets/777_04.png" alt="drones" width="75%" style="border: 1px solid #999;"> 
+*This "simple" (as simple as possible) diagram (with numbered steps) is all I needed (I have no plans to make this diagram or the numbering "perfect, polished" anytime soon; it provides the key info required to create a basic Workshop UI)* <br><img src="/assets/777_04.png" alt="drones" width="75%" style="border: 1px solid #999;"> 
 
 
 <br>
