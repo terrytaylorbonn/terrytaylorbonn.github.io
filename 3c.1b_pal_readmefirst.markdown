@@ -31,6 +31,9 @@ A few problems I ran into that you might want to watch out for.
 
 # **1 Workshop setup** 26.0802
 
+
+**see [Demo 9 HN (haystack needle)](/3c.xxx_pal_HN_01_non_ai/)**
+
 It took me a while to figure out some key configurations details in Workshop. 
 - FDE gave me a workflow that although worked (with several fixes). Tool a while to figure out the fix. 
 - You need to use unique names to keep things straight.
@@ -47,69 +50,6 @@ The following TOC snippet from [\#620](https://drive.google.com/drive/folders/1-
 <br><img src="/assets/777_01.png" alt="drones" width="75%" style="border: 1px solid #999;">
 
 
-
-<br>
-
-----------------------
-
-<br>
-
-also "the dialog DOES NOT insists on adding a "1" after"......
-this time it was differenet. 
-there is a bug somewhere.
-
-Yes — that strongly suggests a UI/state bug or name-collision bug.
-
-Likely behavior:
-
-- If a similar variable name already exists, Workshop silently appends `1`.
-- If it thinks the old name still exists/collides, it appends `1` even when confusing.
-- With your clean unique name `07_filter_output_777`, there was no collision, so it did not append `1`.
-
-So the bug is probably around **duplicate variable names / stale auto-generated names / collision handling**.
-
-Your workaround is the right one:
-
-```text
-use numbered, unique names from the start
-```
-
-Example:
-
-```text
-07_filter_output_777
-08a_filtered_anom_events_777
-```
-
-<br>
-
-----------------------
-
-<br>
-
-yes you are right.... its probably a collision...
-insttead of warning, it just auto-adds a 1 or seomthing... anyway, its a mess.
-
-Yes — exactly.
-
-Likely collision behavior:
-
-```text
-desired name exists / partially exists / stale reference exists
-→ Workshop silently appends "1"
-→ user thinks they are using one variable
-→ app is actually wired to another
-```
-
-The safe rule:
-
-```text
-Use unique numbered names from the beginning.
-Never rely on display names being exactly what you typed.
-Always verify variable usage.
-```
-
-Your `777` approach is the right workaround.
 
 
 <br>
