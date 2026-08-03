@@ -8,9 +8,8 @@ title: Home
 
 <!-- ZiptieAI.com was created in 2024 to document my work on Ukrainian style ziptie'd [AI Drones](/1-drones/). -->
 
-ZiptieAI demos/documents AI (primarily LLMs), from "tiny" neural networks to **[enterprise AI (Palantir)](/pal/)**. <br><br>
-
-
+ZiptieAI demos/documents AI (primarily LLMs), from "tiny" neural networks to **[enterprise AI (Palantir)](/pal/)**. 
+<br>
 
 - **AI fast track**
   - **[Hack](/0-demo/)** explains the core of what makes AI tick.  
@@ -32,7 +31,7 @@ ZiptieAI demos/documents AI (primarily LLMs), from "tiny" neural networks to **[
 See also the **[Wiki](https://github.com/terrytaylorbonn/auxdrone/wiki)** and other links in the footer. -->
 
 
-
+ZiptieAI focuses on providing insightful and practical guidance with minimal text and diagrams (not on the [Chicago comma](https://en.wikipedia.org/wiki/Serial_comma)). If I was working on a site for a customer, I would focus on customer reuqirements (even if that included the Chicago comma). 
 
 The following diagrams summarize the core ZiptieAI take on AI.
 
