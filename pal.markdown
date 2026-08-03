@@ -31,10 +31,7 @@ This section provides what you need to master the basics of Palantir Foundry ASA
 
 ## **[0 Read me first](/3c.1b_pal_readmefirst/)**
 
-This section intros 
-- the core ZiptieAI approach to learning Palantir Foundry
-- things to keep in mind as you work your way throught the examples/demos (problems to watch out for, avoid)
-- etc etc 
+Things to keep in mind as you work your way throught the examples/demos (problems to watch out for, avoid, etc).
 
 **For example:** Its amazing how a simple diagram with numbered steps variables can vastly simplify your life. The screenshot below is from the demo **[D9 UI (Workshop)](/3c.xxx_pal_HN_01_non_ai/)**. I spent almost 3 days trying to figure out how the wiring worked and how to duplicate the process (one problem was that FDE/GPT-5.5 itself made mistakes).<br>
 <img src="/assets/777_05.png" alt="drones" width="75%" style="border: 1px solid #999;"> 
