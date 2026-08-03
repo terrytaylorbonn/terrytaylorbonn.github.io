@@ -21,7 +21,7 @@ This section provides what you need to master the basics of Palantir Foundry ASA
 - **1 Concepts** (I need more (hands-on) experience before I can describe the concepts).
 - **2 Getting started**
   - **Sign up to PAL**
-  - **PAL examples/demos**
+  - **PAL examples/demos/deep-dives**
   - **DIY demos** (team up with FDE (AI assistant) to create your own demos)
 - **3 Advanced (with FDE)**. Demos for
   - **Foundry certification exam guide for application developer** (the exam involves answering questions; this section uses the exam to determine what demos to do).
