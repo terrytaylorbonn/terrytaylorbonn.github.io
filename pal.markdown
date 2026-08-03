@@ -34,6 +34,8 @@ This section provides what you need to master the basics of Palantir Foundry ASA
 
 (WIP 26.0803)
 
+Its amazing how a simple diagram, numbered steps, vars with numbered step names, etc can vastly simplify your life. 
+
 *The simple gist that took me 3 days to figure out (even FDE made mistakes on this one)* <br><img src="/assets/777_04.png" alt="drones" width="75%" style="border: 1px solid #999;"><img src="/assets/777_05.png" alt="drones" width="75%" style="border: 1px solid #999;"> 
 
 
