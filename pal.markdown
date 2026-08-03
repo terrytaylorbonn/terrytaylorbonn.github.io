@@ -128,7 +128,7 @@ Demos not covered earlier (and not in the exam; I don’t have a clear idea yet 
   - managing Foundry environment, 
   - 24/7 operation, 
   - streams, 
-  - packaging, sharing, deployments, dev social media, etc <br>*app that works 24/7, notifies, etc*<br><img src="/assets/pal_10_06.png" alt="drones" width="80%" style="border: 1px solid #999;">
+  - packaging, sharing, deployments, dev social media, etc <br>*app that works 24/7, notifies, etc (this pic is not correct; just a placeholder)*<br><img src="/assets/pal_10_06.png" alt="drones" width="80%" style="border: 1px solid #999;">
 
 <br>
 
