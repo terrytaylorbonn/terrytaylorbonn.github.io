@@ -36,12 +36,10 @@ This section intros
 - things to keep in mind as you work your way throught the examples/demos (problems to watch out for, avoid)
 - etc etc 
 
-#### **For example**
-
-Its amazing how a simple diagram with numbered steps variables can vastly simplify your life. The screenshot below is from the demo **[D9 UI (Workshop)](/3c.xxx_pal_HN_01_non_ai/)**. I spent almost 3 days trying to figure out how the wiring worked and how to duplicate the process (one problem was that FDE/GPT-5.5 itself made mistakes).
+**For example:** Its amazing how a simple diagram with numbered steps variables can vastly simplify your life. The screenshot below is from the demo **[D9 UI (Workshop)](/3c.xxx_pal_HN_01_non_ai/)**. I spent almost 3 days trying to figure out how the wiring worked and how to duplicate the process (one problem was that FDE/GPT-5.5 itself made mistakes).<br>
 <img src="/assets/777_05.png" alt="drones" width="75%" style="border: 1px solid #999;"> 
 
-If I had had this "simple" (as simple as possible) diagram (with numbered steps), it would have taken a few hours.
+If I had had this "simple" (as simple as possible) diagram (with numbered steps), it would have taken a few hours.<br>
 <img src="/assets/777_04.png" alt="drones" width="75%" style="border: 1px solid #999;"> 
 
 

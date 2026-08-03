@@ -10,13 +10,6 @@ permalink: /3c.1b_pal_readmefirst/
 
 <br>
 
-TODO... add the diagram of workshop setup.... 
-and focus on the naming conventions, 
-numbering of chapters, etc.
-
-the basic idea: the ZiptieAI example/demo style makes things much clearer. 
-I am a Foundry user, and i document my own experience.
-i just want to know how to use Foundry to get things done. 
 
 A few problems I ran into that you might want to watch out for.
 
@@ -31,10 +24,12 @@ A few problems I ran into that you might want to watch out for.
 
 # **1 Workshop setup** 26.0802
 
+*See **[Demo 9 HN (haystack needle)](/3c.xxx_pal_HN_01_non_ai/)** for details*.
 
-**see [Demo 9 HN (haystack needle)](/3c.xxx_pal_HN_01_non_ai/)**
+When you are doing PAL exmaples/demos, you just follow the steps. But when you start to DIY, then things can get tricky. Especially when FDE makes mistakes. 
 
-It took me a while to figure out some key configurations details in Workshop. 
+
+It took me a while to figure out some key configurations details in the D9 demo while building Workshop. 
 - FDE gave me a workflow that although worked (with several fixes). Tool a while to figure out the fix. 
 - You need to use unique names to keep things straight.
 - You also need a diagram (i will add this on 26.0803)
@@ -47,9 +42,7 @@ The following TOC snippet from [\#620](https://drive.google.com/drive/folders/1-
 
 [\#620\_pal\_9\_aip-fde\_demo\_hn\_.docx](https://drive.google.com/drive/folders/1-Adawag9uA8_bq-hDF-nOuPYaRLz1eEO)
 
-<br><img src="/assets/777_01.png" alt="drones" width="75%" style="border: 1px solid #999;">
-
-
+<br><img src="/assets/777_01.png" alt="drones" width="65%" style="border: 1px solid #999;">
 
 
 <br>
