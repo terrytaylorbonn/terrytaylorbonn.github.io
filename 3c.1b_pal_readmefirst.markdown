@@ -18,7 +18,9 @@ A few problems I ran into that you might want to watch out for.
 
 <!-- This is something I ran into after a few weeks. I had reached the limit of 60 object types (on the free plan). 
 - This problem is a bit of challenge when you hit it, because deleting objects is not simple. You have to solve it though if you want to do more examples/demos.
-- You dont have to do this now, but you need to be aware of it if you hit the limit. -->
+- You dont have to do this now, but you need to be aware of it if you hit the limit. 
+    - **The MS.Word docs use numbered headings**. This makes it much easier to follow the demos and avoid mistakes. In the future I might number every step (using MS.Word seq function).
+-->
 
 <br>
 

@@ -18,14 +18,14 @@ This section provides what you need to master the basics of Palantir Foundry ASA
 
 **TOC**:
 - **0 Read me first**
-- **1 Concepts** (right now this is just a placeholder; the concepts section is always the last section to be completed; I need more (hands-on) experience before I truly understand the concepts).
-- **2 Getting started** (GS). I originally called this "quick start", but it kept growing in size. Covers
+- **1 Concepts** (I need more (hands-on) experience before I can describe the concepts).
+- **2 Getting started**
   - **Sign up to PAL**
   - **PAL examples/demos**
   - **DIY demos** (team up with FDE (AI assistant) to create your own demos)
-- **3 Advanced (with FDE)**. This will focus on partnering with FDE to cover 2 major topics areas
-  - Demos for topics in **Foundry certification exam guide for application developer** (the exam involves answering questions; the focus of this section is to use the exam to determine what demos to do).
-  - Other demos for topics such as **managing Foundry environment, 24/7 operation, streams, deployments, packaging, sharing, etc** (I don't have a clear idea yet what the topics in this section would be).
+- **3 Advanced (with FDE)**. Demos for
+  - **Foundry certification exam guide for application developer** (the exam involves answering questions; this section uses the exam to determine what demos to do).
+  - **Managing Foundry environment, 24/7 operation, streams, deployments, packaging, sharing, etc** (I am not sure yet exactly what topics).
 
 <br>
 
@@ -60,6 +60,8 @@ Enterprise AI dev platforms do the heavy lifting of creating an enterprise level
 
 ## **2 Getting started** 
 
+**Note: Lab notes** (MS.Word docx files) are available for each example/demo on the **[GDrive](https://drive.google.com/drive/folders/1-Adawag9uA8_bq-hDF-nOuPYaRLz1eEO)**.
+
 - **P1 Sign up to PAL**
 - **P2 PAL examples**. These are complicated, but they have an autoinstaller that allows you to start with a (usually) working version that you can modify.
 - **P3 PAL demos**. These are less complicated, but you start from 0, and getting a working demo at the end requires a lot of skill (including debugging).
@@ -67,7 +69,7 @@ Enterprise AI dev platforms do the heavy lifting of creating an enterprise level
 
 <br>
 
-#### **P1 (3c.0a) Sign up to PAL**
+#### **P1 Sign up to PAL**
 If you cant get a trial version of PAL running, then there's no reason to read further. You will not understand PAL by just reading about it.
   - I dont remember the URL. Just Google it.
   - Unfortunately, I did not record how I signed up, and its not a process I can repeat. But I can tell you this
@@ -76,39 +78,40 @@ If you cant get a trial version of PAL running, then there's no reason to read f
     - **You must have a passport or some picture ID of good enough quality for facial recognition verification**. My passport is almost 10 years old, but it still worked. My drivers licence pic was of such low quality that I doubt it would have worked. 
     - **You need a camera on your PC to take a pic of yourself. PAL will compare your ID and the pic.**
     - I think you need a **mobile phone number** (and email).
-  - It was a fairly long process, but very professionally done (I was impressed).<br><br><img src="/assets/pal_10_08.png" alt="drones" width="37%" style="border: 1px solid #999;"><br><br>
+  - It was a fairly long process, but very professionally done (I was impressed) (3c.0a).<br><br><img src="/assets/pal_10_08.png" alt="drones" width="37%" style="border: 1px solid #999;"><br><br>
 
 
-#### **[P2 (3c.1b) PAL examples](/3c.1b_pal_examples/)** 
+#### **[P2 PAL examples](/3c.1b_pal_examples/)** 
   - Install a PAL example.
   - Run the example.
-  - Try to rebuild the examples (from top to bottom, from downstream to upstream).
-  - Note: These examples are excellent, but are often quite complicated (*my long-term goal is create more simple examples, but from what FDE has told me, publishing examples is not a simple process*). But you don't have to do everything at first step-by-step before you see the the final results. Once you have a working first (reference) example, you can install a second (experimental) example that you can modify at your pace. This allows you to (1) appreciate quickly the capabilities of PAL and (2) focus on learning the UI and basic concepts/terminology. <br><br>*PAL example (left, center) and my own build (right)*<br><img src="/assets/pal_10_01.png" alt="drones" width="25%" style="border: 1px solid #999;">  <img src="/assets/pal_10_05.png" alt="drones" width="33%" style="border: 1px solid #999;">  <img src="/assets/pal_10_02.png" alt="drones" width="30%" style="border: 1px solid #999;"><br><br>
+  - Try to rebuild the examples (from top to bottom, from downstream to upstream). *The examples are excellent, but are often quite complicated. But you don't have to do everything first step-by-step before you see the the final results. Once you have a working first (reference) example, you can install a second (experimental) example that you modify at your pace. This allows you to (1) appreciate quickly the capabilities of PAL and (2) focus on learning the UI and basic concepts/terminology.* <br><br>*PAL example (left, center) and my own build (right) (3c.1b)*<br><img src="/assets/pal_10_01.png" alt="drones" width="25%" style="border: 1px solid #999;">  <img src="/assets/pal_10_05.png" alt="drones" width="33%" style="border: 1px solid #999;">  <img src="/assets/pal_10_02.png" alt="drones" width="30%" style="border: 1px solid #999;"><br><br>
 
 
-#### **[P3 (3c.2) PAL demos](/3c.2_pal_initial_demos/)**
-You just did project setup / pipeline (goal 1). You know your way around Foundry. Now do demos that cover the rest of basic core Foundry functionality. Get hands-on experience before doing "operational" apps (goal 3).
+#### **[P3 PAL demos (speedruns)](/3c.2_pal_initial_demos/)**
   - Current demos consist of just D1-D8, the first PAL demos I did (step by step tutorials). 
+  - When I started, I was overwhelmed by the many dialogs (because I had not done examples first).
+  - I documented all details with screenshots.<br>*Demos of core functionality (3c.2)*<br><img src="/assets/pal_10_13.png" alt="drones" width="37%" style="border: 1px solid #999;">  <img src="/assets/pal_10_14.png" alt="drones" width="50%" style="border: 1px solid #999;"><br><br>
+
+<!-- You just did project setup / pipeline (goal 1). You know your way around Foundry. Now do demos that cover the rest of basic core Foundry functionality. Get hands-on experience before doing "operational" apps (goal 3).
   - **Your initial focus will be on 2 things**
     - **What button to press or where to click next.** The PAL dialogs are well done, but they require a lot of time to get used to.
     - **"I'm stuck.... how do I find a solution"**. PAL has AIP and FDE to help. 
-  - When I started, I was overwhelmed by the many dialogs. I just wanted to be shown what do. I did not care about options. So D1-D8 are a bit messy and not perfect, but 
+  I just wanted to be shown what do. I did not care about options. So D1-D8 are a bit messy and not perfect, but 
     - They are MS.Word docx files that I can update easily. You can download that file and use it as your working notebook. **You need to keep lab notes**.
-    - I documented all details with screenshots. 
-    - **The MS.Word docs use numbered headings**. This makes it much easier to follow the demos and avoid mistakes. In the future I might number every step (using MS.Word seq function).<br>*Demos of core functionality*<br><img src="/assets/pal_10_13.png" alt="drones" width="37%" style="border: 1px solid #999;">  <img src="/assets/pal_10_14.png" alt="drones" width="50%" style="border: 1px solid #999;"><br><br>
 
-#### **[P4 (3c.3) DIY (with FDE assistance) demos](/3c.xxx_pal_gist/)**
-This is the main goal. Creating real-world projects by working as a team with FDE (and AIP, [PAL Pilot](https://www.palantir.com/docs/foundry/pilot/getting-started/)).
+-->
+
+#### **[P4 DIY (with FDE assistance) demos](/3c.xxx_pal_gist/)**
+- Creating real-world projects by working as a team with FDE (AIP/[PAL Pilot](https://www.palantir.com/docs/foundry/pilot/getting-started/)). (3c.3).<br><img src="/assets/pal_10_12.png" alt="drones" width="50%" style="border: 1px solid #999;"><br>
+
+<!-- 
   - **Use AI (AIP/FDE) to do demos from scratch** (not following PAL demos or PAL docs; I might get inspiration from those demos, but I just use AIP/FDE to execute; in the future PAL Pilot would do this).
   - **D9 (demo set 9) = "haystack needle" demos**. I believe this was Palantir's original focus when founded:
     - Finding some small indication in a sea of data
     - Without/with AI.
-  - Coming soon: Other AIP/FDE/Pilot demos.<br><img src="/assets/pal_10_12.png" alt="drones" width="50%" style="border: 1px solid #999;"><br>
-
-<!--  - **[PAL Pilot](https://www.palantir.com/docs/foundry/pilot/getting-started/)** (in beta now) will probably be an "FDE/AIP combo" that can "see" the dialogs and lead you by the hand through complicated setups.<br><img src="/assets/pal_10_07.png" alt="drones" width="40%" style="border: 1px solid #999;"><br><br> 
-
+  - Coming soon: Other AIP/FDE/Pilot demos.
+ - **[PAL Pilot](https://www.palantir.com/docs/foundry/pilot/getting-started/)** (in beta now) will probably be an "FDE/AIP combo" that can "see" the dialogs and lead you by the hand through complicated setups.<br><img src="/assets/pal_10_07.png" alt="drones" width="40%" style="border: 1px solid #999;"><br><br> 
    - **[8 (3c.3b) Pilot real-world projects](/3c.3b_pal_pilot/) (NEAR FUTURE?)** .-->
-
 
 <br>
 
@@ -121,7 +124,7 @@ This will focus on partnering with FDE to cover 2 major topics areas
 <br> 
 
 #### **P5 Demos for *Foundry certification exam guide for application developer* topics**
-Use the exam as a guide for what demos to do to cover all the core topics that were not covered earlier.<br><img src="/assets/pal_15_02.png" alt="drones" width="65%" style="border: 1px solid #999;"><br><br>
+Use the exam as a guide for what demos to do to cover all the core topics that were not covered earlier.<br><img src="/assets/pal_15_02.png" alt="drones" width="55%" style="border: 1px solid #999;"><br><br>
 
 #### **[P6 (3c.2b)"Other" demos (not sure exactly what yet)](/3c.2b_operational_apps/)**
 Demos not covered earlier (and not in the exam; I don’t have a clear idea yet what the topics in this section would be). Up to this point you only use the apps for testing. They are not setup for end user usage, for real deployment ("deployment in the UI in the previous apps was more like "compile/run"). Demos for topics not covered yet. Maybe
