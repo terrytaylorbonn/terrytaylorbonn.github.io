@@ -1,6 +1,6 @@
 ---
 layout: page
-title: Readme me first (demo)
+title: Readme me first
 permalink: /3c.1b_pal_readmefirst/
 ---
 
@@ -17,6 +17,319 @@ numbering of chapters, etc.
 the basic idea: the ZiptieAI example/demo style makes things much clearer. 
 I am a Foundry user, and i document my own experience.
 i just want to know how to use Foundry to get things done. 
+
+A few problems I ran into that you might want to watch out for.
+
+- **1 Workshop setup**
+- **2 Object type limitations**
+
+<!-- This is something I ran into after a few weeks. I had reached the limit of 60 object types (on the free plan). 
+- This problem is a bit of challenge when you hit it, because deleting objects is not simple. You have to solve it though if you want to do more examples/demos.
+- You dont have to do this now, but you need to be aware of it if you hit the limit. -->
+
+<br>
+
+# **1 Workshop setup** 26.0802
+
+It took me a while to figure out some key configurations details in Workshop. 
+- FDE gave me a workflow that although worked (with several fixes). Tool a while to figure out the fix. 
+- You need to use unique names to keep things straight.
+- You also need a diagram (i will add this on 26.0803)
+- Seemed like a small bug (??) in workshop (FDE agreed with that assessment). Probably I am missing something... will have to find out for sure later.
+
+<!-- I spent 2 days trying to figure out how to setup Workshop. I've done it before, but it was always unclear, I could not finish without FDE help. I finally took a day (whole day) to get it clear. There were several problems:-->
+
+
+The following TOC snippet from [\#620](https://drive.google.com/drive/folders/1-Adawag9uA8_bq-hDF-nOuPYaRLz1eEO) docx shows how I finally figure out the correct workflow.
+
+[\#620\_pal\_9\_aip-fde\_demo\_hn\_.docx](https://drive.google.com/drive/folders/1-Adawag9uA8_bq-hDF-nOuPYaRLz1eEO)
+
+<br><img src="/assets/777_01.png" alt="drones" width="75%" style="border: 1px solid #999;">
+
+
+
+<br>
+
+----------------------
+
+<br>
+
+also "the dialog DOES NOT insists on adding a "1" after"......
+this time it was differenet. 
+there is a bug somewhere.
+
+Yes — that strongly suggests a UI/state bug or name-collision bug.
+
+Likely behavior:
+
+- If a similar variable name already exists, Workshop silently appends `1`.
+- If it thinks the old name still exists/collides, it appends `1` even when confusing.
+- With your clean unique name `07_filter_output_777`, there was no collision, so it did not append `1`.
+
+So the bug is probably around **duplicate variable names / stale auto-generated names / collision handling**.
+
+Your workaround is the right one:
+
+```text
+use numbered, unique names from the start
+```
+
+Example:
+
+```text
+07_filter_output_777
+08a_filtered_anom_events_777
+```
+
+<br>
+
+----------------------
+
+<br>
+
+yes you are right.... its probably a collision...
+insttead of warning, it just auto-adds a 1 or seomthing... anyway, its a mess.
+
+Yes — exactly.
+
+Likely collision behavior:
+
+```text
+desired name exists / partially exists / stale reference exists
+→ Workshop silently appends "1"
+→ user thinks they are using one variable
+→ app is actually wired to another
+```
+
+The safe rule:
+
+```text
+Use unique numbered names from the beginning.
+Never rely on display names being exactly what you typed.
+Always verify variable usage.
+```
+
+Your `777` approach is the right workaround.
+
+
+<br>
+<br>
+
+----------------------
+----------------------
+----------------------
+
+<br>
+<br>
+
+# **2 Object type limitations**
+This is something I ran into after a few weeks. I had reached the limit of 60 object types (on the free plan).
+This problem is a bit of challenge when you hit it, because deleting objects is not simple. You have to solve it though if you want to do more examples/demos.
+You dont have to do this now, but you need to be aware of it if you hit the limit.
+
+
+<br>
+
+<!-- *At a high level, the demo uses Foundry pipelines, a Prophet time series model, and Quiver visualization to show anomalous points in a time series. The intended flow is*<br><img src="/assets/pal_17_04.png" alt="drones" width="40%" style="border: 1px solid #999;"> -->
+
+## **why do ontology objects take so long to compile, and why are they limited to 60 ?  they are just objects**
+
+## Short answer
+
+Ontology objects feel like “just objects,” but in Foundry they are compiled semantic resources with schema, security, links, actions, indexes, and generated app/API metadata. The limits exist because loading/validating too many of them inside one app or workspace can become slow, fragile, and hard to reason about.
+
+## Long answer
+
+
+
+Because in Foundry, an **Ontology object type is not just a plain database object/table**.
+
+It looks simple in the UI, but under the hood an object type carries a lot of platform machinery.
+
+## Why ontology objects/object types take time to compile
+
+When Foundry “compiles” ontology resources, it is not just saving a schema. It may need to validate and generate several things:
+
+```text
+dataset columns
+→ object properties
+→ primary keys
+→ links
+→ actions
+→ security rules
+→ search/index configuration
+→ generated APIs / SDK shapes
+→ Workshop/Quiver/OSDK usable definitions
+```
+
+So an object type is closer to a **semantic API contract** than a simple table.
+
+For example, an object type may include:
+
+- primary key definition,
+- property definitions and types,
+- backing dataset mappings,
+- derived/function-backed properties,
+- links to other object types,
+- action types that can mutate it,
+- security / markings / property visibility,
+- search/index configuration,
+- generated OSDK/API representations,
+- Workshop-compatible metadata,
+- time series or media-backed properties,
+- interface implementations.
+
+That means compiling the Ontology requires checking that all of those things are internally consistent.
+
+---
+
+## Why this feels slow
+
+In a normal database, adding a column might be local.
+
+In Foundry Ontology, changing an object type can affect many downstream consumers:
+
+```text
+Ontology object type
+    ↓
+Object Explorer
+Workshop
+Quiver
+OSDK apps
+Actions
+Functions
+Links
+Search indexes
+Permissions
+Models / pipelines
+```
+
+So Foundry has to protect against breaking those consumers.
+
+That validation/generation step is what feels like “compilation.”
+
+---
+
+## Why there may be a limit like 60
+
+The “60” limit is probably not because Foundry cannot represent more than 60 object types globally. It is more likely a **UI/app/workshop/module/session limit** or a **practical compile/load limit**.
+
+If a Workshop app imports too many object types, Foundry has to load all their schemas, properties, links, action metadata, permissions, and generated definitions into the application context.
+
+That can get expensive quickly.
+
+Example:
+
+```text
+60 object types
+× many properties
+× links
+× actions
+× security metadata
+× generated UI definitions
+```
+
+So the limit is probably there to keep:
+
+- Workshop loading time reasonable,
+- browser memory reasonable,
+- app compile time reasonable,
+- generated app metadata manageable,
+- dependency graphs understandable,
+- security validation tractable.
+
+---
+
+## “But they are just objects”
+
+They are “objects” in the business sense, but technically they are more like:
+
+```text
+typed, secured, indexed, API-backed semantic entities
+```
+
+A database row is simple.
+
+An Ontology object type is a contract saying:
+
+> “This real-world entity exists in the platform, has these properties, is backed by this data, participates in these links, supports these actions, obeys these security constraints, and can be consumed by apps and APIs.”
+
+That is much heavier.
+
+---
+
+## Useful distinction
+
+| Thing | Lightweight? | Why |
+|---|---:|---|
+| Dataset row | Relatively lightweight | Just data in a table |
+| Dataset schema | Medium | Column names and types |
+| Ontology object instance | Medium/heavy | Row plus semantic identity and permissions |
+| Ontology object type | Heavy | Schema + mappings + links + actions + APIs + app metadata |
+| Workshop app using object types | Heavy | Must load object type definitions, variables, widgets, filters, actions |
+
+So when you add many object types to Workshop, you are not just adding data. You are adding a lot of semantic metadata and runtime behavior.
+
+---
+
+## Practical advice
+
+For Workshop, do not add every object type “just in case.”
+
+Add only the object types the app actually needs.
+
+Better pattern:
+
+```text
+small focused app
+→ 2–8 core object types
+→ links/actions only where needed
+```
+
+Avoid:
+
+```text
+one giant Workshop app
+→ dozens of object types
+→ many unrelated workflows
+```
+
+If you hit limits, split the app into multiple modules/pages/apps by workflow.
+
+Example:
+
+```text
+Anomaly Review App
+  - Anomaly Event
+  - Asset / Entity
+  - Measurement
+  - Investigation Note
+
+Maintenance App
+  - Work Order
+  - Technician
+  - Asset
+  - Spare Part
+```
+
+Rather than one monster app with everything.
+
+---
+
+## Short answer
+
+Ontology objects feel like “just objects,” but in Foundry they are compiled semantic resources with schema, security, links, actions, indexes, and generated app/API metadata. The limits exist because loading/validating too many of them inside one app or workspace can become slow, fragile, and hard to reason about.
+
+<br>
+
+<!-- #### **[P1b Object type limitations](/3c.1b_pal_object_types_limit/)** 
+- This is something I ran into after a few weeks. I had reached the limit of 60 object types (on the free plan). 
+- This problem is a bit of challenge when you hit it, because deleting objects is not simple. You have to solve it though if you want to do more examples/demos.
+- You dont have to do this now, but you need to be aware of it if you hit the limit. -->
+
+
+
+
 
 <!-- 
 It took me a while to figure out some key configurations details in Workshop. 
@@ -35,6 +348,6 @@ The following TOC snippet from [\#620](https://drive.google.com/drive/folders/1-
 -->
 
 
-<br>
+
 
 26.0803 (v1 26.0803)

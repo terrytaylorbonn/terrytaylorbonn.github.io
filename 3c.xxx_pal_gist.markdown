@@ -1,6 +1,6 @@
 ---
 layout: page
-title: 3c.3 AIP/FDE (Pilot) demos
+title: 3c.3 DIY (with FDE assistance) demos
 permalink: /3c.xxx_pal_gist/
 ---
 
@@ -50,9 +50,8 @@ AIP/FDE real-world projects. This is the main goal. Creating real-world projects
 <br>
 
 
-<br>
 
-26.0727 (v1 26.0722)
+26.0803 (v1 26.0722)
 
 <!-- /3c.bbb_pal_strategy_fde/ 
 **[3c.2 PAL AI dev assistants (WIP)](/3c.bbb_pal_strategy_fde/) shows how to maximize AI usage when using PAL (by using AIP/FDE)**. 

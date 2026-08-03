@@ -21,7 +21,6 @@ This section provides what you need to master the basics of Palantir Foundry ASA
 - **1 Concepts** (right now this is just a placeholder; the concepts section is always the last section to be completed; I need more (hands-on) experience before I truly understand the concepts).
 - **2 Getting started** (GS). I originally called this "quick start", but it kept growing in size. Covers
   - **Sign up to PAL**
-  - **Object type limitations**
   - **PAL examples/demos**
   - **DIY demos** (team up with FDE (AI assistant) to create your own demos)
 - **3 Advanced (with FDE)**. This will focus on partnering with FDE to cover 2 major topics areas
@@ -30,20 +29,25 @@ This section provides what you need to master the basics of Palantir Foundry ASA
 
 <br>
 
-## **[0 Read me first (includes a demo)](/3c.1b_pal_readmefirst/)**
+## **[0 Read me first](/3c.1b_pal_readmefirst/)**
 
-(WIP 26.0803)
+This section intros 
+- the core ZiptieAI approach to learning Palantir Foundry
+- things to keep in mind as you work your way throught the examples/demos (problems to watch out for, avoid)
+- etc etc 
+
+#### **For example**
 
 Its amazing how 
 - a simple diagram,
 - numbered steps, and
 - variables with unique names (including step numbers)
 
-can vastly simplify your life. 
+can vastly simplify your life. The screenshot below is from the demo **[D9 UI (Workshop)](/3c.xxx_pal_HN_01_non_ai/)**. I spent almost 3 days trying to figure out how the wiring worked and how to duplicate the process (one problem was that FDE/GPT-5.5 itself made mistakes).
+<img src="/assets/777_05.png" alt="drones" width="75%" style="border: 1px solid #999;"> 
 
-*This is the demo D9 UI (Workshop); I spent almost 3 days trying to figure out how the wiring worked and how to duplicate the process (one reason was FDE/GPT-5.5 itself made mistakes)*<br><img src="/assets/777_05.png" alt="drones" width="75%" style="border: 1px solid #999;"> 
-
-*This "simple" (as simple as possible) diagram (with numbered steps) is all I needed (I have no plans to make this diagram or the numbering "perfect, polished" anytime soon; it already provides the key info required to create a basic Workshop UI and I have other priorities)* <br><img src="/assets/777_04.png" alt="drones" width="75%" style="border: 1px solid #999;"> 
+This "simple" (as simple as possible) diagram (with numbered steps) is all I needed (I have no plans to make this diagram or the numbering "perfect, polished" anytime soon; it already provides the key info required to create a basic Workshop UI and I have other priorities).
+<img src="/assets/777_04.png" alt="drones" width="75%" style="border: 1px solid #999;"> 
 
 
 <br>
@@ -57,14 +61,13 @@ Enterprise AI dev platforms do the heavy lifting of creating an enterprise level
 
 *The fantasy world -- (left) a crystal ball (called a "palantir" ("seeing stone") in The Lord of the Rings) and (right) AGI (a myth that digital circuits can host intelligence)* <br><img src="/assets/pal_9_06.png" alt="drones" width="25%" style="border: 1px solid #999;"> <img src="/assets/777_02.png" alt="drones" width="30%" style="border: 1px solid #999;"><br>
 
-*The real world -- An enterprise system that provides the infrastructure and safeguards so that AI can be a practical "helpful assistant" ([diagram source](https://blog.dataengineerthings.org/what-palantir-foundry-taught-me-about-building-better-data-systems-407e3768d5fc))*<br><img src="/assets/777_03.png" alt="drones" width="37%" style="border: 1px solid #999;"><br><br>
+*The real world -- An enterprise system that provides the infrastructure and safeguards so that AI can be a practical "helpful assistant" ([diagram source](https://blog.dataengineerthings.org/what-palantir-foundry-taught-me-about-building-better-data-systems-407e3768d5fc))*<br><img src="/assets/777_03.png" alt="drones" width="44%" style="border: 1px solid #999;"><br><br>
 
 <br>
 
 ## **2 Getting started** 
 
 - **P1 Sign up to PAL**
-- **P1b Things to look out for while doing examples/demos**
 - **P2 PAL examples**. These are complicated, but they have an autoinstaller that allows you to start with a (usually) working version that you can modify.
 - **P3 PAL demos**. These are less complicated, but you start from 0, and getting a working demo at the end requires a lot of skill (including debugging).
 - **P4 DIY demos**. Go free style (not "vibe") by teaming up with FDE (AI assistant) to create your own demos.
@@ -82,15 +85,6 @@ If you cant get a trial version of PAL running, then there's no reason to read f
     - I think you need a **mobile phone number** (and email).
   - It was a fairly long process, but very professionally done (I was impressed).<br><br><img src="/assets/pal_10_08.png" alt="drones" width="37%" style="border: 1px solid #999;"><br><br>
 
-#### **[P1b Things to look out for while doing examples/demos](/3c.1b_pal_object_types_limit/)** 
-Just a few rabbit holes I got lost in.
-
-<!-- #### **[P1b Object type limitations](/3c.1b_pal_object_types_limit/)** 
-- This is something I ran into after a few weeks. I had reached the limit of 60 object types (on the free plan). 
-- This problem is a bit of challenge when you hit it, because deleting objects is not simple. You have to solve it though if you want to do more examples/demos.
-- You dont have to do this now, but you need to be aware of it if you hit the limit. -->
-
-<br>
 
 #### **[P2 (3c.1b) PAL examples](/3c.1b_pal_examples/)** 
   - Install a PAL example.
@@ -110,16 +104,17 @@ You just did project setup / pipeline (goal 1). You know your way around Foundry
     - I documented all details with screenshots. 
     - **The MS.Word docs use numbered headings**. This makes it much easier to follow the demos and avoid mistakes. In the future I might number every step (using MS.Word seq function).<br>*Demos of core functionality*<br><img src="/assets/pal_10_13.png" alt="drones" width="37%" style="border: 1px solid #999;">  <img src="/assets/pal_10_14.png" alt="drones" width="50%" style="border: 1px solid #999;"><br><br>
 
-#### **[P4 (3c.3) AIP/FDE (Pilot) example-demos](/3c.xxx_pal_gist/)**
-This is the main goal. Creating real-world projects by working as a team with FDE (and AIP).
+#### **[P4 (3c.3) DIY (with FDE assistance) demos](/3c.xxx_pal_gist/)**
+This is the main goal. Creating real-world projects by working as a team with FDE (and AIP, [PAL Pilot](https://www.palantir.com/docs/foundry/pilot/getting-started/)).
   - **Use AI (AIP/FDE) to do demos from scratch** (not following PAL demos or PAL docs; I might get inspiration from those demos, but I just use AIP/FDE to execute; in the future PAL Pilot would do this).
   - **D9 (demo set 9) = "haystack needle" demos**. I believe this was Palantir's original focus when founded:
     - Finding some small indication in a sea of data
     - Without/with AI.
   - Coming soon: Other AIP/FDE/Pilot demos.<br><img src="/assets/pal_10_12.png" alt="drones" width="50%" style="border: 1px solid #999;"><br>
-  - **[PAL Pilot](https://www.palantir.com/docs/foundry/pilot/getting-started/)** (in beta now) will probably be an "FDE/AIP combo" that can "see" the dialogs and lead you by the hand through complicated setups.<br><img src="/assets/pal_10_07.png" alt="drones" width="40%" style="border: 1px solid #999;"><br><br> 
 
-<!--   - **[8 (3c.3b) Pilot real-world projects](/3c.3b_pal_pilot/) (NEAR FUTURE?)** .-->
+<!--  - **[PAL Pilot](https://www.palantir.com/docs/foundry/pilot/getting-started/)** (in beta now) will probably be an "FDE/AIP combo" that can "see" the dialogs and lead you by the hand through complicated setups.<br><img src="/assets/pal_10_07.png" alt="drones" width="40%" style="border: 1px solid #999;"><br><br> 
+
+   - **[8 (3c.3b) Pilot real-world projects](/3c.3b_pal_pilot/) (NEAR FUTURE?)** .-->
 
 
 <br>
