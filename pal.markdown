@@ -17,6 +17,7 @@ This section provides what you need to master the basics of Palantir Foundry ASA
 <br>
 
 **TOC**:
+- **0 Read me first**
 - **1 Concepts** (right now this is just a placeholder; the concepts section is always the last section to be completed; I need more (hands-on) experience before I truly understand the concepts).
 - **2 Getting started** (GS). I originally called this "quick start", but it kept growing in size. Covers
   - **Sign up to PAL**
@@ -26,6 +27,12 @@ This section provides what you need to master the basics of Palantir Foundry ASA
 - **3 Advanced (with FDE)**. This will focus on partnering with FDE to cover 2 major topics areas
   - Demos for topics in **Foundry certification exam guide for application developer** (the exam involves answering questions; the focus of this section is to use the exam to determine what demos to do).
   - Other demos for topics such as **managing Foundry environment, 24/7 operation, streams, deployments, packaging, sharing, etc** (I don't have a clear idea yet what the topics in this section would be).
+
+<br>
+
+## **[0 Read me first (includes a demo)](/3c.1b_pal_readmefirst/)**
+
+(WIP 26.0803)
 
 <br>
 
