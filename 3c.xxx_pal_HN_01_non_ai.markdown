@@ -10,9 +10,22 @@ permalink: /3c.xxx_pal_HN_01_non_ai/
 
 <br>
 
-#### **NEW TEXT 26.0803.... need to integrate.......**
+### **1 DOCX TOC**
 
-Its amazing how 
+This is the TOC from the docx (**[\#620\_pal\_9\_aip-fde\_demo\_hn\_.docx](https://drive.google.com/drive/folders/1-Adawag9uA8_bq-hDF-nOuPYaRLz1eEO)**) for this DIY demo. 
+- I spent quite a lot of time trying to figure how the Workshop is configured. Way too much time. 
+  - FDE gave me a workflow that although worked (with several fixes). Tool a while to figure out the fix. 
+  - You need to use unique names to keep things straight.
+  - You also need a diagram (i will add this on 26.0803)
+  - Seemed like a small bug (??) in workshop (FDE agreed with that assessment). Probably I am missing something... will have to find out for sure later.
+- Finally on 26.0802 I got it right (top of TOC #7).
+
+<img src="/assets/777_06.png" alt="drones" width="55%" style="border: 1px solid #999;"> 
+
+<br>
+
+### **2 Its amazing how**
+
 - a simple diagram,
 - numbered steps, and
 - variables with unique names (including step numbers)
@@ -24,35 +37,45 @@ This "simple" (as simple as possible) diagram (with numbered steps) is all I nee
 <img src="/assets/777_04.png" alt="drones" width="75%" style="border: 1px solid #999;"> 
 
 <br>
-<br>
-<br>
-<br>
-<br>
 
 
-
-# **1 Workshop setup** 26.0802
-
-It took me a while to figure out some key configurations details in Workshop. 
-- FDE gave me a workflow that although worked (with several fixes). Tool a while to figure out the fix. 
-- You need to use unique names to keep things straight.
-- You also need a diagram (i will add this on 26.0803)
-- Seemed like a small bug (??) in workshop (FDE agreed with that assessment). Probably I am missing something... will have to find out for sure later.
 
 <!-- I spent 2 days trying to figure out how to setup Workshop. I've done it before, but it was always unclear, I could not finish without FDE help. I finally took a day (whole day) to get it clear. There were several problems:-->
 
 
-The following TOC snippet from [\#620](https://drive.google.com/drive/folders/1-Adawag9uA8_bq-hDF-nOuPYaRLz1eEO) docx shows how I finally figure out the correct workflow.
-
-[\#620\_pal\_9\_aip-fde\_demo\_hn\_.docx](https://drive.google.com/drive/folders/1-Adawag9uA8_bq-hDF-nOuPYaRLz1eEO)
-
-<br><img src="/assets/777_01.png" alt="drones" width="75%" style="border: 1px solid #999;">
-
+### **3 For the details, see #7 in the docx** 
 
 
 <br>
+<br>
+<br>
+<br>
+<br>
+<br>
+<br>
+<br>
+<br>
+<br>
+<br>
+<br>
+<br>
+<br>
+<br>
+<br>
 
 ----------------------
+----------------------
+----------------------
+----------------------
+----------------------
+----------------------
+----------------------
+----------------------
+
+<br>
+
+# **OLD NOTES**
+
 
 <br>
 
@@ -115,16 +138,12 @@ Your `777` approach is the right workaround.
 
 
 <br>
+
+
+----------------------
+
+
 <br>
-
-----------------------
-----------------------
-----------------------
-
-
-
-
-
 
 
 
@@ -149,16 +168,13 @@ Your `777` approach is the right workaround.
   - CPU program detection?
 
 <br>
-<br>
+
 
 ----------------------------------------------
-----------------------------------------------
-----------------------------------------------
-----------------------------------------------
-----------------------------------------------
+
 
 <br>
-<br>
+
 
 
 # **INTRO**
@@ -407,21 +423,16 @@ manual dataset output
 
 
 <br>
-<br>
 
 ----------------------------------------------
-----------------------------------------------
-----------------------------------------------
-----------------------------------------------
-----------------------------------------------
+
 
 <br>
-<br>
+
 
 
 # **P0 PIPELINE**
 
-<br>
 <br>
 
 01 Create a local file named:
@@ -842,16 +853,13 @@ SAVE THE ONTO ANOMALY EVENT 3 !!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!
 
 
 <br>
-<br>
+
 
 ----------------------------------------------
-----------------------------------------------
-----------------------------------------------
-----------------------------------------------
-----------------------------------------------
+
 
 <br>
-<br>
+
 
 
 # **P2 UI APP (Workshop)**
