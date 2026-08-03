@@ -43,9 +43,9 @@ Enterprise AI dev platforms do the heavy lifting of creating an enterprise level
 - **PAL offers a generous free trial account for Foundry.**
 - **The built-in AI help (AIP/FDE) makes it possible to complete the demos**.
 
-*A crystal ball (called a "palantir" ("seeing stone") in The Lord of the Rings) that can find a needle in a haystack* <br><img src="/assets/pal_9_06.png" alt="drones" width="25%" style="border: 1px solid #999;">
+*The fantasy world -- (left) a crystal ball (called a "palantir" ("seeing stone") in The Lord of the Rings) and (right) AGI (a myth that digital circuits can host intelligence)* <br><img src="/assets/pal_9_06.png" alt="drones" width="25%" style="border: 1px solid #999;"> <img src="/assets/777_02.png" alt="drones" width="30%" style="border: 1px solid #999;"><br>
 
-*The real world components that make it all work (get a better diagram)*<br><img src="/assets/pal_10_09.png" alt="drones" width="67%" style="border: 1px solid #999;"><br><br>
+*The real world -- An enterprise system that provides the infrastructure and safeguards so that AI can be a practical "helpful assistant"*<br><img src="/assets/777_03.png" alt="drones" width="37%" style="border: 1px solid #999;"><br><br>
 
 <br>
 
@@ -132,7 +132,7 @@ Demos not covered earlier (and not in the exam; I don’t have a clear idea yet 
 
 <br>
 
-26.0802 (v1 26.0702) 
+26.0803 (v1 26.0702) 
 
 <br>
 <br>
