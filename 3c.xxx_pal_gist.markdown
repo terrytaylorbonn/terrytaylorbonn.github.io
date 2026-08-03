@@ -11,14 +11,12 @@ permalink: /3c.xxx_pal_gist/
 <br>
 
 
+These demos are my own, created by prompting AIP/FDE for the steps (see **[3c.2 PAL AI dev assistants](/3c.bbb_pal_strategy_fde/)** for AIP/FDE details).
 
 
-**These demos are my own, created by prompting AIP/FDE for the steps.** (for details see **[3c.2 PAL AI dev assistants](/3c.bbb_pal_strategy_fde/)** about AIP/FDE led help.)
-
-
-AIP/FDE real-world projects. This is the main goal. Creating real-world projects by working as a team with FDE (and AIP).
+<!-- AIP/FDE real-world projects. This is the main goal. Creating real-world projects by working as a team with FDE (and AIP).
   - **Use AI (AIP/FDE) to do demos from scratch** (not following PAL demos or PAL docs; I might get inspiration from those demos, but I just use AIP/FDE to execute; in the future PAL Pilot would do this).<br><img src="/assets/pal_10_12.png" alt="drones" width="50%" style="border: 1px solid #999;"><br>
-  - **[PAL Pilot](https://www.palantir.com/docs/foundry/pilot/getting-started/)** (in beta now) will probably be an "FDE/AIP combo" that can "see" the dialogs and lead you by the hand through complicated setups.<br><img src="/assets/pal_10_07.png" alt="drones" width="40%" style="border: 1px solid #999;"><br><br> 
+  - **[PAL Pilot](https://www.palantir.com/docs/foundry/pilot/getting-started/)** (in beta now) will probably be an "FDE/AIP combo" that can "see" the dialogs and lead you by the hand through complicated setups.<br><img src="/assets/pal_10_07.png" alt="drones" width="40%" style="border: 1px solid #999;"><br><br> -->
 
 <!-- This was my goal from the beginning:
 - In 3c.2 get enough experience so that 
@@ -33,19 +31,18 @@ AIP/FDE real-world projects. This is the main goal. Creating real-world projects
 
 - **[Demo 9: HN demos](/3c.xxx_pal_HN_01_non_ai/)** (haystack needle, with/without AI model). (HN = find small anomalies in mountains of data)
   - **What has interested me the most about Palantir for over a year now are the "haystack needle" (HN) algorithms**. This was the original reason for the founding of PAL. 9/11 occured because the US government failed to detect obvious warning signs in a sea of data. PAL's job was to make sure that that did not happen again by creating a system that could sift through vast amounts of data (about, for example, a sudden surge in foreigners studying to fly large airliners) to flag potential threats. To find the needle in the haystack.
-  - But how exactly did they implement the HN algorithms? That's of practical interest currently because 
+  <br>*The gist of Palantir haystack needle search: A crystal ball (called a "palantir" ("seeing stone") in Lord of the Rings)* <br><img src="/assets/pal_9_06.png" alt="drones" width="25%" style="border: 1px solid #999;"><br><br>
+
+
+
+<!-- 
+
+- But how exactly did they implement the HN algorithms? That's of practical interest currently because 
     - (1) those **HN techniques are being used in all business segments** (not just military and intelligence) and 
-    - (2) **you can learn the details hands-on yourself for free with no assistance**by getting a PAL trial license (I have only a trial license and I am working alone). <br>*The gist of Palantir haystack needle search: A crystal ball (called a "palantir" ("seeing stone") in Lord of the Rings)* <br><img src="/assets/pal_9_06.png" alt="drones" width="25%" style="border: 1px solid #999;"><br><br>
-
-
-- **Other types of AIP/FDE demos (FUTURE)** 
-
-
-<br>
-
-
-
-<!-- The goal of this page is to explain (via demos) the gist of a portion of the Palantir (PAL) toolset (there are not many competitors to PAL right now, but there will be in the near future, and they will follow a lot of the PAL methodologies). How to use that toolset to create HN apps. -->
+    - (2) **you can learn the details hands-on yourself for free with no assistance**by getting a PAL trial license (I have only a trial license and I am working alone). 
+    
+    
+    The goal of this page is to explain (via demos) the gist of a portion of the Palantir (PAL) toolset (there are not many competitors to PAL right now, but there will be in the near future, and they will follow a lot of the PAL methodologies). How to use that toolset to create HN apps. -->
 
 <br>
 
