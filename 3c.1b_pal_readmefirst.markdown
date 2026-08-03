@@ -14,6 +14,10 @@ TODO... add the diagram of workshop setup....
 and focus on the naming conventions, 
 numbering of chapters, etc.
 
+the basic idea: the ZiptieAI example/demo style makes things much clearer. 
+I am a Foundry user, and i document my own experience.
+i just want to know how to use Foundry to get things done. 
+
 <!-- 
 It took me a while to figure out some key configurations details in Workshop. 
 - FDE gave me a workflow that although worked (with several fixes). Tool a while to figure out the fix. 
