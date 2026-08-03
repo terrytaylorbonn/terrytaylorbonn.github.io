@@ -31,14 +31,12 @@ This section provides what you need to master the basics of Palantir Foundry ASA
 
 ## **[0 Read me first](/3c.1b_pal_readmefirst/)**
 
-Things to keep in mind as you work your way throught the examples/demos (problems to watch out for, avoid, etc).
-
-**For example:** A simple diagram with numbered steps and variables can vastly simplify your life. The screenshot below is from the demo **[D9 UI (Workshop)](/3c.xxx_pal_HN_01_non_ai/)**. <br>
+This readme discusses various things to keep in mind as you work your way throught the examples/demos (problems to watch out for, avoid, etc). **For example:** For your first workshop configuration a simple diagram with numbered steps and variables can vastly simplify your life. The screenshot below is from the ZiptieAI demo **[D9 UI (Workshop)](/3c.xxx_pal_HN_01_non_ai/)**. <br>
 <img src="/assets/777_05.png" alt="drones" width="75%" style="border: 1px solid #999;"> 
 
 <!-- I spent almost 3 days trying to figure out how the wiring worked and how to duplicate the process (one problem was that FDE/GPT-5.5 itself made mistakes). -->
 
-If I had had this "simple" (as simple as possible) diagram (with numbered steps), it would taken a lot less time to get running.<br>
+It took me a long time to get the Workshop in that demo working. Even FDE made a mistake during the configuration. Afterwards I created this simple diagram (with numbered steps). If I had had that diagram to start with, it would taken a lot less time to get it running. When you get your first Workshop running, spend extra time to trace through all the connections. Experiment and try using unique names.<br>
 <img src="/assets/777_04.png" alt="drones" width="75%" style="border: 1px solid #999;"> 
 
 
