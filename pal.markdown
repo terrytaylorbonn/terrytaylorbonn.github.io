@@ -38,7 +38,7 @@ Its amazing how a simple diagram, numbered steps, vars with numbered step names,
 
 *This is the demo D9 UI (Workshop); I spent almost 3 days trying to figure out how the wiring worked and how to duplicate the process (one reason was FDE itself made mistakes)*<br><img src="/assets/777_05.png" alt="drones" width="75%" style="border: 1px solid #999;"> 
 
-*This "simple" (as simple as possible) diagram (with numbered steps) is all I needed (I have no plans to make this diagram or the numbering "perfect, polished" anytime soon; it provides the key info required to create a basic Workshop UI)* <br><img src="/assets/777_04.png" alt="drones" width="75%" style="border: 1px solid #999;"> 
+*This "simple" (as simple as possible) diagram (with numbered steps) is all I needed (I have no plans to make this diagram or the numbering "perfect, polished" anytime soon; it already provides the key info required to create a basic Workshop UI and I have other priorities)* <br><img src="/assets/777_04.png" alt="drones" width="75%" style="border: 1px solid #999;"> 
 
 
 <br>
@@ -52,7 +52,7 @@ Enterprise AI dev platforms do the heavy lifting of creating an enterprise level
 
 *The fantasy world -- (left) a crystal ball (called a "palantir" ("seeing stone") in The Lord of the Rings) and (right) AGI (a myth that digital circuits can host intelligence)* <br><img src="/assets/pal_9_06.png" alt="drones" width="25%" style="border: 1px solid #999;"> <img src="/assets/777_02.png" alt="drones" width="30%" style="border: 1px solid #999;"><br>
 
-*The real world -- An enterprise system that provides the infrastructure and safeguards so that AI can be a practical "helpful assistant (**[source](https://blog.dataengineerthings.org/what-palantir-foundry-taught-me-about-building-better-data-systems-407e3768d5fc)**)"*<br><img src="/assets/777_03.png" alt="drones" width="37%" style="border: 1px solid #999;"><br><br>
+*The real world -- An enterprise system that provides the infrastructure and safeguards so that AI can be a practical "helpful assistant" ([diagram source](https://blog.dataengineerthings.org/what-palantir-foundry-taught-me-about-building-better-data-systems-407e3768d5fc))*<br><img src="/assets/777_03.png" alt="drones" width="37%" style="border: 1px solid #999;"><br><br>
 
 <br>
 
