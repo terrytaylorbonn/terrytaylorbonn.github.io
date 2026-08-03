@@ -34,6 +34,9 @@ This section provides what you need to master the basics of Palantir Foundry ASA
 
 (WIP 26.0803)
 
+*The simple gist that took me 3 days to figure out (even FDE made mistakes on this one)* <br><img src="/assets/777_04.png" alt="drones" width="75%" style="border: 1px solid #999;"><img src="/assets/777_05.png" alt="drones" width="75%" style="border: 1px solid #999;"> 
+
+
 <br>
 
 ## **1 Concepts**
@@ -45,7 +48,7 @@ Enterprise AI dev platforms do the heavy lifting of creating an enterprise level
 
 *The fantasy world -- (left) a crystal ball (called a "palantir" ("seeing stone") in The Lord of the Rings) and (right) AGI (a myth that digital circuits can host intelligence)* <br><img src="/assets/pal_9_06.png" alt="drones" width="25%" style="border: 1px solid #999;"> <img src="/assets/777_02.png" alt="drones" width="30%" style="border: 1px solid #999;"><br>
 
-*The real world -- An enterprise system that provides the infrastructure and safeguards so that AI can be a practical "helpful assistant"*<br><img src="/assets/777_03.png" alt="drones" width="37%" style="border: 1px solid #999;"><br><br>
+*The real world -- An enterprise system that provides the infrastructure and safeguards so that AI can be a practical "helpful assistant (**[source](https://blog.dataengineerthings.org/what-palantir-foundry-taught-me-about-building-better-data-systems-407e3768d5fc)**)"*<br><img src="/assets/777_03.png" alt="drones" width="37%" style="border: 1px solid #999;"><br><br>
 
 <br>
 
