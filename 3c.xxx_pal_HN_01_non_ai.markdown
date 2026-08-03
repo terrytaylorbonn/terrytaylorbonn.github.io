@@ -6,7 +6,9 @@ permalink: /3c.xxx_pal_HN_01_non_ai/
 
 <br>
 
-[← 3c PAL](/pal/)
+[← 3c.3 DIY (with FDE assistance) demos](/3c.xxx_pal_gist/)
+
+
 
 <br>
 

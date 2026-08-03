@@ -28,14 +28,23 @@ A few problems I ran into that you might want to watch out for.
 
 *See **[Demo 9 HN (haystack needle)](/3c.xxx_pal_HN_01_non_ai/)** for details*.
 
-When you are doing PAL exmaples/demos, you just follow the steps. But when you start to DIY, then things can get tricky. Especially when FDE makes mistakes. 
+When you are doing PAL examples/demos, you just follow the steps. But when you start to DIY, then things can get tricky. Especially when FDE makes mistakes. That's why you should experiment with PAL examples/demos when you can, to get experience within the confines of working examples/demos.
+
+ZiptieAI DIY demos will have docs also. 
+- These demos will try to use a few small techniques that make things vastly easier to follow. 
+- These docs might be the most helpful in fact because they describe unexpected problems.
+  - For example: Seemed like a small bug (??) in workshop (FDE agreed with that assessment). Probably I am missing something... will have to find out for sure later.
 
 
 It took me a while to figure out some key configurations details in the D9 demo while building Workshop. 
-- FDE gave me a workflow that although worked (with several fixes). Tool a while to figure out the fix. 
-- You need to use unique names to keep things straight.
-- You also need a diagram (i will add this on 26.0803)
-- Seemed like a small bug (??) in workshop (FDE agreed with that assessment). Probably I am missing something... will have to find out for sure later.
+- FDE gave me a workflow that although it worked (with several fixes), it was too complicated to follow. FDE is a LLM (token generator based on trained token patterns). That means that FDE understands nothing, only computes an answer based on training input. This will sometimes really cause you trouble when you get polished verbiage from FDE that makes no sense (or is incomprehensible to a human).
+
+What you really need is
+- Unique names to keep things straight.
+- Diagrams.
+- Numbered steps (not sure why this is not used more; it vastly simplifies these demos).
+
+Hopefully the ZAI DIY docs will provide that eventually.
 
 <!-- I spent 2 days trying to figure out how to setup Workshop. I've done it before, but it was always unclear, I could not finish without FDE help. I finally took a day (whole day) to get it clear. There were several problems:-->
 
