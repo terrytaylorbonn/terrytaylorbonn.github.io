@@ -28,32 +28,20 @@ A few problems I ran into that you might want to watch out for.
 
 *See **[Demo 9 HN (haystack needle)](/3c.xxx_pal_HN_01_non_ai/)** for details*.
 
-When you are doing PAL examples/demos, you just follow the steps. But when you start to DIY, then things can get tricky. Especially when FDE makes mistakes. That's why you should experiment with PAL examples/demos when you can, to get experience within the confines of working examples/demos.
+But when you start to DIY, then things can get tricky. You try to do things that the experts know to avoid but don't talk about in the documentation. It took me a while to figure out some key configurations details in the D9 demo while building Workshop. FDE gave me a workflow that although it worked (with several fixes), it was too complicated to follow. FDE is a LLM (token generator based on trained token patterns). That means that FDE understands nothing, only computes an answer based on training input. This will sometimes really cause you trouble when you get polished verbiage from FDE that makes no sense (or is incomprehensible to a human).  I also ran into a small bug (I think) in Workshop that really confused me (FDE agreed that something was not right and it wasn't my mistake).
 
-ZiptieAI DIY demos will have docs also. 
-- These demos will try to use a few small techniques that make things vastly easier to follow. 
-- These docs might be the most helpful in fact because they describe unexpected problems.
-  - For example: Seemed like a small bug (??) in workshop (FDE agreed with that assessment). Probably I am missing something... will have to find out for sure later.
-
-
-It took me a while to figure out some key configurations details in the D9 demo while building Workshop. 
-- FDE gave me a workflow that although it worked (with several fixes), it was too complicated to follow. FDE is a LLM (token generator based on trained token patterns). That means that FDE understands nothing, only computes an answer based on training input. This will sometimes really cause you trouble when you get polished verbiage from FDE that makes no sense (or is incomprehensible to a human).
-
-What you really need is
-- Unique names to keep things straight.
-- Diagrams.
-- Numbered steps (not sure why this is not used more; it vastly simplifies these demos).
-
-Hopefully the ZAI DIY docs will provide that eventually.
+Recommendations:
+- Experiment with PAL examples/demos when you can, to get experience within the confines of working examples/demos.
+- The DIY docs might be the most helpful in fact because they
+  - describe unexpected problems. 
+  - use a few small techniques that make things vastly easier to follow (using numbering, unique var names, etc). - Unique names to keep things straight. Numbered steps (not sure why this is not used more; it vastly simplifies these demos).
+  - have diagrams (useful, accurate, detailed).
 
 <!-- I spent 2 days trying to figure out how to setup Workshop. I've done it before, but it was always unclear, I could not finish without FDE help. I finally took a day (whole day) to get it clear. There were several problems:-->
 
+<br>
 
-The following TOC snippet from [\#620](https://drive.google.com/drive/folders/1-Adawag9uA8_bq-hDF-nOuPYaRLz1eEO) docx shows how I finally figure out the correct workflow.
-
-[\#620\_pal\_9\_aip-fde\_demo\_hn\_.docx](https://drive.google.com/drive/folders/1-Adawag9uA8_bq-hDF-nOuPYaRLz1eEO)
-
-<br><img src="/assets/777_01.png" alt="drones" width="65%" style="border: 1px solid #999;">
+*The following TOC snippet from [\#620\_pal\_9\_aip-fde\_demo\_hn\_.docx](https://drive.google.com/drive/folders/1-Adawag9uA8_bq-hDF-nOuPYaRLz1eEO) docx shows how I finally figure out the correct workflow. It was a mess. The final result was quite simple.*<br><img src="/assets/777_01.png" alt="drones" width="65%" style="border: 1px solid #999;">
 
 
 <br>
