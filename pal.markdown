@@ -6,7 +6,15 @@ permalink: /pal/
 
 <br>
 
+Enterprise AI dev platforms do the heavy lifting of creating an enterprise level AI app. 
+
+**My focus (for now) is on Palantir (Foundry)** because 
+- PAL is a market leader.
+- **PAL offers a generous free trial account for Foundry.**
+- **The built-in AI help (AIP/FDE) makes it possible to complete the demos**.
+
 This section provides what you need to master the basics of Palantir Foundry ASAP. 
+
 
 <!-- 
  **Reorganized 26.0802**.
@@ -44,10 +52,13 @@ It took me a long time to get the Workshop in that DIY demo working. Even FDE ma
 
 ## **1 Concepts**
 
-Enterprise AI dev platforms do the heavy lifting of creating an enterprise level AI app. **My focus (for now) is on Palantir (Foundry)** because 
-- PAL is a market leader.
-- **PAL offers a generous free trial account for Foundry.**
-- **The built-in AI help (AIP/FDE) makes it possible to complete the demos**.
+I am still working on **my own take on the core conceptual gist of Palantir-SW**, but basically its 
+- Palantir makes the enterprise visible and governable.
+- LLMs make parts of that visibility probabilistic, so they must be sandboxed, verified, and logged.
+
+In the diagram below
+- LEFT: Before LLMs, the Palantir-SW had just wizards/magic-balls (the analyzers and the watchers of the analyzers) that were implemented in procedural programming. Reliable and safe.
+- RIGHT: With LLMs, the Palantir-SW now has new AI wizards/magic-balls embedded inside the old wizards/magic-balls. This requires extra security that Palantir-SW provides. **You need Palantir-type systems now more than ever.** 
 
 *The fantasy world -- (left) a crystal ball (called a "palantir" ("seeing stone") in The Lord of the Rings) and (right) AGI (a myth that digital circuits can host intelligence)* <br><img src="/assets/pal_9_06.png" alt="drones" width="25%" style="border: 1px solid #999;"> <img src="/assets/777_02.png" alt="drones" width="30%" style="border: 1px solid #999;"><br>
 
