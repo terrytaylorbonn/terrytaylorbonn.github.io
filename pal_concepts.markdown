@@ -12,7 +12,7 @@ I am still working on **my own take on the core conceptual gist of Palantir-SW**
 
 <br>
 
-In the diagram below
+In the diagram below 
 - LEFT: Before LLMs, the Palantir-SW had just wizards/magic-balls (the analyzers and the watchers of the analyzers) that were implemented in procedural programming. Trustd, reliable and safe (not human, but programmed by a trusted human programmer-employee). Like the old wizard in Lord of the Rings. 
 - RIGHT: With LLMs, the Palantir-SW now has new AI wizards/magic-balls embedded inside the old wizards/magic-balls. AI has no intelligence (and can not be trusted). An LLM is programmed on training data that you did not control (and you can not determine the training data from analyzing the model, even if you knew the NN weights/biases). And the model is often remote. This requires extra security that Palantir-SW provides. **You need Palantir-type systems now more than ever.** 
 
@@ -1733,11 +1733,11 @@ Action UI = default form for collecting parameters
 Workshop = where users actually trigger it in an app
 ```
 
-*xxx*<br><img src="/assets/777_10.png" alt="drones" width="64%" style="border: 1px solid #999;">
+*10*<br><img src="/assets/777_10.png" alt="drones" width="74%" style="border: 1px solid #999;">
 
 <br> 
 
-*xxx*<br><img src="/assets/777_11.png" alt="drones" width="64%" style="border: 1px solid #999;">
+*11*<br><img src="/assets/777_11.png" alt="drones" width="74%" style="border: 1px solid #999;">
 
 <br> 
 
@@ -1808,15 +1808,348 @@ Human approves when consequence is important.
 <br>
 
 
-*xxx*<br><img src="/assets/777_12.png" alt="drones" width="64%" style="border: 1px solid #999;">
+*12*<br><img src="/assets/777_12.png" alt="drones" width="22%" style="border: 1px solid #999;">
 
 
 <br>
 
+# **ME21: what about in those 3 locations?**
+
+Yes — AI can fit in those 3 action-related locations differently:
+
+## 1. Rules
+
+Mostly deterministic.
+
+```text
+Create object / modify object / links
+```
+
+AI only appears here if you choose something like:
+
+```text
+Run function
+```
+
+and that function calls an LLM.
+
+Best use:
+
+```text
+LLM generates value → rule writes value
+```
+
+---
+
+## 2. User Interface
+
+AI can help before submit.
+
+Examples:
+
+```text
+auto-draft description
+summarize selected object
+suggest department/category
+pre-fill fields
+```
+
+But the form itself is just UI.
+
+---
+
+## 3. Automations
+
+Best place for AI after an action.
+
+```text
+Action submitted
+→ automation runs AIP Logic / Function
+→ LLM summarizes, routes, drafts ticket, sends notification
+```
+
+Example:
+
+```text
+Create Employee action
+→ automation calls LLM to check duplicate/risk/summary
+→ notify admin
+```
+
+Short version:
+
+```text
+Rules = commit changes
+UI = collect/review inputs
+Automations = trigger follow-up AI/workflows
+```
+
+*13*<br><img src="/assets/777_13.png" alt="drones" width="74%" style="border: 1px solid #999;">
+
+<br> 
+
+*14*<br><img src="/assets/777_14.png" alt="drones" width="74%" style="border: 1px solid #999;">
+
+<br>
+
+*15*<br><img src="/assets/777_15.png" alt="drones" width="74%" style="border: 1px solid #999;">
+
+<br> 
+
+# **22 tell me again.. are LLM used  in analysis**
 
 
-<br><br><br><br><br>
+Yes.
+
+LLMs can be used in **analysis**, but they should usually be treated as assistive, not authoritative.
+
+Examples:
+
+```text
+summarize documents
+extract entities
+classify records
+find patterns in text
+explain anomalies
+generate hypotheses
+draft SQL/Python
+compare cases
+rank likely causes
+```
+
+Where:
+
+```text
+Analytics tools: Quiver, Contour, Code Workbook
+LLM layer: AIP / functions / logic / assistants
+```
+
+Best rule:
+
+```text
+LLM helps interpret or extract.
+Deterministic analysis verifies.
+Human decides.
+```
 
 
-26.0804 (v1 26.0804) 
+<br>
 
+# **23: first draft of my concepts section main diagrams**
+
+
+This is a strong first draft. The structure is clear.
+
+I would make only a few tweaks:
+
+## 1. Rename `3a READ` / `3b WRITE`
+
+Good idea. Maybe label as:
+
+```text
+3a Ontology read / objects
+3b Actions / writeback
+```
+
+Because `3b WRITE` is really **Actions**.
+
+---
+
+## 2. Make Security wrap everything
+
+Your diagram already does this well with the pink outer region. Keep that.
+
+Foundry’s key idea is:
+
+```text
+security/governance surrounds every layer
+```
+
+not just the final UI.
+
+---
+
+## 3. Distinguish deterministic vs AI
+
+In the AI diagram, maybe use:
+
+```text
+AI assist
+```
+
+instead of just `AI`.
+
+And for untrusted/controlled AI:
+
+```text
+AI*
+```
+
+Legend:
+
+```text
+AI = probabilistic helper, must be governed/verified
+xxAI = external/untrusted AI, requires special controls
+```
+
+---
+
+## 4. In UI box, separate two concepts
+
+Your UI box says:
+
+```text
+workflows
+write back
+```
+
+Maybe:
+
+```text
+5 UI / Apps
+- inspect
+- decide
+- trigger actions
+```
+
+The writeback itself is your `3b Actions`.
+
+---
+
+## 5. Simple final flow
+
+Your underlying flow is:
+
+```text
+1a Data source
+→ 1b Pipeline
+→ 3 Ontology read
+→ 4 Analysis
+→ 5 UI / workflow
+→ 3b Actions / writeback
+→ source or Foundry state
+```
+
+That is excellent.
+
+---
+
+## Suggested labels
+
+```text
+1a Data sources
+1b Pipelines / transforms
+3 Ontology
+  3a Objects / read model
+  3b Actions / writeback
+4 Analysis
+5 Apps / workflows
+6 Security / governance
+```
+
+For AI version:
+
+```text
+AI can assist at:
+- pipelines
+- ontology read/search
+- analysis
+- UI/app interaction
+- actions/writeback, but carefully
+- governance monitoring, carefully
+```
+
+## Key caption
+
+> Foundry turns enterprise data into governed objects, analysis, workflows, and actions. AI can assist at multiple points, but security/governance must control what AI can see and what it can change.
+
+<br> 
+
+*16*<br><img src="/assets/777_16.png" alt="drones" width="74%" style="border: 1px solid #999;">
+
+<br> 
+
+# **24 xxAI meant that no AI is used...**
+you are saying AI is used as assistant.
+
+Got it.
+
+Then use legend:
+
+```text
+AI = LLM/AI used directly in that layer
+xxAI = no LLM/AI used in that layer
+```
+
+And yes: in many places AI is **assistant**, not controller.
+
+Better labels:
+
+```text
+AI-assist = helps user/developer
+AI-runtime = used inside workflow/pipeline/action
+xxAI = no AI used
+```
+
+So for your diagram:
+
+```text
+Pipeline: AI-runtime possible
+Ontology read: AI-assist possible
+Analysis: AI-runtime / AI-assist possible
+UI: AI-assist possible
+Writeback/actions: usually xxAI or human-approved AI-assist
+Security: mostly xxAI, though AI-assisted monitoring is possible
+```
+
+Key principle:
+
+```text
+AI can assist many layers.
+AI should rarely be final authority for writeback/actions.
+```
+
+<br>
+
+# **25 PS: "magic ball #3" covers everything except data sources.**
+
+"6 security" is only block in #3..
+
+the idea is that you have overseers #1 and #2 being overseen by #3
+
+
+Yes — that framing works.
+
+Your structure is:
+
+```text
+Magic ball #1 = pipeline/data transformation overseer
+Magic ball #2 = ontology/app/analysis/action overseer
+Magic ball #3 = governance overseer
+```
+
+And:
+
+```text
+Magic ball #3 oversees #1 and #2
+```
+
+It does not directly “own” the external data sources, but it governs what Foundry does with them once connected.
+
+So the diagram logic is:
+
+```text
+Data source outside
+    ↓
+Magic ball #1: controlled ingestion/transformation
+    ↓
+Magic ball #2: controlled objects/analysis/UI/actions
+    ↓
+Magic ball #3: controls/logs/governs #1 and #2
+```
+
+Security block inside #3 is fine because #3 is the wrapper/oversight layer.
+
+<br><
+
+26.0804 (v1 26.0804)xx 
