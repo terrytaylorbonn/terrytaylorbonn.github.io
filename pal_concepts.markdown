@@ -39,45 +39,49 @@ i looked at the "foundry certification exam guide: application developer" ... di
 at palantir.com/docs/foundry there is a section "capabilities" with these headings
 
 1 Data integration
-•	Building pipelines →
-•	Python transforms →
-•	Source types reference →
+- •	Building pipelines →
+- •	Python transforms →
+- •	Source types reference →
 
 2 Model integration
-•	Develop and integrate models →
-•	Evaluate and manage models →
-•	Operationalize models →
+- •	Develop and integrate models →
+- •	Evaluate and manage models →
+- •	Operationalize models →
 
 3 Ontology
-•	Object types →
-•	Functions →
-•	Object Views →
+- •	Object types →
+- •	Functions →
+- •	Object Views →
 
 4 Analytics
-•	Contour →
-•	Quiver →
-•	Code Workbook →
+- •	Contour →
+- •	Quiver →
+- •	Code Workbook →
 
 5 Application building
-•	Workshop →
-•	Slate →
-•	Carbon →
+- •	Workshop →
+- •	Slate →
+- •	Carbon →
 
 6 Security
-•	Securing a data foundation →
-•	Protecting sensitive data →
-•	Data protection and governance→
+- •	Securing a data foundation →
+- •	Protecting sensitive data →
+- •	Data protection and governance→
 
 
 Looking at list above, and from what i have done already, i would summarize
-1 get source data, use python to hack a connection if required
-2 use LLM if required to sift thru data (create custom llms)
-3 create in memory "objects" that "package" data into what your core analysis logic needs
-4 analyze objects. look for patterns, needle in haystack.
-5 UI views
-6 security 
+- 1 get source data, use python to hack a connection if required
+- 2 use LLM if required to sift thru data (create custom llms)
+- 3 create in memory "objects" that "package" data into what your core analysis logic needs
+- 4 analyze objects. look for patterns, needle in haystack.
+- 5 UI views
+- 6 security 
+
+<br>
 
 -------------------------------
+
+<br>
 
 but there is no "what the gist of foundry" anywhere (i have not found).
 
@@ -88,8 +92,9 @@ the gist of foundry:
 
 what is your version of gist? no verbiage please... just simple mechanical breakdown. be brief..... i want to gradually organize exampels/demos, etc around the gist.
 
+<br>
 
-### FDE
+# FDE
 
 ## Gist of Foundry
 
