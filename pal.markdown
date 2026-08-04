@@ -38,7 +38,7 @@ This section provides what you need to master the basics of Palantir Foundry ASA
 
 
 
-## **1 Concepts** 26.0804
+## **[1 Concepts](/pal_concepts/)** 26.0804
 
 I am still working on **my own take on the core conceptual gist of Palantir-SW**, but basically its 
 - Palantir makes the enterprise visible and governable.
