@@ -50,6 +50,9 @@ In the diagram below
 
 ### **NOTES** 
 
+<br> 
+
+#### **01-06 core**
 
 ME01 ... My (FDE) one-sentence gist
 - Foundry is an operating system for governed data-to-decision workflows.
@@ -68,7 +71,9 @@ ME04: foundry is an LLM proxy.**
 ME06: so there is a specific group of professionals whose job is to control LLM access for all. devs and app users.** 
 - Yes.In a real organization, there is usually a governance/security/platform group responsible for this.
 
-#### 07-10 summary
+<br> 
+
+#### **07-10 summary**
 
 ME07....
 - Original PAL stack
@@ -82,6 +87,43 @@ ME09 ... Clean framing
 ME10.... Or even shorter:
 - Palantir makes the enterprise visible and governable.  
 - LLMs make parts of that visibility probabilistic, so they must be sandboxed, verified, and logged.
+
+<br> 
+
+#### **11-22 actions**
+
+ME11 write back, patterns
+- example: anomaly app
+
+ME12 ontology actions are standard UI facing
+- 5 types
+
+ME13 actions use ontology
+- can do data source if explicit
+
+**ME14 actions/writeback need own box 3b** 
+
+ME16 LLMs not involved in actions
+- **action can call fucntion/logic that uses LLM**
+
+ME17 action types added in ontology 
+- where used
+
+ME20 AI 
+- before action
+- inside functin-backed action
+- in automation after action
+
+ME21 actions in 3 locations
+- rules
+- UI
+- automations
+
+ME22 LLM in analysis as assistant
+
+<br> 
+
+#### **23-25 diagrams first draft**
 
 
 <br> 
