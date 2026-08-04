@@ -27,6 +27,7 @@ In the diagram below
 *with AI helpful assistant*<br><img src="/assets/777_09.png" alt="drones" width="74%" ><br><br> 
 
 
+Diagram below is the typical Palantir diagram (not mine) with lots of "fluff" and little substance. I post it just to show that AI is not the center of PAL. Its only a helpful assistant. That makes PAL no more of a **["Skynet"](https://en.wikipedia.org/wiki/Skynet_(Terminator))** than your PC with ChatGPT installed.
 
 *The real world -- An enterprise system that provides the infrastructure and safeguards so that AI can be a practical "helpful assistant" ([diagram source](https://blog.dataengineerthings.org/what-palantir-foundry-taught-me-about-building-better-data-systems-407e3768d5fc))*<br><img src="/assets/777_03.png" alt="drones" width="54%" style="border: 1px solid #999;"><br><br> 
 
