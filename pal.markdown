@@ -46,9 +46,9 @@ I am still working on **my own take on the core conceptual gist of Palantir-SW**
 
 *The trusted wizard (left) with his crystal ball (called a "palantir" ("seeing stone") in The Lord of the Rings) and (right) an LLM (AGI = super human intelligence hosted on digital circuits; this is more of a myth than "Lord of the Rings"; LLMs have no intelligence and therefore can not be trusted)* <br><img src="/assets/pal_9_06.png" alt="drones" width="25%" style="border: 1px solid #999;"> <img src="/assets/777_02.png" alt="drones" width="30%" style="border: 1px solid #999;"><br>
 
-I also want to come up with a simple diagram like the following that I can use to summarize what parts of the Foundry workflow an example/demo covers. 
+For the demos I want a more mechanistic conceptual overview. Something like the simple diagram belo that I can use to summarize what parts of the Foundry workflow an example/demo covers. I am more interested in the mechanics of the PAL tools used than the business case. 
 
-*with AI helpful assistant*<br><img src="/assets/777_09.png" alt="drones" width="74%" >
+*Basic PAL diagram*<br><img src="/assets/777_09.png" alt="drones" width="74%" >
 
 For example, for Code Repo demo D19, this is what is covered 
 
