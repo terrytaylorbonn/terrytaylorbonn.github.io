@@ -19,11 +19,16 @@ In the diagram below
 *The trusted wizard (left) with his crystal ball (called a "palantir" ("seeing stone") in The Lord of the Rings) and (right) an LLM (AGI = super human intelligence hosted on digital circuits; this is more of a myth than "Lord of the Rings"; LLMs have no intelligence and therefore can not be trusted)* <br><img src="/assets/pal_9_06.png" alt="drones" width="25%" style="border: 1px solid #999;"> <img src="/assets/777_02.png" alt="drones" width="30%" style="border: 1px solid #999;"><br>
 
 
-*no AI xxxxxxxxxxxx*<br><img src="/assets/777_07.png" alt="drones" width="74%" style="border: 1px solid #999;"><br><br> 
+*palantir.com/docs/foundry*<br><img src="/assets/777_08.png" alt="drones" width="64%" style="border: 1px solid #999;"><br><br> 
+
+
+*no AI xxxxxxxxxxxx*<br><img src="/assets/777_07.png" alt="drones" width="74%" ><br><br> 
+
+*with AI xxxxxxxxxxxx*<br><img src="/assets/777_09.png" alt="drones" width="74%" ><br><br> 
 
 
 
-*The real world -- An enterprise system that provides the infrastructure and safeguards so that AI can be a practical "helpful assistant" ([diagram source](https://blog.dataengineerthings.org/what-palantir-foundry-taught-me-about-building-better-data-systems-407e3768d5fc))*<br><img src="/assets/777_03.png" alt="drones" width="24%" style="border: 1px solid #999;"><br><br> 
+*xxxxThe real world -- An enterprise system that provides the infrastructure and safeguards so that AI can be a practical "helpful assistant" ([diagram source](https://blog.dataengineerthings.org/what-palantir-foundry-taught-me-about-building-better-data-systems-407e3768d5fc))*<br><img src="/assets/777_03.png" alt="drones" width="24%" style="border: 1px solid #999;"><br><br> 
 
 <br>
 <br>
