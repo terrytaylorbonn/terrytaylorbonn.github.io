@@ -46,6 +46,24 @@ I am still working on **my own take on the core conceptual gist of Palantir-SW**
 
 *The trusted wizard (left) with his crystal ball (called a "palantir" ("seeing stone") in The Lord of the Rings) and (right) an LLM (AGI = super human intelligence hosted on digital circuits; this is more of a myth than "Lord of the Rings"; LLMs have no intelligence and therefore can not be trusted)* <br><img src="/assets/pal_9_06.png" alt="drones" width="25%" style="border: 1px solid #999;"> <img src="/assets/777_02.png" alt="drones" width="30%" style="border: 1px solid #999;"><br>
 
+I also want to come up with a simple diagram like the following that I can use to summarize what parts of the Foundry workflow an example/demo covers. 
+
+*with AI helpful assistant*<br><img src="/assets/777_09.png" alt="drones" width="74%" >
+
+For example, for Code Repo demo D19, this is what is covered 
+
+```
+1 Data source          ✓ raw CSV datasets
+1b Pipeline            ✓ code-based PySpark transforms
+3 Ontology read        —
+3b Actions/writeback   —
+4 Analysis             —
+5 UI/app               —
+6 Security/governance  ✓ branching, commits, checks, build
+AI                     xxAI, except optional AIP Assist
+```
+
+
 <!--
 *The real world -- An enterprise system that provides the infrastructure and safeguards so that AI can be a practical "helpful assistant" ([diagram source](https://blog.dataengineerthings.org/what-palantir-foundry-taught-me-about-building-better-data-systems-407e3768d5fc))*<br><img src="/assets/777_03.png" alt="drones" width="44%" style="border: 1px solid #999;"><br><br>  -->
 
