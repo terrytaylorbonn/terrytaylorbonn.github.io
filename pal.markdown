@@ -25,8 +25,7 @@ This section provides what you need to master the basics of Palantir Foundry ASA
 <br>
 
 **TOC**:
-- **0 Read me first**
-- **1 Concepts** (I need more (hands-on) experience before I can describe the concepts).
+- **1 Concepts** (my original take on the gist of PAL).
 - **2 Getting started**
   - **Sign up to PAL**
   - **PAL examples/demos/deep-dives**
@@ -37,18 +36,7 @@ This section provides what you need to master the basics of Palantir Foundry ASA
 
 <br>
 
-## **[0 Read me first](/3c.1b_pal_readmefirst/)**
 
-This readme discusses various things to keep in mind as you work your way throught the examples/demos (problems to watch out for, avoid, etc). **For example:** For your first workshop configuration a simple diagram with numbered steps and variables can make it much easier to grasp what you are doing. Because when you start to try setting up your own config, you need that understanding. The screenshot below is from the ZiptieAI DIY demo **[D9 UI (Workshop)](/3c.xxx_pal_HN_01_non_ai/)** (based on chats with FDE, not an example/demo/deep-dive). <br>
-<img src="/assets/777_05.png" alt="drones" width="75%" style="border: 1px solid #999;"> 
-
-<!-- I spent almost 3 days trying to figure out how the wiring worked and how to duplicate the process (one problem was that FDE/GPT-5.5 itself made mistakes). -->
-
-It took me a long time to get the Workshop in that DIY demo working. Even FDE made a mistake during the configuration. Afterwards I created this simple diagram (with numbered steps). If I had had such a diagram for the step-by-step demos I had done earlier, I would have understood better what I had been doing (I tried but gave up). When you get your first Workshop running, spend extra time to trace through all the connections. Experiment and try using unique names. Do this for other tools besides Workshop. Take your time when doing the examples/demos.<br>
-<img src="/assets/777_04.png" alt="drones" width="75%" style="border: 1px solid #999;"> 
-
-
-<br>
 
 ## **1 Concepts**
 
@@ -57,8 +45,8 @@ I am still working on **my own take on the core conceptual gist of Palantir-SW**
 - LLMs make parts of that visibility probabilistic, so they must be sandboxed, verified, and logged.
 
 In the diagram below
-- LEFT: Before LLMs, the Palantir-SW had just wizards/magic-balls (the analyzers and the watchers of the analyzers) that were implemented in procedural programming. Reliable and safe.
-- RIGHT: With LLMs, the Palantir-SW now has new AI wizards/magic-balls embedded inside the old wizards/magic-balls. This requires extra security that Palantir-SW provides. **You need Palantir-type systems now more than ever.** 
+- LEFT: Before LLMs, the Palantir-SW had just wizards/magic-balls (the analyzers and the watchers of the analyzers) that were implemented in procedural programming. Reliable and safe. A human. Like the old wizard in Lord of the Rings. 
+- RIGHT: With LLMs, the Palantir-SW now has new AI wizards/magic-balls embedded inside the old wizards/magic-balls. AI has no intelligence (and can not be trusted). This requires extra security that Palantir-SW provides. **You need Palantir-type systems now more than ever.** 
 
 *The fantasy world -- (left) a crystal ball (called a "palantir" ("seeing stone") in The Lord of the Rings) and (right) AGI (a myth that digital circuits can host intelligence)* <br><img src="/assets/pal_9_06.png" alt="drones" width="25%" style="border: 1px solid #999;"> <img src="/assets/777_02.png" alt="drones" width="30%" style="border: 1px solid #999;"><br>
 
@@ -71,6 +59,7 @@ In the diagram below
 **Note: Lab notes** (MS.Word docx files) are available for each example/demo on the **[GDrive](https://drive.google.com/drive/folders/1-Adawag9uA8_bq-hDF-nOuPYaRLz1eEO)**.
 
 - **P1 Sign up to PAL**
+- **P1b Readmefirst**
 - **P2 PAL examples**. These are complicated, but they have an autoinstaller that allows you to start with a (usually) working version that you can modify.
 - **P3 PAL demos**. These are less complicated, but you start from 0, and getting a working demo at the end requires a lot of skill (including debugging).
 - **P4 DIY demos**. Go free style (not "vibe") by teaming up with FDE (AI assistant) to create your own demos.
@@ -88,6 +77,21 @@ If you cant get a trial version of PAL running, then there's no reason to read f
     - I think you need a **mobile phone number** (and email).
   - It was a fairly long process, but very professionally done (I was impressed) (3c.0a).<br><br><img src="/assets/pal_10_08.png" alt="drones" width="37%" style="border: 1px solid #999;"><br><br>
 
+
+<br>
+
+#### **[P1b Read me first](/3c.1b_pal_readmefirst/)**
+
+This readme discusses various things to keep in mind as you work your way throught the examples/demos (problems to watch out for, avoid, etc). **For example:** For your first workshop configuration a simple diagram with numbered steps and variables can make it much easier to grasp what you are doing. Because when you start to try setting up your own config, you need that understanding. The screenshot below is from the ZiptieAI DIY demo **[D9 UI (Workshop)](/3c.xxx_pal_HN_01_non_ai/)** (based on chats with FDE, not an example/demo/deep-dive). <br>
+<img src="/assets/777_05.png" alt="drones" width="75%" style="border: 1px solid #999;"> 
+
+<!-- I spent almost 3 days trying to figure out how the wiring worked and how to duplicate the process (one problem was that FDE/GPT-5.5 itself made mistakes). -->
+
+It took me a long time to get the Workshop in that DIY demo working. Even FDE made a mistake during the configuration. Afterwards I created this simple diagram (with numbered steps). If I had had such a diagram for the step-by-step demos I had done earlier, I would have understood better what I had been doing (I tried but gave up). When you get your first Workshop running, spend extra time to trace through all the connections. Experiment and try using unique names. Do this for other tools besides Workshop. Take your time when doing the examples/demos.<br>
+<img src="/assets/777_04.png" alt="drones" width="75%" style="border: 1px solid #999;"> 
+
+
+<br>
 
 #### **[P2 PAL examples](/3c.1b_pal_examples/)** 
   - Install a PAL example.
@@ -143,7 +147,7 @@ Demos not covered earlier (and not in the exam; I don’t have a clear idea yet 
 
 <br>
 
-26.0803 (v1 26.0702) 
+26.0804 (v1 26.0702) 
 
 <br>
 <br>
