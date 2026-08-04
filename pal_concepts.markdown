@@ -32,12 +32,43 @@ In the diagram below
 
 <br> 
 
+### **NOTES** 
 
-Diagram below is the typical Palantir diagram (not mine) with lots of "fluff" and little substance. I post it just to show that AI is not the center of PAL. Its only a helpful assistant. That makes PAL no more of a **["Skynet"](https://en.wikipedia.org/wiki/Skynet_(Terminator))** than your PC with ChatGPT installed.
 
-*The real world -- An enterprise system that provides the infrastructure and safeguards so that AI can be a practical "helpful assistant" ([diagram source](https://blog.dataengineerthings.org/what-palantir-foundry-taught-me-about-building-better-data-systems-407e3768d5fc))*<br><img src="/assets/777_03.png" alt="drones" width="54%" style="border: 1px solid #999;"><br><br> 
+ME01 ... My (FDE) one-sentence gist
+- Foundry is an operating system for governed data-to-decision workflows.
 
-<br>
+ME02 
+- Example with markings
+- Another concrete example: manufacturing
+- Key controls
+
+ME05 
+- If a developer writes a pipeline that directly calls an external LLM API, then they can potentially leak data **unless** that pipeline is governed.
+
+ME04: foundry is an LLM proxy.**
+- Yes — **for LLM use cases**, Foundry/AIP can be thought of as a governed LLM proxy.
+
+ME06: so there is a specific group of professionals whose job is to control LLM access for all. devs and app users.** 
+- Yes.In a real organization, there is usually a governance/security/platform group responsible for this.
+
+#### 07-10 summary
+
+ME07....
+- Original PAL stack
+
+ME08: but my key concept here is that there are 5 magic palantir balls that can see everything going on
+
+ME09 ... Clean framing
+- Old PAL problem: Can the right person see the right data and take the right action?
+- New LLM PAL problem: Can an unreliable reasoning engine be allowed to see data, suggest conclusions, or trigger actions?
+
+ME10.... Or even shorter:
+- Palantir makes the enterprise visible and governable.  
+- LLMs make parts of that visibility probabilistic, so they must be sandboxed, verified, and logged.
+
+
+<br> 
 <br>
 
 ---------------
@@ -956,7 +987,7 @@ Then LLMs add:
 
 ```text
 unreliable synthetic reasoning inside the seeing/action system.
-```
+``` a
 
 So the modern problem becomes:
 
@@ -2150,6 +2181,16 @@ Magic ball #3: controls/logs/governs #1 and #2
 
 Security block inside #3 is fine because #3 is the wrapper/oversight layer.
 
-<br><
+<br>
 
-26.0804 (v1 26.0804)xx 
+------------------
+
+<br>
+
+Diagram below is the typical Palantir diagram (not mine) with lots of "fluff" and little substance. I post it just to show that AI is not the center of PAL. Its only a helpful assistant. That makes PAL no more of a **["Skynet"](https://en.wikipedia.org/wiki/Skynet_(Terminator))** than your PC with ChatGPT installed.
+
+*The real world -- An enterprise system that provides the infrastructure and safeguards so that AI can be a practical "helpful assistant" ([diagram source](https://blog.dataengineerthings.org/what-palantir-foundry-taught-me-about-building-better-data-systems-407e3768d5fc))*<br><img src="/assets/777_03.png" alt="drones" width="54%" style="border: 1px solid #999;"><br><br> 
+
+<br>
+
+26.0804 (v1 26.0804)
