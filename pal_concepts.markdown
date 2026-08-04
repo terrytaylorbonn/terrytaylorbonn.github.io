@@ -18,6 +18,15 @@ In the diagram below
 
 *The trusted wizard (left) with his crystal ball (called a "palantir" ("seeing stone") in The Lord of the Rings) and (right) an LLM (AGI = super human intelligence hosted on digital circuits; this is more of a myth than "Lord of the Rings"; LLMs have no intelligence and therefore can not be trusted)* <br><img src="/assets/pal_9_06.png" alt="drones" width="25%" style="border: 1px solid #999;"> <img src="/assets/777_02.png" alt="drones" width="30%" style="border: 1px solid #999;"><br>
 
+<br> 
+
+---------
+---------
+
+<br>
+
+### **CORE DIAGRAMS** 
+
 <br>
 
 *palantir.com/docs/foundry*<br><img src="/assets/777_08.png" alt="drones" width="64%" style="border: 1px solid #999;">
@@ -28,7 +37,14 @@ In the diagram below
 
 <br> 
 
+**AI CREATIONS DETAILS NEEDED**
+- NO DIRECT LLM ACTIONS ("usually not directly")
+- deterministic/human-approved
+
+<br> 
+
 *with AI helpful assistant*<br><img src="/assets/777_09.png" alt="drones" width="74%" >
+
 
 <br> 
 
