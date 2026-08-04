@@ -6,11 +6,11 @@ permalink: /pal_concepts/
 
 <br>
 
-
-
 I am still working on **my own take on the core conceptual gist of Palantir-SW**, but basically its 
 - Palantir makes the enterprise visible and governable.
 - LLMs make parts of that visibility probabilistic, so they must be sandboxed, verified, and logged.
+
+<br>
 
 In the diagram below
 - LEFT: Before LLMs, the Palantir-SW had just wizards/magic-balls (the analyzers and the watchers of the analyzers) that were implemented in procedural programming. Trustd, reliable and safe (not human, but programmed by a trusted human programmer-employee). Like the old wizard in Lord of the Rings. 
@@ -18,13 +18,19 @@ In the diagram below
 
 *The trusted wizard (left) with his crystal ball (called a "palantir" ("seeing stone") in The Lord of the Rings) and (right) an LLM (AGI = super human intelligence hosted on digital circuits; this is more of a myth than "Lord of the Rings"; LLMs have no intelligence and therefore can not be trusted)* <br><img src="/assets/pal_9_06.png" alt="drones" width="25%" style="border: 1px solid #999;"> <img src="/assets/777_02.png" alt="drones" width="30%" style="border: 1px solid #999;"><br>
 
+<br>
 
-*palantir.com/docs/foundry*<br><img src="/assets/777_08.png" alt="drones" width="64%" style="border: 1px solid #999;"><br><br> 
+*palantir.com/docs/foundry*<br><img src="/assets/777_08.png" alt="drones" width="64%" style="border: 1px solid #999;">
 
+<br> 
 
-*before AI*<br><img src="/assets/777_07.png" alt="drones" width="74%" ><br><br> 
+*before AI*<br><img src="/assets/777_07.png" alt="drones" width="74%" >
 
-*with AI helpful assistant*<br><img src="/assets/777_09.png" alt="drones" width="74%" ><br><br> 
+<br> 
+
+*with AI helpful assistant*<br><img src="/assets/777_09.png" alt="drones" width="74%" >
+
+<br> 
 
 
 Diagram below is the typical Palantir diagram (not mine) with lots of "fluff" and little substance. I post it just to show that AI is not the center of PAL. Its only a helpful assistant. That makes PAL no more of a **["Skynet"](https://en.wikipedia.org/wiki/Skynet_(Terminator))** than your PC with ChatGPT installed.
@@ -966,6 +972,850 @@ Or even shorter:
 > LLMs make parts of that visibility probabilistic, so they must be sandboxed, verified, and logged.
 
 <br>
+
+# **ME11: tell me more about the "write back" from the UI.**
+how far back can you write? 
+to the origina data source?
+no demos i have done yet have touched on this..
+
+## What “write back” means in Foundry
+
+From a UI like Workshop, users usually do **not** edit source databases directly.
+
+They execute **Actions**.
+
+```text
+Workshop button/form
+→ Ontology Action
+→ write/change something
+```
+
+## Where can an Action write?
+
+### 1. To Foundry-backed object edits
+
+Most common.
+
+```text
+User confirms anomaly
+→ Action updates Anomaly object status = confirmed
+```
+
+This writes to Foundry’s object/edit layer, not necessarily the original source system.
+
+Example:
+
+```text
+status: new → confirmed
+assigned_to: Alice
+review_note: "Likely sensor issue"
+```
+
+---
+
+### 2. To an action-backed dataset / object storage
+
+Actions can create or update rows in datasets that back ontology objects.
+
+Example:
+
+```text
+Create Investigation Note
+→ writes new note object
+→ downstream pipeline can use it
+```
+
+This is often the safest writeback pattern.
+
+---
+
+### 3. To external systems, indirectly
+
+Foundry can write back to external systems if configured.
+
+Examples:
+
+```text
+Create ServiceNow ticket
+Update SAP work order
+Send message to queue/API
+Post to external REST endpoint
+```
+
+Usually this is done through:
+
+```text
+Action → function/webhook/integration → external system
+```
+
+---
+
+## How far back can you write?
+
+Conceptually:
+
+```text
+UI → Ontology Action → Foundry object/edit layer
+```
+
+Then optionally:
+
+```text
+Foundry → external source system
+```
+
+But writing all the way back to the original source is **not automatic**.
+
+It requires explicit integration.
+
+---
+
+## Common patterns
+
+### Pattern A: write inside Foundry only
+
+```text
+Source data is read-only
+Foundry stores user decisions separately
+```
+
+Example:
+
+```text
+Original sensor record unchanged
+Anomaly Review object says: dismissed by Bob
+```
+
+This is common and safe.
+
+---
+
+### Pattern B: write back to operational system
+
+```text
+User action creates external ticket/order/update
+```
+
+Example:
+
+```text
+Confirm anomaly
+→ create ServiceNow ticket
+→ ticket ID stored back in Foundry
+```
+
+This is real operational writeback.
+
+---
+
+### Pattern C: write to source-of-truth
+
+```text
+User correction updates source system record
+```
+
+Example:
+
+```text
+Correct customer address
+→ update CRM
+```
+
+This requires strong permissions, validation, and connector/API support.
+
+---
+
+## Important distinction
+
+Foundry usually avoids pretending it owns source systems.
+
+Better model:
+
+```text
+Foundry reads from source systems
+Foundry computes operational view
+Users take actions in Foundry
+Actions either:
+  - write decisions into Foundry
+  - or call approved external systems
+```
+
+---
+
+## Example: anomaly app
+
+User sees anomaly in Workshop.
+
+Action options:
+
+```text
+Dismiss anomaly
+Confirm anomaly
+Assign investigation
+Create maintenance ticket
+```
+
+Possible writes:
+
+```text
+Dismiss anomaly
+→ write status=Dismissed in Foundry object
+
+Assign investigation
+→ create Investigation object in Foundry
+
+Create maintenance ticket
+→ call external ticketing API
+→ store ticket_id in Foundry
+
+Update sensor threshold
+→ call external config system API
+```
+
+---
+
+## Short answer
+
+You can write back:
+
+```text
+1. to Foundry object/action state
+2. to Foundry datasets/objects
+3. to external systems via configured integrations
+4. to original source systems only if explicit writeback/API is built
+```
+
+It is not automatic. It is controlled, action-based, permissioned, and usually audited.
+
+<br>
+
+# **ME12: are all actions of this type?**
+
+Mostly yes.
+
+In Foundry, **Actions** are the standard UI-facing mechanism for users to make changes.
+
+They generally fall into these types:
+
+```text
+1. Edit Foundry ontology objects
+   create / update / delete object data
+
+2. Edit relationships
+   add / remove links between objects
+
+3. Create records
+   notes, reviews, decisions, tickets, annotations
+
+4. Trigger logic
+   call a Function to validate, compute, or orchestrate changes
+
+5. Trigger external side effects
+   webhook/API call, ticket creation, notification, writeback
+```
+
+So the common pattern is:
+
+```text
+Workshop user interaction
+→ Action
+→ governed write/change/side effect
+```
+
+But not every button in Workshop must be an Action.
+
+Some UI events only do local things:
+
+```text
+filter a table
+open a drawer
+change page
+set a variable
+refresh data
+```
+
+Those are **Workshop events**, not ontology Actions.
+
+## Short distinction
+
+```text
+Workshop event = UI behavior
+Ontology Action = governed business change
+```
+
+Examples:
+
+```text
+Click checkbox filter
+→ Workshop event / variable update
+
+Click "Confirm anomaly"
+→ Ontology Action
+
+Click "Create ticket"
+→ Ontology Action or Function-backed Action
+
+Click "Open details panel"
+→ Workshop event
+```
+
+So: all real writebacks should go through Actions or function-backed logic, but not all UI interactions are Actions.
+
+<br>
+
+# **ME13: about actions: do actions use analysis, ontology, pipeline, original data source?**
+
+FDE: Actions primarily use the **Ontology**.
+
+Basic flow:
+
+```text
+UI / app
+→ Ontology Action
+→ object changes / links / function logic
+```
+
+## What Actions touch
+
+### 1. Ontology
+
+Yes. This is the main layer.
+
+Actions can:
+
+```text
+create object
+edit object property
+delete object
+add/remove link
+```
+
+Example:
+
+```text
+Confirm anomaly
+→ AnomalyEvent.status = "confirmed"
+```
+
+---
+
+### 2. Analysis
+
+Indirectly.
+
+An action can use values produced by analysis, for example:
+
+```text
+selected anomaly
+model score
+recommended action
+user-entered note
+```
+
+But the action itself is not “analysis.” It records or triggers a decision based on analysis.
+
+---
+
+### 3. Pipeline
+
+Usually not directly.
+
+Pipelines prepare data upstream. Actions may write user edits that later feed pipelines.
+
+Example:
+
+```text
+User correction
+→ Action writes correction object
+→ nightly pipeline incorporates corrections
+```
+
+Some systems may trigger pipeline/builds, but conceptually actions are not pipeline transforms.
+
+---
+
+### 4. Original data source
+
+Only if explicitly integrated.
+
+Example:
+
+```text
+Action
+→ function/webhook/API
+→ update Salesforce/SAP/ServiceNow
+```
+
+Not automatic.
+
+---
+
+## Short version
+
+```text
+Actions live at the Ontology/app layer.
+
+They can read analysis context,
+modify ontology objects,
+feed future pipelines,
+and optionally call external systems.
+```
+
+Most common:
+
+```text
+Workshop button
+→ Action
+→ Ontology object edit
+```
+
+<br>
+
+# **ME14: seems like actions should be #7?**
+
+1 Data integration
+2 Model integration
+3 Ontology
+4 Analytics
+5 Application building
+6 Security
+
+Conceptually, yes — **Actions deserve their own box**.
+
+In the docs they are usually under:
+
+```text
+3 Ontology
+```
+
+because Actions are defined on ontology objects.
+
+But in the big-picture workflow, I would separate them:
+
+```text
+1 Data integration
+2 Model integration
+3 Ontology
+4 Analytics
+5 Application building
+6 Actions / writeback
+7 Security / governance
+```
+
+Why?
+
+Because Actions are the bridge from:
+
+```text
+seeing/analyzing
+→ doing/changing
+```
+
+Without Actions, Foundry is mostly insight/visibility.
+
+With Actions, Foundry becomes operational.
+
+So your gist could be:
+
+```text
+Data → Models → Ontology → Analytics → Apps → Actions → Governance
+```
+
+<br>
+
+# **15: ME: ok... i will make them 3b** 
+
+this better numbering.. shows that we added.
+the first 6 are shown at palantir.com/docs/foundry
+
+Yes — **3b** is a good choice.
+
+It preserves the Palantir docs structure while making the missing operational piece explicit:
+
+```text
+1 Data integration
+2 Model integration
+3 Ontology
+3b Actions / writeback
+4 Analytics
+5 Application building
+6 Security
+```
+
+Why `3b` works:
+
+```text
+Actions belong to Ontology
+but deserve separate attention
+```
+
+They are the “do something” layer:
+
+```text
+object insight → user decision → governed change/writeback
+```
+
+<br>
+
+# **ME16: are LLMs involved in actions? (i assume not)**
+
+Usually **not directly**, but they can be.
+
+## Common case
+
+```text
+User clicks action
+→ deterministic action logic runs
+→ object is updated
+```
+
+No LLM.
+
+Example:
+
+```text
+Confirm anomaly
+→ status = confirmed
+```
+
+## LLM-assisted case
+
+An LLM may help **before** the action:
+
+```text
+LLM summarizes evidence
+LLM recommends next step
+LLM drafts note
+human reviews
+human clicks action
+```
+
+## Advanced case
+
+An action can call a function/logic that uses an LLM:
+
+```text
+Action
+→ Function / AIP Logic
+→ LLM
+→ result
+→ object edit
+```
+
+But this should be governed carefully.
+
+## Best rule
+
+```text
+LLMs advise.
+Actions commit.
+```
+
+For sensitive workflows, keep final actions deterministic and/or human-approved.
+
+<br>
+
+# **ME17: where do you mechanistically add actions?**
+
+in pipeline i already know (i have done examples).
+can you name the tools (and what tool group (such as pipeline) they belong to?
+
+Mechanically, **Actions are added in the Ontology layer**, not in Pipeline Builder.
+
+## Where Actions are created
+
+```text
+Ontology Manager
+→ Action types
+→ Create action type
+```
+
+Tool group:
+
+```text
+3 Ontology
+```
+
+This is where you define:
+
+- action name,
+- input parameters,
+- which object type it applies to,
+- what properties/links it edits,
+- validation rules,
+- whether it is function-backed.
+
+---
+
+## Where Actions are used
+
+### 1. Workshop
+
+```text
+Workshop
+→ Button / Action form / Object table row action
+→ Execute Ontology Action
+```
+
+Tool group:
+
+```text
+5 Application building
+```
+
+Example:
+
+```text
+Click "Confirm anomaly"
+→ runs Confirm Anomaly action
+```
+
+---
+
+### 2. Object Views
+
+```text
+Object View
+→ action button on object page
+```
+
+Tool group:
+
+```text
+3 Ontology / Object Views
+```
+
+Example:
+
+```text
+Open Anomaly Event object
+→ click "Dismiss"
+```
+
+---
+
+### 3. Functions
+
+If action logic is more complex:
+
+```text
+Action type
+→ backed by Function
+```
+
+Tool group:
+
+```text
+3 Ontology + Functions
+```
+
+Function can:
+
+- validate,
+- compute values,
+- create/update objects,
+- call external APIs if allowed.
+
+---
+
+### 4. AIP Logic / LLM logic
+
+If LLM-assisted:
+
+```text
+Action
+→ AIP Logic / Function
+→ LLM or rule logic
+→ object edit
+```
+
+Tool group:
+
+```text
+2 Model/AI integration or Functions
+```
+
+Use carefully.
+
+---
+
+## Not usually Pipeline Builder
+
+Pipeline Builder is mostly:
+
+```text
+data in → transform → dataset out
+```
+
+Actions are:
+
+```text
+user/app event → governed object edit/writeback
+```
+
+So your added category is right:
+
+```text
+3 Ontology
+3b Actions / writeback
+5 Application building uses Actions
+```
+
+<br>
+
+# **ME18: sorry.. i meant where are actions defined?**
+
+Actions are defined in:
+
+```text
+Ontology Manager → Action types
+```
+
+They belong to:
+
+```text
+3 Ontology
+```
+
+Mechanically:
+
+```text
+Ontology Manager
+→ Action types tab/section
+→ New action type
+```
+
+There you define:
+
+- action inputs,
+- target object type,
+- edits to objects/properties/links,
+- validation rules,
+- permissions,
+- optional function-backed logic.
+
+<br>
+
+# **ME19: looks like action types are strictlly an ontology thing**
+
+you can define UI components in ontology. 
+
+FDE: Yes.
+
+Actions are primarily an **Ontology thing**:
+
+```text
+Ontology Manager → Action types
+```
+
+They define the governed write/change operation.
+
+And yes, action types can include **UI configuration**:
+
+```text
+Parameters
+User Interface
+Submission options
+Success/applying messages
+Field ordering
+Form/table layout
+```
+
+But that UI config is only the **default action form layout**.
+
+Then apps like Workshop can reuse/customize the action UI further.
+
+Short version:
+
+```text
+Action type = ontology-defined operation
+Action UI = default form for collecting parameters
+Workshop = where users actually trigger it in an app
+```
+
+*xxx*<br><img src="/assets/777_10.png" alt="drones" width="64%" style="border: 1px solid #999;">
+
+<br> 
+
+*xxx*<br><img src="/assets/777_11.png" alt="drones" width="64%" style="border: 1px solid #999;">
+
+<br> 
+
+# **ME20: where could AI be used in actions?**
+
+AI can be used in Actions mainly through **function-backed actions** or **automations**.
+
+## Where AI fits
+
+### 1. Before the action
+
+AI suggests values.
+
+```text
+LLM drafts summary / classification / recommendation
+human reviews
+human submits action
+```
+
+Safest pattern.
+
+---
+
+### 2. Inside a function-backed action
+
+```text
+Action
+→ Function / AIP Logic
+→ LLM call
+→ output becomes object edit
+```
+
+Example:
+
+```text
+Create investigation note
+→ LLM summarizes evidence
+→ action writes summary to object
+```
+
+---
+
+### 3. In automation after action
+
+```text
+Action submitted
+→ Automation triggers
+→ AI summarizes / classifies / routes
+→ updates another object or sends notification
+```
+
+Example:
+
+```text
+User confirms anomaly
+→ automation asks LLM to draft ticket text
+→ creates ServiceNow ticket
+```
+
+## Best rule
+
+```text
+AI proposes.
+Action records.
+Human approves when consequence is important.
+```
+
+<br>
+
+
+*xxx*<br><img src="/assets/777_12.png" alt="drones" width="64%" style="border: 1px solid #999;">
+
+
+<br>
+
+
+
+<br><br><br><br><br>
 
 
 26.0804 (v1 26.0804) 
