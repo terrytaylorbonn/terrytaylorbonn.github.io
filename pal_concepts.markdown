@@ -22,9 +22,9 @@ In the diagram below
 *palantir.com/docs/foundry*<br><img src="/assets/777_08.png" alt="drones" width="64%" style="border: 1px solid #999;"><br><br> 
 
 
-*no AI xxxxxxxxxxxx*<br><img src="/assets/777_07.png" alt="drones" width="74%" ><br><br> 
+*before AI*<br><img src="/assets/777_07.png" alt="drones" width="74%" ><br><br> 
 
-*with AI xxxxxxxxxxxx*<br><img src="/assets/777_09.png" alt="drones" width="74%" ><br><br> 
+*with AI helpful assistant*<br><img src="/assets/777_09.png" alt="drones" width="74%" ><br><br> 
 
 
 
