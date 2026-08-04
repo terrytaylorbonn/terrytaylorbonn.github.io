@@ -28,7 +28,7 @@ In the diagram below
 
 
 
-*xxxxThe real world -- An enterprise system that provides the infrastructure and safeguards so that AI can be a practical "helpful assistant" ([diagram source](https://blog.dataengineerthings.org/what-palantir-foundry-taught-me-about-building-better-data-systems-407e3768d5fc))*<br><img src="/assets/777_03.png" alt="drones" width="24%" style="border: 1px solid #999;"><br><br> 
+*The real world -- An enterprise system that provides the infrastructure and safeguards so that AI can be a practical "helpful assistant" ([diagram source](https://blog.dataengineerthings.org/what-palantir-foundry-taught-me-about-building-better-data-systems-407e3768d5fc))*<br><img src="/assets/777_03.png" alt="drones" width="54%" style="border: 1px solid #999;"><br><br> 
 
 <br>
 <br>
