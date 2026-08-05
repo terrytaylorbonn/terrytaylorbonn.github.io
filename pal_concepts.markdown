@@ -103,6 +103,7 @@ In the diagram below
 - **26-30 pipeline/ontology udpates** (see below)
 - **32,32b,36 production grade -- use scripts**
 - **36-43 pyspark/cuda**
+- **44-56 D19 / diagram chat 26.0805 13:00**
 
 <br> 
 <br>
@@ -3955,7 +3956,7 @@ And yes: #1–#3 are conceptual views of one Foundry system, not separate produc
 
 <br>
 
-# **48 i think i will do it this way... **
+# **48 i think i will do it this way...**
 
 - the git etc is a plugin basically
 - its not part of #3 sec&gov.
