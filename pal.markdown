@@ -38,7 +38,7 @@ This section provides what you need to master the basics of Palantir Foundry ASA
 
 
 
-## **[1 Concepts](/pal_concepts/)** 26.0804
+## **[1 Concepts](/pal_concepts/)** 26.0804-05
 
 *(click on link above for details)*
 
