@@ -137,6 +137,128 @@ ME22 LLM in analysis as assistant
 <br>
 <br>
 
+
+# **28**
+```text
+data engineers build pipelines
+ontology engineers model objects/actions
+app builders use the ontology
+users act through apps
+```
+
+# **29**
+Ontology objects update based on their backing data/update configuration.
+
+Common patterns:
+
+```text
+1. Automatic / scheduled
+pipeline builds backing dataset
+→ ontology reflects updated data
+
+2. Manual refresh/build
+user builds dataset or triggers sync
+→ ontology updates
+
+3. Action/edit updates
+user submits action
+→ ontology edit appears immediately or after processing
+
+4. Materialization/sync process
+ontology changes are materialized into datasets for downstream use
+```
+
+Simple version:
+
+```text
+Ontology does not invent updates.
+It reflects backing datasets and user/action edits according to configured sync/materialization behavior.
+```
+# **30**
+
+If the **data source changes**, the update path depends on ingestion mode.
+
+## Batch source
+
+```text
+source changes
+→ next sync/pipeline build
+→ backing dataset updates
+→ ontology objects update
+```
+
+Could be scheduled or manually triggered.
+
+## Streaming source
+
+```text
+source event arrives
+→ stream ingests event
+→ streaming pipeline/process updates dataset/object view
+→ ontology/app sees near-real-time update
+```
+
+The Ontology still usually reads from a backing dataset/object source, but updates can be much faster.
+
+## Key point
+
+The source does not directly update the Ontology.
+
+Usually:
+
+```text
+source → sync/stream → dataset → ontology object type → apps
+```
+
+For actions/writeback:
+
+```text
+app action → ontology edit → maybe external API/source system
+```
+
+That is a good approach.
+
+# **35**
+
+For each demo, add a small “coverage diagram” at the beginning:
+
+```text
+1 Data source
+2 Pipeline
+3 Ontology read
+3b Actions/writeback
+4 Analysis
+5 UI/app
+6 Security/governance
+AI involvement
+```
+
+Use simple markings:
+
+```text
+✓ covered
+— not used
+AI = AI involved
+xxAI = no AI
+```
+
+Example for this Code Repo demo:
+
+```text
+1 Data source          ✓
+1b Pipeline            ✓ xxAI
+3 Ontology read        —
+3b Actions/writeback   —
+4 Analysis             —
+5 UI/app               —
+6 Security/governance  ✓ xxAI
+```
+
+That will make each demo easier to compare.
+
+<br>
+<br>
+
 # **ME01: i am trying to understand the big picture concepts of foundry.**
 
 i looked at the "foundry certification exam guide: application developer" ... did not make much sense to me.
@@ -2251,4 +2373,958 @@ Diagram below is the typical Palantir diagram (not mine) with lots of "fluff" an
 
 <br>
 
-26.0804 (v1 26.0804)
+----------------------------------------------------
+----------------------------------------------------
+----------------------------------------------------
+----------------------------------------------------
+
+<br>
+
+# **26.0805 ################################################################**
+
+<br>
+
+# **26 i forgot.. how does a pipeline normaly intiate update of data to ontology**
+
+Normally:
+
+```text
+Pipeline builds dataset
+→ object type is backed by that dataset
+→ Ontology sync/materialization updates objects
+```
+
+More mechanically:
+
+1. Pipeline outputs a dataset.
+2. Ontology object type maps to that dataset.
+3. Dataset columns map to object properties.
+4. When the dataset updates/builds, the object type refreshes/syncs.
+5. Apps then see updated ontology objects.
+
+So the pipeline does not usually “call the Ontology.”
+
+It updates the backing dataset, and the Ontology reads/syncs from that dataset.
+
+Short version:
+
+```text
+Pipeline output dataset → backing dataset for object type → ontology objects update
+```
+
+<br>
+
+# **26b how does pipeline intiate itself to update?**
+
+A pipeline updates when a **build/schedule/trigger** runs.
+
+Common ways:
+
+```text
+1. Manual build
+   user clicks Build
+
+2. Scheduled build
+   runs hourly/daily/etc.
+
+3. Upstream dependency update
+   input dataset changes → downstream dataset marked stale → build system rebuilds dependent outputs
+
+4. Branch/commit build
+   code changes committed → checks/builds run
+
+5. External/stream trigger
+   new data arrives from connector/stream → downstream process updates
+```
+
+Mechanically:
+
+```text
+trigger occurs
+→ Foundry job/build starts
+→ pipeline reads current inputs
+→ transform code runs
+→ output dataset transaction is written
+→ ontology sees refreshed backing dataset
+```
+
+So the pipeline does not run continuously unless configured to. It runs when built or scheduled/triggered.
+
+
+<br>
+
+# **27 and ontology does the writeback.... so ontology is kind of the core loop**
+
+Yes.
+
+The Ontology is the core operational loop:
+
+```text
+pipelines → backing datasets → ontology objects → apps/users → actions → ontology edits/writeback → downstream systems/pipelines
+```
+
+So it is both:
+
+```text
+read model = structured view of the enterprise
+write model = governed way to change/record decisions
+```
+
+That’s why your split is useful:
+
+```text
+3a Ontology read
+3b Actions/writeback
+```
+
+Ontology is the middle layer where data becomes operational.
+
+
+
+<br>
+
+# **28 i dont remember reading about ontology being the core loop initiator..... i always thought of it as being built by someone else.**
+
+You’re right to question that.
+
+More precise:
+
+## Ontology is not usually the initiator.
+
+Pipelines or actions initiate changes.
+
+```text
+Pipeline build → updates backing dataset → Ontology reflects new objects
+```
+
+or:
+
+```text
+User action → edits ontology object/action state → downstream systems/pipelines react
+```
+
+## Ontology is the core hub, not the engine.
+
+It is the semantic center:
+
+```text
+data comes in through pipelines
+users/apps act through ontology
+writebacks/actions are defined on ontology
+```
+
+So better wording:
+
+```text
+Ontology is the operational hub / contract layer.
+```
+
+Not:
+
+```text
+Ontology initiates everything.
+```
+
+It is “built by someone else” in the sense that:
+
+```text
+data engineers build pipelines
+ontology engineers model objects/actions
+app builders use the ontology
+users act through apps
+```
+
+But once built, it becomes the central interface between data, analysis, apps, and actions.
+
+<br>
+
+# **29 so ontology must be configurd to auto update or can be manually commanded to update**
+
+Yes.
+
+Ontology objects update based on their backing data/update configuration.
+
+Common patterns:
+
+```text
+1. Automatic / scheduled
+pipeline builds backing dataset
+→ ontology reflects updated data
+
+2. Manual refresh/build
+user builds dataset or triggers sync
+→ ontology updates
+
+3. Action/edit updates
+user submits action
+→ ontology edit appears immediately or after processing
+
+4. Materialization/sync process
+ontology changes are materialized into datasets for downstream use
+```
+
+Simple version:
+
+```text
+Ontology does not invent updates.
+It reflects backing datasets and user/action edits according to configured sync/materialization behavior.
+```
+
+<br>
+
+# **30 and if the datasource changes... or if it is a stream?**
+
+If the **data source changes**, the update path depends on ingestion mode.
+
+## Batch source
+
+```text
+source changes
+→ next sync/pipeline build
+→ backing dataset updates
+→ ontology objects update
+```
+
+Could be scheduled or manually triggered.
+
+## Streaming source
+
+```text
+source event arrives
+→ stream ingests event
+→ streaming pipeline/process updates dataset/object view
+→ ontology/app sees near-real-time update
+```
+
+The Ontology still usually reads from a backing dataset/object source, but updates can be much faster.
+
+## Key point
+
+The source does not directly update the Ontology.
+
+Usually:
+
+```text
+source → sync/stream → dataset → ontology object type → apps
+```
+
+For actions/writeback:
+
+```text
+app action → ontology edit → maybe external API/source system
+```
+
+<br>
+
+# **31 (main pic discussion)**
+
+
+*Basic PAL diagram*<br><img src="/assets/777_09.png" alt="drones" width="74%" >
+
+The following is 
+- the toc and 
+- the partial text 
+of a demo i am doing now. 
+i want to end my day soon, but wanted to ask you first to look at this.
+Could you summarized (gues on what you little info you have) this demo
+in the terms of the diagrams we have been discussing (see pic)
+
+
+4 Data Transformation	20
+4.1 Introduction	20
+4.2 Create a New Repository	21
+4.3 Create Your First Transform	29
+4.4 Clean Your Dataset	37
+4.5 Join in Another Dataset (TUE ######################)	47
+4.6 Build Your Dataset	52
+5 Collaboration via Branching	54
+5.1 Introduction	54
+5.2 Protecting Master Branch	55
+5.3 Performing a Transform on Your Branch	57
+5.4 Merge Your Branch into Master	61
+5.5 Build Your Dataset	67
+
+
+GIST OF DEMO (ask FDE)
+
+
+In the next 60 minutes :)))))))))))))))))))))
+you will learn how to build your first data transformation in Foundry’s Code Repositories.
+________________________________________
+What is Code Repositories in Foundry?
+Code Repositories provides a web-based integrated development environment (IDE) for writing and collaborating on production-ready code in Foundry. With Code Repositories, data engineers can create efficient pipelines in bulk.
+Example workflows that are a good fit for Code Repositories include:
+•	A daily pipeline at high data scale which requires incremental compute.
+•	A high-visibility pipeline with strict governance requirements to be able to revert to previous versions of historical code, or gate code changes on unit tests passing.
+________________________________________
+Learning objectives of the course
+You will complete this course being able to create and manage code repositories, perform data transformations, and collaborate effectively.
+By the end of this course, you will have
+created a PySpark Transform including casting and filtering,
+used joins and aggregations,
+worked collaboratively with other people using Branching,
+seen how Code Repositories interact with other Foundry tools like Data Lineage and Job Tracker.
+We advise to plan on spending 60 mins running through this course.
+
+
+
+In this section you will install the marketplace bundle that contains the datasets and create your Code Repository including the cleaning transformations to prepare your datasets. All the code you will be writing in this tutorial will be located in this repository.
+•	claims_raw.csv: A raw csv file containing all claims submitted by insurance customers in the years 2023 and 2024.
+•	policies_raw.csv: A raw csv file containing all policies the insurance has held in the years 2023 and 2024 together with the allocation to the respective line of business.
+
+1.	Search for the Deep Dive: Transforming your data with Code Repositories product in the top search bar labeled Search products... (not the lower search bar labeled Search stores...) 
+
+
+Scenario
+For this tutorial we assume the role of claims handler in a global insurance company. Your task is to present to the Chief Financial Officer the annual results of each line of business. Using code repository, you will process two main datasets, one containing each historic claim over the past years, and the other containing the corresponding policies, including the lines of business.
+At the end of this section you will have implemented a cleaning pipeline using Python Transforms.
+
+4.2 Create a New Repository
+In your training folder Code Repo Training, you will first create a dedicated folder called logic where your Code Repository will live, followed by the Code Repository itself.
+
+4.3 Create Your First Transform
+In this step, you will create your first data transformation using Code Repositories. You will add the claims_raw dataset as your input and create an identity transform. You will preview your dataset at the end of this lesson.
+
+4.4 Clean Your Dataset
+In this lesson, you will clean your input dataset by applying a simple cast and filter transformation and output a transformed dataset.
+________________________________________
+As a first transformation, we want to cast the date column from String to Date. In addition, we will filter by the Boolean column is_accepted.
+
+4.5 Join in Another Dataset (TODO ######################)
+In preparing the financial overview for the CFO, you need to add the lines of business for each claim to your dataset. This information is contained in the second dataset we uploaded previously, policies_raw.
+We will use the JOIN operation to include the new column(s) to our existing claims dataset. We perform this transformation in the same code file which we used for our cast and filter operation.
+
+
+4.6 Build Your Dataset
+Previously, we only previewed our results and committed them to save our code.
+•	Preview produces a sample output without committing changes, running checks, or materializing any datasets in Foundry.
+•	Committing saves our work and triggers Checks, but it doesn’t build the defined outputs as datasets.
+•	Build actually builds the dataset(s) which you define as your output in the code file(s). It also commits the latest code changes and runs checks as part of this.
+
+6.	Verify that the dataset now exists in the prepared folder.
+ 
+Congratulations. You have built your first dataset using Code Repositories.
+
+
+## **FDE RESPONSE --------------------------------------------------**
+
+## Demo summary in your “magic ball” diagram terms
+
+This demo is mostly about:
+
+```text
+Magic ball #1 = Data source → Pipeline
+```
+
+It is a **data transformation / code repository** demo, not really an Ontology/UI/Action demo.
+
+---
+
+## Where it fits in your diagram
+
+```text
+1a DATA SOURCE
+    claims_raw.csv
+    policies_raw.csv
+        ↓
+1b PIPELINE
+    Code Repository
+    PySpark transforms
+    cast date
+    filter accepted claims
+    join policies
+    aggregate / prepare CFO output
+        ↓
+prepared output dataset
+```
+
+So the main Foundry capability is:
+
+```text
+1 Data integration
+```
+
+Specifically:
+
+```text
+Python transforms / Code Repositories / branching / build
+```
+
+---
+
+## What the demo teaches mechanically
+
+```text
+1. Install Marketplace bundle
+2. Create Code Repository
+3. Add raw claims dataset as input
+4. Create identity transform
+5. Clean claims:
+   - cast date string → date
+   - filter is_accepted = true
+6. Add policies dataset
+7. Join claims to policies
+8. Build output dataset
+9. Use branching:
+   - work on branch
+   - merge to master
+   - build again
+```
+
+---
+
+## In diagram language
+
+```text
+NO AI version
+
+1a DATA SOURCE
+  - claims_raw.csv
+  - policies_raw.csv
+
+→ 1b PIPELINE
+  - Code Repo
+  - PySpark transform
+  - cast / filter / join / aggregate
+
+→ output dataset
+  - prepared claims / CFO-ready data
+
+6 SECURITY / GOVERN
+  - branches
+  - commits
+  - checks
+  - merge to master
+  - lineage
+  - job tracker
+```
+
+---
+
+## What is not really involved
+
+This demo does **not** mainly involve:
+
+```text
+2 Model integration
+3 Ontology
+3b Actions/writeback
+4 Analysis
+5 UI/app building
+AI/LLMs
+```
+
+At most, analysis is implied because the output is meant for CFO reporting, but the tutorial itself is focused on building the data foundation.
+
+---
+
+## Magic ball classification
+
+```text
+Magic ball #1: YES
+  controls data preparation via code repository and pipeline
+
+Magic ball #2: mostly NO
+  no real ontology/app/action layer yet
+
+Magic ball #3: YES
+  branching, commits, checks, lineage, build history, job tracker
+```
+
+So this is:
+
+```text
+Data source → governed pipeline → prepared dataset
+```
+
+Not yet:
+
+```text
+prepared dataset → ontology → analysis/app/action
+```
+
+---
+
+## Honest assessment
+
+This is a foundational Foundry engineering demo.
+
+It shows how Foundry makes data transformation controlled and trackable:
+
+```text
+code is versioned
+changes happen on branches
+outputs are built deliberately
+lineage is visible
+jobs are tracked
+master branch can be protected
+```
+
+The business story is:
+
+```text
+raw insurance claims + policies
+→ cleaned/joined dataset
+→ financial overview by line of business
+```
+
+But the actual learning goal is not business analysis. It is:
+
+```text
+how to create production-style data pipelines in Foundry Code Repositories
+```
+
+---
+
+## One-line gist
+
+> This demo teaches Magic Ball #1: how raw datasets become governed, reproducible, production-ready transformed datasets using Code Repositories, PySpark transforms, branching, checks, and builds.
+
+<br>
+
+# **32 so this is how you do it when using the pipeline UI is not specialized or fast enough?**
+
+Yes.
+
+Use **Code Repositories / Python transforms** when Pipeline Builder is not enough.
+
+Typical reasons:
+
+```text
+more complex logic
+large-scale production pipelines
+custom Python/PySpark code
+joins/aggregations at scale
+unit tests/checks
+version control
+branching/collaboration
+reusable code
+incremental computation
+stricter governance
+```
+
+Pipeline Builder is good for:
+
+```text
+visual / low-code / simpler transforms
+```
+
+Code Repositories are better for:
+
+```text
+production-grade data engineering
+```
+
+<br>
+
+# **32b so in production gradue not normally use pipeline transforms?** 
+or just use them as proof of concept?
+
+Pipeline Builder can be production-grade too.
+
+Better distinction:
+
+## Pipeline Builder
+
+Good for:
+
+```text
+visual / low-code transforms
+standard cleaning/joining
+faster prototyping
+transparent business logic
+smaller/medium complexity pipelines
+non-code users
+```
+
+Can be production if logic is simple and maintainable.
+
+## Code Repositories
+
+Better for:
+
+```text
+complex logic
+large-scale PySpark
+custom libraries
+unit tests
+branching/code review
+reusable code
+incremental transforms
+many transforms maintained by engineers
+```
+
+So:
+
+```text
+Pipeline Builder = not just POC
+Code Repo = preferred when engineering complexity grows
+```
+
+Practical rule:
+
+```text
+Use Pipeline Builder until visual logic becomes awkward.
+Use Code Repos when code/testing/reuse/scale matter.
+```
+
+<br>
+
+# **33 what about ch5 ?**
+
+Chapter 5 is **Magic Ball #3: governance/collaboration around pipelines**.
+
+It teaches:
+
+```text
+branching
+protecting master
+making changes on your branch
+merging back to master
+building after merge
+```
+
+In your diagram terms:
+
+```text
+Magic Ball #1 = pipeline logic
+Magic Ball #3 = controls how pipeline logic changes
+```
+
+So Ch. 4 is:
+
+```text
+build the transform
+```
+
+Ch. 5 is:
+
+```text
+govern/collaborate on changes to the transform
+```
+
+It shows that Foundry pipelines are not just scripts; they are controlled, reviewable, trackable production assets.
+
+<br>
+
+# **34 no ai involved?**
+
+Correct — **no AI is inherently involved** in this demo.
+
+It is:
+
+```text
+raw data
+→ PySpark transforms
+→ output dataset
+→ branching/governance
+```
+
+You *could* use AI Assist to help write/debug code, but that is optional assistant use, not part of the pipeline logic.
+
+So in your diagram:
+
+```text
+1b Pipeline = xxAI
+4 Analysis = not used
+5 UI = not used
+6 Governance = xxAI
+```
+
+<br>
+
+# **35 i will go back thru some old demos and start trying to understand them based on the diagrams**
+
+great tomorrow i will go back thru some old demos and start trying to understand them based on the diagrams.
+i want to add a diagram to beginning of each example/demo showing what is covered..
+
+That is a good approach.
+
+For each demo, add a small “coverage diagram” at the beginning:
+
+```text
+1 Data source
+2 Pipeline
+3 Ontology read
+3b Actions/writeback
+4 Analysis
+5 UI/app
+6 Security/governance
+AI involvement
+```
+
+Use simple markings:
+
+```text
+✓ covered
+— not used
+AI = AI involved
+xxAI = no AI
+```
+
+Example for this Code Repo demo:
+
+```text
+1 Data source          ✓
+1b Pipeline            ✓ xxAI
+3 Ontology read        —
+3b Actions/writeback   —
+4 Analysis             —
+5 UI/app               —
+6 Security/governance  ✓ xxAI
+```
+
+That will make each demo easier to compare.
+
+<br>
+
+# **36 you should note that the pipeline is code based??**
+
+Yes — definitely note that.
+
+For this demo:
+
+```text
+1b Pipeline = code-based pipeline
+Tool = Code Repository / Python Transform / PySpark
+```
+
+So the coverage should say:
+
+```text
+1 Data source          ✓ raw CSV datasets
+1b Pipeline            ✓ code-based PySpark transforms
+3 Ontology read        —
+3b Actions/writeback   —
+4 Analysis             —
+5 UI/app               —
+6 Security/governance  ✓ branching, commits, checks, build
+AI                     xxAI, except optional AIP Assist
+```
+
+Short label:
+
+```text
+Magic Ball #1: code-based pipeline, not visual Pipeline Builder
+```
+
+<br>
+<br>
+
+-----------------------------
+-----------------------------
+-----------------------------
+
+<br>
+<br>
+
+# **PYSPARK ----------------------------------------------------------------**
+
+<br>
+
+# **36 what is pyspark (mechanistic explanation)**
+
+PySpark = Python interface to Apache Spark.
+
+Mechanically:
+
+```text
+your Python code
+→ Spark query plan
+→ distributed execution engine
+→ many worker machines process data partitions
+→ output dataset
+```
+
+You write Python like:
+
+```python
+claims.filter(...)
+claims.join(...)
+claims.groupBy(...)
+```
+
+But Spark does not process it row-by-row in normal Python.
+
+Instead it builds a plan:
+
+```text
+read dataset
+→ filter
+→ join
+→ aggregate
+→ write output
+```
+
+Then Spark executes that plan at scale across a cluster.
+
+## Why use it
+
+For data too large for one machine:
+
+```text
+millions/billions of rows
+large joins
+aggregations
+production pipelines
+```
+
+## In this demo
+
+```text
+claims_raw + policies_raw
+→ PySpark transform
+→ cast date
+→ filter accepted claims
+→ join policy data
+→ output dataset
+```
+
+So PySpark is the code engine doing the pipeline transformation.
+
+<br>
+
+# **37 so its kind of like cuda**
+
+Kind of, but at a different level.
+
+```text
+CUDA = parallel compute on GPUs
+PySpark = distributed data processing across machines
+```
+
+CUDA:
+
+```text
+one/few machines
+GPU cores
+numeric/ML/math kernels
+```
+
+PySpark:
+
+```text
+cluster of machines
+CPU/memory/disk partitions
+tables, joins, filters, aggregations
+```
+
+Similarity:
+
+```text
+you write high-level code
+engine parallelizes execution
+```
+
+Difference:
+
+```text
+CUDA parallelizes math operations on GPU cores.
+PySpark parallelizes data transformations over large distributed datasets.
+```
+
+<br>
+
+# **38 so why use in palantir demo D19 (what we talkd about above)**
+
+Because D19 is teaching **production data engineering**, not just small-data cleaning.
+
+PySpark is used because it is the standard engine for:
+
+```text
+large datasets
+joins
+filters
+date casts
+aggregations
+repeatable pipeline builds
+```
+
+In D19:
+
+```text
+claims_raw + policies_raw
+→ PySpark transform
+→ clean/join/prepare CFO dataset
+```
+
+Even if the demo data is small, the pattern scales to enterprise data.
+
+So the lesson is:
+
+```text
+Use PySpark when the same logic may need to run on millions/billions of rows in production.
+```
+
+<br>
+
+# **39 ok... so you cant use gpus for pyspark because its not simple matrix math.... you need procedural code at scale**
+
+Mostly yes.
+
+PySpark is for **dataframe/table operations at scale**:
+
+```text
+filter
+join
+group
+aggregate
+cast
+window
+deduplicate
+write dataset
+```
+
+That is not mainly matrix math.
+
+It is distributed data processing.
+
+Small correction:
+
+You *can* use GPUs with some Spark workloads, but it is not the usual mental model and only helps certain operations.
+
+Normal PySpark:
+
+```text
+cluster CPUs + memory + disk
+```
+
+CUDA/GPU:
+
+```text
+numeric kernels / matrix math / ML training
+```
+
+So your practical summary is right:
+
+> PySpark is procedural/table transformation logic at enterprise scale, not primarily GPU matrix computation.
+
+
+<!-- <br>
+
+# **xxx**
+
+<br>
+
+# **xxx**
+
+<br>
+
+# **xxx**
+
+<br>
+
+# **xxx**
+
+<br>
+
+# **xxx**
+
+<br>
+
+# **xxx** -->
+
+<br>
+
+
+26.0805 (v1 26.0804)
