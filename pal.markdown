@@ -40,6 +40,8 @@ This section provides what you need to master the basics of Palantir Foundry ASA
 
 ## **[1 Concepts](/pal_concepts/)** 26.0804
 
+(click on link above for details)
+
 I am still working on **my own take on the core conceptual gist of Palantir-SW**, but basically its 
 - Palantir makes the enterprise visible and governable.
 - LLMs make parts of that visibility probabilistic, so they must be sandboxed, verified, and logged.
