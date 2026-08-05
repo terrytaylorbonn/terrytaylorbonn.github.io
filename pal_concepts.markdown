@@ -3543,15 +3543,848 @@ PySpark output can feed GPU/AI,
 but often it just feeds datasets, ontology, analytics, or apps.
 ```
 
-<!-- <br>
+<br>
+<br>
 
-# **xxx**
+-----------------------------
+-----------------------------
+-----------------------------
+
+<br>
+<br>
+
+# **DIAGRAM 26.0805 CHAT  ----------------------------------------**
 
 <br>
 
-# **xxx** -->
+
+# **44 D19 is not really “Security & Governance”**
+
+(1) i think you said that D19
+"By the end of this course, you will have
+created a PySpark Transform including casting and filtering,
+used joins and aggregations,
+worked collaboratively with other people using Branching,
+seen how Code Repositories interact with other Foundry tools like Data Lineage and Job Tracker.
+"
+deals with "security" ...
+
+(2) i dont think so.
+it mainly about code and git.
+using code to clean datasets.
+join to another dataset.
+the attached pic shows what "security and governance" are in foundry.
+
+(3) here is TOC of palantir deep dive doc
+...................
+
+(4) are datasets part of pipeline or ontology?
+this demo seems to be only about datasets, not pipeline or ontology
+
+
+
+Short label:
+
+> D19 is a Code Repository data transformation demo: raw datasets are cleaned and joined with PySpark, then built into an output dataset, with branching/PR workflow for code collaboration.
+
+
+Yes — your correction is right.
+
+## 1. D19 is not really “Security & Governance”
+
+D19 is mainly:
+
+```text
+Data Integration
+→ Code Repository
+→ PySpark transforms
+→ datasets
+→ branching / PR / build
+```
+
+The branching part is **governance-like**, but not really Foundry’s full **Security & Governance** capability.
+
+Better label:
+
+```text
+code collaboration / change control
+```
+
+not:
+
+```text
+security
+```
+
+So I would classify D19 as:
+
+```text
+1 Data integration: YES
+   - code-based pipeline / PySpark transforms
+   - clean, cast, filter, join
+   - build output dataset
+
+6 Security/Governance: only lightly
+   - branch protection
+   - PR/merge workflow
+   - checks/build history
+```
+
+Not the full security topics like markings, permissions, data protection, auditing, Cipher, etc.
+
+---
+
+## 2. D19 is about code + datasets
+
+Your summary is accurate:
+
+```text
+raw datasets
+→ code repository transform
+→ cleaned/joined output dataset
+```
+
+It teaches:
+
+```text
+use code to clean datasets
+join another dataset
+build output dataset
+use branches/PRs
+```
+
+It does **not** really touch:
+
+```text
+Ontology
+Actions
+Workshop
+Quiver
+LLMs
+production security controls
+```
+
+---
+
+## 3. Are datasets part of pipeline or ontology?
+
+Datasets are their own thing: **data layer**.
+
+But they are used by both pipelines and ontology.
+
+```text
+Dataset = stored data/table/files
+Pipeline = process that reads/writes datasets
+Ontology = semantic layer that can be backed by datasets
+```
+
+Mechanically:
+
+```text
+pipeline reads dataset → writes dataset
+ontology object type maps to dataset
+```
+
+So:
+
+| Thing | Role |
+|---|---|
+| **Dataset** | Data storage / table/files |
+| **Pipeline** | Transform logic that creates/updates datasets |
+| **Ontology** | Business object model backed by datasets |
+| **App/analysis** | Consumes ontology objects or datasets |
+
+---
+
+## 4. Is this demo about pipelines?
+
+Yes, but specifically **code-based pipelines**.
+
+Not visual Pipeline Builder.
+
+```text
+Code Repository + Python Transform = pipeline logic
+```
+
+So D19 is:
+
+```text
+datasets + code-based pipeline
+```
+
+Not:
+
+```text
+ontology app
+```
+
+## Best classification for your diagram
+
+```text
+1a Data source          YES: claims_raw, policies_raw
+1b Pipeline             YES: code-based PySpark transform
+3 Ontology read         NO
+3b Actions/writeback    NO
+4 Analysis              minimal / implied only
+5 UI                    NO
+6 Security/governance   light: branching, PR, checks
+AI                      NO
+```
+
+Short label:
+
+> D19 is a Code Repository data transformation demo: raw datasets are cleaned and joined with PySpark, then built into an output dataset, with branching/PR workflow for code collaboration.
 
 <br>
+
+# **45 (5) i think i understand now... hte code is same as a custom pipeline transform. and it creates the output dataset.**
+
+(6) so the dataset is a part of the pipeline... no need to add "dataset" to diagram (except maybe as an internal box in pipeline)
+
+
+Yes — you’ve got it.
+
+## 5. Code repo transform = custom pipeline transform
+
+This code:
+
+```python
+@transform_df(
+    Output("claims"),
+    claims_raw=Input("claims_raw"),
+    policies_raw=Input("policies_raw"),
+)
+def compute(claims_raw, policies_raw):
+    ...
+    return claims_aggregated
+```
+
+means:
+
+```text
+input datasets
+→ code transform
+→ output dataset
+```
+
+So yes:
+
+```text
+Code Repository transform = code-based pipeline node
+```
+
+---
+
+## 6. Dataset in diagram
+
+For your big conceptual diagram, you do **not** need a separate top-level “dataset” category.
+
+Better:
+
+```text
+1a Data source
+→ 1b Pipeline / transforms
+   - reads input datasets
+   - writes output datasets
+→ 3 Ontology, if used
+```
+
+Datasets are the **material flowing through the pipeline**, not a separate capability box.
+
+So for D19:
+
+```text
+1a Data source
+  claims_raw, policies_raw
+
+1b Code-based pipeline
+  PySpark transform
+  cast / filter / join / aggregate
+  output dataset: claims
+
+3 Ontology
+  not used
+```
+
+Dataset can be shown as a small internal label inside Pipeline:
+
+```text
+input datasets → transform code → output dataset
+```
+
+
+*17*<br><img src="/assets/777_09.png" alt="drones" width="74%" >
+
+
+<br>
+
+# **46 i am not a  big data pro... but a simple diagram makes everything clear.**
+
+PS: (7) i dont see anthing about code security in "security and governance" ..... 
+so i would say that git in this demo is all part of pipeline. 
+its acutally kind of  a plugin used in pipeline. 
+
+
+Yes — for your diagram, that’s a reasonable simplification.
+
+For D19:
+
+```text
+Git/branching = part of the code-based pipeline workflow
+```
+
+Not a separate Security/Governance demo.
+
+So draw it inside:
+
+```text
+1b Pipeline
+```
+
+as:
+
+```text
+Code Repo
+- PySpark transform
+- Git branch
+- commit
+- PR/merge
+- build
+```
+
+Security/Governance only lightly surrounds it in the background, but the demo is not teaching:
+
+```text
+markings
+permissions
+data protection
+audit
+egress
+Cipher
+sensitive data scanner
+```
+
+So your classification:
+
+```text
+D19 = pipeline demo
+Git = pipeline/code workflow component
+Security = not materially covered
+```
+
+is clean and accurate for organizing examples.
+
+
+<br>
+
+# **47 (8) the diagram has 3 magic balls.... the idea is**
+
+(8) the diagram has 3 magic balls.... the idea is
+#1 pipeline and ontology reading from pipeline
+#2 analysis and UI and UI writing to ontology
+#3 coveres all of palantir. secuirty and governance.
+#1-3 are all just one thing, but in this case #1 and #3 are watching, but the demo did not set any of this securiy/governance up.
+
+
+Yes — good refinement.
+
+For D19:
+
+```text
+Magic ball #1 = active
+```
+
+Because the demo is about:
+
+```text
+data source → code-based pipeline → output dataset
+```
+
+Maybe ontology read is not active yet, but pipeline is.
+
+```text
+Magic ball #2 = not active
+```
+
+Because no real:
+
+```text
+ontology objects
+analysis app
+UI workflow
+actions/writeback
+```
+
+```text
+Magic ball #3 = present but not configured by demo
+```
+
+Foundry still provides background governance infrastructure:
+
+```text
+branches
+commits
+build history
+lineage
+job tracking
+permissions inherited from project
+```
+
+But the demo does not teach/set up:
+
+```text
+markings
+security policies
+data governance controls
+auditing configuration
+egress controls
+```
+
+So label D19 as:
+
+```text
+#1 active: code pipeline
+#2 inactive
+#3 background only
+```
+
+And yes: #1–#3 are conceptual views of one Foundry system, not separate products.
+
+*09*<br><img src="/assets/777_09.png" alt="drones" width="74%" >
+
+
+<br>
+
+# **48 i think i will do it this way... **
+
+- the git etc is a plugin basically
+- its not part of #3 sec&gov.
+- but lets say i#1 is ACTIVE in this demo.  
+   #1 is about those things that the system watches but are not labeled as part of #3. 
+  (so basically i invented #1-2 magic balls becuase of a limitations to palantir's definition of #3) 
+#1 is a whole set of control (including the git plugin) to control workflows. 
+its not in #3, but its a vital part of the guardrails foundry has set up. 
+
+
+Yes — that works.
+
+Your framing:
+
+```text
+Magic ball #1 = pipeline/workflow control layer
+```
+
+It watches/controls things like:
+
+```text
+code repo
+branches
+commits
+PR/merge
+builds
+job tracker
+lineage
+dataset outputs
+```
+
+This is not the formal “Security & Governance” docs bucket, but it is still a **guardrail/control system**.
+
+So for D19:
+
+```text
+#1 ACTIVE
+  code-based pipeline
+  git-like workflow
+  commits
+  build
+  lineage/job tracker
+
+#2 inactive
+  no ontology/app/action loop
+
+#3 background only
+  formal security/governance exists, but demo does not configure it
+```
+
+Your insight is good:
+
+> Palantir’s formal category “Security & Governance” is narrower than the broader control/guardrail machinery spread across the platform.
+
+So your magic balls can represent:
+
+```text
+#1 controls data/pipeline construction
+#2 controls ontology/app/action operations
+#3 controls formal security/governance over everything
+```
+
+<br>
+
+# **49 i  forgot .... how is "4 ANALYSIS" (from the diagram) done... ? is that code noly?**
+
+No — **4 Analysis is not code only**.
+
+In Foundry, analysis can be done with several tools:
+
+```text
+Contour       = visual/no-code data analysis
+Quiver        = visual/time series + graph-style analysis
+Code Workbook = notebook/code-based analysis
+SQL console   = query-based analysis
+Functions     = reusable computed logic
+Models/LLMs   = predictive or text analysis
+```
+
+So:
+
+```text
+4 Analysis = inspect, compute, compare, detect patterns
+```
+
+It can be:
+
+```text
+no-code
+low-code
+code
+model-based
+LLM-assisted
+```
+
+Examples:
+
+```text
+Contour: explore tables visually
+Quiver: analyze time series/anomalies
+Code Workbook: Python/SQL analysis
+Model: score risk/anomaly
+LLM: summarize/extract/classify
+```
+
+
+<br>
+
+# **50 so "5 UI" is workshop.  slate and carbon?**
+
+Yes.
+
+In the docs, **5 Application building / UI** includes:
+
+```text
+Workshop
+Slate
+Carbon
+```
+
+For your diagram:
+
+```text
+5 UI / Apps
+```
+
+means user-facing interfaces and workflows.
+
+Examples:
+
+```text
+Workshop = main low-code operational app builder
+Slate = older/custom app/dashboard framework
+Carbon = application framework/product area
+Quiver embedded views can also feed UI
+Object Views = object-specific UI, though listed under Ontology
+```
+
+So yes:
+
+```text
+5 UI = Workshop / Slate / Carbon / app layer
+```
+
+
+<br>
+
+# **51 and those can have functinos included,,,  but not any py scripts?**
+
+
+Mostly yes.
+
+UI apps like Workshop can include/call:
+
+```text
+Ontology Actions
+Functions
+AIP Logic
+Object sets
+Variables
+Charts/tables/widgets
+```
+
+They usually do **not** run arbitrary Python scripts directly inside the UI.
+
+If Python is needed:
+
+```text
+Workshop button/widget
+→ Function or Action
+→ Python/TypeScript logic runs server-side
+```
+
+Or:
+
+```text
+Pipeline/Code Repo runs Python upstream
+→ UI displays result
+```
+
+So:
+
+```text
+UI does not run raw py scripts.
+UI calls governed backend logic.
+```
+
+<br>
+
+# **52 can "4 ANALYSIS" or "5 UI" use AI?**
+
+Yes.
+
+## 4 Analysis can use AI
+
+Examples:
+
+```text
+LLM summarize/extract/classify
+model scoring
+anomaly detection
+root-cause suggestions
+generate SQL/Python
+search over documents
+```
+
+Tools:
+
+```text
+AIP Logic
+Functions
+Code Workbook
+Models
+Quiver/analysis with AI assistance
+```
+
+## 5 UI can use AI
+
+Examples:
+
+```text
+chat assistant in app
+summarize selected object
+draft action note
+recommend next step
+classify user-entered text
+explain anomaly
+```
+
+Mechanically:
+
+```text
+Workshop/UI
+→ Function or AIP Logic
+→ AI/LLM
+→ result shown or used in action
+```
+
+Best rule:
+
+```text
+AI assists; humans/actions commit.
+```
+
+<br>
+
+# **53 but you can have a mixed UI+code pipeline?**
+
+in this demo the pipeline was just code.
+but you can have a mixed UI+code pipeline?
+can code only pipeline have ai?
+
+Yes.
+
+## Mixed UI + code pipeline
+
+You can have:
+
+```text
+Pipeline Builder steps
+→ code transform
+→ more Pipeline Builder steps
+```
+
+or separate connected pipelines:
+
+```text
+visual pipeline output dataset
+→ code repo transform
+→ visual pipeline
+```
+
+So pipeline logic can be mixed.
+
+## Code-only pipeline can have AI
+
+Yes, if the code calls or uses AI/model logic.
+
+Examples:
+
+```text
+Python transform
+→ call approved LLM/model
+→ classify text
+→ write output dataset
+```
+
+or:
+
+```text
+Python transform
+→ run ML model inference
+→ write predictions
+```
+
+But for external LLMs, it should be controlled by:
+
+```text
+approved model endpoint
+egress policy
+secrets management
+permissions
+code review
+```
+
+<br>
+
+# **54 dataset itself has no ai.**
+
+Correct.
+
+A dataset itself has no AI.
+
+```text
+Dataset = stored data
+```
+
+AI can be applied by something that reads/writes the dataset:
+
+```text
+pipeline
+model
+function
+analysis tool
+UI app
+```
+
+So:
+
+```text
+dataset → passive storage
+AI → active computation around it
+```
+
+
+<br>
+
+# **55 can "4 analyssis" perform writeback to the dataset?**
+
+Usually **no**.
+
+`4 Analysis` tools mostly read/explore data.
+
+They may create derived outputs, but writeback is normally handled by:
+
+```text
+Pipeline / transform
+Actions
+Functions
+notebooks/code outputs
+```
+
+Examples:
+
+```text
+Contour/Quiver analysis → mostly read/visualize
+Code Workbook → can write a new dataset if configured
+Model scoring → writes prediction dataset
+```
+
+But true operational writeback should be:
+
+```text
+5 UI → 3b Action/writeback
+```
+
+or:
+
+```text
+Pipeline/function → output dataset/external system
+```
+
+So:
+
+```text
+Analysis may produce outputs,
+but writeback/change-of-record belongs elsewhere.
+```
+
+<br>
+
+# **56 can analysis feed into  UI? i assume it can.**
+
+Yes.
+
+Common flow:
+
+```text
+Analysis output
+→ dataset / ontology object / metric / function result
+→ UI
+```
+
+Examples:
+
+```text
+Quiver chart embedded in app
+model prediction displayed in Workshop
+Code Workbook output dataset shown in Object Table
+analysis-derived anomaly score shown on object
+```
+
+So:
+
+```text
+4 Analysis → 5 UI
+```
+
+is a normal path.
+
+<br>
+
+<!--
+
+# **57 xxx**
+
+<br>
+
+# **58 xxx**
+
+<br>
+
+# **59 xxx**
+
+<br>
+
+# **60 xxx**
+
+<br>  -->
 
 
 26.0805 (v1 26.0804)
