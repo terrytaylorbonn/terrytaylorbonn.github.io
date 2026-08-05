@@ -51,7 +51,7 @@ In the diagram below
 
 <br>
 
-# **NOTES** 
+# **CHAT TOC** 
 
 - **01-06 core**
   - ME01 ... My (FDE) one-sentence gist
@@ -115,7 +115,7 @@ In the diagram below
 <br>
 <br>
 
-# **MAIN POINTS**
+# **MAIN CHATS**
 
 <br>
 
