@@ -102,7 +102,7 @@ In the diagram below
   - 35 for each demo a small coverage digram/text (see below)
 - **26-30 pipeline/ontology udpates** (see below)
 - **32,32b,36 production grade -- use scripts**
-- **36-40 pyspark/cuda**
+- **36-43 pyspark/cuda**
 
 <br> 
 <br>
@@ -3434,15 +3434,116 @@ claims_raw + policies_raw
 
 No GPU needed because the work is data engineering, not tensor math.
 
+<br>
+
+# **42 so pyspark "cleans up" or "prepares" the data so that it can run on a GPU.**
+
+sounds a lot like the the initial parts of CUDA that prepare the data for running on a GPU.
+
+
+Yes, conceptually similar:
+
+```text
+prepare messy input → convert to uniform structure → feed parallel engine
+```
+
+But different scale/layer.
+
+## CUDA preparation
+
+Usually prepares data for GPU memory:
+
+```text
+CPU arrays/tensors
+→ copy to GPU memory
+→ launch kernel
+→ copy result back
+```
+
+Low-level compute preparation.
+
+## PySpark preparation
+
+Prepares enterprise data for downstream use:
+
+```text
+raw files/tables/logs
+→ clean schemas
+→ join sources
+→ filter bad rows
+→ aggregate features
+→ output dataset/features
+```
+
+High-level data preparation.
+
+## Relationship
+
+```text
+PySpark may prepare the training/inference dataset.
+CUDA may run the model math.
+```
+
+So yes:
+
+```text
+PySpark = upstream data preparation layer
+CUDA = downstream numeric execution layer
+```
+
+But PySpark is not usually preparing memory for GPU; it is preparing the *data meaning/shape/quality*.
+
+<br>
+
+# **43 but in the end what pyspark outputs is run on  GPU/CUDA/**
+
+Sometimes, but not always.
+
+## If the pipeline is for AI/ML
+
+Then yes:
+
+```text
+PySpark output = cleaned/features dataset
+→ model training/inference
+→ GPU/CUDA may run the model
+```
+
+Example:
+
+```text
+raw claims
+→ PySpark creates feature table
+→ neural network trains on GPU
+```
+
+## If the pipeline is normal business analytics
+
+Then no GPU.
+
+```text
+PySpark output
+→ dashboard / ontology / report / SQL / Workshop
+```
+
+Example D19:
+
+```text
+claims_raw + policies_raw
+→ PySpark cleaned/joined dataset
+→ CFO reporting dataset
+```
+
+No CUDA needed.
+
+## Short version
+
+```text
+PySpark output can feed GPU/AI,
+but often it just feeds datasets, ontology, analytics, or apps.
+```
+
 <!-- <br>
-
-# **xxx**
-
-<br>
-
-# **xxx**
-
-<br>
 
 # **xxx**
 
