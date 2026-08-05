@@ -50,7 +50,8 @@ I am still working on **my own take on the core conceptual gist of Palantir-SW**
 
 For the demos I want a more mechanistic conceptual overview. Something like the simple diagram belo that I can use to summarize what parts of the Foundry workflow an example/demo covers. I am more interested in the mechanics of the PAL tools used than the business case. 
 
-*Basic PAL diagram*<br><img src="/assets/777_09.png" alt="drones" width="74%" >
+*Basic PAL diagram*<br><img src="/assets/777_07.png" alt="drones" width="74%" >
+
 
 For example, for Code Repo demo D19, this is what is covered 
 

@@ -37,11 +37,21 @@ In the diagram below
 
 <br> 
 
-**AI CREATION DETAILS NEEDED**
+<!-- **AI CREATION DETAILS NEEDED**
 - NO DIRECT LLM ACTIONS ("usually not directly")
 - deterministic/human-approved
 
-*with AI helpful assistant (**3b WRITE = 3b ACTION**)*<br><img src="/assets/777_09.png" alt="drones" width="74%" >
+*with AI helpful assistant (**3b WRITE = 3b ACTION**)*<br><img src="/assets/777_09.png" alt="drones" width="74%" > -->
+
+#### **FUTURE MAIN DIAGRAM FOR EACH EXAMPLE/DEMO**
+
+Example main diagram for D19: shows the main workflow; red squares highlight those items implemented for demo D19 (this is a a very rought first draft that will change greatly as I figure out the details)
+
+**NOTE: Numbers 1-6 (1a,1b) correspond to the numbers I added to the main diagram above** (from palantir.com/docs/foundry).
+
+*MAIN_D19.png*<br><img src="/assets/MAIN_D19.png" alt="drones" width="74%" >
+
+
 
 
 <br> 
