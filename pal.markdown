@@ -54,7 +54,7 @@ I am still working on **my own take on the core conceptual gist of Palantir-SW**
 
 <br>
 
-#### **1.2 The initial workflow diagrams**
+<!-- #### **1.2 The initial workflow diagrams**
 
 For the demos I wanted a more mechanistic conceptual overview (I am more interested in the mechanics of the PAL tools used than the business cases). At first I wanted something like the simple Foundry workflow diagram below with text to summarize what parts an example/demo covered. 
 
@@ -89,11 +89,20 @@ For example the main diagram for **[E11](/3c.1b_pal_examples/)** (example 11).
 
 *(MAIN_E11.png)*<br><img src="/assets/MAIN_E11.png" alt="drones" width="74%" >
 
-<br> 
+<br>  -->
 
-#### **1.4 Future diagrams**
+#### **1.2 Workflow diagrams**
 
-At some point I will start to "weed out" the things that dont belong in each main diagram. I dont want all that useless verbiage (I might have a master main diagram that has all the text, for not for each example/demos). But for now I want to keep a lot of the verbiage as my own notes (until I get to understanding all the details better). 
+The idea is to show
+- Workflow
+  - steps 
+  - functionality (as text below the diagram)
+- Highlight all those aspects used in
+  - ORANGE for examples (which install everything for you)
+  - RED for demos/deep-dives (which required you to build everything)
+
+*(MAIN_E17.png)*<br><img src="/assets/MAIN_E17.png" alt="drones" width="74%" >
+
 
 <!--
 *The real world -- An enterprise system that provides the infrastructure and safeguards so that AI can be a practical "helpful assistant" ([diagram source](https://blog.dataengineerthings.org/what-palantir-foundry-taught-me-about-building-better-data-systems-407e3768d5fc))*<br><img src="/assets/777_03.png" alt="drones" width="44%" style="border: 1px solid #999;"><br><br>  -->

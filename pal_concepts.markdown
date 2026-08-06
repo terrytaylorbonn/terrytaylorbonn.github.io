@@ -10,9 +10,8 @@ I am still working on **my own take on the core conceptual gist of Palantir-SW**
 - Palantir makes the enterprise visible and governable.
 - LLMs make parts of that visibility probabilistic, so they must be sandboxed, verified, and logged.
 
-See also **[Concepts CHATS ONLY](/pal_chats/)**.
+See also **[Concept CHATS](/pal_chats/)**.
 
-<br>
 
 In the diagram below 
 - LEFT: Before LLMs, the Palantir-SW had just wizards/magic-balls (the analyzers and the watchers of the analyzers) that were implemented in procedural programming. Trustd, reliable and safe (not human, but programmed by a trusted human programmer-employee). Like the old wizard in Lord of the Rings. 
@@ -50,25 +49,67 @@ In the diagram below
 
 ### **2 Main diagrams for example/demo/deep-dive** (26.0806)
 
-This section shows 2 examples.
+<br>
 
+#### **2.1 The initial workflow diagrams**
+
+For the demos I wanted a more mechanistic conceptual overview (I am more interested in the mechanics of the PAL tools used than the business cases). At first I wanted something like the simple Foundry workflow diagram below with text to summarize what parts an example/demo covered. 
+
+*Basic PAL diagram*<br><img src="/assets/777_07.png" alt="drones" width="74%" >
+
+For example, for Code Repo demo D19, this is what is covered 
+
+```
+1 Data source          ✓ raw CSV datasets
+1b Pipeline            ✓ code-based PySpark transforms
+3 Ontology read        —
+3b Actions/writeback   —
+4 Analysis             —
+5 UI/app               —
+6 Security/governance  ✓ branching, commits, checks, build
+AI                     xxAI, except optional AIP Assist
+```
 
 <br> 
 
-#### **[E11](/3c.1b_pal_examples/)**
+<!--
 
-Example main diagram for E11 (example 11): shows the main workflow; orange squares highlight those items included in example install.
+But I prefer the more detailed diagram below. The idea is to show
+- All possible workflow
+  - steps 
+  - functionality (as text below the diagram)
+- Highlight all those aspects used in
+  - ORANGE for examples (which install everything for you)
+  - RED for demos/deep-dives (which required you to build everything)
+
+For example the main diagram for **[E11](/3c.1b_pal_examples/)** (example 11).
 
 *(MAIN_E11.png)*<br><img src="/assets/MAIN_E11.png" alt="drones" width="74%" >
 
 <br> 
+-->
 
-#### **[D19](/3c.2_pal_initial_demos/)**
 
-Example main diagram for D19 (demo 19): shows the main workflow; red squares highlight those items implemented for demo D19 (this is a a very rought first draft that will change greatly as I figure out the details).
+#### **2.2 Current workflow diagrams**
+
+
+**[E11](/3c.1b_pal_examples/)**. Example main diagram for E11 (example 11): shows the main workflow; orange squares highlight those items included in example install.
+
+*(MAIN_E11.png)*<br><img src="/assets/MAIN_E11.png" alt="drones" width="74%" >
+
+
+**[D19](/3c.2_pal_initial_demos/)**. Example main diagram for D19 (demo 19): shows the main workflow; red squares highlight those items implemented for demo D19 (this is a a very rought first draft that will change greatly as I figure out the details).
 
 *Numbers 1-6 (1a,1b) correspond to the numbers I added to the main diagram above (from palantir.com/docs/foundry) (MAIN_D19.png)*<br><img src="/assets/MAIN_D19.png" alt="drones" width="74%" >
 
 <br> 
 
-26.0806 (v1 26.0804)xxxyyyyzzzzzzzzzzzzzzzzzzaaaaaaaa
+#### **2.3 Future diagrams**
+
+At some point I will start to "weed out" the things that dont belong in each main diagram. I dont want all that useless verbiage (I might have a master main diagram that has all the text, for not for each example/demos). But for now I want to keep a lot of the verbiage as my own notes (until I get to understanding all the details better). 
+
+*(MAIN_E17.png)*<br><img src="/assets/MAIN_E17.png" alt="drones" width="74%" >
+
+<br>
+
+26.0806 (v1 26.0804)
