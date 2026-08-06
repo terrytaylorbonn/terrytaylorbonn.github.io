@@ -108,12 +108,14 @@ This readme discusses various things to keep in mind as you work your way throug
 <br>
 
 #### **[P2 PAL examples](/3c.1b_pal_examples/)** 
+*(MAIN DIAGRAM: 621/E10/**OK**, 622/E11/**OK**, 626/E17/**TODO**) // (623/E12/FUTURE) // (624/E15/FAIL, 625/E16/INSTALLERROR)*.
   - Install a PAL example.
   - Run the example.
   - Try to rebuild the examples (from top to bottom, from downstream to upstream). The examples are excellent, but are often quite complicated. But you don't have to do everything first step-by-step before you see the the final results. Once you have a working first (reference) example, you can install a second (experimental) example that you modify at your pace. This allows you to (1) appreciate quickly the capabilities of PAL and (2) focus on learning the UI and basic concepts/terminology.<br>*PAL example (left, center) and my own build (right) (3c.1b)*<br><img src="/assets/pal_10_01.png" alt="drones" width="25%" style="border: 1px solid #999;">  <img src="/assets/pal_10_05.png" alt="drones" width="33%" style="border: 1px solid #999;">  <img src="/assets/pal_10_02.png" alt="drones" width="30%" style="border: 1px solid #999;"><br><br>
 
 
 #### **[P3 PAL demos (speedruns)](/3c.2_pal_initial_demos/)**
+*(MAIN DIAGRAM: 610/D1/xx, 611/612/613/D2/**TODO**, 614/D3/xx, 614/D3/xx, 615/D4/xx, 616/D5/xx, 617/D6/xx, 618/D7/xx, 619/D8/xx, 627/DD19/**OK**)*.
   - Current demos consist of just D1-D8, the first PAL demos I did (step by step tutorials). 
   - When I started, I was overwhelmed by the many dialogs (because I had not done examples first).
   - I documented all details with screenshots.<br>*Demos of core functionality (3c.2)*<br><img src="/assets/pal_10_13.png" alt="drones" width="37%" style="border: 1px solid #999;">  <img src="/assets/pal_10_14.png" alt="drones" width="50%" style="border: 1px solid #999;"><br><br>
@@ -128,6 +130,7 @@ This readme discusses various things to keep in mind as you work your way throug
 -->
 
 #### **[P4 DIY (with FDE assistance) demos](/3c.xxx_pal_gist/)**
+*(MAIN DIAGRAM: 620/D9/xx)*.
 - Creating real-world projects by working as a team with FDE (AIP/[PAL Pilot](https://www.palantir.com/docs/foundry/pilot/getting-started/)). (3c.3).<br><img src="/assets/pal_10_12.png" alt="drones" width="50%" style="border: 1px solid #999;"><br>
 
 <!-- 
