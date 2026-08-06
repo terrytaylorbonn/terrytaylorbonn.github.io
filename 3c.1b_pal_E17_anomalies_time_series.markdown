@@ -16,6 +16,10 @@ permalink: /3c.1b_pal_E17_anomalies_time_series/
   - Requires quite a bit of manual action to process data.
   - **All details in this Docx: [#626\_.docx](https://drive.google.com/drive/folders/1-Adawag9uA8_bq-hDF-nOuPYaRLz1eEO)**.
 
+
+*(MAIN_E17.png)*<br><img src="/assets/MAIN_E17.png" alt="drones" width="74%" >
+
+
 <br>
 
 ----------------------------
@@ -77,7 +81,7 @@ This is a long section ... see docx \#626 for details.
 
 <br>
 
-26.0801 (v1 26.0801)
+26.0806 (v1 26.0801)
 
 <!--
 Yes.
