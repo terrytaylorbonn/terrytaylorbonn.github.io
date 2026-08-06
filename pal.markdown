@@ -181,7 +181,7 @@ Demos not covered earlier (and not in the exam; I don’t have a clear idea yet 
 
 #### **OLD**
 
-- **[A7 (3c.0) Concepts](/3c.ccc_pal_concepts/)**. My own take.
+- **[A7 (3c.0) Concepts](/3c.ccc_pal_concepts/)**. My own take (see also **[Concepts CHATS ONLY](/pal_chats/)**).
   - What problems PAL solves. 
   - This section is a long term WIP (I started using PAL in July 2026, and I need more experience before I can sum up the concepts).<br><img src="/assets/pal_10_09.png" alt="drones" width="67%" style="border: 1px solid #999;"><br><br>
 
