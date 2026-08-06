@@ -16,12 +16,11 @@ permalink: /3c.1b_pal_E11_geospatial/
 
 #### **All details in this Docx: [#622\_.docx](https://drive.google.com/drive/folders/1-Adawag9uA8_bq-hDF-nOuPYaRLz1eEO)**.
 
+Example main diagram for E11 (example 11): shows the main workflow; orange squares highlight those items included in example install.
 
-#### **This is PAL example**
+*(MAIN_E11.png)*<br><img src="/assets/MAIN_E11.png" alt="drones" width="74%" >
 
-
-*xxx*<br><img src="/assets/pal_10_16.png" alt="drones" width="65%" style="border: 1px solid #999;">
-
+<br> 
 *xxx*<br><img src="/assets/pal_10_17.png" alt="drones" width="65%" style="border: 1px solid #999;">
 
 
