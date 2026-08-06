@@ -4509,7 +4509,287 @@ dataset = Foundry-stored form of data
 
 <br>
 
-# **60 xxx**
+# **60 MAIN DIAGRAM for Example 11**
+
+(1) pic1 = main diagram for example 11 (as a template)
+(2) pic2 = section "B4 test a small change" final result for example 17 (detect anomalies time series code workspace). in that section we made some modifications to verify operation. the example was not a start-to-finish smooth flowing exmple, but rather we had to intervene in a few places. 
+(3) from the limited info I just gave you, could you suggest what the main diagram should be? I am only interested in 
+- what should be highlighted in  the workflow blocks
+- what test below should be highlighted (or added if not there)
+
+
+
+Yes. For **Example E17: Detect anomalies in time series data with Code Workspaces**, I would highlight these workflow blocks:
+
+## Main diagram highlights for E17
+
+### Highlight `1a Starting data`
+
+Because the demo starts with raw/imported Foundry datasets:
+
+```text
+art_daily_jumpsup
+art_daily_small_noise
+manual key/series table
+```
+
+These are the starting time series inputs.
+
+---
+
+### Highlight `1b Pipeline`
+
+Use **two separate highlights** inside pipeline:
+
+```text
+1b Pipeline #1: Initial Data Cleaning
+```
+
+This creates:
+
+```text
+[Anomaly Detection] Testing_data
+[Anomaly Detection] Training Data
+[Anomaly Detection] Data
+```
+
+Then later:
+
+```text
+1b Pipeline #2: Create Series
+```
+
+This creates Quiver-friendly time series/object outputs:
+
+```text
+[Anomaly Detection] Metrics
+[Anomaly Detection] Prediction
+```
+
+So E17 uses **Pipeline Builder**, not mainly PySpark pipeline.
+
+---
+
+### Highlight `2 AI / Model integration`
+
+This is central.
+
+```text
+Prophet model
+model training notebook
+model adapter
+manual model publishing
+manual scoring
+```
+
+This is the part where expected values and anomaly labels are produced:
+
+```text
+value
+yhat
+yhat_upper
+yhat_lower
+prediction
+```
+
+This should be strongly highlighted.
+
+---
+
+### Highlight `3a Ontology READ`
+
+Quiver reads ontology/time-series-backed objects such as:
+
+```text
+[Anomaly Detection] Data
+[Anomaly Detection] Metrics
+[Anomaly Detection] Prediction
+```
+
+So `3a READ` is involved.
+
+---
+
+### Do **not** highlight `3b Action WRITE`
+
+No real action/writeback workflow was used.
+
+```text
+3b Actions/writeback = not used
+```
+
+---
+
+### Highlight `4 Analysis`
+
+Yes. Quiver is the main analysis/visualization tool.
+
+```text
+Quiver report
+time series chart
+prediction intervals
+anomaly indication
+```
+
+So `4 ANALYSIS` should be highlighted.
+
+---
+
+### Maybe do **not** highlight `5 UI`
+
+Unless you treat Quiver as an embedded/end-user UI.
+
+For this demo, I would classify Quiver as:
+
+```text
+4 Analysis
+```
+
+not:
+
+```text
+5 UI
+```
+
+So leave `5 UI` unhighlighted or lightly marked as “possible but not used.”
+
+---
+
+### Do not highlight `6 Security/governance`
+
+Not materially part of this demo.
+
+---
+
+## Important added note for E17 diagram
+
+Add a special warning/note:
+
+```text
+Manual bridge required:
+Testing_data did not automatically regenerate Prophet Output.
+We manually scored Testing_data in notebook and wrote Prophet Output TEST.
+Then we repointed Create Series to Prophet Output TEST.
+```
+
+This is the key honest assessment.
+
+---
+
+# Suggested E17 coverage summary
+
+```text
+E17 coverage
+
+1a Starting data: YES
+  raw time series datasets
+
+1b Pipeline: YES
+  Pipeline Builder:
+  - Initial Data Cleaning
+  - Create Series
+
+2 AI / Model integration: YES
+  Prophet model + adapter + notebook scoring
+
+3a Ontology READ: YES
+  Quiver reads anomaly data/metrics/prediction objects/series
+
+3b Actions/writeback: NO
+
+4 Analysis: YES
+  Quiver anomaly visualization
+
+5 UI/app: NO / light
+  Quiver is analysis here, not a Workshop app
+
+6 Security/governance: NO / background only
+
+Git/code: YES, lightly
+  model training repository / adapter code
+```
+
+---
+
+## For the text below the diagram, highlight/add these items
+
+### `1a Starting data`
+
+Highlight:
+
+```text
+raw Foundry datasets:
+art_daily_jumpsup
+art_daily_small_noise
+```
+
+---
+
+### `1b Pipeline`
+
+Highlight:
+
+```text
+Pipeline Builder
+Initial Data Cleaning
+Create Series
+datasets are handoff points
+```
+
+---
+
+### `2 AI / Model integration`
+
+Add/highlight:
+
+```text
+Prophet model predicts expected value and bounds.
+Manual notebook scoring was required.
+```
+
+---
+
+### `3 Ontology`
+
+Highlight:
+
+```text
+3a READ only.
+No 3b action/writeback.
+```
+
+---
+
+### `4 Analysis`
+
+Highlight:
+
+```text
+Quiver visualizes:
+actual values
+upper/lower bounds
+anomaly points
+```
+
+---
+
+### Add special “manual intervention” box
+
+I would add this below the diagram:
+
+```text
+Manual intervention in this demo:
+1. Injected spike values into testing data.
+2. Rebuilt Initial Data Cleaning.
+3. Fixed/published model adapter.
+4. Manually scored Testing_data in notebook.
+5. Wrote Prophet Output TEST dataset.
+6. Repointed Create Series pipeline to TEST output.
+7. Refreshed Quiver to verify anomalies.
+```
+
+That box is essential for E17 because the demo was not a clean automatic flow.
+
 
 <br>  
 
