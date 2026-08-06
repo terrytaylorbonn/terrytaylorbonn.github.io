@@ -29,11 +29,14 @@ In the diagram below
 
 <br>
 
-*palantir.com/docs/foundry*<br><img src="/assets/777_08.png" alt="drones" width="64%" style="border: 1px solid #999;">
+#### **1 palantir.com/docs/foundry**
 
-<br> 
 
-*before AI*<br><img src="/assets/777_07.png" alt="drones" width="74%" >
+*(numbers added)*<br><img src="/assets/777_08.png" alt="drones" width="64%" style="border: 1px solid #999;">
+
+<!-- <br> 
+
+*before AI*<br><img src="/assets/777_07.png" alt="drones" width="74%" > -->
 
 <br> 
 
@@ -43,13 +46,11 @@ In the diagram below
 
 *with AI helpful assistant (**3b WRITE = 3b ACTION**)*<br><img src="/assets/777_09.png" alt="drones" width="74%" > -->
 
-#### **FUTURE MAIN DIAGRAM FOR EACH EXAMPLE/DEMO**
+#### **2 Main diagram for each example/demo/deep-dive** (26.0806)
 
 Example main diagram for D19: shows the main workflow; red squares highlight those items implemented for demo D19 (this is a a very rought first draft that will change greatly as I figure out the details)
 
-**NOTE: Numbers 1-6 (1a,1b) correspond to the numbers I added to the main diagram above** (from palantir.com/docs/foundry).
-
-*MAIN_D19.png*<br><img src="/assets/MAIN_D19.png" alt="drones" width="74%" >
+*Numbers 1-6 (1a,1b) correspond to the numbers I added to the main diagram above (from palantir.com/docs/foundry) (MAIN_D19.png)*<br><img src="/assets/MAIN_D19.png" alt="drones" width="74%" >
 
 
 
@@ -257,7 +258,7 @@ That will make each demo easier to compare.
 
 <br>
 
-# **### LIST OF CHATS #####################################**
+# **ALL CHATS**
 
 <br>
 
@@ -4398,4 +4399,4 @@ is a normal path.
 <br>  -->
 
 
-26.0805 (v1 26.0804)
+26.0806 (v1 26.0804)
