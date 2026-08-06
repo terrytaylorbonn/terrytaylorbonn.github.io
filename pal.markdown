@@ -42,16 +42,23 @@ This section provides what you need to master the basics of Palantir Foundry ASA
 
 *(click on link above for details)*
 
+<br>
+
+#### **The gist**
+
 I am still working on **my own take on the core conceptual gist of Palantir-SW**, but the gist is 
 - Palantir makes the enterprise visible and governable.
 - LLMs only play the role of a helpful assistants, but their very presence makes parts of that visibility probabilistic, so they must be sandboxed, verified, and logged.
 
 *The trusted wizard (left) with his crystal ball (called a "palantir" ("seeing stone") in The Lord of the Rings) and (right) an LLM (AGI = super human intelligence hosted on digital circuits; this is more of a myth than "Lord of the Rings"; LLMs have no intelligence and therefore can not be trusted)* <br><img src="/assets/pal_9_06.png" alt="drones" width="25%" style="border: 1px solid #999;"> <img src="/assets/777_02.png" alt="drones" width="30%" style="border: 1px solid #999;"><br>
 
-For the demos I want a more mechanistic conceptual overview. Something like the simple diagram belo that I can use to summarize what parts of the Foundry workflow an example/demo covers. I am more interested in the mechanics of the PAL tools used than the business case. 
+<br>
+
+#### **The initial workflow diagrams**
+
+For the demos I wanted a more mechanistic conceptual overview (I am more interested in the mechanics of the PAL tools used than the business cases). At first I wanted something like the simple Foundry workflow diagram below with text to summarize what parts an example/demo covered. 
 
 *Basic PAL diagram*<br><img src="/assets/777_07.png" alt="drones" width="74%" >
-
 
 For example, for Code Repo demo D19, this is what is covered 
 
@@ -65,6 +72,23 @@ For example, for Code Repo demo D19, this is what is covered
 6 Security/governance  ✓ branching, commits, checks, build
 AI                     xxAI, except optional AIP Assist
 ```
+
+<br> 
+
+#### **The current workflow diagrams**
+
+But I prefer the more detailed diagram below. The idea is to show
+- All possible workflow
+  - steps 
+  - functionality (as text below the diagram)
+- Highlight all those aspects used in
+  - ORANGE for examples (which install everything for you)
+  - RED for demos/deep-dives (which required you to build everything)
+
+For example the main diagram for **[E11](/3c.1b_pal_examples/)** (example 11).
+
+*(MAIN_E11.png)*<br><img src="/assets/MAIN_E11.png" alt="drones" width="74%" >
+
 
 
 <!--
