@@ -1,0 +1,29 @@
+---
+layout: page
+title: 3c.19_pal_19_transform_data_git
+permalink: /3c.19_pal_19_transform_data_git/
+---
+
+<br>
+
+[← 3c.2 Initial PAL demos](/3c.2_pal_initial_demos/)
+
+<br>
+
+
+See the working text for this QS in
+- **[\#627\_.docx](https://drive.google.com/drive/folders/1-Adawag9uA8_bq-hDF-nOuPYaRLz1eEO)**.  
+- **[xxxxxDemo URL](xxxx)**
+
+
+<br>
+
+
+<img src="/assets/MAIN_DD19.png" alt="drones" width="80%" style="border: 1px solid #999;">
+
+
+
+<br>
+
+
+26.0806 (v1 26.0806)

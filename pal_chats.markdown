@@ -4324,8 +4324,62 @@ is a normal path.
 
 <br>
 
+# **57 dataset / datasource confusion 1**
 
-# **57 dataset / datasource confusion**
+<br>
+
+This picture makes it clearer.
+
+In your diagram, those left boxes are:
+
+```text
+1a DATA SOURCE / input datasets
+```
+
+More precisely:
+
+```text
+ELINT Example = raw input dataset
+CV ATR GEOINT Example = raw input dataset
+```
+
+Then the rest is:
+
+```text
+1b PIPELINE
+  Marketplace transforms
+  Cast to H3
+  H3 Geospatial Join
+  Adjust dates/filter
+  output: Correlated Intelligence dataset
+```
+
+So for this Gaia/geospatial demo, the map is:
+
+```text
+1a input datasets
+  ELINT Example
+  CV ATR GEOINT Example
+
+→ 1b Pipeline Builder pipeline
+  clean/cast
+  convert to H3 geospatial index
+  join by H3
+  adjust/filter
+
+→ DS output dataset
+  Correlated Intelligence
+
+→ likely 3a Ontology / 5 UI Gaia map
+```
+
+Thus: they are datasets, but they function as the **data source inputs** for the demo.
+
+<img src="/assets/777_18.png" alt="drones" width="100%" style="border: 1px solid #999;">
+
+<br>
+
+# **58 dataset / datasource confusion 2**
 
 i am totally confused here... this term "dataset"....
 what is 1a and what is the output of the pipeline in 1b?
@@ -4422,22 +4476,62 @@ In the Gaia example:
   Correlated Intelligence
 ```
 
-
 <br>
 
-<!---->
+# **59 1a DATA SOURCE/SET**
 
-# **58 xxx**
+1a DATA SOURCE/SET
+- Original data outside (SOURCE) or inside (SET) Foundry.
 
-<br>
+FDE: Yes — good wording.
 
-# **59 xxx**
+Maybe slightly cleaner:
+
+```text
+1a DATA SOURCE / INPUT DATASET
+
+Original starting data for the demo.
+
+Can be:
+- outside Foundry source system/file/API/stream
+- already imported into Foundry as a raw dataset
+
+Role:
+- input to the first pipeline/analysis step
+```
+
+Key distinction:
+
+```text
+source = where data originates
+dataset = Foundry-stored form of data
+```
 
 <br>
 
 # **60 xxx**
 
-<br>  -->
+<br>  
+
+# **61 xxx**
+
+<br>  
+
+# **62 xxx**
+
+<br>  
+
+# **63 xxx**
+
+<br>  
+
+# **64 xxx**
+
+<br>  
+
+# **65 xxx**
+
+<br>  
 
 
 26.0806 (v1 26.0804)xxx

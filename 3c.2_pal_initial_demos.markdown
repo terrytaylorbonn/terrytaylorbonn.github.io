@@ -12,6 +12,8 @@ permalink: /3c.2_pal_initial_demos/
 
 For your first demos its probably best to do these (following my docx notes; see also **[PAL demo strategy](/3c.aaa_pal_strategy_demos/)**). I added numbering, conceptual diagrams, and a few error updates to the original demos (in my docx notes). 
 
+**D = demo, DD = deep dive**
+
 - **[D1: Palantir Foundry "speedrun" (quick start) (26.0705)](/3c.1_pal_foundry/)**. 
   - Demo complete... still need to write the webpage.
   - #610_pal_1_foundry_v02_26.0704_SS.docx  
@@ -41,11 +43,13 @@ For your first demos its probably best to do these (following my docx notes; see
 - **[D8: Deep Dive: Model integration (26.0721)](/3c.8_pal_8_model_integration/)**.
   - #619_.docx
   - **Sections 2c, 2d were not in the demos. I prompted AIP/FDE for directions.**
+- **[DD19: Deep Dive: transform_data_w_code_repos (26.0805)](/3c.19_pal_19_transform_data_git/)**.
+  - #627_pal_DD19_transform_data_w_code_repos_v02_26.0805_ss.docx
 
 <br>
 
 
-26.0725 (v1 26.0725)
+26.00806 (0725, v1 26.0725)
 
 <!--
 <br>

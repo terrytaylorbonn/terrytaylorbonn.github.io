@@ -31,7 +31,7 @@ In the diagram below
 
 <br>
 
-#### **1 palantir.com/docs/foundry**
+### **1 palantir.com/docs/foundry**
 
 
 *(numbers added)*<br><img src="/assets/777_08.png" alt="drones" width="64%" style="border: 1px solid #999;">
@@ -48,16 +48,27 @@ In the diagram below
 
 *with AI helpful assistant (**3b WRITE = 3b ACTION**)*<br><img src="/assets/777_09.png" alt="drones" width="74%" > -->
 
-#### **2 Main diagram for each example/demo/deep-dive** (26.0806)
+### **2 Main diagrams for example/demo/deep-dive** (26.0806)
 
-Example main diagram for D19: shows the main workflow; red squares highlight those items implemented for demo D19 (this is a a very rought first draft that will change greatly as I figure out the details)
-
-*Numbers 1-6 (1a,1b) correspond to the numbers I added to the main diagram above (from palantir.com/docs/foundry) (MAIN_D19.png)*<br><img src="/assets/MAIN_D19.png" alt="drones" width="74%" >
-
-
+This section shows 2 examples.
 
 
 <br> 
 
+#### **[D19](/3c.2_pal_initial_demos/)**
+
+Example main diagram for D19 (demo 19): shows the main workflow; red squares highlight those items implemented for demo D19 (this is a a very rought first draft that will change greatly as I figure out the details).
+
+*Numbers 1-6 (1a,1b) correspond to the numbers I added to the main diagram above (from palantir.com/docs/foundry) (MAIN_D19.png)*<br><img src="/assets/MAIN_D19.png" alt="drones" width="74%" >
+
+<br> 
+
+#### **[E11](/3c.1b_pal_examples/)**
+
+Example main diagram for E11 (example 11): shows the main workflow; orange squares highlight those items included in example install.
+
+*(MAIN_E11.png)*<br><img src="/assets/MAIN_E11.png" alt="drones" width="74%" >
+
+<br> 
 
 26.0806 (v1 26.0804)xxx
