@@ -71,4 +71,4 @@ Example main diagram for E11 (example 11): shows the main workflow; orange squar
 
 <br> 
 
-26.0806 (v1 26.0804)xxx
+26.0806 (v1 26.0804)xxxyyyy
