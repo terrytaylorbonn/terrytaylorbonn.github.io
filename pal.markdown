@@ -105,14 +105,13 @@ If you cant get a trial version of PAL running, then there's no reason to read f
 *PAL has 3 types of hands on learning -- examples, demos (speedruns), and deep dives; DIY (do it yourself) is my own hands-on learning from scratch using FDE(GPT 5.5) as the guide; in this doc I for now use the term "hands-on's" (a tongue twister) to refer to them all (until I think of a better term)*.
 
 - To really understand PAL you need to do hands-on's. 
-- PAL has a generous free tier (if you are located in one of the handful of countries that are allowed access).
 - Below is typical hands-on diagram. The idea is to show
   - Workflow
     - steps 
     - functionality (as text below the diagram)
   - Highlight all those aspects used in
     - ORANGE for examples (which install everything for you)
-    - RED for demos/deep-dives (which required you to build everything)
+    - RED for demos/deep-dives (which require you to build everything)
 
 <img src="/assets/MAIN_E17.png" alt="drones" width="74%" >
 
