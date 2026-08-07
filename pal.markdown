@@ -58,7 +58,7 @@ I am still working on **my own take on the core conceptual gist of Palantir-SW**
 
 The following diagram shows the basic PAL workflow.
 
-<img src="/assets/777_07.png" alt="drones" width="74%" >
+*(need to change this to the diagram with AI)*<br><img src="/assets/777_07.png" alt="drones" width="74%" >
 
 ```
 1 Data source          - raw CSV datasets
@@ -77,8 +77,8 @@ AI                     -
 
 **Note: Lab notes** (MS.Word docx files) are available for each example/demo on the **[GDrive](https://drive.google.com/drive/folders/1-Adawag9uA8_bq-hDF-nOuPYaRLz1eEO)**.
 
-- **2.1 Hands-on** with examples/demos/deep-dive's/DIY's
-- **2.2 Palantir free tier sign up**
+- **2.1 Palantir free tier sign up**
+- **2.2 Hands-on** with examples/demos/deep-dive's/DIY's
 - **2.3 Readmefirst**
 - **2.4 PAL examples**. These are complicated, but they have an autoinstaller that allows you to start with a (usually) working version that you can modify.
 - **2.5 PAL demos**. These are less complicated, but you start from 0, and getting a working demo at the end requires a lot of skill (including debugging).
@@ -86,7 +86,21 @@ AI                     -
 
 <br>
 
-#### **2.1 Hands-on with examples/demos/deep-dive's/DIY's**
+#### **2.1 Palantir free tier sign up**
+If you cant get a trial version of PAL running, then there's no reason to read further. You will not understand PAL by just reading about it.
+  - I dont remember the URL. Just Google it.
+  - Unfortunately, I did not record how I signed up, and its not a process I can repeat. But I can tell you this
+    - **You must be in a country that PAL supports** (thats only a few countries).
+    - **You can NOT use a VPN**.
+    - **You must have a passport or some picture ID of good enough quality for facial recognition verification**. My passport is almost 10 years old, but it still worked. My drivers licence pic was of such low quality that I doubt it would have worked. 
+    - **You need a camera on your PC to take a pic of yourself. PAL will compare your ID and the pic.**
+    - I think you need a **mobile phone number** (and email).
+  - It was a fairly long process, but very professionally done (I was impressed) (3c.0a).<br><br><img src="/assets/pal_10_08.png" alt="drones" width="37%" style="border: 1px solid #999;"><br><br>
+
+
+<br>
+
+#### **2.2 Hands-on with examples/demos/deep-dive's/DIY's**
 
 *PAL has 3 types of hands on learning -- examples, demos (speedruns), and deep dives; DIY (do it yourself) is my own hands-on learning from scratch using FDE(GPT 5.5) as the guide; in this doc I for now use the term "hands-on's" (a tongue twister) to refer to them all (until I think of a better term)*.
 
@@ -101,20 +115,6 @@ AI                     -
     - RED for demos/deep-dives (which required you to build everything)
 
 <img src="/assets/MAIN_E17.png" alt="drones" width="74%" >
-
-<br>
-
-#### **2.2 Palantir free tier sign up**
-If you cant get a trial version of PAL running, then there's no reason to read further. You will not understand PAL by just reading about it.
-  - I dont remember the URL. Just Google it.
-  - Unfortunately, I did not record how I signed up, and its not a process I can repeat. But I can tell you this
-    - **You must be in a country that PAL supports** (thats only a few countries).
-    - **You can NOT use a VPN**.
-    - **You must have a passport or some picture ID of good enough quality for facial recognition verification**. My passport is almost 10 years old, but it still worked. My drivers licence pic was of such low quality that I doubt it would have worked. 
-    - **You need a camera on your PC to take a pic of yourself. PAL will compare your ID and the pic.**
-    - I think you need a **mobile phone number** (and email).
-  - It was a fairly long process, but very professionally done (I was impressed) (3c.0a).<br><br><img src="/assets/pal_10_08.png" alt="drones" width="37%" style="border: 1px solid #999;"><br><br>
-
 
 <br>
 
