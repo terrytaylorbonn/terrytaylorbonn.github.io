@@ -106,12 +106,18 @@ If you cant get a trial version of PAL running, then there's no reason to read f
 
 - To really understand PAL you need to do hands-on's. 
 - Below is typical hands-on diagram. The idea is to show
+  - Security functionality. 
+    - "Magic balls" #1-3 ("crystal balls" might be the better term) represent the security aspects of Foundry (ensuring every user can only performed authorized actions). 
+    - Each ball represents a security area (I am not sure about this, but I am sure security needs to be in the diagram): 
+      - (1) Input (starting) data -> pipeline -> ontology.
+      - (2) Ontology -> analysis -> UI AND UI -> ontology -> data source. 
+      - (3) Global security.   
   - Workflow
     - steps 
-    - functionality (as text below the diagram)
-  - Highlight all those aspects used in
-    - ORANGE for examples (which install everything for you)
-    - RED for demos/deep-dives (which require you to build everything)
+    - functionality (text below the diagram)
+  - Required example/demos installation/configuration steps
+    - Examples (ORANGE = everything is installed for you)
+    - Demos/deep-dives (RED = you must configure everything)
 
 <img src="/assets/MAIN_E17.png" alt="drones" width="74%" >
 
@@ -123,7 +129,7 @@ This readme discusses various things to keep in mind as you work your way throug
 
 **Example:** 
 - The screenshot below is from the ZiptieAI DIY demo **[D9 UI (Workshop)](/3c.xxx_pal_HN_01_non_ai/)** (based on chats with FDE, not an example/demo/deep-dive). <br><img src="/assets/777_05.png" alt="drones" width="100%" style="border: 1px solid #999;"><br> 
-- It took me a long time to get the Workshop in that DIY demo working. Even FDE made a mistake during the configuration. Afterwards I created this simple diagram (with uniquely numbered steps and variables; they don't have to be perfect, just something you can trace). If I had had such a diagram for the step-by-step demos I had done earlier, I would have understood better what I had been doing. When you get your first Workshop running, spend extra time tracing through all the connections. Experiment. Do this for other tools.<br> <img src="/assets/777_04.png" alt="drones" width="85%" style="border: 1px solid #999;"> 
+- It took me a long time to get the Workshop in that DIY demo working. Even FDE made a mistake during the configuration. Afterwards I created this simple diagram (with uniquely numbered steps and variables; they don't have to be perfect, just something you can trace). If I had had such a diagram for the step-by-step demos I had done earlier, I would have understood better what I had been doing. When you get your first Workshop running, spend extra time tracing through all the connections. Experiment. Do this for other tools.<br> <img src="/assets/777_04.png" alt="drones" width="80%" style="border: 1px solid #999;"> 
 
 <!--
 For your first workshop configuration a simple diagram with numbered steps and variables can make it much easier to grasp what you are doing. Because when you start to try setting up your own config, you need that understanding. 
