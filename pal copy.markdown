@@ -26,19 +26,21 @@ This section provides what you need to master the basics of Palantir Foundry ASA
 
 **TOC**:
 - **1 Concepts** (my original take on the gist of PAL).
-- **2 Getting started hands-on**
-- **3 Advanced hands-on (future)**
+- **2 Getting started**
+  - **Sign up to PAL**
+  - **PAL examples/demos/deep-dives**
+  - **DIY demos** (team up with FDE (AI assistant) to create your own demos)
+- **3 Advanced (with FDE)**. Demos for
+  - **Foundry certification exam guide for application developer** (the exam involves answering questions; this section uses the exam to determine what demos to do).
+  - **Managing Foundry environment, 24/7 operation, streams, deployments, packaging, sharing, etc** (I am not sure yet exactly what topics).
 
 <br>
 
-## **[1 Concepts](/pal_concepts/)** 26.0807
+
+
+## **[1 Concepts](/pal_concepts/)** 26.0806
 
 *(click on link above for details)*
-
-
-- **1.1 The gist**
-- **1.2 Basic workflow**
-
 
 <br>
 
@@ -52,59 +54,74 @@ I am still working on **my own take on the core conceptual gist of Palantir-SW**
 
 <br>
 
-#### **1.2 Basic workflow**
+<!-- #### **1.2 The initial workflow diagrams**
 
-<!-- For the demos I wanted a more mechanistic conceptual overview (I am more interested in the mechanics of the PAL tools used than the business cases). At first I wanted something like the simple Foundry workflow diagram below with text to summarize what parts an example/demo covered. -->
+For the demos I wanted a more mechanistic conceptual overview (I am more interested in the mechanics of the PAL tools used than the business cases). At first I wanted something like the simple Foundry workflow diagram below with text to summarize what parts an example/demo covered. 
 
-The following diagram shows the basic PAL workflow.
+*Basic PAL diagram*<br><img src="/assets/777_07.png" alt="drones" width="74%" >
 
-<img src="/assets/777_07.png" alt="drones" width="74%" >
+For example, for Code Repo demo D19, this is what is covered 
 
 ```
-1 Data source          - raw CSV datasets
-1b Pipeline            - code-based PySpark transforms
+1 Data source          ✓ raw CSV datasets
+1b Pipeline            ✓ code-based PySpark transforms
 3 Ontology read        —
 3b Actions/writeback   —
 4 Analysis             —
 5 UI/app               —
-6 Security/governance  - branching, commits, checks, build
-AI                     - 
+6 Security/governance  ✓ branching, commits, checks, build
+AI                     xxAI, except optional AIP Assist
 ```
+
+<br> 
+
+#### **1.3 The current workflow diagrams**
+
+But I prefer the more detailed diagram below. The idea is to show
+- All possible workflow
+  - steps 
+  - functionality (as text below the diagram)
+- Highlight all those aspects used in
+  - ORANGE for examples (which install everything for you)
+  - RED for demos/deep-dives (which required you to build everything)
+
+For example the main diagram for **[E11](/3c.1b_pal_examples/)** (example 11).
+
+*(MAIN_E11.png)*<br><img src="/assets/MAIN_E11.png" alt="drones" width="74%" >
+
+<br>  -->
+
+#### **1.2 Workflow diagrams**
+
+The idea is to show
+- Workflow
+  - steps 
+  - functionality (as text below the diagram)
+- Highlight all those aspects used in
+  - ORANGE for examples (which install everything for you)
+  - RED for demos/deep-dives (which required you to build everything)
+
+*(MAIN_E17.png)*<br><img src="/assets/MAIN_E17.png" alt="drones" width="74%" >
+
+
+<!--
+*The real world -- An enterprise system that provides the infrastructure and safeguards so that AI can be a practical "helpful assistant" ([diagram source](https://blog.dataengineerthings.org/what-palantir-foundry-taught-me-about-building-better-data-systems-407e3768d5fc))*<br><img src="/assets/777_03.png" alt="drones" width="44%" style="border: 1px solid #999;"><br><br>  -->
 
 <br>
 
-## **2 Getting started hands-on** 
+## **2 Getting started** 
 
 **Note: Lab notes** (MS.Word docx files) are available for each example/demo on the **[GDrive](https://drive.google.com/drive/folders/1-Adawag9uA8_bq-hDF-nOuPYaRLz1eEO)**.
 
-- **2.1 Hands-on** with examples/demos/deep-dive's/DIY's
-- **2.2 Palantir free tier sign up**
-- **2.3 Readmefirst**
-- **2.4 PAL examples**. These are complicated, but they have an autoinstaller that allows you to start with a (usually) working version that you can modify.
-- **2.5 PAL demos**. These are less complicated, but you start from 0, and getting a working demo at the end requires a lot of skill (including debugging).
-- **2.6 DIY demos**. Go free style (not "vibe") by teaming up with FDE (AI assistant) to create your own demos.
+- **P1 Sign up to PAL**
+- **P1b Readmefirst**
+- **P2 PAL examples**. These are complicated, but they have an autoinstaller that allows you to start with a (usually) working version that you can modify.
+- **P3 PAL demos**. These are less complicated, but you start from 0, and getting a working demo at the end requires a lot of skill (including debugging).
+- **P4 DIY demos**. Go free style (not "vibe") by teaming up with FDE (AI assistant) to create your own demos.
 
 <br>
 
-#### **2.1 Hands-on with examples/demos/deep-dive's/DIY's**
-
-*PAL has 3 types of hands on learning -- examples, demos (speedruns), and deep dives; DIY (do it yourself) is my own hands-on learning from scratch using FDE(GPT 5.5) as the guide; in this doc I for now use the term "hands-on's" (a tongue twister) to refer to them all (until I think of a better term)*.
-
-- To really understand PAL you need to do hands-on's. 
-- PAL has a generous free tier (if you are located in one of the handful of countries that are allowed access).
-- Below is typical hands-on diagram. The idea is to show
-  - Workflow
-    - steps 
-    - functionality (as text below the diagram)
-  - Highlight all those aspects used in
-    - ORANGE for examples (which install everything for you)
-    - RED for demos/deep-dives (which required you to build everything)
-
-<img src="/assets/MAIN_E17.png" alt="drones" width="74%" >
-
-<br>
-
-#### **2.2 Palantir free tier sign up**
+#### **P1 Sign up to PAL**
 If you cant get a trial version of PAL running, then there's no reason to read further. You will not understand PAL by just reading about it.
   - I dont remember the URL. Just Google it.
   - Unfortunately, I did not record how I signed up, and its not a process I can repeat. But I can tell you this
@@ -118,7 +135,7 @@ If you cant get a trial version of PAL running, then there's no reason to read f
 
 <br>
 
-#### **[2.3 Read me first](/3c.1b_pal_readmefirst/)**
+#### **[P1b Read me first](/3c.1b_pal_readmefirst/)**
 
 This readme discusses various things to keep in mind as you work your way throught the examples/demos (problems to watch out for, avoid, etc). **For example:** 
 - For your first workshop configuration a simple diagram with numbered steps and variables can make it much easier to grasp what you are doing. Because when you start to try setting up your own config, you need that understanding. The screenshot below is from the ZiptieAI DIY demo **[D9 UI (Workshop)](/3c.xxx_pal_HN_01_non_ai/)** (based on chats with FDE, not an example/demo/deep-dive). <br><img src="/assets/777_05.png" alt="drones" width="75%" style="border: 1px solid #999;"><br> 
@@ -127,14 +144,14 @@ This readme discusses various things to keep in mind as you work your way throug
 
 <br>
 
-#### **[2.4 PAL examples](/3c.1b_pal_examples/)** 
+#### **[P2 PAL examples](/3c.1b_pal_examples/)** 
 *(MAIN DIAGRAM: 621/E10/**OK**, 622/E11/**OK**, 626/E17/**OK**) // (623/E12/FUTURE) // (624/E15/FAIL, 625/E16/INSTALLERROR)*.
   - Install a PAL example.
   - Run the example.
   - Try to rebuild the examples (from top to bottom, from downstream to upstream). The examples are excellent, but are often quite complicated. But you don't have to do everything first step-by-step before you see the the final results. Once you have a working first (reference) example, you can install a second (experimental) example that you modify at your pace. This allows you to (1) appreciate quickly the capabilities of PAL and (2) focus on learning the UI and basic concepts/terminology.<br>*PAL example (left, center) and my own build (right) (3c.1b)*<br><img src="/assets/pal_10_01.png" alt="drones" width="25%" style="border: 1px solid #999;">  <img src="/assets/pal_10_05.png" alt="drones" width="33%" style="border: 1px solid #999;">  <img src="/assets/pal_10_02.png" alt="drones" width="30%" style="border: 1px solid #999;"><br><br>
 
 
-#### **[2.5 PAL demos (speedruns)](/3c.2_pal_initial_demos/)**
+#### **[P3 PAL demos (speedruns)](/3c.2_pal_initial_demos/)**
 *(MAIN DIAGRAM: 610/D1/xx, 611/612/613/D2/**TODO**, 614/D3/xx, 614/D3/xx, 615/D4/xx, 616/D5/xx, 617/D6/xx, 618/D7/xx, 619/D8/xx, 627/DD19/**OK**)*.
   - Current demos consist of just D1-D8, the first PAL demos I did (step by step tutorials). 
   - When I started, I was overwhelmed by the many dialogs (because I had not done examples first).
@@ -149,7 +166,7 @@ This readme discusses various things to keep in mind as you work your way throug
 
 -->
 
-#### **[2.6 DIY (with FDE assistance) demos](/3c.xxx_pal_gist/)**
+#### **[P4 DIY (with FDE assistance) demos](/3c.xxx_pal_gist/)**
 *(MAIN DIAGRAM: 620/D9/xx)*.
 - Creating real-world projects by working as a team with FDE (AIP/[PAL Pilot](https://www.palantir.com/docs/foundry/pilot/getting-started/)). (3c.3).<br><img src="/assets/pal_10_12.png" alt="drones" width="50%" style="border: 1px solid #999;"><br>
 
@@ -164,21 +181,18 @@ This readme discusses various things to keep in mind as you work your way throug
 
 <br>
 
-## **3 Advanced hands-on (FUTURE)**
+## **3 Advanced (with FDE) (FUTURE)**
 
 This will focus on partnering with FDE to cover 2 major topics areas
-  - **3.1 Demos for *Foundry certification exam guide for application developer* topics** (the exam involves answering questions; this section uses the exam to determine what demos to do).<br><img src="/assets/777_19.png" alt="drones" width="20%" style="border: 1px solid #999;">  
-  - **3.2 Other demos** (Managing Foundry environment, 24/7 operation, streams, deployments, packaging, sharing, etc; inspired by [Online PAL docs](https://www.palantir.com/docs/foundry/getting-started/overview/))<br><img src="/assets/777_20.png" alt="drones" width="52%" style="border: 1px solid #999;">
-
-Before creating these hands-on's I need to get a lot more hands-on experience myself.  
-
-
+  - **P1 Demos for *Foundry certification exam guide for application developer* topics**  
+  - **P2 Other demos** 
+  
 <br> 
 
-#### **3.1 Demos for *Foundry certification exam guide for application developer* topics**
+#### **P5 Demos for *Foundry certification exam guide for application developer* topics**
 Use the exam as a guide for what demos to do to cover all the core topics that were not covered earlier.<br><img src="/assets/pal_15_02.png" alt="drones" width="55%" style="border: 1px solid #999;"><br><br>
 
-#### **[3.2 "Other" demos (not sure exactly what yet)](/3c.2b_operational_apps/)**
+#### **[P6 (3c.2b)"Other" demos (not sure exactly what yet)](/3c.2b_operational_apps/)**
 Demos not covered earlier (and not in the exam; I don’t have a clear idea yet what the topics in this section would be). Up to this point you only use the apps for testing. They are not setup for end user usage, for real deployment ("deployment in the UI in the previous apps was more like "compile/run"). Demos for topics not covered yet. Maybe
   - managing Foundry environment, 
   - 24/7 operation, 
@@ -187,7 +201,7 @@ Demos not covered earlier (and not in the exam; I don’t have a clear idea yet 
 
 <br>
 
-26.0807 (v1 26.0702) 
+26.0804 (v1 26.0702) 
 
 <br>
 <br>
