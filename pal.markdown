@@ -165,7 +165,7 @@ If you cant get a trial version of PAL running, then there's no reason to read f
 - To really understand PAL you need to do hands-on's. 
 - Below is typical hands-on diagram. The idea is to show
   - Security functionality. 
-    - "Magic balls" #1-3 ("crystal balls" might be the better term) represent the security aspects of Foundry (ensuring every user can only performed authorized actions). 
+    - Crystal balls #1-3 represent the security aspects of Foundry (ensuring every user can only performed authorized actions). 
     - Each ball represents a security area (I am not sure about this, but I am sure security needs to be in the diagram): 
       - (1) Input (starting) data -> pipeline -> ontology.
       - (2) Ontology -> analysis -> UI AND UI -> ontology -> data source. 
