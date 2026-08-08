@@ -1,7 +1,7 @@
 ---
 layout: page
 title: 3c Enterprise
-permalink: /pal/
+permalink: /palbbbbbbbbbbb/
 ---
 
 <br>
@@ -52,7 +52,7 @@ Its still a work in progress, but **if you are wanting a single-path demo-by-dem
 
 <br>
 
-## **[1 Concepts](/pal_concepts/)** 26.0808
+## **[1 Concepts](/pal_concepts/)** 26.0807
 
 *(click on link above for details)*
 
@@ -65,16 +65,11 @@ Its still a work in progress, but **if you are wanting a single-path demo-by-dem
 
 #### **1.1 The gist**
 
-- Palantir Foundry makes the enterprise visible and governable.
-- Data from many systems is transformed into a common operational model that can be analyzed, queried, monitored, and updated.
-- LLMs play the role of helpful assistants, but their very presence makes parts of the system probabilistic. As a result, AI actions must be sandboxed, verified, approved, and logged.
-
-<!-- 
 I am still working on **my own take on the core conceptual gist of Palantir-SW**, but the gist is 
 - Palantir makes the enterprise visible and governable.
-- LLMs only play the role of a helpful assistants, but their very presence makes parts of that visibility probabilistic, so they must be sandboxed, verified, and logged. -->
+- LLMs only play the role of a helpful assistants, but their very presence makes parts of that visibility probabilistic, so they must be sandboxed, verified, and logged.
 
-*The trusted wizard (left) using a crystal ball ("palantir" or "seeing stone" in The Lord of the Rings) and (right) modern AI running on digital hardware. Both promise enhanced visibility and insight, although one belongs to fantasy and the other to engineering.* <br><img src="/assets/pal_9_06.png" alt="drones" width="25%" style="border: 1px solid #999;"> <img src="/assets/777_02.png" alt="drones" width="30%" style="border: 1px solid #999;"><br>
+*The trusted wizard (left) with his crystal ball (called a "palantir" ("seeing stone") in The Lord of the Rings) and (right) an LLM (AGI = super human intelligence hosted on digital circuits; this is more of a myth than "Lord of the Rings"; LLMs have no intelligence and therefore can not be trusted)* <br><img src="/assets/pal_9_06.png" alt="drones" width="25%" style="border: 1px solid #999;"> <img src="/assets/777_02.png" alt="drones" width="30%" style="border: 1px solid #999;"><br>
 
 <br>
 
@@ -82,166 +77,20 @@ I am still working on **my own take on the core conceptual gist of Palantir-SW**
 
 <!-- For the demos I wanted a more mechanistic conceptual overview (I am more interested in the mechanics of the PAL tools used than the business cases). At first I wanted something like the simple Foundry workflow diagram below with text to summarize what parts an example/demo covered. -->
 
-
 The following diagram shows the basic PAL workflow.
 
-**1a Data source**
-
-Raw data from enterprise systems.
-
-Examples:
-
-- CSV files
-- Databases
-- ERP systems
-- CRM systems
-- Sensors
-- External APIs
-
-**1b Pipeline**
-
-Transforms raw data into clean, structured, and consistent datasets.
-
-Examples:
-
-- cleaning
-- joining
-- filtering
-- aggregating
-- validation
-
-**3a Ontology read**
-
-Applications and users read enterprise data through the ontology.
-
-The ontology provides a common operational model of the enterprise.
-
-**3b Ontology writeback**
-
-Applications, workflows, and users update enterprise systems through the ontology.
-
-Examples:
-
-- change status
-- create ticket
-- approve request
-- update record
-
-**4 Analysis**
-
-Code, queries, dashboards, rules, AI, and other logic analyze the ontology data.
-
-Purpose:
-
-- discover information
-- detect problems
-- support decisions
-
-**5 UI / App**
-
-User-facing applications.
-
-Examples:
-
-- dashboards
-- workflows
-- forms
-- operational applications
-- AI assistants
-
-**6 Security / Governance**
-
-Controls who can see data, modify data, run workflows, and use AI.
-
-Examples:
-
-- permissions
-- auditing
-- approvals
-- version control
-- lineage
-- logging
-- AI
-
-AI can appear in many layers:
-
-- pipeline transforms
-- model integration
-- ontology functions
-- analysis
-- UI assistants
-
-*The ontology is the operational heart of Foundry. Most applications, analysis, workflows, and AI interact with enterprise data through the ontology rather than directly through the raw datasets*<br><img src="/assets/777_07.png" alt="drones" width="74%" >
-
-
-The three crystal balls represent three layers of governance. Foundry controls 
-- how data enters the system (#1), 
-- how applications and AI interact with operational data (#2), and 
-- how the entire platform is secured, audited, and managed (#3).
-
-So I would describe the three crystal balls as:
+*(need to change this to the diagram with AI)*<br><img src="/assets/777_07.png" alt="drones" width="74%" >
 
 ```
-Crystal ball #1 — Data governance
-
-Controls how raw enterprise data becomes trusted operational data.
-
-Examples:
-
-ingestion
-transformation
-validation
-lineage
-
-This is the boundary between:
-
-Data Source
-     ↓
-Pipeline
-     ↓
-Ontology
+1 Data source          - raw CSV datasets
+1b Pipeline            - code-based PySpark transforms
+3 Ontology read        —
+3b Actions/writeback   —
+4 Analysis             —
+5 UI/app               —
+6 Security/governance  - branching, commits, checks, build
+AI                     - 
 ```
-
-```
-Crystal ball #2 — Operational governance
-
-Controls how applications, users, workflows, and AI interact with the enterprise.
-
-Examples:
-
-ontology permissions
-workflow permissions
-write-back controls
-approval processes
-
-This is the boundary around:
-
-Ontology
-Analysis
-UI
-Writeback
-```
-
-```
-Crystal ball #3 — Global governance
-
-Controls the entire platform.
-
-Examples:
-
-security
-auditing
-version control
-branching
-deployment
-compliance
-
-This is the layer that sits above everything else.
-```
-
-
-
-
 
 <br>
 
