@@ -236,27 +236,31 @@ For your first workshop configuration a simple diagram with numbered steps and v
 ## **3 Advanced hands-on (FUTURE)**
 
 This will focus on partnering with FDE to cover 2 major topics areas
-  - **3.1 Demos for *Foundry certification exam guide for application developer* topics** (the exam involves answering questions; this section uses the exam to determine what demos to do).<br><img src="/assets/777_19.png" alt="drones" width="20%" style="border: 1px solid #999;">  
-  - **3.2 Other demos** (Managing Foundry environment, 24/7 operation, streams, deployments, packaging, sharing, etc; inspired by [Online PAL docs](https://www.palantir.com/docs/foundry/getting-started/overview/))<br><img src="/assets/777_20.png" alt="drones" width="52%" style="border: 1px solid #999;">
+  - **3.1 Demos for *Foundry certification exam guide for application developer* topics** (the exam involves answering questions; this section uses the exam to determine what demos to do).  
+  - **3.2 Other demos** (Managing Foundry environment, 24/7 operation, streams, deployments, packaging, sharing, etc).
 
-Before creating these hands-on's I need to get a lot more hands-on experience myself.  
+<!-- Before creating these hands-on's I need to get a lot more hands-on experience myself.  -->
 
 
 <br> 
 
 #### **3.1 Demos for *Foundry certification exam guide for application developer* topics**
-Use the exam as a guide for what demos to do to cover all the core topics that were not covered earlier.<br><img src="/assets/pal_15_02.png" alt="drones" width="55%" style="border: 1px solid #999;"><br><br>
+Use the exam as a guide for what demos to do to cover all the core topics that were not covered earlier.<br><img src="/assets/777_19.png" alt="drones" width="20%" style="border: 1px solid #999;"><br><img src="/assets/pal_15_02.png" alt="drones" width="55%" style="border: 1px solid #999;"><br><br>
 
 #### **[3.2 "Other" demos (not sure exactly what yet)](/3c.2b_operational_apps/)**
 Demos not covered earlier (and not in the exam; I don’t have a clear idea yet what the topics in this section would be). Up to this point you only use the apps for testing. They are not setup for end user usage, for real deployment ("deployment in the UI in the previous apps was more like "compile/run"). Demos for topics not covered yet. Maybe
   - managing Foundry environment, 
   - 24/7 operation, 
   - streams, 
-  - packaging, sharing, deployments, dev social media, etc <br>*app that works 24/7, notifies, etc (this pic is not correct; just a placeholder)*<br><img src="/assets/pal_10_06.png" alt="drones" width="80%" style="border: 1px solid #999;">
+  - packaging, sharing, deployments, dev social media, etc 
+  
+Basically whatever is inspired by **[Online PAL docs](https://www.palantir.com/docs/foundry/getting-started/overview/)**.<br><img src="/assets/777_20.png" alt="drones" width="50%" style="border: 1px solid #999;">
+
+<!--  <br>*app that works 24/7, notifies, etc (this pic is not correct; just a placeholder)*<br><img src="/assets/pal_10_06.png" alt="drones" width="80%" style="border: 1px solid #999;"> -->
 
 <br>
 
-26.0807 (v1 26.0702) 
+26.0808 (v1 26.0702) 
 
 <br>
 <br>
