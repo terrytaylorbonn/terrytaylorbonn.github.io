@@ -39,7 +39,7 @@ This section provides what you need to master the basics of Palantir Foundry ASA
 
 When I first started with Foundry I was overwhelmed. I first checked out
 - **[palantir.com/docs/foundry](https://www.palantir.com/docs/foundry)** has a lot of great content. But its probably not where you want to initially start. 
-- Several Youtube sites.
+- **Several Youtube sites**. The sites I viewed were quite good, but not really suited for an absolute beginner. When you first start out with Foundry, the really big challenge is getting used to the dialogs. Documents are for easy to use (and they tend to be more up-to-date and serve as the baseline of the documentation of my own tests).
 
 What I really wanted was to get hands-on experience from the start. So I checked out several official Palantir sources of demos. There were a lot of demos.
 - **[build.palantir.com](https://build.palantir.com)** has links to examples/demos organized by type: AI Starter Pack, Document Suite, Reference Implementation, etc.<br><img src="/assets/777_23.png" alt="drones" width="32%" style="border: 1px solid #999;"><br> 
