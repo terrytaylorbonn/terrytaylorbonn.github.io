@@ -85,91 +85,21 @@ I am still working on **my own take on the core conceptual gist of Palantir-SW**
 
 The following diagram shows the basic PAL workflow.
 
-**1a Data source**
-
-Raw data from enterprise systems.
-
-Examples:
-
-- CSV files
-- Databases
-- ERP systems
-- CRM systems
-- Sensors
-- External APIs
-
-**1b Pipeline**
-
-Transforms raw data into clean, structured, and consistent datasets.
-
-Examples:
-
-- cleaning
-- joining
-- filtering
-- aggregating
-- validation
-
-**3a Ontology read**
-
-Applications and users read enterprise data through the ontology.
-
-The ontology provides a common operational model of the enterprise.
-
-**3b Ontology writeback**
-
-Applications, workflows, and users update enterprise systems through the ontology.
-
-Examples:
-
-- change status
-- create ticket
-- approve request
-- update record
-
-**4 Analysis**
-
-Code, queries, dashboards, rules, AI, and other logic analyze the ontology data.
-
-Purpose:
-
-- discover information
-- detect problems
-- support decisions
-
-**5 UI / App**
-
-User-facing applications.
-
-Examples:
-
-- dashboards
-- workflows
-- forms
-- operational applications
-- AI assistants
-
-**6 Security / Governance**
-
-Controls who can see data, modify data, run workflows, and use AI.
-
-Examples:
-
-- permissions
-- auditing
-- approvals
-- version control
-- lineage
-- logging
-- AI
-
-AI can appear in many layers:
-
-- pipeline transforms
-- model integration
-- ontology functions
-- analysis
-- UI assistants
+- **1a Data source**. Raw data from enterprise systems. For example: CSV files, Databases, ERP systems, CRM systems, Sensors, External APIs. 
+- **1b Pipeline**. Transforms raw data into clean, structured, and consistent datasets. For example: cleaning, joining, filtering, aggregating, validation.
+- **3a Ontology read**. Applications and users read enterprise data through the ontology. The ontology provides a common operational model of the enterprise.
+- **3b Ontology writeback**. Applications, workflows, and users update enterprise systems through the ontology. For example: change status, create ticket, approve request, update record.
+- **4 Analysis**. Code, queries, dashboards, rules, AI, and other logic analyze the ontology data. Purpose: 
+  - discover information
+  - detect problems
+  - support decisions
+- **5 UI / App**. User-facing applications. For example: dashboards, workflows, forms, operational applications, AI assistants.
+- **6 Security / Governance**. Controls who can see data, modify data, run workflows, and use AI. For example: permissions, auditing, approvals, version control, lineage, logging, AI. AI can appear in many layers:
+  - pipeline transforms
+  - model integration
+  - ontology functions
+  - analysis
+  - UI assistants
 
 *The ontology is the operational heart of Foundry. Most applications, analysis, workflows, and AI interact with enterprise data through the ontology rather than directly through the raw datasets*<br><img src="/assets/777_07.png" alt="drones" width="74%" >
 
@@ -179,68 +109,24 @@ The three crystal balls represent three layers of governance. Foundry controls
 - how applications and AI interact with operational data (#2), and 
 - how the entire platform is secured, audited, and managed (#3).
 
-So I would describe the three crystal balls as:
+**Crystal ball #1 — Data governance**. Controls how raw enterprise data becomes trusted operational data. 
+- Examples: ingestion, transformation, validation, lineage.
+- This is the boundary between:
+  - Data Source
+  - Pipeline
+  - Ontology
 
-```
-Crystal ball #1 — Data governance
+**Crystal ball #2 — Operational governance**. Controls how applications, users, workflows, and AI interact with the enterprise.
+- Examples: ontology permissions, workflow permissions, write-back controls, approval processes.
+- This is the boundary around:
+  - Ontology
+  - Analysis
+  - UI
+  - Writeback
 
-Controls how raw enterprise data becomes trusted operational data.
-
-Examples:
-
-ingestion
-transformation
-validation
-lineage
-
-This is the boundary between:
-
-Data Source
-     ↓
-Pipeline
-     ↓
-Ontology
-```
-
-```
-Crystal ball #2 — Operational governance
-
-Controls how applications, users, workflows, and AI interact with the enterprise.
-
-Examples:
-
-ontology permissions
-workflow permissions
-write-back controls
-approval processes
-
-This is the boundary around:
-
-Ontology
-Analysis
-UI
-Writeback
-```
-
-```
-Crystal ball #3 — Global governance
-
-Controls the entire platform.
-
-Examples:
-
-security
-auditing
-version control
-branching
-deployment
-compliance
-
-This is the layer that sits above everything else.
-```
-
-
-
+**Crystal ball #3 — Global governance**. Controls the entire platform.
+- Examples: security, auditing, version control, branching, deployment, compliance.
+- This is the layer that sits above everything else.
 
 
 <br>
