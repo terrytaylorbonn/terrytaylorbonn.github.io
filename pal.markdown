@@ -84,13 +84,13 @@ The following diagram shows the basic PAL workflow.
   - analysis
   - UI assistants
 
-*The ontology is the operational heart of Foundry. Most applications, analysis, workflows, and AI interact with enterprise data through the ontology rather than directly through the raw datasets*<br><img src="/assets/777_07.png" alt="drones" width="74%" >
+*The ontology is the operational heart of Foundry. Most applications, analysis, workflows, and AI interact with enterprise data through the ontology rather than directly through the raw datasets.*<br><img src="/assets/777_07.png" alt="drones" width="74%" >
 
-
+<!--
 The three crystal balls represent three layers of governance. Foundry controls 
 - how data enters the system (#1), 
 - how applications and AI interact with operational data (#2), and 
-- how the entire platform is secured, audited, and managed (#3).
+- how the entire platform is secured, audited, and managed (#3). -->
 
 **Crystal ball #1 — Data governance**. Controls how raw enterprise data becomes trusted operational data. 
 - Examples: ingestion, transformation, validation, lineage.
@@ -260,7 +260,7 @@ Basically whatever is inspired by **[Online PAL docs](https://www.palantir.com/d
 
 <br>
 
-26.0808 (v1 26.0702) 
+26.0809 (v1 26.0702) 
 
 <br>
 <br>
