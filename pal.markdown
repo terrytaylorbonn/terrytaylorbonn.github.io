@@ -11,9 +11,9 @@ Enterprise AI dev platforms do the heavy lifting of creating an enterprise level
 **My focus (for now) is on Palantir (Foundry)** because 
 - PAL is a market leader.
 - PAL offers a generous free trial account for Foundry.
-- The built-in AI help (AIP/FDE) makes it possible to complete the demos.
+- The built-in AI help (FDE and to some extent AIP) makes it possible to complete the demos.
 
-This section provides what you need to master the basics of Palantir Foundry ASAP. 
+This section provides (WIP) what you need to master the basics of Palantir Foundry ASAP. 
 
 
 <!-- 
@@ -25,7 +25,7 @@ This section provides what you need to master the basics of Palantir Foundry ASA
 <br>
 
 **TOC**:
-- **1 Concepts** (my original take on the gist of PAL).
+- **1 Concepts**
 - **2 Getting started hands-on**
 - **3 Advanced hands-on (future)**
 
