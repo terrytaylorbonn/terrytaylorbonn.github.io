@@ -109,7 +109,7 @@ The three crystal balls represent three layers of governance. Foundry controls
 - **2.2 Palantir Foundry demo sources**
 - **2.3 My demo plan** 
 - **2.4 Readmefirst**
-- **2.5 PAL examples**. These are complicated, but they have an autoinstaller that allows you to start with a (usually) working version that you can modify.
+- **2.5 PAL examples (START CREATING PALANTIR FOUNDRY APPS HERE)**. These are complicated, but they have an autoinstaller that allows you to start with a (usually) working version that you can modify.
 - **2.6 PAL demos**. These are less complicated, but you start from 0, and getting a working demo at the end requires a lot of skill (including debugging).
 - **2.7 DIY demos**. Go free style (not "vibe") by teaming up with FDE (AI assistant) to create your own demos.
 
@@ -166,10 +166,10 @@ Its still a work in progress (I need another month or two to get the basic doc r
 
 #### **[2.4 Read me first](/3c.1b_pal_readmefirst/)**
 
-But before you start, I recommend you read the readmefirst doc that discusses various things to keep in mind as you work your way throught the examples/demos (problems to watch out for, avoid, etc). 
+But before you start, I recommend you read the readmefirst page that discusses various things to keep in mind as you work your way throught the examples/demos (problems to watch out for, avoid, etc). 
 
 **Example:** 
-- The screenshot below is from the ZiptieAI DIY demo **[D9 UI (Workshop)](/3c.xxx_pal_HN_01_non_ai/)** (based on chats with FDE, not an example/demo/deep-dive). <br><img src="/assets/777_05.png" alt="drones" width="100%" style="border: 1px solid #999;"><br> 
+- The screenshot below is from the ZiptieAI DIY demo **[D9 UI (Workshop)](/3c.xxx_pal_HN_01_non_ai/)** (from 2.7 below). <br><img src="/assets/777_05.png" alt="drones" width="100%" style="border: 1px solid #999;"><br> 
 - It took me a long time to get the Workshop in that DIY demo working. Even FDE made a mistake during the configuration. Afterwards I created this simple diagram (with uniquely numbered steps and variables; they don't have to be perfect, just something you can trace). If I had had such a diagram for the step-by-step demos I had done earlier, I would have understood better what I had been doing. When you get your first Workshop running, spend extra time tracing through all the connections. Experiment. Do this for other tools.<br> <img src="/assets/777_04.png" alt="drones" width="80%" style="border: 1px solid #999;"> 
 
 <!--
@@ -179,7 +179,7 @@ For your first workshop configuration a simple diagram with numbered steps and v
 
 <br>
 
-#### **[2.5 PAL examples](/3c.1b_pal_examples/)** (START CREATING PALANTIR APPS HERE)
+#### **[2.5 PAL examples](/3c.1b_pal_examples/) (START CREATING PALANTIR FOUNDRY APPS HERE)**
 
 <!-- *(MAIN DIAGRAM: 621/E10/**OK**, 622/E11/**OK**, 626/E17/**OK**) // (623/E12/FUTURE) // (624/E15/FAIL, 625/E16/INSTALLERROR)*. -->
 
