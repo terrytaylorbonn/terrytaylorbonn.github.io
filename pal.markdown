@@ -103,6 +103,19 @@ The three crystal balls represent three layers of governance. Foundry controls
   - Examples: security, auditing, version control, branching, deployment, compliance.
   - This is the layer that sits above everything else.
 
+<br>
+
+#### **1.3 Detailed workflow (for simple demo \#610 D1)** 26.0809
+
+PAL-DEMO-1: Palantir Foundry **["Speedrun: Your First End-to-End Workflow"](https://learn.palantir.com/speedrun-your-first-e2e-workflow/19448870**.
+
+*Note: For the FDE chat details see **[1.3 Detailed workflow chats](/pal_1.3_workflow_chats/)**.*
+
+For the D1 demo this is the main diagram version<br><img src="/assets/777_25.png" alt="drones" width="45%" style="border: 1px solid #999;"><br> 
+
+
+
+
 
 <br>
 
@@ -112,12 +125,16 @@ When I first started with Foundry I was a bit overwhelmed (this is a very powerf
 - **[palantir.com/docs/foundry](https://www.palantir.com/docs/foundry)**. Has a lot of great content. But its probably not where you want to initially start. 
 - **Several Youtube sites**. The sites I viewed were quite good, but not really suited for an absolute beginner. Documents are the best for absolute beginners (and they tend to be more up-to-date and can serve as the template for your own docs).
 
-I wanted to get hands-on experience from the start. So I checked out several official Palantir sources of demos. There were a lot of demos.
+I wanted to get hands-on experience from the start. So I checked out several official Palantir sources of demos. There were a lot of demos. There seem to be 3 main sources **[(chat with FDE about this)](/pal_3_demo_sources/)**: 
 - **[build.palantir.com](https://build.palantir.com)** has links to examples/demos organized by type: AI Starter Pack, Document Suite, Reference Implementation, etc.<br><img src="/assets/777_23.png" alt="drones" width="32%" style="border: 1px solid #999;"><br> 
 - **[learn.palantir.com](https://learn.palantir.com)** has links to examples/demo organized by role: Data Engineer, App Dev, etc.<br><img src="/assets/777_22.png" alt="drones" width="65%" style="border: 1px solid #999;"><br> 
 - **[my-org].palantirfoundry.com/workspace/marketplace** is a Foundry internal app for finding examples/demos organized by 9 "stores".<br><img src="/assets/777_21.png" alt="drones" width="45%" style="border: 1px solid #999;"><br> 
 
-I spent the first month doing the demos I thought looking interesting. PAL docs are organized by different roles and different project types. But I wanted a learning path that led me demo-by-demo through the basics of the entire PAL toolchain. So on 26.0807 I created my own learning plan doc **[#699\_planning\_.docx](https://drive.google.com/drive/folders/1-Adawag9uA8_bq-hDF-nOuPYaRLz1eEO)**.<br><img src="/assets/777_24.png" alt="drones" width="51%" style="border: 1px solid #999;"><br>
+I spent the first month doing the demos I thought looked interesting. PAL docs are organized by different roles and different project types. But I wanted a learning path that led me demo-by-demo through the basics of the entire PAL toolchain. So on 26.0807 I created my own learning plan doc **[#699\_planning\_.docx](https://drive.google.com/drive/folders/1-Adawag9uA8_bq-hDF-nOuPYaRLz1eEO)**.<br><img src="/assets/777_24.png" alt="drones" width="51%" style="border: 1px solid #999;"><br>
+
+The goal of this doc:
+- Clear single list of demos (examples, courses, etc) that cover the main fucntionality of Palantir.
+- For each demo: A simple Foundry workflow main diagram (like the crystal ball diagram in section 1 above) with the parts of workflow covered in the demo clearly markeed.
 
 Its still a work in progress, but **if you are wanting a single-path demo-by-demo intro to Foundry, then this section of ZiptieAI is for you** (after another month or two of testing and rewriting the docx's).
 
