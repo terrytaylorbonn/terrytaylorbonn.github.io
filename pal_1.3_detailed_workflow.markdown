@@ -14,7 +14,7 @@ Enterprise AI dev platforms do the heavy lifting of creating an enterprise level
 <br>
 
 
-<img src="/assets/777_25.png" alt="drones" width="45%" style="border: 1px solid #999;"><br> 
+<img src="/assets/777_25.png" alt="drones" width="75%" style="border: 1px solid #999;"><br> 
 
 #### My prompt 
 

@@ -124,6 +124,11 @@ The following (from FDE) explains what section of the demo text ("3") correspond
 8 Operational Workshop =  [5 + 3b] use UI to execute the action
 ```
 
+Following diagram shows the UI sequence in section 8.
+
+*(left) order assigned to Bins, (right) reassinged to Weber, (bottom) result (saved to ontology)*<br><img src="/assets/777_26.png" alt="drones" width="75%" style="border: 1px solid #999;"><br> 
+
+
 <br>
 
 ## **1b My approach to learning Palantir Foundry** 26.0808
