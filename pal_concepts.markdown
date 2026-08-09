@@ -4,6 +4,12 @@ title: Palantir concepts (WIP)
 permalink: /pal_concepts/
 ---
 
+
+
+<br>
+
+# **THIS PAGE NEEDS AN UPDATE....**
+
 <br>
 
 I am still working on **my own take on the core conceptual gist of Palantir-SW**, but basically its 
