@@ -42,7 +42,7 @@ This section provides what you need to master the basics of Palantir Foundry ASA
 
 - **1.1 The gist**
 - **1.2 Basic workflow**
-- **1.3 Detailed workflow (for simple demo \#610 D1)** 
+- **1.3 Example: Basic workflow for simple demo \#610 D1** 
 
 <br>
 
@@ -105,7 +105,7 @@ The three crystal balls represent three layers of governance. Foundry controls
 
 <br>
 
-#### **1.3 Detailed workflow (for simple demo \#610 D1)** 26.0809
+#### **1.3 Example: Basic workflow for simple demo \#610 D1** 26.0809
 
 PAL-DEMO-1: Palantir Foundry **["Speedrun: Your First End-to-End Workflow"](https://learn.palantir.com/speedrun-your-first-e2e-workflow/19448870)**.
 
@@ -124,7 +124,7 @@ The following (from FDE) explains what section of the demo text ("3") correspond
 8 Operational Workshop =  [5 + 3b] use UI to execute the action
 ```
 
-Following diagram shows the UI sequence in section 8.
+The following diagram shows how the UI is used to change the ontology (section 8 Operational Workshop).
 
 *(left) order assigned to Bins, (right) reassigned to Weber, (bottom) result (saved to ontology)*<br><img src="/assets/777_26.png" alt="drones" width="75%" style="border: 1px solid #999;"><br> 
 
