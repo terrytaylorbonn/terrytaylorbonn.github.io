@@ -224,7 +224,7 @@ The first demo I did was **["Speedrun: Your First End-to-End Workflow"](https://
 
 For the D1 demo this is the main workflow diagram *(for details about this workflow see **[D1 workflow chats](/pal_1.3_workflow_chats/)**)*.<br><img src="/assets/777_25.png" alt="drones" width="75%" style="border: 1px solid #999;"><br> 
 
-The following explains what section of docx \#610 (3) corresponds to what parts of the diagram ([1a]):
+The following explains what section of the original demo text (for example "3") corresponds to what parts of the diagram (for example "[1a]").
 
 ```
 3 Ingestion =             [1a] local files/manual upload → starting data in Foundry
