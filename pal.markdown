@@ -87,29 +87,21 @@ The following diagram shows the basic PAL workflow.
 *The ontology is the operational heart of Foundry. Most applications, analysis, workflows, and AI interact with enterprise data through the ontology rather than directly through the raw datasets.*<br><img src="/assets/777_07.png" alt="drones" width="74%" >
 
 <!--
-The three crystal balls represent three layers of governance. Foundry controls 
 - how data enters the system (#1), 
 - how applications and AI interact with operational data (#2), and 
 - how the entire platform is secured, audited, and managed (#3). -->
 
-**Crystal ball #1 — Data governance**. Controls how raw enterprise data becomes trusted operational data. 
-- Examples: ingestion, transformation, validation, lineage.
-- This is the boundary between:
-  - Data Source
-  - Pipeline
-  - Ontology
 
-**Crystal ball #2 — Operational governance**. Controls how applications, users, workflows, and AI interact with the enterprise.
-- Examples: ontology permissions, workflow permissions, write-back controls, approval processes.
-- This is the boundary around:
-  - Ontology
-  - Analysis
-  - UI
-  - Writeback
-
-**Crystal ball #3 — Global governance**. Controls the entire platform.
-- Examples: security, auditing, version control, branching, deployment, compliance.
-- This is the layer that sits above everything else.
+The three crystal balls represent three layers of governance. Foundry controls 
+- **Crystal ball #1 — Data governance**. Controls how raw enterprise data becomes trusted operational data. 
+  - Examples: ingestion, transformation, validation, lineage.
+  - This is the boundary between: Data Source, Pipeline, Ontology.
+- **Crystal ball #2 — Operational governance**. Controls how applications, users, workflows, and AI interact with the enterprise.
+  - Examples: ontology permissions, workflow permissions, write-back controls, approval processes.
+  - This is the boundary around: Ontology, Analysis, UI, Writeback.
+- **Crystal ball #3 — Global governance**. Controls the entire platform.
+  - Examples: security, auditing, version control, branching, deployment, compliance.
+  - This is the layer that sits above everything else.
 
 
 <br>
