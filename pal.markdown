@@ -107,7 +107,7 @@ The three crystal balls represent three layers of governance. Foundry controls
 
 #### **1.3 Detailed workflow (for simple demo \#610 D1)** 26.0809
 
-PAL-DEMO-1: Palantir Foundry **["Speedrun: Your First End-to-End Workflow"](https://learn.palantir.com/speedrun-your-first-e2e-workflow/19448870**.
+PAL-DEMO-1: Palantir Foundry **["Speedrun: Your First End-to-End Workflow"](https://learn.palantir.com/speedrun-your-first-e2e-workflow/19448870)**.
 
 *Note: For the FDE chat details see **[1.3 Detailed workflow chats](/pal_1.3_workflow_chats/)**.*
 
