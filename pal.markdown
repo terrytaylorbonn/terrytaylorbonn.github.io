@@ -42,7 +42,7 @@ This section provides what you need to master the basics of Palantir Foundry ASA
 
 - **1.1 The gist**
 - **1.2 Basic workflow**
-
+- **1.3 Detailed workflow (for simple demo \#610 D1)** 
 
 <br>
 
@@ -111,11 +111,18 @@ PAL-DEMO-1: Palantir Foundry **["Speedrun: Your First End-to-End Workflow"](http
 
 *Note: For the FDE chat details see **[1.3 Detailed workflow chats](/pal_1.3_workflow_chats/)**.*
 
-For the D1 demo this is the main diagram version<br><img src="/assets/777_25.png" alt="drones" width="45%" style="border: 1px solid #999;"><br> 
+For the D1 demo this is the main diagram version<br><img src="/assets/777_25.png" alt="drones" width="75%" style="border: 1px solid #999;"><br> 
 
+The following (from FDE) explains what section of the demo text ("3") corresponds to what parts of the diagram "[1a]":
 
-
-
+```
+3 Ingestion =             [1a] local files/manual upload → starting data in Foundry
+4 Transforming the Data = [1b] Pipeline Builder cleans/joins/unions data → output dataset
+5 Creating the Ontology = [3] output dataset becomes ontology object type
+6 Building Workshop App = [5] Workshop reads ontology objects and displays table/filters/charts/details
+7 Configuring Actions =   [3b] define ontology action/write capability
+8 Operational Workshop =  [5 + 3b] use UI to execute the action
+```
 
 <br>
 
