@@ -1,7 +1,7 @@
 ---
 layout: page
 title: 3c Enterprise
-permalink: /pal/
+permalink: /palcssdfdsf/
 ---
 
 <br>
@@ -26,6 +26,7 @@ This section provides what you need to master the basics of Palantir Foundry ASA
 
 **TOC**:
 - **1 Concepts** (my original take on the gist of PAL).
+- **1b My approach to learning Palantir Foundry**
 - **2 Getting started hands-on**
 - **3 Advanced hands-on (future)**
 
@@ -34,12 +35,14 @@ This section provides what you need to master the basics of Palantir Foundry ASA
 
 <!-- ## **[0 My approach to learning Palantir Foundry](/pal_approach/)** 26.0808 -->
 
-## **[1 Concepts](/pal_concepts/)**
+## **[1 Concepts](/pal_concepts/)** 26.0808
+
+*(click on link above for details)*
 
 
 - **1.1 The gist**
 - **1.2 Basic workflow**
-
+- **1.3 Example: Basic workflow for simple demo \#610 D1** 
 
 <br>
 
@@ -102,16 +105,63 @@ The three crystal balls represent three layers of governance. Foundry controls
 
 <br>
 
+#### **1.3 Example: Basic workflow for simple demo \#610 D1** 26.0809
+
+PAL-DEMO-1: Palantir Foundry **["Speedrun: Your First End-to-End Workflow"](https://learn.palantir.com/speedrun-your-first-e2e-workflow/19448870)**.
+
+*Note: For the FDE chat details see **[1.3 Detailed workflow chats](/pal_1.3_workflow_chats/)**.*
+
+For the D1 demo this is the main diagram version<br><img src="/assets/777_25.png" alt="drones" width="75%" style="border: 1px solid #999;"><br> 
+
+The following (from FDE) explains what section of the demo text ("3") corresponds to what parts of the diagram "[1a]":
+
+```
+3 Ingestion =             [1a] local files/manual upload → starting data in Foundry
+4 Transforming the Data = [1b] Pipeline Builder cleans/joins/unions data → output dataset
+5 Creating the Ontology = [3] output dataset becomes ontology object type
+6 Building Workshop App = [5] Workshop reads ontology objects and displays table/filters/charts/details
+7 Configuring Actions =   [3b] define ontology action/write capability
+8 Operational Workshop =  [5 + 3b] use UI to execute the action
+```
+
+The following diagram shows how the UI is used to change the ontology (section 8 Operational Workshop).
+
+*(left) order assigned to Bins, (right) reassigned to Weber, (bottom) result (saved to ontology)*<br><img src="/assets/777_26.png" alt="drones" width="75%" style="border: 1px solid #999;"><br> 
+
+
+<br>
+
+## **1b My approach to learning Palantir Foundry** 26.0808
+
+When I first started with Foundry I was a bit overwhelmed (this is a very powerful system). I first checked out
+- **[palantir.com/docs/foundry](https://www.palantir.com/docs/foundry)**. Has a lot of great content. But its probably not where you want to initially start. 
+- **Several Youtube sites**. The sites I viewed were quite good, but not really suited for an absolute beginner. Documents are the best for absolute beginners (and they tend to be more up-to-date and can serve as the template for your own docs).
+
+I wanted to get hands-on experience from the start. So I checked out several official Palantir sources of demos. There were a lot of demos. There seem to be 3 main sources **[(chat with FDE about this)](/pal_3_demo_sources/)**: 
+- **[build.palantir.com](https://build.palantir.com)** has links to examples/demos organized by type: AI Starter Pack, Document Suite, Reference Implementation, etc.<br><img src="/assets/777_23.png" alt="drones" width="32%" style="border: 1px solid #999;"><br> 
+- **[learn.palantir.com](https://learn.palantir.com)** has links to examples/demo organized by role: Data Engineer, App Dev, etc.<br><img src="/assets/777_22.png" alt="drones" width="65%" style="border: 1px solid #999;"><br> 
+- **[my-org].palantirfoundry.com/workspace/marketplace** is a Foundry internal app for finding examples/demos organized by 9 "stores".<br><img src="/assets/777_21.png" alt="drones" width="45%" style="border: 1px solid #999;"><br> 
+
+I spent the first month doing the demos I thought looked interesting. PAL docs are organized by different roles and different project types. But I wanted a learning path that led me demo-by-demo through the basics of the entire PAL toolchain. So on 26.0807 I created my own learning plan doc **[#699\_planning\_.docx](https://drive.google.com/drive/folders/1-Adawag9uA8_bq-hDF-nOuPYaRLz1eEO)**.<br><img src="/assets/777_24.png" alt="drones" width="51%" style="border: 1px solid #999;"><br>
+
+The goal of this doc:
+- Clear single list of demos (examples, courses, etc) that cover the main fucntionality of Palantir.
+- For each demo: A simple Foundry workflow main diagram (like the crystal ball diagram in section 1 above) with the parts of workflow covered in the demo clearly markeed.
+
+Its still a work in progress, but **if you are wanting a single-path demo-by-demo intro to Foundry, then this section of ZiptieAI is for you** (after another month or two of testing and rewriting the docx's).
+
+<br>
+
 ## **2 Getting started hands-on** 
 
+**Note: Lab notes** (MS.Word docx files) are available for each example/demo on the **[GDrive](https://drive.google.com/drive/folders/1-Adawag9uA8_bq-hDF-nOuPYaRLz1eEO)**.
 
 - **2.1 Palantir free tier sign up**
-- **2.2 Palantir Foundry demo sources**
-- **2.3 My demo plan** 
-- **2.4 Readmefirst**
-- **2.5 PAL examples**. These are complicated, but they have an autoinstaller that allows you to start with a (usually) working version that you can modify.
-- **2.6 PAL demos**. These are less complicated, but you start from 0, and getting a working demo at the end requires a lot of skill (including debugging).
-- **2.7 DIY demos**. Go free style (not "vibe") by teaming up with FDE (AI assistant) to create your own demos.
+- **2.2 Hands-on** with examples/demos/deep-dive's/DIY's
+- **2.3 Readmefirst**
+- **2.4 PAL examples**. These are complicated, but they have an autoinstaller that allows you to start with a (usually) working version that you can modify.
+- **2.5 PAL demos**. These are less complicated, but you start from 0, and getting a working demo at the end requires a lot of skill (including debugging).
+- **2.6 DIY demos**. Go free style (not "vibe") by teaming up with FDE (AI assistant) to create your own demos.
 
 <br>
 
@@ -129,73 +179,9 @@ If you cant get a trial version of PAL running, then there's no reason to read f
 
 <br>
 
-#### **2.2 Palantir Foundry demo sources**
+#### **2.2 Hands-on with examples/demos/deep-dive's/DIY's**
 
-When I first started with Foundry I was a bit overwhelmed (this is a very powerful system). I first checked out
-- **[palantir.com/docs/foundry](https://www.palantir.com/docs/foundry)**. Has a lot of great content. But its probably not where you want to initially start. 
-- **Several Youtube sites**. The sites I viewed were quite good, but not really suited for an absolute beginner. Documents are the best for absolute beginners (and they tend to be more up-to-date and can serve as the template for your own docs).
-
-I wanted to get hands-on experience from the start. So I checked out several official Palantir sources of demos. There were a lot of demos. There seem to be 3 main sources **[(chat with FDE about this)](/pal_3_demo_sources/)**: 
-- **[build.palantir.com](https://build.palantir.com)** has links to examples/demos organized by type: AI Starter Pack, Document Suite, Reference Implementation, etc.<br><img src="/assets/777_23.png" alt="drones" width="32%" style="border: 1px solid #999;"><br> 
-- **[learn.palantir.com](https://learn.palantir.com)** has links to examples/demo organized by role: Data Engineer, App Dev, etc.<br><img src="/assets/777_22.png" alt="drones" width="65%" style="border: 1px solid #999;"><br> 
-- **[my-org].palantirfoundry.com/workspace/marketplace** is a Foundry internal app for finding examples/demos organized by 9 "stores".<br><img src="/assets/777_21.png" alt="drones" width="45%" style="border: 1px solid #999;"><br> 
-
-<br>
-
-
-#### **2.3 My demo plan** 
-
-
-I spent the first month doing the demos I thought looked interesting from the sources listed in 2.2 above. Lab notes** (MS.Word docx files) are available for each example/demo on the **[GDrive](https://drive.google.com/drive/folders/1-Adawag9uA8_bq-hDF-nOuPYaRLz1eEO)**.
-
-AL docs are organized by different roles and different project types. But I needed a learning path for the generalist beginner like myself. So I decided I'd just start doing demos and after a while I'd eventually figure out a learning path.
-
-I still don't have a ready learning path for you the reader. But I do have a rough draft doc that documents 
-- All the sources
-- What I did so far
-- What I plan to do 
-
-That doc is my learning plan **[#699\_planning\_.docx](https://drive.google.com/drive/folders/1-Adawag9uA8_bq-hDF-nOuPYaRLz1eEO)**.<br><img src="/assets/777_24.png" alt="drones" width="51%" style="border: 1px solid #999;"><br>
-
-The goal of this doc:
-- Clear single list of demos (examples, courses, etc) that cover the main fucntionality of Palantir.
-- For each demo: A simple Foundry workflow main diagram (like the crystal ball diagram in section 1 above) with the parts of workflow covered in the demo clearly markeed.
-
-Its still a work in progress, but **if you are wanting a single-path demo-by-demo intro to Foundry, then this section of ZiptieAI is for you** (after another month or two of testing and rewriting the docx's).
-
-Meanwhile I recommend you follow this order
-- **2.5 PAL examples**. These are complicated, but they have an autoinstaller that allows you to start with a (usually) working version that you can modify.
-- **2.6 PAL demos**. These are less complicated, but you start from 0, and getting a working demo at the end requires a lot of skill (including debugging).
-- **2.7 DIY demos**. Go free style (not "vibe") by teaming up with FDE (AI assistant) to create your own demos.
-
-<br>
-
-#### **[2.4 Read me first](/3c.1b_pal_readmefirst/)**
-
-But before you start, I recommend you read the readmefirst doc that discusses various things to keep in mind as you work your way throught the examples/demos (problems to watch out for, avoid, etc). 
-
-**Example:** 
-- The screenshot below is from the ZiptieAI DIY demo **[D9 UI (Workshop)](/3c.xxx_pal_HN_01_non_ai/)** (based on chats with FDE, not an example/demo/deep-dive). <br><img src="/assets/777_05.png" alt="drones" width="100%" style="border: 1px solid #999;"><br> 
-- It took me a long time to get the Workshop in that DIY demo working. Even FDE made a mistake during the configuration. Afterwards I created this simple diagram (with uniquely numbered steps and variables; they don't have to be perfect, just something you can trace). If I had had such a diagram for the step-by-step demos I had done earlier, I would have understood better what I had been doing. When you get your first Workshop running, spend extra time tracing through all the connections. Experiment. Do this for other tools.<br> <img src="/assets/777_04.png" alt="drones" width="80%" style="border: 1px solid #999;"> 
-
-<!--
-For your first workshop configuration a simple diagram with numbered steps and variables can make it much easier to grasp what you are doing. Because when you start to try setting up your own config, you need that understanding. 
--->
-
-
-<br>
-
-#### **[2.5 PAL examples](/3c.1b_pal_examples/)** (START CREATING PALANTIR APPS HERE)
-
-<!-- *(MAIN DIAGRAM: 621/E10/**OK**, 622/E11/**OK**, 626/E17/**OK**) // (623/E12/FUTURE) // (624/E15/FAIL, 625/E16/INSTALLERROR)*. -->
-
-  - Install a PAL example. The examples are installed and (usually) ready to run immediately. 
-  - Run the example first.
-  - Then rebuild the examples (from top to bottom, from downstream to upstream). The examples are excellent, but are often quite complicated. But you don't have to do everything first step-by-step before you see the the final results. Once you have a working first (reference) example, you can install a second (experimental) example that you modify at your pace. This allows you to (1) appreciate quickly the capabilities of PAL and (2) focus on learning the UI and basic concepts/terminology.<br>*PAL example (left, center) and my own build (right) (3c.1b)*<br><img src="/assets/pal_10_01.png" alt="drones" width="25%" style="border: 1px solid #999;">  <img src="/assets/pal_10_05.png" alt="drones" width="33%" style="border: 1px solid #999;">  <img src="/assets/pal_10_02.png" alt="drones" width="30%" style="border: 1px solid #999;"><br>
-  - Workflow diagrams for examples are usually a bit more complicted than for demos.<br> <img src="/assets/MAIN_E17.png" alt="drones" width="74%" ><br>
-
-
-<!-- *PAL has 3 types of hands on learning -- examples, demos (speedruns), and deep dives; DIY (do it yourself) is my own hands-on learning from scratch using FDE(GPT 5.5) as the guide; in this doc I for now use the term "hands-on's" (a tongue twister) to refer to them all (until I think of a better term)*. 
+*PAL has 3 types of hands on learning -- examples, demos (speedruns), and deep dives; DIY (do it yourself) is my own hands-on learning from scratch using FDE(GPT 5.5) as the guide; in this doc I for now use the term "hands-on's" (a tongue twister) to refer to them all (until I think of a better term)*.
 
 - To really understand PAL you need to do hands-on's. 
 - Below is typical hands-on diagram. The idea is to show
@@ -210,40 +196,41 @@ For your first workshop configuration a simple diagram with numbered steps and v
     - functionality (text below the diagram)
   - Required example/demos installation/configuration steps
     - Examples (ORANGE = everything is installed for you)
-    - Demos/deep-dives (RED = you must configure everything) -->
+    - Demos/deep-dives (RED = you must configure everything)
+
+<img src="/assets/MAIN_E17.png" alt="drones" width="74%" >
+
+<br>
+
+#### **[2.3 Read me first](/3c.1b_pal_readmefirst/)**
+
+This readme discusses various things to keep in mind as you work your way throught the examples/demos (problems to watch out for, avoid, etc). 
+
+**Example:** 
+- The screenshot below is from the ZiptieAI DIY demo **[D9 UI (Workshop)](/3c.xxx_pal_HN_01_non_ai/)** (based on chats with FDE, not an example/demo/deep-dive). <br><img src="/assets/777_05.png" alt="drones" width="100%" style="border: 1px solid #999;"><br> 
+- It took me a long time to get the Workshop in that DIY demo working. Even FDE made a mistake during the configuration. Afterwards I created this simple diagram (with uniquely numbered steps and variables; they don't have to be perfect, just something you can trace). If I had had such a diagram for the step-by-step demos I had done earlier, I would have understood better what I had been doing. When you get your first Workshop running, spend extra time tracing through all the connections. Experiment. Do this for other tools.<br> <img src="/assets/777_04.png" alt="drones" width="80%" style="border: 1px solid #999;"> 
+
+<!--
+For your first workshop configuration a simple diagram with numbered steps and variables can make it much easier to grasp what you are doing. Because when you start to try setting up your own config, you need that understanding. 
+-->
 
 
 <br>
 
-#### **[2.6 PAL demos (speedruns)](/3c.2_pal_initial_demos/)**
+#### **[2.4 PAL examples](/3c.1b_pal_examples/)** 
+*(MAIN DIAGRAM: 621/E10/**OK**, 622/E11/**OK**, 626/E17/**OK**) // (623/E12/FUTURE) // (624/E15/FAIL, 625/E16/INSTALLERROR)*.
+  - Install a PAL example.
+  - Run the example.
+  - Try to rebuild the examples (from top to bottom, from downstream to upstream). The examples are excellent, but are often quite complicated. But you don't have to do everything first step-by-step before you see the the final results. Once you have a working first (reference) example, you can install a second (experimental) example that you modify at your pace. This allows you to (1) appreciate quickly the capabilities of PAL and (2) focus on learning the UI and basic concepts/terminology.<br>*PAL example (left, center) and my own build (right) (3c.1b)*<br><img src="/assets/pal_10_01.png" alt="drones" width="25%" style="border: 1px solid #999;">  <img src="/assets/pal_10_05.png" alt="drones" width="33%" style="border: 1px solid #999;">  <img src="/assets/pal_10_02.png" alt="drones" width="30%" style="border: 1px solid #999;"><br><br>
 
-<!-- 
-*(MAIN DIAGRAM: 610/D1/xx, 611/612/613/D2/**TODO**, 614/D3/xx, 614/D3/xx, 615/D4/xx, 616/D5/xx, 617/D6/xx, 618/D7/xx, 619/D8/xx, 627/DD19/**OK**)*.-->
 
+#### **[2.5 PAL demos (speedruns)](/3c.2_pal_initial_demos/)**
+*(MAIN DIAGRAM: 610/D1/xx, 611/612/613/D2/**TODO**, 614/D3/xx, 614/D3/xx, 615/D4/xx, 616/D5/xx, 617/D6/xx, 618/D7/xx, 619/D8/xx, 627/DD19/**OK**)*.
   - Current demos consist of just D1-D8, the first PAL demos I did (step by step tutorials). 
-  - Demos are simpler, but I think more difficult to get running. I sometimes spent a few hours and at the end it did not work, and I did not know how to find the problem. But if you did the examples first, then you have enough of the environment experience to get through the demos..
-  
-The first demo I did was **["Speedrun: Your First End-to-End Workflow"](https://learn.palantir.com/speedrun-your-first-e2e-workflow/19448870)** *(for details on how I did the demo, see docx \#610 D1)*. The following diagram shows during the final test how the UI is used to change the ontology (section 8 Operational Workshop).
-
-*(left) order assigned to Bins, (right) reassigned to Weber, (bottom) result (saved to ontology)*<br><img src="/assets/777_26.png" alt="drones" width="75%" style="border: 1px solid #999;"><br> 
-
-
-For the D1 demo this is the main workflow diagram *(for details about this workflow see **[D1 workflow chats](/pal_1.3_workflow_chats/)**)*.<br><img src="/assets/777_25.png" alt="drones" width="75%" style="border: 1px solid #999;"><br> 
-
-The following explains what section of docx \#610 (3) corresponds to what parts of the diagram ([1a]):
-
-```
-3 Ingestion =             [1a] local files/manual upload → starting data in Foundry
-4 Transforming the Data = [1b] Pipeline Builder cleans/joins/unions data → output dataset
-5 Creating the Ontology = [3] output dataset becomes ontology object type
-6 Building Workshop App = [5] Workshop reads ontology objects and displays table/filters/charts/details
-7 Configuring Actions =   [3b] define ontology action/write capability
-8 Operational Workshop =  [5 + 3b] use UI to execute the action
-```
-<!-- 
+  - When I started, I was overwhelmed by the many dialogs (because I had not done examples first).
   - I documented all details with screenshots.<br>*Demos of core functionality (3c.2)*<br><img src="/assets/pal_10_13.png" alt="drones" width="37%" style="border: 1px solid #999;">  <img src="/assets/pal_10_14.png" alt="drones" width="50%" style="border: 1px solid #999;"><br><br>
 
-You just did project setup / pipeline (goal 1). You know your way around Foundry. Now do demos that cover the rest of basic core Foundry functionality. Get hands-on experience before doing "operational" apps (goal 3).
+<!-- You just did project setup / pipeline (goal 1). You know your way around Foundry. Now do demos that cover the rest of basic core Foundry functionality. Get hands-on experience before doing "operational" apps (goal 3).
   - **Your initial focus will be on 2 things**
     - **What button to press or where to click next.** The PAL dialogs are well done, but they require a lot of time to get used to.
     - **"I'm stuck.... how do I find a solution"**. PAL has AIP and FDE to help. 
@@ -252,14 +239,11 @@ You just did project setup / pipeline (goal 1). You know your way around Foundry
 
 -->
 
-<br>
-
-#### **[2.7 DIY (with FDE assistance) demos](/3c.xxx_pal_gist/)**
-- The real goal is to be able to create your own apps by working with FDE (and to a limited extent AIP/[PAL Pilot](https://www.palantir.com/docs/foundry/pilot/getting-started/)).<br><img src="/assets/pal_10_12.png" alt="drones" width="50%" style="border: 1px solid #999;"><br>
+#### **[2.6 DIY (with FDE assistance) demos](/3c.xxx_pal_gist/)**
+*(MAIN DIAGRAM: 620/D9/xx)*.
+- Creating real-world projects by working as a team with FDE (AIP/[PAL Pilot](https://www.palantir.com/docs/foundry/pilot/getting-started/)). (3c.3).<br><img src="/assets/pal_10_12.png" alt="drones" width="50%" style="border: 1px solid #999;"><br>
 
 <!-- 
-*(MAIN DIAGRAM: 620/D9/xx)*.
-
   - **Use AI (AIP/FDE) to do demos from scratch** (not following PAL demos or PAL docs; I might get inspiration from those demos, but I just use AIP/FDE to execute; in the future PAL Pilot would do this).
   - **D9 (demo set 9) = "haystack needle" demos**. I believe this was Palantir's original focus when founded:
     - Finding some small indication in a sea of data
@@ -304,7 +288,7 @@ Basically whatever is inspired by **[Online PAL docs](https://www.palantir.com/d
 <br><br>
 <br>
 <br><br>
-<br><br><br><br><br><br><br><br><br>
+<br>
 <br>
 <br>
 <br>
