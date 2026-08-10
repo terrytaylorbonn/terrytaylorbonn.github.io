@@ -179,10 +179,21 @@ The goal of \#699:
 - **2.7 DIY demos**. Go free style (not "vibe") by teaming up with FDE (AI assistant) to create your own demos.
 
 
-**Example 1 (from 2.6 "PAL demos"):** The following is the first example of setting up the Workshop (UI). This was the second demo D02 (see 2.6 below) that I did. And it took a long time to get right (several days). And its usually the last thing you setup for an app. If you made a mistake earlier in the pipeline, ontology, functions, etc then things just dont work in the workshop. And its not easy (for a beginner) to figure out why. Its not even easy to understand how everything connects. It would have been much easier if this had been an example, so that I could have installed one instance, use it as a reference configuration, and then try to replicate. 
+**Example 1 (from 2.6 "PAL demos"):** The following was the second demo D02 (see 2.6 below) that I did. Its the first example of setting up the Workshop (UI). 
+- It took a long time to get right (several days). And its usually the last thing you setup for an app. If you made a mistake earlier in the pipeline, ontology, functions, etc then things just dont work in the workshop. And its not easy (for a beginner) to figure out why. 
+- The diagram shows that are basically 2 parts that dont depend on each other. 
+  - The bottom widget response takes the top widget input and uses an LLM to answer the question with the RAG input.
+  - The left and right widgets do the complicated part
+    - Left widget takes the query text and compares against the embedding values in the "TT2 Chunk VVV" object type. It outputs to variable "Relevant Chunks VVV" the top 9 matching embeddings.
+    - Right widget takes the relevant chunks and inputs to the Vertex template for display.   
+- What this means is you could have done this demo from start (pipeline) to finish (UI) in 3 parts. 
+  - First LLM (top and bottom widgets).
+  - Then display the nearest embedding neighbors (left widget).
+  - Finally build the template and add to the right widget.
+- That would make it easier to handle all the complexity and not get stuck.
+- But best of all would be to have this as an example. You install 2 working example instance. Use one as a reference and slowly rebuild parts of the other.   
 
-(WIP)
-
+<br> <img src="/assets/777_28.png" alt="drones" width="80%" style="border: 1px solid #999;"> 
 
 **Example 2 (2.7 "DIY demos"):** The following is the second example of setting up the Workshop (UI). This was for DIY demo D09 (see 2.7 below). This also took a long time to get right (but far less than D02, because I was not following instructions, but working from scratch with FDE). 
 - The screenshot below is from the ZiptieAI DIY demo **[D9 UI (Workshop)](/3c.xxx_pal_HN_01_non_ai/)** (from 2.7 below). <br><img src="/assets/777_05.png" alt="drones" width="100%" style="border: 1px solid #999;"><br> 
