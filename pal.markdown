@@ -130,7 +130,7 @@ If you cant get a trial version of PAL running, then there's no reason to read f
 #### **2.2 Palantir Foundry demo sources**
 
 When I first started with Foundry I was a bit overwhelmed (this is a very powerful system). I first checked out
-- **[palantir.com/docs/foundry](https://www.palantir.com/docs/foundry)**. Has a lot of great content. But its probably not where you want to initially start. 
+- **[palantir.com/docs/foundry](https://www.palantir.com/docs/foundry)**. Has a lot of great content. But its probably not where you want to initially start. Note: The most interesting thing on this page for me was the diagram below (I added numbering that matches the workflow diagram in 1.2 above).<br><img src="/assets/777_27.png" alt="drones" width="52%" style="border: 1px solid #999;"><br>
 - **Several Youtube sites**. The sites I viewed were quite good, but not really suited for an absolute beginner. Documents are the best for absolute beginners (and they tend to be more up-to-date and can serve as the template for your own docs).
 
 I wanted to get hands-on experience from the start. So I checked out several official Palantir sources of demos. There were a lot of demos. There seem to be 3 main sources **[(chat with FDE about this)](/pal_3_demo_sources/)**: 
