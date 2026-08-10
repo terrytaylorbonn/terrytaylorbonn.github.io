@@ -133,7 +133,7 @@ When I first started with Foundry I was a bit overwhelmed (this is a very powerf
 - **[palantir.com/docs/foundry](https://www.palantir.com/docs/foundry)**. Has a lot of great content. But its probably not where you want to initially start. Note: The most interesting thing on this page for me was the diagram below (I added numbering that matches the workflow diagram in 1.2 above).<br><img src="/assets/777_27.png" alt="drones" width="52%" style="border: 1px solid #999;"><br>
 - **Several Youtube sites**. The sites I viewed were quite good, but not really suited for an absolute beginner. Documents are the best for absolute beginners (and they tend to be more up-to-date and can serve as the template for your own docs).
 
-I wanted to get hands-on experience from the start. So I checked out several official Palantir sources of demos. There were a lot of demos. There seem to be 3 main sources **[(chat with FDE about this)](/pal_3_demo_sources/)**: 
+I wanted to get hands-on experience from the start. So I checked out several official Palantir sources of demos. There were a lot of demos. There seem to be 3 main sources *(see also the **[chat with FDE about demo sources](/pal_3_demo_sources/)**)*: 
 - **[build.palantir.com](https://build.palantir.com)** has links to examples/demos organized by type: AI Starter Pack, Document Suite, Reference Implementation, etc.<br><img src="/assets/777_23.png" alt="drones" width="32%" style="border: 1px solid #999;"><br> 
 - **[learn.palantir.com](https://learn.palantir.com)** has links to examples/demo organized by role: Data Engineer, App Dev, etc.<br><img src="/assets/777_22.png" alt="drones" width="65%" style="border: 1px solid #999;"><br> 
 - **[my-org].palantirfoundry.com/workspace/marketplace** is a Foundry internal app for finding examples/demos organized by 9 "stores".<br><img src="/assets/777_21.png" alt="drones" width="45%" style="border: 1px solid #999;"><br> 
@@ -164,7 +164,7 @@ The goal of \#699:
 
 #### **[2.4 Read me first](/3c.1b_pal_readmefirst/)**
 
-But before you start, I recommend you read the readmefirst page that discusses various things to keep in mind as you work your way throught the examples/demos (problems to watch out for, avoid, etc). 
+Before you start using Foundry, I recommend you read the readmefirst page that discusses various things to keep in mind as you work your way through the examples/demos (problems to watch out for, avoid, etc). 
 
 **Example:** 
 - The screenshot below is from the ZiptieAI DIY demo **[D9 UI (Workshop)](/3c.xxx_pal_HN_01_non_ai/)** (from 2.7 below). <br><img src="/assets/777_05.png" alt="drones" width="100%" style="border: 1px solid #999;"><br> 
@@ -247,7 +247,7 @@ You just did project setup / pipeline (goal 1). You know your way around Foundry
 <br>
 
 #### **[2.7 DIY (with FDE assistance) demos](/3c.xxx_pal_gist/)**
-- The real goal is to be able to create your own apps by working with FDE (and to a limited extent AIP/[PAL Pilot](https://www.palantir.com/docs/foundry/pilot/getting-started/)).<br><img src="/assets/pal_10_12.png" alt="drones" width="50%" style="border: 1px solid #999;"><br>
+- The real goal of the Getting Started phase should be not only to be able to follow demos, but be able to quickly assess how you can create apps to solve requirements with only an AI assistant (FDE paired with GPT-5.5 for example; FDE is an amazing tool that can (1) "see" screenshots that you paste into a chat and (2) guide your through the most complex configurations and problem solving, but you need to have an idea of the big picture direction for any project). The (eventual) goal of the DIY demos is to show how to team up with FDE to work effectively in Foundry (and to a limited extent AIP/[PAL Pilot](https://www.palantir.com/docs/foundry/pilot/getting-started/)).<br><img src="/assets/pal_10_12.png" alt="drones" width="50%" style="border: 1px solid #999;"><br>
 
 <!-- 
 *(MAIN DIAGRAM: 620/D9/xx)*.
