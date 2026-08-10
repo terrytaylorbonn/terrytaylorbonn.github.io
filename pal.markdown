@@ -179,7 +179,17 @@ The goal of \#699:
 - **2.7 DIY demos**. Go free style (not "vibe") by teaming up with FDE (AI assistant) to create your own demos.
 
 
-**Example 1 (from 2.6 "PAL demos"):** The following was the second demo D02 (see 2.6 below) that I did. Its the first example of setting up the Workshop (UI). 
+**Example 1 (from 2.6 "PAL demos"):** The following was the second demo D02 (see 2.6 below) that I did. 
+
+
+
+- The screenshot below is from the ZiptieAI D02 demo **[D02 First AIP workflow](/3c.2_pal_aip/)** (from 2.7 below). 
+- This is the **[speedrun tutorial link](https://learn.palantir.com/speedrun-your-e2e-aip-workflow)**.
+
+<img src="/assets/final-01.png" alt="drones" width="70%" style="border: 1px solid #999;"><br> 
+
+
+Its the first example of setting up the Workshop (UI). 
 - It took a long time to get right (several days). And its usually the last thing you setup for an app. If you made a mistake earlier in the pipeline, ontology, functions, etc then things just dont work in the workshop. And its not easy (for a beginner) to figure out why. 
 - The diagram shows that are basically 2 parts that dont depend on each other. 
   - The bottom widget response takes the top widget input and uses an LLM to answer the question with the RAG input.
