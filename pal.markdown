@@ -74,14 +74,12 @@ The following diagram shows the basic PAL workflow.
   - detect problems
   - support decisions
 - **5 UI / App**. User-facing applications. For example: dashboards, workflows, forms, operational applications, AI assistants.
-- **6 Security / Governance**. Controls who can see data, modify data, run workflows, and use AI. For example: permissions, auditing, approvals, version control, lineage, logging, AI. AI can appear in many layers:
-  - pipeline transforms
-  - model integration
-  - ontology functions
-  - analysis
-  - UI assistants
+- **6 Security / Governance**. Controls who can see data, modify data, run workflows, and use AI. For example: permissions, auditing, approvals, version control, lineage, logging, AI. 
+- **About AI**. AI can appear in many layers: pipeline transforms, model integration, ontology functions, analysis, UI assistants, and governance monitoring. **AI should be treated as a helpful assistant**, not the center of the system and not the final authority. **The responsible pattern is: AI suggests, deterministic logic verifies where possible, humans approve important actions, and the platform logs and governs the workflow**.
 
-*The ontology is the operational heart of Foundry. Most applications, analysis, workflows, and AI interact with enterprise data through the ontology rather than directly through the raw datasets.*<br><img src="/assets/777_07.png" alt="drones" width="74%" >
+<!-- **About AI**. AI can appear in many layers (pipeline transforms, model integration, ontology functions, analysis, UI assistants). **Always as a helfpful assistant, never the center of the universe, never in the driver's seat. Which is exactly where AI (simulated intelligence based on pattern recognition) will always belong.** This is reponsible exploitation of the true powerf of computational AI. -->
+
+*The ontology is the operational heart of Foundry. Most applications, analysis, workflows, and AI interact with enterprise data through the ontology rather than directly through the raw datasets.*<br><img src="/assets/777_07.png" alt="drones" width="64%" >
 
 <!--
 - how data enters the system (#1), 
@@ -146,18 +144,18 @@ I wanted to get hands-on experience from the start. So I checked out several off
 #### **2.3 My demo plan** 
 
 
-I spent the first month doing the demos I thought looked interesting from the sources listed in 2.2 above *(lab notes (MS.Word docx files) are available for each example/demo on the **[GDrive](https://drive.google.com/drive/folders/1-Adawag9uA8_bq-hDF-nOuPYaRLz1eEO)**)*. Those demos are organized by different roles and different project types. But I really needed a (straight, start to finish) learning path for a generalist beginner like myself. So I decided I'd just start doing demos and after a while I'd eventually figure out a learning path. 
+I spent the first month doing the demos I thought looked interesting from the sources listed in 2.2 above *(lab notes (MS.Word docx files) are available for each example/demo on the **[GDrive](https://drive.google.com/drive/folders/1-Adawag9uA8_bq-hDF-nOuPYaRLz1eEO)**)*. Those demos are organized (by Palantir) by role and project types. But what I really needed was a (straight, start to finish) learning path for a generalist beginner. So I decided I'd just start doing demos and after a while I'd eventually figure out a learning path. 
 
-I still don't have a draft learning path. But I do have a rough draft learning plan **[#699\_planning\_.docx](https://drive.google.com/drive/folders/1-Adawag9uA8_bq-hDF-nOuPYaRLz1eEO)** that documents 
+I still don't have a learning path. But I do have a rough draft learning plan **[#699\_planning\_.docx](https://drive.google.com/drive/folders/1-Adawag9uA8_bq-hDF-nOuPYaRLz1eEO)** that documents 
 - All the sources
 - What I did so far
 - What I plan to do<br><img src="/assets/777_24.png" alt="drones" width="51%" style="border: 1px solid #999;"><br>
 
-The goal of this doc:
-- Clear single list of demos (examples, courses, etc) that cover the main fucntionality of Palantir.
-- For each demo: A simple Foundry workflow main diagram (like the crystal ball diagram in section 1 above) with the parts of workflow covered in the demo clearly markeed.
+The goal of \#699:
+- Clear master list of demos (examples, courses, etc).
+- For each demo: A simple Foundry workflow main diagram with for that demo.
 
-Its still a work in progress (I need another month or two to get the basic doc ready). Meanwhile I recommend you do these sections in order
+\#699 is still a work in progress. Meanwhile I will document my tests of
 - **2.5 PAL examples**. These are complicated, but they have an autoinstaller that allows you to start with a (usually) working version that you can modify.
 - **2.6 PAL demos**. These are less complicated, but you start from 0, and getting a working demo at the end requires a lot of skill (including debugging).
 - **2.7 DIY demos**. Go free style (not "vibe") by teaming up with FDE (AI assistant) to create your own demos.
