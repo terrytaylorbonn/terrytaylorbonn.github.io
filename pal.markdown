@@ -119,7 +119,7 @@ The three crystal balls represent three layers of governance. Foundry controls
 - **2.1 Palantir free tier sign up**
 - **2.2 Palantir Foundry demo sources**
 - **2.3 My demo plan** 
-- **2.4 Readmefirst**
+- **2.4 Why examples first**
 - **2.5 PAL examples (START CREATING PALANTIR FOUNDRY APPS HERE)**. These are complicated, but they have an autoinstaller that allows you to start with a (usually) working version that you can modify.
 - **2.6 PAL demos**. These are less complicated, but you start from 0, and getting a working demo at the end requires a lot of skill (including debugging).
 - **2.7 DIY demos**. Go free style (not "vibe") by teaming up with FDE (AI assistant) to create your own demos.
@@ -167,18 +167,24 @@ The goal of \#699:
 - Clear master list of demos (examples, courses, etc).
 - For each demo: A simple Foundry workflow main diagram with for that demo.
 
-\#699 is still a work in progress. Meanwhile I will document my tests of
+<br>
+
+#### **[2.4 Why examples first](/3c.1b_pal_readmefirst/)**
+
+<!-- Before you start using Foundry, I recommend you read the readmefirst page that discusses various things to keep in mind as you work your way through the examples/demos (problems to watch out for, avoid, etc). -->
+
+\#699 is still a work in progress. Meanwhile I will document my tests in the following order
 - **2.5 PAL examples**. These are complicated, but they have an autoinstaller that allows you to start with a (usually) working version that you can modify.
 - **2.6 PAL demos**. These are less complicated, but you start from 0, and getting a working demo at the end requires a lot of skill (including debugging).
 - **2.7 DIY demos**. Go free style (not "vibe") by teaming up with FDE (AI assistant) to create your own demos.
 
-<br>
 
-#### **[2.4 Read me first](/3c.1b_pal_readmefirst/)**
+**Example 1 (from 2.6 "PAL demos"):** The following is the first example of setting up the Workshop (UI). This was the second demo D02 (see 2.6 below) that I did. And it took a long time to get right (several days). And its usually the last thing you setup for an app. If you made a mistake earlier in the pipeline, ontology, functions, etc then things just dont work in the workshop. And its not easy (for a beginner) to figure out why. Its not even easy to understand how everything connects. It would have been much easier if this had been an example, so that I could have installed one instance, use it as a reference configuration, and then try to replicate. 
 
-Before you start using Foundry, I recommend you read the readmefirst page that discusses various things to keep in mind as you work your way through the examples/demos (problems to watch out for, avoid, etc). 
+(WIP)
 
-**Example:** 
+
+**Example 2 (2.7 "DIY demos"):** The following is the second example of setting up the Workshop (UI). This was for DIY demo D09 (see 2.7 below). This also took a long time to get right (but far less than D02, because I was not following instructions, but working from scratch with FDE). 
 - The screenshot below is from the ZiptieAI DIY demo **[D9 UI (Workshop)](/3c.xxx_pal_HN_01_non_ai/)** (from 2.7 below). <br><img src="/assets/777_05.png" alt="drones" width="100%" style="border: 1px solid #999;"><br> 
 - It took me a long time to get the Workshop in that DIY demo working. Even FDE made a mistake during the configuration. Afterwards I created this simple diagram (with uniquely numbered steps and variables; they don't have to be perfect, just something you can trace). If I had had such a diagram for the step-by-step demos I had done earlier, I would have understood better what I had been doing. When you get your first Workshop running, spend extra time tracing through all the connections. Experiment. Do this for other tools.<br> <img src="/assets/777_04.png" alt="drones" width="80%" style="border: 1px solid #999;"> 
 
