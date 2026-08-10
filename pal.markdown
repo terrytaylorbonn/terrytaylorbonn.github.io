@@ -203,7 +203,7 @@ Its the first example of setting up the Workshop (UI).
 - That would make it easier to handle all the complexity and not get stuck.
 - But best of all would be to have this as an example. You install 2 working example instance. Use one as a reference and slowly rebuild parts of the other.   
 
-<br> <img src="/assets/777_28.png" alt="drones" width="80%" style="border: 1px solid #999;"> 
+<img src="/assets/777_28.png" alt="drones" width="80%" style="border: 1px solid #999;"> 
 
 **Example 2 (2.7 "DIY demos"):** The following is the second example of setting up the Workshop (UI). This was for DIY demo D09 (see 2.7 below). This also took a long time to get right (but far less than D02, because I was not following instructions, but working from scratch with FDE). 
 - The screenshot below is from the ZiptieAI DIY demo **[D9 UI (Workshop)](/3c.xxx_pal_HN_01_non_ai/)** (from 2.7 below). <br><img src="/assets/777_05.png" alt="drones" width="100%" style="border: 1px solid #999;"><br> 
