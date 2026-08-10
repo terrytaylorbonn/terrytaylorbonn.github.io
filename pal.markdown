@@ -247,7 +247,7 @@ You just did project setup / pipeline (goal 1). You know your way around Foundry
 <br>
 
 #### **[2.7 DIY (with FDE assistance) demos](/3c.xxx_pal_gist/)**
-- The real goal of the Getting Started phase should be not only to be able to follow demos, but be able to quickly assess how you can create apps to solve requirements with only an AI assistant (FDE paired with GPT-5.5 for example; FDE is an amazing tool that can (1) "see" screenshots that you paste into a chat and (2) guide your through the most complex configurations and problem solving, but you need to have an idea of the big picture direction for any project). The (eventual) goal of the DIY demos is to show how to team up with FDE to work effectively in Foundry (and to a limited extent AIP/[PAL Pilot](https://www.palantir.com/docs/foundry/pilot/getting-started/)).<br><img src="/assets/pal_10_12.png" alt="drones" width="50%" style="border: 1px solid #999;"><br>
+- The real goal of the Getting Started phase is to be able to quickly assess how you can create apps to solve requirements relying only on AI for assistance. FDE is an amazing tool that can (1) "see" screenshots that you paste into a chat and (2) guide your through the most complex configurations and problem solving, but you need to have an idea of the big picture direction for any project. The (eventual) goal of the DIY demos is to show how to team up with FDE to work effectively in Foundry (and to a limited extent AIP/[PAL Pilot](https://www.palantir.com/docs/foundry/pilot/getting-started/)).<br><img src="/assets/pal_10_12.png" alt="drones" width="50%" style="border: 1px solid #999;"><br>
 
 <!-- 
 *(MAIN DIAGRAM: 620/D9/xx)*.
