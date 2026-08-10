@@ -6,17 +6,21 @@ permalink: /pal/
 
 <br>
 
-Enterprise AI dev platforms do the heavy lifting of creating an enterprise level AI app. 
+This Enterprise section currently focuses on Palantir Foundry as a concrete, hands-on example of a modern enterprise platform for data integration, ontology, analytics, applications, AI assistance, and governance.
 
 **My focus (for now) is on Palantir (Foundry)** because 
-- PAL is a market leader.
-- PAL offers a generous free trial account for Foundry.
-- The built-in AI help (FDE and to some extent AIP) makes it possible to complete the demos.
+- Palantir is a market leader.
+- Palantir offers a generous free trial account for Foundry.
+- **Palantir enterprise systems utilize AI as a helpful assistant** (not as a replacement for human intelligence). 
+- **Palantir's built-in AI help (FDE) makes it possible to complete the demos** (without human assistance).
 
-This section provides (WIP) what you need to master the basics of Palantir Foundry ASAP. 
-
+**Palantir Foundry represents the logical culmination of ZiptieAI:** (2) neural networks, (2b) models, (3) agents, (3b) workflows, and (3c) enterprise platforms brought together in a single system. One reason I find Palantir's approach appealing is that **AI is used as a powerful engineering tool within a governed enterprise platform**, rather than as a replacement for human judgment.
 
 <!-- 
+Palantir Foundry represents the logical culmination of ZiptieAI: neural networks, models, agents, workflows, AI assistance, governance, and enterprise systems brought together in a single platform. I view AI as a powerful engineering tool rather than true intelligence. This is one reason I find Palantir's approach appealing: AI is used as a helpful assistant within a governed enterprise platform rather than as a replacement for human judgment.
+
+NOTE: My position on AI is explained on the **[Hack](/0-demo/)** page. 
+**NOTE: The last 2 bullet points above are not contradictory**. On the webpage **[Hack](/0-demo/)** I unapologetically explain why AI is a hack, a mere simulation of human intelligence (something all AI gurus are well aware of). After a decade of empty promises, there are still no safe self-driving cars. Humanoid robots will not be safe around people. I would argue that the recent departure of Google's top AI gurus was because of the failure to deliver on the promises of AI (Google may be going more of the direction of Palantir). But **AI has revolutionized programming** (because AI and programming AI are based on binary computation). Palantir's approach to enterprise AI is the logical final chapter in ZiptieAI. 
  **Reorganized 26.0802**.
 - A very logically structured set of the simplest step-by-step demos (with critical details). 
 - Gradually more complex demos (future)
@@ -247,7 +251,7 @@ You just did project setup / pipeline (goal 1). You know your way around Foundry
 <br>
 
 #### **[2.7 DIY (with FDE assistance) demos](/3c.xxx_pal_gist/)**
-- The real goal of the Getting Started phase is to be able to quickly assess how you can create apps to solve requirements relying only on AI for assistance. FDE is an amazing tool that can (1) "see" screenshots that you paste into a chat and (2) guide your through the most complex configurations and problem solving, but you need to have an idea of the big picture direction for any project. The (eventual) goal of the DIY demos is to show how to team up with FDE to work effectively in Foundry (and to a limited extent AIP/[PAL Pilot](https://www.palantir.com/docs/foundry/pilot/getting-started/)).<br><img src="/assets/pal_10_12.png" alt="drones" width="50%" style="border: 1px solid #999;"><br>
+- The real goal of the Getting Started phase is to be able to quickly assess how you can create apps to solve requirements relying only on AI for assistance. FDE is an amazing tool that can (1) "see" screenshots that you paste into a chat and (2) guide your through the most complex configurations and problem solving. But you need to have an idea of the big picture direction for any project. The (eventual) goal of the DIY demos is to show how to team up with FDE to work effectively in Foundry (and to a limited extent AIP/[PAL Pilot](https://www.palantir.com/docs/foundry/pilot/getting-started/)).<br><img src="/assets/pal_10_12.png" alt="drones" width="50%" style="border: 1px solid #999;"><br>
 
 <!-- 
 *(MAIN DIAGRAM: 620/D9/xx)*.
