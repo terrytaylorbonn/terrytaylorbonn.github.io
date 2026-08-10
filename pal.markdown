@@ -6,6 +6,8 @@ permalink: /pal/
 
 <br>
 
+<!-- https://ziptieai.usw-17.palantirfoundry.com/ -->
+
 This Enterprise section currently focuses on Palantir Foundry as a concrete, hands-on example of a modern enterprise platform for data integration, ontology, analytics, applications, AI assistance, and governance.
 
 **My focus (for now) is on Palantir (Foundry)** because 
@@ -14,7 +16,14 @@ This Enterprise section currently focuses on Palantir Foundry as a concrete, han
 - **Palantir enterprise systems utilize AI as a helpful assistant** (not as a replacement for human intelligence). 
 - **Palantir's built-in AI help (FDE) makes it possible to complete the demos** (without human assistance).
 
-**Palantir Foundry represents the logical culmination of ZiptieAI:** (2) neural networks, (2b) models, (3) agents, (3b) workflows, and (3c) enterprise platforms brought together in a single system. One reason I find Palantir's approach appealing is that **AI is used as a powerful engineering tool within a governed enterprise platform**, rather than as a replacement for human judgment.
+**Palantir Foundry represents the logical culmination of ZiptieAI:** 
+- (2) neural networks, 
+- (2b) models, 
+- (3) agents, 
+- (3b) workflows, and 
+- **(3c) enterprise platforms**<br>
+
+brought together in a single system. One reason I find Palantir's approach appealing is that **AI is used as a powerful engineering tool within a governed enterprise platform**, rather than as a replacement for human judgment.
 
 <!-- 
 Palantir Foundry represents the logical culmination of ZiptieAI: neural networks, models, agents, workflows, AI assistance, governance, and enterprise systems brought together in a single platform. I view AI as a powerful engineering tool rather than true intelligence. This is one reason I find Palantir's approach appealing: AI is used as a helpful assistant within a governed enterprise platform rather than as a replacement for human judgment.
@@ -119,14 +128,13 @@ The three crystal balls represent three layers of governance. Foundry controls
 
 #### **2.1 Palantir free tier sign up**
 If you cant get a trial version of PAL running, then there's no reason to read further. You will not understand PAL by just reading about it.
-  - I dont remember the URL. Just Google it.
-  - Unfortunately, I did not record how I signed up, and its not a process I can repeat. But I can tell you this
+  - I did not record how I signed up, and its not a process I can repeat. But I can tell you the following:
     - **You must be in a country that PAL supports** (thats only a few countries).
     - **You can NOT use a VPN**.
-    - **You must have a passport or some picture ID of good enough quality for facial recognition verification**. My passport is almost 10 years old, but it still worked. My drivers licence pic was of such low quality that I doubt it would have worked. 
+    - **You must have a passport or some picture ID of good enough quality for facial recognition verification**. My passport is almost 10 years old, but it still worked. 
     - **You need a camera on your PC to take a pic of yourself. PAL will compare your ID and the pic.**
     - I think you need a **mobile phone number** (and email).
-  - It was a fairly long process, but very professionally done (I was impressed) (3c.0a).<br><br><img src="/assets/pal_10_08.png" alt="drones" width="37%" style="border: 1px solid #999;"><br><br>
+  - It was a fairly long process, but very professionally done (I was impressed).<br><br><img src="/assets/pal_10_08.png" alt="drones" width="37%" style="border: 1px solid #999;"><br><br>
 
 
 <br>
@@ -293,7 +301,7 @@ Basically whatever is inspired by **[Online PAL docs](https://www.palantir.com/d
 
 <br>
 
-26.0809 (v1 26.0702) 
+26.0810 (v1 26.0702) 
 
 <br>
 <br>
