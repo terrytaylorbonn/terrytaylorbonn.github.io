@@ -8,6 +8,10 @@ permalink: /pal/
 
 <!-- https://ziptieai.usw-17.palantirfoundry.com/ -->
 
+*I will be out of the USA sometime in September-November. During that time I won't have access to Palantir Foundry. So I am trying to work as much as possible in Foundry now, and polish the website/docx's during my trip.* 
+
+<br>
+
 This Enterprise section currently focuses on Palantir Foundry as a concrete, hands-on example of a modern enterprise platform for data integration, ontology, analytics, applications, AI assistance, and governance.
 
 **My focus (for now) is on Palantir (Foundry)** because 
@@ -115,12 +119,13 @@ The three crystal balls represent three layers of governance. Foundry controls
 
 ## **2 Getting started hands-on** 
 
-
+First 
 - **2.1 Palantir free tier sign up**
 - **2.2 Palantir Foundry demo sources**
 - **2.3 My demo plan** 
-- **2.4 Why examples first**
-- **2.5 PAL examples (START CREATING PALANTIR FOUNDRY APPS HERE)**. These are complicated, but they have an autoinstaller that allows you to start with a (usually) working version that you can modify.
+
+Second the actualy hands-on installable_examples and step-by-step demos 
+- **2.5 PAL (installable) examples (START CREATING PALANTIR FOUNDRY APPS HERE)**. These are complicated, but they have an autoinstaller that allows you to start with a (usually) working version that you can modify.
 - **2.6 PAL demos**. These are less complicated, but you start from 0, and getting a working demo at the end requires a lot of skill (including debugging).
 - **2.7 DIY demos**. Go free style (not "vibe") by teaming up with FDE (AI assistant) to create your own demos.
 
@@ -161,25 +166,25 @@ I spent the first month doing the demos I thought looked interesting from the so
 I still don't have a learning path. But I do have a rough draft learning plan **[#699\_planning\_.docx](https://drive.google.com/drive/folders/1-Adawag9uA8_bq-hDF-nOuPYaRLz1eEO)** that documents 
 - All the sources
 - What I did so far
-- What I plan to do<br><img src="/assets/777_24.png" alt="drones" width="51%" style="border: 1px solid #999;"><br>
+- What I plan to do<br><img src="/assets/777_24.png" alt="drones" width="46%" style="border: 1px solid #999;"><br>
 
 The goal of \#699:
 - Clear master list of demos (examples, courses, etc).
 - For each demo: A simple Foundry workflow main diagram with for that demo.
 
-<br>
+<!-- <br>
 
-#### **[2.4 Why examples first](/3c.1b_pal_readmefirst/)**
+#### **[2.4 Why (installed) examples first](/3c.1b_pal_readmefirst/)**
 
-<!-- Before you start using Foundry, I recommend you read the readmefirst page that discusses various things to keep in mind as you work your way through the examples/demos (problems to watch out for, avoid, etc). -->
+ Before you start using Foundry, I recommend you read the readmefirst page that discusses various things to keep in mind as you work your way through the examples/demos (problems to watch out for, avoid, etc). 
 
 \#699 is still a work in progress. Meanwhile I will document my tests in the following order
-- **2.5 PAL examples**. These are complicated, but they have an autoinstaller that allows you to start with a (usually) working version that you can modify.
+- **2.5 PAL (installed) examples**. These are complicated, but they have an autoinstaller that allows you to start with a (usually) working version that you can modify.
 - **2.6 PAL demos**. These are less complicated, but you start from 0, and getting a working demo at the end requires a lot of skill (including debugging).
 - **2.7 DIY demos**. Go free style (not "vibe") by teaming up with FDE (AI assistant) to create your own demos.
+-->
 
-
-**Example 1 (from 2.6 "PAL demos"):** The following was the second demo D02 (see 2.6 below) that I did. 
+<!-- **(2.6) PAL demo D2:** The following was the second demo D2 (see 2.6 below) that I did. 
 
 
 
@@ -203,13 +208,17 @@ Its the first example of setting up the Workshop (UI).
 - That would make it easier to handle all the complexity and not get stuck.
 - But best of all would be to have this as an example. You install 2 working example instance. Use one as a reference and slowly rebuild parts of the other.   
 
-<img src="/assets/777_28.png" alt="drones" width="80%" style="border: 1px solid #999;"> 
 
-**Example 2 (2.7 "DIY demos"):** The following is the second example of setting up the Workshop (UI). This was for DIY demo D09 (see 2.7 below). This also took a long time to get right (but far less than D02, because I was not following instructions, but working from scratch with FDE). 
-- The screenshot below is from the ZiptieAI DIY demo **[D9 UI (Workshop)](/3c.xxx_pal_HN_01_non_ai/)** (from 2.7 below). <br><img src="/assets/777_05.png" alt="drones" width="100%" style="border: 1px solid #999;"><br> 
-- It took me a long time to get the Workshop in that DIY demo working. Even FDE made a mistake during the configuration. Afterwards I created this simple diagram (with uniquely numbered steps and variables; they don't have to be perfect, just something you can trace). If I had had such a diagram for the step-by-step demos I had done earlier, I would have understood better what I had been doing. When you get your first Workshop running, spend extra time tracing through all the connections. Experiment. Do this for other tools.<br> <img src="/assets/777_04.png" alt="drones" width="80%" style="border: 1px solid #999;"> 
+<img src="/assets/777_28.png" alt="drones" width="80%" style="border: 1px solid #999;">  -->
 
 <!--
+**(2.7) DIY demo D9:** The following is the second example of setting up the Workshop (UI). This was for DIY demo D09 (see 2.7 below). This also took a long time to get right (but far less than D02, because I was not following instructions, but working from scratch with FDE). 
+- The screenshot below is from the ZiptieAI DIY demo **[D9 UI (Workshop)](/3c.xxx_pal_HN_01_non_ai/)** (from 2.7 below). <br><img src="/assets/777_05.png" alt="drones" width="100%" style="border: 1px solid #999;"><br> 
+
+
+- It took me a long time to get the Workshop in that DIY demo working. Even FDE made a mistake during the configuration. Afterwards I created this simple diagram (with uniquely numbered steps and variables; they don't have to be perfect, just something you can trace). If I had had such a diagram for the step-by-step demos I had done earlier, I would have understood better what I had been doing. When you get your first Workshop running, spend extra time tracing through all the connections. Experiment. Do this for other tools.<br> <img src="/assets/777_04.png" alt="drones" width="80%" style="border: 1px solid #999;"> 
+
+
 For your first workshop configuration a simple diagram with numbered steps and variables can make it much easier to grasp what you are doing. Because when you start to try setting up your own config, you need that understanding. 
 -->
 
@@ -218,12 +227,15 @@ For your first workshop configuration a simple diagram with numbered steps and v
 
 #### **[2.5 PAL examples](/3c.1b_pal_examples/) (START CREATING PALANTIR FOUNDRY APPS HERE)**
 
+PAL "examples" are complete (usually more complicated) and have an installer that allows you to start with a (usually) working version that you can modify. This is the best way to start.
+
+
 <!-- *(MAIN DIAGRAM: 621/E10/**OK**, 622/E11/**OK**, 626/E17/**OK**) // (623/E12/FUTURE) // (624/E15/FAIL, 625/E16/INSTALLERROR)*. -->
 
   - Install a PAL example. The examples are installed and (usually) ready to run immediately. 
   - Run the example first.
   - Then rebuild the examples (from top to bottom, from downstream to upstream). The examples are excellent, but are often quite complicated. But you don't have to do everything first step-by-step before you see the the final results. Once you have a working first (reference) example, you can install a second (experimental) example that you modify at your pace. This allows you to (1) appreciate quickly the capabilities of PAL and (2) focus on learning the UI and basic concepts/terminology.<br>*PAL example (left, center) and my own build (right) (3c.1b)*<br><img src="/assets/pal_10_01.png" alt="drones" width="25%" style="border: 1px solid #999;">  <img src="/assets/pal_10_05.png" alt="drones" width="33%" style="border: 1px solid #999;">  <img src="/assets/pal_10_02.png" alt="drones" width="30%" style="border: 1px solid #999;"><br>
-  - Workflow diagrams for examples are usually a bit more complicted than for demos.<br> <img src="/assets/MAIN_E17.png" alt="drones" width="74%" ><br>
+  - Workflow diagrams for examples are usually a bit more complicted than for demos.<br> <img src="/assets/MAIN_E17.png" alt="drones" width="67%" ><br>
 
 
 <!-- *PAL has 3 types of hands on learning -- examples, demos (speedruns), and deep dives; DIY (do it yourself) is my own hands-on learning from scratch using FDE(GPT 5.5) as the guide; in this doc I for now use the term "hands-on's" (a tongue twister) to refer to them all (until I think of a better term)*. 
@@ -248,19 +260,29 @@ For your first workshop configuration a simple diagram with numbered steps and v
 
 #### **[2.6 PAL demos (speedruns)](/3c.2_pal_initial_demos/)**
 
+These are (typically) less complicated than installable PAL examples, but you start from 0, and getting a working demo at the end requires a lot of skill (including debugging). My future versions of these will take a different tactic: Not trying to do everything at once (get a basic result first, then go back and add the missing parts). But for now I'd recommend doing these after have done some installable examples.
+
 <!-- 
 *(MAIN DIAGRAM: 610/D1/xx, 611/612/613/D2/**TODO**, 614/D3/xx, 614/D3/xx, 615/D4/xx, 616/D5/xx, 617/D6/xx, 618/D7/xx, 619/D8/xx, 627/DD19/**OK**)*.-->
 
   - Current demos consist of just D1-D8, the first PAL demos I did (step by step tutorials). 
   - Demos are simpler, but I think more difficult to get running. I sometimes spent a few hours and at the end it did not work, and I did not know how to find the problem. But if you did the examples first, then you have enough of the environment experience to get through the demos..
   
-The first demo I did was **["Speedrun: Your First End-to-End Workflow"](https://learn.palantir.com/speedrun-your-first-e2e-workflow/19448870)** *(for details on how I did the demo, see docx \#610 D1)*. The following diagram shows during the final test how the UI is used to change the ontology (section 8 Operational Workshop).
+<!-- The first demo I did was **["Speedrun: Your First End-to-End Workflow"](https://learn.palantir.com/speedrun-your-first-e2e-workflow/19448870)** *(for details on how I did the demo, see docx \#610 D1)*. The following diagram shows during the final test how the UI is used to change the ontology (section 8 Operational Workshop).
 
 *(left) order assigned to Bins, (right) reassigned to Weber, (bottom) result (saved to ontology)*<br><img src="/assets/777_26.png" alt="drones" width="75%" style="border: 1px solid #999;"><br> 
 
-
 For the D1 demo this is the main workflow diagram *(for details about this workflow see **[D1 workflow chats](/pal_1.3_workflow_chats/)**)*.<br><img src="/assets/777_25.png" alt="drones" width="75%" style="border: 1px solid #999;"><br> 
+-->
 
+
+For the D1 demo this is the main workflow diagram *(for details about this workflow see **[D1 workflow chats](/pal_1.3_workflow_chats/)**)*.<br><img src="/assets/777_25.png" alt="drones" width="68%" style="border: 1px solid #999;"><br> 
+
+
+*A diagram of the configuration steps for D2 (I spent days on my initial attempts to recreate D2 without this diagram; with this diagram its fairly simple, but the docx for D2 recommends doing it in 3 separate phases which simplifies greatly the demo)* <br><img src="/assets/777_28.png" alt="drones" width="55%" style="border: 1px solid #999;"> 
+
+
+<!-- 
 The following explains what section of the original demo text (for example "3") corresponds to what parts of the diagram (for example "[1a]").
 
 ```
@@ -271,7 +293,7 @@ The following explains what section of the original demo text (for example "3") 
 7 Configuring Actions =   [3b] define ontology action/write capability
 8 Operational Workshop =  [5 + 3b] use UI to execute the action
 ```
-<!-- 
+
   - I documented all details with screenshots.<br>*Demos of core functionality (3c.2)*<br><img src="/assets/pal_10_13.png" alt="drones" width="37%" style="border: 1px solid #999;">  <img src="/assets/pal_10_14.png" alt="drones" width="50%" style="border: 1px solid #999;"><br><br>
 
 You just did project setup / pipeline (goal 1). You know your way around Foundry. Now do demos that cover the rest of basic core Foundry functionality. Get hands-on experience before doing "operational" apps (goal 3).
@@ -286,7 +308,17 @@ You just did project setup / pipeline (goal 1). You know your way around Foundry
 <br>
 
 #### **[2.7 DIY (with FDE assistance) demos](/3c.xxx_pal_gist/)**
+
+Go free style (not "vibe") by teaming up with FDE (AI assistant) to create your own demos. I recommend this last because these will be my original demos so I need more time to think of what kind of examples to do.
+
+
 - The real goal of the Getting Started phase is to be able to quickly assess how you can create apps to solve requirements relying only on AI for assistance. FDE is an amazing tool that can (1) "see" screenshots that you paste into a chat and (2) guide your through the most complex configurations and problem solving. But you need to have an idea of the big picture direction for any project. The (eventual) goal of the DIY demos is to show how to team up with FDE to work effectively in Foundry (and to a limited extent AIP/[PAL Pilot](https://www.palantir.com/docs/foundry/pilot/getting-started/)).<br><img src="/assets/pal_10_12.png" alt="drones" width="50%" style="border: 1px solid #999;"><br>
+
+
+- When you start free styling, things get complicated easily. You do try things that the experts knew to avoid when they created installable-examples and step-by-step demos. It took me a long time to get the Workshop in that DIY demo working. Even FDE made a mistake during the configuration. Afterwards I created this simple diagram to make sure I could miss those "rabbit holes" in the future (with uniquely numbered steps and variables; they don't have to be perfect, just something you can trace). <br> <img src="/assets/777_04.png" alt="drones" width="60%" style="border: 1px solid #999;"> 
+
+<!--  If I had had such a diagram for the step-by-step demos I had done earlier, I would have understood better what I had been doing. When you get your first Workshop running, spend extra time tracing through all the connections. Experiment. Do this for other tools.
+-->
 
 <!-- 
 *(MAIN DIAGRAM: 620/D9/xx)*.

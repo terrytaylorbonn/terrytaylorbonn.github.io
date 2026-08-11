@@ -1,29 +1,52 @@
 ---
 layout: page
-title: 3c.1 PAL Foundry
+title: Demo D1 ("Speedrun -- Your First End-to-End Workflow")
 permalink: /3c.1_pal_foundry/
 ---
 
 
 <br>
 
-[← 3c.2 Initial PAL demos](/3c.2_pal_initial_demos/)
+[2.6 PAL demos (speedruns)](/3c.2_pal_initial_demos/)
 
 
 
 <br>
 
+https://learn.palantir.com/speedrun-your-first-e2e-workflow/1944887 
 
-## **PAL-DEMO-1: Palantir Foundry "speedrun" (quick start) (26.0705)**
 
-This is link to docx... might add it to this page in future **[#610\_pal\_foundry\_.docx](https://drive.google.com/drive/folders/1-Adawag9uA8_bq-hDF-nOuPYaRLz1eEO)**.
+<!-- ## **PAL-DEMO-1: Palantir Foundry "speedrun" (quick start) (26.0705)** -->
+
+For more info see **[#610\_pal\_foundry\_.docx](https://drive.google.com/drive/folders/1-Adawag9uA8_bq-hDF-nOuPYaRLz1eEO)**.
+
+
+The first demo I did was **["Speedrun: Your First End-to-End Workflow"](https://learn.palantir.com/speedrun-your-first-e2e-workflow/19448870)** *(for details on how I did the demo, see docx \#610 D1)*. The following diagram shows during the final test how the UI is used to change the ontology (section 8 Operational Workshop).
+
+*(left) order assigned to Bins, (right) reassigned to Weber, (bottom) result (saved to ontology)*<br><img src="/assets/777_26.png" alt="drones" width="75%" style="border: 1px solid #999;"><br> 
+
+
+For the D1 demo this is the main workflow diagram *(for details about this workflow see **[D1 workflow chats](/pal_1.3_workflow_chats/)**)*.<br><img src="/assets/777_25.png" alt="drones" width="75%" style="border: 1px solid #999;"><br> 
+
+
+The following explains what section of the original demo text (for example "3") corresponds to what parts of the diagram (for example "[1a]").
+
+```
+3 Ingestion =             [1a] local files/manual upload → starting data in Foundry
+4 Transforming the Data = [1b] Pipeline Builder cleans/joins/unions data → output dataset
+5 Creating the Ontology = [3] output dataset becomes ontology object type
+6 Building Workshop App = [5] Workshop reads ontology objects and displays table/filters/charts/details
+7 Configuring Actions =   [3b] define ontology action/write capability
+8 Operational Workshop =  [5 + 3b] use UI to execute the action
+```
+
+
+<!--
+<img src="/assets/777_30.png" alt="drones" width="70%" style="border: 1px solid #999;"> -->
+
+<img src="/assets/pal-demo-1-01.png" alt="drones" width="70%" style="border: 1px solid #999;">
+
 
 <br>
 
-
-<br>*01* <br><img src="/assets/pal-demo-1-01.png" alt="drones" width="100%" style="border: 1px solid #999;">
-
-
-<br>
-
-26.0713 (v1 26.0713)
+26.0811 (0713, v1 26.0713)
