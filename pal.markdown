@@ -279,7 +279,7 @@ For the D1 demo this is the main workflow diagram *(for details about this workf
 For the D1 demo this is the main workflow diagram *(for details about this workflow see **[D1 workflow chats](/pal_1.3_workflow_chats/)**)*.<br><img src="/assets/777_25.png" alt="drones" width="68%" style="border: 1px solid #999;"><br> 
 
 
-*A diagram of the configuration steps for D2 (I spent days on my initial attempts to recreate D2 without this diagram; with this diagram its fairly simple, but the docx for D2 recommends doing it in 3 separate phases which simplifies greatly the demo)* <br><img src="/assets/777_28.png" alt="drones" width="55%" style="border: 1px solid #999;"> 
+*A diagram of the configuration steps for D2 (I spent days on my initial attempts to recreate D2 without this diagram; with this diagram its fairly simple; its even simpler if you do it in 3 separate phases as described in the latest version of the docx)* <br><img src="/assets/777_28.png" alt="drones" width="55%" style="border: 1px solid #999;"> 
 
 
 <!-- 
