@@ -10,6 +10,14 @@ permalink: /3c.1b_pal_readmefirst/
 
 <br>
 
+- reloading the page is sometimes required
+- relogin after timeout
+- no vpn allowed
+
+
+
+<br>
+
 
 A few problems I ran into that you might want to watch out for.
 
