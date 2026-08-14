@@ -12,7 +12,7 @@ permalink: /pal/
 
 <br>
 
-This Enterprise section currently focuses on Palantir Foundry as a concrete, hands-on example of a modern enterprise platform for data integration, ontology, analytics, applications, AI assistance, and governance.
+This Enterprise section currently focuses on Palantir Foundry as a concrete, hands-on example of a modern enterprise platform for data integration, ontology, analytics, applications, **AI assistance**, and governance.
 
 **My focus (for now) is on Palantir (Foundry)** because 
 - Palantir is a market leader.
