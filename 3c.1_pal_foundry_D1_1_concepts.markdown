@@ -1,0 +1,27 @@
+---
+layout: page
+title: Demo D1 Ch1 Concepts
+permalink: /3c.1_pal_foundry_D1_1_concepts/
+---
+
+<!-- 
+- **[Demo D1 Ch1 Concepts](/3c.1_pal_foundry_D1_1_concepts/)**
+- **[Demo D1 Ch2 Phase 1: Pipeline/ontology](/3c.1_pal_foundry_D1_2_pipe_ontol/)**
+- **[Demo D1 Ch3 Phase 2: Basic UI](/3c.1_pal_foundry_D1_3_ui_basic/)**
+- **[Demo D1 Ch4 Phase 3: Action UI](/3c.1_pal_foundry_D1_4_ui_action/)**
+-->
+
+
+<br>
+
+[← Demo D1](/3c.1_pal_foundry/)
+
+<br>
+
+This website text/images for this page will be generated soon from the docx \#610. 
+
+<!-- *(left) order assigned to Bins, (right) reassigned to Weber, (bottom) result (saved to ontology)*<br><img src="/assets/777_26.png" alt="drones" width="75%" style="border: 1px solid #999;"> -->
+
+<br>
+
+26.0816 (v1 26.0816)

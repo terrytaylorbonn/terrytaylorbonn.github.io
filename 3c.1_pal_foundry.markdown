@@ -4,24 +4,25 @@ title: Demo D1 ("Speedrun -- Your First End-to-End Workflow")
 permalink: /3c.1_pal_foundry/
 ---
 
+<br>
+
+[← 2.6 PAL demos (speedruns)](/3c.2_pal_initial_demos/)
 
 <br>
 
-[2.6 PAL demos (speedruns)](/3c.2_pal_initial_demos/)
-
-
+**(26.0816 WIP) These pages will be the 4 chapters from docx [#610](https://drive.google.com/drive/folders/1-Adawag9uA8_bq-hDF-nOuPYaRLz1eEO)**
+- **[Demo D1 Ch1 Concepts](/3c.1_pal_foundry_D1_1_concepts/)**
+- **[Demo D1 Ch2 Phase 1: Pipeline/ontology](/3c.1_pal_foundry_D1_2_pipe_ontol/)**
+- **[Demo D1 Ch3 Phase 2: Basic UI](/3c.1_pal_foundry_D1_3_ui_basic/)**
+- **[Demo D1 Ch4 Phase 3: Action UI](/3c.1_pal_foundry_D1_4_ui_action/)**
 
 <br>
 
-https://learn.palantir.com/speedrun-your-first-e2e-workflow/1944887 
-
-
-<!-- ## **PAL-DEMO-1: Palantir Foundry "speedrun" (quick start) (26.0705)** -->
-
+<!-- ## **PAL-DEMO-1: Palantir Foundry "speedrun" (quick start) (26.0705)**
 For more info see **[#610\_pal\_foundry\_.docx](https://drive.google.com/drive/folders/1-Adawag9uA8_bq-hDF-nOuPYaRLz1eEO)**.
+-->
 
-
-The first demo I did was **["Speedrun: Your First End-to-End Workflow"](https://learn.palantir.com/speedrun-your-first-e2e-workflow/19448870)** *(for details on how I did the demo, see docx \#610 D1)*. The following diagram shows during the final test how the UI is used to change the ontology (section 8 Operational Workshop).
+See also **["Speedrun: Your First End-to-End Workflow"](https://learn.palantir.com/speedrun-your-first-e2e-workflow)**. The following diagram shows during the final test how the UI is used to change the ontology (section 8 Operational Workshop).
 
 *(left) order assigned to Bins, (right) reassigned to Weber, (bottom) result (saved to ontology)*<br><img src="/assets/777_26.png" alt="drones" width="75%" style="border: 1px solid #999;"><br> 
 
@@ -49,4 +50,4 @@ The following explains what section of the original demo text (for example "3") 
 
 <br>
 
-26.0811 (0713, v1 26.0713)
+26.0816 (0713, v1 26.0713)
