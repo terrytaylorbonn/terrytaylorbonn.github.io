@@ -17,6 +17,20 @@ permalink: /3c.1_pal_foundry/
 - **[Demo D1 Ch4 Phase 3: Action UI](/3c.1_pal_foundry_D1_4_ui_action/)**
 
 <br>
+<br>
+
+
+--------------------
+--------------------
+--------------------
+--------------------
+
+<br>
+<br>
+
+### **(old content)**
+
+<br>
 
 <!-- ## **PAL-DEMO-1: Palantir Foundry "speedrun" (quick start) (26.0705)**
 For more info see **[#610\_pal\_foundry\_.docx](https://drive.google.com/drive/folders/1-Adawag9uA8_bq-hDF-nOuPYaRLz1eEO)**.
