@@ -18,7 +18,8 @@ permalink: /3c.1_pal_foundry_D1_3_ui_basic/
 
 <br>
 
-This website text/images for this page will be generated soon from the docx \#610. 
+The text/images for this page will be generated soon from the docx \#610. 
+
 
 <!-- *(left) order assigned to Bins, (right) reassigned to Weber, (bottom) result (saved to ontology)*<br><img src="/assets/777_26.png" alt="drones" width="75%" style="border: 1px solid #999;"> -->
 
