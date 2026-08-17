@@ -66,7 +66,7 @@ This is a simple demo that introduces some basic Foundry functionality that can 
 
 The following is the main workflow diagram *(for details about this workflow see **[D1 workflow chats](/pal_1.3_workflow_chats/)**)*.<br><img src="/assets/777_25.png" alt="drones" width="75%" style="border: 1px solid #999;"><br> 
 
-The following diagrams show the final result (this is a simplified version of the original PAL demo). 
+The following screenshots show the final result (this is a simplified version of the original PAL demo). 
 - RIGHT panel: "File folders" (object set) is selected
 - LEFT panel: A single "File folders" object is selected.
 - CENTER panel: The properties for the selected object are displayed.
