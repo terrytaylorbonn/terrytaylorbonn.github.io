@@ -4,13 +4,6 @@ title: Demo D1 Ch4 Phase 3 -- Action UI
 permalink: /3c.1_pal_foundry_D1_4_ui_action/
 ---
 
-<!-- 
-- **[Demo D1 Ch1 Concepts](/3c.1_pal_foundry_D1_1_concepts/)**
-- **[Demo D1 Ch2 Phase 1: Pipeline/ontology](/3c.1_pal_foundry_D1_2_pipe_ontol/)**
-- **[Demo D1 Ch3 Phase 2: Basic UI](/3c.1_pal_foundry_D1_3_ui_basic/)**
-- **[Demo D1 Ch4 Phase 3: Action UI](/3c.1_pal_foundry_D1_4_ui_action/)**
--->
-
 
 <br>
 
@@ -20,8 +13,230 @@ permalink: /3c.1_pal_foundry_D1_4_ui_action/
 
 The text/images for this page will be generated soon from the docx \#610. 
 
+<br>
+# **Phase 3: Action UI (steps 23-32 (action type), 33-36 (UI))**
 
-<!-- *(left) order assigned to Bins, (right) reassigned to Weber, (bottom) result (saved to ontology)*<br><img src="/assets/777_26.png" alt="drones" width="75%" style="border: 1px solid #999;"> -->
+<br>
+### **7 Create action type for the object type (from 5.1) (23-32)**
+
+Note: There is no "master diagram" for actions because the process is fairly simple.
+
+<br>
+#### **7.0 Action types concepts**
+
+FDE: We need an action type because the app should not modify data arbitrarily.
+
+An action type defines a **governed operation** users are allowed to perform on ontology objects.
+
+Action types provide a governed “API” for enterprise actions:
+
+- who can do what
+
+- to which object
+
+- with which inputs
+
+- under which rules
+
+- with what audit trail
+
+So instead of users changing data randomly, they execute structured operations:
+
+- Assign Order
+
+- Approve Request
+
+- Create Ticket
+
+- Dismiss Anomaly
+
+- Update Eligibility Decision
+
+That gives the platform a crystal-ball view of:
+
+- what action was taken
+
+- by whom
+
+- on which object
+
+- when
+
+- with what parameters
+
+- and what changed
+
+<br>
+#### **7.0b Specific Action type in this demo**
+
+Assign Order action
+
+→ modifies an Order object
+
+→ sets Status = assigned
+
+→ sets Assignee = selected user/value
+
+So the action type is the controlled write mechanism:
+
+UI submit → ontology action → object edit
+
+This will allow you to do the following in the UI
+
+- select the object (of the object type "All orders")
+
+- enter static value for Object "Assignee" property
+
+- the object "Status" property is statically set to "assigned"
+
+<img src="/assets/D1/D1_301.png" alt="xxx" width="35%" style="border: 1px solid #999;">
+
+<br>
+#### **7.1 Allow edits for object type (the action can edit the object type)**
+
+(23)
+
+<img src="/assets/D1/D1_302.png" alt="xxx" width="100%" style="border: 1px solid #999;">
+
+<br>
+#### **7.2 New action type (for this object type)**
+
+(24) Click on "Action types / New".
+
+<img src="/assets/D1/D1_303.png" alt="xxx" width="90%" style="border: 1px solid #999;">
+
+(25) Select "Modify object(s)".
+
+<img src="/assets/D1/D1_304.png" alt="xxx" width="70%" style="border: 1px solid #999;">
+
+(26-27) Map action params.
+
+Note: "Map action parameters" settings is described below in 7.3-7.5.
+
+<img src="/assets/D1/D1_305.png" alt="xxx" width="80%" style="border: 1px solid #999;">
+
+(28)
+
+<img src="/assets/D1/D1_306.png" alt="xxx" width="70%" style="border: 1px solid #999;">
+
+(29)
+
+<img src="/assets/D1/D1_307.png" alt="xxx" width="75%" style="border: 1px solid #999;">
+
+(30a) The action type is a separate file from the object type.
+
+<img src="/assets/D1/D1_308.png" alt="xxx" width="85%" style="border: 1px solid #999;">
+
+<img src="/assets/D1/D1_309.png" alt="xxx" width="75%" style="border: 1px solid #999;">
+
+<img src="/assets/D1/D1_310.png" alt="xxx" width="60%" style="border: 1px solid #999;">
+
+Resulting action type / overview.
+
+Note that there are no dependents (not used in the UI yet).
+
+<img src="/assets/D1/D1_311.png" alt="xxx" width="100%" style="border: 1px solid #999;">
+
+<br>
+#### **7.3 Resulting action type / rules (what an action does)**
+
+FDE: Rules define what the action actually does.
+
+Example:
+
+- Modify All Orders object
+
+- Status → "assigned"
+
+- Assignee → action parameter Assignee
+
+So rules are the write logic:
+
+- which object type/property changes
+
+- what values are written
+
+<img src="/assets/D1/D1_312.png" alt="xxx" width="95%" style="border: 1px solid #999;">
+
+<br>
+#### **7.4 Resulting action type / parameters (what info the action needs from user/app)**
+
+FDE: Resulting action type / parameters
+
+Parameters define what information the action needs from the user/app.
+
+Example:
+
+- All Orders = which order to modify
+
+- Assignee = who to assign it to
+
+<img src="/assets/D1/D1_313.png" alt="xxx" width="100%" style="border: 1px solid #999;">
+
+<br>
+#### **7.5 Resulting action type / user interface**
+
+FDE: Resulting action type / user interface
+
+The User Interface tab defines the default form layout for the action.
+
+It controls how the action appears when used in Workshop/Object Views:
+
+- field order
+
+- form vs table layout
+
+- submit button behavior
+
+- success message
+
+- required inputs
+
+It is the default UI for collecting action parameters.
+
+<img src="/assets/D1/D1_314.png" alt="xxx" width="85%" style="border: 1px solid #999;">
+
+**Resulting UI popup**
+
+<img src="/assets/D1/D1_315.png" alt="xxx" width="35%" style="border: 1px solid #999;">
+
+<br>
+#### **7.6 (30b) Save changes (this is easy to forget!)**
+
+<br>
+### **8.3 Attach action type to UI button (33-36)**
+
+<br>
+#### **Overview diagram**
+
+<img src="/assets/D1/D1_316.png" alt="xxx" width="70%" style="border: 1px solid #999;">
+
+<br>
+#### **Add the action type to the UI**
+
+(33-8.3) text = "Assign".
+
+(34-8.3) ON CLICK = Action.
+
+(35-8.3) TT assign order v2 / on All Orders.
+
+(36-8.3) PARAMETER DEFAULTS = All Orders
+
+(37) LOCAL DEFAULT VALUE = Object table 1 Active object
+
+<img src="/assets/D1/D1_317.png" alt="xxx" width="95%" style="border: 1px solid #999;">
+
+<br>
+### **Phase 3 final test**
+
+<br>
+#### **NOTE: This updates the ontology (object (instance) of the object type) but not the datasource**
+
+<img src="/assets/D1/D1_318.png" alt="xxx" width="80%" style="border: 1px solid #999;">
+
+<img src="/assets/D1/D1_319.png" alt="xxx" width="45%" style="border: 1px solid #999;">
+
+<img src="/assets/D1/D1_320.png" alt="xxx" width="85%" style="border: 1px solid #999;">
 
 <br>
 
