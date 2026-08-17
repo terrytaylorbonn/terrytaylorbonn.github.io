@@ -10,25 +10,26 @@ permalink: /3c.1_pal_foundry/
 
 <br>
 
-### **1 Demo D1 documentation (ZiptieAI online version)**
+### **1 Demo D1 (ZiptieAI version) online documentation**
 
-These are the 4 chapters generated (using ChatGPT) from the source file docx [#610](https://drive.google.com/drive/folders/1-Adawag9uA8_bq-hDF-nOuPYaRLz1eEO)
+These are the 4 chapters generated (using ChatGPT) from the **source file docx [#610](https://drive.google.com/drive/folders/1-Adawag9uA8_bq-hDF-nOuPYaRLz1eEO)**:
 - **(TODO) [Demo D1 Ch1 Concepts](/3c.1_pal_foundry_D1_1_concepts/)**
 - **(TODO) [Demo D1 Ch2 Phase 1: Pipeline/ontology](/3c.1_pal_foundry_D1_2_pipe_ontol/)**
 - **(TODO) [Demo D1 Ch3 Phase 2: Basic UI](/3c.1_pal_foundry_D1_3_ui_basic/)**
 - **(v1)   [Demo D1 Ch4 Phase 3: Action UI](/3c.1_pal_foundry_D1_4_ui_action/)**
 
-The original PAL demo version is **["Speedrun: Your First End-to-End Workflow"](https://learn.palantir.com/speedrun-your-first-e2e-workflow).
+The original PAL demo version online doc is **["Speedrun: Your First End-to-End Workflow"](https://learn.palantir.com/speedrun-your-first-e2e-workflow)**.
 
 <br>
 
 ### **2 How the demo files are maintained/generated (using AI)**
 
-- Below is an example prompt for generating the markdown/pics for 1 of the 4 chapters. 
+- Docx **[#610](https://drive.google.com/drive/folders/1-Adawag9uA8_bq-hDF-nOuPYaRLz1eEO)** is the master source file.
+- Below is an example prompt for generating the markdown/pics for 1 of the 4 chapters (the chapter is first stored as a separate docx file). 
 - The docx has instruction markers for GPT.
 - GPT extracts the screenshots/diagrams, generates markdown (text), and zips for download.
-- This is a simple reliable method that makes constant updates to the webpage practical.
-  - For simple changes simply regenerate/replace the entire text and any new/changed pics.
+- This is a reliable low-tech method that makes constant updates to the webpage practical.
+- For simple changes simply regenerate/replace the entire text and any new/changed pics.
 
 ```
 (1) create markdown for the attached docx file.
