@@ -18,6 +18,11 @@ These are the 4 chapters generated (using ChatGPT) from the **source file docx [
 - **(TODO) [Demo D1 Ch3 Phase 2: Basic UI](/3c.1_pal_foundry_D1_3_ui_basic/)**
 - **(v1)   [Demo D1 Ch4 Phase 3: Action UI](/3c.1_pal_foundry_D1_4_ui_action/)**
 
+Right now 
+- This a very bare-bones initial D1 demo doc version with minimal text.
+- But it a totally reorganized version of the original Foundry demo. 
+- All pics are from my own demo and the major workflow diagrams are my original.
+
 The original PAL demo version online doc is **["Speedrun: Your First End-to-End Workflow"](https://learn.palantir.com/speedrun-your-first-e2e-workflow)**.
 
 <br>
