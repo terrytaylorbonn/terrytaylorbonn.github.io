@@ -115,7 +115,7 @@ Note: "Map action parameters" settings is described below in 7.3-7.5.
 
 <img src="/assets/D1/D1_305.png" alt="xxx" width="80%" style="border: 1px solid #999;">
 
-(28)
+(28)   
 
 <img src="/assets/D1/D1_306.png" alt="xxx" width="70%" style="border: 1px solid #999;">
 
