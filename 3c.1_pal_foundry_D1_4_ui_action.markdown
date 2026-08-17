@@ -1,6 +1,6 @@
 ---
 layout: page
-title: Demo D1 Ch4 Phase 3 -- Action UI
+title: Phase 3 -- Action UI (steps 23-32 (action type), 33-36 (UI))
 permalink: /3c.1_pal_foundry_D1_4_ui_action/
 ---
 
@@ -9,17 +9,32 @@ permalink: /3c.1_pal_foundry_D1_4_ui_action/
 
 [← Demo D1](/3c.1_pal_foundry/)
 
-<br>
-
-The text/images for this page will be generated soon from the docx \#610. 
 
 <br>
-# **Phase 3: Action UI (steps 23-32 (action type), 33-36 (UI))**
+
+In Phase 2, we created a UI that displays ontology data (objects and their properties). In this final phase, we add the ability to modify ontology objects through the UI and display the resulting changes.
+
+TOC
+- 7 Create action type for the object type (from 5.1) (23-32)
+- 8.3 Attach action type to UI button (33-36)
+- Phase 3 final test
+
 
 <br>
 ### **7 Create action type for the object type (from 5.1) (23-32)**
 
 Note: There is no "master diagram" for actions because the process is fairly simple.
+
+TOC 
+- 7.0a Action types concepts
+- 7.0b Specific Action type in this demo
+- 7.1 Allow edits for object type (the action can edit the object type)
+- 7.2 New action type (for this object type)
+- 7.3 Resulting action type / rules (what an action does)
+- 7.4 Resulting action type / parameters (what info the action needs from user/app)
+- 7.5 Resulting action type / user interface
+- 7.6 (30b) Save changes (this is easy to forget!)
+
 
 <br>
 #### **7.0 Action types concepts**
@@ -240,4 +255,4 @@ It is the default UI for collecting action parameters.
 
 <br>
 
-26.0816 (v1 26.0816)
+26.0817 (v1 26.0816)
