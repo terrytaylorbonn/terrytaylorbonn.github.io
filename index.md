@@ -5,11 +5,14 @@ title: Home
 
 <br>
 
-
 <!-- ZiptieAI.com was created in 2024 to document my work on Ukrainian style ziptie'd [AI Drones](/1-drones/). -->
 
-ZiptieAI demos/documents AI (primarily LLMs), from "tiny" neural networks to **[enterprise AI (Palantir)](/pal/)**. 
+*"This is a good example of the practical value of AI ... AI does not need to replace human intelligence to be revolutionary; eliminating this kind of tedious work is already transformative" (**[GPT's summary](/3c.1_pal_foundry/)** of how ZiptieAI documentation is managed using AI)*.
+
 <br>
+
+ZiptieAI demos/documents AI (primarily LLMs), from "tiny" neural networks to **[enterprise AI (Palantir)](/pal/)**. 
+
 
 - **AI fast track**
   - **[Hack](/0-demo/)** explains the core of what makes AI tick.  
@@ -28,18 +31,15 @@ ZiptieAI demos/documents AI (primarily LLMs), from "tiny" neural networks to **[
  - **A window to the AI future** ([NL](/nl/)) 
  (eventually we all need to **[host our own models](https://www.youtube.com/watch?v=zMhz7JUvJZA&t=36s)**)  
 
-See also the **[Wiki](https://github.com/terrytaylorbonn/auxdrone/wiki)** and other links in the footer. -->
+See also the **[Wiki](https://github.com/terrytaylorbonn/auxdrone/wiki)** and other links in the footer. 
+
+(not on the [Chicago comma](https://en.wikipedia.org/wiki/Serial_comma)). If I was working on a site for a customer, I would focus on customer requirements (even if that included the Chicago comma).
+-->
 
 
-ZiptieAI focuses on providing insightful and practical guidance with minimal text and diagrams (not on the [Chicago comma](https://en.wikipedia.org/wiki/Serial_comma)). If I was working on a site for a customer, I would focus on customer reuqirements (even if that included the Chicago comma). 
-
-The following diagrams summarize the core ZiptieAI take on AI.
-
-*AI = deterministic computational algorithms that are extremely useful for specific types of applications* <br>
-<img src="/assets/M-25.png" alt="drones" width="80%">
-
-*AI intelligence is a fairy tale ((internal) agent + TF (transformer) = LLM)*<br>
-<img src="/assets/M-11b.png" alt="drones" width="27%"><br>
+ZiptieAI focuses on providing insightful and practical guidance with minimal text and diagrams. The following summarizes the ZiptieAI take on AI:
+- AI = deterministic computational algorithms that are extremely useful for specific types of applications.<br><img src="/assets/M-25.png" alt="drones" width="80%"><br><br>
+- AI intelligence is a fairy tale (internal agent + transformer (TF) = LLM).<br><img src="/assets/M-11b.png" alt="drones" width="27%"><br>
 
 
 
