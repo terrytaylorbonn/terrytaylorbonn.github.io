@@ -52,6 +52,9 @@ This is a good example of the practical value of AI ... AI does not need to repl
 
 GPT assessment: **This is a good example of the practical value of AI**. Maintaining screenshot-heavy technical documentation manually is tedious and error-prone. I can instead maintain a simple DOCX master, then use AI to regenerate the Markdown, extract and rename the images, create the HTML image tags, and package everything for the website. What was previously a substantial documentation-maintenance task becomes a simple, repeatable workflow. **AI does not need to replace human intelligence to be revolutionary; eliminating this kind of tedious work is already transformative**.  
 
+*Demo doc creation/maintenance process (AI makes this process practical and reliable) (WIP)*<br><img src="/assets/777_32.png" alt="drones" width="70%" style="border: 1px solid #999;"><br>
+
+
 <br>
 
 #### **3.1 Working in docx**
