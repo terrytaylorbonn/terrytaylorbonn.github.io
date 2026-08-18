@@ -5,9 +5,7 @@ title: Home
 
 <br>
 
-<!-- ZiptieAI.com was created in 2024 to document my work on Ukrainian style ziptie'd [AI Drones](/1-drones/). -->
-
-*"This is a good example of the practical value of AI ... AI does not need to replace human intelligence to be revolutionary; eliminating this kind of tedious work is already transformative" (**[GPT's summary](/3c.1_pal_foundry/)** of how ZiptieAI documentation is managed using AI)*.
+*"This is a good example of the practical value of AI ... AI does not need to replace human intelligence to be revolutionary; eliminating this kind of tedious work is already transformative" (GPT's summary of how ZiptieAI manages the docx/online documentation for the ZiptieAI version of **[Palantir Foundry demo D1](/3c.1_pal_foundry/)** using AI)*.
 
 <br>
 
@@ -26,78 +24,48 @@ ZiptieAI demos/documents AI (primarily LLMs), from "tiny" neural networks to **[
   - **[3b Workflow platform](/3.3-ai-projects/)** (such as n8n) demos of practical agentic AI applications. *The workflow platform controls the architecture.*
   - **[3c Enterprise AI](/pal/)** demos (**current focus is on Palantir**). *The enterprise platform controls almost everything.*<br><br>
 
-<!-- - [4 Resources](/4_resources/) such as (docx) lab notes, Github, Wiki, etc (links in the footer).
-
- - **A window to the AI future** ([NL](/nl/)) 
- (eventually we all need to **[host our own models](https://www.youtube.com/watch?v=zMhz7JUvJZA&t=36s)**)  
-
-See also the **[Wiki](https://github.com/terrytaylorbonn/auxdrone/wiki)** and other links in the footer. 
-
-(not on the [Chicago comma](https://en.wikipedia.org/wiki/Serial_comma)). If I was working on a site for a customer, I would focus on customer requirements (even if that included the Chicago comma).
--->
-
-
 ZiptieAI focuses on providing insightful and practical guidance with minimal text and diagrams. The following summarizes the ZiptieAI take on AI:
 - AI = deterministic computational algorithms that are extremely useful for specific types of applications.<br><img src="/assets/M-25.png" alt="drones" width="80%"><br><br>
 - AI intelligence is a fairy tale (internal agent + transformer (TF) = LLM).<br><img src="/assets/M-11b.png" alt="drones" width="27%"><br>
 
-
-
-
+<!-- ZiptieAI.com was created in 2024 to document my work on Ukrainian style ziptie'd [AI Drones](/1-drones/). -->
+<!-- - [4 Resources](/4_resources/) such as (docx) lab notes, Github, Wiki, etc (links in the footer).
+ - **A window to the AI future** ([NL](/nl/)) 
+ (eventually we all need to **[host our own models](https://www.youtube.com/watch?v=zMhz7JUvJZA&t=36s)**)  
+See also the **[Wiki](https://github.com/terrytaylorbonn/auxdrone/wiki)** and other links in the footer. 
+(not on the [Chicago comma](https://en.wikipedia.org/wiki/Serial_comma)). If I was working on a site for a customer, I would focus on customer requirements (even if that included the Chicago comma).
+-->
 <!-- <br>
-
 **NOTE: About my use of "tiny" demos and analysis based on Alex-Net CNNs (2012) and GPT-3 (2020) throughout this site**. The core of AI is not rapidly evolving. Thats one reason why AI continues to focus on ramping up brute-force computation ("scaling"). The simple demos on this site are the best demos if you want to understand the core mechanics of how AI really works. For example, page **[2.3.6.1b D5 tiny TF algorithm details](/2.3.6.1b-d5-tiny-tf-algorithm-details/)** (draft, WIP) explains in detail the simplest demo (its not simple) of the LLM TF QKV (context) mechanism (*see "TF QKV (context)" in the center of the diagram above*). The pic below is from a video I was watching on 26.0629. That one line "key-value caches need to be maintained" explains (part of) the reason why AI needs so much memory. Google "what is a kv cache" for details. 
-
 *QKV is still the core of LLM AI (**[video](https://youtu.be/lSDC6-BdVus?t=357)**)* <br>
 <img src="/assets/kv.png" alt="drones" width="40%">
 -->
-
-
-
 <!-- 
 <img src="/assets/M-26.png" alt="drones" width="37%">
-
 <br>
-
 *3b Project diagram with AI details* <br>
-
-
 <br>
-
 The **[Mission](/0-mission/)** page describes the "mission" of this site. 
-
 Primary site content is a **[quick start](/0-qs/)** + hands-on **[demos](/0b-demos/)** for **[NNs](/2_models/)**, **[models](/2b_models/)**, and **[agents](/3_agents/)**.  -->
-
-
 <!--
 *Successful (left) and failed (right) AI deployments* <br>
 <img src="/assets/ziptiedrone2.png" alt="drones" width="26%"> <img src="/assets/waymo.png" alt="drones" width="29%"> -->
-
-
 <!-- (*see [2.3.1 The gist of LLMs](/2.3.1-llm-gist/)*) -->
-
 <!-- - **[TL;DR](/0-tldr/)**.
 - **[Focus](/0-site-focus/)** of this site. -->
-
-
-
 <!--  (*see also **[3.2.4 AI agent basic demos](/3.2.4-ai-agent-basic-demos/)***)  
 There are 2 types of agents
   - **PO-agents (PO = "plain old")**. Do not use AI APIs (local or remote).
   - **Agentic agents**. Use an AI model in the program loop. This brings lots of benefits, but lots complications and problems. Understanding how models really work (section 2 "AI (models)") is essential.
 - **[D4 DIY tiny CNN demo](/2.3.6.1b-d5-tiny-tf-algorithm-details/)** (image recognition)
 - **[D5 DIY tiny transformer (TF) demo](/2.2.1-d4-cnn-image-classifier/)** (token generation) -->
-
-
 <!-- ![image](https://github.com/user-attachments/assets/6c4a9ef0-981b-4dcc-8dc3-12470d356284)
 ![image](https://github.com/user-attachments/assets/b249c820-34f7-4169-90b1-26b39705df9d) -->
-
 <!-- Concepts and demos for
   - [3.1 Agentic (no AI)](/3.1-agentic/), 
   - [3.2.4 Agentic + AI (basic)](/3.2.4-ai-agent-basic-demos/), 
   - [3.2.5 Agentic + AI (basic Palantir-style)](3.2.5-ai-agent-pal-demos/), and 
   - **[3.3 Agentic + AI (real-world projects)](/3.3-ai-projects/)** (the end goal of this site). -->
-
 <!-- Recent pages of interest:
 - **[Detailed comparison of D4 CNN / D5 TF algorithms](/2.2b-cnn-tf-comparison/)** (describes how **D4 AND D5 are BOTH input classifiers**; the generated new TF token simply classifies the TF input tokens, like a CNN label classifies the CNN pixel input) -->
 <!-- *RECENT SITE UPDATES:* 

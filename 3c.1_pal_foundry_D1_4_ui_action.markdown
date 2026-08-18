@@ -1,6 +1,6 @@
 ---
 layout: page
-title: Phase 3 -- Action UI (steps 23-32 (action type), 33-36 (UI))
+title: D1 Phase 3 -- Action UI (steps 23-32 (action type), 33-36 (UI))
 permalink: /3c.1_pal_foundry_D1_4_ui_action/
 ---
 

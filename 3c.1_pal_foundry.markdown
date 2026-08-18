@@ -10,13 +10,31 @@ permalink: /3c.1_pal_foundry/
 
 <br>
 
+This page describes demo D1:
+- **1 Demo D1 (ZiptieAI version) online documentation**
+- **2 About the demo**
+- **3 How I maintain the demo documentation (using AI)**. *"This is a good example of the practical value of AI ... AI does not need to replace human intelligence to be revolutionary; eliminating this kind of tedious work is already transformative" (GPT's summary of how ZiptieAI documentation is managed using AI; full text later on this page)*.
+
+
+
+<br>
+
+
 ### **1 Demo D1 (ZiptieAI version) online documentation**
 
 These are the 4 chapters generated (using ChatGPT) from the **source file docx [#610](https://drive.google.com/drive/folders/1-Adawag9uA8_bq-hDF-nOuPYaRLz1eEO)**:
-- **(TODO) [Demo D1 Ch1 Concepts](/3c.1_pal_foundry_D1_1_concepts/)**
+- **(v1) [Demo D1 Ch1 Concepts](/3c.1_pal_foundry_D1_1_concepts/)**
 - **(TODO) [Demo D1 Ch2 Phase 1: Pipeline/ontology](/3c.1_pal_foundry_D1_2_pipe_ontol/)**
-- **(TODO) [Demo D1 Ch3 Phase 2: Basic UI](/3c.1_pal_foundry_D1_3_ui_basic/)**
+- **(v1) [Demo D1 Ch3 Phase 2: Basic UI](/3c.1_pal_foundry_D1_3_ui_basic/)**
 - **(v1)   [Demo D1 Ch4 Phase 3: Action UI](/3c.1_pal_foundry_D1_4_ui_action/)**
+
+
+
+<br>
+
+### **2 About the demo**
+
+This simple demo introduces some of the basic Foundry building blocks used to create and govern real-world enterprise applications. This is a ZiptieAI version of the original demo **["Speedrun: Your First End-to-End Workflow"](https://learn.palantir.com/speedrun-your-first-e2e-workflow)**. 
 
 
 Note:
@@ -26,9 +44,50 @@ Note:
 
 The original PAL demo version online doc is **["Speedrun: Your First End-to-End Workflow"](https://learn.palantir.com/speedrun-your-first-e2e-workflow)**.
 
+The following is the main workflow diagram *(for details about this workflow see **[D1 workflow chats](/pal_1.3_workflow_chats/)**)*.<br><img src="/assets/777_25.png" alt="drones" width="75%" style="border: 1px solid #999;"><br> 
+
+The following screenshots show the final result (this is a simplified version of the original PAL demo). 
+- RIGHT panel: The item name is set to "File Folders." In the original demo documentation, this widget is called a "filter." It does not filter the object list. Instead, its selection is used by the LEFT panel to create the object set that is displayed.
+- LEFT panel: Displays the list of objects filtered by the item name selected in the RIGHT PANEL. Also allows you to select a single object.
+- CENTER panel: The properties for the selected object are displayed.
+
+<img src="/assets/D1/D1_318.png" alt="xxx" width="80%" style="border: 1px solid #999;">
+
+- Click the button to modify the selected object.
+
+<img src="/assets/D1/D1_319.png" alt="xxx" width="45%" style="border: 1px solid #999;">
+
+- Modify the assignee and click Submit. The action is applied and the UI displays the updated object.
+
+<img src="/assets/D1/D1_320.png" alt="xxx" width="85%" style="border: 1px solid #999;">
+
 <br>
 
-### **2 How I maintain the demo documentation (using AI)**
+This the master diagram for the entire D1 setup workflow.
+
+<img src="/assets/D1_workflow_v2.png" alt="xxx" width="100%" style="border: 1px solid #999;">
+
+
+<br>
+
+### **3 How I maintain the demo documentation (using AI)**
+
+**TOC**
+  - **3.1 Working in docx**
+  - **3.2 Creating .md+png's (v1)**
+  - **3.3 Maintaining docx/md+pngs (v2, v3, ...)**
+
+GPT assessment: **This is a good example of the practical value of AI**. Maintaining screenshot-heavy technical documentation manually is tedious and error-prone. I can instead maintain a simple DOCX master, then use AI to regenerate the Markdown, extract and rename the images, create the HTML image tags, and package everything for the website. What was previously a substantial documentation-maintenance task becomes a simple, repeatable workflow. **AI does not need to replace human intelligence to be revolutionary; eliminating this kind of tedious work is already transformative**.  
+
+<br>
+
+#### **3.1 Working in docx**
+
+I maintain one DOCX source containing text, screenshots, headings, and image-ID markers
+
+<br>
+
+#### **3.2 Creating .md+png's v1**
 
 I maintain one DOCX source containing text, screenshots, headings, and image-ID markers → use AI to mechanically generate Markdown + consistently named PNG assets → replace the generated web content. This addresses a real documentation problem: screenshots and UI-heavy instructions become expensive to maintain when the product changes.
 
@@ -61,40 +120,22 @@ then
 (6) package everything into a zip file.
 ```
 
-**This is a good example of the practical value of AI**. Maintaining screenshot-heavy technical documentation manually is tedious and error-prone. I can instead maintain a simple DOCX master, then use AI to regenerate the Markdown, extract and rename the images, create the HTML image tags, and package everything for the website. What was previously a substantial documentation-maintenance task becomes a simple, repeatable workflow. **AI does not need to replace human intelligence to be revolutionary; eliminating this kind of tedious work is already transformative**.
+<br>
 
+#### **3.3 Maintaining docx/md+pngs (v2, v3, ...)**
+
+(WIP) The basic idea:
+- **After the context and structure is stable**: Perhaps make the .md files (markdow) the source files.
+- Possibly mark any changes in the docx. 
+- You might also be changing the md file. 
+- So you kind of have 2 source files.
+- Normally thats a no-no. A big problem. But with AI, its probably manageable, as long as you are careful to mark changes. 
+- Then give GPT the .md and the docx and describe how to find docx changes. GPT updates the .md file. 
+- The main reson for doing this: The .md markdown formatting and pic sizes are very tedious to correct. If you generate everything new from the docx everytime then you need to do a lot of patchwork.
 
 <br>
 
-### **3 About the demo**
 
-This simple demo introduces some of the basic Foundry building blocks used to create and govern real-world enterprise applications. This is a ZiptieAI version of the original demo **["Speedrun: Your First End-to-End Workflow"](https://learn.palantir.com/speedrun-your-first-e2e-workflow)**. 
-
-The following is the main workflow diagram *(for details about this workflow see **[D1 workflow chats](/pal_1.3_workflow_chats/)**)*.<br><img src="/assets/777_25.png" alt="drones" width="75%" style="border: 1px solid #999;"><br> 
-
-The following screenshots show the final result (this is a simplified version of the original PAL demo). 
-- RIGHT panel: The item name is set to "File Folders." In the original demo documentation, this widget is called a "filter." It does not filter the object list. Instead, its selection is used by the LEFT panel to create the object set that is displayed.
-- LEFT panel: Displays the list of objects filtered by the item name selected in the RIGHT PANEL. Also allows you to select a single object.
-- CENTER panel: The properties for the selected object are displayed.
-
-<img src="/assets/D1/D1_318.png" alt="xxx" width="80%" style="border: 1px solid #999;">
-
-- Click the button to modify the selected object.
-
-<img src="/assets/D1/D1_319.png" alt="xxx" width="45%" style="border: 1px solid #999;">
-
-- Modify the assignee and click Submit. The action is applied and the UI displays the updated object.
-
-<img src="/assets/D1/D1_320.png" alt="xxx" width="85%" style="border: 1px solid #999;">
-
-<br>
-
-This the master diagram for the entire D1 setup workflow.
-
-<img src="/assets/D1_workflow_v2.png" alt="xxx" width="100%" style="border: 1px solid #999;">
-
-
-<br>
 
 26.0818 (0713, v1 26.0713)
 
