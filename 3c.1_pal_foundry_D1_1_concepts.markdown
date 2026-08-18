@@ -92,27 +92,18 @@ Foundry can
 Another more recent central pillar of Foundry is security/governance of the enterprise:
 
 - who is allowed to see what
-
 - who is allowed to act
-
 - what gets logged
-
 - what can be trusted
 
 Below is the simple workflow diagram for this demo D1. Diagrams for other demos will use the same basic structure.
 
 - 1a = local files/manual upload → starting data in Foundry
-
 - 1b = Pipeline Builder cleans, joins, and unions data → output dataset
-
 - 3 = output dataset backs an ontology object type
-
 - 5 = Workshop reads ontology objects and displays them to the user
-
 - 3b = ontology action/write capability is defined
-
 - 5/3b = user executes the action through the Workshop UI
-
 - 6 = security and governance layer surrounding the entire workflow**
 
 Note that D1 does not do the following (other demos may include these):

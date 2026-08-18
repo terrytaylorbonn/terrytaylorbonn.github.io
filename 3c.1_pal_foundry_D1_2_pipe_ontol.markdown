@@ -1,6 +1,6 @@
 ---
 layout: page
-title: Demo D1 Ch2 Phase 1 -- Pipeline/ontology
+title: D1 Phase 1 -- Pipeline/ontology
 permalink: /3c.1_pal_foundry_D1_2_pipe_ontol/
 ---
 
@@ -18,11 +18,356 @@ permalink: /3c.1_pal_foundry_D1_2_pipe_ontol/
 
 <br>
 
-The text/images for this page will be generated soon from the docx \#610. 
+NOTE:
+
+- I use the same chapter numbers in this doc that I added to my version of the original Foundry speedrun (quick start) (see #610bbb_pal_D1_foundry_PAL_.docx on the Gdrive). The original speedrun H1/H2 headings were not numbered.
+- I dont number each step in this phase. This phase is relatively easy to follow and verify.
+
+<img src="/assets/D1/D1_101.png" alt="xxx" width="80%" style="border: 1px solid #999;">
+
+<br>
+### **2 Open FDE and create project/folder**
+
+(ch2 not shown in my master diagram above)
+
+<br>
+#### **2.1 Your top-level Foundry namespace / organization workspace**
+
+I think "ziptieai" was created when I signed up.
+
+<img src="/assets/D1/D1_102.png" alt="xxx" width="70%" style="border: 1px solid #999;">
+
+<br>
+#### **2.2 Open FDE**
+
+In left panel click View all.
+
+<img src="/assets/D1/D1_103.png" alt="xxx" width="40%" style="border: 1px solid #999;">
+
+Open AI FDE.
+
+<img src="/assets/D1/D1_104.png" alt="xxx" width="60%" style="border: 1px solid #999;">
+
+FDE is a godsend. You can paste screenshots (just copy the screenshot, then place cursor in prompt field and paste). FDE can "see" them. Without FDE I could not have done 5% of what I have accomplished in Foundry.
+
+<img src="/assets/D1/D1_105.png" alt="xxx" width="80%" style="border: 1px solid #999;">
+
+<br>
+#### **2.3 Create a project (dir for storing created files)**
+
+Click New in upper right of xxxx.palantirfoundry.com/workspace/compass/home
+
+<img src="/assets/D1/D1_106.png" alt="xxx" width="30%" style="border: 1px solid #999;">
+
+Click New portfolio.
+
+<img src="/assets/D1/D1_107.png" alt="xxx" width="70%" style="border: 1px solid #999;">
+
+Click Sandbox project.
+
+Enter project name
+
+<img src="/assets/D1/D1_108.png" alt="xxx" width="60%" style="border: 1px solid #999;">
+
+<img src="/assets/D1/D1_109.png" alt="xxx" width="60%" style="border: 1px solid #999;">
+
+Click Create project.
+
+<img src="/assets/D1/D1_110.png" alt="xxx" width="80%" style="border: 1px solid #999;">
+
+Click New and then type in pipe.
+
+<img src="/assets/D1/D1_111.png" alt="xxx" width="70%" style="border: 1px solid #999;">
+
+Click on Pipeline Builder.
+
+<img src="/assets/D1/D1_112.png" alt="xxx" width="80%" style="border: 1px solid #999;">
+
+Click on Files in left panel.
+
+<img src="/assets/D1/D1_113.png" alt="xxx" width="30%" style="border: 1px solid #999;">
+
+That pipeline you just opened is not there because you did not save it. If you have filled out the required info and saved, it would be listed here.
+
+<img src="/assets/D1/D1_114.png" alt="xxx" width="80%" style="border: 1px solid #999;">
+
+<br>
+#### **2.4 Open Pipeline Builder in new tab**
+
+In left panel click View all and search for pipe.
+
+<img src="/assets/D1/D1_115.png" alt="xxx" width="40%" style="border: 1px solid #999;">
+
+<img src="/assets/D1/D1_116.png" alt="xxx" width="60%" style="border: 1px solid #999;">
+
+Press and hold Ctrl key and mouse click on Pipeline Builder. A new tab with Pipeline Builder appears.
+
+<img src="/assets/D1/D1_117.png" alt="xxx" width="60%" style="border: 1px solid #999;">
+
+<br>
+#### **2.5 Create folder**
+
+<img src="/assets/D1/D1_118.png" alt="xxx" width="80%" style="border: 1px solid #999;">
+
+<img src="/assets/D1/D1_119.png" alt="xxx" width="60%" style="border: 1px solid #999;">
+
+PS: Click on the star for Project1 and Folder1.
+
+<img src="/assets/D1/D1_120.png" alt="xxx" width="50%" style="border: 1px solid #999;">
+
+They are now shown in the left pane.
+
+<img src="/assets/D1/D1_121.png" alt="xxx" width="30%" style="border: 1px solid #999;">
+
+NOTE: The eventual content of your folder will look something like this.
+
+<img src="/assets/D1/D1_122.png" alt="xxx" width="70%" style="border: 1px solid #999;">
+
+<br>
+#### **2.6 Summary**
+
+You now have the folder to store all files in. And you know a bit about how to navigate and open tools.
+
+<br>
+### **3 Download 3 source data files (csv) to your PC and upload to Foundry**
+
+Click on https://learn.palantir.com/speedrun-your-first-e2e-workflow. Download the 3 csv files.
+
+<img src="/assets/D1/D1_123.png" alt="xxx" width="80%" style="border: 1px solid #999;">
+
+Upload the files to your demo dir (from now on I will show my project and folder names).
+
+<img src="/assets/D1/D1_124.png" alt="xxx" width="60%" style="border: 1px solid #999;">
+
+<img src="/assets/D1/D1_125.png" alt="xxx" width="60%" style="border: 1px solid #999;">
+
+<img src="/assets/D1/D1_126.png" alt="xxx" width="70%" style="border: 1px solid #999;">
+
+<br>
+### **4 Create pipeline**
+
+<br>
+#### **4.1 What you will do in this chapter**
+
+You will create the following pipeline:
+
+- Add the 3 csv files.
+- Clean up content.
+- Combine all 3 into a single table (2 joins and 1 union).
+- Output to dataset (all_orders).
+
+NOTE: "all_orders" is not the ideal name for the dataset. That's true for many demo file names you will see in this demo. I might redo this demo in the future with better naming.
+
+<img src="/assets/D1/D1_127.png" alt="xxx" width="70%" style="border: 1px solid #999;">
+
+The following shows the content of all_orders.
+
+<img src="/assets/D1/D1_128.png" alt="xxx" width="40%" style="border: 1px solid #999;">
+
+<br>
+#### **4.2 Create a new Pipeline and add data**
+
+<img src="/assets/D1/D1_130.png" alt="xxx" width="40%" style="border: 1px solid #999;">
+
+<img src="/assets/D1/D1_131.png" alt="xxx" width="70%" style="border: 1px solid #999;">
+
+CTRL + ENTER. Enter your location ("D1 pipeline" is what I used).
+
+<img src="/assets/D1/D1_132.png" alt="xxx" width="30%" style="border: 1px solid #999;">
+
+<img src="/assets/D1/D1_133.png" alt="xxx" width="80%" style="border: 1px solid #999;">
+
+Click Create pipeline.
+
+<img src="/assets/D1/D1_134.png" alt="xxx" width="60%" style="border: 1px solid #999;">
+
+Click Add Foundry data.
+
+Select all 3 csv files.
+
+<img src="/assets/D1/D1_135.png" alt="xxx" width="90%" style="border: 1px solid #999;">
+
+3 new data/input dataset nodes are created.
+
+<img src="/assets/D1/D1_136.png" alt="xxx" width="50%" style="border: 1px solid #999;">
+
+<br>
+#### **4.4 Create transform "Clean Bureau"**
+
+NOTE: For now, I just show the screenshots for my setup. For the detailed instructions see https://learn.palantir.com/speedrun-your-first-e2e-workflow . The pipeline setup is rather straightforward, but I might redo this in th future with a more detailed explanation.
+
+**4.3.1 Cast to timestamp**
+
+<img src="/assets/D1/D1_137.png" alt="xxx" width="90%" style="border: 1px solid #999;">
+
+<img src="/assets/D1/D1_138.png" alt="xxx" width="50%" style="border: 1px solid #999;">
+
+<img src="/assets/D1/D1_139.png" alt="xxx" width="90%" style="border: 1px solid #999;">
+
+<img src="/assets/D1/D1_141.png" alt="xxx" width="60%" style="border: 1px solid #999;">
+
+**4.3.2 Filter rows**
+
+<img src="/assets/D1/D1_142.png" alt="xxx" width="90%" style="border: 1px solid #999;">
+
+<img src="/assets/D1/D1_143.png" alt="xxx" width="50%" style="border: 1px solid #999;">
+
+**4.3.3 Normalize column names**
+
+<img src="/assets/D1/D1_144.png" alt="xxx" width="90%" style="border: 1px solid #999;">
+
+<img src="/assets/D1/D1_145.png" alt="xxx" width="50%" style="border: 1px solid #999;">
+
+<img src="/assets/D1/D1_146.png" alt="xxx" width="70%" style="border: 1px solid #999;">
+
+<br>
+#### **4.4 Create transform "Clean Office Goods"**
+
+<img src="/assets/D1/D1_147.png" alt="xxx" width="90%" style="border: 1px solid #999;">
+
+<img src="/assets/D1/D1_148.png" alt="xxx" width="70%" style="border: 1px solid #999;">
+
+<br>
+#### **4.5 Create join "Join Office Goods"**
+
+<img src="/assets/D1/D1_149.png" alt="xxx" width="50%" style="border: 1px solid #999;">
+
+<img src="/assets/D1/D1_150.png" alt="xxx" width="80%" style="border: 1px solid #999;">
+
+<img src="/assets/D1/D1_152.png" alt="xxx" width="90%" style="border: 1px solid #999;">
+
+<img src="/assets/D1/D1_153.png" alt="xxx" width="80%" style="border: 1px solid #999;">
+
+<img src="/assets/D1/D1_154.png" alt="xxx" width="90%" style="border: 1px solid #999;">
+
+<img src="/assets/D1/D1_155.png" alt="xxx" width="90%" style="border: 1px solid #999;">
+
+<br>
+#### **4.6 Create join "Join Bureau"**
+
+<img src="/assets/D1/D1_156.png" alt="xxx" width="70%" style="border: 1px solid #999;">
+
+<img src="/assets/D1/D1_157.png" alt="xxx" width="70%" style="border: 1px solid #999;">
+
+<img src="/assets/D1/D1_158.png" alt="xxx" width="90%" style="border: 1px solid #999;">
+
+<img src="/assets/D1/D1_159.png" alt="xxx" width="90%" style="border: 1px solid #999;">
+
+<img src="/assets/D1/D1_160.png" alt="xxx" width="90%" style="border: 1px solid #999;">
+
+<br>
+#### **4.7 Create union "Union Orders"**
+
+<img src="/assets/D1/D1_161.png" alt="xxx" width="60%" style="border: 1px solid #999;">
+
+<img src="/assets/D1/D1_162.png" alt="xxx" width="90%" style="border: 1px solid #999;">
+
+<img src="/assets/D1/D1_163.png" alt="xxx" width="100%" style="border: 1px solid #999;">
+
+<img src="/assets/D1/D1_164.png" alt="xxx" width="70%" style="border: 1px solid #999;">
+
+<br>
+#### **4.8 Add output dataset "all_orders"**
+
+<img src="/assets/D1/D1_165.png" alt="xxx" width="50%" style="border: 1px solid #999;">
+
+<img src="/assets/D1/D1_166.png" alt="xxx" width="60%" style="border: 1px solid #999;">
+
+<img src="/assets/D1/D1_167.png" alt="xxx" width="50%" style="border: 1px solid #999;">
+
+<br>
+#### **4.9 Finalize and Run Pipeline**
+
+<img src="/assets/D1/D1_168.png" alt="xxx" width="40%" style="border: 1px solid #999;">
+
+<img src="/assets/D1/D1_169.png" alt="xxx" width="40%" style="border: 1px solid #999;">
+
+<img src="/assets/D1/D1_170.png" alt="xxx" width="50%" style="border: 1px solid #999;">
+
+<img src="/assets/D1/D1_171.png" alt="xxx" width="50%" style="border: 1px solid #999;">
+
+<img src="/assets/D1/D1_172.png" alt="xxx" width="50%" style="border: 1px solid #999;">
+
+View the pipeline result (click on Preview).
+
+<img src="/assets/D1/D1_173.png" alt="xxx" width="90%" style="border: 1px solid #999;">
+
+<br>
+#### **4.10 Summary**
+
+You now have the pipeline that converts the csv files into a cleaned structured dataset that can form as the source (the "backing datasource") of the Ontology
+
+<br>
+### **5 Create ontology**
+
+<br>
+#### **5.0 What is "ontology"**
+
+FDE generated this text describing ontology in response to my prompt about my disagreements with the original (obviously) human-written text and my suggestions about what ontology really is (FDE mostly agreed with my suggestions):
+
+- In the previous section, we created the all_orders dataset. A dataset is a table of rows and columns. It is useful for storage and transformation, but by itself it does not define how the business should interact with those rows.
+- In this section, we create an Ontology object type called Order, backed by the all_orders dataset.
+- The Ontology turns prepared datasets into governed business objects. An object type defines the properties, identity, relationships, permissions, and actions associated with a real-world concept such as an Order.
+- This is more than a simple database table. Once data is modeled as ontology objects, Foundry applications can read it consistently, filter and link it to other objects, expose it through APIs, and modify it through governed actions.
+- In this tutorial, the Order object type will let Workshop display orders, filter them, show details, and later update an order’s assignee through an action.
+- We will define the Order object type using Ontology Manager.
+
+**Note: The PAL doc sometimes refers to "object types" as "objects"**
+
+"We will define the Order object by using the Ontology Manager App." It should be "we will create an Order object type...". FDE confirmed this.
+
+<br>
+#### **5.1 Create the object type for all_orders**
+
+<img src="/assets/D1/D1_174.png" alt="xxx" width="100%" style="border: 1px solid #999;">
+
+<img src="/assets/D1/D1_175.png" alt="xxx" width="80%" style="border: 1px solid #999;">
+
+<img src="/assets/D1/D1_176.png" alt="xxx" width="80%" style="border: 1px solid #999;">
+
+I mistakingly named this "All Orders" because I thought the single Order object would contains all orders. If I had just trusted the UI (which is correct) and not the docs, then I would not have made this mistake. In a future version of this demo I will get all the names correct.
+
+<img src="/assets/D1/D1_177.png" alt="xxx" width="80%" style="border: 1px solid #999;">
+
+<img src="/assets/D1/D1_178.png" alt="xxx" width="80%" style="border: 1px solid #999;">
+
+<img src="/assets/D1/D1_179.png" alt="xxx" width="80%" style="border: 1px solid #999;">
+
+<img src="/assets/D1/D1_180.png" alt="xxx" width="80%" style="border: 1px solid #999;">
+
+<img src="/assets/D1/D1_181.png" alt="xxx" width="40%" style="border: 1px solid #999;">
+
+<img src="/assets/D1/D1_182.png" alt="xxx" width="100%" style="border: 1px solid #999;">
+
+<img src="/assets/D1/D1_183.png" alt="xxx" width="30%" style="border: 1px solid #999;">
+
+<br>
+#### **5.3 Summary**
+
+FDE:
+
+- We now have an Ontology representation of the prepared `all_orders` dataset. The `Order` object type gives the application a governed business-object view of the data, rather than working directly with table rows and columns.
+- We are now ready to build the core of the app: UI logic that reads, filters, displays, and modifies Order objects.
+- In this demo, modifications made through the app will update the Ontology edit layer. They will not write changes back to the original backing dataset.
+
+<br>
+### **Phase 1 final test: View/compare dataset/ontology**
+
+<br>
+#### **Pipeline/dataset**
+
+<img src="/assets/D1/D1_184.png" alt="xxx" width="100%" style="border: 1px solid #999;">
+
+<br>
+#### **View ontology (in Insight)**
+
+<img src="/assets/D1/D1_185.png" alt="xxx" width="60%" style="border: 1px solid #999;">
+
+<img src="/assets/D1/D1_186.png" alt="xxx" width="100%" style="border: 1px solid #999;">
 
 
 <!-- *(left) order assigned to Bins, (right) reassigned to Weber, (bottom) result (saved to ontology)*<br><img src="/assets/777_26.png" alt="drones" width="75%" style="border: 1px solid #999;"> -->
 
 <br>
 
-26.0816 (v1 26.0816)
+26.0818 (v1 26.0816)
