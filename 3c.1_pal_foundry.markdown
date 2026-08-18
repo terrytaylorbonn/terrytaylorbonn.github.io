@@ -18,10 +18,11 @@ These are the 4 chapters generated (using ChatGPT) from the **source file docx [
 - **(TODO) [Demo D1 Ch3 Phase 2: Basic UI](/3c.1_pal_foundry_D1_3_ui_basic/)**
 - **(v1)   [Demo D1 Ch4 Phase 3: Action UI](/3c.1_pal_foundry_D1_4_ui_action/)**
 
-Right now 
-- This a very bare-bones initial D1 demo doc version with minimal text.
-- But it a totally reorganized version of the original Foundry demo. 
-- All pics are from my own demo and the major workflow diagrams are my original.
+
+Note:
+- Currently this is very bare-bones initial D1 demo documentation with minimal text.
+- It is a reorganized version of the original Foundry demo. 
+- All screenshots are from my own demo and the major workflow diagrams are my original.
 
 The original PAL demo version online doc is **["Speedrun: Your First End-to-End Workflow"](https://learn.palantir.com/speedrun-your-first-e2e-workflow)**.
 
@@ -62,24 +63,35 @@ then
 
 ### **3 About the demo**
 
-This is a simple demo that introduces some basic Foundry functionality that can vasty simplify the management and security of complex real-world enterprise apps. This is a ZiptieAI version of the original demo **["Speedrun: Your First End-to-End Workflow"](https://learn.palantir.com/speedrun-your-first-e2e-workflow)**. 
+This simple demo introduces some of the basic Foundry building blocks used to create and govern real-world enterprise applications. This is a ZiptieAI version of the original demo **["Speedrun: Your First End-to-End Workflow"](https://learn.palantir.com/speedrun-your-first-e2e-workflow)**. 
 
 The following is the main workflow diagram *(for details about this workflow see **[D1 workflow chats](/pal_1.3_workflow_chats/)**)*.<br><img src="/assets/777_25.png" alt="drones" width="75%" style="border: 1px solid #999;"><br> 
 
 The following screenshots show the final result (this is a simplified version of the original PAL demo). 
-- RIGHT panel: "File folders" (object set) is selected
-- LEFT panel: A single "File folders" object is selected.
+- RIGHT panel: The item name is set to "File Folders." In the original demo documentation, this widget is called a "filter." It does not directly filter the object list. Instead, its selection is used by the LEFT panel to create the object set that is displayed.
+- LEFT panel: Displays the list of objects filtered by the item name selected in the RIGHT PANEL. Also allows you to select a single object.
 - CENTER panel: The properties for the selected object are displayed.
 
 <img src="/assets/D1/D1_318.png" alt="xxx" width="80%" style="border: 1px solid #999;">
 
-- Click the button to modify the object.
+- Click the button to modify the selected object.
 
 <img src="/assets/D1/D1_319.png" alt="xxx" width="45%" style="border: 1px solid #999;">
 
-- Click Submit. The change is stored in the (ontology) object.
+- Modify the assignee and click Submit. The action is applied and the UI displays the updated object.
 
 <img src="/assets/D1/D1_320.png" alt="xxx" width="85%" style="border: 1px solid #999;">
+
+<br>
+
+This the master diagram for the entire D1 setup workflow.
+
+<img src="/assets/D1_workflow_v2.png" alt="xxx" width="100%" style="border: 1px solid #999;">
+
+
+<br>
+
+26.0818 (0713, v1 26.0713)
 
 <!-- ## **PAL-DEMO-1: Palantir Foundry "speedrun" (quick start) (26.0705)**
 For more info see **[#610\_pal\_foundry\_.docx](https://drive.google.com/drive/folders/1-Adawag9uA8_bq-hDF-nOuPYaRLz1eEO)**.
@@ -101,6 +113,3 @@ The following explains what section of the original demo text (for example "3") 
 <img src="/assets/pal-demo-1-01.png" alt="drones" width="70%" style="border: 1px solid #999;">
 -->
 
-<br>
-
-26.0817 (0713, v1 26.0713)
