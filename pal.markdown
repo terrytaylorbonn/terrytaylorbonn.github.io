@@ -132,6 +132,7 @@ First
 - **2.1 Palantir free tier sign up**
 - **2.2 Palantir Foundry demo sources**
 - **2.3 My demo plan** 
+- **2.4 My demo documentation creation/maintenence strategy** (26.0818)
 
 Second the actualy hands-on installable_examples and step-by-step demos 
 - **2.5 PAL (installable) examples (START CREATING PALANTIR FOUNDRY APPS HERE)**. These are complicated, but they have an autoinstaller that allows you to start with a (usually) working version that you can modify.
@@ -180,6 +181,14 @@ I still don't have a learning path. But I do have a rough draft learning plan **
 The goal of \#699:
 - Clear master list of demos (examples, courses, etc).
 - For each demo: A simple Foundry workflow main diagram with for that demo.
+
+
+<br>
+
+#### **[2.4 My demo documentation creation/maintenence strategy](/3c.1b_pal_docx_md/)** (26.0818)
+
+
+
 
 <!-- <br>
 
