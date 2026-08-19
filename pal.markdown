@@ -131,8 +131,8 @@ The three crystal balls represent three layers of governance. Foundry controls
 First 
 - **2.1 Palantir free tier sign up**
 - **2.2 Palantir Foundry demo sources**
-- **2.3 My demo plan** 
-- **2.4 My demo documentation creation/maintenence strategy** (26.0818)
+- **2.3 Demo plan** 
+- **2.4 Demo documentation creation/maintenence strategy** (26.0818)
 
 Second the actualy hands-on installable_examples and step-by-step demos 
 - **2.5 PAL (installable) examples (START CREATING PALANTIR FOUNDRY APPS HERE)**. These are complicated, but they have an autoinstaller that allows you to start with a (usually) working version that you can modify.
@@ -168,7 +168,7 @@ I wanted to get hands-on experience from the start. So I checked out several off
 <br>
 
 
-#### **2.3 My demo plan** 
+#### **2.3 Demo plan** 
 
 
 I spent the first month doing the demos I thought looked interesting from the sources listed in 2.2 above *(lab notes (MS.Word docx files) are available for each example/demo on the **[GDrive](https://drive.google.com/drive/folders/1-Adawag9uA8_bq-hDF-nOuPYaRLz1eEO)**)*. Those demos are organized (by Palantir) by role and project types. But what I really needed was a (straight, start to finish) learning path for a generalist beginner. So I decided I'd just start doing demos and after a while I'd eventually figure out a learning path. 
@@ -185,7 +185,7 @@ The goal of \#699:
 
 <br>
 
-#### **[2.4 My demo documentation creation/maintenence strategy](/3c.1b_pal_docx_md/)** (26.0818)
+#### **[2.4 Demo documentation creation/maintenence strategy](/3c.1b_pal_docx_md/)** (26.0818)
 
 
 

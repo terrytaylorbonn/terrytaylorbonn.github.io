@@ -10,29 +10,28 @@ permalink: /3c.1_pal_foundry/
 
 <br>
 
-This page describes demo D1:
-- **1 Demo D1 (ZiptieAI version) online documentation**
-- **2 About the demo**
-- **3 How I maintain the demo documentation (using AI)**. *"This is a good example of the practical value of AI ... AI does not need to replace human intelligence to be revolutionary; eliminating this kind of tedious work is already transformative" (GPT's summary of how ZiptieAI documentation is managed using AI; full text later on this page)*.
-
+This page describes the ZiptieAI version of the orginal Palantir Foundry demo D1 **["Speedrun: Your First End-to-End Workflow"](https://learn.palantir.com/speedrun-your-first-e2e-workflow)**:
+- **1 Online tutorial**
+- **2 Demo summary**
 
 
 <br>
 
 
-### **1 Demo D1 (ZiptieAI version) online documentation**
+### **1 Demo D1 (ZiptieAI version) online tutorial**
 
-These are the 4 chapters generated (using ChatGPT) from the **source file docx [#610](https://drive.google.com/drive/folders/1-Adawag9uA8_bq-hDF-nOuPYaRLz1eEO)**:
+
+These are the resulting 4 chapters generated (using ChatGPT) from the **source file docx [#610](https://drive.google.com/drive/folders/1-Adawag9uA8_bq-hDF-nOuPYaRLz1eEO)**:
 - **(v1) [Demo D1 Ch1 Concepts](/3c.1_pal_foundry_D1_1_concepts/)**
 - **(v1) [Demo D1 Ch2 Phase 1: Pipeline/ontology](/3c.1_pal_foundry_D1_2_pipe_ontol/)**
 - **(v1) [Demo D1 Ch3 Phase 2: Basic UI](/3c.1_pal_foundry_D1_3_ui_basic/)**
 - **(v1) [Demo D1 Ch4 Phase 3: Action UI](/3c.1_pal_foundry_D1_4_ui_action/)**
 
-
+Note: **[2.4 Demo documentation creation/maintenence strategy](/3c.1b_pal_docx_md/)** describes the doc processes used to create the online docs for this demo. *"This is a good example of the practical value of AI ... AI does not need to replace human intelligence to be revolutionary; eliminating this kind of tedious work is already transformative" (GPT's summary of how ZiptieAI documentation is managed using AI; full text later on this page)*.
 
 <br>
 
-### **2 About the demo**
+### **2 Demo summary**
 
 This simple demo introduces some of the basic Foundry building blocks used to create and govern real-world enterprise applications. This is a ZiptieAI version of the original demo **["Speedrun: Your First End-to-End Workflow"](https://learn.palantir.com/speedrun-your-first-e2e-workflow)**. 
 
@@ -67,7 +66,11 @@ This the master diagram for the entire D1 setup workflow.
 
 <img src="/assets/D1_workflow_v2.png" alt="xxx" width="100%" style="border: 1px solid #999;">
 
+<br>
 
+26.0818 (0713, v1 26.0713)
+
+<!--
 <br>
 
 ### **3 How I maintain the demo documentation (using AI)**
@@ -133,11 +136,9 @@ then
 - Then give GPT the .md and the docx and describe how to find docx changes. GPT updates the .md file. 
 - The main reson for doing this: The .md markdown formatting and pic sizes are very tedious to correct. If you generate everything new from the docx everytime then you need to do a lot of patchwork.
 
-<br>
+-->
 
 
-
-26.0818 (0713, v1 26.0713)
 
 <!-- ## **PAL-DEMO-1: Palantir Foundry "speedrun" (quick start) (26.0705)**
 For more info see **[#610\_pal\_foundry\_.docx](https://drive.google.com/drive/folders/1-Adawag9uA8_bq-hDF-nOuPYaRLz1eEO)**.
