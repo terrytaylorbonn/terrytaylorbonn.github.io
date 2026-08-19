@@ -10,6 +10,10 @@ permalink: /3c.1_pal_foundry_D1_2_pipe_ontol/
 
 <br>
 
+Phase 1 builds the foundation for the rest of demo D1. We start with three raw CSV files, use Pipeline Builder to clean and combine the data into a single dataset, and then use that dataset to create an Ontology object type.
+
+By the end of this phase, the basic data → pipeline → dataset → ontology workflow is working and can be tested before moving on to the UI in Phase 2.
+
 NOTE:
 
 - I use the same chapter numbers in this doc that I added to my version of the original Foundry speedrun (quick start) (see #610bbb_pal_D1_foundry_PAL_.docx on the Gdrive). The original speedrun H1/H2 headings were not numbered.
