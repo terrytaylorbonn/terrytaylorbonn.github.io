@@ -29,7 +29,7 @@ NOTE:
 
 I think "ziptieai" was created when I signed up.
 
-<img src="/assets/D1/D1_102.png" alt="xxx" width="50%" style="border: 1px solid #999;">
+<img src="/assets/D1/D1_102.png" alt="xxx" width="45%" style="border: 1px solid #999;">
 
 <br>
 
@@ -127,19 +127,20 @@ NOTE: The eventual content of your folder will look something like this.
 You now have the folder to store all files in. And you know a bit about how to navigate and open tools.
 
 <br>
+
 ### **3 Download 3 source data files (csv) to your PC and upload to Foundry**
 
 Click on https://learn.palantir.com/speedrun-your-first-e2e-workflow. Download the 3 csv files.
 
-<img src="/assets/D1/D1_123.png" alt="xxx" width="80%" style="border: 1px solid #999;">
+<img src="/assets/D1/D1_123.png" alt="xxx" width="55%" style="border: 1px solid #999;">
 
 Upload the files to your demo dir (from now on I will show my project and folder names).
 
-<img src="/assets/D1/D1_124.png" alt="xxx" width="60%" style="border: 1px solid #999;">
+<img src="/assets/D1/D1_124.png" alt="xxx" width="46%" style="border: 1px solid #999;">
 
-<img src="/assets/D1/D1_125.png" alt="xxx" width="60%" style="border: 1px solid #999;">
+<img src="/assets/D1/D1_125.png" alt="xxx" width="46%" style="border: 1px solid #999;">
 
-<img src="/assets/D1/D1_126.png" alt="xxx" width="70%" style="border: 1px solid #999;">
+<img src="/assets/D1/D1_126.png" alt="xxx" width="56%" style="border: 1px solid #999;">
 
 <br>
 ### **4 Create pipeline**
@@ -160,24 +161,24 @@ NOTE: "all_orders" is not the ideal name for the dataset. That's true for many d
 
 The following shows the content of all_orders.
 
-<img src="/assets/D1/D1_128.png" alt="xxx" width="40%" style="border: 1px solid #999;">
+<img src="/assets/D1/D1_128.png" alt="xxx" width="20%" style="border: 1px solid #999;">
 
 <br>
 #### **4.2 Create a new Pipeline and add data**
 
-<img src="/assets/D1/D1_130.png" alt="xxx" width="40%" style="border: 1px solid #999;">
+<img src="/assets/D1/D1_130.png" alt="xxx" width="25%" style="border: 1px solid #999;">
 
-<img src="/assets/D1/D1_131.png" alt="xxx" width="70%" style="border: 1px solid #999;">
+<img src="/assets/D1/D1_131.png" alt="xxx" width="40%" style="border: 1px solid #999;">
 
 CTRL + ENTER. Enter your location ("D1 pipeline" is what I used).
 
-<img src="/assets/D1/D1_132.png" alt="xxx" width="30%" style="border: 1px solid #999;">
+<img src="/assets/D1/D1_132.png" alt="xxx" width="10%" style="border: 1px solid #999;">
 
-<img src="/assets/D1/D1_133.png" alt="xxx" width="80%" style="border: 1px solid #999;">
+<img src="/assets/D1/D1_133.png" alt="xxx" width="70%" style="border: 1px solid #999;">
 
 Click Create pipeline.
 
-<img src="/assets/D1/D1_134.png" alt="xxx" width="60%" style="border: 1px solid #999;">
+<img src="/assets/D1/D1_134.png" alt="xxx" width="33%" style="border: 1px solid #999;">
 
 Click Add Foundry data.
 
@@ -187,48 +188,50 @@ Select all 3 csv files.
 
 3 new data/input dataset nodes are created.
 
-<img src="/assets/D1/D1_136.png" alt="xxx" width="50%" style="border: 1px solid #999;">
+<img src="/assets/D1/D1_136.png" alt="xxx" width="24%" style="border: 1px solid #999;">
 
 <br>
+
 #### **4.4 Create transform "Clean Bureau"**
 
 NOTE: For now, I just show the screenshots for my setup. For the detailed instructions see https://learn.palantir.com/speedrun-your-first-e2e-workflow . The pipeline setup is rather straightforward, but I might redo this in th future with a more detailed explanation.
 
 **4.3.1 Cast to timestamp**
 
-<img src="/assets/D1/D1_137.png" alt="xxx" width="90%" style="border: 1px solid #999;">
+<img src="/assets/D1/D1_137.png" alt="xxx" width="60%" style="border: 1px solid #999;">
 
-<img src="/assets/D1/D1_138.png" alt="xxx" width="50%" style="border: 1px solid #999;">
+<img src="/assets/D1/D1_138.png" alt="xxx" width="29%" style="border: 1px solid #999;">
 
 <img src="/assets/D1/D1_139.png" alt="xxx" width="90%" style="border: 1px solid #999;">
 
-<img src="/assets/D1/D1_141.png" alt="xxx" width="60%" style="border: 1px solid #999;">
+<img src="/assets/D1/D1_141.png" alt="xxx" width="50%" style="border: 1px solid #999;">
 
 **4.3.2 Filter rows**
 
-<img src="/assets/D1/D1_142.png" alt="xxx" width="90%" style="border: 1px solid #999;">
+<img src="/assets/D1/D1_142.png" alt="xxx" width="80%" style="border: 1px solid #999;">
 
-<img src="/assets/D1/D1_143.png" alt="xxx" width="50%" style="border: 1px solid #999;">
+<img src="/assets/D1/D1_143.png" alt="xxx" width="30%" style="border: 1px solid #999;">
 
 **4.3.3 Normalize column names**
 
 <img src="/assets/D1/D1_144.png" alt="xxx" width="90%" style="border: 1px solid #999;">
 
-<img src="/assets/D1/D1_145.png" alt="xxx" width="50%" style="border: 1px solid #999;">
+<img src="/assets/D1/D1_145.png" alt="xxx" width="29%" style="border: 1px solid #999;">
 
-<img src="/assets/D1/D1_146.png" alt="xxx" width="70%" style="border: 1px solid #999;">
+<img src="/assets/D1/D1_146.png" alt="xxx" width="42%" style="border: 1px solid #999;">
 
 <br>
+
 #### **4.4 Create transform "Clean Office Goods"**
 
 <img src="/assets/D1/D1_147.png" alt="xxx" width="90%" style="border: 1px solid #999;">
 
-<img src="/assets/D1/D1_148.png" alt="xxx" width="70%" style="border: 1px solid #999;">
+<img src="/assets/D1/D1_148.png" alt="xxx" width="40%" style="border: 1px solid #999;">
 
 <br>
 #### **4.5 Create join "Join Office Goods"**
 
-<img src="/assets/D1/D1_149.png" alt="xxx" width="50%" style="border: 1px solid #999;">
+<img src="/assets/D1/D1_149.png" alt="xxx" width="30%" style="border: 1px solid #999;">
 
 <img src="/assets/D1/D1_150.png" alt="xxx" width="80%" style="border: 1px solid #999;">
 
@@ -238,67 +241,74 @@ NOTE: For now, I just show the screenshots for my setup. For the detailed instru
 
 <img src="/assets/D1/D1_154.png" alt="xxx" width="90%" style="border: 1px solid #999;">
 
-<img src="/assets/D1/D1_155.png" alt="xxx" width="90%" style="border: 1px solid #999;">
+<img src="/assets/D1/D1_155.png" alt="xxx" width="70%" style="border: 1px solid #999;">
 
 <br>
+
 #### **4.6 Create join "Join Bureau"**
 
-<img src="/assets/D1/D1_156.png" alt="xxx" width="70%" style="border: 1px solid #999;">
+<img src="/assets/D1/D1_156.png" alt="xxx" width="40%" style="border: 1px solid #999;">
 
-<img src="/assets/D1/D1_157.png" alt="xxx" width="70%" style="border: 1px solid #999;">
+<img src="/assets/D1/D1_157.png" alt="xxx" width="65%" style="border: 1px solid #999;">
 
 <img src="/assets/D1/D1_158.png" alt="xxx" width="90%" style="border: 1px solid #999;">
 
 <img src="/assets/D1/D1_159.png" alt="xxx" width="90%" style="border: 1px solid #999;">
 
-<img src="/assets/D1/D1_160.png" alt="xxx" width="90%" style="border: 1px solid #999;">
+<img src="/assets/D1/D1_160.png" alt="xxx" width="70%" style="border: 1px solid #999;">
 
 <br>
+
 #### **4.7 Create union "Union Orders"**
 
-<img src="/assets/D1/D1_161.png" alt="xxx" width="60%" style="border: 1px solid #999;">
+<img src="/assets/D1/D1_161.png" alt="xxx" width="30%" style="border: 1px solid #999;">
 
 <img src="/assets/D1/D1_162.png" alt="xxx" width="90%" style="border: 1px solid #999;">
 
 <img src="/assets/D1/D1_163.png" alt="xxx" width="100%" style="border: 1px solid #999;">
 
-<img src="/assets/D1/D1_164.png" alt="xxx" width="70%" style="border: 1px solid #999;">
+<img src="/assets/D1/D1_164.png" alt="xxx" width="45%" style="border: 1px solid #999;">
 
 <br>
+
 #### **4.8 Add output dataset "all_orders"**
 
-<img src="/assets/D1/D1_165.png" alt="xxx" width="50%" style="border: 1px solid #999;">
+<img src="/assets/D1/D1_165.png" alt="xxx" width="30%" style="border: 1px solid #999;">
 
-<img src="/assets/D1/D1_166.png" alt="xxx" width="60%" style="border: 1px solid #999;">
+<img src="/assets/D1/D1_166.png" alt="xxx" width="35%" style="border: 1px solid #999;">
 
-<img src="/assets/D1/D1_167.png" alt="xxx" width="50%" style="border: 1px solid #999;">
+<img src="/assets/D1/D1_167.png" alt="xxx" width="30%" style="border: 1px solid #999;">
 
 <br>
+
 #### **4.9 Finalize and Run Pipeline**
 
-<img src="/assets/D1/D1_168.png" alt="xxx" width="40%" style="border: 1px solid #999;">
+<img src="/assets/D1/D1_168.png" alt="xxx" width="20%" style="border: 1px solid #999;">
 
-<img src="/assets/D1/D1_169.png" alt="xxx" width="40%" style="border: 1px solid #999;">
+<img src="/assets/D1/D1_169.png" alt="xxx" width="20%" style="border: 1px solid #999;">
 
-<img src="/assets/D1/D1_170.png" alt="xxx" width="50%" style="border: 1px solid #999;">
+<img src="/assets/D1/D1_170.png" alt="xxx" width="30%" style="border: 1px solid #999;">
 
-<img src="/assets/D1/D1_171.png" alt="xxx" width="50%" style="border: 1px solid #999;">
+<img src="/assets/D1/D1_171.png" alt="xxx" width="30%" style="border: 1px solid #999;">
 
-<img src="/assets/D1/D1_172.png" alt="xxx" width="50%" style="border: 1px solid #999;">
+<img src="/assets/D1/D1_172.png" alt="xxx" width="30%" style="border: 1px solid #999;">
 
 View the pipeline result (click on Preview).
 
 <img src="/assets/D1/D1_173.png" alt="xxx" width="90%" style="border: 1px solid #999;">
 
 <br>
+
 #### **4.10 Summary**
 
 You now have the pipeline that converts the csv files into a cleaned structured dataset that can form as the source (the "backing datasource") of the Ontology
 
 <br>
+
 ### **5 Create ontology**
 
 <br>
+
 #### **5.0 What is "ontology"**
 
 FDE generated this text describing ontology in response to my prompt about my disagreements with the original (obviously) human-written text and my suggestions about what ontology really is (FDE mostly agreed with my suggestions):
@@ -319,9 +329,9 @@ FDE generated this text describing ontology in response to my prompt about my di
 
 <img src="/assets/D1/D1_174.png" alt="xxx" width="100%" style="border: 1px solid #999;">
 
-<img src="/assets/D1/D1_175.png" alt="xxx" width="80%" style="border: 1px solid #999;">
+<img src="/assets/D1/D1_175.png" alt="xxx" width="75%" style="border: 1px solid #999;">
 
-<img src="/assets/D1/D1_176.png" alt="xxx" width="80%" style="border: 1px solid #999;">
+<img src="/assets/D1/D1_176.png" alt="xxx" width="70%" style="border: 1px solid #999;">
 
 I mistakingly named this "All Orders" because I thought the single Order object would contains all orders. If I had just trusted the UI (which is correct) and not the docs, then I would not have made this mistake. In a future version of this demo I will get all the names correct.
 
@@ -329,15 +339,15 @@ I mistakingly named this "All Orders" because I thought the single Order object 
 
 <img src="/assets/D1/D1_178.png" alt="xxx" width="80%" style="border: 1px solid #999;">
 
-<img src="/assets/D1/D1_179.png" alt="xxx" width="80%" style="border: 1px solid #999;">
+<img src="/assets/D1/D1_179.png" alt="xxx" width="70%" style="border: 1px solid #999;">
 
 <img src="/assets/D1/D1_180.png" alt="xxx" width="80%" style="border: 1px solid #999;">
 
-<img src="/assets/D1/D1_181.png" alt="xxx" width="40%" style="border: 1px solid #999;">
+<img src="/assets/D1/D1_181.png" alt="xxx" width="30%" style="border: 1px solid #999;">
 
 <img src="/assets/D1/D1_182.png" alt="xxx" width="100%" style="border: 1px solid #999;">
 
-<img src="/assets/D1/D1_183.png" alt="xxx" width="30%" style="border: 1px solid #999;">
+<img src="/assets/D1/D1_183.png" alt="xxx" width="25%" style="border: 1px solid #999;">
 
 <br>
 #### **5.3 Summary**
@@ -359,7 +369,7 @@ FDE:
 <br>
 #### **View ontology (in Insight)**
 
-<img src="/assets/D1/D1_185.png" alt="xxx" width="60%" style="border: 1px solid #999;">
+<img src="/assets/D1/D1_185.png" alt="xxx" width="40%" style="border: 1px solid #999;">
 
 <img src="/assets/D1/D1_186.png" alt="xxx" width="100%" style="border: 1px solid #999;">
 
