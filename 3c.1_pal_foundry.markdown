@@ -11,7 +11,7 @@ permalink: /3c.1_pal_foundry/
 <br>
 
 This page describes the ZiptieAI version of the orginal Palantir Foundry demo D1 **["Speedrun: Your First End-to-End Workflow"](https://learn.palantir.com/speedrun-your-first-e2e-workflow)**:
-- **1 Online tutorial**
+- **1 Online tutorial** 
 - **2 Demo summary**
 
 
@@ -20,6 +20,7 @@ This page describes the ZiptieAI version of the orginal Palantir Foundry demo D1
 
 ### **1 Demo D1 (ZiptieAI version) online tutorial**
 
+Contains all the hard info required to get the demo running ASAP. 
 
 These are the resulting 4 chapters generated (using ChatGPT) from the **source file docx [#610](https://drive.google.com/drive/folders/1-Adawag9uA8_bq-hDF-nOuPYaRLz1eEO)**:
 - **(v1) [Demo D1 Ch1 Concepts](/3c.1_pal_foundry_D1_1_concepts/)**
@@ -27,13 +28,13 @@ These are the resulting 4 chapters generated (using ChatGPT) from the **source f
 - **(v1) [Demo D1 Ch3 Phase 2: Basic UI](/3c.1_pal_foundry_D1_3_ui_basic/)**
 - **(v1) [Demo D1 Ch4 Phase 3: Action UI](/3c.1_pal_foundry_D1_4_ui_action/)**
 
-Note: **[2.4 Demo documentation creation/maintenence strategy](/3c.1b_pal_docx_md/)** describes the doc processes used to create the online docs for this demo. *"This is a good example of the practical value of AI ... AI does not need to replace human intelligence to be revolutionary; eliminating this kind of tedious work is already transformative" (GPT's summary of how ZiptieAI documentation is managed using AI; full text later on this page)*.
+The tutorial text generation workflow makes it as easy as possible to constantly update the docs. **[2.4 Demo documentation creation/maintenence strategy](/3c.1b_pal_docx_md/)** describes the doc processes in details. GPT: *"This is a good example of the practical value of AI ... AI does not need to replace human intelligence to be revolutionary; eliminating this kind of tedious work is already transformative"*.
 
 <br>
 
 ### **2 Demo summary**
 
-This simple demo introduces some of the basic Foundry building blocks used to create and govern real-world enterprise applications. This is a ZiptieAI version of the original demo **["Speedrun: Your First End-to-End Workflow"](https://learn.palantir.com/speedrun-your-first-e2e-workflow)**. 
+This simple demo introduces some of the basic Foundry building blocks used to create and govern real-world enterprise applications. 
 
 
 Note:

@@ -10,109 +10,141 @@ permalink: /3c.1b_pal_docx_md/
 
 <br>
 
-**TOC**:
-- **2 AI is not a bubble... how I manage docs is an example of that**
-- **3 How I maintain the demo documentation (using AI)**
-- **4 D1 demo doc generation chats**
+This page describes how I **created/maintain the demo docs for [demo D1](/3c.1_pal_foundry/)**.
+
+GPT assessment: **This is a good example of the practical value of AI**. Maintaining screenshot-heavy technical documentation manually is tedious and error-prone. What was previously a substantial documentation-maintenance task becomes a simple, repeatable workflow. **AI does not need to replace human intelligence to be revolutionary; eliminating this kind of tedious work is already transformative**.  
+ 
 
 <br>
-<br>
-
-# **2 AI is not a bubble... how I manage docs is an example of that**
-
-that your help creating the markdown from docx is simply revolutionary. it vastly simplifies my job.
-
-
-GPT: Yes. And I think that is a much stronger argument than a generic “AI is not a bubble” argument. You have a concrete example.
-
-I would put something short in Section 2, perhaps after describing the DOCX → Markdown process:
-
-This is a good example of the practical value of AI. Maintaining screenshot-heavy technical documentation manually is tedious and error-prone. I can instead maintain a simple DOCX master, then use AI to regenerate the Markdown, extract and rename the images, create the HTML image tags, and package everything for the website. What was previously a substantial documentation-maintenance task becomes a simple, repeatable workflow.
-
-And perhaps one sentence connecting it to your broader AI view:
-
-AI does not need to replace human intelligence to be revolutionary; eliminating this kind of tedious work is already transformative.
-
-I think that last sentence fits ZiptieAI particularly well. It doesn't require AGI, autonomous agents, or any grand claim. You designed the documentation and decided what it should say; AI mechanized a large amount of tedious conversion work.
-
-And it's demonstrable. The prompt is sitting immediately below it, and the four generated documentation pages are sitting immediately above it. A potential employer doesn't have to take your word for it.
-
-<br>
-
-# **3 How I maintain the demo documentation (using AI)**
-
-This is a good example of the practical value of AI ... AI does not need to replace human intelligence to be revolutionary; eliminating this kind of tedious work is already transformative" (GPT's summary of how ZiptieAI documentation is managed using AI; full text later on this page)
 
 **TOC**
-  - **3.1 Working in docx**
-  - **3.2 Creating .md+png's (v1)**
-  - **3.3 Maintaining docx/md+pngs (v2, v3, ...)**
-  - **3.X managing docs**
-  - **3.Y yes agreed. the problem is that docx file is binary i believe....** 
+- **Main workflow diagram**
+- **0 Demo dev in Foundry**
+- **1 First version published**
+- **2 Second version published**
+- **4 Notes (chats)**
 
-GPT assessment: **This is a good example of the practical value of AI**. Maintaining screenshot-heavy technical documentation manually is tedious and error-prone. I can instead maintain a simple DOCX master, then use AI to regenerate the Markdown, extract and rename the images, create the HTML image tags, and package everything for the website. What was previously a substantial documentation-maintenance task becomes a simple, repeatable workflow. **AI does not need to replace human intelligence to be revolutionary; eliminating this kind of tedious work is already transformative**.  
+<br>
+
+## **Main workflow diagram**
+
+I can instead maintain a simple DOCX master, then use AI to regenerate the Markdown, extract and rename the images, create the HTML image tags, and package everything for the website.
 
 *Demo doc creation/maintenance process (AI makes this process practical and reliable) (WIP)*<br><img src="/assets/777_32.png" alt="drones" width="70%" style="border: 1px solid #999;"><br>
 
+<br>
+
+## **0 Demo dev in Foundry**
+
+The core focus for the ZAI demos:
+- **Accurate demo descriptions that can be replicated**
+- **Simplest demos that demo core concepts**
+- **Minimal text/diagrams (maximum content)**
+- **Easy to update**
+
+All of the above requires hands-on work in Foundry.
+The result is perhaps not the prettiest text, **until you actually try to use it**.
 
 <br>
 
-#### **3.1 Working in docx**
-
-I maintain one DOCX source containing text, screenshots, headings, and image-ID markers
+## **1 First version published**
 
 <br>
 
-#### **3.2 Creating .md+png's v1**
+#### **1.1 Working in docx**
 
 I maintain one DOCX source containing text, screenshots, headings, and image-ID markers → use AI to mechanically generate Markdown + consistently named PNG assets → replace the generated web content. This addresses a real documentation problem: screenshots and UI-heavy instructions become expensive to maintain when the product changes.
 
 - Docx **[#610](https://drive.google.com/drive/folders/1-Adawag9uA8_bq-hDF-nOuPYaRLz1eEO)** is the master source file.
-- Below is an example prompt for generating the markdown/pics for 1 of the 4 chapters (the chapter is first stored as a separate docx file). 
 - The docx has instruction markers for GPT.
+
+<br>
+
+#### **1.2 GPT**
+
+- Below is an example prompt for generating the markdown/pics for 1 of the 4 chapters (the chapter is first stored as a separate docx file). 
 - GPT extracts the screenshots/diagrams, generates markdown (text), and zips for download.
 - This is a reliable low-tech method that makes constant updates to the webpage practical.
 - For simple changes simply regenerate/replace the entire text and any new/changed pics.
 
-```
-(1) create markdown for the attached docx file.
-one single webpage.
-(2) png images conversion in this format
-if text before image is "D1_320"
-then
-<img src="/assets/D1/D1_320.png" alt="xxx" width="25%" style="border: 1px solid #999;">
-(2b) about the width above... 
-   it would be nice if you could try to set the width so that the pics are optimal size. 
-   best would be if the pic text size was slightly smaller than the text size on the resulting webpage. 
-   this is not critical however (i can adjust).
-(4) convert docx headings to markdown headings like this:
-(4.1) docx H1 -> # xxx
-(4.2) docx H2 -> ### xxx
-(4.3) docx H3 -> #### xxx
-(4.4) docx H4 -> xxx (just bold)
-(4b) Add " < b r > " (i have to add spaces or it wont be shown in our chat window; 
-    delete these space) before every Heading level 1-3.
-(5) I added a lot of manual page breaks ... ignore them.
-(6) package everything into a zip file.
-```
+<br>
+
+#### **1.3 ZIP v1**
+
+xxxx
 
 <br>
 
-#### **3.3 Maintaining docx/md+pngs (v2, v3, ...)**
+#### **1.4 ZAI v1 published**
 
-(WIP) The basic idea:
+xxxx
+
+<br>
+
+
+## **2 Second version published**
+
+<br>
+
+
+#### **2.1a Working in md**
+
 - **After the context and structure is stable**: Perhaps make the .md files (markdow) the source files.
-- Possibly mark any changes in the docx. 
-- You might also be changing the md file. 
+
+
+
+<br>
+
+#### **2.1b Working in docx**
+
+- Possibly mark any changes in the docx (at same time as in md file)
 - So you kind of have 2 source files.
 - Normally thats a no-no. A big problem. But with AI, its probably manageable, as long as you are careful to mark changes. 
+
+<br>
+
+#### **2.2 GPT**
+
+
 - Then give GPT the .md and the docx and describe how to find docx changes. GPT updates the .md file. 
 - The main reson for doing this: The .md markdown formatting and pic sizes are very tedious to correct. If you generate everything new from the docx everytime then you need to do a lot of patchwork.
 
+
 <br>
 
+#### **2.3 ZIP v2**
 
-#### **3.X managing docs**
+xxxx
+
+<br>
+
+#### **2.4 ZAI v2 published**
+
+xxxx
+
+
+
+<br>
+<br>
+
+------------
+------------
+------------
+------------
+
+
+<br>
+<br>
+
+# **4 NOTES**
+
+<br>
+
+### **4.1 Managing docs (chats)**
+
+<br>
+
+#### **4.1.1 managing docs**
 
 (1) for v1 of the md files, you (GPT) simply convert to md+pngs.
 but i have to be careful about which file is the source file.
@@ -172,7 +204,7 @@ And your numbered PNG scheme is surprisingly important: you've effectively inven
 
 <br>
 
-#### **3.Y yes agreed. the problem is that docx file is binary i believe....** 
+#### **4.1.2 yes agreed. the problem is that docx file is binary i believe....** 
 
 and i have written macros (30 years ago) for modifying word files.. it was a disaster, because ms.word is so messy internally. that's why i doubt you can do it... becuase you cant do magic...
 
@@ -207,12 +239,11 @@ So your instinct from 30 years ago still applies: avoid treating Word as a perfe
 
 <br>
 
-
-# **4 D1 demo doc generation chats**
+### **4.2 D1 demo doc generation (chats)**
 
 <br>
 
-### PHASE 3 GEN
+#### **PHASE 3 GEN**
 
 
 ```
@@ -225,13 +256,17 @@ one single webpage.
 if text before image is "D1_320"
 then
 <img src="/assets/D1/D1_320.png" alt="xxx" width="25%" style="border: 1px solid #999;">
-(2b) about the width above... it would be nice if you could try to set the width so that the pics are optimal size. best would be if the pic text size was slightly smaller than the text size on the resulting webpage. this is not critical however (i can adjust).
+(2b) about the width above... 
+   it would be nice if you could try to set the width so that the pics are optimal size. 
+   best would be if the pic text size was slightly smaller than the text size on the resulting webpage. 
+   this is not critical however (i can adjust).
 (4) convert docx headings to markdown headings like this:
 (4.1) docx H1 -> # xxx
 (4.2) docx H2 -> ### xxx
 (4.3) docx H3 -> #### xxx
 (4.4) docx H4 -> xxx (just bold)
-(4b) Add " < b r > " (i have to add spaces or it wont be shown in our chat window; delete these space) before every Heading level 1-3.
+(4b) Add " < b r > " (i have to add spaces or it wont be shown in our chat window; 
+    delete these space) before every Heading level 1-3.
 (5) I added a lot of manual page breaks ... ignore them.
 (6) package everything into a zip file.
 ```
@@ -245,7 +280,7 @@ Download the ZIP
 
 <br>
 
-### PHASE 2 GEN
+#### **PHASE 2 GEN**
 
 #610_pal_D1_foundry_MINE_v13_26.0818_SS_P2.docx
 Document
@@ -258,7 +293,7 @@ Download the Phase 2 ZIP
 
 <br>
 
-### CONCEPTS GEN
+#### **CONCEPTS GEN**
 
 #610_pal_D1_foundry_MINE_v13_26.0818_SS_CONCEPTS.docx
 Document
@@ -270,7 +305,7 @@ Download the Concepts ZIP
 
 <br>
 
-### PHASE 1 GEN
+#### **PHASE 1 GEN**
 
 #610_pal_D1_foundry_MINE_v13_26.0818_SS_P1.docx
 Document
@@ -283,15 +318,6 @@ Download the Phase 1 ZIP
 
 <br>
 
-
-<br>
-
-<br>
-
-<br>
-
-
-
-26.0818 (v1 26.0818)
+26.0819 (v1 26.0818)
 
 
