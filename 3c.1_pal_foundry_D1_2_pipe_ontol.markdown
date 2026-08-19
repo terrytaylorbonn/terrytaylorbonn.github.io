@@ -14,12 +14,12 @@ Phase 1 builds the foundation for the rest of demo D1. We start with three raw C
 
 By the end of this phase, the basic data → pipeline → dataset → ontology workflow is working and can be tested before moving on to the UI in Phase 2.
 
-**TOC:**
-- **2 Open FDE and create project/folder**
-- **3 Download 3 source data files (csv) to your PC and upload to Foundry**
-- **4 Create pipeline**
-- **5 Create ontology**
-- **Phase 1 final test: View/compare dataset/ontology**
+TOC:
+- 2 Open FDE and create project/folder
+- 3 Download 3 source data files (csv) to your PC and upload to Foundry
+- 4 Create pipeline
+- 5 Create ontology
+- Phase 1 final test: View/compare dataset/ontology
 
 NOTE:
 
@@ -34,13 +34,13 @@ NOTE:
 
 (ch2 not shown in the master diagram above)
 
-**TOC**:
-- **2.1 Your top-level Foundry namespace / organization workspace**
-- **2.2 Open FDE**
-- **2.3 Create a project (dir for storing created files)**
-- **2.4 Open Pipeline Builder in new tab**
-- **2.5 Create folder**
-- **2.6 Summary**
+TOC:
+- 2.1 Your top-level Foundry namespace / organization workspace
+- 2.2 Open FDE
+- 2.3 Create a project (dir for storing created files)
+- 2.4 Open Pipeline Builder in new tab
+- 2.5 Create folder
+- 2.6 Summary
 
 <br>
 
@@ -167,17 +167,17 @@ Upload the files to your demo dir (from now on I will show my project and folder
 ### **4 Create pipeline**
 
 
-**TOC**:
-- **4.1 What you will do in this chapter**
-- **4.2 Create a new Pipeline and add data**
-- **4.3 Create transform “Clean Bureau”**
-- **4.4 Create transform “Clean Office Goods”**
-- **4.5 Create join “Join Office Goods”**
-- **4.6 Create join “Join Bureau”**
-- **4.7 Create union “Union Orders”**
-- **4.8 Add output dataset “all_orders”**
-- **4.9 Finalize and Run Pipeline**
-- **4.10 Summary**
+TOC:
+- 4.1 What you will do in this chapter
+- 4.2 Create a new Pipeline and add data
+- 4.3 Create transform “Clean Bureau”
+- 4.4 Create transform “Clean Office Goods”
+- 4.5 Create join “Join Office Goods”
+- 4.6 Create join “Join Bureau”
+- 4.7 Create union “Union Orders”
+- 4.8 Add output dataset “all_orders”
+- 4.9 Finalize and Run Pipeline
+- 4.10 Summary
 
 <br>
 
@@ -349,10 +349,10 @@ You now have the pipeline that converts the csv files into a cleaned structured 
 
 
 
-**TOC**:
-- **5.1 What is an “ontology”**
-- **5.2 Create the object type for all_orders**
-- **5.3 Summary**
+TOC:
+- 5.1 What is an “ontology”
+- 5.2 Create the object type for all_orders
+- 5.3 Summary
 
 <br>
 
