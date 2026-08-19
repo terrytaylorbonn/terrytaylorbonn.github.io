@@ -51,15 +51,15 @@ The following screenshots show the final result (this is a simplified version of
 - LEFT panel: Displays the list of objects filtered by the item name selected in the RIGHT PANEL. Also allows you to select a single object.
 - CENTER panel: The properties for the selected object are displayed.
 
-<img src="/assets/D1/D1_318.png" alt="xxx" width="80%" style="border: 1px solid #999;">
+<img src="/assets/D1/D1_318.png" alt="xxx" width="70%" style="border: 1px solid #999;">
 
 - Click the button to modify the selected object.
 
-<img src="/assets/D1/D1_319.png" alt="xxx" width="45%" style="border: 1px solid #999;">
+<img src="/assets/D1/D1_319.png" alt="xxx" width="35%" style="border: 1px solid #999;">
 
 - Modify the assignee and click Submit. The action is applied and the UI displays the updated object.
 
-<img src="/assets/D1/D1_320.png" alt="xxx" width="85%" style="border: 1px solid #999;">
+<img src="/assets/D1/D1_320.png" alt="xxx" width="65%" style="border: 1px solid #999;">
 
 <br>
 

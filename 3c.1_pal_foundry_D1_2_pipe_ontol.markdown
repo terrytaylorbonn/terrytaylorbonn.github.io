@@ -4,14 +4,6 @@ title: D1 Phase 1 -- Pipeline/ontology
 permalink: /3c.1_pal_foundry_D1_2_pipe_ontol/
 ---
 
-<!-- 
-- **[Demo D1 Ch1 Concepts](/3c.1_pal_foundry_D1_1_concepts/)**
-- **[Demo D1 Ch2 Phase 1: Pipeline/ontology](/3c.1_pal_foundry_D1_2_pipe_ontol/)**
-- **[Demo D1 Ch3 Phase 2: Basic UI](/3c.1_pal_foundry_D1_3_ui_basic/)**
-- **[Demo D1 Ch4 Phase 3: Action UI](/3c.1_pal_foundry_D1_4_ui_action/)**
--->
-
-
 <br>
 
 [← Demo D1](/3c.1_pal_foundry/)
@@ -23,107 +15,113 @@ NOTE:
 - I use the same chapter numbers in this doc that I added to my version of the original Foundry speedrun (quick start) (see #610bbb_pal_D1_foundry_PAL_.docx on the Gdrive). The original speedrun H1/H2 headings were not numbered.
 - I dont number each step in this phase. This phase is relatively easy to follow and verify.
 
-<img src="/assets/D1/D1_101.png" alt="xxx" width="80%" style="border: 1px solid #999;">
+<img src="/assets/D1/D1_101.png" alt="xxx" width="100%" style="border: 1px solid #999;">
 
 <br>
+
 ### **2 Open FDE and create project/folder**
 
-(ch2 not shown in my master diagram above)
+(ch2 not shown in the master diagram above)
 
 <br>
+
 #### **2.1 Your top-level Foundry namespace / organization workspace**
 
 I think "ziptieai" was created when I signed up.
 
-<img src="/assets/D1/D1_102.png" alt="xxx" width="70%" style="border: 1px solid #999;">
+<img src="/assets/D1/D1_102.png" alt="xxx" width="50%" style="border: 1px solid #999;">
 
 <br>
+
 #### **2.2 Open FDE**
 
 In left panel click View all.
 
-<img src="/assets/D1/D1_103.png" alt="xxx" width="40%" style="border: 1px solid #999;">
+<img src="/assets/D1/D1_103.png" alt="xxx" width="25%" style="border: 1px solid #999;">
 
 Open AI FDE.
 
-<img src="/assets/D1/D1_104.png" alt="xxx" width="60%" style="border: 1px solid #999;">
+<img src="/assets/D1/D1_104.png" alt="xxx" width="40%" style="border: 1px solid #999;">
 
-FDE is a godsend. You can paste screenshots (just copy the screenshot, then place cursor in prompt field and paste). FDE can "see" them. Without FDE I could not have done 5% of what I have accomplished in Foundry.
+FDE is a vital tool. You can paste screenshots (just copy the screenshot, then place cursor in prompt field and paste). FDE can "see" them. Without FDE I could not have done 5% of what I have accomplished in Foundry.
 
-<img src="/assets/D1/D1_105.png" alt="xxx" width="80%" style="border: 1px solid #999;">
+<img src="/assets/D1/D1_105.png" alt="xxx" width="65%" style="border: 1px solid #999;">
 
 <br>
+
 #### **2.3 Create a project (dir for storing created files)**
 
-Click New in upper right of xxxx.palantirfoundry.com/workspace/compass/home
+Click New in upper right of xxxx.palantirfoundry.com/workspace/compass/home.
 
-<img src="/assets/D1/D1_106.png" alt="xxx" width="30%" style="border: 1px solid #999;">
+<img src="/assets/D1/D1_106.png" alt="xxx" width="16%" style="border: 1px solid #999;">
 
 Click New portfolio.
 
-<img src="/assets/D1/D1_107.png" alt="xxx" width="70%" style="border: 1px solid #999;">
+<img src="/assets/D1/D1_107.png" alt="xxx" width="50%" style="border: 1px solid #999;">
 
 Click Sandbox project.
 
 Enter project name
 
-<img src="/assets/D1/D1_108.png" alt="xxx" width="60%" style="border: 1px solid #999;">
+<img src="/assets/D1/D1_108.png" alt="xxx" width="45%" style="border: 1px solid #999;">
 
-<img src="/assets/D1/D1_109.png" alt="xxx" width="60%" style="border: 1px solid #999;">
+<img src="/assets/D1/D1_109.png" alt="xxx" width="55%" style="border: 1px solid #999;">
 
 Click Create project.
 
-<img src="/assets/D1/D1_110.png" alt="xxx" width="80%" style="border: 1px solid #999;">
+<img src="/assets/D1/D1_110.png" alt="xxx" width="60%" style="border: 1px solid #999;">
 
 Click New and then type in pipe.
 
-<img src="/assets/D1/D1_111.png" alt="xxx" width="70%" style="border: 1px solid #999;">
+<img src="/assets/D1/D1_111.png" alt="xxx" width="50%" style="border: 1px solid #999;">
 
 Click on Pipeline Builder.
 
-<img src="/assets/D1/D1_112.png" alt="xxx" width="80%" style="border: 1px solid #999;">
+<img src="/assets/D1/D1_112.png" alt="xxx" width="65%" style="border: 1px solid #999;">
 
 Click on Files in left panel.
 
-<img src="/assets/D1/D1_113.png" alt="xxx" width="30%" style="border: 1px solid #999;">
+<img src="/assets/D1/D1_113.png" alt="xxx" width="15%" style="border: 1px solid #999;">
 
 That pipeline you just opened is not there because you did not save it. If you have filled out the required info and saved, it would be listed here.
 
-<img src="/assets/D1/D1_114.png" alt="xxx" width="80%" style="border: 1px solid #999;">
+<img src="/assets/D1/D1_114.png" alt="xxx" width="60%" style="border: 1px solid #999;">
 
 <br>
 #### **2.4 Open Pipeline Builder in new tab**
 
 In left panel click View all and search for pipe.
 
-<img src="/assets/D1/D1_115.png" alt="xxx" width="40%" style="border: 1px solid #999;">
+<img src="/assets/D1/D1_115.png" alt="xxx" width="27%" style="border: 1px solid #999;">
 
-<img src="/assets/D1/D1_116.png" alt="xxx" width="60%" style="border: 1px solid #999;">
+<img src="/assets/D1/D1_116.png" alt="xxx" width="50%" style="border: 1px solid #999;">
 
 Press and hold Ctrl key and mouse click on Pipeline Builder. A new tab with Pipeline Builder appears.
 
-<img src="/assets/D1/D1_117.png" alt="xxx" width="60%" style="border: 1px solid #999;">
+<img src="/assets/D1/D1_117.png" alt="xxx" width="40%" style="border: 1px solid #999;">
 
 <br>
+
 #### **2.5 Create folder**
 
-<img src="/assets/D1/D1_118.png" alt="xxx" width="80%" style="border: 1px solid #999;">
+<img src="/assets/D1/D1_118.png" alt="xxx" width="60%" style="border: 1px solid #999;">
 
-<img src="/assets/D1/D1_119.png" alt="xxx" width="60%" style="border: 1px solid #999;">
+<img src="/assets/D1/D1_119.png" alt="xxx" width="40%" style="border: 1px solid #999;">
 
 PS: Click on the star for Project1 and Folder1.
 
-<img src="/assets/D1/D1_120.png" alt="xxx" width="50%" style="border: 1px solid #999;">
+<img src="/assets/D1/D1_120.png" alt="xxx" width="45%" style="border: 1px solid #999;">
 
 They are now shown in the left pane.
 
-<img src="/assets/D1/D1_121.png" alt="xxx" width="30%" style="border: 1px solid #999;">
+<img src="/assets/D1/D1_121.png" alt="xxx" width="12%" style="border: 1px solid #999;">
 
 NOTE: The eventual content of your folder will look something like this.
 
-<img src="/assets/D1/D1_122.png" alt="xxx" width="70%" style="border: 1px solid #999;">
+<img src="/assets/D1/D1_122.png" alt="xxx" width="45%" style="border: 1px solid #999;">
 
 <br>
+
 #### **2.6 Summary**
 
 You now have the folder to store all files in. And you know a bit about how to navigate and open tools.
@@ -370,4 +368,4 @@ FDE:
 
 <br>
 
-26.0818 (v1 26.0816)
+26.0819 (v1 26.0816)
