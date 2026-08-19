@@ -14,6 +14,13 @@ Phase 1 builds the foundation for the rest of demo D1. We start with three raw C
 
 By the end of this phase, the basic data → pipeline → dataset → ontology workflow is working and can be tested before moving on to the UI in Phase 2.
 
+**TOC:**
+- **2 Open FDE and create project/folder**
+- **3 Download 3 source data files (csv) to your PC and upload to Foundry**
+- **4 Create pipeline**
+- **5 Create ontology**
+- **Phase 1 final test: View/compare dataset/ontology**
+
 NOTE:
 
 - I use the same chapter numbers in this doc that I added to my version of the original Foundry speedrun (quick start) (see #610bbb_pal_D1_foundry_PAL_.docx on the Gdrive). The original speedrun H1/H2 headings were not numbered.
@@ -26,6 +33,14 @@ NOTE:
 ### **2 Open FDE and create project/folder**
 
 (ch2 not shown in the master diagram above)
+
+**TOC**:
+- **2.1 Your top-level Foundry namespace / organization workspace**
+- **2.2 Open FDE**
+- **2.3 Create a project (dir for storing created files)**
+- **2.4 Open Pipeline Builder in new tab**
+- **2.5 Create folder**
+- **2.6 Summary**
 
 <br>
 
@@ -92,6 +107,7 @@ That pipeline you just opened is not there because you did not save it. If you h
 <img src="/assets/D1/D1_114.png" alt="xxx" width="60%" style="border: 1px solid #999;">
 
 <br>
+
 #### **2.4 Open Pipeline Builder in new tab**
 
 In left panel click View all and search for pipe.
@@ -147,10 +163,29 @@ Upload the files to your demo dir (from now on I will show my project and folder
 <img src="/assets/D1/D1_126.png" alt="xxx" width="56%" style="border: 1px solid #999;">
 
 <br>
+
 ### **4 Create pipeline**
 
+
+**TOC**:
+- **4.1 What you will do in this chapter**
+- **4.2 Create a new Pipeline and add data**
+- **4.3 Create transform “Clean Bureau”**
+- **4.4 Create transform “Clean Office Goods”**
+- **4.5 Create join “Join Office Goods”**
+- **4.6 Create join “Join Bureau”**
+- **4.7 Create union “Union Orders”**
+- **4.8 Add output dataset “all_orders”**
+- **4.9 Finalize and Run Pipeline**
+- **4.10 Summary**
+
 <br>
+
 #### **4.1 What you will do in this chapter**
+
+
+
+
 
 You will create the following pipeline:
 
@@ -168,6 +203,7 @@ The following shows the content of all_orders.
 <img src="/assets/D1/D1_128.png" alt="xxx" width="20%" style="border: 1px solid #999;">
 
 <br>
+
 #### **4.2 Create a new Pipeline and add data**
 
 <img src="/assets/D1/D1_130.png" alt="xxx" width="25%" style="border: 1px solid #999;">
@@ -196,7 +232,7 @@ Select all 3 csv files.
 
 <br>
 
-#### **4.4 Create transform "Clean Bureau"**
+#### **4.3 Create transform "Clean Bureau"**
 
 NOTE: For now, I just show the screenshots for my setup. For the detailed instructions see https://learn.palantir.com/speedrun-your-first-e2e-workflow . The pipeline setup is rather straightforward, but I might redo this in th future with a more detailed explanation.
 
@@ -311,9 +347,16 @@ You now have the pipeline that converts the csv files into a cleaned structured 
 
 ### **5 Create ontology**
 
+
+
+**TOC**:
+- **5.1 What is an “ontology”**
+- **5.2 Create the object type for all_orders**
+- **5.3 Summary**
+
 <br>
 
-#### **5.0 What is "ontology"**
+#### **5.1 What is an "ontology"**
 
 FDE generated this text describing ontology in response to my prompt about my disagreements with the original (obviously) human-written text and my suggestions about what ontology really is (FDE mostly agreed with my suggestions):
 
@@ -329,7 +372,8 @@ FDE generated this text describing ontology in response to my prompt about my di
 "We will define the Order object by using the Ontology Manager App." It should be "we will create an Order object type...". FDE confirmed this.
 
 <br>
-#### **5.1 Create the object type for all_orders**
+
+#### **5.2 Create the object type for all_orders**
 
 <img src="/assets/D1/D1_174.png" alt="xxx" width="100%" style="border: 1px solid #999;">
 
@@ -354,6 +398,7 @@ I mistakingly named this "All Orders" because I thought the single Order object 
 <img src="/assets/D1/D1_183.png" alt="xxx" width="25%" style="border: 1px solid #999;">
 
 <br>
+
 #### **5.3 Summary**
 
 FDE:
