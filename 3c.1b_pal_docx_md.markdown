@@ -103,48 +103,55 @@ One issue I have not solved yet:
 
 ## **2 Create and publish v2+**
 
-The above workflow solves a major documentation problem: screenshots and UI-heavy instructions become expensive to maintain when the product changes (see section 2 of this page for more details on how this is important for v2+).
+
+This workflow described in this section solves a major documentation problem: Screenshots and UI-heavy instructions become expensive to maintain when the product changes.
+
+- **2.1a Working in md**
+- **2.1b Working in docx**
+- **2.2 Prompt GPT to *update* the edited markdown / create *only new* PNGs**
+- **2.3 v2 ZIP contents**
+- **2.4 Publish v2 md/PNGs to ZAI / clean up**
+
 
 *Create and publish v2*<br><img src="/assets/777_36.png" alt="drones" width="52%" style="border: 1px solid #999;">
+
 
 <br>
 
 #### **2.1a Working in md**
 
-- **After the context and structure is stable**: Perhaps make the .md files (markdow) the source files.
-
-
+- The md files have been edited (in VSCode for example). 
+- These files are the new source code (not the docx).
 
 <br>
 
 #### **2.1b Working in docx**
 
-- Possibly mark any changes in the docx (at same time as in md file)
-- So you kind of have 2 source files.
-- Normally thats a no-no. A big problem. But with AI, its probably manageable, as long as you are careful to mark changes. 
+- Since the md files are the source, after v1 you must be careful to tag somehow any changes so that GPT knows what text to add/delete/modify in the md file.
+- How exactly you do this does not matter, as long as it is designed so that GPT knows exactly what to do. 
 
 <br>
 
-#### **2.2 GPT**
+#### **2.2 Prompt GPT to *update* the edited markdown / create *only new* PNGs**
 
-
-- Then give GPT the .md and the docx and describe how to find docx changes. GPT updates the .md file. 
-- The main reson for doing this: The .md markdown formatting and pic sizes are very tedious to correct. If you generate everything new from the docx everytime then you need to do a lot of patchwork.
-
-
-<br>
-
-#### **2.3 ZIP v2**
-
-xxxx
+- Give GPT the .md and the docx and describe how to find docx changes. 
+- GPT updates the .md file.
+- GPT extracts only new/modified PNGs.
+- **Important**: You should verify the new version before pushing to the website.
 
 <br>
 
-#### **2.4 ZAI v2 published**
+#### **2.3 v2 ZIP contents**
 
-xxxx
+Basically similar to v1.
+- A complete new md file(s).
+- PNGs.
 
+<br>
 
+#### **2.4 Publish v2 md/PNGs to ZAI / clean up**
+
+Same as for v1.
 
 <br>
 <br>
