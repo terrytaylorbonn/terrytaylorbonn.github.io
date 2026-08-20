@@ -54,49 +54,58 @@ Docx requirements:
 
 ## **1 Create demo docx/md/PNGs v1 and publish to new ZAI webpage**
 
-- **1.1 Create docx v1 (updated with everything required for GPT)**
+- **1.1 Create v1 (chapter) docx's (updated with everything required for GPT)**
 - **1.2 Prompt GPT to create markdown/PNGs v1**
 - **1.3 v1 ZIP contents**
 - **1.4 Publish v1 md/PNGs to ZAI / clean up**
 
 <br>
 
-#### **1.1 Create docx v1 (updated with everything required for GPT)**
+#### **1.1 Create v1 (chapter) docx's (updated with everything required for GPT)**
 
+How exactly markup the docx(s) you will give to GPT to generate an md file will be your decision. It depends on your particular needs. For Foundry D1 demo docs the most important thing I added was
+- Image-ID markers (a unique marker such as "D1_301"). The main requirements for these markers:
+  - Unique format that GPT can easily distinguish (make sure that the text combo "D1_###" only appears in the doc as a text marker)
+  - Must be unique for each pic
+- Other markings (I might write more about this later; basically you learn a few techniques to minimize the manual cleanup required for generated md file)
 
-I maintain one DOCX source containing text, screenshots, headings, and image-ID markers → use AI to mechanically generate Markdown + consistently named PNG assets → replace the generated web content. This addresses a real documentation problem: screenshots and UI-heavy instructions become expensive to maintain when the product changes.
+Note that I split up the docx into 4 chapter docx's. This because I wanted a main webpage with 4 subpages.
 
-- Docx **[#610](https://drive.google.com/drive/folders/1-Adawag9uA8_bq-hDF-nOuPYaRLz1eEO)** is the master source file.
-- The docx has instruction markers for GPT.
+*4 docxs (left) and tag used to tell GPT the PNG filename (right)*<br><img src="/assets/777_34.png" alt="drones" width="70%" style="border: 1px solid #999;"><br>
 
 <br>
 
 #### **1.2 Prompt GPT to create markdown/PNGs v1**
 
-- Below is an example prompt for generating the markdown/pics for 1 of the 4 chapters (the chapter is first stored as a separate docx file). 
+For example prompts see "4.2 D1 demo doc generation (chats)".
+
 - GPT extracts the screenshots/diagrams, generates markdown (text), and zips for download.
 - This is a reliable low-tech method that makes constant updates to the webpage practical.
 - For simple changes simply regenerate/replace the entire text and any new/changed pics.
+
+One issue I have not solved yet: 
+- PNG size. I could have asked GPT to analyze each pic and adjust the size accordingly, but I was afraid that that might be asking a bit too much for GPT to do on my $20/month cheapo subscription. I just spent a few hours manually correcting the pic sizes (this was also a good way to read through the entire generated md file).
 
 <br>
 
 #### **1.3 v1 ZIP contents**
 
-xxxx
+*ZIP contents*<br><img src="/assets/777_35.png" alt="drones" width="80%" style="border: 1px solid #999;">
 
 <br>
 
 #### **1.4 Publish v1 md/PNGs to ZAI / clean up**
 
-xxxx
+**Inevitably you have to make changes in the md file. The idea of keeping the docx as the source file will not work.** The biggest change I made was adjusting the PNG sizes.
 
 <br>
 
 
 ## **2 Maintain demos docx (v2+)**
 
-<br>
+The above workflow solves a major documentation problem: screenshots and UI-heavy instructions become expensive to maintain when the product changes (see section 2 of this page for more details on how this is important for v2+).
 
+<br>
 
 #### **2.1a Working in md**
 
