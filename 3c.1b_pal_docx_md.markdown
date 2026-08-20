@@ -10,7 +10,7 @@ permalink: /3c.1b_pal_docx_md/
 
 <br>
 
-This page describes how I **created/maintain the demo docs for [demo D1](/3c.1_pal_foundry/)**.
+This page describes how I **created and maintain the demo docs for [demo D1](/3c.1_pal_foundry/)**. The result is perhaps not the prettiest text, **until you actually try to use it**.
 
 GPT assessment: **This is a good example of the practical value of AI**. Maintaining screenshot-heavy technical documentation manually is tedious and error-prone. What was previously a substantial documentation-maintenance task becomes a simple, repeatable workflow. **AI does not need to replace human intelligence to be revolutionary; eliminating this kind of tedious work is already transformative**.  
  
@@ -19,39 +19,53 @@ GPT assessment: **This is a good example of the practical value of AI**. Maintai
 
 **TOC**
 - **Main workflow diagram**
-- **0 Demo dev in Foundry**
-- **1 First version published**
-- **2 Second version published**
+- **0 Create the demo v0 in Foundry / record steps/screenshots in docx v0**
+- **1 Create demo docx/md/PNGs v1 and publish to new ZAI webpage**
+- **2 Maintain demos docx (v2+)**
 - **4 Notes (chats)**
 
 <br>
 
 ## **Main workflow diagram**
 
-I can instead maintain a simple DOCX master, then use AI to regenerate the Markdown, extract and rename the images, create the HTML image tags, and package everything for the website.
+The diagram below describes the demo doc workflow:
+- **v0**. **Create the demo** in Foundry / **record steps/screenshots** in docx v0 (MS.Word).
+- **v1**. **Publish the initial md** (website markdown) to ZAI (this is where most demo doc sites stop).
+- **v2+**. **Maintain (update) the content** (accurately and efficiently). This is the tricky part that most demo doc sites skip *(the main reason most content is difficult to maintain is (1) the writer does not use the SW being documented and (2) the existing content is incomplete/inaccurate, making it difficult to duplicate a demo)*.
+
+The above workflow is only possible/practical with AI (GPT). I use AI to regenerate the Markdown, extract and rename the images, create the HTML image tags, package everything for the website, etc etc.
 
 *Demo doc creation/maintenance process (AI makes this process practical and reliable) (WIP)*<br><img src="/assets/777_32.png" alt="drones" width="70%" style="border: 1px solid #999;"><br>
 
 <br>
 
-## **0 Demo dev in Foundry**
+## **0 Create the demo in Foundry / record steps/screenshots in docx v0**
 
 The core focus for the ZAI demos:
-- **Accurate demo descriptions that can be replicated**
-- **Simplest demos that demo core concepts**
-- **Minimal text/diagrams (maximum content)**
-- **Easy to update**
+- Simplest demos that demo core concepts
 
-All of the above requires hands-on work in Foundry.
-The result is perhaps not the prettiest text, **until you actually try to use it**.
+Docx requirements:
+- Accurate demo descriptions (text, screenshots, diagrams) that can be replicated
+- Minimal text/diagrams (maximum content)
+- For demo D1 this is **[#610](https://drive.google.com/drive/folders/1-Adawag9uA8_bq-hDF-nOuPYaRLz1eEO)**
 
-<br>
 
-## **1 First version published**
 
 <br>
 
-#### **1.1 Working in docx**
+## **1 Create demo docx/md/PNGs v1 and publish to new ZAI webpage**
+
+- **1.1 Write docx**
+- **1.2 Prompt GPT to create markdown/PNGs v1**
+- **1.3 v1 ZIP contents**
+- **1.4 Publish v1 md/PNGs to ZAI / clean up**
+
+
+
+<br>
+
+#### **1.1 Write docx**
+
 
 I maintain one DOCX source containing text, screenshots, headings, and image-ID markers → use AI to mechanically generate Markdown + consistently named PNG assets → replace the generated web content. This addresses a real documentation problem: screenshots and UI-heavy instructions become expensive to maintain when the product changes.
 
@@ -60,7 +74,7 @@ I maintain one DOCX source containing text, screenshots, headings, and image-ID 
 
 <br>
 
-#### **1.2 GPT**
+#### **1.2 Prompt GPT to create markdown/PNGs v1**
 
 - Below is an example prompt for generating the markdown/pics for 1 of the 4 chapters (the chapter is first stored as a separate docx file). 
 - GPT extracts the screenshots/diagrams, generates markdown (text), and zips for download.
@@ -69,20 +83,20 @@ I maintain one DOCX source containing text, screenshots, headings, and image-ID 
 
 <br>
 
-#### **1.3 ZIP v1**
+#### **1.3 v1 ZIP contents**
 
 xxxx
 
 <br>
 
-#### **1.4 ZAI v1 published**
+#### **1.4 Publish v1 md/PNGs to ZAI / clean up**
 
 xxxx
 
 <br>
 
 
-## **2 Second version published**
+## **2 Maintain demos docx (v2+)**
 
 <br>
 
@@ -318,6 +332,6 @@ Download the Phase 1 ZIP
 
 <br>
 
-26.0819 (v1 26.0818)
+26.0820 (v1 26.0818)
 
 
