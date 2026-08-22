@@ -8,9 +8,9 @@ permalink: /pal/
 
 <!-- https://ziptieai.usw-17.palantirfoundry.com/ -->
 
-***TL;DR?** If you want to get started hands-on with Palantir Foundry **ASAP**, then (1) following the directions (on this page) in **2.1 Palantir free tier sign up** and then (2) do my version of the first basic **[Palantir Foundry demo D1](/3c.1_pal_foundry/)**.*
+***TL;DR?** If you want to get started hands-on with Palantir Foundry **ASAP**, then (1) follow the directions (on this page) in **2.1 Palantir free tier sign up** and then (2) do the ZiptieAI version of the first basic **[Palantir Foundry demo D1](/3c.1_pal_foundry/)**.*
 
-*I will be in HK/Jiangsu from 7 September - October. During that time I won't have access to Palantir Foundry. So I am trying to work as much as possible in Foundry now, and polish the website/docx's during my trip.* 
+*I will be in HK/Jiangsu from 7 September - 7 October.* 
 
 <br>
 
