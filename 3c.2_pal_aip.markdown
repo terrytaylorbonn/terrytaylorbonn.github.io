@@ -8,33 +8,56 @@ permalink: /3c.2_pal_aip/
 
 [2.6 PAL demos (speedruns)](/3c.2_pal_initial_demos/)
 
-
 <br>
 
-- The screenshot below is from the ZiptieAI D02 demo.
-- This is the **[speedrun tutorial link](https://learn.palantir.com/speedrun-your-e2e-aip-workflow)**.
-- docx #611vvv_pal_D2_aip_v10_26.0811_SS.docx
-- see also
+(THIS PAGE IS WIP....)
+
+**[From the PAL webpage for demo "Speedrun: Your First AIP Workflow"](https://learn.palantir.com/speedrun-your-e2e-aip-workflow)**
+- "Build yourself a "summer intern" **in just 60 to 90 minutes** with AIP! Extract the most important points and connections from your vast library of specialist literature, and start getting reliable answers to your questions.""
+
+I have spent over a week on this demo (**I am reorganizing the demo and documenting it**, but it still would have taken at least day if I just did the demo).
+
+Much of this demo has nothing to do with demonstrating Foundry AI. I wish the first demo would focus on the topic only.
+
+The 3 diagrams below (WIP) summarize the demo 
+  - UI 
+  - Then 2 (extremely useful) diagrams for the config workflow of demo (no such digrams in original doc) for
+    - AI 
+    - UI
+
+See also
+  - docx **[#611www_pal_D2_aip_vxx_26.0xxx_SS_REDUCED.docx](https://drive.google.com/drive/folders/1-Adawag9uA8_bq-hDF-nOuPYaRLz1eEO)**
+  - This is the **[speedrun tutorial link](https://learn.palantir.com/speedrun-your-e2e-aip-workflow)**.
   - [3c.2.0 PAL AIP notes](/3c.2.0_pal_aip_notes/)
   - [Ch1 Concepts](/3c.2.1_pal_aip_qs_ch1_concepts/)
 
 
-<!--
-**Remaining chapters to add**
-- 2 Set Up Project and Folder
-- 3 Upload Data
-- 4 Transform Data
-- 5 Configure Ontology
-- 6 Explore Object Relations = CREATE "KG" Chunks<>Entities links
-- 7 Create AIP Logic Function ("ontology aided generation")
-- 8 Build App
-*Final app* <br>
-<img src="/assets/final-01.png" alt="drones" width="70%" style="border: 1px solid #999;">
--->
+*Demo UI*<br><img src="/assets/final-01.png" alt="drones" width="70%" style="border: 1px solid #999;"><br> 
 
+*AI config workflow (P1-1, P1-2, ... are sections in the docx)*<br><img src="/assets/MASTER_D2_1.png" alt="drones" width="70%" style="border: 1px solid #999;"><br>
 
-<img src="/assets/final-01.png" alt="drones" width="70%" style="border: 1px solid #999;"><br> 
+*UI config workflow (the darkened parts have nothing to do with AI)*<br><img src="/assets/MASTER_D2_2.png" alt="drones" width="70%" style="border: 1px solid #999;"><br>
 
+<br>
+<br>
+<br><br>
+<br>
+<br><br>
+<br>
+<br><br>
+<br>
+<br>
+
+---------------
+---------------
+---------------
+---------------
+
+<br>
+
+# **OLD**
+
+<br>
 
 Its the first example of setting up the Workshop (UI). 
 - It took a long time to get right (several days). And its usually the last thing you setup for an app. If you made a mistake earlier in the pipeline, ontology, functions, etc then things just dont work in the workshop. And its not easy (for a beginner) to figure out why. 
@@ -50,7 +73,28 @@ Its the first example of setting up the Workshop (UI).
 - That would make it easier to handle all the complexity and not get stuck.
 - But best of all would be to have this as an example. You install 2 working example instance. Use one as a reference and slowly rebuild parts of the other.   
 
-<img src="/assets/777_28.png" alt="drones" width="80%" style="border: 1px solid #999;"> 
+<img src="/assets/777_28.png" alt="drones" width="40%" style="border: 1px solid #999;"> 
+
+
+<br>
+
+
+26.0824 (0811, 0725, 26.0713)
+
+
+
+<!--
+**Remaining chapters to add**
+- 2 Set Up Project and Folder
+- 3 Upload Data
+- 4 Transform Data
+- 5 Configure Ontology
+- 6 Explore Object Relations = CREATE "KG" Chunks<>Entities links
+- 7 Create AIP Logic Function ("ontology aided generation")
+- 8 Build App
+*Final app* <br>
+<img src="/assets/final-01.png" alt="drones" width="70%" style="border: 1px solid #999;">
+-->
 
 <!-- 
 The goal of this page is not to duplicate the content of these docx's 
@@ -65,10 +109,5 @@ There are also a few other lab notes docx's of interest:
 - **[#611bbb\_pal\_aip\_v03\_NOTES\_.docx](https://drive.google.com/drive/folders/1-Adawag9uA8_bq-hDF-nOuPYaRLz1eEO)**. Tons of notes.
 - **[#610\_pal\_foundry\_.docx](https://drive.google.com/drive/folders/1-Adawag9uA8_bq-hDF-nOuPYaRLz1eEO)**. Foundry was the prerequisite of this demo.
 -->
-
-<br>
-
-
-26.0811 (0725, 26.0713)
 
 
