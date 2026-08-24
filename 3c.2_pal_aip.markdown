@@ -13,7 +13,7 @@ permalink: /3c.2_pal_aip/
 (THIS PAGE IS WIP....)
 
 
-**About Alex Karp's comments about Palantir protecting enterprises from AI companies that steal secrets via prompts**. Foundry manages access to all aspects of AI. But you are still using external AI, so you are still sending data to AI companies (but thats much better than if employees had uncontrolled access). If you really want to keep your data safe, you'd use local models (with RAG, which is demo'd in this demo). 
+**About Alex Karp's comments about Palantir protecting enterprises from AI companies that steal secrets via prompts**. Foundry manages access to all aspects of AI. But you are still using external AI, so you are still sending data to AI companies (but thats much better than if employees had uncontrolled access). If you really want to keep your data safe, you'd use local models (with RAG, which is demo'd in this demo). This is of course the case... what interesting is those interviewing Alex dont ask that or ask for him to explain just how Palantir protects data. I dont show this in demo 2 yet, but that my near term plan... will work on that part with GPT/FDE (AI assistants) directly. 
 
 **[From the PAL webpage for demo "Speedrun: Your First AIP Workflow"](https://learn.palantir.com/speedrun-your-e2e-aip-workflow)**
 - "Build yourself a "summer intern" **in just 60 to 90 minutes** with AIP! Extract the most important points and connections from your vast library of specialist literature, and start getting reliable answers to your questions.""
