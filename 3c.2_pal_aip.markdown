@@ -18,24 +18,62 @@ permalink: /3c.2_pal_aip/
 I have spent over a week on this demo (**I am reorganizing the demo and documenting it**, but it still would have taken at least day if I just did the demo). Much of this demo has nothing to do with demonstrating Foundry AI.
 
 The diagrams below (WIP) describe 
-  - AI config 
-  - UI config
-  - UI result
+  - 1 AI config 
+  - 2 UI config
+  - 3 UI result
 
-The 2 diagrams for the config are extremely useful (no such daigrams in original doc).
+The 2 diagrams for the config are extremely useful (no such diagrams in original doc).
+
 
 See also
   - docx **[#611www_pal_D2_aip_vxx_26.0xxx_SS_REDUCED.docx](https://drive.google.com/drive/folders/1-Adawag9uA8_bq-hDF-nOuPYaRLz1eEO)**
-  - This is the **[speedrun tutorial link](https://learn.palantir.com/speedrun-your-e2e-aip-workflow)**.
+
+<!--   - This is the **[speedrun tutorial link](https://learn.palantir.com/speedrun-your-e2e-aip-workflow)**.
   - [3c.2.0 PAL AIP notes](/3c.2.0_pal_aip_notes/)
-  - [Ch1 Concepts](/3c.2.1_pal_aip_qs_ch1_concepts/)
+  - [Ch1 Concepts](/3c.2.1_pal_aip_qs_ch1_concepts/) -->
 
 
-*AI config workflow (P1-1, P1-2, ... are sections in the docx)*<br><img src="/assets/MASTER_D2_1.png" alt="drones" width="100%" style="border: 1px solid #999;"><br>
+<br>
 
-*UI config workflow (the darkened parts have nothing to do with AI)*<br><img src="/assets/MASTER_D2_2.png" alt="drones" width="100%" style="border: 1px solid #999;"><br>
+### **1 AI config**
 
-*Resulting UI*<br><img src="/assets/final-01.png" alt="drones" width="70%" style="border: 1px solid #999;"><br> 
+**THIS IS FASCINATING!! FDE/GPT-5.6 Sol analysis of diagram 1 (FDE can "see" screenshots!!):** 
+
+```
+Yes. The diagram accurately captures the complete AI flow in Demo 2. 
+The optional Entity/Vertex branch is separate from the answer flow. 
+Your diagram now explains the core architecture far more clearly than the original Demo 2 documentation.
+1. Offline preparation
+  - LLM creates summary2 and entities2.
+  - Embedding model converts summary2 into embedding2.
+  - content2, summary2, and embedding2 become Chunk properties.
+2. Runtime retrieval
+  - The top widget supplies userQuestion.
+  - Foundry embeds the question and searches embedding2.
+  - It returns 10 matching Chunk objects.
+3. Runtime augmentation
+  - AIP Logic extracts content2 from those objects.
+  - It combines the text into one reference string.
+  - That string is inserted into the prompt.
+4. Runtime generation
+  - GPT 4o generates the answer.
+  - The function returns a string.
+  - Workshop stores it in AIP Response and displays it in the bottom widget.
+```
+
+*Diagram 1 AI config workflow (P1-1, P1-2, ... are sections in the docx)*<br><img src="/assets/MASTER_D2_1.png" alt="drones" width="100%" style="border: 1px solid #999;"><br>
+
+<br>
+
+### **2 UI config**
+
+*Diagram 2 UI config workflow (the darkened parts have nothing to do with AI)*<br><img src="/assets/MASTER_D2_2.png" alt="drones" width="80%" style="border: 1px solid #999;"><br>
+
+<br>
+
+### **3 UI result**
+
+*Diagram 3 Resulting UI*<br><img src="/assets/final-01.png" alt="drones" width="90%" style="border: 1px solid #999;"><br> 
 
 
 
