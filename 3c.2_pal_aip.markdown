@@ -14,7 +14,7 @@ permalink: /3c.2_pal_aip/
 
 <br>
 
-These links are all TODO
+These links are all TODO (they will be extracted from the first chapter in docx **[#611www_pal_D2_aip_vxx_26.0xxx_SS_REDUCED.docx](https://drive.google.com/drive/folders/1-Adawag9uA8_bq-hDF-nOuPYaRLz1eEO)**):
 - [3c.2.1 PAL D2 AIP QS ch1 Concepts](/3c.2.1_pal_aip_qs_ch1_concepts/)
 - [3c.2.2 PAL D2 AIP QS ch2 P1 AI (TOP/BOTTOM)](/3c.2.2_pal_aip_qs_ch2_P1_ai/)
 - [3c.2.3 PAL D2 AIP QS ch3 LEFT (selected chunks list)](/3c.2.3_pal_aip_qs_ch3_P2_LEFT/)
