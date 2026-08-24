@@ -14,7 +14,8 @@ permalink: /3c.2_pal_aip/
 
 <br>
 
-These links are all TODO (they will be extracted from the first chapter in docx **[#611www_pal_D2_aip_vxx_26.0xxx_SS_REDUCED.docx](https://drive.google.com/drive/folders/1-Adawag9uA8_bq-hDF-nOuPYaRLz1eEO)**):
+#### **TOC**
+Following links are all TODO (they will be extracted from the first chapter in docx **[#611www_pal_D2_aip_vxx_26.0xxx_SS_REDUCED.docx](https://drive.google.com/drive/folders/1-Adawag9uA8_bq-hDF-nOuPYaRLz1eEO)**):
 - [3c.2.1 PAL D2 AIP QS ch1 Concepts](/3c.2.1_pal_aip_qs_ch1_concepts/)
 - [3c.2.2 PAL D2 AIP QS ch2 P1 AI (TOP/BOTTOM)](/3c.2.2_pal_aip_qs_ch2_P1_ai/)
 - [3c.2.3 PAL D2 AIP QS ch3 LEFT (selected chunks list)](/3c.2.3_pal_aip_qs_ch3_P2_LEFT/)
@@ -22,19 +23,24 @@ These links are all TODO (they will be extracted from the first chapter in docx 
 - [3c.2.0 PAL D2 AIP notes](/3c.2.0_pal_aip_notes/)
 
 
-<br><br>
+<br>
 
-**About Alex Karp's comments about Palantir protecting enterprises from AI companies that steal secrets via prompts**. Foundry manages access to all aspects of AI. But you are still using external AI, so you are still sending data to AI companies (but thats much better than if employees had uncontrolled access). If you really want to keep your data safe, you'd use local models (with RAG, which is demo'd in this demo). This is of course the case... what interesting is those interviewing Alex dont ask that or ask for him to explain just how Palantir protects data. I dont show this in demo 2 yet, but thats in my near term future plans... I will work on that part with GPT/FDE (AI assistants) directly. 
+#### **About Alex Karp's comments about Palantir protecting enterprises from AI companies that steal secrets via prompts**
+Foundry manages access to all aspects of AI. But you are still using external AI, so you are still sending data to AI companies (but thats much better than if employees had uncontrolled access). If you really want to keep your data safe, you'd use local models (with RAG, which is demo'd in this demo). This is of course the case... what interesting is those interviewing Alex dont ask that or ask for him to explain just how Palantir protects data. I dont show this in demo 2 yet, but thats in my near term future plans... I will work on that part with GPT/FDE (AI assistants) directly. 
 
-**[From the PAL webpage for demo "Speedrun: Your First AIP Workflow"](https://learn.palantir.com/speedrun-your-e2e-aip-workflow)**
+<br>
+
+#### **[From the PAL webpage for demo "Speedrun: Your First AIP Workflow"](https://learn.palantir.com/speedrun-your-e2e-aip-workflow)**
 - "Build yourself a "summer intern" **in just 60 to 90 minutes** with AIP! Extract the most important points and connections from your vast library of specialist literature, and start getting reliable answers to your questions.""
 
 I have spent over a week on this demo (**I am reorganizing the demo and documenting it**, but it still would have taken at least day if I just did the demo). Much of this demo has nothing to do with demonstrating Foundry AI.
 
-The diagrams below (WIP) describe 
-  - 1 AI config 
-  - 2 UI config
-  - 3 UI result
+<br>
+
+#### **The diagrams below (WIP) describe**
+  - **1 AI config** 
+  - **2 UI config**
+  - **3 UI result**
 
 The 2 diagrams for the config are extremely useful (no such diagrams in original doc).
 
