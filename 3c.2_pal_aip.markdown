@@ -18,9 +18,9 @@ permalink: /3c.2_pal_aip/
 I have spent over a week on this demo (**I am reorganizing the demo and documenting it**, but it still would have taken at least day if I just did the demo). Much of this demo has nothing to do with demonstrating Foundry AI.
 
 The diagrams below (WIP) describe 
-  - UI result
   - AI config 
   - UI config
+  - UI result
 
 The 2 diagrams for the config are extremely useful (no such daigrams in original doc).
 
@@ -31,11 +31,13 @@ See also
   - [Ch1 Concepts](/3c.2.1_pal_aip_qs_ch1_concepts/)
 
 
-*Demo UI*<br><img src="/assets/final-01.png" alt="drones" width="70%" style="border: 1px solid #999;"><br> 
-
 *AI config workflow (P1-1, P1-2, ... are sections in the docx)*<br><img src="/assets/MASTER_D2_1.png" alt="drones" width="100%" style="border: 1px solid #999;"><br>
 
 *UI config workflow (the darkened parts have nothing to do with AI)*<br><img src="/assets/MASTER_D2_2.png" alt="drones" width="100%" style="border: 1px solid #999;"><br>
+
+*Resulting UI*<br><img src="/assets/final-01.png" alt="drones" width="70%" style="border: 1px solid #999;"><br> 
+
+
 
 <br>
 <br>
