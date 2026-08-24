@@ -12,6 +12,17 @@ permalink: /3c.2_pal_aip/
 
 (THIS PAGE IS WIP....)
 
+<br>
+
+These links are all TODO
+- [3c.2.1 PAL D2 AIP QS ch1 Concepts](/3c.2.1_pal_aip_qs_ch1_concepts/)
+- [3c.2.2 PAL D2 AIP QS ch2 P1 AI (TOP/BOTTOM)](/3c.2.2_pal_aip_qs_ch2_P1_ai/)
+- [3c.2.3 PAL D2 AIP QS ch3 LEFT (selected chunks list)](/3c.2.3_pal_aip_qs_ch3_P2_LEFT/)
+- [3c.2.4 PAL D2 AIP QS ch4 P3 Vertex (RIGHT)](/3c.2.4_pal_aip_qs_ch4_P3_RIGHT/)
+- [3c.2.0 PAL D2 AIP notes](/3c.2.0_pal_aip_notes/)
+
+
+<br><br>
 
 **About Alex Karp's comments about Palantir protecting enterprises from AI companies that steal secrets via prompts**. Foundry manages access to all aspects of AI. But you are still using external AI, so you are still sending data to AI companies (but thats much better than if employees had uncontrolled access). If you really want to keep your data safe, you'd use local models (with RAG, which is demo'd in this demo). This is of course the case... what interesting is those interviewing Alex dont ask that or ask for him to explain just how Palantir protects data. I dont show this in demo 2 yet, but thats in my near term future plans... I will work on that part with GPT/FDE (AI assistants) directly. 
 
@@ -79,6 +90,8 @@ Your diagram now explains the core architecture far more clearly than the origin
 ### **3 UI result**
 
 *Diagram 3 Resulting UI*<br><img src="/assets/final-01-no-AI.png" alt="drones" width="90%" style="border: 1px solid #999;"><br> 
+
+
 
 
 
