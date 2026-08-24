@@ -35,6 +35,9 @@ Following links are all TODO (they will be extracted from the first chapter in d
 #### **About Alex Karp's comments about Palantir protecting enterprises from AI companies that steal secrets via prompts**
 Foundry manages access to all aspects of AI. But you are still using external AI, so you are still sending data to AI companies (but thats much better than if employees had uncontrolled access). If you really want to keep your data safe, you'd use local models (with RAG, which is demo'd in this demo). This is of course the case... what interesting is those interviewing Alex dont ask that or ask for him to explain just how Palantir protects data. I dont show this in demo 2 yet, but thats in my near term future plans... I will work on that part with GPT/FDE (AI assistants) directly. 
 
+<img src="/assets/alex.png" alt="drones" width="45%" style="border: 1px solid #999;">
+
+
 <br>
 
 #### **The diagrams below (WIP) describe**
