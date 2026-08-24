@@ -42,7 +42,7 @@ See also
 ### **1 AI config**
 
 - **THIS IS FASCINATING!! FDE/GPT-5.6 Sol analysis of diagram 1 (FDE can "see" screenshots!!):** 
-- NOTE: RAG = R-etrieval A-ugmented G-eneration
+- NOTE: RAG = 2. R-etrieval 3 A-ugmented 4 G-eneration
 
 ```
 Yes. The diagram accurately captures the complete AI flow in Demo 2. 
