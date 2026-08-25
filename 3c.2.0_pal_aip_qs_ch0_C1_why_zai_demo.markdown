@@ -19,17 +19,7 @@ permalink: /3c.2.0_pal_aip_qs_ch0_why_zai_demo/
 This page describes why you should do (or at least read) this ZAI version of the PAL demo 2. 
 THis is PAL's first demo with AI, so I think its particularly of interest.
 
-I spent so much time figuring out this PAL D2 AI demo.
-Makes me wonder: what surprises await me after you pay the big $ for the non-trial version?
-I guess that doesn't matter for now for PAL ... PAL business is booming.
-
-But what about any org planning to use this?
-Well, I guess **you just trust PAL and their FDE's** (human forward deployed engineers).
-Relax, no problems...
-But if you do have doubts, then at least read my version of the D2 demo.
-even better try to do it yourself.
-
-I did not really "redo" the demo yet. 
+NOTE: I did not really "redo" the demo yet. 
 What I mainly did was 
 - Reorg the order in which you do things.
 - Provide accurate full details.
@@ -41,8 +31,42 @@ What I mainly did was
 
 #### **TOC**
 For now this is just a collection of thoughts/comments.. I will gradually refine and reorg.
+- 0 All the errors and shortcomings in the D2 demo (frustrating)
 - 1 Palantir protects enterprises from AI companies that steal secrets via prompts??
 - 2 Demo D8 shows how to train model and deploy in PAL
+- 3a test PAL usage restrictions
+- 3b Future: D2+D8 (RAG + MODEL)
+
+
+
+<br>
+
+#### **0 All the errors and shortcomings in the D2 demo (frustrating)**
+
+Capital letters in Vertex create separate "entity" entry
+<br><img src="/assets/777_37.png" alt="drones" width="35%" style="border: 1px solid #999;">
+
+Entities are keywords!!!! (are you serious??) 
+
+The docs say "Build yourself a "summer intern" in just 60 to 90 minutes with AIP! Extract the most important points and connections from your vast library of specialist literature, and start getting reliable answers to your questions." **I'd rather having a working demo of the core functionality.. not a silly keyword search**.
+ 
+NO DIAGRAMS OR WORKFLOWS!
+
+NO H1/H2 numbering!
+
+NOT UPDATED, NOT MAINTAINED. When setting up AIP, this part magically appears... and its not explained in the docs.. no screenshot. 
+<br><img src="/assets/777_38.png" alt="drones" width="45%" style="border: 1px solid #999;">
+
+I spent so much time figuring out this PAL D2 AI demo.
+Makes me wonder: what surprises await me after you pay the big $ for the non-trial version?
+I guess that doesn't matter for now for PAL ... PAL business is booming.
+
+But what about any org planning to use this?
+Well, I guess **you just trust PAL and their FDE's** (human forward deployed engineers).
+Relax, no problems...
+But if you do have doubts, then at least read my version of the D2 demo.
+even better try to do it yourself.
+
 
 <br>
 
@@ -68,11 +92,17 @@ I had limited success with this demo. I think PAL works fine, but the demo docx 
 
 <br><img src="/assets/D8_model.png" alt="drones" width="45%" style="border: 1px solid #999;">
 
+<br>
 
+#### **3a test PAL usage restrictions**
 
 <br>
 
-<img src="/assets/aaaaaaaaaaaaaaa.png" alt="drones" width="85%"> 
+#### **3b Future: D2+D8 (RAG + MODEL)**
+
+create model + RAG.
+
+<br>
 
 <br>
 
