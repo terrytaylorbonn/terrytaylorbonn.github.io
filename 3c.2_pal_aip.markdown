@@ -28,7 +28,7 @@ This ZAI section describes the concepts and workflows for the ZAI version of dem
   - **[3c.2.0 PAL D2 AIP QS ch0 C1 -- Why you should do the ZiptieAI version of this demo D2](/3c.2.0_pal_aip_qs_ch0_why_zai_demo/)**. The main reason is the ZAI version explains the core D2 concepts and steps correctly and clearly. But I go further, talking topics such as about **"AI sovereignty" (something Alex Karp has been talking a lot about lately; see the diagram below)**.
   - **[3c.2.1 PAL D2 AIP QS ch1 C2 -- D2 Concepts](/3c.2.1_pal_aip_qs_ch1_concepts/)**. My own explanation of the D2 demo (includes **main workflow diagrams**).<br><br>
 
-- **Step by step demo workflows**
+- **Step by step demo D2 workflows (ZAI version)**
   - [3c.2.2 PAL D2 AIP QS ch2 P1 -- AI (UI TOP/BOTTOM)](/3c.2.2_pal_aip_qs_ch2_P1_ai/)
   - [3c.2.3 PAL D2 AIP QS ch3 P2 -- LEFT (UI selected chunks list)](/3c.2.3_pal_aip_qs_ch3_P2_LEFT/)
   - [3c.2.4 PAL D2 AIP QS ch4 P3 -- RIGHT (UI Vertex graph -- NO AI involved)](/3c.2.4_pal_aip_qs_ch4_P3_RIGHT/)
