@@ -14,9 +14,10 @@ permalink: /3c.2_pal_aip/
 
 **[From the PAL webpage for demo "Speedrun: Your First AIP Workflow"](https://learn.palantir.com/speedrun-your-e2e-aip-workflow)**: *"Build yourself a "summer intern" **in just 60 to 90 minutes** with AIP! Extract the most important points and connections from your vast library of specialist literature, and start getting reliable answers to your questions."* 
 - It took me over a day to do this demo. 
-- Then I spent over a week figuring out (redoing the demo) figuring out exactly what I did (not obvious from the docs). I understood why I was so confused by several parts of the demo.
+- Then I spent over a week figuring out (redoing the demo) exactly what I did (not obvious from the docs). Eventually I understood why I was so confused by several parts of the demo.
 - I reorganized the demo workflow.
 - I documented what I did (see docx **[#611www_pal_D2_aip_vxx_26.0xxx_SS_REDUCED.docx](https://drive.google.com/drive/folders/1-Adawag9uA8_bq-hDF-nOuPYaRLz1eEO)**).
+- **All of this was only possible because of the help of FDE (built-in Foundry AI tool).**
 
 This ZAI section describes the concepts and workflows for the ZAI version of demo D2.
 
