@@ -8,172 +8,38 @@ permalink: /3c.2_pal_aip/
 
 [← 2.6 PAL demos (speedruns)](/3c.2_pal_initial_demos/)
 
-<br>
 
-(THIS PAGE IS WIP....)
 
 <br>
 
-#### **[From the PAL webpage for demo "Speedrun: Your First AIP Workflow"](https://learn.palantir.com/speedrun-your-e2e-aip-workflow)**
-- "Build yourself a "summer intern" **in just 60 to 90 minutes** with AIP! Extract the most important points and connections from your vast library of specialist literature, and start getting reliable answers to your questions.""
+**[From the PAL webpage for demo "Speedrun: Your First AIP Workflow"](https://learn.palantir.com/speedrun-your-e2e-aip-workflow)**: *"Build yourself a "summer intern" **in just 60 to 90 minutes** with AIP! Extract the most important points and connections from your vast library of specialist literature, and start getting reliable answers to your questions."* 
+- It took me over a day to do this demo. 
+- Then I spent over a week figuring out (redoing the demo) figuring out exactly what I did (not obvious from the docs). I understood why I was so confused by several parts of the demo.
+- I reorganized the demo workflow.
+- I documented what I did (see docx **[#611www_pal_D2_aip_vxx_26.0xxx_SS_REDUCED.docx](https://drive.google.com/drive/folders/1-Adawag9uA8_bq-hDF-nOuPYaRLz1eEO)**).
 
-I have spent over a week on this demo (**I am reorganizing the demo and documenting it**, but it still would have taken at least day if I just did the demo). Much of this demo has nothing to do with demonstrating Foundry AI.
+This ZAI section describes the concepts and workflows for the ZAI version of demo D2.
 
 <br>
 
 #### **TOC**
-Following links are all TODO (they will be extracted from the first chapter in docx **[#611www_pal_D2_aip_vxx_26.0xxx_SS_REDUCED.docx](https://drive.google.com/drive/folders/1-Adawag9uA8_bq-hDF-nOuPYaRLz1eEO)**):
-- [3c.2.1 PAL D2 AIP QS ch1 Concepts](/3c.2.1_pal_aip_qs_ch1_concepts/)
-- [3c.2.2 PAL D2 AIP QS ch2 P1 AI (TOP/BOTTOM)](/3c.2.2_pal_aip_qs_ch2_P1_ai/)
-- [3c.2.3 PAL D2 AIP QS ch3 LEFT (selected chunks list)](/3c.2.3_pal_aip_qs_ch3_P2_LEFT/)
-- [3c.2.4 PAL D2 AIP QS ch4 P3 Vertex (RIGHT)](/3c.2.4_pal_aip_qs_ch4_P3_RIGHT/)
-- [3c.2.0 PAL D2 AIP notes](/3c.2.0_pal_aip_notes/)
 
+- **Concepts**
+  - **[3c.2.0 PAL D2 AIP QS ch0 C1 -- Why you should do the ZiptieAI version of this demo D2](/3c.2.0_pal_aip_qs_ch0_why_zai_demo/)**. The main reason is the ZAI version explains the core D2 concepts and steps correctly and clearly. But I go further, talking topics such as about **"AI sovereignty" (something Alex Karp has been talking a lot about lately; see the diagram below)**.
+  - **[3c.2.1 PAL D2 AIP QS ch1 C2 -- D2 Concepts](/3c.2.1_pal_aip_qs_ch1_concepts/)**. My own explanation of the D2 demo (includes **main workflow diagrams**).<br><br>
 
-<br>
-
-#### **About Alex Karp's comments about Palantir protecting enterprises from AI companies that steal secrets via prompts**
-Foundry manages access to all aspects of AI. But you are still using external AI, so you are still sending data to AI companies (but thats much better than if employees had uncontrolled access). If you really want to keep your data safe, you'd use local models (with RAG, which is demo'd in this demo). This is of course the case... what interesting is those interviewing Alex dont ask that or ask for him to explain just how Palantir protects data. I dont show this in demo 2 yet, but thats in my near term future plans... I will work on that part with GPT/FDE (AI assistants) directly. 
-
-*Sorry, but I don't get it.... "sovereignty rights"?? Sounds like a legal issue.. and if you don't want your secrets going to a frontier lab, then use a local model.. why are none of the experts asking Alex such questions... I am confused...*<br><img src="/assets/alex.png" alt="drones" width="45%" style="border: 1px solid #999;">
-
+- **Step by step demo workflows**
+  - [3c.2.2 PAL D2 AIP QS ch2 P1 -- AI (UI TOP/BOTTOM)](/3c.2.2_pal_aip_qs_ch2_P1_ai/)
+  - [3c.2.3 PAL D2 AIP QS ch3 P2 -- LEFT (UI selected chunks list)](/3c.2.3_pal_aip_qs_ch3_P2_LEFT/)
+  - [3c.2.4 PAL D2 AIP QS ch4 P3 -- RIGHT (UI Vertex graph -- NO AI involved)](/3c.2.4_pal_aip_qs_ch4_P3_RIGHT/)
 
 <br>
 
-#### **The diagrams below (WIP) describe**
-  - **1 AI config** 
-  - **2 UI config**
-  - **3 UI result**
-
-The 2 diagrams for the config are extremely useful (no such diagrams in original doc).
-
-
-See also
-  - docx **[#611www_pal_D2_aip_vxx_26.0xxx_SS_REDUCED.docx](https://drive.google.com/drive/folders/1-Adawag9uA8_bq-hDF-nOuPYaRLz1eEO)**
-
-<!--   - This is the **[speedrun tutorial link](https://learn.palantir.com/speedrun-your-e2e-aip-workflow)**.
-  - [3c.2.0 PAL AIP notes](/3c.2.0_pal_aip_notes/)
-  - [Ch1 Concepts](/3c.2.1_pal_aip_qs_ch1_concepts/) -->
-
-
+*"Sovereignty rights"?? Sounds like a legal issue; if you don't want your secrets going to a frontier lab, then use a local model; what does "migrating out alpha" mean?*<br><img src="/assets/alex.png" alt="drones" width="45%" style="border: 1px solid #999;">
 
 <br>
 
-### **1 AI config**
+26.0825 (0811, 0725, 26.0713)  *[3c.2.0 PAL D2 AIP notes (old)](/3c.2.0_pal_aip_notes/)*
 
-- **THIS IS FASCINATING!! FDE/GPT-5.6 Sol analysis of diagram 1 (FDE can "see" screenshots!!):** 
-- NOTE: RAG = 2. R-etrieval 3 A-ugmented 4 G-eneration
-
-```
-Yes. The diagram accurately captures the complete AI flow in Demo 2. 
-The optional Entity/Vertex branch is separate from the answer flow. 
-Your diagram now explains the core architecture far more clearly than the original Demo 2 documentation.
-1. Offline preparation
-  - LLM creates summary2 and entities2.
-  - Embedding model converts summary2 into embedding2.
-  - content2, summary2, and embedding2 become Chunk properties.
-2. Runtime retrieval
-  - The top widget supplies userQuestion.
-  - Foundry embeds the question and searches embedding2.
-  - It returns 10 matching Chunk objects.
-3. Runtime augmentation
-  - AIP Logic extracts content2 from those objects.
-  - It combines the text into one reference string.
-  - That string is inserted into the prompt.
-4. Runtime generation
-  - GPT 4o generates the answer.
-  - The function returns a string.
-  - Workshop stores it in AIP Response and displays it in the bottom widget.
-```
-
-*Diagram 1 AI config workflow (P1-1, P1-2, ... are sections in the docx)*<br><img src="/assets/MASTER_D2_1.png" alt="drones" width="100%" style="border: 1px solid #999;"><br>
-
-<br>
-
-### **2 UI config**
-
-*Diagram 2 UI config workflow (the darkened parts have nothing to do with AI)*<br><img src="/assets/MASTER_D2_2.png" alt="drones" width="80%" style="border: 1px solid #999;"><br>
-
-<br>
-
-### **3 UI result**
-
-*Diagram 3 Resulting UI*<br><img src="/assets/final-01-no-AI.png" alt="drones" width="90%" style="border: 1px solid #999;"><br> 
-
-
-
-
-
-<br>
-<br>
-<br><br>
-<br>
-<br><br>
-<br>
-<br><br>
-<br>
-<br>
-
----------------
----------------
----------------
----------------
-
-<br>
-
-# **OLD**
-
-<br>
-
-Its the first example of setting up the Workshop (UI). 
-- It took a long time to get right (several days). And its usually the last thing you setup for an app. If you made a mistake earlier in the pipeline, ontology, functions, etc then things just dont work in the workshop. And its not easy (for a beginner) to figure out why. 
-- The diagram shows that are basically 2 parts that dont depend on each other. 
-  - The bottom widget response takes the top widget input and uses an LLM to answer the question with the RAG input.
-  - The left and right widgets do the complicated part
-    - Left widget takes the query text and compares against the embedding values in the "TT2 Chunk VVV" object type. It outputs to variable "Relevant Chunks VVV" the top 9 matching embeddings.
-    - Right widget takes the relevant chunks and inputs to the Vertex template for display.   
-- What this means is you could have done this demo from start (pipeline) to finish (UI) in 3 parts. 
-  - First LLM (top and bottom widgets).
-  - Then display the nearest embedding neighbors (left widget).
-  - Finally build the template and add to the right widget.
-- That would make it easier to handle all the complexity and not get stuck.
-- But best of all would be to have this as an example. You install 2 working example instance. Use one as a reference and slowly rebuild parts of the other.   
-
-<img src="/assets/777_28.png" alt="drones" width="40%" style="border: 1px solid #999;"> 
-
-
-<br>
-
-
-26.0824 (0811, 0725, 26.0713)
-
-
-
-<!--
-**Remaining chapters to add**
-- 2 Set Up Project and Folder
-- 3 Upload Data
-- 4 Transform Data
-- 5 Configure Ontology
-- 6 Explore Object Relations = CREATE "KG" Chunks<>Entities links
-- 7 Create AIP Logic Function ("ontology aided generation")
-- 8 Build App
-*Final app* <br>
-<img src="/assets/final-01.png" alt="drones" width="70%" style="border: 1px solid #999;">
--->
-
-<!-- 
-The goal of this page is not to duplicate the content of these docx's 
-- Palantir **["AIP workflow speedrun"](https://learn.palantir.com/speedrun-your-e2e-aip-workflow)** or
-- My main lab notes docx **[#611vvv\_aip\_qs\_.docx](https://drive.google.com/drive/folders/1-Adawag9uA8_bq-hDF-nOuPYaRLz1eEO)** (this docx contains only the changes from \#611) or
-- **[#611\_pal\_aip\_v06ccc-02\_.docx](https://drive.google.com/drive/folders/1-Adawag9uA8_bq-hDF-nOuPYaRLz1eEO)**. \#613 (a reorg of the speedrun) failed, so I took the first successful demo in \#611 and reworked my way through it from finish to start (I replaced ch8 UI first, then ch6 Knowledge Graph, ..., and finally the pipeline). **BINGO** (it all worked). *To me the easiest demo would be to do things in that order; take a working demo and modifying it, starting at the finish, and drilling down to the start*.
-
-Rather its meant as a commentary (WIP) about some of the details of the speedrun and my own take on the core concepts. 
-
-There are also a few other lab notes docx's of interest:
-- **[#613\_pal\_aip\_REORG\_TEST\_.docx](https://drive.google.com/drive/folders/1-Adawag9uA8_bq-hDF-nOuPYaRLz1eEO)**. Attempted reorg test. Ran into error for the KG Vertex graph that I could not solve. I think the problem was in the pipeline (I changed the variable names and probably made a mistake; I tried debugging the backend code with FDE/OPUS/GPT, but no luck).
-- **[#611bbb\_pal\_aip\_v03\_NOTES\_.docx](https://drive.google.com/drive/folders/1-Adawag9uA8_bq-hDF-nOuPYaRLz1eEO)**. Tons of notes.
-- **[#610\_pal\_foundry\_.docx](https://drive.google.com/drive/folders/1-Adawag9uA8_bq-hDF-nOuPYaRLz1eEO)**. Foundry was the prerequisite of this demo.
--->
 
 
