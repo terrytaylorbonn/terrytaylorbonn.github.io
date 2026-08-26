@@ -57,8 +57,59 @@ These will focus on **getting started (grasping core concepts via hands-on demos
 
 <br>
 
+#### **3 DIY (with FDE assistance) demos**
+
+<!-- #### **[2.7 DIY (with FDE assistance) demos](/3c.xxx_pal_gist/)** -->
+
+Go free style (not "vibe") by teaming up with FDE (AI assistant) to create your own demos. 
+- FDE is an amazing tool that can (1) "see" screenshots that you paste into a chat and (2) guide your through the most complex configurations and problem solving. (see **[3c.2 PAL AI dev assistants](/3c.bbb_pal_strategy_fde/)** for AIP/FDE details)
+- When you start free styling, things get complicated easily. You do try things that the experts knew to avoid when they created installable-examples and step-by-step demos. It took me a long time to get the Workshop in that DIY demo working. Even FDE made a mistake during the configuration. 
+
+Demo list: 
+- **[Demo 9: HN demos](/3c.xxx_pal_HN_01_non_ai/)** (haystack needle, with/without AI model). (HN = find small anomalies in mountains of data)**What has interested me the most about Palantir for over a year now are the "haystack needle" (HN) algorithms**. This was the original reason for the founding of PAL. 9/11 occured because the US government failed to detect obvious warning signs in a sea of data. PAL's job was to make sure that that did not happen again by creating a system that could sift through vast amounts of data (about, for example, a sudden surge in foreigners studying to fly large airliners) to flag potential threats. To find the needle in the haystack.
+
+
+<!-- 
+
+  <br>*The gist of Palantir haystack needle search: A crystal ball (called a "palantir" ("seeing stone") in Lord of the Rings)* <br><img src="/assets/pal_9_06.png" alt="drones" width="25%" style="border: 1px solid #999;"><br><br>
+
+
+But you need to have an idea of the big picture direction for any project. The (eventual) goal of the DIY demos is to show how to team up with FDE to work effectively in Foundry (and to a limited extent AIP/[PAL Pilot](https://www.palantir.com/docs/foundry/pilot/getting-started/)).<br><img src="/assets/pal_10_12.png" alt="drones" width="50%" style="border: 1px solid #999;"><br> 
+
+Afterwards I created this simple diagram to make sure I could miss those "rabbit holes" in the future (with uniquely numbered steps and variables; they don't have to be perfect, just something you can trace). <br> <img src="/assets/777_04.png" alt="drones" width="60%" style="border: 1px solid #999;"> 
+
+-->
+
+<br>
 
 26.0826 (v1 26.0725)
+
+<!-- 
+
+- But how exactly did they implement the HN algorithms? That's of practical interest currently because 
+    - (1) those **HN techniques are being used in all business segments** (not just military and intelligence) and 
+    - (2) **you can learn the details hands-on yourself for free with no assistance**by getting a PAL trial license (I have only a trial license and I am working alone). 
+    
+    
+    The goal of this page is to explain (via demos) the gist of a portion of the Palantir (PAL) toolset (there are not many competitors to PAL right now, but there will be in the near future, and they will follow a lot of the PAL methodologies). How to use that toolset to create HN apps. -->
+
+
+
+<!--  If I had had such a diagram for the step-by-step demos I had done earlier, I would have understood better what I had been doing. When you get your first Workshop running, spend extra time tracing through all the connections. Experiment. Do this for other tools.
+-->
+
+<!-- 
+*(MAIN DIAGRAM: 620/D9/xx)*.
+
+  - **Use AI (AIP/FDE) to do demos from scratch** (not following PAL demos or PAL docs; I might get inspiration from those demos, but I just use AIP/FDE to execute; in the future PAL Pilot would do this).
+  - **D9 (demo set 9) = "haystack needle" demos**. I believe this was Palantir's original focus when founded:
+    - Finding some small indication in a sea of data
+    - Without/with AI.
+  - Coming soon: Other AIP/FDE/Pilot demos.
+ - **[PAL Pilot](https://www.palantir.com/docs/foundry/pilot/getting-started/)** (in beta now) will probably be an "FDE/AIP combo" that can "see" the dialogs and lead you by the hand through complicated setups.<br><img src="/assets/pal_10_07.png" alt="drones" width="40%" style="border: 1px solid #999;"><br><br> 
+   - **[8 (3c.3b) Pilot real-world projects](/3c.3b_pal_pilot/) (NEAR FUTURE?)** .-->
+
+<br>
 
 <!--
 <br>

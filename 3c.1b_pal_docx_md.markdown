@@ -165,6 +165,66 @@ Same as for v1.
 <br>
 <br>
 
+# **26.0825 convert C1 in D2**
+
+
+ME: do you still have the steps you used to convert the last docx file i gave you into markdown? if you dont i can find it in my notes.
+
+GPT: 
+
+Yes. I still have them from our work here, so **you don't need to find your notes**.
+
+For the last DOCX (Phase 1), the main rules were:
+
+* DOCX → **one Markdown file + PNG images → ZIP**
+* Image marker such as `D1_320` becomes:
+
+  ```html
+  <img src="/assets/D1/D1_320.png" alt="xxx" width="..." style="border: 1px solid #999;">
+  ```
+* Use the existing `D1_###` identifiers as PNG filenames.
+* Choose image width reasonably based on screenshot size/content.
+* DOCX H1 → `# **xxx**`
+* DOCX H2 → `### **xxx**`
+* DOCX H3 → `#### **xxx**`
+* DOCX H4 → `**xxx**`
+* Add `<br>` before H1–H3.
+* Ignore manual Word page breaks.
+* **Consecutive bullet items have no blank lines between them** — this was the correction you made on the last conversion.
+* Package `.md` + `/assets/D1/*.png` into a ZIP.
+
+So if you're about to give me another DOCX, I can use the **same conversion rules as the final Phase 1 version**.
+
+
+ME: Note: everything is D2, not D1. 
+
+GPT: Yes — everything for this new document should use D2, not D1.
+
+So the image convention becomes, for example:
+
+< img src="/assets/D2/D2_001.png" alt="xxx" width="..." style="border: 1px solid #999;" >
+
+And the PNGs will retain your existing D2_001, D2_002, etc. identifiers from the DOCX. I can see those markers throughout the Concepts document you just uploaded.
+
+I'll use the same conversion rules as before, just with D2 throughout.
+
+(9secs)
+
+Done. Converted the D2 Concepts chapter using the same rules as before:
+
+One Markdown file
+13 PNGs: D2_001–D2_013
+/assets/D2/... image references
+No blank lines between consecutive bullets
+Packaged into one ZIP
+Preserved the D2 terminology/content from your source.
+
+Download D2 C1 Markdown + PNGs
+
+
+<br>
+
+
 # **4 NOTES**
 
 <br>

@@ -139,7 +139,6 @@ First
 Second the actualy hands-on installable_examples and step-by-step demos 
 - **2.5 PAL (installable) examples (START CREATING PALANTIR FOUNDRY APPS HERE)**. These are complicated, but they have an autoinstaller that allows you to start with a (usually) working version that you can modify.
 - **2.6 PAL demos**. These are less complicated, but you start from 0, and getting a working demo at the end requires a lot of skill (including debugging).
-- **2.7 DIY demos**. Go free style (not "vibe") by teaming up with FDE (AI assistant) to create your own demos.
 
 <br>
 
@@ -327,31 +326,7 @@ You just did project setup / pipeline (goal 1). You know your way around Foundry
 
 <br>
 
-#### **[2.7 DIY (with FDE assistance) demos](/3c.xxx_pal_gist/)**
 
-Go free style (not "vibe") by teaming up with FDE (AI assistant) to create your own demos. I recommend this last because these will be my original demos so I need more time to think of what kind of examples to do.
-
-
-- The real goal of the Getting Started phase is to be able to quickly assess how you can create apps to solve requirements relying only on AI for assistance. FDE is an amazing tool that can (1) "see" screenshots that you paste into a chat and (2) guide your through the most complex configurations and problem solving. But you need to have an idea of the big picture direction for any project. The (eventual) goal of the DIY demos is to show how to team up with FDE to work effectively in Foundry (and to a limited extent AIP/[PAL Pilot](https://www.palantir.com/docs/foundry/pilot/getting-started/)).<br><img src="/assets/pal_10_12.png" alt="drones" width="50%" style="border: 1px solid #999;"><br>
-
-
-- When you start free styling, things get complicated easily. You do try things that the experts knew to avoid when they created installable-examples and step-by-step demos. It took me a long time to get the Workshop in that DIY demo working. Even FDE made a mistake during the configuration. Afterwards I created this simple diagram to make sure I could miss those "rabbit holes" in the future (with uniquely numbered steps and variables; they don't have to be perfect, just something you can trace). <br> <img src="/assets/777_04.png" alt="drones" width="60%" style="border: 1px solid #999;"> 
-
-<!--  If I had had such a diagram for the step-by-step demos I had done earlier, I would have understood better what I had been doing. When you get your first Workshop running, spend extra time tracing through all the connections. Experiment. Do this for other tools.
--->
-
-<!-- 
-*(MAIN DIAGRAM: 620/D9/xx)*.
-
-  - **Use AI (AIP/FDE) to do demos from scratch** (not following PAL demos or PAL docs; I might get inspiration from those demos, but I just use AIP/FDE to execute; in the future PAL Pilot would do this).
-  - **D9 (demo set 9) = "haystack needle" demos**. I believe this was Palantir's original focus when founded:
-    - Finding some small indication in a sea of data
-    - Without/with AI.
-  - Coming soon: Other AIP/FDE/Pilot demos.
- - **[PAL Pilot](https://www.palantir.com/docs/foundry/pilot/getting-started/)** (in beta now) will probably be an "FDE/AIP combo" that can "see" the dialogs and lead you by the hand through complicated setups.<br><img src="/assets/pal_10_07.png" alt="drones" width="40%" style="border: 1px solid #999;"><br><br> 
-   - **[8 (3c.3b) Pilot real-world projects](/3c.3b_pal_pilot/) (NEAR FUTURE?)** .-->
-
-<br>
 
 ## **3 Advanced hands-on (FUTURE)**
 
@@ -380,7 +355,7 @@ Basically whatever is inspired by **[Online PAL docs](https://www.palantir.com/d
 
 <br>
 
-26.0814 (v1 26.0702) 
+26.0826 (0814, v1 26.0702) 
 
 <br>
 <br>
