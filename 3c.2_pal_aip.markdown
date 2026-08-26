@@ -22,7 +22,7 @@ This ZAI section describes the concepts and workflows for the ZAI version of dem
 - **Concepts**<br><br>
   - **[C0 -- Minimizing AI risks (in the enterprise)](/3c.2.0_pal_aip_qs_C0_ai_risks/)**. **"AI sovereignty"** has become a hot topic recently. But what exactly does this mean, and what are the options?<br><br>*Alex Karp sounding the alarm about the risks of AI in the enterprise.*<br><img src="/assets/alex.png" alt="drones" width="45%" style="border: 1px solid #999;"><br><br>
   - **[C1 -- Why do the ZAI version of this demo](/3c.2.0_pal_aip_qs_C1_why_zai_demo/)**. <br><br>*"Little" things like numbered headings are extremely helpful (I will number each granular step in demos in the future).*<br><img src="/assets/777_40.png" alt="drones" width="25%" style="border: 1px solid #999;"><br><br>
-  - **[C2 -- ZAI demo D2 concepts](/3c.2.1_pal_aip_qs_ch1_concepts/)**. **FOR NOW JUST A FEW DIAGRAMS....WIP**. My own explanation of the D2 demo (includes **main workflow diagrams**). The ZAI version explains the core D2 concepts and steps correctly and clearly.<br><br>*Diagram 1 AI config workflow (P1-1, P1-2, ... are sections in the docx)*<br><img src="/assets/MASTER_D2_1.png" alt="drones" width="45%" style="border: 1px solid #999;"><br>
+  - **[C2 -- ZAI demo D2 concepts](/3c.2.1_pal_aip_qs_ch1_concepts/)**. My own explanation of the modified workflow for the D2 demo (includes **main workflow diagrams**).<br><br>*Diagram 1 AI config workflow (P1-1, P1-2, ... are sections in the docx)*<br><img src="/assets/MASTER_D2_1.png" alt="drones" width="45%" style="border: 1px solid #999;"><br>
 <br>
 
 
