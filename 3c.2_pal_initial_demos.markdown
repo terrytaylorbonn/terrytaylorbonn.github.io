@@ -23,17 +23,17 @@ But recently (26.0826) the focus has shifted to
 
 <br>
 
-#### **1 CORE DEMOS (some WIP/TODO)**
+#### **1 CORE DEMOS**
 These will focus on **getting started (grasping core concepts via hands-on demos) with Foundry + AI + agents**.
 - **[D1 = "Speedrun -- Your First End-to-End Workflow" (26.0818)](/3c.1_pal_foundry/)**. Your first hands-on with the basics.  <!--  - Demo complete... still need to write the webpage.   - #610_pal_1_foundry_v02_26.0704_SS.docx     - https://learn.palantir.com/speedrun-your-first-e2e-workflow/1944887 -->
-- **[D2 = "Speedrun -- Your First AIP Workflow" (26.0824)](/3c.2_pal_aip/)**. Your first app with AI. <!--  - Tis is just a rough summary for now...   - 611vvv_pal_2_aip_qs_v07_26.0713_SS (2).docx - https://learn.palantir.com/speedrun-your-e2e-aip-workflow -->
-- **[D2b = D2 + PAL "crystal ball" controls](/3c.2_pal_D2b_ai_monitor/)**. Work with GPT/FDE to add Foundry safety rails to D2 to make using remote LLMs safer (finding an existing demo for this would be better). 
-- **[D2c = D2(b) + D8 (local (maybe custom trained) models)](/3c.8_pal_D2c_D8/)**. Locals models (+RAG) are probably the optimal solution (see D8 demo description below on this page).
-- **[D3 = Palantir agentic AI "speedrun" (quick start) (26.0713)](/3c.3_pal_agentic_ai/)**.
+- **[(WIP) D2 = "Speedrun -- Your First AIP Workflow" (26.0824)](/3c.2_pal_aip/)**. Your first app with AI. <!--  - Tis is just a rough summary for now...   - 611vvv_pal_2_aip_qs_v07_26.0713_SS (2).docx - https://learn.palantir.com/speedrun-your-e2e-aip-workflow -->
+- **[(TODO) D2b = D2 + PAL "crystal ball" controls](/3c.2_pal_D2b_ai_monitor/)**. Work with GPT/FDE to add Foundry safety rails to D2 to make using remote LLMs safer (finding an existing demo for this would be better). 
+- **[(TODO) D2c = D2(b) + D8 (local (maybe custom trained) models)](/3c.8_pal_D2c_D8/)**. Locals models (+RAG) are probably the optimal solution (see D8 demo description below on this page).
+- **[(TO-UPDATE) D3 = Palantir agentic AI "speedrun" (quick start) (26.0713)](/3c.3_pal_agentic_ai/)**.
 
 <br>
 
-#### **2 TO UPDATE / TODO**
+#### **2 TO-UPDATE**
 - **[D4: Palantir ontology function "speedrun" (quick start) (26.0717)](/3c.4_pal_ontology_function/)**. 
   - At the end of this page is *good demo of how FDE/GPT5.5 fixed a problem with the demo*.
   - #615_pal_4_onto_function_qs_v02_26.0717_ss (2).docx 
