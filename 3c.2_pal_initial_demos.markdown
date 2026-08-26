@@ -11,13 +11,13 @@ permalink: /3c.2_pal_initial_demos/
 <br>
 
 This page was originally meant to be just a description of PAL Foundry demos. 
-With ZAI versions of the docs with add heading numbering, step numbering, concepts (especially conceptual diagrams), and error corrections.
+With ZAI versions of the docs with added heading numbering, step numbering, concepts (especially conceptual diagrams), and error corrections.
 Created/updated/published (to ZAI) from tagged docx files (using GPT).
 
 But recently (26.0826) the focus has shifted to  
 - Modifying existing PAL demos (creating ZAI versions).
 - Creating ZAI demos with the help of GPT/FDE (such as D2b below).
-- Organizing these into a series that intros Foundry in a logical order.
+- Organizing these into a series that intros Foundry in logical order.
 
 *Notes: See also: **[PAL demo strategy](/3c.aaa_pal_strategy_demos/)**. D = demo, DD = deep dive.*
 

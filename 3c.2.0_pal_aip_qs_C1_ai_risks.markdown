@@ -1,0 +1,64 @@
+---
+layout: page
+title: C1 -- Minimizing AI risks (in the enterprise)
+permalink: /3c.2.0_pal_aip_qs_C1_ai_risks/
+---
+
+<!--  - **[C1 -- Minimizing AI risks (in the enterprise)](/3c.2.0_pal_aip_qs_C1_ai_risks/)**. **"AI sovereignty"** has become a hot topic recently. But what exactly does this mean, and what are the options?<br><br>*Alex Karp sounding the alarm about the risks of AI in the enterprise.*<br><img src="/assets/alex.png" alt="drones" width="45%" style="border: 1px solid #999;"><br><br> -->
+
+
+<br>
+
+[← 3c.2 PAL AIP](/3c.2_pal_aip/)
+
+<br>
+
+
+
+#### **TOC**
+For now this is just a collection of thoughts/comments.. I will gradually refine and reorg.
+- 1 Palantir protects enterprises from AI companies that steal secrets via prompts?
+- 2 Demo D8 shows how to train model and deploy in PAL / do D2+D8 (RAG + MODEL)
+- 3 Test PAL usage restrictions
+
+<br>
+
+
+#### **1 Palantir protects enterprises from AI companies that steal secrets via prompts?**
+Foundry manages access to all aspects of AI. But you are still using external AI, so you are still sending data to AI companies (but thats much better than if employees had uncontrolled access). If you really want to keep your data safe, you'd use local models (with RAG, which is demo'd in this demo). This is of course the case... what interesting is those interviewing Alex dont ask that or ask for him to explain just how Palantir protects data. I dont show this in demo 2 yet, but thats in my near term future plans... I will work on that part with GPT/FDE (AI assistants) directly. 
+
+<!-- *Sovereignty rights"?? Sounds like a legal issue; if you don't want your secrets going to a frontier lab, then use a local model; what does "migrating out alpha" mean?*
+ "AI sovereignty"** has become a hot topic recently. But what exactly does this mean, and what are the options?<br><br>*Alex Karp sounding the alarm about the risks of AI in the enterprise.*<br><img src="/assets/alex.png" alt="drones" width="45%" style="border: 1px solid #999;"><br><br> -->
+
+
+
+<!-- 
+The main reason is to understand the basics of AI in Foundry. But my explanation of this demo goes further, into exploring **"AI sovereignty" (something Alex Karp has been talking a lot about lately; see the diagram below)**, then what you really need (from what I understand) a combo of PAL demos D2 and D8. And to really understand D2, you definitely need this ZAI version of the D2 tutorial ("speedrun"). 
+-->
+
+<br><img src="/assets/alex.png" alt="drones" width="45%" style="border: 1px solid #999;">
+
+<br>
+
+#### **2 Demo D8 shows how to train model and deploy in PAL / combine with D2**
+
+There is a ZAI version of demo D8 (creating a local model), but I ran into issues during deployment. I need to redo that demo, and then combine D2 and D8. I had limited success with this demo. I think PAL works fine, but the demo docx (as usual) were definitely lacking something.
+
+**But the real demo you need to do what Alex is talking about ("sovereignty") is a combo of**
+- D2 (shows how do do RAG with model server (openAI, etc))
+- D8 (shows how to train/deploy model in your PAL system)
+
+
+<br><img src="/assets/D8_model.png" alt="drones" width="45%" style="border: 1px solid #999;">
+
+<br>
+
+#### **3 Test PAL usage restrictions**
+
+I still have not tried any demos for Foundry restrictions on employee activity. 
+That to me is what would control the leaking of sensitive data to an external LLM.
+Foundry would use AI to scan any prompts going out of the enterprise.
+
+<br>
+
+26.0825 (v1 26.0825)
