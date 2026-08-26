@@ -16,17 +16,18 @@ For your first demos its probably best to do these (following my docx notes; see
 
 <br>
 
-#### **UPDATED/WIP**
-- **[Demo D1 ("Speedrun -- Your First End-to-End Workflow") (26.0818)](/3c.1_pal_foundry/)**  <!--  - Demo complete... still need to write the webpage.   - #610_pal_1_foundry_v02_26.0704_SS.docx     - https://learn.palantir.com/speedrun-your-first-e2e-workflow/1944887 -->
-- **[Demo D2 ("Speedrun -- Your First AIP Workflow") (26.0824)](/3c.2_pal_aip/)** <!--  - Tis is just a rough summary for now...   - 611vvv_pal_2_aip_qs_v07_26.0713_SS (2).docx - https://learn.palantir.com/speedrun-your-e2e-aip-workflow -->
-
-<br>
-
-
-#### **TO UPDATE**
+#### **CORE DEMOS (some WIP/TODO)**
+- **[Demo D1 ("Speedrun -- Your First End-to-End Workflow") (26.0818)](/3c.1_pal_foundry/)**. Your first hands-on with the basics.  <!--  - Demo complete... still need to write the webpage.   - #610_pal_1_foundry_v02_26.0704_SS.docx     - https://learn.palantir.com/speedrun-your-first-e2e-workflow/1944887 -->
+- **[Demo D2 ("Speedrun -- Your First AIP Workflow") (26.0824)](/3c.2_pal_aip/)**. Your first app with AI. <!--  - Tis is just a rough summary for now...   - 611vvv_pal_2_aip_qs_v07_26.0713_SS (2).docx - https://learn.palantir.com/speedrun-your-e2e-aip-workflow -->
+- **[Demo D2b = D2 + PAL "crystal ball" controls](/3c.2_pal_xxx/)**. I plan to work with GPT/FDE to add Foundry safety rails (whatever they are) to D2 to make using remote LLMs safer. If I can find a demo for this that would be better. 
+- **[Demo D2c = D2(b) + D8 (local (maybe custom trained) model)](/3c.8_pal_xxx/)**. Probably the optimal solution (see D8 demo description below on this page).
 - **[D3: Palantir agentic AI "speedrun" (quick start) (26.0713)](/3c.3_pal_agentic_ai/)**.
   - #614_pal_3_agentic_ai_qs_v03_26.0715_ss.docx 
   - https://learn.palantir.com/speedrun-your-first-agentic-aip-workflow
+
+<br>
+
+#### **TO UPDATE / TODO**
 - **[D4: Palantir ontology function "speedrun" (quick start) (26.0717)](/3c.4_pal_ontology_function/)**. 
   - At the end of this page is *good demo of how FDE/GPT5.5 fixed a problem with the demo*.
   - #615_pal_4_onto_function_qs_v02_26.0717_ss (2).docx 
@@ -51,7 +52,7 @@ For your first demos its probably best to do these (following my docx notes; see
 <br>
 
 
-26.0824 (0725, v1 26.0725)
+26.0826 (0725, v1 26.0725)
 
 <!--
 <br>

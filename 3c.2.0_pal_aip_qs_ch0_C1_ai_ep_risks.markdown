@@ -27,6 +27,9 @@ What I mainly did was
 - **Discuss core concepts (often after consulting with FDE/GPT-5.6 Sol).**
 - Etc, etc....
 
+
+*Sovereignty rights"?? Sounds like a legal issue; if you don't want your secrets going to a frontier lab, then use a local model; what does "migrating out alpha" mean?*
+
 <br>
 
 #### **TOC**
