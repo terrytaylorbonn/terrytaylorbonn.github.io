@@ -22,7 +22,7 @@ For now this is just a collection of thoughts/comments.. I will gradually refine
 - **1 Palantir protects enterprises from AI companies that steal secrets via prompts?**
 - **2 Demo D8 shows how to train model and deploy in PAL / do D2+D8 (RAG + MODEL)**
 - **3 Test PAL usage restrictions**
-- **10 Alex Karp / secrets / RAG (chats)**
+- **4 Alex Karp / secrets / RAG (chat with FDE)**
 
 <br>
 
@@ -66,190 +66,273 @@ Foundry would use AI to scan any prompts going out of the enterprise.
 
 <br>
 <br>
+
+------------------
+------------------
+
+
 <br>
 <br>
 
 
+## **4 Alex Karp / secrets / RAG (chat with FDE)**
 
-## **10 Alex Karp / secrets / RAG**
+### **4.1 Alex Karp has recently been talking about how enterprises are giving the AI LLMs their secrets.**
 
-(2) Alex Karp has recently been talking about how enterprises are giving the AI LLMs their secrets. 
-The impression people are getting is that somehow FOundry (and other PAL tools) will avoid this. but it does not. it only reduces the risk. we are still using remote models.
+The impression people are getting is that somehow FOundry (and other PAL
+tools) will avoid this. but it does not. it only reduces the risk. we
+are still using remote models.
 
+#### **ME: Does Foundry keep enterprise secrets away from remote models?**
 
-2. Does Foundry keep enterprise secrets away from remote models?
-Your interpretation is correct: not automatically.
-When your AIP Logic calls GPT 4o, the question and retrieved reference text are transmitted to a third-party-hosted model endpoint for inference. Foundry therefore does not make remote inference equivalent to keeping data entirely inside the enterprise boundary.
+**FDE:** Your interpretation is correct: not automatically.
+
+When your AIP Logic calls GPT-4o, the question and retrieved reference
+text are transmitted to a third-party-hosted model endpoint for
+inference. Foundry therefore does not make remote inference equivalent
+to keeping data entirely inside the enterprise boundary.
+
 What Palantir claims is that, for AIP-provided third-party models:
-•	Prompts and completions are not retained by the provider.
-•	They are not used to train the provider’s models.
-•	Provider personnel do not have access to them.
-•	Palantir obtains technical and contractual guarantees for those conditions. 
-AIP security and privacy / Do third-party-hosted model service providers have access to the data in AIP’s prompts?
+
+-   Prompts and completions are not retained by the provider.
+-   They are not used to train the provider's models.
+-   Provider personnel do not have access to them.
+-   Palantir obtains technical and contractual guarantees for those
+    conditions.
+
+AIP security and privacy / Do third-party-hosted model service providers
+have access to the data in AIP's prompts?
+
 Foundry additionally reduces risk by controlling:
-•	Which users and agents may access information
-•	Exactly what context is retrieved and transmitted
-•	Markings, roles, and purpose-based controls
-•	Model access and network egress
-•	Auditing and lineage
-•	Which actions an AI may execute
-•	Human approval around consequential operations
+
+-   Which users and agents may access information
+-   Exactly what context is retrieved and transmitted
+-   Markings, roles, and purpose-based controls
+-   Model access and network egress
+-   Auditing and lineage
+-   Which actions an AI may execute
+-   Human approval around consequential operations
+
 So the more accurate claim is:
-Foundry provides governed, controlled use of external models—not an absolute guarantee that data is never externally processed.
-For stricter sovereignty requirements, AIP can also self-host open-source or custom models inside the organization’s infrastructure, including on-premises or air-gapped deployments. 
-Self-host models with AIP  https://www.palantir.com/docs/foundry/aip/self-host-models#selfhost-models-with-aip 
 
- 
-(3) Foundry can help to train models (?) , but still these will not be major frontier models. or will they in the future
-be good enough models for some specific apps? is this what Karp was talking about?
+- Foundry provides governed, controlled use of external models---not an
+absolute guarantee that data is never externally processed.
+- For stricter sovereignty requirements, AIP can also self-host
+open-source or custom models inside the organization's infrastructure,
+including on-premises or air-gapped deployments.
+- Self-host models with AIP
+https://www.palantir.com/docs/foundry/aip/self-host-models#selfhost-models-with-aip
 
-3. Can Foundry train useful private models?
-Yes, but there are several different categories.
-Traditional enterprise models
-Foundry can train and deploy models for:
-•	Classification
-•	Regression
-•	Forecasting
-•	Anomaly detection and similar specialized tasks
-•	Custom pro-code ML workloads
-Model Studio directly supports common classification, regression, and time-series workflows. 
-Model Studio  https://www.palantir.com/docs/foundry/model-studio/overview#model-studio 
-These models can be excellent for a specific organization because they learn its particular equipment, customers, operations, risks, or processes. They do not need to be frontier-sized.
-Domain-specific language models
-An organization can also:
-•	Import or register an existing model
-•	Fine-tune an open-source model
-•	Self-host it
-•	Connect an externally hosted model
-•	Use different models for different tasks
-Foundry provides versioning, permissions, lineage, evaluation, deployment, and Ontology integration around such models. Externally hosted integrations are explicitly governed through model connections and egress policies. 
-Integrate an externally hosted model / Additional considerations for language models  https://www.palantir.com/docs/foundry/integrate-models/external-model-connection#additional-considerations-for-language-models 
-Frontier models
-Training a new GPT-class frontier foundation model from scratch is generally outside the realistic scope of an individual enterprise. It requires extraordinary quantities of compute, data, research, and infrastructure.
-But an enterprise often does not need its own frontier model. A smaller private model can be good enough for narrow tasks such as:
-•	Extracting known fields
-•	Classifying documents
-•	Routing cases
-•	Detecting operational anomalies
-•	Generating constrained reports
-•	Interacting with a limited set of tools
-•	Answering questions over a specialized corpus
-RAG also means organizational knowledge does not have to be learned into the model’s weights. A model can receive the necessary governed context at runtime.
-Likely strategic point
-Without the exact Karp quotation, I would not claim his precise intent. But Palantir’s documented architecture emphasizes something broader than “we will train every customer a private frontier LLM”:
-Use the best appropriate model—remote frontier, externally hosted, fine-tuned, or self-hosted—but place it inside a governed operational system that controls its context, permissions, actions, evaluation, and audit trail.
+### **4.2 Foundry can help to train models (?) , but**
+still these will not be major frontier models. or will they in the
+future be good enough models for some specific apps? is this what Karp was
+talking about?
+
+#### **ME: Can Foundry train useful private models?**
+
+**FDE:** Yes, but there are several different categories.
+
+**1 Traditional enterprise models**. Foundry can train and deploy models for:
+
+-   Classification
+-   Regression
+-   Forecasting
+-   Anomaly detection and similar specialized tasks
+-   Custom pro-code ML workloads
+
+**[Model Studio](https://www.palantir.com/docs/foundry/model-studio/overview#model-studio)** directly supports common classification, regression, and time-series workflows . 
+These models can be excellent for a specific organization because they
+learn its particular equipment, customers, operations, risks, or
+processes. They do not need to be frontier-sized.
+
+**2 Domain-specific language models**. An organization can also:
+
+-   Import or register an existing model
+-   Fine-tune an open-source model
+-   Self-host it
+-   Connect an externally hosted model
+-   Use different models for different tasks
+
+Foundry provides versioning, permissions, lineage, evaluation,
+deployment, and Ontology integration around such models. Externally
+hosted integrations are explicitly governed through model connections
+and egress policies. See **[Integrate an externally hosted model / Additional considerations for language models](https://www.palantir.com/docs/foundry/integrate-models/external-model-connection#additional-considerations-for-language-models)**.
+
+**3 Frontier models**. Training a new GPT-class frontier foundation model from scratch is
+generally outside the realistic scope of an individual enterprise. It
+requires extraordinary quantities of compute, data, research, and
+infrastructure.
+
+But an enterprise often does not need its own frontier model. A smaller
+private model can be good enough for narrow tasks such as:
+
+-   Extracting known fields
+-   Classifying documents
+-   Routing cases
+-   Detecting operational anomalies
+-   Generating constrained reports
+-   Interacting with a limited set of tools
+-   Answering questions over a specialized corpus
+
+**RAG also means organizational knowledge does not have to be learned into the model's weights. A model can receive the necessary governed context at runtime.**
+
+**Likely strategic point**. Without the exact Karp quotation, I would not claim his precise intent.
+But Palantir's documented architecture emphasizes something broader than
+"we will train every customer a private frontier LLM":
+>>Use the best appropriate model---remote frontier, externally hosted, fine-tuned, or self-hosted---but place it inside a governed operational system that controls its context, permissions, actions, evaluation, and audit trail.
+
 A practical enterprise architecture could therefore be:
-•	Small local models: sensitive, repetitive, narrow tasks
-•	Traditional custom ML: predictions and forecasts
-•	Remote frontier models: difficult reasoning where policy permits
-•	Foundry/Ontology: context, security, orchestration, auditing, and operational actions
-That reduces exposure and dependence on remote frontier models, but it does not eliminate them unless the organization deliberately chooses a fully self-hosted architecture.
 
-ME: you wrote "RAG also means organizational knowledge does not have to be learned into the model’s weights. A model can receive the necessary governed context at runtime."
+-   Small local models: sensitive, repetitive, narrow tasks
+-   Traditional custom ML: predictions and forecasts
+-   Remote frontier models: difficult reasoning where policy permits
+-   Foundry/Ontology: context, security, orchestration, auditing, and
+    operational actions
 
-The TF is (in my opinion) stricctly a classifier. 
-- It classifies the input (prompt + running response) which is converted to a token and added to the running response.
-- why general models must be so big is that they also are trained not only on grammar, sentence structures, document sturctures, etc, they also contain a lot of info about specific topics ("what is the capital of france"). 
+That reduces exposure and dependence on remote frontier models, but it
+does not eliminate them unless the organization deliberately chooses a
+fully self-hosted architecture.
 
-The internal agent is procedural code that 
-- controls flow
-- knows how to interact with the TF to get the job done.
+### **4.3 TF is just a classifier**
+
+#### **ME: you wrote "RAG also means organizational knowledge does not have to be learned into the model's weights.**
+A model can receive the necessary governed context at runtime."**
+
+The TF is (in my opinion) stricctly a classifier.
+
+-   It classifies the input (prompt + running response) which is
+    converted to a token and added to the running response.
+-   why general models must be so big is that they also are trained not
+    only on grammar, sentence structures, document sturctures, etc, they
+    also contain a lot of info about specific topics ("what is the
+    capital of france").
+
+The internal agent is procedural code that
+
+-   controls flow
+-   knows how to interact with the TF to get the job done.
 
 for RAG we dont need the specific topic truth... we supply it.
-so for a local model to do RAG, what are the minimal capabilities for the model? 
+so for a local model to do RAG, what are the minimal capabilities for
+the model?
 they are much less than for frontier model.
 it must have an internal agent + TF that can handle
-- language capabilities (grammar, vocab, etc)
-- able to handle the meaning of the prompt and RAG input
 
+-   language capabilities (grammar, vocab, etc)
+-   able to handle the meaning of the prompt and RAG input
 
+**FDE:** Your model is largely correct, with one important distinction between
+the transformer and the agent/orchestrator.
 
+**Transformer as next-token classifier**. An autoregressive transformer repeatedly:
 
-Your model is largely correct, with one important distinction between the transformer and the agent/orchestrator.
-Transformer as next-token classifier
-An autoregressive transformer repeatedly:
-1.	Receives the prompt plus tokens generated so far.
-2.	Computes a probability distribution over its vocabulary.
-3.	Selects a next token.
-4.	Appends that token and repeats.
-In that mathematical sense, it is repeatedly performing classification over possible next tokens. Calling it only a classifier can understate the computation occurring inside the network, but the basic description is correct.
-Large general models contain both:
-•	General language and document patterns
-•	A substantial amount of factual and conceptual information learned during training
-Scaling also improves reasoning, instruction-following, robustness, and in-context learning—not merely factual storage.
-(I DISAGREE WITH THE FOLLOWING.... HAD A LONG CHAT WITH GPT-5.6 Sol AND EVENTUALLY GOT IT TO AGREE WITH MY TERMINOLOGY)
-The agent is normally external
-A transformer does not ordinarily contain an internal procedural agent that controls program flow. Its forward-pass structure is fixed.
-The agent or orchestrator is usually external software that:
-•	Decides when to call the model
-•	Retrieves information
-•	Builds prompts
-•	Invokes tools
-•	Validates results
-•	Repeats steps when necessary
-In this Foundry demo, AIP Logic is the external orchestrator:
+-   Receives the prompt plus tokens generated so far.
+-   Computes a probability distribution over its vocabulary.
+-   Selects a next token.
+-   Appends that token and repeats.
+
+In that mathematical sense, it is repeatedly performing classification
+over possible next tokens. Calling it only a classifier can understate
+the computation occurring inside the network, but the basic description
+is correct. Large general models contain both:
+
+-   General language and document patterns
+-   A substantial amount of factual and conceptual information learned
+    during training
+
+Scaling also improves reasoning, instruction-following, robustness, and
+in-context learning---not merely factual storage.
+
+**(I DISAGREE WITH THE FOLLOWING.... HAD A LONG CHAT WITH GPT-5.6 Sol AND EVENTUALLY GOT IT TO AGREE WITH MY TERMINOLOGY)**
+
+**The agent is normally external**. A transformer does not ordinarily contain an internal procedural agent
+that controls program flow. Its forward-pass structure is fixed. The agent or **orchestrator** is usually external software that:
+
+-   Decides when to call the model
+-   Retrieves information
+-   Builds prompts
+-   Invokes tools
+-   Validates results
+-   Repeats steps when necessary
+
+In this Foundry demo, AIP Logic is the external orchestrator:
+
 Question
 → embedding search
 → retrieve chunks
 → format reference text
 → call GPT‑4o
 → return answer
-GPT 4o does not perform retrieval and does not control this workflow. It performs the final context-based completion.
-Minimum local model for simple RAG
-A local answering model does not need:
-•	Broad authoritative knowledge of every domain
-•	Built-in retrieval
-•	An internal agent
-•	Embedding capabilities
-•	Tool calling
-•	Knowledge of the Ontology or Vertex
+
+GPT-4o does not perform retrieval and does not control this workflow. It
+performs the final context-based completion.
+
+**Minimum local model for simple RAG**. A local answering model does not need:
+
+-   Broad authoritative knowledge of every domain
+-   Built-in retrieval
+-   An internal agent
+-   Embedding capabilities
+-   Tool calling
+-   Knowledge of the Ontology or Vertex
+
 The embedding model and application code can remain separate.
 The answering model minimally needs:
-1.	Language competence
-Grammar, vocabulary, syntax, and document structure.
-2.	Instruction following
-Understand rules such as “answer only from the supplied references.”
-3.	Reading comprehension
-Interpret the question and relevant passages, including references and terminology.
-4.	Contextual synthesis
-Combine information from several retrieved passages into one answer.
-5.	Grounded generation
-Preserve names, numbers, qualifications, and other details from the references.
-6.	Abstention behavior
-Say that the supplied context is insufficient rather than inventing an answer.
-7.	Adequate context length
-Fit the instructions, question, retrieved passages, and generated response.
+
+-   Language competence Grammar, vocabulary, syntax, and document
+    structure.
+-   Instruction following Understand rules such as "answer only from the
+    supplied references."
+-   Reading comprehension Interpret the question and relevant passages,
+    including references and terminology.
+-   Contextual synthesis Combine information from several retrieved
+    passages into one answer.
+-   Grounded generation Preserve names, numbers, qualifications, and
+    other details from the references.
+-   Abstention behavior Say that the supplied context is insufficient
+    rather than inventing an answer.
+-   Adequate context length Fit the instructions, question, retrieved
+    passages, and generated response.
+
 For this demo, that is essentially all:
+- Instructions + question + reference text ↓
+- small instruction-tuned LLM ↓
+- grounded answer
 
-Instructions + question + reference text
-                    ↓
-        small instruction-tuned LLM
-                    ↓
-             grounded answer
+**Topic knowledge is reduced, not entirely unnecessary. *RAG shifts the burden of authoritative factual truth from model weights to retrieved context. That allows a much smaller model to perform well on a bounded application*.**
 
-Topic knowledge is reduced, not entirely unnecessary
-RAG shifts the burden of authoritative factual truth from model weights to retrieved context. That allows a much smaller model to perform well on a bounded application.
-However, the model still needs enough conceptual understanding to interpret the context. A model that knows language but has no useful representation of medicine may struggle with phrases such as:
-•	Multidrug resistance
-•	Latent infection
-•	Treatment regimen
-•	Epidemiological burden
-General language knowledge and domain knowledge are also entangled during training; they are not cleanly separable sections of the weights.
-A good local design might therefore use:
-•	A relatively small general instruction model
-•	Optional domain adaptation or fine-tuning
-•	A separate embedding model
-•	Deterministic orchestration code
-•	Retrieved enterprise context
-•	Output validation and citations
-Three levels of complexity
-Application	Necessary model capability
-Search and display documents	No generative model required
-Simple retrieve-then-answer RAG	Compact instruction-following model
-Agentic, multi-step RAG	Stronger model with planning/tool-use capabilities
-This Foundry demo is fundamentally the middle case. 
-It does not inherently require a frontier model. GPT 4o provides greater quality and robustness, but a smaller self-hosted model could be entirely adequate if it passes tests for faithfulness, comprehension, abstention, latency, and domain terminology.
+However, the model still needs enough conceptual understanding to
+interpret the context. A model that knows language but has no useful
+representation of medicine may struggle with phrases such as:
+
+-   Multidrug resistance
+-   Latent infection
+-   Treatment regimen
+-   Epidemiological burden
+
+General language knowledge and domain knowledge are also entangled during training; they are not cleanly separable sections of the weights. A good local design might therefore use:
+
+-   A relatively small general instruction model
+-   Optional domain adaptation or fine-tuning
+-   A separate embedding model
+-   Deterministic orchestration code
+-   Retrieved enterprise context
+-   Output validation and citations
+
+**Three levels of complexity**
+
+| Application | Necessary model capability |
+|---|---|
+| Search and display documents | No generative model required |
+| Simple retrieve-then-answer RAG | Compact instruction-following model |
+| Agentic, multi-step RAG | Stronger model with planning/tool-use capabilities |
+
+**This Foundry demo is fundamentally the middle case.** It does not inherently require a frontier model. GPT-4o provides greater
+quality and robustness, but a smaller self-hosted model could be
+entirely adequate if it passes tests for faithfulness, comprehension,
+abstention, latency, and domain terminology.
+
+<br>
 
 
-
-26.0825 (v1 26.0825)
+26.0826 (v1 26.0825)
