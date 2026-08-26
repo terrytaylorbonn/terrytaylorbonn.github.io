@@ -10,9 +10,10 @@ permalink: /3c.2_pal_initial_demos/
 
 <br>
 
-This page was originally meant to be just a description of PAL Foundry demos. 
-With ZAI versions of the docs with added heading numbering, step numbering, concepts (especially conceptual diagrams), and error corrections.
-Created/updated/published (to ZAI) from tagged docx files (using GPT).
+This page was originally meant to be just a description of PAL Foundry demos that I did myself. With my notes, screenshots, but without any major changes.
+
+<!-- With ZAI versions of the docs with added heading numbering, step numbering, concepts (especially conceptual diagrams), and error corrections.
+Created/updated/published (to ZAI) from tagged docx files (using GPT). -->
 
 But recently (26.0826) the focus has shifted to  
 - Modifying existing PAL demos (creating ZAI versions).
