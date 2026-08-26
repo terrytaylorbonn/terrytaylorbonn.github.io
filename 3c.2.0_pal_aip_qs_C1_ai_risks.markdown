@@ -48,6 +48,8 @@ There is a ZAI version of demo D8 (creating a local model), but I ran into issue
 - D2 (shows how do do RAG with model server (openAI, etc))
 - D8 (shows how to train/deploy model in your PAL system)
 
+NOTE: This also solves the problem of how frontier models can change dramatically in their programming/training. I recently started using GPT Sol 5.6, and when discussing the concept of an "internal agent" (an agent inside an model that handles all the functionality besides the transformer input classification), 5.6 was refusing to accept this idea. It took a long time to get 5.6 to accept this concept (my own). Every new version of a model means a new slightly different viewpoint on the world.
+
 
 <br><img src="/assets/D8_model.png" alt="drones" width="45%" style="border: 1px solid #999;">
 
