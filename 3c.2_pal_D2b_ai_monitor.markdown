@@ -1,0 +1,27 @@
+---
+layout: page
+title: D2b = D2 + PAL "crystal ball" controls
+permalink: /3c.2_pal_D2b_ai_monitor/
+---
+
+
+<br>
+
+[← 3c.2 PAL AIP](/3c.2_pal_aip/)
+
+<br>
+
+Work with GPT/FDE to add Foundry safety rails to D2 to make using remote LLMs safer (finding an existing demo for this would be better). 
+
+
+
+#### **TOC**
+- xxxxx
+
+<img src="/assets/pal.png" alt="drones" width="40%"> 
+
+<br>
+
+26.0824 (v1 26.0824)
+
+

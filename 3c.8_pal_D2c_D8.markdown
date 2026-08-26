@@ -1,0 +1,23 @@
+---
+layout: page
+title: D2c = D2(b) + D8 (local (maybe custom trained) models)
+permalink: /3c.8_pal_D2c_D8/
+---
+
+
+<br>
+
+[← 3c.2 PAL AIP](/3c.2_pal_aip/)
+
+<br>
+
+Local models (+RAG) are probably the optimal solution (see D8 demo description below on this page).
+
+#### **TOC**
+- xxxxx
+
+<img src="/assets/pal.png" alt="drones" width="40%"> 
+
+<br>
+
+26.0824 (v1 26.0824)
