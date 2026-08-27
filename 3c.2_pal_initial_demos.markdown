@@ -1,12 +1,12 @@
 ---
 layout: page
-title: 2.6 PAL demos (speedruns)
+title: 2.2 PAL demos (speedruns)
 permalink: /3c.2_pal_initial_demos/
 ---
 
 <br>
 
-[← 3c PAL](/pal/)
+[← 3c Enterprise](/pal/)
 
 <br>
 
@@ -22,59 +22,162 @@ But recently (26.0826) the focus has shifted to
 - Generating the ZAI website docs from docx files (using GPT).
 - Organizing the demos into a series that intros Foundry in logical order.
 
-*See also: **[PAL demo strategy](/3c.aaa_pal_strategy_demos/)** (outdated). BELOW: D = demo, DD = deep dive.*
+See also **[PAL demo strategy](/3c.aaa_pal_strategy_demos/)** (outdated).
 
 <br>
 
-### **1 Main thread** 
-These will focus on **getting started (grasping core concepts via hands-on demos) with Foundry + AI + agents**.
-- DIY = do it yourself; I created with FDE/GPT assistance.
+**TOC**:
+- **1 Important info about doing these demos (readthisfirst)** 
+- **2 Main demo thread** 
+- **3 Duplicates/other demos**
+
+<br>
+
+## **1 Important info about doing these demos (readthisfirst)** 
+
+#### **Demo videos vs docx's**
+
+
+Ontologize.com has a lot of top Youtube videos for learning Foundry. However, in the **[Ontologize video](https://youtu.be/6kXdjW4KnHc?t=69) for the first PAL demo** "Speedrun: Your First End-to-End Workflow" they say *"...we're going to build a fully end-to-end workflow. **This course is not going to go into all the detailed ins and outs of each step**. This is about the big picture and to give you a taste of how everything fits together."*  
+
+I spent days getting that demo working because of a few small errors. You need those details. **ZAI is about mastering the (1) the Foundry UI and (2) the details of each demo**. When you first start out, (1) is the most difficult (its an excellent UI, but requires some initial study). And the eventual goal is **a thread of videos** (based on PAL demos, but with ZAI docx docs and modified workflows). **Details are everything. ZAI numbers docx's, demos, headings and steps. And ever screenshots (WIP).**
+
+Ontologize has another great **[video](https://www.youtube.com/watch?v=TTYHAtQ4ROw)** "Speedrun: Mining your First Business Process **(update)**" . Note that word "update". Videos are great, but they are hard to update and fix. ZAI demos are not. The text/pics on this website are extracted from docx master files by a very efficient process where GPT does all the heavy lifting. This makes quick total updates quite possible. For a video thats a major process. And the ZAI docx source files have lots of tech and historical notes.
+
+#### **An example of the kind of error you can run into**
+
+If you look at the ZAI docx for that mining video (\#616 on the [gdrive](https://drive.google.com/drive/folders/1-Adawag9uA8_bq-hDF-nOuPYaRLz1eEO)) at the end of ch6 section 6.2 step 3 is the heading "ERROR". The following shows that error text/screeshots. What apparently happened was a timing error. Foundry does things in the background, and sometimes something is not finished (but it NOT obvious). That can easily cost you hours of debugging. Understanding those errors and how to debug them (with FDE) should the real focus of any initial demos.
+
+<br>
+
+----------------------------
+
+#### **ERROR**
+Failed to load aggregation result
+Here are the details of the error:
+
+<img src="/assets/ERROR_01.png" alt="xxx" width="50%" style="border: 1px solid #999;">
+
+<!-- <img src="/assets/ERROR_02.png" alt="xxx" width="60%" style="border: 1px solid #999;"> -->
+
+then FDE/GPT did some stuff (SEE GPT CONVERSATION 26.0718_1035)
+
+<img src="/assets/ERROR_03.png" alt="xxx" width="60%" style="border: 1px solid #999;">
+
+<!-- <img src="/assets/ERROR_04.png" alt="xxx" width="60%" style="border: 1px solid #999;"> -->
+
+**ME: i clicked "ready to mine" again.. and seems it worked.. did you fix something?**
+
+**FDE: No --- I did not change or fix anything** in the resource. I only
+inspected the saved Machinery graph and the underlying Ontology/log
+data. What likely happened is that the earlier **"Failed to load aggregation result" was a transient loading / aggregation / browser-state issue, and when you clicked Ready to mine again the aggregation succeeded**.
+
+Now that it worked, do these steps before refreshing:
+
+-   Click Confirm in the Mining configuration panel.
+    -   Your screen says: Adding 7 states and 9 transitions.
+    -   Until you click Confirm, those mined elements may not be added to the graph.
+-   After the graph updates, click the top Save button for mine_process_1.
+-   **Wait until the save completes / the Save button no longer indicates unsaved changes**.
+-   Then it should be safe to refresh or reopen.
+
+Your saved Machinery resource is still:
+- mine_process_1
+So the important point is: **Ready to mine only previews/adds mined results; Confirm + Save is what makes them persist in the document.**
+
+----------------------------
+
+#### **Understanding how to use FDE to debug is CRUCIAL**
+
+You can see that from the error text above. Without FDE, you will get stuck. With FDE skills, you fix anything. 
+
+
+<br>
+
+## **2 Main demo thread** 
+
+These will focus on **getting started (grasping core concepts via hands-on demos)**. Not only the concepts for Foundry, but also for AI in general (the knowledge gained from studying sections 2, 2a, 3, and 3b on this website is not crucial, but really comes in handy for understanding what you are doing and why).
+
+Note: 
+- WIP (26.0827 I reorg'd this page)
+- Initial focus is on Foundry + AI + agents
+- DIY = do it yourself; I created the demo from scratch with FDE/GPT assistance.
+
+<br>
 
 #### **[D1 = "Speedrun -- Your First End-to-End Workflow" (26.0818)](/3c.1_pal_foundry/)**
-Your first hands-on with the basics.  <!--  - Demo complete... still need to write the webpage.   - #610_pal_1_foundry_v02_26.0704_SS.docx     - https://learn.palantir.com/speedrun-your-first-e2e-workflow/1944887 -->
+Your first hands-on with the basics.  
+- [#610_pal_1_foundry_v02_26.0704_SS.docx](https://drive.google.com/drive/folders/1-Adawag9uA8_bq-hDF-nOuPYaRLz1eEO)     
+- https://learn.palantir.com/speedrun-your-first-e2e-workflow/1944887
 
-#### **[(WIP) D2 = "Speedrun -- Your First AIP Workflow" (26.0824)](/3c.2_pal_aip/)**
-Your first app with AI. <!--  - Tis is just a rough summary for now...   - 611vvv_pal_2_aip_qs_v07_26.0713_SS (2).docx - https://learn.palantir.com/speedrun-your-e2e-aip-workflow -->
+<br>
 
-#### **[(TO-UPDATE) D3 = Palantir agentic AI "speedrun" (quick start) (26.0713)](/3c.3_pal_agentic_ai/)**
+#### **[D2 (WIP) = "Speedrun -- Your First AIP Workflow" (26.0824)](/3c.2_pal_aip/)**
+Your first app with AI. 
+- [#611www_pal_D2_aip_v17_26.0825_SS_REDUCED.docx](https://drive.google.com/drive/folders/1-Adawag9uA8_bq-hDF-nOuPYaRLz1eEO)
+- https://learn.palantir.com/speedrun-your-e2e-aip-workflow
+
+<br>
+
+#### **[D3 (TO-UPDATE) = Palantir agentic AI "speedrun" (quick start) (26.0713)](/3c.3_pal_agentic_ai/)**
 First agent in Foundry.
 
-#### **[(TO-UPDATE, DIY) D9 = Haystack needle demo](/3c.xxx_pal_HN_01_non_ai/)** 
+<br>
+
+#### **[D9 (TO-UPDATE, DIY) = Haystack needle demo](/3c.xxx_pal_HN_01_non_ai/)** 
 Haystack needle, with/without AI model (find small anomalies in mountains of data). **What has interested me the most about Palantir for over a year now are the "haystack needle" (HN) algorithms**. This was the original reason for the founding of PAL. PAL's job was to sift through vast amounts of data to flag potential threats. To find the needle in the haystack.
 
-#### **[(TO-UPDATE) D5: Speedrun: Mining Your First Business Process (26.0718)](/3c.5_pal_biz_process_mining/)**. 
-IS THIS LIKE D9??????
-  - #616_pal_5_biz_process_mining_qs_v02_26.0718_ss (1).docx
+<br>
+
+#### **[D5 (TO-UPDATE): Speedrun: Mining Your First Business Process (26.0718)](/3c.5_pal_biz_process_mining/)**. 
+  - [#616_pal_5_biz_process_mining_qs_v02_26.0718_ss (1).docx](https://drive.google.com/drive/folders/1-Adawag9uA8_bq-hDF-nOuPYaRLz1eEO)
   - https://learn.palantir.com/speedrun-mining-your-first-business-process
 
-#### **[(TO-UPDATE) D8: Deep Dive: Model integration (26.0721)](/3c.8_pal_8_model_integration/)**
-  - #619_.docx
+FDE: The demo starts with claims, customers, and claim-history logs. After ingesting these datasets into Foundry, the data is modeled as Ontology objects such as Customers and Claims. Machinery then uses the process logs to reconstruct how claims move through the business process over time. Once the process map is built, you can inspect where claims get stuck, identify why some remain unresolved, and embed the process view into an interactive application.
+
+Mechanically:
+1. Start with datasets claims, customers, process logs
+2. Ingest into Foundry upload/import datasets
+3. Add to Ontology create Customer and Claim object types (link/process logs to claims)
+4. Mine process logs (Machinery reads event history: claim X moved from state A → state B at time T).
+5. Build process map (shows actual paths claims took)
+6. Inspect problems (find unresolved claims, bottlenecks, loops, delays)
+7. Embed in visual app
+
+<br>
+
+#### **[D8 (TO-UPDATE): Deep Dive: Model integration (26.0721)](/3c.8_pal_8_model_integration/)**
+  - [#619_.docx](https://drive.google.com/drive/folders/1-Adawag9uA8_bq-hDF-nOuPYaRLz1eEO)
   - Sections 2c, 2d were not in the demos. I prompted AIP/FDE for directions.
 
-#### **[(TODO) D2c = D2(b) + D8 (local (maybe custom trained) models)](/3c.8_pal_D2c_D8/)** 
+<br>
+
+#### **[D2c (TODO) = D2(b) + D8 (local (maybe custom trained) models)](/3c.8_pal_D2c_D8/)** 
 Locals models (+RAG) are probably the optimal solution (see D8 demo description below on this page).
 
-#### **[(TODO) D2b = D2 + PAL "crystal ball" controls](/3c.2_pal_D2b_ai_monitor/)**
+<br>
+
+#### **[D2b (TODO) = D2 + PAL "crystal ball" controls](/3c.2_pal_D2b_ai_monitor/)**
 Work with GPT/FDE to add Foundry safety rails to D2 to make using remote LLMs safer (finding an existing demo for this would be better). 
 
 
 <br>
 
-### **2 Duplicates/other**
+### **3 Duplicates/other demos**
 - **[D4: Palantir ontology function "speedrun" (quick start) (26.0717)](/3c.4_pal_ontology_function/)**. 
   - At the end of this page is *good demo of how FDE/GPT5.5 fixed a problem with the demo*.
-  - #615_pal_4_onto_function_qs_v02_26.0717_ss (2).docx 
+  - [#615_pal_4_onto_function_qs_.docx](https://drive.google.com/drive/folders/1-Adawag9uA8_bq-hDF-nOuPYaRLz1eEO) 
   - https://learn.palantir.com/speedrun-your-first-ontology-function/2131538
 - **[D6: Deep Dive: Building Your First Pipeline (26.0719)](/3c.6_pal_6_first_app/)**.
   - **Some of this failed**. FDE/GPT/OPUS could not fix. 
   - outdated (2+ years) demo? MAKE THE DEMOS SIMPLER AND KEEP THEM UPDATED.
-  - #617_pal_6_first_app_v01_26.0719_ss.docx. 
+  - [#617_pal_6_first_app_.docx](https://drive.google.com/drive/folders/1-Adawag9uA8_bq-hDF-nOuPYaRLz1eEO) 
   - https://learn.palantir.com/deep-dive-building-your-first-application 
 - **[D7: Deep Dive: Building Your First Pipeline (26.0720)](/3c.7_pal_7_first_pipeline/)**.
-  - #618_pal_7_first_pipeline_v01_26.0719_ss.docx
+  - [#618_pal_7_first_pipeline_.docx](https://drive.google.com/drive/folders/1-Adawag9uA8_bq-hDF-nOuPYaRLz1eEO)
   - https://learn.palantir.com/deep-dive-building-your-first-pipeline
 - **[DD19: Deep Dive: transform_data_w_code_repos (26.0805)](/3c.19_pal_19_transform_data_git/)**.
-  - #627_pal_DD19_transform_data_w_code_repos_v02_26.0805_ss.docx
+  - [#627_pal_DD19_transform_data_w_code_repos_.docx](https://drive.google.com/drive/folders/1-Adawag9uA8_bq-hDF-nOuPYaRLz1eEO)
 
 
 
