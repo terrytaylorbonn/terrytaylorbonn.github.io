@@ -6,107 +6,61 @@ permalink: /pal/
 
 <br>
 
-<!-- https://ziptieai.usw-17.palantirfoundry.com/ -->
-
-
 **This Enterprise section focuses on Palantir Foundry** as a concrete, hands-on example of a modern enterprise platform for data integration, ontology, analytics, applications, **AI assistance**, and governance.
-- *THIS PAGE REORG'D 26.0826*
-- *I will be in HK/Jiangsu from 7 September - 7 October.* 
+- *This page reorg'd 26.0826 (simplified)*
+- *I will be in HK/Jiangsu from 7 September - 10 October and will not be updating this site.* 
 
 <br>
-
-<!-- 
-***TL;DR?** If you want to get started hands-on with Palantir Foundry **ASAP**, then (1) follow the directions (on this page) in **2.1 Palantir free tier sign up** and then (2) do the ZiptieAI version of the first basic **[Palantir Foundry demo D1](/3c.1_pal_foundry/)**.*
-
--->
-
 
 **TOC**:
-
 - **1 Concepts**
 - **2 Getting started hands-on** 
-- **3 Planning, docs, etc**
+- **3 Demo sources and docs**
 
 <br>
-
-<!-- ## **[0 My approach to learning Palantir Foundry](/pal_approach/)** 26.0808 -->
 
 ## **[1 Concepts](/pal_concepts/)**
 
-
 - **1.1 Why Palantir**
-- **1.1b Why all the fuss about AI in the enterprise?** (and how can PAL solve the problems)
-- **1.2 Basic workflow**
-
+- **1.2 Why all the fuss about AI in the enterprise** (and how Foundry can mitigate these problems)
+- **1.3 Basic Foundry workflow**
 
 <br>
 
 #### **1.1 Why Palantir**
 
+My focus (for now) is on Palantir Foundry because:
+- Palantir is a market leader and **offers a generous Foundry free trial**.
+- Foundry makes the enterprise visible and governable by bringing data from many systems into a common operational model that can be analyzed, monitored, and updated.
+- AI is used as a helpful engineering tool, not a replacement for human judgment. Because LLMs are probabilistic, their access and actions must be controlled, verified, approved, and logged.
+- Foundry's **built-in AI assistant (FDE) makes hands-on self-study practical**, including completing and troubleshooting the demos.
+- Foundry represents the **logical culmination of ZiptieAI: (2) neural networks → (2b) models → (3) agents → (3b) workflows → (3c) enterprise platforms**.
 
-
-**My focus (for now) is on Palantir (Foundry)** because 
+<!-- **My focus (for now) is on Palantir (Foundry)** because (*this list is WIP...*)
 - Palantir is a market leader.
 - Palantir offers a generous free trial account for Foundry.
 - **Palantir enterprise systems utilize AI as a helpful assistant** (not as a replacement for human intelligence). 
 - **Palantir's built-in AI help (FDE) makes it possible to complete the demos** (without human assistance).
-
-xxxx
 - Palantir Foundry makes the enterprise visible and governable.
 - Data from many systems is transformed into a common operational model that can be analyzed, queried, monitored, and updated.
 - LLMs play the role of helpful assistants, but their very presence makes parts of the system probabilistic. As a result, AI actions must be sandboxed, verified, approved, and logged.
-
-
-**Palantir Foundry represents the logical culmination of ZiptieAI:** 
-- (2) neural networks, 
-- (2b) models, 
-- (3) agents, 
-- (3b) workflows, and 
-- **(3c) enterprise platforms**<br>
-
-brought together in a single system. One reason I find Palantir's approach appealing is that **AI is used as a powerful engineering tool within a governed enterprise platform**, rather than as a replacement for human judgment.
-
+- **Palantir Foundry represents the logical culmination of ZiptieAI:** (see header on this webpage) (2) neural networks, (2b) models, (3) agents, (3b) workflows, and finally **(3c) enterprise platforms** brought together in a single system. 
+- Finally: Palantir's approach appealing is that **AI is used as a powerful engineering tool within a governed enterprise platform**, rather than as a replacement for human judgment. -->
 
 <br>
 
-<!-- 
-
-Palantir Foundry represents the logical culmination of ZiptieAI: neural networks, models, agents, workflows, AI assistance, governance, and enterprise systems brought together in a single platform. I view AI as a powerful engineering tool rather than true intelligence. This is one reason I find Palantir's approach appealing: AI is used as a helpful assistant within a governed enterprise platform rather than as a replacement for human judgment.
-
-NOTE: My position on AI is explained on the **[Hack](/0-demo/)** page. 
-**NOTE: The last 2 bullet points above are not contradictory**. On the webpage **[Hack](/0-demo/)** I unapologetically explain why AI is a hack, a mere simulation of human intelligence (something all AI gurus are well aware of). After a decade of empty promises, there are still no safe self-driving cars. Humanoid robots will not be safe around people. I would argue that the recent departure of Google's top AI gurus was because of the failure to deliver on the promises of AI (Google may be going more of the direction of Palantir). But **AI has revolutionized programming** (because AI and programming AI are based on binary computation). Palantir's approach to enterprise AI is the logical final chapter in ZiptieAI. 
- **Reorganized 26.0802**.
-- A very logically structured set of the simplest step-by-step demos (with critical details). 
-- Gradually more complex demos (future)
-- Core concepts (future) 
--->
-
-<!-- 
-I am still working on **my own take on the core conceptual gist of Palantir-SW**, but the gist is 
-- Palantir makes the enterprise visible and governable.
-- LLMs only play the role of a helpful assistants, but their very presence makes parts of that visibility probabilistic, so they must be sandboxed, verified, and logged. 
-
-
-
-Note: I often use GPT to "polish" text. And GPT makes a lot of very good suggestions. But GPT is also programmed to strongly suggest the "politically correct" version of reality when it comes to AI. The title for the screenshot below is a perfect example. 
-
--->
-
-
-#### **1.1b Why all the fuss about AI in the enterprise?** (and how can PAL solve the problems)
+#### **1.2 Why all the fuss about AI in the enterprise** (and how Foundry can mitigate these problems)
 
 For the diagram below:
-- **My original title:** *The fantasy world -- (left) a crystal ball (called a "palantir" ("seeing stone") in The Lord of the Rings) and (right) **AGI (a myth that digital circuits can host intelligence). Palantir Foundry** represents the real world -- An enterprise system that **provides the infrastructure and safeguards so that AI can be a practical "helpful assistant"**.*
+- **My original title:** *The fantasy world -- (left) a crystal ball (called a "palantir" ("seeing stone") in The Lord of the Rings) and (right) **AGI (a myth that digital circuits can host intelligence). Palantir Foundry** represents the real world -- An enterprise system that **provides the infrastructure and safeguards so that AI can be a practical "helpful assistant"** (not super-human intelligence).*
 - **GPT's strongly suggested "professional" title:** *The trusted wizard (left) using a crystal ball ("palantir" or "seeing stone" in The Lord of the Rings) and (right) modern AI running on digital hardware. Both promise enhanced visibility and insight, although one belongs to fantasy and the other **(AGI) belongs to engineering**.* 
+- My current title: *Palantir provides proven engineering (the crystal ball is just a metaphor, marketing genius); those selling AGI are selling a fantasy that can cause big problems in an enterprise.*
 
-*Palantir provides proven engineering (the crystal ball is just a metaphor, marketing genius); those selling AGI are selling a fantasy that can cause big problems in an enterprise.*<br><img src="/assets/pal_9_06.png" alt="drones" width="25%" style="border: 1px solid #999;"> <img src="/assets/777_02.png" alt="drones" width="30%" style="border: 1px solid #999;"><br>
+<img src="/assets/pal_9_06.png" alt="drones" width="25%" style="border: 1px solid #999;"> <img src="/assets/777_02.png" alt="drones" width="30%" style="border: 1px solid #999;"><br>
 
 <br>
 
-#### **1.2 Basic workflow**
-
-<!-- For the demos I wanted a more mechanistic conceptual overview (I am more interested in the mechanics of the PAL tools used than the business cases). At first I wanted something like the simple Foundry workflow diagram below with text to summarize what parts an example/demo covered. -->
-
+#### **1.3 Basic Foundry workflow**
 
 The following diagram shows the basic PAL workflow.
 
@@ -114,23 +68,12 @@ The following diagram shows the basic PAL workflow.
 - **1b Pipeline**. Transforms raw data into clean, structured, and consistent datasets. For example: cleaning, joining, filtering, aggregating, validation.
 - **3a Ontology read**. Applications and users read enterprise data through the ontology. The ontology provides a common operational model of the enterprise.
 - **3b Ontology writeback**. Applications, workflows, and users update enterprise systems through the ontology. For example: change status, create ticket, approve request, update record.
-- **4 Analysis**. Code, queries, dashboards, rules, AI, and other logic analyze the ontology data. Purpose: 
-  - discover information
-  - detect problems
-  - support decisions
+- **4 Analysis**. Code, queries, dashboards, rules, AI, and other logic analyze the ontology data. Purpose: discover information, detect problems, and support decisions.
 - **5 UI / App**. User-facing applications. For example: dashboards, workflows, forms, operational applications, AI assistants.
 - **6 Security / Governance**. Controls who can see data, modify data, run workflows, and use AI. For example: permissions, auditing, approvals, version control, lineage, logging, AI. 
 - **About AI**. AI can appear in many layers: pipeline transforms, model integration, ontology functions, analysis, UI assistants, and governance monitoring. **AI should be treated as a helpful assistant**, not the center of the system and not the final authority. **The responsible pattern is: AI suggests, deterministic logic verifies where possible, humans approve important actions, and the platform logs and governs the workflow**.
 
-<!-- **About AI**. AI can appear in many layers (pipeline transforms, model integration, ontology functions, analysis, UI assistants). **Always as a helfpful assistant, never the center of the universe, never in the driver's seat. Which is exactly where AI (simulated intelligence based on pattern recognition) will always belong.** This is reponsible exploitation of the true powerf of computational AI. -->
-
 *The ontology is the operational heart of Foundry. Most applications, analysis, workflows, and AI interact with enterprise data through the ontology rather than directly through the raw datasets.*<br><img src="/assets/777_07.png" alt="drones" width="64%" >
-
-<!--
-- how data enters the system (#1), 
-- how applications and AI interact with operational data (#2), and 
-- how the entire platform is secured, audited, and managed (#3). -->
-
 
 The three crystal balls represent three layers of governance. Foundry controls 
 - **Crystal ball #1 — Data governance**. Controls how raw enterprise data becomes trusted operational data. 
@@ -148,9 +91,8 @@ The three crystal balls represent three layers of governance. Foundry controls
 ## **2 Getting started hands-on** 
 
 - **2.1 Palantir free tier sign up**
-- **2.6 PAL demos**. These are less complicated, but you start from 0, and getting a working demo at the end requires a lot of skill (including debugging).
-- **2.5 PAL (installable) examples**. These are complicated, but they have an autoinstaller that allows you to start with a (usually) working version that you can modify.
-
+- **2.2 PAL demos**. These are less complicated, but you start from 0, and getting a working demo at the end requires a lot of skill (including debugging).
+- **2.3 PAL (installable) examples**. These are complicated, but they have an autoinstaller that allows you to start with a (usually) working version that you can modify.
 
 <br>
 
@@ -164,205 +106,60 @@ If you cant get a trial version of PAL running, then there's no reason to read f
     - I think you need a **mobile phone number** (and email).
   - It was a fairly long process, but very professionally done (I was impressed).<br><br><img src="/assets/pal_10_08.png" alt="drones" width="37%" style="border: 1px solid #999;"><br><br>
 
+<br>
+
+#### **[2.2 PAL demos (speedruns)](/3c.2_pal_initial_demos/)**
+
+Step-by-step start to finish demos. Original PAL demos with modified ZAI workflows and documentation. Organized (WIP) as a cohesive progressive study plan.
+
+*Main workflow diagram (simplified) for demo D1 (for details about this workflow see **[D1 workflow chats](/pal_1.3_workflow_chats/)**)*.<br><img src="/assets/777_25.png" alt="drones" width="68%" style="border: 1px solid #999;"><br> 
+
+*A diagram of the configuration steps for demo D2 (I spent days on my initial attempts to recreate D2 without this diagram; with this diagram its fairly simple; its even simpler if you do it in 3 separate phases as described in the latest version of the docx and if you simply ignore the shaded out parts of the demo)* <br><img src="/assets/MASTER_D2_2.png" alt="drones" width="55%" style="border: 1px solid #999;"> 
 
 <br>
 
-#### **[2.6 PAL demos (speedruns)](/3c.2_pal_initial_demos/)**
+#### **[2.3 PAL examples](/3c.1b_pal_examples/)**
 
-These are (typically) less complicated than installable PAL examples, but you start from 0, and getting a working demo at the end requires a lot of skill (including debugging). My future versions of these will take a different tactic: Not trying to do everything at once (get a basic result first, then go back and add the missing parts). But for now I'd recommend doing these after have done some installable examples.
+PAL "examples" are complete (usually more complicated) and have an installer that allows you to start with a (usually) working version that you can modify. ZAI adds a few extra steps: 
+- Install a second (experimental) example 
+- Modify that example at your own pace<br>
 
-<!-- 
-*(MAIN DIAGRAM: 610/D1/xx, 611/612/613/D2/**TODO**, 614/D3/xx, 614/D3/xx, 615/D4/xx, 616/D5/xx, 617/D6/xx, 618/D7/xx, 619/D8/xx, 627/DD19/**OK**)*.-->
+*PAL example (left, center) and my own build (right) (3c.1b)*<br><img src="/assets/pal_10_01.png" alt="drones" width="25%" style="border: 1px solid #999;">  <img src="/assets/pal_10_05.png" alt="drones" width="33%" style="border: 1px solid #999;">  <img src="/assets/pal_10_02.png" alt="drones" width="30%" style="border: 1px solid #999;"><br>
 
-  - Current demos consist of just D1-D8, the first PAL demos I did (step by step tutorials). 
-  - Demos are simpler, but I think more difficult to get running. I sometimes spent a few hours and at the end it did not work, and I did not know how to find the problem. But if you did the examples first, then you have enough of the environment experience to get through the demos..
-  
-<!-- The first demo I did was **["Speedrun: Your First End-to-End Workflow"](https://learn.palantir.com/speedrun-your-first-e2e-workflow/19448870)** *(for details on how I did the demo, see docx \#610 D1)*. The following diagram shows during the final test how the UI is used to change the ontology (section 8 Operational Workshop).
-
-*(left) order assigned to Bins, (right) reassigned to Weber, (bottom) result (saved to ontology)*<br><img src="/assets/777_26.png" alt="drones" width="75%" style="border: 1px solid #999;"><br> 
-
-For the D1 demo this is the main workflow diagram *(for details about this workflow see **[D1 workflow chats](/pal_1.3_workflow_chats/)**)*.<br><img src="/assets/777_25.png" alt="drones" width="75%" style="border: 1px solid #999;"><br> 
--->
-
-
-For the D1 demo this is the main workflow diagram *(for details about this workflow see **[D1 workflow chats](/pal_1.3_workflow_chats/)**)*.<br><img src="/assets/777_25.png" alt="drones" width="68%" style="border: 1px solid #999;"><br> 
-
-
-*A diagram of the configuration steps for demo D2 (I spent days on my initial attempts to recreate D2 without this diagram; with this diagram its fairly simple; its even simpler if you do it in 3 separate phases as described in the latest version of the docx)* <br><img src="/assets/777_28.png" alt="drones" width="55%" style="border: 1px solid #999;"> 
-
-
-<!-- 
-The following explains what section of the original demo text (for example "3") corresponds to what parts of the diagram (for example "[1a]").
-
-```
-3 Ingestion =             [1a] local files/manual upload → starting data in Foundry
-4 Transforming the Data = [1b] Pipeline Builder cleans/joins/unions data → output dataset
-5 Creating the Ontology = [3] output dataset becomes ontology object type
-6 Building Workshop App = [5] Workshop reads ontology objects and displays table/filters/charts/details
-7 Configuring Actions =   [3b] define ontology action/write capability
-8 Operational Workshop =  [5 + 3b] use UI to execute the action
-```
-
-  - I documented all details with screenshots.<br>*Demos of core functionality (3c.2)*<br><img src="/assets/pal_10_13.png" alt="drones" width="37%" style="border: 1px solid #999;">  <img src="/assets/pal_10_14.png" alt="drones" width="50%" style="border: 1px solid #999;"><br><br>
-
-You just did project setup / pipeline (goal 1). You know your way around Foundry. Now do demos that cover the rest of basic core Foundry functionality. Get hands-on experience before doing "operational" apps (goal 3).
-  - **Your initial focus will be on 2 things**
-    - **What button to press or where to click next.** The PAL dialogs are well done, but they require a lot of time to get used to.
-    - **"I'm stuck.... how do I find a solution"**. PAL has AIP and FDE to help. 
-  I just wanted to be shown what do. I did not care about options. So D1-D8 are a bit messy and not perfect, but 
-    - They are MS.Word docx files that I can update easily. You can download that file and use it as your working notebook. **You need to keep lab notes**.
-
--->
+*Workflow diagrams for examples are usually a bit more complicted than for demos.*<br><img src="/assets/MAIN_E17.png" alt="drones" width="67%" ><br>
 
 <br>
 
+## **3 Demo sources and docs**
 
-
-
-#### **[2.5 PAL examples](/3c.1b_pal_examples/)**
-
-PAL "examples" are complete (usually more complicated) and have an installer that allows you to start with a (usually) working version that you can modify. This is the best way to start.
-
-
-<!-- *(MAIN DIAGRAM: 621/E10/**OK**, 622/E11/**OK**, 626/E17/**OK**) // (623/E12/FUTURE) // (624/E15/FAIL, 625/E16/INSTALLERROR)*. -->
-
-  - Install a PAL example. The examples are installed and (usually) ready to run immediately. 
-  - Run the example first.
-  - Then rebuild the examples (from top to bottom, from downstream to upstream). The examples are excellent, but are often quite complicated. But you don't have to do everything first step-by-step before you see the the final results. Once you have a working first (reference) example, you can install a second (experimental) example that you modify at your pace. This allows you to (1) appreciate quickly the capabilities of PAL and (2) focus on learning the UI and basic concepts/terminology.<br>*PAL example (left, center) and my own build (right) (3c.1b)*<br><img src="/assets/pal_10_01.png" alt="drones" width="25%" style="border: 1px solid #999;">  <img src="/assets/pal_10_05.png" alt="drones" width="33%" style="border: 1px solid #999;">  <img src="/assets/pal_10_02.png" alt="drones" width="30%" style="border: 1px solid #999;"><br>
-  - Workflow diagrams for examples are usually a bit more complicted than for demos.<br> <img src="/assets/MAIN_E17.png" alt="drones" width="67%" ><br>
-
-
-<!-- *PAL has 3 types of hands on learning -- examples, demos (speedruns), and deep dives; DIY (do it yourself) is my own hands-on learning from scratch using FDE(GPT 5.5) as the guide; in this doc I for now use the term "hands-on's" (a tongue twister) to refer to them all (until I think of a better term)*. 
-
-- To really understand PAL you need to do hands-on's. 
-- Below is typical hands-on diagram. The idea is to show
-  - Security functionality. 
-    - Crystal balls #1-3 represent the security aspects of Foundry (ensuring every user can only performed authorized actions). 
-    - Each ball represents a security area (I am not sure about this, but I am sure security needs to be in the diagram): 
-      - (1) Input (starting) data -> pipeline -> ontology.
-      - (2) Ontology -> analysis -> UI AND UI -> ontology -> data source. 
-      - (3) Global security.   
-  - Workflow
-    - steps 
-    - functionality (text below the diagram)
-  - Required example/demos installation/configuration steps
-    - Examples (ORANGE = everything is installed for you)
-    - Demos/deep-dives (RED = you must configure everything) -->
-
+- **3.1 Palantir Foundry sources**
+- **3.1 Demo plan** (outdated) 
+- **3.1 Demo docs creation/maintenence strategy** (26.0818)
 
 <br>
 
-## **3 Planning, docs, etc**
+#### **3.1 Palantir Foundry sources**
 
-- **3.2 Palantir Foundry demo sources**
-- **3.3 Demo plan** 
-- **3.4 Demo documentation creation/maintenence strategy** (26.0818)
-
-
-<br>
-
-#### **3.2 Palantir Foundry demo sources**
-
-When I first started with Foundry I was a bit overwhelmed (this is a very powerful system). I first checked out
+- See the **[chat with FDE about demo sources](/pal_3_demo_sources/)**.
 - **[palantir.com/docs/foundry](https://www.palantir.com/docs/foundry)**. Has a lot of great content. But its probably not where you want to initially start. Note: The most interesting thing on this page for me was the diagram below (I added numbering that matches the workflow diagram in 1.2 above).<br><img src="/assets/777_27.png" alt="drones" width="52%" style="border: 1px solid #999;"><br>
 - **Several Youtube sites**. The sites I viewed were quite good, but not really suited for an absolute beginner. Documents are the best for absolute beginners (and they tend to be more up-to-date and can serve as the template for your own docs).
-
-I wanted to get hands-on experience from the start. So I checked out several official Palantir sources of demos. There were a lot of demos. There seem to be 3 main sources *(see also the **[chat with FDE about demo sources](/pal_3_demo_sources/)**)*: 
 - **[build.palantir.com](https://build.palantir.com)** has links to examples/demos organized by type: AI Starter Pack, Document Suite, Reference Implementation, etc.<br><img src="/assets/777_23.png" alt="drones" width="32%" style="border: 1px solid #999;"><br> 
 - **[learn.palantir.com](https://learn.palantir.com)** has links to examples/demo organized by role: Data Engineer, App Dev, etc.<br><img src="/assets/777_22.png" alt="drones" width="65%" style="border: 1px solid #999;"><br> 
-- **[my-org].palantirfoundry.com/workspace/marketplace** is a Foundry internal app for finding examples/demos organized by 9 "stores".<br><img src="/assets/777_21.png" alt="drones" width="45%" style="border: 1px solid #999;"><br> 
+- **[my-org].palantirfoundry.com/workspace/marketplace** is a Foundry internal app for finding examples/demos organized by 9 "stores".<br><img src="/assets/777_21.png" alt="drones" width="45%" style="border: 1px solid #999;"><br><br>
+
+#### **3.2 Demo plan** (outdated) 
+
+I spent the first month doing the demos I thought looked interesting from the sources listed in 2.2 above *(lab notes (MS.Word docx files) are available for each example/demo on the **[GDrive](https://drive.google.com/drive/folders/1-Adawag9uA8_bq-hDF-nOuPYaRLz1eEO)**)*. Those demos are organized (by Palantir) by role and project types. But what I really needed was a (straight, start to finish) learning path for a generalist beginner. So I decided I'd just start doing demos and after a while I'd eventually figure out a learning path. I still don't have a learning path. But I do have a rough draft (OUTDATED) learning plan **[#699\_planning\_.docx](https://drive.google.com/drive/folders/1-Adawag9uA8_bq-hDF-nOuPYaRLz1eEO)**<br><img src="/assets/777_24.png" alt="drones" width="46%" style="border: 1px solid #999;"><br>
 
 <br>
 
-
-#### **3.3 Demo plan** 
-
-
-I spent the first month doing the demos I thought looked interesting from the sources listed in 2.2 above *(lab notes (MS.Word docx files) are available for each example/demo on the **[GDrive](https://drive.google.com/drive/folders/1-Adawag9uA8_bq-hDF-nOuPYaRLz1eEO)**)*. Those demos are organized (by Palantir) by role and project types. But what I really needed was a (straight, start to finish) learning path for a generalist beginner. So I decided I'd just start doing demos and after a while I'd eventually figure out a learning path. 
-
-I still don't have a learning path. But I do have a rough draft learning plan **[#699\_planning\_.docx](https://drive.google.com/drive/folders/1-Adawag9uA8_bq-hDF-nOuPYaRLz1eEO)** that documents 
-- All the sources
-- What I did so far
-- What I plan to do<br><img src="/assets/777_24.png" alt="drones" width="46%" style="border: 1px solid #999;"><br>
-
-The goal of \#699:
-- Clear master list of demos (examples, courses, etc).
-- For each demo: A simple Foundry workflow main diagram with for that demo.
-
+#### **[3.3 Demo docs creation/maintenence strategy](/3c.1b_pal_docx_md/)** (26.0818)
 
 <br>
 
-#### **[3.4 Demo documentation creation/maintenence strategy](/3c.1b_pal_docx_md/)** (26.0818)
+26.0827 (0814, v1 26.0702) 
 
-
-
-
-<!-- <br>
-
-#### **[2.4 Why (installed) examples first](/3c.1b_pal_readmefirst/)**
-
- Before you start using Foundry, I recommend you read the readmefirst page that discusses various things to keep in mind as you work your way through the examples/demos (problems to watch out for, avoid, etc). 
-
-\#699 is still a work in progress. Meanwhile I will document my tests in the following order
-- **2.5 PAL (installed) examples**. These are complicated, but they have an autoinstaller that allows you to start with a (usually) working version that you can modify.
-- **2.6 PAL demos**. These are less complicated, but you start from 0, and getting a working demo at the end requires a lot of skill (including debugging).
-- **2.7 DIY demos**. Go free style (not "vibe") by teaming up with FDE (AI assistant) to create your own demos.
--->
-
-<!-- **(2.6) PAL demo D2:** The following was the second demo D2 (see 2.6 below) that I did. 
-
-
-
-- The screenshot below is from the ZiptieAI D02 demo **[D02 First AIP workflow](/3c.2_pal_aip/)** (from 2.7 below). 
-- This is the **[speedrun tutorial link](https://learn.palantir.com/speedrun-your-e2e-aip-workflow)**.
-
-<img src="/assets/final-01.png" alt="drones" width="70%" style="border: 1px solid #999;"><br> 
-
-
-Its the first example of setting up the Workshop (UI). 
-- It took a long time to get right (several days). And its usually the last thing you setup for an app. If you made a mistake earlier in the pipeline, ontology, functions, etc then things just dont work in the workshop. And its not easy (for a beginner) to figure out why. 
-- The diagram shows that are basically 2 parts that dont depend on each other. 
-  - The bottom widget response takes the top widget input and uses an LLM to answer the question with the RAG input.
-  - The left and right widgets do the complicated part
-    - Left widget takes the query text and compares against the embedding values in the "TT2 Chunk VVV" object type. It outputs to variable "Relevant Chunks VVV" the top 9 matching embeddings.
-    - Right widget takes the relevant chunks and inputs to the Vertex template for display.   
-- What this means is you could have done this demo from start (pipeline) to finish (UI) in 3 parts. 
-  - First LLM (top and bottom widgets).
-  - Then display the nearest embedding neighbors (left widget).
-  - Finally build the template and add to the right widget.
-- That would make it easier to handle all the complexity and not get stuck.
-- But best of all would be to have this as an example. You install 2 working example instance. Use one as a reference and slowly rebuild parts of the other.   
-
-
-<img src="/assets/777_28.png" alt="drones" width="80%" style="border: 1px solid #999;">  -->
-
-<!--
-**(2.7) DIY demo D9:** The following is the second example of setting up the Workshop (UI). This was for DIY demo D09 (see 2.7 below). This also took a long time to get right (but far less than D02, because I was not following instructions, but working from scratch with FDE). 
-- The screenshot below is from the ZiptieAI DIY demo **[D9 UI (Workshop)](/3c.xxx_pal_HN_01_non_ai/)** (from 2.7 below). <br><img src="/assets/777_05.png" alt="drones" width="100%" style="border: 1px solid #999;"><br> 
-
-
-- It took me a long time to get the Workshop in that DIY demo working. Even FDE made a mistake during the configuration. Afterwards I created this simple diagram (with uniquely numbered steps and variables; they don't have to be perfect, just something you can trace). If I had had such a diagram for the step-by-step demos I had done earlier, I would have understood better what I had been doing. When you get your first Workshop running, spend extra time tracing through all the connections. Experiment. Do this for other tools.<br> <img src="/assets/777_04.png" alt="drones" width="80%" style="border: 1px solid #999;"> 
-
-
-For your first workshop configuration a simple diagram with numbered steps and variables can make it much easier to grasp what you are doing. Because when you start to try setting up your own config, you need that understanding. 
--->
-
-
-<!--  <br>*app that works 24/7, notifies, etc (this pic is not correct; just a placeholder)*<br><img src="/assets/pal_10_06.png" alt="drones" width="80%" style="border: 1px solid #999;"> -->
-
-<br>
-
-26.0826 (0814, v1 26.0702) 
-
-<br>
-<br>
-<br><br>
-<br>
-<br><br>
-<br><br><br><br><br><br><br><br><br>
-<br>
-<br>
-<br>
+<br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br>
 
 ----------------
 ----------------
@@ -381,17 +178,11 @@ For your first workshop configuration a simple diagram with numbered steps and v
 
 <br>
 
-
-
-
-
 ### **3 Advanced hands-on (FUTURE)**
 
 This will focus on partnering with FDE to cover 2 major topics areas
   - **3.1 Demos for *Foundry certification exam guide for application developer* topics** (the exam involves answering questions; this section uses the exam to determine what demos to do).  
   - **3.2 Other demos** (Managing Foundry environment, 24/7 operation, streams, deployments, packaging, sharing, etc).
-
-
 
 <br> 
 
@@ -453,6 +244,155 @@ Basically whatever is inspired by **[Online PAL docs](https://www.palantir.com/d
 (TODO)
 
 <br> -->
+
+<!-- These are (typically) less complicated than installable PAL examples, but you start from 0, and getting a working demo at the end requires a lot of skill (including debugging). My future versions of these will take a different tactic: Not trying to do everything at once (get a basic result first, then go back and add the missing parts). But for now I'd recommend doing these after have done some installable examples.
+
+  - Current demos consist of just D1-D8, the first PAL demos I did (step by step tutorials). 
+  - Demos are simpler, but I think more difficult to get running. I sometimes spent a few hours and at the end it did not work, and I did not know how to find the problem. But if you did the examples first, then you have enough of the environment experience to get through the demos. -->
+  
+<!-- *PAL has 3 types of hands on learning -- examples, demos (speedruns), and deep dives; DIY (do it yourself) is my own hands-on learning from scratch using FDE(GPT 5.5) as the guide; in this doc I for now use the term "hands-on's" (a tongue twister) to refer to them all (until I think of a better term)*. 
+
+- To really understand PAL you need to do hands-on's. 
+- Below is typical hands-on diagram. The idea is to show
+  - Security functionality. 
+    - Crystal balls #1-3 represent the security aspects of Foundry (ensuring every user can only performed authorized actions). 
+    - Each ball represents a security area (I am not sure about this, but I am sure security needs to be in the diagram): 
+      - (1) Input (starting) data -> pipeline -> ontology.
+      - (2) Ontology -> analysis -> UI AND UI -> ontology -> data source. 
+      - (3) Global security.   
+  - Workflow
+    - steps 
+    - functionality (text below the diagram)
+  - Required example/demos installation/configuration steps
+    - Examples (ORANGE = everything is installed for you)
+    - Demos/deep-dives (RED = you must configure everything) -->
+
+<!-- <br>
+
+#### **[2.4 Why (installed) examples first](/3c.1b_pal_readmefirst/)**
+
+ Before you start using Foundry, I recommend you read the readmefirst page that discusses various things to keep in mind as you work your way through the examples/demos (problems to watch out for, avoid, etc). 
+
+\#699 is still a work in progress. Meanwhile I will document my tests in the following order
+- **2.5 PAL (installed) examples**. These are complicated, but they have an autoinstaller that allows you to start with a (usually) working version that you can modify.
+- **2.6 PAL demos**. These are less complicated, but you start from 0, and getting a working demo at the end requires a lot of skill (including debugging).
+- **2.7 DIY demos**. Go free style (not "vibe") by teaming up with FDE (AI assistant) to create your own demos.
+-->
+
+<!-- **(2.6) PAL demo D2:** The following was the second demo D2 (see 2.6 below) that I did. 
+
+
+
+- The screenshot below is from the ZiptieAI D02 demo **[D02 First AIP workflow](/3c.2_pal_aip/)** (from 2.7 below). 
+- This is the **[speedrun tutorial link](https://learn.palantir.com/speedrun-your-e2e-aip-workflow)**.
+
+<img src="/assets/final-01.png" alt="drones" width="70%" style="border: 1px solid #999;"><br> 
+
+
+Its the first example of setting up the Workshop (UI). 
+- It took a long time to get right (several days). And its usually the last thing you setup for an app. If you made a mistake earlier in the pipeline, ontology, functions, etc then things just dont work in the workshop. And its not easy (for a beginner) to figure out why. 
+- The diagram shows that are basically 2 parts that dont depend on each other. 
+  - The bottom widget response takes the top widget input and uses an LLM to answer the question with the RAG input.
+  - The left and right widgets do the complicated part
+    - Left widget takes the query text and compares against the embedding values in the "TT2 Chunk VVV" object type. It outputs to variable "Relevant Chunks VVV" the top 9 matching embeddings.
+    - Right widget takes the relevant chunks and inputs to the Vertex template for display.   
+- What this means is you could have done this demo from start (pipeline) to finish (UI) in 3 parts. 
+  - First LLM (top and bottom widgets).
+  - Then display the nearest embedding neighbors (left widget).
+  - Finally build the template and add to the right widget.
+- That would make it easier to handle all the complexity and not get stuck.
+- But best of all would be to have this as an example. You install 2 working example instance. Use one as a reference and slowly rebuild parts of the other.   
+
+
+<img src="/assets/777_28.png" alt="drones" width="80%" style="border: 1px solid #999;">  -->
+
+<!--
+**(2.7) DIY demo D9:** The following is the second example of setting up the Workshop (UI). This was for DIY demo D09 (see 2.7 below). This also took a long time to get right (but far less than D02, because I was not following instructions, but working from scratch with FDE). 
+- The screenshot below is from the ZiptieAI DIY demo **[D9 UI (Workshop)](/3c.xxx_pal_HN_01_non_ai/)** (from 2.7 below). <br><img src="/assets/777_05.png" alt="drones" width="100%" style="border: 1px solid #999;"><br> 
+
+
+- It took me a long time to get the Workshop in that DIY demo working. Even FDE made a mistake during the configuration. Afterwards I created this simple diagram (with uniquely numbered steps and variables; they don't have to be perfect, just something you can trace). If I had had such a diagram for the step-by-step demos I had done earlier, I would have understood better what I had been doing. When you get your first Workshop running, spend extra time tracing through all the connections. Experiment. Do this for other tools.<br> <img src="/assets/777_04.png" alt="drones" width="80%" style="border: 1px solid #999;"> 
+
+
+For your first workshop configuration a simple diagram with numbered steps and variables can make it much easier to grasp what you are doing. Because when you start to try setting up your own config, you need that understanding. 
+-->
+
+
+<!--  <br>*app that works 24/7, notifies, etc (this pic is not correct; just a placeholder)*<br><img src="/assets/pal_10_06.png" alt="drones" width="80%" style="border: 1px solid #999;"> -->
+
+
+<!-- https://ziptieai.usw-17.palantirfoundry.com/ -->
+<!-- 
+*(MAIN DIAGRAM: 610/D1/xx, 611/612/613/D2/**TODO**, 614/D3/xx, 614/D3/xx, 615/D4/xx, 616/D5/xx, 617/D6/xx, 618/D7/xx, 619/D8/xx, 627/DD19/**OK**)*.-->
+
+<!-- The first demo I did was **["Speedrun: Your First End-to-End Workflow"](https://learn.palantir.com/speedrun-your-first-e2e-workflow/19448870)** *(for details on how I did the demo, see docx \#610 D1)*. The following diagram shows during the final test how the UI is used to change the ontology (section 8 Operational Workshop).
+
+*(left) order assigned to Bins, (right) reassigned to Weber, (bottom) result (saved to ontology)*<br><img src="/assets/777_26.png" alt="drones" width="75%" style="border: 1px solid #999;"><br> 
+
+For the D1 demo this is the main workflow diagram *(for details about this workflow see **[D1 workflow chats](/pal_1.3_workflow_chats/)**)*.<br><img src="/assets/777_25.png" alt="drones" width="75%" style="border: 1px solid #999;"><br> 
+-->
+
+<!-- 
+The following explains what section of the original demo text (for example "3") corresponds to what parts of the diagram (for example "[1a]").
+
+```
+3 Ingestion =             [1a] local files/manual upload → starting data in Foundry
+4 Transforming the Data = [1b] Pipeline Builder cleans/joins/unions data → output dataset
+5 Creating the Ontology = [3] output dataset becomes ontology object type
+6 Building Workshop App = [5] Workshop reads ontology objects and displays table/filters/charts/details
+7 Configuring Actions =   [3b] define ontology action/write capability
+8 Operational Workshop =  [5 + 3b] use UI to execute the action
+```
+
+  - I documented all details with screenshots.<br>*Demos of core functionality (3c.2)*<br><img src="/assets/pal_10_13.png" alt="drones" width="37%" style="border: 1px solid #999;">  <img src="/assets/pal_10_14.png" alt="drones" width="50%" style="border: 1px solid #999;"><br><br>
+
+You just did project setup / pipeline (goal 1). You know your way around Foundry. Now do demos that cover the rest of basic core Foundry functionality. Get hands-on experience before doing "operational" apps (goal 3).
+  - **Your initial focus will be on 2 things**
+    - **What button to press or where to click next.** The PAL dialogs are well done, but they require a lot of time to get used to.
+    - **"I'm stuck.... how do I find a solution"**. PAL has AIP and FDE to help. 
+  I just wanted to be shown what do. I did not care about options. So D1-D8 are a bit messy and not perfect, but 
+    - They are MS.Word docx files that I can update easily. You can download that file and use it as your working notebook. **You need to keep lab notes**.
+
+-->
+<!-- *(MAIN DIAGRAM: 621/E10/**OK**, 622/E11/**OK**, 626/E17/**OK**) // (623/E12/FUTURE) // (624/E15/FAIL, 625/E16/INSTALLERROR)*. -->
+
+<!-- 
+***TL;DR?** If you want to get started hands-on with Palantir Foundry **ASAP**, then (1) follow the directions (on this page) in **2.1 Palantir free tier sign up** and then (2) do the ZiptieAI version of the first basic **[Palantir Foundry demo D1](/3c.1_pal_foundry/)**.*
+
+-->
+<!-- ## **[0 My approach to learning Palantir Foundry](/pal_approach/)** 26.0808 -->
+<!-- 
+
+Palantir Foundry represents the logical culmination of ZiptieAI: neural networks, models, agents, workflows, AI assistance, governance, and enterprise systems brought together in a single platform. I view AI as a powerful engineering tool rather than true intelligence. This is one reason I find Palantir's approach appealing: AI is used as a helpful assistant within a governed enterprise platform rather than as a replacement for human judgment.
+
+NOTE: My position on AI is explained on the **[Hack](/0-demo/)** page. 
+**NOTE: The last 2 bullet points above are not contradictory**. On the webpage **[Hack](/0-demo/)** I unapologetically explain why AI is a hack, a mere simulation of human intelligence (something all AI gurus are well aware of). After a decade of empty promises, there are still no safe self-driving cars. Humanoid robots will not be safe around people. I would argue that the recent departure of Google's top AI gurus was because of the failure to deliver on the promises of AI (Google may be going more of the direction of Palantir). But **AI has revolutionized programming** (because AI and programming AI are based on binary computation). Palantir's approach to enterprise AI is the logical final chapter in ZiptieAI. 
+ **Reorganized 26.0802**.
+- A very logically structured set of the simplest step-by-step demos (with critical details). 
+- Gradually more complex demos (future)
+- Core concepts (future) 
+-->
+
+<!-- 
+I am still working on **my own take on the core conceptual gist of Palantir-SW**, but the gist is 
+- Palantir makes the enterprise visible and governable.
+- LLMs only play the role of a helpful assistants, but their very presence makes parts of that visibility probabilistic, so they must be sandboxed, verified, and logged. 
+
+
+
+Note: I often use GPT to "polish" text. And GPT makes a lot of very good suggestions. But GPT is also programmed to strongly suggest the "politically correct" version of reality when it comes to AI. The title for the screenshot below is a perfect example. 
+
+-->
+<!-- For the demos I wanted a more mechanistic conceptual overview (I am more interested in the mechanics of the PAL tools used than the business cases). At first I wanted something like the simple Foundry workflow diagram below with text to summarize what parts an example/demo covered. -->
+
+<!-- **About AI**. AI can appear in many layers (pipeline transforms, model integration, ontology functions, analysis, UI assistants). **Always as a helfpful assistant, never the center of the universe, never in the driver's seat. Which is exactly where AI (simulated intelligence based on pattern recognition) will always belong.** This is reponsible exploitation of the true powerf of computational AI. -->
+<!--
+- how data enters the system (#1), 
+- how applications and AI interact with operational data (#2), and 
+- how the entire platform is secured, audited, and managed (#3). -->
+
+
+
 
 <!-- ### **[3c.1 PAL app concepts (WIP)](/3c.ccc_pal_concepts/)**
 
