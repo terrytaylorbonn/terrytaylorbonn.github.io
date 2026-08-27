@@ -134,7 +134,7 @@ PAL "examples" are complete (usually more complicated) and have an installer tha
 
 - **3.1 Palantir Foundry sources**
 - **3.2 Demo plan** (outdated) 
-- **3.3 Demo docs creation/maintenence strategy** (26.0818)
+- **3.3 Demo docs creation/maintenence strategy**
 
 <br>
 
@@ -153,7 +153,10 @@ I spent the first month doing the demos I thought looked interesting from the so
 
 <br>
 
-#### **[3.3 Demo docs creation/maintenence strategy](/3c.1b_pal_docx_md/)** (26.0818)
+#### **[3.3 Demo docs creation/maintenence strategy](/3c.1b_pal_docx_md/)**
+
+*Demo doc creation/maintenance process (AI makes this process practical and reliable)*<br><img src="/assets/777_32.png" alt="drones" width="62%" style="border: 1px solid #999;"><br>
+
 
 <br>
 
