@@ -22,28 +22,49 @@ But recently (26.0826) the focus has shifted to
 - Generating the ZAI website docs from docx files (using GPT).
 - Organizing the demos into a series that intros Foundry in logical order.
 
-*Notes: See also: **[PAL demo strategy](/3c.aaa_pal_strategy_demos/)** (outdated). BELOW: D = demo, DD = deep dive.*
+*See also: **[PAL demo strategy](/3c.aaa_pal_strategy_demos/)** (outdated). BELOW: D = demo, DD = deep dive.*
 
 <br>
 
-#### **1 CORE DEMOS**
+### **1 Main thread** 
 These will focus on **getting started (grasping core concepts via hands-on demos) with Foundry + AI + agents**.
-- **[D1 = "Speedrun -- Your First End-to-End Workflow" (26.0818)](/3c.1_pal_foundry/)**. Your first hands-on with the basics.  <!--  - Demo complete... still need to write the webpage.   - #610_pal_1_foundry_v02_26.0704_SS.docx     - https://learn.palantir.com/speedrun-your-first-e2e-workflow/1944887 -->
-- **[(WIP) D2 = "Speedrun -- Your First AIP Workflow" (26.0824)](/3c.2_pal_aip/)**. Your first app with AI. <!--  - Tis is just a rough summary for now...   - 611vvv_pal_2_aip_qs_v07_26.0713_SS (2).docx - https://learn.palantir.com/speedrun-your-e2e-aip-workflow -->
-- **[(TODO) D2b = D2 + PAL "crystal ball" controls](/3c.2_pal_D2b_ai_monitor/)**. Work with GPT/FDE to add Foundry safety rails to D2 to make using remote LLMs safer (finding an existing demo for this would be better). 
-- **[(TODO) D2c = D2(b) + D8 (local (maybe custom trained) models)](/3c.8_pal_D2c_D8/)**. Locals models (+RAG) are probably the optimal solution (see D8 demo description below on this page).
-- **[(TO-UPDATE) D3 = Palantir agentic AI "speedrun" (quick start) (26.0713)](/3c.3_pal_agentic_ai/)**.
+- DIY = do it yourself; I created with FDE/GPT assistance.
+
+#### **[D1 = "Speedrun -- Your First End-to-End Workflow" (26.0818)](/3c.1_pal_foundry/)**
+Your first hands-on with the basics.  <!--  - Demo complete... still need to write the webpage.   - #610_pal_1_foundry_v02_26.0704_SS.docx     - https://learn.palantir.com/speedrun-your-first-e2e-workflow/1944887 -->
+
+#### **[(WIP) D2 = "Speedrun -- Your First AIP Workflow" (26.0824)](/3c.2_pal_aip/)**
+Your first app with AI. <!--  - Tis is just a rough summary for now...   - 611vvv_pal_2_aip_qs_v07_26.0713_SS (2).docx - https://learn.palantir.com/speedrun-your-e2e-aip-workflow -->
+
+#### **[(TO-UPDATE) D3 = Palantir agentic AI "speedrun" (quick start) (26.0713)](/3c.3_pal_agentic_ai/)**
+First agent in Foundry.
+
+#### **[(TO-UPDATE, DIY) D9 = Haystack needle demo](/3c.xxx_pal_HN_01_non_ai/)** 
+Haystack needle, with/without AI model (find small anomalies in mountains of data). **What has interested me the most about Palantir for over a year now are the "haystack needle" (HN) algorithms**. This was the original reason for the founding of PAL. PAL's job was to sift through vast amounts of data to flag potential threats. To find the needle in the haystack.
+
+#### **[(TO-UPDATE) D5: Speedrun: Mining Your First Business Process (26.0718)](/3c.5_pal_biz_process_mining/)**. 
+IS THIS LIKE D9??????
+  - #616_pal_5_biz_process_mining_qs_v02_26.0718_ss (1).docx
+  - https://learn.palantir.com/speedrun-mining-your-first-business-process
+
+#### **[(TO-UPDATE) D8: Deep Dive: Model integration (26.0721)](/3c.8_pal_8_model_integration/)**
+  - #619_.docx
+  - Sections 2c, 2d were not in the demos. I prompted AIP/FDE for directions.
+
+#### **[(TODO) D2c = D2(b) + D8 (local (maybe custom trained) models)](/3c.8_pal_D2c_D8/)** 
+Locals models (+RAG) are probably the optimal solution (see D8 demo description below on this page).
+
+#### **[(TODO) D2b = D2 + PAL "crystal ball" controls](/3c.2_pal_D2b_ai_monitor/)**
+Work with GPT/FDE to add Foundry safety rails to D2 to make using remote LLMs safer (finding an existing demo for this would be better). 
+
 
 <br>
 
-#### **2 TO-UPDATE**
+### **2 Duplicates/other**
 - **[D4: Palantir ontology function "speedrun" (quick start) (26.0717)](/3c.4_pal_ontology_function/)**. 
   - At the end of this page is *good demo of how FDE/GPT5.5 fixed a problem with the demo*.
   - #615_pal_4_onto_function_qs_v02_26.0717_ss (2).docx 
   - https://learn.palantir.com/speedrun-your-first-ontology-function/2131538
-- **[D5: Speedrun: Mining Your First Business Process (26.0718)](/3c.5_pal_biz_process_mining/)**. 
-  - #616_pal_5_biz_process_mining_qs_v02_26.0718_ss (1).docx
-  - https://learn.palantir.com/speedrun-mining-your-first-business-process
 - **[D6: Deep Dive: Building Your First Pipeline (26.0719)](/3c.6_pal_6_first_app/)**.
   - **Some of this failed**. FDE/GPT/OPUS could not fix. 
   - outdated (2+ years) demo? MAKE THE DEMOS SIMPLER AND KEEP THEM UPDATED.
@@ -52,24 +73,14 @@ These will focus on **getting started (grasping core concepts via hands-on demos
 - **[D7: Deep Dive: Building Your First Pipeline (26.0720)](/3c.7_pal_7_first_pipeline/)**.
   - #618_pal_7_first_pipeline_v01_26.0719_ss.docx
   - https://learn.palantir.com/deep-dive-building-your-first-pipeline
-- **[D8: Deep Dive: Model integration (26.0721)](/3c.8_pal_8_model_integration/)**.
-  - #619_.docx
-  - **Sections 2c, 2d were not in the demos. I prompted AIP/FDE for directions.**
 - **[DD19: Deep Dive: transform_data_w_code_repos (26.0805)](/3c.19_pal_19_transform_data_git/)**.
   - #627_pal_DD19_transform_data_w_code_repos_v02_26.0805_ss.docx
 
+
+
 <br>
 
-#### **3 DIY (with FDE assistance) demos**
-
-<!-- #### **[2.7 DIY (with FDE assistance) demos](/3c.xxx_pal_gist/)** -->
-
-Go free style (not "vibe") by teaming up with FDE (AI assistant) to create your own demos. 
-- FDE is an amazing tool that can (1) "see" screenshots that you paste into a chat and (2) guide your through the most complex configurations and problem solving. (see **[3c.2 PAL AI dev assistants](/3c.bbb_pal_strategy_fde/)** for AIP/FDE details)
-- When you start free styling, things get complicated easily. You do try things that the experts knew to avoid when they created installable-examples and step-by-step demos. It took me a long time to get the Workshop in that DIY demo working. Even FDE made a mistake during the configuration. 
-
-Demo list: 
-- **[Demo 9: HN demos](/3c.xxx_pal_HN_01_non_ai/)** (haystack needle, with/without AI model). (HN = find small anomalies in mountains of data)**What has interested me the most about Palantir for over a year now are the "haystack needle" (HN) algorithms**. This was the original reason for the founding of PAL. 9/11 occured because the US government failed to detect obvious warning signs in a sea of data. PAL's job was to make sure that that did not happen again by creating a system that could sift through vast amounts of data (about, for example, a sudden surge in foreigners studying to fly large airliners) to flag potential threats. To find the needle in the haystack.
+26.0827 (v1 26.0725)
 
 
 <!-- 
@@ -82,10 +93,6 @@ But you need to have an idea of the big picture direction for any project. The (
 Afterwards I created this simple diagram to make sure I could miss those "rabbit holes" in the future (with uniquely numbered steps and variables; they don't have to be perfect, just something you can trace). <br> <img src="/assets/777_04.png" alt="drones" width="60%" style="border: 1px solid #999;"> 
 
 -->
-
-<br>
-
-26.0826 (v1 26.0725)
 
 <!-- 
 

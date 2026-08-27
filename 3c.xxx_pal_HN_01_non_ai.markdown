@@ -9,6 +9,15 @@ permalink: /3c.xxx_pal_HN_01_non_ai/
 [← 3c.3 DIY (with FDE assistance) demos](/3c.xxx_pal_gist/)
 
 
+<!--  ADD THIS??????????????????????????????????????
+**3 DIY (with FDE assistance) demos**
+
+Go free style (not "vibe") by teaming up with FDE (AI assistant) to create your own demos. 
+- FDE is an amazing tool that can (1) "see" screenshots that you paste into a chat and (2) guide your through the most complex configurations and problem solving. (see **[3c.2 PAL AI dev assistants](/3c.bbb_pal_strategy_fde/)** for AIP/FDE details)
+- When you start free styling, things get complicated easily. You do try things that the experts knew to avoid when they created installable-examples and step-by-step demos. It took me a long time to get the Workshop in that DIY demo working. Even FDE made a mistake during the configuration. -->
+
+Demo list: 
+
 
 <br>
 
