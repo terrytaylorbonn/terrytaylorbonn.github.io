@@ -133,8 +133,8 @@ PAL "examples" are complete (usually more complicated) and have an installer tha
 ## **3 Demo sources and docs**
 
 - **3.1 Palantir Foundry sources**
-- **3.1 Demo plan** (outdated) 
-- **3.1 Demo docs creation/maintenence strategy** (26.0818)
+- **3.2 Demo plan** (outdated) 
+- **3.3 Demo docs creation/maintenence strategy** (26.0818)
 
 <br>
 
@@ -159,6 +159,8 @@ I spent the first month doing the demos I thought looked interesting from the so
 
 26.0827 (0814, v1 26.0702) 
 
+
+<!--
 <br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br>
 
 ----------------
@@ -226,7 +228,10 @@ Basically whatever is inspired by **[Online PAL docs](https://www.palantir.com/d
 - *[Palantir CEO火力全开，场面控制不住了！](https://www.youtube.com/watch?v=feUFT1Q-oBA)*
 - *[zerohedge.com/ai/something-has-gone-completely-wrong-palantirs-alex-karp-goes-ballistic-openai-anthropic](https://www.zerohedge.com/ai/something-has-gone-completely-wrong-palantirs-alex-karp-goes-ballistic-openai-anthropic)*
 - *https://www.youtube.com/watch?v=lSDC6-BdVus?t=341 HBM, diagram of NN, interconnecting multiple GPUs*
+###############################################################################################################
+###############################################################################################################
 
+-->
 
 <!-- and reference material:
 - A6-A8: AI usage / concepts / certification ([Certified Foundry Application Developer](https://learn.palantir.com/page/exam-guides))
