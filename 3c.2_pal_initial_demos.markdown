@@ -105,24 +105,24 @@ Note:
 Your first hands-on with the basics (pipeline, ontology, actions, UI).  
 - A good demo (though a bit too complicated as an initial demo.. I would make something simpler). Plan on spending minimum a full day on this (the demo docs say you will need only 60 minutes).
 - The ZAI splits the demos into 3 phases (this makes the demo much easier to finish and understand).
-- [#610_pal_1_foundry_v02_26.0704_SS.docx](https://drive.google.com/drive/folders/1-Adawag9uA8_bq-hDF-nOuPYaRLz1eEO)     
-- https://learn.palantir.com/speedrun-your-first-e2e-workflow/1944887
+- **[#610_.docx](https://drive.google.com/drive/folders/1-Adawag9uA8_bq-hDF-nOuPYaRLz1eEO)**     
+- **[Speedrun](https://learn.palantir.com/speedrun-your-first-e2e-workflow/1944887)**
 
 <br>
 
-#### **[D2 (WIP) = "Speedrun -- Your First AIP Workflow" (26.0824)](/3c.2_pal_aip/)**
+#### **[D2 (WIP) = "Speedrun -- Your First AIP Workflow" (26.0827)](/3c.2_pal_aip/)**
 Your first app with AI. 
 - Use AI (external models) to clean up extracted chunks of text from PDFs, to extract text keywords ("entities" in the demo) from the chunk, to match a question to chunks via embeddings (machine language representation of the question/chunks meanings (not keywords)), make a RAG call with the question/chunks to answer the question.
 - About half of the demo has nothing to do with AI (the ZAI version splits the demo into 3 phases; phase 3 is the no-AI part; you can skip it).
-- [#611www_pal_D2_aip_v17_26.0825_SS_REDUCED.docx](https://drive.google.com/drive/folders/1-Adawag9uA8_bq-hDF-nOuPYaRLz1eEO)
-- https://learn.palantir.com/speedrun-your-e2e-aip-workflow
+- **[#611www_.docx](https://drive.google.com/drive/folders/1-Adawag9uA8_bq-hDF-nOuPYaRLz1eEO)**
+- **[Speedrun](https://learn.palantir.com/speedrun-your-e2e-aip-workflow)**
 
 <br>
 
 #### **[D3 (TO-UPDATE) = Palantir agentic AI "speedrun" (quick start) (26.0713)](/3c.3_pal_agentic_ai/)**
 - First agent in Foundry. 
 - The ZAI pages **[Hack](https://ziptieai.com/0-demo/)**, **[2 NNs (neural networks)](https://ziptieai.com/2_models/)**, and **[2b Models](https://ziptieai.com/2b_models/)** are a good intro to what an LLM is (a hack, not intelligent). An LLM has an internal agent (iAgent) and a transformer (TF). The TF simply inputs tokens, generates a classification of the input (based on matching to the closest training input), that classification is converted into a token, that token is appended to the input, and that combo is now the next input. With a TF you can not construction anything more than tokens sequences. No complicated hierarchical intelligent-like response. The iAgent provides the API that a human's UI program uses to interact with the model and use the TF. 
-- An (external) **[agent](https://ziptieai.com/3-agents)** is basically using a procedural program (not GPU-based TF) to replace the human (its a lot complicated than that, but that's the gist). That external agent usually has access not only to the LLM, but also to some very powerful computer systems. For example, FSD (full self driving) is basically an agent that uses AI for a lot things that require "sensing", "seeing" the external world and using the probablistic computed results to control a car.
+- ZAI page **[3 Agents](https://ziptieai.com/3_agents)** describes how an (external) agent is basically a procedural program (not GPU-based TF) thats replace the human in the "chat" loop (its a lot more complicated than that, but that's the gist). That external agent usually has access not only to the LLM, but also to some very powerful computer systems. For example, FSD (full self driving) is basically an agent that uses AI for a lot things that require "sensing", "seeing" the external world and using the probablistic computed results to control a car.
 - **FSD is inherently very dangerous and unpredicable. Agents in an enterprise are also.** Thats why there are complex agent frameworks (such as Langgraph, LangChain, etc) that lessen the danger (at the cost of a great deal of programming complexit). **This demo is about Foundry can be used to minimize that risk with far less complexity**.  
 
 <br>
@@ -133,8 +133,8 @@ Your first app with AI.
 <br>
 
 #### **[D5 (TO-UPDATE): Speedrun: Mining Your First Business Process (26.0718)](/3c.5_pal_biz_process_mining/)**. 
-  - [#616_pal_5_biz_process_mining_qs_v02_26.0718_ss (1).docx](https://drive.google.com/drive/folders/1-Adawag9uA8_bq-hDF-nOuPYaRLz1eEO)
-  - https://learn.palantir.com/speedrun-mining-your-first-business-process
+  - **[#616_.docx](https://drive.google.com/drive/folders/1-Adawag9uA8_bq-hDF-nOuPYaRLz1eEO)**
+  - **[Speedrun](https://learn.palantir.com/speedrun-mining-your-first-business-process)**
 
 FDE: The demo starts with claims, customers, and claim-history logs. After ingesting these datasets into Foundry, the data is modeled as Ontology objects such as Customers and Claims. Machinery then uses the process logs to reconstruct how claims move through the business process over time. Once the process map is built, you can inspect where claims get stuck, identify why some remain unresolved, and embed the process view into an interactive application.
 
@@ -150,7 +150,7 @@ Mechanically:
 <br>
 
 #### **[D8 (TO-UPDATE): Deep Dive: Model integration (26.0721)](/3c.8_pal_8_model_integration/)**
-  - [#619_.docx](https://drive.google.com/drive/folders/1-Adawag9uA8_bq-hDF-nOuPYaRLz1eEO)
+  - **[#619_.docx](https://drive.google.com/drive/folders/1-Adawag9uA8_bq-hDF-nOuPYaRLz1eEO)**
   - Sections 2c, 2d were not in the demos. I prompted AIP/FDE for directions.
 
 <br>
@@ -169,18 +169,18 @@ Work with GPT/FDE to add Foundry safety rails to D2 to make using remote LLMs sa
 ### **3 Duplicates/other demos**
 - **[D4: Palantir ontology function "speedrun" (quick start) (26.0717)](/3c.4_pal_ontology_function/)**. 
   - At the end of this page is *good demo of how FDE/GPT5.5 fixed a problem with the demo*.
-  - [#615_pal_4_onto_function_qs_.docx](https://drive.google.com/drive/folders/1-Adawag9uA8_bq-hDF-nOuPYaRLz1eEO) 
-  - https://learn.palantir.com/speedrun-your-first-ontology-function/2131538
+  - **[#615_.docx](https://drive.google.com/drive/folders/1-Adawag9uA8_bq-hDF-nOuPYaRLz1eEO)** 
+  - **[Speedrun](https://learn.palantir.com/speedrun-your-first-ontology-function/2131538)**
 - **[D6: Deep Dive: Building Your First Pipeline (26.0719)](/3c.6_pal_6_first_app/)**.
   - **Some of this failed**. FDE/GPT/OPUS could not fix. 
-  - outdated (2+ years) demo? MAKE THE DEMOS SIMPLER AND KEEP THEM UPDATED.
-  - [#617_pal_6_first_app_.docx](https://drive.google.com/drive/folders/1-Adawag9uA8_bq-hDF-nOuPYaRLz1eEO) 
-  - https://learn.palantir.com/deep-dive-building-your-first-application 
+  - Outdated (2+ years) demo? MAKE THE DEMOS SIMPLER AND KEEP THEM UPDATED.
+  - **[#617_.docx](https://drive.google.com/drive/folders/1-Adawag9uA8_bq-hDF-nOuPYaRLz1eEO)** 
+  - **[Speedrun](https://learn.palantir.com/deep-dive-building-your-first-application)** 
 - **[D7: Deep Dive: Building Your First Pipeline (26.0720)](/3c.7_pal_7_first_pipeline/)**.
-  - [#618_pal_7_first_pipeline_.docx](https://drive.google.com/drive/folders/1-Adawag9uA8_bq-hDF-nOuPYaRLz1eEO)
-  - https://learn.palantir.com/deep-dive-building-your-first-pipeline
+  - **[#618_.docx](https://drive.google.com/drive/folders/1-Adawag9uA8_bq-hDF-nOuPYaRLz1eEO)**
+  - **[Speedrun](https://learn.palantir.com/deep-dive-building-your-first-pipeline)**
 - **[DD19: Deep Dive: transform_data_w_code_repos (26.0805)](/3c.19_pal_19_transform_data_git/)**.
-  - [#627_pal_DD19_transform_data_w_code_repos_.docx](https://drive.google.com/drive/folders/1-Adawag9uA8_bq-hDF-nOuPYaRLz1eEO)
+  - **[#627_.docx](https://drive.google.com/drive/folders/1-Adawag9uA8_bq-hDF-nOuPYaRLz1eEO)**
 
 
 
