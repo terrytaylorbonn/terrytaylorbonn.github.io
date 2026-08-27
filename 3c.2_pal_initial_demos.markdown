@@ -44,17 +44,16 @@ I spent days getting that demo working because of a few small errors. You need t
 
 Ontologize has another great **[video](https://www.youtube.com/watch?v=TTYHAtQ4ROw)** "Speedrun: Mining your First Business Process **(update)**" . Note that word "update". Videos are great, but they are hard to update and fix. ZAI demos are not. The text/pics on this website are extracted from docx master files by a very efficient process where GPT does all the heavy lifting. This makes quick total updates quite possible. For a video thats a major process. And the ZAI docx source files have lots of tech and historical notes.
 
-#### **An example of the kind of error you can run into**
 
-If you look at the ZAI docx for that mining video (\#616 on the [gdrive](https://drive.google.com/drive/folders/1-Adawag9uA8_bq-hDF-nOuPYaRLz1eEO)) at the end of ch6 section 6.2 step 3 is the heading "ERROR". The following shows that error text/screeshots. What apparently happened was a timing error. Foundry does things in the background, and sometimes something is not finished (but it NOT obvious). That can easily cost you hours of debugging. Understanding those errors and how to debug them (with FDE) should the real focus of any initial demos.
+#### **Understanding how to use FDE to debug is CRUCIAL**
+
+Without FDE, you will get stuck. With FDE skills, you fix anything. FOR EXAMPLE: Look at the ZAI docx for that mining video (\#616 on the [gdrive](https://drive.google.com/drive/folders/1-Adawag9uA8_bq-hDF-nOuPYaRLz1eEO)) at the end of ch6 section 6.2 step 3 is the heading "ERROR". The following shows that error text/screeshots. What apparently happened was a timing error. Foundry does things in the background, and sometimes something is not finished (but it NOT obvious). That can easily cost you hours of debugging. Understanding those errors and how to debug them (with FDE) should the real focus of any initial demos.
 
 <br>
 
 ----------------------------
 
-#### **ERROR**
-Failed to load aggregation result
-Here are the details of the error:
+**ERROR**. Failed to load aggregation result. Here are the details of the error:
 
 <img src="/assets/ERROR_01.png" alt="xxx" width="50%" style="border: 1px solid #999;">
 
@@ -87,12 +86,8 @@ So the important point is: **Ready to mine only previews/adds mined results; Co
 
 ----------------------------
 
-#### **Understanding how to use FDE to debug is CRUCIAL**
+<br><br>
 
-You can see that from the error text above. Without FDE, you will get stuck. With FDE skills, you fix anything. 
-
-
-<br>
 
 ## **2 Main demo thread** 
 
