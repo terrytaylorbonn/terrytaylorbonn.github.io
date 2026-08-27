@@ -47,7 +47,7 @@ Ontologize has another great **[video](https://www.youtube.com/watch?v=TTYHAtQ4R
 
 #### **Understanding how to use FDE to debug is CRUCIAL**
 
-Without FDE, you will get stuck. With FDE skills, you fix anything. FOR EXAMPLE: Look at the ZAI docx for that mining video (\#616 on the [gdrive](https://drive.google.com/drive/folders/1-Adawag9uA8_bq-hDF-nOuPYaRLz1eEO)) at the end of ch6 section 6.2 step 3 is the heading "ERROR". The following shows that error text/screeshots. What apparently happened was a timing error. Foundry does things in the background, and sometimes something is not finished (but it NOT obvious). That can easily cost you hours of debugging. Understanding those errors and how to debug them (with FDE) should the real focus of any initial demos.
+Without FDE, you will get stuck. With FDE skills, you fix anything. FOR EXAMPLE: Look at the ZAI docx for that mining video (**[#616](https://drive.google.com/drive/folders/1-Adawag9uA8_bq-hDF-nOuPYaRLz1eEO)**) at the end of ch6 section 6.2 step 3 is the heading "ERROR". The following shows that error text/screeshots. What apparently happened was a timing error. Foundry does things in the background, and sometimes something is not finished (but it NOT obvious). That can easily cost you hours of debugging. Understanding those errors and how to debug them (with FDE) should the real focus of any initial demos.
 
 <br>
 
@@ -95,13 +95,16 @@ These will focus on **getting started (grasping core concepts via hands-on demos
 
 Note: 
 - WIP (26.0827 I reorg'd this page)
+- The thread order does not exactly match the demo number.
 - Initial focus is on Foundry + AI + agents
 - DIY = do it yourself; I created the demo from scratch with FDE/GPT assistance.
 
 <br>
 
 #### **[D1 = "Speedrun -- Your First End-to-End Workflow" (26.0818)](/3c.1_pal_foundry/)**
-Your first hands-on with the basics.  
+Your first hands-on with the basics (pipeline, ontology, actions, UI).  
+- A good demo (though a bit too complicated as an initial demo.. I would make something simpler). Plan on spending minimum a full day on this (the demo docs say you will need only 60 minutes).
+- The ZAI splits the demos into 3 phases (this makes the demo much easier to finish and understand).
 - [#610_pal_1_foundry_v02_26.0704_SS.docx](https://drive.google.com/drive/folders/1-Adawag9uA8_bq-hDF-nOuPYaRLz1eEO)     
 - https://learn.palantir.com/speedrun-your-first-e2e-workflow/1944887
 
@@ -109,18 +112,23 @@ Your first hands-on with the basics.
 
 #### **[D2 (WIP) = "Speedrun -- Your First AIP Workflow" (26.0824)](/3c.2_pal_aip/)**
 Your first app with AI. 
+- Use AI (external models) to clean up extracted chunks of text from PDFs, to extract text keywords ("entities" in the demo) from the chunk, to match a question to chunks via embeddings (machine language representation of the question/chunks meanings (not keywords)), make a RAG call with the question/chunks to answer the question.
+- About half of the demo has nothing to do with AI (the ZAI version splits the demo into 3 phases; phase 3 is the no-AI part; you can skip it).
 - [#611www_pal_D2_aip_v17_26.0825_SS_REDUCED.docx](https://drive.google.com/drive/folders/1-Adawag9uA8_bq-hDF-nOuPYaRLz1eEO)
 - https://learn.palantir.com/speedrun-your-e2e-aip-workflow
 
 <br>
 
 #### **[D3 (TO-UPDATE) = Palantir agentic AI "speedrun" (quick start) (26.0713)](/3c.3_pal_agentic_ai/)**
-First agent in Foundry.
+- First agent in Foundry. 
+- The ZAI pages **[Hack](https://ziptieai.com/0-demo/)**, **[2 NNs (neural networks)](https://ziptieai.com/2_models/)**, and **[2b Models](https://ziptieai.com/2b_models/)** are a good intro to what an LLM is (a hack, not intelligent). An LLM has an internal agent (iAgent) and a transformer (TF). The TF simply inputs tokens, generates a classification of the input (based on matching to the closest training input), that classification is converted into a token, that token is appended to the input, and that combo is now the next input. With a TF you can not construction anything more than tokens sequences. No complicated hierarchical intelligent-like response. The iAgent provides the API that a human's UI program uses to interact with the model and use the TF. 
+- An (external) **[agent](https://ziptieai.com/3-agents)** is basically using a procedural program (not GPU-based TF) to replace the human (its a lot complicated than that, but that's the gist). That external agent usually has access not only to the LLM, but also to some very powerful computer systems. For example, FSD (full self driving) is basically an agent that uses AI for a lot things that require "sensing", "seeing" the external world and using the probablistic computed results to control a car.
+- **FSD is inherently very dangerous and unpredicable. Agents in an enterprise are also.** Thats why there are complex agent frameworks (such as Langgraph, LangChain, etc) that lessen the danger (at the cost of a great deal of programming complexit). **This demo is about Foundry can be used to minimize that risk with far less complexity**.  
 
 <br>
 
 #### **[D9 (TO-UPDATE, DIY) = Haystack needle demo](/3c.xxx_pal_HN_01_non_ai/)** 
-Haystack needle, with/without AI model (find small anomalies in mountains of data). **What has interested me the most about Palantir for over a year now are the "haystack needle" (HN) algorithms**. This was the original reason for the founding of PAL. PAL's job was to sift through vast amounts of data to flag potential threats. To find the needle in the haystack.
+**What has interested me the most about Palantir for over a year now are the "haystack needle" (HN) algorithms**. This was the original reason for the founding of PAL. PAL's job was to sift through vast amounts of data to flag potential threats. To find the needle in the haystack. Thats what this demo does. The demo is DIY (do it yourself), which means it was created from scratch with only FDE/GPT assistance.
 
 <br>
 
