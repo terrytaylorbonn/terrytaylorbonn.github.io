@@ -132,7 +132,7 @@ Your first app with AI.
 
 <br>
 
-#### **[D5 (TO-UPDATE): Speedrun: Mining Your First Business Process (26.0718)](/3c.5_pal_biz_process_mining/)**. 
+#### **[D5 (TO-UPDATE): Speedrun: Mining Your First Business Process (26.0718)](/3c.5_pal_biz_process_mining/)**
   - **[#616_.docx](https://drive.google.com/drive/folders/1-Adawag9uA8_bq-hDF-nOuPYaRLz1eEO)**
   - **[Speedrun](https://learn.palantir.com/speedrun-mining-your-first-business-process)**
 
