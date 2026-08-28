@@ -108,14 +108,27 @@ Your first hands-on with the basics (pipeline, ontology, actions, UI).
 - **[#610_.docx](https://drive.google.com/drive/folders/1-Adawag9uA8_bq-hDF-nOuPYaRLz1eEO)**     
 - **[Speedrun](https://learn.palantir.com/speedrun-your-first-e2e-workflow/1944887)**
 
+*Demo D1 first end-to-end workflow diagram (no AI) (WIP)*<br><img src="/assets/777_46.png" alt="xxx" width="75%" style="border: 1px solid #999;">
+
+
 <br>
 
-#### **[1.2 D2 (WIP) = "Speedrun -- Your First AIP Workflow" (26.0827)](/3c.2_pal_aip/)**
+#### **[1.2 D2 (WIP) = "Speedrun -- Your First AIP Workflow" (26.0828)](/3c.2_pal_aip/)**
 Your first app with AI. 
 - Use AI (external models) to clean up extracted chunks of text from PDFs, to extract text keywords ("entities" in the demo) from the chunk, to match a question to chunks via embeddings (machine language representation of the question/chunks meanings (not keywords)), make a RAG call with the question/chunks to answer the question.
 - About half of the demo has nothing to do with AI (the ZAI version splits the demo into 3 phases; phase 3 is the no-AI part; you can skip it).
 - **[#611www_.docx](https://drive.google.com/drive/folders/1-Adawag9uA8_bq-hDF-nOuPYaRLz1eEO)**
 - **[Speedrun](https://learn.palantir.com/speedrun-your-e2e-aip-workflow)**
+
+*Demo D2 first AIP workflow (ZAI) diagram (26.0828) (3 different AI models are used)*<br><img src="/assets/777_50.png" alt="xxx" width="82%" style="border: 1px solid #999;">
+
+<!-- *Demo D2 first AIP workflow diagram (WIP)*<br><img src="/assets/777_49.png" alt="xxx" width="40%" style="border: 1px solid #999;">
+
+*Demo D2 first AIP workflow diagram (ZAI enhanced version of original speedrun diagram)*<br><img src="/assets/777_47.png" alt="xxx" width="45%" style="border: 1px solid #999;">
+
+*Demo D2 first AIP workflow diagram (this diagram is wrong... FDE gave a fake answer rather than admitting it did not know)*<br><img src="/assets/777_48.png" alt="xxx" width="70%" style="border: 1px solid #999;">
+-->
+
 
 <br>
 
@@ -139,6 +152,8 @@ Work with GPT/FDE to add Foundry safety rails to D2 to make using remote LLMs sa
 <br>
 
 ## **2 Non-AI thread** 
+
+<br>
 
 #### **[2.1 D9 (TO-UPDATE, DIY) = Haystack needle demo](/3c.xxx_pal_HN_01_non_ai/)** 
 **What has interested me the most about Palantir for over a year now are "haystack needle" (HN) algorithms**. This was the original reason for the founding of PAL. PAL's job was to sift through vast amounts of data to flag potential threats (for the first decade or so without the help of AI). To find the needle in the haystack. Thats what this demo does. The demo is DIY (do it yourself), which means it was created from scratch with only FDE/GPT assistance.
