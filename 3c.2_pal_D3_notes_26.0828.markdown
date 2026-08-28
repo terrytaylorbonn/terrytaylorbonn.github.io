@@ -1,0 +1,393 @@
+---
+layout: page
+title: 3c.2_pal_D3_notes_26.0828
+permalink: /3c.2_pal_D3_notes_26.0828/
+---
+
+<br>
+
+# 01
+
+IN the original speedrun doc for this demo there are the following chapters (I added the numbers)
+
+4 Create an Agent 
+5 Evaluate your Agent 
+6 Automate your Agent 
+
+ch4 is fairly clear. 
+4.2 Create an AIP Logic
+4.3 Configure Inputs
+4.4 Compose the LLM Part of your Logic
+4.5 Instruct Agent to Edit your Ontology
+
+i guess the "agent" is only section 4.5 , and it is actually an "action" inside AIP logic
+(this is all quite convoluted).
+
+so to actually run this you have to:
+1) manually run the data thru the pipeline 
+2) excute a preview run of the AIP logic (or just the action?)
+3) can i then accept and execute this (with result showing up in ontology?)
+
+# FDE
+
+## What is the “agent” here?
+
+The terminology is a little misleading. There is no separate Agent Studio agent in this implementation.
+
+The **whole AIP Logic** acts as the agentic workflow:
+
+1. Receives a Patient and Clinical Trial.
+2. Reads their Ontology properties.
+3. Uses the LLM to make an eligibility recommendation.
+4. Calls **Modify Eligibility Decision** to construct the Ontology edits.
+
+Section 4.5 is therefore the **actuation step**, not the entire agent. The Action is the controlled mechanism through which the Logic proposes changes to the Ontology.
+
+Your current :resource[ri.eddie.main.logic.c0fed952-b144-41dd-92af-10d2f6759fb1] already follows that structure.
+
+## How to run it
+
+### 1. Build the data pipeline
+
+Yes—initially, run the pipeline so that the Patient and Clinical Trial objects exist in the Ontology.
+
+You only need to rebuild it when the underlying source data changes. Chapter 6 presumably replaces this manual process with scheduling or event-driven automation.
+
+Allow time for the resulting objects to become available in the Ontology after the build.
+
+### 2. Preview the complete AIP Logic
+
+Select:
+
+- one Patient
+- one Clinical Trial
+
+Then preview the **whole Logic**, not merely the Action.
+
+The Action alone does not perform the eligibility analysis. To execute it directly, you would have to supply the eligibility decision and reasoning yourself.
+
+A Logic preview will:
+
+- run the LLM;
+- produce the decision and reasoning;
+- evaluate the Action;
+- show the resulting proposed Ontology edits.
+
+However, **preview is a dry run**. It does not persist the edits.
+
+### 3. Execute the result through an Action
+
+To make the result appear in the Ontology, there must be a **real Action execution**, separate from the Logic preview.
+
+Depending on the demo configuration, that means one of the following:
+
+- Use an **Apply edits/Execute action** control presented after reviewing the result, if the UI provides one.
+- Configure an Action-backed application workflow that invokes the published Logic and commits its returned edits.
+- Let the automation built in Chapter 6 invoke and commit the workflow automatically.
+
+Simply completing a preview cannot subsequently turn that preview execution into persisted data unless the UI explicitly offers a separate apply/execute operation.
+
+## In short
+
+```text
+Build pipeline
+    ↓
+Patient and Trial become Ontology objects
+    ↓
+Run full AIP Logic
+    ↓
+LLM calculates decision and reasoning
+    ↓
+Logic prepares Modify Eligibility Decision action
+    ↓
+Preview: inspect only, no persistence
+Real Action execution: commit edits
+    ↓
+Updated result appears on the Patient object
+```
+
+So your interpretation is nearly right, with one important distinction:
+
+> The Action is the write mechanism inside the agentic Logic, but previewing that Action does not execute the write. A non-preview Action execution is required for the result to appear in the Ontology.
+
+
+<br>
+
+# 02
+
+this demo 3... previously I did demo 2, which was "speedrun... your first AIP workflow"
+it was not called "agentic AIP", just "AIP". 
+why? 
+because nothing was writing back to the ontology in D2?
+
+# FDE
+
+**Probably yes—but the distinction is broader than simply “writes back versus doesn’t write back.”**
+
+## Demo 2: AIP workflow
+
+Demo 2 was likely a mostly **read-and-generate** workflow:
+
+```text
+Input → retrieve context → call LLM → return an answer
+```
+
+The LLM produced a result, but that result was informational. It did not independently select or invoke a business operation.
+
+## Demo 3: “Agentic” workflow
+
+This demo adds the ability to **act through a governed tool**:
+
+```text
+Patient + Trial → LLM decision → Action → Ontology edit
+```
+
+The key addition is the **Action capability**. The workflow no longer merely recommends an eligibility decision; it can pass that decision into the **Modify Eligibility Decision** Action, which can update operational state.
+
+That is what makes Palantir describe it as more “agentic”:
+
+- it observes Ontology data;
+- reasons with an LLM;
+- selects or prepares an action;
+- can change operational state through a governed Action;
+- can later be triggered automatically.
+
+## One nuance in your implementation
+
+Your Logic is agent-like, but not highly autonomous. Its path is fixed:
+
+1. Always inspect the supplied patient and trial.
+2. Always ask the LLM for the same type of decision.
+3. Always invoke the same Action.
+
+The LLM is **not dynamically choosing among several tools or planning multiple steps**. So “agentic workflow” is more accurate than “autonomous agent.”
+
+And, as discussed, a preview still does not persist anything. It becomes operationally agentic only when the proposed edits are committed through a real Action execution—manually or through the Chapter 6 automation.
+
+### Practical distinction
+
+| Demo | LLM role | Operational write |
+|---|---|---|
+| Demo 2 | Produce information/output | No |
+| Demo 3 | Produce a decision used by an Action | Yes, when actually executed |
+| Demo 3 preview | Simulate the decision and edits | No |
+
+So: **the Ontology writeback is probably the main reason Demo 3 receives the “agentic” label**, with governed Actions and automation being the larger conceptual distinction.
+
+
+# 03
+
+actually Foundry itself is an agent in demo 2. you set up a program that can exploit LLMs (and its not a chatbot.
+Demo2 used 3 different LLMs.
+
+# FDE
+
+You’re right. My previous answer over-indexed on Ontology writeback.
+
+**An agent does not have to be a chatbot, and it does not have to write anything back.** In Demo 2, Foundry itself is the orchestrator:
+
+```text
+Input/data
+   ↓
+Foundry workflow
+   ├─ invokes LLM 1
+   ├─ routes/transforms the result
+   ├─ invokes LLM 2
+   ├─ invokes LLM 3
+   └─ produces the final output
+```
+
+That can reasonably be described as an **agent or agentic system**, even though:
+
+- it has no chat interface;
+- it does not update the Ontology;
+- its workflow may be largely predetermined;
+- it uses multiple specialized LLM calls rather than one conversational model.
+
+## Why was Demo 2 only called an “AIP workflow”?
+
+Most likely this is a **course-labeling and degree-of-agency distinction**, not a rigorous technical boundary.
+
+| Demo 2 | Demo 3 |
+|---|---|
+| Foundry orchestrates three LLMs | Foundry orchestrates an LLM plus an Ontology Action |
+| Produces a derived result | Produces a decision that can alter operational state |
+| Open-loop processing | Potentially closed-loop decision and action |
+| Agent-like workflow | Operational or “action-taking” agentic workflow |
+| No chatbot required | No chatbot required |
+
+Demo 2 was already agentic in the broad sense: Foundry coordinated models and program logic to accomplish a task. Demo 3 adds **agency over the operational environment**:
+
+1. perceive Ontology state;
+2. reason about it;
+3. formulate a decision;
+4. use a governed Action;
+5. potentially run automatically.
+
+So writeback does **not create the agent**. It gives the existing orchestration an additional capability: **acting on the system it is reasoning about**.
+
+A more accurate description would be:
+
+> **Demo 2 builds an AI orchestration workflow that can reasonably be considered an agent. Demo 3 turns that pattern into a closed-loop operational agent by adding governed action and automation.**
+
+And “three LLMs” alone does not necessarily make it more or less agentic; what matters is how Foundry coordinates them, maintains state, makes decisions, uses tools, and pursues the configured objective.
+
+# 04
+
+so in Foundry it becomes an agent in ch6, where it is running the main loop. 
+"agent" is only when it does not require human input.. 
+
+# FDE
+
+**In the terminology of this particular demo, that interpretation makes sense.**
+
+Before Chapter 6, you have an **agent-capable workflow**, but a person supplies the runtime trigger and inputs:
+
+```text
+Human selects Patient + Trial
+→ Human runs Logic
+→ LLM decides
+→ Action is proposed/executed
+```
+
+In Chapter 6, **Automate supplies the control loop**:
+
+```text
+Detect condition/new data
+→ Select relevant objects
+→ Invoke Logic
+→ LLM decides
+→ Execute governed Action
+→ Wait for next trigger
+```
+
+At that point it becomes an **autonomous operational agent**: Foundry repeatedly performs the observe–reason–act cycle without someone manually initiating every case.
+
+I would only qualify this statement:
+
+> “Agent is only when it does not require human input.”
+
+That is a useful definition for this course, but not a universal one. Agents can be:
+
+- **Human-triggered agents**
+- **Human-in-the-loop agents**, requiring approval before acting
+- **Human-on-the-loop agents**, acting automatically but monitored
+- **Fully autonomous agents**
+
+Thus, more precisely:
+
+> Chapters 4–5 construct and test the agent’s decision-and-action capability. Chapter 6 gives it an autonomous trigger/control loop, turning it into a running operational agent.
+
+Also, the “main loop” is not necessarily code inside the AIP Logic. **Automate is the outer loop**, while the Logic is one iteration of `observe → reason → act`.
+
+
+# 05 
+
+on my ziptieai.com website, i have a page that includes the  following sections.
+they describe my take on the demos. 
+i would like to add a summary of our discussion under heading 1.2b below. 
+can you generate teh summary? 
+
+
+## **1 AI thread -- external models** 
+
+#### **[1.2 D2 (WIP) = "Speedrun -- Your First AIP Workflow" (26.0828)](/3c.2_pal_aip/)**
+Your first app with AI. ......................
+
+#### **1.2b What is an "agent" (in Foundry)?**
+?????
+
+#### **[1.3 D3 (TO-UPDATE) = "Speedrun: Your First Agentic AIP Workflow" (26.0713)](/3c.3_pal_agentic_ai/)**
+- First agent in Foundry. .............................
+
+# FDE
+
+#### **1.2b What is an “agent” (in Foundry)?**
+
+An agent does not have to be a chatbot. It can be a program in which Foundry orchestrates data, application logic, tools, and one or more LLMs to achieve a goal. In D2, Foundry coordinates three different LLMs in a predefined workflow. This is already agent-like orchestration, even though it neither converses with a user nor writes results back to the Ontology.
+
+D3 adds an **observe–reason–act** cycle:
+
+1. Read Patient and Clinical Trial objects from the Ontology.
+2. Use an LLM to determine the patient’s eligibility.
+3. Invoke a governed Action that can update the Ontology.
+
+Writing back does not, by itself, make the workflow an agent. It gives the workflow the ability to act upon its operational environment. In Chapters 4–5, however, a human still selects the inputs, starts the Logic, reviews its result, and tests the proposed edit.
+
+Chapter 6 adds **Automate**, which supplies the outer control loop:
+
+```text
+Detect a condition → invoke the Logic → reason → act → wait for the next condition
+```
+
+In the terminology of these demos, this is where the workflow becomes a running **autonomous operational agent**. The AIP Logic implements one iteration of the observe–reason–act process; Automate repeatedly triggers that process without requiring a human to initiate every case.
+
+“Agent” is not a strict binary category, however. A system may be human-triggered, human-in-the-loop, human-supervised, or fully autonomous. A useful summary of the two demos is:
+
+> **D2 builds an AI orchestration workflow that is already agent-like. D3 adds governed action, and Chapter 6 gives it an autonomous control loop.**
+
+
+# 06
+
+pic1:  in automation detects a change (in ontology)
+pic2: calls the AIP Logic, determines that  "eligibility decison" has changed (or a new patient), write change to ontology
+
+that is the agent
+
+<img src="/assets/777_51.png" alt="xxx" width="100%" style="border: 1px solid #999;">
+
+<img src="/assets/777_52.png" alt="xxx" width="100%" style="border: 1px solid #999;">
+
+# FDE
+
+**Yes—that complete event-driven loop is the agent.**
+
+More precisely:
+
+### Picture 1 — Observe and trigger
+
+Automate continuously monitors a dynamic Patient object set. The condition is specifically **“Objects added to set”**, not every arbitrary Ontology change.
+
+A patient triggers the automation when it newly enters that set—for example, because:
+
+- a new Patient object is created; or
+- an existing Patient changes so that it newly satisfies configured filters.
+
+Because your screenshot currently has no filters, it effectively monitors newly appearing Patient objects.
+
+### Picture 2 — Reason and act
+
+For each triggering Patient, Automate:
+
+1. Passes the newly added Patient into the published AIP Logic.
+2. Supplies a selected Clinical Trial as the static second input.
+3. Runs the LLM to determine eligibility.
+4. Passes the decision and reasoning to the **Modify Eligibility Decision** Action.
+5. With **Automatically run edits** selected, commits those edits to the Ontology without human approval.
+
+So the full agent is:
+
+```text
+Automate observes the Ontology
+        ↓
+A Patient enters the monitored set
+        ↓
+Automate invokes AIP Logic
+        ↓
+AIP Logic reads Patient + Trial data
+        ↓
+LLM determines eligibility
+        ↓
+Governed Action writes the result to the Ontology
+        ↓
+Automate continues monitoring
+```
+
+One small correction: the Logic does not first detect that the **eligibility decision changed**. Automate detects that a Patient entered the monitored set; the Logic then calculates and writes the eligibility decision.
+
+Also, the red exclamation mark in Picture 2 appears because the required static Clinical Trial has not yet been selected.
+
+A concise description for the website could be:
+
+> **The agent is the complete event-driven system: Automate observes the Ontology and provides the recurring control loop; AIP Logic performs the reasoning; and a governed Action writes the resulting decision back to the Ontology. With edits configured to run automatically, no human is required to initiate or approve each case.**
+
