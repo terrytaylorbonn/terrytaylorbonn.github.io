@@ -18,7 +18,6 @@ Created/updated/published (to ZAI) from tagged docx files (using GPT). -->
 But recently (26.0826) the focus has shifted to  
 - Modifying existing PAL demos (creating ZAI versions).
 - Creating ZAI demos with the help of GPT/FDE (such as D2b below).
-- Adding my own detailed conceptual description of the demo.
 - Generating the ZAI website docs from docx files (using GPT).
 - Organizing the demos into a series that intros Foundry in logical order.
 
@@ -27,16 +26,16 @@ See also **[PAL demo strategy](/3c.aaa_pal_strategy_demos/)** (outdated).
 <br>
 
 **TOC**:
-- **1 Important info about doing these demos (readthisfirst)** 
-- **2 Main demo thread** 
-- **3 Duplicates/other demos**
+- **0 Important info about doing these demos (readthisfirst)**. The advantages of website tutorials over Youtube videos (at least for beginners) and the critical importance of FDE (Foundry's built-in AI chat tool).
+- **1 AI thread**. Demos that use AI (except for D1). I put this first because ZAI is first and foremost about AI.
+- **2 Non-AI thread**. Palantir started out with no AI. And AI now is just a helpful assistant. This section focuses on the core non-AI Foundry basics.
+- **3 Duplicates/other demos**. Demos that I did that maybe duplicate what has already been demo'd. Also other demos that maybe are not really important (or I could not get to work).
 
 <br>
 
-## **1 Important info about doing these demos (readthisfirst)** 
+## **0 Important info about doing these demos (readthisfirst)** 
 
 #### **Demo videos vs docx's**
-
 
 Ontologize.com has a lot of top Youtube videos for learning Foundry. However, in the **[Ontologize video](https://youtu.be/6kXdjW4KnHc?t=69) for the first PAL demo** "Speedrun: Your First End-to-End Workflow" they say *"...we're going to build a fully end-to-end workflow. **This course is not going to go into all the detailed ins and outs of each step**. This is about the big picture and to give you a taste of how everything fits together."*  
 
@@ -89,9 +88,9 @@ So the important point is: **Ready to mine only previews/adds mined results; Co
 <br><br>
 
 
-## **2 Main demo thread** 
+## **1 AI thread** 
 
-These will focus on **getting started (grasping core concepts via hands-on demos)**. Not only the concepts for Foundry, but also for AI in general (the knowledge gained from studying sections 2, 2a, 3, and 3b on this website is not crucial, but really comes in handy for understanding what you are doing and why).
+These will focus on **getting started (grasping core concepts via hands-on demos) for Foundry with AI**. The knowledge gained from studying sections 2, 2a, 3, and 3b on this website is not crucial, but really comes in handy for understanding what you are doing and why.
 
 Note: 
 - WIP (26.0827 I reorg'd this page)
@@ -101,8 +100,9 @@ Note:
 
 <br>
 
-#### **[D1 = "Speedrun -- Your First End-to-End Workflow" (26.0818)](/3c.1_pal_foundry/)**
+#### **[1.1 D1 = "Speedrun -- Your First End-to-End Workflow" (26.0818)](/3c.1_pal_foundry/)**
 Your first hands-on with the basics (pipeline, ontology, actions, UI).  
+- D1 does not include AI, but its perhaps a required starter for understanding the Foundry basics.
 - A good demo (though a bit too complicated as an initial demo.. I would make something simpler). Plan on spending minimum a full day on this (the demo docs say you will need only 60 minutes).
 - The ZAI splits the demos into 3 phases (this makes the demo much easier to finish and understand).
 - **[#610_.docx](https://drive.google.com/drive/folders/1-Adawag9uA8_bq-hDF-nOuPYaRLz1eEO)**     
@@ -110,7 +110,7 @@ Your first hands-on with the basics (pipeline, ontology, actions, UI).
 
 <br>
 
-#### **[D2 (WIP) = "Speedrun -- Your First AIP Workflow" (26.0827)](/3c.2_pal_aip/)**
+#### **[1.2 D2 (WIP) = "Speedrun -- Your First AIP Workflow" (26.0827)](/3c.2_pal_aip/)**
 Your first app with AI. 
 - Use AI (external models) to clean up extracted chunks of text from PDFs, to extract text keywords ("entities" in the demo) from the chunk, to match a question to chunks via embeddings (machine language representation of the question/chunks meanings (not keywords)), make a RAG call with the question/chunks to answer the question.
 - About half of the demo has nothing to do with AI (the ZAI version splits the demo into 3 phases; phase 3 is the no-AI part; you can skip it).
@@ -119,7 +119,7 @@ Your first app with AI.
 
 <br>
 
-#### **[D3 (TO-UPDATE) = Palantir agentic AI "speedrun" (quick start) (26.0713)](/3c.3_pal_agentic_ai/)**
+#### **[1.3 D3 (TO-UPDATE) = Palantir agentic AI "speedrun" (quick start) (26.0713)](/3c.3_pal_agentic_ai/)**
 - First agent in Foundry. 
 - The ZAI pages **[Hack](https://ziptieai.com/0-demo/)**, **[2 NNs (neural networks)](https://ziptieai.com/2_models/)**, and **[2b Models](https://ziptieai.com/2b_models/)** are a good intro to what an LLM is (a hack, not intelligent). An LLM has an internal agent (iAgent) and a transformer (TF). The TF simply inputs tokens, generates a classification of the input (based on matching to the closest training input), that classification is converted into a token, that token is appended to the input, and that combo is now the next input. With a TF you can not construction anything more than token sequences. No complicated hierarchical intelligent-like response. The iAgent provides (1) the API that a human's UI program uses to interact with the model and (2) all the (sophisticated) procedural logic required to work in tandem with the TF to generate complex responses that do an amazing job of simulating intelligence. 
 - ZAI page **[3 Agents](https://ziptieai.com/3_agents)** describes how an (external) agent is basically a procedural program (not GPU-based TF) that replaces the human in the "chat" loop (its a lot more complicated than that, but that's the gist). That external agent usually has access not only to the LLM, but also to some very powerful external systems (that can be quite dangerous). For example, FSD ("full self driving", a marketing term) is basically an agent that uses AI for a lot of things that require "sensing", "seeing", etc the external world and using the computed probablistic results to decide how to control a car.
@@ -127,12 +127,25 @@ Your first app with AI.
 
 <br>
 
-#### **[D9 (TO-UPDATE, DIY) = Haystack needle demo](/3c.xxx_pal_HN_01_non_ai/)** 
+#### **[1.4 D8 (TO-UPDATE): Deep Dive: Model integration (26.0721)](/3c.8_pal_8_model_integration/)**
+  - **[#619_.docx](https://drive.google.com/drive/folders/1-Adawag9uA8_bq-hDF-nOuPYaRLz1eEO)**
+  - Sections 2c, 2d were not in the demos. I prompted AIP/FDE for directions.
+
+<br>
+
+#### **[1.5 D2b (TODO) = D2 + PAL "crystal ball" controls](/3c.2_pal_D2b_ai_monitor/)**
+Work with GPT/FDE to add Foundry safety rails to D2 to make using remote LLMs safer (finding an existing demo for this would be better). 
+
+<br>
+
+## **2 Non-AI thread** 
+
+#### **[2.1 D9 (TO-UPDATE, DIY) = Haystack needle demo](/3c.xxx_pal_HN_01_non_ai/)** 
 **What has interested me the most about Palantir for over a year now are "haystack needle" (HN) algorithms**. This was the original reason for the founding of PAL. PAL's job was to sift through vast amounts of data to flag potential threats (for the first decade or so without the help of AI). To find the needle in the haystack. Thats what this demo does. The demo is DIY (do it yourself), which means it was created from scratch with only FDE/GPT assistance.
 
 <br>
 
-#### **[D5 (TO-UPDATE): Speedrun: Mining Your First Business Process (26.0718)](/3c.5_pal_biz_process_mining/)**
+#### **[2.2 D5 (TO-UPDATE): Speedrun: Mining Your First Business Process (26.0718)](/3c.5_pal_biz_process_mining/)**
   - **[#616_.docx](https://drive.google.com/drive/folders/1-Adawag9uA8_bq-hDF-nOuPYaRLz1eEO)**
   - **[Speedrun](https://learn.palantir.com/speedrun-mining-your-first-business-process)**
 
@@ -149,44 +162,34 @@ Mechanically:
 
 <br>
 
-#### **[D8 (TO-UPDATE): Deep Dive: Model integration (26.0721)](/3c.8_pal_8_model_integration/)**
-  - **[#619_.docx](https://drive.google.com/drive/folders/1-Adawag9uA8_bq-hDF-nOuPYaRLz1eEO)**
-  - Sections 2c, 2d were not in the demos. I prompted AIP/FDE for directions.
-
-<br>
-
-#### **[D2c (TODO) = D2(b) + D8 (local (maybe custom trained) models)](/3c.8_pal_D2c_D8/)** 
+#### **[2.3 D2c (TODO) = D2(b) + D8 (local (maybe custom trained) models)](/3c.8_pal_D2c_D8/)** 
 Locals models (+RAG) are probably the optimal solution (see D8 demo description below on this page).
 
-<br>
-
-#### **[D2b (TODO) = D2 + PAL "crystal ball" controls](/3c.2_pal_D2b_ai_monitor/)**
-Work with GPT/FDE to add Foundry safety rails to D2 to make using remote LLMs safer (finding an existing demo for this would be better). 
 
 
 <br>
 
-### **3 Duplicates/other demos**
-- **[D4: Palantir ontology function "speedrun" (quick start) (26.0717)](/3c.4_pal_ontology_function/)**. 
+## **4 Duplicates/other demos**
+- **[4.1 D4: Palantir ontology function "speedrun" (quick start) (26.0717)](/3c.4_pal_ontology_function/)**. 
   - At the end of this page is *good demo of how FDE/GPT5.5 fixed a problem with the demo*.
   - **[#615_.docx](https://drive.google.com/drive/folders/1-Adawag9uA8_bq-hDF-nOuPYaRLz1eEO)** 
   - **[Speedrun](https://learn.palantir.com/speedrun-your-first-ontology-function/2131538)**
-- **[D6: Deep Dive: Building Your First Pipeline (26.0719)](/3c.6_pal_6_first_app/)**.
+- **[4.2 D6: Deep Dive: Building Your First Pipeline (26.0719)](/3c.6_pal_6_first_app/)**.
   - **Some of this failed**. FDE/GPT/OPUS could not fix. 
   - Outdated (2+ years) demo? MAKE THE DEMOS SIMPLER AND KEEP THEM UPDATED.
   - **[#617_.docx](https://drive.google.com/drive/folders/1-Adawag9uA8_bq-hDF-nOuPYaRLz1eEO)** 
   - **[Speedrun](https://learn.palantir.com/deep-dive-building-your-first-application)** 
-- **[D7: Deep Dive: Building Your First Pipeline (26.0720)](/3c.7_pal_7_first_pipeline/)**.
+- **[4.3 D7: Deep Dive: Building Your First Pipeline (26.0720)](/3c.7_pal_7_first_pipeline/)**.
   - **[#618_.docx](https://drive.google.com/drive/folders/1-Adawag9uA8_bq-hDF-nOuPYaRLz1eEO)**
   - **[Speedrun](https://learn.palantir.com/deep-dive-building-your-first-pipeline)**
-- **[DD19: Deep Dive: transform_data_w_code_repos (26.0805)](/3c.19_pal_19_transform_data_git/)**.
+- **[4.4 DD19: Deep Dive: transform_data_w_code_repos (26.0805)](/3c.19_pal_19_transform_data_git/)**.
   - **[#627_.docx](https://drive.google.com/drive/folders/1-Adawag9uA8_bq-hDF-nOuPYaRLz1eEO)**
 
 
 
 <br>
 
-26.0827 (v1 26.0725)
+26.0828 (v1 26.0725)
 
 
 <!-- 
