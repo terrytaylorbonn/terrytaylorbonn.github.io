@@ -173,6 +173,10 @@ In the terminology of these demos, this is where the workflow becomes a running 
 - **[Speedrun](https://learn.palantir.com/speedrun-your-first-agentic-aip-workflow)**
 
 
+*Demo D3 ZAI diagram (26.0829) (2 different AI models are used)*<br><img src="/assets/MASTER_D3.png" alt="xxx" width="90%" style="border: 1px solid #999;">
+
+
+
 <br>
 
 #### **[1.4 D2b (TODO) = D2 + PAL "crystal ball" controls FOR EXTERNAL AI MODELS (and AGENTS?)](/3c.2_pal_D2b_ai_monitor/)**
@@ -247,7 +251,7 @@ Mechanically:
 
 <br>
 
-26.0828 (v1 26.0725)
+26.0829 (v1 26.0725)
 
 
 <!-- 
@@ -286,7 +290,6 @@ Afterwards I created this simple diagram to make sure I could miss those "rabbit
  - **[PAL Pilot](https://www.palantir.com/docs/foundry/pilot/getting-started/)** (in beta now) will probably be an "FDE/AIP combo" that can "see" the dialogs and lead you by the hand through complicated setups.<br><img src="/assets/pal_10_07.png" alt="drones" width="40%" style="border: 1px solid #999;"><br><br> 
    - **[8 (3c.3b) Pilot real-world projects](/3c.3b_pal_pilot/) (NEAR FUTURE?)** .-->
 
-<br>
 
 <!--
 <br>
