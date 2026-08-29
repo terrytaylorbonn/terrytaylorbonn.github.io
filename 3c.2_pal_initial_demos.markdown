@@ -34,9 +34,9 @@ See also **[PAL demo strategy](/3c.aaa_pal_strategy_demos/)** (outdated).
 
 <br>
 
-## **0 Important info about doing these demos (readthisfirst)** 
+## **[0 Important info about doing these demos (readthisfirst)](/3c.2.0_info_about_demos/)** 
 
-#### **Demo videos vs docx's**
+<!-- #### **Demo videos vs docx's**
 
 Ontologize.com has a lot of top Youtube videos for learning Foundry. However, in the **[Ontologize video](https://youtu.be/6kXdjW4KnHc?t=69) for the first PAL demo** "Speedrun: Your First End-to-End Workflow" they say *"...we're going to build a fully end-to-end workflow. **This course is not going to go into all the detailed ins and outs of each step**. This is about the big picture and to give you a taste of how everything fits together."*  
 
@@ -57,13 +57,13 @@ Without FDE, you will get stuck. With FDE skills, you fix anything. FOR EXAMPLE:
 
 <img src="/assets/ERROR_01.png" alt="xxx" width="50%" style="border: 1px solid #999;">
 
-<!-- <img src="/assets/ERROR_02.png" alt="xxx" width="60%" style="border: 1px solid #999;"> -->
+<!-- <img src="/assets/ERROR_02.png" alt="xxx" width="60%" style="border: 1px solid #999;"> ->
 
 then FDE/GPT did some stuff (SEE GPT CONVERSATION 26.0718_1035)
 
 <img src="/assets/ERROR_03.png" alt="xxx" width="60%" style="border: 1px solid #999;">
 
-<!-- <img src="/assets/ERROR_04.png" alt="xxx" width="60%" style="border: 1px solid #999;"> -->
+<!-- <img src="/assets/ERROR_04.png" alt="xxx" width="60%" style="border: 1px solid #999;"> ->
 
 **ME: i clicked "ready to mine" again.. and seems it worked.. did you fix something?**
 
@@ -86,7 +86,9 @@ So the important point is: **Ready to mine only previews/adds mined results; Co
 
 ----------------------------
 
-<br><br>
+-->
+
+<br>
 
 
 ## **1 AI thread -- external models** 
@@ -134,14 +136,15 @@ Your first app with AI.
 <br>
 
 #### **[1.3 D3 (WIP) = "Speedrun: Your First Agentic AIP Workflow" (26.0829)](/3c.3_pal_agentic_ai/)**
-This is the First agent in Foundry (for a discussion of what exactly an agent is in Foundry, see **[3c.2_pal_D3_notes_26.0828](/3c.2_pal_D3_notes_26.0828/)**).
+This is the First agent in Foundry (for a draft WIP discussion of what exactly an agent is in Foundry, see **[3c.2_pal_D3_notes_26.0828](/3c.2_pal_D3_notes_26.0828/)**).
 
 
-The user 
-- 1a Modifies the patient or
-- 1b Adds a patient.
+The diagram below summarizes the workflow
+- (1) An patient object is (1a) Modified or (1b) Added. *Note: This is how the objects are added in this demo... but the demo works no matter how the object is modified/added*.
+- (2-4) The agent updates the ontology.
+- (5) The updates are displayed to the user (I think refresh is required).
 
-FDE: The agent is the complete event-driven system. With edits configured to run automatically, no human is required to initiate or approve each case. 
+**Agent details:** FDE: The agent is the complete event-driven system. With edits configured to run automatically, no human is required to initiate or approve each case. 
 - 2 Automate observes the Ontology and provides the recurring control loop; 
 - 3 AIP Logic performs the reasoning; and a 
 - 4 governed Action writes the resulting decision back to the Ontology. 
