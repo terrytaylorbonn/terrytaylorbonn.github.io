@@ -173,7 +173,7 @@ In the terminology of these demos, this is where the workflow becomes a running 
 - **[Speedrun](https://learn.palantir.com/speedrun-your-first-agentic-aip-workflow)**
 
 
-*Demo D3 ZAI diagram (26.0829) (2 different AI models are used)*<br><img src="/assets/MASTER_D3.png" alt="xxx" width="90%" style="border: 1px solid #999;">
+*Demo D3 ZAI diagram (26.0829) (2 different AI models are used)*<br><img src="/assets/MASTER_D3.png" alt="xxx" width="100%" style="border: 1px solid #999;">
 
 
 
