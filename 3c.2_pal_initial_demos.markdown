@@ -210,6 +210,8 @@ This is best described as an **autonomous agent with human oversight**, rather t
 
 <br>
 
+*NOTE: The “AIP Function” and “AIP Logic” boxes show two Foundry UI/resource views of the same executable logic. The Function Registry entry is the published interface selected by Automate; the Logic editor contains its implementation.*
+
 -----------------
 
 <br>
