@@ -72,9 +72,13 @@ Your first app with AI.
 
 #### **[1.2b ZAI take on what exactly an "agent" is in Foundry" (26.0830)](/3c.3_pal_agentic_ai/)**
 
-*WIP.... the numbers (2), (3), (4) below match those in the "1.3 D3" main diagram*.
+**WIP** (this section added v1 26.0830)
 
-*Compared: A conventional code-based agent and the Foundry agent*<br><img src="/assets/MASTER_D1.2b.png" alt="xxx" width="82%" style="border: 1px solid #999;">
+You may have noticed that demo D2 called an external LLM. That is (in my opinion) an AI agent. And a security risk.
+
+However, D3 is mentioned as the first Agentic demo for Foundry? WHy? I spent a lot time trying to figure this out, and the 2 diagrams below (my original, created in tandem with FDE/GPT) compares the traditional agent (python) with FOundry agent. the numbers (2), (3), (4) below match those in the "1.3 D3" main diagram*.
+
+*Compared: A conventional code-based agent and the Foundry agent*<br><img src="/assets/MASTER_D1.2b.png" alt="xxx" width="100%" style="border: 1px solid #999;">
 
 
 <br>
