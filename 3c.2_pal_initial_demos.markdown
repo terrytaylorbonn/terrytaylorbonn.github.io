@@ -12,9 +12,6 @@ permalink: /3c.2_pal_initial_demos/
 
 This page was originally meant to be just a description of PAL Foundry demos that I did myself. With my notes, screenshots, but without any major changes.
 
-<!-- With ZAI versions of the docs with added heading numbering, step numbering, concepts (especially conceptual diagrams), and error corrections.
-Created/updated/published (to ZAI) from tagged docx files (using GPT). -->
-
 But recently (26.0826) the focus has shifted to  
 - Modifying existing PAL demos (creating ZAI versions).
 - Creating ZAI demos with the help of GPT/FDE (such as D2b below).
@@ -36,60 +33,7 @@ See also **[PAL demo strategy](/3c.aaa_pal_strategy_demos/)** (outdated).
 
 ## **[0 Important info about doing these demos (readthisfirst)](/3c.2.0_info_about_demos/)** 
 
-<!-- #### **Demo videos vs docx's**
-
-Ontologize.com has a lot of top Youtube videos for learning Foundry. However, in the **[Ontologize video](https://youtu.be/6kXdjW4KnHc?t=69) for the first PAL demo** "Speedrun: Your First End-to-End Workflow" they say *"...we're going to build a fully end-to-end workflow. **This course is not going to go into all the detailed ins and outs of each step**. This is about the big picture and to give you a taste of how everything fits together."*  
-
-I spent days getting that demo working because of a few small errors. You need those details. **ZAI is about mastering the (1) the Foundry UI and (2) the details of each demo**. When you first start out, (1) is the most difficult (its an excellent UI, but requires some initial study). And the eventual goal is **a thread of videos** (based on PAL demos, but with ZAI docx docs and modified workflows). **Details are everything. ZAI numbers docx's, demos, headings and steps. And every screenshots (WIP).**
-
-Ontologize has another great **[video](https://www.youtube.com/watch?v=TTYHAtQ4ROw)** "Speedrun: Mining your First Business Process **(update)**" . Note that word "update". Videos are great, but they are hard to update and fix. ZAI demos are not. The text/pics on this website are extracted from docx master files by a very efficient process where GPT does all the heavy lifting. This makes quick total updates quite possible. For a video thats a major process. And the ZAI docx source files have lots of tech and historical notes.
-
-
-#### **Understanding how to use FDE to debug is CRUCIAL**
-
-Without FDE, you will get stuck. With FDE skills, you fix anything. FOR EXAMPLE: Look at the ZAI docx for that mining video (**[#616](https://drive.google.com/drive/folders/1-Adawag9uA8_bq-hDF-nOuPYaRLz1eEO)**) at the end of ch6 section 6.2 step 3 is the heading "ERROR". The following shows that error text/screeshots. What apparently happened was a timing error. Foundry does things in the background, and sometimes something is not finished (but it NOT obvious). That can easily cost you hours of debugging. Understanding those errors and how to debug them (with FDE) should the real focus of any initial demos.
-
 <br>
-
-----------------------------
-
-**ERROR**. Failed to load aggregation result. Here are the details of the error:
-
-<img src="/assets/ERROR_01.png" alt="xxx" width="50%" style="border: 1px solid #999;">
-
-<!-- <img src="/assets/ERROR_02.png" alt="xxx" width="60%" style="border: 1px solid #999;"> ->
-
-then FDE/GPT did some stuff (SEE GPT CONVERSATION 26.0718_1035)
-
-<img src="/assets/ERROR_03.png" alt="xxx" width="60%" style="border: 1px solid #999;">
-
-<!-- <img src="/assets/ERROR_04.png" alt="xxx" width="60%" style="border: 1px solid #999;"> ->
-
-**ME: i clicked "ready to mine" again.. and seems it worked.. did you fix something?**
-
-**FDE: No --- I did not change or fix anything** in the resource. I only
-inspected the saved Machinery graph and the underlying Ontology/log
-data. What likely happened is that the earlier **"Failed to load aggregation result" was a transient loading / aggregation / browser-state issue, and when you clicked Ready to mine again the aggregation succeeded**.
-
-Now that it worked, do these steps before refreshing:
-
--   Click Confirm in the Mining configuration panel.
-    -   Your screen says: Adding 7 states and 9 transitions.
-    -   Until you click Confirm, those mined elements may not be added to the graph.
--   After the graph updates, click the top Save button for mine_process_1.
--   **Wait until the save completes / the Save button no longer indicates unsaved changes**.
--   Then it should be safe to refresh or reopen.
-
-Your saved Machinery resource is still:
-- mine_process_1
-So the important point is: **Ready to mine only previews/adds mined results; Confirm + Save is what makes them persist in the document.**
-
-----------------------------
-
--->
-
-<br>
-
 
 ## **1 AI thread -- external models** 
 
@@ -113,7 +57,6 @@ Your first hands-on with the basics (pipeline, ontology, actions, UI).
 
 *Demo D1 first end-to-end workflow diagram (no AI) (WIP)*<br><img src="/assets/777_46.png" alt="xxx" width="75%" style="border: 1px solid #999;">
 
-
 <br>
 
 #### **[1.2 D2 (WIP) = "Speedrun -- Your First AIP Workflow" (26.0828)](/3c.2_pal_aip/)**
@@ -125,103 +68,28 @@ Your first app with AI.
 
 *Demo D2 first AIP workflow (ZAI) diagram (26.0828) (3 different AI models are used)*<br><img src="/assets/777_50.png" alt="xxx" width="82%" style="border: 1px solid #999;">
 
-<!-- *Demo D2 first AIP workflow diagram (WIP)*<br><img src="/assets/777_49.png" alt="xxx" width="40%" style="border: 1px solid #999;">
-
-*Demo D2 first AIP workflow diagram (ZAI enhanced version of original speedrun diagram)*<br><img src="/assets/777_47.png" alt="xxx" width="45%" style="border: 1px solid #999;">
-
-*Demo D2 first AIP workflow diagram (this diagram is wrong... FDE gave a fake answer rather than admitting it did not know)*<br><img src="/assets/777_48.png" alt="xxx" width="70%" style="border: 1px solid #999;">
--->
-
-
 <br>
 
-<!-- #### **[1.3 D3 (WIP) = "Speedrun: Your First Agentic AIP Workflow" (26.0829)](/3c.3_pal_agentic_ai/)**
-This is the First agent in Foundry (for a draft WIP discussion of what exactly an agent is in Foundry, see **[3c.2_pal_D3_notes_26.0828](/3c.2_pal_D3_notes_26.0828/)**).
+#### **[1.3 D3 (WIP) = "Speedrun: Your First Agentic AIP Workflow" (26.0830)](/3c.3_pal_agentic_ai/)**
 
-
-The diagram below summarizes the workflow
-- (1) An patient object is (1a) Modified or (1b) Added. *Note: This is how the objects are added in this demo... but the demo works no matter how the object is modified/added*.
-  - FDE correction (my mistake): With the demonstrated Objects added to set condition and no filters, modifying an existing Patient does not trigger the automation. The trigger is a new Patient entering the monitored object set. A modification would trigger it only if filters were added and the modification caused the Patient to newly enter that set.
-- (2-4) The agent updates the ontology.
-- (5) The updates are displayed to the user (I think refresh is required).
-
-**Agent details:** FDE: The agent is the complete event-driven system. With edits configured to run automatically, no human is required to initiate or approve each case. 
-- 2 Automate observes the Ontology and provides the recurring control loop; 
-- 3 AIP Logic performs the reasoning; and a 
-- 4 governed Action writes the resulting decision back to the Ontology. 
--->
-
-#### **[1.3 D3 (WIP) = "Speedrun: Your First Agentic AIP Workflow" (26.0829)](/3c.3_pal_agentic_ai/)**
-
-This demo builds the first **autonomous operational agent** in this sequence. For a discussion of what “agent” means in Foundry, see the D2 notes.
-
-The user can:
-
-**1a.** Manually review or modify an existing Patient’s eligibility decision through a governed Action; or  
-**1b.** Add a new Patient, causing that Patient to enter the object set monitored by Automate.
-
-The agent is the complete event-driven system:
-
-**2. Automate** observes the Ontology and supplies the recurring control loop. When a Patient enters the monitored object set, it invokes the published AIP Logic for that Patient and the configured Clinical Trial.
-
-**3. AIP Logic** reads the Patient and Clinical Trial objects and uses an LLM to determine the eligibility decision and reasoning.
-
-**4. A governed Action** writes the decision and reasoning back to the Patient object. Because the automation is configured to **automatically run edits**, no human is required to initiate or approve each case.
-
-**5. The UI** displays the updated Patient state, potentially after a manual refresh.
-
-In compact form:
-
-```text
-Patient enters monitored set
-→ Automate triggers
-→ AIP Logic reasons
-→ Governed Action commits edits
-→ Updated Patient appears in the UI
-```
-
-> **FDE:** The agent is not the LLM or AIP Logic alone. It is the complete event-driven system comprising Ontology state, Automate, AIP Logic, the LLM, and the governed Action.
-
-<br>
-
-----------------
-
-<br>
-
-Exactly. The chronology is:
+This demo builds the first **autonomous operational agent** in this sequence. 
 
 1. **A new Patient is added** through the UI and written to the Ontology.
 2. **Automate detects** that the Patient entered the monitored object set.
 3. **AIP Logic evaluates** the Patient against the selected Clinical Trial.
 4. **The governed Action automatically writes** the initial eligibility decision and reasoning.
-5. **Staff review the result** and may manually adjust the eligibility decision through the UI.
-
-That last step is important: automation makes the initial operational decision, but staff retain oversight and can override it through a governed Action.
-
-```text
-Add Patient
-→ automatic assessment
-→ automatic Ontology update
-→ staff review
-→ optional manual correction
-```
-
-This is best described as an **autonomous agent with human oversight**, rather than a system from which humans are entirely removed.
-
-<br>
-
-*NOTE: The “AIP Function” and “AIP Logic” boxes show two Foundry UI/resource views of the same executable logic. The Function Registry entry is the published interface selected by Automate; the Logic editor contains its implementation.*
-
------------------
-
-<br>
+5. **Staff review the result** and may manually adjust the eligibility decision through the UI. This last step is important: Automation makes the initial operational decision, but staff retain oversight and can override it through a governed Action.
 
 See also:  
 - **[#614_.docx](https://drive.google.com/drive/folders/1-Adawag9uA8_bq-hDF-nOuPYaRLz1eEO)**     
 - **[Speedrun](https://learn.palantir.com/speedrun-your-first-agentic-aip-workflow)**
 
+Notes: 
+- For a discussion of what “agent” means in Foundry, see the D2 notes. This is an on-going debate with FDE.
+- FDE (not sure I agree with this): The agent is not the LLM or AIP Logic alone. It is the complete event-driven system comprising Ontology state, Automate, AIP Logic, the LLM, and the governed Action.
+- The “AIP Function” and “AIP Logic” boxes show two Foundry UI/resource views of the same executable logic. The Function Registry entry is the published interface selected by Automate; the Logic editor contains its implementation.
 
-*Demo D3 ZAI diagram (26.0829) (2 different AI models are used)*<br><img src="/assets/MASTER_D3.png" alt="xxx" width="100%" style="border: 1px solid #999;">
+*Demo D3 ZAI diagram (2 different AI models are used)*<br><img src="/assets/MASTER_D3.png" alt="xxx" width="100%" style="border: 1px solid #999;">
 
 
 <br>
@@ -298,7 +166,146 @@ Mechanically:
 
 <br>
 
-26.0829 (v1 26.0725)
+26.0830 (v1 26.0725)
+
+
+
+
+
+
+
+
+
+
+<!-- ==========================================================================================
+==========================================================================================
+==========================================================================================
+==========================================================================================
+==========================================================================================
+-->
+
+<!-- The user can:
+
+**1a.** Manually review or modify an existing Patient’s eligibility decision through a governed Action; or  
+**1b.** Add a new Patient, causing that Patient to enter the object set monitored by Automate.
+
+The agent is the complete event-driven system:
+
+**2. Automate** observes the Ontology and supplies the recurring control loop. When a Patient enters the monitored object set, it invokes the published AIP Logic for that Patient and the configured Clinical Trial.
+
+**3. AIP Logic** reads the Patient and Clinical Trial objects and uses an LLM to determine the eligibility decision and reasoning.
+
+**4. A governed Action** writes the decision and reasoning back to the Patient object. Because the automation is configured to **automatically run edits**, no human is required to initiate or approve each case.
+
+**5. The UI** displays the updated Patient state, potentially after a manual refresh.
+
+In compact form:
+
+```text
+Patient enters monitored set
+→ Automate triggers
+→ AIP Logic reasons
+→ Governed Action commits edits
+→ Updated Patient appears in the UI
+```
+
+
+Exactly. The chronology is:
+
+1. **A new Patient is added** through the UI and written to the Ontology.
+2. **Automate detects** that the Patient entered the monitored object set.
+3. **AIP Logic evaluates** the Patient against the selected Clinical Trial.
+4. **The governed Action automatically writes** the initial eligibility decision and reasoning.
+5. **Staff review the result** and may manually adjust the eligibility decision through the UI.
+
+
+```text
+Add Patient
+→ automatic assessment
+→ automatic Ontology update
+→ staff review
+→ optional manual correction
+```
+
+-->
+
+<!-- With ZAI versions of the docs with added heading numbering, step numbering, concepts (especially conceptual diagrams), and error corrections.
+Created/updated/published (to ZAI) from tagged docx files (using GPT). -->
+
+<!-- *Demo D2 first AIP workflow diagram (WIP)*<br><img src="/assets/777_49.png" alt="xxx" width="40%" style="border: 1px solid #999;">
+
+*Demo D2 first AIP workflow diagram (ZAI enhanced version of original speedrun diagram)*<br><img src="/assets/777_47.png" alt="xxx" width="45%" style="border: 1px solid #999;">
+
+*Demo D2 first AIP workflow diagram (this diagram is wrong... FDE gave a fake answer rather than admitting it did not know)*<br><img src="/assets/777_48.png" alt="xxx" width="70%" style="border: 1px solid #999;">
+-->
+
+<!-- #### **[1.3 D3 (WIP) = "Speedrun: Your First Agentic AIP Workflow" (26.0829)](/3c.3_pal_agentic_ai/)**
+This is the First agent in Foundry (for a draft WIP discussion of what exactly an agent is in Foundry, see **[3c.2_pal_D3_notes_26.0828](/3c.2_pal_D3_notes_26.0828/)**).
+
+
+The diagram below summarizes the workflow
+- (1) An patient object is (1a) Modified or (1b) Added. *Note: This is how the objects are added in this demo... but the demo works no matter how the object is modified/added*.
+  - FDE correction (my mistake): With the demonstrated Objects added to set condition and no filters, modifying an existing Patient does not trigger the automation. The trigger is a new Patient entering the monitored object set. A modification would trigger it only if filters were added and the modification caused the Patient to newly enter that set.
+- (2-4) The agent updates the ontology.
+- (5) The updates are displayed to the user (I think refresh is required).
+
+**Agent details:** FDE: The agent is the complete event-driven system. With edits configured to run automatically, no human is required to initiate or approve each case. 
+- 2 Automate observes the Ontology and provides the recurring control loop; 
+- 3 AIP Logic performs the reasoning; and a 
+- 4 governed Action writes the resulting decision back to the Ontology. 
+-->
+
+<!-- #### **Demo videos vs docx's**
+
+Ontologize.com has a lot of top Youtube videos for learning Foundry. However, in the **[Ontologize video](https://youtu.be/6kXdjW4KnHc?t=69) for the first PAL demo** "Speedrun: Your First End-to-End Workflow" they say *"...we're going to build a fully end-to-end workflow. **This course is not going to go into all the detailed ins and outs of each step**. This is about the big picture and to give you a taste of how everything fits together."*  
+
+I spent days getting that demo working because of a few small errors. You need those details. **ZAI is about mastering the (1) the Foundry UI and (2) the details of each demo**. When you first start out, (1) is the most difficult (its an excellent UI, but requires some initial study). And the eventual goal is **a thread of videos** (based on PAL demos, but with ZAI docx docs and modified workflows). **Details are everything. ZAI numbers docx's, demos, headings and steps. And every screenshots (WIP).**
+
+Ontologize has another great **[video](https://www.youtube.com/watch?v=TTYHAtQ4ROw)** "Speedrun: Mining your First Business Process **(update)**" . Note that word "update". Videos are great, but they are hard to update and fix. ZAI demos are not. The text/pics on this website are extracted from docx master files by a very efficient process where GPT does all the heavy lifting. This makes quick total updates quite possible. For a video thats a major process. And the ZAI docx source files have lots of tech and historical notes.
+
+
+#### **Understanding how to use FDE to debug is CRUCIAL**
+
+Without FDE, you will get stuck. With FDE skills, you fix anything. FOR EXAMPLE: Look at the ZAI docx for that mining video (**[#616](https://drive.google.com/drive/folders/1-Adawag9uA8_bq-hDF-nOuPYaRLz1eEO)**) at the end of ch6 section 6.2 step 3 is the heading "ERROR". The following shows that error text/screeshots. What apparently happened was a timing error. Foundry does things in the background, and sometimes something is not finished (but it NOT obvious). That can easily cost you hours of debugging. Understanding those errors and how to debug them (with FDE) should the real focus of any initial demos.
+
+<br>
+
+----------------------------
+
+**ERROR**. Failed to load aggregation result. Here are the details of the error:
+
+<img src="/assets/ERROR_01.png" alt="xxx" width="50%" style="border: 1px solid #999;">
+
+<!-- <img src="/assets/ERROR_02.png" alt="xxx" width="60%" style="border: 1px solid #999;"> ->
+
+then FDE/GPT did some stuff (SEE GPT CONVERSATION 26.0718_1035)
+
+<img src="/assets/ERROR_03.png" alt="xxx" width="60%" style="border: 1px solid #999;">
+
+<!-- <img src="/assets/ERROR_04.png" alt="xxx" width="60%" style="border: 1px solid #999;"> ->
+
+**ME: i clicked "ready to mine" again.. and seems it worked.. did you fix something?**
+
+**FDE: No --- I did not change or fix anything** in the resource. I only
+inspected the saved Machinery graph and the underlying Ontology/log
+data. What likely happened is that the earlier **"Failed to load aggregation result" was a transient loading / aggregation / browser-state issue, and when you clicked Ready to mine again the aggregation succeeded**.
+
+Now that it worked, do these steps before refreshing:
+
+-   Click Confirm in the Mining configuration panel.
+    -   Your screen says: Adding 7 states and 9 transitions.
+    -   Until you click Confirm, those mined elements may not be added to the graph.
+-   After the graph updates, click the top Save button for mine_process_1.
+-   **Wait until the save completes / the Save button no longer indicates unsaved changes**.
+-   Then it should be safe to refresh or reopen.
+
+Your saved Machinery resource is still:
+- mine_process_1
+So the important point is: **Ready to mine only previews/adds mined results; Confirm + Save is what makes them persist in the document.**
+
+----------------------------
+
+-->
 
 
 <!-- 
