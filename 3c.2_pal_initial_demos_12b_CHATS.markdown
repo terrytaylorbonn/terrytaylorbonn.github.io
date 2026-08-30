@@ -1,0 +1,302 @@
+---
+layout: page
+title: 3c.2_pal_initial_demos_12b_CHATS
+permalink: /3c.2_pal_initial_demos_12b_CHATS/
+---
+
+<br>
+
+[← 3c Enterprise](/pal/)
+
+<br>
+
+what do you think about attached diagram 1?
+shows traditional agent diagram (top) and in Foundry (bottom)
+(2),(3),(4) are the numbers used in the Foundry agent main diagram 2 (attached)
+
+## Overall assessment
+
+**Diagram 1 is very effective.** It makes the conceptual equivalence between a conventional code-based agent and the Foundry implementation much clearer than the original demo documentation does.
+
+The mapping of the numbered components works:
+
+| Number | Traditional implementation | Foundry implementation |
+|---|---|---|
+| **(2)** | Agent/control loop | Automate event loop |
+| **(3)** | LLM API call | **Use LLM** block |
+| **(4)** | Tool/action call | Governed Ontology Action |
+
+It also supports your central argument:
+
+> Foundry did not invent a fundamentally different architecture. It distributed the familiar agent components across named, governed platform resources.
+
+There are, however, several changes that would make the comparison more technically exact.
+
+---
+
+## 1. Change the UI input path in the Foundry diagram
+
+This is the most important adjustment.
+
+The bottom diagram currently appears to show:
+
+```text
+UI Input → Automation INPUT
+```
+
+But that is not how Demo 3 works. The user first creates a Patient in the Ontology:
+
+```text
+UI Input
+→ Add Patient Action
+→ Ontology WRITE
+→ Patient appears in monitored object set
+→ Automate detects it
+```
+
+Automate does not directly receive the form input. It receives a reference to the Patient object that newly entered the monitored set.
+
+I would draw:
+
+```text
+UI Input ──Add Patient Action──▶ Ontology WRITE
+Ontology READ/object-set event ──(2)──▶ Automate
+```
+
+That would also align Diagram 1 with arrows **1b** and **2** in Diagram 2.
+
+---
+
+## 2. Label `(2)` more specifically
+
+In Diagram 2, arrow 2 means more than just “loop.” It includes:
+
+1. monitoring the Patient object set;
+2. detecting that a Patient entered it;
+3. invoking the published Logic function;
+4. passing the Patient and configured Clinical Trial as inputs.
+
+A better label would therefore be:
+
+> **(2) Automate: detect event and invoke Logic**
+
+or:
+
+> **(2) Event trigger / recurring invocation**
+
+The circular loop icon is still appropriate, but the loop is:
+
+```text
+wait for qualifying event
+→ invoke Logic once
+→ wait for next event
+```
+
+It is not an internal LLM planning loop.
+
+---
+
+## 3. Distinguish the two kinds of “agent loop”
+
+This is an important conceptual difference between the top and bottom diagrams.
+
+### Typical code-based agent loop
+
+A conventional agent may run an internal reasoning loop:
+
+```text
+call LLM
+→ choose tool
+→ inspect tool result
+→ call LLM again
+→ repeat until finished
+```
+
+### Demo 3 Foundry loop
+
+The AIP Logic itself is one-shot:
+
+```text
+read objects
+→ call LLM once
+→ invoke Action once
+→ terminate
+```
+
+Automate provides an **outer event loop**:
+
+```text
+wait for new Patient
+→ run one-shot Logic
+→ wait for next Patient
+```
+
+Therefore, I suggest labeling the top loop:
+
+> **Agent reasoning/control loop**
+
+and the bottom loop:
+
+> **Automate event/invocation loop**
+
+That preserves the analogy without implying that the two loops are identical.
+
+---
+
+## 4. Rename the inner `AIP` box
+
+In the bottom diagram, the box containing **Use LLM** and **Action** would be clearer as:
+
+> **Published AIP Logic function — one execution**
+
+rather than simply `AIP`.
+
+That gives you the following hierarchy:
+
+```text
+Automate event loop
+└── Published AIP Logic function
+    ├── Use LLM
+    └── Ontology Action
+```
+
+This also clarifies the relationship to Diagram 2:
+
+- the Logic editor shows its implementation;
+- the AIP Function dialog shows its published interface;
+- Automate selects and invokes that published version.
+
+You do not necessarily need to add the Function Registry dialog to the conceptual diagram. Diagram 2 already explains that UI indirection.
+
+---
+
+## 5. Do not equate MCP directly with a tool
+
+In the top diagram, `MCP, Tool` combines two related but different concepts:
+
+- A **tool** is an operation the agent can invoke.
+- **MCP** is a protocol through which tools and resources can be exposed.
+
+A clearer label would be:
+
+> **Tool / function / API**
+
+If MCP matters to the surrounding discussion, use:
+
+> **Tool API — optionally exposed through MCP**
+
+A corresponding architecture might be:
+
+```text
+Agent → MCP client → MCP server → tool → database
+```
+
+The Foundry Ontology Action is conceptually equivalent to a governed tool call, but it is not inherently an MCP operation.
+
+---
+
+## 6. Label the LLM as an external service
+
+Your drawing already places the LLM outside the main control-loop box, which supports your argument well. I would label it:
+
+> **External LLM service/API**
+
+Then `(3)` can explicitly read:
+
+> **(3) Model API call**
+
+The Foundry equivalent becomes:
+
+```text
+Use LLM block
+→ external LLM service
+→ structured decision returned
+```
+
+This visually reinforces your distinction:
+
+- the LLM service supplies the AI inference;
+- the agent runtime invokes and operationalizes it.
+
+---
+
+## 7. Consider changing the outer dashed boundaries
+
+In the top diagram, the outer dashed box includes the UI, database, agent runtime, and LLM. That is really the complete **deployed agentic system**, rather than only the agent program.
+
+The same applies to the bottom diagram.
+
+Possible outer labels:
+
+### Top
+
+> **Conventional code-based agentic system**
+
+### Bottom
+
+> **Foundry agentic system**
+
+Then the inner boxes identify the actual orchestration runtimes.
+
+This supports two legitimate boundaries:
+
+```text
+Narrow agent:
+control program that invokes models and tools
+
+Operational agentic system:
+program + models + tools + state + triggers + UI
+```
+
+---
+
+## Recommended Foundry flow
+
+With those changes, the bottom diagram would express:
+
+```text
+UI: Add Patient
+        │
+        ▼
+Ontology WRITE
+        │
+        ▼
+Patient enters monitored object set
+        │
+        │ (2) Detect event and invoke
+        ▼
+Automate
+        │
+        ▼
+Published AIP Logic — one execution
+        │
+        ├── read Patient + Clinical Trial from Ontology
+        │
+        ├── (3) Use LLM → external LLM service
+        │
+        └── (4) governed Action → Ontology WRITE
+                                      │
+                                      ▼
+                                Ontology READ
+                                      │
+                                      ▼
+                                  UI Display
+```
+
+## Relationship to Diagram 2
+
+Your numbering is internally consistent, provided that the labels mean:
+
+- **(2):** Automate detects the Ontology event and invokes the published Logic.
+- **(3):** AIP Logic performs its reasoning through the external LLM call.
+- **(4):** The governed Action writes the resulting decision to the Ontology.
+
+Diagram 1 explains the **general architecture**; Diagram 2 shows where those abstract components appear in Foundry’s actual dialogs. That is a strong pairing.
+
+## Bottom line
+
+I would keep Diagram 1. Its principal insight is excellent:
+
+> **A conventional code-based agent and the Foundry agent contain the same conceptual parts; Foundry externalizes those parts as Automate, AIP Logic, Use LLM, Ontology, and Actions.**
+
+The main correction is to route user input through the Ontology before Automate. After that, the distinction between the **outer Automate event loop** and a conventional agent’s possible **inner reasoning loop** should be made explicit.
