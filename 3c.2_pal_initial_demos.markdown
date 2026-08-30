@@ -85,8 +85,7 @@ See also:
 - **[Speedrun](https://learn.palantir.com/speedrun-your-first-agentic-aip-workflow)**
 
 Notes: 
-- For a discussion of what “agent” means in Foundry, see the D2 notes. This is an on-going debate with FDE.
-- FDE (not sure I agree with this): The agent is not the LLM or AIP Logic alone. It is the complete event-driven system comprising Ontology state, Automate, AIP Logic, the LLM, and the governed Action.
+- For a discussion of what “agent” means in Foundry, see the D2 notes. This is an on-going debate with FDE. FDE (not sure I agree with this): The agent is not the LLM or AIP Logic alone. It is the complete event-driven system comprising Ontology state, Automate, AIP Logic, the LLM, and the governed Action.
 - The “AIP Function” and “AIP Logic” boxes show two Foundry UI/resource views of the same executable logic. The Function Registry entry is the published interface selected by Automate; the Logic editor contains its implementation.
 
 *Demo D3 ZAI diagram (2 different AI models are used)*<br><img src="/assets/MASTER_D3.png" alt="xxx" width="100%" style="border: 1px solid #999;">

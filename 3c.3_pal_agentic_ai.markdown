@@ -20,8 +20,34 @@ permalink: /3c.3_pal_agentic_ai/
 - **[#611vvv\_aip\_qs\_.docx](https://drive.google.com/drive/folders/1-Adawag9uA8_bq-hDF-nOuPYaRLz1eEO)**. Rewriting #611\_pal\_aip\_v06ccc-01\_ for the content of this page. Lots of my own concepts, etc.  -->
 
 <br>
+
+
+
+#### **TOC:**
+
+- **Concepts**
+
+  - **C1 Why do the ZAI version of this demo**
+
+  - **C2 What is an agent (not Foundry)**
+
+  - **C3 What is a Foundry agent**
+
+- **Step-by-step**
+
+  - **P1 Install marketplace (data, pipeline, ontology, UI)**
+
+  - **P2 Automation, agent (ch4,6)**
+
+  - **P3 Evaluation suite (ch5)**
+
+- **Notes**
+
 <br>
-<br>
+
+26.0830 (v1 26.0713)
+
+<br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br>
 
 --------------------------------------------
 --------------------------------------------
@@ -964,4 +990,3 @@ Not really “agentic” in the stronger sense.
 
 It’s an LLM-backed workflow/function that updates ontology fields.
 
-26.0714 (v1 26.0713)
