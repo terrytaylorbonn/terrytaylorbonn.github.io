@@ -1,6 +1,6 @@
 ---
 layout: page
-title: 3c.3 PAL Agentic AI
+title: Demo D3 "Speedrun -- Your First Agentic AIP Workflow"
 permalink: /3c.3_pal_agentic_ai/
 ---
 

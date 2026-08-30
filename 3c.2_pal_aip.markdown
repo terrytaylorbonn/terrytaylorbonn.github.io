@@ -1,6 +1,6 @@
 ---
 layout: page
-title: Demo D2 ("Speedrun -- Your First AIP Workflow")
+title: Demo D2 "Speedrun -- Your First AIP Workflow"
 permalink: /3c.2_pal_aip/
 ---
 
