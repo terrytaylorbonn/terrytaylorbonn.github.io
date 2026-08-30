@@ -31,11 +31,11 @@ See also
 
 <br>
 
-- **[P2 Agent](3c.3_pal_agentic_ai_P2_agent)** (Automation (ch4), agent (ch6), evaluation suite (ch5))
+- **[P2 Agent](/3c.3_pal_agentic_ai_P2_agent/)** (Automation (ch4), agent (ch6), evaluation suite (ch5))
 
 <br>
 
-- **[Notes](3c.3_pal_agentic_ai_NOTES)**
+- **[Notes](/3c.3_pal_agentic_ai_NOTES/)**
 
 <br>
 
