@@ -70,6 +70,15 @@ Your first app with AI.
 
 <br>
 
+#### **[1.2b ZAI take on what exactly an "agent" is in Foundry" (26.0830)](/3c.3_pal_agentic_ai/)**
+
+*WIP.... the numbers (2), (3), (4) below match those in the "1.3 D3" main diagram*.
+
+*Compared: A conventional code-based agent and the Foundry agent*<br><img src="/assets/MASTER_D1.2b.png" alt="xxx" width="82%" style="border: 1px solid #999;">
+
+
+<br>
+
 #### **[1.3 D3 (WIP) = "Speedrun: Your First Agentic AIP Workflow" (26.0830)](/3c.3_pal_agentic_ai/)**
 
 This demo builds the first **autonomous operational agent** in this sequence. 
