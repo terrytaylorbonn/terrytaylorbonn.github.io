@@ -31,7 +31,24 @@ See also
 
 <br>
 
-- **[P2 Agent](/3c.3_pal_agentic_ai_P2_agent/)** (Automation (ch4), agent (ch6), evaluation suite (ch5))
+- **[P2 Add AIP/LLM (Building AIP logic reasoning)](/3c.3_pal_agentic_ai_P2_Use_LLM/)** 
+
+<br>
+
+- **[P3 Add AIP / Action (Add Ontology modification)](/3c.3_pal_agentic_ai_P3_action/)** 
+
+<br>
+
+- **[P4 Create the Evaluation Suite](/3c.3_pal_agentic_ai_P4_eval_suite/)** 
+
+<br>
+
+- **[P5 Publish the AIP Logic as a Function](/3c.3_pal_agentic_ai_P5_function/)** 
+
+<br>
+
+- **[P6 Create the Automation](/3c.3_pal_agentic_ai_P6_automation/)** 
+
 
 <br>
 
@@ -39,4 +56,4 @@ See also
 
 <br>
 
-26.0830 (v1 26.0713)
+26.0831 (v1 26.0713)

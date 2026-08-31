@@ -37,13 +37,12 @@ See also **[PAL demo strategy](/3c.aaa_pal_strategy_demos/)** (outdated).
 
 ## **1 AI thread -- external models** 
 
-These will focus on **getting started (grasping core concepts via hands-on demos) for Foundry with AI using external models**. The knowledge gained from studying sections 2, 2a, 3, and 3b on this website is not crucial, but really comes in handy for understanding what you are doing and why.
+These will focus on **getting started (grasping core concepts via hands-on demos) for Foundry with AI using external models**. 
 
 Note: 
-- WIP (26.0827 I reorg'd this page)
 - The thread order does not exactly match the demo number.
 - Initial focus is on Foundry + AI + agents
-- DIY = do it yourself; I created the demo from scratch with FDE/GPT assistance.
+
 
 <br>
 
@@ -70,7 +69,7 @@ Your first app with AI.
 
 <br>
 
-#### **1.2b ZAI take on what exactly an "agent" is in Foundry (26.0831; v1 26.0830)**
+#### **1.2b ZAI take on what exactly an "agent" is in Foundry (26.0831)**
 
 Demo D2 called an external LLM. That is (in my opinion) an AI agent (and a risk of leaking sensitive data to an external LLM). However, D3 is mentioned as the first Agentic demo for Foundry. 
 
@@ -231,7 +230,7 @@ Mechanically:
 
 <br>
 
-26.0830 (v1 26.0725)
+26.0831 (v1 26.0725)
 
 
 

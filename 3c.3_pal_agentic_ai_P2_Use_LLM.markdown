@@ -1,7 +1,7 @@
 ---
 layout: page
-title: P1 Install marketplace
-permalink: /3c.3_pal_agentic_ai_P1_install_mp/
+title: P2 Add AIP/LLM (Building AIP logic reasoning)
+permalink: /3c.3_pal_agentic_ai_P2_Use_LLM/
 ---
 
 <br>
@@ -18,13 +18,7 @@ See also
 
 #### **TOC:**
 
-•	Data sources
-•	Pipeline
-•	Ontology
-•	Actions and UI
-
-
 
 <br>
 
-26.0830 (v1 26.0830)
+26.0831 (v1 26.0831)

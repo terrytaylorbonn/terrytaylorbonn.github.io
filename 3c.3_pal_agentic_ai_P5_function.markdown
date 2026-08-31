@@ -1,8 +1,9 @@
 ---
 layout: page
-title: P1 Install marketplace
-permalink: /3c.3_pal_agentic_ai_P1_install_mp/
+title: P5 Publish the AIP Logic as a Function
+permalink: /3c.3_pal_agentic_ai_P5_function/
 ---
+
 
 <br>
 
@@ -18,13 +19,7 @@ See also
 
 #### **TOC:**
 
-•	Data sources
-•	Pipeline
-•	Ontology
-•	Actions and UI
-
-
 
 <br>
 
-26.0830 (v1 26.0830)
+26.0831 (v1 26.0831)

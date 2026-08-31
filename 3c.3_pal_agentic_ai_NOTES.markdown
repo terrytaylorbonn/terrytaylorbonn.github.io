@@ -1,6 +1,6 @@
 ---
 layout: page
-title: 3c.3_pal_agentic_ai_NOTES
+title: NOTES
 permalink: /3c.3_pal_agentic_ai_NOTES/
 ---
 
