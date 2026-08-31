@@ -18,31 +18,35 @@ See also
 
 <br>
 
-#### **TOC:**
+### **TOC:**
 
 <br>
 
-- **[C0 Concepts (workflow diagrams)](/3c.3_pal_agentic_ai_C0_concepts/)**
+#### **[C0 Concepts (workflow diagrams)](/3c.3_pal_agentic_ai_C0_concepts/)**
 For now mostly workflow diagrams.
   - C0.1 Demo D3 workflow
   - C0.2 Traditional agent (not Foundry) workflow
   - C0.3 Foundry agent workflow
 
 
-*C0.1*<br><img src="/assets/D3/D3_C0.1.png" alt="xxx" width="76%" style="border: 1px solid #999;">
+*C0.1*<br><img src="/assets/D3/D3_C0.1.png" alt="xxx" width="100%" style="border: 1px solid #999;">
 
-*C0.3*<br><img src="/assets/D3/D3_C0.3.png" alt="xxx" width="76%" style="border: 1px solid #999;">
+
+*C0.2*<br><img src="/assets/MASTER_D1.2b_UPPER.png" alt="xxx" width="76%" style="border: 1px solid #999;">
+
+
+*C0.3*<br><img src="/assets/D3/D3_C0.3.png" alt="xxx" width="100%" style="border: 1px solid #999;">
 
 
 <br>
 
-- **[P1 Install marketplace](/3c.3_pal_agentic_ai_P1_install_mp/)** (data, pipeline, ontology, UI)
+#### **[P1 Install marketplace](/3c.3_pal_agentic_ai_P1_install_mp/)** (data, pipeline, ontology, UI)
 
 *P1*<br><img src="/assets/D3/D3_P1.png" alt="xxx" width="76%" style="border: 1px solid #999;">
 
 <br>
 
-- **[P2 Add AIP/LLM (Building AIP logic reasoning)](/3c.3_pal_agentic_ai_P2_Use_LLM/)** 
+#### **[P2 Add AIP/LLM (Building AIP logic reasoning)](/3c.3_pal_agentic_ai_P2_Use_LLM/)** 
 
 *P2*<br><img src="/assets/D3/D3_P2.png" alt="xxx" width="36%" style="border: 1px solid #999;">
 
@@ -52,31 +56,31 @@ For now mostly workflow diagrams.
 
 
 
-- **[P3 Add AIP / Action (Add Ontology modification)](/3c.3_pal_agentic_ai_P3_action/)** 
+#### **[P3 Add AIP / Action (Add Ontology modification)](/3c.3_pal_agentic_ai_P3_action/)** 
 
 *P3*<br><img src="/assets/D3/D3_P3.png" alt="xxx" width="36%" style="border: 1px solid #999;">
 
 <br>
 
-- **[P4 Create the Evaluation Suite](/3c.3_pal_agentic_ai_P4_eval_suite/)** 
+#### **[P4 Create the Evaluation Suite](/3c.3_pal_agentic_ai_P4_eval_suite/)** 
 
 *P4*<br><img src="/assets/D3/D3_P4.png" alt="xxx" width="76%" style="border: 1px solid #999;">
 
 <br>
 
-- **[P5 Publish the AIP Logic as a Function](/3c.3_pal_agentic_ai_P5_function/)** 
+#### **[P5 Publish the AIP Logic as a Function](/3c.3_pal_agentic_ai_P5_function/)** 
 
 *P5*<br><img src="/assets/D3/D3_P5.png" alt="xxx" width="36%" style="border: 1px solid #999;">
 
 <br>
 
-- **[P6 Create the Automation](/3c.3_pal_agentic_ai_P6_automation/)** 
+#### **[P6 Create the Automation](/3c.3_pal_agentic_ai_P6_automation/)** 
 
 *P6*<br><img src="/assets/D3/D3_P6.png" alt="xxx" width="76%" style="border: 1px solid #999;">
 
 <br>
 
-- **[Notes](/3c.3_pal_agentic_ai_NOTES/)**
+#### **[Notes](/3c.3_pal_agentic_ai_NOTES/)**
 
 <br>
 
