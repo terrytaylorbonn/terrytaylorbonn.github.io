@@ -46,7 +46,7 @@ For now mostly workflow diagrams.
 
 <br>
 
-#### **[P2 Add AIP/LLM (Building AIP logic reasoning)](/3c.3_pal_agentic_ai_P2_Use_LLM/)** 
+#### **[P2 Add AIP / Use_LLM (Building AIP logic reasoning)](/3c.3_pal_agentic_ai_P2_Use_LLM/)** 
 
 *P2*<br><img src="/assets/D3/D3_P2.png" alt="xxx" width="36%" style="border: 1px solid #999;">
 
@@ -56,7 +56,7 @@ For now mostly workflow diagrams.
 
 
 
-#### **[P3 Add AIP / Action (Add Ontology modification)](/3c.3_pal_agentic_ai_P3_action/)** 
+#### **[P3 Add AIP / Ontology_Action (Add Ontology modification)](/3c.3_pal_agentic_ai_P3_action/)** 
 
 *P3*<br><img src="/assets/D3/D3_P3.png" alt="xxx" width="36%" style="border: 1px solid #999;">
 
