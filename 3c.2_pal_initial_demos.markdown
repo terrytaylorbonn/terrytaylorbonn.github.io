@@ -70,7 +70,7 @@ Your first app with AI.
 
 <br>
 
-#### **[1.2b ZAI take on what exactly an "agent" is in Foundry" (26.0830)](/3c.3_pal_agentic_ai/)**
+#### **1.2b ZAI take on what exactly an "agent" is in Foundry" (26.0830)**
 
 - **WIP** (this section added v1 26.0830)
 - See also **[3c.2_pal_initial_demos_12b_CHATS](/3c.2_pal_initial_demos_12b_CHATS/)**
