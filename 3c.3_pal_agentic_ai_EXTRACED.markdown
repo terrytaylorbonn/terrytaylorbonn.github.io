@@ -1,0 +1,811 @@
+---
+layout: page
+title: 3c.3_pal_agentic_ai_EXTRACED
+permalink: /3c.3_pal_agentic_ai_EXTRACED/
+---
+
+<br>
+
+[← 2.2 PAL demos (speedruns)](/3c.2_pal_initial_demos/)
+
+<br>
+
+
+# Notes
+
+### P1 Installing marketplace
+
+#### If you need to install marketplace, then see the original
+
+https://learn.palantir.com/speedrun-your-first-agentic-aip-workflow . I dont want to reinstall on my system because uninstalling the current installation is complicated.
+
+<img src="/assets/D3/01.png" alt="xxx" width="55%" style="border: 1px solid #999;">
+
+#### Q1: deleting the old marketplace is complicated
+
+Yes—potentially, because the old Marketplace installation owns the foundation you are planning to reuse:
+
+- Patient and Clinical Trial object types
+- Ontology Actions
+- datasets and pipeline
+- Workshop UI
+
+Your new Logic and Automation will reference those existing resources. Deleting/uninstalling the old Marketplace product could therefore break the new implementation.
+
+For now, the safest arrangement is:
+
+```text
+
+Keep Marketplace installation
+
+├─ reuse its data, Ontology and Actions
+
+├─ pause old Automation
+
+└─ create new Logic, Function, Evaluation and Automation
+
+```
+
+Only remove the Marketplace installation if you intend to remove the entire demo and have first checked all downstream dependencies. Deleting just the old Logic, Evaluation Suite, Function, or Automation is more manageable, but it is unnecessary if they are clearly named and disabled.
+
+#### Q1: what i mean is, if i want to start clean, then getting rid of the existing stuff is not a simple delete.
+
+Correct. A D3 installation is not one self-contained folder that can necessarily be removed with a single ordinary delete. It creates a **dependency graph across Foundry applications**:
+
+```text
+
+Automation
+
+→ published Function
+
+→ AIP Logic
+
+→ Action
+
+→ object types
+
+→ datasets/pipeline
+
+```
+
+It may also include:
+
+- an Evaluation Suite;
+- Workshop resources;
+- generated Ontology objects;
+- user edits written through Actions.
+
+Marketplace may provide an **uninstall/delete installation** operation for resources it manages, but:
+
+- downstream resources you created manually may not be included;
+- active references can block deletion;
+- shared resources must not be removed;
+- Ontology resources and generated data need special care.
+
+A manual cleanup generally proceeds in reverse dependency order:
+
+1. Pause/delete Automations.
+
+2. Remove Evaluation Suites and application references.
+
+3. Retire/remove published Functions and AIP Logic.
+
+4. Remove Workshop dependencies.
+
+5. Remove Actions.
+
+6. Remove object/link types.
+
+7. Remove pipelines and datasets.
+
+8. Remove the Marketplace installation record.
+
+Therefore, if the objective is simply to repeat the tutorial cleanly, **creating a second set of Logic/Evaluation/Function/Automation resources while retaining the Marketplace foundation is much safer**.
+
+For complete isolation, a new namespace with its own Ontology is cleaner than trying to dismantle and recreate everything in the existing namespace. A new folder alone does not provide that isolation.
+
+### P2 Add (4) AIP logic / (4a) Use LLM (Build the AIP Logic reasoning)
+
+#### Q1: i saved this aip_logic and tested. but did not publish.
+
+publish will create the function, and i will not be able to change that function?
+(only can create new version)
+
+**Correct.**
+
+Publishing will:
+
+1. Create the Function identity in the Function Registry.
+
+2. Create its first immutable published version.
+
+3. Leave the source AIP Logic editable.
+
+Afterward:
+
+```text
+
+Edit AIP Logic
+
+→ preview/test
+
+→ publish again
+
+→ create a new immutable Function version
+
+```
+
+**You cannot change the implementation of an already published version.**
+
+**One important point: your current Logic outputs the **Use LLM struct**. If the intended final Function should output **Ontology edits**, add and configure the Action block before the first publication. Changing from a struct output to Ontology edits later is a breaking interface change.**
+
+#### Q2: breaking interface change? what does that mean?
+
+A **breaking interface change** means changing the Function’s public contract so existing callers can no longer use it in the same way.
+
+Your current output is:
+
+```text
+
+Struct {
+
+eligibility_decision: String
+
+eligibility_reasoning: String
+
+}
+
+```
+
+After adding the Action as the output, it becomes:
+
+```text
+
+List<Ontology Edits>
+
+```
+
+Those output types are incompatible. A caller expecting decision fields cannot consume a list of edits.
+
+```text
+
+Before:
+
+Function → decision/reasoning struct
+
+After:
+
+Function → Ontology edits
+
+```
+
+Therefore, existing Automations, applications, evaluations, or other functions might need to be reconfigured. This generally requires a major version or a separate Function identity rather than an automatic compatible upgrade.
+
+Because you have **not published yet**, there is no problem. If your intended final function should modify the Ontology, add the Action first and then publish.
+
+Alternatively, intentionally keep two functions:
+
+```text
+
+Assess Eligibility
+
+→ returns decision/reasoning
+
+Review Patient
+
+→ calls assessment
+
+→ returns Ontology edits
+
+```
+
+That cleanly separates reasoning from writeback.
+
+#### Q3: so its very important to create action and test BEFORE creating the function?
+
+**Yes—if the final Function is supposed to modify the Ontology.**
+
+Recommended order:
+
+```text
+
+Create AIP Logic
+
+→ configure Use LLM
+
+→ add and configure Action
+
+→ preview proposed edits
+
+→ evaluate
+
+→ publish Function
+
+```
+
+This ensures the first published Function has the intended contract:
+
+```text
+
+Inputs: Patient + Clinical Trial
+
+Output: Ontology edits
+
+```
+
+You can continue changing its internal prompts and reasoning afterward and publish new compatible versions, provided the inputs and output type remain compatible.
+
+Publishing before adding the Action would create a different contract—a Function returning a decision struct rather than Ontology edits. That is appropriate only if you intentionally want a separate read-only assessment Function.
+
+#### Q4: so evaluate is important before creating function?
+
+but for my simple demo i want to leave evaluate out....
+do it at the end.... to avoid too much complexity.
+
+**No. Formal evaluation is not required before publishing.** It is a recommended quality-control step.
+
+For your simplified demo, this order is reasonable:
+
+```text
+
+1. Build AIP Logic
+
+2. Add the Action
+
+3. Preview manually
+
+4. Publish the Function
+
+5. Create Automation
+
+6. Add an Evaluation Suite later
+
+```
+
+The important requirement is to **preview and manually verify the complete Logic—including its Action and output type—before publishing**.
+
+For production, evaluation should normally happen before enabling automatic edits. For a teaching demo, moving Evaluation to an optional final chapter reduces complexity and keeps the main architecture easier to understand.
+
+### P3 Add (4) AIP / (4b) Action (Add Ontology modification)
+
+#### Q1: So this is a successful test of aip_logic.
+what is "Function inputs"... this really confused me, because there is no function yet.
+
+**Yes, this is a successful preview test of the complete AIP Logic.** It generated the decision and proposed the expected Ontology edits, but did not apply them.
+
+**“Function inputs” means the test values supplied to the AIP Logic’s declared inputs:**
+
+- `patient` → Sita Menon
+- `clinicalTrial` → Glycurex for Type 2 Diabetes
+
+The terminology is confusing because Foundry treats an AIP Logic as an **unpublished function definition** while you are authoring it.
+
+```text
+
+AIP Logic before publication
+
+= editable function definition
+
+After publication
+
+= registered, versioned Function
+
+```
+
+**Therefore, “Function inputs” does **not** mean that a published Function already exists. It means:**
+
+> Inputs for this preview execution of the Logic that may later be published as a Function.
+
+**A clearer UI label would have been **“Logic preview inputs.”****
+
+### P4 Publish the (3) AIP Logic as a Function
+
+#### Q2: all of these details.. and none of them explained in teh demo doc.
+
+**Agreed. The demo provides the required clicks but does not explain the underlying lifecycle:**
+
+```text
+
+Create AIP Logic
+
+→ define inputs
+
+→ configure LLM
+
+→ add Action
+
+→ preview proposed edits
+
+→ bind Logic to an Ontology
+
+→ publish immutable Function version
+
+→ select that Function in Automate
+
+→ bind runtime inputs
+
+→ choose approval or automatic execution
+
+→ activate monitoring
+
+```
+
+Several distinctions are left implicit:
+
+- An AIP Logic is treated as a function definition before publication.
+- “Function inputs” in Preview are actually Logic preview inputs.
+- Referencing Ontology objects is not the same as formally binding the Logic to that Ontology.
+- Previewed edits are not committed.
+- Publishing creates a versioned Function Registry entry.
+- The published Function is an immutable snapshot, not a live reference to the editable draft.
+- Automate invokes a selected published version.
+- The Action block produces edits; Automate determines whether they are staged or committed.
+
+These are not peripheral details—they determine how the system actually works. Your rewritten documentation is valuable because it explains the resource model and lifecycle rather than merely reproducing the screen sequence.
+
+### P4/P5/P6 AIP_logic / Function / Automation details
+
+<img src="/assets/D3/02.png" alt="xxx" width="75%" style="border: 1px solid #999;">
+
+<img src="/assets/D3/03.png" alt="xxx" width="100%" style="border: 1px solid #999;">
+
+#### (1) so in demo3, all i create in my dir (if the marketplacce was already installed and i created a new dir) is
+
+- AIP_logic
+- Automation
+- evalution (? i did not do that yet)
+
+(2) the function is part of the ontology.
+
+but it (and its future versions) has a fixed a source AIP_logic.
+
+(3) so if i want to test creating a function from scratch,
+
+then i need to create a new AIP_logic.
+
+(4) how can i organize the list of ontology functions by date created?
+
+### 1. Resources in your new folder
+
+**Yes.** You create:
+
+- AIP Logic
+- Evaluation Suite
+- Automation
+
+Publishing the AIP Logic automatically creates the Function entry; it is not another file you manually create in the folder.
+
+### 2. Function and source AIP Logic
+
+**Yes.** The Function is registered with the Ontology/Function Registry and has a fixed source AIP Logic.
+
+Each published version is an immutable snapshot:
+
+```text
+
+One AIP Logic
+
+├─ Function version 1.0.0
+
+├─ Function version 1.0.1
+
+└─ Function version 1.1.0
+
+```
+
+### 3. Creating a Function from scratch
+
+**Yes.** To create a new, independent Function from scratch, create a new AIP Logic and publish it.
+
+To create only a new version of an existing Function, modify its existing source AIP Logic and publish again.
+
+### 4. Sort Functions by date
+
+Click the **Published Date** column heading to sort ascending or descending.
+
+That sorts by publication date, not necessarily the original creation date. The Functions list does not appear to expose a separate **Created Date** column. If you need clearer long-term organization, use consistent name prefixes, source names, and owning projects.
+
+#### i click on that header.... there is no link... i think its an error
+
+You are correct. **Published Date is not sortable in that table.** Only **Name** shows a sort indicator.
+
+My previous instruction was wrong. This is either a UI limitation or defect in Ontology Manager.
+
+Practical workarounds:
+
+- use date/version prefixes in function names;
+- search by function or source Logic name;
+- use the **Owning project** and **Source** columns;
+- inspect individual Function details for publication dates.
+
+There is no visible way in that dialog to order the complete list by publication or creation date.
+
+# P1 Create folder / (Install marketplace)
+
+## P1.1 Create folder
+
+<img src="/assets/D3/P1.01.png" alt="xxx" width="80%" style="border: 1px solid #999;">
+
+## P1.2 Install marketplace (only if not already installed)
+
+The following diagram shows what the marketplace installs
+
+- Data sources
+- Pipeline
+- Ontology
+- Actions and UI
+
+<img src="/assets/D3/P1.02.png" alt="xxx" width="100%" style="border: 1px solid #999;">
+
+### 1 DATA SOURCES / PIPELINE
+
+#### 1.1 CLINICAL_TRIALS: PIPELINE LLM (extract id, criteria FROM mediaReference)
+
+**PIPELINE**
+
+<img src="/assets/D3/P1.03.png" alt="xxx" width="70%" style="border: 1px solid #999;">
+
+<img src="/assets/D3/P1.04.png" alt="xxx" width="35%" style="border: 1px solid #999;">
+
+<img src="/assets/D3/P1.05.png" alt="xxx" width="100%" style="border: 1px solid #999;">
+
+**USE LLM**
+
+<img src="/assets/D3/P1.06.png" alt="xxx" width="90%" style="border: 1px solid #999;">
+
+**INSTRUCTIONS (simplified)**
+
+extract from: mediaReference
+
+- ID of each trial as well as
+- {"criteria": "[Summary of inclusion and exclusion criteria]"} String (paragraph) to determine eligibility
+  - inclusion and
+  - exclusion criteria from each protocol.
+
+used to determine which patients are eligible for the study.
+
+**OUTPUT**
+
+<img src="/assets/D3/P1.07.png" alt="xxx" width="100%" style="border: 1px solid #999;">
+
+#### 1.2 PATIENTS
+
+<img src="/assets/D3/P1.08.png" alt="xxx" width="100%" style="border: 1px solid #999;">
+
+<img src="/assets/D3/P1.09.png" alt="xxx" width="100%" style="border: 1px solid #999;">
+
+### 3 ONTOLOGY
+
+#### 3.1 CLINICAL_TRIAL
+
+**BACKING DATASOURCE**
+
+<img src="/assets/D3/P1.10.png" alt="xxx" width="85%" style="border: 1px solid #999;">
+
+**ACTION TYPES (0)**
+
+<img src="/assets/D3/P1.11.png" alt="xxx" width="25%" style="border: 1px solid #999;">
+
+**PROPERTIES (9)**
+
+<img src="/assets/D3/P1.12.png" alt="xxx" width="30%" style="border: 1px solid #999;">
+
+**LINKS**
+
+<img src="/assets/D3/P1.13.png" alt="xxx" width="60%" style="border: 1px solid #999;">
+
+#### 3.2 PATIENT
+
+**BACKING DATASOURCE**
+
+<img src="/assets/D3/P1.14.png" alt="xxx" width="85%" style="border: 1px solid #999;">
+
+**ACTION TYPE: Create Patient**
+
+**ACTION TYPE: Modify Eligibility Decision**
+
+<img src="/assets/D3/P1.15.png" alt="xxx" width="35%" style="border: 1px solid #999;">
+
+**PROPERTIES (15 ... FOR A DEMO???)**
+
+<img src="/assets/D3/P1.16.png" alt="xxx" width="35%" style="border: 1px solid #999;">
+
+**LINKS**
+
+<img src="/assets/D3/P1.17.png" alt="xxx" width="60%" style="border: 1px solid #999;">
+
+#### 3.2-1 ACTION TYPE "Create Patient" (INPUT<>RULES)
+
+**OVERVIEW**
+
+<img src="/assets/D3/P1.18.png" alt="xxx" width="85%" style="border: 1px solid #999;">
+
+**RULES: Create object Patient**
+
+<img src="/assets/D3/P1.19.png" alt="xxx" width="100%" style="border: 1px solid #999;">
+
+**PARAMETERS (UI): Create Patient**
+
+<img src="/assets/D3/P1.20.png" alt="xxx" width="100%" style="border: 1px solid #999;">
+
+#### 3.2-2 ACTION TYPE "Modify Eligibility Decision" (INPUT<>RULES)
+
+**OVERVIEW**
+
+<img src="/assets/D3/P1.21.png" alt="xxx" width="100%" style="border: 1px solid #999;">
+
+**RULES: Modify object Patient**
+
+<img src="/assets/D3/P1.22.png" alt="xxx" width="100%" style="border: 1px solid #999;">
+
+**PARAMETERS (UI): Modify Eligibility Decision**
+
+<img src="/assets/D3/P1.23.png" alt="xxx" width="100%" style="border: 1px solid #999;">
+
+### 5 UI
+
+#### UI (add_new_patient button / ON CLICK Action = Create_Patient)
+
+<img src="/assets/D3/P1.24.png" alt="xxx" width="100%" style="border: 1px solid #999;">
+
+<img src="/assets/D3/P1.25.png" alt="xxx" width="40%" style="border: 1px solid #999;">
+
+# P2 (4a) Build AIP Logic: Use_LLM
+
+- Define Patient and Clinical Trial inputs
+- Read Ontology properties
+- Configure Use LLM
+- Define structured decision/reasoning output
+
+## P2.1 Configure
+
+File name / location.
+
+<img src="/assets/D3/P2.01.png" alt="xxx" width="25%" style="border: 1px solid #999;">
+
+### Inputs
+
+<img src="/assets/D3/P2.02.png" alt="xxx" width="80%" style="border: 1px solid #999;">
+
+### System prompt
+
+I would like to determine if a patient is suitable for a trial depending on the trial's inclusion and exclusion criteria, providing the reasoning to your decision.
+
+If the patient is fully suitable for the trial, enroll it to the trial, return the following information in json form:
+
+- enrollment_decision: Suitable
+- enrollment_reasoning: 1 sentence reasoning why they are suitable
+
+If the patient is NOT fully suitable for the trail, return the following information in json form:
+
+- enrollment_decision: Not suitable
+- enrollment_reasoning: 1 sentence reasoning why they are not suitable
+
+If you are not able to determine whether the patient is suitable (e.g. because of relevant info missing), return the following information in json form:
+
+- enrollment_decision: Manual review required
+- enrollment_reasoning: 1 sentence reasoning why you couldn't determine whether the patient is suitable or not
+
+### Task prompt
+
+Here is the trial's criteria: Criteria:
+
+Here are details about the patient:
+Age: 
+Contraception: 
+Diagnosis: 
+Disease Stage: 
+Gender: 
+Health Status: 
+Informed Consent: 
+Lab results: 
+Lifestyle Factors: 
+Pregnancy Status: 
+Treatment History:
+
+### Model: GPT-4.1 mini
+
+<img src="/assets/D3/P2.03.png" alt="xxx" width="100%" style="border: 1px solid #999;">
+
+### Change the Output type to struct / Non-strict
+
+  - Add first field: eligibility_decision of type String
+  - Add second field: eligibility_reasoning of type String
+
+<img src="/assets/D3/P2.04.png" alt="xxx" width="75%" style="border: 1px solid #999;">
+
+<img src="/assets/D3/P2.05.png" alt="xxx" width="90%" style="border: 1px solid #999;">
+
+### View in folder
+
+<img src="/assets/D3/P2.06.png" alt="xxx" width="35%" style="border: 1px solid #999;">
+
+### Save (do not publish yet)
+
+<img src="/assets/D3/P2.07.png" alt="xxx" width="45%" style="border: 1px solid #999;">
+
+## P2.2 Test Use_LLM (preview run)
+
+<img src="/assets/D3/P2.08.png" alt="xxx" width="45%" style="border: 1px solid #999;">
+
+{
+
+### "eligibility_decision": "Not suitable",
+
+### "eligibility_reasoning": "The patient has been on metformin for only 2 months, which is less than the required stable dose duration of at least 3 months prior to enrollment."
+
+}
+
+<img src="/assets/D3/P2.09.png" alt="xxx" width="100%" style="border: 1px solid #999;">
+
+# P3 (4b) Complete AIP_Logic: Add Action
+
+- Invoke the governed Action
+- Map LLM outputs to Action parameters
+- Preview the proposed edits
+
+## P3.1 Configure
+
+<img src="/assets/D3/P3.01.png" alt="xxx" width="50%" style="border: 1px solid #999;">
+
+## P3.2 Test action
+
+- Click on the play button in the top right corner
+- Populate the function inputs
+  - For example, for the patient search and find a patient name Priya Nair
+  - For the clinicalTrial, find the clinical trial Glycurex for Type 2 Diabetes
+- Click the blue Preview run button at the bottom of the drawer
+  - The Debugger drawer will automatically open, showing you the execution steps of your agent
+
+<img src="/assets/D3/P3.02.png" alt="xxx" width="100%" style="border: 1px solid #999;">
+
+- Hover over the object for which the ontology edits are proposed
+
+<img src="/assets/D3/P3.03.png" alt="xxx" width="100%" style="border: 1px solid #999;">
+
+# P4 (3) Publish AIP_Logic as a Function
+
+- Explain Logic versus Function
+- Inputs and output contract
+- Debug outputs
+- Publishing and versioning
+
+## P4.1 Bind AIP Logic to Ontology
+
+<img src="/assets/D3/P4.01.png" alt="xxx" width="100%" style="border: 1px solid #999;">
+
+<img src="/assets/D3/P4.02.png" alt="xxx" width="75%" style="border: 1px solid #999;">
+
+### Q1: Not yet bound to ontology
+
+Correct. The Logic references Ontology resources but is **not yet formally bound to the Ontology**.
+
+Before publishing:
+
+1. Click **Select** beside **ziptieai Ontology**.
+
+2. Confirm that it appears under **Bound to the following ontologies**.
+
+3. Save.
+
+4. Publish.
+
+Binding makes the published Function available to Ontology-based consumers such as Automate and Workshop. It does not modify the Patient or Clinical Trial objects.
+
+<img src="/assets/D3/P4.03.png" alt="xxx" width="70%" style="border: 1px solid #999;">
+
+## P4.2 Save AIP_logic
+
+<img src="/assets/D3/P4.04.png" alt="xxx" width="45%" style="border: 1px solid #999;">
+
+<img src="/assets/D3/P4.05.png" alt="xxx" width="65%" style="border: 1px solid #999;">
+
+## P4.3 Publish logic function
+
+<img src="/assets/D3/P4.06.png" alt="xxx" width="40%" style="border: 1px solid #999;">
+
+<img src="/assets/D3/P4.07.png" alt="xxx" width="60%" style="border: 1px solid #999;">
+
+<img src="/assets/D3/P4.08.png" alt="xxx" width="100%" style="border: 1px solid #999;">
+
+<img src="/assets/D3/P4.09.png" alt="xxx" width="100%" style="border: 1px solid #999;">
+
+# P5 (2) Create Automation
+
+- Monitor Patients entering the object set
+- Invoke the published function version
+- Bind dynamic and static inputs
+- Stage or automatically commit edits
+- Configure retries and monitoring
+
+## P5.1 Create new automation
+
+(from AIP logic dialog)
+
+<img src="/assets/D3/P5.01.png" alt="xxx" width="55%" style="border: 1px solid #999;">
+
+<img src="/assets/D3/P5.02.png" alt="xxx" width="90%" style="border: 1px solid #999;">
+
+## P5.2 Add clinicalTrial object
+
+<img src="/assets/D3/P5.03.png" alt="xxx" width="100%" style="border: 1px solid #999;">
+
+<img src="/assets/D3/P5.04.png" alt="xxx" width="100%" style="border: 1px solid #999;">
+
+<img src="/assets/D3/P5.05.png" alt="xxx" width="95%" style="border: 1px solid #999;">
+
+## P5.3 Create automation
+
+<img src="/assets/D3/P5.06.png" alt="xxx" width="95%" style="border: 1px solid #999;">
+
+### NOTE: It will:
+
+- live-monitor `[Ttbonn] Patient`;
+- trigger when a Patient newly enters the object set;
+- invoke `D3 AIP Logic 555` once for each new Patient;
+- automatically execute the returned Action edits.
+
+### NOTE: Before clicking **Create automation**, verify only:
+
+1. The old Automation is paused, to avoid duplicate processing.
+
+2. The static Clinical Trial input is the intended trial.
+
+3. The **December 1, 2026** expiration date is intentional.
+
+4. **User scoped security** is appropriate. Use project-scoped security only if teammates need to see the execution events.
+
+<img src="/assets/D3/P5.07.png" alt="xxx" width="100%" style="border: 1px solid #999;">
+
+## P5.4 Disable old automation
+
+https://ziptieai.usw-17.palantirfoundry.com/workspace/object-monitoring/automations
+
+<img src="/assets/D3/P5.08.png" alt="xxx" width="100%" style="border: 1px solid #999;">
+
+<img src="/assets/D3/P5.09.png" alt="xxx" width="100%" style="border: 1px solid #999;">
+
+<img src="/assets/D3/P5.10.png" alt="xxx" width="100%" style="border: 1px solid #999;">
+
+### NOTE: **The new Automation is active and waiting for its first event.**
+
+`No previous events` is expected until a new Patient is added. To test:
+
+1. Add a new Patient through the UI.
+
+2. Wait up to approximately one minute.
+
+3. Check the Automation’s event history.
+
+4. Refresh the Patient display and verify the eligibility decision/reasoning.
+
+The two `Unknown object type` warnings belong to unrelated Automations and do not affect `D3 AIP Logic 555 automation`.
+
+## P5.5 Open the "View automation events" dialog
+
+<img src="/assets/D3/P5.11.png" alt="xxx" width="40%" style="border: 1px solid #999;">
+
+<img src="/assets/D3/P5.12.png" alt="xxx" width="75%" style="border: 1px solid #999;">
+
+## P5.6 Create patient (in UI)
+
+<img src="/assets/D3/P5.13.png" alt="xxx" width="100%" style="border: 1px solid #999;">
+
+<img src="/assets/D3/P5.14.png" alt="xxx" width="65%" style="border: 1px solid #999;">
+
+## P5.7 View the automation event
+
+Refresh page
+
+<img src="/assets/D3/P5.15.png" alt="xxx" width="100%" style="border: 1px solid #999;">
+
+## P5.8 Final UI result
+
+(note: small letters come after capital letters)
+
+<img src="/assets/D3/P5.16.png" alt="xxx" width="100%" style="border: 1px solid #999;">
+
+
+<br>
+
+26.0901

@@ -18,9 +18,17 @@ See also
 
 <br>
 
+
+#### **This page contains the extracted text/png's from the docx file 26.0901... to be moved the chapters tomorrow...**
+
+**[3c.3_pal_agentic_ai_EXTRACED](/3c.3_pal_agentic_ai_EXTRACED/)**
+
+<br>
+
 ### **TOC:**
 
 <br>
+
 
 #### **[C0 Concepts (workflow diagrams)](/3c.3_pal_agentic_ai_C0_concepts/)**
 For now mostly workflow diagrams.
@@ -38,6 +46,12 @@ For now mostly workflow diagrams.
 *C0.3*<br><img src="/assets/D3/D3_C0.3.png" alt="xxx" width="100%" style="border: 1px solid #999;">
 
 
+
+<br>
+
+#### **[Notes](/3c.3_pal_agentic_ai_NOTES/)**
+
+
 <br>
 
 #### **[P1 Install marketplace](/3c.3_pal_agentic_ai_P1_install_mp/)** (data, pipeline, ontology, UI)
@@ -46,7 +60,7 @@ For now mostly workflow diagrams.
 
 <br>
 
-#### **[P2 Add AIP / Use_LLM (Building AIP logic reasoning)](/3c.3_pal_agentic_ai_P2_Use_LLM/)** 
+#### **[P2 (4a) Add AIP / Use_LLM (Building AIP logic reasoning)](/3c.3_pal_agentic_ai_P2_Use_LLM/)** 
 
 *P2*<br><img src="/assets/D3/D3_P2.png" alt="xxx" width="36%" style="border: 1px solid #999;">
 
@@ -56,32 +70,30 @@ For now mostly workflow diagrams.
 
 
 
-#### **[P3 Add AIP / Ontology_Action (Add Ontology modification)](/3c.3_pal_agentic_ai_P3_action/)** 
+#### **[P3 (4b) Add AIP / Ontology_Action (Add Ontology modification)](/3c.3_pal_agentic_ai_P3_action/)** 
 
 *P3*<br><img src="/assets/D3/D3_P3.png" alt="xxx" width="36%" style="border: 1px solid #999;">
 
 <br>
 
-#### **[P4 Create the Evaluation Suite](/3c.3_pal_agentic_ai_P4_eval_suite/)** 
 
-*P4*<br><img src="/assets/D3/D3_P4.png" alt="xxx" width="76%" style="border: 1px solid #999;">
 
-<br>
-
-#### **[P5 Publish the AIP Logic as a Function](/3c.3_pal_agentic_ai_P5_function/)** 
+#### **[P4 (3) Publish the AIP Logic as a Function](/3c.3_pal_agentic_ai_P5_function/)** 
 
 *P5*<br><img src="/assets/D3/D3_P5.png" alt="xxx" width="36%" style="border: 1px solid #999;">
 
 <br>
 
-#### **[P6 Create the Automation](/3c.3_pal_agentic_ai_P6_automation/)** 
+#### **[P5 (2) Create the Automation](/3c.3_pal_agentic_ai_P6_automation/)** 
 
 *P6*<br><img src="/assets/D3/D3_P6.png" alt="xxx" width="76%" style="border: 1px solid #999;">
 
 <br>
 
-#### **[Notes](/3c.3_pal_agentic_ai_NOTES/)**
+#### **[P6 Create the Evaluation Suite (optional)](/3c.3_pal_agentic_ai_P4_eval_suite/)** 
+
+*P4*<br><img src="/assets/D3/D3_P4.png" alt="xxx" width="76%" style="border: 1px solid #999;">
 
 <br>
 
-26.0831 (v1 26.0713)
+26.0901 (v1 26.0713)
