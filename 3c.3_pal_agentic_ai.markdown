@@ -19,10 +19,10 @@ See also
 <br>
 
 
-#### Page **[3c.3_pal_agentic_ai_EXTRACTED](/3c.3_pal_agentic_ai_EXTRACTED/)** contains the extracted (by GPT) markdown/png's from the docx file 26.0901... to be moved to the chapters below tomorrow...
+<!-- #### Page **[3c.3_pal_agentic_ai_EXTRACTED](/3c.3_pal_agentic_ai_EXTRACTED/)** contains the extracted (by GPT) markdown/png's from the docx file 26.0901... to be moved to the chapters below tomorrow...
 
 
-<br>
+<br> -->
 
 ### **TOC:**
 
@@ -30,19 +30,18 @@ See also
 
 
 #### **[C0 Concepts (workflow diagrams)](/3c.3_pal_agentic_ai_C0_concepts/)**
-For now mostly workflow diagrams.
+
+<!-- For now mostly workflow diagrams.
   - C0.1 Demo D3 workflow
   - C0.2 Traditional agent (not Foundry) workflow
-  - C0.3 Foundry agent workflow
+  - C0.3 Foundry agent workflow -->
 
+**The diagram below shows the overall workflow:**&
+- The grey background components are installed in P1.
+- (4a), (4b), (3), (2) are the main content of this demo (P2, P3, P4, P5).
 
-*C0.1*<br><img src="/assets/D3/D3_C0.1.png" alt="xxx" width="100%" style="border: 1px solid #999;">
+*Overall workflow*<br><img src="/assets/D3/D3_C0.1.png" alt="xxx" width="100%" style="border: 1px solid #999;">
 
-
-*C0.2*<br><img src="/assets/MASTER_D1.2b_UPPER.png" alt="xxx" width="76%" style="border: 1px solid #999;">
-
-
-*C0.3*<br><img src="/assets/D3/D3_C0.3.png" alt="xxx" width="100%" style="border: 1px solid #999;">
 
 
 
@@ -50,20 +49,21 @@ For now mostly workflow diagrams.
 
 #### **[Notes](/3c.3_pal_agentic_ai_NOTES/)**
 
+You might want to read this section for a heads-up about some aspects of P1-P5.
 
 <br>
 
 #### **[P1 Install marketplace](/3c.3_pal_agentic_ai_P1_install_mp/)** (data, pipeline, ontology, UI)
 
-*P1*<br><img src="/assets/D3/D3_P1.png" alt="xxx" width="76%" style="border: 1px solid #999;">
+<!-- *P1*<br><img src="/assets/D3/D3_P1.png" alt="xxx" width="76%" style="border: 1px solid #999;"> -->
 
 <br>
 
 #### **[P2 (4a) Add AIP / Use_LLM (Building AIP logic reasoning)](/3c.3_pal_agentic_ai_P2_Use_LLM/)** 
 
-*P2*<br><img src="/assets/D3/D3_P2.png" alt="xxx" width="36%" style="border: 1px solid #999;">
+<!-- *P2*<br><img src="/assets/D3/D3_P2.png" alt="xxx" width="36%" style="border: 1px solid #999;">
 
-*P2_2*<br><img src="/assets/D3/D3_P2_2.png" alt="xxx" width="36%" style="border: 1px solid #999;">
+*P2_2*<br><img src="/assets/D3/D3_P2_2.png" alt="xxx" width="36%" style="border: 1px solid #999;"> -->
 
 <br>
 
@@ -71,7 +71,7 @@ For now mostly workflow diagrams.
 
 #### **[P3 (4b) Add AIP / Ontology_Action (Add Ontology modification)](/3c.3_pal_agentic_ai_P3_action/)** 
 
-*P3*<br><img src="/assets/D3/D3_P3.png" alt="xxx" width="36%" style="border: 1px solid #999;">
+<!-- *P3*<br><img src="/assets/D3/D3_P3.png" alt="xxx" width="36%" style="border: 1px solid #999;"> -->
 
 <br>
 
@@ -79,19 +79,19 @@ For now mostly workflow diagrams.
 
 #### **[P4 (3) Publish the AIP Logic as a Function](/3c.3_pal_agentic_ai_P5_function/)** 
 
-*P5*<br><img src="/assets/D3/D3_P5.png" alt="xxx" width="36%" style="border: 1px solid #999;">
+<!-- *P5*<br><img src="/assets/D3/D3_P5.png" alt="xxx" width="36%" style="border: 1px solid #999;"> -->
 
 <br>
 
 #### **[P5 (2) Create the Automation](/3c.3_pal_agentic_ai_P6_automation/)** 
 
-*P6*<br><img src="/assets/D3/D3_P6.png" alt="xxx" width="76%" style="border: 1px solid #999;">
+<!-- *P6*<br><img src="/assets/D3/D3_P6.png" alt="xxx" width="76%" style="border: 1px solid #999;"> -->
 
 <br>
 
 #### **[P6 Create the Evaluation Suite (optional)](/3c.3_pal_agentic_ai_P4_eval_suite/)** 
 
-*P4*<br><img src="/assets/D3/D3_P4.png" alt="xxx" width="76%" style="border: 1px solid #999;">
+<!-- *P4*<br><img src="/assets/D3/D3_P4.png" alt="xxx" width="76%" style="border: 1px solid #999;"> -->
 
 <br>
 
