@@ -69,63 +69,11 @@ Your first app with AI.
 
 <br>
 
-#### **1.2b ZAI take on what exactly an "agent" is in Foundry (26.0831)**
+#### **[1.2b ZAI take on what exactly an "agent" is in Foundry](/3c.2c_pal_zai_take_on_foundry_agent/)** (26.0901)
 
 Demo D2 called an external LLM. That is (in my opinion) an AI agent (and a risk of leaking sensitive data to an external LLM). However, D3 is mentioned as the first Agentic demo for Foundry. 
 
-Why? This section explains (my take; I found no explanation of this in the Foundry demo docs). The diagrams below (my original diagrams create with FDE/GPT's invaluable assistance) compare 
-- [0] Demo D1 workflow (no agent)
-- [1] Demo D2 LLM usage (not considered an agent)
-- [2] Traditional agent (python)
-- [3] Demo D3 Foundry agent
-
-*See also **[3c.2_pal_initial_demos_12b_CHATS](/3c.2_pal_initial_demos_12b_CHATS/)***
-
-
-<br>
-
-**[0] D1 Foundry demo workflow (not an agent)**
-
-Demo 1 
-- Basically matched the workflow below (no "4 ANALYSIS")
-- Did not call any LLMs (so definitely was not an AI agent)
-
-*[0] Demo D1 workflow*<br><img src="/assets/MASTER_D1.2b_BASIC.png" alt="xxx" width="50%" style="border: 1px solid #999;">
-
-<br>
-
-**[1] D2 AIP workflow (used LLMs, but not considered an agent)**
-
-Demo 2 used AI. So to me Demo 2 was the first agent. But its not classified as an agent demo. Why? Probably because 
-- although it 
-  - (3) invoked LLMs, 
-- it did not  
-  - (2) have a control loop
-  - (4) change the ontology (the equivalent of the DB)
-
-*[1] Demo D2 AIP workflow*<br><img src="/assets/MASTER_D1.2b_D2.png" alt="xxx" width="82%" style="border: 1px solid #999;">
-
-<br>
-
-**[2] Traditional Agent with tools (python)**
-
-The demo below intentionally mirrors the D3 demo structure
-- (2) main detection loop
-- (3) LLM call 
-- (4) tool/API call
-
-*[2] A conventional code-based agent*<br><img src="/assets/MASTER_D1.2b_UPPER.png" alt="xxx" width="76%" style="border: 1px solid #999;">
-
-<br>
-
-**[3] D3 "Agentic" AIP workflow**
-
-Has 
-- (2) Foundry automation (main detection loop)
-- (3) Foundry AIP -- Use LLM (LLM call) 
-- (4) Foundry AIP -- Action (modifies Ontology)
-
-Foundry did not invent a fundamentally different architecture. It distributed the familiar agent components across named, governed platform resources.
+Why? Foundry did not invent a fundamentally different architecture. It distributed the familiar agent components across named, governed platform resources.
 
 <!-- The Foundry agent contains the same conceptual parts; Foundry externalizes those parts as Automate, AIP Logic, Use LLM, Ontology, and Actions.   -->
 
