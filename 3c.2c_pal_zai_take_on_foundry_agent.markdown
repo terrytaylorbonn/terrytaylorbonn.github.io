@@ -75,9 +75,67 @@ Has
 
 Foundry did not invent a fundamentally different architecture. It distributed the familiar agent components across named, governed platform resources.
 
+**My own simple explanation:**
+- Demo D2 made calls to external LLM. That is (in my opinion) 
+  - an AI agent 
+  - that shares internal data with an external LLM. 
+- However, D3 (the next demo) does several things that D2 did not. It used 
+  - Foundry AIP_Logic (a no-code function definition) calls an LLM like D2, but it also modifies the ontology (core objects)
+  - Foundry Automation (event-driven automation service) provides a main loop that automatically processes (in D3 this means calling API_logic) any incoming onotology data changes.
+
+**FDE/GPT explanation:** *(see also the complete **[chat details](/3c.2_pal_initial_demos_AGENT_CHAT/)**)*
+
+Both D2 and D3 call external LLM services with data from Foundry. Therefore, simply calling an LLM is not what Palantir appears to mean by **agentic**.
+
+In D2, LLM calls are steps within a data-processing workflow:
+
+```text
+Run pipeline
+→ send document content to external LLMs
+→ process the responses
+→ produce pipeline output
+→ stop
+```
+
+D3 adds the ability to observe and change Foundry’s operational state:
+
+1. **AIP Logic** reads Patient and Clinical Trial objects from the Ontology.
+2. **Use LLM** sends relevant object data to an external LLM and receives a structured eligibility decision.
+3. A governed **Ontology Action** converts that decision into proposed Ontology edits.
+4. The Logic is published as a versioned Function.
+5. **Automate** monitors for Patients entering an object set, invokes the Function, automatically commits its edits, and resumes monitoring.
+
+D3 therefore implements an operational cycle:
+
+```text
+Observe Ontology state
+→ invoke the Logic
+→ call an external LLM
+→ produce a decision
+→ execute a governed Action
+→ update Ontology state
+→ wait for the next event
+```
+
+Palantir appears to use **agentic** for a workflow that can act upon its operational environment, rather than merely use an LLM to generate information. The Action gives the Logic agency over the Ontology; Automate makes the resulting system persistent and event-driven.
+
+The original demo does not clearly define this distinction. Under a broader definition, D2 can reasonably be regarded as a **one-shot agentic workflow**: Foundry orchestrates several LLM calls to accomplish a goal and then terminates. A more precise distinction would therefore be:
+
+- **D2:** one-shot AI or agentic data-processing workflow
+- **D3 AIP Logic:** one-shot reasoning-and-action program
+- **D3 with Automate:** persistent, event-driven operational agent
+
+The word **agentic** does not resolve the separate data-security issue. Both demos send data to external model services. Whether that is acceptable depends on the model endpoint, data sent, authorization, retention, training, logging, hosting, and other security controls. Adding Ontology Actions and Automate changes the workflow’s agency—not the fact that information is transmitted to an external LLM.
+
+
+
+Below: (FDE) Automate provides the persistent event loop. For each Patient that newly enters the monitored object set, it invokes the published AIP Logic once. The Logic reads Ontology objects, calls the external LLM once, and uses a governed Action to produce edits. With “Automatically run edits” enabled, Automate commits those edits to the Ontology and resumes monitoring. The UI then displays the updated Patient, whose AI-generated decision staff may optionally override.
+
 <!-- The Foundry agent contains the same conceptual parts; Foundry externalizes those parts as Automate, AIP Logic, Use LLM, Ontology, and Actions.   -->
 
-*[3] Demo D3 Foundry agent (the content of this diagram has been worked out with FDE/GPT; its a bit messy looking, but accurate)*<br><img src="/assets/MASTER_D1.2b_LOWER.png" alt="xxx" width="100%" style="border: 1px solid #999;">
+*[3] Demo D3 Foundry agent (simple)*<br><img src="/assets/MASTER_D1.2b_Foundry_SIMPLE.png" alt="xxx" width="90%" style="border: 1px solid #999;">
+
+*[3] Demo D3 Foundry agent (full) (the content of this diagram has been worked out with FDE/GPT; its a bit messy looking, but accurate)*<br><img src="/assets/MASTER_D1.2b_LOWER.png" alt="xxx" width="100%" style="border: 1px solid #999;">
 
 
 
@@ -86,4 +144,4 @@ Foundry did not invent a fundamentally different architecture. It distributed th
 
 <br>
 
-26.0901 (v1 26.0901)
+26.0902 (v1 26.0901)

@@ -69,22 +69,18 @@ Your first app with AI.
 
 <br>
 
-#### **[1.2b Both D2 and D3 call an external LLM; why is D3 the first "agentic" demo?](/3c.2c_pal_zai_take_on_foundry_agent/)** (26.0902)
+#### **[1.2b Both D2 and D3 send enterprise data to external LLMs—why does Palantir call D3 the first “agentic” demo?](/3c.2c_pal_zai_take_on_foundry_agent/)** (26.0902)
 
-NOTE: The text below is FDE/GPT's version of my original text; the concepts are my original, but the text has been polished by FDE/GPT. This was a very long discussion with FDE/GPT, in part because FDE/GPT was not giving me straight answers. This turned into a very time-consuming discussion. See the **[chat details](/3c.2_pal_initial_demos_AGENT_CHAT/)**.
+*Follow the above header link for details. See also the complete **[chat](/3c.2_pal_initial_demos_AGENT_CHAT/)** with FDE/GPT.*
 
-Before doing Demo 3 "Speedrun: Your First Agentic AIP Workflow", its important to understand the core of why Foundry did not classify D2 "Speedrun -- Your First AIP Workflow" as the first Agentic AI workflow. 
-
-What's the difference?
-- Demo D2 made calls to external LLM. That is (in my opinion) an AI agent (and a risk of leaking sensitive data to an external LLM). 
+**My own simple explanation:**
+- Demo D2 made calls to external LLM. That is (in my opinion) 
+  - an AI agent 
+  - that shares internal data with an external LLM. 
 - However, D3 (the next demo) does several things that D2 did not. It used 
-  - AIP_Logic (a Foundry xxxx) calls an LLM like in D2, but it also modifies the ontology (core objects)
-  - Foundry Automation xxxx provides a main loop that automatically processes any incoming onotology data changes (and uses AIP_logic to accordingly auto-modify that data).
+  - Foundry AIP_Logic (a no-code function definition) calls an LLM like D2, but it also modifies the ontology (core objects)
+  - Foundry Automation (event-driven automation service) provides a main loop that automatically processes (in D3 this means calling API_logic) any incoming onotology data changes.
 
-
-<!-- The Foundry agent contains the same conceptual parts; Foundry externalizes those parts as Automate, AIP Logic, Use LLM, Ontology, and Actions.   -->
-
-*Below: (FDE) Automate provides the persistent event loop. For each Patient that newly enters the monitored object set, it invokes the published AIP Logic once. The Logic reads Ontology objects, calls the external LLM once, and uses a governed Action to produce edits. With “Automatically run edits” enabled, Automate commits those edits to the Ontology and resumes monitoring. The UI then displays the updated Patient, whose AI-generated decision staff may optionally override.*
 
 *[3] Demo D3 Foundry agent*<br><img src="/assets/MASTER_D1.2b_Foundry_SIMPLE.png" alt="xxx" width="90%" style="border: 1px solid #999;">
 
