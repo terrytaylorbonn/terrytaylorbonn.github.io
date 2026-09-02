@@ -1,7 +1,7 @@
 ---
 layout: page
 title: 3c Enterprise
-permalink: /pal/
+permalink: /palxxxxxxxxx/
 ---
 
 <br>

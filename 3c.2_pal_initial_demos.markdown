@@ -89,29 +89,27 @@ Your first app with AI.
 
 *[3] Demo D3 Foundry agent*<br><img src="/assets/MASTER_D1.2b_Foundry_SIMPLE.png" alt="xxx" width="90%" style="border: 1px solid #999;">
 
-
-
 <br>
 
-#### **[1.3 D3 (WIP) = "Speedrun: Your First Agentic AIP Workflow" (26.0830)](/3c.3_pal_agentic_ai/)**
+#### **[1.3 D3 (WIP) = "Speedrun: Your First Agentic AIP Workflow" (26.0902)](/3c.3_pal_agentic_ai/)**
 
 This demo builds the first **autonomous operational agent** in this sequence. 
 
-1. **A new Patient is added** through the UI and written to the Ontology.
-2. **Automate detects** that the Patient entered the monitored object set.
-3. **AIP Logic evaluates** the Patient against the selected Clinical Trial.
-4. **The governed Action automatically writes** the initial eligibility decision and reasoning.
-5. **Staff review the result** and may manually adjust the eligibility decision through the UI. This last step is important: Automation makes the initial operational decision, but staff retain oversight and can override it through a governed Action.
+- **(1) A new Patient is added** through the UI and written to the Ontology.
+- **(2) Automate detects** that the Patient entered the monitored object set.
+- **(3)(4a) AIP Logic evaluates** the Patient against the selected Clinical Trial.
+- **(3)(4b) The governed Action automatically writes** the initial eligibility decision and reasoning.
+- **(5) Staff review the result** and may manually adjust the eligibility decision through the UI. This last step is important: Automation makes the initial operational decision, but staff retain oversight and can override it through a governed Action.
 
 See also:  
-- **[#614_.docx](https://drive.google.com/drive/folders/1-Adawag9uA8_bq-hDF-nOuPYaRLz1eEO)**     
-- **[Speedrun](https://learn.palantir.com/speedrun-your-first-agentic-aip-workflow)**
+- **[#614_.docx](https://drive.google.com/drive/folders/1-Adawag9uA8_bq-hDF-nOuPYaRLz1eEO)** (detailed demo notes; the ZAI webpage markdown/PNG's for the ZAI online docs for this demo were extracted from this docx using GPT)    
+- **[Speedrun](https://learn.palantir.com/speedrun-your-first-agentic-aip-workflow)** (the original demo documentation)
 
 <!-- Notes: 
 - For a discussion of what “agent” means in Foundry, see the D2 notes. This is an on-going debate with FDE. FDE (not sure I agree with this): The agent is not the LLM or AIP Logic alone. It is the complete event-driven system comprising Ontology state, Automate, AIP Logic, the LLM, and the governed Action.
 - The “AIP Function” and “AIP Logic” boxes show two Foundry UI/resource views of the same executable logic. The Function Registry entry is the published interface selected by Automate; the Logic editor contains its implementation. -->
 
-*Demo D3 ZAI diagram (2 different AI models are used)*<br><img src="/assets/MASTER_D3.png" alt="xxx" width="100%" style="border: 1px solid #999;">
+*Diagram of the workflows for the ZAI version of demo D3 "Speedrun: Your First Agentic AIP Workflow”*<br><img src="/assets/MASTER_D3.png" alt="xxx" width="100%" style="border: 1px solid #999;">
 
 
 <br>
