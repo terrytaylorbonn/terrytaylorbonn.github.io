@@ -69,9 +69,11 @@ Your first app with AI.
 
 <br>
 
-#### **[1.2b Both D2 and D3 call an external LLM; whats the difference?](/3c.2c_pal_zai_take_on_foundry_agent/)** (26.0901)
+#### **[1.2b Both D2 and D3 call an external LLM; why is D3 the first "agentic" demo?](/3c.2c_pal_zai_take_on_foundry_agent/)** (26.0902)
 
-Before doing Demo 3 "Speedrun: Your First Agentic AIP Workflow", its important to understand the core of why Foundry did not classify D2 as the first agentic Agentic AI workflow. 
+*(the text below is FDE/GPT's verion of my original text; the concepts are my original, but the text has been polished by FDE/GPT)*
+
+Before doing Demo 3 "Speedrun: Your First Agentic AIP Workflow", its important to understand the core of why Foundry did not classify D2 "Speedrun -- Your First AIP Workflow" as the first Agentic AI workflow. 
 
 What's the difference?
 - Demo D2 made calls to external LLM. That is (in my opinion) an AI agent (and a risk of leaking sensitive data to an external LLM). 
