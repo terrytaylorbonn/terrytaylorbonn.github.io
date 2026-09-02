@@ -26,16 +26,16 @@ See also
 <br>
 
 **TOC**:
-- **1 AI thread -- external models**. Demos that use external AI (except for D1). I put this first because ZAI is first and foremost about AI.
-- **2 AI thread -- in-house models**. Create in-house (in the enterprise) models with Foundry. 
-- **3 Non-AI thread**. Palantir started out with no AI. And AI now is just a helpful assistant. This section focuses on the core non-AI Foundry basics.
-- **4 Duplicates/other demos**. Demos that I did that maybe duplicate what has already been demo'd. Also other demos that maybe are not really important (or I could not get to work).
+- **1 Basic demos with external AI models**. This is the first set of demos because ZAI focuses primarily on AI and external models are simpler than internal models.
+- **2 Basic demos with internal AI models**. Demos that show how to create and host internal models. 
+- **3 Basic demos without AI**. Palantir started out with no AI. And AI now is still just a helpful assistant. This section focuses on the core non-AI Foundry basics.
+- **4 Other demos**. Duplicate or unimportant demos (or demos I could not get to work).
 
 <br>
 
-## **1 AI thread -- external models** 
+## **1 Basic demos with external AI models** 
 
-These will focus on **getting started (grasping core concepts via hands-on demos) for Foundry with AI using external models**. 
+This sections focuses on **getting started (grasping core concepts via hands-on demos)** with Foundry demos that use **external AI models**. 
 
 <!-- Note: 
 - The thread order does not exactly match the demo number.
@@ -121,7 +121,7 @@ Work with GPT/FDE to add Foundry safety rails to D2 to make using remote LLMs (a
 
 <br>
 
-## **2 AI thread -- in-house models** 
+## **2 Basic demos with internal AI models** 
 
 "in-house" = Enterprise controlled models. This is probably the long-term future of enterprise AI.
 
@@ -141,7 +141,7 @@ Locals models (+RAG) are probably the optimal solution (see D8 demo description 
 <br>
 
 
-## **3 Non-AI thread** 
+## **3 Basic demos without AI** 
 
 <br>
 
@@ -168,7 +168,7 @@ Mechanically:
 <br>
 
 
-## **4 Duplicates/other demos**
+## **4 Other demos**
 - **[4.1 D4: Palantir ontology function "speedrun" (quick start) (26.0717)](/3c.4_pal_ontology_function/)**. 
   - At the end of this page is *good demo of how FDE/GPT5.5 fixed a problem with the demo*.
   - **[#615_.docx](https://drive.google.com/drive/folders/1-Adawag9uA8_bq-hDF-nOuPYaRLz1eEO)** 
