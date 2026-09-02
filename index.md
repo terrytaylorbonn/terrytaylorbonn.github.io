@@ -5,7 +5,7 @@ title: Home
 
 <br>
 
-*Latest (26.0829): Making steady progress on section **[2.2 PAL demos (speedruns)](/3c.2_pal_initial_demos/)**.*
+*Latest (26.0901): Making steady progress on section **[2.2 PAL demos (speedruns)](/3c.2_pal_initial_demos/)**.*
 
 <!-- *"This is a good example of the practical value of AI ... AI does not need to replace human intelligence to be revolutionary; eliminating this kind of tedious work is already transformative" (GPT's summary of **[how ZiptieAI manages the docx/online documentation](/3c.1b_pal_docx_md/)** for the ZiptieAI version of **[Palantir Foundry demo D1](/3c.1_pal_foundry/)** using AI)*. -->
 

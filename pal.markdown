@@ -6,6 +6,9 @@ permalink: /pal/
 
 <br>
 
+*Latest (26.0901): Making steady progress on section **[2.2 PAL demos (speedruns)](/3c.2_pal_initial_demos/)**.*
+
+
 **This Enterprise section focuses on Palantir Foundry** as a concrete, hands-on example of a modern enterprise platform for data integration, ontology, analytics, applications, **AI assistance**, and governance.
 - *This page reorg'd 26.0826 (simplified)*
 - *I will be in HK/Jiangsu from 7 September - 10 October and will not be updating this site.* 
