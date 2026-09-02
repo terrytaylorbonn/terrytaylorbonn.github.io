@@ -53,13 +53,13 @@ Markdown and PNG's for the website docs are created from docx files. The md/PNG'
 
 <br>
 
-### **[(5) I have extensive international experience (in regions of interest from a national defense perspective)](https://ziptieai.com/1-drones/)**
+### **(5) I have extensive international experience (in regions of interest from a national defense perspective)**
 
 In the countries listed below I've worked in private sector tech companies (with the exception of Ukraine) and lived like a regular citizen (I never worked for any NGO's or the US government; I have worked in a DoD facility in the USA for 7 years and held a secret clearance).
 
 #### **Ukraine**
 
-I spent 2 years in Ukraine. I am proficient in understanding (not speaking) Ukrainian. I got my start working with drones while in Ukraine.
+I spent 2 years in Ukraine. I am proficient in Ukrainian language comprehension (not speaking). I got my start working on **[drones](https://ziptieai.com/1-drones/)** while in Ukraine.
 
 <img src="/assets/PAL-CL-01.png" alt="drones" width="60%" style="border: 1px solid #999;"> <img src="/assets/PAL-CL-02.png" alt="drones" width="65%" style="border: 1px solid #999;"> 
 
