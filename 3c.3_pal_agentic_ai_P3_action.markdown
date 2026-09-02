@@ -21,4 +21,31 @@ See also
 
 <br>
 
-26.0831 (v1 26.0831)
+# P3 (4b) Complete AIP_Logic: Add Action
+
+- Invoke the governed Action
+- Map LLM outputs to Action parameters
+- Preview the proposed edits
+
+## P3.1 Configure
+
+<img src="/assets/D3/P3.01.png" alt="xxx" width="42%" style="border: 1px solid #999;">
+
+## P3.2 Test action
+
+- Click on the play button in the top right corner
+- Populate the function inputs
+  - For example, for the patient search and find a patient name Priya Nair
+  - For the clinicalTrial, find the clinical trial Glycurex for Type 2 Diabetes
+- Click the blue Preview run button at the bottom of the drawer
+  - The Debugger drawer will automatically open, showing you the execution steps of your agent
+
+<img src="/assets/D3/P3.02.png" alt="xxx" width="100%" style="border: 1px solid #999;">
+
+- Hover over the object for which the ontology edits are proposed
+
+<img src="/assets/D3/P3.03.png" alt="xxx" width="60%" style="border: 1px solid #999;">
+
+<br>
+
+26.0901 (v1 26.0831)

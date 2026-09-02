@@ -1,0 +1,116 @@
+---
+layout: page
+title: P6 Create the Automation
+permalink: /3c.3_pal_agentic_ai_P6_automation/
+---
+
+<br>
+
+[← Demo D3](/3c.3_pal_agentic_ai/)
+
+<br>
+
+See also
+  - #614_pal_3_agentic_ai_qs_v03_26.0715_ss.docx 
+  - https://learn.palantir.com/speedrun-your-first-agentic-aip-workflow
+
+<br>
+
+#### **TOC:**
+
+
+<br>
+
+# P5 (2) Create Automation
+
+- Monitor Patients entering the object set
+- Invoke the published function version
+- Bind dynamic and static inputs
+- Stage or automatically commit edits
+- Configure retries and monitoring
+
+## P5.1 Create new automation
+
+(from AIP logic dialog)
+
+<img src="/assets/D3/P5.01.png" alt="xxx" width="35%" style="border: 1px solid #999;">
+
+<img src="/assets/D3/P5.02.png" alt="xxx" width="90%" style="border: 1px solid #999;">
+
+## P5.2 Add clinicalTrial object
+
+<img src="/assets/D3/P5.03.png" alt="xxx" width="100%" style="border: 1px solid #999;">
+
+<img src="/assets/D3/P5.04.png" alt="xxx" width="80%" style="border: 1px solid #999;">
+
+<img src="/assets/D3/P5.05.png" alt="xxx" width="95%" style="border: 1px solid #999;">
+
+## P5.3 Create automation
+
+<img src="/assets/D3/P5.06.png" alt="xxx" width="55%" style="border: 1px solid #999;">
+
+### NOTE: It will:
+
+- live-monitor `[Ttbonn] Patient`;
+- trigger when a Patient newly enters the object set;
+- invoke `D3 AIP Logic 555` once for each new Patient;
+- automatically execute the returned Action edits.
+
+### NOTE: Before clicking **Create automation**, verify only:
+
+1. The old Automation is paused, to avoid duplicate processing.
+2. The static Clinical Trial input is the intended trial.
+3. The **December 1, 2026** expiration date is intentional.
+4. **User scoped security** is appropriate. Use project-scoped security only if teammates need to see the execution events.
+
+<img src="/assets/D3/P5.07.png" alt="xxx" width="80%" style="border: 1px solid #999;">
+
+## P5.4 Disable old automation
+
+https://ziptieai.usw-17.palantirfoundry.com/workspace/object-monitoring/automations
+
+<img src="/assets/D3/P5.08.png" alt="xxx" width="100%" style="border: 1px solid #999;">
+
+<img src="/assets/D3/P5.09.png" alt="xxx" width="65%" style="border: 1px solid #999;">
+
+<img src="/assets/D3/P5.10.png" alt="xxx" width="100%" style="border: 1px solid #999;">
+
+### NOTE: **The new Automation is active and waiting for its first event.**
+
+`No previous events` is expected until a new Patient is added. To test:
+
+1. Add a new Patient through the UI.
+2. Wait up to approximately one minute.
+3. Check the Automation’s event history.
+4. Refresh the Patient display and verify the eligibility decision/reasoning.
+
+The two `Unknown object type` warnings belong to unrelated Automations and do not affect `D3 AIP Logic 555 automation`.
+
+## P5.5 Open the "View automation events" dialog
+
+<img src="/assets/D3/P5.11.png" alt="xxx" width="25%" style="border: 1px solid #999;">
+
+<img src="/assets/D3/P5.12.png" alt="xxx" width="45%" style="border: 1px solid #999;">
+
+## P5.6 Create patient (in UI)
+
+<img src="/assets/D3/P5.13.png" alt="xxx" width="100%" style="border: 1px solid #999;">
+
+<img src="/assets/D3/P5.14.png" alt="xxx" width="40%" style="border: 1px solid #999;">
+
+## P5.7 View the automation event
+
+Refresh page
+
+<img src="/assets/D3/P5.15.png" alt="xxx" width="100%" style="border: 1px solid #999;">
+
+## P5.8 Final UI result
+
+(note: small letters come after capital letters)
+
+<img src="/assets/D3/P5.16.png" alt="xxx" width="100%" style="border: 1px solid #999;">
+
+
+<br>
+
+26.0901 (v1 26.0831)

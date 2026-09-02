@@ -21,4 +21,93 @@ See also
 
 <br>
 
-26.0831 (v1 26.0831)
+# P2 (4a) Build AIP Logic: Use_LLM
+
+- Define Patient and Clinical Trial inputs
+- Read Ontology properties
+- Configure Use LLM
+- Define structured decision/reasoning output
+
+## P2.1 Configure
+
+File name / location.
+
+<img src="/assets/D3/P2.01.png" alt="xxx" width="18%" style="border: 1px solid #999;">
+
+### Inputs
+
+<img src="/assets/D3/P2.02.png" alt="xxx" width="60%" style="border: 1px solid #999;">
+
+### System prompt
+
+I would like to determine if a patient is suitable for a trial depending on the trial's inclusion and exclusion criteria, providing the reasoning to your decision.
+
+If the patient is fully suitable for the trial, enroll it to the trial, return the following information in json form:
+
+- enrollment_decision: Suitable
+- enrollment_reasoning: 1 sentence reasoning why they are suitable
+
+If the patient is NOT fully suitable for the trail, return the following information in json form:
+
+- enrollment_decision: Not suitable
+- enrollment_reasoning: 1 sentence reasoning why they are not suitable
+
+If you are not able to determine whether the patient is suitable (e.g. because of relevant info missing), return the following information in json form:
+
+- enrollment_decision: Manual review required
+- enrollment_reasoning: 1 sentence reasoning why you couldn't determine whether the patient is suitable or not
+
+### Task prompt
+
+Here is the trial's criteria: Criteria:
+
+Here are details about the patient:
+Age: 
+Contraception: 
+Diagnosis: 
+Disease Stage: 
+Gender: 
+Health Status: 
+Informed Consent: 
+Lab results: 
+Lifestyle Factors: 
+Pregnancy Status: 
+Treatment History:
+
+### Model: GPT-4.1 mini
+
+<img src="/assets/D3/P2.03.png" alt="xxx" width="90%" style="border: 1px solid #999;">
+
+### Change the Output type to struct / Non-strict
+
+  - Add first field: eligibility_decision of type String
+  - Add second field: eligibility_reasoning of type String
+
+<img src="/assets/D3/P2.04.png" alt="xxx" width="50%" style="border: 1px solid #999;">
+
+<img src="/assets/D3/P2.05.png" alt="xxx" width="65%" style="border: 1px solid #999;">
+
+### View in folder
+
+<img src="/assets/D3/P2.06.png" alt="xxx" width="27%" style="border: 1px solid #999;">
+
+### Save (do not publish yet)
+
+<img src="/assets/D3/P2.07.png" alt="xxx" width="35%" style="border: 1px solid #999;">
+
+## P2.2 Test Use_LLM (preview run)
+
+<img src="/assets/D3/P2.08.png" alt="xxx" width="45%" style="border: 1px solid #999;">
+
+{
+
+### "eligibility_decision": "Not suitable",
+
+### "eligibility_reasoning": "The patient has been on metformin for only 2 months, which is less than the required stable dose duration of at least 3 months prior to enrollment."
+
+}
+
+<img src="/assets/D3/P2.09.png" alt="xxx" width="100%" style="border: 1px solid #999;">
+
+
+26.0901 (v1 26.0831)

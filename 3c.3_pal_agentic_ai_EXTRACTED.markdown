@@ -1,7 +1,7 @@
 ---
 layout: page
-title: 3c.3_pal_agentic_ai_EXTRACED
-permalink: /3c.3_pal_agentic_ai_EXTRACED/
+title: 3c.3_pal_agentic_ai_EXTRACTED
+permalink: /3c.3_pal_agentic_ai_EXTRACTED/
 ---
 
 <br>
@@ -19,7 +19,7 @@ permalink: /3c.3_pal_agentic_ai_EXTRACED/
 
 https://learn.palantir.com/speedrun-your-first-agentic-aip-workflow . I dont want to reinstall on my system because uninstalling the current installation is complicated.
 
-<img src="/assets/D3/01.png" alt="xxx" width="55%" style="border: 1px solid #999;">
+<img src="/assets/D3/01.png" alt="xxx" width="35%" style="border: 1px solid #999;">
 
 #### Q1: deleting the old marketplace is complicated
 
@@ -37,11 +37,8 @@ For now, the safest arrangement is:
 ```text
 
 Keep Marketplace installation
-
 ├─ reuse its data, Ontology and Actions
-
 ├─ pause old Automation
-
 └─ create new Logic, Function, Evaluation and Automation
 
 ```
@@ -53,19 +50,12 @@ Only remove the Marketplace installation if you intend to remove the entire demo
 Correct. A D3 installation is not one self-contained folder that can necessarily be removed with a single ordinary delete. It creates a **dependency graph across Foundry applications**:
 
 ```text
-
 Automation
-
 → published Function
-
 → AIP Logic
-
 → Action
-
 → object types
-
 → datasets/pipeline
-
 ```
 
 It may also include:
@@ -85,19 +75,12 @@ Marketplace may provide an **uninstall/delete installation** operation for resou
 A manual cleanup generally proceeds in reverse dependency order:
 
 1. Pause/delete Automations.
-
 2. Remove Evaluation Suites and application references.
-
 3. Retire/remove published Functions and AIP Logic.
-
 4. Remove Workshop dependencies.
-
 5. Remove Actions.
-
 6. Remove object/link types.
-
 7. Remove pipelines and datasets.
-
 8. Remove the Marketplace installation record.
 
 Therefore, if the objective is simply to repeat the tutorial cleanly, **creating a second set of Logic/Evaluation/Function/Automation resources while retaining the Marketplace foundation is much safer**.
@@ -116,23 +99,16 @@ publish will create the function, and i will not be able to change that function
 Publishing will:
 
 1. Create the Function identity in the Function Registry.
-
 2. Create its first immutable published version.
-
 3. Leave the source AIP Logic editable.
 
 Afterward:
 
 ```text
-
 Edit AIP Logic
-
 → preview/test
-
 → publish again
-
 → create a new immutable Function version
-
 ```
 
 **You cannot change the implementation of an already published version.**
@@ -146,37 +122,25 @@ A **breaking interface change** means changing the Function’s public contract 
 Your current output is:
 
 ```text
-
 Struct {
-
 eligibility_decision: String
-
 eligibility_reasoning: String
-
 }
-
 ```
 
 After adding the Action as the output, it becomes:
 
 ```text
-
 List<Ontology Edits>
-
 ```
 
 Those output types are incompatible. A caller expecting decision fields cannot consume a list of edits.
 
 ```text
-
 Before:
-
 Function → decision/reasoning struct
-
 After:
-
 Function → Ontology edits
-
 ```
 
 Therefore, existing Automations, applications, evaluations, or other functions might need to be reconfigured. This generally requires a major version or a separate Function identity rather than an automatic compatible upgrade.
@@ -186,17 +150,11 @@ Because you have **not published yet**, there is no problem. If your intended fi
 Alternatively, intentionally keep two functions:
 
 ```text
-
 Assess Eligibility
-
 → returns decision/reasoning
-
 Review Patient
-
 → calls assessment
-
 → returns Ontology edits
-
 ```
 
 That cleanly separates reasoning from writeback.
@@ -208,29 +166,19 @@ That cleanly separates reasoning from writeback.
 Recommended order:
 
 ```text
-
 Create AIP Logic
-
 → configure Use LLM
-
 → add and configure Action
-
 → preview proposed edits
-
 → evaluate
-
 → publish Function
-
 ```
 
 This ensures the first published Function has the intended contract:
 
 ```text
-
 Inputs: Patient + Clinical Trial
-
 Output: Ontology edits
-
 ```
 
 You can continue changing its internal prompts and reasoning afterward and publish new compatible versions, provided the inputs and output type remain compatible.
@@ -247,19 +195,12 @@ do it at the end.... to avoid too much complexity.
 For your simplified demo, this order is reasonable:
 
 ```text
-
 1. Build AIP Logic
-
 2. Add the Action
-
 3. Preview manually
-
 4. Publish the Function
-
 5. Create Automation
-
 6. Add an Evaluation Suite later
-
 ```
 
 The important requirement is to **preview and manually verify the complete Logic—including its Action and output type—before publishing**.
@@ -281,15 +222,10 @@ what is "Function inputs"... this really confused me, because there is no functi
 The terminology is confusing because Foundry treats an AIP Logic as an **unpublished function definition** while you are authoring it.
 
 ```text
-
 AIP Logic before publication
-
 = editable function definition
-
 After publication
-
 = registered, versioned Function
-
 ```
 
 **Therefore, “Function inputs” does **not** mean that a published Function already exists. It means:**
@@ -305,29 +241,17 @@ After publication
 **Agreed. The demo provides the required clicks but does not explain the underlying lifecycle:**
 
 ```text
-
 Create AIP Logic
-
 → define inputs
-
 → configure LLM
-
 → add Action
-
 → preview proposed edits
-
 → bind Logic to an Ontology
-
 → publish immutable Function version
-
 → select that Function in Automate
-
 → bind runtime inputs
-
 → choose approval or automatic execution
-
 → activate monitoring
-
 ```
 
 Several distinctions are left implicit:
@@ -345,7 +269,7 @@ These are not peripheral details—they determine how the system actually works.
 
 ### P4/P5/P6 AIP_logic / Function / Automation details
 
-<img src="/assets/D3/02.png" alt="xxx" width="75%" style="border: 1px solid #999;">
+<img src="/assets/D3/02.png" alt="xxx" width="58%" style="border: 1px solid #999;">
 
 <img src="/assets/D3/03.png" alt="xxx" width="100%" style="border: 1px solid #999;">
 
@@ -382,15 +306,10 @@ Publishing the AIP Logic automatically creates the Function entry; it is not ano
 Each published version is an immutable snapshot:
 
 ```text
-
 One AIP Logic
-
 ├─ Function version 1.0.0
-
 ├─ Function version 1.0.1
-
 └─ Function version 1.1.0
-
 ```
 
 ### 3. Creating a Function from scratch
@@ -424,7 +343,7 @@ There is no visible way in that dialog to order the complete list by publication
 
 ## P1.1 Create folder
 
-<img src="/assets/D3/P1.01.png" alt="xxx" width="80%" style="border: 1px solid #999;">
+<img src="/assets/D3/P1.01.png" alt="xxx" width="40%" style="border: 1px solid #999;">
 
 ## P1.2 Install marketplace (only if not already installed)
 
@@ -451,7 +370,7 @@ The following diagram shows what the marketplace installs
 
 **USE LLM**
 
-<img src="/assets/D3/P1.06.png" alt="xxx" width="90%" style="border: 1px solid #999;">
+<img src="/assets/D3/P1.06.png" alt="xxx" width="80%" style="border: 1px solid #999;">
 
 **INSTRUCTIONS (simplified)**
 
@@ -480,39 +399,39 @@ used to determine which patients are eligible for the study.
 
 **BACKING DATASOURCE**
 
-<img src="/assets/D3/P1.10.png" alt="xxx" width="85%" style="border: 1px solid #999;">
+<img src="/assets/D3/P1.10.png" alt="xxx" width="65%" style="border: 1px solid #999;">
 
 **ACTION TYPES (0)**
 
-<img src="/assets/D3/P1.11.png" alt="xxx" width="25%" style="border: 1px solid #999;">
+<img src="/assets/D3/P1.11.png" alt="xxx" width="15%" style="border: 1px solid #999;">
 
 **PROPERTIES (9)**
 
-<img src="/assets/D3/P1.12.png" alt="xxx" width="30%" style="border: 1px solid #999;">
+<img src="/assets/D3/P1.12.png" alt="xxx" width="20%" style="border: 1px solid #999;">
 
 **LINKS**
 
-<img src="/assets/D3/P1.13.png" alt="xxx" width="60%" style="border: 1px solid #999;">
+<img src="/assets/D3/P1.13.png" alt="xxx" width="40%" style="border: 1px solid #999;">
 
 #### 3.2 PATIENT
 
 **BACKING DATASOURCE**
 
-<img src="/assets/D3/P1.14.png" alt="xxx" width="85%" style="border: 1px solid #999;">
+<img src="/assets/D3/P1.14.png" alt="xxx" width="70%" style="border: 1px solid #999;">
 
 **ACTION TYPE: Create Patient**
 
 **ACTION TYPE: Modify Eligibility Decision**
 
-<img src="/assets/D3/P1.15.png" alt="xxx" width="35%" style="border: 1px solid #999;">
+<img src="/assets/D3/P1.15.png" alt="xxx" width="27%" style="border: 1px solid #999;">
 
 **PROPERTIES (15 ... FOR A DEMO???)**
 
-<img src="/assets/D3/P1.16.png" alt="xxx" width="35%" style="border: 1px solid #999;">
+<img src="/assets/D3/P1.16.png" alt="xxx" width="25%" style="border: 1px solid #999;">
 
 **LINKS**
 
-<img src="/assets/D3/P1.17.png" alt="xxx" width="60%" style="border: 1px solid #999;">
+<img src="/assets/D3/P1.17.png" alt="xxx" width="40%" style="border: 1px solid #999;">
 
 #### 3.2-1 ACTION TYPE "Create Patient" (INPUT<>RULES)
 
@@ -522,7 +441,7 @@ used to determine which patients are eligible for the study.
 
 **RULES: Create object Patient**
 
-<img src="/assets/D3/P1.19.png" alt="xxx" width="100%" style="border: 1px solid #999;">
+<img src="/assets/D3/P1.19.png" alt="xxx" width="90%" style="border: 1px solid #999;">
 
 **PARAMETERS (UI): Create Patient**
 
@@ -561,11 +480,11 @@ used to determine which patients are eligible for the study.
 
 File name / location.
 
-<img src="/assets/D3/P2.01.png" alt="xxx" width="25%" style="border: 1px solid #999;">
+<img src="/assets/D3/P2.01.png" alt="xxx" width="18%" style="border: 1px solid #999;">
 
 ### Inputs
 
-<img src="/assets/D3/P2.02.png" alt="xxx" width="80%" style="border: 1px solid #999;">
+<img src="/assets/D3/P2.02.png" alt="xxx" width="60%" style="border: 1px solid #999;">
 
 ### System prompt
 
@@ -605,24 +524,24 @@ Treatment History:
 
 ### Model: GPT-4.1 mini
 
-<img src="/assets/D3/P2.03.png" alt="xxx" width="100%" style="border: 1px solid #999;">
+<img src="/assets/D3/P2.03.png" alt="xxx" width="90%" style="border: 1px solid #999;">
 
 ### Change the Output type to struct / Non-strict
 
   - Add first field: eligibility_decision of type String
   - Add second field: eligibility_reasoning of type String
 
-<img src="/assets/D3/P2.04.png" alt="xxx" width="75%" style="border: 1px solid #999;">
+<img src="/assets/D3/P2.04.png" alt="xxx" width="50%" style="border: 1px solid #999;">
 
-<img src="/assets/D3/P2.05.png" alt="xxx" width="90%" style="border: 1px solid #999;">
+<img src="/assets/D3/P2.05.png" alt="xxx" width="65%" style="border: 1px solid #999;">
 
 ### View in folder
 
-<img src="/assets/D3/P2.06.png" alt="xxx" width="35%" style="border: 1px solid #999;">
+<img src="/assets/D3/P2.06.png" alt="xxx" width="27%" style="border: 1px solid #999;">
 
 ### Save (do not publish yet)
 
-<img src="/assets/D3/P2.07.png" alt="xxx" width="45%" style="border: 1px solid #999;">
+<img src="/assets/D3/P2.07.png" alt="xxx" width="35%" style="border: 1px solid #999;">
 
 ## P2.2 Test Use_LLM (preview run)
 
@@ -646,7 +565,7 @@ Treatment History:
 
 ## P3.1 Configure
 
-<img src="/assets/D3/P3.01.png" alt="xxx" width="50%" style="border: 1px solid #999;">
+<img src="/assets/D3/P3.01.png" alt="xxx" width="42%" style="border: 1px solid #999;">
 
 ## P3.2 Test action
 
@@ -661,7 +580,7 @@ Treatment History:
 
 - Hover over the object for which the ontology edits are proposed
 
-<img src="/assets/D3/P3.03.png" alt="xxx" width="100%" style="border: 1px solid #999;">
+<img src="/assets/D3/P3.03.png" alt="xxx" width="60%" style="border: 1px solid #999;">
 
 # P4 (3) Publish AIP_Logic as a Function
 
@@ -674,7 +593,7 @@ Treatment History:
 
 <img src="/assets/D3/P4.01.png" alt="xxx" width="100%" style="border: 1px solid #999;">
 
-<img src="/assets/D3/P4.02.png" alt="xxx" width="75%" style="border: 1px solid #999;">
+<img src="/assets/D3/P4.02.png" alt="xxx" width="65%" style="border: 1px solid #999;">
 
 ### Q1: Not yet bound to ontology
 
@@ -683,30 +602,27 @@ Correct. The Logic references Ontology resources but is **not yet formally bound
 Before publishing:
 
 1. Click **Select** beside **ziptieai Ontology**.
-
 2. Confirm that it appears under **Bound to the following ontologies**.
-
 3. Save.
-
 4. Publish.
 
 Binding makes the published Function available to Ontology-based consumers such as Automate and Workshop. It does not modify the Patient or Clinical Trial objects.
 
-<img src="/assets/D3/P4.03.png" alt="xxx" width="70%" style="border: 1px solid #999;">
+<img src="/assets/D3/P4.03.png" alt="xxx" width="50%" style="border: 1px solid #999;">
 
 ## P4.2 Save AIP_logic
 
-<img src="/assets/D3/P4.04.png" alt="xxx" width="45%" style="border: 1px solid #999;">
+<img src="/assets/D3/P4.04.png" alt="xxx" width="35%" style="border: 1px solid #999;">
 
-<img src="/assets/D3/P4.05.png" alt="xxx" width="65%" style="border: 1px solid #999;">
+<img src="/assets/D3/P4.05.png" alt="xxx" width="45%" style="border: 1px solid #999;">
 
 ## P4.3 Publish logic function
 
-<img src="/assets/D3/P4.06.png" alt="xxx" width="40%" style="border: 1px solid #999;">
+<img src="/assets/D3/P4.06.png" alt="xxx" width="30%" style="border: 1px solid #999;">
 
-<img src="/assets/D3/P4.07.png" alt="xxx" width="60%" style="border: 1px solid #999;">
+<img src="/assets/D3/P4.07.png" alt="xxx" width="52%" style="border: 1px solid #999;">
 
-<img src="/assets/D3/P4.08.png" alt="xxx" width="100%" style="border: 1px solid #999;">
+<img src="/assets/D3/P4.08.png" alt="xxx" width="85%" style="border: 1px solid #999;">
 
 <img src="/assets/D3/P4.09.png" alt="xxx" width="100%" style="border: 1px solid #999;">
 
@@ -722,7 +638,7 @@ Binding makes the published Function available to Ontology-based consumers such 
 
 (from AIP logic dialog)
 
-<img src="/assets/D3/P5.01.png" alt="xxx" width="55%" style="border: 1px solid #999;">
+<img src="/assets/D3/P5.01.png" alt="xxx" width="35%" style="border: 1px solid #999;">
 
 <img src="/assets/D3/P5.02.png" alt="xxx" width="90%" style="border: 1px solid #999;">
 
@@ -730,13 +646,13 @@ Binding makes the published Function available to Ontology-based consumers such 
 
 <img src="/assets/D3/P5.03.png" alt="xxx" width="100%" style="border: 1px solid #999;">
 
-<img src="/assets/D3/P5.04.png" alt="xxx" width="100%" style="border: 1px solid #999;">
+<img src="/assets/D3/P5.04.png" alt="xxx" width="80%" style="border: 1px solid #999;">
 
 <img src="/assets/D3/P5.05.png" alt="xxx" width="95%" style="border: 1px solid #999;">
 
 ## P5.3 Create automation
 
-<img src="/assets/D3/P5.06.png" alt="xxx" width="95%" style="border: 1px solid #999;">
+<img src="/assets/D3/P5.06.png" alt="xxx" width="55%" style="border: 1px solid #999;">
 
 ### NOTE: It will:
 
@@ -748,14 +664,11 @@ Binding makes the published Function available to Ontology-based consumers such 
 ### NOTE: Before clicking **Create automation**, verify only:
 
 1. The old Automation is paused, to avoid duplicate processing.
-
 2. The static Clinical Trial input is the intended trial.
-
 3. The **December 1, 2026** expiration date is intentional.
-
 4. **User scoped security** is appropriate. Use project-scoped security only if teammates need to see the execution events.
 
-<img src="/assets/D3/P5.07.png" alt="xxx" width="100%" style="border: 1px solid #999;">
+<img src="/assets/D3/P5.07.png" alt="xxx" width="80%" style="border: 1px solid #999;">
 
 ## P5.4 Disable old automation
 
@@ -763,7 +676,7 @@ https://ziptieai.usw-17.palantirfoundry.com/workspace/object-monitoring/automati
 
 <img src="/assets/D3/P5.08.png" alt="xxx" width="100%" style="border: 1px solid #999;">
 
-<img src="/assets/D3/P5.09.png" alt="xxx" width="100%" style="border: 1px solid #999;">
+<img src="/assets/D3/P5.09.png" alt="xxx" width="65%" style="border: 1px solid #999;">
 
 <img src="/assets/D3/P5.10.png" alt="xxx" width="100%" style="border: 1px solid #999;">
 
@@ -772,26 +685,23 @@ https://ziptieai.usw-17.palantirfoundry.com/workspace/object-monitoring/automati
 `No previous events` is expected until a new Patient is added. To test:
 
 1. Add a new Patient through the UI.
-
 2. Wait up to approximately one minute.
-
 3. Check the Automation’s event history.
-
 4. Refresh the Patient display and verify the eligibility decision/reasoning.
 
 The two `Unknown object type` warnings belong to unrelated Automations and do not affect `D3 AIP Logic 555 automation`.
 
 ## P5.5 Open the "View automation events" dialog
 
-<img src="/assets/D3/P5.11.png" alt="xxx" width="40%" style="border: 1px solid #999;">
+<img src="/assets/D3/P5.11.png" alt="xxx" width="25%" style="border: 1px solid #999;">
 
-<img src="/assets/D3/P5.12.png" alt="xxx" width="75%" style="border: 1px solid #999;">
+<img src="/assets/D3/P5.12.png" alt="xxx" width="45%" style="border: 1px solid #999;">
 
 ## P5.6 Create patient (in UI)
 
 <img src="/assets/D3/P5.13.png" alt="xxx" width="100%" style="border: 1px solid #999;">
 
-<img src="/assets/D3/P5.14.png" alt="xxx" width="65%" style="border: 1px solid #999;">
+<img src="/assets/D3/P5.14.png" alt="xxx" width="40%" style="border: 1px solid #999;">
 
 ## P5.7 View the automation event
 
