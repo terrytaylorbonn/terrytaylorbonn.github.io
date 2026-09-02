@@ -73,13 +73,13 @@ Your first app with AI.
 
 *Follow the above header link for details. See also the complete **[chat](/3c.2_pal_initial_demos_AGENT_CHAT/)** with FDE/GPT.*
 
-**My own simple explanation:**
+**My own simple explanation** (refer to diagram below)
 - Demo D2 made calls to external LLM. That is (in my opinion) 
   - an AI agent 
   - that shares internal data with an external LLM. 
 - However, D3 (the next demo) does several things that D2 did not. It used 
-  - Foundry AIP_Logic (a no-code function definition) calls an LLM like D2, but it also modifies the ontology (core objects)
-  - Foundry Automation (event-driven automation service) provides a main loop that automatically processes (in D3 this means calling API_logic) any incoming onotology data changes.
+  - (3)(4) Foundry AIP_Logic (a no-code function definition) calls an LLM like D2, but it also modifies the ontology (core objects)
+  - (2) Foundry Automation (event-driven automation service) provides a main loop that automatically processes (in D3 this means calling API_logic) any incoming onotology data changes.
 
 
 *[3] Demo D3 Foundry agent*<br><img src="/assets/MASTER_D1.2b_Foundry_SIMPLE.png" alt="xxx" width="90%" style="border: 1px solid #999;">
