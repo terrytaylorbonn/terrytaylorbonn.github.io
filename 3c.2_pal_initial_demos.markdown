@@ -82,7 +82,7 @@ Your first app with AI.
 - Demo D2 made calls to external LLM. That is (in my opinion) 
   - an AI agent 
   - that shares internal data with an external LLM. 
-- However, D3 (the next demo) does several things that D2 did not. It used 
+- However, D3 (the next demo) does several things that D2 did not: 
   - (3)(4) Foundry AIP_Logic (a no-code function definition) calls an LLM like D2, but it also modifies the ontology (core objects)
   - (2) Foundry Automation (event-driven automation service) provides a main loop that automatically processes (in D3 this means calling API_logic) any incoming onotology data changes.
 
@@ -107,9 +107,9 @@ See also:
 - **[#614_.docx](https://drive.google.com/drive/folders/1-Adawag9uA8_bq-hDF-nOuPYaRLz1eEO)**     
 - **[Speedrun](https://learn.palantir.com/speedrun-your-first-agentic-aip-workflow)**
 
-Notes: 
+<!-- Notes: 
 - For a discussion of what “agent” means in Foundry, see the D2 notes. This is an on-going debate with FDE. FDE (not sure I agree with this): The agent is not the LLM or AIP Logic alone. It is the complete event-driven system comprising Ontology state, Automate, AIP Logic, the LLM, and the governed Action.
-- The “AIP Function” and “AIP Logic” boxes show two Foundry UI/resource views of the same executable logic. The Function Registry entry is the published interface selected by Automate; the Logic editor contains its implementation.
+- The “AIP Function” and “AIP Logic” boxes show two Foundry UI/resource views of the same executable logic. The Function Registry entry is the published interface selected by Automate; the Logic editor contains its implementation. -->
 
 *Demo D3 ZAI diagram (2 different AI models are used)*<br><img src="/assets/MASTER_D3.png" alt="xxx" width="100%" style="border: 1px solid #999;">
 
