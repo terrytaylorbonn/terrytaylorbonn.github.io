@@ -69,15 +69,22 @@ Your first app with AI.
 
 <br>
 
-#### **[1.2b ZAI take on what exactly an "agent" is in Foundry](/3c.2c_pal_zai_take_on_foundry_agent/)** (26.0901)
+#### **[1.2b Both D2 and D3 call an external LLM; whats the difference?](/3c.2c_pal_zai_take_on_foundry_agent/)** (26.0901)
 
-Demo D2 called an external LLM. That is (in my opinion) an AI agent (and a risk of leaking sensitive data to an external LLM). However, D3 is mentioned as the first Agentic demo for Foundry. 
+Before doing Demo 3 "Speedrun: Your First Agentic AIP Workflow", its important to understand the core of why Foundry did not classify D2 as the first agentic Agentic AI workflow. 
 
-Why? Foundry did not invent a fundamentally different architecture. It distributed the familiar agent components across named, governed platform resources.
+What's the difference?
+- Demo D2 made calls to external LLM. That is (in my opinion) an AI agent (and a risk of leaking sensitive data to an external LLM). 
+- However, D3 (the next demo) does several things that D2 did not. It used 
+  - AIP_Logic (a Foundry xxxx) calls an LLM like in D2, but it also modifies the ontology (core objects)
+  - Foundry Automation xxxx provides a main loop that automatically processes any incoming onotology data changes (and uses AIP_logic to accordingly auto-modify that data).
+
 
 <!-- The Foundry agent contains the same conceptual parts; Foundry externalizes those parts as Automate, AIP Logic, Use LLM, Ontology, and Actions.   -->
 
-*[3] Demo D3 Foundry agent (the content of this diagram has been worked out with FDE/GPT; its a bit messy looking, but accurate)*<br><img src="/assets/MASTER_D1.2b_LOWER.png" alt="xxx" width="100%" style="border: 1px solid #999;">
+*Below: (FDE) Automate provides the persistent event loop. For each Patient that newly enters the monitored object set, it invokes the published AIP Logic once. The Logic reads Ontology objects, calls the external LLM once, and uses a governed Action to produce edits. With “Automatically run edits” enabled, Automate commits those edits to the Ontology and resumes monitoring. The UI then displays the updated Patient, whose AI-generated decision staff may optionally override.*
+
+*[3] Demo D3 Foundry agent*<br><img src="/assets/MASTER_D1.2b_Foundry_SIMPLE.png" alt="xxx" width="90%" style="border: 1px solid #999;">
 
 
 
