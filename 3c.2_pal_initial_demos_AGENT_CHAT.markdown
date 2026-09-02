@@ -1,0 +1,346 @@
+---
+layout: page
+title: 1.2b Chat about why D3 is considered agentic (and D2 is not)
+permalink: /3c.2_pal_initial_demos_AGENT_CHAT/
+---
+
+<br>
+
+[← 2.2 PAL demos](/3c.2_pal_initial_demos/)
+
+<br>
+
+Following is a discussion about "what is an agent".
+
+
+# Q1: Below is my updated section 1.2b. Its the section between D2 and D3. 
+
+the png is attached.
+your opinion on what i wrote?
+the "xxxx" ... what is the term need here? "node"? "component"? 
+
+```
+#### **[1.2b Both D2 and D3 call an external LLM; why is D3 the first "agentic" demo?](/3c.2c_pal_zai_take_on_foundry_agent/)** (26.0902)
+
+Before doing Demo 3 "Speedrun: Your First Agentic AIP Workflow", its important to understand the core of why Foundry did not classify D2 "Speedrun -- Your First AIP Workflow" as the first Agentic AI workflow. 
+
+What's the difference?
+- Demo D2 made calls to external LLM. That is (in my opinion) an AI agent (and a risk of leaking sensitive data to an external LLM). 
+- However, D3 (the next demo) does several things that D2 did not. It used 
+  - AIP_Logic (a Foundry xxxx) calls an LLM like in D2, but it also modifies the ontology (core objects)
+  - Foundry Automation xxxx provides a main loop that automatically processes any incoming onotology data changes (and uses AIP_logic to accordingly auto-modify that data).
+
+
+<!-- The Foundry agent contains the same conceptual parts; Foundry externalizes those parts as Automate, AIP Logic, Use LLM, Ontology, and Actions.   -->
+
+*Below: (FDE) Automate provides the persistent event loop. 
+For each Patient that newly enters the monitored object set, it invokes the published AIP Logic once. 
+The Logic reads Ontology objects, calls the external LLM once, and uses a governed Action to produce edits. 
+With “Automatically run edits” enabled, Automate commits those edits to the Ontology and resumes monitoring. 
+The UI then displays the updated Patient, whose AI-generated decision staff may optionally override.*
+```
+
+*[3] Demo D3 Foundry agent*<br><img src="/assets/MASTER_D1.2b_Foundry_SIMPLE.png" alt="xxx" width="90%" style="border: 1px solid #999;">
+
+
+FDE: Your structure and central argument are good. Use **resource** or a more specific term—not “node.”
+
+- **AIP Logic:** a Foundry **no-code function definition**
+- **Automate:** Foundry’s **event-driven automation service**
+
+## Important accuracy changes
+
+1. Calling an external LLM does not by itself constitute data leakage. Say that it creates an **egress/privacy risk requiring governance**.
+2. Automate does not process *any* Ontology change. In D3, it responds specifically when a Patient newly enters the monitored object set.
+3. D2 is better described as a **one-shot agentic workflow**, rather than saying an LLM call alone is an agent.
+4. In the diagram, do not imply that the published Function dynamically references the editable Logic:
+   - `(3)` should be **Published AIP Logic Function version**
+   - `(4)` should be **Function implementation: Use LLM + Action**
+   
+   A published Function version contains an immutable snapshot of the Logic; it does not call the current draft by reference.
+
+## Suggested revision
+
+#### **[1.2b Both D2 and D3 call an external LLM; why is D3 the first “agentic” demo?](/3c.2c_pal_zai_take_on_foundry_agent/)** (26.0902)
+
+Before doing Demo 3, **“Speedrun: Your First Agentic AIP Workflow,”** it is useful to understand why Palantir did not classify Demo 2, **“Speedrun: Your First AIP Workflow,”** as its first agentic workflow.
+
+What is the difference?
+
+- **D2** used a Foundry workflow to orchestrate calls to external LLMs. Under a broad definition, this was already a one-shot agentic workflow. Sending data to an external model service also creates data-egress and privacy considerations that must be governed.
+- **D3** adds capabilities that D2 did not have:
+  - **AIP Logic**, a Foundry no-code function definition, reads Ontology objects, calls an external LLM, and maps its structured response into a governed Ontology Action.
+  - **Automate**, Foundry’s event-driven automation service, supplies the persistent monitoring and invocation loop. When a Patient newly enters the configured object set, Automate invokes the published AIP Logic Function.
+  - The governed Action produces Ontology edits, which Automate can automatically commit.
+
+This turns a one-shot AI workflow into a persistent operational agent:
+
+```text
+Observe an Ontology event
+→ invoke the published Logic
+→ call the external LLM
+→ produce and commit a governed Action
+→ resume monitoring
+```
+
+*Below: Automate provides the persistent event loop. For each Patient that newly enters the monitored object set, it invokes the published AIP Logic Function once. The Logic reads Ontology objects, calls the external LLM once, and uses a governed Action to produce edits. With “Automatically run edits” enabled, Automate commits those edits and resumes monitoring. The UI displays the updated Patient, whose AI-generated decision staff may optionally override.*
+
+For the image, replace `alt="xxx"` with:
+
+```html
+alt="Foundry operational agent architecture showing Automate, a published AIP Logic Function, an external LLM, governed Ontology Actions, and the UI"
+```
+
+<br>
+
+# Q2: "Calling an external LLM does not by itself constitute data leakage."  are you serious?
+
+D2 sends PDF chunks to an external LLM. 
+you are saying this is not data leakage?
+
+
+FDE: You are right. My wording was too dismissive.
+
+**D2 sends PDF content—possibly sensitive content—to an external LLM service. That is external data egress and creates a direct data-leakage/exposure risk.**
+
+The narrow security distinction is:
+
+- If the transfer is explicitly authorized, governed, and sent to an approved provider under appropriate retention and training restrictions, it may not be classified as a *security incident*.
+- But the data still leaves the Foundry trust boundary and is disclosed to another service. If sensitive information is included unintentionally or without adequate controls, that is data leakage.
+
+Your original wording—**“a risk of leaking sensitive data to an external LLM”**—is accurate and should remain.
+
+A precise version would be:
+
+> **D2 sends chunks of the source PDFs to an external LLM service. This creates a direct risk that sensitive document content will leave the Foundry security boundary and be exposed to, retained by, or used by the external model provider. The risk depends on the selected model, hosting arrangement, contractual controls, retention policy, and treatment of submitted data.**
+
+I should not have reduced that to a generic governance consideration. The transmission of document chunks is the specific risk.
+
+<br>
+
+# Q3: the core point is : why is D2 NOT an agent, but D3 is.
+
+that is not my claim.. its the claim of the palantir docs.
+
+
+FDE: Correct—this is **Palantir’s classification**, not yours, and the documentation fails to justify it explicitly.
+
+Based on the demo structure, Palantir appears to make this distinction:
+
+- **D2 is an “AIP workflow”** because it calls LLMs to process information and produce outputs.
+- **D3 is “agentic”** because it reads operational state from the Ontology, reasons about that state, and invokes a governed Action that changes it.
+- **Automate** then makes the agent persistent and event-driven.
+
+In Palantir’s apparent terminology:
+
+```text
+D2:
+data → LLM calls → generated output
+= AI workflow
+
+D3:
+Ontology state → LLM reasoning → governed Action → changed Ontology state
+= agentic workflow
+```
+
+The decisive difference appears to be **agency through an Ontology Action**, not merely calling an LLM. Chapter 4 already calls the AIP Logic an “agent” after the Action is added; Chapter 6 subsequently automates its invocation.
+
+A concise version for your section is:
+
+> **Palantir calls D2 an AIP workflow but calls D3 agentic. The apparent distinction is that D2 uses external LLMs to generate information, whereas D3 can act on its operational environment: AIP Logic reads Ontology objects, uses an LLM to make a decision, and invokes a governed Action that modifies the Ontology. Automate later adds the persistent event loop. This distinction is implicit in the demo structure but is never clearly defined in the original documentation.**
+
+You can then add your own assessment separately:
+
+> **ZAI view:** Under a broader definition, D2 can already be considered a one-shot agentic workflow. D3 adds operational action, and Automate turns it into a persistent event-driven agent.
+
+That clearly separates **Palantir’s implied claim** from **your interpretation**.
+
+<br>
+
+# Q4: Alex Karp (PAL CEO) himself made this the big selling point "companies are giving LLMs their confidential data".. 
+and supposedly PAL could help avoid this. 
+Alex did not say anything about changing ontology or automation..
+something is not right about all this...
+and my trademark for ZAI is honest insightful analysis.
+
+FDE: You have identified the real problem: **three independent questions are being conflated**.
+
+1. **Where does the intelligence come from?**  
+   An external LLM.
+
+2. **Is the workflow agentic?**  
+   Does it merely generate output, or can it act and run repeatedly?
+
+3. **Is confidential data protected?**  
+   What data crosses the trust boundary, and under what contractual and technical controls?
+
+Ontology Actions and Automate address question 2. **They do nothing by themselves to answer question 3.**
+
+## The unresolved issue in D2
+
+D2 sends PDF chunks to an external LLM endpoint. Therefore, document content leaves Foundry’s immediate processing boundary unless the model is hosted within an equivalent controlled environment.
+
+AIP may reduce the risk by enforcing:
+
+- approved model endpoints;
+- access controls and markings;
+- auditing;
+- contractual no-training commitments;
+- limited retention;
+- regional processing;
+- redaction or filtering;
+- controlled network egress.
+
+But those controls must be stated and verified. The mere fact that the call passes through AIP does not mean that the external provider never receives the content.
+
+The honest conclusion is:
+
+> **D2 transmits PDF content to an external LLM service. The demo does not adequately explain the model-provider trust boundary, retention policy, training policy, logging, or other data-handling controls. Therefore, the demo alone does not establish that confidential information remains private.**
+
+That does not prove an actual unauthorized leak occurred. It does establish **external disclosure/data egress and an associated leakage risk**.
+
+## Why Karp’s claim may still differ
+
+Karp’s argument may be contrasting:
+
+```text
+Employees independently pasting data into public chatbots
+```
+
+with:
+
+```text
+A company-governed platform calling approved enterprise model endpoints
+```
+
+AIP can make the second substantially safer. But “safer and governed” is not the same claim as:
+
+```text
+The data never leaves the enterprise
+```
+
+If Palantir intends the stronger claim, it must identify the deployment and security architecture that makes it true.
+
+## The agent label does not resolve this
+
+Palantir’s apparent D2/D3 taxonomy is:
+
+```text
+D2: LLM-generated information
+D3: LLM decision + Ontology Action
+D3 with Automate: persistent event-driven action
+```
+
+That taxonomy concerns **agency**, not confidentiality. Indeed, D3 introduces additional risk because model output can automatically modify operational state.
+
+A concise ZAI analysis would be:
+
+> **Palantir’s “agentic” label and its confidential-data argument concern different architectural axes. D3 becomes agentic by adding governed action and automated invocation; that does not explain or eliminate the external-model data risk already present in D2. AIP may govern external LLM access, but the demo does not document enough about the model endpoint, retention, training, logging, or trust boundary to verify the stronger confidentiality claim.**
+
+That is the honest distinction: **AI, agency, and security are separate properties.**
+
+<br>
+
+# Q6: Yes, you are right. And i already thought that. 
+
+so, after all this discussion, what would you write for 1.2b?
+my suggested title is "Both D2 and D3 send pipeline data to an external LLM; Why is D3 considered the first "agentic" demo?"
+my goal is to answer that central question. 
+
+also: i modified the diagram (see attached).
+note that i added a "AI" box on the "1b pipeline" box... 
+the pipeline sends pipeline data to an external LLM.
+
+<img src="/assets/MASTER_D1.2b_Foundry_SIMPLE.png" alt="xxx" width="90%" style="border: 1px solid #999;">
+
+
+FDE: Your central question is strong, but I would say **enterprise data** rather than **pipeline data**. In D3, the eligibility Logic sends data read from the Ontology—not directly from the pipeline—even though much of that data originated in a pipeline.
+
+## Suggested section
+
+#### **1.2b Both D2 and D3 send enterprise data to external LLMs—why does Palantir call D3 the first “agentic” demo?**
+
+Both D2 and D3 call external LLM services with data from Foundry. Therefore, simply calling an LLM is not what Palantir appears to mean by **agentic**.
+
+In D2, LLM calls are steps within a data-processing workflow:
+
+```text
+Run pipeline
+→ send document content to external LLMs
+→ process the responses
+→ produce pipeline output
+→ stop
+```
+
+D3 adds the ability to observe and change Foundry’s operational state:
+
+1. **AIP Logic** reads Patient and Clinical Trial objects from the Ontology.
+2. **Use LLM** sends relevant object data to an external LLM and receives a structured eligibility decision.
+3. A governed **Ontology Action** converts that decision into proposed Ontology edits.
+4. The Logic is published as a versioned Function.
+5. **Automate** monitors for Patients entering an object set, invokes the Function, automatically commits its edits, and resumes monitoring.
+
+D3 therefore implements an operational cycle:
+
+```text
+Observe Ontology state
+→ invoke the Logic
+→ call an external LLM
+→ produce a decision
+→ execute a governed Action
+→ update Ontology state
+→ wait for the next event
+```
+
+Palantir appears to use **agentic** for a workflow that can act upon its operational environment, rather than merely use an LLM to generate information. The Action gives the Logic agency over the Ontology; Automate makes the resulting system persistent and event-driven.
+
+The original demo does not clearly define this distinction. Under a broader definition, D2 can reasonably be regarded as a **one-shot agentic workflow**: Foundry orchestrates several LLM calls to accomplish a goal and then terminates. A more precise distinction would therefore be:
+
+- **D2:** one-shot AI or agentic data-processing workflow
+- **D3 AIP Logic:** one-shot reasoning-and-action program
+- **D3 with Automate:** persistent, event-driven operational agent
+
+The word **agentic** does not resolve the separate data-security issue. Both demos send data to external model services. Whether that is acceptable depends on the model endpoint, data sent, authorization, retention, training, logging, hosting, and other security controls. Adding Ontology Actions and Automate changes the workflow’s agency—not the fact that information is transmitted to an external LLM.
+
+## Diagram feedback
+
+Adding the `AI` box to `1b PIPELINE` is useful. It visually demonstrates your central point:
+
+> **The pipeline can use AI without Palantir calling the workflow an agent.**
+
+I would make two small changes:
+
+1. Label it more specifically:
+
+   ```text
+   AI1
+   external LLM extraction
+   ```
+
+2. Show its external call with an arrow to an LLM service, because the current diagram explicitly shows only the **Use LLM** connection.
+
+You could distinguish the two model uses as:
+
+```text
+AI1: Pipeline document extraction
+AI2: AIP Logic eligibility reasoning
+```
+
+That would make the diagram’s argument especially clear:
+
+```text
+External LLM use alone ≠ Palantir’s apparent criterion for “agentic”
+
+External LLM
++ operational state
++ governed Action
++ recurring event loop
+= D3 operational agent
+```
+
+
+<br>
+
+26.0831 (v1 26.0725)
+
+
