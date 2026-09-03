@@ -21,7 +21,7 @@ See the working text for this QS in
 
 # **3 Tutorial - Set up a machine learning project in Foundry**
 
-<img src="/assets/D8/D8.3-01.png" alt="drones" width="80%" style="border: 1px solid #999;">
+<img src="/assets/D8/D8.3-01.png" alt="drones" width="89%" style="border: 1px solid #999;">
 
 <br>
 
@@ -29,7 +29,7 @@ See the working text for this QS in
 
 https://www.palantir.com/docs/foundry/model-integration/tutorial-set-up-project
 
-<img src="/assets/D8/D8.3-02.png" alt="drones" width="80%" style="border: 1px solid #999;">
+<img src="/assets/D8/D8.3-02.png" alt="drones" width="29%" style="border: 1px solid #999;">
 
 This project should have:
 
@@ -41,7 +41,7 @@ A code folder to store model training logic used in this project, and,
 
 A modeling objective to manage and deploy production models.
 
-<img src="/assets/D8/D8.3-03.png" alt="drones" width="80%" style="border: 1px solid #999;">
+<img src="/assets/D8/D8.3-03.png" alt="drones" width="38%" style="border: 1px solid #999;">
 
 <br>
 
@@ -49,19 +49,19 @@ A modeling objective to manage and deploy production models.
 
 The modeling objective should be named in relation to the name of the machine learning problem you are attempting to solve. In this case, name the objective "House Price Prediction Objective".
 
-<img src="/assets/D8/D8.3-04.png" alt="drones" width="80%" style="border: 1px solid #999;">
+<img src="/assets/D8/D8.3-04.png" alt="drones" width="69%" style="border: 1px solid #999;">
 
-<img src="/assets/D8/D8.3-05.png" alt="drones" width="80%" style="border: 1px solid #999;">
+<img src="/assets/D8/D8.3-05.png" alt="drones" width="33%" style="border: 1px solid #999;">
 
-<img src="/assets/D8/D8.3-06.png" alt="drones" width="80%" style="border: 1px solid #999;">
+<img src="/assets/D8/D8.3-06.png" alt="drones" width="28%" style="border: 1px solid #999;">
 
-<img src="/assets/D8/D8.3-07.png" alt="drones" width="80%" style="border: 1px solid #999;">
+<img src="/assets/D8/D8.3-07.png" alt="drones" width="29%" style="border: 1px solid #999;">
 
-<img src="/assets/D8/D8.3-08.png" alt="drones" width="80%" style="border: 1px solid #999;">
+<img src="/assets/D8/D8.3-08.png" alt="drones" width="34%" style="border: 1px solid #999;">
 
-<img src="/assets/D8/D8.3-09.png" alt="drones" width="80%" style="border: 1px solid #999;">
+<img src="/assets/D8/D8.3-09.png" alt="drones" width="30%" style="border: 1px solid #999;">
 
-<img src="/assets/D8/D8.3-10.png" alt="drones" width="80%" style="border: 1px solid #999;">
+<img src="/assets/D8/D8.3-10.png" alt="drones" width="67%" style="border: 1px solid #999;">
 
 <br>
 
@@ -91,7 +91,7 @@ The modeling objective should be named in relation to the name of the machine le
 
 #### **monitor**
 
-<img src="/assets/D8/D8.3-11.png" alt="drones" width="80%" style="border: 1px solid #999;">
+<img src="/assets/D8/D8.3-11.png" alt="drones" width="55%" style="border: 1px solid #999;">
 
 <br>
 
@@ -101,9 +101,9 @@ https://www.palantir.com/docs/foundry/model-integration/tutorial-set-up-project/
 
 the labeled American Housing data source and upload it in the data folder as housing_features_and_labels. Download the unlabeled American Census data source and upload it to the data folder as housing_inference_data. You can upload a CSV file into Foundry by dragging it into the folder structure - for this tutorial, upload it as a structured dataset.
 
-<img src="/assets/D8/D8.3-12.png" alt="drones" width="80%" style="border: 1px solid #999;">
+<img src="/assets/D8/D8.3-12.png" alt="drones" width="45%" style="border: 1px solid #999;">
 
-<img src="/assets/D8/D8.3-13.png" alt="drones" width="80%" style="border: 1px solid #999;">
+<img src="/assets/D8/D8.3-13.png" alt="drones" width="63%" style="border: 1px solid #999;">
 
 <br>
 
@@ -151,15 +151,15 @@ In this tutorial, the modeling objective is to predict the median house price in
 
 Action: Navigate to the "House Price Prediction Objective" modeling objective created earlier. Add project context in the header portion of the modeling objective to describe the problem for other teams. Select the pen icon on the right of the header to enter edit mode and add a summary and description for your objective. The description field supports Markdown. An example of suggested content is below:
 
-<img src="/assets/D8/D8.3-14.png" alt="drones" width="80%" style="border: 1px solid #999;">
+<img src="/assets/D8/D8.3-14.png" alt="drones" width="56%" style="border: 1px solid #999;">
 
-<img src="/assets/D8/D8.3-15.png" alt="drones" width="80%" style="border: 1px solid #999;">
+<img src="/assets/D8/D8.3-15.png" alt="drones" width="89%" style="border: 1px solid #999;">
 
 <br>
 
 ### **House Price Prediction Objective_2**
 
-<img src="/assets/D8/D8.3-16.png" alt="drones" width="80%" style="border: 1px solid #999;">
+<img src="/assets/D8/D8.3-16.png" alt="drones" width="73%" style="border: 1px solid #999;">
 
 <br>
 
