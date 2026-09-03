@@ -13,7 +13,7 @@ permalink: /3c.3_pal_agentic_ai/
 **This is the ZAI (ZiptieAI) version of online docs for the original Foundry [Speedrun demo](https://learn.palantir.com/speedrun-your-first-agentic-aip-workflow)**. 
 - The ZAI demo steps are different somewhat from the original. 
 - This online doc is based on multiple test installations and is written for a technical audience (the typical users of Foundry). It is still sparse on explanatory text (WIP), but the core diagrams and workflows are accurate. 
-
+- **This demo assumes you have already done demos 1 and 2... so its a bit sparse on explaining some of the details for navigation Foundry dialogs, etc.**
 See also:  
 - **[#614_.docx](https://drive.google.com/drive/folders/1-Adawag9uA8_bq-hDF-nOuPYaRLz1eEO)** (detailed demo notes; the ZAI webpage markdown/PNG's for the ZAI online docs for this demo were extracted from this docx using GPT)    
 
