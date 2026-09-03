@@ -22,7 +22,9 @@ For details see:
 
 The following diagram shows what you create:
 
-*P2*<br><img src="/assets/D3/D3_P2.png" alt="xxx" width="36%" style="border: 1px solid #999;"><img src="/assets/D3/D3_P2_2.png" alt="xxx" width="36%" style="border: 1px solid #999;">
+*P2*<br><img src="/assets/D3/D3_P2.png" alt="xxx" width="36%" style="border: 1px solid #999;">
+
+<!-- <img src="/assets/D3/D3_P2_2.png" alt="xxx" width="36%" style="border: 1px solid #999;"> -->
 
 <br>
 
