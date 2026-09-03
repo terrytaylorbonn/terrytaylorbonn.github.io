@@ -16,7 +16,8 @@ See the working text for this QS in
 - **[Demo URL](https://www.palantir.com/docs/foundry/model-studio/overview/)** there are actually many ... this was a chaotic demo.  
 
 
-
+<br>
+<br>
 
 - **[3c.8_pal_D8_1_demo_goal (0)](/3c.8_pal_D8_1_demo_goal/)**
 - **[3c.8_pal_D8_2_model_studio (1a)](/3c.8_pal_D8_2_model_studio/)**
