@@ -1,6 +1,6 @@
 ---
 layout: page
-title: 3c.8_pal_D8_5_train_jupyter (2b)
+title: D8.5 Train in Jupyter (2b)
 permalink: /3c.8_pal_D8_5_train_jupyter/
 ---
 

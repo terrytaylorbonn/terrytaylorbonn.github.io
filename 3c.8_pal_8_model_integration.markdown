@@ -10,70 +10,29 @@ permalink: /3c.8_pal_8_model_integration/
 
 <br> 
 
-
-See the working text for this QS in
-- **[\#619\_.docx](https://drive.google.com/drive/folders/1-Adawag9uA8_bq-hDF-nOuPYaRLz1eEO)**.  
-- **[Demo URL](https://www.palantir.com/docs/foundry/model-studio/overview/)** there are actually many ... this was a chaotic demo.  
-
-
-<br>
-<br>
-
-A very compact description of the whole demo could therefore be:
-
 D8 follows a machine-learning model from data and training through deployment and application inference, while comparing Foundry's Model Studio and Jupyter-based development workflows.
 
-General D8 demo summary
+See also: 
+- **[\#619\_.docx](https://drive.google.com/drive/folders/1-Adawag9uA8_bq-hDF-nOuPYaRLz1eEO)** (the working text for the ZAI version of this QS).  
+- **[Demo URL](https://www.palantir.com/docs/foundry/model-studio/overview/)** Palantir webpage **Model connectivity & development / Model Studio / Overview** (original demo text).
 
-Demo D8 explores how a traditional machine-learning model can be trained, deployed, and used for inference inside Palantir Foundry. The demo first examines Foundry's Model Studio and model-management workflow, then creates a project and trains models using two approaches: Model Studio and a Jupyter notebook. Finally, the trained model is deployed and connected to an interactive application for inference. The demo therefore follows much of the model lifecycle: data → training → model → deployment → inference → application.
+<br>
+
+**General D8 demo summary:** Demo D8 explores how a traditional machine-learning model can be trained, deployed, and used for inference inside Palantir Foundry. The demo first examines Foundry's Model Studio and model-management workflow, then creates a project and trains models using two approaches: Model Studio and a Jupyter notebook. Finally, the trained model is deployed and connected to an interactive application for inference. The demo therefore follows much of the model lifecycle: data → training → model → deployment → inference → application.
 
 #### **TOC**
-- **[3c.8_pal_D8_1_demo_goal (0)](/3c.8_pal_D8_1_demo_goal/)**
-- **[3c.8_pal_D8_2_model_studio (1a)](/3c.8_pal_D8_2_model_studio/)**
-- **[3c.8_pal_D8_3_project (1b)](/3c.8_pal_D8_3_project/)**
-- **[3c.8_pal_D8_4_train_mstudio (2a)](/3c.8_pal_D8_4_train_mstudio/)**
-- **[3c.8_pal_D8_5_train_jupyter (2b)](/3c.8_pal_D8_5_train_jupyter/)**
-- **[3c.8_pal_D8_6_inf_app (2c)](/3c.8_pal_D8_6_inf_app/)**
-- **[3c.8_pal_D8_7_summary (3)](/3c.8_pal_D8_7_summary/)**
-
-<br>
-#### TODO Combine the above with this text
-
-D8.1 Demo goal (0)
-
-This chapter defines the goal of Demo D8 and places it in the larger ZiptieAI workflow. The key idea is to go beyond simply training a model and examine how a model becomes part of an operational system. It also distinguishes the training pipeline used in this demo from possible future batch or streaming inference pipelines, which could continuously detect unusual situations.
-
-D8.2 Model Studio (1a)
-
-This chapter explores Foundry Model Studio and how models fit into the Foundry platform. It looks at the model workflow, how a trained model can subsequently be used for inference, and several ways model inference can be incorporated into Foundry applications and pipelines. The goal is primarily to understand the available Foundry model infrastructure before building the demo.
-
-D8.3 Project (1b)
-
-This chapter sets up the machine-learning project in Foundry that will be used for the rest of the demo. It establishes the project resources and data needed for model development and prepares the environment for the two training approaches that follow. In other words, this is the bridge between examining Foundry's model capabilities and actually building a model.
-
-D8.4 Train in Model Studio (2a)
-
-This chapter trains a machine-learning model using Model Studio, Foundry's higher-level model-development environment. It walks through configuring the training workflow, preparing the data, training the model, and examining the resulting model resources. This demonstrates the more integrated Foundry approach to model training without requiring the entire workflow to be constructed manually in code.
-
-D8.5 Train in Jupyter (2b)
-
-This chapter performs model development using a Jupyter notebook, providing a more code-oriented alternative to Model Studio. The notebook gives direct control over data preparation, feature engineering, train/test splitting, model training, and interaction with Foundry resources. Comparing this chapter with the previous one shows two different interfaces for accomplishing many of the same basic model-development tasks.
-
-D8.6 Inference app (2c)
-
-This chapter takes the trained model beyond training and uses it for interactive inference. The model is deployed and connected to an application so that inputs can be submitted and predictions returned through a user-facing interface. This is an important transition in the demo: the model is no longer merely a training artifact but a component being used by another application.
-
-D8.7 Summary (3)
-
-This chapter summarizes the complete D8 workflow and the Foundry tools used at each stage. It emphasizes that the transform pipeline in this demo was primarily part of the training process, while inference was implemented through the deployed model/function and interactive application. It also points toward the logical next step: connecting the model to a batch or streaming inference pipeline so that new operational data can be evaluated automatically.
-
-
-
+- **[D8.1 Demo goal (0)](/3c.8_pal_D8_1_demo_goal/)**. This chapter defines the goal of Demo D8 and places it in the larger ZiptieAI workflow. The key idea is to go beyond simply training a model and examine how a model becomes part of an operational system. It also distinguishes the training pipeline used in this demo from possible future batch or streaming inference pipelines, which could continuously detect unusual situations.
+- **[D8.2 Model Studio (1a)](/3c.8_pal_D8_2_model_studio/)**. This chapter explores Foundry Model Studio and how models fit into the Foundry platform. It looks at the model workflow, how a trained model can subsequently be used for inference, and several ways model inference can be incorporated into Foundry applications and pipelines. The goal is primarily to understand the available Foundry model infrastructure before building the demo.
+- **[D8.3 Project (1b)](/3c.8_pal_D8_3_project/)**. This chapter sets up the machine-learning project in Foundry that will be used for the rest of the demo. It establishes the project resources and data needed for model development and prepares the environment for the two training approaches that follow. In other words, this is the bridge between examining Foundry's model capabilities and actually building a model.
+- **[D8.4 Train in Model Studio (2a)](/3c.8_pal_D8_4_train_mstudio/)**. This chapter trains a machine-learning model using Model Studio, Foundry's higher-level model-development environment. It walks through configuring the training workflow, preparing the data, training the model, and examining the resulting model resources. This demonstrates the more integrated Foundry approach to model training without requiring the entire workflow to be constructed manually in code.
+- **[D8.5 Train in Jupyter (2b)](/3c.8_pal_D8_5_train_jupyter/)**. This chapter performs model development using a Jupyter notebook, providing a more code-oriented alternative to Model Studio. The notebook gives direct control over data preparation, feature engineering, train/test splitting, model training, and interaction with Foundry resources. Comparing this chapter with the previous one shows two different interfaces for accomplishing many of the same basic model-development tasks.
+- **[D8.6 Inference app (2c)](/3c.8_pal_D8_6_inf_app/)**. This chapter takes the trained model beyond training and uses it for interactive inference. The model is deployed and connected to an application so that inputs can be submitted and predictions returned through a user-facing interface. This is an important transition in the demo: the model is no longer merely a training artifact but a component being used by another application.
+- **[D8.7 Summary (3)](/3c.8_pal_D8_7_summary/)**. This chapter summarizes the complete D8 workflow and the Foundry tools used at each stage. It emphasizes that the transform pipeline in this demo was primarily part of the training process, while inference was implemented through the deployed model/function and interactive application. It also points toward the logical next step: connecting the model to a batch or streaming inference pipeline so that new operational data can be evaluated automatically.
 
 <br>
 <br>
 <br>
-<br>
+<br><br><br><br>
 <br>
 <br>
 <br>
@@ -85,7 +44,11 @@ This chapter summarizes the complete D8 workflow and the Foundry tools used at e
 
 <br>
 
-# **AIP/FDE-led parts in demo 8**
+# **OLD TEXT... need to move...**
+
+<br>
+
+## **AIP/FDE-led parts in demo 8**
 
 <br>
 

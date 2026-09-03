@@ -1,6 +1,6 @@
 ---
 layout: page
-title: 3c.8_pal_D8_7_summary (3)
+title: D8.7 Summary (3)
 permalink: /3c.8_pal_D8_7_summary/
 ---
 

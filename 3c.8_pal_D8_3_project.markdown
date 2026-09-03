@@ -1,6 +1,6 @@
 ---
 layout: page
-title: 3c.8_pal_D8_3_project (1b)
+title: D8.3 Project (1b)
 permalink: /3c.8_pal_D8_3_project/
 ---
 

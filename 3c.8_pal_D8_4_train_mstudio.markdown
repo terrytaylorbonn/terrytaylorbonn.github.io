@@ -1,6 +1,6 @@
 ---
 layout: page
-title: 3c.8_pal_D8_4_train_mstudio (2a)
+title: D8.4 Train in Model Studio (2a)
 permalink: /3c.8_pal_D8_4_train_mstudio/
 ---
 

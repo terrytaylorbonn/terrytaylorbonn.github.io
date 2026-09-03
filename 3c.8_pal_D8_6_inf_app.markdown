@@ -1,6 +1,6 @@
 ---
 layout: page
-title: 3c.8_pal_D8_6_inf_app (2c)
+title: D8.6 Inference app (2c)
 permalink: /3c.8_pal_D8_6_inf_app/
 ---
 

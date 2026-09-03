@@ -1,6 +1,6 @@
 ---
 layout: page
-title: 3c.8_pal_D8_1_demo_goal (0)
+title: D8.1 Demo goal (0)
 permalink: /3c.8_pal_D8_1_demo_goal/
 ---
 
