@@ -1,6 +1,6 @@
 ---
 layout: page
-title: C0 Concepts
+title: Concepts
 permalink: /3c.3_pal_agentic_ai_C0_concepts/
 ---
 
@@ -8,45 +8,74 @@ permalink: /3c.3_pal_agentic_ai_C0_concepts/
 
 [← Demo D3](/3c.3_pal_agentic_ai/)
 
-<br>
-
-See also
-  - #614_pal_3_agentic_ai_qs_v03_26.0715_ss.docx 
-  - https://learn.palantir.com/speedrun-your-first-agentic-aip-workflow
 
 <br>
 
 #### **TOC:**
+- **C1 About the ZAI version of demo D3 and this online doc**
+- **C2 Workflow diagrams**
 
-  - **C1 Why do the ZAI version of this demo**
+<br>
+
+# **C1 About the ZAI version of demo D3 and this online doc**
+
+xxxxxxxxxxxxxxxxxxxx
+
+
+<br> 
+
+# **C2 Workflow diagrams**
+
+- **C2.1 Main workflow diagram**
+- **C2.2 Agent workflow diagram**
+
+<br> 
+
+### **C2.1 Main workflow diagram**
+
+
+**The diagram below shows the overall workflow:**
+- The grey background components are installed in P1.
+- (4a), (4b), (3), (2) are the main content of this demo (P2, P3, P4, P5).
+
+*Overall workflow*<br><img src="/assets/D3/D3_C0.1.png" alt="xxx" width="100%" style="border: 1px solid #999;">
+
+
+<br> 
+
+### **C2.2 Agent workflow diagram**
+
+D3 "Agentic" AIP workflow
+
+Has 
+- (2) Foundry automation (main detection loop)
+- (3) Foundry AIP -- Use LLM (LLM call) 
+- (4) Foundry AIP -- Action (modifies Ontology)
+
+Foundry did not invent a fundamentally different architecture. It distributed the familiar agent components across named, governed platform resources.
+
+*[3] Demo D3 Foundry agent (the content of this diagram has been worked out with FDE/GPT; its a bit messy looking, but accurate)*<br><img src="/assets/D3/D3_C0.3.png" alt="xxx" width="100%" style="border: 1px solid #999;">
+
+<!-- OLD
+<img src="/assets/MASTER_D1.2b_LOWER.png" alt="xxx" width="100%" style="border: 1px solid #999;">
+-->
+
+<br>
+
+26.0902 (v1 26.0830)
+
+
+<!--   - **C1 Why do the ZAI version of this demo**
   - **C2 What is an agent (not Foundry)**
   - **C3 What is a Foundry agent**
 
 
 *C0.2*<br><img src="/assets/MASTER_D1.2b_UPPER.png" alt="xxx" width="76%" style="border: 1px solid #999;">
 
-
-*C0.3*<br><img src="/assets/D3/D3_C0.3.png" alt="xxx" width="100%" style="border: 1px solid #999;">
-
+-->
 
 
-
-<br>
-
-
-# **C1 Why do the ZAI version of this demo**
-
-xxxx
-
-
-<br> 
-
------------------------
------------------------
-
-<br> 
-
-# **C2 What is an agent (not Foundry)**
+<!-- # **C2 What is an agent (not Foundry)**
 
 
 Demo D2 called an external LLM. That is (in my opinion) an AI agent (and a risk of leaking sensitive data to an external LLM). However, D3 is mentioned as the first Agentic demo for Foundry. 
@@ -100,24 +129,5 @@ The demo below intentionally mirrors the D3 demo structure
 -----------------------
 -----------------------
 
-<br> 
-
-# **C3 What is a Foundry agent**
-
-D3 "Agentic" AIP workflow
-
-Has 
-- (2) Foundry automation (main detection loop)
-- (3) Foundry AIP -- Use LLM (LLM call) 
-- (4) Foundry AIP -- Action (modifies Ontology)
-
-Foundry did not invent a fundamentally different architecture. It distributed the familiar agent components across named, governed platform resources.
-
-*[3] Demo D3 Foundry agent (the content of this diagram has been worked out with FDE/GPT; its a bit messy looking, but accurate)*<br><img src="/assets/MASTER_D1.2b_LOWER.png" alt="xxx" width="100%" style="border: 1px solid #999;">
-
-
-<br>
-
-26.0831 (v1 26.0830)
-
+<br>  -->
 

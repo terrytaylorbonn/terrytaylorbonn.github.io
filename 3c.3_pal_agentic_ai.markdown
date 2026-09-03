@@ -12,9 +12,9 @@ permalink: /3c.3_pal_agentic_ai/
 
 **WIP**
 
-See also
-  - #614_.docx 
-  - https://learn.palantir.com/speedrun-your-first-agentic-aip-workflow
+See also:  
+- **[#614_.docx](https://drive.google.com/drive/folders/1-Adawag9uA8_bq-hDF-nOuPYaRLz1eEO)** (detailed demo notes; the ZAI webpage markdown/PNG's for the ZAI online docs for this demo were extracted from this docx using GPT)    
+- **[Speedrun](https://learn.palantir.com/speedrun-your-first-agentic-aip-workflow)** (the original demo documentation)
 
 <br>
 
@@ -26,72 +26,14 @@ See also
 
 ### **TOC:**
 
-<br>
-
-
-#### **[C0 Concepts (workflow diagrams)](/3c.3_pal_agentic_ai_C0_concepts/)**
-
-<!-- For now mostly workflow diagrams.
-  - C0.1 Demo D3 workflow
-  - C0.2 Traditional agent (not Foundry) workflow
-  - C0.3 Foundry agent workflow -->
-
-**The diagram below shows the overall workflow:**&
-- The grey background components are installed in P1.
-- (4a), (4b), (3), (2) are the main content of this demo (P2, P3, P4, P5).
-
-*Overall workflow*<br><img src="/assets/D3/D3_C0.1.png" alt="xxx" width="100%" style="border: 1px solid #999;">
-
-
-
-
-<br>
-
-#### **[Notes](/3c.3_pal_agentic_ai_NOTES/)**
-
-You might want to read this section for a heads-up about some aspects of P1-P5.
-
-<br>
-
-#### **[P1 Install marketplace](/3c.3_pal_agentic_ai_P1_install_mp/)** (data, pipeline, ontology, UI)
-
-<!-- *P1*<br><img src="/assets/D3/D3_P1.png" alt="xxx" width="76%" style="border: 1px solid #999;"> -->
-
-<br>
-
-#### **[P2 (4a) Add AIP / Use_LLM (Building AIP logic reasoning)](/3c.3_pal_agentic_ai_P2_Use_LLM/)** 
-
-<!-- *P2*<br><img src="/assets/D3/D3_P2.png" alt="xxx" width="36%" style="border: 1px solid #999;">
-
-*P2_2*<br><img src="/assets/D3/D3_P2_2.png" alt="xxx" width="36%" style="border: 1px solid #999;"> -->
-
-<br>
-
-
-
-#### **[P3 (4b) Add AIP / Ontology_Action (Add Ontology modification)](/3c.3_pal_agentic_ai_P3_action/)** 
-
-<!-- *P3*<br><img src="/assets/D3/D3_P3.png" alt="xxx" width="36%" style="border: 1px solid #999;"> -->
-
-<br>
-
-
-
-#### **[P4 (3) Publish the AIP Logic as a Function](/3c.3_pal_agentic_ai_P5_function/)** 
-
-<!-- *P5*<br><img src="/assets/D3/D3_P5.png" alt="xxx" width="36%" style="border: 1px solid #999;"> -->
-
-<br>
-
-#### **[P5 (2) Create the Automation](/3c.3_pal_agentic_ai_P6_automation/)** 
-
-<!-- *P6*<br><img src="/assets/D3/D3_P6.png" alt="xxx" width="76%" style="border: 1px solid #999;"> -->
-
-<br>
-
-#### **[P6 Create the Evaluation Suite (optional)](/3c.3_pal_agentic_ai_P4_eval_suite/)** 
-
-<!-- *P4*<br><img src="/assets/D3/D3_P4.png" alt="xxx" width="76%" style="border: 1px solid #999;"> -->
+- **[C0 Concepts (workflow diagrams)](/3c.3_pal_agentic_ai_C0_concepts/)**<br>*Overall workflow*<br><img src="/assets/D3/D3_C0.1.png" alt="xxx" width="30%" style="border: 1px solid #999;"><br>*Agent workflow*<br><img src="/assets/D3/D3_C0.3.png" alt="xxx" width="30%" style="border: 1px solid #999;"><br><br>
+- **[Notes](/3c.3_pal_agentic_ai_NOTES/)**. You might want to read this section for a heads-up about some aspects of P1-P5.<br><br>
+- **[P1 Install marketplace](/3c.3_pal_agentic_ai_P1_install_mp/)** (data, pipeline, ontology, UI)<br><br>
+- **[P2 (4a) Add AIP / Use_LLM (Building AIP logic reasoning)](/3c.3_pal_agentic_ai_P2_Use_LLM/)** <br><br>
+- **[P3 (4b) Add AIP / Ontology_Action (Add Ontology modification)](/3c.3_pal_agentic_ai_P3_action/)** <br><br>
+- **[P4 (3) Publish the AIP Logic as a Function](/3c.3_pal_agentic_ai_P5_function/)**<br><br> 
+- **[P5 (2) Create the Automation](/3c.3_pal_agentic_ai_P6_automation/)** <br><br>
+- **[P6 Create the Evaluation Suite (optional)](/3c.3_pal_agentic_ai_P4_eval_suite/)** 
 
 <br>
 

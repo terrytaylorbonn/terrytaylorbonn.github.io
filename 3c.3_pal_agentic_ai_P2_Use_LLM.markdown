@@ -10,30 +10,45 @@ permalink: /3c.3_pal_agentic_ai_P2_Use_LLM/
 
 <br>
 
-See also
-  - #614_pal_3_agentic_ai_qs_v03_26.0715_ss.docx 
-  - https://learn.palantir.com/speedrun-your-first-agentic-aip-workflow
+In this phase 2 you 
+- Create a folder for what you will create
+- Create AIP_logic
+- Add the Use_LLM
+
+For details see:
+- **[Speedrun](https://learn.palantir.com/speedrun-your-first-agentic-aip-workflow)** (the original demo documentation)
+  - Section "Create an agent"
+- **[#614_.docx](https://drive.google.com/drive/folders/1-Adawag9uA8_bq-hDF-nOuPYaRLz1eEO)**  
+
+The following diagram shows what you create:
+
+*P2*<br><img src="/assets/D3/D3_P2.png" alt="xxx" width="36%" style="border: 1px solid #999;"><img src="/assets/D3/D3_P2_2.png" alt="xxx" width="36%" style="border: 1px solid #999;">
 
 <br>
 
 #### **TOC:**
-
-
-*P2*<br><img src="/assets/D3/D3_P2.png" alt="xxx" width="36%" style="border: 1px solid #999;">
-
-*P2_2*<br><img src="/assets/D3/D3_P2_2.png" alt="xxx" width="36%" style="border: 1px solid #999;">
-
+- **P2.1 Create folder**
+- **P2.2 Configure**
+- **P2.3 Test Use_LLM (preview run)**
 
 <br>
 
-# P2 (4a) Build AIP Logic: Use_LLM
+## **P2.1 Create folder**
+
+If the marketplace has already been installed, you can not install it again. 
+Instead, you need to create a folder for what you will install.
+
+<img src="/assets/D3/P1.01.png" alt="xxx" width="40%" style="border: 1px solid #999;">
+
+<br>
+
+## **P2.2 Configure**
 
 - Define Patient and Clinical Trial inputs
 - Read Ontology properties
 - Configure Use LLM
 - Define structured decision/reasoning output
 
-## P2.1 Configure
 
 File name / location.
 
@@ -100,19 +115,22 @@ Treatment History:
 
 <img src="/assets/D3/P2.07.png" alt="xxx" width="35%" style="border: 1px solid #999;">
 
-## P2.2 Test Use_LLM (preview run)
+<br>
+
+## **P2.3 Test Use_LLM (preview run)**
 
 <img src="/assets/D3/P2.08.png" alt="xxx" width="45%" style="border: 1px solid #999;">
 
+```
 {
-
-### "eligibility_decision": "Not suitable",
-
-### "eligibility_reasoning": "The patient has been on metformin for only 2 months, which is less than the required stable dose duration of at least 3 months prior to enrollment."
-
+"eligibility_decision": "Not suitable",
+"eligibility_reasoning": "The patient has been on metformin for only 2 months, 
+   which is less than the required stable dose duration of at least 3 months prior to enrollment."
 }
+```
 
 <img src="/assets/D3/P2.09.png" alt="xxx" width="100%" style="border: 1px solid #999;">
 
+<br>
 
-26.0901 (v1 26.0831)
+26.0902 (v1 26.0831)
