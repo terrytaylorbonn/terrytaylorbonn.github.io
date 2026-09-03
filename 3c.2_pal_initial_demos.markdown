@@ -10,6 +10,10 @@ permalink: /3c.2_pal_initial_demos/
 
 <br>
 
+**TL;DR**? Then skip to **[Demo D3 "Speedrun -- Your First Agentic AIP Workflow"](/3c.3_pal_agentic_ai/)**, a great example of the direction this part of ZiptieAI is heading.
+
+<br>
+
 This page was originally meant to be just a description of PAL Foundry demos that I did myself. With my notes, screenshots, but without any major changes.
 
 But recently (26.0826) the focus has shifted to  
