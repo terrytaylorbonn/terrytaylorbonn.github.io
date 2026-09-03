@@ -16,7 +16,102 @@ See the working text for this QS in
 - **[\#619\_.docx](https://drive.google.com/drive/folders/1-Adawag9uA8_bq-hDF-nOuPYaRLz1eEO)**.  
 - **[Demo URL](https://www.palantir.com/docs/foundry/model-studio/overview/)** there are actually many ... this was a chaotic demo.  
 
+<br>
 
+
+## **TOC**
+
+- [7.1 Tools Used — Full Process](#71-tools-used-full-process)
+- [7.2 Transform pipeline was only used for training](#72-transform-pipeline-was-only-used-for-training)
+
+
+<br>
+
+## **7.1 Tools Used — Full Process**
+
+<br>
+
+### **Data Setup**
+
+Dataset — raw housing data uploaded/referenced in Foundry
+
+Code Repository — the IDE environment where all code lives
+
+Python Transforms (transforms.api) — used to clean, split, and prepare the dataset as a pipeline 1
+
+<br>
+
+### **Model Training**
+
+Code Repository (ML training template) — structured environment for ML work
+
+scikit-learn — built and fit the regression model
+
+palantir_models — defined the ModelAdapter and published the trained model as a versioned Foundry artifact 1
+
+dill — serialized the model for storage and reloading
+
+<br>
+
+### **Inference Setup**
+
+Model Deployments — deployed the trained model behind a REST API for live inference 1
+
+Functions (TypeScript) — wrote a wrapper function that calls the model deployment and returns a prediction 1
+
+Functions Repository — the environment where the TypeScript Function was authored and published
+
+<br>
+
+### **UI**
+
+Workshop — built the front-end app with input widgets and a Metric Card 1
+
+Workshop Variables — Static Numeric inputs wired to a Function-backed output variable
+
+Numeric Input widgets + Metric Card — the UI components the user interacts with
+
+<br>
+
+## **7.2 Transform pipeline was only used for training**
+
+In your demo, yes — the Specifically it handled:
+
+<br>
+
+### **Feature engineering —**
+
+cleaning and preparing the housing data
+
+<br>
+
+### **Train/test splitting —**
+
+splitting the dataset before model fitting
+
+<br>
+
+### **Model training —**
+
+fitting the sklearn model and publishing it via palantir_models
+
+The live inference (what happens when you change a slider in Workshop) bypasses the Transform pipeline entirely. It goes directly through the Function → Model Deployment path in real time.
+
+That said, Transforms can also be used for batch inference — running predictions across a whole dataset and writing the results back to Foundry. 1 That just was not needed in your demo since you built a live, interactive UI instead.
+
+So the short version for your tutorial:
+
+<br>
+
+### **Transforms =**
+
+data prep + training (batch, scheduled)
+
+<br>
+
+### **Function + Model Deployment =**
+
+live inference in the UI (real-time, on demand)
 
 
 
