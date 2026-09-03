@@ -6,7 +6,7 @@ permalink: /3c.3_pal_agentic_ai_NOTES/
 
 <br>
 
-[← Demo D3](/3c.3_pal_agentic_ai/)
+[← Demo D3](/3c.3_pal_agentic_aixxxxx/)
 
 <br>
 
@@ -16,23 +16,17 @@ See also
 
 <br>
 
-<br>
-# **Notes**
+# Notes
 
-<br>
-### **P1 Installing marketplace**
+### P1 Installing marketplace
 
-<br>
-#### **If you need to install marketplace, then see the original**
-
+#### If you need to install marketplace, then see the original
 
 https://learn.palantir.com/speedrun-your-first-agentic-aip-workflow . I dont want to reinstall on my system because uninstalling the current installation is complicated.
 
 <img src="/assets/D3/01.png" alt="xxx" width="35%" style="border: 1px solid #999;">
 
-<br>
-#### **Q1: deleting the old marketplace is complicated**
-
+#### Q1: deleting the old marketplace is complicated
 
 Yes—potentially, because the old Marketplace installation owns the foundation you are planning to reuse:
 
@@ -56,9 +50,7 @@ Keep Marketplace installation
 
 Only remove the Marketplace installation if you intend to remove the entire demo and have first checked all downstream dependencies. Deleting just the old Logic, Evaluation Suite, Function, or Automation is more manageable, but it is unnecessary if they are clearly named and disabled.
 
-<br>
-#### **Q1: what i mean is, if i want to start clean, then getting rid of the existing stuff is not a simple delete.**
-
+#### Q1: what i mean is, if i want to start clean, then getting rid of the existing stuff is not a simple delete.
 
 Correct. A D3 installation is not one self-contained folder that can necessarily be removed with a single ordinary delete. It creates a **dependency graph across Foundry applications**:
 
@@ -100,12 +92,9 @@ Therefore, if the objective is simply to repeat the tutorial cleanly, **creating
 
 For complete isolation, a new namespace with its own Ontology is cleaner than trying to dismantle and recreate everything in the existing namespace. A new folder alone does not provide that isolation.
 
-<br>
-### **P2 Add (4) AIP logic / (4a) Use LLM (Build the AIP Logic reasoning)**
+### P2 Add (4) AIP logic / (4a) Use LLM (Build the AIP Logic reasoning)
 
-<br>
-#### **Q1: i saved this aip_logic and tested. but did not publish.**
-
+#### Q1: i saved this aip_logic and tested. but did not publish.
 
 publish will create the function, and i will not be able to change that function?
 (only can create new version)
@@ -131,9 +120,7 @@ Edit AIP Logic
 
 **One important point: your current Logic outputs the **Use LLM struct**. If the intended final Function should output **Ontology edits**, add and configure the Action block before the first publication. Changing from a struct output to Ontology edits later is a breaking interface change.**
 
-<br>
-#### **Q2: breaking interface change? what does that mean?**
-
+#### Q2: breaking interface change? what does that mean?
 
 A **breaking interface change** means changing the Function’s public contract so existing callers can no longer use it in the same way.
 
@@ -177,9 +164,7 @@ Review Patient
 
 That cleanly separates reasoning from writeback.
 
-<br>
-#### **Q3: so its very important to create action and test BEFORE creating the function?**
-
+#### Q3: so its very important to create action and test BEFORE creating the function?
 
 **Yes—if the final Function is supposed to modify the Ontology.**
 
@@ -205,9 +190,7 @@ You can continue changing its internal prompts and reasoning afterward and publi
 
 Publishing before adding the Action would create a different contract—a Function returning a decision struct rather than Ontology edits. That is appropriate only if you intentionally want a separate read-only assessment Function.
 
-<br>
-#### **Q4: so evaluate is important before creating function?**
-
+#### Q4: so evaluate is important before creating function?
 
 but for my simple demo i want to leave evaluate out....
 do it at the end.... to avoid too much complexity.
@@ -229,12 +212,9 @@ The important requirement is to **preview and manually verify the complete Logic
 
 For production, evaluation should normally happen before enabling automatic edits. For a teaching demo, moving Evaluation to an optional final chapter reduces complexity and keeps the main architecture easier to understand.
 
-<br>
-### **P3 Add (4) AIP / (4b) Action (Add Ontology modification)**
+### P3 Add (4) AIP / (4b) Action (Add Ontology modification)
 
-<br>
-#### **Q1: So this is a successful test of aip_logic.**
-
+#### Q1: So this is a successful test of aip_logic.
 what is "Function inputs"... this really confused me, because there is no function yet.
 
 **Yes, this is a successful preview test of the complete AIP Logic.** It generated the decision and proposed the expected Ontology edits, but did not apply them.
@@ -259,12 +239,9 @@ After publication
 
 **A clearer UI label would have been **“Logic preview inputs.”****
 
-<br>
-### **P4 Publish the (3) AIP Logic as a Function**
+### P4 Publish the (3) AIP Logic as a Function
 
-<br>
-#### **Q2: all of these details.. and none of them explained in teh demo doc.**
-
+#### Q2: all of these details.. and none of them explained in teh demo doc.
 
 **Agreed. The demo provides the required clicks but does not explain the underlying lifecycle:**
 
@@ -295,17 +272,13 @@ Several distinctions are left implicit:
 
 These are not peripheral details—they determine how the system actually works. Your rewritten documentation is valuable because it explains the resource model and lifecycle rather than merely reproducing the screen sequence.
 
-<br>
-### **P4/P5/P6 AIP_logic / Function / Automation details**
-
+### P4/P5/P6 AIP_logic / Function / Automation details
 
 <img src="/assets/D3/02.png" alt="xxx" width="58%" style="border: 1px solid #999;">
 
 <img src="/assets/D3/03.png" alt="xxx" width="100%" style="border: 1px solid #999;">
 
-<br>
-#### **(1) so in demo3, all i create in my dir (if the marketplacce was already installed and i created a new dir) is**
-
+#### (1) so in demo3, all i create in my dir (if the marketplacce was already installed and i created a new dir) is
 
 - AIP_logic
 - Automation
@@ -321,9 +294,7 @@ then i need to create a new AIP_logic.
 
 (4) how can i organize the list of ontology functions by date created?
 
-<br>
-### **1. Resources in your new folder**
-
+### 1. Resources in your new folder
 
 **Yes.** You create:
 
@@ -333,9 +304,7 @@ then i need to create a new AIP_logic.
 
 Publishing the AIP Logic automatically creates the Function entry; it is not another file you manually create in the folder.
 
-<br>
-### **2. Function and source AIP Logic**
-
+### 2. Function and source AIP Logic
 
 **Yes.** The Function is registered with the Ontology/Function Registry and has a fixed source AIP Logic.
 
@@ -348,25 +317,19 @@ One AIP Logic
 └─ Function version 1.1.0
 ```
 
-<br>
-### **3. Creating a Function from scratch**
-
+### 3. Creating a Function from scratch
 
 **Yes.** To create a new, independent Function from scratch, create a new AIP Logic and publish it.
 
 To create only a new version of an existing Function, modify its existing source AIP Logic and publish again.
 
-<br>
-### **4. Sort Functions by date**
-
+### 4. Sort Functions by date
 
 Click the **Published Date** column heading to sort ascending or descending.
 
 That sorts by publication date, not necessarily the original creation date. The Functions list does not appear to expose a separate **Created Date** column. If you need clearer long-term organization, use consistent name prefixes, source names, and owning projects.
 
-<br>
-#### **i click on that header.... there is no link... i think its an error**
-
+#### i click on that header.... there is no link... i think its an error
 
 You are correct. **Published Date is not sortable in that table.** Only **Name** shows a sort indicator.
 
@@ -406,9 +369,7 @@ A polished minimal description could be:
 
 ---
 
-<br>
 ### **1.3 D3 (WIP) = “Speedrun: Your First Agentic AIP Workflow” (26.0829)**
-
 
 This demo builds the first **autonomous operational agent** in this sequence. For a discussion of what “agent” means in Foundry, see the D2 notes.
 
@@ -449,11 +410,7 @@ Patient enters monitored set
 <br>
 <br>
 
-<br>
-# ****2 questions** 26.0829 19:23**
-
-- [Q1: Where is the boundary of the “agent”?](#q1-where-is-the-boundary-of-the-agent)
-
+# **2 questions** 26.0829 19:23
 
 Q1: 
 
@@ -472,22 +429,13 @@ Q2.2 langchain/graph
 
 <br>
 
-<br>
 ## **Q1: Where is the boundary of the “agent”?**
-
-- [1. Narrow authoring boundary: AIP Logic is the agent](#1-narrow-authoring-boundary-aip-logic-is-the-agent)
-- [2. Operational boundary: the complete system is the agent](#2-operational-boundary-the-complete-system-is-the-agent)
-- [AIP Logic versus AIP function](#aip-logic-versus-aip-function)
-- [3. Platform boundary: all of Foundry as an agent](#3-platform-boundary-all-of-foundry-as-an-agent)
-
 
 The Demo 3 documentation appears to use **agent** as a convenient label for the AIP Logic. That is understandable at the authoring level: the Logic contains the model instructions, reads the relevant context, makes the decision, and constructs the action.
 
 However, there are three useful boundaries.
 
-<br>
-### **1. Narrow authoring boundary: AIP Logic is the agent**
-
+### 1. Narrow authoring boundary: AIP Logic is the agent
 
 ```text
 Patient + Clinical Trial
@@ -503,9 +451,7 @@ This is probably what the documentation means. The AIP Logic contains the agent�
 
 By itself, however, it does not continuously monitor anything. Someone or something must invoke it, and its edits must be executed.
 
-<br>
-### **2. Operational boundary: the complete system is the agent**
-
+### 2. Operational boundary: the complete system is the agent
 
 Your preferred definition is stronger for describing what actually runs:
 
@@ -534,9 +480,7 @@ At this boundary:
 
 That is the complete **observe → reason → act** system.
 
-<br>
-### **AIP Logic versus AIP function**
-
+### AIP Logic versus AIP function
 
 There is one small correction to your list: the **AIP Logic and published AIP function are not two independent reasoning components**.
 
@@ -557,9 +501,7 @@ Therefore, the three principal runtime components are more precisely:
 
 With the Ontology serving as the stateful environment connecting them.
 
-<br>
-### **3. Platform boundary: all of Foundry as an agent**
-
+### 3. Platform boundary: all of Foundry as an agent
 
 It is reasonable at a very high conceptual level to see Foundry as one large agent:
 
@@ -579,19 +521,11 @@ A useful formulation is:
 
 ---
 
-<br>
-# **Q2.1: Comparison with a typical agentic-AI agent**
-
-- [Demo 3](#demo-3)
-- [A typical tool-using agent](#a-typical-tool-using-agent)
-- [Comparison](#comparison)
-
+# Q2.1: Comparison with a typical agentic-AI agent
 
 The Demo 3 agent is a **narrow, event-driven operational agent**. It is considerably more constrained than what is commonly marketed as a general agentic-AI agent.
 
-<br>
-## **Demo 3**
-
+## Demo 3
 
 Its path is predetermined:
 
@@ -619,9 +553,7 @@ It does not dynamically decide:
 
 Consequently, it has a **low degree of cognitive autonomy**, but meaningful **operational autonomy**.
 
-<br>
-## **A typical tool-using agent**
-
+## A typical tool-using agent
 
 A more conventional agentic-AI architecture often looks like:
 
@@ -648,9 +580,7 @@ It may include:
 - dynamic termination;
 - human approval gates.
 
-<br>
-## **Comparison**
-
+## Comparison
 
 | Characteristic | Demo 3 | Typical agentic-AI agent |
 |---|---|---|
@@ -687,18 +617,9 @@ It is “agentic,” but it is not a general-purpose planning agent.
 
 ---
 
-<br>
-# **Q2.2: Comparison with LangChain and LangGraph**
+# Q2.2: Comparison with LangChain and LangGraph
 
-- [LangChain](#langchain)
-- [LangGraph](#langgraph)
-- [Conceptual mapping](#conceptual-mapping)
-- [The major difference](#the-major-difference)
-- [Bottom line](#bottom-line)
-
-<br>
-## **LangChain**
-
+## LangChain
 
 LangChain is primarily a collection of components for constructing LLM applications:
 
@@ -735,9 +656,7 @@ However, you would normally need to provide or integrate several surrounding cap
 
 Foundry provides these as parts of an integrated platform.
 
-<br>
-## **LangGraph**
-
+## LangGraph
 
 LangGraph is the closer comparison because it models an application as a **stateful graph** of nodes and transitions.
 
@@ -763,9 +682,7 @@ In LangGraph terms:
 
 Demo 3 is essentially a very simple, single-pass graph. It has no cyclic reasoning edge.
 
-<br>
-## **Conceptual mapping**
-
+## Conceptual mapping
 
 | Foundry Demo 3 | Rough LangChain/LangGraph equivalent |
 |---|---|
@@ -786,9 +703,7 @@ Demo 3 is essentially a very simple, single-pass graph. It has no cyclic reasoni
 | Workshop | Operational application/frontend |
 | Ontology history and action audit | Persistent records, traces, and audit infrastructure |
 
-<br>
-## **The major difference**
-
+## The major difference
 
 With LangGraph, you principally build the **agent control graph**, then assemble the infrastructure around it.
 
@@ -828,9 +743,7 @@ Foundry gives you stronger built-in integration for:
 - auditability;
 - operational applications.
 
-<br>
-## **Bottom line**
-
+## Bottom line
 
 ```text
 Demo 3:
@@ -857,9 +770,7 @@ The Demo 3 system could be represented in LangGraph, but it would be an extremel
 <br>
 <br>
 
-<br>
 # **"There is one small correction to your list: the AIP Logic and published AIP function are not two independent reasoning components."**
-
 
 the function is just a refernence i though.. but still, its a separate UI dialog , so i pasted it anyway.
 my primary goal is to help the reader understand all the dialogs.
@@ -910,6 +821,7 @@ Or, with minimal disruption to the diagram:
 That preserves the diagram’s value as a **map of what the user sees in Foundry**, while preventing readers from interpreting the function and Logic as two successive reasoning engines.
 
 
+
 <br>
 <br>
 
@@ -920,23 +832,12 @@ That preserves the diagram’s value as a **map of what the user sees in Foundry
 <br>
 <br>
 
-<br>
-# ****Yes—professional Foundry developers do substantial work in the UI.** Foundry is not a conventional “everything lives in source code” development environment.**
 
-- [What professionals commonly build in the UI](#what-professionals-commonly-build-in-the-ui)
-- [What is usually done in code](#what-is-usually-done-in-code)
-- [Why this demo feels especially complex](#why-this-demo-feels-especially-complex)
-- [The complexity has two sources](#the-complexity-has-two-sources)
-- [How experienced teams manage it](#how-experienced-teams-manage-it)
-- [Practical assessment](#practical-assessment)
-- [PAL-DEMO-3: Palantir agentic AI "speedrun" (quick start) (26.0713)](#pal-demo-3-palantir-agentic-ai-speedrun-quick-start-260713)
-
+# **Yes—professional Foundry developers do substantial work in the UI.** Foundry is not a conventional “everything lives in source code” development environment.
 
 However, they usually use a **hybrid approach**, and they do not repeatedly traverse all these dialogs during normal operation.
 
-<br>
-## **What professionals commonly build in the UI**
-
+## What professionals commonly build in the UI
 
 Several important Foundry resources are primarily visual or configuration-driven:
 
@@ -951,9 +852,7 @@ Several important Foundry resources are primarily visual or configuration-driven
 
 Consequently, the dialogs in your diagram are real parts of professional Foundry development—not merely simplified tutorial interfaces.
 
-<br>
-## **What is usually done in code**
-
+## What is usually done in code
 
 For more complex implementations, developers often use:
 
@@ -975,9 +874,7 @@ For example, a professional could replace the visual AIP Logic with a TypeScript
 
 So moving the reasoning into code does not eliminate all the platform configuration.
 
-<br>
-## **Why this demo feels especially complex**
-
+## Why this demo feels especially complex
 
 Demo 3 crosses almost every layer of Foundry:
 
@@ -998,15 +895,9 @@ Each layer has its own resource, lifecycle, and dialog. The demo documentation f
 
 Your diagram is useful precisely because it supplies the missing system-level view.
 
-<br>
-## **The complexity has two sources**
+## The complexity has two sources
 
-- [1. Genuine platform complexity](#1-genuine-platform-complexity)
-- [2. UI and resource-model complexity](#2-ui-and-resource-model-complexity)
-
-<br>
-### **1. Genuine platform complexity**
-
+### 1. Genuine platform complexity
 
 Foundry separates:
 
@@ -1030,9 +921,7 @@ For example, the Action is not merely a function call. It establishes:
 - how the operation is audited;
 - whether it is automatically executed or staged for approval.
 
-<br>
-### **2. UI and resource-model complexity**
-
+### 2. UI and resource-model complexity
 
 Some of the apparent complexity is indirection:
 
@@ -1045,9 +934,7 @@ AIP Logic
 
 These are not three different reasoning systems. They are the authoring, publication, and consumption views of one implementation. Nevertheless, Foundry exposes each lifecycle stage as a separate resource or dialog.
 
-<br>
-## **How experienced teams manage it**
-
+## How experienced teams manage it
 
 Professional teams generally reduce the cognitive load by:
 
@@ -1070,9 +957,7 @@ Add Patient
 
 They would not interact with Pipeline Builder, Ontology Manager, AIP Logic, Function Registry, or Automate.
 
-<br>
-## **Practical assessment**
-
+## Practical assessment
 
 Foundry trades **local simplicity** for **integrated operational governance**.
 
@@ -1112,8 +997,9 @@ So the short answer is:
 <br>
 <br>
 
-<br>
+
 ## **PAL-DEMO-3: Palantir agentic AI "speedrun" (quick start) (26.0713)**
+
 
 
 See the working text for this QS in
@@ -1137,15 +1023,11 @@ See the working text for this QS in
 <br>
 <br>
 
-<br>
 # **NOTES**
 
-
 <br>
 
-<br>
-### **ME: in the speedrun it says**
-
+### ME: in the speedrun it says 
 
 "5.9 Summary
 Large Language Models (LLMs) are inherently non-deterministic, meaning their responses can vary even when given the same input. 
@@ -1189,9 +1071,7 @@ This makes it important to rigorously evaluate the performance and reliability o
 
 <br>
 
-<br>
-# **xxxxxxxxxxxxxxxxxxxxxxxxx**
-
+# xxxxxxxxxxxxxxxxxxxxxxxxx
 
 Yes — exactly. In this speedrun setup, those labels come from the **imported Marketplace Workshop app’s Ontology resources**, specifically the action type and object type definitions that were installed with the marketplace package.
 
@@ -1219,9 +1099,7 @@ Marketplace install
 
 And yes — it’s complicated because the text is not “defined in the dialog” directly. The dialog is rendering Ontology metadata from the imported solution.
 
-<br>
-# **yyyyyyyyyyyyyyyyyyy**
-
+# yyyyyyyyyyyyyyyyyyy
 
 Right — that screenshot shows where the **`[ttbonn]` prefix** is configured during the Marketplace installation.
 
@@ -1253,9 +1131,7 @@ That prefixing is separate from the field labels like:
 
 Those field labels are still defined by the imported Ontology entities themselves — object type properties and action type parameters — but the marketplace installer is adding the `[Ttbonn]` namespace/prefix around the imported entities so multiple users can install the same speedrun package without name collisions.
 
-<br>
-# **zzzzzzzzzzzzzzzzzzzzzzzz**
-
+# zzzzzzzzzzzzzzzzzzzzzzzz
 
 ME: i've been trying to figure out where the "agent" in this "agent demo" is and what it does. seems like its in the "action" (red square in diagram). and all it does? just takes LLM-prompt-defined outputs from LLM and maps them to the ontology-defined outputs. thats it????
 
@@ -1319,9 +1195,8 @@ So your summary is basically right:
 
 That’s likely the entire demo pattern. “Agentic” here mostly means **LLM + tool/action side effect**, not autonomous multi-step agency.
 
-<br>
-# **ffffffffffffffffffffffffff**
 
+# ffffffffffffffffffffffffff
 
 ME: i think what the demo means by agent is possibly the entire ""Review Patient for Clinical Trial" block... they never really say clearly what the agent is. 
 
@@ -1372,9 +1247,8 @@ That would make the architecture much clearer. Currently, the word “agent” c
 
 So yes: the demo calls it “agentic,” but what it actually builds is more specifically a **Logic-based LLM workflow with an ontology action side effect**.
 
-<br>
-# **ggggggggggggggggggggggggg**
 
+# ggggggggggggggggggggggggg
 
 ME: "charitable" ??? :)
 
@@ -1417,3 +1291,4 @@ It’s an LLM-backed workflow/function that updates ontology fields.
 <br>
 
 26.0903 (v1 26.0830)
+
