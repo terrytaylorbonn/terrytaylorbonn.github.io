@@ -1,0 +1,26 @@
+---
+layout: page
+title: 3c.8_pal_D8_2_model_studio (1a)
+permalink: /3c.8_pal_D8_2_model_studio/
+---
+
+
+<br>
+
+[← 3c.8 PAL Model integration](/3c.8_pal_8_model_integration/)
+
+<br> 
+
+
+See the working text for this QS in
+- **[\#619\_.docx](https://drive.google.com/drive/folders/1-Adawag9uA8_bq-hDF-nOuPYaRLz1eEO)**.  
+- **[Demo URL](https://www.palantir.com/docs/foundry/model-studio/overview/)** there are actually many ... this was a chaotic demo.  
+
+
+
+
+
+<br>
+
+
+26.0903 (v1 26.0903)

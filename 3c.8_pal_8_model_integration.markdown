@@ -8,7 +8,7 @@ permalink: /3c.8_pal_8_model_integration/
 
 [← 3c.2 Initial PAL demos](/3c.2_pal_initial_demos/)
 
-<br>
+<br> 
 
 
 See the working text for this QS in
@@ -16,8 +16,32 @@ See the working text for this QS in
 - **[Demo URL](https://www.palantir.com/docs/foundry/model-studio/overview/)** there are actually many ... this was a chaotic demo.  
 
 
+
+
+- **[3c.8_pal_D8_1_demo_goal (0)](/3c.8_pal_D8_1_demo_goal/)**
+- **[3c.8_pal_D8_2_model_studio (1a)](/3c.8_pal_D8_2_model_studio/)**
+- **[3c.8_pal_D8_3_project (1b)](/3c.8_pal_D8_3_project/)**
+- **[3c.8_pal_D8_4_train_mstudio (2a)](/3c.8_pal_D8_4_train_mstudio/)**
+- **[3c.8_pal_D8_5_train_jupyter (2b)](/3c.8_pal_D8_5_train_jupyter/)**
+- **[3c.8_pal_D8_6_inf_app (2c)](/3c.8_pal_D8_6_inf_app/)**
+- **[3c.8_pal_D8_7_summary (3)](/3c.8_pal_D8_7_summary/)**
+
+
+
+<br>
+<br>
+<br>
+<br>
+<br>
+<br>
 <br>
 
+-----------------------
+-----------------------
+-----------------------
+-----------------------
+
+<br>
 
 # **AIP/FDE-led parts in demo 8**
 
@@ -118,15 +142,7 @@ a very large, noisy dataset, a model of what normal looks like, and a pipeline t
 
 <!-- <br>*7-03* <br><img src="/assets/pal-demo-7-03.png" alt="xxxxxx" width="100%" style="border: 1px solid #999;"> -->
 
-<br>
 
-----------------------------
-----------------------------
-----------------------------
-----------------------------
-
-<br>
-<br>
 
 # **NOTES**
 
@@ -1278,13 +1294,9 @@ See the working text for this QS in
 
 <br>*00* <br><img src="/assets/pal-demo-xxxx.png" alt="xxxxxx" width="100%" style="border: 1px solid #999;">
 
-<br>
-
-
-
-
+<br> -->
 
 <br>
 
 
-26.0721 (v1 26.0721)
+26.0903 (0721, v1 26.0721)

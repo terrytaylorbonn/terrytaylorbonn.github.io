@@ -1,6 +1,6 @@
 ---
 layout: page
-title: D2b = D2 + PAL "crystal ball" controls
+title: D3b = D3 + PAL "crystal ball" controls
 permalink: /3c.2_pal_D2b_ai_monitor/
 ---
 
@@ -11,7 +11,7 @@ permalink: /3c.2_pal_D2b_ai_monitor/
 
 <br>
 
-Work with GPT/FDE to add Foundry safety rails to D2 to make using remote LLMs safer (finding an existing demo for this would be better). 
+Work with GPT/FDE to add Foundry safety rails to D3 to make using remote LLMs safer (finding an existing demo for this would be better). 
 
 
 

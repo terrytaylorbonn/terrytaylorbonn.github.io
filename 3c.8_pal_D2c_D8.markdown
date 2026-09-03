@@ -1,6 +1,6 @@
 ---
 layout: page
-title: D2c = D2(b) + D8 (local (maybe custom trained) models)
+title: D3c = D3(b) + D8 (local (maybe custom trained) models)
 permalink: /3c.8_pal_D2c_D8/
 ---
 

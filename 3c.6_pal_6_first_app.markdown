@@ -1,6 +1,6 @@
 ---
 layout: page
-title: 3c.6 PAL 6 First pipeline
+title: 3c.6 PAL 6 First APPLICATION (xxxpipeline)
 permalink: /3c.6_pal_6_first_app/
 ---
 
