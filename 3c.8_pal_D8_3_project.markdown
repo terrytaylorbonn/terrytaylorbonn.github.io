@@ -16,6 +16,16 @@ See the working text for this QS in
 - **[\#619\_.docx](https://drive.google.com/drive/folders/1-Adawag9uA8_bq-hDF-nOuPYaRLz1eEO)**.  
 - **[Demo URL](https://www.palantir.com/docs/foundry/model-studio/overview/)** there are actually many ... this was a chaotic demo.  
 
+<br>
+
+## **TOC**
+
+- [3.1a project + folders](#31a-project-folders)
+- [3.1b Action: In your Foundry project, Select +New > Modeling Objective.](#31b-action-in-your-foundry-project-select-new-modeling-objective)
+- [3.2b Action: Download data](#32b-action-download-data)
+- [3.3 How to manage machine learning models (NO ACTIONS)](#33-how-to-manage-machine-learning-models-no-actions)
+- [3.4 Project context (How to manage machine learning projects)](#34-project-context-how-to-manage-machine-learning-projects)
+- [3.5 Next step](#35-next-step)
 
 <br>
 

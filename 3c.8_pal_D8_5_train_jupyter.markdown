@@ -18,6 +18,15 @@ See the working text for this QS in
 
 <br>
 
+## **TOC**
+
+- [5.1 How to create a notebook for model training](#51-how-to-create-a-notebook-for-model-training)
+- [5.2 How to split feature data for testing and training](#52-how-to-split-feature-data-for-testing-and-training)
+- [5.3 How to train a model in (Jupyter) Code Workspaces (not repos)](#53-how-to-train-a-model-in-jupyter-code-workspaces-not-repos)
+- [5.4 How to publish a model from Code Workspaces](#54-how-to-publish-a-model-from-code-workspaces)
+- [5.5 Optional: Configure inference or retraining jobs](#55-optional-configure-inference-or-retraining-jobs)
+- [5.5 Next steps](#55-next-steps)
+
 <br>
 
 # **5. Tutorial: Train a model in a Jupyter® notebook**

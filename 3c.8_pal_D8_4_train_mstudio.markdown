@@ -18,6 +18,21 @@ See the working text for this QS in
 
 <br>
 
+## **TOC**
+
+- [1b.1a project + folders](#1b1a-project-folders)
+- [1b.1b Action: In your Foundry project, Select +New > Modeling Objective.](#1b1b-action-in-your-foundry-project-select-new-modeling-objective)
+- [1b.2b Action: Download data](#1b2b-action-download-data)
+- [1b.3 How to manage machine learning models (NO ACTIONS)](#1b3-how-to-manage-machine-learning-models-no-actions)
+- [1b.4 Project context (How to manage machine learning projects)](#1b4-project-context-how-to-manage-machine-learning-projects)
+- [1b.5 Next step](#1b5-next-step)
+
+<!-- - [4.1 Create a model studio](#41-create-a-model-studio)
+- [4.2 Configure a Model Studio training job](#42-configure-a-model-studio-training-job)
+- [4.4 View the model and submit it to a modeling objective](#44-view-the-model-and-submit-it-to-a-modeling-objective)
+- [4.5 Next steps](#45-next-steps)  -->
+
+
 <br>
 
 # **4. Tutorial: Train a model in Model Studio**

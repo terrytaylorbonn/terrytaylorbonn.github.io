@@ -18,6 +18,11 @@ See the working text for this QS in
 
 <br>
 
+## **TOC**
+
+- [2.1 build model Workflow](#21-build-model-workflow)
+- [2.2 trained model can be used for inference in downstream applications like](#22-trained-model-can-be-used-for-inference-in-downstream-applications-like)
+- [2.3 get started (WRONG)](#23-get-started-wrong)
 
 <br>
 # **2 model studio**

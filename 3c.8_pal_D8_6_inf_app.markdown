@@ -18,6 +18,16 @@ See the working text for this QS in
 
 <br>
 
+## **TOC**
+
+- [6.0 overview](#60-overview)
+- [6.1 ME: how can i test this model? using pipeline, or just some simple verification test](#61-me-how-can-i-test-this-model-using-pipeline-or-just-some-simple-verification-test)
+- [6.2 ME: pipeline test step by step (BINGO BINGO)](#62-me-pipeline-test-step-by-step-bingo-bingo)
+- [6.3 Deploy the model (done already in 2b in Jupyter notebook)](#63-deploy-the-model-done-already-in-2b-in-jupyter-notebook)
+- [6.4 Publish the model as a Function](#64-publish-the-model-as-a-function)
+- [6.5 Create a Workshop app (UI) (BINGO)](#65-create-a-workshop-app-ui-bingo)
+
+
 <br>
 
 # **6 (AIP/FDE) interactive inference app 26.0721-22**
