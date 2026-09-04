@@ -27,13 +27,33 @@ See also:
 - **Concepts**<br><br>
   - **[C0 -- Minimizing AI risks (in the enterprise)](/3c.2.0_pal_aip_qs_C0_ai_risks/)**. **"AI sovereignty"** has become a hot topic recently. But what exactly does this mean, and what are the options?<br><br>*Alex Karp sounding the alarm about the risks of AI in the enterprise.*<br><img src="/assets/alex.png" alt="drones" width="45%" style="border: 1px solid #999;"><br><br>
   - **[C1 -- Why do the ZAI version of this demo](/3c.2.0_pal_aip_qs_C1_why_zai_demo/)**. <br><br>*"Little" things like numbered headings are extremely helpful (I will number each granular step in demos in the future).*<br><img src="/assets/777_40.png" alt="drones" width="25%" style="border: 1px solid #999;"><br><br>
-  - **[C2 -- ZAI demo D2 concepts](/3c.2.1_pal_aip_qs_ch1_concepts/)**. My own explanation of the modified workflow for the D2 demo (includes **main workflow diagrams**).<br><br>*D2 config workflow (focus on AI)*<br><img src="/assets/MASTER_D2_1.png" alt="drones" width="40%" style="border: 1px solid #999;"><br><br>*D2 config workflow (focus on UI; greyed out areas are unrelated to AI and can be skipped; this is only the second demo and should stick to the core concepts)*<br><img src="/assets/D2/D2_003.png" alt="drones" width="40%" style="border: 1px solid #999;"><br>
-<br>
+  - **[C2 -- ZAI demo D2 concepts](/3c.2.1_pal_aip_qs_ch1_concepts/)**. My own explanation of the modified workflow for the D2 demo (includes **main workflow diagrams**).<br><br>*D2 config workflow (focus on AI)*<br><img src="/assets/MASTER_D2_1.png" alt="drones" width="40%" style="border: 1px solid #999;"><br><br>*D2 config workflow (focus on UI; greyed out areas are unrelated to AI and can be skipped; this is only the second demo and should stick to the core concepts)*<br><img src="/assets/D2/D2_003.png" alt="drones" width="40%" style="border: 1px solid #999;"><br><br><br>
 
-- **Step by step demo D2 workflows (ZAI version)**<br><br>
-  - **[3c.2.2 PAL D2 AIP QS ch2 P1 -- AI (UI TOP/BOTTOM)](/3c.2.2_pal_aip_qs_ch2_P1_ai/)**<br><br>
-  - **[3c.2.3 PAL D2 AIP QS ch3 P2 -- LEFT (UI selected chunks list)](/3c.2.3_pal_aip_qs_ch3_P2_LEFT/)**<br><br>
-  - **[3c.2.4 PAL D2 AIP QS ch4 P3 -- RIGHT (UI Vertex graph -- NO AI involved)](/3c.2.4_pal_aip_qs_ch4_P3_RIGHT/)**
+
+- **Step by step demo D2 workflows (ZAI version).** These three parts show the main mechanics behind the demo: AI/RAG answer generation, embedding-based chunk retrieval, and the separate Vertex graph visualization.
+
+
+  - [**P1 – AI (UI TOP/BOTTOM)**](http://127.0.0.1:4000/3c.2.2_pal_aip_qs_ch2_P1_ai/). The user enters a question in the TOP widget; the RAG workflow retrieves relevant chunk content, supplies it to GPT-4o as reference material, and displays the generated answer in the BOTTOM widget.
+
+
+  - [**P2 – LEFT widget (embedding-matched chunk list)**](http://127.0.0.1:4000/3c.2.3_pal_aip_qs_ch3_P2_LEFT/). The user's question is converted to an embedding and compared with the stored chunk embeddings. The closest matching Chunk objects are returned and displayed in the LEFT widget.
+
+
+  - **P3 – RIGHT widget (Vertex graph – no AI involved).** This part creates a Vertex graph showing the relationships between chunks and extracted keywords. It does not participate in the AI/RAG workflow shown in P1 and P2, so I do not reproduce its lengthy setup here. See the DOCX for the complete step-by-step procedure.
+
+
+<img src="/assets/D2/D2_002a.png" alt="drones" width="80%" style="border: 1px solid #999;">
+
+<!-- - **Step by step demo D2 workflows (ZAI version)**<br><br>
+
+  - **[P1 -- AI (UI TOP/BOTTOM)](/3c.2.2_pal_aip_qs_ch2_P1_ai/)**<br><br>
+
+  - **[P2 -- LEFT widget (embedding-matched chunk list)](/3c.2.3_pal_aip_qs_ch3_P2_LEFT/)**<br><br>
+
+  - **P3 -- RIGHT widget (Vertex graph -- no AI involved).** This part creates a Vertex graph showing the relationships between chunks and extracted keywords. It does not participate in the AI/RAG workflow shown in P1 and P2, so I do not reproduce its lengthy setup here. See the DOCX for the complete step-by-step procedure.
+-->
+
+  <!-- title: 3c.2.4 PAL AIP QS ch4 P3 Vertex (RIGHT) permalink: /3c.2.4_pal_aip_qs_ch4_P3_RIGHT/ -->
 
 <br>
 

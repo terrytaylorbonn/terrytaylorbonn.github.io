@@ -10,21 +10,817 @@ permalink: /3c.2.2_pal_aip_qs_ch2_P1_ai/
 
 [← 3c.2 PAL AIP](/3c.2_pal_aip/)
 
+<br>
 
-<!-- <br>
-**See the working text for this QS in**
-- **[#611vvv\_aip\_qs\_.docx](https://drive.google.com/drive/folders/1-Adawag9uA8_bq-hDF-nOuPYaRLz1eEO)**. Rewriting #611\_pal\_aip\_v06ccc-01\_ for the content of this page. Lots of my own concepts, etc.  -->
+**TOC**
+- P1.1 Pipeline
+- P1.2 Ontology (chunks only)
+- P1.3 AIP logic (core section of this demo)
+- P1.4 UI TOP (input question) / BOTTOM (output LLM RAG answer) (BINGO)
 
 <br>
 
-#### **TOC**
-- xxxxx
+# **P1.1 Pipeline**
 
+This is the pipeline you will build in this phase.
 
-<img src="/assets/pal.png" alt="drones" width="40%"> 
+NOTE:
+
+- This is only half of the original demo pipeline (the other half has nothing to do with AIP).
+
+- In the other half there was an error that causes quite a bit of confusion for new users (FDE can solve this easily, but you need to understand how to work with FDE)
+
+**TOC**
+- P1.1-0 Create pipeline
+- P1.1-1 Create Source node "Articles" (5 pdfs, 58 pages)
+- P1.1-2 Create Transform node "Process PDFs" (get pageNumber2, content2)  (output 58 rows)
+- P1.1-3 Create Transform node "Extract chunks" (pageNumber2, content 2 >> chunkNumber2, content2)  (output 578 rows)
+- P1.1-4 Transform node "Create chunk ID" (media_item_rid + pageNumber2 + chunkNumber2)  (output 578 rows)
+- P1.1-5 Use_LLM node "Use LLM" (create summary2, entities2)  "entities" = keywords (output 20 rows)
+- P1.1-6 Transform node "Embed chunks" (for searching; USES AI) / output = embedding2 (output 20 rows)
+- P1.1-7 Dataset node "Chunks"
+- P1.1-8 Deploy all pipeline outputs
+
+**Diagram: P1 Pipeline to build (Chunks only; no entities, no join table)**
+
+<img src="/assets/D2v2/D2_P1_001.png" alt="drones" width="91%" style="border: 1px solid #999;">
+
+<br>
+
+### **P1.1-0 Create pipeline**
+
+FDE: In this step we create the Pipeline Builder pipeline that will prepare data for the AIP demo. We choose a batch pipeline, meaning the pipeline runs when built/deployed and processes the available dataset as a whole. This is appropriate for demo data or periodically updated data. The pipeline will later contain the transforms that prepare the text/chunks/entities used by the question-answering workflow.
+
+A streaming pipeline is different: it continuously processes new records as they arrive, for high-frequency or near-real-time data. Instead of rebuilding the whole dataset each time, it reacts to incoming events and updates outputs continuously. For this demo, batch is simpler and sufficient.
+
+**Diagram: Open Pipeline Builder in Foundry**
+
+<img src="/assets/D2v2/D2_P1_002.png" alt="drones" width="100%" style="border: 1px solid #999;">
+
+**Diagram: Enter pipeline settings**
+
+<img src="/assets/D2v2/D2_P1_003.png" alt="drones" width="77%" style="border: 1px solid #999;">
+
+<br>
+
+### **P1.1-1 Create Source node "Articles" (5 pdfs, 58 pages)**
+
+**Diagram: Add dataset "Articles" to the pipeline**
+
+<img src="/assets/D2v2/D2_P1_004.png" alt="drones" width="100%" style="border: 1px solid #999;">
+
+Below is the dataset source/input node named Articles.
+
+Articles is the input table/dataset.
+
+PDF document is one of its columns.
+
+Snapshot indicates the selected dataset transaction/view mode.
+
+It is not a transform node; downstream transform nodes consume data from it.
+
+**Diagram: Resuting dataset source/input node "Articles"**
+
+<img src="/assets/D2v2/D2_P1_005.png" alt="drones" width="100%" style="border: 1px solid #999;">
+
+<br>
+
+### **P1.1-2 Create Transform node "Process PDFs" (get pageNumber2, content2)  (output 58 rows)**
+
+**TOC**
+- P1.1-2.1 Add Node operation "Extract text from PDF" (the dialog recently changed... this section discusses changes)
+- P1.1-2.2 Add Node operation "Explode array with position"
+- P1.1-2.3 Add node operation "Extract many struct fields"
+- P1.1-2.4 Add node operation Drop columns
+
+**Diagram: From node "Articles": Create Transform node "Process PDFs"**
+
+<img src="/assets/D2v2/D2_P1_006.png" alt="drones" width="53%" style="border: 1px solid #999;">
+
+<br>
+
+#### **P1.1-2.1 Add Node operation "Extract text from PDF" (the dialog recently changed... this section discusses changes)**
+
+FDE: To reproduce the old Raw text configuration in the new UI, configure it as follows:
+
+| New setting | Value |
+| --- | --- |
+| Extract method | Digital Text |
+| Use layout aware extraction | Unchecked |
+| Media reference | media_reference |
+| Start page | 1 |
+| End page | Leave blank |
+| Error handling | FAIL |
+| Output format | Text |
+| Output column | Change extracted_text to content2 |
+| Skip recomputing rows | Off, matching the previous version |
+**Diagram: Settings for Node operation "Extract text from PDF" (NOTE: The official docs shows an older UI version)**
+
+<img src="/assets/D2v2/D2_P1_007.png" alt="drones" width="100%" style="border: 1px solid #999;">
+
+Click Apply and run a preview.
+
+**Diagram: Preview of extracted text from PDF**
+
+<img src="/assets/D2v2/D2_P1_008.png" alt="drones" width="100%" style="border: 1px solid #999;">
+
+The extracted result is an array of page strings—one entry for each PDF page. Your following explode operation should turn those arrays into the approximately 58 page rows used by the rest of the demo.
+
+Old-to-new option mapping
+
+| Old UI | New UI |
+| --- | --- |
+| Raw text | Digital Text |
+| OCR | Full-page Scan |
+| Layout aware | Enable Use layout aware extraction |
+| No equivalent | Conditional Scan |
+What the new choices mean
+
+Digital Text: extracts existing selectable text from a PDF. This most closely reproduces your old Raw text setting.
+
+Full-page Scan: runs OCR on every page; use this for scanned-image PDFs.
+
+Conditional Scan: uses digital text when available and scans pages that need OCR. This is useful for mixed PDFs, but it does not exactly reproduce the old configuration.
+
+Layout-aware extraction: preserves more document structure. It is unnecessary for this demo’s simple text chunking workflow.
+
+Because the previous demo worked with Raw text, use Digital Text + Text output for the clean rebuild.
+
+<br>
+
+#### **P1.1-2.2 Add Node operation "Explode array with position"**
+
+**Diagram: Settings for node operation " Explode array with position"**
+
+<img src="/assets/D2v2/D2_P1_009.png" alt="drones" width="100%" style="border: 1px solid #999;">
+
+**Diagram: Preview of Exploded array with position**
+
+<img src="/assets/D2v2/D2_P1_010.png" alt="drones" width="100%" style="border: 1px solid #999;">
+
+<br>
+
+#### **P1.1-2.3 Add node operation "Extract many struct fields"**
+
+**Diagram: Settings for node operation "Extract many struct fields"**
+
+<img src="/assets/D2v2/D2_P1_011.png" alt="drones" width="100%" style="border: 1px solid #999;">
+
+**Diagram: Preview of Extracted struct's**
+
+<img src="/assets/D2v2/D2_P1_012.png" alt="drones" width="100%" style="border: 1px solid #999;">
+
+<br>
+
+#### **P1.1-2.4 Add node operation Drop columns**
+
+**Diagram: Settings for node operation "Drop columns"**
+
+<img src="/assets/D2v2/D2_P1_013.png" alt="drones" width="100%" style="border: 1px solid #999;">
+
+**Diagram: Resulting operations for transform node "Process PDFs"**
+
+<img src="/assets/D2v2/D2_P1_014.png" alt="drones" width="37%" style="border: 1px solid #999;">
+
+**Diagram: Preview of final output for transform node "Process PDFs"**
+
+<img src="/assets/D2v2/D2_P1_015.png" alt="drones" width="100%" style="border: 1px solid #999;">
+
+**Diagram: New transform node "Process PDFs" in the pipeline diagram**
+
+<img src="/assets/D2v2/D2_P1_016.png" alt="drones" width="60%" style="border: 1px solid #999;">
+
+<br>
+
+### **P1.1-3 Create Transform node "Extract chunks" (pageNumber2, content 2 >> chunkNumber2, content2)  (output 578 rows)**
+
+**TOC**
+- P1.1-3.1 Chunk string
+- P1.1-3.2 Explode array with position
+- P1.1-3.3 Extract many struct fields
+
+**Diagram: From node "Process PDFs": Create Transform node "Extract chunks"**
+
+<img src="/assets/D2v2/D2_P1_017.png" alt="drones" width="51%" style="border: 1px solid #999;">
+
+<br>
+
+#### **P1.1-3.1 Chunk string**
+
+**Diagram: Settings for node operation "Chunk string"**
+
+<img src="/assets/D2v2/D2_P1_018.png" alt="drones" width="100%" style="border: 1px solid #999;">
+
+**Diagram: Preview of chunked strings**
+
+<img src="/assets/D2v2/D2_P1_019.png" alt="drones" width="100%" style="border: 1px solid #999;">
+
+<br>
+
+#### **P1.1-3.2 Explode array with position**
+
+**Diagram: Settings for node operation**
+
+<img src="/assets/D2v2/D2_P1_020.png" alt="drones" width="100%" style="border: 1px solid #999;">
+
+**Diagram: Preview**
+
+<img src="/assets/D2v2/D2_P1_021.png" alt="drones" width="100%" style="border: 1px solid #999;">
+
+<br>
+
+#### **P1.1-3.3 Extract many struct fields**
+
+**Diagram: Settings for node operation**
+
+<img src="/assets/D2v2/D2_P1_022.png" alt="drones" width="100%" style="border: 1px solid #999;">
+
+**Diagram: Preview**
+
+<img src="/assets/D2v2/D2_P1_023.png" alt="drones" width="100%" style="border: 1px solid #999;">
+
+**Diagram: Resulting pipeline**
+
+<img src="/assets/D2v2/D2_P1_024.png" alt="drones" width="37%" style="border: 1px solid #999;">
+
+<br>
+
+### **P1.1-4 Transform node "Create chunk ID" (media_item_rid + pageNumber2 + chunkNumber2)  (output 578 rows)**
+
+**Diagram: From node "Extract chunks": Create Transform node "Create Chunk ID"**
+
+<img src="/assets/D2v2/D2_P1_025.png" alt="drones" width="60%" style="border: 1px solid #999;">
+
+**Diagram: Settings for node operation**
+
+<img src="/assets/D2v2/D2_P1_026.png" alt="drones" width="90%" style="border: 1px solid #999;">
+
+**Diagram: Preview**
+
+<img src="/assets/D2v2/D2_P1_027.png" alt="drones" width="100%" style="border: 1px solid #999;">
+
+**Diagram: Resulting pipeline**
+
+<img src="/assets/D2v2/D2_P1_028.png" alt="drones" width="38%" style="border: 1px solid #999;">
+
+<br>
+
+### **P1.1-5 Use_LLM node "Use LLM" (create summary2, entities2)  "entities" = keywords (output 20 rows)**
+
+For each chunk, the model produces:
+
+A short summary
+
+Important terms or keywords
+
+This is precomputed when the pipeline runs. It is not triggered separately every time someone uses the application.
+
+**Diagram: From node " Create Chunk ID": Create "Use LLM" node "Use LLM"**
+
+<img src="/assets/D2v2/D2_P1_029.png" alt="drones" width="52%" style="border: 1px solid #999;">
+
+Select the "Empty prompt" template.
+
+**Diagram: Settings classification = Empty prompt**
+
+<img src="/assets/D2v2/D2_P1_030.png" alt="drones" width="72%" style="border: 1px solid #999;">
+
+**Diagram: Settings for node operation**
+
+<img src="/assets/D2v2/D2_P1_031.png" alt="drones" width="83%" style="border: 1px solid #999;">
+
+**Diagram: Model settings**
+
+<img src="/assets/D2v2/D2_P1_032.png" alt="drones" width="44%" style="border: 1px solid #999;">
+
+**Diagram: Trial run**
+
+<img src="/assets/D2v2/D2_P1_033.png" alt="drones" width="100%" style="border: 1px solid #999;">
+
+**Diagram: Resulting pipeline**
+
+<img src="/assets/D2v2/D2_P1_034.png" alt="drones" width="46%" style="border: 1px solid #999;">
+
+<br>
+
+### **P1.1-6 Transform node "Embed chunks" (for searching; USES AI) / output = embedding2 (output 20 rows)**
+
+The embedding model converts text into a numeric vector:
+
+Chunk text → embedding2
+
+The vector lets Foundry find passages that are conceptually related to a question, even when they do not use identical wording.
+
+NOTE: This is AI, but it is not text generation.
+
+**TOC**
+- P1.1-6.1 Get struct field
+- P1.1-6.2 Text to embeddings
+- P1.1-6.3 Drop columns
+
+**Diagram: From node "Use LLM": Create Transform node "Embed chunks"**
+
+<img src="/assets/D2v2/D2_P1_035.png" alt="drones" width="46%" style="border: 1px solid #999;">
+
+<br>
+
+#### **P1.1-6.1 Get struct field**
+
+**Diagram: Settings for node operation**
+
+<img src="/assets/D2v2/D2_P1_036.png" alt="drones" width="100%" style="border: 1px solid #999;">
+
+**Diagram: Preview**
+
+<img src="/assets/D2v2/D2_P1_037.png" alt="drones" width="100%" style="border: 1px solid #999;">
+
+<br>
+
+#### **P1.1-6.2 Text to embeddings**
+
+**Diagram: Settings for node operation**
+
+<img src="/assets/D2v2/D2_P1_038.png" alt="drones" width="100%" style="border: 1px solid #999;">
+
+**Diagram: Preview**
+
+<img src="/assets/D2v2/D2_P1_039.png" alt="drones" width="100%" style="border: 1px solid #999;">
+
+**Diagram: Warning about model usage**
+
+<img src="/assets/D2v2/D2_P1_040.png" alt="drones" width="100%" style="border: 1px solid #999;">
+
+<br>
+
+#### **P1.1-6.3 Drop columns**
+
+**Diagram: Settings for node operation**
+
+<img src="/assets/D2v2/D2_P1_041.png" alt="drones" width="100%" style="border: 1px solid #999;">
+
+**Diagram: Select columns to drop (response)**
+
+<img src="/assets/D2v2/D2_P1_042.png" alt="drones" width="20%" style="border: 1px solid #999;">
+
+**Diagram: Resulting pipeline**
+
+<img src="/assets/D2v2/D2_P1_043.png" alt="drones" width="69%" style="border: 1px solid #999;">
+
+<br>
+
+### **P1.1-7 Dataset node "Chunks"**
+
+**Diagram: From node " Embed Chunks": Select "Add ouput" / "New dataset"**
+
+<img src="/assets/D2v2/D2_P1_044.png" alt="drones" width="52%" style="border: 1px solid #999;">
+
+**Diagram: Resulting dataset**
+
+<img src="/assets/D2v2/D2_P1_045.png" alt="drones" width="54%" style="border: 1px solid #999;">
+
+<br>
+
+### **P1.1-8 Deploy all pipeline outputs**
+
+**Diagram: Save all changes**
+
+<img src="/assets/D2v2/D2_P1_046.png" alt="drones" width="25%" style="border: 1px solid #999;">
+
+**Diagram: Deploy pipeline**
+
+<img src="/assets/D2v2/D2_P1_047.png" alt="drones" width="36%" style="border: 1px solid #999;">
+
+**Diagram: Deploy pipeline settings**
+
+<img src="/assets/D2v2/D2_P1_048.png" alt="drones" width="41%" style="border: 1px solid #999;">
+
+**Diagram: Pipeline warnings (ignore)**
+
+<img src="/assets/D2v2/D2_P1_049.png" alt="drones" width="71%" style="border: 1px solid #999;">
+
+**Diagram: Deployment succeeded**
+
+<img src="/assets/D2v2/D2_P1_050.png" alt="drones" width="40%" style="border: 1px solid #999;">
+
+<br>
+
+# **P1.2 Ontology (chunks only)**
+
+**TOC**
+- P1.2-1 Create new ontology
+- P1.2-2 Fix the error
+- P1.2-3 Deploy pipeline
+- P1.2-4 Verify with FDE
+
+<br>
+
+#### **P1.2-1 Create new ontology**
+
+**Diagram: P2 Create new object type in ontology manager**
+
+<img src="/assets/D2v2/D2_P1_051.png" alt="drones" width="70%" style="border: 1px solid #999;">
+
+**Diagram: Use existing datasource**
+
+<img src="/assets/D2v2/D2_P1_052.png" alt="drones" width="79%" style="border: 1px solid #999;">
+
+**Diagram: Select Chunks**
+
+<img src="/assets/D2v2/D2_P1_053.png" alt="drones" width="92%" style="border: 1px solid #999;">
+
+**Diagram: Selected chunks**
+
+<img src="/assets/D2v2/D2_P1_054.png" alt="drones" width="67%" style="border: 1px solid #999;">
+
+**Diagram: Configure metadata**
+
+<img src="/assets/D2v2/D2_P1_055.png" alt="drones" width="84%" style="border: 1px solid #999;">
+
+**Diagram: Primary key and title**
+
+<img src="/assets/D2v2/D2_P1_056.png" alt="drones" width="85%" style="border: 1px solid #999;">
+
+**Diagram: Action types**
+
+<img src="/assets/D2v2/D2_P1_057.png" alt="drones" width="84%" style="border: 1px solid #999;">
+
+**Diagram: Save location**
+
+<img src="/assets/D2v2/D2_P1_058.png" alt="drones" width="85%" style="border: 1px solid #999;">
+
+**Diagram: Warning (ignore)**
+
+<img src="/assets/D2v2/D2_P1_059.png" alt="drones" width="73%" style="border: 1px solid #999;">
+
+**Diagram: Resulting object type Chunks**
+
+<img src="/assets/D2v2/D2_P1_060.png" alt="drones" width="100%" style="border: 1px solid #999;">
+
+**Diagram: Media reference**
+
+<img src="/assets/D2v2/D2_P1_061.png" alt="drones" width="100%" style="border: 1px solid #999;">
+
+**Diagram: Select media source**
+
+<img src="/assets/D2v2/D2_P1_062.png" alt="drones" width="63%" style="border: 1px solid #999;">
+
+Select existing
+
+**Diagram: Select existing (Articles)**
+
+<img src="/assets/D2v2/D2_P1_063.png" alt="drones" width="87%" style="border: 1px solid #999;">
+
+**Diagram: Final settings**
+
+<img src="/assets/D2v2/D2_P1_064.png" alt="drones" width="66%" style="border: 1px solid #999;">
+
+Click Set as media reference property
+
+**Diagram: Resulting settings**
+
+<img src="/assets/D2v2/D2_P1_065.png" alt="drones" width="43%" style="border: 1px solid #999;">
+
+**Diagram: All changes**
+
+<img src="/assets/D2v2/D2_P1_066.png" alt="drones" width="80%" style="border: 1px solid #999;">
+
+Click Save to ontology. An error occurs (see next section).
+
+**Diagram: Save to ontology error**
+
+<img src="/assets/D2v2/D2_P1_067.png" alt="drones" width="100%" style="border: 1px solid #999;">
+
+<br>
+
+#### **P1.2-2 Fix the error**
+
+I made an error earlier and decided to leave it in this demo in order to demo FDE usage.
+
+**Diagram: Open FDE**
+
+<img src="/assets/D2v2/D2_P1_068.png" alt="drones" width="80%" style="border: 1px solid #999;">
+
+Paste a screenshot of the error into FDE.
+
+FDE should say that the error is in the "Create Chunk ID" node. Fix it (add media_item_rid).
+
+**Diagram: Add Expression = media_item_rid to pipeline node "Create Chunk Id" settings for "Concatenate strings"**
+
+<img src="/assets/D2v2/D2_P1_069.png" alt="drones" width="100%" style="border: 1px solid #999;">
+
+<br>
+
+#### **P1.2-3 Deploy pipeline**
+
+**Diagram: Deploy pipeline**
+
+<img src="/assets/D2v2/D2_P1_070.png" alt="drones" width="39%" style="border: 1px solid #999;">
+
+**Diagram: Save to ontology (works now)**
+
+<img src="/assets/D2v2/D2_P1_071.png" alt="drones" width="100%" style="border: 1px solid #999;">
+
+**Diagram: Ontology settings**
+
+<img src="/assets/D2v2/D2_P1_072.png" alt="drones" width="100%" style="border: 1px solid #999;">
+
+<br>
+
+#### **P1.2-4 Verify with FDE**
+
+ME: is it ok now?
+
+FDE: Yes—it is working correctly now.
+
+Evidence in the screenshots:
+
+578 Chunk objects were created.
+
+The backing datasource is Chunks WWW.
+
+Changelog → Merge changes → Indexing → Object Storage V2 are all green.
+
+Data is current.
+
+Schema is Up to date.
+
+Object Storage V2 is selected, which is recommended.
+
+The duplicate-primary-key problem was resolved by including media_item_rid in chunkId, making chunks from different PDFs unique.
+
+One optional consideration: Allow edits is enabled. For a read-only RAG demo, you probably do not need object edits and could disable it. If you leave it enabled, the current Apply user edits strategy means user-edited values take priority over later pipeline values. The orange storage message is informational, not an error.
+
+<br>
+
+# **P1.3 AIP logic (core section of this demo)**
+
+In Foundry, AIP Logic is a no-code function/workflow. It defines the steps Foundry executes when the user submits a question.
+
+For this demo, its conceptual flow is:
+
+User question     ↓
+
+Find semantically similar chunks     ↓
+
+Place those chunks into an LLM prompt    ↓
+
+Generate a grounded answer    ↓
+
+Return the answer and relevant chunks to the UI
+
+The Logic itself is a container for the workflow. It can include ordinary rules as well as AI operations. In this demo, it contains the runtime RAG behavior.
+
+Everything else—chunk IDs, deduplication, join tables, Ontology objects and links, Workshop widgets, and Vertex—is primarily deterministic data transformation, modeling, or presentation.
+
+So the simplest description is:
+
+1 LLM enriches the chunks.
+
+2 Embedding model makes the chunks searchable.
+
+3 AIP Logic retrieves evidence and generates the answer.
+
+**TOC**
+- P1.3-1 Create new API logic
+- P1.3-2 Add inputs block
+- P1.3-3 Add semantic search block
+- P1.3-4 Add LLM block (formatted block + "Use LLM" block)
+- P1.3-5 Test (BINGO)
+- P1.3-6 PUBLISH (error)
+
+<br>
+
+### **P1.3-1 Create new API logic**
+
+**Diagram: Create new AIP logic**
+
+<img src="/assets/D2v2/D2_P1_073.png" alt="drones" width="68%" style="border: 1px solid #999;">
+
+**Diagram: File location**
+
+<img src="/assets/D2v2/D2_P1_074.png" alt="drones" width="49%" style="border: 1px solid #999;">
+
+**Diagram: AIP logic dialog**
+
+<img src="/assets/D2v2/D2_P1_075.png" alt="drones" width="76%" style="border: 1px solid #999;">
+
+<br>
+
+### **P1.3-2 Add inputs block**
+
+**Diagram: Add userQuestion as input**
+
+<img src="/assets/D2v2/D2_P1_076.png" alt="drones" width="68%" style="border: 1px solid #999;">
+
+<br>
+
+### **P1.3-3 Add semantic search block**
+
+**Diagram: Semantic search**
+
+<img src="/assets/D2v2/D2_P1_077.png" alt="drones" width="41%" style="border: 1px solid #999;">
+
+**Diagram: Create new object set**
+
+<img src="/assets/D2v2/D2_P1_078.png" alt="drones" width="100%" style="border: 1px solid #999;">
+
+**Diagram: Select the embedding of the chunks**
+
+<img src="/assets/D2v2/D2_P1_079.png" alt="drones" width="40%" style="border: 1px solid #999;">
+
+**Diagram: Return 10 objects (enough for RAG)**
+
+<img src="/assets/D2v2/D2_P1_080.png" alt="drones" width="47%" style="border: 1px solid #999;">
+
+<br>
+
+### **P1.3-4 Add LLM block (formatted block + "Use LLM" block)**
+
+**Diagram: Add LLM block (that will interact with external LLM)**
+
+<img src="/assets/D2v2/D2_P1_081.png" alt="drones" width="54%" style="border: 1px solid #999;">
+
+**Diagram: Add the LLM prompts**
+
+<img src="/assets/D2v2/D2_P1_082.png" alt="drones" width="100%" style="border: 1px solid #999;">
+
+**Diagram: Add the vars to the prompts**
+
+<img src="/assets/D2v2/D2_P1_083.png" alt="drones" width="59%" style="border: 1px solid #999;">
+
+**Diagram: Select content**
+
+<img src="/assets/D2v2/D2_P1_084.png" alt="drones" width="52%" style="border: 1px solid #999;">
+
+**Diagram: Apply**
+
+<img src="/assets/D2v2/D2_P1_085.png" alt="drones" width="35%" style="border: 1px solid #999;">
+
+**Diagram: Prompts with vars**
+
+<img src="/assets/D2v2/D2_P1_086.png" alt="drones" width="100%" style="border: 1px solid #999;">
+
+This auto-creates the "formatted" block (show below: requires NO configuration)
+
+The Foundry doc does not state this and does not include a screenshot of the "formatted" dialog.
+
+**Diagram: "formatted" block (in the middle)**
+
+<img src="/assets/D2v2/D2_P1_087.png" alt="drones" width="100%" style="border: 1px solid #999;">
+
+**Diagram: Select GPT-40 and single completion**
+
+<img src="/assets/D2v2/D2_P1_088.png" alt="drones" width="51%" style="border: 1px solid #999;">
+
+Save.
+
+**Diagram: Save**
+
+<img src="/assets/D2v2/D2_P1_089.png" alt="drones" width="47%" style="border: 1px solid #999;">
+
+**Diagram: Save message**
+
+<img src="/assets/D2v2/D2_P1_090.png" alt="drones" width="52%" style="border: 1px solid #999;">
+
+<br>
+
+### **P1.3-5 Test (BINGO)**
+
+**Diagram: Preview run**
+
+<img src="/assets/D2v2/D2_P1_091.png" alt="drones" width="53%" style="border: 1px solid #999;">
+
+**Diagram: LLM answers successfully**
+
+<img src="/assets/D2v2/D2_P1_092.png" alt="drones" width="100%" style="border: 1px solid #999;">
+
+**Diagram: LLM can not answer because the RAG docs do not describe the capital of France**
+
+<img src="/assets/D2v2/D2_P1_093.png" alt="drones" width="100%" style="border: 1px solid #999;">
+
+<br>
+
+### **P1.3-6 PUBLISH (error)**
+
+**Diagram: Publish**
+
+<img src="/assets/D2v2/D2_P1_094.png" alt="drones" width="44%" style="border: 1px solid #999;">
+
+**Diagram: Error (happens every time)**
+
+<img src="/assets/D2v2/D2_P1_095.png" alt="drones" width="60%" style="border: 1px solid #999;">
+
+Refresh the webpage to get rid of error
+
+**Diagram: Function published**
+
+<img src="/assets/D2v2/D2_P1_096.png" alt="drones" width="57%" style="border: 1px solid #999;">
+
+**Diagram: AIP logic function in ontology manager**
+
+<img src="/assets/D2v2/D2_P1_097.png" alt="drones" width="100%" style="border: 1px solid #999;">
+
+<br>
+
+# **P1.4 UI TOP (input question) / BOTTOM (output LLM RAG answer) (BINGO)**
+
+**TOC**
+- P1.4-1 Add module
+- P1.4-2 Add user input widget
+- P1.4-3 Add Markdown widget
+
+<br>
+
+### **P1.4-1 Add module**
+
+Click New / Workshop module.
+
+Name the app ("D2_26.0821" below).
+
+**Diagram: New workshop module**
+
+<img src="/assets/D2v2/D2_P1_098.png" alt="drones" width="100%" style="border: 1px solid #999;">
+
+Click on the Page layer.
+
+In the right side configuration panel, under Layout, set padding to Regular.
+
+Change Layout direction to Rows.
+
+**Diagram: Change layout to rows**
+
+<img src="/assets/D2v2/D2_P1_099.png" alt="drones" width="39%" style="border: 1px solid #999;">
+
+<br>
+
+### **P1.4-2 Add user input widget**
+
+Add section at top.
+
+**Diagram: Add section at the top**
+
+<img src="/assets/D2v2/D2_P1_100.png" alt="drones" width="54%" style="border: 1px solid #999;">
+
+**Diagram: Added section**
+
+<img src="/assets/D2v2/D2_P1_101.png" alt="drones" width="86%" style="border: 1px solid #999;">
+
+Add text input widget with STRING VALUE = User Question.
+
+**Diagram: Added text widget**
+
+<img src="/assets/D2v2/D2_P1_102.png" alt="drones" width="100%" style="border: 1px solid #999;">
+
+<br>
+
+### **P1.4-3 Add Markdown widget**
+
+Add section at bottom.
+
+Add a Markdown widget.
+
+**Diagram: Added markdown widget**
+
+<img src="/assets/D2v2/D2_P1_103.png" alt="drones" width="100%" style="border: 1px solid #999;">
+
+Add the AIP function as the INPUT DATA / VARIABLE /  Function.
+
+**Diagram: Add a function**
+
+<img src="/assets/D2v2/D2_P1_104.png" alt="drones" width="100%" style="border: 1px solid #999;">
+
+Add the User Question as the USERQUESTION.
+
+**Diagram: Function settings**
+
+<img src="/assets/D2v2/D2_P1_105.png" alt="drones" width="100%" style="border: 1px solid #999;">
+
+The result (the "Show error" error message is normal).
+
+**Diagram: Resulting UI**
+
+<img src="/assets/D2v2/D2_P1_106.png" alt="drones" width="100%" style="border: 1px solid #999;">
+
+Save and publish.
+
+**Diagram: Save and publish**
+
+<img src="/assets/D2v2/D2_P1_107.png" alt="drones" width="41%" style="border: 1px solid #999;">
+
+**Diagram: UI file in the project folder**
+
+<img src="/assets/D2v2/D2_P1_108.png" alt="drones" width="63%" style="border: 1px solid #999;">
+
+Click View.
+
+Enter the question "What are the biggest challengers in treating and preventing Tuberculosis? The answer appears (no need to press enter).
+
+**Diagram: Enter a question about tuberculosis and the answer appearrs**
+
+<img src="/assets/D2v2/D2_P1_109.png" alt="drones" width="100%" style="border: 1px solid #999;">
 
 
 <br>
 
 
-26.0824 (v1 26.0713)
+26.0904 (0824, v1 26.0713)

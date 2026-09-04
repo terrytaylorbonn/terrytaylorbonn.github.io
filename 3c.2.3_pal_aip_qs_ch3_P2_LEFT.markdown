@@ -9,21 +9,77 @@ permalink: /3c.2.3_pal_aip_qs_ch3_P2_LEFT/
 
 [← 3c.2 PAL AIP](/3c.2_pal_aip/)
 
+<br>
 
-<!-- <br>
-**See the working text for this QS in**
-- **[#611vvv\_aip\_qs\_.docx](https://drive.google.com/drive/folders/1-Adawag9uA8_bq-hDF-nOuPYaRLz1eEO)**. Rewriting #611\_pal\_aip\_v06ccc-01\_ for the content of this page. Lots of my own concepts, etc.  -->
+The left widget simply shows the ~10 chunks that were selected for RAG entry. This does not really have much to do with RAG or AIP. For now I just provide the basic screenshots. The original demo text is at https://learn.palantir.com/speedrun-your-e2e-aip-workflow . See section "Building an APP" / "Display objects" for the details. I might add my details here later.
+
+**Diagram: Left widget section**
+
+<img src="/assets/D2v2/D2_P2_01.png" alt="drones" width="49%" style="border: 1px solid #999;">
+
+**Diagram: Add an Object list**
+
+<img src="/assets/D2v2/D2_P2_02.png" alt="drones" width="31%" style="border: 1px solid #999;">
+
+**Diagram: Object list in the UI**
+
+<img src="/assets/D2v2/D2_P2_03.png" alt="drones" width="80%" style="border: 1px solid #999;">
+
+**Diagram: Object set input data in UI**
+
+<img src="/assets/D2v2/D2_P2_04.png" alt="drones" width="29%" style="border: 1px solid #999;">
+
+**Diagram: Select Chunks**
+
+<img src="/assets/D2v2/D2_P2_05.png" alt="drones" width="67%" style="border: 1px solid #999;">
+
+**Diagram: Resulting input data**
+
+<img src="/assets/D2v2/D2_P2_06.png" alt="drones" width="85%" style="border: 1px solid #999;">
+
+**Diagram: Filter on the embedding**
+
+<img src="/assets/D2v2/D2_P2_07.png" alt="drones" width="36%" style="border: 1px solid #999;">
+
+**Diagram: Set Query = userQuestion**
+
+<img src="/assets/D2v2/D2_P2_08.png" alt="drones" width="64%" style="border: 1px solid #999;">
+
+**Diagram: K value set to 7 (anything from 5-10; this is the number of returned chunk objects)**
+
+<img src="/assets/D2v2/D2_P2_09.png" alt="drones" width="100%" style="border: 1px solid #999;">
+
+**Diagram: Displayed chunks**
+
+<img src="/assets/D2v2/D2_P2_10.png" alt="drones" width="100%" style="border: 1px solid #999;">
+
+**Diagram:  Note the new Chunks var**
+
+<img src="/assets/D2v2/D2_P2_11.png" alt="drones" width="28%" style="border: 1px solid #999;">
+
+**Diagram: The active selection is not used**
+
+<img src="/assets/D2v2/D2_P2_12.png" alt="drones" width="39%" style="border: 1px solid #999;">
+
+**Diagram: Save and publish**
+
+<img src="/assets/D2v2/D2_P2_13.png" alt="drones" width="34%" style="border: 1px solid #999;">
+
+View the UI. 
+Enter a question.
+
+The selected chunks are displayed.
+
+**Diagram: Chunks that match the question are displayed**
+
+<img src="/assets/D2v2/D2_P2_14.png" alt="drones" width="38%" style="border: 1px solid #999;">
+
+**Diagram: Verify with another question**
+
+<img src="/assets/D2v2/D2_P2_15.png" alt="drones" width="37%" style="border: 1px solid #999;">
+
 
 <br>
 
-#### **TOC**
-- xxxxx
 
-
-<img src="/assets/pal.png" alt="drones" width="40%"> 
-
-
-<br>
-
-
-26.0824 (v1 26.0713)
+26.0904 (0824, v1 26.0713)
