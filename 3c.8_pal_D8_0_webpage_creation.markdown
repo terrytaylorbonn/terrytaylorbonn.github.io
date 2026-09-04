@@ -11,15 +11,33 @@ permalink: /3c.8_pal_D8_0_webpage_creation/
 
 <br> 
 
+On this page 
+- "ME" = Actual human writer
+- "GPT" = ChatGPT generated text 
+  - often this is my own text that I ask GPT to just clean up 
+  - but sometimes I ask GPT to generate intro or summary text for several sections of webpages
+- "FDE/GPT" = Foundry "Forward Deployed Engineer" AI-assistant-generated text (FDE uses ChatGPT). 
 
-See the working text for this QS in
-- **[\#619\_.docx](https://drive.google.com/drive/folders/1-Adawag9uA8_bq-hDF-nOuPYaRLz1eEO)**.  
-- **[Demo URL](https://www.palantir.com/docs/foundry/model-studio/overview/)** there are actually many ... this was a chaotic demo.  
+ME: This page describes 
+- how I used GPT to extract docx (MS Word doc) content to create 
+  - Markdown (the text format saved to Github that are displayed on the ZiptieAI.com website) files and 
+  - PNG's (screenshot format).
+
+There are 2 main sections
+- **[1 GPT: GPT as a document-processing tool](#1-gpt-gpt-as-a-document-processing-tool)** (I asked GPT to create this text after we extracted the docx contents into markdown+PNGs)
+- **[2 ME: Actual chat between ME and GPT used to extract demo D8 webpages](#2-me-actual-chat-between-me-and-gpt-used-to-extract-demo-d8-webpages)** (I manually copied the chat text with GPT into Markdown).
+
+*Extraction version of the labnotes docx for the ZAI version of demo D8*<br><img src="/assets/D8/D8.0-00.png" alt="drones" width="90%" style="border: 1px solid #999;">
+
+
+<br>
+
+-----------------------------------
 
 <br>
 
 
-# **GPT as a document-processing tool**
+# **1 GPT: GPT as a document-processing tool**
 
 This webpage documents a practical example of using GPT for something much more involved than answering questions or generating text.
 
@@ -363,20 +381,18 @@ And the final output was not an explanation of how I *could* convert my 50 MB Wo
 
 It was the converted Markdown and PNG files themselves.
 
-<br><br><br><br><br><br><br><br><br><br><br><br><br><br>
 
-----------
-----------
-----------
-----------
-----------
-----------
-----------
-----------
-----------
-----------
+<br>
+
+-----------------------------------
+
+<br>
+
+# **2 ME: Actual chat between ME and GPT used to extract demo D8 webpages**
 
 
+
+<br>
 
 ### **Q01: i have a 50mb docx ready for md/png extraction.**
 can i give you the entire file and 
@@ -406,13 +422,13 @@ Go ahead and upload the 50 MB file.
 
 
 
-- `[**3c.8\_pal\_D8\_1\_demo\_goal (0)**](http://127.0.0.1:4000/3c.8_pal_D8_1_demo_goal/)`
-- `[**3c.8\_pal\_D8\_2\_model\_studio (1a)**](http://127.0.0.1:4000/3c.8_pal_D8_2_model_studio/)`
-- `[**3c.8\_pal\_D8\_3\_project (1b)**](http://127.0.0.1:4000/3c.8_pal_D8_3_project/)`
-- `[**3c.8\_pal\_D8\_4\_train\_mstudio (2a)**](http://127.0.0.1:4000/3c.8_pal_D8_4_train_mstudio/)`
-- `[**3c.8\_pal\_D8\_5\_train\_jupyter (2b)**](http://127.0.0.1:4000/3c.8_pal_D8_5_train_jupyter/)`
-- `[**3c.8\_pal\_D8\_6\_inf\_app (2c)**](http://127.0.0.1:4000/3c.8_pal_D8_6_inf_app/)`
-- `[**3c.8\_pal\_D8\_7\_summary (3)**](http://127.0.0.1:4000/3c.8_pal_D8_7_summary/)`
+- `[**3c.8_pal_D8_1_demo_goal (0)**](http://127.0.0.1:4000/3c.8_pal_D8_1_demo_goal/)`
+- `[**3c.8_pal_D8_2_model_studio (1a)**](http://127.0.0.1:4000/3c.8_pal_D8_2_model_studio/)`
+- `[**3c.8_pal_D8_3_project (1b)**](http://127.0.0.1:4000/3c.8_pal_D8_3_project/)`
+- `[**3c.8_pal_D8_4_train_mstudio (2a)**](http://127.0.0.1:4000/3c.8_pal_D8_4_train_mstudio/)`
+- `[**3c.8_pal_D8_5_train_jupyter (2b)**](http://127.0.0.1:4000/3c.8_pal_D8_5_train_jupyter/)`
+- `[**3c.8_pal_D8_6_inf_app (2c)**](http://127.0.0.1:4000/3c.8_pal_D8_6_inf_app/)`
+- `[**3c.8_pal_D8_7_summary (3)**](http://127.0.0.1:4000/3c.8_pal_D8_7_summary/)`
 
 note the following:
 
@@ -643,4 +659,4 @@ Demo D8 explores how a tradition .........................
 
 <br>
 
-26.0903 (v1 26.0903)
+26.0904 (v1 26.0903)
