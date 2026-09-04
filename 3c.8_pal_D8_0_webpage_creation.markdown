@@ -1,6 +1,6 @@
 ---
 layout: page
-title: How the D8 webpages were created (with GPT)
+title: How the demo D8 webpages were created (with GPT)
 permalink: /3c.8_pal_D8_0_webpage_creation/
 ---
 
