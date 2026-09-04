@@ -33,10 +33,10 @@ See also:
 - **Step by step demo D2 workflows (ZAI version).** These three parts show the main mechanics behind the demo: AI/RAG answer generation, embedding-based chunk retrieval, and the separate Vertex graph visualization.
 
 
-  - [**P1 – AI (UI TOP/BOTTOM)**](http://127.0.0.1:4000/3c.2.2_pal_aip_qs_ch2_P1_ai/). The user enters a question in the TOP widget; the RAG workflow retrieves relevant chunk content, supplies it to GPT-4o as reference material, and displays the generated answer in the BOTTOM widget.
+  - [**P1 – AI (UI TOP/BOTTOM)**](/3c.2.2_pal_aip_qs_ch2_P1_ai/). The user enters a question in the TOP widget; the RAG workflow retrieves relevant chunk content, supplies it to GPT-4o as reference material, and displays the generated answer in the BOTTOM widget.
 
 
-  - [**P2 – LEFT widget (embedding-matched chunk list)**](http://127.0.0.1:4000/3c.2.3_pal_aip_qs_ch3_P2_LEFT/). The user's question is converted to an embedding and compared with the stored chunk embeddings. The closest matching Chunk objects are returned and displayed in the LEFT widget.
+  - [**P2 – LEFT widget (embedding-matched chunk list)**](/3c.2.3_pal_aip_qs_ch3_P2_LEFT/). The user's question is converted to an embedding and compared with the stored chunk embeddings. The closest matching Chunk objects are returned and displayed in the LEFT widget.
 
 
   - **P3 – RIGHT widget (Vertex graph – no AI involved).** This part creates a Vertex graph showing the relationships between chunks and extracted keywords. It does not participate in the AI/RAG workflow shown in P1 and P2, so I do not reproduce its lengthy setup here. See the DOCX for the complete step-by-step procedure.
