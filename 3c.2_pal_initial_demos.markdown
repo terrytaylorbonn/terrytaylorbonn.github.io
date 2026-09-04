@@ -122,7 +122,14 @@ Work with GPT/FDE to add Foundry safety rails to D3 to make using agents + remot
 
 ## **2 Basic demos with internal AI models** 
 
-"in-house" = Enterprise controlled models. This is probably the long-term future of enterprise AI.
+My interpretation of the Palantir post below:
+- Frontier labs (OpenAI, Grok, etc; companies creating LLMs on the frontier, on the edge, of what is possible) are using prompts they get about sensitive topics to train their future models on (for example, GPT knows everything about ZiptieAI, although there's not much super-secret in all that knowledge). I think this is what he means by giving up sovereignty. 
+- These labs will take that knowledge and start to offer competing services based on their LLMs. Thats just the logical next step.
+- The solution: You use your own local models. No data goes outside the company. Your proprietary data stays in-house. You use RAG (you feed your data into LLMs that have not been trained on that data; basically the super-sensitive knowledge is not "baked-in" to the LLM).
+- How do you do that? First of all, you start off with a trial version of Palantir Foundry, you learn the basics doing the ZAI demos D1, D2, and D3 (based very much on original Foundry demos), and then **you do the following D8 demo "Deep Dive: Model integration"**. After that you truly understand the problem and the solution.
+
+
+*Alex Karp sounding the alarm about the risks of AI in the enterprise.*<br><img src="/assets/alex.png" alt="xxx" width="50%" style="border: 1px solid #999;">
 
 
 <br>
