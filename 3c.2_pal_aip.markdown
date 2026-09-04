@@ -17,6 +17,11 @@ This ZAI section describes the concepts and workflows for the ZAI version of dem
 
 <br>
 
+See also:
+- **[#611www_.docx](https://drive.google.com/drive/folders/1-Adawag9uA8_bq-hDF-nOuPYaRLz1eEO)**
+- **[Speedrun](https://learn.palantir.com/speedrun-your-e2e-aip-workflow)**
+
+
 #### **TOC**
 
 - **Concepts**<br><br>

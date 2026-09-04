@@ -60,8 +60,6 @@ Your first hands-on with the basics (pipeline, ontology, actions, UI).
 - D1 does not include AI, but its perhaps a required starter for understanding the Foundry basics.
 - A good demo (though a bit too complicated as an initial demo.. I would make something simpler). Plan on spending minimum a full day on this (the demo docs say you will need only 60 minutes).
 - The ZAI splits the demos into 3 phases (this makes the demo much easier to finish and understand).
-- **[#610_.docx](https://drive.google.com/drive/folders/1-Adawag9uA8_bq-hDF-nOuPYaRLz1eEO)**     
-- **[Speedrun](https://learn.palantir.com/speedrun-your-first-e2e-workflow)**
 
 *Demo D1 first end-to-end workflow diagram (no AI) (WIP)*<br><img src="/assets/777_46.png" alt="xxx" width="75%" style="border: 1px solid #999;">
 
@@ -71,8 +69,6 @@ Your first hands-on with the basics (pipeline, ontology, actions, UI).
 Your first app with AI. 
 - Use AI (external models) to clean up extracted chunks of text from PDFs, to extract text keywords ("entities" in the demo) from the chunk, to match a question to chunks via embeddings (machine language representation of the question/chunks meanings (not keywords)), make a RAG call with the question/chunks to answer the question.
 - About half of the demo has nothing to do with AI (the ZAI version splits the demo into 3 phases; phase 3 is the no-AI part; you can skip it).
-- **[#611www_.docx](https://drive.google.com/drive/folders/1-Adawag9uA8_bq-hDF-nOuPYaRLz1eEO)**
-- **[Speedrun](https://learn.palantir.com/speedrun-your-e2e-aip-workflow)**
 
 *Demo D2 first AIP workflow (ZAI) diagram (26.0828) (3 different AI models are used)*<br><img src="/assets/777_50.png" alt="xxx" width="82%" style="border: 1px solid #999;">
 
@@ -105,11 +101,13 @@ This demo builds the first **autonomous operational agent** in this sequence.
 - **(3)(4b) The governed Action automatically writes** the initial eligibility decision and reasoning.
 - **(5) Staff review the result** and may manually adjust the eligibility decision through the UI. This last step is important: Automation makes the initial operational decision, but staff retain oversight and can override it through a governed Action.
 
+
+<!-- Notes: 
 See also:  
 - **[#614_.docx](https://drive.google.com/drive/folders/1-Adawag9uA8_bq-hDF-nOuPYaRLz1eEO)** (detailed demo notes; the ZAI webpage markdown/PNG's for the ZAI online docs for this demo were extracted from this docx using GPT)    
 - **[Speedrun](https://learn.palantir.com/speedrun-your-first-agentic-aip-workflow)** (the original demo documentation)
 
-<!-- Notes: 
+
 - For a discussion of what “agent” means in Foundry, see the D2 notes. This is an on-going debate with FDE. FDE (not sure I agree with this): The agent is not the LLM or AIP Logic alone. It is the complete event-driven system comprising Ontology state, Automate, AIP Logic, the LLM, and the governed Action.
 - The “AIP Function” and “AIP Logic” boxes show two Foundry UI/resource views of the same executable logic. The Function Registry entry is the published interface selected by Automate; the Logic editor contains its implementation. -->
 
@@ -131,10 +129,10 @@ Work with GPT/FDE to add Foundry safety rails to D3 to make using agents + remot
 
 <br>
 
-#### **[2.1 D8 (TO-UPDATE): Deep Dive: Model integration (26.0721)](/3c.8_pal_8_model_integration/)**
-  - **[#619_.docx](https://drive.google.com/drive/folders/1-Adawag9uA8_bq-hDF-nOuPYaRLz1eEO)**
-  - Sections 2c, 2d were not in the demos. I prompted AIP/FDE for directions.
+#### **[2.1 D8: Deep Dive: Model integration (26.0903)](/3c.8_pal_8_model_integration/)** 
+Demo D8 explores how a traditional machine-learning model can be trained, deployed, and used for inference inside Palantir Foundry. The demo first examines Foundry’s Model Studio and model-management workflow, then creates a project and trains models using two approaches: Model Studio and a Jupyter notebook. Finally, the trained model is deployed and connected to an interactive application for inference. The demo therefore follows much of the model lifecycle: data → training → model → deployment → inference → application.
 
+*Training of the internal model*<br><img src="/assets/D8/D8.4-19.png" alt="xxx" width="100%" style="border: 1px solid #999;">
 
 <br>
 
@@ -151,22 +149,17 @@ Locals models (+RAG) are probably the optimal solution (see D8 demo description 
 #### **[3.1 D9 (TO-UPDATE, DIY) = Haystack needle demo](/3c.xxx_pal_HN_01_non_ai/)** 
 **What has interested me the most about Palantir for over a year now are "haystack needle" (HN) algorithms**. This was the original reason for the founding of PAL. PAL's job was to sift through vast amounts of data to flag potential threats (for the first decade or so without the help of AI). To find the needle in the haystack. Thats what this demo does. The demo is DIY (do it yourself), which means it was created from scratch with only FDE/GPT assistance.
 
+<img src="/assets/D9_HN_detection.png" alt="xxx" width="85%" style="border: 1px solid #999;">
+
+
 <br>
 
 #### **[3.2 D5 (TO-UPDATE): Speedrun: Mining Your First Business Process (26.0718)](/3c.5_pal_biz_process_mining/)**
-  - **[#616_.docx](https://drive.google.com/drive/folders/1-Adawag9uA8_bq-hDF-nOuPYaRLz1eEO)**
-  - **[Speedrun](https://learn.palantir.com/speedrun-mining-your-first-business-process)**
-
 FDE: The demo starts with claims, customers, and claim-history logs. After ingesting these datasets into Foundry, the data is modeled as Ontology objects such as Customers and Claims. Machinery then uses the process logs to reconstruct how claims move through the business process over time. Once the process map is built, you can inspect where claims get stuck, identify why some remain unresolved, and embed the process view into an interactive application.
 
-Mechanically:
-1. Start with datasets claims, customers, process logs
-2. Ingest into Foundry upload/import datasets
-3. Add to Ontology create Customer and Claim object types (link/process logs to claims)
-4. Mine process logs (Machinery reads event history: claim X moved from state A → state B at time T).
-5. Build process map (shows actual paths claims took)
-6. Inspect problems (find unresolved claims, bottlenecks, loops, delays)
-7. Embed in visual app
+
+<img src="/assets/D5_claims_process_app.png" alt="xxx" width="77%" style="border: 1px solid #999;">
+
 
 <br>
 

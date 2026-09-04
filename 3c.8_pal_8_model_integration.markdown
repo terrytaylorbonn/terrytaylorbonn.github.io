@@ -20,7 +20,10 @@ See also:
 
 **General D8 demo summary:** Demo D8 explores how a traditional machine-learning model can be trained, deployed, and used for inference inside Palantir Foundry. The demo first examines Foundry's Model Studio and model-management workflow, then creates a project and trains models using two approaches: Model Studio and a Jupyter notebook. Finally, the trained model is deployed and connected to an interactive application for inference. The demo therefore follows much of the model lifecycle: data → training → model → deployment → inference → application.
 
+<br> 
+
 #### **TOC**
+- **[How the D8 webpages were created (with GPT)](/3c.8_pal_D8_0_webpage_creation/)**. This is very interesting summary of how these D8 webpages were extracted from docx files by GPT.
 - **[D8.1 Demo goal (0)](/3c.8_pal_D8_1_demo_goal/)**. This chapter defines the goal of Demo D8 and places it in the larger ZiptieAI workflow. The key idea is to go beyond simply training a model and examine how a model becomes part of an operational system. It also distinguishes the training pipeline used in this demo from possible future batch or streaming inference pipelines, which could continuously detect unusual situations.
 - **[D8.2 Model Studio (1a)](/3c.8_pal_D8_2_model_studio/)**. This chapter explores Foundry Model Studio and how models fit into the Foundry platform. It looks at the model workflow, how a trained model can subsequently be used for inference, and several ways model inference can be incorporated into Foundry applications and pipelines. The goal is primarily to understand the available Foundry model infrastructure before building the demo.
 - **[D8.3 Project (1b)](/3c.8_pal_D8_3_project/)**. This chapter sets up the machine-learning project in Foundry that will be used for the rest of the demo. It establishes the project resources and data needed for model development and prepares the environment for the two training approaches that follow. In other words, this is the bridge between examining Foundry's model capabilities and actually building a model.
