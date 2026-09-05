@@ -134,6 +134,9 @@ The objective is to determine which risks Foundry controls actually mitigate and
 
 ## **2 Basic demos with internal AI models** 
 
+<br>
+
+#### *I worked out this section structure with FDE/GPT a few days before my trip abroad... on 10 Oct 2026 I will start working on this section*
 
 <!-- ### **ME: Split D8 into multiple demos?**
 
@@ -330,6 +333,47 @@ FDE: The demo starts with claims, customers, and claim-history logs. After inges
 <br>
 
 26.0905 (v1 26.0725)
+
+<br>
+<br>
+<br>
+
+----
+----
+----
+----
+
+<br>
+
+**Yes—the structure and core conceptual progression are sound.**
+
+It moves logically through:
+
+```
+Sovereignty motivation
+→ understand model integration
+→ deploy an existing model
+→ train a custom model
+→ operationalize inference
+→ add governed RAG
+→ consider fine-tuning
+→ govern and monitor models
+→ use an internal model in the protected D3 agent
+```
+
+Specific structural strengths:
+
+- **2.0** explains why internal models matter.
+- **D8a–D8g** decompose an otherwise oversized model-integration topic.
+- RAG and fine-tuning are correctly treated as separate concepts.
+- Governance follows deployment and adaptation.
+- **D3c works well as the capstone**, integrating the model work with the earlier agent and security work.
+- The existing D8 deep dive can initially serve as the umbrella/starting demo; overlaps can be separated later.
+
+The only broad concept to revisit later is the exact meaning of **internal**, **local**, and **sovereign**—they are related but not automatically equivalent. Likewise, the interpretation of Karp’s claims should eventually be distinguished from what can be independently demonstrated. Neither issue requires changing the current structure.
+
+Regarding your Foundry account: **five weeks of inactivity is not necessarily the determining factor; the trial or account expiration policy is more important.** Check its expiration date before leaving if possible. I cannot guarantee that the account will remain active. Keeping your screenshots, extracted documentation, and diagrams locally is sensible.
+
 
 <!-- ==========================================================================================
 ==========================================================================================
