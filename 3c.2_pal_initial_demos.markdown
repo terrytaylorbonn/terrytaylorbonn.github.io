@@ -340,7 +340,11 @@ FDE: The demo starts with claims, customers, and claim-history logs. After inges
 
 <br>
 
-**Yes—the structure and core conceptual progression are sound.**
+# **NOTES**
+
+<br>
+
+# **Yes—the structure and core conceptual progression are sound.**
 
 It moves logically through:
 
@@ -366,6 +370,85 @@ Specific structural strengths:
 - The existing D8 deep dive can initially serve as the umbrella/starting demo; overlaps can be separated later.
 
 The only broad concept to revisit later is the exact meaning of **internal**, **local**, and **sovereign**—they are related but not automatically equivalent. Likewise, the interpretation of Karp’s claims should eventually be distinguished from what can be independently demonstrated. Neither issue requires changing the current structure.
+
+<br>
+
+# (1) the ZiptieAI webpage for D8 (my original ) is below.
+i have been working on this demo past few days...
+the source for the demo is not a speedrun, but the PAL website..
+so there a lot of jumping around, differrent options, very difficult to follow....
+
+so what you have given me is basically a straight path through the whole topic?
+and after i get back from xxx we can work together to match up the website docs with your path?
+
+
+### 1. D8 structure
+
+**Yes.** The D8a–D8g sequence I suggested is a coherent, straight learning path through the larger subject. It is a proposed curriculum, not a claim that Palantir’s current Model Studio pages already present the material that way.
+
+Your existing D8 work maps into that path reasonably well:
+
+| Current D8 material | Proposed path |
+|---|---|
+| D8.1 Goal | Overall orientation |
+| D8.2 Model Studio | D8a: model-integration concepts |
+| D8.3 Project | Setup shared by later demos |
+| D8.4 Train in Model Studio | D8c: custom-model training |
+| D8.5 Train in Jupyter | D8c: alternative training approach |
+| D8.6 Inference app | D8d: deployment and live inference |
+| D8.7 Summary | Transition to operational inference |
+
+Your present demo already covers a substantial vertical slice:
+
+```text
+Understand infrastructure
+→ create project
+→ train model
+→ deploy model
+→ call model from application
+```
+
+The later proposed demos add topics that the current D8 does not fully cover:
+
+- starting from an existing model;
+- batch and streaming inference;
+- internal LLMs;
+- governed RAG;
+- model adaptation/fine-tuning;
+- model governance and monitoring;
+- integration into the protected D3 agent.
+
+After you return, we can map the Palantir pages and your existing screenshots onto that sequence, identify overlaps and gaps, and decide whether to split the current D8 document into D8a, D8b, D8c, and so forth. There is no need to restructure it before your trip.
+
+<br>
+
+# 2. Account lifespan
+
+The information you found is reassuring, but I would distinguish the two claims:
+
+- **Developer Tier lifespan:** the claim that it is available indefinitely appears to mean there is no ordinary fixed 30- or 60-day trial expiration.
+- **User inactivity:** after approximately 30 days without login, the user may be marked inactive and security tokens disabled. If the official policy applies to your tenant, an interactive login should reactivate the user rather than requiring the account to be recreated.
+
+Therefore, after xxx away, the likely sequence is:
+
+```text
+No login for more than 30 days
+→ user marked inactive
+→ existing account/resources remain
+→ next successful login reactivates user
+```
+
+The Reddit source is not authoritative, and program terms can change, so it is not an absolute guarantee. However, your account already remaining available for approximately two months is consistent with it being a Developer/Learning tier rather than a short fixed-duration trial.
+
+Before leaving:
+
+- retain your DOCX files, Markdown, and screenshots locally;
+- make sure you have working MFA and recovery access;
+- record the Foundry organization and login method;
+- pause any Automations you do not want running during your absence;
+- do not attempt to access the account over a connection you consider unsafe.
+
+On the evidence available, **five weeks of inactivity is more likely to cause a reversible inactive status than deletion of your account and projects**.
 
 
 <!-- ==========================================================================================
