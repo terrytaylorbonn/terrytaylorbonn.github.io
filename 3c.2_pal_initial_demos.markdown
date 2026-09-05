@@ -372,8 +372,6 @@ Specific structural strengths:
 
 The only broad concept to revisit later is the exact meaning of **internal**, **local**, and **sovereign**—they are related but not automatically equivalent. Likewise, the interpretation of Karp’s claims should eventually be distinguished from what can be independently demonstrated. Neither issue requires changing the current structure.
 
-Regarding your Foundry account: **five weeks of inactivity is not necessarily the determining factor; the trial or account expiration policy is more important.** Check its expiration date before leaving if possible. I cannot guarantee that the account will remain active. Keeping your screenshots, extracted documentation, and diagrams locally is sensible.
-
 
 <!-- ==========================================================================================
 ==========================================================================================
