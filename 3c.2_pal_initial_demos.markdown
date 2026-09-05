@@ -114,9 +114,18 @@ See also:
 
 <br>
 
-#### **[1.4 (TODO) D3b Agent/model data security)](/3c.2_pal_D2b_ai_monitor/)**
+<!-- 
+#### **[1.4 (TODO) D3b Agent/model data security](/3c.2_pal_D2b_ai_monitor/)**
 
-Work with GPT/FDE to add Foundry safety rails to D3 to make using agents + remote LLMs and agents safer (finding an existing demo for this would be better). 
+Work with GPT/FDE to add Foundry safety rails to D3 to make using agents + remote LLMs and agents safer (finding an existing demo for this would be better).  -->
+
+#### **[1.4 (TODO) D3b — Protecting agents that use external AI models](/3c.2_pal_D2b_ai_monitor/)**
+
+Extend D3 with controls for both sides of the agent boundary: the enterprise data sent to an external LLM and the Ontology changes produced from its response. Proposed topics include sensitive-data detection, minimization and redaction, approved model access, prompt-injection defenses, output validation, constrained Actions, human approval, automation-loop safety, evaluation, monitoring, and rollback.
+
+The objective is to determine which risks Foundry controls actually mitigate and which risks remain with the external model provider.
+
+
 
 <img src="/assets/D3b/D3b_001.png" alt="drones" width="70%" style="border: 1px solid #999;">
 
@@ -125,27 +134,157 @@ Work with GPT/FDE to add Foundry safety rails to D3 to make using agents + remot
 
 ## **2 Basic demos with internal AI models** 
 
+
+<!-- ### **ME: Split D8 into multiple demos?**
+
+FDE: Yes. Model integration, model creation, training, inference, RAG, and model operations are too much for one demo. I recommend keeping D3c as the capstone, after a sequence of smaller D8 demos.
+
+**FDE: Recommended website sequence**
+
+This is preferable to placing D3c immediately after one large D8. Readers first learn how internal models are created, deployed, called, and governed; D3c then demonstrates how those capabilities fit into an operational agent.
+
+-->
+
+
+<br>
+
+#### **TOC**
+- 2.0 Interpreting Alex Karp's statements about sovereignty
+- 2.1 D8a — Model integration concepts
+- 2.2 D8b — Use an existing internal model
+- 2.3 D8c — Train and evaluate a custom model
+- 2.4 D8d — Batch and live inference
+- 2.5 D8e — Internal LLM and governed RAG
+- 2.6 D8f — Fine-tuning, if needed
+- 2.7 D8g — Model governance and operations
+- 2.8 D3c — Protected D3 agent using an internal model
+
+<br> 
+
+#### **2.0 Interpreting Alex Karp's statements about sovereignty**
+
 My interpretation of the Palantir post below:
 - Frontier labs (OpenAI, Grok, etc; companies creating LLMs on the frontier, on the edge, of what is possible) are using prompts they get about sensitive topics to train their future models on (for example, GPT knows everything about ZiptieAI, although there's not much super-secret in all that knowledge). I think this is what he means by giving up sovereignty. 
 - These labs will take that knowledge and start to offer competing services based on their LLMs. Thats just the logical next step.
 - The solution: You use your own local models. No data goes outside the company. Your proprietary data stays in-house. You use RAG (you feed your data into LLMs that have not been trained on that data; basically the super-sensitive knowledge is not "baked-in" to the LLM).
 - How do you do that? First of all, you start off with a trial version of Palantir Foundry, you learn the basics doing the ZAI demos D1, D2, and D3 (based very much on original Foundry demos), and then **you do the following D8 demo "Deep Dive: Model integration"**. After that you truly understand the problem and the solution.
 
-
 *Alex Karp sounding the alarm about the risks of AI in the enterprise.*<br><img src="/assets/alex.png" alt="xxx" width="50%" style="border: 1px solid #999;">
-
 
 <br>
 
-#### **[2.1 D8: Deep Dive: Model integration (26.0903)](/3c.8_pal_8_model_integration/)** 
+
+#### **[2.1 D8(a) (WIP) — Deep Dive: Model integration (26.0905)](/3c.8_pal_8_model_integration/)** 
 Demo D8 explores how a traditional machine-learning model can be trained, deployed, and used for inference inside Palantir Foundry. The demo first examines Foundry’s Model Studio and model-management workflow, then creates a project and trains models using two approaches: Model Studio and a Jupyter notebook. Finally, the trained model is deployed and connected to an interactive application for inference. The demo therefore follows much of the model lifecycle: data → training → model → deployment → inference → application.
+
+**FDE VERSION: 2.1 D8a — Understanding models in Foundry**
+
+Identify the model resources, deployment options, input/output contracts, and differences among external APIs, imported models, internally hosted models, and custom-trained models.
+
+Topics:
+- model versus model endpoint;
+- external versus internally deployed;
+- pre-trained versus custom-trained;
+- batch versus live inference;
+- model versions and dependencies.
+
+<br>
 
 *Training of the internal model*<br><img src="/assets/D8/D8.4-19.png" alt="xxx" width="100%" style="border: 1px solid #999;">
 
 <br>
 
-#### **[2.2 D3c (TODO) = D3(b) + D8 (local (maybe custom trained) models)](/3c.8_pal_D2c_D8/)** 
-Locals models (+RAG) are probably the optimal solution (see D8 demo description below on this page).
+#### **2.2 D8b (TODO) — Deploy and call an existing internal model**
+
+Import or select an existing model, deploy it within the controlled environment, test its inference interface, and call it from a simple Foundry workflow.
+
+This should be the smallest end-to-end internal-model demo:
+- Input → internal model → prediction
+
+<br>
+
+#### **2.3 D8c (TODO) — Train a custom model**
+
+Prepare training data, select features and labels, train candidate models, compare evaluation metrics, and register the selected model version.
+
+Start with a conventional classification or regression model rather than an LLM. It provides a much clearer introduction to:
+- training and validation data;
+- feature engineering;
+- overfitting;
+- metrics;
+- model selection.
+
+<br>
+
+#### **2.4 D8d (TODO) — Operationalize model inference**
+
+Use a published model for batch inference in a pipeline and live inference from a Function or application. Compare the latency, scale, output, and deployment requirements of both approaches.
+
+This connects modeling back to your standard workflow:
+- Pipeline → batch predictions → dataset/Ontology
+- UI or Function → live prediction → response/Action
+
+<br>
+
+#### **2.5 D8e (TODO) — Build RAG with an internal LLM**
+
+Index governed internal content, retrieve only authorized context, send that context to an internally deployed LLM, and return a grounded response with source traceability.
+
+Topics:
+- document extraction;
+- chunking;
+- embeddings;
+- semantic retrieval;
+- permission-aware retrieval;
+- context minimization;
+- prompt injection;
+- grounded answers and citations.
+
+Fine-tuning should be a separate optional demo because it is not the same as RAG.
+
+
+<br>
+
+#### **2.6 D8f (TODO) — Adapt a model to a specialized task**
+
+Where supported and justified, fine-tune or otherwise adapt a model using governed training data. Compare the adapted model with prompting and RAG before deciding whether the additional complexity is worthwhile.
+
+This should be optional. Many use cases need prompting or RAG, not LLM fine-tuning.
+
+<br>
+
+#### **2.7 D8g (TODO) — Govern and monitor internal models**
+
+Manage model versions, approvals, deployment promotion, access controls, evaluation thresholds, drift, monitoring, rollback, and retirement.
+
+This is the internal-model equivalent of your Function versioning discussion.
+
+<br>
+
+
+
+<!-- #### **[2.2 D3c (TODO) = D3(b) + D8 (local (maybe custom trained) models)](/3c.8_pal_D2c_D8/)** 
+Locals models (+RAG) are probably the optimal solution (see D8 demo description below on this page). 
+
+I would remove:
+
+“Local models (+RAG) are probably the optimal solution.”
+
+That conclusion is too broad. Internal models and RAG may be preferable for sensitive workloads, but they introduce model quality, infrastructure, operational, and cost tradeoffs. Also, RAG does not make a model internal; it is a grounding technique that can be used with either internal or external models.
+-->
+
+#### **[2.8 (was 2.2) D3c (TODO) — Rebuild the protected D3 agent with an internal AI model](/3c.8_pal_D2c_D8/)**
+
+Replace D3b’s external LLM with an approved model deployed within the organization’s controlled environment. Optionally add RAG over governed internal sources, then compare external and internal implementations for confidentiality, accuracy, latency, cost, access control, deployment, and operational maintenance.
+
+An internal model can reduce third-party data egress, but it does not eliminate prompt injection, excessive data access, unreliable outputs, or unsafe agent Actions. The D3b controls therefore remain relevant.
+
+<!-- FDE's second recommendation 
+
+**D3c — Use an internal model in the protected D3 agent**
+
+Replace the external LLM in D3b with the internally deployed model from the D8 series. Retain the D3b controls around data access, output validation, governed Actions, human approval, Automate, monitoring, and rollback.
+-->
 
 <br>
 
@@ -190,7 +329,7 @@ FDE: The demo starts with claims, customers, and claim-history logs. After inges
 
 <br>
 
-26.0904 (v1 26.0725)
+26.0905 (v1 26.0725)
 
 <!-- ==========================================================================================
 ==========================================================================================
