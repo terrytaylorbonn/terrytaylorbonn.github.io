@@ -127,7 +127,7 @@ The objective is to determine which risks Foundry controls actually mitigate and
 
 
 
-<img src="/assets/D3b/D3b_001.png" alt="drones" width="70%" style="border: 1px solid #999;">
+<img src="/assets/D3b/D3b_001.png" alt="drones" width="60%" style="border: 1px solid #999;">
 
 
 <br>
@@ -136,7 +136,7 @@ The objective is to determine which risks Foundry controls actually mitigate and
 
 <br>
 
-#### *I worked out this section structure with FDE/GPT a few days before my trip abroad... on 10 Oct 2026 I will start working on this section*
+#### *I worked out the structure of this section with FDE/GPT on 26.0905... I will continue working on it from 10 Oct 2026.*
 
 <!-- ### **ME: Split D8 into multiple demos?**
 
@@ -164,15 +164,11 @@ This is preferable to placing D3c immediately after one large D8. Readers first 
 
 <br> 
 
-#### **2.0 Interpreting Alex Karp's statements about sovereignty**
+#### **[2.0 Interpreting Alex Karp's statements about sovereignty](/3c.2_pal_2.0_sovereignty/)**
 
-My interpretation of the Palantir post below:
-- Frontier labs (OpenAI, Grok, etc; companies creating LLMs on the frontier, on the edge, of what is possible) are using prompts they get about sensitive topics to train their future models on (for example, GPT knows everything about ZiptieAI, although there's not much super-secret in all that knowledge). I think this is what he means by giving up sovereignty. 
-- These labs will take that knowledge and start to offer competing services based on their LLMs. Thats just the logical next step.
-- The solution: You use your own local models. No data goes outside the company. Your proprietary data stays in-house. You use RAG (you feed your data into LLMs that have not been trained on that data; basically the super-sensitive knowledge is not "baked-in" to the LLM).
-- How do you do that? First of all, you start off with a trial version of Palantir Foundry, you learn the basics doing the ZAI demos D1, D2, and D3 (based very much on original Foundry demos), and then **you do the following D8 demo "Deep Dive: Model integration"**. After that you truly understand the problem and the solution.
+Click on heading link for discussion about the Palanti post below.
 
-*Alex Karp sounding the alarm about the risks of AI in the enterprise.*<br><img src="/assets/alex.png" alt="xxx" width="50%" style="border: 1px solid #999;">
+*Alex Karp sounding the alarm about the risks of AI in the enterprise.*<br><img src="/assets/alex.png" alt="xxx" width="45%" style="border: 1px solid #999;">
 
 <br>
 
@@ -191,9 +187,8 @@ Topics:
 - batch versus live inference;
 - model versions and dependencies.
 
-<br>
 
-*Training of the internal model*<br><img src="/assets/D8/D8.4-19.png" alt="xxx" width="100%" style="border: 1px solid #999;">
+*Training of the internal model*<br><img src="/assets/D8/D8.4-19.png" alt="xxx" width="80%" style="border: 1px solid #999;">
 
 <br>
 

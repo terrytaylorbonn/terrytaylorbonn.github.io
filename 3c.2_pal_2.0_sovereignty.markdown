@@ -1,0 +1,185 @@
+---
+layout: page
+title: Interpreting Alex Karp's statements about sovereignty
+permalink: /3c.2_pal_2.0_sovereignty/
+---
+
+<br>
+
+[← 3c.2 Initial PAL demos](/3c.2_pal_initial_demos/)
+
+<br> 
+
+# **My interpretation of the Palantir post below:**
+- Frontier labs (OpenAI, Grok, etc; companies creating LLMs on the frontier, on the edge, of what is possible) are using prompts they get about sensitive topics to train their future models on (for example, GPT knows everything about ZiptieAI, although there's not much super-secret in all that knowledge). I think this is what he means by giving up sovereignty. 
+- These labs will take that knowledge and start to offer competing services based on their LLMs. Thats just the logical next step.
+- The solution: You use your own local models. No data goes outside the company. Your proprietary data stays in-house. You use RAG (you feed your data into LLMs that have not been trained on that data; basically the super-sensitive knowledge is not "baked-in" to the LLM).
+- How do you do that? First of all, you start off with a trial version of Palantir Foundry, you learn the basics doing the ZAI demos D1, D2, and D3 (based very much on original Foundry demos), and then **you do the following D8 demo "Deep Dive: Model integration"**. After that you truly understand the problem and the solution.
+
+*Alex Karp sounding the alarm about the risks of AI in the enterprise.*<br><img src="/assets/alex.png" alt="xxx" width="50%" style="border: 1px solid #999;">
+
+<br>
+
+# **ME1: (ref the above text) this is what i wrote about the attached pic. you agree?**
+
+**No—not completely as written.** Your central sovereignty argument is reasonable, but the text attributes several claims to Karp that the post itself does not establish.
+
+The important distinctions are:
+
+1. **“Alpha being migrated out” does not necessarily mean prompts are being used for training.**  
+   Karp may mean that companies surrender their proprietary advantage, workflows, decisions, and customer relationships to frontier-model vendors. Prompt training is one possible mechanism, but the quoted text does not explicitly say that.
+
+2. **You cannot assume every frontier lab trains on enterprise API prompts.**  
+   Data retention and training policies vary by provider, product, and contract. Sending sensitive data still creates external disclosure and dependency risk, even when the provider promises not to train on it.
+
+3. **Karp does not say companies must exclusively use local models.**  
+   He explicitly says companies may “selectively use their models,” provided the company retains the application/Ontology layer containing its proprietary context and operational logic.
+
+4. **RAG does not guarantee that data stays inside the company.**  
+   If RAG retrieves proprietary passages and sends them to an external LLM, those passages still leave the company at inference time. RAG means the information is supplied as context rather than trained into model weights.
+
+5. `Grok` is a model; **xAI** is the frontier lab.
+
+## Suggested revision
+
+### 2.0 Interpreting Alex Karp’s statements about sovereignty
+
+My interpretation of the Palantir post below:
+
+Frontier labs such as OpenAI, xAI, Anthropic, and Google build the most capable general-purpose models. However, a company’s competitive advantage—or “alpha”—often resides outside those models: in its proprietary data, institutional knowledge, business processes, decisions, and understanding of its operating environment.
+
+Karp appears to argue that companies give up sovereignty when they allow a frontier-model provider to become the owner or controlling layer of those operational capabilities. There is also a separate confidentiality risk when proprietary data is sent to an external model service. Whether that data is retained or used for training depends on the provider, product, deployment, and contractual controls.
+
+The proposed solution is not necessarily to reject frontier models. Karp explicitly says that companies can use them selectively while retaining control of the application and Ontology layers. Those layers hold the company’s proprietary context, business logic, permissions, workflows, and Actions.
+
+Internally controlled models can reduce dependence on frontier labs and prevent inference data from leaving the company’s controlled environment. RAG can provide proprietary knowledge to a model without training that knowledge into its weights. However, if RAG uses an external LLM, the retrieved context may still be transmitted externally. Internal models and RAG solve different parts of the sovereignty problem.
+
+The following D8 demos explore how models can be integrated, trained, deployed, and used for inference in Foundry. Later demos can compare external and internally controlled models and examine what Foundry’s Ontology and application layers contribute to operational sovereignty.
+
+## Concise interpretation
+
+The strongest reading of Karp’s statement is:
+
+```text
+Frontier lab owns the general model.
+
+The company should retain control of:
+- proprietary data;
+- operational context;
+- business logic;
+- permissions;
+- workflows;
+- Actions;
+- resulting decisions and outcomes.
+```
+
+That is a broader and more defensible concept of sovereignty than simply:
+
+> “Frontier labs train on every prompt, so use RAG and a local model.”
+
+Prompt confidentiality is important, but Karp’s quoted argument appears to concern **control of the company’s entire operational advantage**, not only model training.
+
+<br>
+
+# **ME2: so you are saying that the ontology is the key secret, not necessarily the prompt content.**
+
+**Yes—in Karp’s apparent framing, the Ontology/application layer is the strategic asset, not merely the content of an individual prompt.**
+
+The Ontology can embody:
+
+- proprietary data and relationships;
+- the company’s operational model;
+- business rules and workflows;
+- permissions and governance;
+- Actions and decision rights;
+- accumulated human and organizational knowledge.
+
+An external LLM may receive a **selected fragment** of that context for one inference, while the company retains the complete operational system:
+
+```
+Company-controlled Ontology
+→ selectively provide context to LLM
+→ receive model output
+→ validate and apply it through company-controlled Actions
+```
+
+But prompt content may still be confidential. These are two related risks:
+
+1. **Confidentiality risk:** sensitive prompt/context data is exposed externally.
+2. **Sovereignty risk:** the frontier lab comes to own or control the company’s operational knowledge, application layer, customer relationship, or decision process.
+
+So the concise answer is:
+
+> **The Ontology is the larger source of proprietary “alpha”; prompt content may contain pieces of that secret and must still be protected.**
+
+<br>
+
+# **ME3: ok, fine, but i think you dont explain how ontology would be sent to the external world. do you mean that without foundry, you would end up with ontology-type info being embedded into prompts?**
+
+**Yes—partly.** Karp probably does not mean that a company literally uploads an “Ontology file.” He means that, without a company-controlled application layer, the information and capabilities that would constitute an Ontology gradually migrate into the external provider’s system.
+
+That can happen through:
+
+- system prompts containing business rules;
+- user prompts containing proprietary facts;
+- documents uploaded to the provider;
+- RAG content stored in provider-hosted vector databases;
+- fine-tuning datasets;
+- tool definitions and business workflows;
+- conversation histories and memory;
+- application logic built on the provider’s agent platform;
+- provider-hosted user interfaces and customer interactions.
+
+For example, without Foundry, a clinical agent might send an external platform:
+
+```text
+Patient records
++ trial criteria
++ eligibility rules
++ organizational policies
++ workflow instructions
++ available actions
+```
+
+That collection begins to resemble an externalized Ontology and application layer—even if nobody calls it an Ontology.
+
+With Foundry, the intended architecture is:
+
+```text
+Internal Ontology retains:
+- complete Patient and Trial model
+- relationships
+- permissions
+- workflow state
+- business Actions
+
+External LLM receives:
+- only the selected context needed for one decision
+
+Foundry receives the answer:
+- validates it
+- governs the Action
+- retains operational control
+```
+
+So there are two forms of “migration”:
+
+### Literal data migration
+
+Pieces of proprietary knowledge leave through prompts, uploaded documents, RAG context, logs, or training data.
+
+### Functional migration
+
+The external provider increasingly owns the representation of the business, its workflows, memory, tools, application interface, and decision process.
+
+Karp’s sovereignty argument appears to focus especially on the second, broader form. Foundry’s Ontology keeps that operational representation under the company’s control.
+
+However, Foundry does not automatically prevent the first form. D2 and D3 still send selected data to an external LLM. The implementation must minimize and govern what is included in each call.
+
+So the concise answer is:
+
+> **Without a company-controlled Ontology/application layer, Ontology-like knowledge tends to accumulate in prompts, documents, RAG stores, agent memory, tool definitions, and workflows hosted by the external AI provider. Foundry aims to keep the complete operational model internal while exposing only selected fragments to external models.**
+
+<br>
+
+26.0905 (v1 26.0905)
