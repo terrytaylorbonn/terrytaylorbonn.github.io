@@ -6,7 +6,7 @@ permalink: /3c.2_pal_2.0_sovereignty/
 
 <br>
 
-[← 3c.2 Initial PAL demos](/3c.2_pal_initial_demos/)
+[← 2.2 PAL demos](/3c.2_pal_initial_demos/)
 
 
 <br> 
