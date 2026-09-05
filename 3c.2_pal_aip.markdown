@@ -57,7 +57,7 @@ See also:
 
 <br>
 
-26.0904 (0826, 0811, 0725, 26.0713)  *[3c.2.0 PAL D2 AIP notes (old)](/3c.2.0_pal_aip_notes/)*
+26.0905 (0826, 0811, 0725, 26.0713)  *[3c.2.0 PAL D2 AIP notes (old)](/3c.2.0_pal_aip_notes/)*
 
 
 

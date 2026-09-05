@@ -48,7 +48,7 @@ This sections focuses on **getting started (grasping core concepts via hands-on 
 - **1.2 D2 = "Speedrun -- Your First AIP Workflow"**
 - **1.2b Both D2 and D3 send enterprise data to external LLMs — why does Palantir call D3 the first “agentic” demo?**
 - **1.3 D3 = "Speedrun: Your First Agentic AIP Workflow"**
-- **1.4 D3b (TODO) = D3 + PAL "crystal ball" controls FOR AGENTS + EXTERNAL AI MODELS**
+- **1.4 (TODO) D3b Agent/model data security**
  
 
 <br>
@@ -114,9 +114,12 @@ See also:
 
 <br>
 
-#### **[1.4 D3b (TODO) = D3 + PAL "crystal ball" controls FOR AGENTS + EXTERNAL AI MODELS)](/3c.2_pal_D2b_ai_monitor/)**
+#### **[1.4 (TODO) D3b Agent/model data security)](/3c.2_pal_D2b_ai_monitor/)**
 
 Work with GPT/FDE to add Foundry safety rails to D3 to make using agents + remote LLMs and agents safer (finding an existing demo for this would be better). 
+
+<img src="/assets/D3b/D3b_001.png" alt="drones" width="70%" style="border: 1px solid #999;">
+
 
 <br>
 
