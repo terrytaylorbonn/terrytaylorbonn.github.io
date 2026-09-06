@@ -16,7 +16,7 @@ permalink: /3c.aaa_pal_strategy_demos/
 <br>
 
 ```
-(1) Before I leave for my china trip (24 hours from now), 
+(1) Before I leave for my xxxx trip (xx hours from now), 
 I want to get the TOC for "3c Enterprise" / "2.2 PAL demos" in order. 
 Below is the main TOC sections [1,2,2a,2b,3] and the sub-TOCs for each.  
 I am just asking for sanity check... I want to understand the core concepts. 
