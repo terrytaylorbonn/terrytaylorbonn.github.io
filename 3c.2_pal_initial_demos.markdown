@@ -1,6 +1,6 @@
 ---
 layout: page
-title: 2.2 PAL demos (speedruns)
+title: 2.2 Getting started demos (speedruns, marketplace, DIY)
 permalink: /3c.2_pal_initial_demos/
 ---
 
