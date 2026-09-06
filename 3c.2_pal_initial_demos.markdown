@@ -28,11 +28,11 @@ See also (these are outdated... I will update them later)
 <br>
 
 #### **TOC**:
-- **1 External AI models**. This is the first set of demos because (1) ZAI focuses primarily on AI and (2) external models are simpler than internal models.
-- **2 Internal AI models**. Demos that show how to create and host internal models. 
-- **2a Data protection and AI security** (*added 26.0905*) 
-- **2b Sovereignty comparisons** (*added 26.0905*). These demos compare external, internally controlled, and hybrid AI architectures to determine what the organization actually controls. The focus is not only data protection, but also model replaceability, application ownership, operational continuity, and control of decisions and outcomes.
-- **3 Core Foundry analytics without LLMs** (finding "needles in the haystack"). Foundry’s core value proposition predates generative AI. It integrates data from different systems, represents entities and relationships through the Ontology, and helps users discover patterns, anomalies, connections, and business processes that are difficult to see in isolated datasets. In these demos, the LLM is an optional analytical assistant; the underlying data integration, Ontology, analysis, applications, and Actions remain useful without it.
+- **1 External AI models (D1-D3)**. This is the first set of demos because (1) ZAI focuses primarily on AI and (2) external models are simpler than internal models.
+- **2 Internal AI models (D8a-D8g)**. Demos that show how to create and host internal models. 
+- **2a Data protection and AI security (D3b, D3c)** (*added 26.0905*). Data security = How do we prevent unauthorized access, disclosure, modification, or loss? 
+- **2b Sovereignty comparisons (2b.1-2b.8)** (*added 26.0905*). These demos compare external, internally controlled, and hybrid AI architectures to determine what the organization actually controls. The focus is not only data protection, but also model replaceability, application ownership, operational continuity, and control of decisions and outcomes.
+- **3 Core Foundry analytics without LLMs (D9, D5)** (finding "needles in the haystack"). Foundry’s core value proposition predates generative AI. It integrates data from different systems, represents entities and relationships through the Ontology, and helps users discover patterns, anomalies, connections, and business processes that are difficult to see in isolated datasets. In these demos, the LLM is an optional analytical assistant; the underlying data integration, Ontology, analysis, applications, and Actions remain useful without it.
 - **4 Other demos**. Duplicate or unimportant demos (or demos I could not get to work).
 
 <!--
@@ -59,7 +59,9 @@ This sections focuses on **getting started (grasping core concepts via hands-on 
 - **1.2 D2 = "Speedrun -- Your First AIP Workflow"**
 - **1.2b Both D2 and D3 send enterprise data to external LLMs — why does Palantir call D3 the first “agentic” demo?**
 - **1.3 D3 = "Speedrun: Your First Agentic AIP Workflow"**
-- **1.4 (TODO) D3b Agent/model data security**
+
+<!-- 
+- **1.4 (TODO) D3b Agent/model data security**-->
  
 
 <br>
