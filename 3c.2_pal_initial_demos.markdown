@@ -159,7 +159,6 @@ This is preferable to placing D3c immediately after one large D8. Readers first 
 - 2.5 D8e — Internal LLM and governed RAG
 - 2.6 D8f — Fine-tuning, if needed
 - 2.7 D8g — Model governance and operations
-- xxxxx2.8 D3c — Protected D3 agent using an internal model
 
 <br> 
 
@@ -410,7 +409,7 @@ Duplicate or unimportant demos (or demos I could not get to work).
 
 <br>
 
-26.0905 (v1 26.0725)
+26.0906 (v1 26.0725)
 
 <br>
 <br>
