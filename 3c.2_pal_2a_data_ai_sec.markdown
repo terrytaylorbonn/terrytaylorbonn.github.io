@@ -1,0 +1,20 @@
+---
+layout: page
+title: 3c.2_pal_2a_data_ai_sec
+permalink: /3c.2_pal_2a_data_ai_sec/
+---
+
+<br>
+
+[← 2.2 PAL demos](/3c.2_pal_initial_demos/)
+
+
+<br> 
+
+**TOC**:
+- 
+
+
+<br>
+
+26.0905 (v1 26.0905)

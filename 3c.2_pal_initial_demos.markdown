@@ -30,6 +30,7 @@ See also (these are outdated... I will update them later)
 #### **TOC**:
 - **1 Basic demos with external AI models**. This is the first set of demos because ZAI focuses primarily on AI and external models are simpler than internal models.
 - **2 Basic demos with internal AI models**. Demos that show how to create and host internal models. 
+- **2a Data protection and AI-security demos** (*added 26.0905*) 
 - **2b Sovereignty comparison and experiments** (*added 26.0905*)
 - **3 Basic demos without AI**. Palantir started out with no AI. And AI now is still just a helpful assistant. This section focuses on the core non-AI Foundry basics.
 - **4 Other demos**. Duplicate or unimportant demos (or demos I could not get to work).
@@ -277,9 +278,48 @@ Replace the external LLM in D3b with the internally deployed model from the D8 s
 
 <br>
 
+## **[2a Data protection and AI-security demos (*added 26.0905*)](/3c.2_pal_2a_data_ai_sec/)**
+
+Data security = How do we prevent unauthorized access, disclosure, modification, or loss?
+
+Topics include:
+- permissions and markings;
+- sensitive-data scans;
+- encryption;
+- download controls;
+- justification prompts;
+- audit logs;
+- prompt-data leakage;
+- Action restrictions.
+
+
+The distinction can be demonstrated clearly:
+- Secure but not sovereign:
+  - A well-protected vendor system that the vendor ultimately controls.
+- Sovereign but insecure:
+  - A completely self-hosted system with weak permissions and poor security.
+- Secure and sovereign:
+  - A company-controlled system with strong protection and governance.
+
+
+<br>
+
 ## **[2b Sovereignty demos (*added 26.0905*)](/3c.2_pal_2.0_sovereignty/)**
 
+Sovereignty = Who ultimately controls the data, models, application, workflows, decisions, and operational future?
+
 Comparative extensions of the preceding external- and internal-model demos. These demos keep the same data, Ontology, applications, and business tasks while changing the model provider, deployment location, RAG architecture, and control boundaries. Their purpose is to demonstrate which proprietary assets remain under company control and what risks or dependencies remain.
+
+Topics include:
+
+- internal versus external models;
+- data and model location;
+- ownership of the application and Ontology;
+- provider dependency;
+- model replaceability;
+- RAG and memory placement;
+- operational continuity;
+- control of outcomes and customer relationships.
 
 **Click on heading link above for current chats about the Palantir post below.** 
 
