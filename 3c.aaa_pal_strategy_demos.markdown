@@ -8,6 +8,228 @@ permalink: /3c.aaa_pal_strategy_demos/
 
 [← 3c PAL](/pal/)
 
+
+<br>
+
+# **26.0906**
+
+
+<br>
+<br>
+<br>
+
+```
+(1) Before I leave for my china trip (24 hours from now), 
+I want to get the TOC for "3c Enterprise" / "2.2 PAL demos" in order. 
+Below is the main TOC sections [1,2,2a,2b,3] and the sub-TOCs for each.  
+I am just asking for sanity check... I want to understand the core concepts. 
+
+TOC:
+-1 Basic demos with external AI models. 
+   This is the first set of demos because ZAI focuses primarily on AI and external models are simpler than internal models.
+-2 Basic demos with internal AI models. Demos that show how to create and host internal models.
+-2a Data protection and AI-security demos (added 26.0905). 
+   Data security = How do we prevent unauthorized access, disclosure, modification, or loss?
+-2b Sovereignty comparison and experiments (added 26.0905). 
+   ((2) I NEED A SENTENCE OR TWO ABOUT WHAT THIS IS SECTION IS ABOUT)
+-3 Basic demos without AI. Palantir started out with no AI. 
+  And AI now is still just a helpful assistant. This section focuses on the core non-AI Foundry basics.
+
+1 Basic demos with external AI models
+SUMMARY: This sections focuses on getting started (grasping core concepts via hands-on demos) 
+   with Foundry demos that use external AI models.
+TOC:
+1.1 D1 = “Speedrun – Your First End-to-End Workflow”
+1.2 D2 = “Speedrun – Your First AIP Workflow”
+1.2b Both D2 and D3 send enterprise data to external LLMs — why does Palantir call D3 the first “agentic” demo?
+1.3 D3 = “Speedrun: Your First Agentic AIP Workflow”
+
+2 Basic demos with internal AI models 
+SUMMARY: Demos that show how to create and host internal models.
+TOC:
+2.1 D8a — Model integration concepts
+2.2 D8b — Use an existing internal model
+2.3 D8c — Train and evaluate a custom model
+2.4 D8d — Batch and live inference
+2.5 D8e — Internal LLM and governed RAG
+2.6 D8f — Fine-tuning, if needed
+2.7 D8g — Model governance and operations
+
+2a Data protection and AI-security demos
+SUMMARY: Data security = How do we prevent unauthorized access, disclosure, modification, or loss?
+1.4 D3b Agent/model data security 
+    ((3a) I MOVED THIS FROM SECTION "1 Basic demos with external AI models".. is this correct?) 
+2.8 D3c — Protected D3 agent using an internal model 
+    ((3b) I MOVED THIS FROM SECTION "2 Basic demos with internal AI models ".. is this correct?)
+
+2b Sovereignty comparison and experiments
+SUMMARY: ((2) I NEED A SENTENCE OR TWO ABOUT WHAT THIS IS SECTION IS ABOUT)
+TOC:
+2b.1 Define and measure sovereignty
+2b.2 External model with provider-controlled application
+2b.3 Foundry-controlled application with external model
+2b.4 Replace the external model with an internal model
+2b.5 Compare external, internal and provider-hosted RAG
+2b.6 Model-provider outage and model replacement
+2b.7 Agent Action, approval and decision sovereignty
+2b.8 Final sovereignty scorecard 
+
+3 Basic demos without AI ((4) rename this to something about mining, finding needles in a haystack, etc without AI)
+SUMMARY: Palantir started out with no AI. And AI now is still just a helpful assistant. 
+   This section focuses on the core non-AI Foundry basics. 
+   ((5) add something like: "the original founding principle behind palantir -- 
+   was created after 9/11 attacks to fine unusual patterns in data, 
+   such as foreign nationals wanting to train to fly airliners").
+TOC:
+3.1 D9 Haystack needle demo (finding unusual data patterns; this demo was created from scratch with help of FDE)
+3.2 D5 Speedrun: Mining Your First Business Process (26.0718)
+```
+
+<br>
+
+## 1. Overall sanity check
+
+**Yes—the structure is conceptually sound.**
+
+It now separates four different learning goals:
+
+```text
+External AI models
+→ Internal AI models
+→ Data protection and AI security
+→ Sovereignty comparisons
+→ Core Foundry analytics without LLMs
+```
+
+The order also makes sense:
+
+1. Begin with simpler external-model demos.
+2. Learn how internal models are created and operated.
+3. Add security controls that apply to both.
+4. Compare the resulting architectures from a sovereignty perspective.
+5. Examine Foundry’s underlying non-LLM analytical capabilities.
+
+Sections **2a** and **2b** are cross-cutting sections, so reusing or modifying earlier demos is appropriate.
+
+---
+
+## 2. Summary for `2b Sovereignty comparison and experiments`
+
+> **Comparative demos that hold the business task constant while changing who controls the model, data, RAG system, application, and operational decisions. These experiments examine data egress, model replaceability, provider dependency, continuity, and whether the organization retains control of its proprietary knowledge, Ontology, workflows, Actions, and outcomes.**
+
+A shorter version:
+
+> **These demos compare external, internally controlled, and hybrid AI architectures to determine what the organization actually controls. The focus is not only data protection, but also model replaceability, application ownership, operational continuity, and control of decisions and outcomes.**
+
+---
+
+## 3a. Moving D3b to Data Protection and AI Security
+
+**Yes, that is correct.**
+
+D3b is specifically about adding safety controls to the external-model D3 agent:
+
+- controlling data sent to the model;
+- detecting or minimizing sensitive content;
+- validating model responses;
+- constraining Actions;
+- adding approval, monitoring, and rollback.
+
+It should be referenced from the external-model section, but its primary home is now **2a Data Protection and AI Security**.
+
+---
+
+## 3b. Moving D3c to Data Protection and AI Security
+
+**Yes, this is also defensible.**
+
+D3c sits at the intersection of:
+
+- internal models;
+- agent security;
+- data egress;
+- governed Actions.
+
+Because it is explicitly a **protected D3 agent**, placing it after D3b in the security section creates a useful comparison:
+
+```text
+D3b:
+Protected agent using an external model
+
+D3c:
+Protected agent using an internal model
+```
+
+Section 2 should cross-reference D3c as its internal-model capstone, while section 2a can remain its primary location.
+
+Later, consider renumbering them as:
+
+```text
+2a.1 D3b — Protect the external-model agent
+2a.2 D3c — Protect the internal-model agent
+```
+
+The established D3b/D3c names can remain as aliases.
+
+---
+
+## 4. Rename the non-AI section
+
+Recommended title:
+
+### **3 Finding needles in the haystack: Core Foundry analytics without LLMs**
+
+Alternatives:
+
+- **3 Operational intelligence without LLMs**
+- **3 Finding patterns and anomalies without generative AI**
+- **3 Core Foundry analytics: Finding signals in complex data**
+- **3 Foundry’s original mission: Connecting data and detecting patterns**
+
+The first title connects directly to your D9 Haystack Needle demo.
+
+---
+
+## 5. Suggested summary for section 3
+
+> **Foundry’s core value proposition predates generative AI. It integrates data from different systems, represents entities and relationships through the Ontology, and helps users discover patterns, anomalies, connections, and business processes that are difficult to see in isolated datasets. In these demos, the LLM is an optional analytical assistant; the underlying data integration, Ontology, analysis, applications, and Actions remain useful without it.**
+
+You can add the historical context cautiously:
+
+> **Palantir emerged in the post-9/11 period with the broader objective of helping organizations connect signals across fragmented data and identify unusual patterns relevant to security and intelligence. The same architecture is now applied to commercial and operational problems.**
+
+I would avoid the specific statement about foreign nationals learning to fly airliners unless you locate a reliable source for it. It may be a useful illustration, but it is more specific than the history established by your current material.
+
+## Final structure
+
+```text
+1 Basic demos with external AI models
+   ├─ D1
+   ├─ D2
+   ├─ D2/D3 agent analysis
+   └─ D3
+
+2 Basic demos with internal AI models
+   └─ D8a–D8g
+
+2a Data protection and AI-security demos
+   ├─ D3b: protected external-model agent
+   └─ D3c: protected internal-model agent
+
+2b Sovereignty comparison and experiments
+   └─ comparative sovereignty demonstrations
+
+3 Finding needles in the haystack:
+  Core Foundry analytics without LLMs
+   ├─ D9 Haystack Needle
+   └─ D5 Business Process Mining
+```
+
+That is a strong conceptual organization to preserve before your trip.
+
+
+
+
 <br>
 
 Content:
@@ -24,6 +246,10 @@ Content:
 - Document in docx (MS.Word) files. These are detailed and can be realistically maintained (the official demos seem to not be updated often; videos are nice, but they get outdated quickly and are impossible to update). **My personal opinion (and the future direction of my own demos) is that demo documentation should rely more on describing how to work with AI to do hands-on step-by-step demos** (not describing the actual details).<br><img src="/assets/pal_9_11.png" alt="drones" width="44%" style="border: 1px solid #999;"><br><br> 
 - Use AI (internal PAL AIP/FDE) as much as possible (avoid docs and tutorials if possible; I first started to do demos based on AIP/FDE chats in demo D8).<br><img src="/assets/pal_9_12.png" alt="drones" width="64%" style="border: 1px solid #999;">
 
+
+<br>
+
+26.0906 (0720, v1 26.0720)
 
 <!-- 
 See the working text for this QS in
@@ -46,7 +272,3 @@ See the working text for this QS in
 xxxxxx
 
 <br> -->
-
-<br>
-
-26.0720 (v1 26.0720)
