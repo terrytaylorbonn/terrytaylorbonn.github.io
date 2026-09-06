@@ -121,19 +121,6 @@ See also:
 
 Work with GPT/FDE to add Foundry safety rails to D3 to make using agents + remote LLMs and agents safer (finding an existing demo for this would be better).  -->
 
-#### **[1.4 (TODO) D3b — Protecting agents that use external AI models](/3c.2_pal_D2b_ai_monitor/)**
-
-Extend D3 with controls for both sides of the agent boundary: the enterprise data sent to an external LLM and the Ontology changes produced from its response. Proposed topics include sensitive-data detection, minimization and redaction, approved model access, prompt-injection defenses, output validation, constrained Actions, human approval, automation-loop safety, evaluation, monitoring, and rollback.
-
-The objective is to determine which risks Foundry controls actually mitigate and which risks remain with the external model provider.
-
-
-
-<img src="/assets/D3b/D3b_001.png" alt="drones" width="60%" style="border: 1px solid #999;">
-
-
-<br>
-
 ## **2 Basic demos with internal AI models** 
 
 <br>
@@ -161,7 +148,7 @@ This is preferable to placing D3c immediately after one large D8. Readers first 
 - 2.5 D8e — Internal LLM and governed RAG
 - 2.6 D8f — Fine-tuning, if needed
 - 2.7 D8g — Model governance and operations
-- 2.8 D3c — Protected D3 agent using an internal model
+- xxxxx2.8 D3c — Protected D3 agent using an internal model
 
 <br> 
 
@@ -263,21 +250,6 @@ I would remove:
 That conclusion is too broad. Internal models and RAG may be preferable for sensitive workloads, but they introduce model quality, infrastructure, operational, and cost tradeoffs. Also, RAG does not make a model internal; it is a grounding technique that can be used with either internal or external models.
 -->
 
-#### **[2.8 (was 2.2) D3c (TODO) — Rebuild the protected D3 agent with an internal AI model](/3c.8_pal_D2c_D8/)**
-
-Replace D3b’s external LLM with an approved model deployed within the organization’s controlled environment. Optionally add RAG over governed internal sources, then compare external and internal implementations for confidentiality, accuracy, latency, cost, access control, deployment, and operational maintenance.
-
-An internal model can reduce third-party data egress, but it does not eliminate prompt injection, excessive data access, unreliable outputs, or unsafe agent Actions. The D3b controls therefore remain relevant.
-
-<!-- FDE's second recommendation 
-
-**D3c — Use an internal model in the protected D3 agent**
-
-Replace the external LLM in D3b with the internally deployed model from the D8 series. Retain the D3b controls around data access, output validation, governed Actions, human approval, Automate, monitoring, and rollback.
--->
-
-<br>
-
 ## **[2a Data protection and AI-security demos (*added 26.0905*)](/3c.2_pal_2a_data_ai_sec/)**
 
 Data security = How do we prevent unauthorized access, disclosure, modification, or loss?
@@ -301,6 +273,38 @@ The distinction can be demonstrated clearly:
 - Secure and sovereign:
   - A company-controlled system with strong protection and governance.
 
+#### **TOC**:
+- 2a.1 (1.4) (TODO) D3b — Protecting agents that use external AI models
+- 2a.2 (2.8) (was 2.2) D3c (TODO) — Rebuild the protected D3 agent with an internal AI model
+
+<br>
+
+#### **[2a.1 (1.4) (TODO) D3b — Protecting agents that use external AI models](/3c.2_pal_D2b_ai_monitor/)**
+
+Extend D3 with controls for both sides of the agent boundary: the enterprise data sent to an external LLM and the Ontology changes produced from its response. Proposed topics include sensitive-data detection, minimization and redaction, approved model access, prompt-injection defenses, output validation, constrained Actions, human approval, automation-loop safety, evaluation, monitoring, and rollback.
+
+The objective is to determine which risks Foundry controls actually mitigate and which risks remain with the external model provider.
+
+
+
+<img src="/assets/D3b/D3b_001.png" alt="drones" width="60%" style="border: 1px solid #999;">
+
+
+
+<br>
+
+#### **[2a.2 (2.8) (was 2.2) D3c (TODO) — Rebuild the protected D3 agent with an internal AI model](/3c.8_pal_D2c_D8/)**
+
+Replace D3b’s external LLM with an approved model deployed within the organization’s controlled environment. Optionally add RAG over governed internal sources, then compare external and internal implementations for confidentiality, accuracy, latency, cost, access control, deployment, and operational maintenance.
+
+An internal model can reduce third-party data egress, but it does not eliminate prompt injection, excessive data access, unreliable outputs, or unsafe agent Actions. The D3b controls therefore remain relevant.
+
+<!-- FDE's second recommendation 
+
+**D3c — Use an internal model in the protected D3 agent**
+
+Replace the external LLM in D3b with the internally deployed model from the D8 series. Retain the D3b controls around data access, output validation, governed Actions, human approval, Automate, monitoring, and rollback.
+-->
 
 <br>
 
