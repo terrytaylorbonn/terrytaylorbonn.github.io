@@ -28,18 +28,27 @@ See also (these are outdated... I will update them later)
 <br>
 
 #### **TOC**:
-- **1 Basic demos with external AI models**. This is the first set of demos because ZAI focuses primarily on AI and external models are simpler than internal models.
-- **2 Basic demos with internal AI models**. Demos that show how to create and host internal models. 
-- **2a Data protection and AI-security demos** (*added 26.0905*) 
-- **2b Sovereignty comparison and experiments** (*added 26.0905*)
-- **3 Basic demos without AI**. Palantir started out with no AI. And AI now is still just a helpful assistant. This section focuses on the core non-AI Foundry basics.
+- **1 External AI models**. This is the first set of demos because (1) ZAI focuses primarily on AI and (2) external models are simpler than internal models.
+- **2 Internal AI models**. Demos that show how to create and host internal models. 
+- **2a Data protection and AI security** (*added 26.0905*) 
+- **2b Sovereignty comparisons** (*added 26.0905*). These demos compare external, internally controlled, and hybrid AI architectures to determine what the organization actually controls. The focus is not only data protection, but also model replaceability, application ownership, operational continuity, and control of decisions and outcomes.
+- **3 Core Foundry analytics without LLMs** (finding "needles in the haystack"). Foundry’s core value proposition predates generative AI. It integrates data from different systems, represents entities and relationships through the Ontology, and helps users discover patterns, anomalies, connections, and business processes that are difficult to see in isolated datasets. In these demos, the LLM is an optional analytical assistant; the underlying data integration, Ontology, analysis, applications, and Actions remain useful without it.
 - **4 Other demos**. Duplicate or unimportant demos (or demos I could not get to work).
+
+<!--
+Alternatives for 3:
+3 Operational intelligence without LLMs
+3 Finding patterns and anomalies without generative AI
+3 Core Foundry analytics: Finding signals in complex data
+3 Foundry’s original mission: Connecting data and detecting patterns
+-->
+
 
 <br>
 
-## **1 Basic demos with external AI models** 
+## **1 External AI models** 
 
-This sections focuses on **getting started (grasping core concepts via hands-on demos)** with Foundry demos that use **external AI models**. 
+This sections focuses on **getting started (grasping core concepts via hands-on demos)** with Foundry demos that use **external AI models**. This is the first set of demos because (1) ZAI focuses primarily on AI and (2) external models are simpler than internal models.
 
 <!-- Note: 
 - The thread order does not exactly match the demo number.
@@ -121,7 +130,9 @@ See also:
 
 Work with GPT/FDE to add Foundry safety rails to D3 to make using agents + remote LLMs and agents safer (finding an existing demo for this would be better).  -->
 
-## **2 Basic demos with internal AI models** 
+## **2 Internal AI models** 
+
+Demos that show how to create and host internal models. 
 
 <br>
 
@@ -250,7 +261,7 @@ I would remove:
 That conclusion is too broad. Internal models and RAG may be preferable for sensitive workloads, but they introduce model quality, infrastructure, operational, and cost tradeoffs. Also, RAG does not make a model internal; it is a grounding technique that can be used with either internal or external models.
 -->
 
-## **[2a Data protection and AI-security demos (*added 26.0905*)](/3c.2_pal_2a_data_ai_sec/)**
+## **[2a Data protection and AI security (*added 26.0905*)](/3c.2_pal_2a_data_ai_sec/)**
 
 Data security = How do we prevent unauthorized access, disclosure, modification, or loss?
 
@@ -285,11 +296,17 @@ Extend D3 with controls for both sides of the agent boundary: the enterprise dat
 
 The objective is to determine which risks Foundry controls actually mitigate and which risks remain with the external model provider.
 
+D3b is specifically about adding safety controls to the external-model D3 agent:
 
+- controlling data sent to the model;
+- detecting or minimizing sensitive content;
+- validating model responses;
+- constraining Actions;
+- adding approval, monitoring, and rollback.
+
+It should be referenced from the external-model section, but its primary home is now 2a Data Protection and AI Security.
 
 <img src="/assets/D3b/D3b_001.png" alt="drones" width="60%" style="border: 1px solid #999;">
-
-
 
 <br>
 
@@ -298,6 +315,15 @@ The objective is to determine which risks Foundry controls actually mitigate and
 Replace D3b’s external LLM with an approved model deployed within the organization’s controlled environment. Optionally add RAG over governed internal sources, then compare external and internal implementations for confidentiality, accuracy, latency, cost, access control, deployment, and operational maintenance.
 
 An internal model can reduce third-party data egress, but it does not eliminate prompt injection, excessive data access, unreliable outputs, or unsafe agent Actions. The D3b controls therefore remain relevant.
+
+D3c sits at the intersection of:
+
+- internal models;
+- agent security;
+- data egress;
+- governed Actions.
+
+Because it is explicitly a protected D3 agent, placing it after D3b in the security section creates a useful comparison:
 
 <!-- FDE's second recommendation 
 
@@ -308,11 +334,11 @@ Replace the external LLM in D3b with the internally deployed model from the D8 s
 
 <br>
 
-## **[2b Sovereignty demos (*added 26.0905*)](/3c.2_pal_2.0_sovereignty/)**
+## **[2b Sovereignty comparisons (*added 26.0905*)](/3c.2_pal_2.0_sovereignty/)**
 
 Sovereignty = Who ultimately controls the data, models, application, workflows, decisions, and operational future?
 
-Comparative extensions of the preceding external- and internal-model demos. These demos keep the same data, Ontology, applications, and business tasks while changing the model provider, deployment location, RAG architecture, and control boundaries. Their purpose is to demonstrate which proprietary assets remain under company control and what risks or dependencies remain.
+Comparative demos that hold the business task constant while changing who controls the model, data, RAG system, application, and operational decisions. These experiments examine data egress, model replaceability, provider dependency, continuity, and whether the organization retains control of its proprietary knowledge, Ontology, workflows, Actions, and outcomes.
 
 Topics include:
 
@@ -342,7 +368,11 @@ The list of demos will be something like this (FDE list):
 
 <br>
 
-## **3 Basic demos without AI** 
+## **3 Core Foundry analytics without LLMs** 
+
+Foundry’s core value proposition predates generative AI. It integrates data from different systems, represents entities and relationships through the Ontology, and helps users discover patterns, anomalies, connections, and business processes that are difficult to see in isolated datasets. In these demos, the LLM is an optional analytical assistant; the underlying data integration, Ontology, analysis, applications, and Actions remain useful without it.
+
+Palantir emerged in the post-9/11 period with the broader objective of helping organizations connect signals across fragmented data and identify unusual patterns relevant to security and intelligence. The same architecture is now applied to commercial and operational problems.
 
 <br>
 
@@ -357,14 +387,12 @@ The list of demos will be something like this (FDE list):
 #### **[3.2 D5 (TO-UPDATE): Speedrun: Mining Your First Business Process (26.0718)](/3c.5_pal_biz_process_mining/)**
 FDE: The demo starts with claims, customers, and claim-history logs. After ingesting these datasets into Foundry, the data is modeled as Ontology objects such as Customers and Claims. Machinery then uses the process logs to reconstruct how claims move through the business process over time. Once the process map is built, you can inspect where claims get stuck, identify why some remain unresolved, and embed the process view into an interactive application.
 
-
 <img src="/assets/D5_claims_process_app.png" alt="xxx" width="77%" style="border: 1px solid #999;">
-
 
 <br>
 
-
 ## **4 Other demos**
+Duplicate or unimportant demos (or demos I could not get to work).
 - **[4.1 D4: Palantir ontology function "speedrun" (quick start) (26.0717)](/3c.4_pal_ontology_function/)**. 
   - At the end of this page is *good demo of how FDE/GPT5.5 fixed a problem with the demo*.
   - **[#615_.docx](https://drive.google.com/drive/folders/1-Adawag9uA8_bq-hDF-nOuPYaRLz1eEO)** 

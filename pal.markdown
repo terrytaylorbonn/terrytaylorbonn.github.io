@@ -94,8 +94,8 @@ The three crystal balls represent three layers of governance. Foundry controls
 ## **2 Getting started hands-on** 
 
 - **2.1 Palantir free tier sign up**
-- **2.2 PAL demos**. These are less complicated, but you start from 0, and getting a working demo at the end requires a lot of skill (including debugging).
-- **2.3 PAL (installable) examples**. These are complicated, but they have an autoinstaller that allows you to start with a (usually) working version that you can modify.
+- **2.2 Getting started demos**. These are demos organized by core topics, starting out simple and getting progressively more complicated, and with step-by-step directions. This includes demos starting from scratch and those with part of the demo installed from the Marketplace.
+- **2.3 Examples (installable)**. These are complete demos that auto-install. The big advantage is that you start out with a (usually) working version that you can modify piece by piece.
 
 <br>
 
@@ -111,7 +111,7 @@ If you cant get a trial version of PAL running, then there's no reason to read f
 
 <br>
 
-#### **[2.2 PAL demos (speedruns)](/3c.2_pal_initial_demos/)**
+#### **[2.2 Getting started demos](/3c.2_pal_initial_demos/)**
 
 Step-by-step start to finish demos. Original PAL demos with modified ZAI workflows and documentation. Organized (WIP) as a cohesive progressive study plan.
 
@@ -121,13 +121,13 @@ Step-by-step start to finish demos. Original PAL demos with modified ZAI workflo
 
 <br>
 
-#### **[2.3 PAL examples](/3c.1b_pal_examples/)**
+#### **[2.3 Examples (installable)](/3c.1b_pal_examples/)**
 
-PAL "examples" are complete (usually more complicated) and have an installer that allows you to start with a (usually) working version that you can modify. ZAI adds a few extra steps: 
+Examples are complete (usually more complicated) and have an installer that allows you to start with a (usually) working version that you can modify. ZAI adds a few extra steps: 
 - Install a second (experimental) example 
 - Modify that example at your own pace<br>
 
-*PAL example (left, center) and my own build (right) (3c.1b)*<br><img src="/assets/pal_10_01.png" alt="drones" width="25%" style="border: 1px solid #999;">  <img src="/assets/pal_10_05.png" alt="drones" width="33%" style="border: 1px solid #999;">  <img src="/assets/pal_10_02.png" alt="drones" width="30%" style="border: 1px solid #999;"><br>
+*Example (left, center) and my own build (right) (3c.1b)*<br><img src="/assets/pal_10_01.png" alt="drones" width="25%" style="border: 1px solid #999;">  <img src="/assets/pal_10_05.png" alt="drones" width="33%" style="border: 1px solid #999;">  <img src="/assets/pal_10_02.png" alt="drones" width="30%" style="border: 1px solid #999;"><br>
 
 *Workflow diagrams for examples are usually a bit more complicted than for demos.*<br><img src="/assets/MAIN_E17.png" alt="drones" width="67%" ><br>
 
