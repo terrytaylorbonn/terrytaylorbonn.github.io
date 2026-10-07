@@ -1,0 +1,255 @@
+---
+layout: page
+title: 2.2x ZAI Foundry core demos -- Concepts
+permalink: /3c.2_pal_demo_CONCEPTS/
+---
+
+<!-- was 2.2 Getting started demos (speedruns, marketplace, DIY) -->
+
+<br>
+
+[← 3c Enterprise](/pal/)
+
+<!-- **TL;DR**? Then skip to **[Demo D3 "Speedrun -- Your First Agentic AIP Workflow"](/3c.3_pal_agentic_ai/)**, a great example of the direction this part of ZiptieAI is heading. -->
+
+<br>
+
+This page describes the concepts of the core 7/8 demos:
+
+- C1 Workflow
+- C2 Data protection
+- C3/C6 AIP / agentic
+- C4 (5b) Automation
+
+See also
+
+- **[2.2b ZAI versions of the core ~8 Foundry getting started demos](/3c.2_pal_initial_demos/)** is currently (26.0914) the main focus of ZAI.
+- **[Palantir concepts](/pal_concepts/)** covers some of the higher level PAL concepts not in this secgtion (this section is about the concepts directly related to the demos).
+- **[PAL demo strategy (outdated)](/3c.aaa_pal_strategy_demos/)**.
+- **[Important info about doing these demos (outdated)](/3c.2.0_info_about_demos/)**. The advantages of website tutorials over Youtube videos (at least for beginners) and the critical importance of FDE (Foundry's built-in AI chat tool).
+
+<br>
+
+### **TOC**
+
+- **C1) (1,3,4/5) Foundry Core workflow (no Automation) [1]**
+- **C2) (6) Data protection [2]**
+- **C3) (2) AIP / external AI (agentic 1 / Foundry = AIP or AI agent?)**
+- **C4) (5b) Automation (agentic 2)**
+- **C6) (2) AI internal (agentic 3; no ALPHA threat) [5]**
+
+<!-- - **C2b) What is LLM / agent**
+- **C5) (2) ALPHA** (BIG SECTION)
+-->
+
+<br>
+
+### **C1) (1,3,4/5) Foundry Core workflow (no Automation)) [1]**
+
+The following diagram shows the basic PAL workflow.
+
+- **1a Data source**. Raw data from enterprise systems. For example: CSV files, Databases, ERP systems, CRM systems, Sensors, External APIs.
+- **1b Pipeline**. Transforms raw data into clean, structured, and consistent datasets. For example: cleaning, joining, filtering, aggregating, validation.
+- **3a Ontology read**. Applications and users read enterprise data through the ontology. The ontology provides a common operational model of the enterprise.
+- **3b Ontology writeback**. Applications, workflows, and users update enterprise systems through the ontology. For example: change status, create ticket, approve request, update record.
+- **4 Analysis**. Code, queries, dashboards, rules, AI, and other logic analyze the ontology data. Purpose: discover information, detect problems, and support decisions.
+- **5 UI / App**. User-facing applications. For example: dashboards, workflows, forms, operational applications, AI assistants.
+- **6 Security / Governance**. Controls who can see data, modify data, run workflows, and use AI. For example: permissions, auditing, approvals, version control, lineage, logging, AI.
+- **About AI**. AI can appear in many layers: pipeline transforms, model integration, ontology functions, analysis, UI assistants, and governance monitoring. **AI should be treated as a helpful assistant**, not the center of the system and not the final authority. **The responsible pattern is: AI suggests, deterministic logic verifies where possible, humans approve important actions, and the platform logs and governs the workflow**.
+
+_USE THIS?? Foundry enterprise platform functionality"_<br><img src="/assets/wuxi-01.png" alt="drones" width="70%" style="border: 1px solid #999;"><br>
+
+_The ontology is the operational heart of Foundry. Most applications, analysis, workflows, and AI interact with enterprise data through the ontology rather than directly through the raw datasets._<br><img src="/assets/777_07.png" alt="drones" width="64%" >
+
+The three crystal balls represent three layers of governance. Foundry controls
+
+- **Crystal ball #1 — Data governance**. Controls how raw enterprise data becomes trusted operational data.
+  - Examples: ingestion, transformation, validation, lineage.
+  - This is the boundary between: Data Source, Pipeline, Ontology.
+- **Crystal ball #2 — Operational governance**. Controls how applications, users, workflows, and AI interact with the enterprise.
+  - Examples: ontology permissions, workflow permissions, write-back controls, approval processes.
+  - This is the boundary around: Ontology, Analysis, UI, Writeback.
+- **Crystal ball #3 — Global governance**. Controls the entire platform.
+  - Examples: security, auditing, version control, branching, deployment, compliance.
+  - This is the layer that sits above everything else.
+
+**Foundry’s core value proposition predates generative AI**. It integrates data from different systems, represents entities and relationships through the Ontology, and helps users discover patterns, anomalies, connections, and business processes that are difficult to see in isolated datasets (finding "needles in the haystack"). **In these demos, the LLM is an optional analytical assistant**; the underlying data integration, Ontology, analysis, applications, and Actions remain useful without it.
+
+_(1,3,4/5) Core workflow (no Automation))_<br><img src="/assets/wuxi-19.png" alt="xxx" width="72%" style="border: 1px solid #999;">
+
+**PAL concepts of Foundry main capabilities**
+
+_This diagram shows the original PAL conceptualization of Foundry's main capabilities (**NOTE that 5b Automation does not appear in this diagram!**) -- ZAI takes a much different approach (Pic from [palantir.com/docs/foundry](https://www.palantir.com/docs/foundry))_<br><img src="/assets/777_27.png" alt="drones" width="82%" style="border: 1px solid #999;"><br>
+
+<br>
+
+### **C2) [(6) Data protection](/3c.2_pal_2a_data_ai_sec/) [2]**
+
+Data security = How do we prevent unauthorized access, disclosure, modification, or loss? Topics include:
+
+- permissions and markings;
+- sensitive-data scans;
+- encryption;
+- download controls;
+- justification prompts;
+- audit logs;
+- prompt-data leakage;
+- Action restrictions.
+
+_Data protection_<br><img src="/assets/wuxi-20.png" alt="xxx" width="77%" style="border: 1px solid #999;">
+
+<!-- **TOC**:
+
+- 2a.1 (1.4) (TODO) D3b — Protecting agents that use external AI models
+- 2a.2 (2.8) (was 2.2) D3c (TODO) — Rebuild the protected D3 agent with an internal AI model -->
+
+<br>
+
+<!-- ### **C2b) What is LLM / agent**
+
+<br>
+
+#### **C2b-1) LLM**
+
+Why setup below (see ZAI webpage "HACK")?
+
+- iA/TF are very complicated and designed to closely work together (iA must be totally customized to the TF)
+- need language and "thinking" patterns to simulate (fake) human thinking. **this is far less reliable than procedural code**.
+
+_LLM_<br><img src="/assets/wuxi-28.png" alt="xxx" width="45%" style="border: 1px solid #999;">
+
+<br>
+
+#### **C2b-2) ExtAgent**
+
+**(ext)Agentic = non-human using AI (LLM)**<br>_AI agent_<br><img src="/assets/wuxi-29.png" alt="xxx" width="25%" style="border: 1px solid #999;"><br>
+
+Note that your procedural logic (extAgent) is
+
+- far more intelligent and reliable than the simulated "thinking" of LLMs (that is based on pattern recognition and training) because
+- the intelligence of a human was used to program a procedural spec in the extAgent.
+
+extAgent can have following variations:
+
+- **Chat, action, auto (reaction), action/auto**
+- **Single shot / loop**
+
+<br> -->
+
+### **C3) (2) External AI using Foundry "AI Platform" (AIP = AI agent) (agentic 1)**
+
+- **C3.1) External AI [3]**. This is the first set of demos because external models are vastly simpler to use than creating/using internal models.<br>_External AI_<br><img src="/assets/wuxi-21.png" alt="xxx" width="60%" style="border: 1px solid #999;">
+- **C3.2) "Foundry AI Platform" = AI agent**. The naming says it all:
+  - **AIP** suggests **Foundry = ALPHA** (this is the correct orientation; the business logic is more imporant that a token generator based on pattern matching).
+  - **AI agent** suggests **AI = ALPHA** (this is the AI/AGI super-duper-intelligence hype; it's goal is to suggets that AI has some kind of intelligence (it does not; its a computing platform).
+- **C3.3) AIP can be used in different agent modes**
+  - **(4a) chat**. The external AI is used to get text replies.
+  - **(4b) action**. The external AI is used to perform actions (such as modifying the ontology; this is especially risky).<br>_4a = chat / 4b = action_<br><img src="/assets/wuxi-26-1.png" alt="xxx" width="70%" style="border: 1px solid #999;">
+
+<br>
+
+### **C4) (5b) AUTOMATION (agentic 2)**
+
+- **chat**: Risk of data leakage.
+- **action**: Risk of data contamination.<br>_5b = automation_<br><img src="/assets/wuxi-26.png" alt="xxx" width="70%" style="border: 1px solid #999;">
+
+<br>
+
+<!-- ### **C5) (2) ALPHA (sovereignty) (AI external) [4]**
+
+<br>
+
+**TOC**
+
+- **C5.0) ALPHA: The Alex Karp encoded version**
+- **C5.1) DECODED: Loosing alpha = From "your company" to "vibe coding"**
+- **C5.2) CORE LOGIC IS PROCEDURAL AND "OUTSIDE THE MODEL SPECTRUM"**
+- **C5.3) WHY and HOW THEY STEAL ALPHA: MINING DEMO D5**
+- **C5.4) HOW PAL STOPS THE STEAL**
+
+<br>
+
+#### **C5.0) ALPHA: The Alex Karp encoded version**
+
+- BELOW: Alex Karp sounding the alarm sovereignty in the enterprise (it took me a while to understand that I think he meant... I am still not 100% sure what he meant, but I am pretty sure about my take on "alpha".
+- NOTE the sign behind Alex: Own your own outcomes, Own your models, Own your destiny. ??
+
+<img src="/assets/alex222.png" alt="xxx" width="60%" style="border: 1px solid #999;">
+
+<br>
+
+#### **C5.1) DECODED: Loosing alpha = From "your company" to "vibe coding"**
+
+- **[Sovereignty (ALPHA)](/3c.2_pal_2.0_sovereignty/)** = Who ultimately controls the data, models, application, workflows, decisions, and operational future?
+- "ALPHA" = Alex Karp's term for your core biz logic.
+- **The core logic for your business is not in the AI, but in your business processes**.
+- **1 "getting sovereignty right" = no vibe coding**. The core procedural code (pipeline, ontology, analysis) is your secret... you may use external LLMs as assistants, but you never give them enough to steal your ideas.
+
+<!-- - These demos compare external, internally controlled, and hybrid AI architectures to determine what the organization actually controls. The focus is not only data protection, but also model replaceability, application ownership, operational continuity, and control of decisions and outcomes. --
+
+_Your company (with the intro of AI and automation... and no ALPHA guardrails)_<br><img src="/assets/wuxi-22-1.png" alt="xxx" width="68%" style="border: 1px solid #999;">
+
+_The result of ALPHA leakage is loss of ALPHA (1) Alpha moves to model (your product is now "vibe"code), (2) model is now the alpha product, (3) your customers migrate_<br><img src="/assets/wuxi-22-2.png" alt="xxx" width="50%" style="border: 1px solid #999;">
+
+**EXAMPLE:** Farming out your ALPHA is like hiring a taxi driver who can take customer requests, and you call this your FSD productd. If you use an external frontier model for too much of your alpha, then the frontier lab will steal "your" product (you dont have product actually). This is vibe coding (at its worst).<br><img src="/assets/wuxi-18.png" alt="xxx" width="54%" style="border: 1px solid #999;">
+
+<br>
+
+#### **C5.2) CORE LOGIC IS PROCEDURAL AND "OUTSIDE THE MODEL SPECTRUM"**
+
+<img src="/assets/wuxi-22-3.png" alt="xxx" width="50%" style="border: 1px solid #999;">
+
+- Note what I wrote above: **"Farming out your ALPHA is like hiring a taxi driver".**
+- Thats not exactly right. **A frontier lab LLM has no intelligence; it will fake the required skills**. And possible cause a lot of trouble. Something like FSD without the human caretakers.
+- LLMs are dumb binary computational algorithms (token generators) with absolutely no intelligence. **[LLMs ARE A HACK](/0-demo/)** that simulates intelligent conversations by generating response words based on input_word_sequence patterns.
+- You will be competing against
+  - (1) others like yourself and
+  - (2) amateurs who are putting an AGI humanoid robot in the drivers seat and calling this their FSD product (Musk does this to some extent with his army of human operators who are 24/7 ready to save any Tesla that is in a situation that FSD was not programmed to handle).
+
+**NOTE: from section "C2b-2) ExtAgent"**. Note that your procedural logic (extAgent) is
+
+- far more intelligent and reliable than the simulated “thinking” of LLMs (that is based on pattern recognition and training) because
+- the intelligence of a human was used to program a procedural spec in the extAgent.
+
+<!-- - **3 The frontier model is a token generator** (nothing more). But **your core procedural code** ("agent" that has been customized to work with your AI models) **= proprietary knowledge that never gets sent to an LLM so can't be stolen (at least by an LLM)**. --
+
+<br>
+
+#### **C5.3) WHY and HOW THEY STEAL ALPHA: MINING DEMO D5**
+
+- If you give **frontier models** ("frontier" = the most advanced major models) access to your business logic, then
+  - they **will steal your company secrets**
+  - **there is nothing legal you can do to stop them**
+  - They will be doing do to you what they have already done to countless authors of original material used to "train" (program) their frontier models.
+
+**NOTE HOWEVER THE STEAL MAY NOT BE AS GOOD:** If ALPHA is leaked to the LLM, then I would guess that something like the following would occur:
+
+- At first the leader ALPHA would be stored as RAG.
+- Perhaps then if the FLab (Frontier lab) wanted make the ALPHA part of its knowledge store (token generation), then the FLab would train ALPHA into the next model.
+- However, this would not have the accurate of the biz processes as the original?
+
+**Would the ALPHA be mined from plagiarized records, with a process something like in the mining demo D5?**
+
+_Mining demo D5_<br><img src="/assets/wuxi-27.png" alt="xxx" width="54%" style="border: 1px solid #999;">
+
+<br>
+
+#### **C5.4) HOW PAL STOPS THE STEAL**
+
+- **Ontology defines actions, etc that never go to an LLM**. Thus they can not be used to reverse engineer your alpha.<br>_Ontology stays in your Foundry system: it does not leak out_<br><img src="/assets/wuxi-22-2b.png" alt="xxx" width="54%" style="border: 1px solid #999;">
+- Security that closely controls what employees can do with AI.
+
+<!-- _Alpha_<br><img src="/assets/alex222.png" alt="xxx" width="55%" style="border: 1px solid #999;"> --
+
+<br> -->
+
+### **C6) (2) AI internal (agentic 3; no ALPHA threat) [5]**. Demos that show how to create and host internal modelss.
+
+_xxx_<br><img src="/assets/wuxi-23.png" alt="xxx" width="60%" style="border: 1px solid #999;">
+
+ <!--(D8a-D8g)-->
+<!-- - **[6] 4 Other demos**. Duplicate or unimportant demos (or demos I could not get to work). -->
+
+<br>
+
+26.0915 (v1 26.0725)
