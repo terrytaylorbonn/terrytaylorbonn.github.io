@@ -10,27 +10,30 @@ _(WIP; v1 26.1010)_
 
 <br>
 
-We are all thankful for the AI revolution. And those whose hard work made it possible, and that what they did is good for us all. But when they are driven to being the champions no matter what the cost, then you don't take trust or take their word on things. You educate yourself and make smart decisions.
-
-
-The subject of this page  
-- **Many AI industry champions worked over generations to make the current AI tech possible**. We owe them recognition for what they have accomplished. This page talks about just a few of them: Geoffrey Hinton, Jensen Huang (Nvidia), and Elon Musk. 
-- **They became the champions by staying focused on their the reward for themselves** (especially Huang and Musk).  
-- **But its important to remember that What's good for them isn't always necessarily good for us**. The champions often make what I consider very misleading statements ("hype"; there are other stronger, perhaps more appropriate, terms). And of course they do; they are still driven by the desire to be the "champions" (of the world).
-
-<br>
-
+---------------
+---------------
+---------------
 ---------------
 
 <br>
 
-### **1 We are the champions"** (song by Queen)
+
+# **1 Champions**
 
 
 
-The following are the lyrics to Queen's "We are the champions".
 
-Note the line **"no time for losers"**.
+
+
+- We should all be thankful to those who made this AI revolution happen (even if it causes hardship for many of us, its still progress).
+- **Many industry champions worked over generations to make the current AI tech possible**. We owe them recognition for what they have accomplished. This page talks about just a few of them: Geoffrey Hinton and (more recently) Jensen Huang (Nvidia) and Elon Musk. They became the champions by working hard and taking risk when the reward was hard (for the rest of us) to see.
+
+<!-- often make what I consider very misleading statements ("hype"; there are other stronger, perhaps more appropriate, terms). And of course they do; they are still driven by the desire to be the "champions" (of the world). -->
+
+
+*The following are the lyrics to Queen's "We are the champions". A great song by a great band.*
+
+<!-- Note the line **"no time for losers"**.-->
 
 ```
 I've paid my dues
@@ -69,12 +72,14 @@ And I ain't gonna lose (and I mean to go on, and on, and on, and on)
 <br>
 
 
-### **2 Hinton** (comments about AGI)
+### **1.1 Geoffrey Hinton and AlexNet CNN**
+
+Hinton is an AI pioneer. 
+- He was critical to the creation of the AlexNet architecture CNN
+
+_[video](https://youtu.be/caKyQNfj9BM?t=532)_<br><img src="/assets/sun-05.png" alt="drones" width="45%">
 
 
-- (father's bug collection)
-- Claimed a few years ago that AI had emotions and would achieve AGI (human intelligence) within a year or so (he recently retracted such statements)
-- his AlexNet architecture was the key to improving CNNs
 
 
 <br>
@@ -84,7 +89,7 @@ And I ain't gonna lose (and I mean to go on, and on, and on, and on)
 <br>
 
 
-### **3 (many champions) Transformers / FFNs / attention**
+### **1.2 Many champions and LLMs (Transformers / FFNs / attention)**
 
 
 
@@ -106,11 +111,63 @@ And I ain't gonna lose (and I mean to go on, and on, and on, and on)
 <br>
 
 
-### **4 Nvidia's Huang** (comments about losers)
+### **1.3 Jensen Huang and GPUs** 
 
+
+_[video](https://youtu.be/caKyQNfj9BM?t=346)_<br><img src="/assets/sun-04.png" alt="drones" width="30%">
+
+
+<br>
+
+---------------
+
+<br>
+
+### **1.4 Huang/Musk and LLMs** 
+
+_[video](https://youtu.be/caKyQNfj9BM?t=609)_<br><img src="/assets/sun-02.png" alt="drones" width="30%">  <img src="/assets/sun-03.png" alt="drones" width="40%">
+
+
+
+
+
+<br>
+
+---------------
+---------------
+---------------
+---------------
+
+<br>
+
+
+# **2 Heroes**
+
+
+<br>
+
+---------------
+
+<br>
+
+
+
+
+- **But what's good for them isn't always necessarily good for us**. The champions have alwys been focused (and rightly so) on whatever it takes _for them_ to be successful. 
+- **The solution**. Educate yourself about 
+  - their history (this page) and 
+  - the basic technical details of how AI really works (the next top-level webpage "Hack").
+
+
+#### Hinton
+
+- Claimed a few years ago that AI had emotions and would achieve AGI (human intelligence) within a year or so (he recently retracted such statements)
 
 
 #### **4.1 Jensen says he was not born a loser**
+
+(comments about losers)
+
 
 
 
@@ -146,25 +203,17 @@ In the USA his IP is protected.
 But in China?
 
 
-<br>
+#### Musk
 
----------------
-
-<br>
-
-### **5 Musk** (who has lost to competition in China in the EV market)
+(who has lost to competition in China (and now Canada and EU) in the EV market)
 
 
-Elon transferred a lot of tech to China.
-- And now Elon wants to get out.
-- Is Elon a loser?
+Elon transferred a lot of tech to China. Now Elon wants to get out of China. The reasons to me are obvious (I am Chinese speaker and recently spent a month in China).
+- Chinese companies are now copying the tech they learned from Tesla China.
+- Musk can't compete anymore. The showrooms for Chinese cars are in every big shopping center. 
 
-Chinese EVs are taking over in Europe.
+The result is a fleet of new Chinese-made vehicles. Some with major pricetags and major problems.<br>_The $110K Huawei luxury van with brake pedals that break._<br><img src="/assets/sun-01.png" alt="drones" width="80%">
 
-My experience working for Huawei (it was short and not sweet).
+<!-- _I myself worked at Huawei. That was a short experience that ended when I was a contractor at Huawei (China) and was paid half of my salary 2 months in a row. I was told that I would not receive the rest (I eventually did). Just a few months before that I was told that Huawei wanted to hire me as a regular Huawei China employee._ -->
 
-
-
-
-
-
+Is Elon a loser?
