@@ -259,6 +259,11 @@ _Poster for the movie ["For a few dollars more"](https://en.wikipedia.org/wiki/F
 
 # **3 AGI super heroes**
 
+<br>
+
+---------------
+
+<br>
 
 **Hinton claimed a few years ago that AI had emotions and would achieve AGI (human intelligence) within a year or so.** He recently retracted such statements. These statements were from a Turing award and Nobel prize winner. **Musk** also recently predicted that AI would reach AGI within a year (we are still waiting for the FSD from Tesla that has been promised for 10 years as just a year or so away).
 
