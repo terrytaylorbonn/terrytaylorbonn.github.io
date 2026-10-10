@@ -222,7 +222,7 @@ He followed it by rejecting what he called a loser attitude and a loser premise.
 
 **Huang's parents were desperate to send him to America for some reason as a child.** His USA relatives mistakenly sent him to a reform school in Kentucky. The USA intel agencies have predicted that in 2027 the nation of his birth will be the target of an invasion by the country Huang wants to supply advanced chips to. The logic of Jensen's arguments about selling chips to China is beyond my comprehension. 
 
-**The Chinese have enough sense to never transfer any tech or factories to America, but not our AI heroes**.
+**The Chinese have enough sense to never transfer any tech or factories to foreign adversaries, but not our AI heroes**.
 
 
 <br>
@@ -243,7 +243,7 @@ _The $110K Huawei luxury van with brake pedals that break._<br><img src="/assets
 
 _Poster for the movie ["For a few dollars more"](https://en.wikipedia.org/wiki/For_a_Few_Dollars_More)._<br><img src="/assets/sun-08.png" alt="drones" width="15%" style="border: 1px solid #999;">
 
-**The Chinese have enough sense to never transfer any tech or factories to America, but not our AI heroes**.
+**The Chinese have enough sense to never transfer any tech or factories to foreign adversaries, but not our AI heroes**.
 
 <!-- _I myself worked at Huawei. That was a short experience that ended when I was a contractor at Huawei (China) and was paid half of my salary 2 months in a row. I was told that I would not receive the rest (I eventually did). Just a few months before that I was told that Huawei wanted to hire me as a regular Huawei China employee._ -->
 
