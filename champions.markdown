@@ -14,6 +14,8 @@ This page is about
 - **1 AI champions** (they made it all possible) and
 - **2 AI heroes** (when your AI champions become your AI heroes -- that's when you start to make mistakes)
 
+Note: Many of the concepts on this page are ZAI original. And usually get to the gist of AI. For example, below I reference an interesting **[chat I had with ChatGPT](/champions_chat1/)** ("My correction of ChatGPT's definition of transformer (GPT agrees with me)").
+
 <br>
 
 ---------------
@@ -26,16 +28,19 @@ This page is about
 
 # **1 AI champions**
 
+**Many industry champions worked over generations to make the current AI tech possible**. We owe them recognition for what they have accomplished (even if it causes hardship for many of us, its still progress). This page talks about just a few of them: Geoffrey Hinton and (more recently) Jensen Huang (Nvidia) and Elon Musk. They became the champions by working hard and taking risk when the reward was hard (for the rest of us) to see.
 
 
+TOC
+- **1.1 Jensen Huang and GPUs**. Jensen  was only thinking about video but he was creating the computational HW basis for AI. 
+- **1.2 Geoffrey Hinton and AlexNet CNN**. Hinton's 2012 AlexNet team proved that massive scaling of matrix math classification algorithms (a hack) was the best path forward for image recognition. They used Nvidia GPUs (with a pre-CUDA hack).
+- **1.3 Various champions and basic LLMs**. They provided (piece by piece) that transformers (QKV_context/FFN_detection) were the core matrix math algorithms (hacks) that promised the best path forward for token generators (the core of LLMs).
+- **1.4 Huang/Musk and advanced LLMs**. They proved that massive brute-force scaling could achieve practical results for many AI applications (this scaling is logarithmic because the requirements for adding another 9 to 99.99...% is itself logarithmic).
 
-
-
-- We should all be thankful to those who made this AI revolution happen (even if it causes hardship for many of us, its still progress).
-- **Many industry champions worked over generations to make the current AI tech possible**. We owe them recognition for what they have accomplished. This page talks about just a few of them: Geoffrey Hinton and (more recently) Jensen Huang (Nvidia) and Elon Musk. They became the champions by working hard and taking risk when the reward was hard (for the rest of us) to see.
 
 <!-- often make what I consider very misleading statements ("hype"; there are other stronger, perhaps more appropriate, terms). And of course they do; they are still driven by the desire to be the "champions" (of the world). -->
 
+<br>
 
 *The following are the lyrics to Queen's "We are the champions". A great song by a great band.*
 
@@ -78,7 +83,19 @@ And I ain't gonna lose (and I mean to go on, and on, and on, and on)
 <br>
 
 
-### **1.1 Geoffrey Hinton and AlexNet CNN**
+### **1.1 Jensen Huang and GPUs** (he was only thinking about video) 
+
+
+_[video](https://youtu.be/caKyQNfj9BM?t=346)_<br><img src="/assets/sun-04.png" alt="drones" width="30%">
+
+
+<br>
+
+---------------
+
+<br>
+
+### **1.2 Geoffrey Hinton and AlexNet CNN** (proof that matrix math can get good with scale)
 
 Hinton is an AI pioneer. 
 - He was critical to the creation of the AlexNet architecture CNN
@@ -95,7 +112,7 @@ _[video](https://youtu.be/caKyQNfj9BM?t=532)_<br><img src="/assets/sun-05.png" a
 <br>
 
 
-### **1.2 Many champions and LLMs (Transformers / FFNs / attention)**
+### **1.3 Many champions and LLMs (Transformers / FFNs / attention)** (THE ALGORITHMS)
 
 
 
@@ -117,19 +134,7 @@ _[video](https://youtu.be/caKyQNfj9BM?t=532)_<br><img src="/assets/sun-05.png" a
 <br>
 
 
-### **1.3 Jensen Huang and GPUs** 
-
-
-_[video](https://youtu.be/caKyQNfj9BM?t=346)_<br><img src="/assets/sun-04.png" alt="drones" width="30%">
-
-
-<br>
-
----------------
-
-<br>
-
-### **1.4 Huang/Musk and LLMs** 
+### **1.4 Huang/Musk LLM scaling** 
 
 _[video](https://youtu.be/caKyQNfj9BM?t=609)_<br><img src="/assets/sun-02.png" alt="drones" width="30%">  <img src="/assets/sun-03.png" alt="drones" width="40%">
 
