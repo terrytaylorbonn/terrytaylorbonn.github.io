@@ -7,8 +7,6 @@ title: Home
 
 _Latest updates_
 
-
-
 - _(26.1010): **[Heroes](/champions/)**. A new top level webpage._
 - _(26.0914-1002): (while in Wuxi) **[LOOK MOM! NO WIRES!)](/pal_concepts_AIPU_no_wires/)**, (26.0927): **[3c Enterprise](/pal/)**, (26.0927): **[Core Foundry Enterprise AI Concepts](/pal_concepts/)**, _(26.0914): **[2.2b ZAI versions of the core ~8 Foundry getting started demos](/3c.2_pal_initial_demos/)**._
 
@@ -16,6 +14,10 @@ _Latest updates_
 *Latest (26.0901): Making steady progress on section **[2.2 PAL demos (speedruns)](/3c.2_pal_initial_demos/)**.*
 
 *"This is a good example of the practical value of AI ... AI does not need to replace human intelligence to be revolutionary; eliminating this kind of tedious work is already transformative" (GPT's summary of **[how ZiptieAI manages the docx/online documentation](/3c.1b_pal_docx_md/)** for the ZiptieAI version of **[Palantir Foundry demo D1](/3c.1_pal_foundry/)** using AI)*. -->
+
+<br>
+
+----------
 
 <br>
 
