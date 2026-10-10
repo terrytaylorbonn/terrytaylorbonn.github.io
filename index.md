@@ -21,7 +21,7 @@ _Latest updates_
 
 ZiptieAI demos/documents AI (primarily LLMs), from "tiny" neural networks to **[enterprise AI (Palantir)](/pal/)**. ZiptieAI focuses on providing insightful and practical guidance with minimal text and diagrams.
 
-- **Readme first** (the AI champions and their hacks).
+- **Readme first**
   - **[Heroes](/champions/)** is a short history of the AI industry champions that made the current AI tools possible (and became our heroes).
   - **[Hacks](/0-demo/)** explains the core of what makes AI tick. _The champions/heroes never talk about this aspect of AI, but its critical to understand if you want to make the right AI project decisions._<br><br>_AI champions have made the AI revolution possible; but when they claim AI is (or soon will be) intelligent, then they are championing a fairly tale that is not in your best interest (the humorous diagram below compares Tweedle Dee and Tweedle Dum from "Alice in Wonderland" with the (internal) agent and transformer (TF) of an LLM)_<br><img src="/assets/M-11b.png" alt="drones" width="27%"><br><br> 
 
