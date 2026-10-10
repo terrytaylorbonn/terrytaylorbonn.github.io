@@ -165,10 +165,8 @@ _Energy consumption / parameters from [video](https://youtu.be/caKyQNfj9BM?t=119
 
 <br>
 
-### **The problems start when the AI champions become our AI heroes**
+### **2.1 The problems start when the AI champions become our AI heroes**
 
-
-**The Chinese have enough sense to never transfer any tech or factories to America, but not our AI heroes**.
 
 **What's good for our AI heroes isn't always necessarily good for us**. The champions have always been focused (and rightly so) on whatever it takes _for them_ to be successful. For _your_ success its important to understand
   - their history (this page) and 
@@ -186,7 +184,7 @@ _Energy consumption / parameters from [video](https://youtu.be/caKyQNfj9BM?t=119
 <br>
 
 
-### **The various champions of basic LLM tech**
+### **2.2 The various champions of basic LLM tech (see 1.3)**
 
 Those who gave us the transformer seem to have been happy remaining AI champions. It seems that all of them have distinguished careers with many tech publications. They have not tried to become our heroes.
 
@@ -197,7 +195,7 @@ Those who gave us the transformer seem to have been happy remaining AI champions
 <br>
 
 
-### **Jensen Huang**
+### **2.3 Jensen Huang**
 
 **We should all stop studying programming. AI will do it all for us.** Meanwhile, Nvidia has (I believe) 40K programmers.
 
@@ -213,6 +211,9 @@ He followed it by rejecting what he called a loser attitude and a loser premise.
 
 **Huang's parents were desperate to send him to America for some reason as a child.** His USA relatives mistakenly sent him to a reform school in Kentucky. The USA intel agencies have predicted that in 2027 the nation of his birth will be the target of an invasion by the country Huang wants to supply advanced chips to. The logic of Jensen's arguments about selling chips to China is beyond my comprehension. 
 
+**The Chinese have enough sense to never transfer any tech or factories to America, but not our AI heroes**.
+
+
 <br>
 
 ---------------
@@ -221,7 +222,7 @@ He followed it by rejecting what he called a loser attitude and a loser premise.
 
 
 
-### **Musk**
+### **2.4 Musk**
 
 **Elon transferred a lot of tech to China** when he built a Tesla factory there. Now Elon wants to get out of China. Chinese companies are now copying the tech they learned from Tesla China. The result is a fleet of new Chinese-made vehicles, some with major pricetags (and some with major quality problems). Musk's jumpstart is what made it possible for them to break into the EV market **(Musk is not without reason considered a hero in China)**. 
 
@@ -230,6 +231,8 @@ _The $110K Huawei luxury van with brake pedals that break._<br><img src="/assets
 **Musk can't compete (in China) anymore (is he a loser?).** The showrooms for Chinese cars are in every big Chinese shopping center (cars are often being displayed and sold in the stores for companies that are still selling their original product (mobile phones)). These cars are also now flooding the EU and Canada. Does Elon's abject failure (from the perspective of Elon's chosen homeland) in China make him a loser? Was it worth the few dollars (for the world's first "trillionaire") that Elon made?
 
 _Poster for the movie ["For a few dollars more"](https://en.wikipedia.org/wiki/For_a_Few_Dollars_More)._<br><img src="/assets/sun-08.png" alt="drones" width="15%" style="border: 1px solid #999;">
+
+**The Chinese have enough sense to never transfer any tech or factories to America, but not our AI heroes**.
 
 <!-- _I myself worked at Huawei. That was a short experience that ended when I was a contractor at Huawei (China) and was paid half of my salary 2 months in a row. I was told that I would not receive the rest (I eventually did). Just a few months before that I was told that Huawei wanted to hire me as a regular Huawei China employee._ -->
 
