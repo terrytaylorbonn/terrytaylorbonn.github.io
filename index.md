@@ -9,7 +9,7 @@ _Latest updates_
 
 
 
-- _(26.1010): **[Champions](/champions/)**. A new top level webpage._
+- _(26.1010): **[Heroes](/champions/)**. A new top level webpage._
 - _(26.0914-1002): (while in Wuxi) **[LOOK MOM! NO WIRES!)](/pal_concepts_AIPU_no_wires/)**, (26.0927): **[3c Enterprise](/pal/)**, (26.0927): **[Core Foundry Enterprise AI Concepts](/pal_concepts/)**, _(26.0914): **[2.2b ZAI versions of the core ~8 Foundry getting started demos](/3c.2_pal_initial_demos/)**._
 
 <!--
