@@ -13,7 +13,7 @@ _(WIP; v1 26.1010)_
 This page is about 
 - **1 AI champions**. Their hard work and insight made it all possible.
 - **2 AI heroes**. When your AI champions become your AI heroes -- that's when you start to make mistakes. 
-- **3 AGI super heroes**. In the end, the AI champions are claiming to give you something that they know is not possible (human level "intelligence" AI). 
+- **3 AGI super heroes**. Those who are claiming they can give you something that they know is not possible (AI with human level intelligence). 
 
 
 <br>
