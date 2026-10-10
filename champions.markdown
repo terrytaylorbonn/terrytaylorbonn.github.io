@@ -14,7 +14,9 @@ This page is about
 - **1 AI champions** (they made it all possible) and
 - **2 AI heroes** (when your AI champions become your AI heroes -- that's when you start to make mistakes)
 
-Note: Many of the concepts on this page are ZAI original. And usually get to the gist of AI. For example, below I reference an interesting **[chat I had with ChatGPT](/champions_chat1/)** ("My correction of ChatGPT's definition of transformer (GPT agrees with me)").
+Notes: 
+- Many of the concepts on this page are ZAI original. And usually get to the gist of AI. For example, below I reference an interesting **[chat I had with ChatGPT](/champions_chat1/)** ("My correction of ChatGPT's definition of transformer (GPT agrees with me)").
+- Another interesting page with a lot of original ZAI takes on AI: **[LOOK MOM! NO WIRES!)](/pal_concepts_AIPU_no_wires/)**, (26.0927)
 
 <br>
 
@@ -83,8 +85,9 @@ And I ain't gonna lose (and I mean to go on, and on, and on, and on)
 <br>
 
 
-### **1.1 Jensen Huang and GPUs** (he was only thinking about video) 
+### **1.1 Jensen Huang and GPUs**
 
+Jensen was only thinking about video but he was creating the computational HW basis for AI.
 
 _[video](https://youtu.be/caKyQNfj9BM?t=346)_<br><img src="/assets/sun-04.png" alt="drones" width="30%">
 
@@ -95,13 +98,16 @@ _[video](https://youtu.be/caKyQNfj9BM?t=346)_<br><img src="/assets/sun-04.png" a
 
 <br>
 
-### **1.2 Geoffrey Hinton and AlexNet CNN** (proof that matrix math can get good with scale)
+### **1.2 Geoffrey Hinton and AlexNet CNN**
 
-Hinton is an AI pioneer. 
-- He was critical to the creation of the AlexNet architecture CNN
+Hinton’s 2012 AlexNet team proved that massive scaling of matrix math classification algorithms (a hack) was the best path forward for image recognition. They used Nvidia GPUs (with a pre-CUDA hack).
 
 _[video](https://youtu.be/caKyQNfj9BM?t=532)_<br><img src="/assets/sun-05.png" alt="drones" width="45%">
 
+
+See also
+- **[Concepts -- 2.4 CNN convolution](https://ziptieai.com/0b.2.4-concepts-convo/)**
+- **[2.2.1b D4 CNN algorithm details](https://ziptieai.com/2.2.1b-d4-cnn-algorithm-details/)** has the best diagram of the AlexNet CNN (ZAI original diagram)<br><img src="/assets/d4_alexnet.png" alt="drones" width="23%" />
 
 
 
@@ -112,21 +118,22 @@ _[video](https://youtu.be/caKyQNfj9BM?t=532)_<br><img src="/assets/sun-05.png" a
 <br>
 
 
-### **1.3 Many champions and LLMs (Transformers / FFNs / attention)** (THE ALGORITHMS)
+### **1.3 Various champions and basic LLMs** 
 
+These champions proved that transformers (whose primary algorithmic components are **[QKV_context](https://arxiv.org/abs/1706.03762)** and FFN_detection) were the core matrix math algorithms (hacks) that promised the best path forward for token generators (the core of LLMs).
 
-
-
-- Transformers take tokens and transform into
-  - embeddings (in GPT-2 12288 FP16 numbers for each token). This is what ZAI often refers to as "machine language".
-  - the hidden states eventually create a storyline that is located in the last token and it used to classify the meaning of the input (into 1 of 50K vocab tokens in English)
+- Transformers 
+  - transform tokens into embeddings (in GPT-2 12288 FP16 numbers for each token; this is what ZAI often refers to as "machine language").
+  - create a storyline that is located in the last token that is used to classify the meaning of the transformer input (the storyline is then used to compute the probability of each of 50K (English) vocab tokens as the best next token of the response)
+- QKV is not attention -- its context computation.
 - FFNs base much of what they do on the Alexnet type of NNs. 
   - In LLMs these are referred to as "FFNs". 
   - "feed forward networks" the meaning of the acronym is misleading
   - These are primarily pattern detectors (just like in CNNs)
-- its not attention; its context computation  (its not attention; its context computation)
-- this algorithm is still the basis of what makes current LLMs possible
 
+**Transformer algorithms (QKV/FFN) are still the basis of the latest LLM computational algorithms.**
+
+_A simple **[GPT-3 TF diagram](https://ziptieai.com/2.3.2-tf-algorithm/)** (ZAI original) ("2.3.2 Gist of LLM TF UFA (inference)" / "2 TF algorithm (diagrams)")._<br><img src="/assets/llm02_tf123.png" alt="02" width="40%" style="border: 1px solid #999;">
 <br>
 
 ---------------
