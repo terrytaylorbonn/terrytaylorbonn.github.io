@@ -1,6 +1,6 @@
 ---
 layout: page
-title: Hack
+title: Hacks
 permalink: /0-demo/
 ---
 

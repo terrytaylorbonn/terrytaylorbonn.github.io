@@ -1,6 +1,6 @@
 ---
 layout: page
-title: Champions
+title: Heroes
 permalink: /champions/
 ---
 
@@ -10,6 +10,12 @@ _(WIP; v1 26.1010)_
 
 <br>
 
+This page is about 
+- **1 AI champions** (they made it all possible) and
+- **2 AI heroes** (when your AI champions become your AI heroes -- that's when you start to make mistakes)
+
+<br>
+
 ---------------
 ---------------
 ---------------
@@ -18,7 +24,7 @@ _(WIP; v1 26.1010)_
 <br>
 
 
-# **1 Champions**
+# **1 AI champions**
 
 
 
@@ -141,7 +147,11 @@ _[video](https://youtu.be/caKyQNfj9BM?t=609)_<br><img src="/assets/sun-02.png" a
 <br>
 
 
-# **2 Heroes**
+# **2 AI heroes** (this section is a WIP mess....)
+
+<br>
+
+#### **The problems start when the AI champions become our AI heroes**
 
 
 <br>
@@ -149,8 +159,6 @@ _[video](https://youtu.be/caKyQNfj9BM?t=609)_<br><img src="/assets/sun-02.png" a
 ---------------
 
 <br>
-
-
 
 
 - **But what's good for them isn't always necessarily good for us**. The champions have alwys been focused (and rightly so) on whatever it takes _for them_ to be successful. 
@@ -216,4 +224,4 @@ The result is a fleet of new Chinese-made vehicles. Some with major pricetags an
 
 <!-- _I myself worked at Huawei. That was a short experience that ended when I was a contractor at Huawei (China) and was paid half of my salary 2 months in a row. I was told that I would not receive the rest (I eventually did). Just a few months before that I was told that Huawei wanted to hire me as a regular Huawei China employee._ -->
 
-Is Elon a loser?
+Is Elon a loser? xxx

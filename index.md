@@ -22,8 +22,8 @@ _Latest updates_
 ZiptieAI demos/documents AI (primarily LLMs), from "tiny" neural networks to **[enterprise AI (Palantir)](/pal/)**. ZiptieAI focuses on providing insightful and practical guidance with minimal text and diagrams.
 
 - **Readme first** (the AI champions and their hacks).
-  - **[Champions](/champions/)** is a short history of the AI industry champions that made the current AI tools possible.
-  - **[Hack](/0-demo/)** explains the core of what makes AI tick.<br><br>_AI champions have made the AI revolution possible; but when they claim AI is (or soon will be) intelligent, then they are championing a fairly tale that is not in your best interest (the humorous diagram below compares Tweedle Dee and Tweedle Dum from "Alice in Wonderland" with the (internal) agent and transformer (TF) of an LLM)_<br><img src="/assets/M-11b.png" alt="drones" width="27%"><br><br>
+  - **[Heroes](/champions/)** is a short history of the AI industry champions that made the current AI tools possible (and became our heroes).
+  - **[Hacks](/0-demo/)** explains the core of what makes AI tick.<br><br>_AI champions have made the AI revolution possible; but when they claim AI is (or soon will be) intelligent, then they are championing a fairly tale that is not in your best interest (the humorous diagram below compares Tweedle Dee and Tweedle Dum from "Alice in Wonderland" with the (internal) agent and transformer (TF) of an LLM)_<br><img src="/assets/M-11b.png" alt="drones" width="27%"><br><br> 
 
 - **AI fast track**
   - **[QS](/0-qs/)** covers selected demos.
@@ -48,7 +48,7 @@ See also the **[Wiki](https://github.com/terrytaylorbonn/auxdrone/wiki)** and ot
 <!-- <br>
 **NOTE: About my use of "tiny" demos and analysis based on Alex-Net CNNs (2012) and GPT-3 (2020) throughout this site**. The core of AI is not rapidly evolving. Thats one reason why AI continues to focus on ramping up brute-force computation ("scaling"). The simple demos on this site are the best demos if you want to understand the core mechanics of how AI really works. For example, page **[2.3.6.1b D5 tiny TF algorithm details](/2.3.6.1b-d5-tiny-tf-algorithm-details/)** (draft, WIP) explains in detail the simplest demo (its not simple) of the LLM TF QKV (context) mechanism (*see "TF QKV (context)" in the center of the diagram above*). The pic below is from a video I was watching on 26.0629. That one line "key-value caches need to be maintained" explains (part of) the reason why AI needs so much memory. Google "what is a kv cache" for details.
 *QKV is still the core of LLM AI (**[video](https://youtu.be/lSDC6-BdVus?t=357)**)* <br>
-<img src="/assets/kv.png" alt="drones" width="40%">
+<img src="/assets/kv.png" xxxxxxxxxxxx alt="drones" width="40%">
 -->
 <!--
 <img src="/assets/M-26.png" alt="drones" width="37%">
