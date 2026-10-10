@@ -223,7 +223,7 @@ He followed it by rejecting what he called a loser attitude and a loser premise.
 
 ### **Musk**
 
-**Elon transferred a lot of tech to China** when he built a Tesla factory there. Now Elon wants to get out of China. Chinese companies are now copying the tech they learned from Tesla China. The result is a fleet of new Chinese-made vehicles, some with major pricetags (and some with major quality problems). Musk's jumpstart is what made it possible for them to break into the EV market (Musk is not without reason considered a hero in China). 
+**Elon transferred a lot of tech to China** when he built a Tesla factory there. Now Elon wants to get out of China. Chinese companies are now copying the tech they learned from Tesla China. The result is a fleet of new Chinese-made vehicles, some with major pricetags (and some with major quality problems). Musk's jumpstart is what made it possible for them to break into the EV market **(Musk is not without reason considered a hero in China)**. 
 
 _The $110K Huawei luxury van with brake pedals that break._<br><img src="/assets/sun-01.png" alt="drones" width="70%">
 
