@@ -163,7 +163,18 @@ _Energy consumption / parameters from [video](https://youtu.be/caKyQNfj9BM?t=119
 
 # **2 AI heroes** (WIP)
 
+TOC
+- **2.1 The problems start when the AI champions become our AI heroes**
+- **2.2 The various champions of basic LLM tech (see 1.3)**
+- **2.3 Jensen Huang**
+- **2.4 Musk** 
+
 <br>
+
+---------------
+
+<br>
+
 
 ### **2.1 The problems start when the AI champions become our AI heroes**
 
@@ -248,7 +259,6 @@ _Poster for the movie ["For a few dollars more"](https://en.wikipedia.org/wiki/F
 
 # **3 AGI super heroes**
 
-<br>
 
 **Hinton claimed a few years ago that AI had emotions and would achieve AGI (human intelligence) within a year or so.** He recently retracted such statements. These statements were from a Turing award and Nobel prize winner. **Musk** also recently predicted that AI would reach AGI within a year (we are still waiting for the FSD from Tesla that has been promised for 10 years as just a year or so away).
 
