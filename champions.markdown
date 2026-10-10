@@ -211,7 +211,7 @@ He followed it by rejecting what he called a loser attitude and a loser premise.
   - He argued that difficult competition is valuable and that people develop resilience by experiencing hardship.
   - His message was that he doesn't subscribe to the belief that one should avoid competing because defeat is possible.
 
-**Huang's parents were desperate to send him to America for some reason as a child.** His USA relatives mistakenly sent him to a reform school in Kentucky. The USA intel agencies have predicted that in 2027 the nation of his birth will be the target of an invasion by the country Huang wants to supply advanced chips to. The logic of Jensen's arguments about selling chips to China is beyond my comprehension.
+**Huang's parents were desperate to send him to America for some reason as a child.** His USA relatives mistakenly sent him to a reform school in Kentucky. The USA intel agencies have predicted that in 2027 the nation of his birth will be the target of an invasion by the country Huang wants to supply advanced chips to. The logic of Jensen's arguments about selling chips to China is beyond my comprehension. 
 
 <br>
 
@@ -253,11 +253,18 @@ _Poster for the movie ["For a few dollars more"](https://en.wikipedia.org/wiki/F
 
 _Energy consumption / parameters from [video](https://youtu.be/caKyQNfj9BM?t=119)_<br><img src="/assets/sun-07.png" alt="drones" width="52%" style="border: 1px solid #999;"> 
 
-I had an interesting conversation with GPT about this (same thread **[chat I had with ChatGPT](/champions_chat1/)** as mentioned earlier, second half of the chat). The following is the core conclusion that GPT reached (agreeing with my core point):
 
 <br>
 
-#### **ME: good feedback...**
+---------------
+
+<br>
+
+I had an interesting conversation with GPT about this (same thread **[chat I had with ChatGPT](/champions_chat1/)** as mentioned earlier, second half of the chat). The following is the core conclusion that GPT reached (agreeing with my core point).
+
+
+**ME: good feedback...**
+
 i cant write equations during this conversation, so what i meant was what you wrote. your precision in meaning is impressive. 
 
 but my main goal here is to get you to agree to a more deeper insight that is being missed by most (all that i have seen) conversations about this topic 
@@ -300,6 +307,12 @@ I think that is a strong argument. The part I would be careful about is claiming
 
 But the underlying distinction you're emphasizing is absolutely valid—and important.
 
-<br><br>
+<br>
+
+---------------
+
+<br>
+
+
 
 Amazing how AI can conduct such "conversations". But its important to remember that the GPT statement **"I think I see the deeper distinction you're making, and I agree with the central argument"** is not at all true. GPT sees nothing **and never will**. You and I do.
