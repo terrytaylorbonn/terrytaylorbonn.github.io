@@ -161,21 +161,23 @@ _Energy consumption / parameters from [video](https://youtu.be/caKyQNfj9BM?t=119
 <br>
 
 
-# **2 AI heroes** (26.1010 this section is still a WIP mess....)
+# **2 AI heroes** (WIP)
 
 <br>
 
-#### **The problems start when the AI champions become our AI heroes**
+### **The problems start when the AI champions become our AI heroes**
 
-That's why I often focus on debunking the hype of AI champions-turned-heroes. 
+
+**The Chinese have enough sense to never transfer any tech or factories to America, but not our AI heroes**.
+
+**What's good for our AI heroes isn't always necessarily good for us**. The champions have always been focused (and rightly so) on whatever it takes _for them_ to be successful. For _your_ success its important to understand
+  - their history (this page) and 
+  - the basic technical details of how AI really works (the next top-level webpage "Hack").
+
+**That's why ZAI often focuses on debunking the hype of AI champions-turned-heroes.** 
 - Many of the concepts on this page are ZAI original. And usually get to the gist of AI. For example, below I reference an interesting **[chat I had with ChatGPT](/champions_chat1/)** ("My correction of ChatGPT's definition of transformer (GPT agrees with me)").
 - Another interesting page with a lot of original ZAI takes on AI: **[LOOK MOM! NO WIRES!)](/pal_concepts_AIPU_no_wires/)**, (26.0927)
 
-
-**What's good for them isn't always necessarily good for us**. The champions have alwys been focused (and rightly so) on whatever it takes _for them_ to be successful. 
-- **The solution**. Educate yourself about 
-  - their history (this page) and 
-  - the basic technical details of how AI really works (the next top-level webpage "Hack").
 
 <br>
 
@@ -184,64 +186,52 @@ That's why I often focus on debunking the hype of AI champions-turned-heroes.
 <br>
 
 
-#### Hinton
+### **The various champions of basic LLM tech**
 
-- Claimed a few years ago that AI had emotions and would achieve AGI (human intelligence) within a year or so (he recently retracted such statements)
-
-
-#### **4.1 Jensen says he was not born a loser**
-
-(comments about losers)
-
-
-
-
-From ChatGPT:
-
-In April 2026, Jensen Huang, CEO of Nvidia, made a striking statement during an interview with technology podcaster Dwarkesh Patel:
-- "You're not talking to somebody who woke up a loser."
-He followed it by rejecting what he called a loser attitude and a loser premise.
-
-The discussion concerned whether Nvidia should continue selling advanced AI chips to China.
-
-Patel challenged Huang with two arguments:
-- Selling powerful AI chips to China could create national-security risks for the United States.
-- Even if Nvidia continued selling chips, Chinese manufacturers such as Huawei might eventually replace Nvidia, causing it to lose the Chinese market anyway.
-
-Huang strongly rejected the second argument. His position was essentially: Why should Nvidia surrender an enormous market simply because it might eventually lose to a competitor?
-
-In another 2026 appearance, at Stanford University, Huang expressed essentially the same philosophy. 
-- He argued that difficult competition is valuable and that people develop resilience by experiencing hardship.
-- His message was that he doesn't subscribe to the belief that one should avoid competing because defeat is possible.
+Those who gave us the transformer seem to have been happy remaining AI champions. It seems that all of them have distinguished careers with many tech publications. They have not tried to become our heroes.
 
 <br>
 
-#### **4.2 America also does not want to be a loser**
+---------------
+
+<br>
+
+
+### **Jensen Huang**
+
+**We should all stop studying programming. AI will do it all for us.** Meanwhile, Nvidia has (I believe) 40K programmers.
+
+**"You're not talking to somebody who woke up a loser"** _(see the line in the Queen song lyrics "no time for losers")_. **From GPT:** In April 2026, Jensen Huang, CEO of Nvidia, made a striking statement during an interview with technology podcaster Dwarkesh Patel:
+- "You're not talking to somebody who woke up a loser."
+He followed it by rejecting what he called a loser attitude and a loser premise. The discussion concerned whether Nvidia should continue selling advanced AI chips to China. Patel challenged Huang with two arguments:
+- Selling powerful AI chips to China could create national-security risks for the United States.
+- Even if Nvidia continued selling chips, Chinese manufacturers such as Huawei might eventually replace Nvidia, causing it to lose the Chinese market anyway.
+- Huang strongly rejected the second argument. His position was essentially: Why should Nvidia surrender an enormous market simply because it might eventually lose to a competitor?
+- In another 2026 appearance, at Stanford University, Huang expressed essentially the same philosophy. 
+  - He argued that difficult competition is valuable and that people develop resilience by experiencing hardship.
+  - His message was that he doesn't subscribe to the belief that one should avoid competing because defeat is possible.
+
+**Huang's parents were desperate to send him to America for some reason as a child.** His USA relatives mistakenly sent him to a reform school in Kentucky. The USA intel agencies have predicted that in 2027 the nation of his birth will be the target of an invasion by the country Huang wants to supply advanced chips to. The logic of Jensen's arguments about selling chips to China is beyond my comprehension.
+
+<br>
+
+---------------
+
+<br>
 
 
 
-America gave Jensen the chance to succeed that he did not have in his ancestral homeland.
+### **Musk**
 
-And this is how he pays America back?
+**Elon transferred a lot of tech to China** when he built a Tesla factory there. Now Elon wants to get out of China. Chinese companies are now copying the tech they learned from Tesla China. The result is a fleet of new Chinese-made vehicles, some with major pricetags (and some with major quality problems). Musk's jumpstart is what made it possible for them to break into the EV market (Musk is not without reason considered a hero in China). 
 
-In the USA his IP is protected. 
-But in China?
+_The $110K Huawei luxury van with brake pedals that break._<br><img src="/assets/sun-01.png" alt="drones" width="70%">
 
+**Musk can't compete (in China) anymore (is he a loser?).** The showrooms for Chinese cars are in every big Chinese shopping center (cars are often being displayed and sold in the stores for companies that are still selling their original product (mobile phones)). These cars are also now flooding the EU and Canada. Does Elon's abject failure (from the perspective of Elon's chosen homeland) in China make him a loser? Was it worth the few dollars (for the world's first "trillionaire") that Elon made?
 
-#### Musk
-
-(who has lost to competition in China (and now Canada and EU) in the EV market)
-
-
-Elon transferred a lot of tech to China. Now Elon wants to get out of China. The reasons to me are obvious (I am Chinese speaker and recently spent a month in China).
-- Chinese companies are now copying the tech they learned from Tesla China.
-- Musk can't compete anymore. The showrooms for Chinese cars are in every big shopping center. 
-
-The result is a fleet of new Chinese-made vehicles. Some with major pricetags and major problems.<br>_The $110K Huawei luxury van with brake pedals that break._<br><img src="/assets/sun-01.png" alt="drones" width="80%">
+_Poster for the movie ["For a few dollars more"](https://en.wikipedia.org/wiki/For_a_Few_Dollars_More)._<br><img src="/assets/sun-08.png" alt="drones" width="15%" style="border: 1px solid #999;">
 
 <!-- _I myself worked at Huawei. That was a short experience that ended when I was a contractor at Huawei (China) and was paid half of my salary 2 months in a row. I was told that I would not receive the rest (I eventually did). Just a few months before that I was told that Huawei wanted to hire me as a regular Huawei China employee._ -->
-
-Is Elon a loser? xxx
 
 
 <br>
@@ -257,10 +247,9 @@ Is Elon a loser? xxx
 
 <br>
 
+**Hinton claimed a few years ago that AI had emotions and would achieve AGI (human intelligence) within a year or so.** He recently retracted such statements. These statements were from a Turing award and Nobel prize winner. **Musk** also recently predicted that AI would reach AGI within a year (we are still waiting for the FSD from Tesla that has been promised for 10 years as just a year or so away).
 
-In the end, the AI champions are claiming to give you something that they know is not possible (human level "intelligence" AI). 
-
-Remember the exponential graph shown in section 1? This graph is meant to give the impression that AI is just going to explode in growth (and never stop). 
+**The AGI super heroes are claiming to give you something that they know is not possible** (human level "intelligence" AI). Remember the exponential graph shown in section 1? This graph is meant to give the impression that AI is just going to explode in growth (and never stop). 
 
 _Energy consumption / parameters from [video](https://youtu.be/caKyQNfj9BM?t=119)_<br><img src="/assets/sun-07.png" alt="drones" width="52%" style="border: 1px solid #999;"> 
 
