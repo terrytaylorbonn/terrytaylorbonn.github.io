@@ -19,15 +19,15 @@ _Latest updates_
 
 <br>
 
-ZiptieAI demos/documents AI (primarily LLMs), from "tiny" neural networks to **[enterprise AI (Palantir)](/pal/)**.
+ZiptieAI demos/documents AI (primarily LLMs), from "tiny" neural networks to **[enterprise AI (Palantir)](/pal/)**. ZiptieAI focuses on providing insightful and practical guidance with minimal text and diagrams.
 
 - **Readme first** (the AI champions and their hacks).
   - **[Champions](/champions/)** is a short history of the AI industry champions that made the current AI tools possible.
-  - **[Hack](/0-demo/)** explains the core of what makes AI tick.<br><br>
+  - **[Hack](/0-demo/)** explains the core of what makes AI tick.<br><br>_AI is revolutionary tech; but claims of intelligence are fairy tales (internal agent + transformer (TF) = LLM)_<br><img src="/assets/M-11b.png" alt="drones" width="27%"><br><br>
 
 - **AI fast track**
   - **[QS](/0-qs/)** covers selected demos.
-  - **[Concepts](/0b-demos/)** summarizes the core concepts (mainly from the QS demos). <br><br>
+  - **[Concepts](/0b-demos/)** summarizes the core concepts (mainly from the QS demos). <br><br>_AI = deterministic computational algorithms that are extremely useful for specific types of applications._<br><img src="/assets/M-25.png" alt="drones" width="80%"><br><br>
 
 - **AI deep dive**
   - **[2 NNs](/2_models/)** demos NNs, CNNs, and transformers (TFs) (the source of the "I" in AI). _In this section you control the AI mathematics._
@@ -36,10 +36,7 @@ ZiptieAI demos/documents AI (primarily LLMs), from "tiny" neural networks to **[
   - **[3b Workflow platform](/3.3-ai-projects/)** (such as n8n) demos of practical agentic AI applications. _The workflow platform controls the architecture._
   - **[3c Enterprise AI](/pal/)** demos (**current focus is on Palantir**). _The enterprise platform controls almost everything._<br><br>
 
-ZiptieAI focuses on providing insightful and practical guidance with minimal text and diagrams. The following summarizes the ZiptieAI take on AI:
-
-- AI = deterministic computational algorithms that are extremely useful for specific types of applications.<br><img src="/assets/M-25.png" alt="drones" width="80%"><br><br>
-- AI intelligence is a fairy tale (internal agent + transformer (TF) = LLM).<br><img src="/assets/M-11b.png" alt="drones" width="27%"><br>
+ 
 
 <!-- ZiptieAI.com was created in 2024 to document my work on Ukrainian style ziptie'd [AI Drones](/1-drones/). -->
 <!-- - [4 Resources](/4_resources/) such as (docx) lab notes, Github, Wiki, etc (links in the footer).
