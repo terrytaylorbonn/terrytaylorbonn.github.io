@@ -11,12 +11,9 @@ _(WIP; v1 26.1010)_
 <br>
 
 This page is about 
-- **1 AI champions** (they made it all possible) and
-- **2 AI heroes** (when your AI champions become your AI heroes -- that's when you start to make mistakes)
+- **1 AI champions**. Their hard work and insight made it all possible.
+- **2 AI heroes**. When your AI champions become your AI heroes -- that's when you start to make mistakes. 
 
-Notes: 
-- Many of the concepts on this page are ZAI original. And usually get to the gist of AI. For example, below I reference an interesting **[chat I had with ChatGPT](/champions_chat1/)** ("My correction of ChatGPT's definition of transformer (GPT agrees with me)").
-- Another interesting page with a lot of original ZAI takes on AI: **[LOOK MOM! NO WIRES!)](/pal_concepts_AIPU_no_wires/)**, (26.0927)
 
 <br>
 
@@ -100,12 +97,12 @@ _[video](https://youtu.be/caKyQNfj9BM?t=346)_<br><img src="/assets/sun-04.png" a
 
 ### **1.2 Geoffrey Hinton and AlexNet CNN**
 
-Hinton’s 2012 AlexNet team proved that massive scaling of matrix math classification algorithms (a hack) was the best path forward for image recognition. They used Nvidia GPUs (with a pre-CUDA hack).
+Hinton’s 2012 AlexNet team proved that massive scaling of matrix math classification algorithms (a hack) was the best path forward for image recognition. **They used Nvidia GPUs (with a pre-CUDA hack that convinced Jensen to focus on GPUs for AI and CUDA)**.
 
 _[video](https://youtu.be/caKyQNfj9BM?t=532)_<br><img src="/assets/sun-05.png" alt="drones" width="45%">
 
 
-See also
+See also the following ZAI takes on CNNs:
 - **[Concepts -- 2.4 CNN convolution](https://ziptieai.com/0b.2.4-concepts-convo/)**
 - **[2.2.1b D4 CNN algorithm details](https://ziptieai.com/2.2.1b-d4-cnn-algorithm-details/)** has the best diagram of the AlexNet CNN (ZAI original diagram)<br><img src="/assets/d4_alexnet.png" alt="drones" width="23%" />
 
@@ -133,8 +130,9 @@ These champions proved that transformers (whose primary algorithmic components a
 
 **Transformer algorithms (QKV/FFN) are still the basis of the latest LLM computational algorithms.**
 
-_A simple **[GPT-3 TF diagram](https://ziptieai.com/2.3.2-tf-algorithm/)** (ZAI original) ("2.3.2 Gist of LLM TF UFA (inference)" / "2 TF algorithm (diagrams)")._<br><img src="/assets/llm02_tf123.png" alt="02" width="40%" style="border: 1px solid #999;">
-<br>
+_A simple **[GPT-3 TF diagram](https://ziptieai.com/2.3.2-tf-algorithm/)** (ZAI original) ("2.3.2 Gist of LLM TF UFA (inference)" / "2 TF algorithm (diagrams)")._<br><img src="/assets/llm02_tf123.png" alt="02" width="40%" style="border: 1px solid #999;"><br><br>
+
+
 
 ---------------
 
@@ -143,10 +141,13 @@ _A simple **[GPT-3 TF diagram](https://ziptieai.com/2.3.2-tf-algorithm/)** (ZAI 
 
 ### **1.4 Huang/Musk LLM scaling** 
 
+Nvidia gives openAI the first GPU for "the future of humanity". These were (1) 2 true champions who made it to positions of such influence and (2) had the foresight to make the right bets on what kind of AI would work. Amazing. 
+
 _[video](https://youtu.be/caKyQNfj9BM?t=609)_<br><img src="/assets/sun-02.png" alt="drones" width="30%">  <img src="/assets/sun-03.png" alt="drones" width="40%">
 
+Note that you often read that AI is making progress much much faster (logarithmic) than Moore's Law (squared). That may be true, but AI has to make must faster progress, because AI is basically pattern matching / classification hacks that require logarithmic advances to add extra 9's to the 99.99...% (that statement may not be exactly correct, but the main point is).  
 
-
+_Energy consumption / parameters from [video](https://youtu.be/caKyQNfj9BM?t=119)_<br><img src="/assets/sun-07.png" alt="drones" width="52%" style="border: 1px solid #999;"> 
 
 
 <br>
@@ -159,24 +160,27 @@ _[video](https://youtu.be/caKyQNfj9BM?t=609)_<br><img src="/assets/sun-02.png" a
 <br>
 
 
-# **2 AI heroes** (this section is a WIP mess....)
+# **2 AI heroes** (26.1010 this section is still a WIP mess....)
 
 <br>
 
 #### **The problems start when the AI champions become our AI heroes**
 
+That's why I often focus on debunking the hype of AI champions-turned-heroes. 
+- Many of the concepts on this page are ZAI original. And usually get to the gist of AI. For example, below I reference an interesting **[chat I had with ChatGPT](/champions_chat1/)** ("My correction of ChatGPT's definition of transformer (GPT agrees with me)").
+- Another interesting page with a lot of original ZAI takes on AI: **[LOOK MOM! NO WIRES!)](/pal_concepts_AIPU_no_wires/)**, (26.0927)
+
+
+**What's good for them isn't always necessarily good for us**. The champions have alwys been focused (and rightly so) on whatever it takes _for them_ to be successful. 
+- **The solution**. Educate yourself about 
+  - their history (this page) and 
+  - the basic technical details of how AI really works (the next top-level webpage "Hack").
 
 <br>
 
 ---------------
 
 <br>
-
-
-- **But what's good for them isn't always necessarily good for us**. The champions have alwys been focused (and rightly so) on whatever it takes _for them_ to be successful. 
-- **The solution**. Educate yourself about 
-  - their history (this page) and 
-  - the basic technical details of how AI really works (the next top-level webpage "Hack").
 
 
 #### Hinton
