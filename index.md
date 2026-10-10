@@ -7,10 +7,10 @@ title: Home
 
 _Latest updates_
 
-- _(26.1002): **[LOOK MOM! NO WIRES! (the end of the AI/AGI con game)](/pal_concepts_AIPU_no_wires/)**. What I did during my 5 weeks of "vacation" in Wuxi._
-- _(26.0927): **[3c Enterprise](/pal/)**_
-- _(26.0927): **[Core Foundry Enterprise AI Concepts](/pal_concepts/)**_
-- _(26.0914): **[2.2b ZAI versions of the core ~8 Foundry getting started demos](/3c.2_pal_initial_demos/)**._
+
+
+- _(26.1010): **[Champions](/champions/)**. A new top level webpage._
+- _(26.0914-1002): (while in Wuxi) **[LOOK MOM! NO WIRES!)](/pal_concepts_AIPU_no_wires/)**, (26.0927): **[3c Enterprise](/pal/)**, (26.0927): **[Core Foundry Enterprise AI Concepts](/pal_concepts/)**, _(26.0914): **[2.2b ZAI versions of the core ~8 Foundry getting started demos](/3c.2_pal_initial_demos/)**._
 
 <!--
 *Latest (26.0901): Making steady progress on section **[2.2 PAL demos (speedruns)](/3c.2_pal_initial_demos/)**.*
@@ -21,8 +21,11 @@ _Latest updates_
 
 ZiptieAI demos/documents AI (primarily LLMs), from "tiny" neural networks to **[enterprise AI (Palantir)](/pal/)**.
 
+- **Readme first** (the AI champions and their hacks).
+  - **[Champions](/champions/)** is a short history of the AI industry champions that made the current AI tools possible.
+  - **[Hack](/0-demo/)** explains the core of what makes AI tick.<br><br>
+
 - **AI fast track**
-  - **[Hack](/0-demo/)** explains the core of what makes AI tick.
   - **[QS](/0-qs/)** covers selected demos.
   - **[Concepts](/0b-demos/)** summarizes the core concepts (mainly from the QS demos). <br><br>
 
