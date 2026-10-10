@@ -10,6 +10,9 @@ _(WIP; v1 26.1010)_
 
 <br>
 
+We are all thankful for the AI revolution. And those whose hard work made it possible, and that what they did is good for us all. But when they are driven to being the champions no matter what the cost, then you don't take trust or take their word on things. You educate yourself and make smart decisions.
+
+
 The subject of this page  
 - **Many AI industry champions worked over generations to make the current AI tech possible**. We owe them recognition for what they have accomplished. This page talks about just a few of them: Geoffrey Hinton, Jensen Huang (Nvidia), and Elon Musk. 
 - **They became the champions by staying focused on their the reward for themselves** (especially Huang and Musk).  
@@ -25,7 +28,9 @@ The subject of this page
 
 
 
-The following are the lyrics to Queen's "We are the champions":
+The following are the lyrics to Queen's "We are the champions".
+
+Note the line **"no time for losers"**.
 
 ```
 I've paid my dues
@@ -136,6 +141,9 @@ In another 2026 appearance, at Stanford University, Huang expressed essentially 
 America gave Jensen the chance to succeed that he did not have in his ancestral homeland.
 
 And this is how he pays America back?
+
+In the USA his IP is protected. 
+But in China?
 
 
 <br>

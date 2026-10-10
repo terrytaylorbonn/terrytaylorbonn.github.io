@@ -23,7 +23,7 @@ ZiptieAI demos/documents AI (primarily LLMs), from "tiny" neural networks to **[
 
 - **Readme first** (the AI champions and their hacks).
   - **[Champions](/champions/)** is a short history of the AI industry champions that made the current AI tools possible.
-  - **[Hack](/0-demo/)** explains the core of what makes AI tick.<br><br>_AI is revolutionary tech; but claims of intelligence are fairy tales (internal agent + transformer (TF) = LLM)_<br><img src="/assets/M-11b.png" alt="drones" width="27%"><br><br>
+  - **[Hack](/0-demo/)** explains the core of what makes AI tick.<br><br>_AI champions have made the AI revolution possible; but when they claim AI is (or soon will be) intelligent, then the fairly tales they are championing are not in your best interest (internal agent + transformer (TF) = LLM)_<br><img src="/assets/M-11b.png" alt="drones" width="27%"><br><br>
 
 - **AI fast track**
   - **[QS](/0-qs/)** covers selected demos.
