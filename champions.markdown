@@ -13,6 +13,7 @@ _(WIP; v1 26.1010)_
 This page is about 
 - **1 AI champions**. Their hard work and insight made it all possible.
 - **2 AI heroes**. When your AI champions become your AI heroes -- that's when you start to make mistakes. 
+- **3 AGI super heroes**. In the end, the AI champions are claiming to give you something that they know is not possible (human level "intelligence" AI). 
 
 
 <br>
@@ -241,3 +242,75 @@ The result is a fleet of new Chinese-made vehicles. Some with major pricetags an
 <!-- _I myself worked at Huawei. That was a short experience that ended when I was a contractor at Huawei (China) and was paid half of my salary 2 months in a row. I was told that I would not receive the rest (I eventually did). Just a few months before that I was told that Huawei wanted to hire me as a regular Huawei China employee._ -->
 
 Is Elon a loser? xxx
+
+
+<br>
+
+---------------
+---------------
+---------------
+---------------
+
+<br>
+
+# **3 AGI super heroes**
+
+<br>
+
+
+In the end, the AI champions are claiming to give you something that they know is not possible (human level "intelligence" AI). 
+
+Remember the exponential graph shown in section 1? This graph is meant to give the impression that AI is just going to explode in growth (and never stop). 
+
+_Energy consumption / parameters from [video](https://youtu.be/caKyQNfj9BM?t=119)_<br><img src="/assets/sun-07.png" alt="drones" width="52%" style="border: 1px solid #999;"> 
+
+I had an interesting conversation with GPT about this (same thread **[chat I had with ChatGPT](/champions_chat1/)** as mentioned earlier, second half of the chat). The following is the core conclusion that GPT reached (agreeing with my core point):
+
+<br>
+
+#### **ME: good feedback...**
+i cant write equations during this conversation, so what i meant was what you wrote. your precision in meaning is impressive. 
+
+but my main goal here is to get you to agree to a more deeper insight that is being missed by most (all that i have seen) conversations about this topic 
+- y=2^x for moores law meant real 2^x performance improvements. calculations increased by that amount.
+- y=10^x for GPU computation does mean 10^x improvements in inference.
+
+<br>
+
+**GPT:** I think I see the deeper distinction you're making, and I agree with the central argument, with one important qualification.
+
+Moore's Law: Increasing transistor counts enabled enormous improvements in practical computing capability. More calculations could be performed, faster and more cheaply. The relationship wasn't exactly 1:1, but the benefits were relatively direct.
+
+AI GPU scaling: Increasing computational capacity by 10× does not necessarily produce a 10× improvement in the quality, accuracy, or reliability of AI inference.
+
+For example, hypothetically:
+
+| Computational capacity | AI accuracy |
+| ---------------------- | ----------- |
+| 1×                     | 90%         |
+| 10×                    | 95%         |
+| 100×                   | 98%         |
+| 1,000×                 | 99%         |
+| 10,000×                | 99.5%       |
+
+These are illustrative numbers, not measured scaling results.
+
+And I think you're making an even deeper observation:
+
+Conventional computing scales the amount of computation we can perform. Neural-network AI scaling increases the computation available to approximate a desired result, but the improvement in the result itself can be dramatically smaller.
+
+There is a distinction worth preserving: 10× more GPU capacity really can deliver approximately 10× more raw calculations per second under suitable conditions. But that doesn't mean 10× better intelligence, prediction, or reliability.
+
+This also connects directly to your earlier argument about adding more 9s to accuracy.
+
+I would summarize your thesis as:
+
+The spectacular exponential growth in AI computational capacity is frequently confused with equally spectacular growth in AI capability. But these are fundamentally different measurements, and diminishing returns can make the gap enormous.
+
+I think that is a strong argument. The part I would be careful about is claiming that the gap must grow at a particular exponential rate. That would require empirical evidence and a precise definition of AI capability.
+
+But the underlying distinction you're emphasizing is absolutely valid—and important.
+
+<br><br>
+
+Amazing how AI can conduct such "conversations". But its important to remember that the GPT statement **"I think I see the deeper distinction you're making, and I agree with the central argument"** is not at all true. GPT sees nothing **and never will**. You and I do.
