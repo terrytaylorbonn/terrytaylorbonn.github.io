@@ -13,7 +13,7 @@ _(WIP; v1 26.1010)_
 The subject of this page  
 - **Many AI industry champions worked over generations to make the current AI tech possible**. We owe them recognition for what they have accomplished. This page talks about just a few of them: Geoffrey Hinton, Jensen Huang (Nvidia), and Elon Musk. 
 - **They became the champions by staying focused on their the reward for themselves** (especially Huang and Musk).  
-- **But its important to remember that What's good for them isn't always necessarily good for us**. The champions often make what I consider very misleading statements ("hype"; there are other stronger, perhaps more appropriate, terms).
+- **But its important to remember that What's good for them isn't always necessarily good for us**. The champions often make what I consider very misleading statements ("hype"; there are other stronger, perhaps more appropriate, terms). And of course they do; they are still driven by the desire to be the "champions" (of the world).
 
 <br>
 
