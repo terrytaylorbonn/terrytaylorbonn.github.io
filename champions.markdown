@@ -121,7 +121,7 @@ See also the following ZAI takes on CNNs:
 These champions proved that transformers (whose primary algorithmic components are **[QKV_context](https://arxiv.org/abs/1706.03762)** and FFN_detection) were the core matrix math algorithms (hacks) that promised the best path forward for token generators (the core of LLMs).
 
 - Transformers 
-  - transform tokens into embeddings (in GPT-2 12288 FP16 numbers for each token; this is what ZAI often refers to as "machine language").
+  - transform tokens into embeddings (in GPT-3 12288 FP16 numbers for each token; this is what ZAI often refers to as "machine language").
   - create a storyline that is located in the last token that is used to classify the meaning of the transformer input (the storyline is then used to compute the probability of each of 50K (English) vocab tokens as the best next token of the response)
 - QKV is not attention -- its context computation.
 - FFNs base much of what they do on the Alexnet type of NNs. 
@@ -208,9 +208,9 @@ Those who gave us the transformer seem to have been happy remaining AI champions
 
 ### **2.3 Jensen Huang**
 
-**We should all stop studying programming. AI will do it all for us.** Meanwhile, Nvidia has (I believe) 40K programmers.
+**Jensen: "We should all stop studying programming. AI will do it all for us."** Meanwhile, Nvidia has (I believe) 40K programmers.
 
-**"You're not talking to somebody who woke up a loser"** _(see the line in the Queen song lyrics "no time for losers")_. **From GPT:** In April 2026, Jensen Huang, CEO of Nvidia, made a striking statement during an interview with technology podcaster Dwarkesh Patel:
+**Jensen: "You're not talking to somebody who woke up a loser"** _(see the line in the Queen song lyrics "no time for losers")_. **From GPT:** In April 2026, Jensen Huang, CEO of Nvidia, made a striking statement during an interview with technology podcaster Dwarkesh Patel:
 - "You're not talking to somebody who woke up a loser."
 He followed it by rejecting what he called a loser attitude and a loser premise. The discussion concerned whether Nvidia should continue selling advanced AI chips to China. Patel challenged Huang with two arguments:
 - Selling powerful AI chips to China could create national-security risks for the United States.
@@ -267,16 +267,17 @@ _Poster for the movie ["For a few dollars more"](https://en.wikipedia.org/wiki/F
 
 **Hinton claimed a few years ago that AI had emotions and would achieve AGI (human intelligence) within a year or so.** He recently retracted such statements. These statements were from a Turing award and Nobel prize winner. **Musk** also recently predicted that AI would reach AGI within a year (we are still waiting for the FSD from Tesla that has been promised for 10 years as just a year or so away).
 
-**The AGI super heroes are claiming to give you something that they know is not possible** (human level "intelligence" AI). Remember the exponential graph shown in section 1? This graph is meant to give the impression that AI is just going to explode in growth (and never stop). 
-
-_Energy consumption / parameters from [video](https://youtu.be/caKyQNfj9BM?t=119)_<br><img src="/assets/sun-07.png" alt="drones" width="52%" style="border: 1px solid #999;"> 
-
 
 <br>
 
 ---------------
 
 <br>
+
+**The AGI super heroes are claiming to give you something that they know is not possible** (human level "intelligence" AI). Remember the exponential graph shown in section 1? This graph is meant to give the impression that AI is just going to explode in growth (and never stop). 
+
+_Energy consumption / parameters from [video](https://youtu.be/caKyQNfj9BM?t=119)_<br><img src="/assets/sun-07.png" alt="drones" width="52%" style="border: 1px solid #999;"> 
+
 
 I had an interesting conversation with GPT about this (same thread **[chat I had with ChatGPT](/champions_chat1/)** as mentioned earlier, second half of the chat). The following is the core conclusion that GPT reached (agreeing with my core point).
 
