@@ -176,7 +176,18 @@ TOC
 <br>
 
 
-### **2.1 The problems start when the AI champions become our AI heroes**
+### **2.1 The various champions of basic LLM tech (see 1.3)**
+
+Those who gave us the transformer seem to have been happy remaining AI champions. It seems that all of them have distinguished careers with many tech publications. They have not tried to become our heroes.
+
+<br>
+
+---------------
+
+<br>
+
+
+### **2.2 The problems start when the AI champions become our AI heroes**
 
 
 **What's good for our AI heroes isn't always necessarily good for us**. The champions have always been focused (and rightly so) on whatever it takes _for them_ to be successful. For _your_ success its important to understand
@@ -187,17 +198,6 @@ TOC
 - Many of the concepts on this page are ZAI original. And usually get to the gist of AI. For example, below I reference an interesting **[chat I had with ChatGPT](/champions_chat1/)** ("My correction of ChatGPT's definition of transformer (GPT agrees with me)").
 - Another interesting page with a lot of original ZAI takes on AI: **[LOOK MOM! NO WIRES!)](/pal_concepts_AIPU_no_wires/)**, (26.0927)
 
-
-<br>
-
----------------
-
-<br>
-
-
-### **2.2 The various champions of basic LLM tech (see 1.3)**
-
-Those who gave us the transformer seem to have been happy remaining AI champions. It seems that all of them have distinguished careers with many tech publications. They have not tried to become our heroes.
 
 <br>
 
