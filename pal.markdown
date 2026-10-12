@@ -21,16 +21,68 @@ _ADD:_
 - Palantir offers a **generous Foundry free trial**.
 - Foundry's **built-in AI assistant (FDE) makes hands-on self-study practical**.
 
-_Foundry enterprise platform workflow_<br><img src="/assets/wuxi-01bbb.png" alt="drones" width="70%" style="border: 1px solid #999;"><br>
+_Foundry enterprise platform workflow (diagram needs update)_<br><img src="/assets/wuxi-01bbb.png" alt="drones" width="70%" style="border: 1px solid #999;"><br>
+
+_Version of above diagram for demo D2_<br><img src="/assets/wuxi-12d.png" alt="drones" width="70%" style="border: 1px solid #999;"><br>
 
 <br>
 
 **TOC**:
 
+- **0 Core Foundry Enterprise Concepts** (#697)
 - **1 Core Foundry Enterprise AI Concepts**
 - **1b Foundry free tier sign up**
 - **2 Foundry Tutorial concepts/projects** (ZAI-modified PAL demos and ZAI/FDE original demos)
 - **3 Project/doc sources** (PAL and ZAI)
+
+<br>
+
+--------------------
+--------------------
+--------------------
+--------------------
+--------------------
+--------------------
+
+<br>
+
+
+## **[0 Core Foundry Enterprise Concepts](/pal_concepts_ep/)** (#697; added 26.1011)
+
+<img src="/assets/sun-13.png" alt="xxx" width="40%" style="border: 1px solid #999;">
+
+https://learn.palantir.com/introduction-to-foundry-aip-for-enterprise-organizations
+
+This is the intro to core Foundry concepts on learn.palantir.com. 
+- High level, fuzzy, with no examples.
+- Later examples never refer back to this doc. so its very hard to figure out.
+- My plan: 
+  - reference demos in my docx version of the PAL link above.
+  - in demos reference the parts of the PAL link above that are demo'd.
+
+I have known for a long time I needed to do this, 
+- but there no enough (practical) guidance in the PAL docs, 
+- so I needed hands-on first and then try to tackle this. 
+- my version will give an understandable explanation/demos 
+  - not only for "ontology"
+  - but also for other stuff that is just as important for Foundry to work   
+
+_Note the incredibly complicated diagram_<br>
+<img src="/assets/sun-12.png" alt="drones" width="80%" style="border: 1px solid #999;"><br>
+
+<br>
+
+#### **ALSO: [0b Scoping](/pal_concepts_scoping/)** (#696; added 26.1011)
+
+
+<br>
+
+--------------------
+--------------------
+--------------------
+--------------------
+--------------------
+--------------------
 
 <br>
 
@@ -92,7 +144,18 @@ _Alex Karp sounding the alarm about sovereignty and ALPHA in the enterprise._<br
 <!-- >
 <br>_Foundry enterprise platform functionality_<br><img src="/assets/wuxi-01.png" alt="drones" width="58%" style="border: 1px solid #999;"><br> -->
 
+
 <br>
+
+--------------------
+--------------------
+--------------------
+--------------------
+--------------------
+--------------------
+
+<br>
+
 
 <!-- >
 
@@ -114,7 +177,18 @@ If you cant get a trial version of PAL running, then there's no reason to read f
   - I think you need a **mobile phone number** (and email).
 - It was a fairly long process, but very professionally done (I was impressed).<br><br><img src="/assets/pal_10_08.png" alt="drones" width="37%" style="border: 1px solid #999;"><br>
 
+
 <br>
+
+--------------------
+--------------------
+--------------------
+--------------------
+--------------------
+--------------------
+
+<br>
+
 
 ## **2 Foundry Tutorial concepts/projects**
 
@@ -130,7 +204,13 @@ This section contains a deep dive into concepts and 3 Foundry tutorial projects
 - 2.2b ZAI versions of the core ~8 Foundry getting started demos
 - 2.3 PAL Examples (installable) -->
 
+
 <br>
+
+--------------------
+
+<br>
+
 
 #### **[2.2x CONCEPTS (DEEP DIVE): ZAI demos](/3c.2_pal_demo_CONCEPTS/)**
 
@@ -138,6 +218,11 @@ This section contains a deep dive into concepts and 3 Foundry tutorial projects
 - use those ~8 demos as a basic course in hands-on learning of the main concepts (as I see them) (See 2.2b section below)<br><img src="/assets/wuxi-24.png" alt="drones" width="40%" style="border: 1px solid #999;"><br>
 
 <br>
+
+--------------------
+
+<br>
+
 
 #### **[2.2a ZAI start-to-finish demo project (TODO)](/3c.2_pal_initial_demo_ZAI/)**.
 
@@ -159,6 +244,11 @@ The idea is to
 when i started: I decided I'd just start doing demos and after a while I'd eventually figure out a learning path. \*thats what this is... a Start-to-Finish learning path.** SEE ALSO: rough draft (OUTDATED) learning plan **[#699_planning\_.docx](https://drive.google.com/drive/folders/1-Adawag9uA8_bq-hDF-nOuPYaRLz1eEO)\*\*<br><img src="/assets/777_24.png" alt="drones" width="13%" style="border: 1px solid #999;"><br> -->
 
 <br>
+
+--------------------
+
+<br>
+
 
 #### **[2.2b ZAI versions of the core ~8 Foundry getting started demos](/3c.2_pal_initial_demos/).**
 
@@ -238,11 +328,21 @@ _(D2 = [1] and [3], but [3] is the real focus) A diagram of the configuration st
 
 <br>
 
+--------------------
+
+<br>
+
+
 #### **2.2zzz TARGET APP DEMOS (TODO)**.
 
 These will be focusing on target apps, for example "Haystack Needle" demos. Higher level docs, assuming you know the basics.
 
 <br>
+
+--------------------
+
+<br>
+
 
 #### **[2.3 PAL Examples (installable)](/3c.1b_pal_examples/)**.
 
@@ -258,12 +358,28 @@ _Workflow diagrams for examples are usually a bit more complicted than for demos
 
 <br>
 
+----------------------------------------
+--------------------
+--------------------
+--------------------
+--------------------
+--------------------
+
+<br>
+
+
 ## **3 Project/Doc sources**
 
 - **3.1 ZAI doc sources (docx, gdrive, this site, etc)**
 - **3.2 PAL project/doc sources**
 
 <br>
+
+----------------------------------------
+
+
+<br>
+
 
 #### **3.1 ZAI doc sources (docx, gdrive, this site, etc)**
 
@@ -273,6 +389,12 @@ _Workflow diagrams for examples are usually a bit more complicted than for demos
 <!-- - **DOC LIST (plan)**. I spent the first month doing the demos I thought looked interesting from the sources listed in 2.2 above _(lab notes (MS.Word docx files) are available for each example/demo on the **[GDrive](https://drive.google.com/drive/folders/1-Adawag9uA8_bq-hDF-nOuPYaRLz1eEO)**)_. Those demos are organized (by Palantir) by role and project types. I do have a rough draft (OUTDATED) list of docs / plan **[#699_planning\_.docx](https://drive.google.com/drive/folders/1-Adawag9uA8_bq-hDF-nOuPYaRLz1eEO)**<br><img src="/assets/777_24.png" alt="drones" width="13%" style="border: 1px solid #999;"><br> -->
 
 <br>
+
+----------------------------------------
+
+
+<br>
+
 
 #### **3.2 PAL project/doc sources**
 
@@ -300,7 +422,7 @@ FDE is the core tool for learning Foundry.
 
 <br>
 
-26.1001 (0814, v1 26.0702)
+26.1011 (0814, v1 26.0702)
 
 <!--
 <br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br>
