@@ -20,6 +20,8 @@ This page is the ZAI take on the xxxxxxxxxxxxxxxxxxxxxxxxxxxx <!--**core Enterpr
 
 # **CHAT**
 
+https://chatgpt.com/c/6acb8e66-0d1c-83e9-8116-82b74f9f9d81
+
 ### **01**
 
 I did the palantir demo&#x20;

@@ -21,19 +21,19 @@ _ADD:_
 - Palantir offers a **generous Foundry free trial**.
 - Foundry's **built-in AI assistant (FDE) makes hands-on self-study practical**.
 
-_Foundry enterprise platform workflow (diagram needs update)_<br><img src="/assets/wuxi-01bbb.png" alt="drones" width="70%" style="border: 1px solid #999;"><br>
+_Foundry enterprise platform workflow (diagram needs update)_<br><img src="/assets/wuxi-01bbb.png" alt="drones" width="60%" style="border: 1px solid #999;"><br>
 
-_Version of above diagram for demo D2_<br><img src="/assets/wuxi-12d.png" alt="drones" width="70%" style="border: 1px solid #999;"><br>
+_Version of above diagram for demo D2_<br><img src="/assets/wuxi-12d.png" alt="drones" width="66%" style="border: 1px solid #999;"><br>
 
 <br>
 
-**TOC**:
+#### **TOC**:
 
-- **0 Core Foundry Enterprise Concepts** (#697)
+- **0 Core Foundry Enterprise Concepts** (#697) **ADDED 26.1011**
 - **1 Core Foundry Enterprise AI Concepts**
 - **1b Foundry free tier sign up**
 - **2 Foundry Tutorial concepts/projects** (ZAI-modified PAL demos and ZAI/FDE original demos)
-- **3 Project/doc sources** (PAL and ZAI)
+- **3 Project/doc sources** (PAL and ZAI)x
 
 <br>
 
@@ -49,25 +49,27 @@ _Version of above diagram for demo D2_<br><img src="/assets/wuxi-12d.png" alt="d
 
 ## **[0 Core Foundry Enterprise Concepts](/pal_concepts_ep/)** (#697; added 26.1011)
 
-<img src="/assets/sun-13.png" alt="xxx" width="40%" style="border: 1px solid #999;">
+_https://learn.palantir.com/introduction-to-foundry-aip-for-enterprise-organizations_<br>
+<img src="/assets/sun-13.png" alt="xxx" width="36%" style="border: 1px solid #999;">
 
-https://learn.palantir.com/introduction-to-foundry-aip-for-enterprise-organizations
 
-This is the intro to core Foundry concepts on learn.palantir.com. 
+**The intro to core Foundry concepts on learn.palantir.com is**
 - High level, fuzzy, with no examples.
 - Later examples never refer back to this doc. so its very hard to figure out.
-- My plan: 
-  - reference demos in my docx version of the PAL link above.
-  - in demos reference the parts of the PAL link above that are demo'd.
 
-I have known for a long time I needed to do this, 
-- but there no enough (practical) guidance in the PAL docs, 
-- so I needed hands-on first and then try to tackle this. 
+**My plan for my own version of the core concepts:** 
+- reference demos in my docx version of the PAL link above.
+- in demos reference the parts of the PAL link above that are demo'd.
 - my version will give an understandable explanation/demos 
   - not only for "ontology"
   - but also for other stuff that is just as important for Foundry to work   
 
-_Note the incredibly complicated diagram_<br>
+**I have known for a long time I needed to do this,** 
+- but there no enough (practical) guidance in the PAL docs, 
+- so I needed hands-on first and then try to tackle this. 
+
+
+_Note the incredibly complicated diagram (my goal is to refer back to this diagram in all demo docs, and try to create demos that specifically show examples of what is shown in this diagram)_<br>
 <img src="/assets/sun-12.png" alt="drones" width="80%" style="border: 1px solid #999;"><br>
 
 <br>
@@ -88,7 +90,8 @@ _Note the incredibly complicated diagram_<br>
 
 ## **[1 Core Foundry Enterprise AI Concepts](/pal_concepts/)**
 
-_NOTE: See (below) section "2 Tutorial projects" subsection "2.2x CONCEPTS (DEEP DIVE): ZAI demos" for lower level concepts (workflows, data protection, AIP, and automation)._
+**This "AI" concepts was motivated primarily by Alex Karp talking about sovereignty and ALPHA in the enterprise.** THese are issues due to the nature of AI (unpredictable matrix math computations that recognize patterns / perform classification). 
+
 
 <!-- A historical review of ALPHA/sovereignty
 - 1 Mainframes and PCs
@@ -102,14 +105,21 @@ _NOTE: See (below) section "2 Tutorial projects" subsection "2.2x CONCEPTS (DEEP
 - **C3 (7-8) Know the difference between AI scammers and your AI allies (a Frontier AI LLM provider can be both).**
 - **C4 (9) Historical overview of SOV/ALPHA. Before LLMs and (now) with LLMs for the enterprise and (future?) the PC.**
 
+_NOTE: See (below) section "2 Tutorial projects" subsection "2.2x CONCEPTS (DEEP DIVE): ZAI demos" for lower level concepts (workflows, data protection, AIP, and automation)._
+
+
+_Alex Karp sounding the alarm about sovereignty and ALPHA in the enterprise._<br><img src="/assets/alex222.png" alt="xxx" width="60%" style="border: 1px solid #999;">
+
+_Palantir provides proven engineering (the crystal ball is just a metaphor, marketing genius); those selling AGI are selling a fantasy that can cause big problems in an enterprise._<br><img src="/assets/pal_9_06.png" alt="drones" width="25%" style="border: 1px solid #999;"> <img src="/assets/777_02.png" alt="drones" width="30%" style="border: 1px solid #999;"><br>
+
+
+
 <!--
 - **AI can be a blessing or a curse for your enterprise**. FOundry makes it much more of a blessing.
 - **What exactly are AI, SOV, ALPHA?**
 - **Understanding the goals of the AI titans and how you can protect yourself.**
 - **A historical perspective on SOV/ALPHA**. Past, present, and future. -->
-
 <!--
-
   - **1 What AI can do _FOR_ your enterprise**.
   - **2 What AI can do _TO_ your enterprise**. Much of how AI can help you win can also be used against you.
   - **3 AI (LLMs) is pattern recognition** (not intelligence)
@@ -122,7 +132,6 @@ _NOTE: See (below) section "2 Tutorial projects" subsection "2.2x CONCEPTS (DEEP
     - **9.1 (PAST) ALPHA/SOV Before LLMs**. Microsoft used Windows to extract ALPHA (40 years ago). The goal was a monopoly (the same for AI shops now).
     - **9.2 (PRESENT) ALPHA/SOV with LLMs for Enterprise**. If you use AI for business processes and intel, you need to appreciate what the token sellers are doing with your submitted prompts.
     - **9.3 (FUTURE) ALPHA/SOV with LLMs for the PC?**. A new open HW PC standard with built in Foundry type system to protect SOV/ALPHA.
-
 - **What is ALPHA/SOV**
 - **Why LLMs want your ALPHA/SOVereignty**
 - PAST, PRESENT, FUTURE of ALPHA/SOV
@@ -133,14 +142,8 @@ _NOTE: See (below) section "2 Tutorial projects" subsection "2.2x CONCEPTS (DEEP
 - **1 The problems with AI (LLMs) in the Enterprise**.
 - **2 How Foundry solves these problems (Alex Karp's "Alpha" concept)** .
 - **3 Basic Foundry workflows**. -->
-
-_Palantir provides proven engineering (the crystal ball is just a metaphor, marketing genius); those selling AGI are selling a fantasy that can cause big problems in an enterprise._<br><img src="/assets/pal_9_06.png" alt="drones" width="25%" style="border: 1px solid #999;"> <img src="/assets/777_02.png" alt="drones" width="30%" style="border: 1px solid #999;"><br>
-
 <!-- - BELOW: Alex Karp sounding the alarm about sovereignty in the enterprise (it took me a while to understand that I think he meant... I am still not 100% sure what he meant, but I am pretty sure about my take on "alpha".
 - NOTE the sign behind Alex: Own your own outcomes, Own your models, Own your destiny. ?? -->
-
-_Alex Karp sounding the alarm about sovereignty and ALPHA in the enterprise._<br><img src="/assets/alex222.png" alt="xxx" width="60%" style="border: 1px solid #999;">
-
 <!-- >
 <br>_Foundry enterprise platform functionality_<br><img src="/assets/wuxi-01.png" alt="drones" width="58%" style="border: 1px solid #999;"><br> -->
 
