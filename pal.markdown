@@ -102,18 +102,13 @@ _New ZAI south/equator/north docx (WIP)_<br><img src="/assets/sun-16.png" alt="d
 
 <br>
 
-### 0.4 PAL south/ontology/north diagram (no equator)
+<!-- ### 0.4 PAL south/ontology/north diagram (no equator)
 
 This diagram is missing the "equator" (of which ontology is only a component (granted, the most important component)). 
 
 _PAL south/ontology/north diagram_<br><img src="/assets/sun-15.png" alt="drones" width="60%" style="border: 1px solid #999;"><br>
 
-
-
-
-
-
-<br>
+<br> -->
 
 --------------------
 --------------------
