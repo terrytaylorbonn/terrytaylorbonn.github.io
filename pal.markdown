@@ -57,49 +57,52 @@ _ADD:_
 
 **The intro to core Foundry concepts on learn.palantir.com is**
 - High level, fuzzy, with no examples.
+- there no enough (practical) guidance in the PAL docs, 
 - Later examples never refer back to this doc. so its very hard to figure out.
 
-**I have known for a long time I needed to do this,** 
-- but there no enough (practical) guidance in the PAL docs, 
-- so I needed hands-on first and then try to tackle this. 
+**I have known for a long time that I needed to create my own version of the intro doc** 
+- but I needed hands-on demo experience first. 
 
 _https://learn.palantir.com/introduction-to-foundry-aip-for-enterprise-organizations_<br>
 <img src="/assets/sun-13bbb.png" alt="xxx" width="40%" style="border: 1px solid #999;">
 
-_Note the incredibly complicated diagram (my goal is to refer back to this diagram in all demo docs, and try to create demos that specifically show examples of what is shown in this diagram)_<br>
-<img src="/assets/sun-12.png" alt="drones" width="80%" style="border: 1px solid #999;"><br>
+_The complicated main PAL concepts diagram @ **[learn.palantir.com/introduction-to-foundry-aip-for-enterprise-organizations](https://learn.palantir.com/introduction-to-foundry-aip-for-enterprise-organizations)**; my goal is to create a new version of this diagram, and back to that diagram in all demo docs, and try to create demos that specifically show examples of what is shown in that diagram._<br>
+<img src="/assets/sun-12.png" alt="drones" width="70%" style="border: 1px solid #999;"><br>
 
 <br>
 
-### 0.1 D2 demo (my plan: demo-oriented core concepts)
+### 0.1 ZAI version will focus on demo-oriented core concepts
 
-**My plan for my own version of the core concepts:** 
 - reference demos in my docx version of the PAL link above.
 - in demos reference the parts of the PAL link above that are demo'd.
 - my version will give an understandable explanation/demos 
   - not only for "ontology"
   - but also for other stuff that is just as important for Foundry to work   
 
-_Version of above diagram for demo D2_<br><img src="/assets/wuxi-12d.png" alt="drones" width="66%" style="border: 1px solid #999;"><br>
+_diagram for demo D2_<br><img src="/assets/wuxi-12d.png" alt="drones" width="66%" style="border: 1px solid #999;"><br>
 
 
 <br>
 
 ### 0.2 ZAI original diagram (needs work)
 
-_Foundry enterprise platform workflow (diagram needs update)_<br><img src="/assets/wuxi-01bbb.png" alt="drones" width="60%" style="border: 1px solid #999;"><br>
+_ZAI original Foundry enterprise platform workflow diagram (needs update)_<br><img src="/assets/wuxi-01bbb.png" alt="drones" width="60%" style="border: 1px solid #999;"><br>
 
 <br>
 
-### 0.3 ZAI south/equator/north diagram (WIP)
+### 0.3 New ZAI south/equator/north diagram (WIP)
 
-_south/equator/north diagram_<br><img src="/assets/sun-14.png" alt="drones" width="40%" style="border: 1px solid #999;"><br>
+- This diagram shows the "equator" (in PAL diagrams this is only "ontology")
+- Note: The south/north components (shown in diagram in 0.4) are also to be included in this diagram
+  - I left them out for simplicity
+
+_New ZAI south/equator/north diagram (only new ZAI stuff shown)_<br><img src="/assets/sun-14.png" alt="drones" width="40%" style="border: 1px solid #999;"><br>
 
 <br>
 
 ### 0.4 PAL south/ontology/north diagram (no equator)
 
-This diagram is missing the "equator" (of which ontology is only a portion (granted, the most important portion)). 
+This diagram is missing the "equator" (of which ontology is only a component (granted, the most important component)). 
 
 _PAL south/ontology/north diagram_<br><img src="/assets/sun-15.png" alt="drones" width="60%" style="border: 1px solid #999;"><br>
 
