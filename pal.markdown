@@ -49,7 +49,14 @@ _ADD:_
 <br>
 
 
-## **[0 Core Foundry Enterprise Concepts](/pal_concepts_ep/)** (#697; added 26.1011)
+## **[0 Core Foundry Enterprise Concepts](/pal_concepts_ep/)** (v1 26.1011)
+
+<br>
+
+For details about how the concepts in the section were developed see:
+- **[#697\_pal\_foundry\_aip\_ep\_concepts\_.docx](https://drive.google.com/drive/folders/1-Adawag9uA8_bq-hDF-nOuPYaRLz1eEO)** (contains draft rewrite and GPT discusssions)
+- **[GPT discussions public link](https://chatgpt.com/c/6acccd47-afb8-83ea-8470-4cb2eceaa1f0)** 
+
 
 <br>
 
