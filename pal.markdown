@@ -50,7 +50,7 @@ _Version of above diagram for demo D2_<br><img src="/assets/wuxi-12d.png" alt="d
 ## **[0 Core Foundry Enterprise Concepts](/pal_concepts_ep/)** (#697; added 26.1011)
 
 _https://learn.palantir.com/introduction-to-foundry-aip-for-enterprise-organizations_<br>
-<img src="/assets/sun-13.png" alt="xxx" width="36%" style="border: 1px solid #999;">
+<img src="/assets/sun-13.png" alt="xxx" width="40%" style="border: 1px solid #999;">
 
 
 **The intro to core Foundry concepts on learn.palantir.com is**
