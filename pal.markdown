@@ -96,7 +96,7 @@ _ZAI original Foundry enterprise platform workflow diagram (needs update)_<br><i
 - Note: The south/north components (shown in diagram in 0.4) are also to be included in this diagram
   - I left them out for simplicity
 
-_New ZAI south/equator/north diagram (only new ZAI stuff shown)_<br><img src="/assets/sun-14.png" alt="drones" width="40%" style="border: 1px solid #999;"><br>
+_New ZAI south/equator/north diagram (only new ZAI stuff shown)_<br><img src="/assets/sun-14.png" alt="drones" width="50%" style="border: 1px solid #999;"><br>
 
 <br>
 
