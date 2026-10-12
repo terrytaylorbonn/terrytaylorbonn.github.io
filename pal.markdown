@@ -8,6 +8,11 @@ _ADD:_
 
 - _Video about real estate for Leon._
 - _add 2.z Function-specific list of demos.. for example HN demos (not AI, ALPHA, SOV, etc)._
+- _put [0b Scoping](/pal_concepts_scoping/) (#696; added 26.1011) somehwere_
+
+<br>
+
+------------------
 
 <br>
 
@@ -21,9 +26,6 @@ _ADD:_
 - Palantir offers a **generous Foundry free trial**.
 - Foundry's **built-in AI assistant (FDE) makes hands-on self-study practical**.
 
-_Foundry enterprise platform workflow (diagram needs update)_<br><img src="/assets/wuxi-01bbb.png" alt="drones" width="60%" style="border: 1px solid #999;"><br>
-
-_Version of above diagram for demo D2_<br><img src="/assets/wuxi-12d.png" alt="drones" width="66%" style="border: 1px solid #999;"><br>
 
 <br>
 
@@ -33,7 +35,7 @@ _Version of above diagram for demo D2_<br><img src="/assets/wuxi-12d.png" alt="d
 - **1 Core Foundry Enterprise AI Concepts**
 - **1b Foundry free tier sign up**
 - **2 Foundry Tutorial concepts/projects** (ZAI-modified PAL demos and ZAI/FDE original demos)
-- **3 Project/doc sources** (PAL and ZAI)x
+- **3 Project/doc sources** (PAL and ZAI)xx
 
 <br>
 
@@ -49,13 +51,27 @@ _Version of above diagram for demo D2_<br><img src="/assets/wuxi-12d.png" alt="d
 
 ## **[0 Core Foundry Enterprise Concepts](/pal_concepts_ep/)** (#697; added 26.1011)
 
-_https://learn.palantir.com/introduction-to-foundry-aip-for-enterprise-organizations_<br>
-<img src="/assets/sun-13.png" alt="xxx" width="40%" style="border: 1px solid #999;">
+<br>
 
+### 0.0 learn.palantir starts with very high level abstract ideas
 
 **The intro to core Foundry concepts on learn.palantir.com is**
 - High level, fuzzy, with no examples.
 - Later examples never refer back to this doc. so its very hard to figure out.
+
+**I have known for a long time I needed to do this,** 
+- but there no enough (practical) guidance in the PAL docs, 
+- so I needed hands-on first and then try to tackle this. 
+
+_https://learn.palantir.com/introduction-to-foundry-aip-for-enterprise-organizations_<br>
+<img src="/assets/sun-13bbb.png" alt="xxx" width="40%" style="border: 1px solid #999;">
+
+_Note the incredibly complicated diagram (my goal is to refer back to this diagram in all demo docs, and try to create demos that specifically show examples of what is shown in this diagram)_<br>
+<img src="/assets/sun-12.png" alt="drones" width="80%" style="border: 1px solid #999;"><br>
+
+<br>
+
+### 0.1 D2 demo (my plan: demo-oriented core concepts)
 
 **My plan for my own version of the core concepts:** 
 - reference demos in my docx version of the PAL link above.
@@ -64,17 +80,32 @@ _https://learn.palantir.com/introduction-to-foundry-aip-for-enterprise-organizat
   - not only for "ontology"
   - but also for other stuff that is just as important for Foundry to work   
 
-**I have known for a long time I needed to do this,** 
-- but there no enough (practical) guidance in the PAL docs, 
-- so I needed hands-on first and then try to tackle this. 
+_Version of above diagram for demo D2_<br><img src="/assets/wuxi-12d.png" alt="drones" width="66%" style="border: 1px solid #999;"><br>
 
-
-_Note the incredibly complicated diagram (my goal is to refer back to this diagram in all demo docs, and try to create demos that specifically show examples of what is shown in this diagram)_<br>
-<img src="/assets/sun-12.png" alt="drones" width="80%" style="border: 1px solid #999;"><br>
 
 <br>
 
-#### **ALSO: [0b Scoping](/pal_concepts_scoping/)** (#696; added 26.1011)
+### 0.2 ZAI original diagram (needs work)
+
+_Foundry enterprise platform workflow (diagram needs update)_<br><img src="/assets/wuxi-01bbb.png" alt="drones" width="60%" style="border: 1px solid #999;"><br>
+
+<br>
+
+### 0.3 ZAI south/equator/north diagram (WIP)
+
+_south/equator/north diagram_<br><img src="/assets/sun-14.png" alt="drones" width="40%" style="border: 1px solid #999;"><br>
+
+<br>
+
+### 0.4 PAL south/ontology/north diagram (no equator)
+
+This diagram is missing the "equator" (of which ontology is only a portion (granted, the most important portion)). 
+
+_PAL south/ontology/north diagram_<br><img src="/assets/sun-15.png" alt="drones" width="60%" style="border: 1px solid #999;"><br>
+
+
+
+
 
 
 <br>
