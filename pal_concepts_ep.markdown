@@ -10,10 +10,111 @@ permalink: /pal_concepts_ep/
 
 <br>
 
-This page is the ZAI take on the xxxxxxxxxxxxxxxxxxxxxxxxxxxx <!--**core Enterprise_AI/Foundry concepts**. The content is my original, and is at times perhaps **a bit opinionated (and even provocative)**. And perhaps in a few places based on mistaken assumptions (I wrote most of this without AI assistance). But this initial version is meant to help you **think outside the box about AI**. ZiptieAI.com is meant as a learning and discovery platform, not as a polished product website.-->
+
+**TOC**
+- 0.1 ZAI focuses on hands-on demos (and useful docs) to learn Foundry
+- 0.2 ZAI original Foundry concepts diagram (needs an update)
+- 0.3 New ZAI Foundry south/equator/north concepts diagram/docx (WIP / v1 26.1012)
+- 0.4 The original (official) Foundry south/ontology/north intro webpage
+
 
 <br>
 
+----
+
+<br>
+
+### 0.1 ZAI focuses on hands-on demos (and useful docs) to learn Foundry
+
+_Diagram for demo D2 "Speedrun -- your first AIP workflow"_<br><img src="/assets/wuxi-12d.png" alt="drones" width="66%" style="border: 1px solid #999;"><br>
+
+
+<br>
+
+----
+
+<br>
+
+
+
+### 0.2 ZAI original Foundry concepts diagram (needs an update)
+
+- The demos should follow basic big picture Foundry concepts.
+- I could not find such a conceptual presentation that made the basic tutorial tasks clear.
+- I created the main diagram (below) only after doing the basic hands-on demos (as recommended by Foundry website).
+
+_ZAI original Foundry concepts (workflow) diagram (needs an update)_<br><img src="/assets/wuxi-01bbb.png" alt="drones" width="60%" style="border: 1px solid #999;"><br>
+
+<br>
+
+----
+
+<br>
+
+
+
+### 0.3 New ZAI Foundry south/equator/north concepts diagram/docx (WIP / v1 26.1012)
+
+- The main concept in the diagram/docx below is the organization of Foundry concepts into south/equator/north components.
+- This based on the original official Foundry main concept document/diagram (shown in the next sectio n 0.4) that organized concepts into south/ontology/north.
+- I added "equator" to replace ontology (ontology is now a single component within equator).
+- I also deleted several sections (WIP) and rewrote the remaining sections.
+- For details about how the concepts in the section were developed see:
+  - **[#697\_pal\_foundry\_aip\_ep\_concepts\_.docx](https://drive.google.com/drive/folders/1-Adawag9uA8_bq-hDF-nOuPYaRLz1eEO)** (contains draft rewrite and GPT discusssions)
+  - **[GPT discussions public link](https://chatgpt.com/c/6acccd47-afb8-83ea-8470-4cb2eceaa1f0)**  
+- I left them out many south/north components from the original Fpundry diagram (see 0.4) for simplicity.
+- **I have known for a long time that I needed to create my own version of the intro doc** but I needed hands-on demo experience first.
+
+<!-- - The core reference demos in my docx version of the PAL link above.
+- in demos reference the parts of the PAL link above that are demo'd.
+- my version will give an understandable explanation/demos 
+  - not only for "ontology"
+  - but also for other stuff that is just as important for Foundry to work 
+  - This diagram shows the "equator" (in PAL diagrams this is only "ontology")
+  -->
+
+_New ZAI south/equator/north diagram (only new ZAI stuff shown)_<br><img src="/assets/sun-14.png" alt="drones" width="50%" style="border: 1px solid #999;"><br>
+
+_New ZAI south/equator/north **[docx (#697)](https://drive.google.com/drive/folders/1-Adawag9uA8_bq-hDF-nOuPYaRLz1eEO)** (WIP)_<br><img src="/assets/sun-16.png" alt="drones" width="50%" style="border: 1px solid #999;"><br>
+
+<br>
+
+----
+
+<br>
+
+
+
+### 0.4 The original (official) Foundry south/ontology/north intro webpage
+
+<!--  "introduction-to-foundry-aip-for-enterprise-organizations" -->
+
+**The webpage [intro to core Foundry concepts](https://learn.palantir.com/introduction-to-foundry-aip-for-enterprise-organizations) on learn.palantir.com**
+- Is the authoritative reference and provides extensive information. 
+- However 
+  - The webpage presents very high level abstract concepts.
+  - These concepts are not tied to specific demos. 
+  - Demo docs do not refer to this diagram.
+  - I could not match what I learned hands-on with this doc.
+  - The central section only includes ontology (no mention of pipeline, AIP, or internal LLMs). UI's in the north and external LLMs in the south are not explicitly shown.
+
+_The Foundry intro webpage is the first item at learn.palantir.com_<br>
+<img src="/assets/sun-13bbb.png" alt="xxx" width="40%" style="border: 1px solid #999;">
+
+<!-- _The complicated main PAL concepts diagram @ **[learn.palantir.com/introduction-to-foundry-aip-for-enterprise-organizations](https://learn.palantir.com/introduction-to-foundry-aip-for-enterprise-organizations)**; my goal is to create a new version of this diagram, and back to that diagram in all demo docs, and try to create demos that specifically show examples of what is shown in that diagram._  -->
+
+_The Foundry intro main concepts diagram is quite complicated._<br>
+<img src="/assets/sun-12.png" alt="drones" width="70%" style="border: 1px solid #999;"><br>
+
+
+<br>
+
+---
+---
+---
+---
+---
+---
 ---
 
 <br>

@@ -48,64 +48,31 @@ _ADD:_
 
 <br>
 
-
 ## **[0 Core Foundry Enterprise Concepts](/pal_concepts_ep/)** (v1 26.1011)
 
 <br>
 
-For details about how the concepts in the section were developed see:
-- **[#697\_pal\_foundry\_aip\_ep\_concepts\_.docx](https://drive.google.com/drive/folders/1-Adawag9uA8_bq-hDF-nOuPYaRLz1eEO)** (contains draft rewrite and GPT discusssions)
-- **[GPT discussions public link](https://chatgpt.com/c/6acccd47-afb8-83ea-8470-4cb2eceaa1f0)** 
-
-
+<!-- **TOC**
+- 0.1 ZAI focuses on hands-on demos (and useful docs) to learn Foundry
+- 0.2 ZAI original Foundry concepts diagram (needs an update)
+- 0.3 New ZAI Foundry south/equator/north concepts diagram/docx (WIP / v1 26.1012)
+- 0.4 The original (official) Foundry south/ontology/north intro webpage 
 <br>
+-->
 
-### 0.0 learn.palantir starts with very high level abstract ideas
-
-**The intro to core Foundry concepts on learn.palantir.com is**
-- High level, fuzzy, with no examples.
-- there no enough (practical) guidance in the PAL docs, 
-- Later examples never refer back to this doc. so its very hard to figure out.
-
-**I have known for a long time that I needed to create my own version of the intro doc** 
-- but I needed hands-on demo experience first. 
-
-_https://learn.palantir.com/introduction-to-foundry-aip-for-enterprise-organizations_<br>
-<img src="/assets/sun-13bbb.png" alt="xxx" width="40%" style="border: 1px solid #999;">
-
-_The complicated main PAL concepts diagram @ **[learn.palantir.com/introduction-to-foundry-aip-for-enterprise-organizations](https://learn.palantir.com/introduction-to-foundry-aip-for-enterprise-organizations)**; my goal is to create a new version of this diagram, and back to that diagram in all demo docs, and try to create demos that specifically show examples of what is shown in that diagram._<br>
-<img src="/assets/sun-12.png" alt="drones" width="70%" style="border: 1px solid #999;"><br>
-
-<br>
-
-### 0.1 ZAI version will focus on demo-oriented core concepts
-
-- reference demos in my docx version of the PAL link above.
-- in demos reference the parts of the PAL link above that are demo'd.
-- my version will give an understandable explanation/demos 
-  - not only for "ontology"
-  - but also for other stuff that is just as important for Foundry to work   
-
-_diagram for demo D2_<br><img src="/assets/wuxi-12d.png" alt="drones" width="66%" style="border: 1px solid #999;"><br>
-
-
-<br>
-
-### 0.2 ZAI original diagram (needs work)
-
-_ZAI original Foundry enterprise platform workflow diagram (needs update)_<br><img src="/assets/wuxi-01bbb.png" alt="drones" width="60%" style="border: 1px solid #999;"><br>
-
-<br>
-
-### 0.3 New ZAI south/equator/north diagram/docx (WIP)
-
-- This diagram shows the "equator" (in PAL diagrams this is only "ontology")
-- Note: The south/north components (shown in diagram in 0.4) are also to be included in this diagram
-  - I left them out for simplicity
+**New ZAI version of Foundry core concepts**
 
 _New ZAI south/equator/north diagram (only new ZAI stuff shown)_<br><img src="/assets/sun-14.png" alt="drones" width="50%" style="border: 1px solid #999;"><br>
 
-_New ZAI south/equator/north docx (WIP)_<br><img src="/assets/sun-16.png" alt="drones" width="50%" style="border: 1px solid #999;"><br>
+_New ZAI south/equator/north **[docx (#697)](https://drive.google.com/drive/folders/1-Adawag9uA8_bq-hDF-nOuPYaRLz1eEO)** (WIP)_<br><img src="/assets/sun-16.png" alt="drones" width="50%" style="border: 1px solid #999;"><br>
+
+<br>
+
+**Original official version of Foundry core concepts**
+
+
+_**[webpage](https://learn.palantir.com/introduction-to-foundry-aip-for-enterprise-organizations)** on learn.palantir.com_<br>
+<img src="/assets/sun-12.png" alt="drones" width="70%" style="border: 1px solid #999;"><br>
 
 <br>
 
@@ -137,13 +104,14 @@ _PAL south/ontology/north diagram_<br><img src="/assets/sun-15.png" alt="drones"
 - 3 AI APIs for AI search engines
 - 4 AI APIs LLMs and Foundry -->
 
+<!-- 
 - **SUMMARY (TL;DR): Why has Palantir been so successful recently?**
 - **C1 (1-2) AI can be a blessing or a curse for your enterprise. Foundry makes it much more of a blessing.**
 - **C2 (3-5) What exactly are AI, SOVereignty, and ALPHA?**
 - **C3 (7-8) Know the difference between AI scammers and your AI allies (a Frontier AI LLM provider can be both).**
 - **C4 (9) Historical overview of SOV/ALPHA. Before LLMs and (now) with LLMs for the enterprise and (future?) the PC.**
 
-_NOTE: See (below) section "2 Tutorial projects" subsection "2.2x CONCEPTS (DEEP DIVE): ZAI demos" for lower level concepts (workflows, data protection, AIP, and automation)._
+_NOTE: See (below) section "2 Tutorial projects" subsection "2.2x CONCEPTS (DEEP DIVE): ZAI demos" for lower level concepts (workflows, data protection, AIP, and automation)._ -->
 
 
 _Alex Karp sounding the alarm about sovereignty and ALPHA in the enterprise._<br><img src="/assets/alex222.png" alt="xxx" width="60%" style="border: 1px solid #999;">
