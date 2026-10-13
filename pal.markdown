@@ -64,14 +64,14 @@ _ADD:_
 
 _New ZAI south/equator/north diagram (only new ZAI stuff shown)_<br><img src="/assets/sun-14.png" alt="drones" width="50%" style="border: 1px solid #999;"><br>
 
-_New ZAI south/equator/north **[docx (#697)](https://drive.google.com/drive/folders/1-Adawag9uA8_bq-hDF-nOuPYaRLz1eEO)** (WIP)_<br><img src="/assets/sun-16.png" alt="drones" width="50%" style="border: 1px solid #999;"><br>
+_New ZAI south/equator/north **[docx (#697)](https://drive.google.com/drive/folders/1-Adawag9uA8_bq-hDF-nOuPYaRLz1eEO)** (WIP)_<br><img src="/assets/sun-16.png" alt="drones" width="45%" style="border: 1px solid #999;"><br>
 
 <br>
 
 **Original official version of Foundry core concepts**
 
 
-_**[webpage](https://learn.palantir.com/introduction-to-foundry-aip-for-enterprise-organizations)** on learn.palantir.com_<br>
+_**[Webpage](https://learn.palantir.com/introduction-to-foundry-aip-for-enterprise-organizations)** on learn.palantir.com_<br>
 <img src="/assets/sun-12.png" alt="drones" width="70%" style="border: 1px solid #999;"><br>
 
 <br>
@@ -114,9 +114,9 @@ _PAL south/ontology/north diagram_<br><img src="/assets/sun-15.png" alt="drones"
 _NOTE: See (below) section "2 Tutorial projects" subsection "2.2x CONCEPTS (DEEP DIVE): ZAI demos" for lower level concepts (workflows, data protection, AIP, and automation)._ -->
 
 
-_Alex Karp sounding the alarm about sovereignty and ALPHA in the enterprise._<br><img src="/assets/alex222.png" alt="xxx" width="60%" style="border: 1px solid #999;">
+_Alex Karp sounding the alarm about sovereignty and ALPHA in the enterprise._<br><img src="/assets/alex222.png" alt="xxx" width="52%" style="border: 1px solid #999;">
 
-_Palantir provides proven engineering (the crystal ball is just a metaphor, marketing genius); those selling AGI are selling a fantasy that can cause big problems in an enterprise._<br><img src="/assets/pal_9_06.png" alt="drones" width="25%" style="border: 1px solid #999;"> <img src="/assets/777_02.png" alt="drones" width="30%" style="border: 1px solid #999;"><br>
+_Palantir provides proven engineering (the crystal ball is just a metaphor, marketing genius); those selling AGI are selling a fantasy that can cause big problems in an enterprise._<br><img src="/assets/pal_9_06.png" alt="drones" width="20%" style="border: 1px solid #999;"> <img src="/assets/777_02.png" alt="drones" width="25%" style="border: 1px solid #999;"><br>
 
 
 
