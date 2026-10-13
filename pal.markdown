@@ -50,8 +50,6 @@ _ADD:_
 
 ## **[0 Core Foundry Enterprise Concepts](/pal_concepts_ep/)** (v1 26.1011)
 
-<br>
-
 <!-- **TOC**
 - 0.1 ZAI focuses on hands-on demos (and useful docs) to learn Foundry
 - 0.2 ZAI original Foundry concepts diagram (needs an update)
@@ -60,15 +58,15 @@ _ADD:_
 <br>
 -->
 
-**New ZAI version of Foundry core concepts**
+#### **New ZAI version of Foundry core concepts**
 
 _New ZAI south/equator/north diagram (only new ZAI stuff shown)_<br><img src="/assets/sun-14.png" alt="drones" width="50%" style="border: 1px solid #999;"><br>
 
 _New ZAI south/equator/north **[docx (#697)](https://drive.google.com/drive/folders/1-Adawag9uA8_bq-hDF-nOuPYaRLz1eEO)** (WIP)_<br><img src="/assets/sun-16.png" alt="drones" width="45%" style="border: 1px solid #999;"><br>
 
-<br>
 
-**Original official version of Foundry core concepts**
+
+#### **Original official version of Foundry core concepts**
 
 
 _**[Webpage](https://learn.palantir.com/introduction-to-foundry-aip-for-enterprise-organizations)** on learn.palantir.com_<br>
@@ -95,7 +93,7 @@ _PAL south/ontology/north diagram_<br><img src="/assets/sun-15.png" alt="drones"
 
 ## **[1 Core Foundry Enterprise AI Concepts](/pal_concepts/)**
 
-**This "AI" concepts was motivated primarily by Alex Karp talking about sovereignty and ALPHA in the enterprise.** THese are issues due to the nature of AI (unpredictable matrix math computations that recognize patterns / perform classification). 
+**The AI concepts webpage was inspired by Alex Karp's talks about sovereignty and ALPHA in the enterprise.** These issues are due to the nature of AI (unpredictable matrix math computations that recognize patterns / perform classification). 
 
 
 <!-- A historical review of ALPHA/sovereignty
