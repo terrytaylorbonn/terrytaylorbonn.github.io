@@ -6,8 +6,7 @@ permalink: /pal/
 
 _ADD:_
 
-- _Video about real estate for Leon._
-- _add 2.z Function-specific list of demos.. for example HN demos (not AI, ALPHA, SOV, etc)._
+- _add 2.z Function-specific list of demos. for example HN demos (not AI, ALPHA, SOV, etc)._
 - _put [0b Scoping](/pal_concepts_scoping/) (#696; added 26.1011) somehwere_
 
 <br>
@@ -60,7 +59,7 @@ _ADD:_
 
 #### **New ZAI version of Foundry core concepts**
 
-I needed a few months of hands-on experience before I was able to create a ZAI version of the Foundry core concepts. 
+I needed a few months of hands-on experience before I was able to create a ZAI version of the Foundry core concepts (**[docx (#697)](https://drive.google.com/drive/folders/1-Adawag9uA8_bq-hDF-nOuPYaRLz1eEO)** (WIP)). 
 
 _New ZAI south/equator/north diagram (only new ZAI stuff shown)_<br><img src="/assets/sun-14.png" alt="drones" width="50%" style="border: 1px solid #999;"><br>
 
@@ -70,6 +69,7 @@ _New ZAI south/equator/north **[docx (#697)](https://drive.google.com/drive/fold
 
 #### **Original official version of Foundry core concepts**
 
+I think you can sum up this webpage with a quote from the webpage itself: "**If you remember one thing from this course**, let it be this: the Ontology is the centerpiece of the entire platform."
 
 _**[Webpage](https://learn.palantir.com/introduction-to-foundry-aip-for-enterprise-organizations)** on learn.palantir.com_<br>
 <img src="/assets/sun-12.png" alt="drones" width="70%" style="border: 1px solid #999;"><br>
