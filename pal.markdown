@@ -58,7 +58,7 @@ _TODO: add [0b Scoping](/pal_concepts_scoping/) (#696; added 26.1011) somehwere_
 
 I needed a few months of hands-on experience before I was able to create a ZAI version of the Foundry intro (core concepts) (see **[docx #697ex](https://drive.google.com/drive/folders/1-Adawag9uA8_bq-hDF-nOuPYaRLz1eEO)** (WIP)). The ZAI version (WIP) replaces the original "ontology" section with the "equator" section.  
 
-_Note: The new ZAI Foundry intro will also cross reference all demos with Foundry apps (for details see **[docx #697ex](https://drive.google.com/drive/folders/1-Adawag9uA8_bq-hDF-nOuPYaRLz1eEO)** and section "2 Foundry demos" / "2.0 Master demo list" below on this webpage)._
+_Note: The new ZAI Foundry intro will also cross reference all demos with Foundry apps (for details see **[docx #697ex](https://drive.google.com/drive/folders/1-Adawag9uA8_bq-hDF-nOuPYaRLz1eEO)** and section **"2 Foundry demos" / "2.0 Master demo list"** below on this webpage)._
 
 
 _New ZAI south/equator/north diagram (only new ZAI stuff shown)_<br><img src="/assets/sun-14.png" alt="drones" width="50%" style="border: 1px solid #999;"><br>
