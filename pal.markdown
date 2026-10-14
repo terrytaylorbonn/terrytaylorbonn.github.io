@@ -69,7 +69,7 @@ _New ZAI south/equator/north **[docx (#697)](https://drive.google.com/drive/fold
 
 #### **Original official version of Foundry core concepts**
 
-I think you can sum up this webpage with a quote from the webpage itself: "**If you remember one thing from this course**, let it be this: the Ontology is the centerpiece of the entire platform."
+A quote from the webpage itself: "**If you remember one thing from this course**, let it be this: the Ontology is the centerpiece of the entire platform." The course is quite interesting perhaps for a management reader, but too complicated and abstract for a reader wanting to learn Foundry hands-on ASAP. **But such a doc (reorganized) could serve as the main guide for what demos to do.**
 
 _**[Webpage](https://learn.palantir.com/introduction-to-foundry-aip-for-enterprise-organizations)** on learn.palantir.com_<br>
 <img src="/assets/sun-12.png" alt="drones" width="70%" style="border: 1px solid #999;"><br>
@@ -203,6 +203,7 @@ If you cant get a trial version of PAL running, then there's no reason to read f
 
 This section contains a deep dive into concepts and 3 Foundry tutorial projects
 
+- **2.0 Master demo list**
 - **2.2x CONCEPTS (DEEP DIVE): ZAI demos**
 - **2.2a ZAI start-to-finish demo project (TODO)**
 - **2.2b ZAI versions of the core ~8 Foundry getting started demos**
@@ -213,6 +214,14 @@ This section contains a deep dive into concepts and 3 Foundry tutorial projects
 - 2.2b ZAI versions of the core ~8 Foundry getting started demos
 - 2.3 PAL Examples (installable) -->
 
+
+<br>
+
+--------------------
+
+<br>
+
+#### **[2.0 Master demo list](/3c.2_pal_demo_MASTERLIST/)** (26.1013)
 
 <br>
 
