@@ -53,7 +53,7 @@ _ADD:_
 - 0.1 ZAI focuses on hands-on demos (and useful docs) to learn Foundry
 - 0.2 ZAI original Foundry concepts diagram (needs an update)
 - 0.3 New ZAI Foundry south/equator/north concepts diagram/docx (WIP / v1 26.1012)
-- 0.4 The original (official) Foundry south/ontology/north intro webpage 
+- 0.4    The original (official) Foundry south/ontology/north intro webpage 
 <br>
 -->
 
@@ -63,9 +63,9 @@ I needed a few months of hands-on experience before I was able to create a ZAI v
 
 _New ZAI south/equator/north diagram (only new ZAI stuff shown)_<br><img src="/assets/sun-14.png" alt="drones" width="50%" style="border: 1px solid #999;"><br>
 
-_ZAI south/equator/north **[docx (#697)](https://drive.google.com/drive/folders/1-Adawag9uA8_bq-hDF-nOuPYaRLz1eEO)** (left) v1 and (right) v2_<br><img src="/assets/sun-16.png" alt="drones" width="45%" style="border: 1px solid #999;">  <img src="/assets/sun-16bbb.png" alt="drones" width="35%" style="border: 1px solid #999;"><br>
+_ZAI version of Foundry intro (will reference all demos/Foundry_applications in future) (see **[docx (#697ex)](https://drive.google.com/drive/folders/1-Adawag9uA8_bq-hDF-nOuPYaRLz1eEO)**)_<br><img src="/assets/sun-16bbb.png" alt="drones" width="35%" style="border: 1px solid #999;"><br>
 
-
+<!-- <br><img src="/assets/sun-16.png" alt="drones" width="45%" style="border: 1px solid #999;">    -->
 
 #### **Original official version of Foundry core concepts**
 
