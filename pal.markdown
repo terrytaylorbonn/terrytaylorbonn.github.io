@@ -206,11 +206,11 @@ If you cant get a trial version of PAL running, then there's no reason to read f
 This section contains a deep dive into concepts and 3 Foundry tutorial projects
 
 - **2.0 Master demo list**
-- **2.2x CONCEPTS (DEEP DIVE): ZAI demos**
-- **2.2a ZAI start-to-finish demo project (TODO)**
-- **2.2b ZAI versions of the core ~8 Foundry getting started demos**
-- **2.2zzz TARGET APP DEMOS (TODO)**. These will be focusing on target apps, for example "Haystack Needle" demos. Higher level docs, assuming you know the basics.
-- **2.3 PAL Examples (installable)**. FULL-FEATURED BUSINESS APP (WITH INSTALLER).
+<!-- - **2.2x CONCEPTS (DEEP DIVE): ZAI demos** -->
+- **2.1 ZAI start-to-finish demo project (TODO)**
+- **2.2 ZAI versions of the core ~8 Foundry getting started demos**
+- **2.3 Target app demos (TODO)**. These will be focusing on target apps, for example "Haystack Needle" demos. Higher level docs, assuming you know the basics.
+- **2.4 PAL Examples (installable)**. FULL-FEATURED BUSINESS APP (WITH INSTALLER).
 
 <!-- - 2.2a ZAI start-to-finish demo project (TODO)
 - 2.2b ZAI versions of the core ~8 Foundry getting started demos
@@ -238,7 +238,7 @@ In the diagrams of the new ZAI version of the Foundry intro below:
 
 <br>
 
-
+<!-- 
 #### **[2.2x CONCEPTS (DEEP DIVE): ZAI demos](/3c.2_pal_demo_CONCEPTS/)**
 
 - the core getting started demos did not seem to focus on what I gradually (with more and more hands-on experience) began to recognize as the core concepts of PAL demos.
@@ -248,10 +248,10 @@ In the diagrams of the new ZAI version of the Foundry intro below:
 
 --------------------
 
-<br>
+<br> -->
 
 
-#### **[2.2a ZAI start-to-finish demo project (TODO)](/3c.2_pal_initial_demo_ZAI/)**.
+#### **[2.1 ZAI start-to-finish demo project (TODO)](/3c.2_pal_initial_demo_ZAI/)**.
 
 The idea is to
 
@@ -277,7 +277,7 @@ when i started: I decided I'd just start doing demos and after a while I'd event
 <br>
 
 
-#### **[2.2b ZAI versions of the core ~8 Foundry getting started demos](/3c.2_pal_initial_demos/).**
+#### **[2.2 ZAI versions of the core ~8 Foundry getting started demos](/3c.2_pal_initial_demos/).**
 
 _This is currently (26.0914) the Main focus of (1) ZAI "3c Enterprise" and (2) ZAI in general_.\*\*
 
@@ -360,7 +360,7 @@ _(D2 = [1] and [3], but [3] is the real focus) A diagram of the configuration st
 <br>
 
 
-#### **2.2zzz TARGET APP DEMOS (TODO)**.
+#### **2.3 Target app demos (TODO)**.
 
 These will be focusing on target apps, for example "Haystack Needle" demos. Higher level docs, assuming you know the basics.
 
@@ -371,7 +371,7 @@ These will be focusing on target apps, for example "Haystack Needle" demos. High
 <br>
 
 
-#### **[2.3 PAL Examples (installable)](/3c.1b_pal_examples/)**.
+#### **[2.4 PAL Examples (installable)](/3c.1b_pal_examples/)**.
 
 FULL-FEATURED BUSINESS APP (WITH INSTALLER). I originally planned to focus on examples These are complete demos that auto-install. The big advantage is that you start out with a (usually) working version that you can modify piece by piece. Examples are complete (usually more complicated) and have an installer that allows you to start with a (usually) working version that you can modify. ZAI adds a few extra steps:
 
