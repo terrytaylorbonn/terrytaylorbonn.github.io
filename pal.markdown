@@ -4,10 +4,7 @@ title: 3c Enterprise
 permalink: /pal/
 ---
 
-_ADD:_
-
-- _add 2.z Function-specific list of demos. for example HN demos (not AI, ALPHA, SOV, etc)._
-- _put [0b Scoping](/pal_concepts_scoping/) (#696; added 26.1011) somehwere_
+_TODO: add [0b Scoping](/pal_concepts_scoping/) (#696; added 26.1011) somehwere_
 
 <br>
 
@@ -33,7 +30,7 @@ _ADD:_
 - **0 Core Foundry Enterprise Concepts** (#697) **ADDED 26.1011**
 - **1 Core Foundry Enterprise AI Concepts**
 - **1b Foundry free tier sign up**
-- **2 Foundry Tutorial concepts/projects** (ZAI-modified PAL demos and ZAI/FDE original demos)
+- **2 Foundry demos** (ZAI-modified PAL demos and ZAI/FDE original demos)
 - **3 Project/doc sources** (PAL and ZAI)xx
 
 <br>
@@ -59,11 +56,16 @@ _ADD:_
 
 #### **New ZAI version of Foundry core concepts**
 
-I needed a few months of hands-on experience before I was able to create a ZAI version of the Foundry core concepts (**[docx (#697)](https://drive.google.com/drive/folders/1-Adawag9uA8_bq-hDF-nOuPYaRLz1eEO)** (WIP)). 
+I needed a few months of hands-on experience before I was able to create a ZAI version of the Foundry intro (core concepts) (see **[docx #697ex](https://drive.google.com/drive/folders/1-Adawag9uA8_bq-hDF-nOuPYaRLz1eEO)** (WIP)). The ZAI version (WIP) replaces the original "ontology" section with the "equator" section.  
+
+_Note: The new ZAI Foundry intro will also cross reference all demos with Foundry apps (for details see **[docx #697ex](https://drive.google.com/drive/folders/1-Adawag9uA8_bq-hDF-nOuPYaRLz1eEO)** and section "2 Foundry demos" / "2.0 Master demo list" below on this webpage)._
+
 
 _New ZAI south/equator/north diagram (only new ZAI stuff shown)_<br><img src="/assets/sun-14.png" alt="drones" width="50%" style="border: 1px solid #999;"><br>
 
-_ZAI version of Foundry intro (will reference all demos/Foundry_applications in future) (see **[docx (#697ex)](https://drive.google.com/drive/folders/1-Adawag9uA8_bq-hDF-nOuPYaRLz1eEO)**)_<br><img src="/assets/sun-16bbb.png" alt="drones" width="35%" style="border: 1px solid #999;"><br>
+
+
+<img src="/assets/sun-16ccc.png" alt="drones" width="35%" style="border: 1px solid #999;">
 
 <!-- <br><img src="/assets/sun-16.png" alt="drones" width="45%" style="border: 1px solid #999;">    -->
 
@@ -199,7 +201,7 @@ If you cant get a trial version of PAL running, then there's no reason to read f
 <br>
 
 
-## **2 Foundry Tutorial concepts/projects**
+## **2 Foundry demos**
 
 This section contains a deep dive into concepts and 3 Foundry tutorial projects
 
@@ -221,7 +223,14 @@ This section contains a deep dive into concepts and 3 Foundry tutorial projects
 
 <br>
 
-#### **[2.0 Master demo list](/3c.2_pal_demo_MASTERLIST/)** (26.1013)
+#### **[2.0 Master demo list](/3c.2_pal_demo_MASTERLIST/)** (v1 26.1013)
+
+In the diagrams of the new ZAI version of the Foundry intro below: 
+- (left) The new ZAI version of Foundry intro (WIP) will cross reference all demos with Foundry apps.
+- (right) H3 Foundry apps that demo D3b/#628 are marked (in the future all apps will be added). 
+- For details see **[docx (#697ex)](https://drive.google.com/drive/folders/1-Adawag9uA8_bq-hDF-nOuPYaRLz1eEO)**.
+
+<img src="/assets/sun-16bbb.png" alt="drones" width="35%" style="border: 1px solid #999;">  <img src="/assets/sun-16ddd.png" alt="drones" width="35%" style="border: 1px solid #999;">
 
 <br>
 
