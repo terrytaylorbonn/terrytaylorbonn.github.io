@@ -48,6 +48,8 @@ example of the meaning of chapter titles in this docx:
 -	"xxxS4: Governance" (original PAL webpage; S4 indicates the order it appeared on that page)
 -	"S4-v2 Governance & Security" ("v2" indicates its the first reorg'd version (per GPT chats))
 
+Note: The original chapter numbers have intentionally not been updated. They reflect to the order on the original Foundry webpage.
+
 <img src="/assets/sun-17.png" alt="drones" width="40%" style="border: 1px solid #999;"><br>
 
 <br>

@@ -63,7 +63,7 @@ I needed a few months of hands-on experience before I was able to create a ZAI v
 
 _New ZAI south/equator/north diagram (only new ZAI stuff shown)_<br><img src="/assets/sun-14.png" alt="drones" width="50%" style="border: 1px solid #999;"><br>
 
-_New ZAI south/equator/north **[docx (#697)](https://drive.google.com/drive/folders/1-Adawag9uA8_bq-hDF-nOuPYaRLz1eEO)** (WIP)_<br><img src="/assets/sun-16.png" alt="drones" width="45%" style="border: 1px solid #999;"><br>
+_ZAI south/equator/north **[docx (#697)](https://drive.google.com/drive/folders/1-Adawag9uA8_bq-hDF-nOuPYaRLz1eEO)** (left) v1 and (right) v2_<br><img src="/assets/sun-16.png" alt="drones" width="45%" style="border: 1px solid #999;">  <img src="/assets/sun-16bbb.png" alt="drones" width="35%" style="border: 1px solid #999;"><br>
 
 
 
