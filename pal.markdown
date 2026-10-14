@@ -205,7 +205,7 @@ If you cant get a trial version of PAL running, then there's no reason to read f
 
 This section contains a deep dive into concepts and 3 Foundry tutorial projects
 
-- **2.0 ZAI master demo list**
+- **2.0 ZAI demo master list**
 <!-- - **2.2x CONCEPTS (DEEP DIVE): ZAI demos** -->
 - **2.1 ZAI start-to-finish demo project (TODO)**
 - **2.2 ZAI versions of the core ~8 Foundry getting started demos**
@@ -223,7 +223,7 @@ This section contains a deep dive into concepts and 3 Foundry tutorial projects
 
 <br>
 
-#### **[2.0 ZAI master demo list](/3c.2_pal_demo_MASTERLIST/)** (v1 26.1013)
+#### **[2.0 ZAI demo master list](/3c.2_pal_demo_MASTERLIST/)** (v1 26.1013)
 
 In the diagrams of the new ZAI version of the Foundry intro below: 
 - (left) The new ZAI version of Foundry intro (WIP) will cross reference all demos with Foundry apps.
