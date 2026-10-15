@@ -6,7 +6,7 @@ permalink: /3c.1b_pal_examples/
 
 <br>
 
-[← 3c PAL](/pal/)
+[← 3c PAL](/pal/) 
 
 <br>
 
@@ -100,6 +100,7 @@ _Typical example workflow (some examples may not have all components shown)_<br>
 - E10
 - E11
 - E17
+- E14 26.1014
 
 <br>
 
@@ -142,6 +143,18 @@ _Workflow diagrams for examples are usually a bit more complicted than for demos
 
 <br>
 
+
+#### **E14: Evaluate Retrieval-Augmented Generation (RAG) methods** (26.1014)
+
+- #629
+- https://ziptieai.usw-17.palantirfoundry.com/workspace/now/platform/7997a708-4d1e-4efb-bfca-882dc172b4e8
+- _E14_<br><img src="/assets/pal_14_01.png" alt="drones" width="60%" style="border: 1px solid #999;">
+- _E14_<br><img src="/assets/sun-19.png" alt="drones" width="60%" style="border: 1px solid #999;">
+
+<br>
+
+
+
 # **4a List of TODO examples**
 
 <br>
@@ -151,14 +164,6 @@ _Workflow diagrams for examples are usually a bit more complicted than for demos
 - no Docx??
 - https://ziptieai.usw-17.palantirfoundry.com/workspace/now/platform/b88675ed-e8f9-4bc9-b75b-aa446930d07b
 - _E13_<br><img src="/assets/pal_13_01.png" alt="drones" width="60%" style="border: 1px solid #999;">
-
-<br>
-
-#### **E14: Evaluate Retrieval-Augmented Generation (RAG) methods**.
-
-- no Docx??
-- https://ziptieai.usw-17.palantirfoundry.com/workspace/now/platform/7997a708-4d1e-4efb-bfca-882dc172b4e8
-- _E14_<br><img src="/assets/pal_14_01.png" alt="drones" width="60%" style="border: 1px solid #999;">
 
 <br>
 
@@ -286,7 +291,7 @@ So yes — Palantir probably should onboard new users with small working example
 
 <br>
 
-26.0809 (v1 26.0728)
+26.1014 (0809, v1 26.0728)
 
 <!-- # **2 Why do examples instead of demos**
 

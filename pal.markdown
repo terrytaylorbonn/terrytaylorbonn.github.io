@@ -22,6 +22,7 @@ _TODO: add [0b Scoping](/pal_concepts_scoping/) (#696; added 26.1011) somehwere_
 - Palantir offers a **generous Foundry free trial**.
 - Foundry's **built-in AI assistant (FDE) makes hands-on self-study practical**.
 
+Note: I am using a free trial version of Foundry. A very generous free trial. But with one major limitation: **I can only have up to 50 ontology objects** (something like that; I forgot the details). So its inevitable that **I sometimes must delete demos/examples. So I try to document them carefully.**
 
 <br>
 
