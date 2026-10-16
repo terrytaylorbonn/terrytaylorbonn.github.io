@@ -20,7 +20,7 @@ My take on this is I think unique and quite on the mark. GPT (for what its worth
 
 <br>
 
-ME01: in foundry.
+### **ME01: in foundry**
 
 you have objects.
 you can run Crud on these objects. 
@@ -31,7 +31,7 @@ objects are linked.
 
 so its kind of like REST endpoints.
 
-GPT:
+#### **GPT:**
 
 Yes. A Foundry Ontology is somewhat like a REST API backed by a relational database, but with additional business logic.
 
@@ -75,10 +75,10 @@ That is a useful starting point for explaining the Ontology without Palantir's m
 
 <br>
 
-ME02: you can also use REST commands (https:/xxx.com/run_test) to do actions.
+### **ME02: you can also use REST commands (https:/xxx.com/run_test) to do actions.**
 
 
-GPT: 
+#### **GPT:**
 Yes. Foundry Ontology Actions can also be invoked through REST API endpoints, not just through Foundry applications.
 
 For example, conceptually:
@@ -111,7 +111,7 @@ And importantly, Foundry's native REST endpoints have defined URL structures; yo
 
 <br>
 
-ME3:  so the big selling point is Foundry constrains you.. what you can do. 
+### **ME3:  so the big selling point is Foundry constrains you.. what you can do.**
 
 but at the same time allows you to "insert" AI anywhere in the workflow.
 in the pipeline, in the ontology 
@@ -120,7 +120,7 @@ the real value is the objects relationships and CRUD).
 
 you insert AI in a controlled and monitored way.
 
-GPT: 
+#### **GPT:** 
 
 
 
@@ -180,12 +180,13 @@ That is a much more concrete explanation of Foundry's value than simply saying i
 
 <br>
 
-ME4: can try to give a summary of how this mimics REST based systems. 
+### **ME4: can try to give a summary of how this mimics REST based systems.** 
+
 not just the REST endpoints...
 but the data sanitization that occurs, realtime data inputs,
 
 
-GPT:
+#### **GPT:**
 
 I think Foundry can be understood as an enterprise REST-based application architecture, extended with integrated data pipelines, business objects, AI, and governance.
 
@@ -280,7 +281,7 @@ The innovation is not that Foundry invented these mechanisms. It is how Foundry 
 
 <br>
 
-ME5: 
+### **ME5:**
 
 pic 1 shows all the actions you can create for object type. 
 pic 2 is about an action that runs a function on a different objecct. 
@@ -298,7 +299,7 @@ this is REST/ objectx oriented programming "on rails".
 
 
 
-GPT: 
+#### **GPT:** 
 
 “REST / object-oriented programming on rails” is a very good description of what you're seeing. And I think you've identified an important part of Foundry's value that Palantir's introductory explanations tend to obscure.
 
@@ -378,13 +379,13 @@ The important caveat is that the rails don't eliminate programming or guarantee 
 
 <br>
 
-ME6:
+### **ME6: so original OO programming focused on "low level" OOP, .....**
 
-so original OO programming focused on "low level" OOP, ..... by that i mean providing the basic commands to create objects.. but you had to create a lot of "glue" logic.  
+by that i mean providing the basic commands to create objects.. but you had to create a lot of "glue" logic.  
 
 but in foundry its not glue logic... Foundry actually give you "real" complete objects on a higher level, making it much easier to focus on the business aspects while still retaining the ability to custom code.
 
-GPT: 
+### **GPT:** 
 
 Yes. I agree with your central distinction: Foundry raises the level of abstraction from programming objects to building business systems using predefined, operational business objects.
 
@@ -446,11 +447,11 @@ Foundry doesn't just make business application development easier. It also provi
 
 <br>
 
-ME7: 
+### **ME7: keeping the "programming level" (you can also write real code if required) on a high level allows you to focus on much more complex systems programming.**
 
-keeping the "programming level" (you can also write real code if required) on a high level allows you to focus on much more complex systems programming.  that last pic i showed you will all of the many options for an action... if you tried to do that in an IDE with code assist, it would far too complicated ... links, functions, notifications, webhooks, etc etc..... but in foundry you have a very manageable way of havin access to all of these.
+that last pic i showed you will all of the many options for an action... if you tried to do that in an IDE with code assist, it would far too complicated ... links, functions, notifications, webhooks, etc etc..... but in foundry you have a very manageable way of havin access to all of these.
 
-GPT: 
+#### **GPT:** 
 
 Yes. And I think you're getting at something more important than simply reducing the amount of code developers must write.
 
