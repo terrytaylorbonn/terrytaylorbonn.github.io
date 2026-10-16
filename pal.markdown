@@ -46,16 +46,17 @@ Note: I am using a free trial version of Foundry. A very generous free trial. Bu
 
 <br>
 
-## **00 Why Foundry?** (v1 26.1016)
-
-<!-- **[00 Why Foundry?](/pal_concepts_why_foundry/)** (v1 26.1016) -->
+## **[00 Why Foundry?](/pal_concepts_why_foundry/)** (v1 26.1016) -->
 
 (WIP... below is just some initial thoughts)
 
 - People are discovering that **no matter how great the model is, it will never have real intelligence** (that's something I have been writing for a year; its obvious to anyone with basic tech insight and basic familiarity with the core of what makes AI tick (and AI does tick, because its simply binary computation on clocked circuits)).
-- So **the focus on LLMs is more on price and power usage**. LLMs will be commoditieis in the (very near) future. The big LLM providers are in trouble (this is why Anthropic's latest gimmicks of protecting an LLM's feelings and demanding gov control because they are just too dangerous; all scams to get gov funding and suppress competition). **Eisman interview.**  
+- So **the focus on LLMs is more on price and power usage**. LLMs will be commoditieis in the (very near) future. The big LLM providers are in trouble (this is why Anthropic's latest gimmicks of protecting an LLM's feelings and demanding gov control because they are just too dangerous; all scams to get gov funding and suppress competition).   
 - Since the model will never have real intelligence, the focus will be on **creating agents (enterprise SW) that bridges the gap between the unpredictable human_world/outside_digital_world and LLMs**. This means making inputs to LLMs much more "sanitized" and "cleaner". 
 - **That's the core of the Foundry design**.  
+- Boring Warren.
+- Eisman interview.
+
 
 
 <br>
