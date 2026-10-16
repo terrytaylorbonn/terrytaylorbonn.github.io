@@ -385,7 +385,7 @@ by that i mean providing the basic commands to create objects.. but you had to c
 
 but in foundry its not glue logic... Foundry actually give you "real" complete objects on a higher level, making it much easier to focus on the business aspects while still retaining the ability to custom code.
 
-### **GPT:** 
+#### **GPT:** 
 
 Yes. I agree with your central distinction: Foundry raises the level of abstraction from programming objects to building business systems using predefined, operational business objects.
 
