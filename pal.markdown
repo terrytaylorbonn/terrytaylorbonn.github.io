@@ -28,11 +28,35 @@ Note: I am using a free trial version of Foundry. A very generous free trial. Bu
 
 #### **TOC**:
 
-- **0 Core Foundry Enterprise Concepts** (#697) **ADDED 26.1011**
+- **00 Why Foundry?** (v1 26.1016)
+- **0 Core Foundry Enterprise Concepts** (#697; v1 26.1011)
 - **1 Core Foundry Enterprise AI Concepts**
 - **1b Foundry free tier sign up**
 - **2 Foundry demos** (ZAI-modified PAL demos and ZAI/FDE original demos)
 - **3 Project/doc sources** (PAL and ZAI)xx
+
+<br>
+
+--------------------
+--------------------
+--------------------
+--------------------
+--------------------
+--------------------
+
+<br>
+
+## **00 Why Foundry?** (v1 26.1016)
+
+<!-- **[00 Why Foundry?](/pal_concepts_why_foundry/)** (v1 26.1016) -->
+
+(WIP... below is just some initial thoughts)
+
+- People are discovering that **no matter how great the model is, it will never have real intelligence** (that's something I have been writing for a year; its obvious to anyone with basic tech insight and basic familiarity with the core of what makes AI tick (and AI does tick, because its simply binary computation on clocked circuits)).
+- So **the focus on LLMs is more on price and power usage**. LLMs will be commoditieis in the (very near) future. The big LLM providers are in trouble (this is why Anthropic's latest gimmicks of protecting an LLM's feelings and demanding gov control because they are just too dangerous; all scams to get gov funding and suppress competition). **Eisman interview.**  
+- Since the model will never have real intelligence, the focus will be on **creating agents (enterprise SW) that bridges the gap between the unpredictable human_world/outside_digital_world and LLMs**. This means making inputs to LLMs much more "sanitized" and "cleaner". 
+- **That's the core of the Foundry design**.  
+
 
 <br>
 
@@ -207,6 +231,7 @@ If you cant get a trial version of PAL running, then there's no reason to read f
 This section contains a deep dive into concepts and 3 Foundry tutorial projects
 
 - **2.0 ZAI demo master list**
+- **2.0b Foundry ontology (object type) management**
 <!-- - **2.2x CONCEPTS (DEEP DIVE): ZAI demos** -->
 - **2.1 ZAI start-to-finish demo project (TODO)**
 - **2.2 ZAI versions of the core ~8 Foundry getting started demos**
@@ -251,6 +276,17 @@ In the diagrams of the new ZAI version of the Foundry intro below:
 
 <br> -->
 
+
+#### **2.0b Foundry ontology (object type) management** (v1 26.1016)
+
+(WIP: discuss here about managing ontology while doing the demos, especially object types in order to **stay under the 60 object types limit**....).
+
+
+<br>
+
+--------------------
+
+<br>
 
 #### **[2.1 ZAI start-to-finish demo project (TODO)](/3c.2_pal_initial_demo_ZAI/)**.
 

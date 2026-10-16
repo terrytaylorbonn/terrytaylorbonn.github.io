@@ -100,7 +100,8 @@ _Typical example workflow (some examples may not have all components shown)_<br>
 - E10
 - E11
 - E17
-- E14 26.1014
+- E14 (26.1014)
+- E18 (moved 26.1015)
 
 <br>
 
@@ -153,6 +154,14 @@ _Workflow diagrams for examples are usually a bit more complicted than for demos
 
 <br>
 
+
+#### **E18: E18_build_w_aip_chatbot_studio**
+
+- #???
+- https://ziptieai.usw-17.palantirfoundry.com/workspace/compass/view/ri.compass.main.folder.5684e562-8ccd-4c8d-934a-3b50d8861dd7
+- _E18_<br><img src="/assets/sun-20.png" alt="drones" width="60%" style="border: 1px solid #999;">
+
+<br>
 
 
 # **4a List of TODO examples**
