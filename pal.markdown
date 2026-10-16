@@ -46,16 +46,16 @@ Note: I am using a free trial version of Foundry. A very generous free trial. Bu
 
 <br>
 
-## **[00 Why Foundry?](/pal_concepts_why_foundry/)** (v1 26.1016) -->
+## **[00 Why Foundry?](/pal_concepts_why_foundry/)** (v1 26.1016)
 
 (WIP... below is just some initial thoughts)
 
 - People are discovering that **no matter how great the model is, it will never have real intelligence** (that's something I have been writing for a year; its obvious to anyone with basic tech insight and basic familiarity with the core of what makes AI tick (and AI does tick, because its simply binary computation on clocked circuits)).
-- So **the focus on LLMs is more on price and power usage**. LLMs will be commoditieis in the (very near) future. The big LLM providers are in trouble (this is why Anthropic's latest gimmicks of protecting an LLM's feelings and demanding gov control because they are just too dangerous; all scams to get gov funding and suppress competition).   
-- Since the model will never have real intelligence, the focus will be on **creating agents (enterprise SW) that bridges the gap between the unpredictable human_world/outside_digital_world and LLMs**. This means making inputs to LLMs much more "sanitized" and "cleaner". 
-- **That's the core of the Foundry design**.  
-- Boring Warren.
-- Eisman interview.
+- So **the future focus on LLMs will be more on price and power usage** (for the majority of apps). LLMs will be commodities in the (very near) future. The big LLM providers are in trouble (this is why Anthropic has come up wiht its latest gimmicks: protecting an LLM's "feelings" and demanding gov control of LLMs (because they are just too dangerous); all scams to get gov funding and suppress the competition).   
+- Since the model will never have real intelligence, the focus will be on **creating agents (enterprise SW) that bridge the gap between the human world and the LLM world**. 
+- **Foundry is designed just for such a reality**.  
+- Boring Warren Buffett. He let the AI boom pass him by. Looks like he might have been right (yet again).
+<!-- - Eisman interview. -->
 
 
 
