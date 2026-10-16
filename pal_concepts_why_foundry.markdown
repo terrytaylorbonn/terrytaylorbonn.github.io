@@ -389,7 +389,7 @@ but in foundry its not glue logic... Foundry actually give you "real" complete o
 
 Yes. I agree with your central distinction: Foundry raises the level of abstraction from programming objects to building business systems using predefined, operational business objects.
 
-And I think this is a more useful way to explain Foundry than Palantir's abstract descriptions of the Ontology.
+And **I think this is a more useful way to explain Foundry than Palantir's abstract descriptions of the Ontology.**
 
 ### Traditional OOP versus Foundry
 
