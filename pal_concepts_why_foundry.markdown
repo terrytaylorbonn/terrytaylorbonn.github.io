@@ -34,7 +34,10 @@ This section consists of
 - a single prompt of mine to GPT 
 - GPT's response
 
-THe **GPT response includes some brilliant insight** that I think is instructive when comparing against my original prompt.
+THe **GPT response includes some brilliant insight** that I think is instructive when comparing against my original prompt. GPT's final comment about my diagrams:
+
+> **My main recommendation: Keep the diagrams largely as they are. They're doing exactly what you want: showing developers that the Ontology isn't magic. It's a higher-level implementation of familiar enterprise software mechanisms, integrated with pipelines, applications, and AI.**
+
 
 <br>
 
@@ -185,11 +188,11 @@ But those abstractions are especially valuable now because AI introduces unpredi
 
 So I'd phrase your conclusion as:
 
-> Foundry is a higher-level enterprise application platform that integrates the familiar mechanisms of traditional PC/backend systems — pipelines, objects, relationships, CRUD-like Actions, APIs, and external integrations. Its integrated architecture is particularly valuable in the AI era, allowing developers to introduce AI into workflows while retaining structured business operations, deterministic logic, and configurable controls.
+> **Foundry is a higher-level enterprise application platform that integrates the familiar mechanisms of traditional PC/backend systems — pipelines, objects, relationships, CRUD-like Actions, APIs, and external integrations. Its integrated architecture is particularly valuable in the AI era, allowing developers to introduce AI into workflows while retaining structured business operations, deterministic logic, and configurable controls.**
 
 That preserves your main insight without overstating Foundry's historical motivation.
 
-My main recommendation: Keep the diagrams largely as they are. They're doing exactly what you want: showing developers that the Ontology isn't magic. It's a higher-level implementation of familiar enterprise software mechanisms, integrated with pipelines, applications, and AI.
+**My main recommendation: Keep the diagrams largely as they are. They're doing exactly what you want: showing developers that the Ontology isn't magic. It's a higher-level implementation of familiar enterprise software mechanisms, integrated with pipelines, applications, and AI.**
 
 
 <br>
