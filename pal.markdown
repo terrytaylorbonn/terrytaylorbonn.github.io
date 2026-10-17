@@ -55,8 +55,9 @@ Note: I am using a free trial version of Foundry. A very generous free trial. Bu
 - Since the model will never have real intelligence, the focus will be on **creating agents (enterprise SW) that bridge the gap between the human world and the LLM world**. 
 - **Foundry is designed just for such a reality**.  
 - Boring Warren Buffett. He let the AI boom pass him by. Looks like he might have been right (yet again).
-<!-- - Eisman interview. -->
+- (Eisman interview)
 
+_(left) Non-AI App, (center) AI app ("agent") + local LLM, (right) remote LLM_<br><img src="/assets/sun-25.png" alt="drones" width="16%" style="border: 1px solid #999;">    <img src="/assets/sun-26.png" alt="drones" width="30%" style="border: 1px solid #999;">    <img src="/assets/sun-27.png" alt="drones" width="30%" style="border: 1px solid #999;"><br>
 
 
 <br>

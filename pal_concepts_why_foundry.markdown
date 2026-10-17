@@ -8,7 +8,72 @@ permalink: /pal_concepts_why_foundry/
 
 **[← 3c Enterprise](/pal/)**
 
+
 <br>
+
+# **Comparisons: No AI and LLM (remote/ local)**
+
+<br>
+
+### **No AI**
+
+- The App must match the OS perfectly. Decades ago this was a hard lockin to a CPU, but nowadays tech exists to quicky port to other CPUs.
+- THe OS is a monopoly. Calls to the OS must be perfect (unlike LLMs that accept human language).
+- The response format is quite predictable. 
+
+_Non-AI App_<br><img src="/assets/sun-25.png" alt="drones" width="16%" style="border: 1px solid #999;"><br>
+
+<br>
+
+
+### **Remote LLM**
+
+- (1) Human language prompt/response between app (agent) and LLM internal agent (iA) intros considerable risk.
+  - Previously this would have been a REST interface, which would have required careful programming and drastically restricted communication.
+- (2) Therefore there can be no monopoly for intercomm between app (agent) and LLM (unlike between app and REST API; the app must carefully be written for particular API)
+- (3) No LLM TF HW lockin (any CUDA/GPU that the LLM is compatible with)
+- (4) BUT response is not predictable (human language)
+- (5) This is why Foundry excels. 
+  - 5.1 Not built on the myth of AGI (intelligent AI).
+  - 5.2 Abstracts from code enough for human programmers to handle the added complexity of the new programming paradigm (just like the added abstraction for the switch from assembly level to high level languages previously). Other companies added complexity (programming), but Foundry added ontology abstraction.
+  - 5.3 Foundry restricts and governs any communications or actions.
+- (6) The risks with remote LLM are many:
+  - LLM provider steals your ideas.
+  - Your colleagues get careless and/or lazy and start feeding complex prompts with proprietary info to LLM.
+  - The LLM searchs in the internet for any info it requires (further spreading your IP all over the internet).
+
+_Remote LLM_<br><img src="/assets/sun-27.png" alt="drones" width="30%" style="border: 1px solid #999;"><br>
+
+<br>
+
+
+
+### **Local LLM (complicated)**
+
+
+In diagram below:
+ - Ollama installs LLM locally. 
+ - TF .pt file is loaded onto the GPU with CUDA interface.
+ - Any GPU can be used, but as with early CPUs, a GPU can have a monopoly if it is a top performer (like Nvidia).
+ - Inference is via CUDA.
+
+_AI app ("agent") + local LLM_<br><img src="/assets/sun-26.png" alt="drones" width="30%" style="border: 1px solid #999;"><br>
+
+
+
+
+
+<br>
+
+------------------
+------------------
+------------------
+------------------
+------------------
+
+<br>
+
+# **CHAT**
 
 Below is an interesting chat I had on 26.1016 about the core of what make Foundry tick.. what makes it so valuable. Still working on these concepts.... eventually want to compare Foundry with a REST based system.  Its taking a long time to do this.. so much time spent on peeling the onion layers of complexity to get at the gist.
 
