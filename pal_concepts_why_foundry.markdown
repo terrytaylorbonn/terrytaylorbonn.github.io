@@ -8,10 +8,55 @@ permalink: /pal_concepts_why_foundry/
 
 **[← 3c Enterprise](/pal/)**
 
+<br>
+
+#### **This page is a WIP** (currently just various thoughts)
 
 <br>
 
+You are always hearing about how "ontology" is the secret of Palantir's success. My opinion is that the reasons for this success are not so simple.
+- There are a variety of reasons why Palantir is so successful.
+- I have seen any clear explanation of this, so on this page I write my own take on this concept (I think my take is the better than anything else I have read/heard).
+
+
+
+
+
+<br>
+
+------------------
+
+<br>
+
+# **Comparisons: Post, telegraph, telephone (manual/auto switching)**
+
+The new paradigm that Foundry brings to AI/binary computing is not unlike historical paradigm shifts, such as with the appearance of the telephone.
+
+- Post office: network tightly controlled, reliable.
+- Telegraph: 
+  - Only trained operators allowed (their signature is detectable)
+  - Easy to hack signals. 
+- Telephone (manual switching)
+  - Manual switching operator can listen in.
+  - Operator always knows source.
+  - Human language; skill level lower than for telegraph.
+- Telephone (auto switching)
+  - Must more secure.
+- Telephone digital
+  - Much harder to listen in.
+
+
+<br>
+
+------------------
+
+<br>
+
+
 # **Comparisons: No AI and LLM (remote/ local)**
+
+The following compares the differences that AI introduced into the enterprise.
+
 
 <br>
 
@@ -28,16 +73,16 @@ _Non-AI App_<br><img src="/assets/sun-25.png" alt="drones" width="16%" style="bo
 
 ### **Remote LLM**
 
-- (1) Human language prompt/response between app (agent) and LLM internal agent (iA) intros considerable risk.
+- (1) **Human language prompt/response** between app (agent) and LLM internal agent (iA) intros considerable risk.
   - Previously this would have been a REST interface, which would have required careful programming and drastically restricted communication.
-- (2) Therefore there can be no monopoly for intercomm between app (agent) and LLM (unlike between app and REST API; the app must carefully be written for particular API)
-- (3) No LLM TF HW lockin (any CUDA/GPU that the LLM is compatible with)
-- (4) BUT response is not predictable (human language)
-- (5) This is why Foundry excels. 
-  - 5.1 Not built on the myth of AGI (intelligent AI).
-  - 5.2 Abstracts from code enough for human programmers to handle the added complexity of the new programming paradigm (just like the added abstraction for the switch from assembly level to high level languages previously). Other companies added complexity (programming), but Foundry added ontology abstraction.
-  - 5.3 Foundry restricts and governs any communications or actions.
-- (6) The risks with remote LLM are many:
+- (2) **No monopoly for intercommunication** between app (agent) and LLM (unlike between app and REST API; the app must carefully be written for particular API)
+- (3) **No HW lockin** for LLM TF (any CUDA/GPU that the LLM is compatible with)
+- (4) BUT **response is not predictable** (human language)
+- (5) This is **why Foundry excels**. 
+  - 5.1 **Not built on the myth of AGI** (intelligent AI).
+  - 5.2 **Abstracts from code enough for human programmers to handle the added complexity of the new programming paradigm** (just like the added abstraction for the switch from assembly level to high level languages previously). Other companies added complexity (programming), but Foundry added ontology abstraction.
+  - 5.3 **Foundry restricts and governs** any communications or actions.
+- (6) The **risks with remote LLM are many**:
   - LLM provider steals your ideas.
   - Your colleagues get careless and/or lazy and start feeding complex prompts with proprietary info to LLM.
   - The LLM searchs in the internet for any info it requires (further spreading your IP all over the internet).
