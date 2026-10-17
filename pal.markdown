@@ -28,9 +28,10 @@ Note: I am using a free trial version of Foundry. A very generous free trial. Bu
 
 #### **TOC**:
 
-- **00 Why Foundry?** (v1 26.1016)
-- **0 Core Foundry Enterprise Concepts** (#697; v1 26.1011)
-- **1 Core Foundry Enterprise AI Concepts**
+- **CONCEPTS** (maybe combine these)
+  - **00 Why Foundry?** (v1 26.1016)
+  - **0 Core Foundry Enterprise Concepts** (#697; v1 26.1011)
+  - **1 Core Foundry Enterprise AI Concepts**
 - **1b Foundry free tier sign up**
 - **2 Foundry demos** (ZAI-modified PAL demos and ZAI/FDE original demos)
 - **3 Project/doc sources** (PAL and ZAI)xx
@@ -63,11 +64,7 @@ _(left) Non-AI App, (center) AI app ("agent") + local LLM, (right) remote LLM_<b
 <br>
 
 --------------------
---------------------
---------------------
---------------------
---------------------
---------------------
+
 
 <br>
 
@@ -113,11 +110,6 @@ _PAL south/ontology/north diagram_<br><img src="/assets/sun-15.png" alt="drones"
 
 <br> -->
 
---------------------
---------------------
---------------------
---------------------
---------------------
 --------------------
 
 <br>
