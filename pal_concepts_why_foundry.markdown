@@ -10,7 +10,7 @@ permalink: /pal_concepts_why_foundry/
 
 <br>
 
-#### **This page is a WIP** (currently just various thoughts)
+#### **This page is a WIP** (currently just various thoughts (many **very original**))
 
 <br>
 
