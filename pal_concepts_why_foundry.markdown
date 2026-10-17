@@ -14,16 +14,188 @@ permalink: /pal_concepts_why_foundry/
 
 <br>
 
-You are always hearing about how "ontology" is the secret of Palantir's success. My opinion is that the reasons for this success are not so simple.
-- There are a variety of reasons why Palantir is so successful.
-- I have seen any clear explanation of this, so on this page I write my own take on this concept (I think my take is the better than anything else I have read/heard).
-
-
+You are always hearing about how "ontology" is the secret of Palantir's success. 
+- My opinion is that the reasons for this success are not so simple. There are a variety of reasons why Palantir is so successful.
+- on this page I write my own original take on this concept (I've not seen a similar explanation elsewhere).
 
 
 
 <br>
 
+------------------
+------------------
+------------------
+
+<br>
+
+# **Comparing PC and Foundry to understand ontology**
+
+This section consists of
+- a single prompt of mine to GPT 
+- GPT's response
+
+THe **GPT response includes some brilliant insight** that I think is instructive when comparing against my original prompt.
+
+<br>
+
+------------------
+
+<br>
+
+#### **ME: This section compares PC and Foundry as the best way to understand what ontology really is.**
+
+In left diagram below (PC + backend)
+- Local PC files upload to pipeline; pipeline output to backend.
+- PC to the backend is REST connection
+- Backend contains objects + actions + links (persistent storage in DB).
+- Maybe sometimes backend has connection to LLM ?? 
+- External systems.
+
+In right diagram below (Foundry)
+- datasource uploaded to pipeline; pipeline output to ontology.
+- UI sends REST-like (CRUD) commands to ontology 
+- Ontology contains objects + actions + links (persistent storage in DB).
+- Pipeline/ontology uses (usually external) LLM.
+- External systems such as Odoo (webhook).
+
+
+_PC and Foundry_<br><img src="/assets/sun-28.png" alt="drones" width="70%" style="border: 1px solid #999;"><br>
+
+_Foundry dialog for specifying the type of action for an object type_<br><img src="/assets/sun-23.png" alt="drones" width="60%" style="border: 1px solid #999;"><br>
+
+<br>
+
+
+#### **GPT: I think this is one of the strongest explanations you've developed for what Foundry actually is.** 
+The side-by-side comparison makes the Ontology much less mysterious.
+
+Your central thesis is:
+
+Foundry is an AI-era enterprise application platform that raises the abstraction level of the traditional PC + backend architecture.
+
+I largely agree. But I would make a few technical distinctions to strengthen the argument.
+
+### 1. What your diagrams get right
+
+The structural similarity is striking.
+
+| Traditional PC + backend | Foundry                                    |
+| ------------------------ | ------------------------------------------ |
+| PC user interface        | Foundry UI (e.g., Workshop)                |
+| Backend application      | Ontology + associated Foundry services     |
+| Objects                  | Ontology Objects                           |
+| Object relationships     | Ontology Links                             |
+| Backend operations       | Ontology Actions                           |
+| Database                 | Dataset backing, Ontology storage/indexing |
+| REST APIs                | Foundry APIs, OSDK, Actions                |
+| Data ingestion / ETL     | Foundry Pipelines                          |
+| External integrations    | Foundry connectors, webhooks               |
+| AI integration           | Pipeline AI, AIP Logic, model inference    |
+
+The Ontology is not an entirely new programming paradigm. It packages many familiar backend mechanisms into a standardized, higher-level platform.
+
+And your second screenshot reinforces that point. Foundry provides configurable Create, Modify, Upsert, and Delete operations rather than requiring developers to implement each operation from scratch.
+
+### 2. Four refinements I'd make
+
+#### A. The Ontology is not the entire backend
+
+This is probably the most important distinction.
+
+In your left diagram, the orange Backend box contains application logic, objects, APIs, and persistence.
+
+In Foundry, those responsibilities are distributed across several integrated services:
+
+- Ontology — business objects, relationships, and Actions.
+- AIP Logic / Functions — custom and AI-assisted logic.
+- Pipeline Builder — ingestion and transformation.
+- Foundry APIs and platform services — access, execution, persistence, security.
+
+So the Ontology is the central business-object and action layer, rather than literally all the backend software.
+
+Your diagram works as a conceptual simplification, provided you explain that.
+
+#### B. The UI connection is REST-like, but not necessarily REST
+
+You wrote:
+
+> UI sends REST-like (CRUD) commands to ontology.
+
+That's a good conceptual description.
+
+More precisely, the UI queries Ontology objects and invokes Actions. Underlying implementations may use Foundry APIs and platform services rather than direct REST requests from the browser.
+
+I would label that connection:
+
+Object queries + Actions (CRUD-like)
+
+#### C. The database relationship is different
+
+In a traditional backend, objects are commonly persisted directly into application databases.
+
+In Foundry, objects can be backed by datasets, with Ontology indexing and optional edit mechanisms.
+
+As your D2 demo demonstrated, objects can appear automatically through dataset-backed indexing without invoking a Create Action.
+
+That's an important difference worth preserving in your explanation.
+
+#### D. AI is not necessarily external
+
+Your diagram correctly shows LLM access from both pipelines and the Ontology side.
+
+However, Foundry can use models made available within its platform environment as well as externally hosted models.
+
+And AI can be invoked from applications and workflows, not only from pipelines and Ontology functions.
+
+I'd simply label the purple box LLM / Models (internal or external).
+
+### 3. The bigger architectural insight
+
+Your comparison highlights three levels of abstraction.
+
+Level 1 — Traditional programming
+
+Developers write objects, business logic, database access, APIs, and integrations.
+
+Level 2 — Traditional enterprise frameworks
+
+Frameworks provide many of these mechanisms, but developers still assemble the application and supporting services.
+
+Level 3 — Foundry
+
+The platform provides a common environment for data pipelines, business objects, relationships, Actions, applications, integrations, and AI.
+
+This is where I think your argument is strongest.
+
+Foundry doesn't invent objects, REST, pipelines, or AI. It integrates them into a system where developers can work at a higher architectural level.
+
+That can make developing complex enterprise workflows more manageable, particularly when AI is involved.
+
+### 4. The one claim I would slightly modify
+
+You wrote:
+
+> Foundry raised the abstraction level to deal with AI-era complexities.
+
+I would distinguish the historical claim from the present-day advantage.
+
+Foundry's higher-level data and application abstractions existed before today's generative AI boom. They weren't originally invented solely to deal with LLMs.
+
+But those abstractions are especially valuable now because AI introduces unpredictable outputs and increasingly complex interactions with enterprise systems.
+
+So I'd phrase your conclusion as:
+
+> Foundry is a higher-level enterprise application platform that integrates the familiar mechanisms of traditional PC/backend systems — pipelines, objects, relationships, CRUD-like Actions, APIs, and external integrations. Its integrated architecture is particularly valuable in the AI era, allowing developers to introduce AI into workflows while retaining structured business operations, deterministic logic, and configurable controls.
+
+That preserves your main insight without overstating Foundry's historical motivation.
+
+My main recommendation: Keep the diagrams largely as they are. They're doing exactly what you want: showing developers that the Ontology isn't magic. It's a higher-level implementation of familiar enterprise software mechanisms, integrated with pipelines, applications, and AI.
+
+
+<br>
+
+------------------
+------------------
 ------------------
 
 <br>
@@ -48,6 +220,8 @@ The new paradigm that Foundry brings to AI/binary computing is not unlike histor
 
 <br>
 
+------------------
+------------------
 ------------------
 
 <br>
@@ -106,14 +280,13 @@ _AI app ("agent") + local LLM_<br><img src="/assets/sun-26.png" alt="drones" wid
 
 
 
-
-
 <br>
 
 ------------------
 ------------------
 ------------------
 ------------------
+------------------------------------
 ------------------
 
 <br>
