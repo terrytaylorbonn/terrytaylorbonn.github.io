@@ -46,22 +46,22 @@ THe **GPT response includes some brilliant insight** that I think is instructive
 
 In left diagram below (PC + backend)
 - Local PC files upload to pipeline; pipeline output to backend.
-- PC to the backend is REST connection
-- Backend contains objects + actions + links (persistent storage in DB).
+- **PC to the backend is REST connection (CRUD: create, read, update, delete)**.
+- **Backend contains objects + actions + links (persistent storage in DB)**.
 - Maybe sometimes backend has connection to LLM ?? 
 - External systems.
 
 In right diagram below (Foundry)
 - datasource uploaded to pipeline; pipeline output to ontology.
-- UI sends REST-like (CRUD) commands to ontology 
-- Ontology contains objects + actions + links (persistent storage in DB).
+- **UI sends REST-like (CRUD) commands to ontology**. 
+- **Ontology contains objects + actions + links (persistent storage in DB)**.
 - Pipeline/ontology uses (usually external) LLM.
 - External systems such as Odoo (webhook).
 
 
 _PC and Foundry_<br><img src="/assets/sun-28.png" alt="drones" width="70%" style="border: 1px solid #999;"><br>
 
-_Foundry dialog for specifying the type of action for an object type_<br><img src="/assets/sun-23.png" alt="drones" width="60%" style="border: 1px solid #999;"><br>
+_Foundry dialog for specifying the type of action for an object type (**in this example, the dialog is for creating CUD (R is default) for the object type**)_<br><img src="/assets/sun-23.png" alt="drones" width="60%" style="border: 1px solid #999;"><br>
 
 <br>
 
