@@ -47,7 +47,7 @@ For now this is a collection of various ideas that come to mind...
 
 <br>
 
-# **1 [Comparing Foundry to airliner autopilot](/pal_concepts_why_foundry_1/)** (click this heading for details)
+# **1 [Comparing Foundry to airliner autopilot](/pal_concepts_why_foundry_1/)** (click this heading for chats)
 
 _(GPT does not have intelligence, but for me something far more important: the ability to provide meaningful insightful feedback when discussing innovative concepts... pure magic)_
 
