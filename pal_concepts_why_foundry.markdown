@@ -259,25 +259,34 @@ That preserves your main insight without overstating Foundry's historical motiva
 
 # **3 Comparisons: Post, telegraph, telephone (manual/auto switching)**
 
-The new paradigm that Foundry brings to AI/binary computing is not unlike historical paradigm shifts, such as with the appearance of the telephone.
+The new paradigm that Foundry brings to procedural (non-AI) and probablistic (AI) computing is not unlike historical paradigm shift in communications during 150 years.
 
-- Post office: network tightly controlled, reliable.
+- Post office: 
+  - A network of tightly controlled, reliable offices/professionals.
+  - Very difficult to steal secrets (sealed envelopes).
+  - **It was not fast, but confidential info could be sent safely**.
 - Telegraph: 
-  - Only trained operators allowed (their signature is detectable)
-  - Easy to hack signals. 
-- Telephone (manual switching)
-  - Manual switching operator can listen in.
-  - Operator always knows source.
-  - Human language; skill level lower than for telegraph.
+  - Only trained operators allowed (their tapping signature was recognizable).
+  - Easy to hack signals (simply tap into the telegraph lines).  
+  - **Guard rails required to ensure the security of communications.**
+- Telephone (with human operators at a switch panel)
+  - Operator knows the sources, can eavesdrop.
+  - Human language means much lower skill level than for the telegraph.
+  - Far more stations that telegraph.
+  - **The most dangerous situation. The security of communications not guaranteed. So companies required strict training of key employees when using phone.**
 - Telephone (auto switching)
-  - Must more secure.
+  - Much more secure.
+  - Still problems like party-lines.
+  - **Far less of a threat to sensitive info (wiretaps were easy, but require court orders)**
 - Telephone digital
   - Much harder to listen in.
-
+  - With encryption the most secure. 
+  - **Could be used for sensitive content (within limits).**
+  - **Very hard to wiretap**.
 
 <br>
 
-------------------
+---------------
 ------------------
 ------------------
 
