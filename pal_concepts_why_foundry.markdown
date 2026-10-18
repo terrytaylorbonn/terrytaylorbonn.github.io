@@ -14,11 +14,17 @@ permalink: /pal_concepts_why_foundry/
 
 <br>
 
-You are always hearing about how "ontology" is the secret of Palantir's success. 
+You are always hearing about how "ontology" is the secret of Palantir's success. on this page I write my own original take on this concept (I've not seen a similar explanation elsewhere). 
 - My opinion is that the reasons for this success are not so simple. There are a variety of reasons why Palantir is so successful.
-- on this page I write my own original take on this concept (I've not seen a similar explanation elsewhere).
+- **The biggest reason: Foundry represents the** 
+  - **(1) required higher level of abstraction and** 
+  - **(2) the "rails" required for AI apps**. 
+  
+When the switch was made from assembly level to abstract languages (like COBOL, FORTRAN, C, etc), IDE's were created to aid in creating 
+- (1) abstract commands and the 
+- (2) guard rails to make it possible for humans to effectively write code. 
 
-
+Foundry is an example of the next level.  
 
 <br>
 
@@ -30,11 +36,13 @@ You are always hearing about how "ontology" is the secret of Palantir's success.
 
 # **Comparing PC and Foundry to understand ontology**
 
-This section consists of
-- a single prompt of mine to GPT 
-- GPT's response
+To me the easiest way of understanding what Foundry (and the ontology) does is to compare to a typical "enterprise" setup with Foundry (see diagram below). 
 
-THe **GPT response includes some brilliant insight** that I think is instructive when comparing against my original prompt. GPT's final comment about my diagrams:
+This section consists of
+- a single prompt ("ME:") of mine to GPT 
+- GPT's response ("GPT:") 
+
+GPT's final comment about my diagrams:
 
 > **My main recommendation: Keep the diagrams largely as they are. They're doing exactly what you want: showing developers that the Ontology isn't magic. It's a higher-level implementation of familiar enterprise software mechanisms, integrated with pipelines, applications, and AI.**
 
@@ -65,6 +73,8 @@ In right diagram below (Foundry)
 _PC and Foundry_<br><img src="/assets/sun-28.png" alt="drones" width="70%" style="border: 1px solid #999;"><br>
 
 _Foundry dialog for specifying the type of action for an object type (**in this example, the dialog is for creating CUD (R is default) for the object type**)_<br><img src="/assets/sun-23.png" alt="drones" width="60%" style="border: 1px solid #999;"><br>
+
+_Creating the NORTH UI widget and specifying the action (create chunk (of text))_<br><img src="/assets/sun-29.png" alt="drones" width="100%" style="border: 1px solid #999;"><br>
 
 <br>
 
