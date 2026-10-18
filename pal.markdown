@@ -271,7 +271,8 @@ In the diagrams of the new ZAI version of the Foundry intro below:
 <br> -->
 
 
-#### **2.0b Foundry ontology (object type) management** (v1 26.1016)
+#### **[2.0b Foundry ontology (object type) management](/pal_ontology_management/)** (v1 26.1018)
+
 
 (WIP: discuss here about managing ontology while doing the demos, especially object types in order to **stay under the 60 object types limit**... there are no utilities to take care of this!).
 
