@@ -51,6 +51,8 @@ For now this is a collection of various ideas that come to mind...
 
 _(GPT does not have intelligence, but for me something far more important: the ability to provide meaningful insightful feedback when discussing innovative concepts.... pure magic)_
 
+#### For details see **[Chat about Autopilot <> Foundry comparisons](/pal_concepts_why_foundry_1/)**
+
 _Autopilot diagram (GPT generated; my comments in red)_<br><img src="/assets/sun-30.png" alt="drones" width="70%" style="border: 1px solid #999;"><br>
 
 
