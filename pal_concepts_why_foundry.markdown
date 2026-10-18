@@ -55,6 +55,7 @@ _(GPT does not have intelligence, but for me something far more important: the a
 
 _Autopilot diagram (GPT generated; my comments in red)_<br><img src="/assets/sun-30.png" alt="drones" width="70%" style="border: 1px solid #999;"><br>
 
+_Comparison with Foundry_<br><img src="/assets/sun-32.png" alt="drones" width="70%" style="border: 1px solid #999;"><br>
 
 
 
