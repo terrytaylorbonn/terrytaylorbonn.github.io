@@ -22,7 +22,7 @@ You are always hearing about how "ontology" is the secret of Palantir's success.
   
 When the switch was made from assembly level to abstract languages (like COBOL, FORTRAN, C, etc), IDE's were created to aid in creating 
 - (1) abstract commands and the 
-- (2) guard rails (various techniques to reduce the extra complexity and room for error) to make it possible for humans to effectively write code. 
+- (2) guard rails (various techniques to reduce the additional complexity and room for error created by abstraction) to make it possible for humans to effectively write code. 
 
 Foundry is an example of the next level.  
 
