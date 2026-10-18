@@ -24,7 +24,15 @@ When the switch was made from assembly level to abstract languages (like COBOL, 
 - (1) abstract commands and the 
 - (2) guard rails (various techniques to reduce the additional complexity and room for error created by abstraction) to make it possible for humans to effectively write code. 
 
-Foundry is an example of the next level.  
+**Foundry is an example of the next level. The easiest way to get the concepts is too compare Foundry with other types of systems.**
+
+#### **TOC** (right now this is a collection of various ideas that come to mind)
+- **1 Comparing Foundry to airliner autopilot**
+- **2 Comparing PC and Foundry to understand ontology**
+- **3 Comparisons: Post, telegraph, telephone (manual/auto switching)**
+- **4 Comparisons: No AI and LLM (remote/ local)**
+- **9 CHAT**
+
 
 <br>
 
@@ -34,7 +42,26 @@ Foundry is an example of the next level.
 
 <br>
 
-# **Comparing PC and Foundry to understand ontology**
+# **1 Comparing Foundry to airliner autopilot**
+
+_(GPT does not have intelligence, but for me something far more important: the ability to provide meaningful insightful feedback when discussing innovative concepts.... pure magic)_
+
+_Autopilot diagram (GPT generated; my comments in red)_<br><img src="/assets/sun-30.png" alt="drones" width="70%" style="border: 1px solid #999;"><br>
+
+
+
+
+
+
+<br>
+
+------------------
+------------------
+------------------
+
+<br>
+
+# **2 Comparing PC and Foundry to understand ontology**
 
 To me the easiest way of understanding what Foundry (and the ontology) does is to compare to a typical "enterprise" setup with Foundry (see diagram below). 
 
@@ -213,7 +240,7 @@ That preserves your main insight without overstating Foundry's historical motiva
 
 <br>
 
-# **Comparisons: Post, telegraph, telephone (manual/auto switching)**
+# **3 Comparisons: Post, telegraph, telephone (manual/auto switching)**
 
 The new paradigm that Foundry brings to AI/binary computing is not unlike historical paradigm shifts, such as with the appearance of the telephone.
 
@@ -240,7 +267,7 @@ The new paradigm that Foundry brings to AI/binary computing is not unlike histor
 <br>
 
 
-# **Comparisons: No AI and LLM (remote/ local)**
+# **4 Comparisons: No AI and LLM (remote/ local)**
 
 The following compares the differences that AI introduced into the enterprise.
 
@@ -304,7 +331,7 @@ _AI app ("agent") + local LLM_<br><img src="/assets/sun-26.png" alt="drones" wid
 
 <br>
 
-# **CHAT**
+# **9 CHAT**
 
 Below is an interesting chat I had on 26.1016 about the core of what make Foundry tick.. what makes it so valuable. Still working on these concepts.... eventually want to compare Foundry with a REST based system.  Its taking a long time to do this.. so much time spent on peeling the onion layers of complexity to get at the gist.
 
