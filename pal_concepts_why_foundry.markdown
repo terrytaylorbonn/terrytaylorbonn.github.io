@@ -47,11 +47,20 @@ For now this is a collection of various ideas that come to mind...
 
 <br>
 
-# **1 Comparing Foundry to airliner autopilot**
+# **1 [Comparing Foundry to airliner autopilot](/pal_concepts_why_foundry_1/)** (click this heading for details)
 
-_(GPT does not have intelligence, but for me something far more important: the ability to provide meaningful insightful feedback when discussing innovative concepts.... pure magic)_
+_(GPT does not have intelligence, but for me something far more important: the ability to provide meaningful insightful feedback when discussing innovative concepts... pure magic)_
 
-#### For details see **[Chat about Autopilot <> Foundry comparisons](/pal_concepts_why_foundry_1/)**
+<!-- #### For details see **[Chat about Autopilot <> Foundry comparisons](/pal_concepts_why_foundry_1/)** -->
+
+Note 1: This section is about airliner autopilot, which does not use AI. But its very similar to FSD ("full self driving", something that has been promised for over a decade, but never delivered). 
+- FSD is much more complex (must operate in very chaotic environments; airliner autopilot operates in (1) air (very forgiving) and (2) airports (tightly controlled environments with many guardrails)).
+- Because of AI (object detection sensors, etc) FSD must re-check everything.
+- (from what I have read from reliable sources) Because AI fails at this task, Tesla (secretly) has a human monitor for every dozen or two Teslas on the road. The human saves the Tesla in situations where the FSD indicates it can not figure out what to do ("does not compute!").
+
+Note 2: Foundry was an autopilot type system (no AI) before AI became usable. 
+- So Palantir learned early on how to make the "upgrade" from an autopilot type system to something like FSD (with AI). They learned how to manage the plus's and minus's of AI.
+- Palantirs FDE's (forward deployed engineers) are critical feedback to improve Foundry (just like Frontier models are updated from external data). But Palantir makes improvemens (I believe) not to the AI, but to the ontology (EQUATOR).
 
 _Autopilot diagram (GPT generated; my comments in red)_<br><img src="/assets/sun-30.png" alt="drones" width="70%" style="border: 1px solid #999;"><br>
 
