@@ -24,9 +24,14 @@ When the switch was made from assembly level to abstract languages (like COBOL, 
 - (1) abstract commands and the 
 - (2) guard rails (various techniques to reduce the additional complexity and room for error created by abstraction) to make it possible for humans to effectively write code. 
 
+
+
 **Foundry is an example of the next level. The easiest way to get the concepts is too compare Foundry with other types of systems.**
 
-#### **TOC** (right now this is a collection of various ideas that come to mind)
+<br>
+
+#### **TOC**
+For now this is a collection of various ideas that come to mind...
 - **1 Comparing Foundry to airliner autopilot**
 - **2 Comparing PC and Foundry to understand ontology**
 - **3 Comparisons: Post, telegraph, telephone (manual/auto switching)**
