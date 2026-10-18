@@ -277,6 +277,9 @@ In the diagrams of the new ZAI version of the Foundry intro below:
 (WIP: discuss here about managing ontology while doing the demos, especially object types in order to **stay under the 60 object types limit**... there are no utilities to take care of this!).
 
 
+
+
+
 <br>
 
 --------------------
@@ -289,6 +292,18 @@ The idea is to
 
 - **create a long demo with many phases that stays laser-focued on demo'ing the core Foundry concepts** (such as "alpha"; not on overly complicated "realistic" demos of specific application markets) while
 - learning to navigate the UI and the terminology (The most challenging aspect of working with Foundry)
+
+Docx **[#695](https://drive.google.com/drive/folders/1-Adawag9uA8_bq-hDF-nOuPYaRLz1eEO)** is my working version of this demo. 
+
+<img src="/assets/sun-41.png" alt="xxx" width="45%" style="border: 1px solid #999;">
+
+The demo focuses on the mechanics of how Foundry works, not on some real world example.
+
+<img src="/assets/sun-42.png" alt="xxx" width="27%" style="border: 1px solid #999;">
+
+
+
+
 
 <!--
 - There are 5 basic classifications for each addition to the demo:
