@@ -14,7 +14,7 @@ permalink: /pal_concepts_why_foundry/
 
 <br>
 
-You are always hearing about how "ontology" is the secret of Palantir's success. on this page I write my own original take on this concept (I've not seen a similar explanation elsewhere). 
+You are always hearing about how "ontology" is the secret of Palantir's success. On this page I write my own original take on this concept (I've not seen a similar explanation elsewhere). 
 - My opinion is that the reasons for this success are not so simple. There are a variety of reasons why Palantir is so successful.
 - **The biggest reason: Foundry represents the** 
   - **(1) required higher level of abstraction and** 
@@ -22,7 +22,7 @@ You are always hearing about how "ontology" is the secret of Palantir's success.
   
 When the switch was made from assembly level to abstract languages (like COBOL, FORTRAN, C, etc), IDE's were created to aid in creating 
 - (1) abstract commands and the 
-- (2) guard rails to make it possible for humans to effectively write code. 
+- (2) guard rails (various techniques to reduce the extra complexity and room for error) to make it possible for humans to effectively write code. 
 
 Foundry is an example of the next level.  
 
