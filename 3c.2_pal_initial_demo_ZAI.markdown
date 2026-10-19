@@ -10,10 +10,12 @@ permalink: /3c.2_pal_initial_demo_ZAI/
 
 <br>
 
+Docx **[#695](https://drive.google.com/drive/folders/1-Adawag9uA8_bq-hDF-nOuPYaRLz1eEO)** is my working version of this demo. For now I will be updating the docx, not this webpage.
 
-Docx **[#695](https://drive.google.com/drive/folders/1-Adawag9uA8_bq-hDF-nOuPYaRLz1eEO)** is my working version of this demo. 
+<img src="/assets/sun-43.png" alt="xxx" width="100%" style="border: 1px solid #999;">
 
-<img src="/assets/sun-41.png" alt="xxx" width="52%" style="border: 1px solid #999;">
+
+<!-- <img src="/assets/sun-41.png" alt="xxx" width="52%" style="border: 1px solid #999;"> -->
 
 The demo focuses on the mechanics of how Foundry works, not on some real world example.
 

@@ -4,7 +4,7 @@ title: 3c Enterprise
 permalink: /pal/
 ---
 
-_TODO: add [0b Scoping](/pal_concepts_scoping/) (#696; added 26.1011) somehwere_
+<!-- _TODO: add [0b Scoping](/pal_concepts_scoping/) (#696; added 26.1011) somehwere_ -->
 
 <br>
 
@@ -14,9 +14,9 @@ _TODO: add [0b Scoping](/pal_concepts_scoping/) (#696; added 26.1011) somehwere_
 
 <!--_Latest (26.0911): Making steady progress on section **[2.2 PAL demos (speedruns)](/3c.2_pal_initial_demos/)**._ -->
 
-#### **TL;DR: To get started programming**, skip to section 2 **subsection 2.1 ZAI start-to-finish demo project**. 
-
-This shows how to start from 0, no fancy real world demo, just the basic mechanics of UI.
+#### **TL;DR: To get started programming ASAP** skip to the following sections 
+- **1b Foundry free tier sign up**
+- **2.1 ZAI start-to-finish demo project**. Shows how to start from 0, no fancy real world demo, just the basic mechanics of UI. I highly recommend skipping to this start-to-finish demo and getting hands-on experience first before reading the other sections.
 
 <br>
 
@@ -300,18 +300,20 @@ In the diagrams of the new ZAI version of the Foundry intro below:
 
 #### **[2.1 ZAI start-to-finish demo project (TODO)](/3c.2_pal_initial_demo_ZAI/)**.
 
-The idea is to
+This will be (WIP) **a long demo with many phases that stays laser-focued on demo'ing the core mechanics of using Foundry** (not on realistic demos of specific application markets; focuses on learning to navigate the UI and the terminology (The most challenging aspect of working with Foundry))
 
-- **create a long demo with many phases that stays laser-focued on demo'ing the core Foundry concepts** (such as "alpha"; not on overly complicated "realistic" demos of specific application markets) while
-- learning to navigate the UI and the terminology (The most challenging aspect of working with Foundry)
+NOTE: A big part of learning Foundry is **learning how to use FDE or GPT (AI) to help you learn Foundry**. 
 
-Docx **[#695](https://drive.google.com/drive/folders/1-Adawag9uA8_bq-hDF-nOuPYaRLz1eEO)** is my working version of this demo. 
+Docx **[#695](https://drive.google.com/drive/folders/1-Adawag9uA8_bq-hDF-nOuPYaRLz1eEO)** is my working version of this demo (open that doc; I will not be (for now) adding anything on this webpage). 
 
 <img src="/assets/sun-41.png" alt="xxx" width="45%" style="border: 1px solid #999;">
 
-The demo focuses on the mechanics of how Foundry works, not on some real world example.
+Learning how to create the most basic things in Foundry is quite challenge (at first). YOu need to be prepared to spend a bit of time at first on this.
 
 <img src="/assets/sun-42.png" alt="xxx" width="27%" style="border: 1px solid #999;">
+
+
+
 
 
 
