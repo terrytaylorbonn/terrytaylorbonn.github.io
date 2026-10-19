@@ -1,6 +1,6 @@
 ---
 layout: page
-title: 2.2a Getting started demos / START-TO-FINISH [1]-[5] ZAI DEMO
+title: 2.1 ZAI start-to-finish demo project (WIP)
 permalink: /3c.2_pal_initial_demo_ZAI/
 ---
 

@@ -298,7 +298,7 @@ In the diagrams of the new ZAI version of the Foundry intro below:
 
 <br>
 
-#### **[2.1 ZAI start-to-finish demo project (TODO)](/3c.2_pal_initial_demo_ZAI/)**.
+#### **[2.1 ZAI start-to-finish demo project (WIP)](/3c.2_pal_initial_demo_ZAI/)**
 
 This will be (WIP) **a long demo with many phases that stays laser-focued on demo'ing the core mechanics of using Foundry** (not on realistic demos of specific application markets; focuses on learning to navigate the UI and the terminology (The most challenging aspect of working with Foundry))
 
