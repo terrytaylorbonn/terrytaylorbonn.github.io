@@ -10,12 +10,16 @@ permalink: /3c.2_pal_initial_demo_ZAI/
 
 <br>
 
-Docx **[#695](https://drive.google.com/drive/folders/1-Adawag9uA8_bq-hDF-nOuPYaRLz1eEO)** is my working version of this demo. For now I will be updating the docx, not this webpage.
+This will be (WIP) **a long demo with many phases that stays laser-focued on demo'ing the core mechanics of using Foundry** (not on realistic demos of specific application markets; focuses on learning to navigate the UI and the terminology (The most challenging aspect of working with Foundry))
+
+NOTE: A big part of learning Foundry is **learning how to use FDE or GPT (AI) to help you learn Foundry**. 
+
+Docx **[#695](https://drive.google.com/drive/folders/1-Adawag9uA8_bq-hDF-nOuPYaRLz1eEO)** is my working version of this demo (open that doc; I will not be (for now) adding anything on this webpage). 
 
 <img src="/assets/sun-43.png" alt="xxx" width="100%" style="border: 1px solid #999;">
 
 
-<!-- <img src="/assets/sun-41.png" alt="xxx" width="52%" style="border: 1px solid #999;"> -->
+<!--   xxx <img src="/assets/sun-41.png" alt="xxx" width="52%" style="border: 1px solid #999;"> -->
 
 The demo focuses on the mechanics of how Foundry works, not on some real world example.
 
