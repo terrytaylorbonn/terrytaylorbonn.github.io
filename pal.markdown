@@ -14,6 +14,17 @@ _TODO: add [0b Scoping](/pal_concepts_scoping/) (#696; added 26.1011) somehwere_
 
 <!--_Latest (26.0911): Making steady progress on section **[2.2 PAL demos (speedruns)](/3c.2_pal_initial_demos/)**._ -->
 
+#### **TL;DR: To get started programming**, skip to section 2 **subsection 2.1 ZAI start-to-finish demo project**. 
+
+This shows how to start from 0, no fancy real world demo, just the basic mechanics of UI.
+
+<br>
+
+------------------
+
+<br>
+
+
 **This Enterprise section focuses on Palantir Foundry**:
 
 - Foundry (see diagram below) is a modern enterprise platform for data integration, ontology, analytics, applications, **AI assistance**, and governance.
@@ -27,6 +38,7 @@ Note: I am using a free trial version of Foundry. A very generous free trial. Bu
 <br>
 
 #### **TOC**:
+
 
 - **CONCEPTS** (maybe combine these)
   - **00 Why Foundry?** (v1 26.1016)
