@@ -14,9 +14,9 @@ permalink: /pal/
 
 <!--_Latest (26.0911): Making steady progress on section **[2.2 PAL demos (speedruns)](/3c.2_pal_initial_demos/)**._ -->
 
-#### **TL;DR: To get started programming ASAP** skip to the following sections 
+#### **TL;DR: To get started with Enterprise AI programming with Palantir Foundry ASAP** skip to the following sections 
 - **1b Foundry free tier sign up**
-- **2.1 ZAI start-to-finish demo project**. Shows how to start from 0, no fancy real world demo, just the basic mechanics of UI. I highly recommend skipping to this start-to-finish demo and getting hands-on experience first before reading the other sections.
+- **2.1 ZAI start-to-finish demo project**. Shows how to start from 0, no real world demo, just the basic mechanics of using Foundry (the messy details of starting from 0). I highly recommend skipping to this start-to-finish demo and getting hands-on experience first before reading the other sections.
 
 <br>
 
