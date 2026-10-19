@@ -21,9 +21,16 @@ Docx **[#695](https://drive.google.com/drive/folders/1-Adawag9uA8_bq-hDF-nOuPYaR
 
 <!--   xxx <img src="/assets/sun-41.png" alt="xxx" width="52%" style="border: 1px solid #999;"> -->
 
-The demo focuses on the mechanics of how Foundry works, not on some real world example.
+**THE REASON FOR THIS DOCX**
 
-<img src="/assets/sun-42.png" alt="xxx" width="33%" style="border: 1px solid #999;">
+I spent several months doing various Foundry demos. These were all "realistic" demos, step by step. The problem was the "realistic" aspect. I needed a demo that focused on the mechanics of how to create all the mechanisms (Projects, apps, UI (very compicated), ObjectTypes, actions, etc etc etc). I did not want to focus on a demo with an ObjectType that had 19 (!!) properties (because the demo was about some complicated medical documents). Sure, eventually I would want such demos, but not as demo1, demo2, etc. 
+
+Also, I wanted to know how to use AI (FDE) to create demos. This is probably the most important thing to learn. This docx show my interaction with GPT and FDE.
+
+Foundry is complicated to use (read the first pages of this docx to get an idea). Because it solves much more complicated tasks. Its a fantastic tool. Proven in the marketplace. So its well worth the effort to learn. But you need to learn to walk before you can run, and the demos were about running (or at least walking fast). This demo starts with crawling. But this is what I need to really know how to use Foundry. I need to train on the dialogs. I could not find such a quick start, so I decided to write this one. 
+
+
+_The first UI created in this demo. The names are chosen not to describe some real world app, but rather the structure of what name represents (in this example, the name is wrong; I need to fix)_<br><img src="/assets/sun-42.png" alt="xxx" width="33%" style="border: 1px solid #999;">
 
 
 
