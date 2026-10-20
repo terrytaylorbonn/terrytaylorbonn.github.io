@@ -1,6 +1,6 @@
 ---
 layout: page
-title: 2.1 ZAI start-to-finish demo project (WIP)
+title: 2.1 ZAI Palantir Foundry start-to-finish demo project (WIP)
 permalink: /3c.2_pal_initial_demo_ZAI/
 ---
 
