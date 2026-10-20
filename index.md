@@ -7,7 +7,7 @@ title: Home
 
 _Latest updates_
 
-
+- _(26.1020): **[The future of programming Foundry (and documentation) is here today (WIP)](/future_foundry_and_docs/)**._ 
 - _(26.1019): **[2.1 ZAI start-to-finish demo project (WIP)](/3c.2_pal_initial_demo_ZAI/)**. This page has been **a big goal of mine since I started using Foundry**. Its something I could not find elsewhere: A demo that focuses on the mechanics of using Foundry, from an empty project. This is how you want to get started with Foundry._
 - _(26.1017): On page **[00 Why Foundry?](/pal_concepts_why_foundry/)** a new section **Comparing PC and Foundry to understand ontology**_
 - _(26.1011): On page **[3c Enterprise](/pal/)** a new section **0 Core Foundry Enterprise Concepts**_

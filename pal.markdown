@@ -41,9 +41,10 @@ Note: I am using a free trial version of Foundry. A very generous free trial. Bu
 
 
 - **CONCEPTS** (maybe combine these)
-  - **00 Why Foundry?** (v1 26.1016)
-  - **0 Core Foundry Enterprise Concepts** (#697; v1 26.1011)
-  - **1 Core Foundry Enterprise AI Concepts**
+  - **C1 Why Foundry?** (00, v1 26.1016)
+  - **C2 The future of programming Foundry (and documentation) is here today (WIP)** (00b, v1 26.1020)
+  - **C3 Core Foundry Enterprise Concepts** (0, #697; v1 26.1011)
+  - **C4 Core Foundry Enterprise AI Concepts** (1)
 - **1b Foundry free tier sign up**
 - **2 Foundry demos** (ZAI-modified PAL demos and ZAI/FDE original demos)
 - **3 Project/doc sources** (PAL and ZAI)xx
@@ -59,7 +60,7 @@ Note: I am using a free trial version of Foundry. A very generous free trial. Bu
 
 <br>
 
-## **[00 Why Foundry?](/pal_concepts_why_foundry/)** (v1 26.1016)
+## **[C1 Why Foundry?](/pal_concepts_why_foundry/)** (v1 26.1016)
 
 (WIP... below is just some initial thoughts)
 
@@ -73,6 +74,21 @@ Note: I am using a free trial version of Foundry. A very generous free trial. Bu
 _(left) Non-AI App, (center) AI app ("agent") + local LLM, (right) remote LLM_<br><img src="/assets/sun-25.png" alt="drones" width="16%" style="border: 1px solid #999;">    <img src="/assets/sun-26.png" alt="drones" width="30%" style="border: 1px solid #999;">    <img src="/assets/sun-27.png" alt="drones" width="30%" style="border: 1px solid #999;"><br>
 
 
+
+<br>
+
+--------------------
+
+<br>
+
+
+## **[C2 The future of programming Foundry (and documentation) is here today (WIP)](/future_foundry_and_docs/)** (v1 26.1020)
+
+I am programming and writing a Foundry QS (quick start) by simply chatting with FDE/GPT. 
+- Most of the text is FDE chat responses and the screenshots submitted to FDE (FDE can "see" screenshots and diagrams). 
+- In the future, you will simply talk with FDE and FDE can see your screen. 
+- Programming speeds will be vastly faster, and the bar for programming productivity will be raised once again.
+
 <br>
 
 --------------------
@@ -80,7 +96,7 @@ _(left) Non-AI App, (center) AI app ("agent") + local LLM, (right) remote LLM_<b
 
 <br>
 
-## **[0 Core Foundry Enterprise Concepts](/pal_concepts_ep/)** (v1 26.1011)
+## **[C3 Core Foundry Enterprise Concepts](/pal_concepts_ep/)** (v1 26.1011)
 
 <!-- **TOC**
 - 0.1 ZAI focuses on hands-on demos (and useful docs) to learn Foundry
@@ -126,7 +142,7 @@ _PAL south/ontology/north diagram_<br><img src="/assets/sun-15.png" alt="drones"
 
 <br>
 
-## **[1 Core Foundry Enterprise AI Concepts](/pal_concepts/)**
+## **[C4 Core Foundry Enterprise AI Concepts](/pal_concepts/)**
 
 **The AI concepts webpage was inspired by Alex Karp's talks about sovereignty and ALPHA in the enterprise.** These issues are due to the nature of AI (unpredictable matrix math computations that recognize patterns / perform classification). 
 
@@ -139,10 +155,10 @@ _PAL south/ontology/north diagram_<br><img src="/assets/sun-15.png" alt="drones"
 
 <!-- 
 - **SUMMARY (TL;DR): Why has Palantir been so successful recently?**
-- **C1 (1-2) AI can be a blessing or a curse for your enterprise. Foundry makes it much more of a blessing.**
-- **C2 (3-5) What exactly are AI, SOVereignty, and ALPHA?**
-- **C3 (7-8) Know the difference between AI scammers and your AI allies (a Frontier AI LLM provider can be both).**
-- **C4 (9) Historical overview of SOV/ALPHA. Before LLMs and (now) with LLMs for the enterprise and (future?) the PC.**
+- **C-1 (1-2) AI can be a blessing or a curse for your enterprise. Foundry makes it much more of a blessing.**
+- **C-2 (3-5) What exactly are AI, SOVereignty, and ALPHA?**
+- **C-3 (7-8) Know the difference between AI scammers and your AI allies (a Frontier AI LLM provider can be both).**
+- **C-4 (9) Historical overview of SOV/ALPHA. Before LLMs and (now) with LLMs for the enterprise and (future?) the PC.**
 
 _NOTE: See (below) section "2 Tutorial projects" subsection "2.2x CONCEPTS (DEEP DIVE): ZAI demos" for lower level concepts (workflows, data protection, AIP, and automation)._ -->
 
@@ -299,6 +315,8 @@ In the diagrams of the new ZAI version of the Foundry intro below:
 <br>
 
 #### **[2.1 ZAI start-to-finish demo project (WIP)](/3c.2_pal_initial_demo_ZAI/)**
+
+_See also **[C2 The future of programming Foundry (and documentation) is here today (WIP)](/future_foundry_and_docs/)**._
 
 This will be (WIP) **a long demo with many phases that stays laser-focued on demo'ing the core mechanics of using Foundry** (not on realistic demos of specific application markets; focuses on learning to navigate the UI and the terminology (The most challenging aspect of working with Foundry))
 
@@ -510,7 +528,7 @@ FDE is the core tool for learning Foundry.
 
 <br>
 
-26.1011 (0814, v1 26.0702)
+26.1020 (0814, v1 26.0702)
 
 <!--
 <br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br>
