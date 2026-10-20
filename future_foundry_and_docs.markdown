@@ -27,8 +27,12 @@ permalink: /future_foundry_and_docs/
 
 ### **0 How I started learning Foundry**
 
-I spent a couple of months going through Foundry demos. They were super helpful.  xxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxx
-
+I spent a couple of months going through Foundry demos (see **["3.2 PAL project/doc sources"](/pal/)**). They were super helpful. But what I needed was 
+- A personal trainer, an expert with Foundry.
+- This was criticial when unexpected problems showed up.
+- Feedback on the accuracy of what I was doing. 
+- Ability to change in focus, level of complexity, etc.
+- Not having to figure out all the training resources. The sheer numbers of demos/examples was overwhelming. 
 
 <br>
 
@@ -38,10 +42,9 @@ I spent a couple of months going through Foundry demos. They were super helpful.
 
 ### **1 How I am programming (and documenting) the ZAI Foundry Quick Start**
 
-
-
 I am writing the **[2.1 ZAI start-to-finish demo project](/3c.2_pal_initial_demo_ZAI/)** by simply chatting with FDE/GPT only. 
 - Most of the text is FDE chat responses and the screenshots submitted to FDE (FDE can "see" screenshots and diagrams; this is probably based on GPT tech; FDE probably provides the link to the current Foundry instance). 
+- I insert into the docs questions to ask FDE and other possible directions of focus.
 
 For documentation:
 - Chats with FDE will serve as the starting point.
