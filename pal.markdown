@@ -40,9 +40,9 @@ Note: I am using a free trial version of Foundry. A very generous free trial. Bu
 #### **TOC**:
 
 
-- **CONCEPTS** (maybe combine these)
+- **CONCEPTS** (maybe combine these into a subpage)
   - **C1 Why Foundry?** (00, v1 26.1016)
-  - **C2 The future of programming Foundry (and documentation) is here today (WIP)** (00b, v1 26.1020)
+  - **C2 The future of programming Foundry (and writing documentation) is here today (WIP)** (00b, v1 26.1020)
   - **C3 Core Foundry Enterprise Concepts** (0, #697; v1 26.1011)
   - **C4 Core Foundry Enterprise AI Concepts** (1)
 - **1b Foundry free tier sign up**
@@ -88,6 +88,10 @@ I am programming and writing a Foundry QS (quick start) by simply chatting with 
 - Most of the text is FDE chat responses and the screenshots submitted to FDE (FDE can "see" screenshots and diagrams). 
 - In the future, you will simply talk with FDE and FDE can see your screen. 
 - Programming speeds will be vastly faster, and the bar for programming productivity will be raised once again.
+
+_The new programming/documentation paradigm with FDE/GPT._<br><img src="/assets/sun-44.png" alt="drones" width="80%" style="border: 1px solid #999;"><br>
+
+
 
 <br>
 

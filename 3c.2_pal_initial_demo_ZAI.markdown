@@ -10,7 +10,7 @@ permalink: /3c.2_pal_initial_demo_ZAI/
 
 <br>
 
-_See also **[The future of programming Foundry (and documentation) is here today (WIP)](/future_foundry_and_docs/)**._
+_See also **[The future of programming Foundry (and writing documentation) is here today (WIP)](/future_foundry_and_docs/)**._
 
 This will be (WIP) **a long demo with many phases that stays laser-focued on demo'ing the core mechanics of using Foundry** (not on realistic demos of specific application markets; focuses on learning to navigate the UI and the terminology (The most challenging aspect of working with Foundry))
 
