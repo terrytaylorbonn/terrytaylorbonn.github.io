@@ -10,6 +10,14 @@ permalink: /pal_capstone/
 
 <br>
 
+
+Docx **[#694](https://drive.google.com/drive/folders/1-Adawag9uA8_bq-hDF-nOuPYaRLz1eEO)** is my working version of the capstone project. 
+
+<!-- <img src="/assets/sun-xx.png" alt="xxx" width="100%" style="border: 1px solid #999;"> -->
+
+<br>
+
+
 ```
 ME: Below is your (FDE) summary for stage "020 — AI checks data and calls an Action".
 This to me is the goal of the quick start.
@@ -68,9 +76,6 @@ That is a strong destination for Foundry Foundations with FDE: a project readers
 
 ```
 
-<!-- 
-Docx **[#69xxxxxxx](https://drive.google.com/drive/folders/1-Adawag9uA8_bq-hDF-nOuPYaRLz1eEO)** is my working version of this xxxxxxxxxxxxxxx. 
-<img src="/assets/sun-xx.png" alt="xxx" width="100%" style="border: 1px solid #999;"> -->
 
 <br>
 

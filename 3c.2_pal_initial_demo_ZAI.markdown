@@ -22,8 +22,6 @@ _See also_
 <img src="/assets/sun-43.png" alt="xxx" width="50%" style="border: 1px solid #999;">
 
 
-<!--   xxx <img src="/assets/sun-41.png" alt="xxx" width="52%" style="border: 1px solid #999;"> -->
-
 <br>
 
 #### **THE REASON FOR THIS DOCX**
@@ -36,6 +34,10 @@ Foundry solves some very complicated problems. Its a fantastic tool. Proven in t
 
 _The first UI created in this demo_<br><img src="/assets/sun-42.png" alt="xxx" width="33%" style="border: 1px solid #999;">
  
+<br>
+
+26.1026
+
 
 
 <br><br><br><br><br><br><br><br><br><br><br>
@@ -94,6 +96,10 @@ The basic idea for the Start-to-Finish demo project:
 - Like the name says, you start with nothing, continue to develop until you have covered all the main topics.
 - The demo is a generic demo, simple, meant as a tech demo, not a real-world business process demo.
 - The progression of the StF project is not [1]-[5] above. Rather, you do whatever comes next logically, and you use [1]-[5] to classify what you are adding.
+
+# **For the rest of this page see the markdown**
+
+<!--
 
 <br>
 <br>
@@ -207,12 +213,12 @@ D3c sits at the intersection of:
 
 Because it is explicitly a protected D3 agent, placing it after D3b in the security section creates a useful comparison:
 
-<!-- FDE's second recommendation
+<--  FDE's second recommendation
 
 **D3c — Use an internal model in the protected D3 agent**
 
 Replace the external LLM in D3b with the internally deployed model from the D8 series. Retain the D3b controls around data access, output validation, governed Actions, human approval, Automate, monitoring, and rollback.
--->
+-ssss-!>
 
 <br>
 
@@ -220,9 +226,9 @@ Replace the external LLM in D3b with the internally deployed model from the D8 s
 
 This sections focuses on **getting started (grasping core concepts via hands-on demos)** with Foundry demos that use **external AI models**. This is the first set of demos because (1) ZAI focuses primarily on AI and (2) external models are simpler than internal models.
 
-<!-- Note:
+<--  Note:
 - The thread order does not exactly match the demo number.
-- Initial focus is on Foundry + AI + agents -->
+- Initial focus is on Foundry + AI + agents -ssss-!>
 
 **TOC:**
 
@@ -231,8 +237,8 @@ This sections focuses on **getting started (grasping core concepts via hands-on 
 - **1.2b Both D2 and D3 send enterprise data to external LLMs — why does Palantir call D3 the first “agentic” demo?**
 - **1.3 D3 = "Speedrun: Your First Agentic AIP Workflow"**
 
-<!--
-- **1.4 (TODO) D3b Agent/model data security**-->
+<-- 
+- **1.4 (TODO) D3b Agent/model data security**-ssss-!>
 
 <br>
 
@@ -286,23 +292,23 @@ This demo builds the first **autonomous operational agent** in this sequence.
 - **(3)(4b) The governed Action automatically writes** the initial eligibility decision and reasoning.
 - **(5) Staff review the result** and may manually adjust the eligibility decision through the UI. This last step is important: Automation makes the initial operational decision, but staff retain oversight and can override it through a governed Action.
 
-<!-- Notes:
+<--  Notes:
 See also:
 - **[#614_.docx](https://drive.google.com/drive/folders/1-Adawag9uA8_bq-hDF-nOuPYaRLz1eEO)** (detailed demo notes; the ZAI webpage markdown/PNG's for the ZAI online docs for this demo were extracted from this docx using GPT)
 - **[Speedrun](https://learn.palantir.com/speedrun-your-first-agentic-aip-workflow)** (the original demo documentation)
 
 
 - For a discussion of what “agent” means in Foundry, see the D2 notes. This is an on-going debate with FDE. FDE (not sure I agree with this): The agent is not the LLM or AIP Logic alone. It is the complete event-driven system comprising Ontology state, Automate, AIP Logic, the LLM, and the governed Action.
-- The “AIP Function” and “AIP Logic” boxes show two Foundry UI/resource views of the same executable logic. The Function Registry entry is the published interface selected by Automate; the Logic editor contains its implementation. -->
+- The “AIP Function” and “AIP Logic” boxes show two Foundry UI/resource views of the same executable logic. The Function Registry entry is the published interface selected by Automate; the Logic editor contains its implementation. -ssss-!>
 
 _Diagram of the workflows for the ZAI version of demo D3 "Speedrun: Your First Agentic AIP Workflow”_<br><img src="/assets/MASTER_D3.png" alt="xxx" width="100%" style="border: 1px solid #999;">
 
 <br>
 
-<!--
+<-- 
 #### **[1.4 (TODO) D3b Agent/model data security](/3c.2_pal_D2b_ai_monitor/)**
 
-Work with GPT/FDE to add Foundry safety rails to D3 to make using agents + remote LLMs and agents safer (finding an existing demo for this would be better).  -->
+Work with GPT/FDE to add Foundry safety rails to D3 to make using agents + remote LLMs and agents safer (finding an existing demo for this would be better).  -ssss-!>
 
 ### **[[4] 2b Sovereignty comparisons (_added 26.0905_)](/3c.2_pal_2.0_sovereignty/)**
 
@@ -347,7 +353,7 @@ Demos that show how to create and host internal models.
 
 #### _I worked out the structure of this section with FDE/GPT on 26.0905... I will continue working on it from 10 Oct 2026._
 
-<!-- ### **ME: Split D8 into multiple demos?**
+<--  ### **ME: Split D8 into multiple demos?**
 
 FDE: Yes. Model integration, model creation, training, inference, RAG, and model operations are too much for one demo. I recommend keeping D3c as the capstone, after a sequence of smaller D8 demos.
 
@@ -355,7 +361,7 @@ FDE: Yes. Model integration, model creation, training, inference, RAG, and model
 
 This is preferable to placing D3c immediately after one large D8. Readers first learn how internal models are created, deployed, called, and governed; D3c then demonstrates how those capabilities fit into an operational agent.
 
--->
+-ssss-!>
 
 <br>
 
@@ -505,7 +511,7 @@ This is the internal-model equivalent of your Function versioning discussion.
 
 <br>
 
-<!-- #### **[2.2 D3c (TODO) = D3(b) + D8 (local (maybe custom trained) models)](/3c.8_pal_D2c_D8/)**
+<--  #### **[2.2 D3c (TODO) = D3(b) + D8 (local (maybe custom trained) models)](/3c.8_pal_D2c_D8/)**
 Locals models (+RAG) are probably the optimal solution (see D8 demo description below on this page).
 
 I would remove:
@@ -513,7 +519,7 @@ I would remove:
 “Local models (+RAG) are probably the optimal solution.”
 
 That conclusion is too broad. Internal models and RAG may be preferable for sensitive workloads, but they introduce model quality, infrastructure, operational, and cost tradeoffs. Also, RAG does not make a model internal; it is a grounding technique that can be used with either internal or external models.
--->
+-ssss-!>
 
 ### **[6] 4 Other demos**
 
@@ -662,14 +668,14 @@ Before leaving:
 
 On the evidence available, **five weeks of inactivity is more likely to cause a reversible inactive status than deletion of your account and projects**.
 
-# <!-- ==========================================================================================
+# <--  ==========================================================================================
 
 # ==========================================================================================
 
 ==========================================================================================
--->
+-ssss-!>
 
-<!-- The user can:
+<--  The user can:
 
 **1a.** Manually review or modify an existing Patient’s eligibility decision through a governed Action; or
 **1b.** Add a new Patient, causing that Patient to enter the object set monitored by Automate.
@@ -712,19 +718,19 @@ Add Patient
 → optional manual correction
 ```
 
--->
+-ssss-!>
 
-<!-- With ZAI versions of the docs with added heading numbering, step numbering, concepts (especially conceptual diagrams), and error corrections.
-Created/updated/published (to ZAI) from tagged docx files (using GPT). -->
+<--  With ZAI versions of the docs with added heading numbering, step numbering, concepts (especially conceptual diagrams), and error corrections.
+Created/updated/published (to ZAI) from tagged docx files (using GPT). -ssss-!>
 
-<!-- *Demo D2 first AIP workflow diagram (WIP)*<br><img src="/assets/777_49.png" alt="xxx" width="40%" style="border: 1px solid #999;">
+<--  *Demo D2 first AIP workflow diagram (WIP)*<br><img src="/assets/777_49.png" alt="xxx" width="40%" style="border: 1px solid #999;">
 
 *Demo D2 first AIP workflow diagram (ZAI enhanced version of original speedrun diagram)*<br><img src="/assets/777_47.png" alt="xxx" width="45%" style="border: 1px solid #999;">
 
 *Demo D2 first AIP workflow diagram (this diagram is wrong... FDE gave a fake answer rather than admitting it did not know)*<br><img src="/assets/777_48.png" alt="xxx" width="70%" style="border: 1px solid #999;">
--->
+-ssss-!>
 
-<!-- #### **[1.3 D3 (WIP) = "Speedrun: Your First Agentic AIP Workflow" (26.0829)](/3c.3_pal_agentic_ai/)**
+<--  #### **[1.3 D3 (WIP) = "Speedrun: Your First Agentic AIP Workflow" (26.0829)](/3c.3_pal_agentic_ai/)**
 This is the First agent in Foundry (for a draft WIP discussion of what exactly an agent is in Foundry, see **[3c.2_pal_D3_notes_26.0828](/3c.2_pal_D3_notes_26.0828/)**).
 
 
@@ -738,9 +744,9 @@ The diagram below summarizes the workflow
 - 2 Automate observes the Ontology and provides the recurring control loop;
 - 3 AIP Logic performs the reasoning; and a
 - 4 governed Action writes the resulting decision back to the Ontology.
--->
+-ssss-!>
 
-<!-- #### **Demo videos vs docx's**
+<--  #### **Demo videos vs docx's**
 
 Ontologize.com has a lot of top Youtube videos for learning Foundry. However, in the **[Ontologize video](https://youtu.be/6kXdjW4KnHc?t=69) for the first PAL demo** "Speedrun: Your First End-to-End Workflow" they say *"...we're going to build a fully end-to-end workflow. **This course is not going to go into all the detailed ins and outs of each step**. This is about the big picture and to give you a taste of how everything fits together."*
 
@@ -761,13 +767,13 @@ Without FDE, you will get stuck. With FDE skills, you fix anything. FOR EXAMPLE:
 
 <img src="/assets/ERROR_01.png" alt="xxx" width="50%" style="border: 1px solid #999;">
 
-<!-- <img src="/assets/ERROR_02.png" alt="xxx" width="60%" style="border: 1px solid #999;"> ->
+<--  <img src="/assets/ERROR_02.png" alt="xxx" width="60%" style="border: 1px solid #999;"> ->
 
 then FDE/GPT did some stuff (SEE GPT CONVERSATION 26.0718_1035)
 
 <img src="/assets/ERROR_03.png" alt="xxx" width="60%" style="border: 1px solid #999;">
 
-<!-- <img src="/assets/ERROR_04.png" alt="xxx" width="60%" style="border: 1px solid #999;"> ->
+<--  <img src="/assets/ERROR_04.png" alt="xxx" width="60%" style="border: 1px solid #999;"> ->
 
 **ME: i clicked "ready to mine" again.. and seems it worked.. did you fix something?**
 
@@ -790,9 +796,9 @@ So the important point is: **Ready to mine only previews/adds mined results; Co
 
 ----------------------------
 
--->
+-ssss-!>
 
-<!--
+<-- 
 
   <br>*The gist of Palantir haystack needle search: A crystal ball (called a "palantir" ("seeing stone") in Lord of the Rings)* <br><img src="/assets/pal_9_06.png" alt="drones" width="25%" style="border: 1px solid #999;"><br><br>
 
@@ -801,21 +807,21 @@ But you need to have an idea of the big picture direction for any project. The (
 
 Afterwards I created this simple diagram to make sure I could miss those "rabbit holes" in the future (with uniquely numbered steps and variables; they don't have to be perfect, just something you can trace). <br> <img src="/assets/777_04.png" alt="drones" width="60%" style="border: 1px solid #999;">
 
--->
+-ssss-!>
 
-<!--
+<-- 
 
 - But how exactly did they implement the HN algorithms? That's of practical interest currently because
     - (1) those **HN techniques are being used in all business segments** (not just military and intelligence) and
     - (2) **you can learn the details hands-on yourself for free with no assistance**by getting a PAL trial license (I have only a trial license and I am working alone).
 
 
-    The goal of this page is to explain (via demos) the gist of a portion of the Palantir (PAL) toolset (there are not many competitors to PAL right now, but there will be in the near future, and they will follow a lot of the PAL methodologies). How to use that toolset to create HN apps. -->
+    The goal of this page is to explain (via demos) the gist of a portion of the Palantir (PAL) toolset (there are not many competitors to PAL right now, but there will be in the near future, and they will follow a lot of the PAL methodologies). How to use that toolset to create HN apps. -ssss-!>
 
-<!--  If I had had such a diagram for the step-by-step demos I had done earlier, I would have understood better what I had been doing. When you get your first Workshop running, spend extra time tracing through all the connections. Experiment. Do this for other tools.
--->
+<--   If I had had such a diagram for the step-by-step demos I had done earlier, I would have understood better what I had been doing. When you get your first Workshop running, spend extra time tracing through all the connections. Experiment. Do this for other tools.
+-ssss-!>
 
-<!--
+<-- 
 *(MAIN DIAGRAM: 620/D9/xx)*.
 
   - **Use AI (AIP/FDE) to do demos from scratch** (not following PAL demos or PAL docs; I might get inspiration from those demos, but I just use AIP/FDE to execute; in the future PAL Pilot would do this).
@@ -824,9 +830,9 @@ Afterwards I created this simple diagram to make sure I could miss those "rabbit
     - Without/with AI.
   - Coming soon: Other AIP/FDE/Pilot demos.
  - **[PAL Pilot](https://www.palantir.com/docs/foundry/pilot/getting-started/)** (in beta now) will probably be an "FDE/AIP combo" that can "see" the dialogs and lead you by the hand through complicated setups.<br><img src="/assets/pal_10_07.png" alt="drones" width="40%" style="border: 1px solid #999;"><br><br>
-   - **[8 (3c.3b) Pilot real-world projects](/3c.3b_pal_pilot/) (NEAR FUTURE?)** .-->
+   - **[8 (3c.3b) Pilot real-world projects](/3c.3b_pal_pilot/) (NEAR FUTURE?)** .-ssss-!>
 
-<!--
+<-- 
 <br>
 <br>
 <br>
@@ -882,4 +888,6 @@ There are also a few other lab notes docx's of interest:
 
 *Final app* <br>
 <img src="/assets/final-01.png" alt="drones" width="70%" style="border: 1px solid #999;">
+-ssss-!>
+
 -->
