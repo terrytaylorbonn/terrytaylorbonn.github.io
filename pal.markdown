@@ -311,6 +311,10 @@ when i started: I decided I'd just start doing demos and after a while I'd event
 
 Based on the demo project built in 2.1, you create a “Needle in the Haystack” demo. In this demo you specify what kind of “needle” you are looking for in a “haystack” of data, and the Foundry uses AI to find (almost a real world demo of one of Foundry’s most well known capabilities).
 
+_See also_
+- _Docx **[#694](https://drive.google.com/drive/folders/1-Adawag9uA8_bq-hDF-nOuPYaRLz1eEO)** is my working version of the capstone project demo._ 
+
+
 <br>
 
 --------------------
