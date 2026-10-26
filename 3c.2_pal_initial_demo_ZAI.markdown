@@ -1,6 +1,6 @@
 ---
 layout: page
-title: 2.1 ZAI Palantir Foundry start-to-finish demo project (WIP)
+title: 2.1 ZAI quick start (QS) (WIP)
 permalink: /3c.2_pal_initial_demo_ZAI/
 ---
 
@@ -10,33 +10,35 @@ permalink: /3c.2_pal_initial_demo_ZAI/
 
 <br>
 
-_See also **[The future of programming Foundry (and writing documentation) is here today (WIP)](/future_foundry_and_docs/)**._
+A detailed QS that starts from 0, giving you core Foundry skills (and a real understanding of key Foundry concepts). Stays laser-focused on 
+- the core mechanics of using Foundry
+- how to navigate the UI and the terminology
+- **using FDE (Foundry's built-in AI assistant)** 
 
-This will be (WIP) **a long demo with many phases that stays laser-focued on demo'ing the core mechanics of using Foundry** (not on realistic demos of specific application markets; focuses on learning to navigate the UI and the terminology (The most challenging aspect of working with Foundry))
+_See also_
+- _Docx **[#695](https://drive.google.com/drive/folders/1-Adawag9uA8_bq-hDF-nOuPYaRLz1eEO)** is my working version of this demo (open that doc; I will not be (for now) adding anything on this webpage)._ 
+- _**[C2 The future of programming Foundry (and documentation) is here today (WIP)](/future_foundry_and_docs/)**._
 
-NOTE: A big part of learning Foundry is **learning how to use FDE or GPT (AI) to help you learn Foundry**. 
-
-Docx **[#695](https://drive.google.com/drive/folders/1-Adawag9uA8_bq-hDF-nOuPYaRLz1eEO)** is my working version of this demo (open that doc; I will not be (for now) adding anything on this webpage). 
-
-<img src="/assets/sun-43.png" alt="xxx" width="100%" style="border: 1px solid #999;">
+<img src="/assets/sun-43.png" alt="xxx" width="50%" style="border: 1px solid #999;">
 
 
 <!--   xxx <img src="/assets/sun-41.png" alt="xxx" width="52%" style="border: 1px solid #999;"> -->
 
-**THE REASON FOR THIS DOCX**
+<br>
 
-I spent several months doing various Foundry demos. These were all "realistic" demos, step by step. The problem was the "realistic" aspect. I needed a demo that focused on the mechanics of how to create all the mechanisms (Projects, apps, UI (very compicated), ObjectTypes, actions, etc etc etc). I did not want to focus on a demo with an ObjectType that had 19 (!!) properties (because the demo was about some complicated medical documents). Sure, eventually I would want such demos, but not as demo1, demo2, etc. 
+#### **THE REASON FOR THIS DOCX**
 
-Also, I wanted to know how to use AI (FDE) to create demos. This is probably the most important thing to learn. This docx show my interaction with GPT and FDE.
+- I spent several months doing various Foundry demos. These were all "realistic" demos, step by step. The problem was the "realistic" aspect. I needed a demo that focused on the mechanics of how to create all the mechanisms (Projects, apps, UI (very compicated), ObjectTypes, actions, etc etc etc) with minimalistic non-real-world demos (eventually I would want such demos, but at first).
+- Using AI (FDE) to create demos is probably the most important thing to learn. This docx show my interaction with GPT and FDE.
 
-Foundry is complicated to use (read the first pages of this docx to get an idea). Because it solves much more complicated tasks. Its a fantastic tool. Proven in the marketplace. So its well worth the effort to learn. But you need to learn to walk before you can run, and the demos were about running (or at least walking fast). This demo starts with crawling. But this is what I need to really know how to use Foundry. I need to train on the dialogs. I could not find such a quick start, so I decided to write this one. 
-
-
-_The first UI created in this demo. The names are chosen not to describe some real world app, but rather the structure of what name represents (in this example, the name is wrong; I need to fix)_<br><img src="/assets/sun-42.png" alt="xxx" width="33%" style="border: 1px solid #999;">
+Foundry solves some very complicated problems. Its a fantastic tool. Proven in the marketplace. So its well worth the effort to learn. But you need to learn to walk before you can run, and this demo starts with crawling. 
 
 
+_The first UI created in this demo_<br><img src="/assets/sun-42.png" alt="xxx" width="33%" style="border: 1px solid #999;">
+ 
 
-<br><br><br><br><br><br><br>
+
+<br><br><br><br><br><br><br><br><br><br><br>
 
 -----------------
 -----------------
@@ -47,7 +49,9 @@ _The first UI created in this demo. The names are chosen not to describe some re
 
 <br>
 
-# **OLD**
+# **OLD (the original idea for a QS)**
+
+I eventually decided to create my own from scratch.
 
 ```
 CREATE 2.2a ZAI VERSION OF FOLLOWING

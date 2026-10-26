@@ -256,90 +256,37 @@ If you cant get a trial version of PAL running, then there's no reason to read f
 
 This section contains a deep dive into concepts and 3 Foundry tutorial projects
 
-- **2.0 ZAI demo master list**
-- **2.0b Foundry ontology (object type) management**
-<!-- - **2.2x CONCEPTS (DEEP DIVE): ZAI demos** -->
-- **2.1 ZAI start-to-finish demo project (TODO)**
-- **2.2 ZAI versions of the core ~8 Foundry getting started demos**
-- **2.3 ZAI target app demos (TODO)**. These will be focusing on target apps, for example "Haystack Needle" demos. Higher level docs, assuming you know the basics.
-- **2.4 PAL Examples (installable)**. FULL-FEATURED BUSINESS APP (WITH INSTALLER).
+- **2.1 ZAI quick start (QS) (WIP)**. A detailed QS that starts from 0, giving you the core Foundry skills (and a real understanding of key Foundry concepts).
+- **2.2 ZAI "capstone" project demo (TODO)**. Based on the demo project built in 2.1, you create a "Needle in the Haystack" demo. In this demo you specify what kind of "needle" you are looking for in a "haystack" of data, and the Foundry uses AI to find (almost a real world demo of one of  Foundry's most well known capabilities).
+- **2.3 Foundry ontology (object type) management**. The trial version of Foundry is very generous, but limits the total numbers of Object Types to 60. You probably won't hit that limit in 2.1 or 2.2, but to avoid running into problems in future demos, you might want to learn how to delete previous Object Types (then ask you create future demos you will appreciate the importance of tracking which demos are lowest priority).
+- **2.4 ZAI versions of the core ~8 Foundry getting started demos**. Official Foundry demos. 
+- **2.5 PAL Examples (installable)**. Full-featured business apps (with installer). 
+
+<!--- **2.0 ZAI demo master list**
+ - **2.2x CONCEPTS (DEEP DIVE): ZAI demos** -->
 
 <!-- - 2.2a ZAI start-to-finish demo project (TODO)
 - 2.2b ZAI versions of the core ~8 Foundry getting started demos
 - 2.3 PAL Examples (installable) -->
 
-
 <br>
 
 --------------------
 
 <br>
 
-#### **[2.0 ZAI demo master list](/3c.2_pal_demo_MASTERLIST/)** (v1 26.1013)
+#### **[2.1 ZAI quick start (QS) (WIP)](/3c.2_pal_initial_demo_ZAI/)**
 
-In the diagrams of the new ZAI version of the Foundry intro below: 
-- (left) The new ZAI version of Foundry intro (WIP) will cross reference all demos with Foundry apps.
-- (right) H3 Foundry apps that demo D3b/#628 are marked (in the future all apps will be added). 
-- For details see **[docx (#697ex)](https://drive.google.com/drive/folders/1-Adawag9uA8_bq-hDF-nOuPYaRLz1eEO)**.
+A detailed QS that starts from 0, giving you core Foundry skills (and a real understanding of key Foundry concepts). Stays laser-focused on 
+- the core mechanics of using Foundry
+- how to navigate the UI and the terminology
+- **using FDE (Foundry's built-in AI assistant)** 
 
-<img src="/assets/sun-16bbb.png" alt="drones" width="35%" style="border: 1px solid #999;">  <img src="/assets/sun-16ddd.png" alt="drones" width="35%" style="border: 1px solid #999;">
+_See also_
+- _Docx **[#695](https://drive.google.com/drive/folders/1-Adawag9uA8_bq-hDF-nOuPYaRLz1eEO)** is my working version of this demo (open that doc; I will not be (for now) adding anything on this webpage)._ 
+- _**[C2 The future of programming Foundry (and documentation) is here today (WIP)](/future_foundry_and_docs/)**._
 
-<br>
-
---------------------
-
-<br>
-
-<!-- 
-#### **[2.2x CONCEPTS (DEEP DIVE): ZAI demos](/3c.2_pal_demo_CONCEPTS/)**
-
-- the core getting started demos did not seem to focus on what I gradually (with more and more hands-on experience) began to recognize as the core concepts of PAL demos.
-- use those ~8 demos as a basic course in hands-on learning of the main concepts (as I see them) (See 2.2b section below)<br><img src="/assets/wuxi-24.png" alt="drones" width="40%" style="border: 1px solid #999;"><br>
-
-<br>
-
---------------------
-
-<br> -->
-
-
-#### **[2.0b Foundry ontology (object type) management](/pal_ontology_management/)** (v1 26.1018)
-
-
-(WIP: discuss here about managing ontology while doing the demos, especially object types in order to **stay under the 60 object types limit**... there are no utilities to take care of this!).
-
-
-
-
-
-<br>
-
---------------------
-
-<br>
-
-#### **[2.1 ZAI start-to-finish demo project (WIP)](/3c.2_pal_initial_demo_ZAI/)**
-
-_See also **[C2 The future of programming Foundry (and documentation) is here today (WIP)](/future_foundry_and_docs/)**._
-
-This will be (WIP) **a long demo with many phases that stays laser-focued on demo'ing the core mechanics of using Foundry** (not on realistic demos of specific application markets; focuses on learning to navigate the UI and the terminology (The most challenging aspect of working with Foundry))
-
-NOTE: A big part of learning Foundry is **learning how to use FDE or GPT (AI) to help you learn Foundry**. 
-
-Docx **[#695](https://drive.google.com/drive/folders/1-Adawag9uA8_bq-hDF-nOuPYaRLz1eEO)** is my working version of this demo (open that doc; I will not be (for now) adding anything on this webpage). 
-
-<img src="/assets/sun-41.png" alt="xxx" width="45%" style="border: 1px solid #999;">
-
-Learning how to create the most basic things in Foundry is quite challenge (at first). YOu need to be prepared to spend a bit of time at first on this.
-
-<img src="/assets/sun-42.png" alt="xxx" width="27%" style="border: 1px solid #999;">
-
-
-
-
-
-
-
+<img src="/assets/sun-41.png" alt="xxx" width="60%" style="border: 1px solid #999;">
 
 <!--
 - There are 5 basic classifications for each addition to the demo:
@@ -360,7 +307,60 @@ when i started: I decided I'd just start doing demos and after a while I'd event
 <br>
 
 
-#### **[2.2 ZAI versions of the core ~8 Foundry getting started demos](/3c.2_pal_initial_demos/)**
+#### **[2.2 ZAI Foundry“capstone” project demo (was 2.3)](/pal_capstone/)**
+
+Based on the demo project built in 2.1, you create a “Needle in the Haystack” demo. In this demo you specify what kind of “needle” you are looking for in a “haystack” of data, and the Foundry uses AI to find (almost a real world demo of one of Foundry’s most well known capabilities).
+
+<br>
+
+--------------------
+
+<br>
+
+<!-- #### **[2.0 ZAI demo master list](/3c.2_pal_demo_MASTERLIST/)** (v1 26.1013)
+
+In the diagrams of the new ZAI version of the Foundry intro below: 
+- (left) The new ZAI version of Foundry intro (WIP) will cross reference all demos with Foundry apps.
+- (right) H3 Foundry apps that demo D3b/#628 are marked (in the future all apps will be added). 
+- For details see **[docx (#697ex)](https://drive.google.com/drive/folders/1-Adawag9uA8_bq-hDF-nOuPYaRLz1eEO)**.
+
+<img src="/assets/sun-16bbb.png" alt="drones" width="35%" style="border: 1px solid #999;">  <img src="/assets/sun-16ddd.png" alt="drones" width="35%" style="border: 1px solid #999;">
+
+<br>
+
+--------------------
+
+<br> -->
+
+<!-- 
+#### **[2.2x CONCEPTS (DEEP DIVE): ZAI demos](/3c.2_pal_demo_CONCEPTS/)**
+
+- the core getting started demos did not seem to focus on what I gradually (with more and more hands-on experience) began to recognize as the core concepts of PAL demos.
+- use those ~8 demos as a basic course in hands-on learning of the main concepts (as I see them) (See 2.2b section below)<br><img src="/assets/wuxi-24.png" alt="drones" width="40%" style="border: 1px solid #999;"><br>
+
+<br>
+
+--------------------
+
+<br> -->
+
+
+#### **[2.3 Foundry ontology (object type) management](/pal_ontology_management/)** (v1 26.1018) (was 2.0b)
+
+
+(WIP: discuss here about managing ontology while doing the demos, especially object types in order to **stay under the 60 object types limit**... there are no utilities to take care of this!).
+
+
+
+
+
+<br>
+
+--------------------
+
+<br>
+
+#### **[2.4 ZAI versions of the core ~8 Foundry getting started demos](/3c.2_pal_initial_demos/)** (was 2.2)
 
 _This is currently (26.0914) the Main focus of (1) ZAI "3c Enterprise" and (2) ZAI in general_.\*\*
 
@@ -443,18 +443,7 @@ _(D2 = [1] and [3], but [3] is the real focus) A diagram of the configuration st
 <br>
 
 
-#### **2.3 ZAI target app demos (TODO)**
-
-These will be focusing on target apps, for example "Haystack Needle" demos. Higher level docs, assuming you know the basics.
-
-<br>
-
---------------------
-
-<br>
-
-
-#### **[2.4 PAL Examples (installable)](/3c.1b_pal_examples/)**
+#### **[2.5 PAL Examples (installable)](/3c.1b_pal_examples/)** (was 2.4) 
 
 FULL-FEATURED BUSINESS APP (WITH INSTALLER). I originally planned to focus on examples These are complete demos that auto-install. The big advantage is that you start out with a (usually) working version that you can modify piece by piece. Examples are complete (usually more complicated) and have an installer that allows you to start with a (usually) working version that you can modify. ZAI adds a few extra steps:
 
@@ -532,7 +521,7 @@ FDE is the core tool for learning Foundry.
 
 <br>
 
-26.1020 (0814, v1 26.0702)
+26.1026 (0814, v1 26.0702)
 
 <!--
 <br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br>
