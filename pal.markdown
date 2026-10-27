@@ -8,46 +8,67 @@ permalink: /pal/
 
 <br>
 
+#### **This Enterprise section focuses on Palantir Foundry**
+
+<br>
+
+<!--
+
+<br>
+
 ------------------
 
 <br>
 
-<!--_Latest (26.0911): Making steady progress on section **[2.2 PAL demos (speedruns)](/3c.2_pal_initial_demos/)**._ -->
+_Latest (26.0911): Making steady progress on section **[2.2 PAL demos (speedruns)](/3c.2_pal_initial_demos/)**._ -->
 
-#### **TL;DR: To get started ASAP with Enterprise AI programming using Palantir Foundry** skip to the following sections 
+**TL;DR: To get started ASAP with Enterprise AI programming using Palantir Foundry** skip to the following sections 
 - **1b Foundry free tier sign up**
 - **2.1 ZAI start-to-finish demo project**. Shows how to start from 0, no real world demo, just the basic mechanics of using Foundry (the messy details of starting from 0). I highly recommend skipping to this start-to-finish demo and getting hands-on experience first before reading the other sections.
 
+<!-- 
 <br>
 
 ------------------
 
+
+<br> -->
+
+
+#### **TOC**:
+
+
+- **1 Concepts** (26.1027 combined into into a subpage)
+- **1b Foundry free tier sign up**
+- **2 Foundry demos** (ZAI-modified PAL demos and ZAI/FDE original demos)
+- **3 Project/doc sources** (PAL and ZAI)
+
+<!-- **C1 Why Foundry?** (00, v1 26.1016)
+   **C2 The future of programming Foundry (and writing documentation) is here today (WIP)** (00b, v1 26.1020)
+   **C3 Core Foundry Enterprise Concepts** (0, #697; v1 26.1011)
+   **C4 Core Foundry Enterprise AI Concepts** (1)  
+  -->
+
 <br>
 
+--------------------
+--------------------
+--------------------
+--------------------
+--------------------
+--------------------
 
-**This Enterprise section focuses on Palantir Foundry**:
+<br>
 
-- Foundry (see diagram below) is a modern enterprise platform for data integration, ontology, analytics, applications, **AI assistance**, and governance.
+## **[Concepts](/pal_concepts_all/)**
+
+- Foundry is a modern enterprise platform for data integration, ontology, analytics, applications, **AI assistance**, and governance.
 - Foundry represents the **logical culmination of ZiptieAI: (2) neural networks → (2b) models → (3) agents → (3b) workflows** (and finally) **→ (3c) enterprise platforms**.
 - Foundry takes a **very practical no-nonsense approach to AI in the enterprise**. Foundry was a market leader over 20 years ago (long before AI).
 - Palantir offers a **generous Foundry free trial**.
 - Foundry's **built-in AI assistant (FDE) makes hands-on self-study practical**.
 
-Note: I am using a free trial version of Foundry. A very generous free trial. But with one major limitation: **I can only have up to 50 ontology objects** (something like that; I forgot the details). So its inevitable that **I sometimes must delete demos/examples. So I try to document them carefully.**
-
-<br>
-
-#### **TOC**:
-
-
-- **CONCEPTS** (maybe combine these into a subpage)
-  - **C1 Why Foundry?** (00, v1 26.1016)
-  - **C2 The future of programming Foundry (and writing documentation) is here today (WIP)** (00b, v1 26.1020)
-  - **C3 Core Foundry Enterprise Concepts** (0, #697; v1 26.1011)
-  - **C4 Core Foundry Enterprise AI Concepts** (1)
-- **1b Foundry free tier sign up**
-- **2 Foundry demos** (ZAI-modified PAL demos and ZAI/FDE original demos)
-- **3 Project/doc sources** (PAL and ZAI)xx
+<!-- Note: I am using a free trial version of Foundry. A very generous free trial. But with one major limitation: **I can only have up to 50 ontology objects** (something like that; I forgot the details). So its inevitable that **I sometimes must delete demos/examples. So I try to document them carefully.** -->
 
 <br>
 
@@ -59,6 +80,9 @@ Note: I am using a free trial version of Foundry. A very generous free trial. Bu
 --------------------
 
 <br>
+
+
+<!-- 
 
 ## **[C1 Why Foundry?](/pal_concepts_why_foundry/)** (v1 26.1016)
 
@@ -73,14 +97,11 @@ Note: I am using a free trial version of Foundry. A very generous free trial. Bu
 
 _(left) Non-AI App, (center) AI app ("agent") + local LLM, (right) remote LLM_<br><img src="/assets/sun-25.png" alt="drones" width="16%" style="border: 1px solid #999;">    <img src="/assets/sun-26.png" alt="drones" width="30%" style="border: 1px solid #999;">    <img src="/assets/sun-27.png" alt="drones" width="30%" style="border: 1px solid #999;"><br>
 
-
-
 <br>
 
 --------------------
 
 <br>
-
 
 ## **[C2 The future of programming Foundry (and documentation) is here today (WIP)](/future_foundry_and_docs/)** (v1 26.1020)
 
@@ -91,24 +112,13 @@ I am programming and writing a Foundry QS (quick start) by simply chatting with 
 
 _The new programming/documentation paradigm with FDE/GPT._<br><img src="/assets/sun-44.png" alt="drones" width="80%" style="border: 1px solid #999;"><br>
 
-
-
 <br>
 
 --------------------
 
-
 <br>
 
 ## **[C3 Core Foundry Enterprise Concepts](/pal_concepts_ep/)** (v1 26.1011)
-
-<!-- **TOC**
-- 0.1 ZAI focuses on hands-on demos (and useful docs) to learn Foundry
-- 0.2 ZAI original Foundry concepts diagram (needs an update)
-- 0.3 New ZAI Foundry south/equator/north concepts diagram/docx (WIP / v1 26.1012)
-- 0.4    The original (official) Foundry south/ontology/north intro webpage 
-<br>
--->
 
 #### **New ZAI version of Foundry core concepts**
 
@@ -116,14 +126,9 @@ I needed a few months of hands-on experience before I was able to create a ZAI v
 
 _Note: The new ZAI Foundry intro will also cross reference all demos with Foundry apps (for details see **[docx #697ex](https://drive.google.com/drive/folders/1-Adawag9uA8_bq-hDF-nOuPYaRLz1eEO)** and section **"2 Foundry demos" / "2.0 Master demo list"** below on this webpage)._
 
-
 _New ZAI south/equator/north diagram (only new ZAI stuff shown)_<br><img src="/assets/sun-14.png" alt="drones" width="50%" style="border: 1px solid #999;"><br>
 
-
-
 <img src="/assets/sun-16ccc.png" alt="drones" width="35%" style="border: 1px solid #999;">
-
-<!-- <br><img src="/assets/sun-16.png" alt="drones" width="45%" style="border: 1px solid #999;">    -->
 
 #### **Original official version of Foundry core concepts**
 
@@ -134,14 +139,6 @@ _**[Webpage](https://learn.palantir.com/introduction-to-foundry-aip-for-enterpri
 
 <br>
 
-<!-- ### 0.4 PAL south/ontology/north diagram (no equator)
-
-This diagram is missing the "equator" (of which ontology is only a component (granted, the most important component)). 
-
-_PAL south/ontology/north diagram_<br><img src="/assets/sun-15.png" alt="drones" width="60%" style="border: 1px solid #999;"><br>
-
-<br> -->
-
 --------------------
 
 <br>
@@ -150,63 +147,12 @@ _PAL south/ontology/north diagram_<br><img src="/assets/sun-15.png" alt="drones"
 
 **The AI concepts webpage was inspired by Alex Karp's talks about sovereignty and ALPHA in the enterprise.** These issues are due to the nature of AI (unpredictable matrix math computations that recognize patterns / perform classification). 
 
-
-<!-- A historical review of ALPHA/sovereignty
-- 1 Mainframes and PCs
-- 2 REST APIs
-- 3 AI APIs for AI search engines
-- 4 AI APIs LLMs and Foundry -->
-
-<!-- 
-- **SUMMARY (TL;DR): Why has Palantir been so successful recently?**
-- **C-1 (1-2) AI can be a blessing or a curse for your enterprise. Foundry makes it much more of a blessing.**
-- **C-2 (3-5) What exactly are AI, SOVereignty, and ALPHA?**
-- **C-3 (7-8) Know the difference between AI scammers and your AI allies (a Frontier AI LLM provider can be both).**
-- **C-4 (9) Historical overview of SOV/ALPHA. Before LLMs and (now) with LLMs for the enterprise and (future?) the PC.**
-
-_NOTE: See (below) section "2 Tutorial projects" subsection "2.2x CONCEPTS (DEEP DIVE): ZAI demos" for lower level concepts (workflows, data protection, AIP, and automation)._ -->
-
-
 _Alex Karp sounding the alarm about sovereignty and ALPHA in the enterprise._<br><img src="/assets/alex222.png" alt="xxx" width="52%" style="border: 1px solid #999;">
 
 _Palantir provides proven engineering (the crystal ball is just a metaphor, marketing genius); those selling AGI are selling a fantasy that can cause big problems in an enterprise._<br><img src="/assets/pal_9_06.png" alt="drones" width="20%" style="border: 1px solid #999;"> <img src="/assets/777_02.png" alt="drones" width="25%" style="border: 1px solid #999;"><br>
 
 
 
-<!--
-- **AI can be a blessing or a curse for your enterprise**. FOundry makes it much more of a blessing.
-- **What exactly are AI, SOV, ALPHA?**
-- **Understanding the goals of the AI titans and how you can protect yourself.**
-- **A historical perspective on SOV/ALPHA**. Past, present, and future. -->
-<!--
-  - **1 What AI can do _FOR_ your enterprise**.
-  - **2 What AI can do _TO_ your enterprise**. Much of how AI can help you win can also be used against you.
-  - **3 AI (LLMs) is pattern recognition** (not intelligence)
-  - **4 What are SOV, ALPHA**. Alpha = your company’s business model, workflows, secrets. SOV = your independence from a specific AI LLM provider.
-  - **5 How AI steals SOV/ALPHA**
-  - **7 Know your enemy**. The AI LLM shops have their own goals, that don't always aline with those of your enterprise.
-  - **8 Know your defense options**. If you understand how PAL Foundry works, then you understand the core problems and solutions. ZAI provides unique and insightful intro into the core concepts.
-- **Finally, a historical perspective on SOV/ALPHA**. These concepts are nothing new.
-  - **9 SOV/ALPHA past/present/future**
-    - **9.1 (PAST) ALPHA/SOV Before LLMs**. Microsoft used Windows to extract ALPHA (40 years ago). The goal was a monopoly (the same for AI shops now).
-    - **9.2 (PRESENT) ALPHA/SOV with LLMs for Enterprise**. If you use AI for business processes and intel, you need to appreciate what the token sellers are doing with your submitted prompts.
-    - **9.3 (FUTURE) ALPHA/SOV with LLMs for the PC?**. A new open HW PC standard with built in Foundry type system to protect SOV/ALPHA.
-- **What is ALPHA/SOV**
-- **Why LLMs want your ALPHA/SOVereignty**
-- PAST, PRESENT, FUTURE of ALPHA/SOV
-  - **(PAST) ALPHA/SOV Before LLMs**
-  - **(PRESENT) ALPHA/SOV after LLMs**. How Palantir alerted to the ALPHA/SOV problems and substantially mitigates the risks (for the enterprise).
-  - **(FUTURE) ALPHA/SOV for the PC?**
--------------------
-- **1 The problems with AI (LLMs) in the Enterprise**.
-- **2 How Foundry solves these problems (Alex Karp's "Alpha" concept)** .
-- **3 Basic Foundry workflows**. -->
-<!-- - BELOW: Alex Karp sounding the alarm about sovereignty in the enterprise (it took me a while to understand that I think he meant... I am still not 100% sure what he meant, but I am pretty sure about my take on "alpha".
-- NOTE the sign behind Alex: Own your own outcomes, Own your models, Own your destiny. ?? -->
-<!-- >
-<br>_Foundry enterprise platform functionality_<br><img src="/assets/wuxi-01.png" alt="drones" width="58%" style="border: 1px solid #999;"><br> -->
-
-
 <br>
 
 --------------------
@@ -218,6 +164,7 @@ _Palantir provides proven engineering (the crystal ball is just a metaphor, mark
 
 <br>
 
+-->
 
 <!-- >
 
@@ -478,10 +425,12 @@ _Workflow diagrams for examples are usually a bit more complicted than for demos
 <br>
 
 
-## **3 Project/Doc sources**
+## **[3 Project/Doc sources](/pal_project_doc_sources/)**
 
 - **3.1 ZAI doc sources (docx, gdrive, this site, etc)**
 - **3.2 PAL project/doc sources**
+
+<!--
 
 <br>
 
@@ -496,7 +445,7 @@ _Workflow diagrams for examples are usually a bit more complicted than for demos
 - **ZAI docx lab notes**
 - **ZAI website**
 - **[docx/website extraction/maintenence](/3c.1b_pal_docx_md/)**<br>_Demo doc creation/maintenance process (AI makes this process practical and reliable)_<br><img src="/assets/777_32.png" alt="drones" width="62%" style="border: 1px solid #999;"><br>
-<!-- - **DOC LIST (plan)**. I spent the first month doing the demos I thought looked interesting from the sources listed in 2.2 above _(lab notes (MS.Word docx files) are available for each example/demo on the **[GDrive](https://drive.google.com/drive/folders/1-Adawag9uA8_bq-hDF-nOuPYaRLz1eEO)**)_. Those demos are organized (by Palantir) by role and project types. I do have a rough draft (OUTDATED) list of docs / plan **[#699_planning\_.docx](https://drive.google.com/drive/folders/1-Adawag9uA8_bq-hDF-nOuPYaRLz1eEO)**<br><img src="/assets/777_24.png" alt="drones" width="13%" style="border: 1px solid #999;"><br> -->
+
 
 <br>
 
@@ -508,20 +457,7 @@ _Workflow diagrams for examples are usually a bit more complicted than for demos
 
 #### **3.2 PAL project/doc sources**
 
-<!--
-- **4.1 FDE /// Demo plan** (outdated)
-- **4.2 Palantir Foundry demos/examples**
 
-<br>
-
-#### **4.1 FDE // xxxDemo plan** (outdated)
-
-FDE is the core tool for learning Foundry.
-
-<br>
-
-#### **4.2 Palantir Foundry demos/examples**
--->
 
 - See the **[chat with FDE about demo sources](/pal_3_demo_sources/)**.
 - **[palantir.com/docs/foundry](https://www.palantir.com/docs/foundry)**. Has a lot of great content. But its probably not where you want to initially start. Note: The most interesting thing on this page for me was the diagram below (I added numbering that matches the workflow diagram in 1.2 above).<br><img src="/assets/777_27.png" alt="drones" width="52%" style="border: 1px solid #999;"><br>
@@ -530,9 +466,15 @@ FDE is the core tool for learning Foundry.
 - **[learn.palantir.com](https://learn.palantir.com)** has links to examples/demo organized by role: Data Engineer, App Dev, etc.<br><img src="/assets/777_22.png" alt="drones" width="65%" style="border: 1px solid #999;"><br>
 - **[my-org].palantirfoundry.com/workspace/marketplace** is a Foundry internal app for finding examples/demos organized by 9 "stores".<br><img src="/assets/777_21.png" alt="drones" width="45%" style="border: 1px solid #999;"><br><br>
 
+-->
+
 <br>
 
-26.1026 (0814, v1 26.0702)
+-------------------------------
+
+<br>
+
+26.1027 (0814, v1 26.0702)
 
 <!--
 <br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br>
