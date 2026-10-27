@@ -16,6 +16,7 @@ A detailed QS that starts from 0, giving you core Foundry skills (and a real und
 - **using FDE (Foundry's built-in AI assistant)** 
 
 _See also_
+- _**[foundry_qs](/foundry_qs/)** (a test converting about 10% of the docx source file to markdown for display on this website)._
 - _Docx **[#695](https://drive.google.com/drive/folders/1-Adawag9uA8_bq-hDF-nOuPYaRLz1eEO)** is my working version of this demo (open that doc; I will not be (for now) adding anything on this webpage)._ 
 - _**[C2 The future of programming Foundry (and documentation) is here today (WIP)](/future_foundry_and_docs/)**._
 
@@ -36,7 +37,7 @@ _The first UI created in this demo_<br><img src="/assets/sun-42.png" alt="xxx" w
  
 <br>
 
-26.1026
+26.1027
 
 
 
