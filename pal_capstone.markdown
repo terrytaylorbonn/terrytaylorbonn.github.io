@@ -17,6 +17,10 @@ Docx **[#694](https://drive.google.com/drive/folders/1-Adawag9uA8_bq-hDF-nOuPYaR
 
 <br>
 
+_Capstone demo \#694 TOC 26.1027_<br><img src="/assets/sun-52.png" alt="xxx" width="70%" style="border: 1px solid #999;">
+
+
+<br>
 
 ```
 ME: Below is your (FDE) summary for stage "020 — AI checks data and calls an Action".
