@@ -8,9 +8,8 @@ permalink: /pal/
 
 <br>
 
-#### **This Enterprise section focuses on Palantir Foundry**
+#### **This Enterprise section focuses on Palantir Foundry.**
 
-<br>
 
 <!--
 
@@ -22,7 +21,7 @@ permalink: /pal/
 
 _Latest (26.0911): Making steady progress on section **[2.2 PAL demos (speedruns)](/3c.2_pal_initial_demos/)**._ -->
 
-**TL;DR: To get started ASAP with Enterprise AI programming using Palantir Foundry** skip to the following sections 
+**TL;DR:** To get started ASAP with Enterprise AI programming using Palantir Foundry skip to the following sections 
 - **1b Foundry free tier sign up**
 - **2.1 ZAI start-to-finish demo project**. Shows how to start from 0, no real world demo, just the basic mechanics of using Foundry (the messy details of starting from 0). I highly recommend skipping to this start-to-finish demo and getting hands-on experience first before reading the other sections.
 
@@ -234,7 +233,7 @@ _See also_
 - _Docx **[#695](https://drive.google.com/drive/folders/1-Adawag9uA8_bq-hDF-nOuPYaRLz1eEO)** is my working version of this demo (open that doc; I will not be (for now) adding anything on this webpage)._ 
 - _**[C2 The future of programming Foundry (and documentation) is here today (WIP)](/future_foundry_and_docs/)**._
 
-<img src="/assets/sun-41.png" alt="xxx" width="60%" style="border: 1px solid #999;">
+<img src="/assets/sun-41.png" alt="xxx" width="55%" style="border: 1px solid #999;">
 
 <!--
 - There are 5 basic classifications for each addition to the demo:
@@ -259,7 +258,7 @@ when i started: I decided I'd just start doing demos and after a while I'd event
 
 Based on the demo project built in 2.1, you create a “Needle in the Haystack” demo. In this demo you specify what kind of “needle” you are looking for in a “haystack” of data, and the Foundry uses AI to find (almost a real world demo of one of Foundry’s most well known capabilities).
 
-_Capstone demo \#694 TOC 26.1027_<br><img src="/assets/sun-52.png" alt="xxx" width="70%" style="border: 1px solid #999;">
+_Capstone demo \#694 TOC 26.1027_<br><img src="/assets/sun-52.png" alt="xxx" width="65%" style="border: 1px solid #999;">
 
 
 _See also_
@@ -320,11 +319,12 @@ In the diagrams of the new ZAI version of the Foundry intro below:
 
 #### **[2.4 ZAI versions of the core ~8 Foundry getting started demos](/3c.2_pal_initial_demos/)** (was 2.2)
 
+<!----
 _This is currently (26.0914) the Main focus of (1) ZAI "3c Enterprise" and (2) ZAI in general_.\*\*
 
 - NOTE: see [2.2x CONCEPTS (DEEP DIVE): ZAI demos](/3c.2_pal_demo_CONCEPTS/) above
-- ~8 demos as a basic course in hands-on learning of the main concepts (as I see them).<br><img src="/assets/wuxi-25.png" alt="drones" width="80%" style="border: 1px solid #999;"><br>
-- _Main diagram for demo D3 (Core workflow + Automation + AI external)_<br><img src="/assets/wuxi-15bbb.png" alt="drones" width="100%" style="border: 1px solid #999;"><br>
+- ~8 demos as a basic course in hands-on learning of the main concepts (as I see them).<br><img src="/assets/wuxi-25.png" alt="drones" width="80%" style="border: 1px solid #999;"><br> -->
+- _Main diagram for demo D3 (Core workflow + Automation + AI external)_<br><img src="/assets/wuxi-15bbb.png" alt="drones" width="80%" style="border: 1px solid #999;"><br>
 
 <!--
 - You are redoing (ZAI versions of) PAL demos.
