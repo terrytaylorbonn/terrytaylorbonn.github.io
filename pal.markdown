@@ -202,6 +202,7 @@ If you cant get a trial version of PAL running, then there's no reason to read f
 
 This section contains a deep dive into concepts and 3 Foundry tutorial projects
 
+- **2.0 Before you start programming**
 - **2.1 ZAI quick start (QS) (WIP)**
 - **2.2 ZAI "capstone" project demo (TODO)**. Based on the demo project built in 2.1, you create a "Needle in the Haystack" demo. 
 - **2.3 Foundry ontology (object type) management**. 
@@ -221,6 +222,19 @@ This section contains a deep dive into concepts and 3 Foundry tutorial projects
 
 <br>
 
+
+#### **2.0 Before you start programming**
+
+- Why Foundry represents **[the future of AI programming](/future_foundry_and_docs/)**.
+- But there are challenges to learning Foundry: **[Why the ZAI approach to learning Foundry is the most effective](/pal_zai_learning_method/)** (webpage content auto-converted from docx by GPT).
+
+
+<br>
+
+--------------------
+
+<br>
+
 #### **[2.1 ZAI quick start (QS) (WIP)](/3c.2_pal_initial_demo_ZAI/)**
 
 A detailed QS that starts from 0, giving you core Foundry skills (and a real understanding of key Foundry concepts). Stays laser-focused on 
@@ -231,7 +245,6 @@ A detailed QS that starts from 0, giving you core Foundry skills (and a real und
 _See also_
 - _**[foundry_qs](/foundry_qs/)** (a test converting about 5% of the docx source file to markdown for display on this website)._
 - _Docx **[#695](https://drive.google.com/drive/folders/1-Adawag9uA8_bq-hDF-nOuPYaRLz1eEO)** is my working version of this demo (open that doc; I will not be (for now) adding anything on this webpage)._ 
-- _**[C2 The future of programming Foundry (and documentation) is here today (WIP)](/future_foundry_and_docs/)**._
 
 <img src="/assets/sun-41.png" alt="xxx" width="55%" style="border: 1px solid #999;">
 
