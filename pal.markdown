@@ -22,8 +22,8 @@ permalink: /pal/
 _Latest (26.0911): Making steady progress on section **[2.2 PAL demos (speedruns)](/3c.2_pal_initial_demos/)**._ -->
 
 **TL;DR:** To get started ASAP with Enterprise AI programming using Palantir Foundry skip to the following sections 
-- **1b Foundry free tier sign up**
-- **2.1 ZAI quick start (QS)**. Shows how to start from 0, no real world demo, just the basic mechanics of using Foundry (the messy details of starting from 0). I highly recommend skipping to this start-to-finish demo and getting hands-on experience first before reading the other sections.
+- **1b Foundry free tier sign up**. 
+- **2.1 ZAI quick start (QS)**. Hands-on is the only way you really learn Foundry. 
 
 <!-- 
 <br>
@@ -59,7 +59,7 @@ _Latest (26.0911): Making steady progress on section **[2.2 PAL demos (speedruns
 
 <br>
 
-## **[Concepts](/pal_concepts_all/)**
+## **[1 Concepts](/pal_concepts_all/)**
 
 - Foundry is a modern enterprise platform for data integration, ontology, analytics, applications, **AI assistance**, and governance.
 - Foundry represents the **logical culmination of ZiptieAI: (2) neural networks → (2b) models → (3) agents → (3b) workflows** (and finally) **→ (3c) enterprise platforms**.
@@ -202,11 +202,11 @@ If you cant get a trial version of PAL running, then there's no reason to read f
 
 This section contains a deep dive into concepts and 3 Foundry tutorial projects
 
-- **2.1 ZAI quick start (QS) (WIP)**. A detailed QS that starts from 0, giving you the core Foundry skills (and a real understanding of key Foundry concepts).
-- **2.2 ZAI "capstone" project demo (TODO)**. Based on the demo project built in 2.1, you create a "Needle in the Haystack" demo. In this demo you specify what kind of "needle" you are looking for in a "haystack" of data, and the Foundry uses AI to find (almost a real world demo of one of  Foundry's most well known capabilities).
-- **2.3 Foundry ontology (object type) management**. The trial version of Foundry is very generous, but limits the total numbers of Object Types to 60. You probably won't hit that limit in 2.1 or 2.2, but to avoid running into problems in future demos, you might want to learn how to delete previous Object Types (then ask you create future demos you will appreciate the importance of tracking which demos are lowest priority).
-- **2.4 ZAI versions of the core ~8 Foundry getting started demos**. Official Foundry demos. 
-- **2.5 PAL Examples (installable)**. Full-featured business apps (with installer). 
+- **2.1 ZAI quick start (QS) (WIP)**
+- **2.2 ZAI "capstone" project demo (TODO)**. Based on the demo project built in 2.1, you create a "Needle in the Haystack" demo. 
+- **2.3 Foundry ontology (object type) management**. 
+- **2.4 ZAI versions of the core ~8 Foundry getting started demos**.
+- **2.5 PAL Examples (installable)**.  
 
 <!--- **2.0 ZAI demo master list**
  - **2.2x CONCEPTS (DEEP DIVE): ZAI demos** -->
@@ -305,7 +305,7 @@ In the diagrams of the new ZAI version of the Foundry intro below:
 #### **[2.3 Foundry ontology (object type) management](/pal_ontology_management/)** (v1 26.1018) (was 2.0b)
 
 
-(WIP: discuss here about managing ontology while doing the demos, especially object types in order to **stay under the 60 object types limit**... there are no utilities to take care of this!).
+The trial version of Foundry is very generous, but limits the total numbers of Object Types to 60. You probably won't hit that limit in 2.1 or 2.2, but to avoid running into problems in future demos, you might want to learn how to delete previous Object Types (then ask you create future demos you will appreciate the importance of tracking which demos are lowest priority).
 
 
 
