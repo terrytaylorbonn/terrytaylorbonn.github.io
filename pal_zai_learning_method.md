@@ -4,17 +4,28 @@ title: Why the ZAI approach to learning Foundry is the most effective
 permalink: /pal_zai_learning_method/
 ---
 
-_See Docx **[#694](https://drive.google.com/drive/folders/1-Adawag9uA8_bq-hDF-nOuPYaRLz1eEO)** for original text._ 
+
+<br>
+
+### **"Mechanistic" step by step demos are what you need to get started with Foundry**
+
+This page shows a perfect example of why you need to start out learning Foundry with
+- ZAI "mechanistic" demos (not real world demos) that give you basic skills with the Foundry UI.
+- FDE to help you when you run into problems.
+
+The following sections show what happened after I made a small mistake that caused a lot of complications. Even after using Foundry for 2 months, I still run into such issues. Luckily 
+- I document what I do and 
+- (most of all) I have FDE to help.
+
+This webpage content was auto-converted from docx by GPT (the formatting is not perfect).
+- See Docx **[#694](https://drive.google.com/drive/folders/1-Adawag9uA8_bq-hDF-nOuPYaRLz1eEO)** for original text.
 
 
-# Why a "mechanistic" step by step demo is required
+<br>
 
-There are several reasons.   
-but the following is the perect example of why.
+-------------
 
-This happened after I had been using Foundry for 2 months.  
-i still made a small mistake that caused a lot of complications.  
-luckily i document what i do and (most of all) i have FDE to help.
+<br>
 
 ### My mistake
 
