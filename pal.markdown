@@ -37,9 +37,9 @@ _Latest (26.0911): Making steady progress on section **[2.2 PAL demos (speedruns
 #### **TOC**:
 
 
-- **1 Concepts** (26.1027 combined into into a subpage)
+- **1 Concepts**
 - **1b Foundry free tier sign up**
-- **2 Foundry demos** (ZAI-modified PAL demos and ZAI/FDE original demos)
+- **2 Foundry tutorials** (ZAI original and modified Palantir)
 - **3 Project/doc sources** (PAL and ZAI)
 
 <!-- **C1 Why Foundry?** (00, v1 26.1016)
@@ -198,9 +198,9 @@ If you cant get a trial version of PAL running, then there's no reason to read f
 <br>
 
 
-## **2 Foundry demos**
+## **2 Foundry tutorials**
 
-This section contains a deep dive into concepts and 3 Foundry tutorial projects
+This section contains (original ZAI and modified Palantir) Foundry tutorials:
 
 - **2.0 Before you start programming**
 - **2.1 ZAI quick start (QS) (WIP)**
