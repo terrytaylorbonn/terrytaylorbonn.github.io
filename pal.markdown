@@ -249,7 +249,7 @@ _See also_
 - _**[foundry_qs](/foundry_qs/)** (a test converting about 5% of the docx source file to markdown for display on this website)._
 - _Docx **[#695](https://drive.google.com/drive/folders/1-Adawag9uA8_bq-hDF-nOuPYaRLz1eEO)** is my working version of this demo (open that doc; I will not be (for now) adding anything on this webpage)._ 
 
-_(left) Foundry diagram (for the ZAI quick start) and (right) original_<br> <img src="/assets/sun-41.png" alt="xxx" width="59%" style="border: 1px solid #999;">  <img src="/assets/sun-53.png" alt="xxx" width="36%" style="border: 1px solid #999;">
+_(left) Foundry diagram (for the ZAI quick start; Ontology is a component in the "Equator") and (right) original_<br> <img src="/assets/sun-41.png" alt="xxx" width="59%" style="border: 1px solid #999;">  <img src="/assets/sun-53.png" alt="xxx" width="36%" style="border: 1px solid #999;">
 
 
 
