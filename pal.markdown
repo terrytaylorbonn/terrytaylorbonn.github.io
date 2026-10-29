@@ -175,7 +175,7 @@ _Palantir provides proven engineering (the crystal ball is just a metaphor, mark
 
 ## **1b Foundry free tier sign up**
 
-If you cant get a trial version of PAL running, then there's no reason to read further. You will not understand PAL by just reading about it.
+<!-- If you cant get a trial version of PAL running, then there's no reason to read further. You will not understand PAL by just reading about it. -->
 
 - I did not record how I signed up, and its not a process I can repeat. But I can tell you the following:
   - **You must be in a country that PAL supports** (thats only a few countries).
