@@ -177,13 +177,16 @@ _Palantir provides proven engineering (the crystal ball is just a metaphor, mark
 
 <!-- If you cant get a trial version of PAL running, then there's no reason to read further. You will not understand PAL by just reading about it. -->
 
-- I did not record how I signed up, and its not a process I can repeat. But I can tell you the following:
+I did not record how I signed up, and its not a process I can repeat. But I can tell you the following:
   - **You must be in a country that PAL supports** (thats only a few countries).
   - **You can NOT use a VPN**.
   - **You must have a passport or some picture ID of good enough quality for facial recognition verification**. My passport is almost 10 years old, but it still worked.
   - **You need a camera on your PC to take a pic of yourself. PAL will compare your ID and the pic.**
   - I think you need a **mobile phone number** (and email).
-- It was a fairly long process, but very professionally done (I was impressed).<br><br><img src="/assets/pal_10_08.png" alt="drones" width="37%" style="border: 1px solid #999;"><br>
+
+<!-- - It was a fairly long process, but very professionally done (I was impressed).<br><br> -->
+
+<img src="/assets/pal_10_08.png" alt="drones" width="37%" style="border: 1px solid #999;"><br>
 
 
 <br>
