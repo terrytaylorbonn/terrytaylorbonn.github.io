@@ -17,8 +17,8 @@ Docx **[#694](https://drive.google.com/drive/folders/1-Adawag9uA8_bq-hDF-nOuPYaR
 
 <br>
 
-_Capstone demo \#694 TOC 26.1027_<br><img src="/assets/sun-52.png" alt="xxx" width="70%" style="border: 1px solid #999;">
 
+_Detailed TOC (26.1030); not simple, but it worked, thanks to FDE_<br><img src="/assets/sun-54.png" alt="xxx" width="70%" style="border: 1px solid #999;">
 
 <br>
 
@@ -83,4 +83,4 @@ That is a strong destination for Foundry Foundations with FDE: a project readers
 
 <br>
 
-26.1026 (v1 26.1026)
+26.1030 (v1 26.1026)
