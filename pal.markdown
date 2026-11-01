@@ -206,6 +206,7 @@ I did not record how I signed up, and its not a process I can repeat. But I can 
 This section contains (original ZAI and modified Palantir) Foundry tutorials:
 
 - **2.0 Before you start programming**
+- **2.0b Doc plan for ZAI QS (2.1) and Capstone (2.2) tutorials**
 - **2.1 ZAI quick start (QS) (WIP)**
 - **2.2 ZAI "capstone" project demo (TODO)**. Based on the demo project built in 2.1, you create a "Needle in the Haystack" demo. 
 - **2.3 Foundry ontology (object type) management**. 
@@ -231,6 +232,14 @@ This section contains (original ZAI and modified Palantir) Foundry tutorials:
 - Why Foundry represents **[the future of AI programming](/future_foundry_and_docs/)**.
 - But there are challenges to learning Foundry: **[Why the ZAI approach to learning Foundry is the most effective](/pal_zai_learning_method/)** (webpage content auto-converted from docx by GPT).
 
+
+<br>
+
+--------------------
+
+<br>
+
+#### **[2.0b Doc plan for ZAI QS (2.1) and Capstone (2.2) tutorials](/pal_2.x_doc_plan/)**
 
 <br>
 
