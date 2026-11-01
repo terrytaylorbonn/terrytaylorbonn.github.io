@@ -203,12 +203,12 @@ I did not record how I signed up, and its not a process I can repeat. But I can 
 
 ## **2 Foundry tutorials**
 
-This section contains (original ZAI and modified Palantir) Foundry tutorials:
+This section contains Foundry tutorials. The current focus is on original ZAI tutorials (see 2.0b, 2.1, 2.2). The original focus was on ZAI-modified Palantir demos (2.4, 2.5).
 
 - **2.0 Before you start programming**
-- **2.0b Doc plan for ZAI QS (2.1) and Capstone (2.2) tutorials**
-- **2.1 ZAI quick start (QS) (WIP)**
-- **2.2 ZAI "capstone" project demo (TODO)**. Based on the demo project built in 2.1, you create a "Needle in the Haystack" demo. 
+- **2.0b Doc plan (for ZAI QS (2.1) and Capstone (2.2) tutorials)**
+- **2.1 ZAI quick start (QS)**
+- **2.2 ZAI "capstone" project demo**. Based on the demo project built in 2.1, you create a "Needle in the Haystack" demo. 
 - **2.3 Foundry ontology (object type) management**. 
 - **2.4 ZAI versions of the core ~8 Foundry getting started demos**.
 - **2.5 PAL Examples (installable)**.  
