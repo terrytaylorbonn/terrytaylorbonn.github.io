@@ -243,10 +243,10 @@ This section contains Foundry tutorials. The current focus is on original ZAI tu
 
 The basic idea (that I am testing on 26.1031-...) on the 2.2 demo is
 1. Do the first hands-on demo (for 2.2 this is **694-1**) with FDE and document. This process is unpredictable and a bit chaotic, with debugging and discussion sections.
-1. **Clean up 694-1**. Add H2 headings, add prompt/response serial # markers (the serial # is from FDE chat dialog; there were 700+ such markers in 694). Note: I have to manually add these #'s because FDE can not see them (although they are in the chat). **Then ask FDE to create what it thinks the prompts should be for anyone wanting to replicate this tutorial (by using FDE and prompts)**. Here is an example prompt:
+1. **Clean up 694-1**. Add H2 headings, add prompt/response serial # markers (the serial # is from FDE chat dialog; there were 700+ such markers in 694; I have to manually add these #'s because FDE can not see them in the chat). **Then ask FDE to create what it thinks the prompts should be for anyone wanting to replicate this tutorial (by simply prompting FDE)**. Here is an example prompt:
 - [F4.04-213] I replaced the System prompt. Here are the prompt, Tools section, and Initial user message. Verify the configuration, then guide me through inserting the criteria input into the message using a variable chip—not plain text.
 1. Then create file **694-2**. Try to replicate the tutorial using the "[F]" prompts. 
-1. Finally **clean up 694-2**. This will be the final user tutorial docx (**use GPT to create markdown/png's for web publishing).
+1. Finally **clean up 694-2**. This will be the final user tutorial docx (**use GPT to create markdown/png's for web publishing**).
 
 NOTE: Just as Foundry requires a lot of preparation and organization to work with AI successfully, so does this system of creating docs with AI. But the result is **very useful, technically-accurate, and very maintainable tutorial docs.**
 
