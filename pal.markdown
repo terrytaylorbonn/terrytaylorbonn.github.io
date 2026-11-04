@@ -250,7 +250,7 @@ I relied too much on FDE AI. Both tutorials worked, but the result was not somet
 
 #### **[2.2 693 QS tutorial (3rd attempt, first good QS version)](/pal_693_qs/)**
 
-The FDE-generated text is factual, but for a human reader at times difficult to understand. After finishing the demo setup and test, I redid the H1 headings (it was a long discussion with FDE, but basically all of my corrections were needed and correct except for one mistake). 
+The FDE-generated text is factual, but for a human reader at times difficult to understand. After finishing the demo setup and test, I redid the H1 headings (it was a **[long discussion with FDE](/pal_693_ch_title_chats/)**, but basically all of my corrections were needed and correct except for one mistake). 
 
 <img src="/assets/sun-55.png" alt="drones" width="61%" style="border: 1px solid #999;">
 
