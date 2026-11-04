@@ -2,6 +2,12 @@
 
 This repository now includes DocSearch integration for enhanced search functionality on your ZiptieAI.com site.
 
+## Show or Hide Header Search
+
+Header search is currently disabled. To restore it, change `header_search_enabled: false` to `header_search_enabled: true` in `_config.yml`, then rebuild or deploy the site. Restart `bundle exec jekyll serve` if it is running locally.
+
+This setting controls both the header search button and the DocSearch CSS/JavaScript. The existing search configuration and styling are preserved.
+
 ## What's Been Added
 
 1. **DocSearch Integration Files:**

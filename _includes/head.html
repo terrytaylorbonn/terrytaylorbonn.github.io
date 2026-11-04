@@ -11,6 +11,8 @@
     {%- include google-analytics.html -%}
   {%- endif -%}
   
-  <!-- DocSearch Integration -->
-  {%- include docsearch.html -%}
+  {%- if site.header_search_enabled -%}
+    <!-- DocSearch Integration -->
+    {%- include docsearch.html -%}
+  {%- endif -%}
 </head>

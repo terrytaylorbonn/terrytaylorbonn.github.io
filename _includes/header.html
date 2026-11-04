@@ -30,8 +30,10 @@
             {%- endif -%}
           {%- endfor -%}
 
-          <!-- DocSearch -->
-          <div id="docsearch"></div>
+          {%- if site.header_search_enabled -%}
+            <!-- DocSearch -->
+            <div id="docsearch"></div>
+          {%- endif -%}
         </div>
       </nav>
     {%- endif -%}

@@ -29,6 +29,9 @@ github_username:
 
 wiki_url: "https://github.com/terrytaylorbonn/auxdrone/wiki"
 
+# Set to true to restore the header search button and load DocSearch.
+header_search_enabled: false
+
 # Header navigation order
 header_pages:
   - index.md

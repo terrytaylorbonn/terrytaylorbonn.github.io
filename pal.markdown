@@ -4,7 +4,14 @@ title: 3c Enterprise
 permalink: /pal/
 ---
 
-<!-- _TODO: add [0b Scoping](/pal_concepts_scoping/) (#696; added 26.1011) somehwere_ -->
+<!-- _TODO: add [0b Scoping](/pal_concepts_scoping/) (#696; added 26.1011) somehwere_ 
+
+26.1104
+Removed the header search locally and preserved its setup.
+To restore it, set header_search_enabled: true in [_config.yml (line 33)](/C:/Users/terry/Downloads/terrytaylorbonn.github.io/_config.yml:33), then rebuild.
+Build passed; verified search is absent from the generated page. Changes aren’t published yet.
+
+-->
 
 <br>
 
