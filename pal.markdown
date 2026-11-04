@@ -250,8 +250,11 @@ I relied too much on FDE AI. Both tutorials worked, but the result was not somet
 
 #### **[2.2 693 QS tutorial (3rd attempt, first good QS version)](/pal_693_qs/)**
 
+The FDE-generated text is factual, but for a human reader at times difficult to understand. My second job was to redo the headings. My version below.
+
 <img src="/assets/sun-55.png" alt="drones" width="61%" style="border: 1px solid #999;">
 
+Before that I created some diagrams to summarize what we are doing. FDE can "see" these diagrams and is quite good at catching any errors. 
 
 <img src="/assets/sun-56.png" alt="drones" width="70%" style="border: 1px solid #999;">
 
