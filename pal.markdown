@@ -30,7 +30,7 @@ _Latest (26.0911): Making steady progress on section **[2.2 PAL demos (speedruns
 
 **TL;DR:** To get started ASAP with Enterprise AI programming using Palantir Foundry skip to the following sections 
 - **1b Foundry free tier sign up**. 
-- **2.2 693 QS (quick start) tutorial**. Hands-on is the only way you really learn Foundry. 
+- **2.2 QS (quick start) tutorial**. Hands-on is the only way you really learn Foundry. 
 
 <!-- 
 <br>
@@ -208,7 +208,7 @@ This section contains Foundry tutorials. The current focus is on original ZAI tu
 
 - **2.0 Before you start programming**
 - **2.1 My first 2 failed attempts to create a tutorial (my mistakes are instructive)**
-- **2.2 693 QS tutorial (3rd attempt, first good version)**
+- **2.2 QS tutorial (v3)**
 - **2.3 Foundry ontology (object type) management**. 
 - **2.4 ZAI versions of the core ~8 Foundry getting started demos**.
 - **2.5 PAL Examples (installable)**.  
@@ -248,7 +248,7 @@ I relied too much on FDE AI. Both tutorials worked, but the result was not somet
 
 <br>
 
-#### **[2.2 693 QS tutorial (3rd attempt, first good QS version)](/pal_693_qs/)**
+#### **[2.2 QS tutorial (v3)](/pal_693_qs/)**
 
 #### For the **latest tutorial version see [docx #693](https://drive.google.com/drive/folders/1-Adawag9uA8_bq-hDF-nOuPYaRLz1eEO)**.
 
