@@ -16,6 +16,7 @@ permalink: /pal_693_qs/
 xxxxxxxxxx  -->
 
 
+#### For **latest tutorial version see [docx #693](https://drive.google.com/drive/folders/1-Adawag9uA8_bq-hDF-nOuPYaRLz1eEO)**.
 
 The FDE-generated text is factual, but for a human reader at times difficult to understand. After finishing the demo setup and test, I redid the H1 headings (it was a **[long discussion with FDE](/pal_693_ch_title_chats/)**, but basically all of my corrections were needed and correct except for one mistake). 
 
@@ -26,8 +27,6 @@ I also created diagrams to summarize the setup workflows. FDE can "see" these di
 <img src="/assets/sun-56.png" alt="drones" width="70%" style="border: 1px solid #999;">
 
 
-_See also_
-- _Docx **[#693](https://drive.google.com/drive/folders/1-Adawag9uA8_bq-hDF-nOuPYaRLz1eEO)** is my working version of this demo._ 
 
 
 

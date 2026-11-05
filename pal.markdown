@@ -30,19 +30,16 @@ _Latest (26.0911): Making steady progress on section **[2.2 PAL demos (speedruns
 
 **TL;DR:** To get started ASAP with Enterprise AI programming using Palantir Foundry skip to the following sections 
 - **1b Foundry free tier sign up**. 
-- **2.1 ZAI quick start (QS)**. Hands-on is the only way you really learn Foundry. 
+- **2.2 693 QS (quick start) tutorial**. Hands-on is the only way you really learn Foundry. 
 
 <!-- 
 <br>
 
 ------------------
 
-
 <br> -->
 
-
 #### **TOC**:
-
 
 - **1 Concepts**
 - **1b Foundry free tier sign up**
@@ -86,7 +83,6 @@ _Latest (26.0911): Making steady progress on section **[2.2 PAL demos (speedruns
 --------------------
 
 <br>
-
 
 <!-- 
 
@@ -195,7 +191,6 @@ I did not record how I signed up, and its not a process I can repeat. But I can 
 
 <img src="/assets/pal_10_08.png" alt="drones" width="37%" style="border: 1px solid #999;"><br>
 
-
 <br>
 
 --------------------
@@ -206,7 +201,6 @@ I did not record how I signed up, and its not a process I can repeat. But I can 
 --------------------
 
 <br>
-
 
 ## **2 Foundry tutorials**
 
@@ -232,7 +226,6 @@ This section contains Foundry tutorials. The current focus is on original ZAI tu
 
 <br>
 
-
 #### **2.0 Before you start programming**
 
 - Why Foundry represents **[the future of AI programming](/future_foundry_and_docs/)**.
@@ -257,16 +250,17 @@ I relied too much on FDE AI. Both tutorials worked, but the result was not somet
 
 #### **[2.2 693 QS tutorial (3rd attempt, first good QS version)](/pal_693_qs/)**
 
-The FDE-generated text is factual, but for a human reader at times a challenge to understand. After finishing the demo setup and test, I started **the really hard part: Very long Discussions with FDE** about terminology and concepts:
-- (1) I redid the demo H1 headings (it was a **[long discussion with FDE](/pal_693_ch_title_chats/)**, but basically all of my corrections were needed and correct except for one mistake). 
-- (2) A very **[long chat about chapter 5 and the Use_LLM dialog](/pal_693_UseLLM_chat/)**. It took a long time, but in the end my core assumptions were correct and explained why so many things confused me.
+#### For the **latest tutorial version see [docx #693](https://drive.google.com/drive/folders/1-Adawag9uA8_bq-hDF-nOuPYaRLz1eEO)**.
+
+I had some **long discussions with FDE** about terminology and concepts:
+- **[Chat about H1 headings](/pal_693_ch_title_chats/)**. 
+- **[Chat about chapter 5 and the Use_LLM dialog](/pal_693_UseLLM_chat/)**.
  
 <img src="/assets/sun-55.png" alt="drones" width="61%" style="border: 1px solid #999;">
 
-I also created diagrams to summarize the setup workflows. FDE can "see" these diagrams and is quite good at making useful suggestions or catching errors. Below the (WIP) diagram for ch3. 
+I created a workflow diagram for each chapter.
 
-<img src="/assets/sun-56bbb.png" alt="drones" width="90%" style="border: 1px solid #999;">
-
+_Workflow diagram for ch1; ch1 has H2 subheadings 1.1 - 1.5._<br><img src="/assets/sun-56bbb.png" alt="drones" width="90%" style="border: 1px solid #999;">
 
 <br>
 
