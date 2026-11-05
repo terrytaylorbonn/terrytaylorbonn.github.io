@@ -260,7 +260,7 @@ I had some **long discussions with FDE** about terminology and concepts:
 
 I created a workflow diagram for each chapter.
 
-_Workflow diagram for ch1; ch1 has H2 subheadings 1.1 - 1.5._<br><img src="/assets/sun-56bbb.png" alt="drones" width="90%" style="border: 1px solid #999;">
+_Workflow diagram (verified by FDE) for ch1; ch1 has H2 subheadings 1.1 - 1.5._<br><img src="/assets/sun-56bbb.png" alt="drones" width="90%" style="border: 1px solid #999;">
 
 <br>
 
