@@ -11,10 +11,12 @@ permalink: /pal_693_qs/
 
 <br>
 
-<!-- #### **[xxxx](/xxxxxxx/)**
-
-xxxxxxxxxx  -->
-
+- **[What makes this the best first demo for Foundry](/pal_693_qs_0a_best_demo/)**
+- **[0 First steps](/pal_693_qs_0b_first_steps/)**
+- **[1 Fetch MockAPI records and display in UI ("Workshop")](/pal_693_qs_1_mockapi/)**
+- **[2 Create (1) AIPLF to detect matching digits in object text/integer properties / (2) UI to display result](/pal_693_qs_2_ailpf/)**
+- **[3 Modify AIPL prompt to detect matching letter-only-text and integer-digits (display result in UI)](/pal_693_qs_3_aipl_prompt/)**
+- **[4 Enter AI matching criteria (configure only AIPL+F and UI)](/pal_693_qs_4_criteria/)**
 
 #### For **latest tutorial version see [docx #693](https://drive.google.com/drive/folders/1-Adawag9uA8_bq-hDF-nOuPYaRLz1eEO)**.
 
