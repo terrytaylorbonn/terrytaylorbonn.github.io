@@ -51,10 +51,13 @@ I also created diagrams to summarize the setup workflows. FDE can "see" these di
 <br>
 
 
-#### **PROMPT FOR GPT TO CONVERT DOCX**
-
+#### **PROMPT FOR GPT TO CONVERT DOCX source file to create md/png's for this website**
 
 GPT prompt v03 26.1106 16:07
+
+I make small adjustments to this constantly, but this is the boilerplate version. 
+Created with GPT's help (GPT recommended this kind of prompt).
+
 
 ```
 1 Convert attached docx to markdown's + png's.
