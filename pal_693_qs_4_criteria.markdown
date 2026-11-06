@@ -11,15 +11,32 @@ permalink: /pal_693_qs_4_criteria/
 
 <br>
 
-_26.1106 09:33 (converted from docx source file to markdown+PNGs by ChatGPT)_
-
+_26.1106 15:32 (converted from docx source file to markdown+PNGs by ChatGPT)_
 
 <br>
+
+**TOC**
+
+- **[4.0 What we will build](#section-4-0)**
+- **[4.1 AIPL](#section-4-1)**
+  - **[4.1.1 Add input "criteria" to AIPL](#section-4-1-1)**
+  - **[4.1.2 Modify AIPL prompt](#section-4-1-2)**
+  - **[4.1.3 AIPL preview test](#section-4-1-3)**
+- **[4.2 Create (publish) AIPLF (function)](#section-4-2)**
+- **[4.3 Add UI text entry text box for "criteria"](#section-4-3)**
+  - **[4.3.1 Configure the instructions box](#section-4-3-1)**
+  - **[4.3.2 Connect its text to the AI check](#section-4-3-2)**
+  - **[4.3.3 Save and publish the UI](#section-4-3-3)**
+  - **[4.3.4 Test the UI](#section-4-3-4)**
+
+<br>
+
+<a id="section-4-0"></a>
 
 ### **4.0 What we will build**
 
 
-<img src="/assets/qs/4_01.png" alt="4_criteria illustration 1" width="75%" style="border: 1px solid #999;">
+<img src="/assets/qs/4_01.png" alt="4_criteria illustration 1" width="95%" style="border: 1px solid #999;">
 
 ME: We will modify
 
@@ -34,7 +51,7 @@ to be able to
 - press the **CheckRecord** button, and
 - see the answer.
 - Change the rule without rebuilding the application.
-- **Pass the rule to the AIPL input “criteria”**** **(It is supplied when the check runs, not saved permanently in AIP Logic. )
+- **Pass the rule to the AIPL input “criteria”** (It is supplied when the check runs, not saved permanently in AIP Logic. )
 
 
 ```text
@@ -49,29 +66,34 @@ Checking instructions text box → criteria input
 
 for example for integer 111:
 
-**Instructions entered****	****	****	****	Expected answer**
-
-Match if the integer is greater than 100.	FOUND
-
-Match if the integer is greater than 200.	NOT FOUND
+| Instructions entered | Expected answer |
+|---|---|
+| Match if the integer is greater than 100. | FOUND |
+| Match if the integer is greater than 200. | NOT FOUND |
 
 
 <br>
+
+<a id="section-4-1"></a>
 
 ### **4.1 AIPL**
 
 
 <br>
 
+<a id="section-4-1-1"></a>
+
 #### **4.1.1 Add input "criteria" to AIPL**
 
 **693_AIPL_CheckRecord**.
 
 
-<img src="/assets/qs/4_02.png" alt="4_criteria illustration 2" width="50%" style="border: 1px solid #999;">
+<img src="/assets/qs/4_02.png" alt="4_criteria illustration 2" width="70%" style="border: 1px solid #999;">
 
 
 <br>
+
+<a id="section-4-1-2"></a>
 
 #### **4.1.2 Modify AIPL prompt**
 
@@ -99,7 +121,7 @@ Return only FOUND, NOT FOUND, UNCERTAIN, or MISSING INPUT.
 ```
 
 
-<img src="/assets/qs/4_03.png" alt="4_criteria illustration 3" width="50%" style="border: 1px solid #999;">
+<img src="/assets/qs/4_03.png" alt="4_criteria illustration 3" width="65%" style="border: 1px solid #999;">
 
 In **Initial user message**, add (via the / variable picker—do not type [criteria] literally)
 
@@ -109,49 +131,55 @@ Criteria: [criteria]
 ```
 
 
-<img src="/assets/qs/4_04.png" alt="4_criteria illustration 4" width="40%" style="border: 1px solid #999;">
+<img src="/assets/qs/4_04.png" alt="4_criteria illustration 4" width="24%" style="border: 1px solid #999;">
 
 
 <br>
+
+<a id="section-4-1-3"></a>
 
 #### **4.1.3 AIPL preview test**
 
 - **Save**, then open **Preview**.
 
-<img src="/assets/qs/4_05.png" alt="4_criteria illustration 5" width="40%" style="border: 1px solid #999;">
+<img src="/assets/qs/4_05.png" alt="4_criteria illustration 5" width="12%" style="border: 1px solid #999;">
 
 - Select record **Id 1**, integer **111**.
 - Enter criteria:
-Match if the integer is greater than 100.
+  Match if the integer is greater than 100.
 
-<img src="/assets/qs/4_06.png" alt="4_criteria illustration 6" width="50%" style="border: 1px solid #999;">
+<img src="/assets/qs/4_06.png" alt="4_criteria illustration 6" width="65%" style="border: 1px solid #999;">
 
 - Click **Preview run** → expect **FOUND**.
 - Change only the criteria to:
-Match if the integer is greater than 200.
+  Match if the integer is greater than 200.
 - Run again → expect **NOT FOUND**.
 
-<img src="/assets/qs/4_07.png" alt="4_criteria illustration 7" width="50%" style="border: 1px solid #999;">
+<img src="/assets/qs/4_07.png" alt="4_criteria illustration 7" width="65%" style="border: 1px solid #999;">
 
 
 <br>
+
+<a id="section-4-2"></a>
 
 ### **4.2 Create (publish) AIPLF (function)**
 
 - Click **Publish**.
 - Leave versioning on **Automatic**.
 - Enter:
-Chapter 4: Added required criteria input and criteria-based checking. Verified FOUND and NOT FOUND by changing criteria only.
+  Chapter 4: Added required criteria input and criteria-based checking. Verified FOUND and NOT FOUND by changing criteria only.
 - Confirm publication.
 
-<img src="/assets/qs/4_08.png" alt="4_criteria illustration 8" width="50%" style="border: 1px solid #999;">
+<img src="/assets/qs/4_08.png" alt="4_criteria illustration 8" width="65%" style="border: 1px solid #999;">
 
 - Send the assigned version number.
 
-<img src="/assets/qs/4_09.png" alt="4_criteria illustration 9" width="50%" style="border: 1px solid #999;">
+<img src="/assets/qs/4_09.png" alt="4_criteria illustration 9" width="58%" style="border: 1px solid #999;">
 
 
 <br>
+
+<a id="section-4-3"></a>
 
 ### **4.3 Add UI text entry text box for "criteria"**
 
@@ -168,12 +196,14 @@ Connect its entered text to the function’s criteria input.
 
 <br>
 
+<a id="section-4-3-1"></a>
+
 #### **4.3.1 Configure the instructions box**
 
 - In the floating editor’s **Default value**, enter:
-Match if the integer is greater than 100.
+  Match if the integer is greater than 100.
 
-<img src="/assets/qs/4_11.png" alt="4_criteria illustration 11" width="75%" style="border: 1px solid #999;">
+<img src="/assets/qs/4_11.png" alt="4_criteria illustration 11" width="90%" style="border: 1px solid #999;">
 
 - Dismiss the floating editor by clicking outside it. **Do not click the × beside String value.**
 - In the text-input widget’s settings, set:
@@ -182,10 +212,12 @@ Match if the integer is greater than 100.
 - **Format:** Text area
 - Leave the keyboard-triggered event off.
 
-<img src="/assets/qs/4_12.png" alt="4_criteria illustration 12" width="40%" style="border: 1px solid #999;">
+<img src="/assets/qs/4_12.png" alt="4_criteria illustration 12" width="38%" style="border: 1px solid #999;">
 
 
 <br>
+
+<a id="section-4-3-2"></a>
 
 #### **4.3.2 Connect its text to the AI check**
 
@@ -194,7 +226,7 @@ Match if the integer is greater than 100.
 - Change **693_AIPL_CheckRecord** from version **1.1.0 → 2.0.0**.
 - For the new **CRITERIA** input, select **Text input 1 String value**.
 
-<img src="/assets/qs/4_13.png" alt="4_criteria illustration 13" width="50%" style="border: 1px solid #999;">
+<img src="/assets/qs/4_13.png" alt="4_criteria illustration 13" width="65%" style="border: 1px solid #999;">
 
 
 Keep:
@@ -214,6 +246,8 @@ Send the completed configuration. **Do not publish yet.**
 
 <br>
 
+<a id="section-4-3-3"></a>
+
 #### **4.3.3 Save and publish the UI**
 
 - Dismiss the variable editor.
@@ -226,7 +260,7 @@ Chapter 4: Added editable checking instructions connected to function 2.0.0.
 
 - Open **View**.
 
-<img src="/assets/qs/4_14.png" alt="4_criteria illustration 14" width="50%" style="border: 1px solid #999;">
+<img src="/assets/qs/4_14.png" alt="4_criteria illustration 14" width="55%" style="border: 1px solid #999;">
 
 
 <img src="/assets/qs/4_15.png" alt="4_criteria illustration 15" width="40%" style="border: 1px solid #999;">
@@ -234,18 +268,20 @@ Chapter 4: Added editable checking instructions connected to function 2.0.0.
 
 <br>
 
+<a id="section-4-3-4"></a>
+
 #### **4.3.4 Test the UI**
 
 Change the instructions, press **CheckRecord**, and verify the answer.
 
 - Select record **Id 1**, integer **111**.
 - Enter:
-Match if the integer is greater than 101.
+  Match if the integer is greater than 101.
 - Click outside the text box, then press **CheckRecord** → expect **FOUND**.
 
 <img src="/assets/qs/4_16.png" alt="4_criteria illustration 16" width="40%" style="border: 1px solid #999;">
 
 - Change only 100 to 200.
-Click outside the text box, then press **CheckRecord** → expect **NOT FOUND**.
+  Click outside the text box, then press **CheckRecord** → expect **NOT FOUND**.
 
-<img src="/assets/qs/4_17.png" alt="4_criteria illustration 17" width="40%" style="border: 1px solid #999;">
+<img src="/assets/qs/4_17.png" alt="4_criteria illustration 17" width="30%" style="border: 1px solid #999;">
