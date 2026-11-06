@@ -13,9 +13,11 @@ permalink: /pal_693_qs/
 
 #### For the **latest QS version see [docx #693](https://drive.google.com/drive/folders/1-Adawag9uA8_bq-hDF-nOuPYaRLz1eEO)**.
 
-This QS is a work in progress (WIP).
-
-This online version was created from the docx by ChatGPT. The formatting is WIP, but the contents are technically accurate and up-to-date.
+- This QS is a work in progress (WIP).
+- The main goal of this QS is accuracy and usefulness (that means constant updates). Something that a reader can use to learn Foundry.
+- Constant updates is best assured with markdown/PNG's (pics) extracted from the 693 docx source file by GPT.
+- I copy/paste the md/png's into this website manually. I do not modify the contents. My goal is to ensure that the content is single-source and that source is only the docx file.
+- The PNG sizing is difficult for GPT to get right (GPT does adjust the width of the PNG based on text in the PNG; the result is an improvement, but I need to "hardcode" the width (in my docx file) to get things right).
 
 <br>
 
@@ -55,6 +57,8 @@ I also created diagrams to summarize the setup workflows. FDE can "see" these di
 
 GPT prompt v03 26.1106 16:07
 
+**The core goal of the conversion is to avoid any modification of content in the markdown file**
+(I would have to copy such mods into the docx file if the docx was to remain the source).
 I make small adjustments to this constantly, but this is the boilerplate version. 
 Created with GPT's help (GPT recommended this kind of prompt).
 
