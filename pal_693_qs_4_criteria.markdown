@@ -1,6 +1,6 @@
 ---
 layout: page
-title: 4.0 What we will build
+title: 4 Enter AI matching criteria (configure only AIPL+F and UI) 
 permalink: /pal_693_qs_4_criteria/
 ---
 
