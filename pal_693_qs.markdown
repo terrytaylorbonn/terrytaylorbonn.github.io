@@ -1,13 +1,13 @@
 ---
 layout: page
-title: Foundry Quick Start (v02 26.1106)
+title: Foundry Quick Start (v03 26.1107)
 permalink: /pal_693_qs/
 ---
 
 <br>
 
 
-[← 3c Enterprise](/pal/)
+[← 3c Enterprise](/pal/) 
 
 <br>
 
@@ -32,6 +32,8 @@ permalink: /pal_693_qs/
 - **[6 Add a text-save action (A1) call in AIPL / create AIPLF / create action (A2) to call AIPLF (use in Ch7)](/pal_693_qs_6_a1_a2/)**
 - **[7 Add automation ("(new) object added to set" inits automation)](/pal_693_qs_7_automation/)**
 - **[8 Schedule MockAPI DATASET import / Add new Capstone2Record / Trace automation](/pal_693_qs_8_schedule/)**
+- **[8a Governance: allow, block, verify](/pal_693_qs_8a_governance/)**
+- **[8b Where these mechanics could be used](/pal_693_qs_8b_real_apps/)**
 - **[9 Where to go from here](/pal_693_qs_9_where_next/)**
 
 <br>
@@ -55,18 +57,18 @@ I also created diagrams to summarize the setup workflows. FDE can "see" these di
 
 #### **PROMPT FOR GPT TO CONVERT DOCX source file to create md/png's for this website**
 
-GPT prompt v03 26.1106 16:07
 
 **The core goal of the conversion is to avoid any modification of content in the markdown file**
 (I would have to copy such mods into the docx file if the docx was to remain the source).
 I make small adjustments to this constantly, but this is the boilerplate version. 
 Created with GPT's help (GPT recommended this kind of prompt).
 
-
 ```
+GPT prompt v05 26.1106 17:08
+
 1 Convert attached docx to markdown's + png's.
 Only convert the H1 sections before "==============="  (11 total)
-(up to but not including chapter " Generating webpage markdown+png's from this docx ").
+(up to but not including chapter "Generating webpage markdown+png's from this docx").
 
 2a Split each H1 into a separate markdown file.
 Name the files 
@@ -86,6 +88,7 @@ Name the files
 •	2_ailpf
 •	3_aipl_prompt
 •	4_criteria
+
 Return a zip file.
 PNG's in subdir \assets\qs.
 
@@ -102,8 +105,8 @@ Do not rewrite, summarize, correct, reorganize, or add explanatory content. Pres
 
 
 3b Chapter table of contents
-Create a TOC near the beginning of each Markdown chapter, immediately before the first H2 heading.
 
+Create a TOC near the beginning of each Markdown chapter, immediately before the first H2 heading.
 - Include every H2 and H3 heading in the chapter, in document order.
 - Use a nested bulleted list: H2 at the first level, H3 indented beneath its parent H2.
 - Preserve the original heading numbers and text exactly.
@@ -116,24 +119,34 @@ Create a TOC near the beginning of each Markdown chapter, immediately before the
 - Put **TOC** immediately above the list.
 - MAKE SURE THERE IS A <br> between the TOC and the first H1
 
-Generate explicit, stable heading IDs for H2 and H3 headings, and link TOC entries to those IDs. The IDs must remain consistent when regenerating the Markdown, provided the heading numbers remain unchanged.
+Generate explicit, stable heading IDs for H2 and H3 headings, and link TOC entries to those IDs. 
+The IDs must remain consistent when regenerating the Markdown, provided the heading numbers remain unchanged.
 
-For example, your Chapter 6 TOC would look like this (illustrating the structure with shortened headings):
+Generate stable heading IDs using explicit HTML anchors 
+immediately before each H2 and H3 heading, 
+in the format <a id="section-4-0"></a>. 
+Do not use {#section-4-0} syntax. 
+Ensure every TOC link matches its heading anchor exactly.
+
+For example, 
+your Chapter 6 TOC would look like this (illustrating the structure with shortened headings):
 TOC
 •	6.0 What we will build
-o	6.0.1 Example H3
+   o	6.0.1 Example H3
 •	6.1 Add text-save action
 •	6.2 Test AIPL text save
 •	..................
 
 The H3 above is just an illustration, not something to insert into the actual chapter.
 
-4 Conversion date/time
-At the top of each Markdown file, insert the actual local date and time when the Markdown file was generated, using Eastern Time (America/New_York).
+4 Conversion date/time (always, even when only generating markdown)
+At the top of each Markdown file, insert the actual local date and time 
+when the Markdown file was generated, using Eastern Time (America/New_York).
 Format: YY.MMDD HH:mm (converted from docx source file to markdown+PNGs by ChatGPT)
 ALSO: Italicize the text (with _xx_).
 Example: _26.1106 14:22 (converted from docx source file to markdown+PNGs by ChatGPT)_
-Always regenerate this timestamp when updating or regenerating the Markdown file. Do not reuse a timestamp from an earlier conversion.
+Always regenerate this timestamp when updating or regenerating the Markdown file. 
+Do not reuse a timestamp from an earlier conversion.
 
 5 Heading formats docx / markdow
 •	H1 / ## **xxx**
@@ -150,20 +163,15 @@ For the value of "width=", use your best judgement (if you are not sure just use
 Number images sequentially within each chapter, in their original DOCX order. Never reuse an image filename for a different image within the same conversion.
 
 7 Image display sizing
-- The priority is to prevent screenshots from appearing too large on the webpage.
-- Examine the text size inside EACH screenshot individually.
-- Adjust the width="xx%" in each <img> tag so the displayed screenshot text approximately matches normal webpage body text.
-- Use 16px as the initial webpage text-size reference.
-- Prefer slightly smaller screenshots rather than oversized ones.
-- Do NOT use a fixed width percentage for all images.
-- Do NOT resize the PNG files; adjust only the HTML width percentage.
-- Preserve aspect ratios. Avoid unnecessary upscaling.
+- Examine each screenshot individually.
+- Identify the largest text appearing anywhere inside the screenshot.
+- Adjust the HTML width="xx%" so that this largest text appears approximately the same size as normal, non-heading webpage body text (about 16px).
+- Smaller text within the screenshot may appear smaller than normal webpage text.
+- Prefer slightly undersized images rather than oversized text.
+- Do not resize the PNG itself; change only the HTML width percentage.
+- If width=35 (or another number) appears immediately before the image in the DOCX, use that percentage exactly and skip automatic sizing.
+- Do not include the width=35 instruction itself in the generated Markdown.
 
-Image width override:
-•	If width=35 (or any other number) appears immediately before an image in the DOCX, use that number as the HTML image width percentage (width="35%").
-•	This overrides all automatic image-sizing rules. Do not inspect or recalculate the width.
-•	Do not include the width=35 instruction itself in the generated Markdown.
-•	If no width instruction is present, apply the normal image-sizing rules.
 
 8 Use very simple format for tables (no special background or coloring). 
 keep tables compact with no line between rows.
@@ -183,7 +191,16 @@ Preserve the original DOCX paragraph formatting as closely as Markdown allows.
 - Do not flatten lists, remove indentation, or add paragraph breaks that were not present in the original.
 - Prioritize matching the original DOCX visual structure over simplifying the Markdown.
 
-Before returning the ZIP, check that workflow sequences, nested bullets, JSON, code blocks, and paragraph spacing preserve the DOCX structure. In particular, avoid converting consecutive list items into separate paragraphs.
+Markdown bullet-list boundaries:
+- Always insert one blank line between the end of a bullet or numbered list and the next normal paragraph.
+- Do not insert blank lines between consecutive items within the same list.
+- Preserve the DOCX paragraph boundaries, even when the DOCX has no empty paragraph between a list and the following text.
+- Verify that no normal paragraph is accidentally rendered as part of the preceding list item.
+- Preserve nested list indentation and inline bold formatting.
+
+Before returning the ZIP:
+- check that workflow sequences, nested bullets, JSON, code blocks, and paragraph spacing preserve the DOCX structure. 
+- In particular, avoid converting consecutive list items into separate paragraphs.
 
 10. Final verification
 Before returning the ZIP:
@@ -204,3 +221,21 @@ Before returning the ZIP:
 <br>
 
 26.1106 (v1 26.1104)
+
+<!-- 
+- The priority is to prevent screenshots from appearing too large on the webpage.
+- Examine the text size inside EACH screenshot individually.
+- Adjust the width="xx%" in each <img> tag so the displayed screenshot text approximately matches normal webpage body text.
+- Use 16px as the initial webpage text-size reference.
+- Prefer slightly smaller screenshots rather than oversized ones.
+- Do NOT use a fixed width percentage for all images.
+- Do NOT resize the PNG files; adjust only the HTML width percentage.
+- Preserve aspect ratios. Avoid unnecessary upscaling.
+
+Image width override:
+•	If width=35 (or any other number) appears immediately before an image in the DOCX, use that number as the HTML image width percentage (width="35%").
+•	This overrides all automatic image-sizing rules. Do not inspect or recalculate the width.
+•	Do not include the width=35 instruction itself in the generated Markdown.
+•	If no width instruction is present, apply the normal image-sizing rules.
+
+-->

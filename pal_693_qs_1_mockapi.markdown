@@ -11,31 +11,41 @@ permalink: /pal_693_qs_1_mockapi/
 
 <br>
 
-_26.1106 08:28 (converted from docx to md by GPT)_
-
+_26.1106 17:48 (converted from docx source file to markdown+PNGs by ChatGPT)_
 
 <br>
+
+
+**TOC**
+
+- **[1.0 What we will build](#section-1-0)**
+- **[1.1 Create MockAPI records](#section-1-1)**
+- **[1.2 Configure the data connection to MockAPI](#section-1-2)**
+- **[1.3 Fetch MockAPI records through the data connection and store them in a dataset using Python](#section-1-3)**
+- **[1.4 Create ObjectTypes/Objects from the dataset](#section-1-4)**
+  - **[1.4 is verified: Capstone2Record now has 3 objects, and all three columns are mapped correctly:](#section-1-4-verified)**
+- **[1.5 Display ObjectType records in a UI (Workshop) table](#section-1-5)**
+
+<br>
+
+<a id="section-1-0"></a>
 
 ### **1.0 What we will build**
 
 
-<img src="/assets/qs/1_01.png" alt="Foundry screenshot" width="75%" style="border: 1px solid #999;">
+<img src="/assets/qs/1_01.png" alt="Foundry screenshot" width="65%" style="border: 1px solid #999;">
 
 Bring in a few records from MockAPI and display their text and numbers in a table.
 
+```text
 1.1 MockAPI — three source records
-
 → 1.2 connection allowing Foundry to read MockAPI
-
 → 1.3a manually run Python import
-
 → 1.3b stored dataset: 693_MockAPI_Items
-
 → 1.4 column-to-property mappings + automatic indexing
-
 → Capstone2Record: three objects
-
 → 1.5 UI table displays those objects
+```
 
 **1.2 is connection configuration, not another set of data records.** The import uses that connection to fetch the records.
 
@@ -56,49 +66,38 @@ I’ll also distinguish **creating a definition**, **saving/publishing it**, and
 
 <br>
 
+<a id="section-1-1"></a>
+
 ### **1.1 Create MockAPI records**
 
 Keep only the synthetic records needed for this demo: an ID, text, and an integer.
 
+```json
 [
-
-{
-
-"id": "1",
-
-"text": "text1",
-
-"integer": 111
-
-},
-
-{
-
-"id": "2",
-
-"text": "text2",
-
-"integer": 222
-
-},
-
-{
-
-"id": "3",
-
-"text": "text3",
-
-"integer": 333
-
-}
-
+  {
+    "id": "1",
+    "text": "text1",
+    "integer": 111
+  },
+  {
+    "id": "2",
+    "text": "text2",
+    "integer": 222
+  },
+  {
+    "id": "3",
+    "text": "text3",
+    "integer": 333
+  }
 ]
+```
 
-
-<img src="/assets/qs/1_02.png" alt="Foundry screenshot" width="65%" style="border: 1px solid #999;">
+<img src="/assets/qs/1_02.png" alt="Foundry screenshot" width="50%" style="border: 1px solid #999;">
 
 
 <br>
+
+<a id="section-1-2"></a>
 
 ### **1.2 Configure the data connection to MockAPI**
 
@@ -113,16 +112,18 @@ But in this demo you **reused an existing connection**, so the accurate title is
 Configure the external connection and explain what access we are allowing. Reuse the existing connection if suitable.
 
 
-<img src="/assets/qs/1_03.png" alt="Foundry screenshot" width="75%" style="border: 1px solid #999;">
+<img src="/assets/qs/1_03.png" alt="Foundry screenshot" width="65%" style="border: 1px solid #999;">
 
 
-<img src="/assets/qs/1_04.png" alt="Foundry screenshot" width="75%" style="border: 1px solid #999;">
+<img src="/assets/qs/1_04.png" alt="Foundry screenshot" width="65%" style="border: 1px solid #999;">
 
 
-<img src="/assets/qs/1_05.png" alt="Foundry screenshot" width="75%" style="border: 1px solid #999;">
+<img src="/assets/qs/1_05.png" alt="Foundry screenshot" width="55%" style="border: 1px solid #999;">
 
 
 <br>
+
+<a id="section-1-3"></a>
 
 ### **1.3 Fetch MockAPI records through the data connection and store them in a dataset using Python**
 
@@ -136,23 +137,23 @@ FDE: Yes—that makes the mechanism explicit. I’d phrase it:
 Run a small import manually. Check the returned records and column types. Leave recurring fetches off.
 
 
-<img src="/assets/qs/1_06.png" alt="Foundry screenshot" width="65%" style="border: 1px solid #999;">
+<img src="/assets/qs/1_06.png" alt="Foundry screenshot" width="45%" style="border: 1px solid #999;">
 
 **Confirmed: the old import reads name and quantity.** We’ll leave it unchanged and create a new import for 693.
 
 
-<img src="/assets/qs/1_07.png" alt="Foundry screenshot" width="75%" style="border: 1px solid #999;">
+<img src="/assets/qs/1_07.png" alt="Foundry screenshot" width="65%" style="border: 1px solid #999;">
 
 
-<img src="/assets/qs/1_08.png" alt="Foundry screenshot" width="50%" style="border: 1px solid #999;">
+<img src="/assets/qs/1_08.png" alt="Foundry screenshot" width="25%" style="border: 1px solid #999;">
 
 
-<img src="/assets/qs/1_09.png" alt="Foundry screenshot" width="50%" style="border: 1px solid #999;">
+<img src="/assets/qs/1_09.png" alt="Foundry screenshot" width="30%" style="border: 1px solid #999;">
 
 preview
 
 
-<img src="/assets/qs/1_10.png" alt="Foundry screenshot" width="75%" style="border: 1px solid #999;">
+<img src="/assets/qs/1_10.png" alt="Foundry screenshot" width="55%" style="border: 1px solid #999;">
 
 
 <br>
@@ -160,22 +161,24 @@ preview
 #### **837**
 
 
-<img src="/assets/qs/1_11.png" alt="Foundry screenshot" width="75%" style="border: 1px solid #999;">
+<img src="/assets/qs/1_11.png" alt="Foundry screenshot" width="55%" style="border: 1px solid #999;">
 
 
-<img src="/assets/qs/1_12.png" alt="Foundry screenshot" width="50%" style="border: 1px solid #999;">
+<img src="/assets/qs/1_12.png" alt="Foundry screenshot" width="30%" style="border: 1px solid #999;">
 
 
-<img src="/assets/qs/1_13.png" alt="Foundry screenshot" width="50%" style="border: 1px solid #999;">
+<img src="/assets/qs/1_13.png" alt="Foundry screenshot" width="35%" style="border: 1px solid #999;">
 
 
-<img src="/assets/qs/1_14.png" alt="Foundry screenshot" width="75%" style="border: 1px solid #999;">
+<img src="/assets/qs/1_14.png" alt="Foundry screenshot" width="60%" style="border: 1px solid #999;">
 
 
-<img src="/assets/qs/1_15.png" alt="Foundry screenshot" width="65%" style="border: 1px solid #999;">
+<img src="/assets/qs/1_15.png" alt="Foundry screenshot" width="55%" style="border: 1px solid #999;">
 
 
 <br>
+
+<a id="section-1-4"></a>
 
 ### **1.4 Create ObjectTypes/Objects from the dataset**
 
@@ -201,7 +204,7 @@ Proposed configuration:
 **Numeric property:** integer
 
 
-<img src="/assets/qs/1_16.png" alt="Foundry screenshot" width="50%" style="border: 1px solid #999;">
+<img src="/assets/qs/1_16.png" alt="Foundry screenshot" width="45%" style="border: 1px solid #999;">
 
 
 <br>
@@ -209,13 +212,13 @@ Proposed configuration:
 #### **842**
 
 
-<img src="/assets/qs/1_17.png" alt="Foundry screenshot" width="65%" style="border: 1px solid #999;">
+<img src="/assets/qs/1_17.png" alt="Foundry screenshot" width="55%" style="border: 1px solid #999;">
 
 
-<img src="/assets/qs/1_18.png" alt="Foundry screenshot" width="65%" style="border: 1px solid #999;">
+<img src="/assets/qs/1_18.png" alt="Foundry screenshot" width="55%" style="border: 1px solid #999;">
 
 
-<img src="/assets/qs/1_19.png" alt="Foundry screenshot" width="65%" style="border: 1px solid #999;">
+<img src="/assets/qs/1_19.png" alt="Foundry screenshot" width="55%" style="border: 1px solid #999;">
 
 
 <br>
@@ -223,7 +226,7 @@ Proposed configuration:
 #### **848**
 
 
-<img src="/assets/qs/1_20.png" alt="Foundry screenshot" width="50%" style="border: 1px solid #999;">
+<img src="/assets/qs/1_20.png" alt="Foundry screenshot" width="40%" style="border: 1px solid #999;">
 
 **Leave all three checkboxes unchecked.** We do not need controls to create, modify, or delete records inside Foundry for this first step.
 
@@ -232,25 +235,27 @@ Our records will come from **MockAPI**, and the table will display them. We’ll
 The **who can submit** options are disabled because no Actions are selected—that is expected.
 
 
-<img src="/assets/qs/1_21.png" alt="Foundry screenshot" width="50%" style="border: 1px solid #999;">
+<img src="/assets/qs/1_21.png" alt="Foundry screenshot" width="40%" style="border: 1px solid #999;">
 
 
-<img src="/assets/qs/1_22.png" alt="Foundry screenshot" width="75%" style="border: 1px solid #999;">
+<img src="/assets/qs/1_22.png" alt="Foundry screenshot" width="60%" style="border: 1px solid #999;">
 
 
-<img src="/assets/qs/1_23.png" alt="Foundry screenshot" width="50%" style="border: 1px solid #999;">
+<img src="/assets/qs/1_23.png" alt="Foundry screenshot" width="40%" style="border: 1px solid #999;">
 
 
-<img src="/assets/qs/1_24.png" alt="Foundry screenshot" width="50%" style="border: 1px solid #999;">
+<img src="/assets/qs/1_24.png" alt="Foundry screenshot" width="30%" style="border: 1px solid #999;">
 
 
-<img src="/assets/qs/1_25.png" alt="Foundry screenshot" width="75%" style="border: 1px solid #999;">
+<img src="/assets/qs/1_25.png" alt="Foundry screenshot" width="60%" style="border: 1px solid #999;">
 
 
-<img src="/assets/qs/1_26.png" alt="Foundry screenshot" width="75%" style="border: 1px solid #999;">
+<img src="/assets/qs/1_26.png" alt="Foundry screenshot" width="65%" style="border: 1px solid #999;">
 
 
 <br>
+
+<a id="section-1-4-verified"></a>
 
 #### **1.4 is verified: Capstone2Record now has 3 objects, and all three columns are mapped correctly:**
 
@@ -284,9 +289,7 @@ That background indexing is when Foundry read the stored dataset rows and made t
 Later, when we changed MockAPI:
 
 Build fetched updated data into the dataset
-
 → indexing picked up the dataset change
-
 → the object’s Text value changed
 
 **“Copied” is useful shorthand, but this is a maintained connection—not a one-time conversion.** No timer is needed for indexing to pick up a completed update to the backing dataset; the timer we add later controls fetching from MockAPI.
@@ -301,19 +304,17 @@ Build fetched updated data into the dataset
 There are two separate operations:
 
 Click Build on 693_MockAPI_Items
-
 → Python fetches MockAPI
-
 → dataset contents are updated
-
 Foundry then indexes that dataset update automatically
-
 → object values become available or change
 
 **In 1.4, we did not run that Python build again.** We saved the object definition, and Foundry’s initial indexing read the dataset contents that were already stored.
 
 
 <br>
+
+<a id="section-1-5"></a>
 
 ### **1.5 Display ObjectType records in a UI (Workshop) table**
 
@@ -322,13 +323,13 @@ Create a minimal application with one table. Verify that the displayed values ma
 **Chapter 1 ends with:** MockAPI records visible in the application—**no AI, buttons, result storage, or automation yet**.
 
 
-<img src="/assets/qs/1_27.png" alt="Foundry screenshot" width="75%" style="border: 1px solid #999;">
+<img src="/assets/qs/1_27.png" alt="Foundry screenshot" width="60%" style="border: 1px solid #999;">
 
 
-<img src="/assets/qs/1_28.png" alt="Foundry screenshot" width="50%" style="border: 1px solid #999;">
+<img src="/assets/qs/1_28.png" alt="Foundry screenshot" width="35%" style="border: 1px solid #999;">
 
 
-<img src="/assets/qs/1_29.png" alt="Foundry screenshot" width="50%" style="border: 1px solid #999;">
+<img src="/assets/qs/1_29.png" alt="Foundry screenshot" width="30%" style="border: 1px solid #999;">
 
 
 <br>
@@ -336,13 +337,13 @@ Create a minimal application with one table. Verify that the displayed values ma
 #### **864**
 
 
-<img src="/assets/qs/1_30.png" alt="Foundry screenshot" width="75%" style="border: 1px solid #999;">
+<img src="/assets/qs/1_30.png" alt="Foundry screenshot" width="45%" style="border: 1px solid #999;">
 
 
-<img src="/assets/qs/1_31.png" alt="Foundry screenshot" width="75%" style="border: 1px solid #999;">
+<img src="/assets/qs/1_31.png" alt="Foundry screenshot" width="60%" style="border: 1px solid #999;">
 
 
-<img src="/assets/qs/1_32.png" alt="Foundry screenshot" width="75%" style="border: 1px solid #999;">
+<img src="/assets/qs/1_32.png" alt="Foundry screenshot" width="55%" style="border: 1px solid #999;">
 
 
 <br>
@@ -350,19 +351,19 @@ Create a minimal application with one table. Verify that the displayed values ma
 #### **872**
 
 
-<img src="/assets/qs/1_33.png" alt="Foundry screenshot" width="75%" style="border: 1px solid #999;">
+<img src="/assets/qs/1_33.png" alt="Foundry screenshot" width="60%" style="border: 1px solid #999;">
 
 
-<img src="/assets/qs/1_34.png" alt="Foundry screenshot" width="65%" style="border: 1px solid #999;">
+<img src="/assets/qs/1_34.png" alt="Foundry screenshot" width="45%" style="border: 1px solid #999;">
 
 
-<img src="/assets/qs/1_35.png" alt="Foundry screenshot" width="50%" style="border: 1px solid #999;">
+<img src="/assets/qs/1_35.png" alt="Foundry screenshot" width="30%" style="border: 1px solid #999;">
 
 
-<img src="/assets/qs/1_36.png" alt="Foundry screenshot" width="75%" style="border: 1px solid #999;">
+<img src="/assets/qs/1_36.png" alt="Foundry screenshot" width="55%" style="border: 1px solid #999;">
 
 
-<img src="/assets/qs/1_37.png" alt="Foundry screenshot" width="50%" style="border: 1px solid #999;">
+<img src="/assets/qs/1_37.png" alt="Foundry screenshot" width="40%" style="border: 1px solid #999;">
 
 **Publishing makes the application configuration available; it does not fetch MockAPI again.**
 

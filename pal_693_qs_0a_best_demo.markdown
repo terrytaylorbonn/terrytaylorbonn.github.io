@@ -29,7 +29,7 @@ The demos are not "real-world". They focus strictly on teaching how Foundry work
 
 <br>
 
-### **Accurate, numbered, up-to-data instructions (with minimal verbiage)**
+### **Accurate, numbered, up-to-date instructions**
 
 1 My core doc source (working docs) are MS.Word docs. I can easily update them.
 
@@ -150,7 +150,7 @@ The demos are not "real-world". They focus strictly on teaching how Foundry work
 
 <br>
 
-### **Accurate, numbered, up-to-data instructions (with minimal verbiage)**
+### **Accurate, numbered, up-to-date instructions**
 
 1 My core doc source (working docs) are MS.Word docs. I can easily update them.
 
