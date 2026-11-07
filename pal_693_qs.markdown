@@ -23,6 +23,7 @@ permalink: /pal_693_qs/
 
 #### **TOC**
 - **[What makes this the best first demo for Foundry](/pal_693_qs_0a_best_demo/)**
+- **[Configuration / workflow diagrams](/pal_693_qs_0a2_config_dias/)**
 - **[0 First steps](/pal_693_qs_0b_first_steps/)**
 - **[1 Fetch MockAPI records and display in UI ("Workshop")](/pal_693_qs_1_mockapi/)**
 - **[2 Create (1) AIPLF to detect matching digits in object text/integer properties / (2) UI to display result](/pal_693_qs_2_ailpf/)**
