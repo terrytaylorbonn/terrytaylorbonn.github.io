@@ -39,7 +39,7 @@ _Latest (26.0911): Making steady progress on section **[2.2 PAL demos (speedruns
 
 <br> -->
 
-#### **TOC**:
+#### **TOC**
 
 - **1 Concepts**
 - **1b Foundry free tier sign up**
