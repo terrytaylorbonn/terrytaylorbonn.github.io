@@ -1,6 +1,6 @@
 ---
 layout: page
-title: Foundry Quick Start (v03 26.1107)
+title: Foundry Quick Start (v04 26.1108)
 permalink: /pal_693_qs/
 ---
 
@@ -31,6 +31,7 @@ permalink: /pal_693_qs/
 - **[4 Enter AI matching criteria (configure only AIPL+F and UI)](/pal_693_qs_4_criteria/)**
 - **[5 Add an object property and Action to save the LLM response (used in Chapter 6)](/pal_693_qs_5_property_action/)**
 - **[6 Add a text-save action (A1) call in AIPL / create AIPLF / create action (A2) to call AIPLF (use in Ch7)](/pal_693_qs_6_a1_a2/)**
+  - **[pal_693_qs_0a2bbb_a2_aiplf_a1](/pal_693_qs_0a2bbb_a2_aiplf_a1/)**
 - **[7 Add automation ("(new) object added to set" inits automation)](/pal_693_qs_7_automation/)**
 - **[8 Schedule MockAPI DATASET import / Add new Capstone2Record / Trace automation](/pal_693_qs_8_schedule/)**
 - **[8a Governance: allow, block, verify](/pal_693_qs_8a_governance/)**
