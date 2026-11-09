@@ -11,6 +11,12 @@ permalink: /pal_693_qs_10_docx_gen/
 
 <br>
 
+**The core goal of the conversion is to avoid any modification of content in the markdown file**
+(I would have to copy such mods into the docx file if the docx was to remain the source).
+I make small adjustments to this constantly, but this is the boilerplate version. 
+Created with GPT's help (GPT recommended this kind of prompt).
+
+
 ```
 GPT prompt v07 26.1106 17:45
 
