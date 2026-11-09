@@ -1,6 +1,6 @@
 ---
 layout: page
-title: Foundry Quick Start (v04 26.1108)
+title: Foundry Quick Start (v04 26.1109)
 permalink: /pal_693_qs/
 ---
 
@@ -37,6 +37,7 @@ permalink: /pal_693_qs/
 - **[8a Governance: allow, block, verify](/pal_693_qs_8a_governance/)**
 - **[8b Where these mechanics could be used](/pal_693_qs_8b_real_apps/)**
 - **[9 Where to go from here](/pal_693_qs_9_where_next/)**
+- **[10 How the QS site pages were generated (from docx)](/pal_693_qs_10_docx_gen/)**
 
 <br>
 
