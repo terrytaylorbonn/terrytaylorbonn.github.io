@@ -1,6 +1,6 @@
 ---
 layout: page
-title: Foundry Quick Start (26.1109)
+title: Foundry Quick Start (26.1109b)
 permalink: /pal_693_qs/
 ---
 
