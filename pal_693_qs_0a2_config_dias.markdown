@@ -12,8 +12,7 @@ permalink: /pal_693_qs_0a2_config_dias/
 
 <br>
 
-
-## **TOC (Configuration/workflow diagrams)**
+_26.1110 16:12 (converted from docx source file to markdown+PNGs by ChatGPT)_
 
 **TOC**
 
