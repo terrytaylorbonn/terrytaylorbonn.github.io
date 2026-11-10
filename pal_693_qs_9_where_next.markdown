@@ -1,6 +1,6 @@
 ---
 layout: page
-title: 9 Where to go from here
+title: 9 (WIP) Continuing your Foundry education (where to go from here)
 permalink: /pal_693_qs_9_where_next/
 ---
 

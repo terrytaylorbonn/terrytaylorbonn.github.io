@@ -1,6 +1,6 @@
 ---
 layout: page
-title: 10 How the QS site pages were generated (from docx)
+title: 10 (appendix) Generating webpage markdown+png's from the docx master
 permalink: /pal_693_qs_10_docx_gen/
 ---
 

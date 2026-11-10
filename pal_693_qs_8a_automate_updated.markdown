@@ -1,7 +1,7 @@
 ---
 layout: page
-title: 8b Where these mechanics could be used
-permalink: /pal_693_qs_8b_real_apps/
+title: 8a (7b) Add processing of updated objects to automation
+permalink: /pal_693_qs_8a_automate_updated/
 ---
 
 <br>

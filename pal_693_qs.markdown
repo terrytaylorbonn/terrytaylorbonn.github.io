@@ -1,6 +1,6 @@
 ---
 layout: page
-title: Foundry Quick Start (26.1109b)
+title: Foundry Quick Start (26.1110)
 permalink: /pal_693_qs/
 ---
 
@@ -21,7 +21,7 @@ permalink: /pal_693_qs/
 #### **TOC**
 - **[What makes this the best first demo for Foundry](/pal_693_qs_0a_best_demo/)**
 - **[Configuration / workflow diagrams](/pal_693_qs_0a2_config_dias/)**
-- **[0 First steps](/pal_693_qs_0b_first_steps/)**
+- **[0 First steps (Foundry sign up, FDE, project/folder, applications)](/pal_693_qs_0b_first_steps/)**
 - **[1 Fetch MockAPI records and display in UI ("Workshop")](/pal_693_qs_1_mockapi/)**
 - **[2 Create (1) AIPLF to detect matching digits in object text/integer properties / (2) UI to display result](/pal_693_qs_2_ailpf/)**
 - **[3 Modify AIPL prompt to detect matching letter-only-text and integer-digits (display result in UI)](/pal_693_qs_3_aipl_prompt/)**
@@ -29,12 +29,13 @@ permalink: /pal_693_qs/
 - **[5 Add an object property and Action to save the LLM response (used in Chapter 6)](/pal_693_qs_5_property_action/)**
 - **[6 Add a text-save action (A1) call in AIPL / create AIPLF / create action (A2) to call AIPLF (use in Ch7)](/pal_693_qs_6_a1_a2/)**
   - **[pal_693_qs_0a2bbb_a2_aiplf_a1](/pal_693_qs_0a2bbb_a2_aiplf_a1/)**
-- **[7 Add automation ("(new) object added to set" inits automation)](/pal_693_qs_7_automation/)**
-- **[8 Schedule MockAPI DATASET import / Add new Capstone2Record / Trace automation](/pal_693_qs_8_schedule/)**
-- **[8a Governance: allow, block, verify](/pal_693_qs_8a_governance/)**
-- **[8b Where these mechanics could be used](/pal_693_qs_8b_real_apps/)**
-- **[9 Where to go from here](/pal_693_qs_9_where_next/)**
-- **[10 (appendix) How the QS site pages were generated (from docx)](/pal_693_qs_10_docx_gen/)**
+- **[Ch7 Add automation: "(new) object added to set" inits automation](/pal_693_qs_7_automation/)**
+- **[7-2 Data lineage / scheduling confusion (chat)](/pal_693_qs_7-2_DL-S-confusion/)**
+- **[Ch8 Schedule (Data Lineage)](/pal_693_qs_8_schedule/)**
+- **[8a (7b) Add processing of updated objects to automation](/pal_693_qs_8a_automate_updated/)**
+- **[8b (8a) Governance](/pal_693_qs_8b_governance/)**
+- **[9 (WIP) Continuing your Foundry education (where to go from here)](/pal_693_qs_9_where_next/)**
+- **[10 (appendix) Generating webpage markdown+png's from the docx master](/pal_693_qs_10_docx_gen/)**
 
 <br>
 
