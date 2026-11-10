@@ -9,10 +9,13 @@ permalink: /pal_693_qs_0a2_config_dias/
 
 [← 3c Foundry QS](/pal_693_qs/)
 
+_26.1110 16:12 (converted from docx source file to markdown+PNGs by ChatGPT)_
 
 <br>
 
-_26.1110 16:12 (converted from docx source file to markdown+PNGs by ChatGPT)_
+This chapter is provides an overview of the ZiptieAI Foundry QS (quick start) with links to each chapter (this webpage, like all QS webpages, was converted from docx source files to markdown by ChatGPT).
+
+<br>
 
 **TOC**
 
@@ -35,7 +38,6 @@ _26.1110 16:12 (converted from docx source file to markdown+PNGs by ChatGPT)_
 - **[Ch9 (WIP) Continuing your Foundry education (where to go from here)](#section-9)**
 
 
-This chapter provides a short overview (text + diagrams) of each remaining chapter.
 
 
 <br>
