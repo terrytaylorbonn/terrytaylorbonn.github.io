@@ -12,8 +12,8 @@ permalink: /pal_693_qs_0a2_config_dias/
 
 <br>
 
-_26.1110 16:24 (converted from docx source file to markdown+PNGs by ChatGPT)_
 
+## **TOC (Configuration/workflow diagrams)**
 
 **TOC**
 
@@ -90,7 +90,7 @@ This is variation of the original Foundry diagram (https://www.palantir.com/docs
 
 <a id="section-0"></a>
 
-### **Ch0 First steps (Foundry sign up, FDE, project/folder, applications)**
+### **[Ch0 First steps (Foundry sign up, FDE, project/folder, applications)](/pal_693_qs_0b_first_steps/)**
 
 
 The diagram below shows the first steps. See Ch0 for details.
@@ -103,7 +103,7 @@ The diagram below shows the first steps. See Ch0 for details.
 
 <a id="section-1"></a>
 
-### **Ch1 Fetch MockAPI records and display in UI ("Workshop")**
+### **[Ch1 Fetch MockAPI records and display in UI ("Workshop")](/pal_693_qs_1_mockapi/)**
 
 
 **Summary**
@@ -136,7 +136,7 @@ No AI.
 
 <a id="section-2"></a>
 
-### **Ch2 Create (1) AIPLF to detect matching digits in object text/integer properties / (2) UI to display result**
+### **[Ch2 Create (1) AIPLF to detect matching digits in object text/integer properties / (2) UI to display result](/pal_693_qs_2_ailpf/)**
 
 
 **Summary**
@@ -197,7 +197,7 @@ FOUND is returned back up that chain and displayed in UI
 
 <a id="section-3"></a>
 
-### **Ch3 Modify AIPL prompt to detect matching letter-only-text and integer-digits (display result in UI)**
+### **[Ch3 Modify AIPL prompt to detect matching letter-only-text and integer-digits (display result in UI)](/pal_693_qs_3_aipl_prompt/)**
 
 
 **Summary**
@@ -260,7 +260,7 @@ FOUND is returned back up that chain and displayed in UI
 
 <a id="section-4"></a>
 
-### **Ch4 Enter AI matching criteria (configure only AIPL+F and UI)**
+### **[Ch4 Enter AI matching criteria (configure only AIPL+F and UI)](/pal_693_qs_4_criteria/)**
 
 
 **Summary (TODO)**
@@ -317,7 +317,7 @@ Match if the integer is greater than 200.NOT FOUND
 
 <a id="section-5"></a>
 
-### **Ch5 Add an object property and Action to save the LLM response (use in Ch6)**
+### **[Ch5 Add an object property and Action to save the LLM response (use in Ch6)](/pal_693_qs_5_property_action/)**
 
 
 **Summary (TODO)**
@@ -349,7 +349,7 @@ In this chapter, we prepare and test the saving operation.
 
 <a id="section-6"></a>
 
-### **Ch6 Add an AIPL call for text-save action (A1/Ch5) / "wrap" with AIPLF / create "wrapper" action (A2) for AIPLF (for Ch7)**
+### **[Ch6 Add an AIPL call for text-save action (A1/Ch5) / "wrap" with AIPLF / create "wrapper" action (A2) for AIPLF (for Ch7)](/pal_693_qs_6_a1_a2/)**
 
 
 **Summary**
@@ -408,7 +408,7 @@ The application still displays the answer.
 
 <a id="section-7"></a>
 
-### **Ch7 Add automation: "(new) object added to set" inits automation**
+### **[Ch7 Add automation: "(new) object added to set" inits automation](/pal_693_qs_7_automation/)**
 
 
 **Summary**
@@ -453,7 +453,7 @@ We’ll still fetch MockAPI records **manually**. Scheduling the fetch comes in 
 
 <a id="section-8"></a>
 
-### **Ch8 Schedule (Data Lineage)**
+### **[Ch8 Schedule (Data Lineage)](/pal_693_qs_8_schedule/)**
 
 
 **Summary**
@@ -493,7 +493,7 @@ Schedule the Python import to fetch MockAPI records into **693_MockAPI_Items (da
 
 <a id="section-8a"></a>
 
-### **Ch8a (7b) (WIP) Add processing of updated objects to automation**
+### **[Ch8a (7b) (WIP) Add processing of updated objects to automation](/pal_693_qs_8a_automate_updated/)**
 
 
 Note: This was 7b. I need to update diagrams.
@@ -509,7 +509,7 @@ The Chapter 7 automation processes **only newly added objects**. Updating an exi
 
 <a id="section-8b"></a>
 
-### **Ch8b (8a) Governance**
+### **[Ch8b (8a) Governance](/pal_693_qs_8b_governance/)**
 
 
 Note: This was 8a. I need to update diagrams.
@@ -568,7 +568,7 @@ Note:  A trial user does not have access to this functionality. So this section 
 
 <a id="section-9"></a>
 
-### **Ch9 (WIP) Continuing your Foundry education (where to go from here)**
+### **[Ch9 (WIP) Continuing your Foundry education (where to go from here)](/pal_693_qs_9_where_next/)**
 
 
 There will be some kind of diagram for this section in the near future. The following shows the current proposed sections.
