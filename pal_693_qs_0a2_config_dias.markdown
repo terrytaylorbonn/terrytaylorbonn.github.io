@@ -1,6 +1,6 @@
 ---
 layout: page
-title: Configuration / workflow diagrams
+title: TOC (Configuration/workflow diagrams)
 permalink: /pal_693_qs_0a2_config_dias/
 ---
 
