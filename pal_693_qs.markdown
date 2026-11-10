@@ -29,9 +29,9 @@ permalink: /pal_693_qs/
 - **[5 Add an object property and Action to save the LLM response (used in Chapter 6)](/pal_693_qs_5_property_action/)**
 - **[6 Add a text-save action (A1) call in AIPL / create AIPLF / create action (A2) to call AIPLF (use in Ch7)](/pal_693_qs_6_a1_a2/)**
   - **[pal_693_qs_0a2bbb_a2_aiplf_a1](/pal_693_qs_0a2bbb_a2_aiplf_a1/)**
-- **[Ch7 Add automation: "(new) object added to set" inits automation](/pal_693_qs_7_automation/)**
+- **[7 Add automation: "(new) object added to set" inits automation](/pal_693_qs_7_automation/)**
 - **[7-2 Data lineage / scheduling confusion (chat)](/pal_693_qs_7-2_DL-S-confusion/)**
-- **[Ch8 Schedule (Data Lineage)](/pal_693_qs_8_schedule/)**
+- **[8 Schedule (Data Lineage)](/pal_693_qs_8_schedule/)**
 - **[8a (7b) Add processing of updated objects to automation](/pal_693_qs_8a_automate_updated/)**
 - **[8b (8a) Governance](/pal_693_qs_8b_governance/)**
 - **[9 (WIP) Continuing your Foundry education (where to go from here)](/pal_693_qs_9_where_next/)**
