@@ -50,7 +50,7 @@ Note: This QS is a work in progress (WIP). In particular some of the variable na
 
 
 <!-- #### **Workflow diagram examples**
-
+ssss
 _Workflow diagram for ch1_<br><img src="/assets/qs_summary_ch1.png" alt="Foundry screenshot" width="75%" style="border: 1px solid #999;">
 
 _Workflow diagram for ch6_<br><img src="/assets/qs_summary_ch6-1.png" alt="Foundry screenshot" width="75%" style="border: 1px solid #999;">
