@@ -67,9 +67,21 @@ I also created diagrams to summarize the setup workflows. FDE can "see" these di
 
 <br>
 
+---
+
+<br>
+
 FDE chats:
 - **[Chat about H1 headings](/pal_693_ch_title_chats/)**. 
 - **[Chat about chapter 5 and the Use_LLM dialog](/pal_693_UseLLM_chat/)**.
+
+<br>
+
+---
+
+<br>
+
+_Possible **[future tutorials](/pal_693_qs_9_where_next/)** (same style as the QS)_<br><img src="/assets/sun-55fff.png" alt="drones" width="85%" style="border: 1px solid #999;">
 
 
 
