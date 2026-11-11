@@ -24,6 +24,8 @@ This QS shows how to build a "small" Foundry workflow that **imports external da
 
 <img src="/assets/qs/0a/0a_01.png" alt="0a illustration 1" width="65%" style="border: 1px solid #999;">
 
+Note: This QS is a work in progress (WIP). In particular some of the variable names used in the QS need to be changed (to better reflect their true meaning). I need to redo this demo sometime in the future to get a final good version (that focuses less on what I did, and more on what prompts you need to ask FDE). But this version works, and conceptually its an excellent intro. 
+
 
 <br>
 
