@@ -37,7 +37,11 @@ This chapter is provides an overview of the ZiptieAI Foundry QS (quick start) wi
   - **[8b.4b Hypothetical "Control which data may be sent to LLMs" config/workflow](#section-8b-4b)**
 - **[Ch9 (WIP) Continuing your Foundry education (where to go from here)](#section-9)**
 
+<br>
 
+-----------------------------------
+-----------------------------------
+-----------------------------------
 
 
 <br>
@@ -86,6 +90,12 @@ This is variation of the original Foundry diagram (https://www.palantir.com/docs
 
 <img src="/assets/qs/0c_config_workflow_04.png" alt="0c_config_workflow illustration 4" width="83%" style="border: 1px solid #999;">
 
+<br>
+
+-----------------------------------
+-----------------------------------
+-----------------------------------
+
 
 <br>
 
@@ -98,6 +108,12 @@ The diagram below shows the first steps. See Ch0 for details.
 
 
 <img src="/assets/qs/0c_config_workflow_05.png" alt="0c_config_workflow illustration 5" width="100%" style="border: 1px solid #999;">
+
+<br>
+
+-----------------------------------
+-----------------------------------
+-----------------------------------
 
 
 <br>
@@ -131,6 +147,12 @@ No AI.
 
 
 **Workflow (TODO)**
+
+<br>
+
+-----------------------------------
+-----------------------------------
+-----------------------------------
 
 
 <br>
@@ -192,6 +214,12 @@ calls AIPLF
   AIPL calls AI model to generate  FOUND  
 
 FOUND is returned back up that chain and displayed in UI
+
+<br>
+
+-----------------------------------
+-----------------------------------
+-----------------------------------
 
 
 <br>
@@ -256,6 +284,12 @@ calls AIPLF
 
 FOUND is returned back up that chain and displayed in UI
 
+<br>
+
+-----------------------------------
+-----------------------------------
+-----------------------------------
+
 
 <br>
 
@@ -313,6 +347,12 @@ Match if the integer is greater than 100.FOUND
 
 Match if the integer is greater than 200.NOT FOUND
 
+<br>
+
+-----------------------------------
+-----------------------------------
+-----------------------------------
+
 
 <br>
 
@@ -344,6 +384,12 @@ In this chapter, we prepare and test the saving operation.
 1. Select an object + enter test text
 2. AI checks a selected **Capstone2Record object** using the supplied criteria.
 3. The **LLM text response** (FOUND, NOT FOUND, etc.) is saved in that object’s **CheckResult** property using **693_SaveCheckResult**.
+
+<br>
+
+-----------------------------------
+-----------------------------------
+-----------------------------------
 
 
 <br>
@@ -404,6 +450,12 @@ It saves its answer into that record’s **CheckResult** using **693_SaveCheckRe
 
 The application still displays the answer.
 
+<br>
+
+-----------------------------------
+-----------------------------------
+-----------------------------------
+
 
 <br>
 
@@ -449,6 +501,12 @@ We’ll still fetch MockAPI records **manually**. Scheduling the fetch comes in 
 - Add a record in MockAPI and manually fetch the latest data (with manual dataset build).**Manual fetch → new object → automatic AI check → saved CheckResult**
 - Verify that the new record is checked and its answer saved without pressing the checking button.You manually fetched the records, but did **not** manually run the check.
 
+<br>
+
+-----------------------------------
+-----------------------------------
+-----------------------------------
+
 
 <br>
 
@@ -492,6 +550,12 @@ Schedule the Python import to fetch MockAPI records into **693_MockAPI_Items (da
 
 <br>
 
+-----------------------------------
+-----------------------------------
+-----------------------------------
+
+<br>
+
 <a id="section-8a"></a>
 
 ### **[Ch8a (7b) (WIP) Add processing of updated objects to automation](/pal_693_qs_8a_automate_updated/)**
@@ -508,6 +572,12 @@ The Chapter 7 automation processes **only newly added objects**. Updating an exi
 
 <br>
 
+-----------------------------------
+-----------------------------------
+-----------------------------------
+
+<br>
+
 <a id="section-8b"></a>
 
 ### **[Ch8b (8a) Governance](/pal_693_qs_8b_governance/)**
@@ -515,6 +585,12 @@ The Chapter 7 automation processes **only newly added objects**. Updating an exi
 
 Note: This was 8a. I need to update diagrams.
 
+
+<br>
+
+-----------------------------------
+-----------------------------------
+-----------------------------------
 
 <br>
 
@@ -528,6 +604,12 @@ Note: This was 8a. I need to update diagrams.
 
 <br>
 
+-----------------------------------
+-----------------------------------
+-----------------------------------
+
+<br>
+
 <a id="section-8b-2"></a>
 
 #### **8b.2 Action access**
@@ -538,6 +620,12 @@ Note: This was 8a. I need to update diagrams.
 
 <br>
 
+-----------------------------------
+-----------------------------------
+-----------------------------------
+
+<br>
+
 <a id="section-8b-3"></a>
 
 #### **8b.3 Inspect Action config/execution history**
@@ -545,6 +633,12 @@ Note: This was 8a. I need to update diagrams.
 
 <img src="/assets/qs/0c_config_workflow_21.png" alt="0c_config_workflow illustration 21" width="100%" style="border: 1px solid #999;">
 
+
+<br>
+
+-----------------------------------
+-----------------------------------
+-----------------------------------
 
 <br>
 
@@ -564,6 +658,12 @@ Note:  A trial user does not have access to this functionality. So this section 
 
 <img src="/assets/qs/0c_config_workflow_22.png" alt="0c_config_workflow illustration 22" width="74%" style="border: 1px solid #999;">
 
+
+<br>
+
+-----------------------------------
+-----------------------------------
+-----------------------------------
 
 <br>
 
