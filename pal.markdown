@@ -208,7 +208,7 @@ This section contains Foundry tutorials. The current focus is on original ZAI tu
 
 - **2.0 Before you start programming**
 - **2.1 My first 2 failed attempts to create a tutorial (my mistakes are instructive)**
-- **2.2 QS tutorial (v3)**
+- **2.2 Foundry QS tutorial (v3)**
 - **2.3 Foundry ontology (object type) management**. 
 - **2.4 ZAI versions of the core ~8 Foundry getting started demos**.
 - **2.5 PAL Examples (installable)**.  
@@ -248,19 +248,16 @@ I relied too much on FDE AI. Both tutorials worked, but the result was not somet
 
 <br>
 
-#### **[2.2 QS tutorial (v3)](/pal_693_qs/)**
+#### **[2.2 Foundry QS tutorial (v3)](/pal_693_qs/)**
 
 #### For the **latest tutorial version see [docx #693](https://drive.google.com/drive/folders/1-Adawag9uA8_bq-hDF-nOuPYaRLz1eEO)**.
 
-I had some **long discussions with FDE** about terminology and concepts:
-- **[Chat about H1 headings](/pal_693_ch_title_chats/)**. 
-- **[Chat about chapter 5 and the Use_LLM dialog](/pal_693_UseLLM_chat/)**.
  
 <img src="/assets/sun-55.png" alt="drones" width="61%" style="border: 1px solid #999;">
 
-I created a workflow diagram for each chapter.
 
-_Workflow diagram (verified by FDE) for ch1; ch1 has H2 subheadings 1.1 - 1.5._<br><img src="/assets/sun-56bbb.png" alt="drones" width="90%" style="border: 1px solid #999;">
+_Workflow diagram (verified by FDE) for ch2_<br><img src="/assets/qs/0b/0b_06.png" alt="drones" width="90%" style="border: 1px solid #999;">
+
 
 <br>
 

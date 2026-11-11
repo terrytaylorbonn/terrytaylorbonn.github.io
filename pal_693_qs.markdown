@@ -64,6 +64,15 @@ The FDE-generated text is factual, but for a human reader at times difficult to 
 I also created diagrams to summarize the setup workflows. FDE can "see" these diagrams and is quite good at making useful suggestions or catching errors. 
 
 -->
+
+<br>
+
+FDE chats:
+- **[Chat about H1 headings](/pal_693_ch_title_chats/)**. 
+- **[Chat about chapter 5 and the Use_LLM dialog](/pal_693_UseLLM_chat/)**.
+
+
+
 <br>
 
 ---
