@@ -12,9 +12,18 @@ permalink: /pal_693_qs/
 
 #### For the **latest QS version see [docx #693](https://drive.google.com/drive/folders/1-Adawag9uA8_bq-hDF-nOuPYaRLz1eEO)**.
 
-- The main goal of this QS is accuracy and usefulness (that means constant updates). 
+<br>
+
+<!-- - The main goal of this QS is accuracy and usefulness (that means constant updates). 
 - Constant updates is best assured with markdown/PNG's (pics) extracted from the 693 docx source file by GPT.
-- The PNG sizing is difficult for GPT to get right (GPT does adjust the width of the PNG based on text in the PNG; the result is an improvement, but I need to "hardcode" the width (in my docx file) to get things right).
+- The PNG sizing is difficult for GPT to get right (GPT does adjust the width of the PNG based on text in the PNG; the result is an improvement, but I need to "hardcode" the width (in my docx file) to get things right). -->
+
+
+This QS shows how to build a "small" Foundry workflow that **imports external data, displays it as objects, uses an LLM to process their properties, and saves the LLM response.** Then automate fetching/processing, and test basic governance controls. Variations of the basic data flow chain (below) appear throughout this QS.
+
+
+<img src="/assets/qs/0a/0a_01.png" alt="0a illustration 1" width="65%" style="border: 1px solid #999;">
+
 
 <br>
 
@@ -37,9 +46,8 @@ permalink: /pal_693_qs/
 - **[9 (WIP) Continuing your Foundry education (where to go from here)](/pal_693_qs_9_where_next/)**
 - **[10 (appendix) Generating webpage markdown+png's from the docx master](/pal_693_qs_10_docx_gen/)**
 
-<br>
 
-#### **Workflow diagram examples**
+<!-- #### **Workflow diagram examples**
 
 _Workflow diagram for ch1_<br><img src="/assets/qs_summary_ch1.png" alt="Foundry screenshot" width="75%" style="border: 1px solid #999;">
 
@@ -47,7 +55,7 @@ _Workflow diagram for ch6_<br><img src="/assets/qs_summary_ch6-1.png" alt="Found
 
 _Workflow diagram (perspective 2) for ch6_<br><img src="/assets/qs_summary_ch6-2.png" alt="Foundry screenshot" width="75%" style="border: 1px solid #999;">
 
-<br>
+<br> 
 
 #### **Notes**
 
@@ -55,14 +63,14 @@ The FDE-generated text is factual, but for a human reader at times difficult to 
 
 I also created diagrams to summarize the setup workflows. FDE can "see" these diagrams and is quite good at making useful suggestions or catching errors. 
 
-
+-->
 <br>
 
 ---
 
 <br>
 
-26.1109 (v1 26.1104)
+26.1111 (v1 26.1104)
 
 <!-- 
 - The priority is to prevent screenshots from appearing too large on the webpage.
