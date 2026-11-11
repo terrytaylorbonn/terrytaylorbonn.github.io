@@ -1,6 +1,6 @@
 ---
 layout: page
-title: Foundry Quick Start (26.1110)
+title: Foundry Quick Start (26.1111)
 permalink: /pal_693_qs/
 ---
 
@@ -19,8 +19,8 @@ permalink: /pal_693_qs/
 <br>
 
 #### **TOC**
-- **[What makes this the best first demo for Foundry](/pal_693_qs_0a_best_demo/)**
-- **[Configuration / workflow diagrams](/pal_693_qs_0a2_config_dias/)**
+- **[Why this is the best QS for Foundry](/pal_693_qs_0a_best_demo/)**
+- **[Short overview of all chapters (TOC)](/pal_693_qs_0a2_config_dias/)**
 - **[0 First steps (Foundry sign up, FDE, project/folder, applications)](/pal_693_qs_0b_first_steps/)**
 - **[1 Fetch MockAPI records and display in UI ("Workshop")](/pal_693_qs_1_mockapi/)**
 - **[2 Create (1) AIPLF to detect matching digits in object text/integer properties / (2) UI to display result](/pal_693_qs_2_ailpf/)**
