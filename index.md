@@ -6,7 +6,7 @@ title: Home
 <br>
 
 _Latest updates **([history](/pal_latest_updates_history/))**_
-- _26.1111 **[Foundry Quick Start (26.1110)](/pal_693_qs/)**_
+- _26.1111 **[Foundry Quick Start](/pal_693_qs/)**_
   - _**[Why this is the best QS for Foundry](/pal_693_qs_0a_best_demo/)**_
   - _**[Short overview of all chapters (TOC)](/pal_693_qs_0a2_config_dias/)**_
 
