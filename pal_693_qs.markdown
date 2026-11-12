@@ -33,8 +33,9 @@ Variations of the basic data flow chain (below) appear throughout this QS.
 <img src="/assets/qs/0a/0a_01.png" alt="0a illustration 1" width="65%" style="border: 1px solid #999;">
 
 Note: 
-- This QS is a work in progress (WIP). Some of the variable names used need to be changed (to avoid confusion).
-- Conversion from docx to markdown is a big focus right now. There are lots of details. But it seems to be worth the effort.
+- This QS is a work in progress (WIP).
+- My working source file is an MS.Word docx. Conversion from docx to markdown requires that I keep the format of the docx as simple as possible (a docx internally is absolute chaos if you are not careful). The ideal solution would be for the LLM (GPT in this case) to look at the docx visual output and reproduce that. But for now GPT must look at the (binary) docx file (there are non binary representations, RTF?, but probably same complexity problems). So the formatting sometimes is quite crude. But the focus is up-to-date accurate info, not fancy formatting.
+- Some of the variable names used need to be changed (to avoid confusion).
 - Text is minimal because
   - The initial focus was on the screenshots and workflows. 
   - It only makes sense to fill out the text if a few people start to take an interest in the QS. Otherwise it will remain simply my personal learning project. And for my personal learning the focus is on creating more demos.
