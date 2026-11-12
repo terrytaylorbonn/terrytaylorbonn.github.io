@@ -7,9 +7,7 @@ permalink: /pal_693_qs_1_mockapi/
 <br>
 
 
-[↑ 3c Foundry QS](/pal_693_qs/)
-
-[← 0 First steps](/pal_693_qs_0b_first_steps/) / [→ 2 Create AIPLF and UI](/pal_693_qs_2_ailpf/)
+[← 0 First steps](/pal_693_qs_0b_first_steps/)  / [↑ 3c Foundry QS](/pal_693_qs/) / [→ 2 Create AIPLF and UI](/pal_693_qs_2_ailpf/)
 
 _26.1111 16:21 (converted from docx source file to markdown+PNGs by ChatGPT)_
 
