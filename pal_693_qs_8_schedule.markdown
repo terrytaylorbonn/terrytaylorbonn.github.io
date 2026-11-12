@@ -7,7 +7,10 @@ permalink: /pal_693_qs_8_schedule/
 <br>
 
 
-[← 3c Foundry QS](/pal_693_qs/)
+
+
+[← 7 Add automation](/pal_693_qs_7_automation/) / [↑ 3c Foundry QS](/pal_693_qs/) / [→ 8a Add processing of updated objects](/pal_693_qs_8a_automate_updated/)
+
 
 <br>
 

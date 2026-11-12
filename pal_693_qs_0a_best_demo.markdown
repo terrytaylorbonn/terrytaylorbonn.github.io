@@ -8,7 +8,7 @@ permalink: /pal_693_qs_0a_best_demo/
 
 
 
-[→ Short overview of all chapters (TOC)](/pal_693_qs_0a2_config_dias/) / [↑ 3c Foundry QS](/pal_693_qs/) / 
+[↑ 3c Foundry QS](/pal_693_qs/) / [→ Short overview of all chapters (TOC)](/pal_693_qs_0a2_config_dias/)   
 
 
 

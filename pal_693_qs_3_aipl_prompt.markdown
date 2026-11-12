@@ -5,9 +5,9 @@ permalink: /pal_693_qs_3_aipl_prompt/
 ---
 
 <br>
+ 
 
-
-[← 3c Foundry QS](/pal_693_qs/)
+[← 2 Create AIPLF and UI](/pal_693_qs_2_ailpf/) / [↑ 3c Foundry QS](/pal_693_qs/) / [→ 4 Enter AI matching criteria](/pal_693_qs_4_criteria/)
 
 _26.1112 06:19 (converted from docx source file to markdown+PNGs by ChatGPT)_
 

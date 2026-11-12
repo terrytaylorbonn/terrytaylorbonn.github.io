@@ -7,7 +7,8 @@ permalink: /pal_693_qs_9_where_next/
 <br>
 
 
-[← 3c Foundry QS](/pal_693_qs/)
+[← 8b Governance](/pal_693_qs_8b_governance/) / [↑ 3c Foundry QS](/pal_693_qs/)
+
 
 <br>
 

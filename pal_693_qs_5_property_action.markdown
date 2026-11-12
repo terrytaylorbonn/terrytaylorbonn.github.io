@@ -7,7 +7,10 @@ permalink: /pal_693_qs_5_property_action/
 <br>
 
 
-[← 3c Foundry QS](/pal_693_qs/)
+
+
+[← 4 Enter AI matching criteria](/pal_693_qs_4_criteria/) / [↑ 3c Foundry QS](/pal_693_qs/) / [→ 6 Add A1/A2 Actions](/pal_693_qs_6_a1_a2/)
+
 
 _26.1112 09:08 (converted from docx source file to markdown+PNGs by ChatGPT)_
 

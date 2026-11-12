@@ -7,7 +7,9 @@ permalink: /pal_693_qs_6_a1_a2/
 <br>
 
 
-[← 3c Foundry QS](/pal_693_qs/)
+
+[← 5 Add object property and Action](/pal_693_qs_5_property_action/) / [↑ 3c Foundry QS](/pal_693_qs/) / [→ 7 Add automation](/pal_693_qs_7_automation/)
+
 
 <br>
 

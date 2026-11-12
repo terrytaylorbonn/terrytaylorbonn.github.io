@@ -7,7 +7,10 @@ permalink: /pal_693_qs_7_automation/
 <br>
 
 
-[← 3c Foundry QS](/pal_693_qs/)
+
+[← 6 Add A1/A2 Actions](/pal_693_qs_6_a1_a2/) / [↑ 3c Foundry QS](/pal_693_qs/) / [→ 8 Schedule (Data Lineage)](/pal_693_qs_8_schedule/)
+
+
 
 <br>
 

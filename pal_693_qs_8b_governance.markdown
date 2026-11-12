@@ -7,8 +7,8 @@ permalink: /pal_693_qs_8b_governance/
 <br>
 
 
-[← 3c Foundry QS](/pal_693_qs/)
 
+[← 8a Add processing of updated objects](/pal_693_qs_8a_automate_updated/) / [↑ 3c Foundry QS](/pal_693_qs/) / [→ 9 Continuing your Foundry education](/pal_693_qs_9_where_next/)
 
 <br>
 
