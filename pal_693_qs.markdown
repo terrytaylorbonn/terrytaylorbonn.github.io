@@ -1,6 +1,6 @@
 ---
 layout: page
-title: Foundry Quick Start (26.1111)
+title: Foundry Quick Start (26.1112)
 permalink: /pal_693_qs/
 ---
 
@@ -93,7 +93,7 @@ _Possible **[future tutorials](/pal_693_qs_9_where_next/)** (same style as the Q
 
 <br>
 
-26.1111 (v1 26.1104)
+26.1112 (v1 26.1104)
 
 <!-- 
 - The priority is to prevent screenshots from appearing too large on the webpage.
