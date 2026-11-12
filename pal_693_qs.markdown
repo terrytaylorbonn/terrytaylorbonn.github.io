@@ -21,11 +21,11 @@ permalink: /pal_693_qs/
 
 **This QS shows how to build a "small" Foundry workflow** that 
 - imports external data (from MockAPI), 
-- displays it as objects, 
+- displays it as objects (the ontology), 
 - uses an LLM to process their properties, 
 - saves the LLM response
-- automates fetching/processing, and 
-- tests basic governance controls. 
+- automates fetching/processing 
+- tests basic governance controls 
 
 Variations of the basic data flow chain (below) appear throughout this QS.
 
