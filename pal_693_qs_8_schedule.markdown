@@ -47,7 +47,7 @@ _26.1110 16:53 (converted from docx source file to markdown+PNGs by ChatGPT)_
 
 ### **8.0 What we will build**
 
-<img src="/assets/qs/8_01.png" alt="8 Schedule illustration 1" width="100%" style="border: 1px solid #999;">
+<img src="/assets/qs/8_01.png" alt="8 Schedule illustration 1" width="72%" style="border: 1px solid #999;">
 
 Schedule the Python import to fetch MockAPI records into **693_MockAPI_Items every two minutes**.
 
@@ -106,11 +106,11 @@ Schedule the Python import to fetch MockAPI records into **693_MockAPI_Items eve
 
 #### **Build schedules / data lineage**
 
-<img src="/assets/qs/8_03.png" alt="8 Schedule illustration 3" width="100%" style="border: 1px solid #999;">
+<img src="/assets/qs/8_03.png" alt="8 Schedule illustration 3" width="52%" style="border: 1px solid #999;">
 
-<img src="/assets/qs/8_04.png" alt="8 Schedule illustration 4" width="100%" style="border: 1px solid #999;">
+<img src="/assets/qs/8_04.png" alt="8 Schedule illustration 4" width="73%" style="border: 1px solid #999;">
 
-<img src="/assets/qs/8_05.png" alt="8 Schedule illustration 5" width="80%" style="border: 1px solid #999;">
+<img src="/assets/qs/8_05.png" alt="8 Schedule illustration 5" width="68%" style="border: 1px solid #999;">
 
 
 <br>
@@ -121,7 +121,7 @@ Schedule the Python import to fetch MockAPI records into **693_MockAPI_Items eve
 
 This section addresses an important gap. 
 
-<img src="/assets/qs/8_06.png" alt="8 Schedule illustration 6" width="100%" style="border: 1px solid #999;">
+<img src="/assets/qs/8_06.png" alt="8 Schedule illustration 6" width="52%" style="border: 1px solid #999;">
 
 For the dataset entry, use:
 
@@ -132,7 +132,7 @@ For the dataset entry, use:
   
 **Do not use New → Dataset**—that creates another dataset.
 
-<img src="/assets/qs/8_08.png" alt="8 Schedule illustration 8" width="67%" style="border: 1px solid #999;">
+<img src="/assets/qs/8_08.png" alt="8 Schedule illustration 8" width="51%" style="border: 1px solid #999;">
 
 
 <br>
@@ -154,11 +154,11 @@ For the dataset entry, use:
 
 Leave **693_AIPL_CR_Automation** active.
 
-<img src="/assets/qs/8_09.png" alt="8 Schedule illustration 9" width="100%" style="border: 1px solid #999;">
+<img src="/assets/qs/8_09.png" alt="8 Schedule illustration 9" width="77%" style="border: 1px solid #999;">
 
-<img src="/assets/qs/8_10.png" alt="8 Schedule illustration 10" width="65%" style="border: 1px solid #999;">
+<img src="/assets/qs/8_10.png" alt="8 Schedule illustration 10" width="48%" style="border: 1px solid #999;">
 
-<img src="/assets/qs/8_11.png" alt="8 Schedule illustration 11" width="62%" style="border: 1px solid #999;">
+<img src="/assets/qs/8_11.png" alt="8 Schedule illustration 11" width="44%" style="border: 1px solid #999;">
 
 
 <br>
@@ -171,13 +171,13 @@ In **Data Lineage**, click **Back to schedules list** at the top of the right-ha
 
 Show that list so we can locate the delete control for **Schedule afe13ab56b**. Leave it paused.
 
-<img src="/assets/qs/8_12.png" alt="8 Schedule illustration 12" width="59%" style="border: 1px solid #999;">
+<img src="/assets/qs/8_12.png" alt="8 Schedule illustration 12" width="45%" style="border: 1px solid #999;">
 
 click Edit.
 
-<img src="/assets/qs/8_13.png" alt="8 Schedule illustration 13" width="64%" style="border: 1px solid #999;">
+<img src="/assets/qs/8_13.png" alt="8 Schedule illustration 13" width="46%" style="border: 1px solid #999;">
 
-<img src="/assets/qs/8_14.png" alt="8 Schedule illustration 14" width="83%" style="border: 1px solid #999;">
+<img src="/assets/qs/8_14.png" alt="8 Schedule illustration 14" width="41%" style="border: 1px solid #999;">
 
 <img src="/assets/qs/8_15.png" alt="8 Schedule illustration 15" width="75%" style="border: 1px solid #999;">
 
@@ -219,9 +219,9 @@ Correct—the deletion confirmation was a **browser popup**, not a Foundry dialo
 
 *015_MockAPI_Import (repository), showing capstone2_items.py (Python script).*
 
-<img src="/assets/qs/8_16.png" alt="8 Schedule illustration 16" width="100%" style="border: 1px solid #999;">
+<img src="/assets/qs/8_16.png" alt="8 Schedule illustration 16" width="82%" style="border: 1px solid #999;">
 
-<img src="/assets/qs/8_17.png" alt="8 Schedule illustration 17" width="73%" style="border: 1px solid #999;">
+<img src="/assets/qs/8_17.png" alt="8 Schedule illustration 17" width="55%" style="border: 1px solid #999;">
 
 1 For this new schedule:
 
@@ -233,13 +233,13 @@ Correct—the deletion confirmation was a **browser popup**, not a Foundry dialo
 
 *The screenshot uses the older description “Fetch MockAPI every 2 minutes”; the description is only a label.*
 
-<img src="/assets/qs/8_18.png" alt="8 Schedule illustration 18" width="71%" style="border: 1px solid #999;">
+<img src="/assets/qs/8_18.png" alt="8 Schedule illustration 18" width="44%" style="border: 1px solid #999;">
 
 2 Expand **Advanced options** → enable **Force build** and acknowledge its warning.
 
-<img src="/assets/qs/8_19.png" alt="8 Schedule illustration 19" width="64%" style="border: 1px solid #999;">
+<img src="/assets/qs/8_19.png" alt="8 Schedule illustration 19" width="44%" style="border: 1px solid #999;">
 
-<img src="/assets/qs/8_20.png" alt="8 Schedule illustration 20" width="67%" style="border: 1px solid #999;">
+<img src="/assets/qs/8_20.png" alt="8 Schedule illustration 20" width="44%" style="border: 1px solid #999;">
 
 3 Click **Save** at the top of the above panel. This returns to Data Lineage dialog.
 
@@ -263,9 +263,9 @@ To test:
 
 1 Add a MockAPI item with a **new, unused Id**, preserving existing items.
 
-<img src="/assets/qs/8_22.png" alt="8 Schedule illustration 22" width="43%" style="border: 1px solid #999;">
+<img src="/assets/qs/8_22.png" alt="8 Schedule illustration 22" width="30%" style="border: 1px solid #999;">
 
-<img src="/assets/qs/8_23.png" alt="8 Schedule illustration 23" width="41%" style="border: 1px solid #999;">
+<img src="/assets/qs/8_23.png" alt="8 Schedule illustration 23" width="33%" style="border: 1px solid #999;">
 
 **Id 7 is new**, and the existing six items are preserved.
 
@@ -273,7 +273,7 @@ To test:
 
 3 In **Ontology Manager → Capstone2Record**, look for **Id 7**. We expect **Integer = 777** and **CheckResult = FOUND**, using the automation’s criterion **“integer is greater than 100.”**
 
-<img src="/assets/qs/8_24.png" alt="8 Schedule illustration 24" width="19%" style="border: 1px solid #999;">
+<img src="/assets/qs/8_24.png" alt="8 Schedule illustration 24" width="16%" style="border: 1px solid #999;">
 
 
 <br>
@@ -306,9 +306,9 @@ It is the **dataset viewer**, opened by opening **693_MockAPI_Items** from its p
 
 #### **8.4.1b Dataset Metrics / Schedule**
 
-<img src="/assets/qs/8_27.png" alt="8 Schedule illustration 27" width="72%" style="border: 1px solid #999;">
+<img src="/assets/qs/8_27.png" alt="8 Schedule illustration 27" width="26%" style="border: 1px solid #999;">
 
-<img src="/assets/qs/8_28.png" alt="8 Schedule illustration 28" width="68%" style="border: 1px solid #999;">
+<img src="/assets/qs/8_28.png" alt="8 Schedule illustration 28" width="51%" style="border: 1px solid #999;">
 
 <img src="/assets/qs/8_29.png" alt="8 Schedule illustration 29" width="100%" style="border: 1px solid #999;">
 
@@ -337,7 +337,7 @@ It is the **dataset viewer**, opened by opening **693_MockAPI_Items** from its p
 
 #### **8.4.4 UI**
 
-<img src="/assets/qs/8_32.png" alt="8 Schedule illustration 32" width="51%" style="border: 1px solid #999;">
+<img src="/assets/qs/8_32.png" alt="8 Schedule illustration 32" width="35%" style="border: 1px solid #999;">
 
 
 <br>
@@ -346,10 +346,10 @@ It is the **dataset viewer**, opened by opening **693_MockAPI_Items** from its p
 
 ### **8.5 Test CheckRecord in UI (this is not automation)**
 
-<img src="/assets/qs/8_33.png" alt="8 Schedule illustration 33" width="40%" style="border: 1px solid #999;">
+<img src="/assets/qs/8_33.png" alt="8 Schedule illustration 33" width="31%" style="border: 1px solid #999;">
 
-<img src="/assets/qs/8_34.png" alt="8 Schedule illustration 34" width="16%" style="border: 1px solid #999;">
+<img src="/assets/qs/8_34.png" alt="8 Schedule illustration 34" width="11%" style="border: 1px solid #999;">
 
-<img src="/assets/qs/8_35.png" alt="8 Schedule illustration 35" width="37%" style="border: 1px solid #999;">
+<img src="/assets/qs/8_35.png" alt="8 Schedule illustration 35" width="29%" style="border: 1px solid #999;">
 
-<img src="/assets/qs/8_36.png" alt="8 Schedule illustration 36" width="38%" style="border: 1px solid #999;">
+<img src="/assets/qs/8_36.png" alt="8 Schedule illustration 36" width="28%" style="border: 1px solid #999;">
