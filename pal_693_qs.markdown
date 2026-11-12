@@ -20,7 +20,7 @@ permalink: /pal_693_qs/
 
 
 This QS shows how to build a "small" Foundry workflow that 
-- imports external data, 
+- imports external data (from MockAPI), 
 - displays it as objects, 
 - uses an LLM to process their properties, 
 - saves the LLM response
