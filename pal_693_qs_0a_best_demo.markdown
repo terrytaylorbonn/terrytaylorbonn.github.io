@@ -7,7 +7,11 @@ permalink: /pal_693_qs_0a_best_demo/
 <br>
 
 
-[← 3c Foundry QS](/pal_693_qs/)
+[↑ 3c Foundry QS](/pal_693_qs/)
+
+[→ Short overview of all chapters (TOC)](/pal_693_qs_0a2_config_dias/)
+
+
 
 _26.1111 07:59 (converted from docx source file to markdown+PNGs by ChatGPT)_
 

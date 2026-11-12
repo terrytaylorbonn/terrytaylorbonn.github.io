@@ -6,7 +6,10 @@ permalink: /pal_693_qs_0b_first_steps/
 
 <br>
 
-[← 3c Foundry QS](/pal_693_qs/)
+[↑ 3c Foundry QS](/pal_693_qs/)
+
+[← Short overview of all chapters (TOC)](/pal_693_qs_0a2_config_dias/) / [→ 1 Fetch MockAPI records and display in UI ("Workshop")](/pal_693_qs_1_mockapi/)
+
 
 _26.1111 14:35 (converted from docx source file to markdown by ChatGPT)_
 

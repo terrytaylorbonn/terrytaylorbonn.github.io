@@ -7,7 +7,9 @@ permalink: /pal_693_qs_0a2_config_dias/
 <br>
 
 
-[← 3c Foundry QS](/pal_693_qs/)
+[↑ 3c Foundry QS](/pal_693_qs/)
+
+[← Why this is the best QS for Foundry](/pal_693_qs_0a_best_demo/) / [→ 0 First steps](/pal_693_qs_0b_first_steps/)
 
 _26.1111 07:59 (converted from docx source file to markdown+PNGs by ChatGPT)_
 
