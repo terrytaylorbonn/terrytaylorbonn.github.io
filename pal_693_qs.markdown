@@ -19,7 +19,7 @@ permalink: /pal_693_qs/
 - The PNG sizing is difficult for GPT to get right (GPT does adjust the width of the PNG based on text in the PNG; the result is an improvement, but I need to "hardcode" the width (in my docx file) to get things right). -->
 
 
-This QS shows how to build a "small" Foundry workflow that 
+**This QS shows how to build a "small" Foundry workflow** that 
 - imports external data (from MockAPI), 
 - displays it as objects, 
 - uses an LLM to process their properties, 
@@ -32,14 +32,15 @@ Variations of the basic data flow chain (below) appear throughout this QS.
 
 <img src="/assets/qs/0a/0a_01.png" alt="0a illustration 1" width="65%" style="border: 1px solid #999;">
 
-Note: 
-- This QS is a work in progress (WIP).
-- My working source file is an MS.Word docx. Conversion from docx to markdown requires that I keep the format of the docx as simple as possible (a docx internally is absolute chaos if you are not careful). The ideal solution would be for the LLM (GPT in this case) to look at the docx visual output and reproduce that. But for now GPT must look at the (binary) docx file (there are non binary representations, RTF?, but probably same complexity problems). So the formatting sometimes is quite crude. But the focus is up-to-date accurate info, not fancy formatting.
-- Some of the variable names used need to be changed (to avoid confusion).
-- Text is minimal because
-  - The initial focus was on the screenshots and workflows. 
-  - It only makes sense to fill out the text if a few people start to take an interest in the QS. Otherwise it will remain simply my personal learning project. And for my personal learning the focus is on creating more demos.
-  - What a student really needs are the prompts to ask FDE while doing the demo. A QS focused on prompts. The reader can ask FDE for an explanation of the details. That would take a lot of effort, and negate the value of adding detailed text. 
+
+**Why learn how to do this with Foundry?** Importing data, analyzing it with AI, and saving results for operational use are common enterprise tasks. This QS introduces the Foundry mechanisms used to perform those tasks safely and reliably.
+
+**Why start with this QS?** It uses small, generic examples, detailed numbered instructions, and diagrams to explain exactly what to configure, what runs, and how to verify the result.
+
+<!-- **Why learn how to do this... with Foundry?** Because in the modern enterprise, this is part of the core workflows for analyzing incoming data and, in particular, for using AI to analyze. Safely, reliably. 
+
+**Why use this QS to get started?** Because this QS is very detailed and focuses on the mechanics of Foundry tools. The absolute simplest demos (with accurate instructions) to learn (without human assistance) how to use a very powerful toolset. -->
+
 
 <br>
 
@@ -61,6 +62,22 @@ Note:
 - **[8b (8a) Governance](/pal_693_qs_8b_governance/)**
 - **[9 (WIP) Continuing your Foundry education (where to go from here)](/pal_693_qs_9_where_next/)**
 - **[10 (appendix) Generating webpage markdown+png's from the docx master](/pal_693_qs_10_docx_gen/)**
+
+<br>
+
+---
+
+<br>
+
+Note the following: 
+- This QS is a work in progress (WIP).
+- My working source file is an MS.Word docx. Conversion from docx to markdown requires that I keep the format of the docx as simple as possible (a docx internally is absolute chaos if you are not careful). The ideal solution would be for the LLM (GPT in this case) to look at the docx visual output and reproduce that. But for now GPT must look at the (binary) docx file (there are non binary representations, RTF?, but probably same complexity problems). So the formatting sometimes is quite crude. But the focus is up-to-date accurate info, not fancy formatting.
+- Some of the variable names used need to be changed (to avoid confusion).
+- Text is minimal because
+  - The initial focus was on the screenshots and workflows. 
+  - It only makes sense to fill out the text if a few people start to take an interest in the QS. Otherwise it will remain simply my personal learning project. And for my personal learning the focus is on creating more demos.
+  - What a student really needs are the prompts to ask FDE while doing the demo. A QS focused on prompts. The reader can ask FDE for an explanation of the details. That would take a lot of effort, and negate the value of adding detailed text. 
+
 
 
 <!-- #### **Workflow diagram examples**
