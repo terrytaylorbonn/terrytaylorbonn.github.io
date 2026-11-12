@@ -19,12 +19,26 @@ permalink: /pal_693_qs/
 - The PNG sizing is difficult for GPT to get right (GPT does adjust the width of the PNG based on text in the PNG; the result is an improvement, but I need to "hardcode" the width (in my docx file) to get things right). -->
 
 
-This QS shows how to build a "small" Foundry workflow that **imports external data, displays it as objects, uses an LLM to process their properties, and saves the LLM response.** Then automate fetching/processing, and test basic governance controls. Variations of the basic data flow chain (below) appear throughout this QS.
+This QS shows how to build a "small" Foundry workflow that 
+- imports external data, 
+- displays it as objects, 
+- uses an LLM to process their properties, 
+- saves the LLM response
+- automates fetching/processing, and 
+- tests basic governance controls. 
+
+Variations of the basic data flow chain (below) appear throughout this QS.
 
 
 <img src="/assets/qs/0a/0a_01.png" alt="0a illustration 1" width="65%" style="border: 1px solid #999;">
 
-Note: This QS is a work in progress (WIP). In particular some of the variable names used in the QS need to be changed (to better reflect their true meaning). I need to redo this demo sometime in the future to get a final good version (that focuses less on what I did, and more on what prompts you need to ask FDE). But this version works, and conceptually its an excellent intro. 
+Note: 
+- This QS is a work in progress (WIP). Some of the variable names used need to be changed (to avoid confusion).
+- Conversion from docx to markdown is a big focus right now. There are lots of details. But it seems to be worth the effort.
+- Text is minimal because
+  - The initial focus was on the screenshots and workflows. 
+  - It only makes sense to fill out the text if a few people start to take an interest in the QS. Otherwise it will remain simply my personal learning project. And for my personal learning the focus is on creating more demos.
+  - What a student really needs are the prompts to ask FDE while doing the demo. A QS focused on prompts. The reader can ask FDE for an explanation of the details. That would take a lot of effort, and negate the value of adding detailed text. 
 
 
 <br>
