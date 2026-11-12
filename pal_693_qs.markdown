@@ -40,7 +40,6 @@ Note:
   - It only makes sense to fill out the text if a few people start to take an interest in the QS. Otherwise it will remain simply my personal learning project. And for my personal learning the focus is on creating more demos.
   - What a student really needs are the prompts to ask FDE while doing the demo. A QS focused on prompts. The reader can ask FDE for an explanation of the details. That would take a lot of effort, and negate the value of adding detailed text. 
 
-
 <br>
 
 #### **TOC**

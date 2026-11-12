@@ -38,7 +38,7 @@ _26.1112 09:08 (converted from docx source file to markdown+PNGs by ChatGPT)_
 
 ### **5.0 What we will build**
 
-**Summary. **Configure and test the saving operation.
+**Summary.** Configure and test the saving operation.
 
 <img src="/assets/qs/5_01.png" alt="Chapter 5 screenshot 1" width="75%" style="border: 1px solid #999;">
 
@@ -46,7 +46,7 @@ _26.1112 09:08 (converted from docx source file to markdown+PNGs by ChatGPT)_
 
 - 5.1 Add the CheckResult property to the Capstone2Record object type.
 - 5.2 Create the 693_SaveCheckResult Action to save a String in CheckResult.
-- 5.3 Test the Action using manually entered test text.
+-5.3 Test the Action using manually entered test text.
 
 **Workflow**
 
