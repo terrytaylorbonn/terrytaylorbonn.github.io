@@ -12,8 +12,6 @@ permalink: /pal_693_qs_8_schedule/
 [← 7 Add automation](/pal_693_qs_7_automation/) / [↑ 3c Foundry QS](/pal_693_qs/) / [→ 8a Add processing of updated objects](/pal_693_qs_8a_automate_updated/)
 
 
-<br>
-
 _26.1110 16:53 (converted from docx source file to markdown+PNGs by ChatGPT)_
 
 <br>

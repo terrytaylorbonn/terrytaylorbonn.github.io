@@ -10,8 +10,6 @@ permalink: /pal_693_qs_8a_automate_updated/
 
 [← 8 Schedule (Data Lineage)](/pal_693_qs_8_schedule/) / [↑ 3c Foundry QS](/pal_693_qs/) / [→ 8b Governance](/pal_693_qs_8b_governance/)
 
-<br>
-
 _26.1110 16:57 (converted from docx source file to markdown+PNGs by ChatGPT)_
 
 <br>

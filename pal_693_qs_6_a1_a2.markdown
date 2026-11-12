@@ -10,9 +10,6 @@ permalink: /pal_693_qs_6_a1_a2/
 
 [← 5 Add object property and Action](/pal_693_qs_5_property_action/) / [↑ 3c Foundry QS](/pal_693_qs/) / [→ 7 Add automation](/pal_693_qs_7_automation/)
 
-
-<br>
-
 26.1106 14:22 (converted from docx source file to markdown+PNGs by ChatGPT)
 
 
@@ -73,17 +70,17 @@ Keep the prompt—including **“Do not call tools or Actions”**—unchanged. 
 Click the **Ontology ****▾** menu under **Add a block** and show the available options.
 
 
-<img src="/assets/qs/6_04.png" alt="6_a1_a2 illustration 4" width="70%" style="border: 1px solid #999;">
+<img src="/assets/qs/6_04.png" alt="6_a1_a2 illustration 4" width="90%" style="border: 1px solid #999;">
 
 
-<img src="/assets/qs/6_05.png" alt="6_a1_a2 illustration 5" width="65%" style="border: 1px solid #999;">
+<img src="/assets/qs/6_05.png" alt="6_a1_a2 illustration 5" width="82%" style="border: 1px solid #999;">
 
 Choose **Action**—the first option.
 
 In the new block, select **693_SaveCheckResult**.
 
 
-<img src="/assets/qs/6_06.png" alt="6_a1_a2 illustration 6" width="75%" style="border: 1px solid #999;">
+<img src="/assets/qs/6_06.png" alt="6_a1_a2 illustration 6" width="83%" style="border: 1px solid #999;">
 
 We’ll then connect its two inputs:
 
@@ -92,7 +89,7 @@ We’ll then connect its two inputs:
 This adds the saving step; it does not yet apply any changes to records.
 
 
-<img src="/assets/qs/6_07.png" alt="6_a1_a2 illustration 7" width="25%" style="border: 1px solid #999;">
+<img src="/assets/qs/6_07.png" alt="6_a1_a2 illustration 7" width="29%" style="border: 1px solid #999;">
 
 **Yes—both connections are correct:**
 
@@ -101,7 +98,7 @@ This adds the saving step; it does not yet apply any changes to records.
 Click outside the dropdown to close it. Then scroll to the bottom **Output** block and show its configuration. We need to configure the workflow to return the proposed **Ontology edits**, rather than only the answer text.
 
 
-<img src="/assets/qs/6_08.png" alt="6_a1_a2 illustration 8" width="30%" style="border: 1px solid #999;">
+<img src="/assets/qs/6_08.png" alt="6_a1_a2 illustration 8" width="23%" style="border: 1px solid #999;">
 
 **Correct.** The Action block returns **Ontology edits**, so no separate selector is needed here.
 
@@ -126,7 +123,7 @@ Open the Logic preview and supply:
 Run the preview and show the result. We expect a proposed change setting **CheckResult** to FOUND; previewing does not itself prove that the value was permanently saved.
 
 
-<img src="/assets/qs/6_09.png" alt="6_a1_a2 illustration 9" width="65%" style="border: 1px solid #999;">
+<img src="/assets/qs/6_09.png" alt="6_a1_a2 illustration 9" width="83%" style="border: 1px solid #999;">
 
 **The preview passed.**
 
@@ -181,10 +178,10 @@ This is separate from **693_SaveCheckResult**:
 Show the creation screen so we can configure it.
 
 
-<img src="/assets/qs/6_12.png" alt="6_a1_a2 illustration 12" width="48%" style="border: 1px solid #999;">
+<img src="/assets/qs/6_12.png" alt="6_a1_a2 illustration 12" width="52%" style="border: 1px solid #999;">
 
 
-<img src="/assets/qs/6_13.png" alt="6_a1_a2 illustration 13" width="50%" style="border: 1px solid #999;">
+<img src="/assets/qs/6_13.png" alt="6_a1_a2 illustration 13" width="54%" style="border: 1px solid #999;">
 
 **This configuration is correct:**
 
@@ -215,10 +212,10 @@ Keep the default icon, then scroll down to the next step.
 <img src="/assets/qs/6_14.png" alt="6_a1_a2 illustration 14" width="50%" style="border: 1px solid #999;">
 
 
-<img src="/assets/qs/6_15.png" alt="6_a1_a2 illustration 15" width="36%" style="border: 1px solid #999;">
+<img src="/assets/qs/6_15.png" alt="6_a1_a2 illustration 15" width="32%" style="border: 1px solid #999;">
 
 
-<img src="/assets/qs/6_16.png" alt="6_a1_a2 illustration 16" width="32%" style="border: 1px solid #999;">
+<img src="/assets/qs/6_16.png" alt="6_a1_a2 illustration 16" width="29%" style="border: 1px solid #999;">
 
 For this demo, keep:
 
@@ -229,19 +226,19 @@ Proceed with creation. If an API-name validation error appears, use c2-693-check
 This creates the Action definition; it does **not** run the AI or change any records yet.
 
 
-<img src="/assets/qs/6_17.png" alt="6_a1_a2 illustration 17" width="75%" style="border: 1px solid #999;">
+<img src="/assets/qs/6_17.png" alt="6_a1_a2 illustration 17" width="97%" style="border: 1px solid #999;">
 
 
-<img src="/assets/qs/6_18.png" alt="6_a1_a2 illustration 18" width="42%" style="border: 1px solid #999;">
+<img src="/assets/qs/6_18.png" alt="6_a1_a2 illustration 18" width="39%" style="border: 1px solid #999;">
 
 
 <img src="/assets/qs/6_19.png" alt="6_a1_a2 illustration 19" width="43%" style="border: 1px solid #999;">
 
 
-<img src="/assets/qs/6_20.png" alt="6_a1_a2 illustration 20" width="45%" style="border: 1px solid #999;">
+<img src="/assets/qs/6_20.png" alt="6_a1_a2 illustration 20" width="58%" style="border: 1px solid #999;">
 
 
-<img src="/assets/qs/6_21.png" alt="6_a1_a2 illustration 21" width="65%" style="border: 1px solid #999;">
+<img src="/assets/qs/6_21.png" alt="6_a1_a2 illustration 21" width="70%" style="border: 1px solid #999;">
 
 **693_CheckAndSaveRecord is saved.** Its overview shows the two inputs—**Record** and **Criteria**—feeding the AI function.
 
@@ -253,12 +250,12 @@ This creates the Action definition; it does **not** run the AI or change any rec
 Return to the **Capstone2Records table in Object Explorer**, where you ran the manual saving Action.
 
 
-<img src="/assets/qs/6_22.png" alt="6_a1_a2 illustration 22" width="85%" style="border: 1px solid #999;">
+<img src="/assets/qs/6_22.png" alt="6_a1_a2 illustration 22" width="99%" style="border: 1px solid #999;">
 
 - Select **Id 1**.
 - Open **Actions** and choose **693_CheckAndSaveRecord**.
 
-<img src="/assets/qs/6_23.png" alt="6_a1_a2 illustration 23" width="40%" style="border: 1px solid #999;">
+<img src="/assets/qs/6_23.png" alt="6_a1_a2 illustration 23" width="42%" style="border: 1px solid #999;">
 
 - Enter:
 Match if the integer is greater than 100.
@@ -267,10 +264,10 @@ Match if the integer is greater than 100.
 Refresh the table afterward. We expect **CheckResult** to change from MANUAL TEST to FOUND, with **Text** and **Integer** unchanged.
 
 
-<img src="/assets/qs/6_24.png" alt="6_a1_a2 illustration 24" width="35%" style="border: 1px solid #999;">
+<img src="/assets/qs/6_24.png" alt="6_a1_a2 illustration 24" width="31%" style="border: 1px solid #999;">
 
 
-<img src="/assets/qs/6_25.png" alt="6_a1_a2 illustration 25" width="70%" style="border: 1px solid #999;">
+<img src="/assets/qs/6_25.png" alt="6_a1_a2 illustration 25" width="90%" style="border: 1px solid #999;">
 
 **The check-and-save workflow worked.** Record **Id 1** now stores **FOUND** in **CheckResult**, while **Text** and **Integer (111)** remain unchanged. The other records were not modified.
 
@@ -281,7 +278,7 @@ Match if the integer is greater than 200.
 After submitting, verify that **CheckResult** changes to **NOT FOUND**. This confirms the workflow saves a newly calculated answer rather than always writing FOUND.
 
 
-<img src="/assets/qs/6_26.png" alt="6_a1_a2 illustration 26" width="65%" style="border: 1px solid #999;">
+<img src="/assets/qs/6_26.png" alt="6_a1_a2 illustration 26" width="99%" style="border: 1px solid #999;">
 
 **The second test passed.** Record **Id 1** now stores NOT FOUND; **Text** and **Integer (111)** remain unchanged. The earlier error was a missing record selection, not a broken workflow.
 
