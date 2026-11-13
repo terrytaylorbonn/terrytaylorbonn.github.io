@@ -9,6 +9,86 @@ permalink: /pal_693_qs_10_docx_gen/
 
 [← 3c Foundry QS](/pal_693_qs/)
 
+<br>
+
+
+26.1113 14:28 (not-AI generated text)
+
+### ME: i dont have too many rules. but your printouts of rules seem to be exploding in complexity .... 
+i think i need to rewrite and distill out the core rules.
+I agree. And I think you've identified an important distinction:
+
+#### GPT: Your requirements aren't complicated. My implementation of them became complicated.
+```
+We kept accumulating explanations, exceptions, and corrective rules instead of reducing everything to a few fundamental principles.
+I would distill the conversion requirements to just five:
+Text: Preserve the original DOCX text exactly, including manually typed numbers. No automatic numbering.
+Formatting: Convert Word headings and bold formatting to Markdown. Do not reformat text that has already been converted.
+Bullets: Any source paragraph beginning with - is a bullet. Preserve its indentation.
+Images: Preserve image positions and references. Don't regenerate images unless requested.
+TOC: Generate a Markdown table of contents from the document headings.
+One additional principle belongs to the conversion program, not your requirements:
+Validate the output before delivering it.
+I would also separate two things that became mixed together:
+Conversion rules: What the output must look like.
+Implementation details: How the Python program accomplishes that.
+You shouldn't need to specify implementation details or anticipate programming errors.
+And I would not add more rules to memory every time something goes wrong. That risks turning a simple specification into an increasingly confusing collection of exceptions.
+Five clear requirements and one reliable, tested converter. That's the direction I'd take.
+```
+
+
+### **DUMP OF RULES ========================================**
+
+
+ZiptieAI — DOCX to Jekyll Markdown
+Current consolidated extraction rules — 13 November 2026
+This is a record of the working requirements discussed so far, not a claim that the last converter implemented them correctly.
+1. Output and scope
+•	Convert source DOCX into a Jekyll-compatible Markdown (.md) file.
+•	Preserve the source document’s content and order; do not rewrite, paraphrase, or silently correct it.
+•	Generate/extract PNG images only when explicitly requested. When existing PNGs are already correct, keep their Markdown references and sizing unchanged.
+•	If requested, package Markdown and extracted PNGs in a ZIP; otherwise return only the requested files.
+2. Manually typed numbering
+•	All numbered steps in the source DOCX are manually typed text, NOT Word automatic numbering.
+•	Preserve the exact original numbers, including sequences such as 3., 3.1, 3.2, 4.; never renumber or restart them.
+•	Prevent Markdown from interpreting a line beginning “1.” as an automatically numbered list: escape the list-triggering period, e.g. 1\. Step text.
+•	Preserve subordinate step hierarchy and modest indentation where present; do not combine separate numbered paragraphs.
+•	Numbers remain literal text even when images, paragraphs, or headings intervene.
+3. Bullets and indentation
+•	Any source line beginning with a hyphen (-) is a bullet item.
+•	Emit one Markdown bullet marker (- ) and preserve nesting/indentation.
+•	Do not duplicate the hyphen (avoid “- - text”) or leave a second literal hyphen at the start of rendered bullet text.
+•	Preserve bold and other inline formatting within bullet text.
+4. Headings and inline formatting
+•	Convert Word heading styles to proper Markdown headings (#, ##, ###, etc.), retaining heading text.
+•	Preserve bold as Markdown **bold**; apply Markdown formatting exactly once.
+•	Do not wrap Markdown headings in extra ** markers (avoid “**## Heading**”).
+•	Do not emit escaped Markdown syntax or HTML entities in ordinary text (e.g. avoid **\*\*text\*\***, &#x50;, and 2\\.).
+•	Keep paragraph breaks and content order intact.
+5. Images
+•	Keep every image at its original place relative to surrounding paragraphs.
+•	When image extraction is requested, use sequential PNG names such as MP_01.png, MP_02.png, etc., unless the specific job says otherwise.
+•	Use valid Markdown image links: ![description](MP_01.png); do not escape the parentheses.
+•	If the request says “no PNG generation,” do not extract, regenerate, resize, or replace pictures; preserve existing image references and sizes.
+6. Table of contents and timestamp
+•	Add a top-level table of contents when requested, with Jekyll-compatible lowercase heading anchors.
+•	Preserve the intended section hierarchy; do not include excluded or “DONT PUBLISH” material unless the user explicitly requests it.
+•	Update the date/time only when requested, using the current date/time at conversion; do not alter other dates in the content.
+7. Quality checks before delivery
+•	Check that original numbered paragraphs still have exactly their original numeric labels, in the same order.
+•	Check bullet lines for missing bullets, duplicate hyphens, and lost nesting.
+•	Check for malformed Markdown: **##, duplicate bold escapes, literal HTML character entities, and escaped image parentheses.
+•	Check headings and TOC anchors; confirm image references match available PNG filenames.
+•	Inspect the beginning, middle, and end of large chapters; do not assume a conversion is correct because a script completed.
+•	Prefer a small, predictable one-pass converter; do not repeatedly reprocess already-generated Markdown.
+8. Scope of past preferences
+•	Past jobs sometimes requested bold headings, <br> spacing before headings, mini-TOCs, or specific ZIP packaging. Apply these only when the current job requests them or an agreed template explicitly includes them.
+•	If a source document contains content marked “DONT PUBLISH,” do not assume it is safe to remove automatically; confirm the intended publication scope when ambiguous.
+Key principle: source DOCX is authoritative; convert structure once, preserve literal text, and validate output.
+
+
+
 26.1112 17:50
 
 <br>
