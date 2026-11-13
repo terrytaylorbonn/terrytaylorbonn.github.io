@@ -23,7 +23,7 @@ permalink: /pal_693_qs/
 -->
 
 
-**Why start learning Foundry with this QS?** I learned Foundry by working through Palantir’s excellent Speedruns (tutorials). I found them well suited to people already experienced in enterprise software development. But I believe Foundry will become an application-development tool for a much broader audience. That is why I wrote this Quick Start — with invaluable help from Foundry’s AI FDE assistant — to make the fundamentals easier for non-specialists to understand. It uses small examples, explicit directions, and diagrams to explain the mechanics and help readers build with confidence.
+**Why start learning Foundry with this QS?** I learned Foundry by working through Palantir’s excellent Speedruns (tutorials). I found them well suited to people already experienced in enterprise software development. But **I believe Foundry will become an application-development tool for a much broader audience. That is why I wrote this Quick Start** — with invaluable help from Foundry’s AI FDE assistant — to make the fundamentals easier for non-specialists to understand. It uses small examples, explicit directions, and diagrams to explain the mechanics and help readers build with confidence.
 
 
 <br>
