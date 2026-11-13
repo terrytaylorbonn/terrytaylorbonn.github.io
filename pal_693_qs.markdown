@@ -35,7 +35,7 @@ Variations of the basic data flow chain (below) appear throughout this QS.
 
 **Why learn how to do this with Foundry?** Importing data, analyzing it with AI, and saving results for operational use are common enterprise tasks. This QS introduces the Foundry mechanisms used to perform those tasks safely and reliably.
 
-**Why start with this QS?** These small, generic demos get to the core of how Foundry works. Numbered instructions, diagrams, and tests make the mechanics visible, giving you a clear understanding of the fundamentals and the confidence to build your own workflows.
+
 
 <!-- **Why learn how to do this... with Foundry?** Because in the modern enterprise, this is part of the core workflows for analyzing incoming data and, in particular, for using AI to analyze. Safely, reliably. 
 
