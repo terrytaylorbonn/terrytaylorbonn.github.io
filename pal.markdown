@@ -259,6 +259,17 @@ I relied too much on FDE AI. Both tutorials worked, but the result was not somet
 _Workflow diagram (verified by FDE) for ch2_<br><img src="/assets/qs/0b/0b_06.png" alt="drones" width="90%" style="border: 1px solid #999;">
 
 
+<br>
+
+-------------------------
+
+<br>
+
+
+#### **2.2a Future ZAI tutorials**
+
+_Currently working on **[#692\_pal\_foundry\_d1\_data\_xforms\_.docx](https://drive.google.com/drive/folders/1-Adawag9uA8_bq-hDF-nOuPYaRLz1eEO)**_
+
 _Possible **[future tutorials](/pal_693_qs_9_where_next/)** (same style as the QS)_<br><img src="/assets/sun-55fff.png" alt="drones" width="77%" style="border: 1px solid #999;">
 
 
