@@ -1,6 +1,6 @@
 ---
 layout: page
-title: Foundry Quick Start (26.1112)
+title: Foundry Quick Start (26.1113)
 permalink: /pal_693_qs/
 ---
 
@@ -16,8 +16,17 @@ permalink: /pal_693_qs/
 
 <!-- - The main goal of this QS is accuracy and usefulness (that means constant updates). 
 - Constant updates is best assured with markdown/PNG's (pics) extracted from the 693 docx source file by GPT.
-- The PNG sizing is difficult for GPT to get right (GPT does adjust the width of the PNG based on text in the PNG; the result is an improvement, but I need to "hardcode" the width (in my docx file) to get things right). -->
+- The PNG sizing is difficult for GPT to get right (GPT does adjust the width of the PNG based on text in the PNG; the result is an improvement, but I need to "hardcode" the width (in my docx file) to get things right).
 
+**Why start learning Foundry with this QS**. I learned Foundry by doing the excellent speedruns (tutorials) from Palantir. These are perfect for enterprise software development professionals who are the traditional first-time users of Foundry (and who often become forward deployed engineers (FDE)). But I believe Foundry will soon become a standard tool for application development for a much broader market. Thats why I wrote (with the invaluable help of Foundry's excellent FDE AI assistant) this Foundry QS that makes it easier for non-specialists to learn Foundry basics. I believe the number of such potential users will increase dramatically in the near future.
+
+-->
+
+
+**Why start learning Foundry with this QS?** I learned Foundry by working through Palantir’s excellent Speedruns (tutorials). I found them well suited to people already experienced in enterprise software development. But I believe Foundry will become an application-development tool for a much broader audience. That is why I wrote this Quick Start—with invaluable help from Foundry’s AI FDE assistant—to make the fundamentals easier for non-specialists to understand. It uses small examples, explicit directions, and diagrams to explain the mechanics and help readers build with confidence.
+
+
+<br>
 
 **This QS shows how to build a "small" Foundry workflow** that 
 - imports external data (from MockAPI), 
@@ -33,9 +42,6 @@ Variations of the basic data flow chain (below) appear throughout this QS.
 <img src="/assets/qs/0a/0a_01.png" alt="0a illustration 1" width="65%" style="border: 1px solid #999;">
 
 
-**Why learn how to do this with Foundry?** Importing data, analyzing it with AI, and saving results for operational use are common enterprise tasks. This QS introduces the Foundry mechanisms used to perform those tasks safely and reliably.
-
-
 
 <!-- **Why learn how to do this... with Foundry?** Because in the modern enterprise, this is part of the core workflows for analyzing incoming data and, in particular, for using AI to analyze. Safely, reliably. 
 
@@ -45,7 +51,7 @@ Variations of the basic data flow chain (below) appear throughout this QS.
 <br>
 
 #### **TOC**
-- **[Why this is the best QS for Foundry](/pal_693_qs_0a_best_demo/)**
+- **[What this QS offers beginners](/pal_693_qs_0a_best_demo/)**
 - **[Short overview of all chapters (TOC)](/pal_693_qs_0a2_config_dias/)**
 - **[0 First steps (Foundry sign up, FDE, project/folder, applications)](/pal_693_qs_0b_first_steps/)**
 - **[1 Fetch MockAPI records and display in UI ("Workshop")](/pal_693_qs_1_mockapi/)**

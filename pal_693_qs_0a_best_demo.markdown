@@ -1,6 +1,6 @@
 ---
 layout: page
-title: Why this is the best QS for Foundry
+title: What this QS offers beginners
 permalink: /pal_693_qs_0a_best_demo/
 ---
 
