@@ -7,7 +7,7 @@ title: Home
 
 _Latest updates **([history](/pal_latest_updates_history/))**_
 - _26.1111 **[Foundry Quick Start](/pal_693_qs/)**_
-- _26.1115 **[Foundry "deep dive" (section 2.2a; WIP)](/pal)**_
+- _26.1115 **[Foundry "deep dive" (page 3c Enterprise / section 2.2a; WIP)](/pal)**_
 
 <!--
   - _**[What this QS offers beginners](/pal_693_qs_0a_best_demo/)**_
