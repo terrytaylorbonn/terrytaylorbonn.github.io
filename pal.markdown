@@ -270,7 +270,7 @@ _Workflow diagram (verified by FDE) for ch2_<br><img src="/assets/qs/0b/0b_06.pn
 
 #### **2.2a Foundry deep dive**
 
-A collection of demos D1-D6. These will be expaned in the near future.
+A collection of demos D1-D6. These demos will be expanded in the near future.
 
 This is the "master" diagram for D1-D6. This demo is D3.
 -	D1: import and transform data. _26.1114 (DRAFT DOCX) **[#692\_pal\_foundry\_d1\_data\_xforms\_.docx](https://drive.google.com/drive/folders/1-Adawag9uA8_bq-hDF-nOuPYaRLz1eEO)**_
