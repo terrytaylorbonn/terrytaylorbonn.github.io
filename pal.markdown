@@ -268,9 +268,9 @@ _Workflow diagram (verified by FDE) for ch2_<br><img src="/assets/qs/0b/0b_06.pn
 
 #### **2.2a Other ZAI tutorials**
 
-- _**(DRAFT DOCX FINISHED 26.1114) [#692\_pal\_foundry\_d1\_data\_xforms\_.docx](https://drive.google.com/drive/folders/1-Adawag9uA8_bq-hDF-nOuPYaRLz1eEO)**_
-- _**(WIP DOCX 26.1114) [#691\_pal\_foundry\_d2\_linked\_objects\_.docx](https://drive.google.com/drive/folders/1-Adawag9uA8_bq-hDF-nOuPYaRLz1eEO)**_
-
+- _26.1114 (DRAFT DOCX) **[#692\_pal\_foundry\_d1\_data\_xforms\_.docx](https://drive.google.com/drive/folders/1-Adawag9uA8_bq-hDF-nOuPYaRLz1eEO)**_
+- _26.1114 (DRAFT DOCX) **[#691\_pal\_foundry\_d2\_linked\_objects\_.docx](https://drive.google.com/drive/folders/1-Adawag9uA8_bq-hDF-nOuPYaRLz1eEO)**_
+- _26.1115 (WIP DOCX) **[#690\_pal\_foundry\_d3\_ui\_.docx](https://drive.google.com/drive/folders/1-Adawag9uA8_bq-hDF-nOuPYaRLz1eEO)**_
 
 
 _Possible **[future tutorials](/pal_693_qs_9_where_next/)** (same style as the QS)_<br><img src="/assets/sun-55fff.png" alt="drones" width="77%" style="border: 1px solid #999;">
