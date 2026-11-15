@@ -264,7 +264,7 @@ This Quick Start has one focused goal — find the “needle in the haystack” 
 - The needle is a data record that fits some criteria defined in a user prompt.
 - AI interprets that prompt and scours a (potentially very large) set of data for any matching records. -->
 
-#### For the **latest tutorial version see [docx #693](https://drive.google.com/drive/folders/1-Adawag9uA8_bq-hDF-nOuPYaRLz1eEO)**.
+**Original [docx #693](https://drive.google.com/drive/folders/1-Adawag9uA8_bq-hDF-nOuPYaRLz1eEO) source file** (with notes).
 
  
 <img src="/assets/sun-55.png" alt="drones" width="61%" style="border: 1px solid #999;">
@@ -286,7 +286,7 @@ A collection of demos D1-D6. I am still trying to figure out exactly what DD sho
 
 The **QS** had one focused goal — find the “needle in the haystack” — using enough Foundry to complete it.
 
-This **Deep Dive (DD)** focuses on much more:
+The **Deep Dive (DD)** focuses on much more:
   - a broad, hands-on introduction to Foundry’s apps and techniques, not exhaustive depth in each one.
   - a wider tour of Foundry, with small, mechanistic exercises that show what each capability does, which app configures it, and how to verify it.
   - EQUATOR-SOUTH-NORTH
@@ -297,13 +297,13 @@ This **Deep Dive (DD)** focuses on much more:
     - Introduce each app or technique through a small working example, connected to familiar data and mechanisms
     - That gives readers both breadth of exposure and a mental map of where each capability fits—without turning every introduction into a complicated project.
 
-This is the "master" diagram for the initial version of D1-D6.
--	D1: import and transform data. **[#692\_pal\_foundry\_d1\_data\_xforms\_.docx](https://drive.google.com/drive/folders/1-Adawag9uA8_bq-hDF-nOuPYaRLz1eEO)**_
--	D2: create object types and links from datasets. **[#691\_pal\_foundry\_d2\_linked\_objects\_.docx](https://drive.google.com/drive/folders/1-Adawag9uA8_bq-hDF-nOuPYaRLz1eEO)**_
--	D3: interact with linked objects through the UI. **[#690\_pal\_foundry\_d3\_ui\_.docx](https://drive.google.com/drive/folders/1-Adawag9uA8_bq-hDF-nOuPYaRLz1eEO)**_
--	D4: use Actions to change objects through the UI.
--	D5: combine objects, AI, Actions, and human review.
--	D6: operate and govern the overall workflow.
+Below is the "master" diagram for the initial version of D1-D6.
+-	D1: Import and transform data _(**[#692\_pal\_foundry\_d1\_data\_xforms\_.docx](https://drive.google.com/drive/folders/1-Adawag9uA8_bq-hDF-nOuPYaRLz1eEO)**)_
+-	D2: Create object types and links from datasets _(**[#691\_pal\_foundry\_d2\_linked\_objects\_.docx](https://drive.google.com/drive/folders/1-Adawag9uA8_bq-hDF-nOuPYaRLz1eEO)**)_
+-	D3: Interact with linked objects through the UI _(**[#690\_pal\_foundry\_d3\_ui\_.docx](https://drive.google.com/drive/folders/1-Adawag9uA8_bq-hDF-nOuPYaRLz1eEO)**)_
+-	D4: Use Actions to change objects through the UI.
+-	D5: Combine objects, AI, Actions, and human review.
+-	D6: Operate and govern the overall workflow.
 
 
 _Foundry deep dive master diagram (ZAI original diagram verified by FDE)_<br><img src="/assets/DD_master_diagram.png" alt="drones" width="87%" style="border: 1px solid #999;">
