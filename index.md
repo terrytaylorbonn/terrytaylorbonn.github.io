@@ -7,13 +7,16 @@ title: Home
 
 _Latest updates **([history](/pal_latest_updates_history/))**_
 - _26.1111 **[Foundry Quick Start](/pal_693_qs/)**_
+- _26.1115 **[Foundry "deep dive" (section 2.2a; WIP)](/pal)**_
+
+<!--
   - _**[What this QS offers beginners](/pal_693_qs_0a_best_demo/)**_
   - _**[Short overview of all chapters (TOC)](/pal_693_qs_0a2_config_dias/)**_
 - _26.1114 (DRAFT DOCX) **[#692\_pal\_foundry\_d1\_data\_xforms\_.docx](https://drive.google.com/drive/folders/1-Adawag9uA8_bq-hDF-nOuPYaRLz1eEO)**_
 - _26.1114 (DRAFT DOCX) **[#691\_pal\_foundry\_d2\_linked\_objects\_.docx](https://drive.google.com/drive/folders/1-Adawag9uA8_bq-hDF-nOuPYaRLz1eEO)**_
 - _26.1115 (WIP DOCX) **[#690\_pal\_foundry\_d3\_ui\_.docx](https://drive.google.com/drive/folders/1-Adawag9uA8_bq-hDF-nOuPYaRLz1eEO)**_
 
-
+-->
 
 
 <br>
