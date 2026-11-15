@@ -268,14 +268,28 @@ _Workflow diagram (verified by FDE) for ch2_<br><img src="/assets/qs/0b/0b_06.pn
 <br>
 
 
-#### **2.2a Foundry deep dive**
+#### **2.2a Foundry deep dive (DD)**
 
-A collection of demos D1-D6. These demos will be expanded in the near future.
+A collection of demos D1-D6. I am still trying to figure out exactly what DD should cover. These demos will be expanded in the near future. 
 
-This is the "master" diagram for D1-D6. This demo is D3.
--	D1: import and transform data. _26.1114 (DRAFT DOCX) **[#692\_pal\_foundry\_d1\_data\_xforms\_.docx](https://drive.google.com/drive/folders/1-Adawag9uA8_bq-hDF-nOuPYaRLz1eEO)**_
--	D2: create object types and links from datasets. _26.1114 (DRAFT DOCX) **[#691\_pal\_foundry\_d2\_linked\_objects\_.docx](https://drive.google.com/drive/folders/1-Adawag9uA8_bq-hDF-nOuPYaRLz1eEO)**_
--	D3: interact with linked objects through the UI. _26.1115 (DRAFT DOCX) **[#690\_pal\_foundry\_d3\_ui\_.docx](https://drive.google.com/drive/folders/1-Adawag9uA8_bq-hDF-nOuPYaRLz1eEO)**_
+FDE summary of DD/QS differences: 
+- **QS:** 
+  - one focused goal—find the “needle in the haystack”—using enough Foundry to complete it.
+- **Deep Dive (DD):**
+  - a broad, hands-on introduction to Foundry’s apps and techniques, not exhaustive depth in each one.
+  - a wider tour of Foundry, with small, mechanistic exercises that show what each capability does, which app configures it, and how to verify it.
+  - EQUATOR-SOUTH-NORTH
+    - D1–D6 provide the EQUATOR backbone. 
+    - SOUTH extensions introduce different sources and ingestion techniques; 
+    - NORTH extensions introduce different analysis and interaction tools.
+  - The guiding rule for DD is:
+    - Introduce each app or technique through a small working example, connected to familiar data and mechanisms
+    - That gives readers both breadth of exposure and a mental map of where each capability fits—without turning every introduction into a complicated project.
+
+This is the "master" diagram for D1-D6.
+-	D1: import and transform data. **[#692\_pal\_foundry\_d1\_data\_xforms\_.docx](https://drive.google.com/drive/folders/1-Adawag9uA8_bq-hDF-nOuPYaRLz1eEO)**_
+-	D2: create object types and links from datasets. **[#691\_pal\_foundry\_d2\_linked\_objects\_.docx](https://drive.google.com/drive/folders/1-Adawag9uA8_bq-hDF-nOuPYaRLz1eEO)**_
+-	D3: interact with linked objects through the UI. **[#690\_pal\_foundry\_d3\_ui\_.docx](https://drive.google.com/drive/folders/1-Adawag9uA8_bq-hDF-nOuPYaRLz1eEO)**_
 -	D4: use Actions to change objects through the UI.
 -	D5: combine objects, AI, Actions, and human review.
 -	D6: operate and govern the overall workflow.
