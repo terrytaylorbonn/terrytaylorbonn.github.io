@@ -252,6 +252,18 @@ I relied too much on FDE AI. Both tutorials worked, but the result was not somet
 
 #### **[2.2 Foundry QS tutorial (v3)](/pal_693_qs/)**
 
+This Quick Start has one focused goal — find the “needle in the haystack” — using Foundry and AI to identify records that match user-defined criteria.
+
+- The haystack: a collection of data records imported into Foundry.
+- The needle: any record whose text or numeric properties match criteria expressed in a user prompt.
+- The AI’s role: interpret those criteria and evaluate each record supplied to the workflow.
+- The complete workflow: import records, display them, evaluate matches, save the results, and automate processing when records arrive or change.
+- The tutorial uses a small dataset to make the mechanics visible. It introduces the workflow — not a demonstration of large-scale search performance.
+
+<!-- QS has one focused goal — find the “needle in the haystack” — using enough Foundry (with AI) to complete it. 
+- The needle is a data record that fits some criteria defined in a user prompt.
+- AI interprets that prompt and scours a (potentially very large) set of data for any matching records. -->
+
 #### For the **latest tutorial version see [docx #693](https://drive.google.com/drive/folders/1-Adawag9uA8_bq-hDF-nOuPYaRLz1eEO)**.
 
  
@@ -272,10 +284,9 @@ _Workflow diagram (verified by FDE) for ch2_<br><img src="/assets/qs/0b/0b_06.pn
 
 A collection of demos D1-D6. I am still trying to figure out exactly what DD should cover. These demos will be expanded in the near future. 
 
-FDE summary of DD/QS differences: 
-- **QS:** 
-  - one focused goal—find the “needle in the haystack”—using enough Foundry to complete it.
-- **Deep Dive (DD):**
+The **QS** had one focused goal — find the “needle in the haystack” — using enough Foundry to complete it.
+
+This **Deep Dive (DD)** focuses on much more:
   - a broad, hands-on introduction to Foundry’s apps and techniques, not exhaustive depth in each one.
   - a wider tour of Foundry, with small, mechanistic exercises that show what each capability does, which app configures it, and how to verify it.
   - EQUATOR-SOUTH-NORTH
@@ -286,7 +297,7 @@ FDE summary of DD/QS differences:
     - Introduce each app or technique through a small working example, connected to familiar data and mechanisms
     - That gives readers both breadth of exposure and a mental map of where each capability fits—without turning every introduction into a complicated project.
 
-This is the "master" diagram for D1-D6.
+This is the "master" diagram for the intial version of D1-D6.
 -	D1: import and transform data. **[#692\_pal\_foundry\_d1\_data\_xforms\_.docx](https://drive.google.com/drive/folders/1-Adawag9uA8_bq-hDF-nOuPYaRLz1eEO)**_
 -	D2: create object types and links from datasets. **[#691\_pal\_foundry\_d2\_linked\_objects\_.docx](https://drive.google.com/drive/folders/1-Adawag9uA8_bq-hDF-nOuPYaRLz1eEO)**_
 -	D3: interact with linked objects through the UI. **[#690\_pal\_foundry\_d3\_ui\_.docx](https://drive.google.com/drive/folders/1-Adawag9uA8_bq-hDF-nOuPYaRLz1eEO)**_
