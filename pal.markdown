@@ -297,7 +297,7 @@ This **Deep Dive (DD)** focuses on much more:
     - Introduce each app or technique through a small working example, connected to familiar data and mechanisms
     - That gives readers both breadth of exposure and a mental map of where each capability fits—without turning every introduction into a complicated project.
 
-This is the "master" diagram for the intial version of D1-D6.
+This is the "master" diagram for the initial version of D1-D6.
 -	D1: import and transform data. **[#692\_pal\_foundry\_d1\_data\_xforms\_.docx](https://drive.google.com/drive/folders/1-Adawag9uA8_bq-hDF-nOuPYaRLz1eEO)**_
 -	D2: create object types and links from datasets. **[#691\_pal\_foundry\_d2\_linked\_objects\_.docx](https://drive.google.com/drive/folders/1-Adawag9uA8_bq-hDF-nOuPYaRLz1eEO)**_
 -	D3: interact with linked objects through the UI. **[#690\_pal\_foundry\_d3\_ui\_.docx](https://drive.google.com/drive/folders/1-Adawag9uA8_bq-hDF-nOuPYaRLz1eEO)**_
