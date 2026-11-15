@@ -209,7 +209,9 @@ This section contains Foundry tutorials. The current focus is on original ZAI tu
 - **2.0 Before you start programming**
 - **2.1 My first 2 failed attempts to create a tutorial (my mistakes are instructive)**
 - **2.2 Foundry QS tutorial (v3)**
+- **2.2a Foundry deep dive**
 - **2.3 Foundry ontology (object type) management**. 
+- **2.3a Foundry RequestEntityTooLarge (prompt window oversize) error**. 
 - **2.4 ZAI versions of the core ~8 Foundry getting started demos**.
 - **2.5 PAL Examples (installable)**.  
 
@@ -266,15 +268,20 @@ _Workflow diagram (verified by FDE) for ch2_<br><img src="/assets/qs/0b/0b_06.pn
 <br>
 
 
-#### **2.2a Other ZAI tutorials**
+#### **2.2a Foundry deep dive**
 
-- _26.1114 (DRAFT DOCX) **[#692\_pal\_foundry\_d1\_data\_xforms\_.docx](https://drive.google.com/drive/folders/1-Adawag9uA8_bq-hDF-nOuPYaRLz1eEO)**_
-- _26.1114 (DRAFT DOCX) **[#691\_pal\_foundry\_d2\_linked\_objects\_.docx](https://drive.google.com/drive/folders/1-Adawag9uA8_bq-hDF-nOuPYaRLz1eEO)**_
-- _26.1115 (WIP DOCX) **[#690\_pal\_foundry\_d3\_ui\_.docx](https://drive.google.com/drive/folders/1-Adawag9uA8_bq-hDF-nOuPYaRLz1eEO)**_
+A collection of demos D1-D6. These will be expaned in the near future.
+
+This is the "master" diagram for D1-D6. This demo is D3.
+-	D1: import and transform data. _26.1114 (DRAFT DOCX) **[#692\_pal\_foundry\_d1\_data\_xforms\_.docx](https://drive.google.com/drive/folders/1-Adawag9uA8_bq-hDF-nOuPYaRLz1eEO)**_
+-	D2: create object types and links from datasets. _26.1114 (DRAFT DOCX) **[#691\_pal\_foundry\_d2\_linked\_objects\_.docx](https://drive.google.com/drive/folders/1-Adawag9uA8_bq-hDF-nOuPYaRLz1eEO)**_
+-	D3: interact with linked objects through the UI. _26.1115 (DRAFT DOCX) **[#690\_pal\_foundry\_d3\_ui\_.docx](https://drive.google.com/drive/folders/1-Adawag9uA8_bq-hDF-nOuPYaRLz1eEO)**_
+-	D4: use Actions to change objects through the UI.
+-	D5: combine objects, AI, Actions, and human review.
+-	D6: operate and govern the overall workflow.
 
 
-_Possible **[future tutorials](/pal_693_qs_9_where_next/)** (same style as the QS)_<br><img src="/assets/sun-55fff.png" alt="drones" width="77%" style="border: 1px solid #999;">
-
+_Foundry deep dive master diagram (ZAI original diagram verified by FDE)_<br><img src="/assets/DD_master_diagram.png" alt="drones" width="87%" style="border: 1px solid #999;">
 
 
 
@@ -316,6 +323,17 @@ In the diagrams of the new ZAI version of the Foundry intro below:
 
 
 The trial version of Foundry is very generous, but limits the total numbers of Object Types to 60. You probably won't hit that limit in 2.1 or 2.2, but to avoid running into problems in future demos, you might want to learn how to delete previous Object Types (then ask you create future demos you will appreciate the importance of tracking which demos are lowest priority).
+
+<br>
+
+--------------------
+
+<br>
+
+#### **[2.3a Foundry RequestEntityTooLarge (prompt window oversize) error](/pal_RequestEntityTooLarge/)**
+
+
+
 
 <br>
 
