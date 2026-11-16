@@ -211,7 +211,7 @@ This section contains Foundry tutorials. The current focus is on original ZAI tu
 - **2.2 Foundry QS tutorial (v3)**
 - **2.2a Foundry deep dive**
 - **2.3 Foundry ontology (object type) management**. 
-- **2.3a Foundry RequestEntityTooLarge (prompt window oversize) error**. 
+- **2.3a FDE ERROR: Foundry RequestEntityTooLarge (prompt window oversize) error**. 
 - **2.4 ZAI versions of the core ~8 Foundry getting started demos**.
 - **2.5 PAL Examples (installable)**.  
 
@@ -355,8 +355,10 @@ The trial version of Foundry is very generous, but limits the total numbers of O
 
 <br>
 
-#### **[2.3a Foundry RequestEntityTooLarge (prompt window oversize) error](/pal_RequestEntityTooLarge/)**
+#### **[2.3a FDE ERROR: Foundry RequestEntityTooLarge (prompt window oversize) error](/pal_RequestEntityTooLarge/)**
 
+
+_A show stopper (FDE error) -- If this happens, you need to summarize part of your chat window_<br><img src="/assets/RETL-0.png" alt="drones" width="46%" style="border: 1px solid #999;"><br>
 
 
 
@@ -373,7 +375,8 @@ _This is currently (26.0914) the Main focus of (1) ZAI "3c Enterprise" and (2) Z
 
 - NOTE: see [2.2x CONCEPTS (DEEP DIVE): ZAI demos](/3c.2_pal_demo_CONCEPTS/) above
 - ~8 demos as a basic course in hands-on learning of the main concepts (as I see them).<br><img src="/assets/wuxi-25.png" alt="drones" width="80%" style="border: 1px solid #999;"><br> -->
-- _Main diagram for demo D3 (Core workflow + Automation + AI external)_<br><img src="/assets/wuxi-15bbb.png" alt="drones" width="80%" style="border: 1px solid #999;"><br>
+
+_Main diagram for demo D3 (Core workflow + Automation + AI external)_<br><img src="/assets/wuxi-15bbb.png" alt="drones" width="86%" style="border: 1px solid #999;"><br>
 
 <!--
 - You are redoing (ZAI versions of) PAL demos.
@@ -456,6 +459,13 @@ FULL-FEATURED BUSINESS APP (WITH INSTALLER). I originally planned to focus on ex
 
 - Install a second (experimental) example
 - Modify that example at your own pace<br>
+
+
+
+
+
+ _Geospatial example: Input 2 sets of intelligence data (ELINT and ATR GEOINT), find ~3 million matching entries, sift through the 3 million to find 4 entries of interest, display the 4 entries on a map._<br><img src="/assets/pal_10_20.png" alt="drones" width="53%" style="border: 1px solid #999;"><br>
+
 
 <!--
 _Example (left, center) and my own build (right) (3c.1b)_<br><img src="/assets/pal_10_01.png" alt="drones" width="25%" style="border: 1px solid #999;"> <img src="/assets/pal_10_05.png" alt="drones" width="33%" style="border: 1px solid #999;"> <img src="/assets/pal_10_02.png" alt="drones" width="30%" style="border: 1px solid #999;"><br>
