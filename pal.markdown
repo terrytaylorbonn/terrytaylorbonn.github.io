@@ -71,6 +71,12 @@ _Geospatial example: Input 2 sets of intelligence data (ELINT and ATR GEOINT), f
 - Palantir offers a **generous Foundry free trial**.
 - Foundry's **built-in AI assistant (FDE) makes hands-on self-study practical**.
 
+
+_Main Foundry diagram (ZAI original original diagram verified by FDE)_<br><img src="/assets/MAIN-03.png" alt="drones" width="73%" style="border: 1px solid #999;">
+
+
+
+
 <!-- Note: I am using a free trial version of Foundry. A very generous free trial. But with one major limitation: **I can only have up to 50 ontology objects** (something like that; I forgot the details). So its inevitable that **I sometimes must delete demos/examples. So I try to document them carefully.** -->
 
 <br>
@@ -271,8 +277,9 @@ This Quick Start has one focused goal — find the “needle in the haystack” 
  
 <img src="/assets/sun-55.png" alt="drones" width="61%" style="border: 1px solid #999;">
 
+<!-- _Main Foundry diagram (ZAI original original diagram verified by FDE)_<br><img src="/assets/MAIN-03.png" alt="drones" width="73%" style="border: 1px solid #999;"> -->
 
-_Workflow diagram (verified by FDE) for ch2_<br><img src="/assets/qs/0b/0b_06.png" alt="drones" width="90%" style="border: 1px solid #999;">
+_Example workflow diagram (verified by FDE) for ch2_<br><img src="/assets/qs/0b/0b_06.png" alt="drones" width="90%" style="border: 1px solid #999;">
 
 
 <br>
