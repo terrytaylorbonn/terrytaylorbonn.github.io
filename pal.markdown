@@ -87,7 +87,7 @@ Below are short explanations (GPT answers to my promtps) for 2 key concepts (oft
 #### **(1) Ontology/REST analogies**
 
 
-_Main Foundry diagram (ZAI original diagram verified by FDE)_<br><img src="/assets/MAIN-03.png" alt="drones" width="73%" style="border: 1px solid #999;">
+_Main Foundry diagram (ZAI original diagram verified by FDE)_<br><img src="/assets/MAIN-03.png" alt="drones" width="79%" style="border: 1px solid #999;">
 
 
 | Operation | Foundry Ontology | REST analogy | Important differences |

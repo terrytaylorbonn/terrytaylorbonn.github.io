@@ -347,3 +347,80 @@ GPT: Protecting Enterprise Alpha: Ontology, AI, and Governance
 -----------------
 
 <br>
+
+ME: We normally think of in-memory objects and a DB that stores them... but Foundry has blurred these distinctions. 
+And its using spark (isnt this kind of like CUDA, but for DB, allowing to put them on a GPU and run massively parallet operations on the DB?). So I am not trying to make analogies.... its more I am trying to explain the paradigm shift.
+
+**Yes—you’re identifying a shift in what the application developer has to manage.** Foundry lets you work with persistent objects, links, and Actions without manually implementing the usual loading, mapping, and saving between application objects and database records.
+
+**But Spark is a separate part of the picture, and it is not like CUDA:**
+
+| Technology | What it does |
+|---|---|
+| **Spark** | Runs data-processing operations in parallel, usually across **CPUs** on one or more machines |
+| **CUDA** | Enables computation on NVIDIA **GPUs** |
+| **Foundry Object Storage V2** | Stores and serves Ontology object data and edits |
+
+Spark can use GPU acceleration with additional technology, but **our transforms did not configure that**. Spark also does not mean the Ontology database itself is running on a GPU.
+
+### The paradigm shift in our demo
+
+**Dataset pipeline:** Python/Spark prepares data → Foundry indexes it into objects.
+
+**Operational application:** UI reads those objects → an Action saves an object edit.
+
+Submitting **Set Status** does **not** run Spark. Rebuilding the source dataset does.
+
+For your explanation, I’d write:
+
+> **Foundry presents data to applications as persistent, linked objects with defined operations. Developers work with those objects rather than manually building the mapping and synchronization between database records and application objects. Data pipelines prepare and refresh the source values; Actions save operational changes to the objects.**
+
+The distinction between memory and persistent storage still exists internally. **Foundry abstracts much of that distinction from the application-building experience.**
+
+
+<br>
+
+-----------------
+-----------------
+-----------------
+-----------------
+
+<br>
+
+ME: OK OK.... so what, you can run a model on a CPU. My point is, Spark is like CUDA because you are moving from procedural to parallel processing for massive repetitive tasks.
+
+
+Yes—at that level, your comparison is valid. Both let you express work that can execute in parallel across many processing units, rather than manually process each item sequentially.
+
+Spark: distributes data-processing tasks across partitions and workers.
+CUDA: distributes computation across GPU threads.
+Your point is the shift from explicitly sequential processing to expressing operations over large collections that the execution system parallelizes. My earlier answer focused too narrowly on the hardware distinction.
+
+<br>
+
+-----------------
+-----------------
+-----------------
+-----------------
+
+<br>
+
+ME: so this diagram... on the lower left i have space for what we just talk about.... (1) the new paradigm and (2) parallelization. can you come up with a good summary i can add to diagram?
+
+_Main Foundry diagram (ZAI original diagram verified by FDE)_<br><img src="/assets/MAIN-03.png" alt="drones" width="78%" style="border: 1px solid #999;">
+
+FDE: 
+Persistent objects, not manual database plumbing
+Apps work with stored objects, properties, and links. Pipelines refresh source values; Actions save object changes.
+
+Parallel processing, not row-by-row loops
+Transforms express operations over datasets. Spark distributes the work across data partitions and available workers.
+
+<br>
+
+-----------------
+-----------------
+-----------------
+-----------------
+
+<br>
