@@ -65,13 +65,14 @@ _Geospatial example: Input 2 sets of intelligence data (ELINT and ATR GEOINT), f
 
 ## **[1 Concepts](/pal_concepts_all/)**
 
+**General concepts:**
 - Foundry is a modern enterprise platform for data integration, ontology, analytics, applications, **AI assistance**, and governance.
 - Foundry represents the **logical culmination of ZiptieAI: (2) neural networks → (2b) models → (3) agents → (3b) workflows** (and finally) **→ (3c) enterprise platforms**.
 - Foundry takes a **very practical no-nonsense approach to AI in the enterprise**. Foundry was a market leader over 20 years ago (long before AI).
 - Palantir offers a **generous Foundry free trial**.
 - Foundry's **built-in AI assistant (FDE) makes hands-on self-study practical**.
 
-Below are short explanations (GPT answers to my promtps) for 2 key concepts (often discussed in blogs about Foundry; see the original **[GPT chats](/pal_onto_rest_analogies/)**): 
+**2 key concepts:** Below are short explanations (GPT answers to my promtps) for 2 key concepts (often discussed in blogs about Foundry; see the original **[GPT chats](/pal_onto_rest_analogies/)**): 
 - **(1) Ontology**. What is it use analogies with REST endpoints. 
 - **(2) Alpha**. How Foundry helps you avert leakage of sensitive enterprise data.
 
