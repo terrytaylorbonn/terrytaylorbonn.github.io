@@ -71,11 +71,39 @@ _Geospatial example: Input 2 sets of intelligence data (ELINT and ATR GEOINT), f
 - Palantir offers a **generous Foundry free trial**.
 - Foundry's **built-in AI assistant (FDE) makes hands-on self-study practical**.
 
+Below are short explanations (GPT answers to my promtps) for 2 key concepts (often discussed in blogs about Foundry; see the original **[GPT chats](/pal_onto_rest_analogies/)**): 
+- **(1) Ontology**. What is it use analogies with REST endpoints. 
+- **(2) Alpha**. How Foundry helps you avert leakage of sensitive enterprise data.
+
+<br>
+
+--------------------
+
+<br>
+
+#### **(1) Ontology/REST analogies**
+
 
 _Main Foundry diagram (ZAI original diagram verified by FDE)_<br><img src="/assets/MAIN-03.png" alt="drones" width="73%" style="border: 1px solid #999;">
 
 
+| Operation | Foundry Ontology | REST analogy | Important differences |
+|---|---|---|---|
+| **1. Read an object** | Workshop Object Table reads a `693_Record` object from the Ontology. | `GET /records/123` returns the record's properties. | Foundry exposes objects through its Ontology query mechanisms, not necessarily a conventional REST GET endpoint. Objects may be backed by datasets or other data sources. |
+| **2. Modify an object** | Workshop submits the `693_SaveCheckResult` Action to update an object's `CheckResult` property. | `PATCH /records/123` with `{"CheckResult":"FOUND"}` updates the record. | Foundry Actions are governed operations with permissions and validation. Changes may be stored as Ontology edits rather than directly modifying the underlying dataset. |
+| **3. Execute AI and save the result** | Workshop submits `693_CheckAndSaveRecord`, which runs the AI check through AIPLF and saves its answer using an Action. | `POST /records/123/check` invokes server-side logic that calls an LLM and updates the record. | The Foundry workflow combines Action logic, AIPLF, AI processing, and object edits. A conventional REST application would require developers to implement and connect these components themselves. |
 
+<br>
+
+--------------------
+
+<br>
+
+#### **(2) Protecting Enterprise Alpha: Ontology, AI, and Governance**
+
+Ontology helps organize and control access to an enterprise's valuable operational knowledge ("alpha"). Adding AI introduces new data flows that must be governed, particularly when proprietary information is sent to external models. AIPL, Actions, authorization policies, and UI controls each play a role in controlling those flows.
+
+One especially important distinction: monitoring is not the same as preventing leakage. If sensitive data has already been transmitted to an external model, detecting it afterward may be too late. Preventive controls must operate before transmission.
 
 <!-- Note: I am using a free trial version of Foundry. A very generous free trial. But with one major limitation: **I can only have up to 50 ontology objects** (something like that; I forgot the details). So its inevitable that **I sometimes must delete demos/examples. So I try to document them carefully.** -->
 
