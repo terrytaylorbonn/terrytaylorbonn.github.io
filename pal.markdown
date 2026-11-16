@@ -17,27 +17,27 @@ Build passed; verified search is absent from the generated page. Changes aren’
 
 #### **This Enterprise section focuses on Palantir Foundry.**
 
+<br>
 
 <!--
-
-<br>
-
-------------------
-
-<br>
-
 _Latest (26.0911): Making steady progress on section **[2.2 PAL demos (speedruns)](/3c.2_pal_initial_demos/)**._ -->
 
-**TL;DR:** To get started ASAP with Enterprise AI programming using Palantir Foundry skip to the following sections 
+**TL;DR (26.1116):** To get started ASAP with Enterprise AI programming using Palantir Foundry do the following sections 
 - **1b Foundry free tier sign up**. 
-- **2.2 QS (quick start) tutorial**. Hands-on is the only way you really learn Foundry. 
+- **2.2 QS (quick start) tutorial**. Focuses on creating from scratch a very very basic "needle in the haystack" Foundry app. Hands-on is the only way you really learn Foundry. 
+- Then for more motivation, **skip to the real-world demo (screenshot below)** in **2.5 PAL Examples (installable)**, example **E11: Palantir Foundry example “Integrate GeoSpatial data with Gaia” (26.0728).** The ZAI docx for this example shows how to (1) install the excellent PAL example and then (2) replicate that example (reusing only the original example data; you recreate everything else).
+- Then armed with the inspiration and motivation you got from the real-world example, go back to **2.2a Foundry deep dive (DD)**. 
+  - Cover the topics (hands-on) in the QS in more detail and cover topics that were not in the QS. 
+  - The plan is to reference official PAL speedruns, demos, and examples in the DD. 
 
-<!-- 
+_Geospatial example: Input 2 sets of intelligence data (ELINT and ATR GEOINT), find ~3 million matching entries, sift through the 3 million to find 4 entries of interest, display the 4 entries on a map._<br><img src="/assets/pal_10_20.png" alt="drones" width="53%" style="border: 1px solid #999;"><br>
+
 <br>
 
 ------------------
 
-<br> -->
+<br>
+
 
 #### **TOC**
 
@@ -208,12 +208,14 @@ This section contains Foundry tutorials. The current focus is on original ZAI tu
 
 - **2.0 Before you start programming**
 - **2.1 My first 2 failed attempts to create a tutorial (my mistakes are instructive)**
-- **2.2 Foundry QS tutorial (v3)**
-- **2.2a Foundry deep dive**
-- **2.3 Foundry ontology (object type) management**. 
-- **2.3a FDE ERROR: Foundry RequestEntityTooLarge (prompt window oversize) error**. 
-- **2.4 ZAI versions of the core ~8 Foundry getting started demos**.
-- **2.5 PAL Examples (installable)**.  
+- **2.2 Foundry QS tutorial (v3)**. This Quick Start has one focused goal — find the “needle in the haystack” — using Foundry and AI to identify records that match user-defined criteria.
+- **2.2a Foundry deep dive (DD)**. The goal of this DD is to cover the topics (hands-on) in the QS in more detail and cover topics that were not in the QS. The plan is to reference official PAL speedruns, demos, and examples in the DD. 
+- **2.3 Foundry ontology (object type) management**. You are limited to 60 object types (OT's) in the ontology. Deleting existing OT's requires deleting other dependencies first (you cant just delete OT's).
+- **2.3a FDE ERROR: Foundry RequestEntityTooLarge (prompt window oversize) error**. If your chat window with FDE gets large enough, you will get this error. The fix is simple, but not obvious (and you cant ask FDE to help you fix it).
+- **2.4 ZAI versions of the core ~8 Foundry getting started demos**. The core demos (speedruns) for beginners. 
+- **2.5 PAL Examples (installable)**. Real-world demos. For example **E11: Palantir Foundry example “Integrate GeoSpatial data with Gaia” (26.0728).** The ZAI docx for this example shows how to (1) install the excellent PAL example and then (2) replicate that example (reusing only the original example data; you recreate everything else).
+
+
 
 <!--- **2.0 ZAI demo master list**
  - **2.2x CONCEPTS (DEEP DIVE): ZAI demos** -->
@@ -231,7 +233,7 @@ This section contains Foundry tutorials. The current focus is on original ZAI tu
 #### **2.0 Before you start programming**
 
 - Why Foundry represents **[the future of AI programming](/future_foundry_and_docs/)**.
-- But there are challenges to learning Foundry: **[Why the ZAI approach to learning Foundry is the most effective](/pal_zai_learning_method/)** (webpage content auto-converted from docx by GPT).
+- But there are challenges to learning Foundry: **[Why the ZAI approach to learning Foundry is the most effective](/pal_zai_learning_method/)**.
 
 
 <br>
