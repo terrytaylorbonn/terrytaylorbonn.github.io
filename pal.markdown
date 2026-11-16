@@ -72,7 +72,7 @@ _Geospatial example: Input 2 sets of intelligence data (ELINT and ATR GEOINT), f
 - Foundry's **built-in AI assistant (FDE) makes hands-on self-study practical**.
 
 
-_Main Foundry diagram (ZAI original original diagram verified by FDE)_<br><img src="/assets/MAIN-03.png" alt="drones" width="73%" style="border: 1px solid #999;">
+_Main Foundry diagram (ZAI original diagram verified by FDE)_<br><img src="/assets/MAIN-03.png" alt="drones" width="73%" style="border: 1px solid #999;">
 
 
 
