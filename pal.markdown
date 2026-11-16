@@ -30,7 +30,7 @@ _Latest (26.0911): Making steady progress on section **[2.2 PAL demos (speedruns
   - Cover the topics (hands-on) in the QS in more detail and cover topics that were not in the QS. 
   - The plan is to reference official PAL speedruns, demos, and examples in the DD. 
 
-_Geospatial example: Input 2 sets of intelligence data (ELINT and ATR GEOINT), find ~3 million matching entries, sift through the 3 million to find 4 entries of interest, display the 4 entries on a map._<br><img src="/assets/pal_10_20.png" alt="drones" width="53%" style="border: 1px solid #999;"><br>
+_Geospatial example: Input 2 sets of intelligence data (ELINT and ATR GEOINT, the **"haystack"**), find ~3 million matching entries, sift through the 3 million to find 4 entries of interest (**4 "needles"**), display the 4 entries on a map._<br><img src="/assets/pal_10_20.png" alt="drones" width="53%" style="border: 1px solid #999;"><br>
 
 <br>
 
