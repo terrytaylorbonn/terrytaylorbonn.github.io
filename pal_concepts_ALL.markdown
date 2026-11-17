@@ -6,17 +6,16 @@ permalink: /pal_concepts_all/
 
 <br>
 
-_(rewritten 26.1117)_
-
-
 [← 3c Enterprise](/pal/)
+
+_This is the original ZiptieAI take on the core Foundry concepts (worked out in tandem with FDE). I only figured this out 26.1117, so there are several TODO's and WIP's below._
 
 <br>
 
-This is the original ZiptieAI take on the core Foundry concepts (worked out in tandem with FDE). I only figured this out 26.1117, so there are several TODO's and WIP's below.
+**These concepts describe what you do during the quick starts and deep dives** (hands-on, to the point, learning quickly, minimal text/diagrams, with FDE assistance).
 
-- **1 (TODO QS0-1) Detect/analyze haystack needles: Install real-world Foundry example GAIA**
-- **2 (TODO QS0-2) Detect/analyze haystack needles: Create (with FDE) your own version**
+- **1 (TODO QS0-1) Detect/analyze haystack needles: Install/test/modify the real-world Foundry example GAIA**
+- **2 (TODO QS0-2) Detect/analyze haystack needles: Create (with FDE) your own haystack needle app**
 - **4 (2.2 QS1) Create "full" Ontology “backend” (Ontology OTs/PTs, actions, links) for analysis of Dataset with Workshop**. Ontology helps organize and control access to an enterprise’s valuable operational knowledge (“alpha”).
 - **5 (2.2a DD WIP) Add AI**
 - **6 (2.2a DD WIP) Add governance**
@@ -32,7 +31,7 @@ See also **[GPT chats (26.1117)](/pal_onto_rest_analogies/)**.
 <br>
 
 
-### **1 (TODO QS0-1) Detect/analyze haystack needles: Install real-world Foundry example GAIA**
+### **1 (TODO QS0-1) Detect/analyze haystack needles: Install/test/modify the real-world Foundry example GAIA**
 
 In 1/2 you created everything for a real-world app like in this example. 
 See **docx [692](https://drive.google.com/drive/folders/1-Adawag9uA8_bq-hDF-nOuPYaRLz1eEO)** for details on how to install and modify the example.
@@ -49,7 +48,7 @@ _Geospatial example: Input 2 sets of intelligence data (ELINT and ATR GEOINT, th
 
 <br>
 
-### **2 (TODO QS0-2) Detect/analyze haystack needles: Create (with FDE) your own version**
+### **(TODO QS0-2) Detect/analyze haystack needles: Create (with FDE) your own haystack needle app**
 
 use PY/Pipeline to detect (filter out).
 
