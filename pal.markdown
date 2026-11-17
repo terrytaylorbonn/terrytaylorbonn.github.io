@@ -25,12 +25,13 @@ _Latest (26.0911): Making steady progress on section **[2.2 PAL demos (speedruns
 #### **TL;DR (26.1116):** To get started ASAP with Enterprise AI programming using Palantir Foundry do the following sections 
 - **1b Foundry free tier sign up**. 
 - **2.2 QS (quick start) tutorial**. Focuses on creating from scratch a very very basic **"needle in the haystack" Foundry app**. Hands-on is the only way you really learn Foundry. 
-- Then for more motivation, **skip to the real-world demo (screenshot below)** in **2.5 PAL Examples (installable)**, example **E11: Palantir Foundry example “Integrate GeoSpatial data with Gaia” (26.0728).** The ZAI docx for this example shows how to (1) install the excellent PAL example and then (2) replicate that example (reusing only the original example data; you recreate everything else).
-- Then armed with the inspiration and motivation you got from the real-world example, go back to **2.2a Foundry deep dive (DD)**. 
+- Then go to **2.2a Foundry deep dive (DD)**. 
   - Cover the topics (hands-on) in the QS in more detail and cover topics that were not in the QS. 
   - The plan is to reference official PAL speedruns, demos, and examples in the DD. 
 
-_Geospatial example: Input 2 sets of intelligence data (ELINT and ATR GEOINT, the **"haystack"**), find ~3 million matching entries, sift through the 3 million to find 4 entries of interest (**4 "needles"**), display the 4 entries on a map._<br><img src="/assets/pal_10_20.png" alt="drones" width="53%" style="border: 1px solid #999;"><br>
+<!---  - (optional) Then for more motivation, **skip to the real-world demo (screenshot below)** in **2.5 PAL Examples (installable)**, example **E11: Palantir Foundry example “Integrate GeoSpatial data with Gaia” (26.0728).** The ZAI docx for this example shows how to (1) install the excellent PAL example and then (2) replicate that example (reusing only the original example data; you recreate everything else).<br>_Geospatial example: Input 2 sets of intelligence data (ELINT and ATR GEOINT, the **"haystack"**), find ~3 million matching entries, sift through the 3 million to find 4 entries of interest (**4 "needles"**), display the 4 entries on a map._<br><img src="/assets/pal_10_20.png" alt="drones" width="39%" style="border: 1px solid #999;"><br>
+ -->
+
 
 <br>
 
@@ -65,6 +66,8 @@ _Geospatial example: Input 2 sets of intelligence data (ELINT and ATR GEOINT, th
 
 ## **[1 Concepts](/pal_concepts_all/)**
 
+For the **Core application programming concepts** click on the title link above.
+
 **General concepts**
 - Foundry is a modern enterprise platform for data integration, ontology, analytics, applications, **AI assistance**, and governance.
 - Foundry represents the **logical culmination of ZiptieAI: (2) neural networks → (2b) models → (3) agents → (3b) workflows** (and finally) **→ (3c) enterprise platforms**.
@@ -72,7 +75,7 @@ _Geospatial example: Input 2 sets of intelligence data (ELINT and ATR GEOINT, th
 - Palantir offers a **generous Foundry free trial**.
 - Foundry's **built-in AI assistant (FDE) makes hands-on self-study practical**.
 
-**Key concepts** 
+<!-- **Key concepts** 
 
 Below are short explanations (GPT answers to my promtps) for 2 key concepts: 
 - **(1) Ontology**. What is it use analogies with REST endpoints. 
@@ -112,7 +115,7 @@ Ontology helps organize and control access to an enterprise's valuable operation
 
 One especially important distinction: monitoring is not the same as preventing leakage. If sensitive data has already been transmitted to an external model, detecting it afterward may be too late. Preventive controls must operate before transmission.
 
-<!-- Note: I am using a free trial version of Foundry. A very generous free trial. But with one major limitation: **I can only have up to 50 ontology objects** (something like that; I forgot the details). So its inevitable that **I sometimes must delete demos/examples. So I try to document them carefully.** -->
+<-- Note: I am using a free trial version of Foundry. A very generous free trial. But with one major limitation: **I can only have up to 50 ontology objects** (something like that; I forgot the details). So its inevitable that **I sometimes must delete demos/examples. So I try to document them carefully.** -->
 
 <br>
 

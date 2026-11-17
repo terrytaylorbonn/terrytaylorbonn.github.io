@@ -1,14 +1,164 @@
 ---
 layout: page
-title: PAL concepts (ALL)
+title: Core Foundry programming concepts
 permalink: /pal_concepts_all/
 ---
 
 <br>
 
-26.1027 I moved all concepts to this single page.
+_(rewritten 26.1117)_
 
-TOC
+
+[← 3c Enterprise](/pal/)
+
+<br>
+
+This is the original ZiptieAI take on the core Foundry concepts (worked out in tandem with FDE). 
+
+- **1 (TODO) Detect haystack needles (create Dataset)**
+- **2 (TODO) Display / analyze with Maps (create Ontology OTs/PTs)**
+- **3 Compare to real world Foundry Example “Geospatial GAIA”**
+- **4 (QS) Create Ontology “backend” (Ontology OTs/PTs, actions, links) for analysis of Dataset with Workshop**. Ontology helps organize and control access to an enterprise’s valuable operational knowledge (“alpha”).
+- **5 (DD) Adding AI**
+- **6 (DD) Governance**
+
+<br>
+
+FOR DETAILS SEE **[GPT chats (26.1117)](/pal_onto_rest_analogies/)**
+- These topics are often discussed in blogs about Foundry;
+- but I decided to create my own explanation that I consider more complete and exact (verified by FDE). 
+
+
+<br>
+
+--------------------
+
+<br>
+
+
+### **1 (TODO) Detect haystack needles (create Dataset)**
+
+use PY/Pipeline to detect (filter out).
+
+<img src="/assets/ALL-01.png" alt="drones" width="48%" style="border: 1px solid #999;">
+
+
+<br>
+
+--------------------
+
+<br>
+
+### **2 (TODO) Display / analyze with Maps (create Ontology OTs/PTs)**
+
+<img src="/assets/ALL-02.png" alt="drones" width="48%" style="border: 1px solid #999;">
+
+
+<br>
+
+--------------------
+
+<br>
+
+### **3 Compare to real world Foundry Example "Geospatial GAIA"**
+
+In 1/2 you created everything for a real-world app like in this example.
+
+<img src="/assets/ALL-03.png" alt="drones" width="48%" style="border: 1px solid #999;">
+
+
+_Geospatial example: Input 2 sets of intelligence data (ELINT and ATR GEOINT, the **"haystack"**), find ~3 million matching entries, sift through the 3 million to find 4 entries of interest (**4 "needles"**), display the 4 entries on a map._<br><img src="/assets/pal_10_20.png" alt="drones" width="53%" style="border: 1px solid #999;"><br>
+
+
+<br>
+
+--------------------
+
+<br>
+
+### **4 (QS) Create Ontology "backend" (Ontology OTs/PTs, actions, links) for analysis of Dataset with Workshop**
+
+
+Ontology helps organize and control access to an enterprise's valuable operational knowledge ("alpha"). 
+
+
+<img src="/assets/ALL-04.png" alt="drones" width="55%" style="border: 1px solid #999;">
+
+<br>
+
+#### **(1) Ontology/REST analogies**
+
+
+_Main Foundry diagram (ZAI original diagram verified by FDE)_<br><img src="/assets/MAIN-03.png" alt="drones" width="79%" style="border: 1px solid #999;">
+
+
+| Operation | Foundry Ontology | REST analogy | Important differences |
+|---|---|---|---|
+| **1. Read an object** | Workshop Object Table reads a `693_Record` object from the Ontology. | `GET /records/123` returns the record's properties. | Foundry exposes objects through its Ontology query mechanisms, not necessarily a conventional REST GET endpoint. Objects may be backed by datasets or other data sources. |
+| **2. Modify an object** | Workshop submits the `693_SaveCheckResult` Action to update an object's `CheckResult` property. | `PATCH /records/123` with `{"CheckResult":"FOUND"}` updates the record. | Foundry Actions are governed operations with permissions and validation. Changes may be stored as Ontology edits rather than directly modifying the underlying dataset. |
+| **3. Execute AI and save the result** | Workshop submits `693_CheckAndSaveRecord`, which runs the AI check through AIPLF and saves its answer using an Action. | `POST /records/123/check` invokes server-side logic that calls an LLM and updates the record. | The Foundry workflow combines Action logic, AIPLF, AI processing, and object edits. A conventional REST application would require developers to implement and connect these components themselves. |
+
+
+
+<br>
+
+--------------------
+
+<br>
+
+### **5 (DD) Adding AI**
+
+Adding AI introduces new data flows that must be governed, particularly when proprietary information is sent to external models. AIPL, Actions, authorization policies, and UI controls each play a role in controlling those flows.
+
+
+
+
+<img src="/assets/ALL-05.png" alt="drones" width="55%" style="border: 1px solid #999;">
+
+
+<br>
+
+--------------------
+
+<br>
+
+
+### **6 (DD) Governance**
+
+One especially important distinction: monitoring is not the same as preventing leakage. If sensitive data has already been transmitted to an external model, detecting it afterward may be too late. Preventive controls must operate before transmission.
+
+
+<img src="/assets/ALL-06.png" alt="drones" width="55%" style="border: 1px solid #999;">
+
+
+<br>
+
+--------------------
+
+
+
+
+
+
+<br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br>
+
+--------------------
+--------------------
+--------------------
+--------------------
+--------------------
+--------------------
+--------------------
+--------------------
+--------------------
+--------------------
+--------------------
+
+<br>
+
+# OLD TOC 
+
+
   - **C1 Why Foundry?** (00, v1 26.1016)
   - **C2 The future of programming Foundry (and writing documentation) is here today (WIP)** (00b, v1 26.1020)
   - **C3 Core Foundry Enterprise Concepts** (0, #697; v1 26.1011)
@@ -171,4 +321,4 @@ _Palantir provides proven engineering (the crystal ball is just a metaphor, mark
 
 <br>
 
-26.0930 (v1 26.0804)
+26.1117 (0930, v1 26.0804)
