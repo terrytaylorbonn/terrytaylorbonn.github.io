@@ -59,7 +59,8 @@ use PY/Pipeline to detect (filter out).
 
 ### **3 (TODO) Compare to real world Foundry Example "Geospatial GAIA"**
 
-In 1/2 you created everything for a real-world app like in this example.
+In 1/2 you created everything for a real-world app like in this example. 
+See **docx [692](https://drive.google.com/drive/folders/1-Adawag9uA8_bq-hDF-nOuPYaRLz1eEO)** for details on how to install and modify the example.
 
 <img src="/assets/ALL-03.png" alt="drones" width="48%" style="border: 1px solid #999;">
 
@@ -79,21 +80,20 @@ _Geospatial example: Input 2 sets of intelligence data (ELINT and ATR GEOINT, th
 Ontology helps organize and control access to an enterprise's valuable operational knowledge ("alpha"). 
 
 
-<img src="/assets/ALL-04.png" alt="drones" width="55%" style="border: 1px solid #999;">
+_Main Foundry diagram (ZAI original diagram verified by FDE)_<br><img src="/assets/ALL-04.png" alt="drones" width="77%" style="border: 1px solid #999;">
 
 <br>
 
-#### **(1) Ontology/REST analogies**
+#### **Ontology/REST analogies**
 
 
-_Main Foundry diagram (ZAI original diagram verified by FDE)_<br><img src="/assets/MAIN-03.png" alt="drones" width="79%" style="border: 1px solid #999;">
 
 
 | Operation | Foundry Ontology | REST analogy | Important differences |
 |---|---|---|---|
 | **1. Read an object** | Workshop Object Table reads a `693_Record` object from the Ontology. | `GET /records/123` returns the record's properties. | Foundry exposes objects through its Ontology query mechanisms, not necessarily a conventional REST GET endpoint. Objects may be backed by datasets or other data sources. |
 | **2. Modify an object** | Workshop submits the `693_SaveCheckResult` Action to update an object's `CheckResult` property. | `PATCH /records/123` with `{"CheckResult":"FOUND"}` updates the record. | Foundry Actions are governed operations with permissions and validation. Changes may be stored as Ontology edits rather than directly modifying the underlying dataset. |
-| **3. Execute AI and save the result** | Workshop submits `693_CheckAndSaveRecord`, which runs the AI check through AIPLF and saves its answer using an Action. | `POST /records/123/check` invokes server-side logic that calls an LLM and updates the record. | The Foundry workflow combines Action logic, AIPLF, AI processing, and object edits. A conventional REST application would require developers to implement and connect these components themselves. |
+| **3. Execute AI and save the result** (see next section) | Workshop submits `693_CheckAndSaveRecord`, which runs the AI check through AIPLF and saves its answer using an Action. | `POST /records/123/check` invokes server-side logic that calls an LLM and updates the record. | The Foundry workflow combines Action logic, AIPLF, AI processing, and object edits. A conventional REST application would require developers to implement and connect these components themselves. |
 
 
 
@@ -109,8 +109,9 @@ Adding AI introduces new data flows that must be governed, particularly when pro
 
 
 
+<img src="/assets/ALL-05.png" alt="drones" width="62%" style="border: 1px solid #999;">
 
-<img src="/assets/ALL-05.png" alt="drones" width="55%" style="border: 1px solid #999;">
+_OLD_<br><img src="/assets/MAIN-03.png" alt="drones" width="33%" style="border: 1px solid #999;">
 
 
 <br>
@@ -125,7 +126,7 @@ Adding AI introduces new data flows that must be governed, particularly when pro
 One especially important distinction: monitoring is not the same as preventing leakage. If sensitive data has already been transmitted to an external model, detecting it afterward may be too late. Preventive controls must operate before transmission.
 
 
-<img src="/assets/ALL-06.png" alt="drones" width="55%" style="border: 1px solid #999;">
+<img src="/assets/ALL-06.png" alt="drones" width="63%" style="border: 1px solid #999;">
 
 
 <br>
@@ -153,9 +154,10 @@ One especially important distinction: monitoring is not the same as preventing l
 
 <br>
 
-# OLD TOC 
+# OLD CONCEPTS 
 
 
+**TOC**
   - **C1 Why Foundry?** (00, v1 26.1016)
   - **C2 The future of programming Foundry (and writing documentation) is here today (WIP)** (00b, v1 26.1020)
   - **C3 Core Foundry Enterprise Concepts** (0, #697; v1 26.1011)
@@ -164,7 +166,7 @@ One especially important distinction: monitoring is not the same as preventing l
 <br>
 
 
-## **[C1 Why Foundry?](/pal_concepts_why_foundry/)** (v1 26.1016)
+### **[C1 Why Foundry?](/pal_concepts_why_foundry/)** (v1 26.1016)
 
 (WIP... below is just some initial thoughts)
 
@@ -186,7 +188,7 @@ _(left) Non-AI App, (center) AI app ("agent") + local LLM, (right) remote LLM_<b
 <br>
 
 
-## **[C2 The future of programming Foundry (and documentation) is here today (WIP)](/future_foundry_and_docs/)** (v1 26.1020)
+### **[C2 The future of programming Foundry (and documentation) is here today (WIP)](/future_foundry_and_docs/)** (v1 26.1020)
 
 I am programming and writing a Foundry QS (quick start) by simply chatting with FDE/GPT. 
 - Most of the text is FDE chat responses and the screenshots submitted to FDE (FDE can "see" screenshots and diagrams). 
@@ -204,7 +206,7 @@ _The new programming/documentation paradigm with FDE/GPT._<br><img src="/assets/
 
 <br>
 
-## **[C3 Core Foundry Enterprise Concepts](/pal_concepts_ep/)** (v1 26.1011)
+### **[C3 Core Foundry Enterprise Concepts](/pal_concepts_ep/)** (v1 26.1011)
 
 <!-- **TOC**
 - 0.1 ZAI focuses on hands-on demos (and useful docs) to learn Foundry
@@ -250,7 +252,7 @@ _PAL south/ontology/north diagram_<br><img src="/assets/sun-15.png" alt="drones"
 
 <br>
 
-## **[C4 Core Foundry Enterprise AI Concepts](/pal_concepts/)**
+### **[C4 Core Foundry Enterprise AI Concepts](/pal_concepts/)**
 
 **The AI concepts webpage was inspired by Alex Karp's talks about sovereignty and ALPHA in the enterprise.** These issues are due to the nature of AI (unpredictable matrix math computations that recognize patterns / perform classification). 
 
