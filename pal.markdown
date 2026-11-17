@@ -23,11 +23,12 @@ Build passed; verified search is absent from the generated page. Changes aren’
 _Latest (26.0911): Making steady progress on section **[2.2 PAL demos (speedruns)](/3c.2_pal_initial_demos/)**._ -->
 
 #### **TL;DR (26.1116):** To get started ASAP with Enterprise AI programming using Palantir Foundry do the following sections 
+- **1 Concepts** (briefly look over; there are some very brief and informative diagrams (ZiptieAI originals) that you will want to refer back to as you make progress).
 - **1b Foundry free tier sign up**. 
 - **2.2 QS (quick start) tutorial**. Focuses on creating from scratch a very very basic **"needle in the haystack" Foundry app**. Hands-on is the only way you really learn Foundry. 
-- Then go to **2.2a Foundry deep dive (DD)**. 
-  - Cover the topics (hands-on) in the QS in more detail and cover topics that were not in the QS. 
-  - The plan is to reference official PAL speedruns, demos, and examples in the DD. 
+- **2.2a Foundry deep dive (DD)**. 
+  - Covers the topics (hands-on) in the QS in more detail and cover topics that were not in the QS. 
+  - Will (TODO) reference official PAL speedruns, demos, and examples. 
 
 <!---  - (optional) Then for more motivation, **skip to the real-world demo (screenshot below)** in **2.5 PAL Examples (installable)**, example **E11: Palantir Foundry example “Integrate GeoSpatial data with Gaia” (26.0728).** The ZAI docx for this example shows how to (1) install the excellent PAL example and then (2) replicate that example (reusing only the original example data; you recreate everything else).<br>_Geospatial example: Input 2 sets of intelligence data (ELINT and ATR GEOINT, the **"haystack"**), find ~3 million matching entries, sift through the 3 million to find 4 entries of interest (**4 "needles"**), display the 4 entries on a map._<br><img src="/assets/pal_10_20.png" alt="drones" width="39%" style="border: 1px solid #999;"><br>
  -->
