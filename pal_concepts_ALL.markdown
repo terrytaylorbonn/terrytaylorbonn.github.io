@@ -13,21 +13,18 @@ _(rewritten 26.1117)_
 
 <br>
 
-This is the original ZiptieAI take on the core Foundry concepts (worked out in tandem with FDE). 
+This is the original ZiptieAI take on the core Foundry concepts (worked out in tandem with FDE). I only figured this out 26.1117, so there are several TODO's and WIP's below.
 
 - **1 (TODO) Detect haystack needles (create Dataset)**
 - **2 (TODO) Display / analyze with Maps (create Ontology OTs/PTs)**
-- **3 Compare to real world Foundry Example “Geospatial GAIA”**
+- **3 (TODO) Compare to real world Foundry Example “Geospatial GAIA”**
 - **4 (QS) Create Ontology “backend” (Ontology OTs/PTs, actions, links) for analysis of Dataset with Workshop**. Ontology helps organize and control access to an enterprise’s valuable operational knowledge (“alpha”).
-- **5 (DD) Adding AI**
-- **6 (DD) Governance**
+- **5 (WIP DD) Adding AI**
+- **6 (WIP DD) Governance**
 
 <br>
 
-FOR DETAILS SEE **[GPT chats (26.1117)](/pal_onto_rest_analogies/)**
-- These topics are often discussed in blogs about Foundry;
-- but I decided to create my own explanation that I consider more complete and exact (verified by FDE). 
-
+See also **[GPT chats (26.1117)](/pal_onto_rest_analogies/)**.
 
 <br>
 
