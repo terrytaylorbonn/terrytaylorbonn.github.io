@@ -43,7 +43,7 @@ _Latest (26.0911): Making steady progress on section **[2.2 PAL demos (speedruns
 
 #### **TOC**
 
-- **1 Concepts**
+- **1 Concepts** (rewritten 26.1117)
 - **1b Foundry free tier sign up**
 - **2 Foundry tutorials** (ZAI original and modified Palantir)
 - **3 Project/doc sources** (PAL and ZAI)
@@ -65,7 +65,7 @@ _Latest (26.0911): Making steady progress on section **[2.2 PAL demos (speedruns
 
 <br>
 
-## **[1 Concepts](/pal_concepts_all/)**
+## **[1 Concepts](/pal_concepts_all/)** (rewritten 26.1117)
 
 For the **Core application programming concepts** click on the title link above.
 

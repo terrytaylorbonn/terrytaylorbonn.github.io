@@ -54,7 +54,7 @@ _Geospatial example: Input 2 sets of intelligence data (ELINT and ATR GEOINT, th
 
 <br>
 
-### **(2.1 QS0-2 TODO) Detect/analyze haystack needles: Create (with FDE) your own haystack needle app**
+### **2 (2.1 QS0-2 TODO) Detect/analyze haystack needles: Create (with FDE) your own haystack needle app**
 
 use PY/Pipeline to detect (filter out).
 
