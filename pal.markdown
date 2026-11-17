@@ -25,7 +25,7 @@ _Latest (26.0911): Making steady progress on section **[2.2 PAL demos (speedruns
 #### **TL;DR (26.1116):** To get started ASAP with Enterprise AI programming using Palantir Foundry do the following sections 
 - **1 Concepts** (briefly look over; there are some very brief and informative diagrams (ZiptieAI originals) that you will want to refer back to as you make progress).
 - **1b Foundry free tier sign up**. 
-- **2.2 QS (quick start) tutorial**. Focuses on creating from scratch a very very basic **"needle in the haystack" Foundry app**. Hands-on is the only way you really learn Foundry. 
+- **2.2 QS1 (quick start) tutorial**. Focuses on creating from scratch a very very basic **"needle in the haystack" Foundry app**. Hands-on is the only way you really learn Foundry. 
 - **2.2a Foundry deep dive (DD)**. 
   - Covers the topics (hands-on) in the QS in more detail and cover topics that were not in the QS. 
   - Will (TODO) reference official PAL speedruns, demos, and examples. 
