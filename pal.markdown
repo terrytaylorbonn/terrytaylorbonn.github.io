@@ -24,7 +24,7 @@ _Latest (26.0911): Making steady progress on section **[2.2 PAL demos (speedruns
 
 #### **TL;DR (26.1116):** To get started ASAP with Enterprise AI programming using Palantir Foundry do the following sections 
 - **1b Foundry free tier sign up**. 
-- **2.2 QS (quick start) tutorial**. Focuses on creating from scratch a very very basic "needle in the haystack" Foundry app. Hands-on is the only way you really learn Foundry. 
+- **2.2 QS (quick start) tutorial**. Focuses on creating from scratch a very very basic **"needle in the haystack" Foundry app**. Hands-on is the only way you really learn Foundry. 
 - Then for more motivation, **skip to the real-world demo (screenshot below)** in **2.5 PAL Examples (installable)**, example **E11: Palantir Foundry example “Integrate GeoSpatial data with Gaia” (26.0728).** The ZAI docx for this example shows how to (1) install the excellent PAL example and then (2) replicate that example (reusing only the original example data; you recreate everything else).
 - Then armed with the inspiration and motivation you got from the real-world example, go back to **2.2a Foundry deep dive (DD)**. 
   - Cover the topics (hands-on) in the QS in more detail and cover topics that were not in the QS. 
