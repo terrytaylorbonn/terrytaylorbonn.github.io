@@ -57,7 +57,7 @@ use PY/Pipeline to detect (filter out).
 
 <br>
 
-### **3 Compare to real world Foundry Example "Geospatial GAIA"**
+### **3 (TODO) Compare to real world Foundry Example "Geospatial GAIA"**
 
 In 1/2 you created everything for a real-world app like in this example.
 
@@ -103,7 +103,7 @@ _Main Foundry diagram (ZAI original diagram verified by FDE)_<br><img src="/asse
 
 <br>
 
-### **5 (DD) Adding AI**
+### **5 (WIP DD) Adding AI**
 
 Adding AI introduces new data flows that must be governed, particularly when proprietary information is sent to external models. AIPL, Actions, authorization policies, and UI controls each play a role in controlling those flows.
 
@@ -120,7 +120,7 @@ Adding AI introduces new data flows that must be governed, particularly when pro
 <br>
 
 
-### **6 (DD) Governance**
+### **6 (WIP DD) Governance**
 
 One especially important distinction: monitoring is not the same as preventing leakage. If sensitive data has already been transmitted to an external model, detecting it afterward may be too late. Preventive controls must operate before transmission.
 

@@ -251,6 +251,179 @@ The educational progression becomes:
 
 I would treat this as a redesign for the next edition—not a reason to discard the current QS. Much of its material can become QS2, while D1 supplies much of the foundation for QS1.
 
+<br>
+
+-----------------
+-----------------
+-----------------
+-----------------
+
+<br>
+
+
+ME: I dont want to discard the current. This is what I would like to do:
+-1 add this plan to the main "3c Enterprise" page... a very short version.
+-2 finish basic DD (deep dive)
+-3 create QS1 (the current QS becomes QS2)
+-4 continue on DD (try to "plug in" all the missing pieces... tools that need to describe, etc)
+
+<br>
+
+-----------------
+
+<br>
+
+**Yes—that preserves the current work and gives the series a clear development order.**
+
+Suggested short text for **3c Enterprise**:
+
+### Foundry tutorial roadmap
+
+1. **Finish the basic Deep Dive (D1–D6):** introduce the core Foundry mechanisms through small, connected exercises.
+2. **Add QS1—Find and map the needles:** detect matches in sample data, display them on a map, and connect the exercise to the richer GAIA example. **The existing Quick Start becomes QS2**, extending the workflow with an interactive UI, AI, Actions, and automation.
+3. **Expand the Deep Dive:** plug in additional data sources, analysis tools, and techniques, showing where each fits in the overall architecture.
+
+**The existing Quick Start remains available throughout.**
+
+
+<br>
+
+-----------------
+-----------------
+-----------------
+-----------------
+
+<br>
+
+ME: by "plan" i mean not what i am going to do...
+But rather what the end goal is.
+
+I want to reorg the concepts to reflect what we discussed....
+and update diagrams.
+in the attached diagrams "QS-1, QS-2a, ...." does not mean any particular QS right now,
+but the eventual desired general QS progression.
+i want to diagrams something like these to the main "3c Enterprise" section "1 Concepts"
+to show TODAY (even if not yet implemented) what hte goal is.
+
+pic1: 3 diagrams, basic "haystack needles" demo.
+the needles are in the dataset, and use north tools (maps, UI, etc) to find specific needles.
+
+pic2,3,4: ontology, AI, governance.
+
+<br>
+
+-----------------
+
+<br>
+
+
+**Understood—this is the intended learning progression, not a development schedule or a list of tutorials already available.** You can present it today under **1 Concepts**, with that distinction stated once.
+
+Suggested introduction:
+
+> **The diagrams below show the intended Quick Start learning progression: detect relevant records, explore the results, build an operational application, add AI, and apply governance. They describe the overall learning goal; not every stage is currently implemented as a separate tutorial.**
+
+## Suggested concept headings
+
+| Heading | Main message |
+|---|---|
+| **1.1 Detect needles in the haystack** | Pipeline transforms identify matching records and store them in a dataset. |
+| **1.2 Explore the detected needles** | North tools—such as Maps—display the results and help users investigate particular matches. |
+| **1.3 Work with persistent objects and Actions** | The Ontology provides objects, properties, links, and controlled changes for applications to use. |
+| **1.4 Apply AI where it adds value** | AI can participate in pipeline processing or analyze objects through AIPL, Functions, and applications. |
+| **1.5 Govern the complete workflow** | Controls determine who and what may access, process, change, and transmit data. |
+
+The **GAIA comparison fits at the end of 1.2**: show how the small exercise illustrates mechanisms used in a richer example, without implying that it reproduces the entire example.
+
+## Diagram adjustments
+
+### Picture 1: detection versus exploration
+
+**Your separation is useful:**
+
+- **Pipeline:** detects candidate needles according to configured rules.
+- **Output dataset:** stores those detected candidates.
+- **North tools:** display, filter, and investigate them further.
+
+Keep the distinction explicit: **the map does not have to repeat the original detection process.**
+
+For the Maps path shown, retain:
+
+**Detected dataset → Ontology objects → Maps**
+
+For other North tools, Ontology is not universally required—some can analyze datasets directly.
+
+### Picture 2: Ontology-backed applications
+
+This diagram works for **objects, links, Actions, Functions, and Workshop**. Since it represents the eventual conceptual progression, remove **“current QS”** from its title.
+
+Suggested title:
+
+> **QS-3: Build an application over persistent objects**
+
+### Picture 3: where AI can participate
+
+Replace **“Where can AI be injected??????”** with:
+
+> **AI can be invoked during data processing or during application use.**
+
+Show model-call connections from:
+- **Python transforms / Pipeline Builder**
+- **AIPL**
+- **Functions**
+
+A UI may also expose native AI features or call those workflows. **A dataset or object type does not invoke an LLM merely by existing.**
+
+For **“LLM (SOUTH)”**, add a qualification:
+
+> **Model service—external or Foundry-hosted**
+
+An LLM is not necessarily outside Foundry; its placement depends on how it is hosted.
+
+### Picture 4: governance
+
+**The outer governance boundary works.** Include a short caption:
+
+> **Governance spans source access, datasets, objects, Actions, model use, and data egress—not just the UI.**
+
+**The overall story is now: detect → explore → operationalize → augment with AI → govern throughout.** Governance appears last in the explanation, but applies across every stage.
+
+<br>
+
+-----------------
+-----------------
+-----------------
+-----------------
+
+<br>
+
+
+ME: thanks... you apparently agree with the gist of what i am proposing.
+
+if i had had such diagrams and explanation froom the beginning, learning this would have been so much easier.
+i think the ZiptieAi concepts will make it vastly easeier to understand foundry.
+
+<br>
+
+-----------------
+
+<br>
+
+
+**Yes—I agree with the gist.** Your diagrams give readers a map **before** asking them to navigate individual Foundry screens.
+
+They separate questions that otherwise get tangled together:
+
+- **Where is the data?**
+- **Where does processing happen?**
+- **What does the Ontology provide?**
+- **Which app configures or uses each capability?**
+- **Where can AI participate, and what governs it?**
+
+That is the contribution of the ZiptieAI concepts: **connect the tools to a coherent mental model**, then use small, verified exercises to make that model concrete.
+
+We’ve repeatedly seen how those distinctions resolve confusion in your own learning. Putting them at the beginning should help other beginners avoid the same detours.
+
 
 
 <br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br>
@@ -263,7 +436,7 @@ I would treat this as a redesign for the next edition—not a reason to discard 
 
 <br>
 
-
+# **26.1116**
 
 _Main Foundry diagram (ZAI original diagram verified by FDE)_<br><img src="/assets/MAIN-03.png" alt="drones" width="73%" style="border: 1px solid #999;">
 
