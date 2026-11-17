@@ -15,12 +15,11 @@ _(rewritten 26.1117)_
 
 This is the original ZiptieAI take on the core Foundry concepts (worked out in tandem with FDE). I only figured this out 26.1117, so there are several TODO's and WIP's below.
 
-- **1 (TODO) Compare to real world Foundry Example “Geospatial GAIA”**
-- **2 (TODO) Detect haystack needles (create Dataset)**
-- **3 (TODO) Display / analyze with Maps (create Ontology OTs/PTs)**
-- **4 (QS) Create Ontology “backend” (Ontology OTs/PTs, actions, links) for analysis of Dataset with Workshop**. Ontology helps organize and control access to an enterprise’s valuable operational knowledge (“alpha”).
-- **5 (WIP DD) Adding AI**
-- **6 (WIP DD) Governance**
+- **1 (TODO QS0-1) Detect/analyze haystack needles: Install real-world Foundry example GAIA**
+- **2 (TODO QS0-2) Detect/analyze haystack needles: Create (with FDE) your own version**
+- **4 (2.2 QS1) Create "full" Ontology “backend” (Ontology OTs/PTs, actions, links) for analysis of Dataset with Workshop**. Ontology helps organize and control access to an enterprise’s valuable operational knowledge (“alpha”).
+- **5 (2.2a DD WIP) Add AI**
+- **6 (2.2a DD WIP) Add governance**
 
 <br>
 
@@ -33,7 +32,7 @@ See also **[GPT chats (26.1117)](/pal_onto_rest_analogies/)**.
 <br>
 
 
-### **1 (TODO) Compare to real world Foundry Example "Geospatial GAIA"**
+### **1 (TODO QS0-1) Detect/analyze haystack needles: Install real-world Foundry example GAIA**
 
 In 1/2 you created everything for a real-world app like in this example. 
 See **docx [692](https://drive.google.com/drive/folders/1-Adawag9uA8_bq-hDF-nOuPYaRLz1eEO)** for details on how to install and modify the example.
@@ -50,23 +49,17 @@ _Geospatial example: Input 2 sets of intelligence data (ELINT and ATR GEOINT, th
 
 <br>
 
-### **2 (TODO) Detect haystack needles (create Dataset)**
+### **2 (TODO QS0-2) Detect/analyze haystack needles: Create (with FDE) your own version**
 
 use PY/Pipeline to detect (filter out).
 
-<img src="/assets/ALL-01.png" alt="drones" width="48%" style="border: 1px solid #999;">
+<img src="/assets/ALL-02bbb.png" alt="drones" width="70%" style="border: 1px solid #999;">
 
-
-<br>
-
---------------------
-
-<br>
-
+<!-- 
 ### **3 (TODO) Display / analyze with Maps (create Ontology OTs/PTs)**
 
 <img src="/assets/ALL-02.png" alt="drones" width="48%" style="border: 1px solid #999;">
-
+-->
 
 <br>
 
@@ -74,7 +67,7 @@ use PY/Pipeline to detect (filter out).
 
 <br>
 
-### **4 (QS) Create Ontology "backend" (Ontology OTs/PTs, actions, links) for analysis of Dataset with Workshop**
+### **4 (2.2 QS1) Create "full" Ontology "backend" (Ontology OTs/PTs, actions, links) for analysis of Dataset with Workshop**
 
 
 Ontology helps organize and control access to an enterprise's valuable operational knowledge ("alpha"). 
@@ -103,7 +96,7 @@ _Main Foundry diagram (ZAI original diagram verified by FDE)_<br><img src="/asse
 
 <br>
 
-### **5 (WIP DD) Adding AI**
+### **5 (2.2a DD WIP) Add AI**
 
 Adding AI introduces new data flows that must be governed, particularly when proprietary information is sent to external models. AIPL, Actions, authorization policies, and UI controls each play a role in controlling those flows.
 
@@ -121,7 +114,7 @@ _OLD_<br><img src="/assets/MAIN-03.png" alt="drones" width="33%" style="border: 
 <br>
 
 
-### **6 (WIP DD) Governance**
+### **6 (2.2a DD WIP) Add governance**
 
 One especially important distinction: monitoring is not the same as preventing leakage. If sensitive data has already been transmitted to an external model, detecting it afterward may be too late. Preventive controls must operate before transmission.
 
