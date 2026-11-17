@@ -15,9 +15,9 @@ _(rewritten 26.1117)_
 
 This is the original ZiptieAI take on the core Foundry concepts (worked out in tandem with FDE). I only figured this out 26.1117, so there are several TODO's and WIP's below.
 
-- **1 (TODO) Detect haystack needles (create Dataset)**
-- **2 (TODO) Display / analyze with Maps (create Ontology OTs/PTs)**
-- **3 (TODO) Compare to real world Foundry Example “Geospatial GAIA”**
+- **1 (TODO) Compare to real world Foundry Example “Geospatial GAIA”**
+- **2 (TODO) Detect haystack needles (create Dataset)**
+- **3 (TODO) Display / analyze with Maps (create Ontology OTs/PTs)**
 - **4 (QS) Create Ontology “backend” (Ontology OTs/PTs, actions, links) for analysis of Dataset with Workshop**. Ontology helps organize and control access to an enterprise’s valuable operational knowledge (“alpha”).
 - **5 (WIP DD) Adding AI**
 - **6 (WIP DD) Governance**
@@ -33,7 +33,24 @@ See also **[GPT chats (26.1117)](/pal_onto_rest_analogies/)**.
 <br>
 
 
-### **1 (TODO) Detect haystack needles (create Dataset)**
+### **1 (TODO) Compare to real world Foundry Example "Geospatial GAIA"**
+
+In 1/2 you created everything for a real-world app like in this example. 
+See **docx [692](https://drive.google.com/drive/folders/1-Adawag9uA8_bq-hDF-nOuPYaRLz1eEO)** for details on how to install and modify the example.
+
+<img src="/assets/ALL-03.png" alt="drones" width="48%" style="border: 1px solid #999;">
+
+
+_Geospatial example: Input 2 sets of intelligence data (ELINT and ATR GEOINT, the **"haystack"**), find ~3 million matching entries, sift through the 3 million to find 4 entries of interest (**4 "needles"**), display the 4 entries on a map._<br><img src="/assets/pal_10_20.png" alt="drones" width="53%" style="border: 1px solid #999;"><br>
+
+
+<br>
+
+--------------------
+
+<br>
+
+### **2 (TODO) Detect haystack needles (create Dataset)**
 
 use PY/Pipeline to detect (filter out).
 
@@ -46,26 +63,9 @@ use PY/Pipeline to detect (filter out).
 
 <br>
 
-### **2 (TODO) Display / analyze with Maps (create Ontology OTs/PTs)**
+### **3 (TODO) Display / analyze with Maps (create Ontology OTs/PTs)**
 
 <img src="/assets/ALL-02.png" alt="drones" width="48%" style="border: 1px solid #999;">
-
-
-<br>
-
---------------------
-
-<br>
-
-### **3 (TODO) Compare to real world Foundry Example "Geospatial GAIA"**
-
-In 1/2 you created everything for a real-world app like in this example. 
-See **docx [692](https://drive.google.com/drive/folders/1-Adawag9uA8_bq-hDF-nOuPYaRLz1eEO)** for details on how to install and modify the example.
-
-<img src="/assets/ALL-03.png" alt="drones" width="48%" style="border: 1px solid #999;">
-
-
-_Geospatial example: Input 2 sets of intelligence data (ELINT and ATR GEOINT, the **"haystack"**), find ~3 million matching entries, sift through the 3 million to find 4 entries of interest (**4 "needles"**), display the 4 entries on a map._<br><img src="/assets/pal_10_20.png" alt="drones" width="53%" style="border: 1px solid #999;"><br>
 
 
 <br>
