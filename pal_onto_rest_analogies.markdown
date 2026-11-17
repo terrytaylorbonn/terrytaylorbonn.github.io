@@ -6,18 +6,169 @@ permalink: /pal_onto_rest_analogies/
 
 <br>
 
+26.1117
+
+<br>
+
+
+on webpage https://ziptieai.com/pal/ title "3c Enterprise" under heading "1 Concepts" there are 2 subheadings
+
+1 Ontology/REST analogies
+2 Protecting Enterprise Alpha: Ontology, AI, and Governance
+
+i want to chat with you about these 2 subheadings
+
+<br>
+
+## 1 Ontology/REST analogies
+
+i suggest to rename to "1 Ontology <> REST-backend anologies"
+
+ontology is like a REST-backend with built in DB
+WORKSHOP accesses in REST style
+allows workshop to analyze
+in our QS, we search for needle using AI in AIPLF.
+but on the main "3c Enterprise" ziptieai webpage, i compare our demo to the Palantir EXAMPLE geospatial GAIA.
+BUT for GAIA demo the search is using filter in the pipeline (see attached pic1) .
+
+<img src="/assets/GAIA-01.png" alt="drones" width="73%" style="border: 1px solid #999;">
+
+
+maps are used to display resulting data. (see attached pic2)
+
+<img src="/assets/GAIA-02.png" alt="drones" width="73%" style="border: 1px solid #999;">
+
+<br>
+
+## it seems to me that there needs to be a new "1 Concepts" subsection
+
+### 1b "haystack needed search"
+and we describe where the spark based searches occur
+2 Protecting Enterprise Alpha: Ontology, AI, and Governance
+where is alpha, AI and governance?
+
+<br>
+
+## i want to create a diagram.
+and specific exactly where these are (see attached pic 3)
+
+<img src="/assets/GAIA-03.png" alt="drones" width="73%" style="border: 1px solid #999;">
+
+
+<br>
+
+-----------------
+
+<br>
+
+FDE: 
+
+**Yes—these should be three distinct concepts.** Based on your text and diagrams, I would organize them as follows.
+
+## 1a Ontology ↔ REST-backend analogies
+
+Your proposed title works; I would spell it:
+
+> **1a Ontology ↔ REST backend: a useful analogy**
+
+The central explanation:
+
+> **The Ontology provides persistent objects, relationships, permissions, and controlled operations. Workshop uses these capabilities much as a conventional browser UI uses a backend API to read and change stored data.**
+
+Your three points, slightly refined:
+
+- **Ontology:** comparable to an application backend backed by persistent storage—not merely an in-memory object model.
+- **Workshop:** reads objects, follows links, and submits Actions. This resembles REST-backed application behavior; we need not claim Workshop literally uses REST for every operation.
+- **Analysis:** Workshop and other North tools can display, filter, summarize, and interact with the objects.
+
+**Workshop is one consumer of the Ontology, not its sole purpose.**
+
+## 1b Finding the needle: where searching happens
+
+**Yes—this deserves its own subsection.** Suggested title:
+
+> **1b Finding the needle: pipeline filters, object queries, and AI**
+
+The important distinction is **not all searching is AI, and not all searching uses Spark**.
+
+| Where | How matching happens | Your example |
+|---|---|---|
+| **Data pipeline** | Filters, joins, calculations, and correlations select matching rows. Spark can distribute these operations when it is the execution engine. | The geospatial demo’s timestamp-range filter |
+| **Ontology queries** | Indexed property filters and link traversal select objects. Do not describe these as Spark jobs. | Find Items belonging to a selected Group |
+| **AI workflow** | An LLM interprets criteria or content and evaluates the records supplied to it. | The QS’s AIPL/AIPLF matching workflow |
+| **North application** | Users explore, filter, and visualize results; the app may delegate queries to the underlying services. | The map displaying the geospatial results |
+
+For the geospatial example, describe the pictured filter specifically:
+
+> **This pipeline step keeps detections within the configured time window. The resulting objects are then available for display on the map.**
+
+That screenshot alone does not establish every matching operation in the larger demo.
+
+**The map displays the needles; it is not necessarily where they were found.**
+
+## 2 Protecting Enterprise Alpha: Ontology, AI, and Governance
+
+For this section, distinguish **valuable content**, **processing capability**, and **controls**.
+
+### Where is Alpha?
+
+If by **enterprise alpha** you mean the organization’s proprietary knowledge and advantage, it has **no single location**.
+
+It can reside in:
+
+- **Source data and datasets:** observations, records, documents.
+- **Pipeline logic:** proprietary calculations, correlations, and selection rules.
+- **Ontology:** meaningful properties and relationships that make data operational.
+- **AIPL and Functions:** prompts, decision rules, and specialized logic.
+- **Saved decisions and feedback:** knowledge captured through operational use.
+
+**AI does not automatically create alpha; it can help extract, apply, or augment it.**
+
+For your diagram, label the red box:
+
+> **Enterprise Alpha: valuable data, relationships, logic, and decisions**
+
+Use callouts to the relevant boxes rather than limiting it to Python and datasets.
+
+### Where is AI?
+
+Your dotted lines should distinguish two meanings:
+
+1. **AI assistance while building:** AI FDE helps configure apps or write code.
+2. **AI executing in the workflow:** a pipeline, AIPL, Function, or AI-enabled UI component invokes a model.
+
+**The Ontology supplies governed context and receives authorized changes; it is not itself an LLM.** A line from Ontology to AI should therefore mean **“governed object data/context,”** not “the Ontology automatically runs AI.”
+
+### Where is governance?
+
+**Across the Foundry boundary**, as your outer rectangle suggests—but enforced at different points:
+
+- Source access and network egress.
+- Dataset permissions and markings.
+- Object/property visibility.
+- Action submission criteria.
+- Model availability and LLM data-access policies.
+- Execution records and audit capabilities.
+
+A compact diagram caption could be:
+
+> **Alpha is the valuable data and logic. AI is a capability applied to it. Governance controls who or what may access, process, change, and send it outside the platform.**
+
+
+
+<br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br>
+<br>
+
+-----------------
+-----------------
+-----------------
+-----------------
+
+<br>
+
+
+
 _Main Foundry diagram (ZAI original diagram verified by FDE)_<br><img src="/assets/MAIN-03.png" alt="drones" width="73%" style="border: 1px solid #999;">
-
-<br><br>
-<br>
-
------------------
------------------
------------------
------------------
-
-<br>
-
 
 # **ME: attached is my diagram for Foundry ... the core of what it is.** 
 

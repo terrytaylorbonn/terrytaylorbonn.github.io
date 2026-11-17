@@ -74,9 +74,13 @@ _Geospatial example: Input 2 sets of intelligence data (ELINT and ATR GEOINT, th
 
 **Key concepts** 
 
-Below are short explanations (GPT answers to my promtps) for 2 key concepts (often discussed in blogs about Foundry; see the original **[GPT chats](/pal_onto_rest_analogies/)**): 
+Below are short explanations (GPT answers to my promtps) for 2 key concepts: 
 - **(1) Ontology**. What is it use analogies with REST endpoints. 
 - **(2) Alpha**. How Foundry helps you avert leakage of sensitive enterprise data.
+
+FOR DETAILS SEE **[GPT chats (26.1117)](/pal_onto_rest_analogies/)**
+- These topics are often discussed in blogs about Foundry;
+- but I decided to create my own explanation that I consider more complete and exact (verified by FDE). 
 
 <br>
 
