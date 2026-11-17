@@ -17,8 +17,8 @@ _This is the original ZiptieAI take on the core Foundry concepts (worked out in 
 - **1 (2.1 QS0-1 TODO) Detect/analyze haystack needles: Install/test/modify the real-world Foundry example GAIA**
 - **2 (2.1 QS0-2 TODO) Detect/analyze haystack needles: Create (with FDE) your own haystack needle app**
 - **4 (2.2 QS1) Create "full" Ontology “backend” (Ontology OTs/PTs, actions, links) for analysis of Dataset with Workshop**. Ontology helps organize and control access to an enterprise’s valuable operational knowledge (“alpha”).
-- **5 (2.2a DD WIP) Add AI**
-- **6 (2.2a DD WIP) Add governance**
+- **5 (2.2a DD D5) Add AI**
+- **6 (2.2a DD D6 WIP) Add governance**
 
 <br>
 
