@@ -251,9 +251,10 @@ I did not record how I signed up, and its not a process I can repeat. But I can 
 
 This section contains Foundry tutorials. The current focus is on original ZAI tutorials (see 2.0b, 2.1, 2.2). The original focus was on ZAI-modified Palantir demos (2.4, 2.5).
 
-- **2.0 Before you start programming**
-- **2.1 My first 2 failed attempts to create a tutorial (my mistakes are instructive)**
-- **2.2 Foundry QS tutorial (v3)**. This Quick Start has one focused goal — find the “needle in the haystack” — using Foundry and AI to identify records that match user-defined criteria.
+<!-- - **2.0 Before you start programming** -->
+
+- **2.1 QS0 tutorial (TODO).** 
+- **2.2 Foundry QS1 tutorial (v3)**. This Quick Start has one focused goal — find the “needle in the haystack” — using Foundry and AI to identify records that match user-defined criteria.
 - **2.2a Foundry deep dive (DD)**. The goal of this DD is to cover the topics (hands-on) in the QS in more detail and cover topics that were not in the QS. The plan is to reference official PAL speedruns, demos, and examples in the DD. 
 - **2.3 Foundry ontology (object type) management**. You are limited to 60 object types (OT's) in the ontology. Deleting existing OT's requires deleting other dependencies first (you cant just delete OT's).
 - **2.3a FDE ERROR: Foundry RequestEntityTooLarge (prompt window oversize) error**. If your chat window with FDE gets large enough, you will get this error. The fix is simple, but not obvious (and you cant ask FDE to help you fix it).
@@ -275,21 +276,14 @@ This section contains Foundry tutorials. The current focus is on original ZAI tu
 
 <br>
 
-#### **2.0 Before you start programming**
+#### **[(TODO) 2.1 QS0 Detect/analyze haystack needles](/pal_qs0/)**
 
-- Why Foundry represents **[the future of AI programming](/future_foundry_and_docs/)**.
-- But there are challenges to learning Foundry: **[Why the ZAI approach to learning Foundry is the most effective](/pal_zai_learning_method/)**.
+<img src="/assets/ALL-02bbb.png" alt="drones" width="68%" style="border: 1px solid #999;">
 
 
-<br>
+<img src="/assets/pal_10_20.png" alt="drones" width="44%" style="border: 1px solid #999;">
 
---------------------
 
-<br>
-
-#### **[2.1 My first 2 failed attempts to create a tutorial (my mistakes are instructive)](/pal_2_failed_tutorials/)**
-
-I relied too much on FDE AI. Both tutorials worked, but the result was not something to use as a tutorial. At first I thought things were going good. But for a human reader the AI-generated structure and explanations were not good enough. FDE did, however, catch any small logic error in a document. Human intelligence and AI make a great team. But the human has to be in control. You need to reach a minimal level of expertise with Foundry so that you are always in control. 
 
 <br>
 
@@ -297,7 +291,7 @@ I relied too much on FDE AI. Both tutorials worked, but the result was not somet
 
 <br>
 
-#### **[2.2 Foundry QS tutorial (v3)](/pal_693_qs/)**
+#### **[2.2 Foundry QS1 tutorial (v3)](/pal_693_qs/)**
 
 This Quick Start has one focused goal — find the “needle in the haystack” — using Foundry and AI to identify records that match user-defined criteria.
 
@@ -319,6 +313,10 @@ This Quick Start has one focused goal — find the “needle in the haystack” 
 <!-- _Main Foundry diagram (ZAI original original diagram verified by FDE)_<br><img src="/assets/MAIN-03.png" alt="drones" width="73%" style="border: 1px solid #999;"> -->
 
 _Example workflow diagram (verified by FDE) for ch2_<br><img src="/assets/qs/0b/0b_06.png" alt="drones" width="90%" style="border: 1px solid #999;">
+
+
+_NOTE: [2.1 My first 2 failed attempts to create a tutorial (my mistakes are instructive)](/pal_2_failed_tutorials/). I relied too much on FDE AI. Both tutorials worked, but the result was not something to use as a tutorial. At first I thought things were going good. But for a human reader the AI-generated structure and explanations were not good enough. FDE did, however, catch any small logic error in a document. Human intelligence and AI make a great team. But the human has to be in control. You need to reach a minimal level of expertise with Foundry so that you are always in control._
+
 
 
 <br>
@@ -396,6 +394,9 @@ In the diagrams of the new ZAI version of the Foundry intro below:
 
 
 The trial version of Foundry is very generous, but limits the total numbers of Object Types to 60. You probably won't hit that limit in 2.1 or 2.2, but to avoid running into problems in future demos, you might want to learn how to delete previous Object Types (then ask you create future demos you will appreciate the importance of tracking which demos are lowest priority).
+
+_Deleting objects_<br><img src="/assets/ALL-11.png" alt="drones" width="46%" style="border: 1px solid #999;"><br>
+
 
 <br>
 
@@ -500,7 +501,6 @@ _(D2 = [1] and [3], but [3] is the real focus) A diagram of the configuration st
 
 <br>
 
-
 #### **[2.5 PAL Examples (installable)](/3c.1b_pal_examples/)** (was 2.4) 
 
 FULL-FEATURED BUSINESS APP (WITH INSTALLER). I originally planned to focus on examples These are complete demos that auto-install. The big advantage is that you start out with a (usually) working version that you can modify piece by piece. Examples are complete (usually more complicated) and have an installer that allows you to start with a (usually) working version that you can modify. ZAI adds a few extra steps:
@@ -508,11 +508,7 @@ FULL-FEATURED BUSINESS APP (WITH INSTALLER). I originally planned to focus on ex
 - Install a second (experimental) example
 - Modify that example at your own pace<br>
 
-
-
-
-
- _Geospatial example: Input 2 sets of intelligence data (ELINT and ATR GEOINT), find ~3 million matching entries, sift through the 3 million to find 4 entries of interest, display the 4 entries on a map._<br><img src="/assets/pal_10_20.png" alt="drones" width="53%" style="border: 1px solid #999;"><br>
+ _Geospatial example: Input 2 sets of intelligence data (ELINT and ATR GEOINT), find ~3 million matching entries, sift through the 3 million to find 4 entries of interest, display the 4 entries on a map._<br><img src="/assets/pal_10_20.png" alt="drones" width="44%" style="border: 1px solid #999;"><br>
 
 
 <!--
