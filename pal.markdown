@@ -276,7 +276,11 @@ This section contains Foundry tutorials. The current focus is on original ZAI tu
 
 <br>
 
-#### **[(TODO) 2.1 QS0 Detect/analyze haystack needles](/pal_qs0/)**
+#### **[(WIP) 2.1 QS0 Detect/analyze haystack needles](/pal_qs0/)**
+
+**Original [docx #686](https://drive.google.com/drive/folders/1-Adawag9uA8_bq-hDF-nOuPYaRLz1eEO) source file** (with notes).
+
+
 
 <img src="/assets/ALL-02bbb.png" alt="drones" width="68%" style="border: 1px solid #999;">
 
