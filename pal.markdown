@@ -96,11 +96,10 @@ This section contains Foundry tutorials.
 **The first set of ZAI tutorials focuses on you learning core skills hands-on** (just go through these from start to finish):
 
 
-- **2.1 QS0 tutorial (26.1119).** The new first step. In QS0 you install a Foundry "needle in the haystack" real-world Example, then rebuild it yourself. Focuses on a quick demo that shows you the real power of Foundry (with no AI).  
-- **2.2 Foundry QS1 tutorial (26.1113)**. The second step. QS1 is also a “needle in the haystack” demo, but differs from QS0:
-  - Uses Python scripts (instead of pipeline), AIPL (AI) and functions, and governance. 
+- **2.1 Foundry QS0: Detect/analyze haystack needles (start with Foundry example) (26.1119).** The new first step. In QS0 you install a Foundry "needle in the haystack" real-world Example, then rebuild it yourself. Focuses on a quick demo that shows you the real power of Foundry (with no AI).  
+- **2.2 Foundry QS1: Detect/analyze haystack needles (start from scratch) (26.1113)**. The second step. QS1 is also a “needle in the haystack” demo, but differs from QS0 (Uses Python scripts (instead of pipeline), AIPL (AI) and functions, and governance). 
 - **2.2a Foundry deep dive (DD) (WIP)**. The goal of this DD is to cover the topics (hands-on) in the QS in more detail and cover topics that were not in the QS. The plan is to reference official PAL speedruns, demos, and examples in the DD. 
-- **Other important topics** 
+- **Other important topics** (TODO: combine these into a single page)
   - **2.3 Foundry ontology (object type) management**. You are limited to 60 object types (OT's) in the ontology. Deleting existing OT's requires deleting other dependencies first (you cant just delete OT's).
   - **2.3a FDE ERROR: Foundry RequestEntityTooLarge (prompt window oversize) error**. If your chat window with FDE gets large enough, you will get this error. The fix is simple, but not obvious (and you cant ask FDE to help you fix it).
 
@@ -111,7 +110,7 @@ This section contains Foundry tutorials.
 
 <br>
 
-#### **[2.1 QS0 Detect/analyze haystack needles (26.1119)](/pal_qs0/)**
+#### **[2.1 Foundry QS0: Detect/analyze haystack needles (start with Foundry example) (26.1119)](/pal_qs0/)**
 
 **Original [docx #686](https://drive.google.com/drive/folders/1-Adawag9uA8_bq-hDF-nOuPYaRLz1eEO) source file** (with notes).
 
@@ -130,7 +129,7 @@ This section contains Foundry tutorials.
 
 <br>
 
-#### **[2.2 Foundry QS1 tutorial (26.1113)](/pal_693_qs/)**
+#### **[2.2 Foundry QS1: Detect/analyze haystack needles (start from scratch) (26.1113)](/pal_693_qs/)**
 
 This Quick Start has one focused goal — find the “needle in the haystack” — using Foundry and AI to identify records that match user-defined criteria.
 
@@ -230,8 +229,8 @@ _A show stopper (FDE error) -- If this happens, you need to summarize part of yo
 
 **The second set focuses on various important skills and on original (some ZAI-modified) Palantir demos:**
 
-- **2.4 ZAI versions of the core ~8 Foundry getting started demos**. The core demos (speedruns) for beginners. 
-- **2.5 PAL Examples (installable)**. Real-world demos. For example **E11: Palantir Foundry example “Integrate GeoSpatial data with Gaia” (26.0728).** The ZAI docx for this example shows how to (1) install the excellent PAL example and then (2) replicate that example (reusing only the original example data; you recreate everything else).
+- **2b.4 ZAI versions of the core ~8 Foundry getting started demos**. The core demos (speedruns) for beginners. 
+- **2b.5 PAL Examples (installable)**. Real-world demos. For example **E11: Palantir Foundry example “Integrate GeoSpatial data with Gaia” (26.0728).** The ZAI docx for this example shows how to (1) install the excellent PAL example and then (2) replicate that example (reusing only the original example data; you recreate everything else).
 
 
 
@@ -241,7 +240,7 @@ _A show stopper (FDE error) -- If this happens, you need to summarize part of yo
 
 <br>
 
-#### **[2.4 ZAI versions of the core ~8 Foundry getting started demos](/3c.2_pal_initial_demos/)** (was 2.2)
+#### **[2b.4 ZAI versions of the core ~8 Foundry getting started demos](/3c.2_pal_initial_demos/)**
 
 
 _Main diagram for demo D3 (Core workflow + Automation + AI external)_<br><img src="/assets/wuxi-15bbb.png" alt="drones" width="86%" style="border: 1px solid #999;"><br>
@@ -255,7 +254,7 @@ _Main diagram for demo D3 (Core workflow + Automation + AI external)_<br><img sr
 
 <br>
 
-#### **[2.5 PAL Examples (installable)](/3c.1b_pal_examples/)** (was 2.4) 
+#### **[2b.5 PAL Examples (installable)](/3c.1b_pal_examples/)**  
 
 FULL-FEATURED BUSINESS APP (WITH INSTALLER). I originally planned to focus on examples These are complete demos that auto-install. The big advantage is that you start out with a (usually) working version that you can modify piece by piece. Examples are complete (usually more complicated) and have an installer that allows you to start with a (usually) working version that you can modify. ZAI adds a few extra steps:
 
