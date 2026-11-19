@@ -6,9 +6,27 @@ permalink: /pal_qs0/
 
 <br>
 
+
+
 [← 3c Enterprise](/pal/)
 
 26.1119 (v1 26.1118)
+
+
+<br>
+
+Chapters (WIP; will be extracted from docx)
+- **[1 Intro](/pal_qs0_1_introl/)**
+- **[2 Install marketplace](/pal_qs0_2_install_mplace/)**
+- **[3 Download Dataset](/pal_qs0_3_download_ds/)**
+- **[4 Pipeline](/pal_qs0_4_pipeline/)**
+- **[5 Object type](/pal_qs0_5_objectype/)**
+- **[6 Maps](/pal_qs0_6_maps/)**
+- **[7 UI](/pal_qs0_7_ui/)**
+- **[8 Algorithm](/pal_qs0_8_algorithm/)**
+
+<br>
+
 
 **Original [docx #686](https://drive.google.com/drive/folders/1-Adawag9uA8_bq-hDF-nOuPYaRLz1eEO) source file** (with notes).
 
