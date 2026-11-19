@@ -15,7 +15,7 @@ permalink: /pal_qs0/
 
 <br>
 
-Chapters (WIP; will be extracted from docx)
+Chapters (extracted from docx)
 - **[1 First steps](/pal_qs0_1_introl/)**
 - **[2 Install marketplace app and test](/pal_qs0_2_install_mplace/)**
 - **[3 Create own project with datasets](/pal_qs0_3_download_ds/)**
