@@ -6,7 +6,7 @@ permalink: /pal_qs0_3_download_ds/
 
 <br>
 
-[← 3c Enterprise](/pal/)
+[← QS0](/pal_qs0/)
 
 _Converted 2026-11-19 01:53 PM EST_
 

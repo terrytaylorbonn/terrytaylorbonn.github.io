@@ -6,7 +6,7 @@ permalink: /pal_qs0_2_install_mplace/
 
 <br>
 
-[← 3c Enterprise](/pal/)
+[← QS0](/pal_qs0/)
 
 _Converted 2026-11-19 12:52 PM EST_
 

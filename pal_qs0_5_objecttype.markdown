@@ -6,7 +6,7 @@ permalink: /pal_qs0_5_objectype/
 
 <br>
 
-[← 3c Enterprise](/pal/)
+[← QS0](/pal_qs0/)
 
 26.1119 (v1 26.1119)
 
