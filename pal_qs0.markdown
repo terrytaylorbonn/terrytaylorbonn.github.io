@@ -4,6 +4,10 @@ title: 2.1 QS0 Detect/analyze haystack needles
 permalink: /pal_qs0/
 ---
 
+<br>
+
+[← 3c Enterprise](/pal/)
+
 26.1119 (v1 26.1118)
 
 **Original [docx #686](https://drive.google.com/drive/folders/1-Adawag9uA8_bq-hDF-nOuPYaRLz1eEO) source file** (with notes).
