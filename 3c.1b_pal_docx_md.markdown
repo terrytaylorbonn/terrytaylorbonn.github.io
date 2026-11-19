@@ -570,6 +570,58 @@ Principle: Triple backticks in the DOCX explicitly define a Markdown code block.
 ----------------------------
 ----------------------------
 
+## 26.1119 15:20 ZiptieAI DOCX → Markdown: Remaining Master Rules
+
+Excludes the rules we just discussed for numbered lists, bulleted lists, backticks, image sequences, and DONT PUBLISH sections.
+
+### General
+
+1. Source: DOCX is the sole source of truth. Do not rewrite, correct, summarize, or reorganize content.
+2. Timestamp: Put the actual Eastern Time conversion timestamp on the first line of each Markdown file.
+3. Chapters: Convert each H1 chapter into a separate Markdown file.
+4. Scope: Convert only the requested chapters.
+5. Paragraphs: Preserve Word paragraph boundaries. Never accidentally combine paragraphs.
+6. Formatting: Preserve bold, italics, inline code, and intentional Markdown syntax.
+
+### Headings and TOC
+
+7\. Headings: Convert Word heading styles as follows:
+
+| Word | Markdown           |
+| ---- | ------------------ |
+| H1   | `## **Heading**`   |
+| H2   | `### **Heading**`  |
+| H3   | `#### **Heading**` |
+| H4   | `**Heading**`      |
+
+8. Heading spacing: Insert `<br>` and a blank line before headings.
+9. TOC: Generate a chapter TOC immediately before the first H2, including all H2/H3 headings in document order.
+10. TOC links: Use working internal links and explicit heading anchors.
+11. TOC label: Use `**TOC**`, not a heading.
+
+### Images
+
+12. Format: Export embedded screenshots as PNG files, without resizing the original images.
+13. Paths: Use the requested Jekyll asset directory.
+14. Image HTML: Use `<img>` tags with `src`, `alt`, percentage `width`, and a thin gray border.
+15. Placement: Preserve each image's position relative to the surrounding text.
+16. Default width: Use the established default when no explicit width is supplied.
+
+### Other formatting
+
+17. Code: Preserve existing code formatting without adding unnecessary fences or language identifiers.
+18. Whitespace: Maintain blank lines between independent Markdown blocks.
+19. Manual line breaks: Preserve intentional line breaks rather than merging separate instructions.
+20. Breadcrumbs: Preserve manually authored navigation links; do not regenerate them.
+
+### Quality control
+
+21. Content: Verify that all requested publishable sections are included.
+22. Formatting: Check bold markers, paragraph boundaries, headings, and TOC anchors.
+23. Deliverables: Return the requested Markdown and/or PNGs, without generating unnecessary files.
+
+These 23 principles, combined with the list, backtick, image-numbering, and publication-exclusion rules we established today, should give us a compact master specification.
+
 <br>
 
 26.1119 (v1 26.0818)
