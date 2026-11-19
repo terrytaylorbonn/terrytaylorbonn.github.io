@@ -23,7 +23,7 @@ Chapters (WIP; will be extracted from docx)
 - **[5 Create Object type](/pal_qs0_5_objectype/)**
 - **[6 Display in Maps](/pal_qs0_6_maps/)**
 - **[7 Create UI](/pal_qs0_7_ui/)**
-- **[8 HN algorithm](/pal_qs0_8_algorithm/)**
+- **[8 HN algorithm description](/pal_qs0_8_algorithm/)**
 
 <br>
 

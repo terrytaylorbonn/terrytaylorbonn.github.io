@@ -1,6 +1,6 @@
 ---
 layout: page
-title: 1 Intro
+title: 1 First steps
 permalink: /pal_qs0_1_introl/
 ---
 
