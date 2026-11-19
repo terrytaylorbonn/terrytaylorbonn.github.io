@@ -16,14 +16,14 @@ permalink: /pal_qs0/
 <br>
 
 Chapters (WIP; will be extracted from docx)
-- **[1 Intro](/pal_qs0_1_introl/)**
-- **[2 Install marketplace](/pal_qs0_2_install_mplace/)**
-- **[3 Download Dataset](/pal_qs0_3_download_ds/)**
-- **[4 Pipeline](/pal_qs0_4_pipeline/)**
-- **[5 Object type](/pal_qs0_5_objectype/)**
-- **[6 Maps](/pal_qs0_6_maps/)**
-- **[7 UI](/pal_qs0_7_ui/)**
-- **[8 Algorithm](/pal_qs0_8_algorithm/)**
+- **[1 First steps](/pal_qs0_1_introl/)**
+- **[2 Install marketplace app and test](/pal_qs0_2_install_mplace/)**
+- **[3 Create own project with datasets](/pal_qs0_3_download_ds/)**
+- **[4 Build pipeline](/pal_qs0_4_pipeline/)**
+- **[5 Create Object type](/pal_qs0_5_objectype/)**
+- **[6 Display in Maps](/pal_qs0_6_maps/)**
+- **[7 Create UI](/pal_qs0_7_ui/)**
+- **[8 HN algorithm](/pal_qs0_8_algorithm/)**
 
 <br>
 
