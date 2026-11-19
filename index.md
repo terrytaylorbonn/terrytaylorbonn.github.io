@@ -6,9 +6,10 @@ title: Home
 <br>
 
 _Latest updates **([history](/pal_latest_updates_history/))**_
-- _26.1111 **[Foundry Quick Start](/pal_693_qs/)**_
+- _26.1111 **[Foundry Quick Start (QS1)](/pal_693_qs/)**_
 - _26.1115 **[Foundry "deep dive" (page 3c Enterprise / section 2.2a; WIP)](/pal/)**_
 - _26.1117 **[Core Foundry programming concepts (rewritten)](/pal_concepts_all/)**_
+- _26.1119 **[QS0 (new)](/pal_qs0)** (rework of a Foundry example, to be used as the initial demo on this site)_
 
 
 <!--
