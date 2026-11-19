@@ -405,8 +405,173 @@ GPT: Done. I converted the Phase 1 DOCX into Markdown plus 83 PNGs, packaged in 
 
 Download the Phase 1 ZIP 
 
+
 <br>
 
-26.0820 (v1 26.0818)
+----------------------------
+----------------------------
+----------------------------
+----------------------------
+----------------------------
+----------------------------
+
+<br>
+
+# 26.1119
+
+
+## ZiptieAI DOCX → Markdown: Updated Conversion Rules (November 19, 2026)
+
+These are the new and revised rules established during our Chapter 2 conversion. They supplement the existing conversion rules.
+
+### 1. Numbered lists
+
+- Detect genuine Microsoft Word numbered lists.
+- Preserve the original numbering, including restarts and nested numbering.
+- Convert each item into a separate, unindented Markdown paragraph.
+- Escape the period after each number to prevent Markdown from automatically creating an ordered list.
+- Preserve numbering across images, explanatory paragraphs, and other content.
+- Do not generate HTML `<ol>` or `<li>` tags.
+
+Example:
+
+```
+
+1\. First step.
+
+2\. Second step.
+
+<img src="/assets/qs0/ch2/2_01.png" width="60%">
+
+3\. Third step.
+
+Some explanatory text.
+
+4\. Fourth step.
+
+```
+
+### 2. Bulleted lists
+
+- Detect genuine Word bulleted lists.
+- Detect nested bullet levels from Word's list formatting.
+- Convert to ordinary Markdown bullets using `- `.
+- Use two spaces of indentation for each nested level.
+- Preserve each item as a separate paragraph.
+- Preserve inline bold and italic formatting.
+- Do not generate HTML `<ul>` or `<li>` tags.
+
+### 3. DONT PUBLISH sections
+
+Use these explicit markers in the DOCX:
+
+- `(DONT PUBLISH)` — begin exclusion.
+- `(DONT PUBLISH END)` — end exclusion.
+
+Exclude everything between these markers, including the markers themselves.
+
+Resume conversion immediately after `(DONT PUBLISH END)`. Do not exclude any subsequent content unless another exclusion begins.
+
+Apply these rules to text, headings, lists, and images.
+
+### 4. Image numbering and synchronization
+
+- Number PNGs sequentially within each chapter.
+- Example: `2_01.png`, `2_02.png`, ... `2_32.png`.
+- Count only images outside excluded sections.
+- Generate Markdown image references and exported PNG filenames from the same image sequence.
+- Preserve the original PNG dimensions.
+- Preserve image order exactly as it appears in Word.
+- Verify that every Markdown image reference corresponds to an exported PNG.
+
+Chapter 2 image directory: `/assets/qs0/ch2/`
+
+Chapter 3 image directory: `/assets/qs0/ch3/`
+
+### 5. Image width and Word sequence markers — NEW
+
+Immediately after or near each screenshot, the DOCX contains an image width percentage and a Word sequence identifier.
+
+Example from your screenshot:
+
+89 (png b-32)
+
+89 = image width percentage; (png b-32) = Word sequence identifier
+
+Conversion rules:
+
+- Read `89` as the image display width: `width="89%"`.
+- Treat `(png b-32)` as a Word-side image identifier.
+- Neither the width number nor the sequence identifier should appear as ordinary text in the Markdown.
+- The sequence identifier is not a replacement for the chapter's sequential PNG filename.
+- Use the identifier as an additional cross-check when matching screenshots to Markdown references.
+- If the sequence identifier is a Word field, use its displayed result when identifying the image.
+
+Example output:
+
+```
+
+<img src="/assets/qs0/ch2/2_32.png" alt="" width="89%" style="border: 1px solid #999;">
+
+```
+
+### 6. Compact TOC
+
+- Generate the chapter TOC from publishable H2 and H3 headings.
+- Exclude headings inside DONT PUBLISH sections.
+- Use `**TOC**` as the label.
+- No blank lines between TOC entries.
+- Preserve heading order and working anchor links.
+
+### 7. Final verification
+
+Before delivering a conversion:
+
+1. Verify that all publishable sections are included.
+2. Verify that every exclusion has a matching end marker.
+3. Verify that numbering and bullet nesting are preserved.
+4. Verify that image references and exported PNGs match exactly.
+5. Verify that width percentages are correctly applied.
+6. Verify that no image-width numbers or Word sequence identifiers appear as standalone Markdown text.
+7. Verify that the TOC includes all publishable H2/H3 headings.
+8. Preserve the actual Eastern Time conversion timestamp on the first line.
+
+Key principle: The DOCX controls the content, list numbering, image order, image widths, and publication boundaries. The converter must reproduce those instructions without interpreting or rewriting the material.
+
+<br>
+
+----------------------------
+----------------------------
+----------------------------
+----------------------------
+----------------------------
+----------------------------
+
+<br>
+
+13:58 Added
+
+DOCX → Markdown: Triple-Backtick Rule
+1. Detect paragraphs containing exactly three backticks (```) in the Word document.
+2. Treat the first occurrence as the opening code fence and the next as the closing code fence.
+3. Preserve both fences exactly in Markdown, each on its own line.
+4. Preserve all text between the fences exactly, including indentation, line breaks, and special characters.
+5. Do not apply Markdown formatting conversions inside the fenced region (bold, bullets, numbering, etc.).
+6. Do not add extra backticks, escape existing backticks, or add language identifiers such as json.
+Principle: Triple backticks in the DOCX explicitly define a Markdown code block. Copy the enclosed content without modification.
+
+
+<br>
+
+----------------------------
+----------------------------
+----------------------------
+----------------------------
+----------------------------
+----------------------------
+
+<br>
+
+26.1119 (v1 26.0818)
 
 
