@@ -4,14 +4,6 @@ title: 3c Enterprise
 permalink: /pal/
 ---
 
-<!-- _TODO: add [0b Scoping](/pal_concepts_scoping/) (#696; added 26.1011) somehwere_ 
-
-26.1104
-Removed the header search locally and preserved its setup.
-To restore it, set header_search_enabled: true in [_config.yml (line 33)](/C:/Users/terry/Downloads/terrytaylorbonn.github.io/_config.yml:33), then rebuild.
-Build passed; verified search is absent from the generated page. Changes aren’t published yet.
-
--->
 
 <br>
 
@@ -19,40 +11,24 @@ Build passed; verified search is absent from the generated page. Changes aren’
 
 <br>
 
-<!--
-_Latest (26.0911): Making steady progress on section **[2.2 PAL demos (speedruns)](/3c.2_pal_initial_demos/)**._ -->
-
-#### **TL;DR (26.1116):** To get started ASAP with Enterprise AI programming using Palantir Foundry do the following sections 
-- **1 Concepts** (briefly look over; there are some very brief and informative diagrams (ZiptieAI originals) that you will want to refer back to as you make progress).
-- **1b Foundry free tier sign up**. 
-- **2.2 QS1 (quick start) tutorial**. Focuses on creating from scratch a very very basic **"needle in the haystack" Foundry app**. Hands-on is the only way you really learn Foundry. 
-- **2.2a Foundry deep dive (DD)**. 
-  - Covers the topics (hands-on) in the QS in more detail and cover topics that were not in the QS. 
-  - Will (TODO) reference official PAL speedruns, demos, and examples. 
-
-<!---  - (optional) Then for more motivation, **skip to the real-world demo (screenshot below)** in **2.5 PAL Examples (installable)**, example **E11: Palantir Foundry example “Integrate GeoSpatial data with Gaia” (26.0728).** The ZAI docx for this example shows how to (1) install the excellent PAL example and then (2) replicate that example (reusing only the original example data; you recreate everything else).<br>_Geospatial example: Input 2 sets of intelligence data (ELINT and ATR GEOINT, the **"haystack"**), find ~3 million matching entries, sift through the 3 million to find 4 entries of interest (**4 "needles"**), display the 4 entries on a map._<br><img src="/assets/pal_10_20.png" alt="drones" width="39%" style="border: 1px solid #999;"><br>
- -->
-
-
-<br>
 
 ------------------
 
 <br>
 
-
 #### **TOC**
+
+_**To get started ASAP with Enterprise AI programming using Foundry**, sign up to Foundry (1b), then do the ZAI tutorials (2) start to finish (while referring often to the core concepts (1))._
+
+<!-- - **1 Concepts** (briefly look over; there are some very brief and informative diagrams (ZiptieAI originals) that you will want to refer back to as you make progress).
+- **1b Foundry free tier sign up**. 
+- **2 Core ZAI tutorials hands-on tutorials (do these start to finish)** -->
 
 - **1 Concepts** (rewritten 26.1117)
 - **1b Foundry free tier sign up**
-- **2 Foundry tutorials** (ZAI original and modified Palantir)
-- **3 Project/doc sources** (PAL and ZAI)
-
-<!-- **C1 Why Foundry?** (00, v1 26.1016)
-   **C2 The future of programming Foundry (and writing documentation) is here today (WIP)** (00b, v1 26.1020)
-   **C3 Core Foundry Enterprise Concepts** (0, #697; v1 26.1011)
-   **C4 Core Foundry Enterprise AI Concepts** (1)  
-  -->
+- **2 Core ZAI hands-on tutorials (do these start to finish)**
+- **2b Foundry demos**
+- **3 Project/doc sources** (Foundry and ZAI)
 
 <br>
 
@@ -75,6 +51,298 @@ For the **Core application programming concepts** click on the title link above.
 - Foundry takes a **very practical no-nonsense approach to AI in the enterprise**. Foundry was a market leader over 20 years ago (long before AI).
 - Palantir offers a **generous Foundry free trial**.
 - Foundry's **built-in AI assistant (FDE) makes hands-on self-study practical**.
+
+
+<br>
+
+--------------------
+--------------------
+--------------------
+--------------------
+--------------------
+--------------------
+
+<br>
+
+
+
+## **1b Foundry free tier sign up**
+
+I did not record how I signed up, and its not a process I can repeat. But I can tell you the following:
+  - **You must be in a country that PAL supports** (thats only a few countries).
+  - **You can NOT use a VPN**.
+  - **You must have a passport or some picture ID of good enough quality for facial recognition verification**. My passport is almost 10 years old, but it still worked.
+  - **You need a camera on your PC to take a pic of yourself. PAL will compare your ID and the pic.**
+  - I think you need a **mobile phone number** (and email).
+
+
+<img src="/assets/pal_10_08.png" alt="drones" width="37%" style="border: 1px solid #999;"><br>
+
+<br>
+
+--------------------
+--------------------
+--------------------
+--------------------
+--------------------
+--------------------
+
+<br>
+
+## **2 Core ZAI hands-on tutorials (do these start to finish)**
+
+This section contains Foundry tutorials. 
+
+**The first set of ZAI tutorials focuses on you learning core skills hands-on** (just go through these from start to finish):
+
+
+- **2.1 QS0 tutorial (26.1119).** The new first step. In QS0 you install a Foundry "needle in the haystack" real-world Example, then rebuild it yourself. Focuses on a quick demo that shows you the real power of Foundry (with no AI).  
+- **2.2 Foundry QS1 tutorial (26.1113)**. The second step. QS1 is also a “needle in the haystack” demo, but differs from QS0:
+  - Uses Python scripts (instead of pipeline), AIPL (AI) and functions, and governance. 
+- **2.2a Foundry deep dive (DD) (WIP)**. The goal of this DD is to cover the topics (hands-on) in the QS in more detail and cover topics that were not in the QS. The plan is to reference official PAL speedruns, demos, and examples in the DD. 
+- **Other important topics** 
+  - **2.3 Foundry ontology (object type) management**. You are limited to 60 object types (OT's) in the ontology. Deleting existing OT's requires deleting other dependencies first (you cant just delete OT's).
+  - **2.3a FDE ERROR: Foundry RequestEntityTooLarge (prompt window oversize) error**. If your chat window with FDE gets large enough, you will get this error. The fix is simple, but not obvious (and you cant ask FDE to help you fix it).
+
+
+<br>
+
+--------------------
+
+<br>
+
+#### **[2.1 QS0 Detect/analyze haystack needles (26.1119)](/pal_qs0/)**
+
+**Original [docx #686](https://drive.google.com/drive/folders/1-Adawag9uA8_bq-hDF-nOuPYaRLz1eEO) source file** (with notes).
+
+
+
+<img src="/assets/ALL-02bbb.png" alt="drones" width="68%" style="border: 1px solid #999;">
+
+
+<img src="/assets/pal_10_20.png" alt="drones" width="44%" style="border: 1px solid #999;">
+
+
+
+<br>
+
+--------------------
+
+<br>
+
+#### **[2.2 Foundry QS1 tutorial (26.1113)](/pal_693_qs/)**
+
+This Quick Start has one focused goal — find the “needle in the haystack” — using Foundry and AI to identify records that match user-defined criteria.
+
+- The haystack: a collection of data records imported into Foundry.
+- The needle: any record whose text or numeric properties match criteria expressed in a user prompt.
+- The AI’s role: interpret those criteria and evaluate each record supplied to the workflow.
+- The complete workflow: import records, display them, evaluate matches, save the results, and automate processing when records arrive or change.
+- The tutorial uses a small dataset to make the mechanics visible. It introduces the workflow — not a demonstration of large-scale search performance.
+
+
+
+**Original [docx #693](https://drive.google.com/drive/folders/1-Adawag9uA8_bq-hDF-nOuPYaRLz1eEO) source file** (with notes).
+
+ 
+<img src="/assets/sun-55.png" alt="drones" width="61%" style="border: 1px solid #999;">
+
+
+_Example workflow diagram (verified by FDE) for ch2_<br><img src="/assets/qs/0b/0b_06.png" alt="drones" width="90%" style="border: 1px solid #999;">
+
+
+_NOTE: [2.1 My first 2 failed attempts to create a tutorial (my mistakes are instructive)](/pal_2_failed_tutorials/). I relied too much on FDE AI. Both tutorials worked, but the result was not something to use as a tutorial. At first I thought things were going good. But for a human reader the AI-generated structure and explanations were not good enough. FDE did, however, catch any small logic error in a document. Human intelligence and AI make a great team. But the human has to be in control. You need to reach a minimal level of expertise with Foundry so that you are always in control._
+
+
+
+<br>
+
+---------------------------
+
+<br>
+
+
+#### **2.2a Foundry deep dive (DD) (26.1117 WIP)**
+
+A collection of demos D1-D6. I am still trying to figure out exactly what DD should cover. These demos will be expanded in the near future. 
+
+The **QS** had one focused goal — find the “needle in the haystack” — using enough Foundry to complete it.
+
+The **Deep Dive (DD)** focuses on much more:
+  - a broad, hands-on introduction to Foundry’s apps and techniques, not exhaustive depth in each one.
+  - a wider tour of Foundry, with small, mechanistic exercises that show what each capability does, which app configures it, and how to verify it.
+  - EQUATOR-SOUTH-NORTH
+    - D1–D6 provide the EQUATOR backbone. 
+    - SOUTH extensions introduce different sources and ingestion techniques; 
+    - NORTH extensions introduce different analysis and interaction tools.
+  - The guiding rule for DD is:
+    - Introduce each app or technique through a small working example, connected to familiar data and mechanisms
+    - That gives readers both breadth of exposure and a mental map of where each capability fits—without turning every introduction into a complicated project.
+
+Below is the "master" diagram for the initial version of D1-D6.
+-	D1: Import and transform data _(**[#692\_pal\_foundry\_d1\_data\_xforms\_.docx](https://drive.google.com/drive/folders/1-Adawag9uA8_bq-hDF-nOuPYaRLz1eEO)**)_
+-	D2: Create object types and links from datasets _(**[#691\_pal\_foundry\_d2\_linked\_objects\_.docx](https://drive.google.com/drive/folders/1-Adawag9uA8_bq-hDF-nOuPYaRLz1eEO)**)_
+-	D3: Interact with linked objects through the UI _(**[#690\_pal\_foundry\_d3\_ui\_.docx](https://drive.google.com/drive/folders/1-Adawag9uA8_bq-hDF-nOuPYaRLz1eEO)**)_
+-	D4: Use Actions to change objects through the UI _(**[#689\_pal\_foundry\_d4\_actions\_.docx](https://drive.google.com/drive/folders/1-Adawag9uA8_bq-hDF-nOuPYaRLz1eEO)**)_
+-	D5: Combine objects, AI, Actions, and human review _(**[#688\_pal\_foundry\_d5\_ai\_human\_.docx](https://drive.google.com/drive/folders/1-Adawag9uA8_bq-hDF-nOuPYaRLz1eEO)**)_
+-	D6: Operate and govern the overall workflow
+
+_Foundry deep dive master diagram (ZAI original diagram verified by FDE)_<br><img src="/assets/DD_master_diagram.png" alt="drones" width="87%" style="border: 1px solid #999;">
+
+<br>
+
+-------------------------
+
+<br>
+
+#### **[2.3 Foundry ontology (object type) management](/pal_ontology_management/)** (v1 26.1018) (was 2.0b)
+
+
+The trial version of Foundry is very generous, but limits the total numbers of Object Types to 60. You probably won't hit that limit in 2.1 or 2.2, but to avoid running into problems in future demos, you might want to learn how to delete previous Object Types (then ask you create future demos you will appreciate the importance of tracking which demos are lowest priority).
+
+_Deleting objects_<br><img src="/assets/ALL-11.png" alt="drones" width="46%" style="border: 1px solid #999;"><br>
+
+
+<br>
+
+--------------------
+
+<br>
+
+#### **[2.3a FDE ERROR: Foundry RequestEntityTooLarge (prompt window oversize) error](/pal_RequestEntityTooLarge/)**
+
+
+_A show stopper (FDE error) -- If this happens, you need to summarize part of your chat window_<br><img src="/assets/RETL-0.png" alt="drones" width="46%" style="border: 1px solid #999;"><br>
+
+
+<br>
+
+--------------------
+--------------------
+--------------------
+--------------------
+--------------------
+--------------------
+
+<br>
+
+## **2b Foundry demos**
+
+**The second set focuses on various important skills and on original (some ZAI-modified) Palantir demos:**
+
+- **2.4 ZAI versions of the core ~8 Foundry getting started demos**. The core demos (speedruns) for beginners. 
+- **2.5 PAL Examples (installable)**. Real-world demos. For example **E11: Palantir Foundry example “Integrate GeoSpatial data with Gaia” (26.0728).** The ZAI docx for this example shows how to (1) install the excellent PAL example and then (2) replicate that example (reusing only the original example data; you recreate everything else).
+
+
+
+<br>
+
+--------------------
+
+<br>
+
+#### **[2.4 ZAI versions of the core ~8 Foundry getting started demos](/3c.2_pal_initial_demos/)** (was 2.2)
+
+
+_Main diagram for demo D3 (Core workflow + Automation + AI external)_<br><img src="/assets/wuxi-15bbb.png" alt="drones" width="86%" style="border: 1px solid #999;"><br>
+
+
+
+
+<br>
+
+--------------------
+
+<br>
+
+#### **[2.5 PAL Examples (installable)](/3c.1b_pal_examples/)** (was 2.4) 
+
+FULL-FEATURED BUSINESS APP (WITH INSTALLER). I originally planned to focus on examples These are complete demos that auto-install. The big advantage is that you start out with a (usually) working version that you can modify piece by piece. Examples are complete (usually more complicated) and have an installer that allows you to start with a (usually) working version that you can modify. ZAI adds a few extra steps:
+
+- Install a second (experimental) example
+- Modify that example at your own pace<br>
+
+ _Geospatial example: Input 2 sets of intelligence data (ELINT and ATR GEOINT), find ~3 million matching entries, sift through the 3 million to find 4 entries of interest, display the 4 entries on a map._<br><img src="/assets/pal_10_20.png" alt="drones" width="44%" style="border: 1px solid #999;"><br>
+
+
+
+<br>
+
+----------------------------------------
+--------------------
+--------------------
+--------------------
+--------------------
+--------------------
+
+<br>
+
+
+## **[3 Project/Doc sources](/pal_project_doc_sources/)**
+
+- **3.1 ZAI doc sources (docx, gdrive, this site, etc)**
+- **3.2 PAL project/doc sources**
+
+
+<br>
+
+-------------------------------
+-------------------------------
+-------------------------------
+-------------------------------
+-------------------------------
+-------------------------------
+
+<br>
+
+26.1119 (0814, v1 26.0702)
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+<!-- _TODO: add [0b Scoping](/pal_concepts_scoping/) (#696; added 26.1011) somehwere_ 
+
+26.1104
+Removed the header search locally and preserved its setup.
+To restore it, set header_search_enabled: true in [_config.yml (line 33)](/C:/Users/terry/Downloads/terrytaylorbonn.github.io/_config.yml:33), then rebuild.
+Build passed; verified search is absent from the generated page. Changes aren’t published yet.
+
+<!--
+_Latest (26.0911): Making steady progress on section **[2.2 PAL demos (speedruns)](/3c.2_pal_initial_demos/)**._ -->
+
+<!---  - **2.2 QS1 (quick start) tutorial**. Focuses on creating from scratch a very very basic **"needle in the haystack" Foundry app**. Hands-on is the only way you really learn Foundry. 
+  - **2.2a Foundry deep dive (DD)**. 
+    - Covers the topics (hands-on) in the QS in more detail and cover topics that were not in the QS. 
+    - Will (TODO) reference official PAL speedruns, demos, and examples. 
+
+  - (optional) Then for more motivation, **skip to the real-world demo (screenshot below)** in **2.5 PAL Examples (installable)**, example **E11: Palantir Foundry example “Integrate GeoSpatial data with Gaia” (26.0728).** The ZAI docx for this example shows how to (1) install the excellent PAL example and then (2) replicate that example (reusing only the original example data; you recreate everything else).<br>_Geospatial example: Input 2 sets of intelligence data (ELINT and ATR GEOINT, the **"haystack"**), find ~3 million matching entries, sift through the 3 million to find 4 entries of interest (**4 "needles"**), display the 4 entries on a map._<br><img src="/assets/pal_10_20.png" alt="drones" width="39%" style="border: 1px solid #999;"><br>
+ -->
+
+<!-- **C1 Why Foundry?** (00, v1 26.1016)
+   **C2 The future of programming Foundry (and writing documentation) is here today (WIP)** (00b, v1 26.1020)
+   **C3 Core Foundry Enterprise Concepts** (0, #697; v1 26.1011)
+   **C4 Core Foundry Enterprise AI Concepts** (1)  
+  -->
 
 <!-- **Key concepts** 
 
@@ -118,16 +386,6 @@ One especially important distinction: monitoring is not the same as preventing l
 
 <-- Note: I am using a free trial version of Foundry. A very generous free trial. But with one major limitation: **I can only have up to 50 ontology objects** (something like that; I forgot the details). So its inevitable that **I sometimes must delete demos/examples. So I try to document them carefully.** -->
 
-<br>
-
---------------------
---------------------
---------------------
---------------------
---------------------
---------------------
-
-<br>
 
 <!-- 
 
@@ -221,48 +479,6 @@ _Palantir provides proven engineering (the crystal ball is just a metaphor, mark
 - **1.3 Basic Foundry workflows** (that keep your in control and out of trouble)
 <br> -->
 
-## **1b Foundry free tier sign up**
-
-<!-- If you cant get a trial version of PAL running, then there's no reason to read further. You will not understand PAL by just reading about it. -->
-
-I did not record how I signed up, and its not a process I can repeat. But I can tell you the following:
-  - **You must be in a country that PAL supports** (thats only a few countries).
-  - **You can NOT use a VPN**.
-  - **You must have a passport or some picture ID of good enough quality for facial recognition verification**. My passport is almost 10 years old, but it still worked.
-  - **You need a camera on your PC to take a pic of yourself. PAL will compare your ID and the pic.**
-  - I think you need a **mobile phone number** (and email).
-
-<!-- - It was a fairly long process, but very professionally done (I was impressed).<br><br> -->
-
-<img src="/assets/pal_10_08.png" alt="drones" width="37%" style="border: 1px solid #999;"><br>
-
-<br>
-
---------------------
---------------------
---------------------
---------------------
---------------------
---------------------
-
-<br>
-
-## **2 Foundry tutorials**
-
-This section contains Foundry tutorials. The current focus is on original ZAI tutorials (see 2.0b, 2.1, 2.2). The original focus was on ZAI-modified Palantir demos (2.4, 2.5).
-
-<!-- - **2.0 Before you start programming** -->
-
-- **2.1 QS0 tutorial (TODO).** 
-- **2.2 Foundry QS1 tutorial (v3)**. This Quick Start has one focused goal — find the “needle in the haystack” — using Foundry and AI to identify records that match user-defined criteria.
-- **2.2a Foundry deep dive (DD)**. The goal of this DD is to cover the topics (hands-on) in the QS in more detail and cover topics that were not in the QS. The plan is to reference official PAL speedruns, demos, and examples in the DD. 
-- **2.3 Foundry ontology (object type) management**. You are limited to 60 object types (OT's) in the ontology. Deleting existing OT's requires deleting other dependencies first (you cant just delete OT's).
-- **2.3a FDE ERROR: Foundry RequestEntityTooLarge (prompt window oversize) error**. If your chat window with FDE gets large enough, you will get this error. The fix is simple, but not obvious (and you cant ask FDE to help you fix it).
-- **2.4 ZAI versions of the core ~8 Foundry getting started demos**. The core demos (speedruns) for beginners. 
-- **2.5 PAL Examples (installable)**. Real-world demos. For example **E11: Palantir Foundry example “Integrate GeoSpatial data with Gaia” (26.0728).** The ZAI docx for this example shows how to (1) install the excellent PAL example and then (2) replicate that example (reusing only the original example data; you recreate everything else).
-
-
-
 <!--- **2.0 ZAI demo master list**
  - **2.2x CONCEPTS (DEEP DIVE): ZAI demos** -->
 
@@ -270,101 +486,11 @@ This section contains Foundry tutorials. The current focus is on original ZAI tu
 - 2.2b ZAI versions of the core ~8 Foundry getting started demos
 - 2.3 PAL Examples (installable) -->
 
-<br>
-
---------------------
-
-<br>
-
-#### **[(WIP) 2.1 QS0 Detect/analyze haystack needles](/pal_qs0/)**
-
-**Original [docx #686](https://drive.google.com/drive/folders/1-Adawag9uA8_bq-hDF-nOuPYaRLz1eEO) source file** (with notes).
-
-
-
-<img src="/assets/ALL-02bbb.png" alt="drones" width="68%" style="border: 1px solid #999;">
-
-
-<img src="/assets/pal_10_20.png" alt="drones" width="44%" style="border: 1px solid #999;">
-
-
-
-<br>
-
---------------------
-
-<br>
-
-#### **[2.2 Foundry QS1 tutorial (v3)](/pal_693_qs/)**
-
-This Quick Start has one focused goal — find the “needle in the haystack” — using Foundry and AI to identify records that match user-defined criteria.
-
-- The haystack: a collection of data records imported into Foundry.
-- The needle: any record whose text or numeric properties match criteria expressed in a user prompt.
-- The AI’s role: interpret those criteria and evaluate each record supplied to the workflow.
-- The complete workflow: import records, display them, evaluate matches, save the results, and automate processing when records arrive or change.
-- The tutorial uses a small dataset to make the mechanics visible. It introduces the workflow — not a demonstration of large-scale search performance.
-
 <!-- QS has one focused goal — find the “needle in the haystack” — using enough Foundry (with AI) to complete it. 
 - The needle is a data record that fits some criteria defined in a user prompt.
 - AI interprets that prompt and scours a (potentially very large) set of data for any matching records. -->
 
-**Original [docx #693](https://drive.google.com/drive/folders/1-Adawag9uA8_bq-hDF-nOuPYaRLz1eEO) source file** (with notes).
-
- 
-<img src="/assets/sun-55.png" alt="drones" width="61%" style="border: 1px solid #999;">
-
 <!-- _Main Foundry diagram (ZAI original original diagram verified by FDE)_<br><img src="/assets/MAIN-03.png" alt="drones" width="73%" style="border: 1px solid #999;"> -->
-
-_Example workflow diagram (verified by FDE) for ch2_<br><img src="/assets/qs/0b/0b_06.png" alt="drones" width="90%" style="border: 1px solid #999;">
-
-
-_NOTE: [2.1 My first 2 failed attempts to create a tutorial (my mistakes are instructive)](/pal_2_failed_tutorials/). I relied too much on FDE AI. Both tutorials worked, but the result was not something to use as a tutorial. At first I thought things were going good. But for a human reader the AI-generated structure and explanations were not good enough. FDE did, however, catch any small logic error in a document. Human intelligence and AI make a great team. But the human has to be in control. You need to reach a minimal level of expertise with Foundry so that you are always in control._
-
-
-
-<br>
-
----------------------------
-
-<br>
-
-
-#### **2.2a Foundry deep dive (DD)**
-
-A collection of demos D1-D6. I am still trying to figure out exactly what DD should cover. These demos will be expanded in the near future. 
-
-The **QS** had one focused goal — find the “needle in the haystack” — using enough Foundry to complete it.
-
-The **Deep Dive (DD)** focuses on much more:
-  - a broad, hands-on introduction to Foundry’s apps and techniques, not exhaustive depth in each one.
-  - a wider tour of Foundry, with small, mechanistic exercises that show what each capability does, which app configures it, and how to verify it.
-  - EQUATOR-SOUTH-NORTH
-    - D1–D6 provide the EQUATOR backbone. 
-    - SOUTH extensions introduce different sources and ingestion techniques; 
-    - NORTH extensions introduce different analysis and interaction tools.
-  - The guiding rule for DD is:
-    - Introduce each app or technique through a small working example, connected to familiar data and mechanisms
-    - That gives readers both breadth of exposure and a mental map of where each capability fits—without turning every introduction into a complicated project.
-
-Below is the "master" diagram for the initial version of D1-D6.
--	D1: Import and transform data _(**[#692\_pal\_foundry\_d1\_data\_xforms\_.docx](https://drive.google.com/drive/folders/1-Adawag9uA8_bq-hDF-nOuPYaRLz1eEO)**)_
--	D2: Create object types and links from datasets _(**[#691\_pal\_foundry\_d2\_linked\_objects\_.docx](https://drive.google.com/drive/folders/1-Adawag9uA8_bq-hDF-nOuPYaRLz1eEO)**)_
--	D3: Interact with linked objects through the UI _(**[#690\_pal\_foundry\_d3\_ui\_.docx](https://drive.google.com/drive/folders/1-Adawag9uA8_bq-hDF-nOuPYaRLz1eEO)**)_
--	D4: Use Actions to change objects through the UI _(**[#689\_pal\_foundry\_d4\_actions\_.docx](https://drive.google.com/drive/folders/1-Adawag9uA8_bq-hDF-nOuPYaRLz1eEO)**)_
--	D5: Combine objects, AI, Actions, and human review _(**[#688\_pal\_foundry\_d5\_ai\_human\_.docx](https://drive.google.com/drive/folders/1-Adawag9uA8_bq-hDF-nOuPYaRLz1eEO)**)_
--	D6: Operate and govern the overall workflow
-
-
-_Foundry deep dive master diagram (ZAI original diagram verified by FDE)_<br><img src="/assets/DD_master_diagram.png" alt="drones" width="87%" style="border: 1px solid #999;">
-
-
-
-<br>
-
--------------------------
-
-<br>
 
 <!-- #### **[2.0 ZAI demo master list](/3c.2_pal_demo_MASTERLIST/)** (v1 26.1013)
 
@@ -394,42 +520,11 @@ In the diagrams of the new ZAI version of the Foundry intro below:
 <br> -->
 
 
-#### **[2.3 Foundry ontology (object type) management](/pal_ontology_management/)** (v1 26.1018) (was 2.0b)
-
-
-The trial version of Foundry is very generous, but limits the total numbers of Object Types to 60. You probably won't hit that limit in 2.1 or 2.2, but to avoid running into problems in future demos, you might want to learn how to delete previous Object Types (then ask you create future demos you will appreciate the importance of tracking which demos are lowest priority).
-
-_Deleting objects_<br><img src="/assets/ALL-11.png" alt="drones" width="46%" style="border: 1px solid #999;"><br>
-
-
-<br>
-
---------------------
-
-<br>
-
-#### **[2.3a FDE ERROR: Foundry RequestEntityTooLarge (prompt window oversize) error](/pal_RequestEntityTooLarge/)**
-
-
-_A show stopper (FDE error) -- If this happens, you need to summarize part of your chat window_<br><img src="/assets/RETL-0.png" alt="drones" width="46%" style="border: 1px solid #999;"><br>
-
-
-
-<br>
-
---------------------
-
-<br>
-
-#### **[2.4 ZAI versions of the core ~8 Foundry getting started demos](/3c.2_pal_initial_demos/)** (was 2.2)
-
 <!----
 _This is currently (26.0914) the Main focus of (1) ZAI "3c Enterprise" and (2) ZAI in general_.\*\*
 
 - NOTE: see [2.2x CONCEPTS (DEEP DIVE): ZAI demos](/3c.2_pal_demo_CONCEPTS/) above
 - ~8 demos as a basic course in hands-on learning of the main concepts (as I see them).<br><img src="/assets/wuxi-25.png" alt="drones" width="80%" style="border: 1px solid #999;"><br> -->
-
-_Main diagram for demo D3 (Core workflow + Automation + AI external)_<br><img src="/assets/wuxi-15bbb.png" alt="drones" width="86%" style="border: 1px solid #999;"><br>
 
 <!--
 - You are redoing (ZAI versions of) PAL demos.
@@ -499,43 +594,11 @@ _(D2 = [1] and [3], but [3] is the real focus) A diagram of the configuration st
 
 -->
 
-<br>
-
---------------------
-
-<br>
-
-#### **[2.5 PAL Examples (installable)](/3c.1b_pal_examples/)** (was 2.4) 
-
-FULL-FEATURED BUSINESS APP (WITH INSTALLER). I originally planned to focus on examples These are complete demos that auto-install. The big advantage is that you start out with a (usually) working version that you can modify piece by piece. Examples are complete (usually more complicated) and have an installer that allows you to start with a (usually) working version that you can modify. ZAI adds a few extra steps:
-
-- Install a second (experimental) example
-- Modify that example at your own pace<br>
-
- _Geospatial example: Input 2 sets of intelligence data (ELINT and ATR GEOINT), find ~3 million matching entries, sift through the 3 million to find 4 entries of interest, display the 4 entries on a map._<br><img src="/assets/pal_10_20.png" alt="drones" width="44%" style="border: 1px solid #999;"><br>
-
 
 <!--
 _Example (left, center) and my own build (right) (3c.1b)_<br><img src="/assets/pal_10_01.png" alt="drones" width="25%" style="border: 1px solid #999;"> <img src="/assets/pal_10_05.png" alt="drones" width="33%" style="border: 1px solid #999;"> <img src="/assets/pal_10_02.png" alt="drones" width="30%" style="border: 1px solid #999;"><br>
 
 _Workflow diagrams for examples are usually a bit more complicted than for demos._<br><img src="/assets/MAIN_E17.png" alt="drones" width="67%" ><br> -->
-
-<br>
-
-----------------------------------------
---------------------
---------------------
---------------------
---------------------
---------------------
-
-<br>
-
-
-## **[3 Project/Doc sources](/pal_project_doc_sources/)**
-
-- **3.1 ZAI doc sources (docx, gdrive, this site, etc)**
-- **3.2 PAL project/doc sources**
 
 <!--
 
@@ -575,13 +638,6 @@ _Workflow diagrams for examples are usually a bit more complicted than for demos
 
 -->
 
-<br>
-
--------------------------------
-
-<br>
-
-26.1118 (0814, v1 26.0702)
 
 <!--
 <br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br>
