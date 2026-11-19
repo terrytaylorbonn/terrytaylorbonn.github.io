@@ -27,7 +27,7 @@ _**To get started ASAP with Enterprise AI programming using Foundry**, sign up t
 - **1 Concepts** (rewritten 26.1117)
 - **1b Foundry free tier sign up**
 - **2 Core ZAI hands-on tutorials (do these start to finish)**
-- **2b Foundry demos**
+- **2b Foundry demos (ZAI versions)**
 - **3 Project/doc sources** (Foundry and ZAI)
 
 <br>
@@ -226,7 +226,7 @@ _A show stopper (FDE error) -- If this happens, you need to summarize part of yo
 
 <br>
 
-## **2b Foundry demos**
+## **2b Foundry demos (ZAI versions)**
 
 **The second set focuses on various important skills and on original (some ZAI-modified) Palantir demos:**
 
