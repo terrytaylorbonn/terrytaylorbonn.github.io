@@ -98,7 +98,7 @@ I did not record how I signed up, and its not a process I can repeat. But I can 
 
 #### **[2.0 FDE (and other prerequisite skills) (26.1120)](/pal_fde/)**
 
-Knowing how to use FDE (Forward Deployed Engineer, Foundry's excellent AI assistant) is the most important skill you will learn. But there are also several things to be aware of before you start creating Foundry apps. 
+Knowing how to use FDE (Forward Deployed Engineer, Foundry's excellent AI assistant) is the most important skill you will learn. But there are also several other things to be aware of before you start creating Foundry apps. 
 
 _The FDE error that you will run into sooner or later (a show stopper; without FDE you are going nowhere)_<br><img src="/assets/RETL-0.png" alt="drones" width="46%" style="border: 1px solid #999;"><br>
 
