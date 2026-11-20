@@ -16,7 +16,7 @@ permalink: /pal/
 
 #### **TOC**
 
-_**To get started ASAP with Enterprise AI programming using Foundry**, sign up to Foundry (1b), then do the ZAI tutorials (2) start to finish (while referring often to the core concepts (1))._
+_**To get started ASAP with Enterprise AI programming using Foundry**, sign up to Foundry (2), then do the ZAI tutorials (3) start to finish (while referring often to the core concepts (1))._
 
 - **1 Concepts** (rewritten 26.1117)
 - **2 Foundry free tier sign up** (1b)
@@ -241,7 +241,7 @@ For example **E11: Palantir Foundry example “Integrate GeoSpatial data with Ga
 - **5.1 ZAI doc sources (docx, gdrive, this site, etc)** (3.1)
 - **5.2 PAL project/doc sources** (3.2)
 
-_palantir.com/docs/foundry (ZAI describes existing PAL docs)_<br><img src="/assets/777_27.png" alt="drones" width="68%" style="border: 1px solid #999;"><br>
+_palantir.com/docs/foundry (this section provides an overview of Palantir Foundry docs)_<br><img src="/assets/777_27.png" alt="drones" width="68%" style="border: 1px solid #999;"><br>
 
 
 <br>
