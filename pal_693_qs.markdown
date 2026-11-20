@@ -1,6 +1,6 @@
 ---
 layout: page
-title: Foundry Quick Start (26.1113)
+title: 3.3 Foundry QS1 -- Detect/analyze haystack needles (start from scratch) (26.1113) 
 permalink: /pal_693_qs/
 ---
 

@@ -1,13 +1,13 @@
 ---
 layout: page
-title: PAL project/doc sources
+title: 5 Project/Doc sources
 permalink: /pal_project_doc_sources/
 ---
 
 <br>
 
-- **3.1 ZAI doc sources (docx, gdrive, this site, etc)**
-- **3.2 PAL project/doc sources**
+- **5.1 ZAI doc sources (docx, gdrive, this site, etc)**
+- **5.2 PAL project/doc sources**
 
 <br>
 
@@ -17,11 +17,11 @@ permalink: /pal_project_doc_sources/
 <br>
 
 
-#### **3.1 ZAI doc sources (docx, gdrive, this site, etc)**
+#### **5.1 ZAI doc sources (docx, gdrive, this site, etc)**
 
 - **ZAI docx lab notes**
 - **ZAI website**
-- **[docx/website extraction/maintenence](/3c.1b_pal_docx_md/)**<br>_Demo doc creation/maintenance process (AI makes this process practical and reliable)_<br><img src="/assets/777_32.png" alt="drones" width="62%" style="border: 1px solid #999;"><br>
+- **OUTDATED.... [docx/website extraction/maintenence](/3c.1b_pal_docx_md/)**<br>_Demo doc creation/maintenance process (AI makes this process practical and reliable)_<br><img src="/assets/777_32.png" alt="drones" width="62%" style="border: 1px solid #999;"><br>
 <!-- - **DOC LIST (plan)**. I spent the first month doing the demos I thought looked interesting from the sources listed in 2.2 above _(lab notes (MS.Word docx files) are available for each example/demo on the **[GDrive](https://drive.google.com/drive/folders/1-Adawag9uA8_bq-hDF-nOuPYaRLz1eEO)**)_. Those demos are organized (by Palantir) by role and project types. I do have a rough draft (OUTDATED) list of docs / plan **[#699_planning\_.docx](https://drive.google.com/drive/folders/1-Adawag9uA8_bq-hDF-nOuPYaRLz1eEO)**<br><img src="/assets/777_24.png" alt="drones" width="13%" style="border: 1px solid #999;"><br> -->
 
 <br>
@@ -32,7 +32,7 @@ permalink: /pal_project_doc_sources/
 <br>
 
 
-#### **3.2 PAL project/doc sources**
+#### **5.2 PAL project/doc sources**
 
 <!--
 - **4.1 FDE /// Demo plan** (outdated)
@@ -64,4 +64,4 @@ FDE is the core tool for learning Foundry.
 
 <br>
 
-26.0930 (v1 26.0804)
+26.1120 (0930, v1 26.0804)

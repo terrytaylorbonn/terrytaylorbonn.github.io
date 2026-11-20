@@ -1,6 +1,6 @@
 ---
 layout: page
-title: 2.1 QS0 Detect/analyze haystack needles
+title: 3.2 Foundry QS0 -- Detect/analyze haystack needles (start with Foundry example) (26.1119) (2.1)
 permalink: /pal_qs0/
 ---
 

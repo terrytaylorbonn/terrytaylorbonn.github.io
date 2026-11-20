@@ -1,6 +1,6 @@
 ---
 layout: page
-title: 2.2b ZAI versions of the core ~8 Foundry getting started demos
+title: 4.1 ZAI versions of the core ~8 Foundry getting started demos (2b.4)
 permalink: /3c.2_pal_initial_demos/
 ---
 

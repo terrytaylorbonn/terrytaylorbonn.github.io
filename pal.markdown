@@ -158,13 +158,12 @@ _NOTE: [2.1 My first 2 failed attempts to create a tutorial (my mistakes are ins
 
 <br>
 
-#### **3.4 Foundry deep dive (DD) (26.1117 WIP)** (2.2a)
+#### **[3.4 Foundry deep dive (DD) (26.1117 WIP)](/pal_693_dd/)** (2.2a)
 
-The goal of this DD is to cover the topics (hands-on) in the QS in more detail and cover topics that were not in the QS. The plan is to reference official PAL speedruns, demos, and examples in the DD.
 
-A collection of demos D1-D6. I am still trying to figure out exactly what DD should cover. These demos will be expanded in the near future. 
+QS0 and QS1 had one focused goal — find the “needle in the haystack” — using simple and short demos.
 
-The **QS** had one focused goal — find the “needle in the haystack” — using enough Foundry to complete it.
+The goal of this DD is to cover the topics (hands-on) in the QS's in more detail and cover topics that were not in the QS's. The plan is to reference official PAL speedruns, demos, and examples in the DD.
 
 The **Deep Dive (DD)** focuses on much more:
   - a broad, hands-on introduction to Foundry’s apps and techniques, not exhaustive depth in each one.
@@ -178,14 +177,8 @@ The **Deep Dive (DD)** focuses on much more:
     - That gives readers both breadth of exposure and a mental map of where each capability fits—without turning every introduction into a complicated project.
 
 Below is the "master" diagram for the initial version of D1-D6.
--	D1: Import and transform data _(**[#692\_pal\_foundry\_d1\_data\_xforms\_.docx](https://drive.google.com/drive/folders/1-Adawag9uA8_bq-hDF-nOuPYaRLz1eEO)**)_
--	D2: Create object types and links from datasets _(**[#691\_pal\_foundry\_d2\_linked\_objects\_.docx](https://drive.google.com/drive/folders/1-Adawag9uA8_bq-hDF-nOuPYaRLz1eEO)**)_
--	D3: Interact with linked objects through the UI _(**[#690\_pal\_foundry\_d3\_ui\_.docx](https://drive.google.com/drive/folders/1-Adawag9uA8_bq-hDF-nOuPYaRLz1eEO)**)_
--	D4: Use Actions to change objects through the UI _(**[#689\_pal\_foundry\_d4\_actions\_.docx](https://drive.google.com/drive/folders/1-Adawag9uA8_bq-hDF-nOuPYaRLz1eEO)**)_
--	D5: Combine objects, AI, Actions, and human review _(**[#688\_pal\_foundry\_d5\_ai\_human\_.docx](https://drive.google.com/drive/folders/1-Adawag9uA8_bq-hDF-nOuPYaRLz1eEO)**)_
--	D6: Operate and govern the overall workflow
 
-_Foundry deep dive master diagram (ZAI original diagram verified by FDE)_<br><img src="/assets/DD_master_diagram.png" alt="drones" width="87%" style="border: 1px solid #999;">
+_Foundry deep dive master diagram (ZAI original diagram verified by FDE)_<br><img src="/assets/DD_master_diagram.png" alt="drones" width="80%" style="border: 1px solid #999;">
 
 <br>
 
@@ -203,7 +196,7 @@ _Foundry deep dive master diagram (ZAI original diagram verified by FDE)_<br><im
 **The second set of ZAI tutorials are based on Palantir demos:**
 
 - **4.1 ZAI versions of the core ~8 Foundry getting started demos**. The core demos (speedruns) meant for beginners. (2b.4)
-- **4.2 PAL Examples (installable)**. Real-world demos. ZiptieAI uses one of these demos as the very first demo for beginners. (2b.5)
+- **4.2 ZAI versions of PAL Examples (installable)**. Real-world demos. ZiptieAI uses one of these demos as the very first demo for beginners. (2b.5)
 
 <br>
 
@@ -221,7 +214,7 @@ _Main diagram for demo D3 (Core workflow + Automation + AI external)_<br><img sr
 
 <br>
 
-#### **[4.2 PAL Examples (installable)](/3c.1b_pal_examples/)** (2b.5) 
+#### **[4.2 ZAI versions of PAL Examples (installable)](/3c.1b_pal_examples/)** (2b.5) 
 
 FULL-FEATURED BUSINESS APP (WITH INSTALLER). I originally planned to focus on examples These are complete demos that auto-install. The big advantage is that you start out with a (usually) working version that you can modify piece by piece. Examples are complete (usually more complicated) and have an installer that allows you to start with a (usually) working version that you can modify. ZAI adds a few extra steps:
 
@@ -247,6 +240,9 @@ For example **E11: Palantir Foundry example “Integrate GeoSpatial data with Ga
 
 - **5.1 ZAI doc sources (docx, gdrive, this site, etc)** (3.1)
 - **5.2 PAL project/doc sources** (3.2)
+
+_palantir.com/docs/foundry (ZAI describes existing PAL docs)_<br><img src="/assets/777_27.png" alt="drones" width="68%" style="border: 1px solid #999;"><br>
+
 
 <br>
 
