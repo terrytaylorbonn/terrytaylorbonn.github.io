@@ -6,7 +6,7 @@ permalink: /pal/
 
 <br>
 
-**This Enterprise section focuses on Palantir Foundry** (reorganized 26.1120).
+**This Enterprise section focuses on Palantir Foundry** (reorganized 26.1120; headings renumbered).
 
 <br>
 
@@ -19,10 +19,10 @@ permalink: /pal/
 _**To get started ASAP with Enterprise AI programming using Foundry**, sign up to Foundry (1b), then do the ZAI tutorials (2) start to finish (while referring often to the core concepts (1))._
 
 - **1 Concepts** (rewritten 26.1117)
-- **1b Foundry free tier sign up**
-- **2 Core ZAI hands-on tutorials (do these start to finish)**
-- **2b ZAI versions of Foundry demos**
-- **3 Project/doc sources** (Foundry and ZAI)
+- **2 Foundry free tier sign up** (1b)
+- **3 Core ZAI hands-on tutorials (do these start to finish)** (2)
+- **4 ZAI versions of Foundry demos** (2b)
+- **5 Project/doc sources** (Foundry and ZAI) (3)
 
 <br>
 
@@ -58,7 +58,7 @@ For the **Core application programming concepts** click on the title link above.
 <br>
 
 
-## **1b Foundry free tier sign up**
+## **2 Foundry free tier sign up**
 
 I did not record how I signed up, and its not a process I can repeat. But I can tell you the following:
   - **You must be in a country that PAL supports** (thats only a few countries).
@@ -81,14 +81,14 @@ I did not record how I signed up, and its not a process I can repeat. But I can 
 
 <br>
 
-## **2 Core ZAI hands-on tutorials (do these start to finish)**
+## **3 Core ZAI hands-on tutorials (do these start to finish)** (2)
 
 **The first set of ZAI tutorials focuses on you learning core skills hands-on** (just go through these from start to finish):
 
-- **2.0 FDE (and other prerequisite skills) (26.1120)**
-- **2.1 Foundry QS0: Detect/analyze haystack needles (start with Foundry example) (26.1119)**  
-- **2.2 Foundry QS1: Detect/analyze haystack needles (start from scratch) (26.1113)**
-- **2.2a Foundry deep dive (DD) (WIP)**
+- **3.1 FDE (and other prerequisite skills) (26.1120)** (2.0)
+- **3.2 Foundry QS0: Detect/analyze haystack needles (start with Foundry example) (26.1119)** (2.1)  
+- **3.3 Foundry QS1: Detect/analyze haystack needles (start from scratch) (26.1113)** (2.2)
+- **3.4 Foundry deep dive (DD) (WIP)** (2.2a)
 
 <br>
 
@@ -96,7 +96,7 @@ I did not record how I signed up, and its not a process I can repeat. But I can 
 
 <br>
 
-#### **[2.0 FDE (and other prerequisite skills) (26.1120)](/pal_fde/)**
+#### **[3.1 FDE (and other prerequisite skills) (26.1120)](/pal_fde/)** (2.0)
 
 _**[Single source docx #685](https://drive.google.com/drive/folders/1-Adawag9uA8_bq-hDF-nOuPYaRLz1eEO)** (WIP) for FDE webpages (markdown and PNG's are extracted by ChatGPT)._
 
@@ -111,7 +111,7 @@ _The FDE error that you will run into sooner or later (a show stopper; without F
 
 <br>
 
-#### **[2.1 Foundry QS0: Detect/analyze haystack needles (start with Foundry example) (26.1119)](/pal_qs0/)**
+#### **[3.2 Foundry QS0: Detect/analyze haystack needles (start with Foundry example) (26.1119)](/pal_qs0/)** (2.1)
 
 _**[Single source docx #686](https://drive.google.com/drive/folders/1-Adawag9uA8_bq-hDF-nOuPYaRLz1eEO)** for QS0 webpages (markdown and PNG's are extracted by ChatGPT)._
 
@@ -136,7 +136,7 @@ QS0 uses a real world example, but is a simpler demo than the next QS1 (that foc
 
 <br>
 
-#### **[2.2 Foundry QS1: Detect/analyze haystack needles (start from scratch) (26.1113)](/pal_693_qs/)**
+#### **[3.3 Foundry QS1: Detect/analyze haystack needles (start from scratch) (26.1113)](/pal_693_qs/)** (2.2)
 
 _**[Single source docx #693](https://drive.google.com/drive/folders/1-Adawag9uA8_bq-hDF-nOuPYaRLz1eEO)** for QS1 webpages (markdown and PNG's are extracted by ChatGPT)._
 
@@ -158,7 +158,7 @@ _NOTE: [2.1 My first 2 failed attempts to create a tutorial (my mistakes are ins
 
 <br>
 
-#### **2.2a Foundry deep dive (DD) (26.1117 WIP)**
+#### **3.4 Foundry deep dive (DD) (26.1117 WIP)** (2.2a)
 
 The goal of this DD is to cover the topics (hands-on) in the QS in more detail and cover topics that were not in the QS. The plan is to reference official PAL speedruns, demos, and examples in the DD.
 
@@ -198,12 +198,12 @@ _Foundry deep dive master diagram (ZAI original diagram verified by FDE)_<br><im
 
 <br>
 
-## **2b ZAI versions of Foundry demos**
+## **4 ZAI versions of Foundry demos** (2b)
 
 **The second set of ZAI tutorials are based on Palantir demos:**
 
-- **2b.4 ZAI versions of the core ~8 Foundry getting started demos**. The core demos (speedruns) meant for beginners. 
-- **2b.5 PAL Examples (installable)**. Real-world demos. ZiptieAI uses one of these demos as the very first demo for beginners.
+- **4.1 ZAI versions of the core ~8 Foundry getting started demos**. The core demos (speedruns) meant for beginners. (2b.4)
+- **4.2 PAL Examples (installable)**. Real-world demos. ZiptieAI uses one of these demos as the very first demo for beginners. (2b.5)
 
 <br>
 
@@ -211,7 +211,7 @@ _Foundry deep dive master diagram (ZAI original diagram verified by FDE)_<br><im
 
 <br>
 
-#### **[2b.4 ZAI versions of the core ~8 Foundry getting started demos](/3c.2_pal_initial_demos/)**
+#### **[4.1 ZAI versions of the core ~8 Foundry getting started demos](/3c.2_pal_initial_demos/)** (2b.4)
 
 _Main diagram for demo D3 (Core workflow + Automation + AI external)_<br><img src="/assets/wuxi-15bbb.png" alt="drones" width="86%" style="border: 1px solid #999;"><br>
 
@@ -221,7 +221,7 @@ _Main diagram for demo D3 (Core workflow + Automation + AI external)_<br><img sr
 
 <br>
 
-#### **[2b.5 PAL Examples (installable)](/3c.1b_pal_examples/)**  
+#### **[4.2 PAL Examples (installable)](/3c.1b_pal_examples/)** (2b.5) 
 
 FULL-FEATURED BUSINESS APP (WITH INSTALLER). I originally planned to focus on examples These are complete demos that auto-install. The big advantage is that you start out with a (usually) working version that you can modify piece by piece. Examples are complete (usually more complicated) and have an installer that allows you to start with a (usually) working version that you can modify. ZAI adds a few extra steps:
 
@@ -243,10 +243,10 @@ For example **E11: Palantir Foundry example “Integrate GeoSpatial data with Ga
 
 <br>
 
-## **[3 Project/Doc sources](/pal_project_doc_sources/)**
+## **[5 Project/Doc sources](/pal_project_doc_sources/)** (3)
 
-- **3.1 ZAI doc sources (docx, gdrive, this site, etc)**
-- **3.2 PAL project/doc sources**
+- **5.1 ZAI doc sources (docx, gdrive, this site, etc)** (3.1)
+- **5.2 PAL project/doc sources** (3.2)
 
 <br>
 
