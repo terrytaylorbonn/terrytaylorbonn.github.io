@@ -19,10 +19,10 @@ permalink: /pal/
 _**To get started ASAP with Enterprise AI programming using Foundry**, sign up to Foundry (2), then do the ZAI tutorials (3) start to finish (while referring often to the core concepts (1))._
 
 - **1 Concepts** (rewritten 26.1117)
-- **2 Foundry free tier sign up** (1b)
-- **3 Core ZAI hands-on tutorials (do these start to finish)** (2)
-- **4 ZAI versions of Foundry demos** (2b)
-- **5 Project/doc sources** (Foundry and ZAI) (3)
+- **2 Foundry free tier sign up** 
+- **3 Core ZAI hands-on tutorials** (do these start to finish)
+- **4 ZAI versions of Foundry demos** 
+- **5 Project/doc sources** (Foundry and ZAI)
 
 <br>
 
