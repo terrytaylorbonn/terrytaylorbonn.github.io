@@ -98,6 +98,9 @@ I did not record how I signed up, and its not a process I can repeat. But I can 
 
 #### **[2.0 FDE (and other prerequisite skills) (26.1120)](/pal_fde/)**
 
+_**[Single source docx #685](https://drive.google.com/drive/folders/1-Adawag9uA8_bq-hDF-nOuPYaRLz1eEO)** (WIP) for FDE webpages (markdown and PNG's are extracted by ChatGPT)._
+
+
 Knowing how to use FDE (Forward Deployed Engineer, Foundry's excellent AI assistant) is the most important skill you will learn. But there are also several other things to be aware of before you start creating Foundry apps. 
 
 _The FDE error that you will run into sooner or later (a show stopper; without FDE you are going nowhere)_<br><img src="/assets/RETL-0.png" alt="drones" width="46%" style="border: 1px solid #999;"><br>
@@ -110,11 +113,18 @@ _The FDE error that you will run into sooner or later (a show stopper; without F
 
 #### **[2.1 Foundry QS0: Detect/analyze haystack needles (start with Foundry example) (26.1119)](/pal_qs0/)**
 
-In QS0 you install a Foundry "needle in the haystack" real-world Example, then rebuild it yourself. Focuses on a quick demo that shows you the real power of Foundry (with no AI). 
+_**[Single source docx #686](https://drive.google.com/drive/folders/1-Adawag9uA8_bq-hDF-nOuPYaRLz1eEO)** for QS0 webpages (markdown and PNG's are extracted by ChatGPT)._
+
+In QS0 you install a Foundry "needle in the haystack" real-world Example, then rebuild it yourself.  
 - The haystack: a collection of data records imported into Foundry.
 - The needle: any record whose text or numeric properties match criteria expressed in a user prompt.
 
-**Original [docx #686](https://drive.google.com/drive/folders/1-Adawag9uA8_bq-hDF-nOuPYaRLz1eEO) source file** (with notes).
+QS0 uses a real world example, but is a simpler demo than the next QS1 (that focuses on the mechanics of Foundry):
+- No AI.
+- No functions.
+- Uses pipeline for creating datasets (QS1 uses Python). 
+- The large and complex dataset demonstrates the power of PySpark (QS1 uses very simple data from a MockAPI test site).
+
 
 <img src="/assets/ALL-02bbb.png" alt="drones" width="68%" style="border: 1px solid #999;">
 
@@ -128,13 +138,14 @@ In QS0 you install a Foundry "needle in the haystack" real-world Example, then r
 
 #### **[2.2 Foundry QS1: Detect/analyze haystack needles (start from scratch) (26.1113)](/pal_693_qs/)**
 
+_**[Single source docx #693](https://drive.google.com/drive/folders/1-Adawag9uA8_bq-hDF-nOuPYaRLz1eEO)** for QS1 webpages (markdown and PNG's are extracted by ChatGPT)._
+
 QS1 is also a “needle in the haystack” demo (using Foundry to identify records that match user-defined criteria), but
 - Differs from QS0: Uses Python scripts (instead of pipeline), AIPL (AI) and functions, and governance.
 - The tutorial uses a small dataset to make the mechanics visible. It introduces the workflow — not a demonstration of large-scale search performance.- AI’s role: interpret those criteria and evaluate each record supplied to the workflow.
 - The complete workflow: import records, display them, evaluate matches, save the results, and automate processing when records arrive or change.
 
-**Original [docx #693](https://drive.google.com/drive/folders/1-Adawag9uA8_bq-hDF-nOuPYaRLz1eEO) source file** (with notes).
- 
+
 <img src="/assets/sun-55.png" alt="drones" width="61%" style="border: 1px solid #999;">
 
 _Example workflow diagram (verified by FDE) for ch2_<br><img src="/assets/qs/0b/0b_06.png" alt="drones" width="90%" style="border: 1px solid #999;">
