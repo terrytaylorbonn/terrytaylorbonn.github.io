@@ -10,14 +10,9 @@ permalink: /pal_qs0_2_install_mplace/
 [← 1 First steps](/pal_qs0_1_introl/) / [↑ 3.2 Foundry QS0](/pal_qs0/) / [→ 3 Create own project with datasets](/pal_qs0_3_download_ds/)
 
 
-_Converted 2026-11-19 12:52 PM EST_
-
+_Converted 2026-11-19 01:03 PM EST_
 
 <br>
-
-<!-- Converted 2026-11-19 01:03 PM EST -->
-
-## **2 Install marketplace app and test**
 
 **TOC**
 - [2.1 Find the installation](#section-2-1-find-the-installation)
@@ -26,7 +21,8 @@ _Converted 2026-11-19 12:52 PM EST_
 - [2.4 Run the example](#section-2-4-run-the-example)
   - [2.4.1 Explore ontology / insight](#section-2-4-1-explore-ontology-insight)
   - [2.4.2 Show in maps](#section-2-4-2-show-in-maps)
-  - [2.4.3 Add to maps](#section-2-4-3-add-to-maps)
+
+<!--   - [2.4.3 Add to maps](#section-2-4-3-add-to-maps)-->
 
 <br>
 
@@ -180,8 +176,8 @@ Click dataset "ELINT Example"
 
 <br>
 
-<a id="section-2-4-3-add-to-maps"></a>
-#### **2.4.3 Add to maps**
+<!-- <a id="section-2-4-3-add-to-maps"></a>
+#### **2.4.3 Add to maps** -->
 
 <img src="/assets/qs0/ch2/2_28.png" alt="" width="88%" style="border: 1px solid #999;">
 
