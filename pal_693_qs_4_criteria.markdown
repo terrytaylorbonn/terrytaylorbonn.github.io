@@ -7,7 +7,7 @@ permalink: /pal_693_qs_4_criteria/
 <br>
 
 
-[← 3 Modify AIPL prompt](/pal_693_qs_3_aipl_prompt/) / [↑ 3c Foundry QS](/pal_693_qs/) / [→ 5 Add object property and Action](/pal_693_qs_5_property_action/)
+[← 3 Modify AIPL prompt](/pal_693_qs_3_aipl_prompt/) / [↑ 3.3 Foundry QS1](/pal_693_qs/) / [→ 5 Add object property and Action](/pal_693_qs_5_property_action/)
 
 
 _26.1112 09:08 (converted from docx source file to markdown+PNGs by ChatGPT)_

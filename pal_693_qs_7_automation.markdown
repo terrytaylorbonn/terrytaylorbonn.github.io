@@ -6,7 +6,7 @@ permalink: /pal_693_qs_7_automation/
 
 <br>
 
-[← 6 Add A1/A2 Actions](/pal_693_qs_6_a1_a2/) / [↑ 3c Foundry QS](/pal_693_qs/) / [→ 8 Schedule (Data Lineage)](/pal_693_qs_8_schedule/)
+[← 6 Add A1/A2 Actions](/pal_693_qs_6_a1_a2/) / [↑ 3.3 Foundry QS1](/pal_693_qs/) / [→ 8 Schedule (Data Lineage)](/pal_693_qs_8_schedule/)
 
 _26.1112 13:37 (converted from docx source file to markdown+PNGs by ChatGPT)_
 

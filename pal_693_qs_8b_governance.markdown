@@ -8,7 +8,7 @@ permalink: /pal_693_qs_8b_governance/
 
 
 
-[← 8a Add processing of updated objects](/pal_693_qs_8a_automate_updated/) / [↑ 3c Foundry QS](/pal_693_qs/) / [→ 9 Continuing your Foundry education](/pal_693_qs_9_where_next/)
+[← 8a Add processing of updated objects](/pal_693_qs_8a_automate_updated/) / [↑ 3.3 Foundry QS1](/pal_693_qs/) / [→ 9 Continuing your Foundry education](/pal_693_qs_9_where_next/)
 
 _26.1113 12:52 (converted from docx source file to markdown+PNGs by ChatGPT)_
 

@@ -7,7 +7,7 @@ permalink: /pal_693_qs_7-2_DL-S-confusion/
 <br>
 
 
-[← 3c Foundry QS](/pal_693_qs/)
+[← 3.3 Foundry QS1](/pal_693_qs/)
 
 <br>
 

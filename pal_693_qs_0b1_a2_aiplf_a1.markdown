@@ -6,7 +6,7 @@ permalink: /pal_693_qs_0a2bbb_a2_aiplf_a1/
 
 <br>
 
-[← 3c Foundry QS](/pal_693_qs/)
+[← 3.3 Foundry QS1](/pal_693_qs/)
 
 <br>
 

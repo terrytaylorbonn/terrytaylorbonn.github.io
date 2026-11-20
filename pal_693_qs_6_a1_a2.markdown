@@ -6,7 +6,7 @@ permalink: /pal_693_qs_6_a1_a2/
 
 <br>
 
-[← 5 Add object property and Action](/pal_693_qs_5_property_action/) / [↑ 3c Foundry QS](/pal_693_qs/) / [→ 7 Add automation](/pal_693_qs_7_automation/)
+[← 5 Add object property and Action](/pal_693_qs_5_property_action/) / [↑ 3.3 Foundry QS1](/pal_693_qs/) / [→ 7 Add automation](/pal_693_qs_7_automation/)
 
 _26.1112 13:37 (converted from docx source file to markdown+PNGs by ChatGPT)_
 

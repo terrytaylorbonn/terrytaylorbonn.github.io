@@ -7,7 +7,7 @@ permalink: /pal_693_qs_2_ailpf/
 <br>
 
 
-[← 1 Fetch MockAPI records and display in UI](/pal_693_qs_1_mockapi/) / [↑ 3c Foundry QS](/pal_693_qs/) / [→ 3 Modify AIPL prompt](/pal_693_qs_3_aipl_prompt/)
+[← 1 Fetch MockAPI records and display in UI](/pal_693_qs_1_mockapi/) / [↑ 3.3 Foundry QS1](/pal_693_qs/) / [→ 3 Modify AIPL prompt](/pal_693_qs_3_aipl_prompt/)
 
 _26.1111 17:34 (converted from docx source file to markdown+PNGs by ChatGPT)_
 
