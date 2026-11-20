@@ -6,9 +6,8 @@ permalink: /pal_qs0_1_introl/
 
 <br>
 
-[← QS0](/pal_qs0/)
-
-26.1119 (v1 26.1119)
+<!-- 1 First steps -->
+[← Short overview of all chapters (TOC)](/pal_qs0_0b_config_dias/) / [↑ 3.2 Foundry QS0](/pal_qs0/) / [→ 2 Install marketplace app and test](/pal_qs0_2_install_mplace/)
 
 <br>
 
@@ -21,5 +20,12 @@ permalink: /pal_qs0_1_introl/
 - CTRL-click
 - etc etc 
 
+<br>
+
+------------------------------------
+
+<br>
+
+26.1120
 
 

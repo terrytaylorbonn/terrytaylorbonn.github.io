@@ -16,6 +16,9 @@ permalink: /pal_qs0/
 <br>
 
 Chapters (extracted from docx)
+
+- **[What this QS0 offers beginners](/pal_qs0_0a_best_demo/)**
+- **[Short overview of all chapters (TOC)](/pal_qs0_0b_config_dias/)**
 - **[1 First steps](/pal_qs0_1_introl/)**
 - **[2 Install marketplace app and test](/pal_qs0_2_install_mplace/)**
 - **[3 Create own project with datasets](/pal_qs0_3_download_ds/)**

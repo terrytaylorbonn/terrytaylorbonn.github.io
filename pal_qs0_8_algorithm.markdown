@@ -6,7 +6,8 @@ permalink: /pal_qs0_8_algorithm/
 
 <br>
 
-[← QS0](/pal_qs0/)
+<!-- 8 HN algorithm description -->
+[← 7 Create UI](/pal_qs0_7_ui/) / [↑ 3.2 Foundry QS0](/pal_qs0/)
 
 _Converted 2026-11-19 04:47 PM EST_
 
