@@ -6,7 +6,7 @@ permalink: /pal/
 
 <br>
 
-**This Enterprise section focuses on Palantir Foundry** (reorgnized 26.1120).
+**This Enterprise section focuses on Palantir Foundry** (reorganized 26.1120).
 
 <br>
 
