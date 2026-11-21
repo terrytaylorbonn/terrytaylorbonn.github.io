@@ -88,9 +88,9 @@ I did not record how I signed up, and its not a process I can repeat. But I can 
 
 <br>
 
-## **3 Core ZAI hands-on tutorials (do these start to finish)** (2)
+## **3 Core ZAI hands-on tutorials** (2)
 
-**The first set of ZAI tutorials focuses on you learning core skills hands-on** (just go through these from start to finish):
+These tutorials are the most effective method to learn core Foundry skills:
 
 - **3.1 FDE (and other prerequisite skills) (26.1120)**. 
 - **3.2 Foundry QS0: Detect/analyze haystack needles (start with Foundry example) (26.1119)**. 
@@ -169,15 +169,14 @@ QS1 is also a “needle in the haystack” demo (using Foundry to identify recor
 - Ch8b: Governance (access control, monitoring (especially of AI), etc).
 
 How QS1 differs from QS0: 
-- Uses Python scripts (instead of pipeline), AIPL (AI) and functions, and governance.
-- The tutorial uses a small dataset to make the mechanics visible. It introduces the workflow — not a demonstration of large-scale search performance.
-- AI’s role: interpret those criteria and evaluate each record supplied to the workflow.
-- The complete workflow: import records, display them, evaluate matches, save the results, and automate processing when records arrive or change.
+- Focuses on Foundry mechanics and workflows (a small dataset, not real-world search demo).
+- Python scripts replace the pipeline.
+- Actions, AI (AIPL and functions), automation and governance.
 
 
-<img src="/assets/sun-55.png" alt="drones" width="72%" style="border: 1px solid #999;">
+_Automation (Foundry checks for updates in the external data source)_<br><img src="/assets/sun-55.png" alt="drones" width="68%" style="border: 1px solid #999;">
 
-_Example workflow diagram_<br><img src="/assets/sun-55mmm.png" alt="drones" width="90%" style="border: 1px solid #999;">
+_Example workflow diagram_<br><img src="/assets/sun-55mmm.png" alt="drones" width="84%" style="border: 1px solid #999;">
 
 
 <br>
