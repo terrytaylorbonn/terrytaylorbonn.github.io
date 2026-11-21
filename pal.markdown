@@ -7,15 +7,13 @@ permalink: /pal/
 <br>
 
 **This Enterprise section focuses on Palantir Foundry** (reorganized 26.1120). 
-- Foundry is an excellent enterprise framework (with integrated AI) with lots of demos.
-- **Foundry offers a generous free trial version**. 
+- Foundry is an **excellent enterprise framework** (with integrated AI) with lots of demos.
+- Foundry offers a **generous free trial version**. 
 
 To learn Foundry:
 - Use Foundry's **FDE** AI assistant constantly.
-- Follow ZAI (ZiptieAI) learning path published on this website. Consider downloading **[ZAI docxs](https://drive.google.com/drive/folders/1-Adawag9uA8_bq-hDF-nOuPYaRLz1eEO)** (MS Word docs) and using these as a template for your own study notes. 
-- **Repeat, repeat, repeat**. It will take you hours or days to do the first demos. It takes weeks or months to learn the dialogs, terminology, and core concepts (with ZAI this learning curve is minimized). Repetition is the key.
-
-_Detailed docs (docx's) and repetition are the key_<br><img src="/assets/sun-60.png" alt="drones" width="68%" style="border: 1px solid #999;">
+- Follow **ZAI learning path** (consider using **[ZAI MS Word docx's](https://drive.google.com/drive/folders/1-Adawag9uA8_bq-hDF-nOuPYaRLz1eEO)** as a template for your own study notes). 
+- **Repeat, repeat, repeat**. It takes weeks to master UI, terminology, and core concepts basics (with ZAI this learning curve is minimized).<br><img src="/assets/sun-60.png" alt="drones" width="64%" style="border: 1px solid #999;">
 
 <br>
 
@@ -25,7 +23,7 @@ _Detailed docs (docx's) and repetition are the key_<br><img src="/assets/sun-60.
 
 #### **TOC**
 
-_**To get started ASAP with Enterprise AI programming using Foundry**, sign up to Foundry (2), then do the ZAI tutorials (3) start to finish (while referring often to the core concepts (1))._
+<!-- _**To get started ASAP with Enterprise AI programming using Foundry**, sign up to Foundry (2), then do the ZAI tutorials (3) start to finish (while referring often to the core concepts (1))._ -->
 
 - **1 Concepts** (rewritten 26.1117)
 - **2 Foundry free tier sign up** 
@@ -46,14 +44,14 @@ _**To get started ASAP with Enterprise AI programming using Foundry**, sign up t
 
 ## **[1 Concepts](/pal_concepts_all/)** (rewritten 26.1117)
 
-For the **Core application programming concepts** click on the title link above.
-
-**General concepts**
-- Foundry is a modern enterprise platform for data integration, ontology, analytics, applications, **AI assistance**, and governance.
-- Foundry represents the **logical culmination of ZiptieAI: (2) neural networks → (2b) models → (3) agents → (3b) workflows** (and finally) **→ (3c) enterprise platforms**.
-- Foundry takes a **very practical no-nonsense approach to AI in the enterprise**. Foundry was a market leader over 20 years ago (long before AI).
+General concepts:
+- Foundry is a **modern enterprise platform** for data integration, ontology, analytics, applications, **AI assistance**, and governance.
+- Foundry represents the **logical culmination of ZiptieAI**.
+- Foundry takes a **very practical no-nonsense approach to AI in the enterprise** (Foundry was a market leader over 20 years ago, long before AI).
 - Palantir offers a **generous Foundry free trial**.
-- Foundry's **built-in AI assistant (FDE) makes hands-on self-study practical**.
+- Foundry's **built-in AI assistant (FDE)** makes hands-on self-study practical.
+
+Click on the heading above for programming concepts. 
 
 <br>
 
