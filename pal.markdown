@@ -86,8 +86,6 @@ I did not record how I signed up, and its not a process I can repeat. But I can 
 **The first set of ZAI tutorials focuses on you learning core skills hands-on** (just go through these from start to finish):
 
 - **3.1 FDE (and other prerequisite skills) (26.1120)**. 
-  - FDE (Foundry's built-in AI tool) is critical.
-  - However, its also critical to understand FDE's limits: **[My first 2 attempts to create a QS (my mistakes are instructive)](/pal_2_failed_tutorials/)**. I relied too much on FDE AI. Both tutorials worked, but the result was not something to use as a tutorial. Human intelligence and AI make a great team. But the human has to be in control. You need to reach a minimal level of expertise with Foundry so that you are always in control. Thats why you still ZAI to guide you through the basics.
 - **3.2 Foundry QS0: Detect/analyze haystack needles (start with Foundry example) (26.1119)**. 
   - Quick realistic real-world demo (finding matching intelligence records in a large set of data) **without AI** (Palantir's original mission; Palantir was founded 25 years ago, long before AI). 
   - Intros haystack datasets, pipeline (that detects needles), and objects/maps/UI for display of needles.     
@@ -111,7 +109,9 @@ I did not record how I signed up, and its not a process I can repeat. But I can 
 _**[Single source docx #685](https://drive.google.com/drive/folders/1-Adawag9uA8_bq-hDF-nOuPYaRLz1eEO)** (WIP) for FDE webpages (markdown and PNG's are extracted by ChatGPT)._
 
 
-Knowing how to use FDE (Forward Deployed Engineer, Foundry's excellent AI assistant) is the most important skill you will learn. But there are also several other things to be aware of before you start creating Foundry apps. 
+- Knowing how to use FDE (Forward Deployed Engineer, Foundry's excellent AI assistant) is the most important skill you will learn. 
+- However, its also critical to understand FDE's limits: **[My first 2 attempts to create a QS (my mistakes are instructive)](/pal_2_failed_tutorials/)**. I relied too much on FDE AI. Both tutorials worked, but the result was not something to use as a tutorial. Human intelligence and AI make a great team. But the human has to be in control. You need to reach a minimal level of expertise with Foundry so that you are always in control. Thats why you still ZAI to guide you through the basics.
+- There are also several other things to be aware of before you start creating Foundry apps. 
 
 
 
