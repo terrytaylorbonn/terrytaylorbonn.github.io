@@ -85,10 +85,20 @@ I did not record how I signed up, and its not a process I can repeat. But I can 
 
 **The first set of ZAI tutorials focuses on you learning core skills hands-on** (just go through these from start to finish):
 
-- **3.1 FDE (and other prerequisite skills) (26.1120)** (2.0)
-- **3.2 Foundry QS0: Detect/analyze haystack needles (start with Foundry example) (26.1119)** (2.1)  
-- **3.3 Foundry QS1: Detect/analyze haystack needles (start from scratch) (26.1113)** (2.2)
-- **3.4 Foundry deep dive (DD) (WIP)** (2.2a)
+- **3.1 FDE (and other prerequisite skills) (26.1120)**. 
+  - FDE (Foundry's built-in AI tool) is critical.
+  - However, its also critical to understand FDE's limits: **[My first 2 attempts to create a QS (my mistakes are instructive)](/pal_2_failed_tutorials/)**. I relied too much on FDE AI. Both tutorials worked, but the result was not something to use as a tutorial. Human intelligence and AI make a great team. But the human has to be in control. You need to reach a minimal level of expertise with Foundry so that you are always in control. Thats why you still ZAI to guide you through the basics.
+- **3.2 Foundry QS0: Detect/analyze haystack needles (start with Foundry example) (26.1119)**. 
+  - Quick realistic real-world demo (finding matching intelligence records in a large set of data) **without AI** (Palantir's original mission; Palantir was founded 25 years ago, long before AI). 
+  - Intros haystack datasets, pipeline (that detects needles), and objects/maps/UI for display of needles.     
+- **3.3 Foundry QS1: Detect/analyze haystack needles (start from scratch) (26.1113)**. 
+  - A non-realistic demo that focuses on mechanical details. 
+  - Intros AI, actions, automation/scheduling, and governance. 
+- **3.4 Foundry deep dive (DD) (WIP)**. 
+  - Intended as simple intro to all of the Foundry functionality/tools that were not introduced in QS0/QS1. Goal is the piecemeal intro of the missing pieces. 
+  - After this, you can continue in section 4 doing (ZAI versions of) Palantir Foundry speedruns, demos, examples, etc.
+
+
 
 <br>
 
@@ -102,6 +112,8 @@ _**[Single source docx #685](https://drive.google.com/drive/folders/1-Adawag9uA8
 
 
 Knowing how to use FDE (Forward Deployed Engineer, Foundry's excellent AI assistant) is the most important skill you will learn. But there are also several other things to be aware of before you start creating Foundry apps. 
+
+
 
 _The FDE error that you will run into sooner or later (a show stopper; without FDE you are going nowhere)_<br><img src="/assets/RETL-0.png" alt="drones" width="46%" style="border: 1px solid #999;"><br>
 
@@ -120,10 +132,12 @@ In QS0 you install a Foundry "needle in the haystack" real-world Example, then r
 - The needle: any record whose text or numeric properties match criteria expressed in a user prompt.
 
 QS0 uses a real world example, but is a simpler demo than the next QS1 (that focuses on the mechanics of Foundry):
-- No AI.
-- No functions.
-- Uses pipeline for creating datasets (QS1 uses Python). 
-- The large and complex dataset demonstrates the power of PySpark (QS1 uses very simple data from a MockAPI test site).
+- Ch1: First steps (sign up/in, FDE)
+- Ch2: PAL Example (real-world) install. The large and complex (haystack) dataset demonstrates the power of PySpark.
+- Ch3/4: Pipeline (no-code) filters out the chaff (everything but the needles). Input 2 raw datasets (haystack, 5K rows) and outputs (needle, 4 rows) dataset.
+- Ch5: Very basic ontology (a single object type, no actions, no links). 
+- Ch6. Display the needle dataset in the Maps tool.
+- Ch7. Create a custom UI to display the needle dataset (display only; no actions in QS0).
 
 
 <img src="/assets/ALL-02bbb.png" alt="drones" width="68%" style="border: 1px solid #999;">
@@ -141,16 +155,23 @@ QS0 uses a real world example, but is a simpler demo than the next QS1 (that foc
 _**[Single source docx #693](https://drive.google.com/drive/folders/1-Adawag9uA8_bq-hDF-nOuPYaRLz1eEO)** for QS1 webpages (markdown and PNG's are extracted by ChatGPT)._
 
 QS1 is also a “needle in the haystack” demo (using Foundry to identify records that match user-defined criteria), but
-- Differs from QS0: Uses Python scripts (instead of pipeline), AIPL (AI) and functions, and governance.
-- The tutorial uses a small dataset to make the mechanics visible. It introduces the workflow — not a demonstration of large-scale search performance.- AI’s role: interpret those criteria and evaluate each record supplied to the workflow.
+- Ch1: MockAPI (very simple external datasource that you control).
+- Ch2/3/4: AI. MockAPI records are very few and simple. But the messy human language content is not simple for a computer without AI. This is core reason AI is used in Foundry.
+- Ch5/6: Actions. AI calls actions to create ontology objects.
+- Ch7/8/8a: Automation (scheduling dataset updates and updating objects).
+- Ch8b: Governance (access control, monitoring (especially of AI), etc).
+
+How QS1 differs from QS0: 
+- Uses Python scripts (instead of pipeline), AIPL (AI) and functions, and governance.
+- The tutorial uses a small dataset to make the mechanics visible. It introduces the workflow — not a demonstration of large-scale search performance.
+- AI’s role: interpret those criteria and evaluate each record supplied to the workflow.
 - The complete workflow: import records, display them, evaluate matches, save the results, and automate processing when records arrive or change.
 
 
-<img src="/assets/sun-55.png" alt="drones" width="61%" style="border: 1px solid #999;">
+<img src="/assets/sun-55.png" alt="drones" width="72%" style="border: 1px solid #999;">
 
-_Example workflow diagram (verified by FDE) for ch2_<br><img src="/assets/qs/0b/0b_06.png" alt="drones" width="90%" style="border: 1px solid #999;">
+_Example workflow diagram_<br><img src="/assets/sun-55mmm.png" alt="drones" width="90%" style="border: 1px solid #999;">
 
-_NOTE: [2.1 My first 2 failed attempts to create a tutorial (my mistakes are instructive)](/pal_2_failed_tutorials/). I relied too much on FDE AI. Both tutorials worked, but the result was not something to use as a tutorial. At first I thought things were going good. But for a human reader the AI-generated structure and explanations were not good enough. FDE did, however, catch any small logic error in a document. Human intelligence and AI make a great team. But the human has to be in control. You need to reach a minimal level of expertise with Foundry so that you are always in control._
 
 <br>
 

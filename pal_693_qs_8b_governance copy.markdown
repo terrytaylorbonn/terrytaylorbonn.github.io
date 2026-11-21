@@ -1,7 +1,7 @@
 ---
 layout: page
 title: 8b (8a) Governance (allow, block, verify)
-permalink: /pal_693_qs_8b_governance/
+permalink: /pal_693_qs_8b_governancexxxxxx/
 ---
 
 <br>
