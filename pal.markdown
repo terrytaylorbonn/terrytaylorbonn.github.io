@@ -100,6 +100,8 @@ These tutorials are the most effective method to learn core Foundry skills:
 - **3.4 Foundry deep dive (DD) (WIP)**. 
   - Intended as simple intro to all of the Foundry functionality/tools that were not introduced in QS0/QS1. Goal is the piecemeal intro of the missing pieces. 
   - After this, you can continue in section 4 doing (ZAI versions of) Palantir Foundry speedruns, demos, examples, etc.
+- **3.5 (WIP) DIY (do-it-yourself) demos** (26.1121)
+
 
 <br>
 
@@ -229,6 +231,8 @@ THIS SECTION IS WIP... BELOW JUST SOME OF MY THOUGHTS...
 
 - **4.1 ZAI versions of the core ~8 Foundry getting started demos**. The core demos (speedruns) meant for beginners. (2b.4)
 - **4.2 ZAI versions of PAL Examples (installable)**. Real-world demos. ZiptieAI uses one of these demos as the very first demo for beginners. (2b.5)
+- **4.3 PAL demos master list** (added 26.1121)
+
 
 <br>
 
