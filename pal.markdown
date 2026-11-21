@@ -204,15 +204,27 @@ _Foundry deep dive master diagram (ZAI original diagram verified by FDE)_<br><im
 
 <br>
 
-#### **3.5 (WIP) DIY (do-it-yourself) demos** (26.1121)
+#### **3.5 (WIP) DIY (do-it-yourself) demos** (v1 26.1121)
 
-THIS SECTION IS WIP... BELOW JUST SOME OF MY THOUGHTS...
-
-- I'm just thinking about creating such a section. 
+- Maybe this should be the focus? But I think first I need to do a better inventory of the existing PAL demos (section 4).
+- Review the master list of Palantir demos in 4.3 as "inspiration" for DIY demos (ask FDE/GPT for their opinions).
 - I've done only 1 demo of this type.. where I started from scratch and worked with FDE to get it running.
   - **[#620_pal_DIY9_aip-fde_demo_hn_](https://drive.google.com/drive/folders/1-Adawag9uA8_bq-hDF-nOuPYaRLz1eEO)**. Using AI.
-- Maybe this should be the focus? But I think first I need to do a better inventory of the existing PAL demos (section 4).
 
+```
+FDE: Your sequence makes sense:
+
+Review 4.3: use the Palantir demo catalog as a source of capabilities and inspiration—not a checklist you must complete.
+Choose 3.5 exercises: together, identify capabilities not yet covered and design small, generic build-and-test demos.
+For each candidate, we can ask:
+
+What new app or technique does it introduce?
+Where does it fit in your NES diagram?
+Can we reuse familiar data and objects?
+What is the smallest exercise with a clearly verifiable result?
+The official demo supplies inspiration; your DIY demo isolates and teaches the mechanism. 
+   You can still document selected official demos in section 4 when their complete scenario is worth exploring.
+```
 
 <br>
 
@@ -267,12 +279,12 @@ For example **E11: Palantir Foundry example “Integrate GeoSpatial data with Ga
 
 <br>
 
-#### **[4.3 PAL demos master list](/pal_demo_list/)** 26.1121
+#### **[4.3 PAL demos master list](/pal_demo_list/)** (V1 26.1121)
 
-THIS SECTION IS WIP... BELOW JUST SOME OF MY THOUGHTS...
-
-i create this list 4 months ago... maybe put it in here as a list of potential demos... just an idea.
-
+- I created this list 4 months ago.
+- This list has a hyper-linked TOC to all demos.
+- They are organized by the PAL-defined Foundry user roles.
+- I merely made much easier to search (and include in prompts to AI).
 
 
 <br>
