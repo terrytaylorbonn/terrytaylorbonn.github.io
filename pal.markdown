@@ -6,7 +6,16 @@ permalink: /pal/
 
 <br>
 
-**This Enterprise section focuses on Palantir Foundry** (reorganized 26.1120; headings renumbered).
+**This Enterprise section focuses on Palantir Foundry** (reorganized 26.1120). 
+- Foundry is an excellent enterprise framework (with integrated AI) with lots of demos.
+- **Foundry offers a generous free trial version**. 
+
+To learn Foundry:
+- Use Foundry's **FDE** AI assistant constantly.
+- Follow ZAI (ZiptieAI) learning path published on this website. Consider downloading **[ZAI docxs](https://drive.google.com/drive/folders/1-Adawag9uA8_bq-hDF-nOuPYaRLz1eEO)** (MS Word docs) and using these as a template for your own study notes. 
+- **Repeat, repeat, repeat**. It will take you hours or days to do the first demos. It takes weeks or months to learn the dialogs, terminology, and core concepts (with ZAI this learning curve is minimized). Repetition is the key.
+
+_Detailed docs (docx's) and repetition are the key_<br><img src="/assets/sun-60.png" alt="drones" width="68%" style="border: 1px solid #999;">
 
 <br>
 
@@ -142,7 +151,7 @@ QS0 uses a real world example, but is a simpler demo than the next QS1 (that foc
 
 <img src="/assets/ALL-02bbb.png" alt="drones" width="68%" style="border: 1px solid #999;">
 
-<img src="/assets/pal_10_20.png" alt="drones" width="44%" style="border: 1px solid #999;">
+<img src="/assets/sun-59.png" alt="drones" width="88%" style="border: 1px solid #999;">
 
 <br>
 
