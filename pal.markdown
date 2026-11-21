@@ -12,8 +12,8 @@ permalink: /pal/
 
 To learn Foundry:
 - Use Foundry's **FDE** AI assistant constantly.
-- Follow **ZAI learning path** (consider using **[ZAI MS Word docx's](https://drive.google.com/drive/folders/1-Adawag9uA8_bq-hDF-nOuPYaRLz1eEO)** as a template for your own study notes). 
-- **Repeat, repeat, repeat**. It takes weeks to master UI, terminology, and core concepts basics (with ZAI this learning curve is minimized).<br><img src="/assets/sun-60.png" alt="drones" width="64%" style="border: 1px solid #999;">
+- Follow the **ZAI learning path** (consider using **[ZAI MS Word docx's](https://drive.google.com/drive/folders/1-Adawag9uA8_bq-hDF-nOuPYaRLz1eEO)** as a template for your own study notes). 
+- **Repeat, repeat, repeat**. It takes weeks to master the basics (UI, workflows, terminology, core concepts, etc). ZAI minimizes this learning curve.<br><img src="/assets/sun-60.png" alt="drones" width="64%" style="border: 1px solid #999;">
 
 <br>
 
@@ -64,7 +64,6 @@ Click on the heading above for programming concepts.
 
 <br>
 
-
 ## **2 Foundry free tier sign up**
 
 I did not record how I signed up, and its not a process I can repeat. But I can tell you the following:
@@ -73,7 +72,6 @@ I did not record how I signed up, and its not a process I can repeat. But I can 
   - **You must have a passport or some picture ID of good enough quality for facial recognition verification**. My passport is almost 10 years old, but it still worked.
   - **You need a camera on your PC to take a pic of yourself. PAL will compare your ID and the pic.**
   - I think you need a **mobile phone number** (and email).
-
 
 <img src="/assets/pal_10_08.png" alt="drones" width="37%" style="border: 1px solid #999;"><br>
 
@@ -103,8 +101,6 @@ These tutorials are the most effective method to learn core Foundry skills:
   - Intended as simple intro to all of the Foundry functionality/tools that were not introduced in QS0/QS1. Goal is the piecemeal intro of the missing pieces. 
   - After this, you can continue in section 4 doing (ZAI versions of) Palantir Foundry speedruns, demos, examples, etc.
 
-
-
 <br>
 
 --------------------
@@ -115,12 +111,9 @@ These tutorials are the most effective method to learn core Foundry skills:
 
 _**[Single source docx #685](https://drive.google.com/drive/folders/1-Adawag9uA8_bq-hDF-nOuPYaRLz1eEO)** (WIP) for FDE webpages (markdown and PNG's are extracted by ChatGPT)._
 
-
 - Knowing how to use FDE (Forward Deployed Engineer, Foundry's excellent AI assistant) is the most important skill you will learn. 
 - However, its also critical to understand FDE's limits: **[My first 2 attempts to create a QS (my mistakes are instructive)](/pal_2_failed_tutorials/)**. I relied too much on FDE AI. Both tutorials worked, but the result was not something to use as a tutorial. Human intelligence and AI make a great team. But the human has to be in control. You need to reach a minimal level of expertise with Foundry so that you are always in control. Thats why you still ZAI to guide you through the basics.
 - There are also several other things to be aware of before you start creating Foundry apps. 
-
-
 
 _The FDE error that you will run into sooner or later (a show stopper; without FDE you are going nowhere)_<br><img src="/assets/RETL-0.png" alt="drones" width="46%" style="border: 1px solid #999;"><br>
 
@@ -146,7 +139,6 @@ QS0 uses a real world example, but is a simpler demo than the next QS1 (that foc
 - Ch6. Display the needle dataset in the Maps tool.
 - Ch7. Create a custom UI to display the needle dataset (display only; no actions in QS0).
 
-
 <img src="/assets/ALL-02bbb.png" alt="drones" width="68%" style="border: 1px solid #999;">
 
 <img src="/assets/sun-59.png" alt="drones" width="88%" style="border: 1px solid #999;">
@@ -169,15 +161,13 @@ QS1 is also a “needle in the haystack” demo (using Foundry to identify recor
 - Ch8b: Governance (access control, monitoring (especially of AI), etc).
 
 How QS1 differs from QS0: 
-- Focuses on Foundry mechanics and workflows (a small dataset, not real-world search demo).
+- Focuses on Foundry mechanics and workflows (a small dataset, not a real-world search demo).
 - Python scripts replace the pipeline.
 - Actions, AI (AIPL and functions), automation and governance.
-
 
 _Automation (Foundry checks for updates in the external data source)_<br><img src="/assets/sun-55.png" alt="drones" width="68%" style="border: 1px solid #999;">
 
 _Example workflow diagram_<br><img src="/assets/sun-55mmm.png" alt="drones" width="84%" style="border: 1px solid #999;">
-
 
 <br>
 
@@ -187,8 +177,7 @@ _Example workflow diagram_<br><img src="/assets/sun-55mmm.png" alt="drones" widt
 
 #### **[3.4 Foundry deep dive (DD) (26.1117 WIP)](/pal_693_dd/)** (2.2a)
 
-
-QS0 and QS1 had one focused goal — find the “needle in the haystack” — using simple and short demos.
+QS0 and QS1 were simple demos with one goal — find the “needle in the haystack”.
 
 The goal of this DD is to cover the topics (hands-on) in the QS's in more detail and cover topics that were not in the QS's. The plan is to reference official PAL speedruns, demos, and examples in the DD.
 
@@ -206,6 +195,22 @@ The **Deep Dive (DD)** focuses on much more:
 Below is the "master" diagram for the initial version of D1-D6.
 
 _Foundry deep dive master diagram (ZAI original diagram verified by FDE)_<br><img src="/assets/DD_master_diagram.png" alt="drones" width="80%" style="border: 1px solid #999;">
+
+<br>
+
+---------------------------
+
+<br>
+
+#### **3.5 (WIP) DIY (do-it-yourself) demos** (26.1121)
+
+THIS SECTION IS WIP... BELOW JUST SOME OF MY THOUGHTS...
+
+- I'm just thinking about creating such a section. 
+- I've done only 1 demo of this type.. where I started from scratch and worked with FDE to get it running.
+  - **[#620_pal_DIY9_aip-fde_demo_hn_](https://drive.google.com/drive/folders/1-Adawag9uA8_bq-hDF-nOuPYaRLz1eEO)**. Using AI.
+- Maybe this should be the focus? But I think first I need to do a better inventory of the existing PAL demos (section 4).
+
 
 <br>
 
@@ -254,6 +259,20 @@ For example **E11: Palantir Foundry example “Integrate GeoSpatial data with Ga
 
 <br>
 
+--------------------
+
+<br>
+
+#### **[4.3 PAL demos master list](/pal_demo_list/)** 26.1121
+
+THIS SECTION IS WIP... BELOW JUST SOME OF MY THOUGHTS...
+
+i create this list 4 months ago... maybe put it in here as a list of potential demos... just an idea.
+
+
+
+<br>
+
 ----------------------------------------
 --------------------
 --------------------
@@ -282,4 +301,4 @@ _palantir.com/docs/foundry (this section provides an overview of Palantir Foundr
 
 <br>
 
-26.1120 (0814, v1 26.0702)
+26.1121 (0814, v1 26.0702)
