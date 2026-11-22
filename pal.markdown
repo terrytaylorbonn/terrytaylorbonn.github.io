@@ -11,7 +11,8 @@ permalink: /pal/
 - Foundry offers a **generous free trial version**. 
 
 To learn Foundry:
-- Follow the learning path in section **3 ZAI tutorials**. 
+- **Sign up for Foundry** as described in section 2. 
+- Follow the section **3 ZAI tutorials** learning path.
 - **Repeat, repeat, repeat**. It takes weeks to master the basics (UI, workflows, terminology, core concepts, etc). **ZAI substantially minimizes this learning curve**.
 
 <br>
