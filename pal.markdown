@@ -12,8 +12,10 @@ permalink: /pal/
 
 To learn Foundry:
 - **Sign up for Foundry** as described in section 2. 
-- Follow the section **3 ZAI tutorials** learning path.
-- **Repeat, repeat, repeat**. It takes weeks to master the basics (UI, workflows, terminology, core concepts, etc). **ZAI substantially minimizes this learning curve**.
+- Follow the section **3 ZAI tutorials** learning path. For the first week focus on 2 skillsets:
+  - **Using FDE**
+  - **Navigating the applications and dialogs**
+- **Repeat, repeat, repeat**. It takes weeks to master the basics (UI, workflows, terminology, core concepts, etc). **ZAI substantially minimizes the learning curve**.
 
 <br>
 
