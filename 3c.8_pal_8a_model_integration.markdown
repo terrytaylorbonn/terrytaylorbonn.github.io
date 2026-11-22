@@ -1,0 +1,137 @@
+---
+layout: page
+title: D8a (FDE VERSION) Understanding models in Foundry (26.1122)
+permalink: /3c.8_pal_8a_model_integration/
+---
+
+<br>
+
+[← 3c.2 Initial PAL demos](/3c.2_pal_initial_demos/)
+
+<br> 
+
+---------------------
+
+<br>
+
+Identify the model resources, deployment options, input/output contracts, and differences among external APIs, imported models, internally hosted models, and custom-trained models.
+
+Topics:
+
+- model versus model endpoint;
+- external versus internally deployed;
+- pre-trained versus custom-trained;
+- batch versus live inference;
+- model versions and dependencies.
+
+
+<br>
+
+_I worked out the structure of this section with FDE/GPT on 26.0905... I will continue working on it from 10 Oct 2026._
+
+#### **TOC2 (LAX-HK)**
+
+THIS IS D8 / xxx = i did not do in D8
+
+**[0,1] INTRO/SETUP**
+
+- BLAH - 2.1 D8a — Model integration concepts
+
+**[2] TRAIN/RAG/TUNE**
+
+- OR JUST USE EXISTING 2.2 D8b — Use an existing internal model (from demo d3 (d2?))
+- (2a) D8c Train (submit to objective)
+- 2.5 D8e — Build RAG with an internal LLM
+- 2.6 D8f — Fine-tuning, if needed / Adapt a model to a specialized task
+
+**[3,4] INFERENCE/EVAL/EXPERIMENT**
+
+- XXX evaluate a custom model (D8-1,D8-2)
+- **live inference BINGO** (2.4 D8d — inference (D8-3,4,5)) and
+- xxxBatch
+- xxxno-code-batch inference
+
+**[5] DEPLOY/PROD**
+
+**[6] GOVERN/MONITOR (IS THIS 2a "data protection and ai security??? NONO)**
+
+- 2.7 D8g — Govern and monitor internal models
+
+<br>
+
+#### **2.2 D8b (TODO) — Deploy and call an existing internal model**
+
+Import or select an existing model, deploy it within the controlled environment, test its inference interface, and call it from a simple Foundry workflow.
+
+This should be the smallest end-to-end internal-model demo:
+
+- Input → internal model → prediction
+
+<br>
+
+#### **2.3 D8c (TODO) — Train a custom model**
+
+Prepare training data, select features and labels, train candidate models, compare evaluation metrics, and register the selected model version.
+
+Start with a conventional classification or regression model rather than an LLM. It provides a much clearer introduction to:
+
+- training and validation data;
+- feature engineering;
+- overfitting;
+- metrics;
+- model selection.
+
+<br>
+
+#### **2.4 D8d (TODO) — Operationalize model inference**
+
+Use a published model for batch inference in a pipeline and live inference from a Function or application. Compare the latency, scale, output, and deployment requirements of both approaches.
+
+This connects modeling back to your standard workflow:
+
+- Pipeline → batch predictions → dataset/Ontology
+- UI or Function → live prediction → response/Action
+
+<br>
+
+#### **2.5 D8e (TODO) — Build RAG with an internal LLM**
+
+Index governed internal content, retrieve only authorized context, send that context to an internally deployed LLM, and return a grounded response with source traceability.
+
+Topics:
+
+- document extraction;
+- chunking;
+- embeddings;
+- semantic retrieval;
+- permission-aware retrieval;
+- context minimization;
+- prompt injection;
+- grounded answers and citations.
+
+Fine-tuning should be a separate optional demo because it is not the same as RAG.
+
+<br>
+
+#### **2.6 D8f (TODO) — Adapt a model to a specialized task**
+
+Where supported and justified, fine-tune or otherwise adapt a model using governed training data. Compare the adapted model with prompting and RAG before deciding whether the additional complexity is worthwhile.
+
+This should be optional. Many use cases need prompting or RAG, not LLM fine-tuning.
+
+<br>
+
+#### **2.7 D8g (TODO) — Govern and monitor internal models**
+
+Manage model versions, approvals, deployment promotion, access controls, evaluation thresholds, drift, monitoring, rollback, and retirement.
+
+This is the internal-model equivalent of your Function versioning discussion.
+
+<br> 
+
+---------------------
+
+<br>
+
+
+26.1122 (0903, 0721, v1 26.0721)
