@@ -15,31 +15,10 @@ permalink: /3.5_diy/
 This page describes **original ZAI demos** (created with the help of FDE/GPT).
 - These demos will follow to some extent official PAL docs website (FDE gets its info primarily from that source).
 
-<!-- The goal
-- The target audience is**Do-it-yourselfers, hands-on learners**. Those like myself who want minimal text/diagrams and maximum useful info for getting hands-on experience.
-
-- **Demo the Foundry core concept "ALPHA"/sovereignty** (that Alex Karp has been talking about a lot recently).
-- **Demo other Foundry concepts** (data protection, etc; my own take)
-- **Maximize ALPHA/sovereignty / Data protection** (within performance/cost/complexity limitations)
-
-These concepts extend to non-Palantir AI dev:
-
-- The value of Foundry is
-  - **Foundry forces compliance with safe AI practices**. Foundry makes you think about the requirements for enterprise AI.
-  - **Palantir leadership (such as Alex Karp) are very verbal about some very real problems with AI in the enterprise**. They are the only ones exposing the real issues, the hype (while minimizing their own marketing hype).
-- The drawbacks of Foundry are
-  - **Overly complicated demos** that dont stay laser-focused on the topics Alex talks about or on the main point of the demo.
-  - **UI, terminology, and docs that leave you in confusion**.
-
-Future goals
-
-- Create **a set of "minimalized" ZAI Foundry demos** that demo key concepts (especially ALPHA).
-- Create **a set of "minimalized" ZAI demos (not Foundry-based)**. I love working with Foundry, but
-  - I am not sure I can make a job out of it.
-  - The required mental overhead for working in Foundry is not insignificant.
-  - Foundry is specialized and (from what I have read) expensive.
-  - The lessons learned can be applied to AI projects not built in Foundry.
--->
+Ideas
+- first pdf's as input .. we create
+- then apps (small free app as input)
+- then streams (weather)
 
 See also (these pages are very outdated ... I will update later)
 
@@ -55,6 +34,7 @@ See also (these pages are very outdated ... I will update later)
 - **1 NO AI**. These demos show that you dont need AI to do analysis (this is the safest option for sovereignty if viable).
   - **DIY9** (from ZAI/FDE/GPT) (NO AI)
 - **2 Data protection (NONE)**. NONE = There are so far no specific demos for this functionality. But Data Protection is always there.
+  - **MONITORING WITH AI ANALYSIS 26.1122**
 - **3 AIP external (Agentic 1) (no automation; sovereignty risk via AI calls)**. You are using external LLMs. Processing occurs whenever data changes (there is no central loop running).
 - **4 Automation (Agentic 2) (AI external; major sovereignty risk via automated AI calls)**. You have automation which watches for data changes and then invokes actions (and AI). Major sovereignty risks.
   - **D3b (TODO)** — Protecting agents that use external AI models (TODO)
@@ -112,8 +92,6 @@ _Resulting UI_<br><img src="/assets/wuxi-07.png" alt="drones" width="36%" style=
 
 <br>
 
-<br>
-
 ---
 ---
 ---
@@ -134,6 +112,39 @@ _Resulting UI_<br><img src="/assets/wuxi-07.png" alt="drones" width="36%" style=
 ---
 
 <br>
+
+### 856 **MONITORING WITH AI ANALYSIS** 26.1122 chat
+
+#### ME can AI be used to monitor , alert about suspicious activity....
+or is it all fixed logic?
+
+#### FDE Both are possible. Foundry monitoring can use fixed rules, AI analysis, or a combination.
+
+**Both are possible.** Foundry monitoring can use fixed rules, AI analysis, or a combination.
+
+| Approach | Example |
+|---|---|
+| **Fixed rules** | Warn after repeated failures, an unusual volume of submissions, or an attempted operation outside allowed hours |
+| **AI analysis** | Review available activity records, summarize unusual patterns, and explain why they deserve investigation |
+| **Combined** | A rule detects a candidate incident → AI adds context → a person receives an alert and reviews it |
+
+**It is not automatic merely because AI is enabled.** We would need to identify accessible activity/audit records, build the detection workflow, and configure notifications. We have not yet verified those data sources or integrations in your environment.
+
+For security, I would keep **permission enforcement deterministic**—like the group condition we just tested—and use AI to assist investigation, not decide whether someone may bypass a restriction.
+
+A small **3.5 Deep Dive** could demonstrate:
+
+**Activity records → suspicious-pattern detection → AI explanation → alert → human review**
+
+Our current D6 demonstrates **preventing unauthorized submission**, not monitoring attempted misuse. Those are separate capabilities.
+
+<br>
+
+---
+
+<br>
+
+
 
 # **3 Agentic 1 (AI external / no automation) (sovereignty risk via AI calls)**
 
@@ -633,4 +644,29 @@ There are also a few other lab notes docx's of interest:
 
 *Final app* <br>
 <img src="/assets/final-01.png" alt="drones" width="70%" style="border: 1px solid #999;">
+-->
+<!-- The goal
+- The target audience is**Do-it-yourselfers, hands-on learners**. Those like myself who want minimal text/diagrams and maximum useful info for getting hands-on experience.
+
+- **Demo the Foundry core concept "ALPHA"/sovereignty** (that Alex Karp has been talking about a lot recently).
+- **Demo other Foundry concepts** (data protection, etc; my own take)
+- **Maximize ALPHA/sovereignty / Data protection** (within performance/cost/complexity limitations)
+
+These concepts extend to non-Palantir AI dev:
+
+- The value of Foundry is
+  - **Foundry forces compliance with safe AI practices**. Foundry makes you think about the requirements for enterprise AI.
+  - **Palantir leadership (such as Alex Karp) are very verbal about some very real problems with AI in the enterprise**. They are the only ones exposing the real issues, the hype (while minimizing their own marketing hype).
+- The drawbacks of Foundry are
+  - **Overly complicated demos** that dont stay laser-focused on the topics Alex talks about or on the main point of the demo.
+  - **UI, terminology, and docs that leave you in confusion**.
+
+Future goals
+
+- Create **a set of "minimalized" ZAI Foundry demos** that demo key concepts (especially ALPHA).
+- Create **a set of "minimalized" ZAI demos (not Foundry-based)**. I love working with Foundry, but
+  - I am not sure I can make a job out of it.
+  - The required mental overhead for working in Foundry is not insignificant.
+  - Foundry is specialized and (from what I have read) expensive.
+  - The lessons learned can be applied to AI projects not built in Foundry.
 -->
