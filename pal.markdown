@@ -11,8 +11,7 @@ permalink: /pal/
 - Foundry offers a **generous free trial version**. 
 
 To learn Foundry:
-- Use Foundry's **FDE** AI assistant constantly.
-- Follow the **ZAI learning path** (consider using **[ZAI MS Word docx's](https://drive.google.com/drive/folders/1-Adawag9uA8_bq-hDF-nOuPYaRLz1eEO)** as a template for your own study notes). 
+- Follow the learning path in section **3 ZAI tutorials**. 
 - **Repeat, repeat, repeat**. It takes weeks to master the basics (UI, workflows, terminology, core concepts, etc). **ZAI substantially minimizes this learning curve**.
 
 <br>
@@ -27,8 +26,8 @@ To learn Foundry:
 
 - **1 Concepts** (rewritten 26.1117)
 - **2 Foundry free tier sign up** 
-- **3 Core ZAI hands-on tutorials** (do these start to finish)
-- **4 ZAI versions of Foundry demos** 
+- **3 ZAI tutorials** (do these start to finish)
+- **4 Palantir tutorials (ZAI versions)** 
 - **5 Project/doc sources** (Foundry and ZAI)
 
 <br>
@@ -86,22 +85,22 @@ I did not record how I signed up, and its not a process I can repeat. But I can 
 
 <br>
 
-## **3 Core ZAI hands-on tutorials** (2)
+## **3 ZAI tutorials** (2)
 
-These tutorials are the most effective method to learn core Foundry skills:
+These tutorials are the most effective method to learn core Foundry skills (consider using the **[MS Word docx](https://drive.google.com/drive/folders/1-Adawag9uA8_bq-hDF-nOuPYaRLz1eEO)** files as a template for your own lab notes):
 
-- **3.1 FDE (and other prerequisite skills) (26.1120)**. 
-- **3.2 Foundry QS0: Detect/analyze haystack needles (start with Foundry example) (26.1119)**. 
+- **3.1 Corequisites (primarily FDE)** (26.1120). Topics to at least be aware of while you are doing the tutorials.
+- **3.2 QS0: Detect/analyze haystack needles 1 (install a Foundry example)** (26.1119) (QS0 was originally QS2). 
   - Quick realistic real-world demo (finding matching intelligence records in a large set of data) **without AI** (Palantir's original mission; Palantir was founded 25 years ago, long before AI). 
   - Intros haystack datasets, pipeline (that detects needles), and objects/maps/UI for display of needles.     
-- **3.3 Foundry QS1: Detect/analyze haystack needles (start from scratch) (26.1113)**. 
+- **3.3 QS1: Detect/analyze haystack needles 2 (start from scratch)** (26.1113). 
   - A non-realistic demo that focuses on mechanical details. 
   - Intros AI, actions, automation/scheduling, and governance. 
-- **3.4 Foundry deep dive (DD) (WIP)**. 
-  - Intended as simple intro to all of the Foundry functionality/tools that were not introduced in QS0/QS1. Goal is the piecemeal intro of the missing pieces. 
-  - After this, you can continue in section 4 doing (ZAI versions of) Palantir Foundry speedruns, demos, examples, etc.
-- **3.5 (WIP) DIY (do-it-yourself) demos** (26.1121)
-
+- **3.4 QS3 (WIP)**. QS3 will focus on 2 things:
+  - More step by step directions for more Foundry functionality and algorithms (like the other two QS's).
+  - Suggesting "inline" (while you are doing QS3) various topics to study in more depth.
+  - Referencing section 3.5 **deep dive** (DD) tutorials for these in depth topics.
+- **3.5 DD (deep dive) tutorials** (WIP/26.1121). This is the primary long-term focus.
 
 <br>
 
@@ -109,7 +108,7 @@ These tutorials are the most effective method to learn core Foundry skills:
 
 <br>
 
-#### **[3.1 FDE (and other prerequisite skills) (26.1120)](/pal_fde/)** (2.0)
+#### **[3.1 Corequisites (primarily FDE)](/pal_fde/)** (26.1120/2.0)
 
 _**[Single source docx #685](https://drive.google.com/drive/folders/1-Adawag9uA8_bq-hDF-nOuPYaRLz1eEO)** (WIP) for FDE webpages (markdown and PNG's are extracted by ChatGPT)._
 
@@ -127,7 +126,7 @@ _Its important to master the UI_<br><img src="/assets/sun-60.png" alt="drones" w
 
 <br>
 
-#### **[3.2 Foundry QS0: Detect/analyze haystack needles (start with Foundry example) (26.1119)](/pal_qs0/)** (2.1)
+#### **[3.2 QS0: Detect/analyze haystack needles 1 (install a Foundry example)](/pal_qs0/)** (26.1119/2.1)
 
 _**[Single source docx #686](https://drive.google.com/drive/folders/1-Adawag9uA8_bq-hDF-nOuPYaRLz1eEO)** for QS0 webpages (markdown and PNG's are extracted by ChatGPT)._
 
@@ -153,7 +152,7 @@ QS0 uses a real world example, but is a simpler demo than the next QS1 (that foc
 
 <br>
 
-#### **[3.3 Foundry QS1: Detect/analyze haystack needles (start from scratch) (26.1113)](/pal_693_qs/)** (2.2)
+#### **[3.3 QS1: Detect/analyze haystack needles 2 (start from scratch) (26.1113)](/pal_693_qs/)** (2.2)
 
 _**[Single source docx #693](https://drive.google.com/drive/folders/1-Adawag9uA8_bq-hDF-nOuPYaRLz1eEO)** for QS1 webpages (markdown and PNG's are extracted by ChatGPT)._
 
@@ -179,7 +178,7 @@ _Example workflow diagram_<br><img src="/assets/sun-55mmm.png" alt="drones" widt
 
 <br>
 
-#### **[3.4 Foundry deep dive (DD) (26.1117 WIP)](/pal_693_dd/)** (2.2a)
+#### **[3.4 QS3 (WIP)](/pal_693_dd/)** (26.1117/2.2a)
 
 The goal of QS0 and QS1 was to intro the basics with a simple goal — find the “needle in the haystack”. **The goal of DD is to introduce the general "mechanics" of how Foundry works**. The plan is to reference official PAL speedruns, demos, and examples in the DD.
 
@@ -191,12 +190,12 @@ _Foundry deep dive master diagram_<br><img src="/assets/DD_master_diagram.png" a
 
 <br>
 
-#### **[3.5 (WIP) DIY (do-it-yourself) demos](/3.5_diy/)** (v1 26.1122)
+#### **[3.5 Deep dive (DD) tutorials](/3.5_diy/)** (v1 26.1122)
 
-The official demo supplies inspiration; DIY demos isolate and teach the mechanism.  
+The QS's (3.2-3.4) and the official demos (section 4) supply inspiration; DD demos isolate and teach the mechanism.  
 
 - Section 4.3 catalogs the official Palantir demos.
-- This section will contain demos 
+- This section will contain DD's 
   - inspired by those official demos
   - but created from scratch
   - and are minimized in scope and complexity as much as possible (while still demonstrating the target concepts)
@@ -207,7 +206,7 @@ The official demo supplies inspiration; DIY demos isolate and teach the mechanis
   - Can we reuse familiar data and objects?
   - What is the smallest exercise with a clearly verifiable result? -->
 
-There are current only 2 demos of this type (started from and built with the sole assistance of FDE). Several TODO's.
+There are current only 2 DD's of this type (started from and built with the sole assistance of FDE). Several TODO's.
 
 - **[#620\_pal\_DIY9\_aip-fde_demo\_hn\_](https://drive.google.com/drive/folders/1-Adawag9uA8_bq-hDF-nOuPYaRLz1eEO)**.<br>_DIY9 UI_<br><img src="/assets/sun-61.png" alt="drones" width="44%" style="border: 2px solid #999;">
 - **[#619\_pal\_D8\_model\_integration\_](https://drive.google.com/drive/folders/1-Adawag9uA8_bq-hDF-nOuPYaRLz1eEO)**.<br>_D8 demo model trained in Foundry_<br><img src="/assets/sun-62.png" alt="drones" width="60%" style="border: 2px solid #999;"><br>
@@ -239,9 +238,9 @@ The official demo supplies inspiration; your DIY demo isolates and teaches the m
 
 <br>
 
-## **4 ZAI versions of Foundry demos** (2b)
+## **4 Palantir tutorials (ZAI versions)** (2b)
 
-**The second set of ZAI tutorials are based on Palantir demos:**
+The second set of ZAI tutorials are based on Palantir demos:
 
 - **4.1 ZAI versions of the core ~8 Foundry getting started demos**. The core demos (speedruns) meant for beginners. (2b.4)
 - **4.2 ZAI versions of PAL Examples (installable)**. Real-world demos. ZiptieAI uses one of these demos as the very first demo for beginners. (2b.5)
