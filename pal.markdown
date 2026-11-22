@@ -13,7 +13,7 @@ permalink: /pal/
 To learn Foundry:
 - Use Foundry's **FDE** AI assistant constantly.
 - Follow the **ZAI learning path** (consider using **[ZAI MS Word docx's](https://drive.google.com/drive/folders/1-Adawag9uA8_bq-hDF-nOuPYaRLz1eEO)** as a template for your own study notes). 
-- **Repeat, repeat, repeat**. It takes weeks to master the basics (UI, workflows, terminology, core concepts, etc). ZAI minimizes this learning curve.
+- **Repeat, repeat, repeat**. It takes weeks to master the basics (UI, workflows, terminology, core concepts, etc). **ZAI substantially minimizes this learning curve**.
 
 <br>
 
@@ -191,7 +191,7 @@ _Foundry deep dive master diagram_<br><img src="/assets/DD_master_diagram.png" a
 
 <br>
 
-#### **3.5 (WIP) DIY (do-it-yourself) demos** (v1 26.1121)
+#### **[3.5 (WIP) DIY (do-it-yourself) demos](/3.5_diy/)** (v1 26.1122)
 
 The official demo supplies inspiration; DIY demos isolate and teach the mechanism.  
 

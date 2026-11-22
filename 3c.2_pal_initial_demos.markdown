@@ -1,10 +1,10 @@
 ---
 layout: page
-title: 4.1 ZAI versions of the core ~8 Foundry getting started demos (2b.4)
+title: 4.1 ZAI versions of the core ~8 Foundry getting started demos (rewritten 26.1122)
 permalink: /3c.2_pal_initial_demos/
 ---
 
-<!-- was 2.2 Getting started demos (speedruns, marketplace, DIY) -->
+<!-- was  (2b.4)  //// 2.2 Getting started demos (speedruns, marketplace, DIY) -->
 
 <br>
 
@@ -12,24 +12,25 @@ permalink: /3c.2_pal_initial_demos/
 
 <br>
 
-<!-- **TL;DR**? Then skip to **[Demo D3 "Speedrun -- Your First Agentic AIP Workflow"](/3c.3_pal_agentic_ai/)**, a great example of the direction this part of ZiptieAI is heading. -->
+<!-- **TL;DR**? Then skip to **[Demo D3 "Speedrun -- Your First Agentic AIP Workflow"](/3c.3_pal_agentic_ai/)**, a great example of the direction this part of ZiptieAI is heading. 
 
 #### _This is currently (26.0914) **the Main focus of (1) ZAI "3c Enterprise" and (2) ZAI in general**_:
 
 - See also **[2.2x CONCEPTS (DEEP DIVE) -- ZAI demos](/3c.2_pal_demo_CONCEPTS/)**
+-->
 
-<br>
+
 
 This page describes
 
-- the **ZAI versions of 7 Palantir Foundry hands-on demos ("speedruns")** and
-- **1 original ZAI demo** (created with the help of FDE/GPT)
+- the **ZAI versions of 7 Palantir Foundry hands-on demos (mainly "speedruns")** and
+<!--- **1 original ZAI demo** (created with the help of FDE/GPT) -->
 
 The target audience
 
-- **Do-it-yourselfers, hands-on learners**. Those like myself who want minimal text/diagrams and maximum useful info for getting hands-on experience.
+- **hands-on learners**. Those like myself who want minimal text/diagrams and maximum useful info for getting hands-on experience.
 
-The goal
+<!-- The goal
 
 - **Demo the Foundry core concept "ALPHA"/sovereignty** (that Alex Karp has been talking about a lot recently).
 - **Demo other Foundry concepts** (data protection, etc; my own take)
@@ -51,12 +52,16 @@ Future goals
   - I am not sure I can make a job out of it.
   - The required mental overhead for working in Foundry is not insignificant.
   - Foundry is specialized and (from what I have read) expensive.
-  - The lessons learned can be applied to AI projects not built in Foundry.
+  - The lessons learned can be applied to AI projects not built in Foundry. -->
 
 See also (these pages are very outdated ... I will update later)
 
 - **[PAL demo strategy](/3c.aaa_pal_strategy_demos/)**.
 - **[Important info about doing these demos](/3c.2.0_info_about_demos/)**. The advantages of website tutorials over Youtube videos (at least for beginners) and the critical importance of FDE (Foundry's built-in AI chat tool).
+
+<br>
+
+-----
 
 <br>
 
@@ -75,23 +80,31 @@ xxxxxxxxxxxxxxxx**CONCEPTS**
 **HANDS-ON DEMOS (WIP)**
 
 - **DEMOS 1) NO AI**. These demos show that you dont need AI to do analysis (this is the safest option for sovereignty if viable).
-  - (1) DIY9 (from ZAI/FDE/GPT) (NO AI)
-  - (2) D1 (from PAL) (NO AI)
+<!--  - (1) DIY9 (from ZAI/FDE/GPT) (NO AI) -->
+  - **D1** (from PAL) (NO AI)
 - **DEMOS 2) Data protection (NONE)**. NONE = There are so far no specific demos for this functionality. But Data Protection is always there.
 - **DEMOS 3) AIP external (Agentic 1) (no automation; sovereignty risk via AI calls)**. You are using external LLMs. Processing occurs whenever data changes (there is no central loop running).
-  - (3) D2 (from PAL)
+  - **D2** (from PAL)
 - **DEMOS 4) Automation (Agentic 2) (AI external; major sovereignty risk via automated AI calls)**. You have automation which watches for data changes and then invokes actions (and AI). Major sovereignty risks.
-  - (4) D3
-  - (4b) D3b — Protecting agents that use external AI models (TODO)
+  - **D3**
+<!--  - (4b) D3b — Protecting agents that use external AI models (TODO)-->
 - **DEMOS 5) ALPHA -- Mining (how frontier models steal your "alpha")**. This demo is primitive and uses black box Foundry functionality ("mining"), but Frontier model labs are certainly experts at such techniques.
-  - (5) D5. This demo "mines" (extracts the alpha of) the workflows based on example data.
-  - (5b) D5b (FUTURE) (C5c): Demos for Maximize ALPHA/sovereignty / Data protectio (within performance/cost/complexity limitations)
+  - **D5**. This demo "mines" (extracts the alpha of) the workflows based on example data.
+<!--  - (5b) D5b (FUTURE) (C5c): Demos for Maximize ALPHA/sovereignty / Data protectio (within performance/cost/complexity limitations)-->
 - **DEMOS 6) AIP internal (Agentic 3)**. The best solution. Calls to AI are only to internal models. These demos show how to create and deploy your own model using Foundry.
-  - (6) D3c
-  - (7) D8a
+- **Other demos**. Duplicate or unimportant demos (or demos I could not get to work).
+  - **D4**: Palantir ontology function “speedrun” (quick start) (26.0717).
+  - **D6**: Deep Dive: Building Your First APPLICATION (xxxPipeline???) (26.0719).
+  - **D7**: Deep Dive: Building Your First Pipeline (26.0720).
+  - **DD19**: Deep Dive: transform_data_w_code_repos (26.0805).
+
 
 <br>
 
+---------
+---
+---
+---
 ---
 
 <br>
@@ -102,39 +115,12 @@ Foundry’s core value proposition predates generative AI. It integrates data fr
 
 Palantir emerged in the post-9/11 period with the broader objective of helping organizations connect signals across fragmented data and identify unusual patterns relevant to security and intelligence. The same architecture is now applied to commercial and operational problems.
 
-<br>
+---
 
-### **(1) DIY9 (from ZAI/FDE/GPT) (NO AI)**
-
-DIY = do it yourself. Create your own demo.
-
-SEE ALSO: **[3.1 D9 (TO-UPDATE, DIY) = Haystack needle demo](/3c.xxx_pal_HN_01_non_ai/)**.
-
-- **All of the analysis is in the UI**
-  - UI right widget: You select multiple property column VALUES for a single object type property (**this is an object type property value selector; it has nothing to do with filtering**).
-  - UI left widget: Displays objects whose property column values match selected property values.
-- **Classification of the demo:**
-  - **[1] Analytics** (objects displayed based on selected object type property values)
-  - **[2] Data protection** (this is not something you setup; but Foundry controls restricts access to data for enterprise staff)
-- Other aspects of this (very simple) demo:
-  - **DIY = Do it yourself. I did this from scratch by chatting with FDE/GPT.** This is a very important aspect of this demo, showing that this is possible.
-  - **NO AI**.
-
-_Functional overview (maybe I should not have crossed out governance; it is very important and always active, but you did not have to set it up)_<br><img src="/assets/wuxi-08.png" alt="drones" width="68%" style="border: 1px solid #999;">
-
-_A simple diagram of the UI config (the PAL demos do not have such diagrams)_<br><img src="/assets/wuxi-06-DIY9_main.png" alt="drones" width="90%" style="border: 1px solid #999;">
-
-_Resulting UI_<br><img src="/assets/wuxi-07.png" alt="drones" width="60%" style="border: 1px solid #999;">
 
 <br>
 
-<!-- **What has interested me the most about Palantir for over a year now are "haystack needle" (HN) algorithms**. This was the original reason for the founding of PAL. PAL's job was to sift through vast amounts of data to flag potential threats (for the first decade or so without the help of AI). To find the needle in the haystack. Thats what this demo does. The demo is DIY (do it yourself), which means it was created from scratch with only FDE/GPT assistance.
-
-<img src="/assets/D9_HN_detection.png" alt="xxx" width="85%" style="border: 1px solid #999;"> -->
-
-<br>
-
-### **(2) D1 (from PAL) (NO AI)**
+### **D1 (from PAL) (NO AI)**
 
 SEE ALSO: **[1.1 D1 = "Speedrun -- Your First End-to-End Workflow" (26.0818)](/3c.1_pal_foundry/)**.
 
@@ -148,48 +134,23 @@ SEE ALSO: **[1.1 D1 = "Speedrun -- Your First End-to-End Workflow" (26.0818)](/3
   - ZAI splits the demos into 3 phases (this makes the demo much easier to finish and understand).
   - **NO AI.**
 
-_D1 Main workflow diagram (simplified) (for details about this workflow see **[D1 workflow chats](/pal_1.3_workflow_chats/)**)_<br><img src="/assets/777_25bbb.png" alt="drones" width="90%" style="border: 1px solid #999;"><br>
+_D1 Main workflow diagram (simplified) (for details about this workflow see **[D1 workflow chats](/pal_1.3_workflow_chats/)**)_<br><img src="/assets/777_25bbb.png" alt="drones" width="80%" style="border: 1px solid #999;"><br>
 
-_Action defition_<br><img src="/assets/wuxi-10.png" alt="drones" width="70%" style="border: 1px solid #999;">
+_Action defition_<br><img src="/assets/wuxi-10.png" alt="drones" width="63%" style="border: 1px solid #999;">
 
-_Action reference in the UI_<br><img src="/assets/wuxi-11.png" alt="drones" width="33%" style="border: 1px solid #999;">
+_Action reference in the UI_<br><img src="/assets/wuxi-11.png" alt="drones" width="30%" style="border: 1px solid #999;">
 
 _Upper left: Orignal order. Upper right: After reassigning to different employee. Below: Changes saved to data._<br><img src="/assets/wuxi-09.png" alt="drones" width="88%" style="border: 1px solid #999;">
 
 <br>
 
-<!--
-### **[3] 1 External AI models (Basic app, AIP app, agentic aip)**
-
-This sections focuses on **getting started (grasping core concepts via hands-on demos)** with Foundry demos that use **external AI models**. This is the first set of demos because (1) ZAI focuses primarily on AI and (2) external models are simpler than internal models.
-
- Note:
-- The thread order does not exactly match the demo number.
-- Initial focus is on Foundry + AI + agents
-
-**TOC:**
-
-- **1.1 D1 = "Speedrun -- Your First End-to-End Workflow"**
-- **1.2 D2 = "Speedrun -- Your First AIP Workflow"**
-- **1.2b Both D2 and D3 send enterprise data to external LLMs — why does Palantir call D3 the first “agentic” demo?**
-- **1.3 D3 = "Speedrun: Your First Agentic AIP Workflow"**
-
-
-- **1.4 (TODO) D3b Agent/model data security**
-
-#### **[1.1 D1 = "Speedrun -- Your First End-to-End Workflow" (26.0818)](/3c.1_pal_foundry/)**
-
-Your first hands-on with the basics (pipeline, ontology, actions, UI).
-
-- D1 does not include AI, but its perhaps a required starter for understanding the Foundry basics.
-- A good demo (though a bit too complicated as an initial demo.. I would make something simpler). Plan on spending minimum a full day on this (the demo docs say you will need only 60 minutes).
-- The ZAI splits the demos into 3 phases (this makes the demo much easier to finish and understand).
-
-_Demo D1 first end-to-end workflow diagram (no AI) (WIP)_<br><img src="/assets/777_46.png" alt="xxx" width="75%" style="border: 1px solid #999;">
-
-<br> -->
 
 ---
+---
+---
+---
+---
+
 
 <br>
 
@@ -198,6 +159,11 @@ _Demo D1 first end-to-end workflow diagram (no AI) (WIP)_<br><img src="/assets/7
 <br>
 
 ---
+---
+---
+---
+---
+
 
 <br>
 
@@ -205,7 +171,11 @@ _Demo D1 first end-to-end workflow diagram (no AI) (WIP)_<br><img src="/assets/7
 
 <br>
 
-### **(3) D2 (from PAL)**
+---
+
+<br>
+
+### **D2 (from PAL)**
 
 Your first app with AI. This demo was way too complicated. You can save a lot of time by following the ZAI version of the demo (and skip part 3 of 3 that has absolutely nothing to do with AI, but requires a lot of effort).0
 
@@ -237,10 +207,19 @@ This is the diagram you really need when doing the demo. A diagram of the config
 <br>
 
 ---
+---
+---
+---
+---
+
 
 <br>
 
 # **DEMOS 4) Agentic 2 (AI external + automation) (major sovereignty risk via automated AI calls)**
+
+<br>
+
+----
 
 <br>
 
@@ -264,6 +243,12 @@ _D3 xxx_<br><img src="/assets/wuxi-17.png" alt="xxx" width="70%" style="border: 
 
 _D3 xxx_<br><img src="/assets/wuxi-16.png" alt="xxx" width="100%" style="border: 1px solid #999;">
 
+<br>
+
+----
+
+<br>
+
 #### **[Both D2 and D3 send enterprise data to external LLMs—why does Palantir call D3 the first “agentic” demo?](/3c.2c_pal_zai_take_on_foundry_agent/)** (26.0902)
 
 _Follow the above header link for details. See also the complete **[chat](/3c.2_pal_initial_demos_AGENT_CHAT/)** with FDE/GPT._
@@ -279,51 +264,24 @@ _Follow the above header link for details. See also the complete **[chat](/3c.2_
 
 _[3] Demo D3 Foundry agent_<br><img src="/assets/MASTER_D1.2b_Foundry_SIMPLE.png" alt="xxx" width="90%" style="border: 1px solid #999;">
 
-<!-- Notes:
-See also:
-- **[#614_.docx](https://drive.google.com/drive/folders/1-Adawag9uA8_bq-hDF-nOuPYaRLz1eEO)** (detailed demo notes; the ZAI webpage markdown/PNG's for the ZAI online docs for this demo were extracted from this docx using GPT)
-- **[Speedrun](https://learn.palantir.com/speedrun-your-first-agentic-aip-workflow)** (the original demo documentation)
 
-
-- For a discussion of what “agent” means in Foundry, see the D2 notes. This is an on-going debate with FDE. FDE (not sure I agree with this): The agent is not the LLM or AIP Logic alone. It is the complete event-driven system comprising Ontology state, Automate, AIP Logic, the LLM, and the governed Action.
-- The “AIP Function” and “AIP Logic” boxes show two Foundry UI/resource views of the same executable logic. The Function Registry entry is the published interface selected by Automate; the Logic editor contains its implementation.
-
-_Diagram of the workflows for the ZAI version of demo D3 "Speedrun: Your First Agentic AIP Workflow”_<br><img src="/assets/MASTER_D3.png" alt="xxx" width="100%" style="border: 1px solid #999;">
--->
-<!--
-#### **[1.4 (TODO) D3b Agent/model data security](/3c.2_pal_D2b_ai_monitor/)**
-
-Work with GPT/FDE to add Foundry safety rails to D3 to make using agents + remote LLMs and agents safer (finding an existing demo for this would be better).  -->
-
-<br>
-
-### **[(4b) (TODO) D3b — Protecting agents that use external AI models](/3c.2_pal_D2b_ai_monitor/)**
-
-<!-- 1.4 (2a.1) -->
-
-Extend D3 with controls for both sides of the agent boundary: the enterprise data sent to an external LLM and the Ontology changes produced from its response. Proposed topics include sensitive-data detection, minimization and redaction, approved model access, prompt-injection defenses, output validation, constrained Actions, human approval, automation-loop safety, evaluation, monitoring, and rollback.
-
-The objective is to determine which risks Foundry controls actually mitigate and which risks remain with the external model provider.
-
-D3b is specifically about adding safety controls to the external-model D3 agent:
-
-- controlling data sent to the model;
-- detecting or minimizing sensitive content;
-- validating model responses;
-- constraining Actions;
-- adding approval, monitoring, and rollback.
-
-It should be referenced from the external-model section, but its primary home is now 2a Data Protection and AI Security.
-
-<img src="/assets/D3b/D3b_001.png" alt="drones" width="60%" style="border: 1px solid #999;">
 
 <br>
 
 ---
+---
+---
+---
+---
+
+
+<br>  
+
+# **DEMOS 5) ALPHA (Mining)**
 
 <br>
 
-# **DEMOS 5) ALPHA (Mining)**
+-------
 
 <br>
 
@@ -333,45 +291,15 @@ FDE: The demo starts with claims, customers, and claim-history logs. After inges
 
 <img src="/assets/D5_claims_process_app.png" alt="xxx" width="77%" style="border: 1px solid #999;">
 
-<br>
-
-### **(5b) D5b (FUTURE) (C5c): Demos for Maximize ALPHA/sovereignty / Data protection** (within performance/cost/complexity limitations)
-
-**(FUTURE)** Comparative demos that hold the business task constant while changing who controls the model, data, RAG system, application, and operational decisions. These experiments examine data egress, model replaceability, provider dependency, continuity, and whether the organization retains control of its proprietary knowledge, Ontology, workflows, Actions, and outcomes.
-
-The distinction can be demonstrated clearly:
-
-- **Secure but not sovereign**. A well-protected vendor system that the vendor ultimately controls.
-
-- **Sovereign but insecure**. A completely self-hosted system with weak permissions and poor security.
-
-- **Secure and sovereign**. A company-controlled system with strong protection and governance.
-
-Topics include
-
-- internal versus external models;
-- data and model location;
-- ownership of the application and Ontology;
-- provider dependency;
-- model replaceability;
-- RAG and memory placement;
-- operational continuity;
-- control of outcomes and customer relationships.
-
-The chat in the title link above describes a set of future demos (FDE generated list):
-
-- 1 Define and measure sovereignty
-- 2 External model with provider-controlled application
-- 3 Foundry-controlled application with external model
-- 4 Replace the external model with an internal model
-- 5 Compare external, internal and provider-hosted RAG
-- 6 Model-provider outage and model replacement
-- 7 Agent Action, approval and decision sovereignty
-- 8 Final sovereignty scorecard
 
 <br>
 
 ---
+---
+---
+---
+---
+
 
 <br>
 
@@ -379,216 +307,10 @@ The chat in the title link above describes a set of future demos (FDE generated 
 
 <br>
 
-### **[(6) D3c (TODO) — Rebuild the protected D3 agent with an internal AI model](/3c.8_pal_D2c_D8/)**
-
-<!-- 2a.2 (2.8) (was 2.2)  -->
-
-Replace D3b’s external LLM with an approved model deployed within the organization’s controlled environment. Optionally add RAG over governed internal sources, then compare external and internal implementations for confidentiality, accuracy, latency, cost, access control, deployment, and operational maintenance.
-
-An internal model can reduce third-party data egress, but it does not eliminate prompt injection, excessive data access, unreliable outputs, or unsafe agent Actions. The D3b controls therefore remain relevant.
-
-D3c sits at the intersection of:
-
-- internal models;
-- agent security;
-- data egress;
-- governed Actions.
-
-Because it is explicitly a protected D3 agent, placing it after D3b in the security section creates a useful comparison:
-
-<!-- FDE's second recommendation
-
-**D3c — Use an internal model in the protected D3 agent**
-
-Replace the external LLM in D3b with the internally deployed model from the D8 series. Retain the D3b controls around data access, output validation, governed Actions, human approval, Automate, monitoring, and rollback.
--->
-
-<br>
-
-### **[(7) D8a (WIP) — Deep Dive: Model integration (26.0905)](/3c.8_pal_8_model_integration/)**
-
-<!-- 2.1 D8(a) -->
-
-Demo D8 explores how a traditional machine-learning model can be trained, deployed, and used for inference inside Palantir Foundry. The demo first examines Foundry’s Model Studio and model-management workflow, then creates a project and trains models using two approaches: Model Studio and a Jupyter notebook. Finally, the trained model is deployed and connected to an interactive application for inference. The demo therefore follows much of the model lifecycle: data → training → model → deployment → inference → application.
-
-**FDE VERSION: 2.1 D8a — Understanding models in Foundry**
-
-Identify the model resources, deployment options, input/output contracts, and differences among external APIs, imported models, internally hosted models, and custom-trained models.
-
-Topics:
-
-- model versus model endpoint;
-- external versus internally deployed;
-- pre-trained versus custom-trained;
-- batch versus live inference;
-- model versions and dependencies.
-
-_Training of the internal model_<br><img src="/assets/D8/D8.4-19.png" alt="xxx" width="80%" style="border: 1px solid #999;">
-
-<br>
-
-#### _I worked out the structure of this section with FDE/GPT on 26.0905... I will continue working on it from 10 Oct 2026._
-
-<!-- ### **ME: Split D8 into multiple demos?**
-
-FDE: Yes. Model integration, model creation, training, inference, RAG, and model operations are too much for one demo. I recommend keeping D3c as the capstone, after a sequence of smaller D8 demos.
-
-**FDE: Recommended website sequence**
-
-This is preferable to placing D3c immediately after one large D8. Readers first learn how internal models are created, deployed, called, and governed; D3c then demonstrates how those capabilities fit into an operational agent.
-
--->
-<!--
-<br>
-
-#### **TOC**
-
-26.0907.13:44 ORD
-
-- BLAH - 2.1 D8a — Model integration concepts
-
-- 2.2 D8b — Use an existing internal model (from demo d3 (d2?))
-
-THIS IS D8 / xxx = i did not do in D8
-
-- 2.3 D8c — train/eval (D8-1,2)
-  - (2a) Train (submit to objective)
-  - XXX evaluate a custom model (D8-1,D8-2)
-- 2.4 D8d — inference (D8-3,4,5)
-  - **live inference BINGO** and
-  - xxxBatch
-  - xxxno-code-batch inference
-- 2.5 D8e — Build RAG with an internal LLM
-
-NEW
-
-- 2.6 D8f — Fine-tuning, if needed / Adapt a model to a specialized task
-- 2.7 D8g — Govern and monitor internal models
-
-<br> -->
-
-#### **TOC2 (LAX-HK)**
-
-THIS IS D8 / xxx = i did not do in D8
-
-**[0,1] INTRO/SETUP**
-
-- BLAH - 2.1 D8a — Model integration concepts
-
-**[2] TRAIN/RAG/TUNE**
-
-- OR JUST USE EXISTING 2.2 D8b — Use an existing internal model (from demo d3 (d2?))
-- (2a) D8c Train (submit to objective)
-- 2.5 D8e — Build RAG with an internal LLM
-- 2.6 D8f — Fine-tuning, if needed / Adapt a model to a specialized task
-
-**[3,4] INFERENCE/EVAL/EXPERIMENT**
-
-- XXX evaluate a custom model (D8-1,D8-2)
-- **live inference BINGO** (2.4 D8d — inference (D8-3,4,5)) and
-- xxxBatch
-- xxxno-code-batch inference
-
-**[5] DEPLOY/PROD**
-
-**[6] GOVERN/MONITOR (IS THIS 2a "data protection and ai security??? NONO)**
-
-- 2.7 D8g — Govern and monitor internal models
-
-<br>
-
-#### **2.2 D8b (TODO) — Deploy and call an existing internal model**
-
-Import or select an existing model, deploy it within the controlled environment, test its inference interface, and call it from a simple Foundry workflow.
-
-This should be the smallest end-to-end internal-model demo:
-
-- Input → internal model → prediction
-
-<br>
-
-#### **2.3 D8c (TODO) — Train a custom model**
-
-Prepare training data, select features and labels, train candidate models, compare evaluation metrics, and register the selected model version.
-
-Start with a conventional classification or regression model rather than an LLM. It provides a much clearer introduction to:
-
-- training and validation data;
-- feature engineering;
-- overfitting;
-- metrics;
-- model selection.
-
-<br>
-
-#### **2.4 D8d (TODO) — Operationalize model inference**
-
-Use a published model for batch inference in a pipeline and live inference from a Function or application. Compare the latency, scale, output, and deployment requirements of both approaches.
-
-This connects modeling back to your standard workflow:
-
-- Pipeline → batch predictions → dataset/Ontology
-- UI or Function → live prediction → response/Action
-
-<br>
-
-#### **2.5 D8e (TODO) — Build RAG with an internal LLM**
-
-Index governed internal content, retrieve only authorized context, send that context to an internally deployed LLM, and return a grounded response with source traceability.
-
-Topics:
-
-- document extraction;
-- chunking;
-- embeddings;
-- semantic retrieval;
-- permission-aware retrieval;
-- context minimization;
-- prompt injection;
-- grounded answers and citations.
-
-Fine-tuning should be a separate optional demo because it is not the same as RAG.
-
-<br>
-
-#### **2.6 D8f (TODO) — Adapt a model to a specialized task**
-
-Where supported and justified, fine-tune or otherwise adapt a model using governed training data. Compare the adapted model with prompting and RAG before deciding whether the additional complexity is worthwhile.
-
-This should be optional. Many use cases need prompting or RAG, not LLM fine-tuning.
-
-<br>
-
-#### **2.7 D8g (TODO) — Govern and monitor internal models**
-
-Manage model versions, approvals, deployment promotion, access controls, evaluation thresholds, drift, monitoring, rollback, and retirement.
-
-This is the internal-model equivalent of your Function versioning discussion.
-
-<br>
-
-<!-- #### **[2.2 D3c (TODO) = D3(b) + D8 (local (maybe custom trained) models)](/3c.8_pal_D2c_D8/)**
-Locals models (+RAG) are probably the optimal solution (see D8 demo description below on this page).
-
-I would remove:
-
-“Local models (+RAG) are probably the optimal solution.”
-
-That conclusion is too broad. Internal models and RAG may be preferable for sensitive workloads, but they introduce model quality, infrastructure, operational, and cost tradeoffs. Also, RAG does not make a model internal; it is a grounding technique that can be used with either internal or external models.
--->
-
-<br><br><br><br><br><br><br><br><br><br><br>
-
 ---
-
 ---
-
 ---
-
 ---
-
----
-
 ---
 
 <br>
@@ -597,22 +319,70 @@ That conclusion is too broad. Internal models and RAG may be preferable for sens
 
 Duplicate or unimportant demos (or demos I could not get to work).
 
-- **[4.1 D4: Palantir ontology function "speedrun" (quick start) (26.0717)](/3c.4_pal_ontology_function/)**.
+<br>
+
+----
+
+<br>
+
+### **[D4: Palantir ontology function "speedrun" (quick start) (26.0717)](/3c.4_pal_ontology_function/)**.
   - At the end of this page is _good demo of how FDE/GPT5.5 fixed a problem with the demo_.
   - **[#615\_.docx](https://drive.google.com/drive/folders/1-Adawag9uA8_bq-hDF-nOuPYaRLz1eEO)**
   - **[Speedrun](https://learn.palantir.com/speedrun-your-first-ontology-function/2131538)**
-- **[4.2 D6: Deep Dive: Building Your First APPLICATION (xxxPipeline???) (26.0719)](/3c.6_pal_6_first_app/)**.
+
+<br>
+
+----
+
+<br>
+
+### **[D6: Deep Dive: Building Your First APPLICATION (xxxPipeline???) (26.0719)](/3c.6_pal_6_first_app/)**.
   - **Some of this failed**. FDE/GPT/OPUS could not fix.
   - Outdated (2+ years) demo? MAKE THE DEMOS SIMPLER AND KEEP THEM UPDATED.
   - **[#617\_.docx](https://drive.google.com/drive/folders/1-Adawag9uA8_bq-hDF-nOuPYaRLz1eEO)**
   - **[Speedrun](https://learn.palantir.com/deep-dive-building-your-first-application)**
-- **[4.3 D7: Deep Dive: Building Your First Pipeline (26.0720)](/3c.7_pal_7_first_pipeline/)**.
-  - **[#618\_.docx](https://drive.google.com/drive/folders/1-Adawag9uA8_bq-hDF-nOuPYaRLz1eEO)**
-  - **[Speedrun](https://learn.palantir.com/deep-dive-building-your-first-pipeline)**
-- **[4.4 DD19: Deep Dive: transform_data_w_code_repos (26.0805)](/3c.19_pal_19_transform_data_git/)**.
-  - **[#627\_.docx](https://drive.google.com/drive/folders/1-Adawag9uA8_bq-hDF-nOuPYaRLz1eEO)**
 
 <br>
+
+----
+
+<br>
+
+### **[D7: Deep Dive: Building Your First Pipeline (26.0720)](/3c.7_pal_7_first_pipeline/)**.
+  - **[#618\_.docx](https://drive.google.com/drive/folders/1-Adawag9uA8_bq-hDF-nOuPYaRLz1eEO)**
+  - **[Speedrun](https://learn.palantir.com/deep-dive-building-your-first-pipeline)**
+
+<br>
+
+----
+
+<br>
+
+### **[DD19: Deep Dive: transform_data_w_code_repos (26.0805)](/3c.19_pal_19_transform_data_git/)**.
+  - **[#627\_.docx](https://drive.google.com/drive/folders/1-Adawag9uA8_bq-hDF-nOuPYaRLz1eEO)**
+
+
+<br>
+
+----
+
+<br>
+
+
+
+26.1122 (0915, v1 26.0725)
+
+<br>
+
+<!-- ==========================================================================================
+
+# ==========================================================================================
+
+==========================================================================================
+-->
+
+<!-- 
+
 
 # **Yes—the structure and core conceptual progression are sound.**
 
@@ -720,20 +490,9 @@ Before leaving:
 
 On the evidence available, **five weeks of inactivity is more likely to cause a reversible inactive status than deletion of your account and projects**.
 
-<br>
 
-26.0915 (v1 26.0725)
 
-<br>
-
-<!-- ==========================================================================================
-
-# ==========================================================================================
-
-==========================================================================================
--->
-
-<!-- The user can:
+The user can:
 
 **1a.** Manually review or modify an existing Patient’s eligibility decision through a governed Action; or
 **1b.** Add a new Patient, causing that Patient to enter the object set monitored by Automate.
