@@ -207,8 +207,10 @@ The official demo supplies inspiration; DIY demos isolate and teach the mechanis
   - Can we reuse familiar data and objects?
   - What is the smallest exercise with a clearly verifiable result? -->
 
-There is current only 1 demo of this type (started from and built with the sole assistance of FDE).
-- **[#620\_pal\_DIY9\_aip-fde_demo\_hn\_](https://drive.google.com/drive/folders/1-Adawag9uA8_bq-hDF-nOuPYaRLz1eEO)**.<br>_DIY9 UI_<br><img src="/assets/sun-61.png" alt="drones" width="44%" style="border: 1px solid #999;"><br>_Diagram of UI connections_<br><img src="/assets/sun-62.png" alt="drones" width="60%" style="border: 1px solid #999;"><br>
+There are current only 2 demos of this type (started from and built with the sole assistance of FDE). Several TODO's.
+
+- **[#620\_pal\_DIY9\_aip-fde_demo\_hn\_](https://drive.google.com/drive/folders/1-Adawag9uA8_bq-hDF-nOuPYaRLz1eEO)**.<br>_DIY9 UI_<br><img src="/assets/sun-61.png" alt="drones" width="44%" style="border: 2px solid #999;">
+- **[#619\_pal\_D8\_model\_integration\_](https://drive.google.com/drive/folders/1-Adawag9uA8_bq-hDF-nOuPYaRLz1eEO)**.<br>_D8 demo model trained in Foundry_<br><img src="/assets/sun-62.png" alt="drones" width="60%" style="border: 2px solid #999;"><br>
 
 
 <!-- 
