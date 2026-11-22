@@ -13,6 +13,7 @@ permalink: /3.5_diy/
 <br>
 
 This page describes **original ZAI demos** (created with the help of FDE/GPT).
+- These demos will follow to some extent official PAL docs website (FDE gets its info primarily from that source).
 
 <!-- The goal
 - The target audience is**Do-it-yourselfers, hands-on learners**. Those like myself who want minimal text/diagrams and maximum useful info for getting hands-on experience.
