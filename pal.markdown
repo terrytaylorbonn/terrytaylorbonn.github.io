@@ -91,7 +91,7 @@ These tutorials are the most effective method to learn core Foundry skills (cons
 
 - **3.1 Corequisites (primarily FDE)** (26.1120). Topics to at least be aware of while you are doing the tutorials.
 - **3.2 QS0: Detect/analyze haystack needles 1 (install a Foundry example)** (26.1119) (QS0 was originally QS2). 
-  - Quick realistic real-world demo (finding matching intelligence records in a large set of data) **without AI** (Palantir's original mission; Palantir was founded 25 years ago, long before AI). 
+  - Quick realistic real-world demo (finding matching intelligence records in a large set of data) **without AI** (Palantir's original mission; Palantir was founded 25 years ago, before today’s generative-AI/LLM era). 
   - Intros haystack datasets, pipeline (that detects needles), and objects/maps/UI for display of needles.     
 - **3.3 QS1: Detect/analyze haystack needles 2 (start from scratch)** (26.1113). 
   - A non-realistic demo that focuses on mechanical details. 
@@ -130,7 +130,7 @@ _Its important to master the UI_<br><img src="/assets/sun-60.png" alt="drones" w
 
 _**[Single source docx #686](https://drive.google.com/drive/folders/1-Adawag9uA8_bq-hDF-nOuPYaRLz1eEO)** for QS0 webpages (markdown and PNG's are extracted by ChatGPT)._
 
-In QS0 you install a Foundry "needle in the haystack" real-world Example, then rebuild it yourself.  
+In QS0 (originally QS2) you install a Foundry "needle in the haystack" real-world Example, then rebuild it yourself.  
 - The haystack: a collection of data records imported into Foundry.
 - The needle: any record whose text or numeric properties match criteria expressed in a user prompt.
 
