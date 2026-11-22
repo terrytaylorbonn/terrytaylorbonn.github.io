@@ -13,7 +13,7 @@ permalink: /pal/
 To learn Foundry:
 - Use Foundry's **FDE** AI assistant constantly.
 - Follow the **ZAI learning path** (consider using **[ZAI MS Word docx's](https://drive.google.com/drive/folders/1-Adawag9uA8_bq-hDF-nOuPYaRLz1eEO)** as a template for your own study notes). 
-- **Repeat, repeat, repeat**. It takes weeks to master the basics (UI, workflows, terminology, core concepts, etc). ZAI minimizes this learning curve.<br><img src="/assets/sun-60.png" alt="drones" width="64%" style="border: 1px solid #999;">
+- **Repeat, repeat, repeat**. It takes weeks to master the basics (UI, workflows, terminology, core concepts, etc). ZAI minimizes this learning curve.
 
 <br>
 
@@ -119,6 +119,8 @@ _**[Single source docx #685](https://drive.google.com/drive/folders/1-Adawag9uA8
 
 _The FDE error that you will run into sooner or later (a show stopper; without FDE you are going nowhere)_<br><img src="/assets/RETL-0.png" alt="drones" width="46%" style="border: 1px solid #999;"><br>
 
+_Its important to master the UI_<br><img src="/assets/sun-60.png" alt="drones" width="64%" style="border: 1px solid #999;">
+
 <br>
 
 --------------------
@@ -179,24 +181,9 @@ _Example workflow diagram_<br><img src="/assets/sun-55mmm.png" alt="drones" widt
 
 #### **[3.4 Foundry deep dive (DD) (26.1117 WIP)](/pal_693_dd/)** (2.2a)
 
-QS0 and QS1 were simple demos with one goal — find the “needle in the haystack”.
+The goal of QS0 and QS1 was to intro the basics with a simple goal — find the “needle in the haystack”. **The goal of DD is to introduce the general "mechanics" of how Foundry works**. The plan is to reference official PAL speedruns, demos, and examples in the DD.
 
-The goal of this DD is to cover the topics (hands-on) in the QS's in more detail and cover topics that were not in the QS's. The plan is to reference official PAL speedruns, demos, and examples in the DD.
-
-The **Deep Dive (DD)** focuses on much more:
-  - a broad, hands-on introduction to Foundry’s apps and techniques, not exhaustive depth in each one.
-  - a wider tour of Foundry, with small, mechanistic exercises that show what each capability does, which app configures it, and how to verify it.
-  - EQUATOR-SOUTH-NORTH
-    - D1–D6 provide the EQUATOR backbone. 
-    - SOUTH extensions introduce different sources and ingestion techniques; 
-    - NORTH extensions introduce different analysis and interaction tools.
-  - The guiding rule for DD is:
-    - Introduce each app or technique through a small working example, connected to familiar data and mechanisms
-    - That gives readers both breadth of exposure and a mental map of where each capability fits—without turning every introduction into a complicated project.
-
-Below is the "master" diagram for the initial version of D1-D6.
-
-_Foundry deep dive master diagram (ZAI original diagram verified by FDE)_<br><img src="/assets/DD_master_diagram.png" alt="drones" width="80%" style="border: 1px solid #999;">
+_Foundry deep dive master diagram_<br><img src="/assets/DD_master_diagram.png" alt="drones" width="80%" style="border: 1px solid #999;">
 
 <br>
 
@@ -206,12 +193,25 @@ _Foundry deep dive master diagram (ZAI original diagram verified by FDE)_<br><im
 
 #### **3.5 (WIP) DIY (do-it-yourself) demos** (v1 26.1121)
 
-- Maybe this should be the focus? But I think first I need to do a better inventory of the existing PAL demos (section 4).
-- Review the master list of Palantir demos in 4.3 as "inspiration" for DIY demos (ask FDE/GPT for their opinions).
-- I've done only 1 demo of this type.. where I started from scratch and worked with FDE to get it running.
-  - **[#620_pal_DIY9_aip-fde_demo_hn_](https://drive.google.com/drive/folders/1-Adawag9uA8_bq-hDF-nOuPYaRLz1eEO)**. Using AI.
+The official demo supplies inspiration; DIY demos isolate and teach the mechanism.  
 
-```
+- Section 4.3 catalogs the official Palantir demos.
+- This section will contain demos 
+  - inspired by those official demos
+  - but created from scratch
+  - and are minimized in scope and complexity as much as possible (while still demonstrating the target concepts)
+
+<!-- - Selection of 4.3 demos will be based on
+  - What new app or technique does it introduce?
+  - Where does it fit in the NORTH-EQUATOR-SOUTH diagram?
+  - Can we reuse familiar data and objects?
+  - What is the smallest exercise with a clearly verifiable result? -->
+
+There is current only 1 demo of this type (started from and built with the sole assistance of FDE).
+- **[#620\_pal\_DIY9\_aip-fde_demo\_hn\_](https://drive.google.com/drive/folders/1-Adawag9uA8_bq-hDF-nOuPYaRLz1eEO)**.<br>_DIY9 UI_<br><img src="/assets/sun-61.png" alt="drones" width="44%" style="border: 1px solid #999;"><br>_Diagram of UI connections_<br><img src="/assets/sun-62.png" alt="drones" width="60%" style="border: 1px solid #999;"><br>
+
+
+<!-- 
 FDE: Your sequence makes sense:
 
 Review 4.3: use the Palantir demo catalog as a source of capabilities and inspiration—not a checklist you must complete.
@@ -224,7 +224,7 @@ Can we reuse familiar data and objects?
 What is the smallest exercise with a clearly verifiable result?
 The official demo supplies inspiration; your DIY demo isolates and teaches the mechanism. 
    You can still document selected official demos in section 4 when their complete scenario is worth exploring.
-```
+-->
 
 <br>
 
