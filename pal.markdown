@@ -46,14 +46,21 @@ To learn Foundry:
 
 ## **[1 Concepts](/pal_concepts_all/)** (rewritten 26.1117)
 
+The **ZAI take on Ontology** (the most talked about aspect of Foundry):
+- **Pipelines convert input data into clean datasets**. 
+- **Clean datasets "back" (are the input for) the ontology** 
+- **Ontology contains persistent Object types, action types, and link types** (analogous to backend persistent objects).
+- **Ontology has an "API"** that is analogous to a **REST API".
+- **Ontology can be called by existing tools or a UI** that you create.
+
 General concepts:
-- Foundry is a **modern enterprise platform** for data integration, ontology, analytics, applications, **AI assistance**, and governance.
 - Foundry represents the **logical culmination of ZiptieAI**.
+- Foundry is a **modern enterprise platform** for data integration, ontology, analytics, applications, **AI assistance**, and governance.
 - Foundry takes a **very practical no-nonsense approach to AI in the enterprise** (Foundry was a market leader over 20 years ago, long before AI).
 - Palantir offers a **generous Foundry free trial**.
 - Foundry's **built-in AI assistant (FDE)** makes hands-on self-study practical.
 
-Click on the heading above for programming concepts. 
+Click on the heading above for more detailed concepts. 
 
 <br>
 
