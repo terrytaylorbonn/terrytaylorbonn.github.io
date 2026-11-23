@@ -10,6 +10,30 @@ permalink: /pal/
 - Foundry is an **excellent enterprise framework** (with integrated AI) with lots of demos.
 - Foundry offers a **generous free trial version**. 
 
+
+<br>
+
+------------------
+
+<br>
+
+**Your goal** (even if you don't know it yet) 
+- is **not to master Foundry** (working without docs or assistance is old-style pre-AI), 
+- but rather **to learn**
+  - **what Foundry can do** and
+  - **how Foundry can do it**
+- so that you 
+  - **know what problems Foundry can solve** and
+  - **can work with FDE** (Foundry's AI tool) to get the job done (even for problems you dont fully understand).
+  
+**Knowing the needs of your enterprise** takes priority over programming expertise (welcome to the AI age).
+
+<br>
+
+------------------
+
+<br>
+
 To learn Foundry:
 - **Sign up for Foundry** as described in section 2. 
 - Follow the section **3 ZAI tutorials** learning path. For the first week focus on 2 skillsets:
@@ -33,7 +57,7 @@ To learn Foundry:
 - **4 Palantir tutorials (ZAI versions)** 
 - **5 Project/doc sources** (Foundry and ZAI)
 
-<br>
+<br><br>
 
 --------------------
 --------------------
@@ -62,7 +86,7 @@ General concepts:
 
 Click on the heading above for more detailed concepts. 
 
-<br>
+<br><br>
 
 --------------------
 --------------------
@@ -84,7 +108,7 @@ I did not record how I signed up, and its not a process I can repeat. But I can 
 
 <img src="/assets/pal_10_08.png" alt="drones" width="37%" style="border: 1px solid #999;"><br>
 
-<br>
+<br><br>
 
 --------------------
 --------------------
@@ -101,7 +125,9 @@ These tutorials are the most effective method to learn core Foundry skills (cons
 
 - **3.1 Corequisites (primarily FDE)** (26.1120). Topics to at least be aware of while you are doing the tutorials.
 - **3.2 QS0: Detect/analyze haystack needles 1 (install a Foundry example)** (26.1119) (QS0 was originally QS2). 
-  - Quick realistic real-world demo (finding matching intelligence records in a large set of data) **without AI** (Palantir's original mission; Palantir was founded 25 years ago, before today’s generative-AI/LLM era). 
+  - Quick demo of a **realistic real-world demo whose technical details you probably don't understand** (finding matching intelligence records in a large set of data) and 
+  - **You don't need to understand (fully) the technical details** thanks to FDE.
+  - The **QS0 algorithm does not require AI** to get the job done (Palantir's original mission; Palantir was founded 25 years ago, before today’s generative-AI/LLM era). 
   - Intros haystack datasets, pipeline (that detects needles), and objects/maps/UI for display of needles.     
 - **3.3 QS1: Detect/analyze haystack needles 2 (start from scratch)** (26.1113). 
   - A non-realistic demo that focuses on mechanical details. 
@@ -110,7 +136,8 @@ These tutorials are the most effective method to learn core Foundry skills (cons
   - More step by step directions for more Foundry functionality and algorithms (like the other two QS's).
   - Suggesting "inline" (while you are doing QS3) various topics to study in more depth.
   - Referencing section 3.5 **deep dive** (DD) tutorials for these in depth topics.
-- **3.5 DD (deep dive) tutorials** (WIP/26.1121). This is the primary long-term focus.
+- **3.5 DD (deep dive) tutorials** (Foundry capabilities in detail) (WIP/26.1121). This is the primary long-term focus.
+- **3.6 Target applications (requirements and tasks)**. Intros typical tasks for various types of enterprises (TODO; v1 26.1123)
 
 <br>
 
@@ -200,9 +227,11 @@ _Foundry deep dive master diagram_<br><img src="/assets/DD_master_diagram.png" a
 
 <br>
 
-#### **[3.5 Deep dive (DD) tutorials](/3.5_diy/)** (v1 26.1122)
+#### **[3.5 Deep dive (DD) tutorials (Foundry capabilities in detail)](/3.5_diy/)** (v1 26.1122)
 
-The QS's (3.2-3.4) and the official demos (section 4) supply inspiration; DD demos isolate and teach the mechanism.  
+<!-- The QS's (3.2-3.4) and the official demos (section 4) supply inspiration; -->
+
+DD tutorials focus on learning the full set of Foundry capabilities you need to get real world projects done.
 
 - Section 4.3 catalogs the official Palantir demos.
 - This section will contain DD's 
@@ -238,6 +267,17 @@ The official demo supplies inspiration; your DIY demo isolates and teaches the m
 -->
 
 <br>
+
+---------------------------
+
+<br>
+
+#### **3.6 Target applications (requirements and tasks)** (v1 26.1123)
+
+This section will focus on introducing target applications and how you would use Foundry + FDE to get the job done.
+
+<br><br>
+
 
 --------------------
 --------------------
@@ -298,7 +338,7 @@ For example **E11: Palantir Foundry example “Integrate GeoSpatial data with Ga
 - I merely made much easier to search (and include in prompts to AI).
 
 
-<br>
+<br><br>
 
 ----------------------------------------
 --------------------
@@ -326,6 +366,6 @@ _palantir.com/docs/foundry (this section provides an overview of Palantir Foundr
 -------------------------------
 -------------------------------
 
-<br>
+<br><br>
 
-26.1121 (0814, v1 26.0702)
+26.1123 (0814, v1 26.0702)
