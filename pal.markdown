@@ -121,6 +121,9 @@ I did not record how I signed up, and its not a process I can repeat. But I can 
 
 ## **3 ZAI tutorials** (2)
 
+_Tutorials in the past needed to provide all the details to learn a new SW tool. Things have changed in the AI age. You will work with FDE to do these demos. All you really need from the docs are (1) what prompts to ask and (2) conceptual explanations. And the prompts in ZAI tutorials are sometimes not text, but screenshots. FDE and I would often have long discussions with a very specific pattern: (1) FDE tells me what to do, (2) I post a screenshot of the results (no text), and repeat. In the future, Foundry will probably be able to see your screen (you wont have to paste screenshots) and you will have audio chats. Foundry might even do all keyboard and mouse work._
+
+
 These tutorials are the most effective method to learn core Foundry skills (consider using the **[MS Word docx](https://drive.google.com/drive/folders/1-Adawag9uA8_bq-hDF-nOuPYaRLz1eEO)** files as a template for your own lab notes):
 
 - **3.1 Corequisites (primarily FDE)** (26.1120). Topics to at least be aware of while you are doing the tutorials.
