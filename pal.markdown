@@ -276,7 +276,7 @@ The official demo supplies inspiration; your DIY demo isolates and teaches the m
 
 <br>
 
-#### **3.6 Target applications (requirements and tasks)** (v1 26.1123)
+#### **[3.6 Target applications (requirements and tasks)](/pal_3.6_target_apps/)** (v1 26.1123)
 
 This section will focus on introducing target applications and how you would use Foundry + FDE to get the job done.
 
@@ -296,9 +296,22 @@ This section will focus on introducing target applications and how you would use
 
 The second set of ZAI tutorials are based on Palantir demos:
 
+- **4.0 PAL demos master list** (added 26.1121)
 - **4.1 ZAI versions of the core ~8 Foundry getting started demos**. The core demos (speedruns) meant for beginners. (2b.4)
 - **4.2 ZAI versions of PAL Examples (installable)**. Real-world demos. ZiptieAI uses one of these demos as the very first demo for beginners. (2b.5)
-- **4.3 PAL demos master list** (added 26.1121)
+
+<br>
+
+--------------------
+
+<br>
+
+#### **[4.0 PAL demos master list](/pal_demo_list/)** (V1 26.1121)
+
+- I created this list 4 months ago.
+- This list has a hyper-linked TOC to all demos.
+- They are organized by the PAL-defined Foundry user roles.
+- I merely made much easier to search (and include in prompts to AI).
 
 
 <br>
@@ -327,20 +340,6 @@ FULL-FEATURED BUSINESS APP (WITH INSTALLER). I originally planned to focus on ex
 For example **E11: Palantir Foundry example “Integrate GeoSpatial data with Gaia” (26.0728).** The ZAI docx for this example shows how to (1) install the excellent PAL example and then (2) replicate that example (reusing only the original example data; you recreate everything else).
 
  _Geospatial example: Input 2 sets of intelligence data (ELINT and ATR GEOINT), find ~3 million matching entries, sift through the 3 million to find 4 entries of interest, display the 4 entries on a map._<br><img src="/assets/pal_10_20.png" alt="drones" width="44%" style="border: 1px solid #999;"><br>
-
-<br>
-
---------------------
-
-<br>
-
-#### **[4.3 PAL demos master list](/pal_demo_list/)** (V1 26.1121)
-
-- I created this list 4 months ago.
-- This list has a hyper-linked TOC to all demos.
-- They are organized by the PAL-defined Foundry user roles.
-- I merely made much easier to search (and include in prompts to AI).
-
 
 <br><br>
 
