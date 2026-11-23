@@ -48,10 +48,10 @@ To learn Foundry:
 
 The **ZAI take on Ontology** (the most talked about aspect of Foundry):
 - **Pipelines convert input data into clean datasets**. 
-- **Clean datasets "back" (are the input for) the ontology** 
+- **Clean datasets "back" (are the input data for) the ontology** 
 - **Ontology contains persistent Object types, action types, and link types** (analogous to backend persistent objects).
-- **Ontology has an "API"** that is analogous to a **REST API".
-- **Ontology can be called by existing tools or a UI** that you create.
+- **Ontology has an "API"** that is analogous to a **REST API**.
+- The **Ontology API can be called by existing tools or a UI** that you create.
 
 General concepts:
 - Foundry represents the **logical culmination of ZiptieAI**.
