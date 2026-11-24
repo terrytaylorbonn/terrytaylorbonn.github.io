@@ -8,14 +8,28 @@ permalink: /pal_3.6_target_apps/
 
 #### **TOC**
 
-- **L-1   LIST 1 (A1-A4)** 
-- **L-2   [LIST2 (T1-T6)](/pal_demo_list/)**
+- **L-1 LIST 1 (A1-A4)** 
+- **L-2 [LIST2 (T1-T6)](/pal_demo_list/)**
 
 
 - **DD-1 DIY (HN DIY9 + D8 (TRAIN))** 
 - **[DD-2 D1-D7 (+DD19)](/3c.2_pal_initial_demos/)** 
 - **[DD-3 D8 Train model (#619)](/pal_3.6_15_model_train/)**
 - **[DD-4 Exx](/3c.1b_pal_examples/)** 
+
+
+
+#### **Notes:**
+- **2 Data protection (NONE)**. NONE = There are so far no specific demos for this functionality. But Data Protection is always there.
+  - **MONITORING WITH AI ANALYSIS 26.1122**
+- **3 AIP external (Agentic 1) (no automation; sovereignty risk via AI calls)**. You are using external LLMs. Processing occurs whenever data changes (there is no central loop running).
+- **4 Automation (Agentic 2) (AI external; major sovereignty risk via automated AI calls)**. You have automation which watches for data changes and then invokes actions (and AI). Major sovereignty risks.
+  - **D3b (TODO)** — Protecting agents that use external AI models (TODO)
+- **5 ALPHA -- Mining (how frontier models steal your "alpha")**. This demo is primitive and uses black box Foundry functionality ("mining"), but Frontier model labs are certainly experts at such techniques.
+  - **D5b (TODO)** (C5c): Demos for Maximize ALPHA/sovereignty / Data protectio (within performance/cost/complexity limitations)
+- **6 AIP internal (Agentic 3)**. The best solution. Calls to AI are only to internal models. These demos show how to create and deploy your own model using Foundry.
+  - **D3c (TODO)**
+  - **D8a (TODO)**
 
 
 
@@ -63,9 +77,6 @@ permalink: /pal_3.6_target_apps/
 |--- | 13 | Approve a proposed change and send it back to an external system | Writeback-enabled decision support |
 |--- | 14 | Compare a proposed change with the current situation before committing | What-if scenarios |
 
-```
-- D5 mining #616_pal_D5_biz_process_mining_qs
-```
 
 
 <br>
@@ -99,6 +110,7 @@ permalink: /pal_3.6_target_apps/
 
 ```
 - HN #620_pal_DIY9_aip-fde_demo_hn  #620_pal_9_aip-fde_demo_hn_
+- D5 mining #616_pal_D5_biz_process_mining_qs
 ```
 
 |**Example** | **#** | **Specific problem for a ZAI_example** | **Potential inspiration** |
@@ -280,21 +292,6 @@ permalink: /3.5_diy/
 
 ### **TOC**
 
-**HANDS-ON DEMOS**
-
-- **1 NO AI**. These demos show that you dont need AI to do analysis (this is the safest option for sovereignty if viable).
-  - **DIY9** (from ZAI/FDE/GPT) (NO AI)
-- **2 Data protection (NONE)**. NONE = There are so far no specific demos for this functionality. But Data Protection is always there.
-  - **MONITORING WITH AI ANALYSIS 26.1122**
-- **3 AIP external (Agentic 1) (no automation; sovereignty risk via AI calls)**. You are using external LLMs. Processing occurs whenever data changes (there is no central loop running).
-- **4 Automation (Agentic 2) (AI external; major sovereignty risk via automated AI calls)**. You have automation which watches for data changes and then invokes actions (and AI). Major sovereignty risks.
-  - **D3b (TODO)** — Protecting agents that use external AI models (TODO)
-- **5 ALPHA -- Mining (how frontier models steal your "alpha")**. This demo is primitive and uses black box Foundry functionality ("mining"), but Frontier model labs are certainly experts at such techniques.
-  - **D5b (TODO)** (C5c): Demos for Maximize ALPHA/sovereignty / Data protectio (within performance/cost/complexity limitations)
-- **6 AIP internal (Agentic 3)**. The best solution. Calls to AI are only to internal models. These demos show how to create and deploy your own model using Foundry.
-  - **D3c (TODO)**
-  - **D8 THE MAIN AI INTERNAL DEMO (BEFORE LAX)** 
-  - **D8a (TODO)**
 
 <br>
 

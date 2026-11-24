@@ -248,15 +248,23 @@ _Foundry deep dive master diagram_<br><img src="/assets/DD_master_diagram.png" a
 ## **4 ZAI deep dives (DD's)** (2b)
 
 In Palantir docs
-- The initial demos (D1, D2, etc) were called "speedruns". These were actually deep dives. 
-- Examples are also deep dives.
-- And there were also "deep dives". 
+- The initial demos (D1, D2, etc) are called "speedruns".
+- Examples are installable.
+- There are also "deep dives". 
 
-In this section they are all grouped together and used to create ZAI deep dives. 
+ZAI calls them all "deep dives" and organizes them (and ZAI originals) into the following categories:
 
+- **A1 Office**
+- **A2 Backend (EQUATOR)**
+- **A3 Haystack needles**
+- **A4a Inference (AI)**
+- **A4b Training (AI)**
+- **A5 Governance / security**
+- **A6 Agentic (central loop)**
 
-- **4.1 OK/WIP/FAILED LIST** //3.5 DD (deep dive) tutorials (Foundry capabilities in detail) (WIP/26.1121). This is the primary long-term focus.
-- **4.2 (3.6) PLANNING LIST** // Target applications (requirements and tasks). Intros typical tasks for various types of enterprises (TODO; v1 26.1123)
+The following is the inventory of all tutorials (working list)
+- **4.7 PLANNING LIST** 
+
 
 <!-- - **4.3 ZAI versions of the core ~8 Foundry getting started demos**. The core demos (speedruns) meant for beginners. (2b.4)
 - **4.4 ZAI versions of PAL Examples (installable)**. Real-world demos. ZiptieAI uses one of these demos as the very first demo for beginners. (2b.5) -->
@@ -268,44 +276,7 @@ In this section they are all grouped together and used to create ZAI deep dives.
 
 <br>
 
-#### **[4.1 OK/WIP/FAILED LIST](/3.5_diy/)** (v1 26.1122)
-
-<!-- The QS's (3.2-3.4) and the official demos (section 4) supply inspiration; -->
-
-DD tutorials focus on learning the full set of Foundry capabilities you need to get real world projects done.
-
-- Section 4.3 catalogs the official Palantir demos.
-- This section will contain DD's 
-  - inspired by those official demos
-  - but created from scratch
-  - and are minimized in scope and complexity as much as possible (while still demonstrating the target concepts)
-
-<!-- - Selection of 4.3 demos will be based on
-  - What new app or technique does it introduce?
-  - Where does it fit in the NORTH-EQUATOR-SOUTH diagram?
-  - Can we reuse familiar data and objects?
-  - What is the smallest exercise with a clearly verifiable result? -->
-
-There are current only 2 DD's of this type (started from and built with the sole assistance of FDE). Several TODO's.
-
-- **[#620\_pal\_DIY9\_aip-fde_demo\_hn\_](https://drive.google.com/drive/folders/1-Adawag9uA8_bq-hDF-nOuPYaRLz1eEO)**.<br>_DIY9 UI_<br><img src="/assets/sun-61.png" alt="drones" width="44%" style="border: 2px solid #999;">
-- **[#619\_pal\_D8\_model\_integration\_](https://drive.google.com/drive/folders/1-Adawag9uA8_bq-hDF-nOuPYaRLz1eEO)**.<br>_D8 demo model trained in Foundry_<br><img src="/assets/sun-62.png" alt="drones" width="60%" style="border: 2px solid #999;"><br>
-
-
-<!-- 
-FDE: Your sequence makes sense:
-
-Review 4.3: use the Palantir demo catalog as a source of capabilities and inspiration—not a checklist you must complete.
-Choose 3.5 exercises: together, identify capabilities not yet covered and design small, generic build-and-test demos.
-For each candidate, we can ask:
-
-What new app or technique does it introduce?
-Where does it fit in your NES diagram?
-Can we reuse familiar data and objects?
-What is the smallest exercise with a clearly verifiable result?
-The official demo supplies inspiration; your DIY demo isolates and teaches the mechanism. 
-   You can still document selected official demos in section 4 when their complete scenario is worth exploring.
--->
+#### **[pal_4.1_a1_office](/pal_4.1_a1_office/)** (v1 26.1124)
 
 <br>
 
@@ -313,7 +284,57 @@ The official demo supplies inspiration; your DIY demo isolates and teaches the m
 
 <br>
 
-#### **[4.2 (3.6) PLANNING LIST](/pal_3.6_target_apps/)** (v1 26.1123)
+#### **[pal_4.2_a2_equator](/pal_4.2_a2_equator/)** (v1 26.1124)
+
+<br>
+
+---------------------------
+
+<br>
+
+#### **[pal_4.3_a3_haystacks](/pal_4.3_a3_haystacks/)** (v1 26.1124)
+
+<br>
+
+---------------------------
+
+<br>
+
+#### **[pal_4.4a_a4a_ai_inference](/pal_4.4a_a4a_ai_inference/)** (v1 26.1124)
+
+<br>
+
+---------------------------
+
+<br>
+
+#### **[pal_4.4b_a4b_ai_training](/pal_4.4b_a4b_ai_training/)** (v1 26.1124)
+
+<br>
+
+---------------------------
+
+<br>
+
+#### **[pal_4.5_a5_governance](/pal_4.5_a5_governance/)** (v1 26.1124)
+
+<br>
+
+---------------------------
+
+<br>
+
+#### **[pal_4.6_a6_agentic](/pal_4.6_a6_agentic/)** (v1 26.1124)
+
+
+
+<br>
+
+---------------------------
+
+<br>
+
+#### **[4.7 PLANNING LIST](/pal_3.6_target_apps/)** (v1 26.1123)
 
 This section will focus on introducing target applications and how you would use Foundry + FDE to get the job done.
 
@@ -357,6 +378,55 @@ For example **E11: Palantir Foundry example “Integrate GeoSpatial data with Ga
 
 -->
 
+
+
+<br>
+
+---------------------------
+
+<br>
+
+
+
+#### **[xxxxxxxxxxxxxxxx4.1 OK/WIP/FAILED LIST](/3.5_diy/)** (v1 26.1122)
+
+<!-- The QS's (3.2-3.4) and the official demos (section 4) supply inspiration; -->
+
+DD tutorials focus on learning the full set of Foundry capabilities you need to get real world projects done.
+
+- Section 4.3 catalogs the official Palantir demos.
+- This section will contain DD's 
+  - inspired by those official demos
+  - but created from scratch
+  - and are minimized in scope and complexity as much as possible (while still demonstrating the target concepts)
+
+<!-- - Selection of 4.3 demos will be based on
+  - What new app or technique does it introduce?
+  - Where does it fit in the NORTH-EQUATOR-SOUTH diagram?
+  - Can we reuse familiar data and objects?
+  - What is the smallest exercise with a clearly verifiable result? -->
+
+There are current only 2 DD's of this type (started from and built with the sole assistance of FDE). Several TODO's.
+
+- **[#620\_pal\_DIY9\_aip-fde_demo\_hn\_](https://drive.google.com/drive/folders/1-Adawag9uA8_bq-hDF-nOuPYaRLz1eEO)**.<br>_DIY9 UI_<br><img src="/assets/sun-61.png" alt="drones" width="44%" style="border: 2px solid #999;">
+- **[#619\_pal\_D8\_model\_integration\_](https://drive.google.com/drive/folders/1-Adawag9uA8_bq-hDF-nOuPYaRLz1eEO)**.<br>_D8 demo model trained in Foundry_<br><img src="/assets/sun-62.png" alt="drones" width="60%" style="border: 2px solid #999;"><br>
+
+
+<!-- 
+FDE: Your sequence makes sense:
+
+Review 4.3: use the Palantir demo catalog as a source of capabilities and inspiration—not a checklist you must complete.
+Choose 3.5 exercises: together, identify capabilities not yet covered and design small, generic build-and-test demos.
+For each candidate, we can ask:
+
+What new app or technique does it introduce?
+Where does it fit in your NES diagram?
+Can we reuse familiar data and objects?
+What is the smallest exercise with a clearly verifiable result?
+The official demo supplies inspiration; your DIY demo isolates and teaches the mechanism. 
+   You can still document selected official demos in section 4 when their complete scenario is worth exploring.
+-->
+
 <br><br>
 
 ----------------------------------------
@@ -387,4 +457,4 @@ _palantir.com/docs/foundry (this section provides an overview of Palantir Foundr
 
 <br><br>
 
-26.1123 (0814, v1 26.0702)
+26.1124 (0814, v1 26.0702)
