@@ -35,8 +35,9 @@ permalink: /pal_3.6_target_apps/
 
 # **LIST 1 (A1-A6)** 
 
-- **A1 Secretarial**
-- **A2 Backend (ontology)**
+
+- **A1 Office**
+- **A2 Backend (EQUATOR)**
 - **A3 Haystack needles**
 - **A4a Inference (AI)**
 - **A4b Training (AI)**
@@ -50,7 +51,8 @@ permalink: /pal_3.6_target_apps/
 
 <br>
 
-### **A1 Secretarial**
+### **A1 Office**
+
 
 |**Example** | **#** | **Specific problem for a ZAI_example** | **Potential inspiration** |
 |--- | 5 | Combine incoming files whose columns have different names and formats | Schema matching and validation |
@@ -60,6 +62,10 @@ permalink: /pal_3.6_target_apps/
 |--- | 11 | Generate a report for a selected record or investigation | Notepad Templates |
 |--- | 13 | Approve a proposed change and send it back to an external system | Writeback-enabled decision support |
 |--- | 14 | Compare a proposed change with the current situation before committing | What-if scenarios |
+
+```
+- D5 mining #616_pal_D5_biz_process_mining_qs
+```
 
 
 <br>
@@ -76,7 +82,6 @@ permalink: /pal_3.6_target_apps/
 - D2 AIP #611www_pal_D2_aip_
 - D3 automation #614_pal_agentic_ai_qs
 - D4 functions #615_pal_onto_function_qs
-- D5 mining #616_pal_D5_biz_process_mining_qs
 - D6 basic #617_pal_D6_first_app_
 - D7 basic #618_pal_D7_first_pipeline_
 
@@ -107,7 +112,7 @@ permalink: /pal_3.6_target_apps/
 <br>
 
 
-### **A4 Inference (AI)**
+### **A4a Inference (AI)**
 
 
 
