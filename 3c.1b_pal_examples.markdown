@@ -10,6 +10,10 @@ permalink: /3c.1b_pal_examples/
 
 <br>
 
+
+title: 4.2 ZAI versions of PAL Examples (installable)
+permalink: /3c.1b_pal_examples/
+
 **TOC**:
 
 - 1 Why start with PAL/ZAI examples

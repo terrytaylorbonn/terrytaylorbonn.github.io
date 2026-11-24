@@ -11,13 +11,20 @@ permalink: /pal_fde/
 
 26.1120 (v1 26.1120)
 
+_Its important to master the UI_<br><img src="/assets/sun-60.png" alt="drones" width="64%" style="border: 1px solid #999;">
 
 <br>
+
+
+
 
 Chapters (extracted from docx)
 - **FDE**
 - **Other important topics** (TODO: combine these into a single page)
   - **2.3 Foundry ontology (object type) management**. You are limited to 60 object types (OT's) in the ontology. Deleting existing OT's requires deleting other dependencies first (you cant just delete OT's).
+
+_**[Single source docx #685](https://drive.google.com/drive/folders/1-Adawag9uA8_bq-hDF-nOuPYaRLz1eEO)** (WIP) for FDE webpages (markdown and PNG's are extracted by ChatGPT)._
+
 
 
 <br>

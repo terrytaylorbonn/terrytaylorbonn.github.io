@@ -17,6 +17,7 @@ permalink: /pal/
 
 <br>
 
+<!-- 
 **Your goal** (even if you don't know it yet) 
 - is **not to master Foundry** (working without docs or assistance is old-style pre-AI), 
 - but rather **to learn**
@@ -32,14 +33,14 @@ permalink: /pal/
 
 ------------------
 
-<br>
+<br>  -->
 
 To learn Foundry:
 - **Sign up for Foundry** as described in section 2. 
-- Follow the section **3 ZAI tutorials** learning path. For the first week focus on 2 skillsets:
+- Follow the section **3 ZAI quick starts** learning path. For the first week focus on 2 skillsets:
   - **Using FDE**
-  - **Navigating the applications and dialogs**
-- **Repeat, repeat, repeat**. It takes weeks to master the basics (UI, workflows, terminology, core concepts, etc). **ZAI substantially minimizes the learning curve**.
+  - **Navigating the applications and dialogs**. It takes weeks to master the basics (UI, workflows, terminology, core concepts, etc). **ZAI substantially minimizes the learning curve**.
+- Then do the section **4 Deep dives**.
 
 <br>
 
@@ -53,8 +54,8 @@ To learn Foundry:
 
 - **1 Concepts** (rewritten 26.1117)
 - **2 Foundry free tier sign up** 
-- **3 ZAI tutorials** (do these start to finish)
-- **4 Palantir tutorials (ZAI versions)** 
+- **3 ZAI quick starts (Foundry basics)** (2)
+- **4 ZAI deep dives (DD's)** (2b)
 - **5 Project/doc sources** (Foundry and ZAI)
 
 <br><br>
@@ -119,7 +120,11 @@ I did not record how I signed up, and its not a process I can repeat. But I can 
 
 <br>
 
-## **3 ZAI tutorials** (2)
+## **3 ZAI quick starts (Foundry basics)** (2)
+
+In Palantir docs
+- The initial demos (D1, D2, etc) were called "speedruns". These were actually deep dives.
+- There were no quick starts.  
 
 _Tutorials in the past needed to provide all the details to learn a new SW tool. Things have changed in the AI age. You will work with FDE to do these demos. All you really need from the docs are (1) what prompts to ask and (2) conceptual explanations. And the prompts in ZAI tutorials are sometimes not text, but screenshots. FDE and I would often have long discussions with a very specific pattern: (1) FDE tells me what to do, (2) I post a screenshot of the results (no text), and repeat. In the future, Foundry will probably be able to see your screen (you wont have to paste screenshots) and you will have audio chats. Foundry might even do all keyboard and mouse work._
 
@@ -136,12 +141,9 @@ These tutorials are the most effective method to learn core Foundry skills (cons
 - **3.3 QS1: Detect/analyze haystack needles 2 (start from scratch)** (26.1113). 
   - A non-realistic demo that focuses on mechanical details. 
   - Intros AI, actions, automation/scheduling, and governance. 
-- **3.4 QS3 (WIP)**. QS3 will focus on 2 things:
+- **3.4 QS3: Broaden your Foundry skills (WIP)**. QS3 will focus on 2 things:
   - More step by step directions for more Foundry functionality and algorithms (like the other two QS's).
-  - Suggesting "inline" (while you are doing QS3) various topics to study in more depth.
-  - Referencing section 3.5 **deep dive** (DD) tutorials for these in depth topics.
-- **3.5 DD (deep dive) tutorials** (Foundry capabilities in detail) (WIP/26.1121). This is the primary long-term focus.
-- **3.6 Target applications (requirements and tasks)**. Intros typical tasks for various types of enterprises (TODO; v1 26.1123)
+  - Suggesting "inline" (while you are doing QS3) various topics to study in more depth (including topics in section 3.5 and 3.6).
 
 <br>
 
@@ -151,15 +153,13 @@ These tutorials are the most effective method to learn core Foundry skills (cons
 
 #### **[3.1 Corequisites (primarily FDE)](/pal_fde/)** (26.1120/2.0)
 
-_**[Single source docx #685](https://drive.google.com/drive/folders/1-Adawag9uA8_bq-hDF-nOuPYaRLz1eEO)** (WIP) for FDE webpages (markdown and PNG's are extracted by ChatGPT)._
 
-- Knowing how to use FDE (Forward Deployed Engineer, Foundry's excellent AI assistant) is the most important skill you will learn. 
-- However, its also critical to understand FDE's limits: **[My first 2 attempts to create a QS (my mistakes are instructive)](/pal_2_failed_tutorials/)**. I relied too much on FDE AI. Both tutorials worked, but the result was not something to use as a tutorial. Human intelligence and AI make a great team. But the human has to be in control. You need to reach a minimal level of expertise with Foundry so that you are always in control. Thats why you still ZAI to guide you through the basics.
-- There are also several other things to be aware of before you start creating Foundry apps. 
+Knowing how to use FDE (Forward Deployed Engineer, Foundry's excellent AI assistant) is the most important skill you will learn. There also a few other things to keep in mind while working with Foudry.
 
 _The FDE error that you will run into sooner or later (a show stopper; without FDE you are going nowhere)_<br><img src="/assets/RETL-0.png" alt="drones" width="46%" style="border: 1px solid #999;"><br>
 
-_Its important to master the UI_<br><img src="/assets/sun-60.png" alt="drones" width="64%" style="border: 1px solid #999;">
+_**[Single source docx #685](https://drive.google.com/drive/folders/1-Adawag9uA8_bq-hDF-nOuPYaRLz1eEO)** (WIP) for FDE webpages (markdown and PNG's are extracted by ChatGPT)._
+
 
 <br>
 
@@ -169,7 +169,7 @@ _Its important to master the UI_<br><img src="/assets/sun-60.png" alt="drones" w
 
 #### **[3.2 QS0: Detect/analyze haystack needles 1 (install a Foundry example)](/pal_qs0/)** (26.1119/2.1)
 
-_**[Single source docx #686](https://drive.google.com/drive/folders/1-Adawag9uA8_bq-hDF-nOuPYaRLz1eEO)** for QS0 webpages (markdown and PNG's are extracted by ChatGPT)._
+
 
 In QS0 (originally QS2) you install a Foundry "needle in the haystack" real-world Example, then rebuild it yourself.  
 - The haystack: a collection of data records imported into Foundry.
@@ -187,6 +187,8 @@ QS0 uses a real world example, but is a simpler demo than the next QS1 (that foc
 
 <img src="/assets/sun-59.png" alt="drones" width="88%" style="border: 1px solid #999;">
 
+_**[Single source docx #686](https://drive.google.com/drive/folders/1-Adawag9uA8_bq-hDF-nOuPYaRLz1eEO)** for QS0 webpages (markdown and PNG's are extracted by ChatGPT)._
+
 <br>
 
 --------------------
@@ -195,7 +197,6 @@ QS0 uses a real world example, but is a simpler demo than the next QS1 (that foc
 
 #### **[3.3 QS1: Detect/analyze haystack needles 2 (start from scratch) (26.1113)](/pal_693_qs/)** (2.2)
 
-_**[Single source docx #693](https://drive.google.com/drive/folders/1-Adawag9uA8_bq-hDF-nOuPYaRLz1eEO)** for QS1 webpages (markdown and PNG's are extracted by ChatGPT)._
 
 QS1 is also a “needle in the haystack” demo (using Foundry to identify records that match user-defined criteria), but
 - Ch1: MockAPI (very simple external datasource that you control).
@@ -213,17 +214,8 @@ _Automation (Foundry checks for updates in the external data source)_<br><img sr
 
 _Example workflow diagram_<br><img src="/assets/sun-55mmm.png" alt="drones" width="84%" style="border: 1px solid #999;">
 
-<br>
+_**[Single source docx #693](https://drive.google.com/drive/folders/1-Adawag9uA8_bq-hDF-nOuPYaRLz1eEO)** for QS1 webpages (markdown and PNG's are extracted by ChatGPT)._
 
----------------------------
-
-<br>
-
-#### **[3.4 QS3 (WIP)](/pal_693_dd/)** (26.1117/2.2a)
-
-The goal of QS0 and QS1 was to intro the basics with a simple goal — find the “needle in the haystack”. **The goal of DD is to introduce the general "mechanics" of how Foundry works**. The plan is to reference official PAL speedruns, demos, and examples in the DD.
-
-_Foundry deep dive master diagram_<br><img src="/assets/DD_master_diagram.png" alt="drones" width="80%" style="border: 1px solid #999;">
 
 <br>
 
@@ -231,7 +223,52 @@ _Foundry deep dive master diagram_<br><img src="/assets/DD_master_diagram.png" a
 
 <br>
 
-#### **[3.5 Deep dive (DD) tutorials (Foundry capabilities in detail)](/3.5_diy/)** (v1 26.1122)
+#### **[3.4 QS3: Broaden your Foundry skills (WIP)](/pal_693_dd/)** (26.1117/2.2a)
+
+QS0 and QS1 introduced Foundry through a focused goal: find the “needle in the haystack.” **QS3 broadens that foundation, accelerating your discovery of more Foundry apps**, capabilities, and techniques. Small, connected exercises retain the step-by-step Quick Start style, showing what each tool does, where it fits, and how to verify the result. The aim is broad introductory coverage—not exhaustive mastery of every tool.
+
+
+_Foundry’s application landscape—approximately 65 apps in the environment shown._<br><img src="/assets/sun-63.png" alt="drones" width="23%" style="border: 1px solid #999;">
+
+<!-- 
+_Foundry deep dive master diagram_<br><img src="/assets/DD_master_diagram.png" alt="drones" width="80%" style="border: 1px solid #999;"> -->
+
+<br><br>
+
+
+--------------------
+--------------------
+--------------------
+--------------------
+--------------------
+--------------------
+
+<br>
+
+## **4 ZAI deep dives (DD's)** (2b)
+
+In Palantir docs
+- The initial demos (D1, D2, etc) were called "speedruns". These were actually deep dives. 
+- Examples are also deep dives.
+- And there were also "deep dives". 
+
+In this section they are all grouped together and used to create ZAI deep dives. 
+
+
+- **4.1 OK/WIP/FAILED LIST** //3.5 DD (deep dive) tutorials (Foundry capabilities in detail) (WIP/26.1121). This is the primary long-term focus.
+- **4.2 (3.6) PLANNING LIST** // Target applications (requirements and tasks). Intros typical tasks for various types of enterprises (TODO; v1 26.1123)
+
+<!-- - **4.3 ZAI versions of the core ~8 Foundry getting started demos**. The core demos (speedruns) meant for beginners. (2b.4)
+- **4.4 ZAI versions of PAL Examples (installable)**. Real-world demos. ZiptieAI uses one of these demos as the very first demo for beginners. (2b.5) -->
+
+
+<br>
+
+---------------------------
+
+<br>
+
+#### **[4.1 OK/WIP/FAILED LIST](/3.5_diy/)** (v1 26.1122)
 
 <!-- The QS's (3.2-3.4) and the official demos (section 4) supply inspiration; -->
 
@@ -276,43 +313,20 @@ The official demo supplies inspiration; your DIY demo isolates and teaches the m
 
 <br>
 
-#### **[3.6 Target applications (requirements and tasks)](/pal_3.6_target_apps/)** (v1 26.1123)
+#### **[4.2 (3.6) PLANNING LIST](/pal_3.6_target_apps/)** (v1 26.1123)
 
 This section will focus on introducing target applications and how you would use Foundry + FDE to get the job done.
 
-<br><br>
-
-
---------------------
---------------------
---------------------
---------------------
---------------------
---------------------
-
-<br>
-
-## **4 Palantir tutorials (ZAI versions)** (2b)
-
-The second set of ZAI tutorials are based on Palantir demos:
-
-- **4.0 PAL demos master list** (added 26.1121)
-- **4.1 ZAI versions of the core ~8 Foundry getting started demos**. The core demos (speedruns) meant for beginners. (2b.4)
-- **4.2 ZAI versions of PAL Examples (installable)**. Real-world demos. ZiptieAI uses one of these demos as the very first demo for beginners. (2b.5)
-
-<br>
-
---------------------
-
-<br>
-
-#### **[4.0 PAL demos master list](/pal_demo_list/)** (V1 26.1121)
+<!-- 
+#### **[LIST2 // 4.0 PAL demos master list](/pal_demo_list/)** (V1 26.1121)
 
 - I created this list 4 months ago.
 - This list has a hyper-linked TOC to all demos.
 - They are organized by the PAL-defined Foundry user roles.
 - I merely made much easier to search (and include in prompts to AI).
+-->
 
+<!--
 
 <br>
 
@@ -320,7 +334,7 @@ The second set of ZAI tutorials are based on Palantir demos:
 
 <br>
 
-#### **[4.1 ZAI versions of the core ~8 Foundry getting started demos](/3c.2_pal_initial_demos/)** (2b.4)
+#### **[4.3 ZAI versions of the core ~8 Foundry getting started demos](/3c.2_pal_initial_demos/)** (2b.4)
 
 _Main diagram for demo D3 (Core workflow + Automation + AI external)_<br><img src="/assets/wuxi-15bbb.png" alt="drones" width="86%" style="border: 1px solid #999;"><br>
 
@@ -330,7 +344,7 @@ _Main diagram for demo D3 (Core workflow + Automation + AI external)_<br><img sr
 
 <br>
 
-#### **[4.2 ZAI versions of PAL Examples (installable)](/3c.1b_pal_examples/)** (2b.5) 
+#### **[4.4 ZAI versions of PAL Examples (installable)](/3c.1b_pal_examples/)** (2b.5) 
 
 FULL-FEATURED BUSINESS APP (WITH INSTALLER). I originally planned to focus on examples These are complete demos that auto-install. The big advantage is that you start out with a (usually) working version that you can modify piece by piece. Examples are complete (usually more complicated) and have an installer that allows you to start with a (usually) working version that you can modify. ZAI adds a few extra steps:
 
@@ -340,6 +354,8 @@ FULL-FEATURED BUSINESS APP (WITH INSTALLER). I originally planned to focus on ex
 For example **E11: Palantir Foundry example “Integrate GeoSpatial data with Gaia” (26.0728).** The ZAI docx for this example shows how to (1) install the excellent PAL example and then (2) replicate that example (reusing only the original example data; you recreate everything else).
 
  _Geospatial example: Input 2 sets of intelligence data (ELINT and ATR GEOINT), find ~3 million matching entries, sift through the 3 million to find 4 entries of interest, display the 4 entries on a map._<br><img src="/assets/pal_10_20.png" alt="drones" width="44%" style="border: 1px solid #999;"><br>
+
+-->
 
 <br><br>
 

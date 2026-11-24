@@ -1,6 +1,6 @@
 ---
 layout: page
-title: 3.5 DIY (v1 26.1122)
+title: pal_4.1_dd_ok_wip_fail (3.5 DIY (v1 26.1122))
 permalink: /3.5_diy/
 ---
 
@@ -27,6 +27,8 @@ See also (these pages are very outdated ... I will update later)
 
 <br>
 
+# **DIY** ##############################################################
+
 ### **TOC**
 
 **HANDS-ON DEMOS**
@@ -46,6 +48,41 @@ See also (these pages are very outdated ... I will update later)
   - **D8a (TODO)**
 
 <br>
+
+
+
+- **DEMOS 1) NO AI**. These demos show that you dont need AI to do analysis (this is the safest option for sovereignty if viable).
+  - (1) DIY9 (from ZAI/FDE/GPT) (NO AI)
+  - (2) D1 (from PAL) (NO AI)
+<!--  - (1) DIY9 (from ZAI/FDE/GPT) (NO AI) -->
+  - **D1** (from PAL) (NO AI)
+- **DEMOS 2) Data protection (NONE)**. NONE = There are so far no specific demos for this functionality. But Data Protection is always there.
+- **DEMOS 3) AIP external (Agentic 1) (no automation; sovereignty risk via AI calls)**. You are using external LLMs. Processing occurs whenever data changes (there is no central loop running).
+  - (3) D2 (from PAL)
+  - **D2** (from PAL)
+- **DEMOS 4) Automation (Agentic 2) (AI external; major sovereignty risk via automated AI calls)**. You have automation which watches for data changes and then invokes actions (and AI). Major sovereignty risks.
+  - (4) D3
+  - (4b) D3b — Protecting agents that use external AI models (TODO)
+  - **D3**
+<!--  - (4b) D3b — Protecting agents that use external AI models (TODO)-->
+- **DEMOS 5) ALPHA -- Mining (how frontier models steal your "alpha")**. This demo is primitive and uses black box Foundry functionality ("mining"), but Frontier model labs are certainly experts at such techniques.
+  - (5) D5. This demo "mines" (extracts the alpha of) the workflows based on example data.
+  - (5b) D5b (FUTURE) (C5c): Demos for Maximize ALPHA/sovereignty / Data protectio (within performance/cost/complexity limitations)
+  - **D5**. This demo "mines" (extracts the alpha of) the workflows based on example data.
+<!--  - (5b) D5b (FUTURE) (C5c): Demos for Maximize ALPHA/sovereignty / Data protectio (within performance/cost/complexity limitations)-->
+- **DEMOS 6) AIP internal (Agentic 3)**. The best solution. Calls to AI are only to internal models. These demos show how to create and deploy your own model using Foundry.
+  - (6) D3c
+  - (7) D8a
+- **Other demos**. Duplicate or unimportant demos (or demos I could not get to work).
+  - **D4**: Palantir ontology function “speedrun” (quick start) (26.0717).
+  - **D6**: Deep Dive: Building Your First APPLICATION (xxxPipeline???) (26.0719).
+  - **D7**: Deep Dive: Building Your First Pipeline (26.0720).
+  - **DD19**: Deep Dive: transform_data_w_code_repos (26.0805).
+
+
+
+
+
 
 ---
 ---
