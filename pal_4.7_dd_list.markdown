@@ -177,41 +177,6 @@ permalink: /pal_3.6_target_apps/
 - I merely made much easier to search (and include in prompts to AI).
 
 
-
-
-<br> 
-
-------
-------
-------
-------
-------
-
-<br>
-
-
-**900 No—AIPL/AIPLF is one route, not the only route.**
-
-LLMs can be called through:
-- **AIP Logic**
-- **Pipeline transforms**, including Pipeline Builder and Python
-- **Code-based Functions**
-- **Agents/chatbots**
-- **Built-in AI features**, such as AI FDE and AIP Assist
-
-And **they are not limited to pipelines and UIs**. For example, an automation can trigger an Action that calls an LLM-backed function, without anyone using a UI.
-
-For your diagram, think:
-
-> **LLMs are model services that different Foundry workflows can invoke—not a mandatory AIPL → AIPLF → UI chain.**
-
-ME: OK, so AIPL/code, in the UI via AIPLF or code, .....
-FDE, AI assist.
-thats about it.
-
-
-
-
 <br> 
 
 ------
