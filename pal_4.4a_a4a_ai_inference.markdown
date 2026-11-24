@@ -19,6 +19,57 @@ permalink: /pal_4.4a_a4a_ai_inference/
 
 
 
+
+#### **[E10: Parse PDFs with LLMs in Pipeline Builder (26.0727)](/3c.1b_pal_f_example_first/)**
+
+- A very basic app that uses AI to summarize content of PDF files.<br>_E10 output_<br><img src="/assets/pal_10_23.png" alt="drones" width="85%" style="border: 1px solid #999;">
+- Docx for this example: **[#621\_.docx](https://drive.google.com/drive/folders/1-Adawag9uA8_bq-hDF-nOuPYaRLz1eEO)**.
+
+- **Example main diagram**. Shows the main workflow; red squares highlight those items implemented for demo D19 (this is a a very rought first draft that will change greatly as I figure out the details).<br>_(MAIN_E10.png)_<br><img src="/assets/MAIN_E10.png" alt="drones" width="74%" >
+
+<!-- - Just data and pipeline, but also uses AI.<br>*E10*<br><img src="/assets/pal_10_22.png" alt="drones" width="33%" style="border: 1px solid #999;"> -->
+
+<br>
+
+
+
+#### **E14: Evaluate Retrieval-Augmented Generation (RAG) methods** (26.1014)
+
+- #629
+- https://ziptieai.usw-17.palantirfoundry.com/workspace/now/platform/7997a708-4d1e-4efb-bfca-882dc172b4e8
+- _E14_<br><img src="/assets/pal_14_01.png" alt="drones" width="60%" style="border: 1px solid #999;">
+- _E14_<br><img src="/assets/sun-19.png" alt="drones" width="60%" style="border: 1px solid #999;">
+
+<br>
+
+
+#### **E13: Protect sensitive images using visual obfuscation in Cipher**.
+
+- no Docx??
+- https://ziptieai.usw-17.palantirfoundry.com/workspace/now/platform/b88675ed-e8f9-4bc9-b75b-aa446930d07b
+- _E13_<br><img src="/assets/pal_13_01.png" alt="drones" width="60%" style="border: 1px solid #999;">
+
+<br>
+
+# **4b List of failed/xxxx examples**
+
+<br>
+
+
+
+
+#### **xxxx FAIL ### E15: Cross-validate Images and Documents using AIP**.
+
+- #624_pal_E15_cross_validate_images_docs_aip_v02_26.0730_ss
+- https://ziptieai.usw-17.palantirfoundry.com/workspace/now/platform/e99a7898-6dc2-4394-a5ec-a583a2d87568
+- _E15_<br><img src="/assets/pal_15_01.png" alt="drones" width="60%" style="border: 1px solid #999;">
+
+<br>
+
+
+
+
+
 <br> 
 
 ------

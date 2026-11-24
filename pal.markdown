@@ -225,7 +225,7 @@ _**[Single source docx #693](https://drive.google.com/drive/folders/1-Adawag9uA8
 
 #### **[3.4 QS3: Broaden your Foundry skills (WIP)](/pal_693_dd/)** (26.1117/2.2a)
 
-Qs3 has 2 goals:
+QS3 has 2 goals:
 - QS0 and QS1 introduced Foundry through a focused goal: find the “needle in the haystack.” **QS3 broadens that foundation, accelerating your discovery of more Foundry apps**, capabilities, and techniques. Small, connected exercises retain the step-by-step Quick Start style, showing what each tool does, where it fits, and how to verify the result. The aim is broad introductory coverage—not exhaustive mastery of every tool.<br>_Foundry’s application landscape—approximately 65 apps in the environment shown._<br><img src="/assets/sun-63.png" alt="drones" width="21%" style="border: 1px solid #999;">
 
 - **QS3 will provide (if possible) a small intro demo of the 7 Deep Dive types listed in section 4.**
@@ -271,7 +271,7 @@ ZAI calls them all "deep dives" and organizes them (and ZAI originals) into the 
 - **A6 Agentic (central loop)**
 
 The following is the inventory of all tutorials (working list)
-- **4.7 PLANNING LIST** 
+- **4.7 Planning list** 
 
 <!-- - **4.3 ZAI versions of the core ~8 Foundry getting started demos**. The core demos (speedruns) meant for beginners. (2b.4)
 - **4.4 ZAI versions of PAL Examples (installable)**. Real-world demos. ZiptieAI uses one of these demos as the very first demo for beginners. (2b.5) -->
@@ -282,7 +282,7 @@ The following is the inventory of all tutorials (working list)
 
 <br>
 
-#### **[pal_4.1_a1_office](/pal_4.1_a1_office/)** (v1 26.1124)
+#### **[A1 Office](/pal_4.1_a1_office/)** (v1 26.1124)
 
 <br>
 
@@ -290,7 +290,7 @@ The following is the inventory of all tutorials (working list)
 
 <br>
 
-#### **[pal_4.2_a2_equator](/pal_4.2_a2_equator/)** (v1 26.1124)
+#### **[A2 Equator (backend)](/pal_4.2_a2_equator/)** (v1 26.1124)
 
 <br>
 
@@ -298,7 +298,7 @@ The following is the inventory of all tutorials (working list)
 
 <br>
 
-#### **[pal_4.3_a3_haystacks](/pal_4.3_a3_haystacks/)** (v1 26.1124)
+#### **[A3 Haystack needles](/pal_4.3_a3_haystacks/)** (v1 26.1124)
 
 <br>
 
@@ -306,7 +306,7 @@ The following is the inventory of all tutorials (working list)
 
 <br>
 
-#### **[pal_4.4a_a4a_ai_inference](/pal_4.4a_a4a_ai_inference/)** (v1 26.1124)
+#### **[A4a Inference (AI)](/pal_4.4a_a4a_ai_inference/)** (v1 26.1124)
 
 <br>
 
@@ -314,7 +314,7 @@ The following is the inventory of all tutorials (working list)
 
 <br>
 
-#### **[pal_4.4b_a4b_ai_training](/pal_4.4b_a4b_ai_training/)** (v1 26.1124)
+#### **[A4b Training (AI)](/pal_4.4b_a4b_ai_training/)** (v1 26.1124)
 
 <br>
 
@@ -322,7 +322,7 @@ The following is the inventory of all tutorials (working list)
 
 <br>
 
-#### **[pal_4.5_a5_governance](/pal_4.5_a5_governance/)** (v1 26.1124)
+#### **[A5 Governance](/pal_4.5_a5_governance/)** (v1 26.1124)
 
 <br>
 
@@ -330,7 +330,7 @@ The following is the inventory of all tutorials (working list)
 
 <br>
 
-#### **[pal_4.6_a6_agentic](/pal_4.6_a6_agentic/)** (v1 26.1124)
+#### **[A6 Agentic](/pal_4.6_a6_agentic/)** (v1 26.1124)
 
 <br>
 
@@ -338,9 +338,9 @@ The following is the inventory of all tutorials (working list)
 
 <br>
 
-#### **[4.7 PLANNING LIST](/pal_3.6_target_apps/)** (v1 26.1123)
+#### **[4.7 Planning list](/pal_3.6_target_apps/)** (v1 26.1123)
 
-This section will focus on introducing target applications and how you would use Foundry + FDE to get the job done.
+The master planning list of all deep dives. 
 
 
 <br><br>
