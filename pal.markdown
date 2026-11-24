@@ -225,12 +225,18 @@ _**[Single source docx #693](https://drive.google.com/drive/folders/1-Adawag9uA8
 
 #### **[3.4 QS3: Broaden your Foundry skills (WIP)](/pal_693_dd/)** (26.1117/2.2a)
 
-**26.1124: A primary goal of QS3 is a small intro demo of the 7 Deep Dive types listed in section 4.**
+Qs3 has 2 goals:
+- QS0 and QS1 introduced Foundry through a focused goal: find the “needle in the haystack.” **QS3 broadens that foundation, accelerating your discovery of more Foundry apps**, capabilities, and techniques. Small, connected exercises retain the step-by-step Quick Start style, showing what each tool does, where it fits, and how to verify the result. The aim is broad introductory coverage—not exhaustive mastery of every tool.<br>_Foundry’s application landscape—approximately 65 apps in the environment shown._<br><img src="/assets/sun-63.png" alt="drones" width="21%" style="border: 1px solid #999;">
 
-QS0 and QS1 introduced Foundry through a focused goal: find the “needle in the haystack.” **QS3 broadens that foundation, accelerating your discovery of more Foundry apps**, capabilities, and techniques. Small, connected exercises retain the step-by-step Quick Start style, showing what each tool does, where it fits, and how to verify the result. The aim is broad introductory coverage—not exhaustive mastery of every tool.
+- **QS3 will provide (if possible) a small intro demo of the 7 Deep Dive types listed in section 4.**
+  - A1 Office
+  - A2 Backend (EQUATOR)
+  - A3 Haystack needles
+  - A4a Inference (AI)
+  - A4b Training (AI)
+  - A5 Governance / security
+  - A6 Agentic (central loop)
 
-
-_Foundry’s application landscape—approximately 65 apps in the environment shown._<br><img src="/assets/sun-63.png" alt="drones" width="23%" style="border: 1px solid #999;">
 
 <!-- 
 _Foundry deep dive master diagram_<br><img src="/assets/DD_master_diagram.png" alt="drones" width="80%" style="border: 1px solid #999;"> -->
@@ -336,34 +342,6 @@ The following is the inventory of all tutorials (working list)
 
 This section will focus on introducing target applications and how you would use Foundry + FDE to get the job done.
 
-<br>
-
----------------------------
-
-<br>
-
-#### **[xxxxxxxxxxxxxxxx4.1 OK/WIP/FAILED LIST](/3.5_diy/)** (v1 26.1122)
-
-<!-- The QS's (3.2-3.4) and the official demos (section 4) supply inspiration; -->
-
-DD tutorials focus on learning the full set of Foundry capabilities you need to get real world projects done.
-
-- Section 4.3 catalogs the official Palantir demos.
-- This section will contain DD's 
-  - inspired by those official demos
-  - but created from scratch
-  - and are minimized in scope and complexity as much as possible (while still demonstrating the target concepts)
-
-<!-- - Selection of 4.3 demos will be based on
-  - What new app or technique does it introduce?
-  - Where does it fit in the NORTH-EQUATOR-SOUTH diagram?
-  - Can we reuse familiar data and objects?
-  - What is the smallest exercise with a clearly verifiable result? -->
-
-There are current only 2 DD's of this type (started from and built with the sole assistance of FDE). Several TODO's.
-
-- **[#620\_pal\_DIY9\_aip-fde_demo\_hn\_](https://drive.google.com/drive/folders/1-Adawag9uA8_bq-hDF-nOuPYaRLz1eEO)**.<br>_DIY9 UI_<br><img src="/assets/sun-61.png" alt="drones" width="44%" style="border: 2px solid #999;">
-- **[#619\_pal\_D8\_model\_integration\_](https://drive.google.com/drive/folders/1-Adawag9uA8_bq-hDF-nOuPYaRLz1eEO)**.<br>_D8 demo model trained in Foundry_<br><img src="/assets/sun-62.png" alt="drones" width="60%" style="border: 2px solid #999;"><br>
 
 <br><br>
 

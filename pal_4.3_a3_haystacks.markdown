@@ -20,6 +20,9 @@ permalink: /pal_4.3_a3_haystacks/
 |E17 | 12 | Show where and when a changing measurement exceeded a threshold | Time series on a map |
 
 
+- **[#620\_pal\_DIY9\_aip-fde_demo\_hn\_](https://drive.google.com/drive/folders/1-Adawag9uA8_bq-hDF-nOuPYaRLz1eEO)**.<br>_DIY9 UI_<br><img src="/assets/sun-61.png" alt="drones" width="44%" style="border: 2px solid #999;">
+
+
 
 <br> 
 
