@@ -78,7 +78,9 @@ The **ZAI take on Ontology** (the most talked about aspect of Foundry):
 - **Ontology has an "API"** that is analogous to a **REST API**.
 - The **Ontology API can be called by existing tools or a UI** that you create.
 
-General concepts:
+**It really is that simple.** There is, however, a lot more going on behind the scenes (with governance and security). 
+
+**General Foundry concepts:**
 - Foundry represents the **logical culmination of ZiptieAI**.
 - Foundry is a **modern enterprise platform** for data integration, ontology, analytics, applications, **AI assistance**, and governance.
 - Foundry takes a **very practical no-nonsense approach to AI in the enterprise** (Foundry was a market leader over 20 years ago, long before AI).
@@ -126,9 +128,7 @@ In Palantir docs
 - The initial demos (D1, D2, etc) were called "speedruns". These were actually deep dives.
 - There were no quick starts.  
 
-_Tutorials in the past needed to provide all the details to learn a new SW tool. Things have changed in the AI age. You will work with FDE to do these demos. All you really need from the docs are (1) what prompts to ask and (2) conceptual explanations. And the prompts in ZAI tutorials are sometimes not text, but screenshots. FDE and I would often have long discussions with a very specific pattern: (1) FDE tells me what to do, (2) I post a screenshot of the results (no text), and repeat. In the future, Foundry will probably be able to see your screen (you wont have to paste screenshots) and you will have audio chats. Foundry might even do all keyboard and mouse work._
 
-_What the above means is that the goal of these tutorials is more about high level knowledge. Enterprise app programming has moved to yet another higher level of abstraction._
 
 These tutorials are the most effective method to learn core Foundry skills (consider using the **[MS Word docx](https://drive.google.com/drive/folders/1-Adawag9uA8_bq-hDF-nOuPYaRLz1eEO)** files as a template for your own lab notes):
 
@@ -144,6 +144,12 @@ These tutorials are the most effective method to learn core Foundry skills (cons
 - **3.4 QS3: Broaden your Foundry skills (WIP)**. QS3 will focus on 2 things:
   - More step by step directions for more Foundry functionality and algorithms (like the other two QS's).
   - Suggesting "inline" (while you are doing QS3) various topics to study in more depth (including topics in section 3.5 and 3.6).
+
+Quick starts, tutorials, etc in the past needed to provide all the details to learn a new SW tool. But things have changed in the AI age. 
+- You will work with FDE to do these demos. 
+- All you really need from the docs are (1) what prompts to ask and (2) conceptual explanations. 
+- The prompts in ZAI tutorials are sometimes not text, but screenshots. FDE and I would often have long discussions with a very specific pattern: (1) FDE tells me what to do, (2) I post a screenshot of the results (no text), and repeat. 
+- In the future, Foundry will probably be able to see your screen (you wont have to paste screenshots) and you will have audio chats. Foundry might even do all keyboard and mouse work.
 
 <br>
 
