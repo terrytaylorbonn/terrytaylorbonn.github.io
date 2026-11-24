@@ -12,10 +12,10 @@ permalink: /pal_3.6_target_apps/
 - **L-2   [LIST2 (T1-T6)](/pal_demo_list/)**
 
 
-- **DD-1  DD-1 DIY (DIY9 + D8)** 
-- **DD-2  [DD-2 D1-D7 (+DD19)](/3c.2_pal_initial_demos/)** 
-- **DD-3  [DD-3 Train model (#619)](/pal_3.6_15_model_train/)**
-- **DD-4  [DD-4 Exx](/3c.1b_pal_examples/)** 
+- **DD-1 DIY (HN DIY9 + D8 (TRAIN))** 
+- **[DD-2 D1-D7 (+DD19)](/3c.2_pal_initial_demos/)** 
+- **[DD-3 D8 Train model (#619)](/pal_3.6_15_model_train/)**
+- **[DD-4 Exx](/3c.1b_pal_examples/)** 
 
 
 
@@ -97,7 +97,9 @@ permalink: /pal_3.6_target_apps/
 
 ### **A3 Haystack needles**
 
+```
 - HN #620_pal_DIY9_aip-fde_demo_hn  #620_pal_9_aip-fde_demo_hn_
+```
 
 |**Example** | **#** | **Specific problem for a ZAI_example** | **Potential inspiration** |
 |E11 | 1 | Find records occurring near the same place and time | Geospatial/common operating picture |
@@ -968,7 +970,7 @@ Duplicate or unimportant demos (or demos I could not get to work).
 
 
 
-# **[DD-3 Train model (#619)](/pal_3.6_15_model_train/)**
+# **[DD-3 D8 Train model (#619)](/pal_3.6_15_model_train/)**
 
 pal_3.6_15_model_train (#619) 
 
