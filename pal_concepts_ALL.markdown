@@ -8,18 +8,16 @@ permalink: /pal_concepts_all/
 
 [← 3c Enterprise](/pal/)
 
-_This is the original ZiptieAI take on the core Foundry concepts (worked out in tandem with FDE). I only figured this out 26.1117, so there are several TODO's and WIP's below._
-
 <br>
 
-**These concepts describe what you do during the quick starts and deep dives** (hands-on, to the point, learning quickly, minimal text/diagrams, with FDE assistance, all on the **[3c Enterprise page](/pal/)**). Right now the content is a bit sparse and looks like repeat of other pages, but the eventual goal is to collect all the core concepts, summarizing on this page.
+This page describe the core concepts for Palantir Foundry in the enterprise as used in ZiptieAI.
 
-- **3.2 QS0: Detect/analyze haystack needles:** 
+<!-- - **3.2 QS0: Detect/analyze haystack needles:** 
   - Install/test/modify the real-world Foundry example GAIA
   - Rebuild (with FDE's help) the GAIA example from scratch
 - **3.3 QS1: Create a "full" Ontology “backend”** (Ontology OTs/PTs, actions, links) for analysis of a dataset with Workshop. Ontology helps organize and control access to an enterprise’s valuable operational knowledge (“alpha”).
 - **3.4 DD (deep dive):** Add AI, Governance, and in general fanning out to cover all the bases. 
-- **4.1 and 4.2**: Focus on doing the excellent Palantir Foundry speedruns, examples, etc.
+- **4.1 and 4.2**: Focus on doing the excellent Palantir Foundry speedruns, examples, etc. -->
 
 <br>
 
@@ -27,9 +25,6 @@ See also
 - **[GPT chats (26.1117)](/pal_onto_rest_analogies/)**.
 - Why Foundry represents **[the future of AI programming](/future_foundry_and_docs/)**.
 - But there are challenges to learning Foundry: **[Why the ZAI approach to learning Foundry is the most effective](/pal_zai_learning_method/)**.
-
-
-
 
 <br>
 
@@ -42,31 +37,23 @@ See also
 
 ### **3.2 QS0: Detect/analyze haystack needles**
 
-<br> 
+_Note: QS0 was intially QS1 (therefore the numbering discrepancy)._
 
-#### **Install/test/modify the real-world Foundry example GAIA**
+Install/test/modify the real-world Foundry example GAIA. See **docx [692](https://drive.google.com/drive/folders/1-Adawag9uA8_bq-hDF-nOuPYaRLz1eEO)** for details on how to install and modify the example.
 
-In 1/2 you created everything for a real-world app like in this example. 
-See **docx [692](https://drive.google.com/drive/folders/1-Adawag9uA8_bq-hDF-nOuPYaRLz1eEO)** for details on how to install and modify the example.
 
-<img src="/assets/ALL-03.png" alt="drones" width="48%" style="border: 1px solid #999;">
+<img src="/assets/ALL-02bbb.png" alt="drones" width="70%" style="border: 1px solid #999;">
+
+<!-- <img src="/assets/ALL-03.png" alt="drones" width="48%" style="border: 1px solid #999;"> -->
 
 
 _Geospatial example: Input 2 sets of intelligence data (ELINT and ATR GEOINT, the **"haystack"**), find ~3 million matching entries, sift through the 3 million to find 4 entries of interest (**4 "needles"**), display the 4 entries on a map._<br><img src="/assets/pal_10_20.png" alt="drones" width="53%" style="border: 1px solid #999;"><br>
 
-
-<br> 
-
-#### **Install/test/modify the real-world Foundry example GAIA**
-
-
-use PY/Pipeline to detect (filter out).
-
-<img src="/assets/ALL-02bbb.png" alt="drones" width="70%" style="border: 1px solid #999;">
-
 <!-- 
+#### **Install/test/modify the real-world Foundry example GAIA**
+use PY/Pipeline to detect (filter out).
+<img src="/assets/ALL-02bbb.png" alt="drones" width="70%" style="border: 1px solid #999;">
 ### **3 (TODO) Display / analyze with Maps (create Ontology OTs/PTs)**
-
 <img src="/assets/ALL-02.png" alt="drones" width="48%" style="border: 1px solid #999;">
 -->
 
@@ -81,7 +68,6 @@ use PY/Pipeline to detect (filter out).
 ### **3.3 QS1: Create a “full” Ontology “backend”**
 
 Ontology OTs/PTs, actions, links for analysis of Dataset with Workshop. Ontology helps organize and control access to an enterprise's valuable operational knowledge ("alpha"). 
-
 
 _Main Foundry diagram (ZAI original diagram verified by FDE)_<br><img src="/assets/ALL-04.png" alt="drones" width="77%" style="border: 1px solid #999;">
 
@@ -104,11 +90,11 @@ _Main Foundry diagram (ZAI original diagram verified by FDE)_<br><img src="/asse
 
 <br>
 
-### **3.4 DD (deep dive): Add AI, Governance, and in general fanning out to cover all the bases**
+### **3.4 QS3: Add AI, Governance, and some basic examples of the deep dive demos**
 
 <br>
 
-#### **Add AI**
+#### **AI**
 
 Adding AI introduces new data flows that must be governed, particularly when proprietary information is sent to external models. AIPL, Actions, authorization policies, and UI controls each play a role in controlling those flows.
 
@@ -120,7 +106,7 @@ _OLD_<br><img src="/assets/MAIN-03.png" alt="drones" width="33%" style="border: 
 
 <br>
 
-#### **Add governance**
+#### **Governance**
 
 One especially important distinction: monitoring is not the same as preventing leakage. If sensitive data has already been transmitted to an external model, detecting it afterward may be too late. Preventive controls must operate before transmission.
 
@@ -135,7 +121,7 @@ One especially important distinction: monitoring is not the same as preventing l
 
 <br>
 
-26.1120 (0930, v1 26.0804)
+26.1124 (0930, v1 26.0804)
 
 
 
@@ -143,7 +129,7 @@ One especially important distinction: monitoring is not the same as preventing l
 
 
 
-<br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br>
+<br><br><br><br>
 
 --------------------
 --------------------

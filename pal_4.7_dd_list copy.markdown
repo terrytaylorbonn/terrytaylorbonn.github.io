@@ -1,7 +1,7 @@
 ---
 layout: page
 title: pal_4.2_dd_list (3.6 Target apps)
-permalink: /pal_3.6_target_apps/
+permalink: /pal_3.6_target_appsxxxxxxxxxxxxxxxxx/
 ---
 
 <br>
