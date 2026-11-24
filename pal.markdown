@@ -40,7 +40,7 @@ To learn Foundry:
 - Follow the section **3 ZAI quick starts** learning path. For the first week focus on 2 skillsets:
   - **Using FDE**
   - **Navigating the applications and dialogs**. It takes weeks to master the basics (UI, workflows, terminology, core concepts, etc). **ZAI substantially minimizes the learning curve**.
-- Then do the section **4 Deep dives**.
+- Then explore section **4 Deep dives**.
 
 <br>
 
@@ -54,8 +54,8 @@ To learn Foundry:
 
 - **1 Concepts** (rewritten 26.1117)
 - **2 Foundry free tier sign up** 
-- **3 ZAI quick starts (Foundry basics)** (2)
-- **4 ZAI deep dives (DD's)** (2b)
+- **3 ZAI quick starts (Foundry basics)**
+- **4 ZAI deep dives (DD's)**
 - **5 Project/doc sources** (Foundry and ZAI)
 
 <br><br>
@@ -78,7 +78,7 @@ The **ZAI take on Ontology** (the most talked about aspect of Foundry):
 - **Ontology has an "API"** that is analogous to a **REST API**.
 - The **Ontology API can be called by existing tools or a UI** that you create.
 
-**It really is that simple.** There is, however, a lot more going on behind the scenes (with governance and security). 
+There is a lot of very valuable functionality beyond that simple summary above (espeically with governance and security). **But the core gist really is that simple.** 
 
 **General Foundry concepts:**
 - Foundry represents the **logical culmination of ZiptieAI**.
