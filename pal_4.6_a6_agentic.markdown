@@ -4,6 +4,9 @@ title: 4.6 Agentic execution
 permalink: /pal_4.6_a6_agentic/
 ---
 
+<!-- 4.6 Agentic execution -->
+[← 4.5 Governance/security](/pal_4.5_a5_governance/) / [↑ 3c Enterprise](/pal/) / [→ 4.7 DD master list (3.6)](/pal_3.6_target_apps/)
+
 <br>
 
 Agentic execution: interactive, event-triggered, or continuously hosted workflows, including model-directed tool use.

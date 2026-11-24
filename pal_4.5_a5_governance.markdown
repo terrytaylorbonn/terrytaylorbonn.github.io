@@ -4,6 +4,9 @@ title: 4.5 Governance/security
 permalink: /pal_4.5_a5_governance/
 ---
 
+<!-- 4.5 Governance/security -->
+[← 4.4b AI training](/pal_4.4b_a4b_ai_training/) / [↑ 3c Enterprise](/pal/) / [→ 4.6 Agentic execution](/pal_4.6_a6_agentic/)
+
 <br>
 
 Governance/security: control access and changes; inspect evidence and recover safely.

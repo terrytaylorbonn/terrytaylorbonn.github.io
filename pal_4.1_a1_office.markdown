@@ -4,7 +4,11 @@ title: 4.1 Office
 permalink: /pal_4.1_a1_office/
 ---
 
+<!-- 4.1 Office -->
+[↑ 3c Enterprise](/pal/) / [→ 4.2 Backend / Equator](/pal_4.2_a2_equator/)
+
 <br>
+
 
 Office: organize work, collect information, review decisions, and produce reports.
 

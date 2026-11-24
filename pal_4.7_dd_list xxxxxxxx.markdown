@@ -4,6 +4,9 @@ title: pal_4.2_dd_list (3.6 Target apps)
 permalink: /pal_3.6_target_appsxxxxxxxxxxxxxxxxx/
 ---
 
+<!-- 4.7 DD master list (3.6) -->
+[← 4.6 Agentic execution](/pal_4.6_a6_agentic/) / [↑ 3c Enterprise](/pal/)
+
 <br>
 
 #### **TOC**

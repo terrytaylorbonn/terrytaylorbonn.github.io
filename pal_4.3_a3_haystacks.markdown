@@ -4,6 +4,9 @@ title: 4.3 Haystack needles
 permalink: /pal_4.3_a3_haystacks/
 ---
 
+<!-- 4.3 Haystack needles -->
+[← 4.2 Backend / Equator](/pal_4.2_a2_equator/) / [↑ 3c Enterprise](/pal/) / [→ 4.4a AI inference](/pal_4.4a_a4a_ai_inference/)
+
 <br>
 
 Haystack needles: Find needles (a few relevant records, relationships, events, or anomalies) in a haystack (a massive amount of data). 

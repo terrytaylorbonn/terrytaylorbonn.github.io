@@ -4,6 +4,9 @@ title: 4.4a AI inference
 permalink: /pal_4.4a_a4a_ai_inference/
 ---
 
+<!-- 4.4a AI inference -->
+[← 4.3 Haystack needles](/pal_4.3_a3_haystacks/) / [↑ 3c Enterprise](/pal/) / [→ 4.4b AI training](/pal_4.4b_a4b_ai_training/)
+
 <br>
 
 AI inference

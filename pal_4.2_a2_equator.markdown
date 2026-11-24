@@ -4,6 +4,9 @@ title: 4.2 Backend / Equator
 permalink: /pal_4.2_a2_equator/
 ---
 
+<!-- 4.2 Backend / Equator -->
+[← 4.1 Office](/pal_4.1_a1_office/) / [↑ 3c Enterprise](/pal/) / [→ 4.3 Haystack needles](/pal_4.3_a3_haystacks/)
+
 <br>
 
 Backend / Equator: ingest, transform, store, represent, link, and change data.

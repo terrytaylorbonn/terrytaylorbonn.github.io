@@ -4,6 +4,10 @@ title: 4.4b AI training
 permalink: /pal_4.4b_a4b_ai_training/
 ---
 
+
+<!-- 4.4b AI training -->
+[← 4.4a AI inference](/pal_4.4a_a4a_ai_inference/) / [↑ 3c Enterprise](/pal/) / [→ 4.5 Governance/security](/pal_4.5_a5_governance/)
+
 <br>
 
 AI training: fit and evaluate a model using example data.
