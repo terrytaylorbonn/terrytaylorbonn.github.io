@@ -1,10 +1,12 @@
 ---
 layout: page
-title: pal_4.1_a1_office
+title: 4.1 Office
 permalink: /pal_4.1_a1_office/
 ---
 
 <br>
+
+Office: organize work, collect information, review decisions, and produce reports.
 
 #### **TOC**
 

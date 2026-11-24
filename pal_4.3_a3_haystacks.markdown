@@ -1,10 +1,12 @@
 ---
 layout: page
-title: pal_4.3_a3_haystacks
+title: 4.3 Haystack needles
 permalink: /pal_4.3_a3_haystacks/
 ---
 
 <br>
+
+Haystack needles: find relevant records, relationships, events, or anomalies.
 
 #### **TOC**
 

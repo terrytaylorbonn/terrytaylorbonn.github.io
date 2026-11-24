@@ -1,10 +1,12 @@
 ---
 layout: page
-title: pal_4.4a_a4a_ai_inference
+title: 4.4a AI inference
 permalink: /pal_4.4a_a4a_ai_inference/
 ---
 
 <br>
+
+AI inference
 
 #### **TOC**
 

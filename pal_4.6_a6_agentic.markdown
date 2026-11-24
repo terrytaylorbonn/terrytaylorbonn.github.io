@@ -1,10 +1,12 @@
 ---
 layout: page
-title: pal_4.6_a6_agentic
+title: 4.6 Agentic execution
 permalink: /pal_4.6_a6_agentic/
 ---
 
 <br>
+
+Agentic execution: interactive, event-triggered, or continuously hosted workflows, including model-directed tool use.
 
 #### **TOC**
 

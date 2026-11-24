@@ -1,10 +1,12 @@
 ---
 layout: page
-title: pal_4.2_a2_equator
+title: 4.2 Backend / Equator
 permalink: /pal_4.2_a2_equator/
 ---
 
 <br>
+
+Backend / Equator: ingest, transform, store, represent, link, and change data.
 
 #### **TOC**
 

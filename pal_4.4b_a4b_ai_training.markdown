@@ -1,10 +1,12 @@
 ---
 layout: page
-title: pal_4.4b_a4b_ai_training
+title: 4.4b AI training
 permalink: /pal_4.4b_a4b_ai_training/
 ---
 
 <br>
+
+AI training: fit and evaluate a model using example data.
 
 #### **TOC**
 

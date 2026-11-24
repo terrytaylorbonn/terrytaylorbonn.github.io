@@ -1,10 +1,12 @@
 ---
 layout: page
-title: pal_4.5_a5_governance
+title: 4.5 Governance/security
 permalink: /pal_4.5_a5_governance/
 ---
 
 <br>
+
+Governance/security: control access and changes; inspect evidence and recover safely.
 
 #### **TOC**
 
