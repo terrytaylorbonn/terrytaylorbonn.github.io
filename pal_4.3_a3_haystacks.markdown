@@ -6,7 +6,7 @@ permalink: /pal_4.3_a3_haystacks/
 
 <br>
 
-Haystack needles: find relevant records, relationships, events, or anomalies.
+Haystack needles: Find needles (a few relevant records, relationships, events, or anomalies) in a haystack (a massive amount of data). 
 
 #### **TOC**
 

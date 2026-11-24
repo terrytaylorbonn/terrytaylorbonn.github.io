@@ -6,6 +6,13 @@ permalink: /pal_3.6_target_apps/
 
 <br>
 
+
+FDE: 
+- 4.7 should remain the single numbered master inventory. Give each tutorial one stable identity and a primary location; add cross-references where it covers other areas.
+- Keep suggested learning order separate from identity, so rearranging the sequence does not invalidate document numbers and references.
+- The resulting structure is coherent: QS3 provides the introductory tour; 4.1–4.6 provide depth; 4.7 lets readers find every tutorial without searching around.
+
+
 #### **TOC**
 
 
@@ -95,7 +102,6 @@ permalink: /pal_3.6_target_apps/
 |E10 | 3 | Extract specified fields from PDFs and flag missing information | PDF parsing |
 |E14 | --- |RAG |---|
 |E15 | 6 | (FAIL) Find disagreements between a document and its accompanying image | Image/document cross-validation |
-|E13 | --- |(TODO) Cipher visual obfuscation |---|
 
 
 
@@ -130,6 +136,7 @@ permalink: /pal_3.6_target_apps/
 
 ```
 - #628_pal_D1b_data_security_
+|E13 | --- |(TODO) Cipher visual obfuscation |---|
 ```
 
 <br>

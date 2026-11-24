@@ -128,9 +128,7 @@ In Palantir docs
 - The initial demos (D1, D2, etc) were called "speedruns". These were actually deep dives.
 - There were no quick starts.  
 
-
-
-These tutorials are the most effective method to learn core Foundry skills (consider using the **[MS Word docx](https://drive.google.com/drive/folders/1-Adawag9uA8_bq-hDF-nOuPYaRLz1eEO)** files as a template for your own lab notes):
+These quickstarts are the most effective method to get started with Foundry (consider using the **[MS Word docx](https://drive.google.com/drive/folders/1-Adawag9uA8_bq-hDF-nOuPYaRLz1eEO)** files as a template for your own lab notes):
 
 - **3.1 Corequisites (primarily FDE)** (26.1120). Topics to at least be aware of while you are doing the tutorials.
 - **3.2 QS0: Detect/analyze haystack needles 1 (install a Foundry example)** (26.1119) (QS0 was originally QS2). 
@@ -143,9 +141,9 @@ These tutorials are the most effective method to learn core Foundry skills (cons
   - Intros AI, actions, automation/scheduling, and governance. 
 - **3.4 QS3: Broaden your Foundry skills (WIP)**. QS3 will focus on 2 things:
   - More step by step directions for more Foundry functionality and algorithms (like the other two QS's).
-  - Suggesting "inline" (while you are doing QS3) various topics to study in more depth (including topics in section 3.5 and 3.6).
+  - Suggesting "inline" (while you are doing QS3) various topics to study in more depth.
 
-Quick starts, tutorials, etc in the past needed to provide all the details to learn a new SW tool. But things have changed in the AI age. 
+Note: Quick starts, tutorials, etc in the past needed to provide all the details to learn a new SW tool. But things have changed in the AI age. 
 - You will work with FDE to do these demos. 
 - All you really need from the docs are (1) what prompts to ask and (2) conceptual explanations. 
 - The prompts in ZAI tutorials are sometimes not text, but screenshots. FDE and I would often have long discussions with a very specific pattern: (1) FDE tells me what to do, (2) I post a screenshot of the results (no text), and repeat. 
@@ -232,7 +230,12 @@ _**[Single source docx #693](https://drive.google.com/drive/folders/1-Adawag9uA8
 #### **[3.4 QS3: Broaden your Foundry skills (WIP)](/pal_693_dd/)** (26.1117/2.2a)
 
 QS3 has 2 goals:
-- QS0 and QS1 introduced Foundry through a focused goal: find the “needle in the haystack.” **QS3 broadens that foundation, accelerating your discovery of more Foundry apps**, capabilities, and techniques. Small, connected exercises retain the step-by-step Quick Start style, showing what each tool does, where it fits, and how to verify the result. The aim is broad introductory coverage—not exhaustive mastery of every tool.<br>_Foundry’s application landscape—approximately 65 apps in the environment shown._<br><img src="/assets/sun-63.png" alt="drones" width="21%" style="border: 1px solid #999;">
+- QS0 and QS1 introduced Foundry through a focused goal: find the “needle in the haystack.” 
+- **QS3 broadens that foundation, accelerating your discovery of more Foundry apps**, capabilities, and techniques. 
+
+Small, connected exercises retain the step-by-step Quick Start style, showing what each tool does, where it fits, and how to verify the result. 
+
+_Foundry’s application landscape—approximately 65 apps in the environment shown._<br><img src="/assets/sun-63.png" alt="drones" width="21%" style="border: 1px solid #999;">
 
 - **QS3 will provide (if possible) a small intro demo of the 7 Deep Dive types listed in section 4.**
   - A1 Office
@@ -268,13 +271,13 @@ In Palantir docs
 
 ZAI calls them all "deep dives" and organizes them (and ZAI originals) into the following categories:
 
-- **A1 Office**
-- **A2 Backend (EQUATOR)**
-- **A3 Haystack needles**
-- **A4a Inference (AI)**
-- **A4b Training (AI)**
-- **A5 Governance / security**
-- **A6 Agentic (central loop)**
+- **4.1 Office**
+- **4.2 Backend (EQUATOR)**
+- **4.3 Haystack needles**
+- **4.4a Inference (AI)**
+- **4.4b Training (AI)**
+- **4.5 Governance / security**
+- **4.6 Agentic (central loop)**
 
 The following is the inventory of all tutorials (working list)
 - **4.7 Planning list** 
@@ -288,7 +291,15 @@ The following is the inventory of all tutorials (working list)
 
 <br>
 
-#### **[A1 Office](/pal_4.1_a1_office/)** (v1 26.1124)
+#### **[4.1 Office](/pal_4.1_a1_office/)** (v1 26.1124)
+
+Organize work, collect information, review decisions, and produce reports.
+- Put incoming tasks into a prioritized inbox and notify their assignees	Dynamic inbox and Action notifications.
+- Guide someone through submitting a complete record with attachments	Guided forms and questionnaires.
+- Generate a report for a selected record or investigation	Notepad Templates.
+- Approve a proposed change and send it back to an external system	Writeback-enabled decision support.
+
+This section currently has no examples.
 
 <br>
 
@@ -296,7 +307,12 @@ The following is the inventory of all tutorials (working list)
 
 <br>
 
-#### **[A2 Equator (backend)](/pal_4.2_a2_equator/)** (v1 26.1124)
+#### **[4.2 Backend (Equator)](/pal_4.2_a2_equator/)** (v1 26.1124)
+
+Ingest, transform, store, represent, link, and change data. The core of any data processing app:
+- Pipelines.
+- Ontology (joins, objects, links, Actions).
+- Functions. 
 
 <br>
 
@@ -304,7 +320,9 @@ The following is the inventory of all tutorials (working list)
 
 <br>
 
-#### **[A3 Haystack needles](/pal_4.3_a3_haystacks/)** (v1 26.1124)
+#### **[4.3 Haystack needles](/pal_4.3_a3_haystacks/)** (v1 26.1124)
+
+Filtering out data from a large dataset (similar to the QS0 and QS1). Find relevant records, relationships, events, or anomalies.
 
 <br>
 
@@ -312,7 +330,9 @@ The following is the inventory of all tutorials (working list)
 
 <br>
 
-#### **[A4a Inference (AI)](/pal_4.4a_a4a_ai_inference/)** (v1 26.1124)
+#### **[4.4a Inference (AI)](/pal_4.4a_a4a_ai_inference/)** (v1 26.1124)
+
+Apply an existing model.
 
 <br>
 
@@ -320,7 +340,9 @@ The following is the inventory of all tutorials (working list)
 
 <br>
 
-#### **[A4b Training (AI)](/pal_4.4b_a4b_ai_training/)** (v1 26.1124)
+#### **[4.4b Training (AI)](/pal_4.4b_a4b_ai_training/)** (v1 26.1124)
+
+Train an existing model (using Foundry tools).
 
 <br>
 
@@ -328,7 +350,9 @@ The following is the inventory of all tutorials (working list)
 
 <br>
 
-#### **[A5 Governance](/pal_4.5_a5_governance/)** (v1 26.1124)
+#### **[4.5 Governance](/pal_4.5_a5_governance/)** (v1 26.1124)
+
+Control access and changes; inspect evidence and recover safely.
 
 <br>
 
@@ -336,7 +360,9 @@ The following is the inventory of all tutorials (working list)
 
 <br>
 
-#### **[A6 Agentic](/pal_4.6_a6_agentic/)** (v1 26.1124)
+#### **[4.6 Agentic](/pal_4.6_a6_agentic/)** (v1 26.1124)
+
+Interactive, event-triggered, or continuously hosted workflows, including model-directed tool use.
 
 <br>
 
