@@ -283,7 +283,7 @@ QS4 will demo (step by step):
   - A6 Agentic (central loop) 
 
 
-_(this diagram is a first draft by GPT based on the text above)_<br><img src="/assets/dd/qs4.png/" alt="drones" width="73%" style="border: 1px solid #999;">
+_(this diagram is a first draft by GPT based on the text above)_<br><img src="/assets/dd/qs4.png" alt="drones" width="73%" style="border: 1px solid #999;">
 
 
 <br><br>
