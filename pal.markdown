@@ -273,12 +273,12 @@ _Foundry deep dive master diagram_<br><img src="/assets/DD_master_diagram.png" a
 
 ## **4 ZAI deep dives (DD's)** (2b)
 
-In Palantir docs
-- The initial demos (D1, D2, etc) are called "speedruns".
-- Examples are installable.
-- There are also "deep dives". 
+In Palantir there are several kinds of tutorials:
+- Speedruns are the initial demos (D1, D2, etc) intended for beginners.
+- Examples are installable tutorials.
+- "Deep dives". 
 
-ZAI calls them all "deep dives" and organizes them (and ZAI originals) into the following categories:
+ZAI calls all of the above "deep dives" and organizes (ZAI versions of) them and ZAI original deep dives (created with the help of FDE) into the following categories:
 
 - **4.1 Office**. FDE added this section; for now its empty and not a priority.
 - **4.2 Backend (EQUATOR)**. What is "ontology"? Its basic the objects in the backend you build in Foundry. And it only a part of what ZAI calls the "equator" (Foundry diagrams have north/ontology/south; ZAI replaces south with equator that contains the ontology).
@@ -425,9 +425,7 @@ The master planning list of all deep dives.
 ## **[5 Project/Doc sources](/pal_project_doc_sources/)**
 
 - **5.1 ZAI doc sources (docx, gdrive, this site, etc)** 
-- **5.2 PAL project/doc sources**
-
-_palantir.com/docs/foundry (this section provides an overview of Palantir Foundry docs)_<br><img src="/assets/777_444.png" alt="drones" width="88%" style="border: 1px solid #999;"><br>
+- **5.2 PAL project/doc sources**<br>_palantir.com/docs/foundry (this section provides an overview of Palantir Foundry docs)_<br><img src="/assets/777_444.png" alt="drones" width="88%" style="border: 1px solid #999;"><br>
 
 <br>
 
