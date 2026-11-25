@@ -10,6 +10,12 @@ permalink: /pal_latest_updates_history/
 
 <br>
 
+- _26.1124 **[Updates to "Core Foundry programming concepts"](/pal_concepts_all/)**_
+- _26.1119 **[QS0 (new)](/pal_qs0/)** (rework of a Foundry example, to be used as the initial demo on this site)_
+- _26.1119 **[docx to md/png conversion (see end of page)](/3c.1b_pal_docx_md/)**_
+- _26.1117 **[Core Foundry programming concepts (rewritten)](/pal_concepts_all/)**_
+- _26.1115 **[Foundry "deep dive" (page 3c Enterprise / section 2.2a; WIP)](/pal/)**_
+- _26.1111 **[Foundry Quick Start (QS1)](/pal_693_qs/)**_
 - _(26.1027): **[2.2 ZAI Foundry“capstone” project demo (WIP)](/pal_capstone/)**. This is the next demo building on the 2.1 demo._
 - _(26.1019): **[2.1 ZAI start-to-finish demo project (WIP)](/3c.2_pal_initial_demo_ZAI/)**. This page has been **a big goal of mine since I started using Foundry**. Its something I could not find elsewhere: A demo that focuses on the mechanics of using Foundry, from an empty project. This is how you want to get started with Foundry._
 - _(26.1020): **[The future of programming Foundry (and writing documentation) is here today (WIP)](/future_foundry_and_docs/)**._ 
