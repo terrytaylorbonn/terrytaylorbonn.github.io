@@ -189,7 +189,7 @@ QS0 uses a real world example, but is a simpler demo than the next QS1 (that foc
 - Ch6. Display the needle dataset in the Maps tool.
 - Ch7. Create a custom UI to display the needle dataset (display only; no actions in QS0).
 
-<img src="/assets/dd/qs0.png" alt="drones" width="88%" style="border: 1px solid #999;">
+_(This diagram is a first draft by GPT)_<br><img src="/assets/dd/qs0.png" alt="drones" width="88%" style="border: 1px solid #999;">
 
 
 <!-- 
@@ -220,7 +220,7 @@ How QS1 differs from QS0:
 - Python scripts replace the pipeline.
 - Actions, AI (AIPL and functions), automation and governance.
 
-_Example workflow diagram_<br><img src="/assets/dd/qs1.png" alt="drones" width="84%" style="border: 1px solid #999;">
+_Example workflow diagram (a first draft by GPT)_<br><img src="/assets/dd/qs1.png" alt="drones" width="84%" style="border: 1px solid #999;">
 
 
 <!-- _Example workflow diagram_<br><img src="/assets/sun-55mmm.png" alt="drones" width="84%" style="border: 1px solid #999;">
@@ -263,6 +263,8 @@ south is external data, models, etc.
 and we have 65 foundry "apps" (tools; I call apps what you create using foundry) -->
 
 _(this diagram is a first draft by GPT based on the text above)_<br><img src="/assets/dd/qs3.png" alt="drones" width="80%" style="border: 1px solid #999;">
+
+_Runtime example ("Generate suggestion" means AI generates)_<br><img src="/assets/sun-64.png" alt="drones" width="72%" style="border: 1px solid #999;">
 
 
 <!-- 
