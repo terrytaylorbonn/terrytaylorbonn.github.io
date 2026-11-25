@@ -251,7 +251,19 @@ QS0 and QS1 introduced Foundry through a focused goal: find the “needle in the
   - A5 Governance / security
   - xxA6 Agentic (central loop) (QS4)
 
-QS3 will also focus on introducing as many of Foundry "apps" (tools) as possible.<br>_Foundry’s application landscape—approximately 65 apps in the environment shown._<br><img src="/assets/sun-63.png" alt="drones" width="21%" style="border: 1px solid #999;">
+QS3 will also focus on introducing as many of Foundry "apps" (tools) as possible.<br>_Foundry’s application landscape—approximately 65 apps in the environment shown._<br><img src="/assets/sun-63.png" alt="drones" width="24%" style="border: 1px solid #999;">
+
+
+<!-- please create your best diagram for the attached.
+"xx" means will not do in qs3.
+(will do this in qs4).
+remember we have the North / equator / south idea. 
+north is analytics, ui, etc.
+south is external data, models, etc.
+and we have 65 foundry "apps" (tools; I call apps what you create using foundry) -->
+
+_(this diagram is a first draft by GPT based on the text above)_<br><img src="/assets/dd/qs3.png" alt="drones" width="80%" style="border: 1px solid #999;">
+
 
 <!-- 
 _Foundry deep dive master diagram_<br><img src="/assets/DD_master_diagram.png" alt="drones" width="80%" style="border: 1px solid #999;"> -->
@@ -269,6 +281,9 @@ QS4 will demo (step by step):
   - A4b Training (AI) (evaluation, etc) 
   - A5 Governance / security (of AI/agentic)
   - A6 Agentic (central loop) 
+
+
+_(this diagram is a first draft by GPT based on the text above)_<br><img src="/assets/dd/qs4.png/" alt="drones" width="73%" style="border: 1px solid #999;">
 
 
 <br><br>
@@ -303,9 +318,7 @@ ZAI calls all of the above "deep dives" and organizes (ZAI versions of) them and
 - **4.6 Agentic (central loop)**. Creating a central execution loop that runs 24/7.
 
 The last section is the inventory of all tutorials (working list)
-- **4.7 Planning list**. 
-
-<img src="/assets/dd/dd_4.7.png" alt="drones" width="56%" style="border: 1px solid #999;"><br>
+- **4.7 Planning list**.<br><img src="/assets/dd/dd_4.7.png" alt="drones" width="56%" style="border: 1px solid #999;"><br>
 
 
 <!-- - **4.3 ZAI versions of the core ~8 Foundry getting started demos**. The core demos (speedruns) meant for beginners. (2b.4)
