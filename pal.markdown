@@ -251,10 +251,7 @@ QS0 and QS1 introduced Foundry through a focused goal: find the “needle in the
   - A5 Governance / security
   - xxA6 Agentic (central loop) (QS4)
 
-
-_Foundry’s application landscape—approximately 65 apps in the environment shown._<br><img src="/assets/sun-63.png" alt="drones" width="21%" style="border: 1px solid #999;">
-
-
+QS3 will also focus on introducing as many of Foundry "apps" (tools) as possible.<br>_Foundry’s application landscape—approximately 65 apps in the environment shown._<br><img src="/assets/sun-63.png" alt="drones" width="21%" style="border: 1px solid #999;">
 
 <!-- 
 _Foundry deep dive master diagram_<br><img src="/assets/DD_master_diagram.png" alt="drones" width="80%" style="border: 1px solid #999;"> -->
