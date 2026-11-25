@@ -142,6 +142,8 @@ These quickstarts are the most effective method to get started with Foundry (con
 - **3.4 QS3: Broaden your Foundry skills (WIP)**. QS3 will focus on 2 things:
   - More step by step directions for more Foundry functionality and algorithms (like the other two QS's).
   - Suggesting "inline" (while you are doing QS3) various topics to study in more depth.
+- **3.5 (TODO) QS4: LLM training and agents**
+
 
 Note: Quick starts, tutorials, etc in the past needed to provide all the details to learn a new SW tool. But things have changed in the AI age. 
 - You will work with FDE to do these demos. 
@@ -236,28 +238,41 @@ _**[Single source docx #693](https://drive.google.com/drive/folders/1-Adawag9uA8
 
 <br>
 
-#### **[3.4 QS3: Broaden your Foundry skills (WIP)](/pal_693_dd/)** (26.1117/2.2a)
+#### **[3.4 QS3: Broaden your Foundry skills (WIP)](/pal_693_dd/)** (26.1117)
 
-QS3 has 2 goals:
-- QS0 and QS1 introduced Foundry through a focused goal: find the “needle in the haystack.” 
-- **QS3 broadens that foundation, accelerating your discovery of more Foundry apps**, capabilities, and techniques. 
+QS0 and QS1 introduced Foundry through a focused goal: find the “needle in the haystack.” 
 
-Small, connected exercises retain the step-by-step Quick Start style, showing what each tool does, where it fits, and how to verify the result. 
-
-_Foundry’s application landscape—approximately 65 apps in the environment shown._<br><img src="/assets/sun-63.png" alt="drones" width="21%" style="border: 1px solid #999;">
-
-- **QS3 will provide (if possible) a small intro demo of the 7 Deep Dive types listed in section 4.**
-  - A1 Office
+**QS3 broadens that foundation, accelerating your discovery of more Foundry apps**, capabilities, and techniques. QS3 will have small, connected exercises retain the step-by-step Quick Start style, showing what each tool does, where it fits, and how to verify the result.  
+  - A1 Office (a few examples)
   - A2 Backend (EQUATOR)
   - A3 Haystack needles
   - A4a Inference (AI)
-  - A4b Training (AI)
+  - xxA4b Training (AI) (QS4)
   - A5 Governance / security
-  - A6 Agentic (central loop)
+  - xxA6 Agentic (central loop) (QS4)
+
+
+_Foundry’s application landscape—approximately 65 apps in the environment shown._<br><img src="/assets/sun-63.png" alt="drones" width="21%" style="border: 1px solid #999;">
+
 
 
 <!-- 
 _Foundry deep dive master diagram_<br><img src="/assets/DD_master_diagram.png" alt="drones" width="80%" style="border: 1px solid #999;"> -->
+
+<br>
+
+---------------------------
+
+<br>
+
+#### **[3.5 (TODO) QS4: LLM training and agents](/pal_qs4/)** (26.1125)
+
+QS4 will demo (step by step):
+  - A4a Inference (AI) (of trained models)
+  - A4b Training (AI) (evaluation, etc) 
+  - A5 Governance / security (of AI/agentic)
+  - A6 Agentic (central loop) 
+
 
 <br><br>
 
