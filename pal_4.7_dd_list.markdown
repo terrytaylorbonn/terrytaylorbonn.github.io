@@ -16,9 +16,12 @@ FDE:
 - The resulting structure is coherent: QS3 provides the introductory tour; 4.1–4.6 provide depth; 4.7 lets readers find every tutorial without searching around.
 
 
+
+
 #### **TOC**
 
 
+- **T1-T6** (this is the Palantir master list I compiled from the PAL website)
 - **A1 Office**
 - **A2 Backend (EQUATOR)**
 - **A3 Haystack needles**
@@ -26,6 +29,22 @@ FDE:
 - **A4b Training (AI)**
 - **A5 Governance / security**
 - **A6 Agentic (central loop)**
+
+<br>
+
+---------------
+
+
+
+<br>
+
+### **[LIST2 (T1-T6)](/pal_demo_list/)** (V1 26.1121)
+
+- I created this list 4 months ago.
+- This list has a hyper-linked TOC to all Palantir demos.
+- They are organized by the PAL-defined Foundry user roles (T1-T6).
+- I did this to create an overview and inventory (and to include in chat prompts to with FDE/GPT).
+
 
 
 <br>
@@ -175,16 +194,6 @@ FDE:
 |E15 | (FAIL) Cross-validate Images and Documents using AIP |  
 |E17 | Detect anomalies in time series data with Code Workspaces |  
 |E18 | E18_build_w_aip_chatbot_studio |
-
-
-<br>
-
-# **[LIST2 (T1-T6)](/pal_demo_list/)** (V1 26.1121)
-
-- I created this list 4 months ago.
-- This list has a hyper-linked TOC to all demos.
-- They are organized by the PAL-defined Foundry user roles.
-- I merely made much easier to search (and include in prompts to AI).
 
 
 <br> 

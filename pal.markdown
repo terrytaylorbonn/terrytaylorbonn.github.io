@@ -69,7 +69,7 @@ To learn Foundry:
 
 <br>
 
-## **[1 Concepts](/pal_concepts_all/)** (rewritten 26.1117)
+## **[1 Concepts](/pal_concepts_all/)**
 
 The **ZAI take on Ontology** (the most talked about aspect of Foundry):
 - **Pipelines convert input data into clean datasets**. 
@@ -122,7 +122,7 @@ I did not record how I signed up, and its not a process I can repeat. But I can 
 
 <br>
 
-## **3 ZAI quick starts (Foundry basics)** (2)
+## **3 ZAI quick starts (Foundry basics)**
 
 In Palantir docs
 - The initial demos (D1, D2, etc) were called "speedruns". These were actually deep dives.
@@ -283,7 +283,9 @@ QS4 will demo (step by step):
 
 <br>
 
-## **4 ZAI deep dives (DD's)** (2b)
+## **4 ZAI deep dives (DD's)**
+
+> It was a challenge for me to figure out the learning path (there were many forks in the path) and the concepts when I started with Foundry. Some of the early demos were a real challenge (at least for me; the demo 2 docs say you need 90 minutes to complete; it took me a week to understand D2; this is one reason I created the QS's). So I initially focused on anything I could get working. I collected whatever I did into this DD section on 26.1124 (it wasn't until then that I had a clear picture of how to organize them). It will take a bit of time to get everything organized.
 
 In Palantir there are several kinds of tutorials:
 - Speedruns are the initial demos (D1, D2, etc) intended for beginners.
@@ -301,7 +303,7 @@ ZAI calls all of the above "deep dives" and organizes (ZAI versions of) them and
 - **4.6 Agentic (central loop)**. Creating a central execution loop that runs 24/7.
 
 The last section is the inventory of all tutorials (working list)
-- **4.7 Planning list** 
+- **4.7 Planning list**. 
 
 <img src="/assets/dd/dd_4.7.png" alt="drones" width="56%" style="border: 1px solid #999;"><br>
 
