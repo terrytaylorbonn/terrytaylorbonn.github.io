@@ -280,16 +280,19 @@ In Palantir docs
 
 ZAI calls them all "deep dives" and organizes them (and ZAI originals) into the following categories:
 
-- **4.1 Office**
-- **4.2 Backend (EQUATOR)**
-- **4.3 Haystack needles**
-- **4.4a Inference (AI)**
-- **4.4b Training (AI)**
-- **4.5 Governance / security**
-- **4.6 Agentic (central loop)**
+- **4.1 Office**. FDE added this section; for now its empty and not a priority.
+- **4.2 Backend (EQUATOR)**. What is "ontology"? Its basic the objects in the backend you build in Foundry. And it only a part of what ZAI calls the "equator" (Foundry diagrams have north/ontology/south; ZAI replaces south with equator that contains the ontology).
+- **4.3 Haystack needles**. This is why Palantir was founded. 9/11 occurred because the intelligence that raised alarms got stuck in a giant human bureaucracy. Palantir's job was to make sure that did not happen again. ZAI refers to this as find the "needle in the haystack". The original Foundry did this without AI.
+- **4.4a Inference (AI)**. Use AI as an assistant in Foundry.
+- **4.4b Training (AI)**. Train and deploy models in Foundry.
+- **4.5 Governance / security**. Protect enterprise data by tracking everthing.
+- **4.6 Agentic (central loop)**. Creating a central execution loop that runs 24/7.
 
-The following is the inventory of all tutorials (working list)
+The last section is the inventory of all tutorials (working list)
 - **4.7 Planning list** 
+
+<img src="/assets/dd/dd_4.7.png" alt="drones" width="56%" style="border: 1px solid #999;"><br>
+
 
 <!-- - **4.3 ZAI versions of the core ~8 Foundry getting started demos**. The core demos (speedruns) meant for beginners. (2b.4)
 - **4.4 ZAI versions of PAL Examples (installable)**. Real-world demos. ZiptieAI uses one of these demos as the very first demo for beginners. (2b.5) -->
@@ -309,8 +312,6 @@ Organize work, collect information, review decisions, and produce reports.
 - Guide someone through submitting a complete record with attachments	Guided forms and questionnaires.
 - Generate a report for a selected record or investigation	Notepad Templates.
 - Approve a proposed change and send it back to an external system	Writeback-enabled decision support.
-
-
 
 <img src="/assets/dd/dd_4.1.png" alt="drones" width="61%" style="border: 1px solid #999;"><br>
 
