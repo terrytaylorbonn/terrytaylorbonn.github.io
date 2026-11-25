@@ -187,7 +187,11 @@ QS0 uses a real world example, but is a simpler demo than the next QS1 (that foc
 - Ch6. Display the needle dataset in the Maps tool.
 - Ch7. Create a custom UI to display the needle dataset (display only; no actions in QS0).
 
-<img src="/assets/ALL-02bbb.png" alt="drones" width="68%" style="border: 1px solid #999;">
+<img src="/assets/dd/qs0.png" alt="drones" width="88%" style="border: 1px solid #999;">
+
+
+<!-- 
+<img src="/assets/ALL-02bbb.png" alt="drones" width="68%" style="border: 1px solid #999;"> -->
 
 <img src="/assets/sun-59.png" alt="drones" width="88%" style="border: 1px solid #999;">
 
@@ -214,9 +218,14 @@ How QS1 differs from QS0:
 - Python scripts replace the pipeline.
 - Actions, AI (AIPL and functions), automation and governance.
 
-_Automation (Foundry checks for updates in the external data source)_<br><img src="/assets/sun-55.png" alt="drones" width="68%" style="border: 1px solid #999;">
+_Example workflow diagram_<br><img src="/assets/dd/qs1.png" alt="drones" width="84%" style="border: 1px solid #999;">
 
-_Example workflow diagram_<br><img src="/assets/sun-55mmm.png" alt="drones" width="84%" style="border: 1px solid #999;">
+
+<!-- _Example workflow diagram_<br><img src="/assets/sun-55mmm.png" alt="drones" width="84%" style="border: 1px solid #999;">
+-->
+
+_Runtime Automation example (Foundry checks for updates in the external data source)_<br><img src="/assets/sun-55.png" alt="drones" width="68%" style="border: 1px solid #999;">
+
 
 _**[Single source docx #693](https://drive.google.com/drive/folders/1-Adawag9uA8_bq-hDF-nOuPYaRLz1eEO)** for QS1 webpages (markdown and PNG's are extracted by ChatGPT)._
 
@@ -293,13 +302,17 @@ The following is the inventory of all tutorials (working list)
 
 #### **[4.1 Office](/pal_4.1_a1_office/)** (v1 26.1124)
 
+_This section currently has no examples_.
+
 Organize work, collect information, review decisions, and produce reports.
 - Put incoming tasks into a prioritized inbox and notify their assignees	Dynamic inbox and Action notifications.
 - Guide someone through submitting a complete record with attachments	Guided forms and questionnaires.
 - Generate a report for a selected record or investigation	Notepad Templates.
 - Approve a proposed change and send it back to an external system	Writeback-enabled decision support.
 
-This section currently has no examples.
+
+
+<img src="/assets/dd/dd_4.1.png" alt="drones" width="61%" style="border: 1px solid #999;"><br>
 
 <br>
 
@@ -314,6 +327,9 @@ Ingest, transform, store, represent, link, and change data. The core of any data
 - Ontology (joins, objects, links, Actions).
 - Functions. 
 
+<img src="/assets/dd/dd_4.2.png" alt="drones" width="61%" style="border: 1px solid #999;"><br>
+
+
 <br>
 
 ---------------------------
@@ -323,6 +339,9 @@ Ingest, transform, store, represent, link, and change data. The core of any data
 #### **[4.3 Haystack needles](/pal_4.3_a3_haystacks/)** (v1 26.1124)
 
 Filtering out data from a large dataset (similar to the QS0 and QS1). Find relevant records, relationships, events, or anomalies.
+
+<img src="/assets/dd/dd_4.3.png" alt="drones" width="61%" style="border: 1px solid #999;"><br>
+
 
 <br>
 
@@ -334,6 +353,10 @@ Filtering out data from a large dataset (similar to the QS0 and QS1). Find relev
 
 Apply an existing model.
 
+
+<img src="/assets/dd/dd_4.4a.png" alt="drones" width="48%" style="border: 1px solid #999;"><br>
+
+
 <br>
 
 ---------------------------
@@ -343,6 +366,10 @@ Apply an existing model.
 #### **[4.4b Training (AI)](/pal_4.4b_a4b_ai_training/)** (v1 26.1124)
 
 Train an existing model (using Foundry tools).
+
+
+<img src="/assets/dd/dd_4.4b.png" alt="drones" width="48%" style="border: 1px solid #999;"><br>
+
 
 <br>
 
@@ -354,6 +381,9 @@ Train an existing model (using Foundry tools).
 
 Control access and changes; inspect evidence and recover safely.
 
+<img src="/assets/dd/dd_4.5.png" alt="drones" width="61%" style="border: 1px solid #999;"><br>
+
+
 <br>
 
 ---------------------------
@@ -364,6 +394,9 @@ Control access and changes; inspect evidence and recover safely.
 
 Interactive, event-triggered, or continuously hosted workflows, including model-directed tool use.
 
+<img src="/assets/dd/dd_4.6.png" alt="drones" width="61%" style="border: 1px solid #999;"><br>
+
+
 <br>
 
 ---------------------------
@@ -373,6 +406,8 @@ Interactive, event-triggered, or continuously hosted workflows, including model-
 #### **[4.7 Planning list](/pal_3.6_target_apps/)** (v1 26.1123)
 
 The master planning list of all deep dives. 
+
+<img src="/assets/dd/dd_4.7.png" alt="drones" width="71%" style="border: 1px solid #999;"><br>
 
 
 <br><br>
@@ -386,12 +421,12 @@ The master planning list of all deep dives.
 
 <br>
 
-## **[5 Project/Doc sources](/pal_project_doc_sources/)** (3)
+## **[5 Project/Doc sources](/pal_project_doc_sources/)**
 
-- **5.1 ZAI doc sources (docx, gdrive, this site, etc)** (3.1)
-- **5.2 PAL project/doc sources** (3.2)
+- **5.1 ZAI doc sources (docx, gdrive, this site, etc)** 
+- **5.2 PAL project/doc sources**
 
-_palantir.com/docs/foundry (this section provides an overview of Palantir Foundry docs)_<br><img src="/assets/777_27.png" alt="drones" width="68%" style="border: 1px solid #999;"><br>
+_palantir.com/docs/foundry (this section provides an overview of Palantir Foundry docs)_<br><img src="/assets/777_444.png" alt="drones" width="88%" style="border: 1px solid #999;"><br>
 
 <br>
 
@@ -404,4 +439,4 @@ _palantir.com/docs/foundry (this section provides an overview of Palantir Foundr
 
 <br><br>
 
-26.1124 (0814, v1 26.0702)
+26.1125 (0814, v1 26.0702)
