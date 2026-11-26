@@ -157,7 +157,7 @@ Note: Quick starts, tutorials, etc in the past needed to provide all the details
 
 <br>
 
-#### **[3.1 Corequisites (primarily FDE)](/pal_fde/)** (26.1120/2.0)
+#### **[3.1 Corequisites (primarily FDE)](/pal_fde/)** (26.1125)
 
 
 Knowing how to use FDE (Forward Deployed Engineer, Foundry's excellent AI assistant) is the most important skill you will learn. There also a few other things to keep in mind while working with Foudry.
@@ -205,7 +205,7 @@ _**[Single source docx #686](https://drive.google.com/drive/folders/1-Adawag9uA8
 
 <br>
 
-#### **[3.3 QS1: Detect/analyze haystack needles 2 (start from scratch) (26.1113)](/pal_693_qs/)** (2.2)
+#### **[3.3 QS1: Detect/analyze haystack needles 2 (start from scratch) (26.1113)](/pal_693_qs/)**
 
 
 QS1 is also a “needle in the haystack” demo (using Foundry to identify records that match user-defined criteria), but
@@ -238,7 +238,7 @@ _**[Single source docx #693](https://drive.google.com/drive/folders/1-Adawag9uA8
 
 <br>
 
-#### **[3.4 QS3: Broaden your Foundry skills (WIP)](/pal_693_dd/)** (26.1117)
+#### **[3.4 QS3: Broaden your Foundry skills (WIP)](/pal_693_dd/)** (26.1124)
 
 QS0 and QS1 introduced Foundry through a focused goal: find the “needle in the haystack.” 
 
