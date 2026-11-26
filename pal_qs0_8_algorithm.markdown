@@ -7,44 +7,36 @@ permalink: /pal_qs0_8_algorithm/
 <!-- 8 HN algorithm description -->
 [← 7 Create UI (in project QS0b)](/pal_qs0_7_ui/) / [↑ 3.2 Foundry QS0](/pal_qs0/)
 
-
-_Converted 2026-11-19 04:47 PM EST_
-
+_Converted from DOCX by GPT on 2026-11-26 08:59:25 EST_
 
 <br>
 
 **TOC**
-- [8.0a CHAT: Matching mechanism](#section-8-0a-chat-matching-mechanism)
-  - [FDE: Next we should explain the matching mechanism before creating the pipeline:](#section-fde-next-we-should-explain-the-matching-mechanism-before-creating-the-pipeline)
-  - [FDE: Yes—the pictured filter is one of the key places where candidate matches are narrowed down](#section-fde-yes-the-pictured-filter-is-one-of-the-key-places-where-candidate-matches-are-narrowed-down)
-  - [Does Spark parallelize this?](#section-does-spark-parallelize-this)
-  - [ME: sounds good... thats enough... no reason to get into a lot of details...](#section-me-sounds-good-thats-enough-no-reason-to-get-into-a-lot-of-details)
-- [8.0b ME: section 4.0 "the hackstack needle (HN)" algorithm.](#section-8-0b-me-section-4-0-the-hackstack-needle-hn-algorithm)
-- [8.1 What are ELINT and GEOINT?](#section-8-1-what-are-elint-and-geoint)
-- [8.2 How thousands of records become millions of candidate pairs](#section-8-2-how-thousands-of-records-become-millions-of-candidate-pairs)
-- [8.3 How we reduce the candidates to four results](#section-8-3-how-we-reduce-the-candidates-to-four-results)
-- [8.3b  one example of a calculation that yields a pair](#section-8-3b-one-example-of-a-calculation-that-yields-a-pair)
-- [8.3c drop duplicates](#section-8-3c-drop-duplicates)
-- [8.3d so the algorithm is simply (for 77,004,914 pairs) (THATS WHAT I WANTED)](#section-8-3d-so-the-algorithm-is-simply-for-77-004-914-pairs-thats-what-i-wanted)
-- [8.3e why only 3 million (not 75 million) (silly question)](#section-8-3e-why-only-3-million-not-75-million-silly-question)
-- [8.4 How Spark processes the data](#section-8-4-how-spark-processes-the-data)
-- [8.5 The same pattern outside intelligence](#section-8-5-the-same-pattern-outside-intelligence)
+- [8.1 Matching mechanism](#section-1)
+- [8.2 What are ELINT and GEOINT?](#section-7)
+- [8.4 How thousands of records become millions of candidate pairs](#section-8)
+- [8.5 How we reduce the candidates to four results](#section-9)
+- [8.6 One example of a calculation that yields a pair](#section-10)
+- [8.7 Drop duplicates](#section-11)
+- [8.8 So the algorithm is simply (for 77,004,914 pairs) (THATS WHAT I WANTED)](#section-12)
+- [8.9 Why only 3 million (not 75 million) (silly question)](#section-13)
+- [8.10 How Spark processes the data](#section-14)
+- [8.11 The same pattern outside intelligence](#section-15)
 
 <br>
 
-<a id="section-8-0a-chat-matching-mechanism"></a>
-### **8.0a CHAT: Matching mechanism**
+<a id="section-1"></a>
+### **8.1 Matching mechanism**
 
 <br>
 
-<a id="section-fde-next-we-should-explain-the-matching-mechanism-before-creating-the-pipeline"></a>
+<a id="section-2"></a>
 #### **FDE: Next we should explain the matching mechanism before creating the pipeline:**
 
 what counts as a candidate spatial match, how the time-window filter narrows it, and which final checks produce the needles. We’ll inspect the original **Correlate Intelligence (Pipeline Builder)** as a reference—without changing it—so we reproduce its actual rules rather than guess.
 
 <br>
 
-<a id="section-me-very-good-idea-the-target-read-knows-like-me-basically-nothing-data-science"></a>
 **ME: very good idea.... the target read knows (like me) basically nothing data science.**
 
 explain the core point where the needle search happens..
@@ -59,7 +51,7 @@ if that is accurate.
 
 <br>
 
-<a id="section-fde-yes-the-pictured-filter-is-one-of-the-key-places-where-candidate-matches-are-narrowed-down"></a>
+<a id="section-3"></a>
 #### **FDE: Yes—the pictured filter is one of the key places where candidate matches are narrowed down**
 
 <img src="/assets/qs0/ch8/8_01.png" alt="" width="88%" style="border: 1px solid #999;">
@@ -72,32 +64,26 @@ We must inspect the preceding timestamp calculations to confirm the **unit**—t
 
 <br>
 
-<a id="section-where-the-needle-search-happens"></a>
 **Where the needle search happens**
 
 <br>
 
-<a id="section-the-search-is-the-combined-sequence-of-operations-not-necessarily-this-filter-alone"></a>
 **The search is the combined sequence of operations, not necessarily this filter alone:**
 
 <br>
 
-<a id="section-1-spatial-matching-identify-candidate-pairs-of-observations-in-the-same-area"></a>
 **1 Spatial matching: identify candidate pairs of observations in the same area.**
 
 <br>
 
-<a id="section-2-time-filtering-the-pictured-step-retain-pairs-close-enough-in-time"></a>
 **2 Time filtering—the pictured step: retain pairs close enough in time.**
 
 <br>
 
-<a id="section-3-any-further-checks-narrow-the-candidates-to-the-final-results"></a>
 **3 Any further checks: narrow the candidates to the final results.**
 
 <br>
 
-<a id="section-an-analogy-for-beginners"></a>
 **An analogy for beginners:**
 
 **First find observations from approximately the same place. Then ask whether they happened at approximately the same time. Keep the pairs that satisfy both tests.**
@@ -106,19 +92,17 @@ We’ll verify the original pipeline’s exact operations before presenting that
 
 <br>
 
-<a id="section-does-spark-parallelize-this"></a>
+<a id="section-4"></a>
 #### **Does Spark parallelize this?**
 
 <br>
 
-<a id="section-if-this-pipeline-runs-on-spark-yes"></a>
 **If this pipeline runs on Spark, yes:**
 
 Spark can evaluate the filter across data partitions in parallel on CPU workers. We should verify the pipeline’s execution configuration before labeling it specifically Spark.
 
 <br>
 
-<a id="section-your-cuda-comparison-works-at-the-broad-conceptual-level"></a>
 **Your CUDA comparison works at the broad conceptual level:**
 
 **Express the operation once; let the execution system apply it across many records in parallel.**
@@ -127,12 +111,11 @@ Spark distributes tasks across partitions and workers; CUDA executes kernels acr
 
 <br>
 
-<a id="section-the-filter-finds-matches-using-explicit-rules-no-ai-or-data-science-knowledge-is-required-to-understand-this-step"></a>
 **The filter finds matches using explicit rules. No AI or data-science knowledge is required to understand this step.**
 
 <br>
 
-<a id="section-me-sounds-good-thats-enough-no-reason-to-get-into-a-lot-of-details"></a>
+<a id="section-5"></a>
 #### **ME: sounds good... thats enough... no reason to get into a lot of details...**
 
 reader wont undrestand until has done the demo.
@@ -149,25 +132,18 @@ Afterward, the summary will connect the steps: **where matching happened, how ea
 
 <br>
 
-<a id="section-8-0b-me-section-4-0-the-hackstack-needle-hn-algorithm"></a>
-### **8.0b ME: section 4.0 "the hackstack needle (HN)" algorithm.**
+<a id="section-6"></a>
+#### **ME: section 4.0 "the hackstack needle (HN)" algorithm.**
 
 the idea is to
 
 ```
-
 (1)- explain ELINT and GEOINT data.
-
 (2)- how we went from 3000 rows and 24000 rows in 4.4 and 4.5
-
 (3)- to 4 rows in 4.8 (at the end)
-
 (4)- also explain maybe spark... how these searches are done quickly
-
 (5)- finally, this is sigint... but how HN algorithm can be used in other industries
-
 ```
-
 <img src="/assets/qs0/ch8/8_02.png" alt="" width="55%" style="border: 1px solid #999;">
 
 FDE: Our goal is to find observations that match **in location and time**, then display the results.
@@ -176,8 +152,8 @@ FDE: Our goal is to find observations that match **in location and time**, then 
 
 <br>
 
-<a id="section-8-1-what-are-elint-and-geoint"></a>
-### **8.1 What are ELINT and GEOINT?**
+<a id="section-7"></a>
+### **8.2 What are ELINT and GEOINT?**
 
 The example supplies two datasets:
 
@@ -191,12 +167,12 @@ We use the supplied example data; we do not assume it represents real operationa
 
 <br>
 
-<a id="section-8-2-how-thousands-of-records-become-millions-of-candidate-pairs"></a>
-### **8.2 How thousands of records become millions of candidate pairs**
+<a id="section-8"></a>
+### **8.4 How thousands of records become millions of candidate pairs**
 
 Our inputs contain:
 
-| Input dataset | Rows |
+| **Input dataset** | **Rows** |
 | --- | --- |
 | ELINT Example | 3,206 |
 | CV ATR GEOINT Example | 24,019 |
@@ -221,7 +197,6 @@ Both datasets already contain these IDs. Our **Logical type cast → H3 Index** 
 
 <br>
 
-<a id="section-fde-yes-the-displayed-geoint-rows-all-have-the-same-h3-index-2-value-we-haven-t-checked-whether-that-is-true-for-all-24-019-rows"></a>
 **FDE: Yes—the displayed GEOINT rows all have the same h3_index_2 value. We haven’t checked whether that is true for all 24,019 rows.**
 
 That is possible because **H3 cells at resolution 2 cover large areas**. Many detections at different coordinates can share one cell ID.
@@ -231,17 +206,12 @@ This explains why the join produces so many candidate pairs: **it matches the sa
 We should clarify that in the tutorial—and verify the number of distinct H3 IDs before claiming they are all identical.
 
 ```
-
 8229a7fffffffff
 
 SELECT *
-
 FROM `master`.`ri.foundry.main.dataset.9713551e-d12c-4e61-9b70-1db0873f9b65`
-
 WHERE `h3_index_2` <> '8229a7fffffffff';
-
 ```
-
 <img src="/assets/qs0/ch8/8_03.png" alt="" width="88%" style="border: 1px solid #999;">
 
 **The query returned no rows:** no non-null H3 ID differs from 8229a7fffffffff.
@@ -249,22 +219,16 @@ WHERE `h3_index_2` <> '8229a7fffffffff';
 To check every value, including nulls, keep your existing **FROM** line and run:
 
 ```
-
 SELECT `h3_index_2`, COUNT(*) AS `row_count`
-
 FROM /* keep your existing dataset reference here */
-
 GROUP BY `h3_index_2`;
-
 ```
-
 If it returns **one row with count 24,019**, then every GEOINT record has that same H3 ID.
 
 <img src="/assets/qs0/ch8/8_04.png" alt="" width="66%" style="border: 1px solid #999;">
 
 <br>
 
-<a id="section-fde-as-a-beginner-tutorial-it-has-significant-weaknesses-yes-what-we-ve-verified-supports-that-criticism"></a>
 **FDE: As a beginner tutorial, it has significant weaknesses—yes. What we’ve verified supports that criticism:**
 
 - **Misleading naming:** elint_plus_10 actually adds **one day**.
@@ -281,14 +245,14 @@ I would describe it as **a geospatial tooling demonstration, not a rigorous dete
 
 <br>
 
-<a id="section-8-3-how-we-reduce-the-candidates-to-four-results"></a>
-### **8.3 How we reduce the candidates to four results**
+<a id="section-9"></a>
+### **8.5 How we reduce the candidates to four results**
 
-| Stage | Rule | Result |
+| **Stage** | **Rule** | **Result** |
 | --- | --- | --- |
-| Match H3 cells | Pair observations with equal H3 cell IDs | 3,266,584 candidate pairs |
-| Filter by time | Keep detections from 10 minutes before through 1 day after the ELINT timestamp | 2,419,560 pairs |
-| Remove repeated matches | Keep one row per unique ELINT geometry + Track Id combination | 4 rows |
+| **Match H3 cells** | Pair observations with equal H3 cell IDs | 3,266,584 candidate pairs |
+| **Filter by time** | Keep detections from **10 minutes before through 1 day after** the ELINT timestamp | 2,419,560 pairs |
+| **Remove repeated matches** | Keep one row per unique **ELINT geometry + Track Id** combination | **4 rows** |
 
 **An important distinction:** the time filter does not reduce millions of pairs directly to four. The final reduction comes from grouping repeated matches by the selected keys and retaining one representative.
 
@@ -296,76 +260,58 @@ The reference’s **Drop duplicates** operation keeps an arbitrary representativ
 
 <br>
 
-<a id="section-8-3b-one-example-of-a-calculation-that-yields-a-pair"></a>
-### **8.3b  one example of a calculation that yields a pair**
+<a id="section-10"></a>
+### **8.6 One example of a calculation that yields a pair**
 
 Yes—take **one ELINT observation and one GEOINT detection from our results**.
 
 <br>
 
-<a id="section-1-their-h3-ids-match"></a>
 **1. Their H3 IDs match**
 
 ```
-
 ELINT H3 ID:   8229a7fffffffff
-
 GEOINT H3 ID:  8229a7fffffffff
-
 ```
-
 The join therefore creates a **candidate pair** containing both records.
 
 <br>
 
-<a id="section-2-calculate-the-elint-time-window"></a>
 **2. Calculate the ELINT time window**
 
 ```
-
 The ELINT timestamp is:
-
 June 27, 2024 at 08:16:14 UTC
 
 Our calculations produce:
-
 Lower boundary: June 27 at 08:06:14 UTC  (subtract 10 minutes)
-
 Upper boundary: June 28 at 08:16:14 UTC  (add 1 day)
-
 ```
-
 <br>
 
-<a id="section-3-test-the-geoint-detection"></a>
 **3. Test the GEOINT detection**
 
 ```
-
 The paired GEOINT detection timestamp is:
-
 June 27, 2024 at 17:30:47.524 UTC
-
 ```
-
-| Filter condition | Result |
+| **Filter condition** | **Result** |
 | --- | --- |
-| Detection ≥ June 27 at 08:06:14 | True |
-| Detection ≤ June 28 at 08:16:14 | True |
+| Detection ≥ June 27 at 08:06:14 | **True** |
+| Detection ≤ June 28 at 08:16:14 | **True** |
 
 <br>
 
-<a id="section-both-conditions-pass-so-the-pair-survives-the-time-filter"></a>
 **Both conditions pass, so the pair survives the time filter.**
 
 This establishes **same coarse H3 cell + inside the configured time window**—not necessarily the same physical object.
 
 <br>
 
-<a id="section-8-3c-drop-duplicates"></a>
-### **8.3c drop duplicates**
+<a id="section-11"></a>
+### **8.7 Drop duplicates**
 
-we drop duplicates for For **Column subset**, select only:
+We drop duplicates for For **Column subset**, select only:
 
   - elint_geometry
 
@@ -373,12 +319,12 @@ we drop duplicates for For **Column subset**, select only:
 
 ME: i assume both of these values are in both datasets? can you give examples of these values, what they mean?
 
-**FDE:** **No—both columns come from the ELINT dataset.** The join carries them into each candidate pair alongside the GEOINT fields.
+**FDE: No—both columns come from the ELINT dataset.** The join carries them into each candidate pair alongside the GEOINT fields.
 
-| Column | Example | Meaning |
+| **Column** | **Example** | **Meaning** |
 | --- | --- | --- |
-| track_id | d5973b87-ff5e-4d76-99f2-eccdfe1bd59e | Identifies an ELINT track. Multiple observations can belong to the same track. |
-| elint_geometry | {"type":"Polygon","coordinates":[…]} | A GeoJSON polygon describing the ELINT observation’s geographic area. The … here abbreviates the actual coordinate list. |
+| **track_id** | d5973b87-ff5e-4d76-99f2-eccdfe1bd59e | Identifies an ELINT track. Multiple observations can belong to the same track. |
+| **elint_geometry** | {"type":"Polygon","coordinates":[…]} | A GeoJSON polygon describing the ELINT observation’s geographic area. The … here abbreviates the actual coordinate list. |
 
 **What “drop duplicates” means here**
 
@@ -388,7 +334,7 @@ It compares the **combination of those two values**:
 
 For example, suppose these joined rows survived the time filter:
 
-| ELINT Track Id | ELINT geometry | Paired GEOINT detection |
+| **ELINT Track Id** | **ELINT geometry** | **Paired GEOINT detection** |
 | --- | --- | --- |
 | Track A | Polygon X | Detection 1 |
 | Track A | Polygon X | Detection 2 |
@@ -414,48 +360,40 @@ Neither step compares **elint_geometry** with the GEOINT detection’s exact loc
 
 <br>
 
-<a id="section-8-3d-so-the-algorithm-is-simply-for-77-004-914-pairs-thats-what-i-wanted"></a>
-### **8.3d so the algorithm is simply (for 77,004,914 pairs) (THATS WHAT I WANTED)**
+<a id="section-12"></a>
+### **8.8 So the algorithm is simply (for 77,004,914 pairs) (THATS WHAT I WANTED)**
 
 ```
-
 filter1:only entries with (ELINT h3_index_2 = ELINT h3_index_2).
-
-filter2: only a single combination of ([ELINT trackid] ,  [ELINT Geometry])
-
+filter2: only a single combination of ([ELINT trackid] ,  [ELINT Geometry]) 
 ```
-
 **Almost—you’re missing the time filter, and the first comparison is ELINT versus GEOINT.**
 
 The algorithm is:
 
 <br>
 
-<a id="section-4-6-join-3-266-584-create-pairs-where-elint-h3-index-2-geoint-h3-index-2"></a>
 **(4.6) Join (=3,266,584): create pairs where  ELINT.h3_index_2 = GEOINT.h3_index_2.**
 
 <br>
 
-<a id="section-4-7-time-filter-2-419-560-keep-pairs-where-the-geoint-detection-occurred-between-10-minutes-before-and-1-day-after-the-elint-timestamp"></a>
 **(4.7) Time filter (=2,419,560): keep pairs where the GEOINT detection occurred between 10 minutes before and 1 day after the ELINT timestamp.**
 
 <br>
 
-<a id="section-4-8-deduplicate-4-keep-one-arbitrary-surviving-pair-per-distinct-combination-of-elint-track-id-elint-elint-geometry"></a>
 **(4.8) Deduplicate (=4): keep one arbitrary surviving pair per distinct combination of (ELINT.track_id, ELINT.elint_geometry).**
 
 Step 3 does not keep just one combination overall—it keeps one row **for each combination**, yielding four rows in this example.
 
-**Exactly** **🙂** **That three-step description is the core algorithm.** The type conversions and map-field preparation support it; they are not additional matching rules.
+**Exactly 🙂 That three-step description is the core algorithm.** The type conversions and map-field preparation support it; they are not additional matching rules.
 
 <br>
 
-<a id="section-8-3e-why-only-3-million-not-75-million-silly-question"></a>
-### **8.3e why only 3 million (not 75 million) (silly question)**
+<a id="section-13"></a>
+### **8.9 Why only 3 million (not 75 million) (silly question)**
 
 <br>
 
-<a id="section-in-4-4-there-are-3200-in-4-5-24-000-so-why-only-3million-spatial-joins-not-75-million"></a>
 **in 4.4 there are 3200, in 4.5 24,000 so why only ~3million spatial joins, not 75 million?**
 
 **Because the join pairs only records with equal H3 IDs—not every ELINT record with every GEOINT record.**
@@ -474,8 +412,8 @@ The remaining **3,070 ELINT records** have different H3 IDs, so they contribute 
 
 <br>
 
-<a id="section-8-4-how-spark-processes-the-data"></a>
-### **8.4 How Spark processes the data**
+<a id="section-14"></a>
+### **8.10 How Spark processes the data**
 
 We selected **Standard batch compute**, which is backed by **Spark**.
 
@@ -485,17 +423,17 @@ Rather than writing a loop that manually checks records one by one, we configure
 
 <br>
 
-<a id="section-8-5-the-same-pattern-outside-intelligence"></a>
-### **8.5 The same pattern outside intelligence**
+<a id="section-15"></a>
+### **8.11 The same pattern outside intelligence**
 
 ELINT is part of signals intelligence; this example combines it with geospatial detections. But **matching records by shared attributes, location, and time is broadly useful**:
 
-| Industry | Possible “needle” |
+| **Industry** | **Possible “needle”** |
 | --- | --- |
-| Manufacturing | A defect associated with machine readings near its production time |
-| Logistics | A delivery scan associated with a vehicle near the delivery location |
-| Energy | An equipment alarm associated with nearby inspection observations |
-| Retail | A stock discrepancy associated with relevant inventory movements |
+| **Manufacturing** | A defect associated with machine readings near its production time |
+| **Logistics** | A delivery scan associated with a vehicle near the delivery location |
+| **Energy** | An equipment alarm associated with nearby inspection observations |
+| **Retail** | A stock discrepancy associated with relevant inventory movements |
 
 The reusable pattern is:
 
