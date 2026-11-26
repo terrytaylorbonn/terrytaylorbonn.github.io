@@ -1,6 +1,6 @@
 ---
 layout: page
-title: 3.2 Foundry QS0 -- Detect/analyze haystack needles (start with Foundry example) (26.1119) (2.1)
+title: 3.2 Foundry QS0 -- Detect/analyze haystack needles (start with Foundry example) (26.1126) 
 permalink: /pal_qs0/
 ---
 
@@ -10,20 +10,20 @@ permalink: /pal_qs0/
 
 [← 3c Enterprise](/pal/)
 
-26.1120 (v1 26.1118)
+26.1126 (v1 26.1118)
 
 
 <br>
 
 Chapters (extracted from docx)
 
-- **(TODO) [What this QS0 offers beginners](/pal_qs0_0a_best_demo/)**
-- **(TODO) [Short overview of all chapters (TOC)](/pal_qs0_0b_config_dias/)**
-- **(TODO) [1 First steps](/pal_qs0_1_introl/)**
+- **[Take notes while doing this QS0](/pal_qs0_0a_best_demo/)**
+- **[Overview](/pal_qs0_0b_config_dias/)**
+- **[1 First steps](/pal_qs0_1_introl/)**
 - **[2 Install marketplace app and test](/pal_qs0_2_install_mplace/)**
 - **[3 Create own project with datasets](/pal_qs0_3_download_ds/)**
 - **[4 Build pipeline](/pal_qs0_4_pipeline/)**
-- **[5 Create Object type](/pal_qs0_5_objectype/)**
+- **[5 Create object type](/pal_qs0_5_objectype/)**
 - **[6 Display in Maps](/pal_qs0_6_maps/)**
 - **[7 Create UI](/pal_qs0_7_ui/)**
 - **[8 HN algorithm description](/pal_qs0_8_algorithm/)**

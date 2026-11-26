@@ -173,7 +173,7 @@ _**[Single source docx #685](https://drive.google.com/drive/folders/1-Adawag9uA8
 
 <br>
 
-#### **[3.2 QS0: Detect/analyze haystack needles 1 (install a Foundry example)](/pal_qs0/)** (26.1119/2.1)
+#### **[3.2 QS0: Detect/analyze haystack needles 1 (install a Foundry example)](/pal_qs0/)** (26.1126)
 
 
 
