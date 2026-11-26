@@ -4,10 +4,9 @@ title: 4 Build pipeline
 permalink: /pal_qs0_4_pipeline/
 ---
 
-<br>
-
 <!-- 4 Build pipeline -->
-[← 3 Create own project with datasets](/pal_qs0_3_download_ds/) / [↑ 3.2 Foundry QS0](/pal_qs0/) / [→ 5 Create Object type](/pal_qs0_5_objectype/)
+[← 3 Create own project with datasets (QS0c (QS0_Build))](/pal_qs0_3_download_ds/) / [↑ 3.2 Foundry QS0](/pal_qs0/) / [→ 5 Create object type](/pal_qs0_5_objectype/)
+
 
 
 _Converted 2026-11-19 02:59 PM EST_

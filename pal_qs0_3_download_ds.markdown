@@ -4,11 +4,9 @@ title: 3 Create own project with datasets
 permalink: /pal_qs0_3_download_ds/
 ---
 
-<br>
-
-
 <!-- 3 Create own project with datasets -->
-[← 2 Install marketplace app and test](/pal_qs0_2_install_mplace/) / [↑ 3.2 Foundry QS0](/pal_qs0/) / [→ 4 Build pipeline](/pal_qs0_4_pipeline/)
+[← 2 Install marketplace app and test (QS0b)](/pal_qs0_2_install_mplace/) / [↑ 3.2 Foundry QS0](/pal_qs0/) / [→ 4 Build pipeline](/pal_qs0_4_pipeline/)
+
 
 _Converted 2026-11-19 01:53 PM EST_
 

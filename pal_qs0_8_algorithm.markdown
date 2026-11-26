@@ -4,10 +4,9 @@ title: 8 HN algorithm description
 permalink: /pal_qs0_8_algorithm/
 ---
 
-<br>
-
 <!-- 8 HN algorithm description -->
-[← 7 Create UI](/pal_qs0_7_ui/) / [↑ 3.2 Foundry QS0](/pal_qs0/)
+[← 7 Create UI (in project QS0b)](/pal_qs0_7_ui/) / [↑ 3.2 Foundry QS0](/pal_qs0/)
+
 
 _Converted 2026-11-19 04:47 PM EST_
 

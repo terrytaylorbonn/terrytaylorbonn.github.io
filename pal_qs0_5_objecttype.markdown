@@ -4,10 +4,9 @@ title: 5 Create object type
 permalink: /pal_qs0_5_objectype/
 ---
 
-<br>
-
-<!-- 5 Create Object type -->
+<!-- 5 Create object type -->
 [← 4 Build pipeline](/pal_qs0_4_pipeline/) / [↑ 3.2 Foundry QS0](/pal_qs0/) / [→ 6 Display in Maps](/pal_qs0_6_maps/)
+
 
 _Converted 2026-11-19 04:30 PM EST_
 

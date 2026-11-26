@@ -4,11 +4,8 @@ title: 2 Install marketplace app and test
 permalink: /pal_qs0_2_install_mplace/
 ---
 
-<br>
-
 <!-- 2 Install marketplace app and test -->
-[← 1 First steps](/pal_qs0_1_introl/) / [↑ 3.2 Foundry QS0](/pal_qs0/) / [→ 3 Create own project with datasets](/pal_qs0_3_download_ds/)
-
+[← 1 First steps (Foundry sign up, FDE, project/folder, applications)](/pal_qs0_1_introl/) / [↑ 3.2 Foundry QS0](/pal_qs0/) / [→ 3 Create own project with datasets (QS0c (QS0_Build))](/pal_qs0_3_download_ds/)
 
 _Converted 2026-11-19 01:03 PM EST_
 

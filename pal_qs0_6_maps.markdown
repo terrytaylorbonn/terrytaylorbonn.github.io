@@ -4,10 +4,9 @@ title: 6 Display in Maps
 permalink: /pal_qs0_6_maps/
 ---
 
-<br>
-
 <!-- 6 Display in Maps -->
-[← 5 Create Object type](/pal_qs0_5_objectype/) / [↑ 3.2 Foundry QS0](/pal_qs0/) / [→ 7 Create UI](/pal_qs0_7_ui/)
+[← 5 Create object type](/pal_qs0_5_objectype/) / [↑ 3.2 Foundry QS0](/pal_qs0/) / [→ 7 Create UI (in project QS0b)](/pal_qs0_7_ui/)
+
 
 _Converted 2026-11-19 04:35 PM EST_
 
