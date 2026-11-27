@@ -37,13 +37,12 @@ ZiptieAI demos/documents AI (primarily LLMs), from "tiny" neural networks to **[
 <br>
 
 ### **[Part 1: AI](/1_ai/)** (artificial intelligence) focuses on minimalistic demos of core concepts
-  - **[QS](/0-qs/)** covers selected demos.
-  - **[Concepts](/0b-demos/)** summarizes the core concepts (mainly from the QS demos).
-  - **[(AI) QS](/0-qs)** (this is a second page of concepts)
-  - **[(AI) Concepts](/0b-concepts)**
-  - **[2 NNs](/_models)**
-  - **[2b Models](/2b_models)**
-  - **[3 Agents](/3_agents)**<br>_AI = deterministic computational algorithms that are extremely useful for specific types of applications._<br><img src="/assets/M-25bbb.png" alt="drones" width="80%">
+  - **QS** covers selected demos.
+  - **Concepts** summarizes the core concepts (mainly from the QS demos).
+  - **(AI) Concepts** (this is a second page of concepts)
+  - **2 NNs** (neural networks)
+  - **2b Models**
+  - **3 Agents**<br>_AI = deterministic computational algorithms that are extremely useful for specific types of applications._<br><img src="/assets/M-25bbb.png" alt="drones" width="80%">
 
 <br>
 
