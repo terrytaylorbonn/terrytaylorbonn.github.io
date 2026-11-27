@@ -289,6 +289,17 @@ _Foundry deep dive master diagram_<br><img src="/assets/DD_master_diagram.png" a
 
 <br>
 
+#### **[3.3b (TODO) QS3b: Complete overview of foundry tools (apps)](/pal_qs3b/)** (26.1127)
+
+- QS3b
+- projects/apps
+
+<br>
+
+---------------------------
+
+<br>
+
 #### **[3.5 (TODO) QS4: LLM training and agents](/pal_qs4/)** (26.1125)
 
 QS4 will demo (step by step):
