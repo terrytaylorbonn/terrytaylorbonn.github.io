@@ -165,7 +165,7 @@ These quickstarts are the most effective method to get started with Foundry (con
 - **3.2 QS0: Basic workflow (no AI)**. Detect/analyze haystack needles 1 (install a Foundry example) (26.1119) (QS0 was originally QS2). 
 - **3.3 QS1: Using model inference (AI)**. Detect/analyze haystack needles 2 (start from scratch) (26.1113). 
 - **3.4 QS3: Focus on the Foundry framework** (Broaden your Foundry skills (WIP)).
-- **3.4b QS3b: (TODO) Complete overview of foundry tools (65 apps)** (26.1127)
+- **3.4b QS3b: (WIP) Complete overview of foundry tools (65 apps)** (26.1127)
 - **3.5 QS4: (TODO) Agents in Foundry**
 - **3.6 QS5: (TODO) Model training in Foundr**
 
