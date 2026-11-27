@@ -10,6 +10,8 @@ permalink: /pal_latest_updates_history/
 
 <br>
 
+- _26.1126 UPDATED (entire content re-extracted from latest docx by GPT): **[3.2 Foundry QS0 -- Detect/analyze haystack needles (start with Foundry example) (26.1126)](/pal_qs0/)**_
+- _26.1124 **[Major updates to "3c Enterprise" sections "3 ZAI quick starts (Foundry basics)" and "4 ZAI deep dives (DD’s)"](/pal/)**_
 - _26.1124 **[Updates to "Core Foundry programming concepts"](/pal_concepts_all/)**_
 - _26.1119 **[QS0 (new)](/pal_qs0/)** (rework of a Foundry example, to be used as the initial demo on this site)_
 - _26.1119 **[docx to md/png conversion (see end of page)](/3c.1b_pal_docx_md/)**_
