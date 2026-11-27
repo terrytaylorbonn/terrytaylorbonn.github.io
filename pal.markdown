@@ -142,6 +142,7 @@ These quickstarts are the most effective method to get started with Foundry (con
 - **3.4 QS3: Broaden your Foundry skills (WIP)**. QS3 will focus on 2 things:
   - More step by step directions for more Foundry functionality and algorithms (like the other two QS's).
   - Suggesting "inline" (while you are doing QS3) various topics to study in more depth.
+- **3.4b (TODO) QS3b: Complete overview of foundry tools (apps)** (26.1127)
 - **3.5 (TODO) QS4: LLM training and agents**
 
 
@@ -289,7 +290,7 @@ _Foundry deep dive master diagram_<br><img src="/assets/DD_master_diagram.png" a
 
 <br>
 
-#### **[3.3b (TODO) QS3b: Complete overview of foundry tools (apps)](/pal_qs3b/)** (26.1127)
+#### **[3.4b (TODO) QS3b: Complete overview of foundry tools (apps)](/pal_qs3b/)** (26.1127)
 
 - QS3b
 - projects/apps
