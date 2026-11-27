@@ -1,6 +1,6 @@
 ---
 layout: page
-title: 3.3b (TODO) QS4b -- Complete overview of foundry tools (apps)
+title: 3.4b (TODO) QS3b -- Complete overview of foundry tools (apps)
 permalink: /pal_qs3b/
 ---
 
