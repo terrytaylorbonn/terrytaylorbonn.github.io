@@ -10,7 +10,19 @@ permalink: /pal_concepts_all/
 
 <br>
 
-This page describe the core concepts for Palantir Foundry in the enterprise as used in ZiptieAI.
+This page describes the core concepts for Palantir Foundry in the enterprise as used in ZiptieAI.
+
+
+
+26.1127: For Enterprise Intelligence there are 6 main concepts:
+
+- **1 Workflows (QS0)** ([3b Workflows](/3.3-ai-projects))
+- **2 Models -- Inference (QS1)**
+- **3 Framework (QS3)** 
+- **4 Framework tools (QS3b)** 
+- **5 Agents (QS4a)** 
+- **6 Models -- Training (QS4b)** 
+
 
 <!-- - **3.2 QS0: Detect/analyze haystack needles:** 
   - Install/test/modify the real-world Foundry example GAIA

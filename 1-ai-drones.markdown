@@ -1,6 +1,6 @@
 ---
 layout: page
-title: "1 Drones"
+title: "Drones"
 permalink: /1-drones/
 ---
 

@@ -26,26 +26,51 @@ _Latest updates **([history](/pal_latest_updates_history/))**_
 
 <br>
 
-ZiptieAI demos/documents AI (primarily LLMs), from "tiny" neural networks to **[enterprise AI (Palantir)](/pal/)**. ZiptieAI focuses on providing insightful and practical guidance with minimal text and diagrams.
+ZiptieAI demos/documents AI (primarily LLMs), from "tiny" neural networks to **[enterprise AI (Palantir)](/pal/)**, providing insightful and practical guidance with minimal text and diagrams.
 
-- **Readme first**
+<br>
+
+### **Readme first**
   - **[Heroes](/champions/)** is a short history of the AI industry champions that made the current AI tools possible (and became our heroes).
-  - **[Hacks](/0-demo/)** explains the core of what makes AI tick. _The champions/heroes never talk about this aspect of AI, but its critical to understand if you want to make the right AI project decisions._<br><br>_AI champions have made the AI revolution possible; but when they claim AI is (or soon will be) intelligent, then they are championing a fairly tale that is not in your best interest (the humorous diagram below compares Tweedle Dee and Tweedle Dum from "Alice in Wonderland" with the (internal) agent and transformer (TF) of an LLM)_<br><img src="/assets/M-11b.png" alt="drones" width="27%"><br><br> 
+  - **[Hacks](/0-demo/)** explains the core of what makes AI tick. _The champions/heroes never talk about this aspect of AI, but its critical to understand if you want to make the right AI project decisions._<br><br>_AI champions have made the AI revolution possible; but when they claim AI is (or soon will be) intelligent, then they are championing a fairly tale that is not in your best interest (the humorous diagram below compares Tweedle Dee and Tweedle Dum from "Alice in Wonderland" with the (internal) agent and transformer (TF) of an LLM)_<br><img src="/assets/M-11b.png" alt="drones" width="27%">
 
-- **AI fast track**
+<br>
+
+### **[Part 1: AI](/1_ai/)** (artificial intelligence) focuses on minimalistic demos of core concepts
   - **[QS](/0-qs/)** covers selected demos.
-  - **[Concepts](/0b-demos/)** summarizes the core concepts (mainly from the QS demos). <br><br>_AI = deterministic computational algorithms that are extremely useful for specific types of applications._<br><img src="/assets/M-25.png" alt="drones" width="80%"><br><br>
+  - **[Concepts](/0b-demos/)** summarizes the core concepts (mainly from the QS demos).
+  - **[(AI) QS](/0-qs)** (this is a second page of concepts)
+  - **[(AI) Concepts](/0b-concepts)**
+  - **[2 NNs](/_models)**
+  - **[2b Models](/2b_models)**
+  - **[3 Agents](/3_agents)**<br>_AI = deterministic computational algorithms that are extremely useful for specific types of applications._<br><img src="/assets/M-25bbb.png" alt="drones" width="80%">
 
-- **AI deep dive**
-  - **[2 NNs](/2_models/)** demos NNs, CNNs, and transformers (TFs) (the source of the "I" in AI). _In this section you control the AI mathematics._
+<br>
+
+### **[Part 2: EI](/3_ei/)** (enterprise intelligence) focuses on Palantir Foundry (reorganized 26.1120/1127). 
+
+<!-- - Foundry is an **excellent enterprise framework** (with integrated AI) with lots of demos.
+- Foundry offers a **generous free trial version**. 
+
+For Enterprise Intelligence (centered on Foundry) there are 6 main concepts (click on heading above to see details):-->
+
+- **1 Workflows (QS0)**
+- **2 Models -- Inference (QS1)**
+- **3 Framework (QS3)** 
+- **4 Framework tools (QS3b)** 
+- **5 Agents (QS4a)** 
+- **6 Models -- Training (QS4b)**<br>_Palantir = Enterprise intelligence_<br><img src="/assets/pal_9_06.png" alt="drones" width="26%" style="border: 1px solid #999;"><br>
+
+<!-- <img src="/assets/M-17.png" alt="drones" width="26%">  -->
+
+
+<!--  - **[2 NNs](/2_models/)** demos NNs, CNNs, and transformers (TFs) (the source of the "I" in AI). _In this section you control the AI mathematics._
   - **[2b Models](/2b_models/)** demos how to build packaged AI models (primarily LLMs). Covers fine-tuning, local models, deployment, and model serving (**I am convinced that local models, like local computers 40 years ago, will become the norm**). _In this section you control the model._
-  - **[3 Agents](/3_agents/)**. Python agents that implement reliable workflows, using AI models as helpful assistants. _You control the application._
+  - **[3 Agents](/3_agents/)**. Python agents that implement reliable workflows, using AI models as helpful assistants. _You control the application._ 
+
   - **[3b Workflow platform](/3.3-ai-projects/)** (such as n8n) demos of practical agentic AI applications. _The workflow platform controls the architecture._
-  - **[3c Enterprise AI](/pal/)** demos (**current focus is on Palantir**). _The enterprise platform controls almost everything._<br><br> _From core NNs to enterprise AI._<br><img src="/assets/M-17.png" alt="drones" width="26%">  <img src="/assets/pal_9_06.png" alt="drones" width="21%" style="border: 1px solid #999;"><br>
-
-  
-
-
+  - **[3c Enterprise AI](/pal/)** demos (**current focus is on Palantir**). _The enterprise platform controls almost everything.
+ --> 
 
 <!-- ZiptieAI.com was created in 2024 to document my work on Ukrainian style ziptie'd [AI Drones](/1-drones/). -->
 <!-- - [4 Resources](/4_resources/) such as (docx) lab notes, Github, Wiki, etc (links in the footer).
