@@ -28,6 +28,9 @@ Chapters (extracted from docx)
 - **[7 Create UI](/pal_qs0_7_ui/)**
 - **[8 HN algorithm description](/pal_qs0_8_algorithm/)**
 
+<img src="/assets/sun-59.png" alt="drones" width="88%" style="border: 1px solid #999;">
+
+
 <br>
 
 
@@ -46,7 +49,9 @@ Step 3 does not keep just one combination overall—it keeps one row for each co
 
 <img src="/assets/ALL-02bbb.png" alt="drones" width="68%" style="border: 1px solid #999;">
 
+_(This diagram is a first draft by GPT)_<br><img src="/assets/dd/qs0.png" alt="drones" width="88%" style="border: 1px solid #999;">
 
-<img src="/assets/pal_10_20.png" alt="drones" width="44%" style="border: 1px solid #999;">
+
+<!-- <img src="/assets/pal_10_20.png" alt="drones" width="44%" style="border: 1px solid #999;">-->
 
 

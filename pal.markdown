@@ -189,6 +189,9 @@ QS0 uses a real world example, but is a simpler demo than the next QS1 (that foc
 - Ch6. Display the needle dataset in the Maps tool.
 - Ch7. Create a custom UI to display the needle dataset (display only; no actions in QS0).
 
+
+_**[Single source docx #686](https://drive.google.com/drive/folders/1-Adawag9uA8_bq-hDF-nOuPYaRLz1eEO)** for QS0 webpages (markdown and PNG's are extracted by ChatGPT)._
+
 _(This diagram is a first draft by GPT)_<br><img src="/assets/dd/qs0.png" alt="drones" width="88%" style="border: 1px solid #999;">
 
 
@@ -197,7 +200,6 @@ _(This diagram is a first draft by GPT)_<br><img src="/assets/dd/qs0.png" alt="d
 
 <img src="/assets/sun-59.png" alt="drones" width="88%" style="border: 1px solid #999;">
 
-_**[Single source docx #686](https://drive.google.com/drive/folders/1-Adawag9uA8_bq-hDF-nOuPYaRLz1eEO)** for QS0 webpages (markdown and PNG's are extracted by ChatGPT)._
 
 <br>
 
@@ -220,6 +222,9 @@ How QS1 differs from QS0:
 - Python scripts replace the pipeline.
 - Actions, AI (AIPL and functions), automation and governance.
 
+_**[Single source docx #693](https://drive.google.com/drive/folders/1-Adawag9uA8_bq-hDF-nOuPYaRLz1eEO)** for QS1 webpages (markdown and PNG's are extracted by ChatGPT)._
+
+
 _Example workflow diagram (a first draft by GPT)_<br><img src="/assets/dd/qs1.png" alt="drones" width="84%" style="border: 1px solid #999;">
 
 
@@ -229,7 +234,6 @@ _Example workflow diagram (a first draft by GPT)_<br><img src="/assets/dd/qs1.pn
 _Runtime Automation example (Foundry checks for updates in the external data source)_<br><img src="/assets/sun-55.png" alt="drones" width="68%" style="border: 1px solid #999;">
 
 
-_**[Single source docx #693](https://drive.google.com/drive/folders/1-Adawag9uA8_bq-hDF-nOuPYaRLz1eEO)** for QS1 webpages (markdown and PNG's are extracted by ChatGPT)._
 
 
 <br>
@@ -251,7 +255,7 @@ QS0 and QS1 introduced Foundry through a focused goal: find the “needle in the
   - A5 Governance / security
   - xxA6 Agentic (central loop) (QS4)
 
-QS3 will also focus on introducing as many of Foundry "apps" (tools) as possible.<br>_Foundry’s application landscape—approximately 65 apps in the environment shown._<br><img src="/assets/sun-63.png" alt="drones" width="24%" style="border: 1px solid #999;">
+<!-- QS3 will also focus on introducing as many of Foundry "apps" (tools) as possible.<br>_Foundry’s application landscape—approximately 65 apps in the environment shown._<br><img src="/assets/sun-63.png" alt="drones" width="24%" style="border: 1px solid #999;"> -->
 
 
 <!-- please create your best diagram for the attached.
@@ -261,6 +265,15 @@ remember we have the North / equator / south idea.
 north is analytics, ui, etc.
 south is external data, models, etc.
 and we have 65 foundry "apps" (tools; I call apps what you create using foundry) -->
+
+_**Single source docx's:**_ 
+-	D1: Import and transform data _(**[#692\_pal\_foundry\_d1\_data\_xforms\_.docx](https://drive.google.com/drive/folders/1-Adawag9uA8_bq-hDF-nOuPYaRLz1eEO)**)_
+-	D2: Create object types and links from datasets _(**[#691\_pal\_foundry\_d2\_linked\_objects\_.docx](https://drive.google.com/drive/folders/1-Adawag9uA8_bq-hDF-nOuPYaRLz1eEO)**)_
+-	D3: Interact with linked objects through the UI _(**[#690\_pal\_foundry\_d3\_ui\_.docx](https://drive.google.com/drive/folders/1-Adawag9uA8_bq-hDF-nOuPYaRLz1eEO)**)_
+-	D4: Use Actions to change objects through the UI _(**[#689\_pal\_foundry\_d4\_actions\_.docx](https://drive.google.com/drive/folders/1-Adawag9uA8_bq-hDF-nOuPYaRLz1eEO)**)_
+-	D5: Combine objects, AI, Actions, and human review _(**[#688\_pal\_foundry\_d5\_ai\_human\_.docx](https://drive.google.com/drive/folders/1-Adawag9uA8_bq-hDF-nOuPYaRLz1eEO)**)_
+-	D6: Operate and govern the overall workflow _(**[#687\_pal\_foundry\_d6\_governance\_.docx](https://drive.google.com/drive/folders/1-Adawag9uA8_bq-hDF-nOuPYaRLz1eEO)**)_
+
 
 _(this diagram is a first draft by GPT based on the text above)_<br><img src="/assets/dd/qs3.png" alt="drones" width="80%" style="border: 1px solid #999;">
 
