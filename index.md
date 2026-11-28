@@ -39,7 +39,7 @@ ZiptieAI demos/documents AI (primarily LLMs), from "tiny" neural networks to **[
 <br>
 
 ### **[Drones](/1-drones/)**
-I built AI drones (initial test flights were in my kitchen) from 2023 to 2024 focusing on autonomous flight and AI (Pixhawk drone with Jetson Nano using object recognition with Pymavlink for flight control inputs). AI gradually became the main focus.
+I built AI drones (initial test flights were in my kitchen) from 2023 to 2024 focusing on autonomous flight and AI (Pixhawk drone with Jetson Nano using object recognition with Pymavlink for flight control inputs). 
 
 _Ziptie'd AI drone_<br><img src="/assets/ziptiedrone2.png" alt="drones" width="22%">
 
@@ -47,6 +47,9 @@ _Ziptie'd AI drone_<br><img src="/assets/ziptiedrone2.png" alt="drones" width="2
 <br>
 
 ### **[Part 1: AI](/1_ai/)** (artificial intelligence) focuses on minimalistic demos of core concepts
+
+Gradually the focus shifted from drones to AI (CNN objection recogition then LLM transformers).
+
   - **QS** covers selected demos.
   - **Concepts** summarizes the core concepts (mainly from the QS demos).
   - **(AI) Concepts** (this is a second page of concepts)
@@ -57,6 +60,8 @@ _Ziptie'd AI drone_<br><img src="/assets/ziptiedrone2.png" alt="drones" width="2
 <br>
 
 ### **[Part 2: EI](/3_ei/)** (enterprise intelligence) focuses on Palantir Foundry 
+
+In mid-2026 the focus shifted to EI and in particular Palantir Foundry. 
 
 <!-- - Foundry is an **excellent enterprise framework** (with integrated AI) with lots of demos.
 - Foundry offers a **generous free trial version**. 
