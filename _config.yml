@@ -35,6 +35,7 @@ header_search_enabled: false
 # Header navigation order
 header_pages:
   - index.md
+  - blog.markdown
   - champions.markdown
   - 0-demo.markdown
   # - 0-qs.markdown

@@ -31,7 +31,7 @@ For Foundry there are 6 main concepts:
 
 
 
-_See also (outdated) Why Foundry represents **[the future of AI programming](/future_foundry_and_docs/)**._
+_See also (outdated) "Why Foundry represents **[the future of AI programming](/future_foundry_and_docs/)**"._
 
 <!-- - **[GPT chats (26.1117)](/pal_onto_rest_analogies/)**.
 - But there are challenges to learning Foundry: **[Why the ZAI approach to learning Foundry is the most effective](/pal_zai_learning_method/)**. -->
