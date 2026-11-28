@@ -1,6 +1,6 @@
 ---
 layout: page
-title: Core EI programming concepts
+title: Foundry concepts
 permalink: /pal_concepts_all/
 ---
 
@@ -12,7 +12,7 @@ permalink: /pal_concepts_all/
 
 <!-- This page describes the core concepts for Palantir Foundry in the enterprise as used in ZiptieAI. -->
 
-For Enterprise Intelligence there are 6 main concepts:
+For Foundry there are 6 main concepts:
 
 - **1 Workflows (QS0)** (old: [3b Workflows](/3.3-ai-projects))
 - **2 Models -- Inference (QS1)**
@@ -31,8 +31,7 @@ For Enterprise Intelligence there are 6 main concepts:
 
 
 
-See also 
-- Why Foundry represents **[the future of AI programming](/future_foundry_and_docs/)**.
+_See also (outdated) Why Foundry represents **[the future of AI programming](/future_foundry_and_docs/)**._
 
 <!-- - **[GPT chats (26.1117)](/pal_onto_rest_analogies/)**.
 - But there are challenges to learning Foundry: **[Why the ZAI approach to learning Foundry is the most effective](/pal_zai_learning_method/)**. -->
