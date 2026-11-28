@@ -70,6 +70,18 @@ use PY/Pipeline to detect (filter out).
 
 <br>
 
+#### **Ontology/REST analogies**
+
+| Operation | Foundry Ontology | REST analogy | Important differences |
+|---|---|---|---|
+| **1. Read an object** | Workshop Object Table reads a `693_Record` object from the Ontology. | `GET /records/123` returns the record's properties. | Foundry exposes objects through its Ontology query mechanisms, not necessarily a conventional REST GET endpoint. Objects may be backed by datasets or other data sources. |
+| **2. Modify an object** | Workshop submits the `693_SaveCheckResult` Action to update an object's `CheckResult` property. | `PATCH /records/123` with `{"CheckResult":"FOUND"}` updates the record. | Foundry Actions are governed operations with permissions and validation. Changes may be stored as Ontology edits rather than directly modifying the underlying dataset. |
+
+
+
+<br>
+
+
 --------------------
 --------------------
 --------------------
@@ -80,39 +92,52 @@ use PY/Pipeline to detect (filter out).
 
 Ontology OTs/PTs, actions, links for analysis of Dataset with Workshop. Ontology helps organize and control access to an enterprise's valuable operational knowledge ("alpha"). 
 
-_Main Foundry diagram (ZAI original diagram verified by FDE)_<br><img src="/assets/ALL-04.png" alt="drones" width="77%" style="border: 1px solid #999;">
+<img src="/assets/ALL-05.png" alt="drones" width="62%" style="border: 1px solid #999;">
+
+
+<!-- _Main Foundry diagram (ZAI original diagram verified by FDE)_<br> -->
+<img src="/assets/ALL-04.png" alt="drones" width="27%" style="border: 1px solid #999;">
+
+
+
 
 <br>
 
-#### **Ontology/REST analogies**
+#### **Ontology/REST analogies update**
+
 
 | Operation | Foundry Ontology | REST analogy | Important differences |
 |---|---|---|---|
-| **1. Read an object** | Workshop Object Table reads a `693_Record` object from the Ontology. | `GET /records/123` returns the record's properties. | Foundry exposes objects through its Ontology query mechanisms, not necessarily a conventional REST GET endpoint. Objects may be backed by datasets or other data sources. |
-| **2. Modify an object** | Workshop submits the `693_SaveCheckResult` Action to update an object's `CheckResult` property. | `PATCH /records/123` with `{"CheckResult":"FOUND"}` updates the record. | Foundry Actions are governed operations with permissions and validation. Changes may be stored as Ontology edits rather than directly modifying the underlying dataset. |
 | **3. Execute AI and save the result** (see next section) | Workshop submits `693_CheckAndSaveRecord`, which runs the AI check through AIPLF and saves its answer using an Action. | `POST /records/123/check` invokes server-side logic that calls an LLM and updates the record. | The Foundry workflow combines Action logic, AIPLF, AI processing, and object edits. A conventional REST application would require developers to implement and connect these components themselves. |
 
-<br>
-
---------------------
---------------------
---------------------
-
 
 <br>
 
-### **3 Framework (3.4 QS3: Add AI, Governance, and some basic examples of the deep dive demos)**
 
-**AI**. Adding AI introduces new data flows that must be governed, particularly when proprietary information is sent to external models. AIPL, Actions, authorization policies, and UI controls each play a role in controlling those flows.
+--------------------
+--------------------
+--------------------
 
 
-<img src="/assets/ALL-05.png" alt="drones" width="62%" style="border: 1px solid #999;">
+<br>
+
+### **3 Framework (3.4 QS3: Governance)**
+
+**Governance**. In particular, **AI introduces new data flows that must be governed**, particularly when proprietary information is sent to external models. AIPL, Actions, authorization policies, and UI controls each play a role in controlling those flows.
+
+_New ZAI south/equator/north diagram_<br><img src="/assets/sun-14.png" alt="drones" width="50%" style="border: 3px solid #999;"><br>
+
+
+
 
 <!-- _OLD_<br><img src="/assets/MAIN-03.png" alt="drones" width="33%" style="border: 1px solid #999;"> -->
 
-**Governance**. One especially important distinction: monitoring is not the same as preventing leakage. If sensitive data has already been transmitted to an external model, detecting it afterward may be too late. Preventive controls must operate before transmission.
 
-<img src="/assets/ALL-06.png" alt="drones" width="63%" style="border: 1px solid #999;">
+
+<!-- 
+One especially important distinction: monitoring is not the same as preventing leakage. If sensitive data has already been transmitted to an external model, detecting it afterward may be too late. Preventive controls must operate before transmission. 
+<img src="/assets/ALL-06.png" alt="drones" width="63%" style="border: 1px solid #999;"> -->
+
 
 <br>
 
