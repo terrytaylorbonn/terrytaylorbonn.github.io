@@ -157,13 +157,15 @@ I did not record how I signed up, and its not a process I can repeat. But I can 
 
 These quickstarts are the most effective method to get started with Foundry (consider using the **[MS Word docx](https://drive.google.com/drive/folders/1-Adawag9uA8_bq-hDF-nOuPYaRLz1eEO)** files as a template for your own lab notes):
 
-- **3.1 Corequisites (primarily FDE)** (26.1120). Topics to at least be aware of while you are doing the tutorials.
-- **3.2 QS0: Basic workflow (no AI)**. Detect/analyze haystack needles 1 (install a Foundry example) (26.1119) (QS0 was originally QS2). 
-- **3.3 QS1: Using model inference (AI)**. Detect/analyze haystack needles 2 (start from scratch) (26.1113). 
-- **3.4 QS3: Focus on the Foundry framework** (Broaden your Foundry skills (WIP)).
-- **3.4b QS3b: (WIP) Complete overview of foundry tools (65 apps)** (26.1127)
-- **3.5 QS4: (TODO) Agents in Foundry**
-- **3.6 QS5: (TODO) Model training in Foundr**
+- **3.0 Corequisites (primarily FDE)** (26.1120). Topics to at least be aware of while you are doing the tutorials.
+- **3.1 QS0: Workflows (no AI)**. Detect/analyze haystack needles 1 (install a Foundry example) (26.1119) (QS0 was originally QS2). 
+- **3.2 QS1: Models - Inference (AI)**. Detect/analyze haystack needles 2 (start from scratch) (26.1113). 
+- **3.3 QS3: Framework tools** (Broaden your Foundry skills (WIP)).
+- **3.4 QS4: (TODO) Agents**
+- **3.5 QS5: (TODO) Models - Training**
+
+<!-- - **3.4b QS3b: (WIP) Complete overview of foundry tools (65 apps)** (26.1127) -->
+
 
 <br>
 
@@ -185,7 +187,7 @@ Note: In Palantir docs
 
 <br>
 
-#### **[3.1 Corequisites (primarily FDE)](/pal_fde/)** (26.1125)
+#### **[3.0 Corequisites (primarily FDE)](/pal_fde/)** (26.1125)
 
   - Quick demo of a **realistic real-world demo whose technical details you probably don't understand** (finding matching intelligence records in a large set of data) and 
   - **You don't need to understand (fully) the technical details** thanks to FDE.
@@ -210,7 +212,7 @@ _The FDE error that you will run into sooner or later (a show stopper; without F
 
 <br>
 
-#### **[3.2 QS0: Detect/analyze haystack needles 1 (install a Foundry example)](/pal_qs0/)** (26.1126)
+#### **[3.1 QS0: Workflows (Detect/analyze haystack needles without AI) (install a Foundry example)](/pal_qs0/)** (26.1126)
 
 
 
@@ -244,7 +246,7 @@ _(This diagram is a first draft by GPT)_<br><img src="/assets/dd/qs0.png" alt="d
 
 <br>
 
-#### **[3.3 QS1: Detect/analyze haystack needles 2 (start from scratch) (26.1113)](/pal_693_qs/)**
+#### **[3.2 QS1: Models - inference (Detect/analyze haystack needles using AI) (start from scratch) (26.1113)](/pal_693_qs/)**
 
   - A non-realistic demo that focuses on mechanical details. 
   - Intros AI, actions, automation/scheduling, and governance. 
@@ -278,7 +280,9 @@ _Runtime Automation example (Foundry checks for updates in the external data sou
 
 <br>
 
-#### **[3.4 QS3: Broaden your Foundry skills (WIP)](/pal_693_dd/)** (26.1124)
+#### **[3.3 QS3: Framework tools (WIP)](/pal_693_dd/)** (26.1124)
+
+<!--  Broaden your Foundry skills -->
 
   - More step by step directions for more Foundry functionality and algorithms (like the other two QS's).
   - Suggesting "inline" (while you are doing QS3) various topics to study in more depth.
@@ -328,7 +332,7 @@ _Foundry deep dive master diagram_<br><img src="/assets/DD_master_diagram.png" a
 
 <br>
 
-#### **[3.4b (TODO) QS3b: Complete overview of foundry tools (apps)](/pal_qs3b/)** (26.1127)
+<!--  #### **[3.4b (TODO) QS3b: Complete overview of foundry tools (apps)](/pal_qs3b/)** (26.1127)
 
 - QS3b
 - projects/apps
@@ -337,9 +341,9 @@ _Foundry deep dive master diagram_<br><img src="/assets/DD_master_diagram.png" a
 
 ---------------------------
 
-<br>
+<br> -->
 
-#### **[3.5 (TODO) QS4: Agents](/pal_qs4/)** (26.1125)
+#### **[3.4 (TODO) QS4: Agents](/pal_qs4/)** (26.1125)
 
 QS4 will demo (step by step):
   - A6 Agentic (central loop) 
@@ -353,7 +357,7 @@ _(this diagram is a first draft by GPT based on the text above)_<br><img src="/a
 
 <br>
 
-#### **[3.6 QS5: (TODO) Model training]()**
+#### **[3.5 QS5: (TODO) Models - training]()**
 
 QS5 will demo (step by step):
   - A4b Training (AI) (evaluation, etc) 

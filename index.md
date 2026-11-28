@@ -73,10 +73,9 @@ For Enterprise Intelligence (centered on Foundry) there are 6 main concepts (cli
 
 - **1 Workflows (QS0)**
 - **2 Models -- Inference (QS1)**
-- **3 Framework (QS3)** 
-- **4 Framework tools (QS3b)** 
-- **5 Agents (QS4)** 
-- **6 Models -- Training (QS5)**<br>_Palantir (the crystal ball)= Enterprise intelligence_<br><img src="/assets/pal_9_06.png" alt="drones" width="23%" style="border: 1px solid #999;"><br>
+- **3 Framework tools (QS3)** 
+- **4 Agents (QS4)** 
+- **5 Models -- Training (QS5)**<br>_Palantir (the crystal ball)= Enterprise intelligence_<br><img src="/assets/pal_9_06.png" alt="drones" width="23%" style="border: 1px solid #999;"><br>
 
 <!-- <img src="/assets/M-17.png" alt="drones" width="26%">  -->
 
