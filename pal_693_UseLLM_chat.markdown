@@ -7,7 +7,7 @@ permalink: /pal_693_UseLLM_chat/
 <br>
 
 
-[← 3c Enterprise](/pal/)
+[← 2 EI](/3_ei/)
 
 <br>
 

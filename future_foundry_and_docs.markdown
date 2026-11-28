@@ -7,7 +7,7 @@ permalink: /future_foundry_and_docs/
 <br>
 
 
-- [← 3c Enterprise](/pal/) (search for "C2")
+- [← 2 EI](/3_ei/) (search for "C2")
 - [← 2.1 ZAI start-to-finish demo project](/3c.2_pal_initial_demo_ZAI/)
 
 

@@ -48,7 +48,7 @@ _Ziptie'd AI drone_<br><img src="/assets/ziptiedrone2.png" alt="drones" width="2
 
 ### **[Part 1: AI](/1_ai/)** (artificial intelligence) focuses on minimalistic demos of core concepts
 
-Gradually the focus shifted from drones to AI (CNN objection recogition then LLM transformers).
+Gradually the focus shifted from drones to AI (CNN objection recognition and LLM transformers).
 
   - **QS** covers selected demos.
   - **Concepts** summarizes the core concepts (mainly from the QS demos).

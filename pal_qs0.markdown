@@ -8,7 +8,7 @@ permalink: /pal_qs0/
 
 
 
-[← 3c Enterprise](/pal/)
+[← 2 EI](/3_ei/)
 
 26.1126 (v1 26.1118)
 

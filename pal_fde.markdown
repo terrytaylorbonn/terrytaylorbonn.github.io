@@ -7,7 +7,7 @@ permalink: /pal_fde/
 <br>
 
 
-[← 3c Enterprise](/pal/)
+[← 2 EI](/3_ei/)
 
 _Converted from DOCX by GPT on 2026-11-24 17:29:53 EST_
 

@@ -13,7 +13,7 @@ permalink: /pal_concepts/
 - **UI, terminology, and docs that need to be more clear**.
 - **Limited geographical availability, cost, etc.**  -->
 
-[← 3c Enterprise](/pal/)
+[← 2 EI](/3_ei/)
 
 <br>
 

@@ -7,7 +7,7 @@ permalink: /pal_693_ch_title_chats/
 <br>
 
 
-[← 3c Enterprise](/pal/)
+[← 2 EI](/3_ei/)
 
 <br>
 

@@ -8,7 +8,7 @@ permalink: /3c.2_pal_demo_CONCEPTS/
 
 <br>
 
-[← 3c Enterprise](/pal/)
+[← 2 EI](/3_ei/)
 
 <!-- **TL;DR**? Then skip to **[Demo D3 "Speedrun -- Your First Agentic AIP Workflow"](/3c.3_pal_agentic_ai/)**, a great example of the direction this part of ZiptieAI is heading. -->
 

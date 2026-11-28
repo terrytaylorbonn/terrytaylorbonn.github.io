@@ -6,7 +6,7 @@ permalink: /pal_RequestEntityTooLarge/
 
 <br>
 
-**[← 3c Enterprise](/pal/)**
+**[← 2 EI](/3_ei/)**
 
 <br>
 

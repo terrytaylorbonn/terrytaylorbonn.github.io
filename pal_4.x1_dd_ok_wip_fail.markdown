@@ -8,7 +8,7 @@ permalink: /3.5_diy/
 
 <br>
 
-[← 3c Enterprise](/pal/)
+[← 2 EI](/3_ei/)
 
 <br>
 

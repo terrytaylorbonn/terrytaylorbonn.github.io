@@ -6,7 +6,7 @@ permalink: /pal_latest_updates_history/
 
 <br>
 
-[← 3c Enterprise](/pal/)
+[← Home](/)
 
 <br>
 

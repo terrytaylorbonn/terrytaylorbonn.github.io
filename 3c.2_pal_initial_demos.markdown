@@ -8,7 +8,7 @@ permalink: /3c.2_pal_initial_demos/
 
 <br>
 
-[← 3c Enterprise](/pal/)
+[← 2 EI](/3_ei/)
 
 <br>
 

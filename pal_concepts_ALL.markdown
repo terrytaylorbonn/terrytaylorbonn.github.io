@@ -6,7 +6,7 @@ permalink: /pal_concepts_all/
 
 <br>
 
-[← 3c Enterprise](/pal/) 26.1128
+[← 2 EI](/3_ei/) 26.1128
 
 <br>
 

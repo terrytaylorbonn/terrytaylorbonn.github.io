@@ -7,7 +7,7 @@ permalink: /pal_2.x_doc_plan/
 <br>
 
 
-[← 3c Enterprise](/pal/)
+[← 2 EI](/3_ei/)
 
 <br>
 

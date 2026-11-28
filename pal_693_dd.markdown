@@ -6,7 +6,7 @@ permalink: /pal_693_dd/
 
 <br>
 
-[← 3c Enterprise](/pal/) 
+[← 2 EI](/3_ei/) 
 
 <!-- <br>
 

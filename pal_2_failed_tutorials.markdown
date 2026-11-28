@@ -7,7 +7,7 @@ permalink: /pal_2_failed_tutorials/
 <br>
 
 
-[← 3c Enterprise](/pal/)
+[← 2 EI](/3_ei/)
 
 <br>
 
