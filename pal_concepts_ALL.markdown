@@ -1,22 +1,20 @@
 ---
 layout: page
-title: Core Foundry programming concepts
+title: Core EI programming concepts
 permalink: /pal_concepts_all/
 ---
 
 <br>
 
-[← 3c Enterprise](/pal/)
+[← 3c Enterprise](/pal/) 26.1128
 
 <br>
 
-This page describes the core concepts for Palantir Foundry in the enterprise as used in ZiptieAI.
+<!-- This page describes the core concepts for Palantir Foundry in the enterprise as used in ZiptieAI. -->
 
+For Enterprise Intelligence there are 6 main concepts:
 
-
-26.1127: For Enterprise Intelligence there are 6 main concepts:
-
-- **1 Workflows (QS0)** ([3b Workflows](/3.3-ai-projects))
+- **1 Workflows (QS0)** (old: [3b Workflows](/3.3-ai-projects))
 - **2 Models -- Inference (QS1)**
 - **3 Framework (QS3)** 
 - **4 Framework tools (QS3b)** 
@@ -31,12 +29,13 @@ This page describes the core concepts for Palantir Foundry in the enterprise as 
 - **3.4 DD (deep dive):** Add AI, Governance, and in general fanning out to cover all the bases. 
 - **4.1 and 4.2**: Focus on doing the excellent Palantir Foundry speedruns, examples, etc. -->
 
-<br>
+
 
 See also 
-- **[GPT chats (26.1117)](/pal_onto_rest_analogies/)**.
 - Why Foundry represents **[the future of AI programming](/future_foundry_and_docs/)**.
-- But there are challenges to learning Foundry: **[Why the ZAI approach to learning Foundry is the most effective](/pal_zai_learning_method/)**.
+
+<!-- - **[GPT chats (26.1117)](/pal_onto_rest_analogies/)**.
+- But there are challenges to learning Foundry: **[Why the ZAI approach to learning Foundry is the most effective](/pal_zai_learning_method/)**. -->
 
 <br>
 
@@ -47,7 +46,7 @@ See also
 <br>
 
 
-### **3.2 QS0: Detect/analyze haystack needles**
+### **1 Workflows (3.2 QS0: Detect/analyze haystack needles)**
 
 _Note: QS0 was intially QS1 (therefore the numbering discrepancy)._
 
@@ -77,7 +76,7 @@ use PY/Pipeline to detect (filter out).
 
 <br>
 
-### **3.3 QS1: Create a “full” Ontology “backend”**
+### **2 Models -- Inference (3.3 QS1: Create a “full” Ontology “backend”)**
 
 Ontology OTs/PTs, actions, links for analysis of Dataset with Workshop. Ontology helps organize and control access to an enterprise's valuable operational knowledge ("alpha"). 
 
@@ -102,26 +101,16 @@ _Main Foundry diagram (ZAI original diagram verified by FDE)_<br><img src="/asse
 
 <br>
 
-### **3.4 QS3: Add AI, Governance, and some basic examples of the deep dive demos**
+### **3 Framework (3.4 QS3: Add AI, Governance, and some basic examples of the deep dive demos)**
 
-<br>
-
-#### **AI**
-
-Adding AI introduces new data flows that must be governed, particularly when proprietary information is sent to external models. AIPL, Actions, authorization policies, and UI controls each play a role in controlling those flows.
+**AI**. Adding AI introduces new data flows that must be governed, particularly when proprietary information is sent to external models. AIPL, Actions, authorization policies, and UI controls each play a role in controlling those flows.
 
 
 <img src="/assets/ALL-05.png" alt="drones" width="62%" style="border: 1px solid #999;">
 
-_OLD_<br><img src="/assets/MAIN-03.png" alt="drones" width="33%" style="border: 1px solid #999;">
+<!-- _OLD_<br><img src="/assets/MAIN-03.png" alt="drones" width="33%" style="border: 1px solid #999;"> -->
 
-
-<br>
-
-#### **Governance**
-
-One especially important distinction: monitoring is not the same as preventing leakage. If sensitive data has already been transmitted to an external model, detecting it afterward may be too late. Preventive controls must operate before transmission.
-
+**Governance**. One especially important distinction: monitoring is not the same as preventing leakage. If sensitive data has already been transmitted to an external model, detecting it afterward may be too late. Preventive controls must operate before transmission.
 
 <img src="/assets/ALL-06.png" alt="drones" width="63%" style="border: 1px solid #999;">
 
@@ -133,11 +122,36 @@ One especially important distinction: monitoring is not the same as preventing l
 
 <br>
 
-26.1124 (0930, v1 26.0804)
 
+### **4 Framework tools (QS3b)** 
 
+<br>
 
+---------
+---
+---
 
+<br>
+
+### **5 Agents (QS4a)** 
+
+<br>
+
+---------
+---
+---
+
+<br>
+
+### **6 Models -- Training (QS4b)** 
+
+<br>
+
+---------
+
+<br>
+
+26.1128 (0930, v1 26.0804)
 
 
 
@@ -158,7 +172,6 @@ One especially important distinction: monitoring is not the same as preventing l
 <br>
 
 # OLD CONCEPTS 
-
 
 **TOC**
   - **C1 Why Foundry?** (00, v1 26.1016)

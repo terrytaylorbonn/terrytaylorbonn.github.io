@@ -4,18 +4,16 @@ title: "2 EI"
 permalink: /3_ei/
 ---
 
-_26.1127 (the original version (before 26.1127) of this page: **[3c Enterprise](/pal))**_
+_26.1127 reorganized_
 
-<!-- 
----
+<!--  (the original version (before 26.1127) of this page: **[3c Enterprise](/pal))**
 layout: page
 title: 3c Enterprise
-permalink: /pal/
----  -->
+permalink: /pal/ -->
 
 <br>
 
-#### **EI (Enterprise intelligence) focuses on Palantir Foundry** (reorganized 26.1120/1127). 
+#### **EI (Enterprise intelligence) focuses on Palantir Foundry** 
 - Foundry is an **excellent enterprise framework** (with integrated AI) with lots of demos.
 - Foundry offers a **generous free trial version**. 
 
@@ -84,18 +82,18 @@ To learn Foundry:
 
 <br>
 
-For Enterprise Intelligence (centered on Foundry) there are 6 main concepts (click on heading above to see details):
+For Enterprise Intelligence (centered on Foundry) there are 6 main concepts (click on heading above for details):
 
-- **1 Workflows (QS0)**
-- **2 Models -- Inference (QS1)**
-- **3 Framework (QS3)** 
-- **4 Framework tools (QS3b)** 
-- **5 Agents (QS4a)** 
-- **6 Models -- Training (QS4b)** 
+- **1 Workflows**
+- **2 Models -- Inference**
+- **3 Framework** 
+- **4 Framework tools** 
+- **5 Agents** 
+- **6 Models -- Training** 
 
-Old links (before 26.1127)
+<!-- Old links (before 26.1127)
   - **[3b Workflow platform](/3.3-ai-projects/)** (such as n8n) demos of practical agentic AI applications. _The workflow platform controls the architecture._
-  - **[3c Enterprise AI](/pal/)** demos (**current focus is on Palantir**). _The enterprise platform controls almost everything.
+  - **[3c Enterprise AI](/pal/)** demos (**current focus is on Palantir**). _The enterprise platform controls almost everything. -->
 
 <br>
 
@@ -116,8 +114,6 @@ There is a lot of very valuable functionality beyond that simple summary above (
 - Foundry takes a **very practical no-nonsense approach to AI in the enterprise** (Foundry was a market leader over 20 years ago, long before AI).
 - Palantir offers a **generous Foundry free trial**.
 - Foundry's **built-in AI assistant (FDE)** makes hands-on self-study practical.
-
-Click on the heading above for more detailed concepts. 
 
 <br><br>
 

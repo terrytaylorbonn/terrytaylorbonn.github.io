@@ -28,11 +28,20 @@ _Latest updates **([history](/pal_latest_updates_history/))**_
 
 ZiptieAI demos/documents AI (primarily LLMs), from "tiny" neural networks to **[enterprise AI (Palantir)](/pal/)**, providing insightful and practical guidance with minimal text and diagrams.
 
+
 <br>
 
-### **Readme first**
+### **AI reality check**
   - **[Heroes](/champions/)** is a short history of the AI industry champions that made the current AI tools possible (and became our heroes).
   - **[Hacks](/0-demo/)** explains the core of what makes AI tick. _The champions/heroes never talk about this aspect of AI, but its critical to understand if you want to make the right AI project decisions._<br><br>_AI champions have made the AI revolution possible; but when they claim AI is (or soon will be) intelligent, then they are championing a fairly tale that is not in your best interest (the humorous diagram below compares Tweedle Dee and Tweedle Dum from "Alice in Wonderland" with the (internal) agent and transformer (TF) of an LLM)_<br><img src="/assets/M-11b.png" alt="drones" width="27%">
+
+<br>
+
+### **[Drones](/1-drones/)**
+I built AI drones (initial test flights were in my kitchen) from 2023 to 2024 focusing on autonomous flight and AI (Pixhawk drone with Jetson Nano using object recognition with Pymavlink for flight control inputs). AI gradually became the main focus.
+
+_Ziptie'd AI drone_<br><img src="/assets/ziptiedrone2.png" alt="drones" width="22%">
+
 
 <br>
 
@@ -42,7 +51,7 @@ ZiptieAI demos/documents AI (primarily LLMs), from "tiny" neural networks to **[
   - **(AI) Concepts** (this is a second page of concepts)
   - **2 NNs** (neural networks)
   - **2b Models**
-  - **3 Agents**<br>_AI = deterministic computational algorithms that are extremely useful for specific types of applications._<br><img src="/assets/M-25bbb.png" alt="drones" width="80%">
+  - **3 Agents**<br>_AI = deterministic computational algorithms that are extremely useful for specific types of applications._<br><img src="/assets/M-25bbb.png" alt="drones" width="73%">
 
 <br>
 
@@ -58,7 +67,7 @@ For Enterprise Intelligence (centered on Foundry) there are 6 main concepts (cli
 - **3 Framework (QS3)** 
 - **4 Framework tools (QS3b)** 
 - **5 Agents (QS4)** 
-- **6 Models -- Training (QS5)**<br>_Palantir (the crystal ball)= Enterprise intelligence _<br><img src="/assets/pal_9_06.png" alt="drones" width="26%" style="border: 1px solid #999;"><br>
+- **6 Models -- Training (QS5)**<br>_Palantir (the crystal ball)= Enterprise intelligence_<br><img src="/assets/pal_9_06.png" alt="drones" width="23%" style="border: 1px solid #999;"><br>
 
 <!-- <img src="/assets/M-17.png" alt="drones" width="26%">  -->
 
