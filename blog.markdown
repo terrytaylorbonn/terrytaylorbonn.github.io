@@ -8,8 +8,8 @@ permalink: /blog/
 
 This page (v1 26.1128) will contain links to 
 - Blog posts (on ZiptiaAI.com)
-- Youtube videos (future)
-- Legacy Substack posts
+- **[Youtube videos](https://www.youtube.com/@ziptieai)** (future)
+- Legacy **[Substack posts](https://substack.com/@ziptieai)**
 
 <br>
 
