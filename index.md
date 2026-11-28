@@ -41,7 +41,8 @@ ZiptieAI demos/documents AI (primarily LLMs), from "tiny" neural networks to **[
 <br>
 
 ### **[Drones](/1-drones/)**
-I built AI drones (initial test flights were in my kitchen) from 2023 to 2024 focusing on autonomous flight and AI (Pixhawk drone with Jetson Nano using object recognition with Pymavlink for flight control inputs). 
+
+The initial focus (2023 to 2024) of ZAI was on ziptie'd AI drones (initial test flights were in a kitchen).  
 
 _Ziptie'd AI drone_<br><img src="/assets/ziptiedrone2.png" alt="drones" width="22%">
 
